@@ -1,0 +1,66 @@
+h1. Backups 
+
+There are two categories of data you might want back up :
+
+- Configuration :=  this includes all the config files, analytics configuration, users, web config, context configuration, and such.
+- Data := this includes the metrics, flows, alerts, packets
+
+For a large data platform like Trisul , configuration backup is of main importance. The databases tend to be of very large Terabyte sizes.  The recommended solution for full scale data backup is to setup a DR node. 
+
+h2. Directories 
+
+
+p(autohint info-circle info). 
+*Small deployment easy backup* For small deployments simply backup the @/usr/local@ directory. Ensure to first check the directory size using @du -sh /usr/local@ 
+
+
+The following directories need  be backed up.  If your Trisul installation is small you can simply backup these directories using normal Linux backup tools.
+
+|/usr/local/share| data |
+|/usr/local/lib| libraries |
+|/usr/local/var| data and log files. this directory can be very large |
+|/usr/local/etc| config |
+|/usr/local/bin| executables |
+
+h2. Daily config backup
+
+Using the @install_setup_backup.sh@ tool.
+
+The trisul-hub package includes the install_setup_backup.sh (backup the Trisul setup) script which setups a CRON which automates these backups. 
+
+The supported backup methods are :
+
+# using sftp / scp (the default)
+# using FTP 
+# by copying to another directory, such as an external drive
+
+h3. Running install_setup_backup.sh 
+
+p(autohint info-circle danger). 
+*For secure backups using ssh/scp* you need to setup automatic login use @ssh-copy-id@
+
+The steps are :
+
+# Go to /usr/local/share/trisul-hub  
+# Type ./install_setup_backup.sh   
+# You will be asked to enter the SFTP login details , or FTP login details
+# You will be asked to enter a remote directory
+ 
+Once complete a crontab entry will be automatically created to backup at 4:00AM daily. You may adjust this later.
+
+<pre>
+### Backup trisul configuration####
+0 4 * * * /usr/local/share/trisul-hub/setup_backup.sh /usr/local/share/trisul-hub/setup_backup.conf
+
+</pre>
+
+The backups are placed in the remote directory in a single tar.gz file with the HOSTNAME and TIMSTAMP of the backup
+
+h3. Distributed probe
+
+If you have a distributed setup, copy the @install_setup_backup.sh@ @install_setup_backup.conf@ and @setup_backup.sh@ files to each node into the /usr/local/share/trisul-probe or trisul-hub directories and repeat the above steps.
+
+
+h2. Restore
+
+To restore the backup. Locate the backup with the correct timestamp you wish to use and untar the backup file.

@@ -1,0 +1,188 @@
+h1. Object T.async
+
+The T.async interface provides methods to help you do long running I/O tasks that do not block the fast packet pipeline path. For introduction to Async scripting operations. See "Async operations introduction":async.html 
+
+h2. Purpose of T.async
+
+To execute long running I/O tasks in a separate worker pool to prevent blocking the Trisul streaming pipelines.  The default worker thread pool size is 1, it can be increased at the script level by "TrisulPlugin.request_async_workers":basics.html#structure_of_a_lua_script  parameter
+
+h2. Methods 
+
+
+|_. function       |_. parameters |_. what it does  |
+| "cat":#t.async.cat | from_file, to_file  |  Append one file to another |
+| "copy":#t.async.copy | from_file, to_file |  Copy one file to another. |
+| "rm":#t.async.rm | filename : string  |  Delete a file  |
+| "copybuffer":#t.async.copybuffer | from_buffer (a "Buffer":obj_buffer.html object), to_file  |  Append buffer content bytes to the target file  |
+| "schedule":#t.async:schedule | a LUA schedule block |Runs the LUA functions in the block asynchronosly and re-enter the fast path at a later time when results are ready   |
+
+
+----------
+
+h2. Function @T.async.cat@
+
+Appends file1 to file2.
+
+h4. Purpose 
+
+Append content of file1 to the end of file2. If file2 does not exist, it is created. 
+
+h4. Parameters
+
+| from_file | @filename@ string |  source filename. In file reassemly scripts, this typically in the ramfs.  |
+| to_file | @filename@ string |  destination file. if it doesnt exist it is created. |
+
+h4. Return value
+
+None
+
+h4. Usage 
+
+<pre>
+..
+T.async.cat("/tmpfs/k/file1.data", "/home/nsm/files/file123.dat")
+..
+</pre>
+
+hr. 
+
+--------------------
+
+h2. Function @T.async.copy@
+
+Copies file1 to file2.
+
+h4. Purpose 
+
+Copies file1 to file2. Creates file2 if it does not exist, overwrites it if it does. 
+
+h4. Parameters
+
+| from_file | @filename@ string |  source filename.   |
+| to_file | @filename@ string |  destination file.  |
+
+h4. Return value
+
+None
+
+---------------------
+
+
+h3. Function @T.async.rm@
+
+Deletes the file.
+
+h4. Purpose 
+
+Deletes the file, if present.
+
+h4. Parameters
+
+| filename | @filename@ string |   filename to delete from the filesytem   |
+
+h4. Return value
+
+None
+
+hr. 
+
+<a name="t.async.copybuffer"/>
+
+
+h2. Function @T.async.copybuffer@
+
+Operations on writing "Buffer":obj_buffer.html contents to files.
+
+h3. Purpose 
+
+Write contents of a "buffer":obj_buffer.html  object  to disk. 
+
+h3. Parameters
+
+| buff | A  "Buffer":obj_buffer.html object | an object usually passed by Trisul into your LUA script    |
+| filename | @filename@ string |   filename to write to. File is created if it doesnt exist    |
+| position (optional)| @seelpos@ number  | *Optional* At what position do you want to write the buffer. If this parameter is not specified the default mode of @copybuffer@ is to append to the end of the file    |
+
+
+h3. Return value
+
+None 
+
+h3. Usage 
+
+<pre>
+..
+
+-- appends to the end of the file T.async.copybuffer( payload_buffer, "/home/nsm/files/file123.dat")
+
+T.async.copybuffer( payload_buffer, "/home/nsm/files/file123.dat")
+
+-- writes at specifed position used by (reassembly scripts)
+..
+T.async.copybuffer( payload_buffer, "/home/nsm/files/file123.dat", seekpos )
+
+</pre>
+
+
+
+h2. T.async:schedule  
+
+T.async methods _cp,cat,rm,copybuffer_ described above accomplish very specific tasks. Using the @T.async:schedule@ method described below you can run any arbitrary LUA code out of the main packet pipeline.  
+
+
+p(autohint lightbulb-o info).  
+*T.async:schedule* 
+Imagine your LUA script needed to look up a dictionary of Malware online, you would write the LUA code to do that and use the @schedule@ method to push it out of the fast path.
+
+
+h3. Methods
+
+T.async:schedule expects a table with the following fields
+
+| data | string | a string that is passed on to the onexecute function below |
+| onexecute | function( in_data) | *called on SLOWPATH* A function that accepts the @data@ string specified. This function executes in a separate thread/task from the packet pipeline. You do your processing and optionally return a 'response' string. See rules below |
+| onresult | function(engine, in_data, out_data)| *called on FASTPATH* if your script in  @onexecute@ on the separate thread returns string, Trisul will re-enter the fast path and call the @onresult@ function with the result string. You can then update the @engine@ parameter by adding metrics, generating alerts, or interact with Trisul in any way |
+
+
+
+h3. Usage
+
+This small snippet shows the usage
+
+Task: calculate sha1sum of extracted file 
+
+<pre>
+ onfile_http  = function ( engine, timestamp, flowkey,
+               path, req_header, resp_header, length )
+
+
+      T.async:schedule(
+          {
+              -- send the file path
+              -- 
+              data = path,
+
+              --
+              -- [ on slow path, another thread ]
+              -- calc sha1sum on the file
+              -- and return the string
+              -- 
+              onexecute = function( indata)
+                local h = io.popen("sha1sum "..path)
+                local sha1  = h:read("*a")
+                h:close()
+                return sha1
+              end,
+
+              --
+              -- [ back on fast path]
+              -- 
+              onresult = function(engine, req, response)
+                  print("The SHA1 sum of  "..path.." IS " .. response)
+              end
+          }
+      )
+
+  end,
+
+</pre>

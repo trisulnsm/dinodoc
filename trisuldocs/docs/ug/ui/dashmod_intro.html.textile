@@ -1,0 +1,236 @@
+h1. Dashboards and Modules
+
+A _dashboard_ is a web page that contains _modules_ at various positions.
+
+Key rules about modules and dashboards:
+
+  # A dashboard may contain several modules.
+  # A module may appear in any number of dashboards.
+  # A module may even appear multiple times in the same dashboard.  
+  # A change in a module property will propagate to all the dashboards which use the module.
+  # If there are no modules in a particular position that position is not rendered at all as trisul modules auto adjust for width.
+
+
+h2. An example - Current Hosts
+
+The first screen you will see when you login is the Current Hosts overview dashboard
+
+p(image-with-caption). 
+!images/host_dashboard.png(thumbnail_zoom)!
+Figure: Host Dashboard
+
+
+You can see that this dashboard is nothing but four modules laid out in two columns. Trisul has well defined column positions into which you can place modules. See "Module Positions":#module_positions 
+
+Lets take a closer look at the dashboard shown above.
+
+|_.Top 2 position column 1|_. Top 2 position column 2 |
+|Module : In vs out traffic (past 6 hours) | Module : Active TCP connections (past 6 hours) |
+|Module : Top Internal Hosts (current) | Module : Top External Hosts (current) |
+
+
+h2.  Toolbars 
+
+h3. Dashboard Toolbars
+
+You can control dashboard layout and contents by using the toolbars.
+
+  * Dashboard toolbars can be accessed from the right side corner of each dashboard window.
+
+p(image-with-caption). 
+!images/toolbars/dashboard_icons.png!
+Dashboard level toolbar 
+
+h4. Operations
+
+The following operations can be performed using the toolbars:
+
+|_.Operation|_.Description|
+|<i class='fa fa-edit fa-fw'></i> Customize| Edit dashboard parameters like name, description,modules etc..|
+|<i class='fa fa-toggle-on fa-fw'></i> Toggle labels| Toogle reaable vs lable only on table list|
+|<i class='fa fa-home fa-fw'> </i> Set as default dashboard |  Set as home page |
+|<i class='fa fa-compress fa-fw'> </i> Collpase all modules | Click on the dashboard to disable all modules |
+|<i class='fa fa-expand fa-fw'> </i> Expand all modules |  Click on the dashboard to enable all modules |
+|<i class='fa fa-file-pdf-o fa-fw'></i> Download as PDF | Export data in PDF file|
+
+
+  
+h3. Module Toolbars
+
+
+  * Module toolbar appears when the mouse is clicked on the icon.
+
+p(image-with-caption). 
+!images/toolbars/module_icons.png!
+Module toolbar 
+
+h4.  Operations 
+
+The following operations can be performed using the toolbars:
+
+|_.Operation|_.Description|
+|Rearrange modules | Click on the module's title bar and drag it to a new place |
+|<i class='fa fa-pencil fa-fw'></i> Customize | Edit module parameters like name, description, etc..|
+|<i class='fa fa-bar-chart fa-fw'></i> Historical Chart| View long term historical view of this chart|
+|<i class='fa fa-times fa-fw'></i> Remove from  Dashboard| Remove module from this dashboard|
+|<i class='fa fa-sort fa-fw'></i> Disable/Enabel Module| Disable / Enable this module|
+
+
+
+
+h2. Creating a new dashboard
+
+To create a new dashboard
+
+** Select Customize -> UI -> Dashboards.
+** Click ->Create a new dashboard.
+** Supply value for the following fields.
+
+|_.Field Name|_.Description|
+|Owner|Trisul user|
+|Package|Name of package (default)|
+|Key |A unique identifier for this dashboard(No special characters).|
+|Name|Dashboard title|
+|Description|Subtitle|
+|Dashboard type|LIVE or RETRO (see "Dashboard Types":/docs/ug/ui/dashmod_intro.html#dashboard_types) |
+|Position Left|Click on _Add module_ to select modules. Module numbers are shown separated by commas and you can split them into columns using the pipe character. |
+|Position Right|As above|
+|Position Top1|As above|
+|Position Top2|As above|
+|Position Mid3|As above|
+|Position Mid4|As above|
+|Position Bottom2|As above|
+|Position Bottom1|As above|
+
+h2. Modules
+
+In Modules information is presented in tables and charts . You can create your own modules using the pre-existing module template.Trisul has 40 different types of modules.See "Module Templates":/docs/ug/ui/module_templates.html for more information about modules.
+
+
+h3. Create new modules
+
+To create a new module
+
+  ** Select Customize -> UI -> Modules
+  ** A list of available modules will appear.
+  ** Clone a similar module  to create new module.
+  ** Edit the required fields.
+
+h3. How to add modules to empty dashboard
+
+  You can create and add new modules as well as existing modules to empty dashbord.
+  Create an empty live dashboard dashboard. Don't add any modules.
+
+  ** Select Dashboard -> Show all
+  ** Select the empty dashboard you have created 
+
+p(image-with-caption). 
+!images/add_modules_empty_dashboard.png! 
+Empty dashboard ready to add modules to it 
+
+h4. Create a module from your favorite keys and meters
+
+  
+  ** click create a module from your favorite keys and meters
+  ** Select the Counter Group and Keys to add modules to the dashboard. 
+  ** If you want plot multiple keys in one module(per meter) check the Multiple Keys box.
+  ** Default all selected meters ploted in one module(per key).  
+
+h4. Create Modules from topper
+
+  ** Click create Modules from topper
+  ** Select keys from topper list. (You can change Counter and Meters)
+  ** Click Add modules button to add modules to dashboard
+
+
+h4. Create live module from your favorite keys and meters
+
+
+  ** Create live module from your favorite keys and meters
+  ** Select the Counter Group and Keys to add modules to the dashboard.
+  ** Click Add modules button to add modules to dashboard
+
+h4. Add existing modules to empty dashbord
+
+  ** Click Add Existing Modules to add existing modules to empty dashbpard
+  ** Select module postion and modules.<br/>
+  ** Click Add button to add selected modules to dashboard.
+
+
+
+
+h3. How to add modules to the dashboard
+
+
+h5. Method - I
+
+To add a module to a specific position
+
+  ** Select Customize -> UI -> Dashboards
+  ** A list of available dashboards will appear. 
+  ** Click -> Edit option for the dashboard you want to add the module to. 
+  ** Click -> Add Module button in any position.
+  ** You will be shown a list of modules.
+  ** Select the modules and click -> Select button to take changes.
+
+You can also specify the module number of your choice at any point.To find the module numbers, 
+Select  Customize -> UI -> Modules 
+
+h5. Method - II
+
+  ** Click -> Plus on the "dashboard toolbar":/docs/ug/ui/dashmod_intro.html#toolbars
+  ** A list of available modules will appear. 
+  ** Module position can be seen at the top of the form.
+  ** Select a position and a module you wish to add to that position.
+  ** Click -> Save.
+
+h5. Method - III
+
+  ** Click -> Plus on the "module toolbar":/docs/ug/ui/dashmod_intro.html#module_toolbars
+  ** A list of dashboards are available.
+  ** Select the dashboard into which you want to add the module.
+
+The module will be added to the top 1 position, you can open the dashboard and rearrange if required.
+
+h3. How to  edit a module
+
+To edit a module from a dashboard
+
+** Click -> <i class='fa fa-pencil fa-fw'></i>pencil icon on the "module toolbar":/docs/ug/ui/dashmod_intro.html#module_toolbars
+
+You can also edit it by selecting Customize -> UI -> Modules.
+
+
+
+h3. How to delete a module from the dashboard
+
+To delete a module from a dashboard
+
+** Click -> <i class='fa fa-times fa-fw'></i> Minus on the "module toolbar":/docs/ug/ui/dashmod_intro.html#module_toolbars
+
+You can also delete it by selecting Customize -> UI -> Dashboards.
+
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function(event) {
+    $('img[alt="thumbnail_zoom"]').click(function(e){
+      thumbnail_zoom(e);
+    });
+  });
+</script>
+
+
+h3. Creating Modules with arithmetic expressions
+
+You can also create modules with the help of arithmetic expressions.You can combine different metrics together and show in a module.
+
+Generally Models are numbered as 1,2,3,etc. Supported operators are +,_,*,%,/,()
+
+For eg. Add two Metrics, You have to enter arithmetic expression as (1+2),(3-4) or Metric 1 as a percentage of 2 and 3 as 1%(2+3)
+
+!images/arithmetic_expr.png!
+
+A custom module dashboard with arithmetic expressions will look like this.
+
+!images/custom_mod_dashboard.png!
+
+

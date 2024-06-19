@@ -1,0 +1,21 @@
+h1. Howtos 
+
+Short descriptions of how to accomplish specific tasks with Trisul.
+
+
+h2. List of howtos 
+
+Click on topics from the left menu to view.
+
+h2. Popular 
+
+h3. "How to install on Security Onion":/docs/howto/installseco.html
+
+h3. "How to send IDS alerts to Trisul":/docs/howto/setup_ids_alerts.html
+
+h3. "How to run Trisul on 10G networks":/docs/howto/10gcapture.html
+
+h3. "How to configure Trisul for Netflow":/docs/ug/netflow/netflow_setup.html
+
+
+

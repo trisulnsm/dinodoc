@@ -1,0 +1,95 @@
+%h1 Traffic Monitoring with Trisul 
+
+Traffic monitoring is the central task of Trisul. Out of the box, Trisul measures over 120 parameters about 16 different "things" such as Applications, Hosts, VLAN, MAC, etc.   A "Counter Group":intro.html is the key concept you need to know about in Traffic Monitoring with Trisul. 
+
+.row 
+  .col-md-6
+    %h3 Traffic analysis features 
+
+    .panel.panel-default
+      .panel-heading
+        %h5 
+          %i.fa.fa-line-chart 
+          Real Time
+      .panel-body
+        
+        You can monitor any metric in real time using <a  href='stabber.html'>Real time stabbers</a>. This helps with troubleshooting and real time tracking of developing situations. 
+
+    .panel.panel-default
+      .panel-heading
+        %h5 
+          %i.fa.fa-line-chart 
+          Historical analysis
+      .panel-body
+        
+        Use <a  href='retro.html'>retro analysis</a> tools, long term traffic charts, monthly usage reports and other tools for historical analysis. Trisul does not summarize or roll up any old data. 
+
+  .col-md-6
+    %h3 Data acquisition methods
+    .panel.panel-info
+      .panel-heading
+        %h5 
+          %i.fa.fa-plug 
+          Packet capture
+      .panel-body
+        
+        The <bold>default</bold> mode. Trisul does all its analytics by directly capturing packets from the network. Learn how to <a href='/docs/ug/install/input_packets.html'>capture packets</a> for  Trisul NSM.
+
+    .panel.panel-info
+      .panel-heading
+        %h5 
+          %i.fa.fa-plug 
+          Netflow
+      .panel-body
+        Can also accept <a href='/docs/ug/netflow/netflow_setup.html'>Netflow</a> v5, v9, SFLOW, and IPFIX instead of packets. This is a powerful low-cost way to gain total visibility into your internal network traffic without a TAP and Probe rollout with packet capture techniques.
+
+%hr
+
+
+.row
+  .col-md-6
+    
+    %h3 Task list
+
+    Jump to common network analysis tasks 
+    %ul.list-unstyled
+      %li Find out which flows caused a traffic pattern
+      %li View flow activity of a particular host or port in real time 
+      %li Jump from alerts to flows that caused them
+      %li Set up **flow trackers** to analyze specific activity
+      %li Investigate past activity 
+      %li Enable metering which depend on flows not packets
+      %li Optimize full content storage (eg, store only first 1M of each flow)
+    %a.btn.btn-sm.btn-default{:href=>"tasks.html"}
+      View all tasks
+
+  .col-md-6
+    
+    %h3 Related features
+    %dl
+      %dt
+        %a{href:"stabber.html"} Real Time stabbbers
+      %dd
+        Chart usage of any item or view toppers in any counter group in real time.
+      %dd
+        Example : View in real time top Internal Hosts, or view Total Bps for Port 443
+
+      %dt
+        %a{href:"retro.html"} Retro Analysis
+      %dd
+        Select a time interval and drill down over 100 ways.
+
+      %dt
+        %a{href:"retrofaq.html"} Retro FAQ
+      %dd
+        Select a time interval and click on pre-defined analysis in Q&A style
+
+      %dt
+        %a{href:"custom.html"} Custom metering
+      %dd
+        Create your own custom counter policies.
+      
+
+
+
+

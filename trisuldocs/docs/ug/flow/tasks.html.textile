@@ -1,0 +1,44 @@
+h1. Common Tasks
+
+
+h2. Query flows
+
+If you know the IP address
+# Click on Tools -> Explore flows 
+# Just type in your query "ip=192.168.2.81" in the box
+
+For more details read the section on "Explore Flows":/docs/ug/tools/explore_flows.html
+
+h2. Total flow and traffic based summary for an IP 
+
+If you can see the IP in any dashboard 
+# Click on the small tag next to the IP and select "Investigate"
+
+If you know the IP address
+# Click on Tools -> Investigate IP 
+# Select a time frame
+# Enter the IP you want to search for
+
+
+h2. Find out which flows caused a traffic spike
+
+# Go to *Retro -> Retro Tools*
+# Select the spike
+# Select *Flow Trackers* from the toolbox
+# Select *Traffic*
+
+
+h2. View flow activity of a host or port in real time
+
+# Type the host or the port in the search box
+# Click on the search results to go to the Key Dashboard 
+# On the top right, select "Flow Stabber"
+
+
+h2. Jump from alerts to flows that caused them
+
+# From any table that shows invididual alerts click on the "Flows" icon
+
+This will show the flow that caused the alert as well as nearby flows. For example, if a web download of a PDF caused an alert, this will retrieve all relevant flows. 
+
+

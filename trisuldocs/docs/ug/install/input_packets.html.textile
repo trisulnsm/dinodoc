@@ -1,0 +1,174 @@
+h1. Setup packet captures for Trisul 
+
+This section explains the various methods to acquire raw network packets from your infrastructure and into a Trisul Probe. 
+
+Sections in this document
+
+* *Port Mirror* - recommended for most enterprises < 500 Mbps 
+* *Network Taps* - recommended for links > 500Mbps
+* *Bridges* - for small offices and appliances only
+
+h3. Virtual Machine configuration
+
+If you are installing Trisul on a Virtual Machine, you may need to put the Virtual Switch in promiscuous mode to capture the traffic on the Physical port span. See this link for instructions for "VMWare":https://kb.vmware.com/s/article/1004099
+
+h2. Configuring port mirror / SPAN Port
+
+The following diagram shows how you can configure a SPAN port and feed packets into Trisul.  See your switch vendor's documentation on configurating a Port SPAN session. [ "Cisco SPAN documentation":https://www.cisco.com/c/en/us/support/docs/switches/catalyst-6500-series-switches/10570-41.html ]
+
+<div class='panel panel-primary text-center'>
+<div class='panel-body '>
+!images/portmirror.png! 
+</div>
+<div class='panel-footer'>
+*SPAN example* ports @ge/0/0/1@ and @ge/0/0/12@ traffic mirrored to @ge/0/0/6@ which is then connected to Trisul-Probe 
+</div>
+</div>
+
+h2. Using Network Taps
+
+SPAN ports quickly become unweildy as network speeds increase.  Network taps are available as Copper and Optical modules that are the preferred choice for high speed networks. 
+
+<div class='panel panel-primary text-center'>
+<div class='panel-body '>
+!images/networktap.png! 
+</div>
+<div class='panel-footer'>
+Network Tap used with 10G optical fiber. Each direction needs a tap and sent to two ports on Trisul-Probe 
+</div>
+</div>
+
+
+h2. Using Trisul as a bridge
+
+For small office networks you can even use 2 Ports of the box running Trisul and create a bridge. This places Trisul as an inline device. 
+
+
+<div class='panel panel-primary text-center'>
+<div class='panel-body '>
+!images/bridge.png! 
+</div>
+<div class='panel-footer'>
+Bridge : Use the Trisul-Probe inline as a bridge. Useful for small deployments
+</div>
+</div>
+
+h3. Bridging Ethrenet Connections
+
+A bridge allows you to connect two or more network segments together allowing devices to join the network when it's not possible to connect them directly to a router or switch
+
+h4. How to bridge
+
+<div class='tabs tabs-text'>
+  <ul class='nav nav-tabs'>
+    <li class='active'>
+      <a href="#tab_brctl_ubuntu" data-toggle="tab">
+        <img src="/images/icons/ubuntu.png"></img>
+        Ubuntu
+      </a>
+    </li>
+    <li>
+      <a href="#tab_brctl_centos" data-toggle="tab">
+        <img src="/images/icons/centos.png"></img>
+        CentOS
+      </a>
+    </li>
+  </ul>
+  <div class='tab-content'>
+    <div id='tab_brctl_ubuntu' class='tab-pane fade in active'>
+
+      Install the bridge-utils package.
+
+      <pre>sudo apt-get install bridge-utils</pre>
+
+      Automatically Create the Bridge at Start-up<br/>
+
+      Sample @/etc/network/interfaces file@
+
+      <notextile>
+        <pre class='language-bash'>
+        #eth0
+        auto eth0
+        iface eth0 inet manual
+        up ifconfig eth0 up
+
+        #eth1
+        auto eth1
+        iface eth1 inet manual
+        up ifconfig eth1 up
+
+        #bridge br0
+        auto br0
+        iface br0 inet static
+        address 192.168.2.79
+        gateway 192.168.2.1
+        netmask 255.255.255.0
+        bridge_ports eth0 eth1
+
+        </pre>
+      </notextile>
+
+      Restart networking
+      <pre> sudo /etc/init.d/networking restart </pre>
+    </div>
+    <div id='tab_brctl_centos' class='tab-pane fade in'>
+
+      Install the bridge-utils package.
+
+      <pre>yum install  bridge-utils</pre>
+
+      To create a network bridge, create a file in the @/etc/sysconfig/network-scripts/@ directory called @ifcfg-br0@
+      <br/>
+      sample @/etc/sysconfig/network-scripts/ifcfg-br0@
+
+      <notextile>
+        <pre class='language-bash'>
+          DEVICE=br0
+          TYPE=Bridge
+          IPADDR=192.168.2.78
+          GATEWAY=192.168.2.1
+          NETMASK=255.255.255.0
+          ONBOOT=yes
+          BOOTPROTO=none
+          NM_CONTROLLED=no
+          DELAY=0
+        </pre>
+      </notextile>
+
+      To complete the bridge another interface is created, or an existing interface is modified, and pointed to the bridge interface
+
+      sample @/etc/sysconfig/network-scripts/ifcfg-eth0@
+
+      <notextile>
+        <pre class='language-bash'>
+          DEVICE=eth0
+          TYPE=Ethernet
+          HWADDR=AA:BB:CC:DD:EE:FF
+          BOOTPROTO=none
+          ONBOOT=yes
+          NM_CONTROLLED=no
+          BRIDGE=br0
+
+        </pre>
+      </notextile>
+
+     sample @/etc/sysconfig/network-scripts/ifcfg-eth1@
+
+      <notextile>
+        <pre class='language-bash'>
+          DEVICE=eth1
+          TYPE=Ethernet
+          HWADDR=AA:BB:CC:DD:EE:FG
+          BOOTPROTO=none
+          ONBOOT=yes
+          NM_CONTROLLED=no
+          BRIDGE=br0
+        </pre>
+      </notextile>
+
+     
+      Restart networking
+      <pre> /etc/init.d/netwok restart</pre>
+    </div>
+  </div>
+</div>

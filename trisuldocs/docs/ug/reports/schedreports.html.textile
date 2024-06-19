@@ -1,0 +1,127 @@
+h1.  Schedule email reports 
+
+You can have Trisul automatically email reports periodically.
+
+
+h2. Report intervals  
+
+You may dispatch by email any of the supported report types at these intervals.
+
+  # Hourly
+  # Daily
+  # Weekly
+  # Monthly
+
+
+h2. Schedule a new report
+
+To schedule a new report 
+
+p(autohint hand-o-right info). 
+Select Reports -> Schedule
+ 
+  # A list of all reports scheduled will appear
+  # Click **Schedule a new report**
+  # Fill out these fields 
+
+!images/schedule_new_report.png!
+
+Here is the table with the description of all available fields to schedule a new report.
+
+|_.Field Name|_.Description|
+|Select a Report|You can choose various type of reports|
+|Probes|You can choose among different nodes if multiple probes are setup|
+|Run Time| At the top of what time do you want to run the report. The actual run times of the reports also depends on the frequency. For example if you select "2011-12-20 10:20:00" for hourly report runs. The report will be generated at 10:20, 11:20, 12:20, etc..|
+|Business Hours|Runs the report for business hours only|
+|Run Frequency|Select from Hourly,Daily,Weekly, or Monthly|
+|To | Email address of receiver|
+|Cc|Recipient received a copy of the message.|
+|Bcc|Recipients are invisible to all the other recipients of the message|
+|Specify a Subject |Subject of the report|
+|Signature|Signature of the sender|
+|Report parameters (optional)|Optional parameters, if present must be in valid @JSON@ format. This parameter is only required for these three reports Endpoint Activity, Application Activity, Router and Interfaces|
+
+Once you schedule the report, all your scheduled reports will appear on the index page and you can toggle from there.
+
+!images/sched_report.png!
+
+You can check if the report has been sent successfully to the destination mail address by clicking on the options button on the right corner and selecting the 'Run Status' option.
+
+!images/report_run_stats.png!
+
+You have the PDF option to download the scheduled report manually.
+
+
+h2. Report parameters
+
+Some reports are generated for a particular entity such as a specific host or application. For these reports you need to tell Trisul about the  entity via the _Report parameters_ field.  Currently there are three types of such reports.
+
+h3. Parameters for the Endpoint Activity report
+
+The _Endpoint activity report_ expects you to specify a host.  
+
+# Specify all common fields for a scheduled report
+# In addition enter report parameters as shown below
+
+Say you want to schedule an endpoint report for host 192.168.1.151, enter the ip address in this format 
+@{"IP":"192.168.1.151"}@ You can also enter a host name instead of an IP like @{"IP":"dns00.unleashnetworks.com"}@
+
+h3. Parameters for the Application Activity report
+
+The _Application activity_ report expects you to specify an application or port.  
+
+# Specify all common fields for a scheduled report
+# In addition enter report parameters as shown below
+
+Say you want to schedule an for the http app, use this format 
+@{"port1":"http"}@ You can also enter a port number @{"port1":"Port-80"}@
+
+h3. Parameters for the Interface Activity report
+
+%(label)Netflow only%  You can generate a report for any netflow interface.
+
+# Specify all common fields for a scheduled report
+# In addition enter report parameters as shown below
+
+Say you want to schedule an report for interface with ifIndex 22 on router 192.168.1.1, use the following format 
+@{"interface":"192.168.1.1_22"}@ 
+
+
+h2. Enable email dispatching 
+
+After you have setup email, you need to enable the job that actually generates the report and sends out the email.
+
+To enable this :
+
+p(autohint hand-o-right info).  
+Select Customize -> App Settings
+
+Check the **Automatically email scheduled reports**
+
+%(label label-info)Note% Ensure you have set up your "Email Settings":emailsettings.html
+
+
+h2.  Troubleshooting 
+
+Are your reports not coming through ? Here are some possible reasons.
+
+h3.  Check if cron support is available in your system 
+
+As root type 
+
+pre. crontab -l
+
+
+h3.  Check the logs 
+
+If you are not receiving the email reports, check the logs.
+  
+p(autohint hand-o-right danger). 
+Login as Admin -> WebAdmin -> View Logs
+Click on **Background tasks log**
+
+You can see if any errors are observed there.
+
+
+
+

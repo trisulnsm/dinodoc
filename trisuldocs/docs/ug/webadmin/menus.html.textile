@@ -1,0 +1,55 @@
+h1. Menus
+
+You can customize which items appear on the menu panel. You can control both the parent and sublevel menu items and positions. 
+
+
+h2. Create a new menu
+
+You can either create a new item or clone an existing one and modify some parameters.
+
+div(info). 
+Login as @admin@ user to manage menus.
+
+h3. Method - I : Create a new item
+
+p(autohint hand-o-right info). 
+Select _Webadmin_ -> Manage -> Menu Manager
+
+# Click **Create New Menu** 
+# You are shown the form with following fileds 
+
+|_.Field Name|_.Description|
+|Menu Name|Name of the menu|
+|Parent Menu|Select a parent if this is a submenu or select *No Parent* |
+|Role ID|"User Roles":/docs/ug/webadmin/userroles.html|
+|Description|Description of the menu|
+|Controller||
+|Action||
+|Params Json|valid json|
+
+h3. Method - II : Clone an existing item
+
+You can  create a new  by cloning the existing menu
+
+p(autohint hand-o-right info).  
+Select Admin -> Menu Manager
+
+# Click **Clone**  in the menu list
+# Edit the required fields and click **Create** button 
+
+h2. Manage Menus
+
+You can rearrange the menu
+
+- Move Up := 
+Click the __Move Up__  link to up the menu one level
+=:
+
+- Move Down := 
+Click the __Move Down__  link to down the menu one level
+=:
+
+- Delete := 
+Deletes the menu
+=:
+

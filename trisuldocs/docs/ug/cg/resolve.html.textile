@@ -1,0 +1,86 @@
+h1. Name resolution
+
+You can assign a user friendly name for any type of item.
+
+h2. Manually assign a name 
+
+
+h3. 1 From the key dashboard
+
+This is the easiest way to edit. You can come to the key dashboard by clicking on a link or by searching for a specific item. 
+
+
+  # You can also edit by clicking the link on the IP or Port from any module or table
+  # You will be redirected to "Key Traffic":/docs/ug/ui/dashboards.html#key_dashboard  dashboard
+  # Find the module **Key Details** and click the "Edit" link
+
+
+h3. 2 From top keys 
+
+Use this if you want to see recently active keys and assign them names in one page.
+
+p(autohint hand-o-right info). 
+Select Customize -> Keys
+
+  # List of counter groups  will appear
+  # Click the *show recently active* in any counter group
+  # You will get list of keys and click the *edit* icon
+  # You will be redirected to a page with following fields
+
+
+|_.Field Name|_. Description|
+|Key| A unique identifier for the entity. |
+|Name|A user friendly name for this key. Examples: Host names for IP Addresses, Application names for port numbers, etc|
+|Description|More information about this entity. This doesn't show up anywhere except in the key details panel. |
+
+
+h3. 3 Resolve keys in bulk from csv file
+
+p(autohint hand-o-right info). 
+Select Customize -> Keys
+
+
+  # List of counter groups will appear
+  # Click the **Import from csv**
+  # Upload a csv file
+  # Select the column numbers that contain the key and label
+  # Click Import CSV File
+
+
+h2.  Automatically name resolution
+
+Trisul comes with a sophisticated way to resolve keys automatically in the background. This works magically by only resolving those keys which are likely to be "interesting". The process is designed to place as little load on your DNS servers as possible.
+
+p(autohint lightbulb-o success). 
+Automatic name resolution is disabled by default
+
+
+h3. How to enable automatic name resolution
+
+p(autohint hand-o-right info). 
+Customize -> App Settings
+
+# Enable **Automatically resolve** top IPs option.
+
+Once enabled wait for about 10-15 minutes for hostnames to start appearing in your UI.
+
+h2. Export labels to CSV file
+
+You can export assigned labels to csv file
+
+p(autohint hand-o-right info). 
+Select Customize -> Keys
+
+
+  # List of counter groups will appear
+  # Click the **Export to CSV**
+
+
+h3. Troubleshooting
+
+If for some reason you are not able to see hostnames in Trisul, try these steps.
+
+# Check if there are any errors in the log. Go to _Admin -> View Logs -> Background Tasks Log_ 
+# Check if crontab is enabled. Type @crontab -l@ to check entries
+# Check if DNS works, click on any IP to bring up key dashboard, then click on _Resolve_
+

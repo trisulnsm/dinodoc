@@ -1,0 +1,119 @@
+h1.  Geo Plugin 
+
+The Geo plugin is an add-on package to Trisul. It enhances the base Trisul functionality by adding
+
+  # A Country Counter group - for country wise traffic metering
+  # A ASN Counter Group - for Autonomous System Number wise metering
+  # A CITY Counter Group - for City/Region wise metering. 
+  # A Prefix Counter Group - for IP Prefix (AS BGP blocks) wise metering
+  # BGP metrics for ISP applications
+
+The plugin can connect to MaxMind and IP2LOC online databases with your APIKEY, periodically download, and integrate Geo Metrics from them into Trisul.
+
+h2.  Samples 
+
+Here is a screenshot to give you an idea of what functionality is added by this plugin.
+
+|!images/asn.png(By ASN)! <br/>Traffic by ASN |!images/country.png(Traffic by country)!<br/>Traffic by country|
+
+h2.  Setup 
+
+h3.  Installation 
+
+This plugin is distributed as a RPM / DEB package.  Follow instructions in the "Downloads":/download page to install the *trisul-geo* package
+
+h3.  Starting 
+
+Once installed, the plugin will become effective the next time you restart Trisul Probe.
+
+h2.  Database used and API Key
+
+In order to work accurately, this plugin needs an upto-date Geo location database. We currently support geo location databases from "Maxmind"://www.maxmind.com  The basic install includes an out of data database in CSV format. Once install they are automatically updated weekly. 
+
+p(autohint lightbulb-o). 
+To automatically download databases you need to sign up with "Maxmind"://www.maxmind.com for an API Key. Then put that key into the feed configuration file shown below. 
+
+Use "cfgedit":/docs/ref/plugin_configuration.html  to edit the config settings. Select the _Trisul Geo_ option in the menu. 
+
+Once installed Trisul will automatically keep the databases updated at 2AM everyday. See the Frequency parameter in the config file.
+
+The main parameters you may be interested to edit are :
+
+|_.Parameter|_.Default|_.Note|
+|ReloadListSeconds|3600|Trisul checks for new files every so many seconds. |
+|SampleRate|32|In packet mode, sample rate. Lookup Geo database only once every so many packets|
+|MeterCountry|TRUE|Enable Country Wise metering  |
+|MeterASN|TRUE|Enable ASN Wise metering  |
+|MeterCity|FALSE|Enable City/Location metering - !WARNING! This will result in about 500MB RAM extra usage, disabled by default   |
+|MeterPrefix|TRUE|Enable Network Prefixs (AS numbers as found in BGP) |
+|MeterASPATH|FALSE|Meter AS Path based on the BGP Peering established by Trisul with the routers<br/><span class="label label-info">Feature used in ISP environments</span>|
+|HomeASNumbers||Enter the ASNumber of the Trisul customer. This is required to calculate Upload/Download direction for the ASNumber Counter group<br/><span class="label label-info">Feature used in ISP environments</span>|
+|DebugLevel|0| Set this to 1 to print every IP lookup|
+|BGPRibsPath|/usr/local/var/ramdisk|The location where the Trisul BGP Route receiver process will save the routing database.<br/><span class="label label-info">Feature used in ISP environments</span> |
+|AddFlowEdges|true|Add flow edges from Country/Prefix/ASNumber. |
+|DirectionalMode|true|This impacts the ASNumber counter group. If _DirectionalMode_ is set to TRUE, external IPs are checked for ASNumber match in the geo databases. This is appropriate for enterprise and non-transit ISPs. When _DirectionalMode_ is set to FALSE, then both IPs are matched against the ASN databases|
+
+h2. Editing the config file
+
+The Geo.xml contains config parameters as well as global 'feed' items. The config items shown in the above table are updated in the usual manner. Using the "cfg.edit tool on the probe":/docs/ref/plugin_configuration.html#plugin_config_editor
+
+The feeds are updated on the hub node as shown below. 
+
+
+h2. How updates work
+
+Trisul is a distributed system. The Geo.xml specifies _feeds_  which are downloaded only once on the Hub node by a background cron process. The hub then _pushes_ these feeds to all probes. 
+
+h2. Editing feed updates
+
+To change the feed updates or to remove feeds, edit the file in the feeds directory on the HUB nodes.
+
+# Logon to the hub node
+# Go to the feeds directory @/usr/local/var/lib/trisul-config/domain0/allcontexts/feeds/@ 
+# Each plugin is represented by a GUID. The Geo plugin is @feed-99...@ 
+# cd to the @feed-99..@ directory
+# Open the rules.xml file
+
+
+It contains feed source lines like this
+
+p(autohint lightbulb-o). 
+Enter your Maxmind APIKEY in the provided space YOURLICENSEKEYHERE. For ISP customers, enter your AS Number in the provided space as well. 
+
+<pre class='language-xml'>
+<code>
+  <Source>
+    <URL>https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country-CSV&amp;license_key=YOURLICENSEKEYHERE&amp;suffix=zip</URL>
+    <Target>GeoLite2-Country-CSV.zip</Target>
+  </Source>
+  <Source>
+    <URL>https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-ASN-CSV&amp;license_key=YOURLICENSEKEYHERE&amp;suffix=zip</URL>
+    <Target>GeoLite2-ASN-CSV.zip</Target>
+  </Source>
+</code>
+</pre>
+
+# To disable a feed remove the @<Source>@ block or change its name to something like @<Source_Disabled>@
+# To enable a feed, enter a new @Source@ block or uncomment any @Source_Disabled@ block
+# Currently only the feeds mentioned in the file are supported. 
+
+
+h2.  Commercial  
+
+FOr high accuracy it is reccommended to purchase a license from https://www.maxmind.com for the following GeoLite2 products. 
+  # GeoLite2 Country
+  # GeoLite2 ASN
+  # GeoLite2 City
+
+div(info). 
+Please contact the list vendor directly for a subscription.
+
+
+h2. License
+
+The following statement 
+
+<pre>
+This product includes GeoLite2 data created by MaxMind, available from
+<a href="https://www.maxmind.com">https://www.maxmind.com</a>.
+</pre>

@@ -1,0 +1,881 @@
+h1. Object Engine
+
+The Trisul metrics engine. 
+
+You call methods on this object to add metrics, objects, flows, or other types of information. This is the most important object you will be working with.
+
+
+h2. Functions
+
+A summary of the functions available in this object. 
+
+* <span class='label label-warning'>F</span>  - functions that can be called from "Frontend (aka Fastpath)":basics.html#frontend_and_backend_scripts  scripts
+* <span class='label label-info'>B</span> - functions that can be called from "Backend (aka Slowpath)":basics.html#frontend_and_backend_scripts  scripts
+
+If you call functions that are not available you will get the following error
+
+<pre>
+ERR_NOTAVAIL: add_flow_counter() is not available for backend scripts
+</pre>
+
+|_. Name       |_. Availability |_. Description |
+| "update_counter":#function_update_counter | <span class='label label-warning'>F</span> <span class='label label-info'>B</span> | Updates a meter for a key with a particular value|
+| "update_counter_bytes":#function_update_counter_bytes |  <span class='label label-warning'>F</span> |Updates a meter for a key but with a value of wire_length in the packet|
+| "update_counter_raw":#function_update_counter_raw | <span class='label label-warning'>F</span> <span class='label label-info'>B</span> |Update counter raw is a variant of update_counter.  |
+| "update_key_info":#function_update_key_info |  <span class='label label-warning'>F</span> <span class='label label-info'>B</span> | Set a user friendly label or a description for a key |
+| "add_alert":#function_add_alert |  <span class='label label-warning'>F</span> <span class='label label-info'>B</span> |Add an alert  |
+| "add_alert_full":#function_add_alert_full |  <span class='label label-warning'>F</span> <span class='label label-info'>B</span> |Same as add alert with with a priority and classification. Used for IDS alert types  |
+| "add_alert_tca":#function_add_alert_tca |  <span class='label label-warning'>F</span> <span class='label label-info'>B</span> |For alerts based on metric values and threshold crossing events  |
+| "add_resource":#function_add_resource|  <span class='label label-warning'>F</span> <span class='label label-info'>B</span> |Add a new resource with metadata and contents to Trisul |
+| "timestamp":#function_timestamp |   <span class='label label-warning'>F</span> <span class='label label-info'>B</span> |The latest timestamp seen by the engine |
+| "add_flow_counter":#function_add_flow_counter | <span class='label label-warning'>F</span>  | Add a flow counter  |
+| "reset_flow_counter":#function_reset_flow_counter |  <span class='label label-warning'>F</span>|Removes all flow counters, then does an add_flow_counter  |
+| "tag_flow":#function_tag_flow |   <span class='label label-warning'>F</span> <span class='label label-info'>B</span> |Tag a flow with a label. Y|
+| "instanceid":#function_instanceid |  <span class='label label-warning'>F</span> <span class='label label-info'>B</span> |Engine Instance identifier|
+| "probeid":#function_probeid |   <span class='label label-warning'>F</span> <span class='label label-info'>B</span> |Trisul probe id of the engine|
+| "update_flow":#function_update_flow |  <span class='label label-warning'>F</span>  |Update a flow based metric|
+| "new_flow_record":#function_new_flow_record |  <span class='label label-warning'>F</span>  | Inform framework about a new flow record|
+| "set_flow_duration":#function_set_flow_duration |  <span class='label label-warning'>F</span>  |Set the duration of the flow in seconds |
+| "disable_reassembly":#function_disable_reassembly |  <span class='label label-warning'>F</span>  |Stop TCP reassembly of this flow  |
+| "post_message_frontend":#function_post_message_frontend |  <span class='label label-warning'>F</span> <span class='label label-info'>B</span> |Post a message to other LUA plugins attached to the packet (frontend) pipeline|
+| "post_message_backend":#function_post_message_backend|  <span class='label label-warning'>F</span> <span class='label label-info'>B</span> |Post a message to other LUA plugins in the metrics (backend) pipeline|
+| "add_edge":#function_add_edge|  <span class='label label-warning'>F</span> <span class='label label-info'>B</span> |Add a single edge to the Trisul Streaming Graph Analytics pipeline|
+| "add_flow_edges":#function_add_flow_edges|  <span class='label label-warning'>F</span> <span class='label label-info'>B</span> |Automatically add edges from a network flow to a given vertex. |
+| "set_key_attribute":#function_set_key_attribute|  <span class='label label-warning'>F</span> <span class='label label-info'>B</span> |Set an arbitrary {attribute-name,value} pair for any key|
+| "add_flow_attribute":#function_add_flow_attribute|  <span class='label label-warning'>F</span> <span class='label label-info'>B</span> |Add an  {attribute-name,value} pair for any flow for other Lua script to pick up.|
+
+
+h2. Function @update_counter@
+
+Adds a single metric to the Trisul platform.
+
+h3. Purpose 
+
+Update a counter with a value. Recall that the heirarchy in Trisul is 
+
+* Counter Group  _example_  @Applications@  
+** Key _example_ @pop3@
+*** Meter  _example_ meter @id = 5 Active Connections@ 
+
+
+h4. Also see 
+
+Use "update_counter_raw":#function_update_counter_raw if 
+  # you are updating @GAUGE@ or  @AVERAGE@ meter "data types":obj_globalt.html#constants_t.k.vartype
+  # you are updating more than 8 metrics for the same key 
+
+
+h3. Parameters
+
+| counter guid | @guid@ string |  the counter group you want to update |
+| key | string | the unique key within the counter group  |
+| meter | number | the metric id within the counter group |
+| value | number |  the metric value  |
+
+h3. Return value
+
+None
+
+
+h3. Usage 
+
+<pre>
+..
+
+-- update the Hosts counter group identified by the GUID {4CD..}
+--        the Host identified by 182.28.22.123
+--        the Meter 1 (received bytes)
+--           with the value 288278
+--
+engine:update_counter( "{4CD742B1-C1CA-4708-BE78-0FCA2EB01A87}", "182.28.22.123", 1, 288378)
+..
+</pre>
+
+--------------------------------------
+
+h2. Function @update_counter_bytes@
+
+<span class='label label-warning'>FRONTEND ONLY </span>
+
+Adds a single metric to the Trisul framework. Same as "update_counter":#function_update_counter but where the metric value is the packet wire length.
+
+h3. Purpose 
+
+When used with "simplecounter":simple_counter.html and other front end scripts - this method adds a metric with the wire length of the packet context in which it is called. 
+
+h3. Parameters
+
+| counter guid | @guid@ string |  the counter group you want to update |
+| key | string | the unique key within the counter group  |
+| meter | number | the metric id within the counter group |
+
+h3. Return value
+
+None
+
+h3. Usage 
+
+This method is only available on frontend scripts.
+
+
+-----------------------------------------------------------------------------
+
+
+h2. Function @update_counter_raw@
+
+A variation of "update_counter":#function_update_counter
+
+h3. Purpose 
+
+This does exactly the same thing as "update_counter":#function_update_counter  with the following difference.
+
+# this version has a slightly lower performance
+# use this method if you want to update a large number of keys for a single counter group . *More than 8 keys*
+# you are updating @GAUGE@ or  @AVERAGE@ meter "data types":obj_globalt.html#constants_t.k.vartype
+
+
+
+h3. Parameters
+
+| counter guid | @guid@ string |  the counter group you want to update |
+| key | string | the unique key within the counter group  |
+| meter | number | the metric id within the counter group |
+| value | number | the value of the meter  |
+
+
+h3. Return value
+
+None
+
+h3. Usage 
+
+<pre>
+
+--
+-- we are updating 6 keys for a single counter group
+-- for this kind of updating use the 'raw' version
+--
+engine:update_counter_raw("{D2AAD7C6-...}", "user_1",  1, 100)
+engine:update_counter_raw("{D2AAD7C6-...}", "user_11", 1, 10)
+engine:update_counter_raw("{D2AAD7C6-...}", "user_2",  1, 200)
+engine:update_counter_raw("{D2AAD7C6-...}", "user_33", 1, 3200)
+engine:update_counter_raw("{D2AAD7C6-...}", "user_34", 1, 300)
+engine:update_counter_raw("{D2AAD7C6-...}", "user_44", 1, 23200)
+</pre>
+
+--------------------------------------------------------
+
+
+
+h2. Function @update_key_info@
+
+Set a user friendly label for a key.
+
+h3. Purpose 
+
+Set a user friendly label or a description for a particular key. For example : to assign a hostname to an IP address
+
+h3. Parameters
+
+| counter group id | @guid@ string | the counter group id of the counter |
+| key  | string | the key  |
+| label  | string | the human friendly label attached to the key   |
+| description (optional) | string | more information  |
+
+h3. Return value
+
+None
+
+h3. Usage 
+
+<pre>
+
+..
+--
+-- to assign a label "Router1_10G_1" to the MAC address "0A:11:21.BA:00:02" 
+-- the GUID "{4B0.."  represents the MAC Counter Group
+-- 
+engine:update_key_info( "{4B09BD22-3B99-40FC-8215-94A430EA0A35}", "0A:11:21:BA:00:02", "Router1_10G_1")
+..
+
+</pre>
+
+--------------------------------------------------------
+
+
+h2. Function @add_alert@
+
+Add an alert to the Trisul framework.
+
+h3. Purpose 
+
+Lets you add a simple alert to the Trisul pipeline. This simple version only contains a priority, alert-type, and description. Also see "add_alert_full":#function_add_alert_full and "add_alert_tca":#function_add_alert_tca for more specific variants.
+
+h3. Parameters
+
+| alert guid | @guid@ string |  Identifies the type of alert. See "GUIDs":basics.html#on_guids  |
+| flowkey | string or nil | the "flowid string":obj_flowid.html of the flow which caused the alert. @nil@ if alert not related to a particular flow |
+| alertkey | string | the type of alert within the group. Think of this as a _Signature ID_  |
+| priority | number | the alert priority. typically 1 = high, 2 = medium, 3 = low. But you can use your priorities if you are using your own alert groups |
+| message | string | a dispatch message |
+
+h3. Return value
+
+None
+
+h3. Usage 
+
+The following example adds a Priority 1 alert to the general purpose "User Alerts":/docs/ref/guid.html#alert_groups group. 
+
+<pre>
+
+engine:add_alert("{B5F1DECB-51D5-4395-B71B-6FA730B772D9}", -- GUID for 'User Alerts' group
+                 resource:flow():id(),                     -- flow ID
+                 "RAMNIT-DETECTED",                        -- alert key , think of this as a SigID   
+                 1,                                        -- priority
+                 "A potential EK was detected message ="   -- free form text alert 
+                 )
+
+</pre>
+
+
+-----------------------------------------------------------------------------
+
+h2. Function @add_alert_full@
+
+Add an alert to the Trisul framework with all bells and whistles. 
+
+h3. Purpose 
+
+Same as @add_alert@ but with classification and priority fields. To make it compatible with alerts from IDS systems like Snort and Suricata
+
+
+h3. Parameters
+
+| alert guid | @guid@ string |  Identifies the type of alert. See "GUIDs":basics.html#on_guids  |
+| flowkey | string or nil | the "flowid string":obj_flowid.html of the flow which caused the alert. @nil@ if alert not related to a particular flow |
+| alertkey | string | the type of alert within the group. Think of this as a _Signature ID_  |
+| classification | string | Optional: a type of alert. This is for compatibility with popular IDS systems like Snort and Suricata|
+| priority | number | the alert priority. typically 1 = high, 2 = medium, 3 = low. But you can use your priorities if you are using your own |
+| message | string | a dispatch message |
+| status | string (optional) | a status or impact field. Example : CLEAR, ALARM, FIRE, BLOCK etc |
+
+
+h3. Return value
+
+None
+
+h3. Usage 
+
+-----------------------------------
+
+h2. Function @add_alert_tca@
+
+A special type of alert called Threshold Crossing Alert (TCA) based on metrics. 
+
+h3. Purpose 
+
+Same as @add_alert@ family but designed for metrics based alerting.
+
+h3. Parameters
+
+| alert guid | @guid@ string |  Identifies the type of alert. See "GUIDs":basics.html#on_guids  |
+| tca_id | number | a number that uniquely identifies a type of threshold you've defined elsewhere. Example : a TCA , Threshold Band, or Flow Tracker alert in Trisul. |
+| status | string | a string @FIRED@ crossed threshold event or @CLEAR@ when condition is clear and metric back in limits |
+| message | string | a dispatch message |
+
+h3. Return value
+
+None
+
+h3. Usage 
+
+--------------------------------------------------------
+
+h2. Function @add_resource@
+
+Add a new resource. 
+
+h3. Purpose 
+
+Resources are meta data which you can log and search on. You can create your own resource group or add to existing resource groups like "DNS Records", "HTTP URLs", etc.   Think of _resources_  as _logs_ and resource groups as _log types_ 
+
+h3. Parameters
+
+| resource_id | a GUID | Resource group ID. See "GUIDs":basics.html#on_guids  |
+| flowkey | a string in "FlowID":obj_flowid.html format |  The flow containing this resource. You can get the flow ID from a packet.  |
+| uri | a string |  The metadata that identifies the resource. This can be thought of a summary of the full log entry |
+| contents (optional) | a string |  The actual resource (less than 32K). This of this as the complete log line |
+
+h3. Return value
+
+None
+
+h3. Usage 
+
+<pre>
+
+-- add a custom SHA256 hash resource
+--
+engine:add_resource('{9781db2c-f78a-4f7f-a7e8-2b1a9a7be71a}',  -- represents FileHash resource in Trisul 
+                    flowkey:id(),                              -- flow ID
+                    "SHA256:"..hex_sha256,                     -- resource key (log summary)
+                    full_filename)                             -- full resource  (full log)
+
+
+
+</pre>
+
+--------------------------------------------------------
+
+h2. Function @timestamp@
+
+The latest timestamp in seconds since Epoch format (timeval.tv_sec) seen by the engine.
+
+h3. Purpose 
+
+If you want to find out the latest timestamps seen by the engine. Remember that you may not be able to simply use @os.date)@ because Trisul also works on PCAP files that may have other timestamps. 
+
+h3. Parameters
+
+None.
+
+h3. Return value
+
+|Number| Representing number of seconds since 1-1-1970, a unix timestamp value (tv_sec) |
+
+
+# For frontend scripts that work with packets, this represents the timestamp of the last packet seen. 
+# For backend scripts, this returns the last stream interval that was processed to completion. 
+
+h3. Usage 
+
+-----------------------------------
+
+h2. Function @add_flow_counter@
+
+<span class='label label-warning'>FRONTEND ONLY </span>
+
+Add an automatic flow based counter.
+
+h3. Purpose 
+
+A Flow Counter works in the following way :
+# you attach a counter to a flow
+# all packets in that flow from that point onwards automatically get that counter with the metric equal to the packet length
+
+
+h3. Parameters
+
+| flowkey  | string |  identifies the flow that you want to attach a counter to  |
+| counter group id | @guid@ string | the counter group id of the counter you want to attach to this flow |
+| key  | string | the key within the counter group  |
+| metric | number |the metric for the counter group  |
+| direction | number |the direction you want to count. <br/>0 = Both 1 = OUT (in Direction of SYN), 2 = IN |
+
+h3. Return value
+
+None
+
+h3. Usage 
+
+The method is only available for Frontend scripts. If you call this method from a backend script you will get an error.
+
+If you detect a particular flow to be carrying YouTube video you can attach a counter "you-tube-traffic" metric. From that point onwards each packet on that flow will automatically update the 'youtube-traffic' counter with the packet length. 
+
+h4. Note on the @Direction@ parameter
+
+Use Direction=0 to update a Total traffic counter and Directions 1,2 to update IN/OUT separately.  In the snippet below you've "created your own counter group":counter_group.html with GUID @{55F..}@  with three meters 0=Total,1=Xmit,2=Recv. You can see how to update the _Totals_ counter Direction=0 and In/Out counters
+
+
+<pre>
+
+-- Direction 0 : update both OUT and IN direction packets to the same counter
+
+-- to update a TOTAL BYTES counter 
+engine:add_flow_counter( flowkey:id(),
+                         "{55F98CC1-646E-4DE6-AD79-6B896211F177}",  -- a counter guid
+                         'my-video-traffic', 
+                         0,  -- Total bytes
+                         0)  -- Both directions update the Total bytes counter 
+
+
+-- for XMIT 
+engine:add_flow_counter( flowkey:id(),
+                         "{55F98CC1-646E-4DE6-AD79-6B896211F177}",  -- a counter guid
+                         external_host, 
+                         1,   -- Transmit meter
+                         1)   -- Only OUT direction update the Trasmit meter 
+-- for RECV
+engine:add_flow_counter( flowkey:id(),
+                         "{55F98CC1-646E-4DE6-AD79-6B896211F177}",  -- a counter guid
+                         external_host, 
+                         2,   -- Recv meter 
+                         2)   -- Only IN direction update the receive meter 
+
+
+</pre>
+
+
+
+
+--------------------------------------------------------
+
+h2. Function @reset_flow_counter@
+
+<span class='label label-warning'>FRONTEND ONLY </span>
+
+Removes a flow based counter.
+
+h3. Purpose 
+
+Remove a previous flow based counter added by  "add_flow_counter":#function_add_flow_counter 
+
+h3. Parameters
+
+| flowkey  | string |  identifies the flow that you want to attach a counter to  |
+| counter group id | @guid@ string | the counter group id of the counter you want to attach to this flow |
+
+
+h3. Return value
+
+None
+
+h3. Usage 
+
+The method is only available for Frontend scripts. If you call this method from a backend script you will get an error.
+
+
+--------------------------------------------------------
+
+h2. Function @tag_flow@
+
+Tag a flow with a string.
+
+h3. Purpose 
+
+Add a text label to a IP flow.  You can then search for flows using this string. 
+
+h3. Parameters
+
+| flowkey  | string |  identifies the flow that you want to attach a counter to. Usually you get this from "flow:id()":obj_flowid.html  |
+| tag  | string | a short text label that is attached to the flow. You can attach multiple tags to a flow but the total length of all tags must be less than 64 bytes. If you add tags >= 64 bytes the extra tags are discarded. |
+
+h3. Return value
+
+None
+
+h3. Usage 
+
+--------------------------------------------------------
+
+h2. Function @instanceid@
+
+A *string* representing the instance of the engine
+
+h3. Purpose 
+
+There may be multiple @engine@ contexts in Trisul. This string identifies each one. You can use this to construct unique filenames etc. 
+
+h3. Parameters
+
+None.
+
+h3. Return value
+
+|String| Representing the instance of the engine object you are working with. This string is random string like "77BAB82" for Frontend scripts. For backend scripts, this string is the instance number such as "0", "1", "2" etc. |
+
+h3. Usage 
+
+A common use of @instanceid@ is to construct filenames for log files.  Another use is when you have scheduled scripts and you only want to run them once. In that case, you only run your code when @engine:instanceid()=="0"@ See "engine_monitor":engine_monitor.html for more.
+
+
+
+--------------------------------------------------------
+
+h2. Function @probeid@
+
+The probe id. 
+
+h3. Purpose 
+
+Use this to retrieve the probeid - eg @probe0@ that the engine object belongs to. 
+
+h3. Parameters
+
+None.
+
+h3. Return value
+
+|String| The probe id such as @probe0@ that identifies the domain probe id of the engine |
+
+h3. Usage 
+
+--------------------------------------------------------
+
+h2. Function @update_flow@
+
+<span class='label label-warning'>FRONTEND ONLY </span>
+
+Add a flow metric.
+
+h3. Purpose 
+
+Update a flow based metric.  The key used in a SessKey format. 
+
+h3. Parameters
+
+| key | string |  a string representing a flow in SessKey format  |
+| meter | number | the metric id |
+| value | number | update with this value  |
+
+h3. Return value
+
+None
+
+h3. Usage 
+
+--------------------------------------------------------
+
+h2. Function @new_flow_record@
+
+Use this method only when you are writing an "Input Filter":inputfilter.html plugin importing feeds with "Netflow like" flow records. 
+
+
+h3. Purpose 
+
+Tell the Trisul framework we have new flow record with X bytes and Y packets. The reason you need to do this is because some plugins ; such as Badfellas work with flow records for efficiency reasons.   This method does not impact metrics in any way, but exists only to inform some plugins of a new flow. 
+
+
+h3. Parameters
+
+| key | string |  a string representing a flow in SessKey format  |
+| bytes_az | number | bytes in A > Z direction  |
+| bytes_za | number | bytes in Z > A direction  |
+| packets_az | number | packets in A > Z direction  |
+| packets_za | number | packets in Z > A direction  |
+
+h3. Return value
+
+None
+
+h3. Usage 
+
+
+--------------------------------------------------------
+
+h2. Function @set_flow_duration@
+
+<span class='label label-warning'>FRONTEND ONLY </span>
+
+Set length in seconds of a flow.
+
+h3. Purpose 
+
+Use this along with @update_flow@ to handle Netflow like input data.  This method sets the length of each flow. Use this if the duration of the flow is available in your input records. 
+
+
+h3. Parameters
+
+| key | string |  a string representing a flow in SessKey format  |
+| value | number | duration of the flow in seconds   |
+
+h3. Return value
+
+None
+
+h3. Usage 
+
+
+--------------------------------------------------------
+
+h2. Function @disable_reassembly@
+
+<span class='label label-warning'>FRONTEND ONLY </span>
+
+Stop reassembly and reconstruction of this flow.
+
+h3. Purpose 
+
+
+This method is useful in various contexts like "file extraction":fileextract.html  and "reassembly":reassembly.html 
+
+The main use of this method is when you need to see the beginning bytes of a TCP flow to determine whether you are interested in further reassembly.  Turning off reassembly of TCP streams you are not interested in can save significant CPU and memory.
+
+
+h3. Parameters
+
+| key | string |  a string representing a flow in SessKey format  |
+
+h3. Return value
+
+None
+
+h3. Usage 
+
+disable_reassembly is only available for frontend scripts that work with packets and flows. 
+
+
+--------------------------------------------------------
+
+h2. Function @post_message_frontend@
+
+Post a message to the frontend (packet) pipeline
+
+h3. Purpose 
+
+Use this method to communicate with other LUA plugins that are plugged into the packet pipeline stages.
+
+You can use @trisulctl_probe testbench guid@ to generate a msg id.
+
+
+h3. Parameters
+
+| message_id (optional) | a GUID |  a message ID - message sent only to those LUA plugins subscribed to this message id. |
+| message | a string |  a message. the targets would know how to handle|
+
+h3. Return value
+
+None
+
+h3. Usage 
+
+<pre>
+
+-- sent to all plugins which have an onmessage(..) handler 
+--
+engine:post_message_frontend("192.168.2.1 port 299 needs fileextraction")
+
+
+-- sent to only those plugins who have subscribed to 
+-- message if {F8D5570E-00A7-41FD-C30E-298C55D8EC4D}
+--
+engine:post_message_frontend("{F8D5570E-00A7-41FD-C30E-298C55D8EC4D}",
+                              "192.168.2.1 port 299 needs fileextraction")
+
+..
+
+
+</pre>
+
+--------------------------------------------------------
+
+h2. Function @post_message_backend@
+
+Post a message to the backend (streaming metrics) pipeline
+
+h3. Purpose 
+
+Use this method to communicate with other LUA plugins that are plugged into the backend pipeline 
+
+You can use @trisulctl_probe testbench guid@ to generate a msg id.
+
+
+h3. Parameters
+
+| message_id (optional) | a GUID |  a message ID - message sent only to those LUA plugins subscribed to this message id. |
+| message | a string |  a message. the targets would know how to handle|
+
+h3. Return value
+
+None
+
+h3. Usage 
+
+<pre>
+
+-- sent to all backend plugins which have an onmessage(..) handler 
+--
+engine:post_message_backend("192.168.2.1 port 299 label all flows as suspicious")
+
+
+-- sent to only those plugins who have subscribed to 
+-- message id {F8D5570E-00A7-41FD-C30E-298C55D8EC4D}
+--
+engine:post_message_backend("{F8D5570E-00A7-41FD-C30E-298C55D8EC4D}",
+                              "192.168.2.1 port 299 label all flows as suspicious")
+
+..
+
+
+</pre>
+
+
+--------------------------------------------------------
+
+h2. Function @add_edge@
+
+Add a new uni-directional edge to the _edge stream_. This is part of the new Trisul Streaming Graph Analytics feature set.
+
+h3. Purpose 
+
+In Graph Analytics lingo, an _edge_ is two vertices joined with a connection. The @add_edge@ method allows to you push a simple Edge to the Trisul streaming pipeline. 
+
+
+<div class='panel panel-info'>
+
+!images/lua-edge1.png!
+</div>
+
+
+The above picture explains the following terms 
+
+- Subject Vertex Type := The type or color of Vertex-A.  This is a GUID , typically a counter group or alert type.
+- Subject Vertex Key := A key identifying the vertex within the group. Example an _IP Address_ within _Hosts_
+- Target Vertex Type := The type or color of Vertex-B.
+- Target Vertex Key := A key identifying the target vertex
+
+
+
+h3. Parameters
+
+| subject_guid | a GUID | type of Vertex-A |
+| subject_key | string | key of Vertex-A |
+| target_guid | a GUID | type of Vertex-B |
+| target_key | string | key of Vertex-B |
+
+
+h4. Note on edge direction.
+
+Trisul edges are directional, so if you want to add a bi-directional edge. Call @add_edge@ twice with A and B reversed the second time.  See _Usage_ section.
+
+
+h3. Return value
+
+None
+
+h3. Usage 
+
+
+Here is how you add a bi-directional edge. Say between a PING-ALERT and an Internal IP address
+
+<pre>
+
+--
+engine:add_edge("{F8D5570E-00A7-41FD-C30E-298C55D8EC4D}", "ICMP-PING-ALERT"
+                "{98348488-45A7-45FD-450E-45838053800D}", "10.2.28.18" );
+
+-- the other direction
+engine:add_edge("{98348488-45A7-45FD-450E-45838053800D}", "10.2.28.18",
+                "{F8D5570E-00A7-41FD-C30E-298C55D8EC4D}", "ICMP-PING-ALERT");
+
+                              
+
+..
+
+
+</pre>
+
+--------------------------------------------------------
+
+h2. Function @add_flow_edges@
+
+Add edges from a given vertex to all vertices of a flow. 
+
+h3. Purpose 
+
+This function adds the following uni-directional edges from a given _vertex_ 
+* Vertex -> Source IP
+* Source IP -> Vertex
+* Vertex -> Dest IP
+* Dest IP -> Vertex
+* Port -> Vertex
+* Vertex -> Port
+* Protocol -> Vertex
+* Vertex -> Protocol 
+
+h3. Parameters
+
+| flow_key | a string | A string representing a flow. This is in "FlowID format":obj_flowid.html You typically get this string as inputs to your lua function |
+| target_guid | a GUID | type of Vertex-B. This can be a counter group id, alert group id, or any other group id |
+| target_key | string | key of Vertex-B |
+
+
+h3. Return value
+
+None
+
+h3. Usage 
+
+Add an ALERT vertex to all the endpoints of the flow that generated it. 
+
+<pre>
+
+--
+-- adds edges from the new ICMP-PING-ALERT vertex
+--
+engine:add_flow_edges("06A:C0.A8.01.02:p-0B94_D1.D8.F9.3A:p-0016", 
+                      "{F8D5570E-00A7-41FD-C30E-298C55D8EC4D}", "ICMP-PING-ALERT");
+
+..
+
+</pre>
+
+--------------------------------------------------------
+
+h2. Function @set_key_attribute@
+
+Add an arbitrary attribute-name, attribute-value pair to any key.
+If the key already has an attribute with the _attribute-name_ then overwrite the old value with the new _attribute_value_
+
+h3. Purpose 
+
+Allows you to attach a name,value to any key. For example
+
+# A common use is to assign an Interface Speed (ifSpeed) to a netflow interface.
+# other uses can be thought of such as "operating-system" to a Host IP, etc
+
+
+h3. Parameters
+
+| counter guid | @guid@ string |  the counter group  |
+| key | string | the unique key within the counter group  |
+| attribute_name | a string | A name for the attribute  |
+| attribute_value | a string | a value|
+
+h3. Return value
+
+None
+
+h3. Usage 
+
+
+<pre>
+
+--
+-- to assign a value of 100000 to interface_speed for interface 1ge/0/0
+--
+
+set_key_attribute(  "{7CA09636-02D4-45e7-AA00-BE0D49B94E26}", -- netflow interfaces group
+                    "1ge/0/0",             -- interface key 
+                    "interface_speed",     -- attr_name
+                    "1000000" )            -- value
+
+</pre>
+
+--------------------------------------------------------
+
+h2. Function @add_flow_attribute@
+
+Adds an attribute-name=attribute-value to a flow. 
+
+
+h3. Purpose 
+
+Flow attributes can be attached to any flow. You can then write other scripts that can listen to these attributes using "reassembly/onattribute":reassembly.html#function_onattribute and work on them.  
+
+
+
+h3. Parameters
+
+| flow_key |  string | A string representing a "FlowID":obj_flowid.html |
+| attribute_name|  string | type of attribute. Example HTTP-User-Agent |
+| attribute_value | string | attribute value, Example "Mozilla ..."  |
+
+
+h3. Return value
+
+None
+
+h3. Usage 
+

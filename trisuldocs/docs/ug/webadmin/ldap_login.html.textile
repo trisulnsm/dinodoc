@@ -1,0 +1,113 @@
+h1. LDAP Login
+
+The LDAP (Lightweight Directory Access Protocol) is a login option that authenticates users against an LDAP server. 
+
+There are two steps to setting up a user to login via LDAP
+# configure LDAP domain
+# create a user and specify he/she be authenticated against an LDAP domain 
+
+After you have created a LDAP Domain , a checkbox called "LDAP Authentication" appears at the login screen as shown below.
+
+!images/ldaplogin.png! 
+_If you configure an LDAP domain, a checkbox will be shown on the login page_
+
+h2. View LDAP domains
+
+This page shows a list of LDAP domains configured in Trisul. 
+
+p(autohint hand-o-right info). 
+Login as admin and select _Web Admin > Manage > LDAP Domain_
+
+A list of configured domains is shown with the following details
+ 
+# Domain name : the default domain which cannot be deleted is called _Local authentication_  this is for normal users who will be able to login without LDAP
+# Server / Port 
+# User name: : this is used to bind to the LDAP server
+# Base DN : under which users are queried 
+# Filter : the username is taken from this attribute, usually the @mail@
+
+h3. LDAP Domain options
+
+For each LDAP domain shown, the following options are shown at the right side of each row.
+
+|Edit| Modify this LDAP domain entry|
+|Delete| Delete the LDAP domain without deleting the users|
+|Check authentication |Check if Trisul is able to successfully bind with the LDAP server|
+|Sync users| *Synchronize Users* - contact the LDAP domain server and query for users with the _Sync Users Filter_ parameter then add all the users to Trisul with the username taken from the _Search Filter_.  At the end of the synchronize operation you should be able to see all the users added under _Manage > Users_ |
+|Delete synced users|Only delete the users automatically added by an earlier "Sync Users" operation.  You can then go back and synchronize or manually add LDAP users|
+
+h3. Synchronize users from LDAP
+
+This feature allows Trisul to automatically query a LDAP directory using a particular attribute value then create users in Trisul based on its results. You do not have to manually create users and associate them to a LDAP domain. 
+
+# Login and bind to the LDAP server using the connection details
+# Using the _Sync Users Filter_ string a LDAP search filter is constructed 
+# An LDAP search is performed
+# In the returned user matches the user name is extracted from the _Search Filter_ field. This is usually like mail or uid
+# Trisul users are then created using this information. 
+
+
+
+h2. Configure LDAP Domain
+
+The first step is to configure the LDAP domain against which the authentication will be done.
+
+p(autohint hand-o-right info). 
+Login as admin and select _Web Admin > Manage > LDAP Domain and Click the Configure button_
+
+Fill in the details as shown below.
+
+|_.Field|_.Description|
+|Domain Name| A descriptive name given to this LDAP domain|
+|Domain Server| DNS name or IP address of the LDAP Domain Server|
+|Port| LDAP port number, usually 389. If using secure LDAP , LDAPS use 636|
+|Use SSL| Check if box is using LDAPS. LDAP over SSL/LDAP. If this option is checked, ensure the _Port_ is set correctly|
+|Disable SSL Cert verification| When using LDAPS (LDAP over SSL/TLS) if the server is not using a certificate issued by a valid root certificate authority the SSL connection can fail. Check this box to disable SSL certificate verification.|
+|Connection Login Name|User name of the account used to connect to the LDAP server. All query operations will use this name.|
+|Connection Password|Password for the connection login name|
+|Base DN|Base DN or Search DN refers to the structure of the LDAP server against which searches will be performed.|
+|Search Filter|The actual attribute name that is used to match the user. Examples : @email@ or @uid@ @dn@ @cn@. If you specify @email@ then the username would have to be the email ID eg _email=tim@company.com_ |
+|Sync Users Filter|When LDAP is used to automatically synchronize use from the LDAP server, query users with this filter and automatically add them to Trisul (only used if you want to automatically synchronize users from LDAP directory, if you want to add users manually leave this blank) <ul><li>If a comma separated list is supplied,  it is converted to a LDAP filter Eg @category=user,group=network@  will be internally combined by & (AND) </li>
+<li>If a string in LDAP syntax is supplied,  it is directly used  Eg @(&(ObjectCategory=user)(memberOf=CN=XYZ,OU=OperatorGroups))@ If the string is supplied in paranthesis with an & or OR operator it is directly used</li></ul>|
+|Login with bind only|If checked, the LDAP login process only uses the user name to bind rather than the default way of using the connection user name and password first and then bind the user|
+|Append to username| The string specified in this field will automatically appended to the user name. A features to help the user avoid typing the full login names. For example : if you set this to _@unitedfederalbankname.com_ then the user who had to type  _mike@unitedfederalbankname.com_ only has to type _mike_ at the login screen|
+
+
+
+
+h2. Create a LDAP enabled user
+
+Next you need to create a new LDAP  user.
+
+p(autohint hand-o-right info). 
+Login as admin and select _Web Admin > Manage > Users > New User_
+
+p(autohint lightbulb-o success). 
+You can also use the Synchronize Users to automatically search and add users from LDAP. See _Synchronize users from LDAP_ 
+
+
+Here there are two options
+
+| LDAP Only login | The user can only login via LDAP auth and not have a local password |
+| LDAP + Local auth | The user can choose to login locally or via LDAP auth|
+
+As per your company policy you can choose to create any one of the two types of users.
+
+h2. Admin user is always local
+
+The super admin user with login name = _admin_ always uses a local login. 
+
+h2. Login mode
+
+After you create a LDAP Domain, the login screen will show a checkbox called "LDAP authentication". 
+
+# *for users with LDAP Only auth* -- they have no choice but to enter their LDAP password
+# *for users with LDAP or Local auth* -- if they do not check the "LDAP authentication" checkbox they will use the local login/password.
+
+h2. Troubleshooting
+
+If you experience errors you can try the following.
+
+# Test the LDAP domain by clicking the _Check Authentication_ like on the _Options_ link
+# Login using a LDAP enabled user and check the "LDAP Authentication" check box
+# Then check the Webtrisul log file for errors using _Manage > Web Server Logs > Web server logs_ 

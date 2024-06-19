@@ -1,0 +1,62 @@
+h1.  Payload Search 
+
+If you have full packet capture enabled, you can search your network traffic for patterns. Trisul gives you a point and click interface that makes it dead simple and intuitive.
+
+You can search for 
+# Text patterns %(label)New% UTF-8 and Unicode also supported
+# Binary 
+# MD5s
+# Select a file
+
+
+p(image-with-caption). 
+!images/paysrch1.png!
+Figure. Search for text, binary, or files within HTTP traffic. 
+
+
+h3. How this works
+
+p(autohint lightbulb-o success). 
+Make sure you have full packet capture and flow tracking enabled in the "trisulConfig.xml":/docs/ref/trisulconfig.html file
+
+
+Trisul will reassemble and check all TCP streams in both directions for a match. If HTTP compression and chunked encoding are used, they are also factored in. Finally Trisul will show you a list of  flows that match along with a highlighted context  – you can then pull the packets as a PCAP file into "Unsniff Network Analyzer":http://www.google.com/search?q=unsniff for further analysis.
+
+
+div(info). 
+%(label label-default)Note%  For maximum benefit, you need to use _Payload Search_ in conjunction with a network forensic reconstruction tool like Unsniff Network Analyzer. Wireshark can also help in a limited way here.
+
+h2. How to use
+
+p(autohint hand-o-right info). 
+To access select Tools -> Payload Search
+
+First select a time frame from the top panel.  Then enter the search criteria
+
+h4. Search Criteria
+
+You can enter text, binary, or select a file from your local drive.
+
+
+table(table table-condensed).
+|_.Field|_. Description|
+|Search Text| Enter a text string. Can be ASCII, Unicode, UTF-8. |
+|Search Binary |Enter hex. White space and newlines are ignored.|
+|Search MD5s|Enter a list of content MD5 hashes. One MD5 per line, (whitespaces are ignored)|
+|Select File|Upload a file and search for matches|
+
+Press  *Find*, you will be shown a list of flows that match.
+
+h4. Flow list
+
+You are shown a list of matching flows along with the pattern highlighted. This gives you some context about the pattern, so you can decide if that particular match if worth investigating further.
+
+* You can then click on the "Get packets in PCAP format".
+
+You can then open the PCAP file in a deep forensics tool like Unsniff for further analysis.
+
+
+h3. API Access
+
+Using the "Trisul Remote Protocol":/docs/trp/index.html you can even automate the whole process.
+

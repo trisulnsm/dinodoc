@@ -1,0 +1,320 @@
+h1. Counter Group Monitor
+
+<span class="label label-info">BACKEND SCRIPT</span>
+
+Monitor counter group activity.
+
+Get called when metrics related to a counter group are computed and stored. 
+
+h2. Structure 
+
+
+<div class='lua_skeletons' data-file='cg_monitor' data-name='Counter Group Monitor'></div>
+
+
+
+
+h2. Table @cg_monitor@
+
+The table consists the following 
+
+| counter_guid | String or function returning string | Counter Group to attach to for monitoring |
+| "onbeginflush":#function_onbeginflush | "engine":obj_engine.html, timestamp  | Before starting to flush all metrics to db|
+| "onflush":#function_onflush | "engine":obj_engine.html, timestamp, key, arrayofmetrics | Called for each key as they are being flushed |
+| "onendflush":#function_onendflush | "engine":obj_engine.html | After all keys have been flushed for this interval  |
+| "onbegintopperflush":#function_onbegintopperflush |  "engine":obj_engine.html, timestamp, meter  | Before flushing toppers for this meter |
+| "ontopperflush":#function_ontopperflush | "engine":obj_engine.html, key, metric | Called for each topper item  |
+| "onendtopperflush":#function_onendtopperflush |  "engine":obj_engine.html, meter | After topper flush  |
+| "onupdate":#function_onupdate | "engine":obj_engine.html, timestamp, key, arrayofmetrics | As each update happens (1sec resolution) |
+| "onnewkey":#function_onnewkey | "engine":obj_engine.html, timestamp, key  | A new key was discovered within the stream window. |
+| "onmetronome":#function_onmetronome | "engine":obj_engine.html, timestamp, tick_count, tick_interval| called every second ( Tick Interval)  |
+
+
+h2. Functions Reference
+
+
+
+h2. Function @onbeginflush@
+
+
+h3. Purpose   
+
+Before a counter group is flushed to the Trisul database on the Hub node. Trisul is a streaming analytics system. By default every 60 seconds the analytics are snapshotted and sent to the database node (hub). The _onbeginflush_  function is therefore called every 60 seconds. 
+
+h3. When called
+
+When an flush operation is about to start. The sequence goes
+
+<pre>
+
+-- operation is invoked every 60 seconds by default 
+--
+onbeginflush(..) 
+onflush(..)
+onflush(..)
+onflush(..)
+..
+..
+onendflush(..)
+
+</pre>
+
+h3. Parameters
+
+| engine | An "engine":obj_engine.html object |  use this object to add metrics, counter items, or counter items into the Trisul framework |
+| timestamp | Timestamp | Timestamps seconds @tv_sec@ |
+
+
+h3. Return value
+
+Ignored
+
+h3. Example
+
+
+h2. Function @onflush@
+
+
+h3. Purpose   
+
+Custom processing before each counter item is flushed. Perhaps write to your own tools or logfiles.
+
+h3. When called
+
+Just before each counter item is flushed to the database. The maximum delay between getting a @onnewcounter item@ and a corresponding @onflush(..)@ for that counter item is 60 seconds. 
+
+h3. Parameters
+
+| engine | An "engine":obj_engine.html object |  use this object to add metrics, counter items, or counter items into the Trisul framework |
+| timestamp | Timestamp | Timestamps seconds @tv_sec@ |
+| key | string  | the key identifying the counter item |
+| arrayofmetrics | array of numbers  | array of metrics.  array item 0 refers to meter 0 and so forth  |
+
+
+h3. Return value
+
+Ignored
+
+h3. Example
+
+-------------------
+
+
+h2. Function @onendflush@
+
+
+h3. Purpose   
+
+The flush operation has ended.  You can do some cleanup operations here.
+
+
+h3. When called
+
+When all the counter items in this timeslice have been flushed to the database.
+
+
+h3. Parameters
+
+| engine | An "engine":obj_engine.html object |  use this object to add metrics, counter items, or counter items into the Trisul framework |
+| timestamp | Timestamp | Timestamps seconds @tv_sec@ |
+
+
+h3. Return value
+
+Ignored
+
+h3. Example
+
+
+------------
+
+
+
+h2. Function @onbegintopperflush@
+
+
+h3. Purpose   
+
+Topper snapshotting is a key streaming analytics step in Trisul. Just as raw metrics are tracked using the _onbeginflush_, _onflush_, and _onendflush_  functions documented above, topper snapshot flushes can be handled by you using the _onbegintopperflush_, _ontopperflush_, _onendtopperflush_ functions. 
+
+
+h3. When called
+
+By default every 60 seconds. The call flow goes
+
+<pre>
+
+-- flushing Topper for metric 0 
+onbegintopperflush(engine,148858585,0) -- flushing topper meter 0 
+ontopperflush(..)
+ontopperflush(..)
+ontopperflush(..)
+..
+onendtopperflush(,0)
+
+-- flushing Topper for metric 1 
+onbegintopperflush(engine,148858585,1) -- flushing topper meter 1
+ontopperflush(..)
+ontopperflush(..)
+ontopperflush(..)
+..
+onendtopperflush(..)
+
+
+</pre>
+
+
+h3. Parameters
+
+| engine | An "engine":obj_engine.html object |  use this object to add metrics, counter items, or counter items into the Trisul framework |
+| timestamp | Timestamp | Timestamps seconds @tv_sec@ |
+| meter | number | The meter number representing the topper tracker set. For example : when "Top Hosts By Connections" are flushed - the meter will be 6 where 6 represents the metric "Connections" |
+
+
+
+h3. Return value
+
+Ignored
+
+h3. Example
+
+
+-------------------
+
+h2. Function @ontopperflush@
+
+
+h3. Purpose   
+
+Each topper item as it is flushed.  You can leverage Trisul's highly tuned streaming computation of toppers. 
+
+h3. When called
+
+When each topper item is flushed. 
+
+h3. Parameters
+
+| engine | An "engine":obj_engine.html object |  use this object to add metrics, counter items, or counter items into the Trisul framework |
+| key | string | The topper item |
+| metric | number  | The metric for the key and the meter. Remember the meter is sent in onbegintopperflush  |
+
+
+h3. Return value
+
+Ignored
+
+h3. Example
+
+-------------------
+
+
+h2. Function @onendtopperflush@
+
+
+h3. Purpose   
+
+The flush operation has ended.  You can do some cleanup operations here.
+
+
+h3. When called
+
+When all the topper items for a particular metric have been flushed
+
+
+h3. Parameters
+
+| engine | An "engine":obj_engine.html object |  use this object to add metrics, counter items, or counter items into the Trisul framework |
+| meter | number | The meter number  |
+
+
+h3. Return value
+
+Ignored
+
+h3. Example
+
+
+
+------------
+
+h2. Function @onupdate@
+
+
+p(autohint info-circle danger).  
+*High frequency function*
+For busy networks this can result in thousands of updates every second. Keep your LUA function @onupdate(..)@  efficient and avoid I/O or blocking.
+
+h3. Purpose   
+
+A real time update to a metric item.
+
+h3. When called
+
+A streaming update to a counter item. This will update a metric value in real time in 1 second resolution. Therefore for busy networks you can expect many keys to be updated every second in the common case. 
+
+
+h3. Parameters
+
+| engine | An "engine":obj_engine.html object |  engine use ths to add your results back into the Trisul framework |
+| timestamp | Timestamp | Timestamps seconds @tv_sec@ |
+| key | string  | the key identifying the counter item |
+| arrayofmetrics | array of numbers  | array of metrics.  array item 0 refers to meter 0 and so forth  |
+
+h3. Return value
+
+Ignored
+
+h3. Example
+
+------------
+
+h2. Function @onnewkey@
+
+h3. Purpose   
+
+A new key was discovered. Handle when you see keys you havent seen before (in the recent past)
+
+h3. When called
+
+When "new" keys are seen by Trisul in this counter group.  Trisul uses a Bloom Filter per counter group to track newly seen keys, the filter itself is reset when it becomes saturated. Use this method to track newly seen keys, but keep in mind they are not "absolutely" new as seen by Trisul since it first started. 
+
+h3. Parameters
+
+| engine | An "engine":obj_engine.html object |  engine use ths to add your results back into the Trisul framework |
+| timestamp | Timestamp | Timestamps seconds @tv_sec@ |
+| key | string  | the key identifying the counter item |
+
+h3. Return value
+
+Ignored
+
+h3. Example
+
+
+
+----------
+
+h2. Function @onmetronome@
+
+
+h3. Purpose   
+
+Plug into a metronome.
+
+h3. When called
+
+If you define a onmetronome(..) function you will be plugged into the Trisul metronome heartbeat mechanism. This method will be called every metronome tick(roughly every second).  The context in which this method is called is threadsafe and you can add metrics to the Engine from here. 
+
+
+h3. Parameters
+
+| engine | An "Engine":obj_engine.html object |  use this object to add metrics, resources, or alerts into the Trisul framework |
+| timestamp | Number | Current timestamp (tv_sec epoch seconds) |
+| tick_count | Number | An incremeting tick counter |
+| tick_interval | Number | The tick interval, in seconds. |
+
+h3. Return value
+
+Ignored
+
+h3. Example

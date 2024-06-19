@@ -1,0 +1,92 @@
+h1. Email alert delivery 
+
+This page describes how you can configure Trisul to send you an email when any alert fires. 
+
+The way the alerting pipeline works is the following.
+* Alerts are first sent to syslog 
+* The email alert service watches syslog for alerts and dispatches them 
+
+
+h2. Using the Email Alerts Wizard 
+
+Trisul has a new Email Alert Wizard that lets you configure everything from one place.
+
+To access that
+
+p(autohint hand-o-right info). 
+Login as Admin -> Select Context and profile -> Under Alerts -> Email Alerts Wizard
+
+You can just follow the steps in the wizard.
+
+
+h2. Basic steps to enable email alerts 
+
+The following steps are needed to forward email alerts.
+
+<ul class="step-text">
+  <li>
+    <h5> Setup SMTP Server to send emails </h5>
+
+p(autohint hand-o-right info). 
+Login as Admin -> Manage ->  "Email Settings":/docs/ug/reports/emailsettings.html 
+</li>
+
+<li>
+
+h5. Ensure who receives the Alert Emails 
+
+p(autohint hand-o-right info). 
+Login as Admin -> Manage ->  "Email Settings":/docs/ug/reports/emailsettings.html -> Select "Configure Email Alerts"
+
+</li>
+
+<li>
+
+h5. Ensure alerts are forwarded to syslog
+
+p(autohint hand-o-right info). 
+Login as Admin -> Select Context > profile ->  "View Alert Groups" > Check if your alert is forwarded to syslog/email. Use "Edit" to enable
+
+</li>
+
+<li>
+
+h5. Start the email Notification service
+
+The email notification service logtails the syslog and dispatches alerts. The service is careful not to flood < 5 minutes and can automatically create digests if alert volume are too high.
+
+p(autohint hand-o-right info). 
+Login as Admin ->  Manage  > Start/Stop Tasks ->  "Start Email Notification Service
+
+</li>
+</ul>
+
+h2. Advanced customization of email subjects and bodies
+
+
+Trisul uses ERB Templates to configure email subjects and bodies.  
+
+The config file is located in 
+@/usr/local/share/webtrisul/config/initializers/emailalert_settings.rb@
+
+The config file is well documented and should be self describing.
+
+
+The file contains 5 sections. Each controlling a particular type of alert
+
+# TCA = Threshold Crossing Alerts
+# FT = Flow Tracker Alerts
+# BADFELLAS = Blacklist based Alerts
+# IDS = Snort/Suricata alerts
+# TBA = Threshold Band  Alerts
+
+h3. IDS Alerts 
+
+IDS alerts from Snort/Suricata processed via Trisul.
+
+|EMAIL_BLOCK_PRIORITIES|[]|Block these priorities. Set this to @[3]@ to block emails for low priority alerts |
+|EMAIL_BLOCK_SIGS|[]|Block these signatures for email alerts |
+
+
+
+

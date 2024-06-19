@@ -1,0 +1,149 @@
+h1.  Packet capture settings 
+
+A single instance of Trisul can listen on one or more network interfaces. This page describes how you can add or edit packet capture parameters for any profile.  
+
+h2. View list of capture profiles
+
+p(autohint hand-o-right info). 
+Login as admin and Select _Context : default > profile0 -> Capture Adapters_
+ 
+By default, only *eth0* is enabled.  There are some other disabled entries for debugging purposes. If you want to listen on, say eth1 you can create a new profile and enable that one. 
+
+h2. Create a new capture profile
+
+Say you want to create a new network adapter for profile0 in context0. 
+
+p(autohint hand-o-right info). 
+Select _Context : default > profile0 -> Capture Adapters_
+Click **Create New Profile**  
+
+A form with the following fields are displayed 
+
+|_.Field|_.Description|
+|Name |A unique name for this profile|
+|Description|A short description of the profile|
+|Interface| The linux network interface name - such as _eth0_, _eth1_, _wlan0_ |
+|BPF Filter|A BPF (libpcap/tcpdump) filter expression (see "notes below":#specifying_a_bpf_filter_for_afpacket_and_rxring on how to generate this for rxring mode - the default) |
+|Add Ethernet FCS|Add 4 byte FCS to packet length. Use to option to reconcile with SNMP based counters.|
+|Force Netflow Mode|Force this adapter into Netflow Mode - use this option if you want to use a mix of Netflow and Packet capture on a per-adapter basis. |
+|Enable ERSPAN|Decapsulate all ERSPAN packets on this interface. If this option is disabled, ERSPAN is counted as a single IP+GRE tunnel.|
+
+
+h3. Provider specific options
+
+Trisul can capture packets in two "four modes", _Linux RX Ring_ , _Libpcap_ , _PF Ring_ ,_AF Packet_,_Napatech_ . You dont control the run mode here, but at the command line or by changing the application settings. The capture profiles work for all run modes, with one exception. 
+
+h4. RX Ring
+
+!images/rx_ring.png!
+
+- Number of blocks (2^N) := Number of slots in the ring. Increase only if you need to
+  
+h4. Libpcap
+
+!images/libpcap.png!
+
+- Promiscuous Mode := Usually set to true
+- Snap length := How many bytes of each packet to capture
+
+
+h4. PF Ring
+
+!images/pf_ring.png!
+
+- PF Ring Cluster ID := Cluster ID to which this PF_RING socket is attached. (Numeric)
+
+h4. AF Packet
+
+!images/af_packet.png!
+
+- AF Packet FANOUT Group ID := AF Packet Fanout Group ID for flow based load balancing (Numeric < 1000)
+
+h4. Napatech
+
+!images/napatech.png!
+
+- Stream ID := Numeric number
+- Hashing mode := how packets are distributed across streams
+- Stream config := Full NTPL command.
+
+
+
+
+h2. Specifying a BPF Filter for AFPACKET and RXRING 
+
+You need to enter BPF filter slightly differently for RX_RING adapters.
+
+h4. Filter for Libpcap
+
+Just directly enter a *tcpdump* compatible expression, such as @not host 192.168.1.22@
+
+h4. Filter for RX Ring
+
+You need to enter the *tcpdump bytecode* instead of just the expression. To do so, open a linux command line, then use @tcpdump -ddd <expression>@ and paste the output into the BPF Filter box.  Here is an example.
+
+<pre class="language-bash">
+
+[root@localhost trunk]$ sudo tcpdump -i eth0 -ddd not host 192.168.1.22
+14
+40 0 0 12
+21 0 4 2048
+32 0 0 26
+21 8 0 3232235798
+32 0 0 30
+21 6 7 3232235798
+21 1 0 2054
+21 0 5 32821
+32 0 0 28
+21 2 0 3232235798
+32 0 0 38
+21 0 1 3232235798
+6 0 0 0
+6 0 0 65535
+
+</pre>
+
+
+h2. Express adapter creation wizard
+
+Click on "Create Adapter" on the top right to quickly create capture profiles for flow based load balancing.
+
+
+!images/quick_options.png!
+
+h3. Quick create Single Adapter
+
+Select _Quick create single Adapter_  to create a single adapter using an interface name
+
+|Adapter name|Enter the network adapter name (eg eth0)|
+
+h3. Quick create PF Ring 
+
+Select _Quick create RF Ring_ to create a PF Ring capture profile with multiple streams for flow based load balancing 
+
+|Adapter name|Enter the network adapter name (eg eth0)|
+|Number of streams|Number of flow balanced streams (eg 2, 4, etc|
+|Cluster ID|PF Ring Cluster ID you wish to assign to the streams (eg 999) | 
+
+h3. Quick create AF Packet 
+
+Select _Quick create AF Packet_ to create AF Packet FANOUT based streams for flow based load balancing.
+
+|Adapter name|Enter the network adapter name (eg eth0)|
+|Number of streams|Number of AF FANOUT streams for flow based load balancing (eg, 2,4,etc)|
+|Fanout Group ID|AF Packet Fanout Group ID for flow based load balancing (Example 999) | 
+
+h2. Enable or Disable the profile
+
+  # Click *Enable* or *Disable* in the Profile list 
+
+  To disable all adapters, click on the "Disable All" button 
+
+h2. Edit the profile 
+
+  # Click *Edit* in the Profile list 
+  # Edit the fields as shown in "Add.."
+
+h2. Delete the profile
+
+  # Click *Delete* in the profile list.

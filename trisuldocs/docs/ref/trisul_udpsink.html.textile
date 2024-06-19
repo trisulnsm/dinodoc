@@ -1,0 +1,46 @@
+h1. trisul_udpsink : A UDP sink to prevent ICMP unreachable
+
+Trisul uses high speed packet filter mechainsms in Netflow mode as well. This means that Trisul does not actually open a UDP port 2055 (netflow) to process netflow but directly taps into the packet filter mechanisms. 
+
+The downside of this is since there is no port open but the packets are directed at those ports, you may see @ICMP Dest Unreachable@ messages.
+
+The _trisul_udpsink_ program simply opens these ports and reads the messages into a sink. This stops the ICMP messages.
+
+
+p(autohint lightbulb-o). 
+Type @man trisul_udpsink@
+
+h2. Running the service
+
+The preferred method is to edit the trisul-udpsink systemd service.
+
+If you are using the default NETFLOW port 2055
+
+<pre>
+	systemctl start trisul-udpsink
+</pre>
+
+If you want to change the port number from 2055 to your custom port.  Type.
+
+<pre>
+systemctl edit trisul-udpsink --full
+</pre>
+ 
+Change the port number from 2055 to your preferred. 
+
+
+If you need more than one port number , just clone the systemd file to create new services with different port numbers.
+
+
+h2. Running the program directly
+
+You can run the program manually like so 
+
+<pre>
+
+trisul_udpsink 2055 
+
+</pre>
+
+There are other options for sending it into the background as a daemon. Type @man..@
+ 

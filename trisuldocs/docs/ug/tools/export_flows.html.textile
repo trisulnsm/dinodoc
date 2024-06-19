@@ -1,0 +1,28 @@
+h1. Export flows 
+
+Export raw flows for an IP to a CSV File that can be imported into Excel. 
+
+p(image-with-caption). 
+!images/Export_IP.png!
+Export IP Flows-Search Form
+
+h4. Use cases
+
+# Compliance -quering by subscriber IP
+# Large scale workload - this tool creates the CSV file on the server , then downloads the file to the client. 
+
+
+h2. How to export flows by IP 
+
+p(autohint hand-o-right info). 
+Select Tools ->Export Flows
+
+h3. Search Criteria
+
+# *IP* this tool only allows exporting flows by IP as a special optimization 
+# *Flow Tags* this option enables tagging internal and external ip and for nat ip.
+
+
+h2. Using 
+
+Enter an IP address or hostname , select a time frame, and then press the "Export to CSV" button

@@ -1,0 +1,28 @@
+.container
+  .row
+    .col-md-6.col-md-offset-3
+      %h1.text-center 
+        %i.fa.fa-search
+        Search Trisul Documentation 
+      %div#cse_box
+      loading search widget. wait..
+      :plain
+        <script>
+          (function() {
+            var cx = '004006686983193745234:c9rg8ybjslw';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+          })();
+        </script>
+        <gcse:searchbox></gcse:searchbox>
+  .row
+    .col-md-10.col-md-offset-1
+      %div#cse_results
+      :plain
+        <gcse:searchresults></gcse:searchresults>
+
+

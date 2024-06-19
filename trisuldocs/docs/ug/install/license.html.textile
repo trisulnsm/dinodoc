@@ -1,0 +1,133 @@
+h1.  Installing a new License  
+
+This section describes how you can install a new License File to replace the default "Free 3-day":/free rolling window license. 
+
+h2.  Introduction to Trisul Licensing
+
+Trisul Network Analytics licenses are :
+# Perpetual
+# Need one license per physical node
+# Tied to a machine ID 
+
+License types are :
+
+# Free 3-Day License : The free license gives you tremendous value as it gets you all of the real time analytics and the most recent 3 days for historical analysis
+# Production License : depends on the number of active internal endpoints in your Home Network space
+## Small Business : 500 simultaneously active Internal IPs
+## Medium : 2000 simultaneously active Internal IPs
+## Unlimited : As many as your hardware can support 
+
+p(autohint lightbulb-o success). 
+For more information see the "Licensing FAQ":/pricing
+
+
+
+h2. Machine ID
+
+Once you have decided which license type suits you, you need to get the Trisul Machine ID that uniquely identifies the server or VM on which you are running Trisul. 
+
+
+h3. Getting the Machine ID
+
+p(autohint hand-o-right info). 
+Login as Admin -> Select Context :default ->  Licensing
+
+<div class='panel panel-info panel-body text-center'>
+_Getting the machine-id from the Admin UI_
+!images/machineid.png! 
+</div>
+
+Click on the machine ID link against each node to get the machineID as shown below
+
+<div class='panel panel-info panel-body text-center'>
+_Showing the Upload button used to install new license files_
+!images/machineid_value.png! 
+</div>
+
+
+h3. Alternate method: get Machine ID using command line
+
+Using this alternate method to get the machine ID. Type the following command as send us its output. 
+
+
+<pre class='language-bash'>
+sudo trisul --machineid
+</pre>
+
+The string looks like this :
+
+<pre class='language-bash'>
+[root@localhost ~]# trisul --machineid
+4087ACCD-4B0B-DE11-833A-00248CB93BDE
+[root@localhost ~]# 
+</pre>
+
+h2. Finding out how many internal IPs I have 
+
+The license size depends on the number of maximum number of simultnaneously active Internal IPs. To get this number 
+
+p(autohint hand-o-right info). 
+Login as Admin -> Select Context ->  Licensing
+
+!(img-thumbnail)images/license.png! 
+
+The chart shows the active internal hosts in the past 24 hours.  Click on "Long Term Trends" to see a longer time window 
+
+
+h2.  Installing the License.xyz.txt file 
+
+A new license file is typically named _License.{emailid}.txt_  *You need a License file for each Hub and Probe node* 
+
+h3. Install using Web Interface
+
+This is the recommended method suitable for most deployments. You just have to upload the new license to the Hubs and Probe nodes using the _License page_
+
+p(autohint hand-o-right info). 
+Login as Admin -> Select Context :default ->  Licensing
+
+On the Licensing page you can click on the Upload Button shown in the image below to select the new License file and upload it.
+
+<div class='panel panel-info panel-body text-center'>
+_Showing the Upload button used to install new license files_
+!images/license_upload.png! 
+</div>
+
+h3. Alternate method: Install new licenses using the Command Line
+
+The following alternate method places the new License files directly in the correct directories. You can use this method if the User Interface is not suitable for you. For example : when you want automatic deployment of license files. 
+
+h4. Install license on Trisul Probe node 
+
+# Put the new license file  in @/usr/local/etc/trisul-probe@  
+  ##  *Change the name* of the new file to @LicenseKey.txt@   *OR*
+  ##  *Edit the* "LicenseFile parameter in trisulProbeConfig.xml":/docs/ref/trisulconfig.html#app to point to the new file. The @trisulProbeConfig.xml@ file is a per-context config file found under @/usr/local/etc/trisul-probe/domain0/probe0/context0@ directory.
+
+h4. Install license on Trisul Hub node 
+
+# Put the new license file  in @/usr/local/etc/trisul-hub@  
+  ##  *Change the name* of the new file to @LicenseKey.txt@   *OR*
+  ##  *Edit the* "LicenseFile parameter in trisulHubConfig.xml":/docs/ref/trisulconfig.html#app to point to the new file. The @trisulHubConfig.xml@ file is a per-context file found under @/usr/local/etc/trisul-hub/domain0/hub0/contextXYZ@ directory.
+
+h4. Restart Trisul Hub and Probe node
+
+<div class="callout  callout-danger">
+<i class="fa fa-exclamation-triangle  pull-left fa-border "></i>Please restart both hub and probe node to take effect
+</div>
+
+ 
+h2. View the License file in effect
+
+p(autohint hand-o-right info). 
+Login as Admin -> Select Context ->  Licensing
+
+The current license file is displayed as shown in the screenshot above. 
+
+
+h2. Moving an existing License to new hardware
+
+If you move any Trisul node (Probe or Hub) to a new machine or VM, send us the new machineid and we will reissue the License.
+
+
+h2. Upgrading a Trisul 6.5 production license to 7.0
+
+See "How to upgrade 6.5 production license":license65update.html  

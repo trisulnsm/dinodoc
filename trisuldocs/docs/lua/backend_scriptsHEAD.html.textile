@@ -1,0 +1,37 @@
+h1. Back end scripts
+
+Back end scripts work on a stream of metrics.
+
+
+h2. Applications
+
+Since the Backend scripts have a more relaxed time budget than the Frontend scripts, they can be incredibly powerful for data enrichment or to guide real time detection.
+
+# Security - check Filehashes, hosts, IPs against blacklists
+# Perform action on metric stream.
+# Export alerts or flows to elastic search
+# Custom thresholding code and generate statistics based alerting
+# Export flows to elastic search or other platforms
+
+
+h2. Time Budget
+
+Since Trisul Network Analytics is a streaming analyzer. You get a single pass over the streaming data. All your scripts must complete within a total time budget of 1 minute. 
+
+
+h2. List of backend script types
+
+The following script types are available - within each script type you listen to one streaming 'topic' or subset. If you want to monitor metrics for the _Hosts counter group_ you would choose the _cg_monitor_ script type and within that script listen to the _Hosts_ stream.
+
+
+|_. Name |_.  Called when  |_. Notes |
+| "engine_monitor":engine_monitor.html | Periodically | on a 1 minute timer you can support SNMP and other data input tools into Trisul |
+| "cg_monitor":cg_monitor.html| Counter group metrics events | Use for traffic, top-N, cardinality analytics |
+| "sg_monitor":sg_monitor.html | Flow metrics | On new flow, when flow is flushed,  |
+| "alert_monitor":alert_monitor.html | Alert stream | Process alerts in Lua  |
+| "resource_monitor":resource_monitor.html | Resource stream | HTTP requests, DNS events, TLS, File hashes stream|
+| "fts_monitor":fts_monitor.html | Full Text Search docs | Documents HTTP headers, full TLS Certs|
+| "flow_tracker":flow_tracker.html | Flow tracker | Create your own custom flow tracker - top-K flow snapshots |
+
+
+

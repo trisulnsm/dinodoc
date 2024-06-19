@@ -1,0 +1,31 @@
+h1.  Monthly Charts 
+
+You can now display daily totals for any meters for any item on a calendar.  For example you can show on a monthly calendar
+
+    * Total Bytes / In
+    * Total Bytes / Out
+    * Total Connection
+    * Total Alerts
+
+for a  Host like  shadyguy.mycompany.com
+
+h2. How to use
+
+p(autohint hand-o-right info). 
+To access select Tools->Monthly Chart
+
+
+h5. Search Criteria
+
+|_.Field|_. Description|
+|CounterGroup|Counter Group name |
+|Meters|Meter within the counter group  |
+|Key| Usage list for item (eg Hosts +meter+ 192.168.1.8 or Apps+meter+ ssh )|
+
+
+h5. Example
+
+p(image-with-caption). 
+!images/monthly_charts.png!
+Daily usage calendar for an internal IP
+

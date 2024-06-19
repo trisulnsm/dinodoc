@@ -1,0 +1,47 @@
+h1.  Upgrading Trisul 
+
+An upgrade is simply an uninstall followed by a new install.
+
+p(autohint info-circle info). 
+Upgrading Trisul preserves all installation, application settings, and traffic data. 
+
+Typically it will look like the following
+
+h2. Ubuntu 
+
+Remove and add the meta package 
+
+
+<pre class="language-bash">
+sudo apt-get update 
+sudo apt-get remove --auto-remove trisul-full
+sudo apt-get install trisul-full
+</pre>
+
+or you can upgrade individual packages 
+
+<pre class="language-bash">
+sudo apt-get update 
+sudo apt-get remove trisul-hub 
+sudo apt-get install trisul-hub
+</pre>
+
+
+h2. CentOS/RHEL
+
+For CentOS/RHEL the instructions are similar, 
+
+<pre class="language-bash">
+yum group remove 'Trisul Full'
+yum group install 'Trisul Full'
+</pre>
+
+If you are getting an error with using the Group commands, try upgrading individual packages. You can even put them all on a single line  
+
+<pre class="language-bash">
+yum  remove trisul-hub trisul-probe webtrisul
+yum  install trisul-hub trisul-probe webtrisul
+</pre>
+
+
+

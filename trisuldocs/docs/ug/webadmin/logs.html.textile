@@ -1,0 +1,38 @@
+h1. View logs 
+
+For troubleshooting you can view various logs from the web interface itself. 
+
+h2. Viewing web server logs
+
+p(autohint hand-o-right info). 
+Login as admin and select _Web Admin > Manage > Web Server Logs_ 
+
+Then you can select to view any of the following types of logs
+
+
+- Web server log := Logs for the Trisul web server.
+- Background tasks log := Logs on scheduled tasks like report mailers, blacklist downloaders etc. Use this to check status of automatic downloads of threat intel, geo, and various other lists.
+- Web sockets log := Errors related to the real time stabbers
+- Auth Log := View user login including failed attempts
+- Email Logs := View email log sent by trisul
+- SNMP Dump Logs := Download SNMP command and dumps for debugging purposes
+
+h2. Viewing probe and hub logs 
+
+Hub and Probe logs represent the actual Trisul processes running processing network traffic. They are linked to a particular context. To view Hub and Probe logs
+
+
+p(autohint hand-o-right info). 
+Login as admin and select _Context: default > Admin Tasks > Start/Stop Tasks_
+
+This shows the list of hubs and probes. To view Hub and Probe logs click on the _More Options_ link and select the view options link as shown below.
+
+!images/contextlogs.png!
+
+h2. Log directory
+
+If you want the raw webserver log it can be found on the Trisul Hub server at @/usr/local/var/log/trisul-hub/webtrisul@
+The files are named production.log or productionssl.log (if you are running webtrisul on HTTPS)
+
+Also see trisbashrc:"/docs/ref/trisbashrc.html" which contains helper aliases to locate various log files on the probe and hub server systems. 
+ 

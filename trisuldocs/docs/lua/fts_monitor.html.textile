@@ -1,0 +1,205 @@
+h1. FTS Monitor
+
+<span class='label label-info'>BACKEND SCRIPT</span>
+
+FTS stands for Full Text Search documents. These are extracted by Trisul and _fts_monitor_ scripts can look at them and perform custom processing. 
+
+Currently there are only two FTS doc types built in to Trisul
+
+# HTTP Headers - same format as on the wire 
+# SSL Certificates fully decoded as text - same structure as OpenSSL text dump of certificates
+
+h3. Common FTS Groups GUIDs
+
+For quick reference these are the common "FTS GUIDs":basics.html#on_guids  For a full list Login as Admin > profil0 > All FTS Groups
+
+|{9FEB8ADE-ADBB-49AD-BC68-C6A02F389C71}|SSL Certificate FTS |
+|{28217924-E7A5-4523-993C-44B52758D5A8}|HTTP Header FTS |
+|{09B305DF-078C-4B9E-8E2F-EA64B7326880}|Full text dump of DNS records|
+
+h2. Structure 
+
+<div class='lua_skeletons' data-file='fts_monitor' data-name='FTS Monitor'></div>
+
+h2. Table @fts_monitor@
+
+The Lua table @fts_monitor = {..}@  can contain one or more of the following handler functions. 
+
+|_. field |_. type |_. when called |
+| fts_guid | String | Type of fts. Example @{5AEE3F0B-9304-44BE-BBD0-0467052CF468}@ for SSL Certs.See "Well known guids":/docs/ref/guid.html#fts_groups |
+| onnewfts | Function( "engine":obj_engine.html, "fts":#fts)  |A new fts was seen. Sent within 1 sec of seeing the fts |
+| onbeginflush | Function( "engine":obj_engine.html)  | Before starting to flush all metrics to db|
+| flushfilter | Function( "engine":obj_engine.html, "fts":#fts) | Return true if you want to save in DB, false to skip this  |
+| onflush | Function( "engine":obj_engine.html, "fts":#fts) | Called for each fts as they are being flushed |
+| onendflush | "engine":obj_engine.html | After all fts  have been flushed for this interval  |
+
+h2. Objects Reference
+
+h2. FTS   
+
+The object has the following fields 
+
+
+|_. field |_. return type |_. description |
+|timestamp| number,number | The time when the item was seen. Seconds in @tv_sec@ format, and Microseconds @tv_usec@. <pre> local secs=alert:timestamp()          -- if you only want seconds
+local secs,usecs=alert:timestamp()    -- if you want seconds, usecs
+local printable = os.date('%c', secs) -- if you want printable 
+</pre>  |
+|key| string |  The unique string identifying the document |
+|flow | A "flow object":obj_flowid.html | the IP flow from which this document was extracted   |
+|text| string | The text of the document. |
+
+
+h3. Example use of object
+
+* Logging HTTP header fields.
+* OCSP verification of certificate chains
+* Logging certificate chains
+
+h2. Functions Reference
+
+h2. Function @onnewfts@
+
+
+h3. Purpose   
+
+Trisul created a new FTS document.
+
+h3. When called
+
+When a new FTS document is created by Trisul. 
+
+h3. Parameters
+
+| engine | An "engine":obj_engine.html  object |  use this object to add metrics, FTSs, or alerts into the Trisul framework |
+| FTS | A "FTS object":#fts | the FTS |
+
+h3. Return value
+
+Ignored
+
+h3. Example
+
+
+--------
+
+
+h2. Function @onbeginflush@
+
+When a stream window closes and _before_ all the FTS documents in this window are about to be flushed to the Hub node.
+
+h3. Purpose   
+
+Signal begin of data flushing window.
+
+h3. When called
+
+Before FTS documents are flushed to the hub node. 
+
+h3. Parameters
+
+| engine | An "engine":obj_engine.html object |  use this object to add metrics, FTSs, or alerts into the Trisul framework |
+| timestamp | Timestamp | Timestamps seconds @tv_sec@ |
+
+
+h3. Return value
+
+Ignored
+
+h3. Example
+
+
+
+-------
+
+
+h2. Function @onflush@
+
+
+h3. Purpose   
+
+FTS doc flush event.
+
+h3. When called
+
+Before each FTS doc is flushed to the hub node. 
+
+h3. Parameters
+
+| engine | An "engine":obj_engine.html object |  use this object to add metrics, FTSs, or alerts into the Trisul framework |
+| FTS | An "FTS object":#fts | the FTS document |
+
+h3. Return value
+
+Ignored
+
+h3. Example
+
+
+---------------
+
+
+h2. Function @flushfilter@
+
+
+h3. Purpose   
+
+To control whether you want to flush a particular FTS document or not.
+
+h3. When called
+
+Before each FTS document is flushed. 
+If you return @false@ from this method, the "onflush"#function_onflush will never be called. 
+
+h3. Parameters
+
+| engine | An "engine":obj_engine.html object |  use this object to add metrics, FTSs, or alerts into the Trisul framework |
+| FTS | A "FTS object":#fts | the FTS document|
+
+h3. Return value
+
+
+- true := flush this FTS to the backend database node
+- false := dont flush this FTS, drop it
+
+p(autohint lightbulb-o info).  
+If you return false in all cases,  then no FTS documents will be saved to the backend.
+
+
+h3. Example
+
+
+-----
+
+
+h2. Function @onendflush@
+
+
+h3. Purpose   
+
+Handle cleanup and summarization after all documents have been flushed in the streaming analysis window (default 1 minute)
+
+h3. When called
+
+After all FTS documents have been flushed. the scenario is
+
+<pre>
+onbeginflush()
+onflush( doc-1 )
+onflush( doc-2 )
+...
+onflush( doc-n )
+onendflush()
+</pre>
+
+h3. Parameters
+
+| engine | An "engine":obj_engine.html object |  use this object to add metrics, FTSs, or alerts into the Trisul framework |
+| timestamp | Timestamp | Timestamps seconds @tv_sec@ |
+
+
+h3. Return value
+
+Ignored
+
+h3. Example

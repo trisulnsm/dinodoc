@@ -1,0 +1,31 @@
+h1. Resource Group
+
+Create a new Resource Group.
+
+You can extend Trisul's functionality by creating your own Resource Groups in addition to Trisul built in ones like HTTP URLs, SSL Certs, DNS Records, File Hashes, etc.  You can then use the LUA API method "engine:add_resource()":obj_engine.html#function_add_resource to generate resource logs for that group. 
+
+
+h2. Structure 
+
+<div class='lua_skeletons' data-file='new_resource_group' data-name='New Resource Group'></div>
+
+
+h2. Table @resourcegroup@
+
+The table resourcegroup has a single section called control that assigns a GUID to the group.
+
+# @control@ -- the GUID, name, and description 
+
+  
+|_. name |_. description |
+| table "control":#table_control | assigns a name and guid to the new resource group |
+
+h2. Table @control@
+
+The control table assigns a unique GUID to the new resource group.
+
+|_. name |_. type |_. description |
+| guid | string | A unique guid that identifies the group. See "section on GUIDs":basics.html#on_guids  |
+| name | string | Name of the resource group. We suggest purely as a style guide to keep it short < 15 chars. This is shown in various UI elements. |
+| description | string | A description.  *Note: This is mandatory unlike description fields in other objects*. This can be a longer description of the resource group.   |
+

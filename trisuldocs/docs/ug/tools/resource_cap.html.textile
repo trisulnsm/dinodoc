@@ -1,0 +1,90 @@
+h1. Resource Cap
+
+Resource cap is used to calculate additional bandwidth usage.
+
+h2. Create Resource cap
+
+You can set a resource cap value 
+
+# Goto "key dashboard":/docs/ug/ui/dashboards.html#key_dashboard
+# Click the Create cap in the key dashboard module
+#  You will be redirected to Resorce cap creation page
+
+|_.Field Name|_.Description|
+|key|Hex format of key(readonly)|
+|Resolved key|User readable format of key(readonly)|
+|Resource cap string|This must be a valid JSON. Ex resource cap for 10Mb the valid JSON is {"bw":1000000}|
+|Description|Description of the resource cap|
+
+
+
+h2. Edit Resource cap
+
+# Goto "key dashboard":/docs/ug/ui/dashboards.html#key_dashboard
+# Click the Edit cap in the key dashboard module
+#  You will be redirected to Resorce cap edit page
+
+|_.Field Name|_.Description|
+|key|Hex format of key(readonly)|
+|Resolved key|User readable format of key(readonly)|
+|Resource cap string|This must be a valid JSON.Ex resource cap for 10Mb the valid JSON is {"bw":1000000}|
+|Description|Description of the resource cap|
+
+
+h2. Resource cap report
+
+Generates a resource cap report for a specific IP Address.
+
+Steps to generate resource cap reports
+  # In the Endpoints & Application section, locate the 'IP Usage' option
+  # Enter the IP address or host name in this box. Note that this box autocompletes hostnames.
+  # Click on any of the time ranges adjacent to the text box
+
+
+h2. Business Hours report
+
+ You can get a daily report based on business hours.
+
+h3. Set Business Hours time
+
+p(autohint hand-o-right info). 
+To set select Customize->App Settings
+
+change the business hour time
+
+h3. Schedule Report with business hours time
+
+	To "schedule":/docs/ug/reports/schedreports.html a new report 
+
+p(autohint hand-o-right info). 
+Select Reports -> Schedule
+
+  # List of scheduled reports will appear
+  # Click **Schedule a new report**
+
+ Fill all values
+ Enable **Business Hours only** to get daily reports for business hours
+
+
+h2. Create Filtered Counter Group 
+
+You have to configure "filter counter groups":/docs/ug/cg/custom.html#filtered_counter_groups to get usage port details  for particular IP
+
+p(autohint hand-o-right info). 
+To configure Customize -> Counters -> Filtered Counters
+
+# List of Filtered Counters will appear
+# Click **New Filtered Counter Group**
+#  You will be redirected to a page  with following fields
+
+|_.Field Name|_.Description|
+|Counter Croup Name|Name of the counter group.The name starts with Apps_ip|
+|Description| Description of the counter group|
+|Parent Group| Parent Group must be an APPS|
+|Filter Group| Parent Group must be a Host|
+|key List| Give the IP which you want to get port usage details|
+
+
+Click **Create** button to add new Filtered Counter Group
+
+

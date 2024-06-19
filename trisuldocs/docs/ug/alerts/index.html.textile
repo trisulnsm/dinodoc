@@ -1,0 +1,68 @@
+<div class='row'>
+<dic calss='col-md-9'>
+
+h1.  Alerts
+
+You can set up Trisul to generate alerts based on network activity.  
+
+These alerts can be 
+
+ * viewed on the alert bar on the top right (automatically within 1 minute)
+ * analyzed from the alerts menu
+ * dispatched via SYSLOG, EMAIL, or SMS notification
+
+!images/alerts1.png!
+      
+
+h2. Types of alerts 
+
+Trisul can generate 5 different types of alerts. 
+
+h3.  Threshold Band Anomaly alerts 
+
+*NEW* 
+
+Threshold bands are created for selected metrics based on past historical activity. Metrics are continously compared with expected values and alerts are generated if they fall out of bounds.
+
+* "Threshold Band Anomaly alerts":tband.html
+
+
+h3.  Threshold Crossing Alerts
+
+Notifies you when ever any traffic meter crosses pre-configured hi and lo water marks.
+
+* "Working with TCAs":tca.html
+
+h3.  Flow Tracker Alerts
+
+Alert on certain predefined flow activity. For example : Alert on flows that upload 20MB or more out of your network. There are many other types of flow activity that can be alerted upon as well. 
+
+* "Flow Tracker Alerts":ft.html
+
+h3.  Intrusion Alerts (IDS)
+
+Trisul interfaces with Snort/Suricata using Unix Sockets. The alerts are correlated with other traffic metrics. 
+
+* "The web based Real Time Alert Console":ids_stabber.html
+* "Connecting Trisul with Snort via a Unix Socket":/docs/howto/setup_ids_alerts.html
+
+h3.  Blacklist alerts (Badfellas)
+
+Requires the Badfellas plugin. Trisul will continuously monitor your traffic and hold it up against millions of blacklisted entities. Any traffic that trips one of the blacklists, be it spam, phishing attacks, botnet C&C, is flagged.
+
+* "Installing the BadFellas plugin":/docs/ug/install/badfellas.html
+* "Badfellas Alerts":mw.html
+
+
+h2. Viewing and forwarding alerts 
+
+The alerts generated appear immediately on the user interface. You can also setup the following 
+
+# Sending alerts to "SYSLOG":/docs/ref/trisulconfig.html#syslog - from where you can send it to your other logging / alerting tools
+# Send alerts via "email":email_settings.html
+# Send alerts via "SMS service":sms_settings.html
+# Send alerts to "Microsoft Teams":msteams.html 
+
+The Email and SMS services work by reading the SYSLOG alerts. So you need "ensure  SYSLOG alerting is enabled":/docs/ref/trisulconfig.html#syslog  in trisulConfig.xml. It is enabled by default.
+</div>
+</div>

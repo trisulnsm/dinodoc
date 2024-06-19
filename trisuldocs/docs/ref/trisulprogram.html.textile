@@ -1,0 +1,154 @@
+h1. Trisul Executable 
+
+The _trisul_ executable is located in @/usr/local/bin/@.
+
+The _trisul_ executable is the actual probe process. One instance of trisul will run for every context. You rarely need to run this command manually, instead 
+# use the web interface menu _Admin > Start/Stop Tasks > Start Trisul on each probe_
+# use @trisulctl_probe start context ctxname@ command line tool 
+
+
+
+h2.  Full Command line 
+
+Just type _trisul_ to have it tell you the command line options.
+
+
+pre.. 
+[root@li76-90 ~]# trisul
+Usage: trisul [--version|--machineid|--listdev] | [-demon|-nodemon]  /path/to/config/file -mode {runmode} -in ifile -out ofile -args extra_args 
+{runmode} = select ONE  of the following 
+         *  online_rxring      - Linux RX RING  [default]
+            online_pfring      - Use native PF_RING API (requires libs)
+            online_libpcap     - LIBPCAP 
+            online_afpacket    - AF_PACKET with FANOUT flow based load balancing
+            online_napa        - Use Napatech API (requires libs)
+            offline            - read pcap files (also need -in option)
+            idsalert           - alerts only processing via unix socket 
+            offlineoverlay     - read pcap files overlaying on existing DB
+            idsalertoverlay    - alerts only overlaying on stats db
+            crashpcap          - for debugging, gen a pcap file from prev run
+            instant            - for debugging, gen pkts from /dev/random like device
+            lua                - a lua input filter drives the pipeline
+
+
+
+
+h2.  Common operations 
+
+h3.  Checking version 
+
+pre.. 
+[demo@li76-90 ~]$ trisul --version
+6.0.1774
+
+
+h3.  Getting the machineid  
+
+You need to get the machineid in order to upgrade Trisul from the 3-day window free version to a licensed version.
+
+pre.. 
+[root@li76-90 ~]# trisul --machineid
+00551AD4-CA00-BE16-3A42-1ACCFD6BF00D
+
+h3.  Listing all available interfaces 
+
+pre.. 
+[vivek@localhost trisul]$   trisul --listdev
+[sudo] password for vivek: 
+---------------------------------------------------------------------------
+Num     Name            Description 
+---------------------------------------------------------------------------
+1  	eth0           	not available
+2  	wlan0          	not available
+3  	usbmon1        	USB bus number 1
+4  	usbmon2        	USB bus number 2
+5  	any            	Pseudo-device that captures on all interfaces
+6  	lo             	not available
+---------------------------------------------------------------------------
+
+
+h2.  About run modes 
+
+The **run mode** controls what capabilities of Trisul are used while running.
+
+The run mode is a combination of 
+  # Packet Capture : type of capture mechanism
+  # Analytics Overlay : whether analytics are overlaid on top of existing metrics
+
+h4. Specifying the run mode from the web interface
+
+p(autohint lightbulb-o info). 
+To specify a run mode, go to  Admin Tasks > Start/Stop Tasks then select run mode from drop down list for each probe
+
+
+h3. Modes supported 
+
+table(table table-bordered). 
+|_.|_\3=.Available Features in runmode|_.|
+|_.Runmode|_.Packet acquisition |_.Parameters |
+|_.online_rxring   |use  RX RING ||
+|_.online_libpcap  |use LIBPCAP  ||
+|_.online_afpacket  |use AF_PACKET ||
+|_.online_napa     |use Napatech API (*requires libs _see below_ ) ||
+|_.online_pfring   |use native PF_RING API (*requires libs _see below_ ) ||
+|_.offline        |From capture file/directory|   -in capture-file-dir |
+|_.idsalert       |alerts only processing via unix socket||
+|_.crashpcap      |For debugging||
+|_.instant        |For debugging||
+|_.offlineoverlay |From capture file/directory <p> Overlay metrics on to existing data</p> | -in capture-file-or-directory |
+|_.idsalertoverlay|IDS alerts from unix socket<p> Overlay metrics on to existing data</p>||
+|_.lua|a lua script drives the pipeline|-in lua-importscript.lua  -args passed as @T.args@ to your LUA script|
+
+
+p(autohint exclamation-triangle danger).    
+**Requires Libs**
+For PF_RING and other runmodes marked _requires libs_ you need to copy the appropriate libXX.so file into @/usr/local/lib/trisul-probe@. Trisul only ships with a stub implementation. For example : if you want to use PF_RING. Copy the compiled libpfring.so file into @/usr/local/lib/trisul-probe@. This is due to licensing issues.
+
+
+h2.  Examples 
+
+h4.  Normal run as a daemon 
+
+pre. trisul -demon /usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml -mode online_rxring
+
+h4.  Normal run attached to terminal 
+
+pre. trisul -nodemon /usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml -mode online_rxring
+
+
+h4.  Run trisul over capture files in a directory 
+
+All capture files must be in tcpdump (libpcap) format. Trisul supports both big and little endian pcap files. 
+  # PCAP files in directory are automatically processed in order of the timestamp of the first packet in each file. 
+  # capture files can be gzip or bzip2. The prefix must be gz or bzip2 of bz2.
+
+
+p(autohint lightbulb-o info).    
+You can process a single PCAP file, a directory of PCAP files, or even nested directory trees
+
+pre. trisul -nodemon /usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml -mode offline -in /home/vivek/mycaps/capdir
+  
+
+h4.  Run trisul for context named "satellitelinks" 
+
+Each "trisul context":/docs/ug/domain/index.html#contexts.html is defined by the corresponding trisulConfig @contextname@ folder. 
+
+<pre>
+trisul -demon /usr/local/etc/trisul-probe/domain0/probe0/context_satellitelinks/trisulProbeConfig.xml -mode online_libpcap
+</pre>
+
+h4.  Run trisul only looking at alerts  
+
+In this mode Trisul only looks at IDS alerts. The only meters activated are related to alerts, such as top hosts generating alerts, victim hosts, etc.
+
+<pre>
+trisul -demon /usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml -mode idsalert
+</pre>
+
+h4. Run trisul using a LUA input filter script 
+
+If you want your "inputfilter":/docs/lua/inputfilter.html  script at @/home/kev/read_tcp.lua@ to drive the Trisul pipeline use the following
+
+<pre>
+trisul -demon /usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml -mode lua -in /home/kev/read_tcp.lua -args argstolua-script
+</pre>

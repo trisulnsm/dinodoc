@@ -1,0 +1,149 @@
+h1. Configure disk storage
+
+Trisul's disk requirements depend on how much you want to retain :
+
+# How much raw packet data in GB   (probe nodes)
+# How much metrics, flows, alerts in Days (hub nodes)
+
+
+p(autohint info-circle  info).  
+*Probe vs Hub*  
+The Probes store the raw packets. AES encrypted.
+The Hubs store everything else - metrics, flows, alerts, metadata, etc.
+
+h2. Checking current database status
+
+One of the first things you need to do is to calculate how much disk you are going to need to meet your data retention requirements. Follow these steps.
+
+# Logon to the web interface as _admin_ then select the _Admin Tasks -> DB Status_ 
+# From the _Database Slices_ section you can check how much Disk Space is being used per day. 
+# Lower down , from the "Full Content" section you can see how much disk space is being used for packets. 
+# Click on the "Bar chart" icon above each item to see DB Growth Trends
+
+If you are trying to recover from a 100% full disk you may not be able to access the web interface. Add new disk space as desribed below and retry these steps.
+
+h2. Data locations on the Probe Nodes
+
+The raw packets are stored for each context in the following default directories.  The _App > DBRoot_ parameter in "trisulProbeConfig.xml":/docs/ref/trisulconfig.html points to the base directory
+
+* /usr/local/var/lib/trisul-probe/domain0/probe0/context0/caps/
+  ** /oper  - the operational directory where Trisul _writes_ packets
+  ** /ref  - the reference directory for recent data likely to be looked up
+  ** /archive  - older data 
+  As data ages they 'cool down' and slide from oper to ref to archive. Therefore the 'hottest' data slices are under /oper.  For more details read "How the  sliding slices work":/docs/ug/caps/fullcontent.html#sliding_slices
+
+The reason we have three directories is that they can be mounted on three separate volumes if required for heavy workloads. 
+
+h3. Move packets to a different volume
+
+Follow the instructions for  "@trisulctl_probe relocate context@":/docs/ug/basicusage/reloc.html command to relocate the probe capture files to a different directory. 
+
+h3. Decide how much PCAP to store
+
+On the Probe nodes, PCAPs can rapidly fill a disk volume.  By default Trisul Probe is configured to store 10GB of packet data, you can increase that to match your disk size.   
+
+* To specify how much GB of PCAPs you want to retain -->  change the _Ring > SlicePolicy_ setting in "trisulProbeConfig.xml":/docs/ref/trisulconfig.html#ring
+
+
+h2. Data locations on the Hub  Nodes
+
+
+All of the timeseries metrics, alerts, flows and other metadata are stored on the Hub node.
+
+The databases are stored for each context in the following default directories.  The _App > DBRoot_ parameter in "trisulHubConfig.xml":/docs/ref/trisulhubconfig.html points to the base directory
+
+* /usr/local/var/lib/trisul-hub/domain0/hub0/context0/caps/
+  ** /oper  - the operational directory where Trisul writes metrics 
+  ** /ref  - the reference directory for recent data
+  ** /archive  - older data 
+  Trisul slides the oldest data each day from the oper to ref to archive to /dev/null (delete)
+
+As in the probe,  we have three directories so they can be mounted on three separate volumes with different performance characteristics.
+
+h3. Move packets to a different volume
+
+Follow the instructions for  "trisulctl_hub relocate context":/docs/ug/basicusage/reloc.html command to relocate to a different volume.
+
+h3. Decide retention period
+
+On the Hub you specify how many days you want to retain data.   To specify the value , change the _SlicePolicy_ setting in "trisulHubConfig.xml":/docs/ref/trisulhubconfig.html
+
+
+h2. Recovering from a Disk Full error
+
+If the Trisul disk fills up 100% you may not be able to access the web interface and of course Trisul will stop working. To recover from this error follow these steps.
+
+
+<ul class="step-text">
+
+<li>
+
+h5. Mount new partition
+
+Create a new partition with enough space and mount the new partition, say on @/mnt/trisul_extra@
+
+We will be moving some packet capture and metrics to this new area to free up some space.
+
+</li>
+
+<li>
+
+h5.  Move the Probe archive to the new volume 
+
+The idea here is to move the packet capture @archive@ directory to the new volume and create a soft link to point to it in the old location.
+
+<pre class='language-bash'>
+	cd /usr/local/var/lib/trisul-probe/domain0/probe0/context0/caps/
+	mv archive /mnt/trisul_extra/probe_archive
+	ln -sf /mnt/trisul_extra/probe_archive archive
+
+</pre>
+
+</li>
+
+<li>
+
+h5. Check if enough disk is freed up and repeat
+
+Use the @df@ command to check if now enough disk is available. If it is not available repeat Step 2 for the @/ref@ directory and then if required for the @/oper@ directory.
+
+p(autohint info-circle  info).  
+*Check disk space* At this step, if disk usage drop to about 70-80% you can stop here and skip Step 4. You should be able to restart the Web Server and then the other Trisul components.
+ 
+ </li> 
+<li>
+
+h5.  Move the Hub archive to the new volume 
+
+Similar to the probe node we want to move the Hub data to the new partition and create a soft link to point to it.
+
+<pre class='language-bash'>
+	cd /usr/local/var/lib/trisul-hub/domain0/hub0/context0/meters/
+	mv archive /mnt/trisul_extra/hub_archive
+	ln -sf /mnt/trisul_extra/hub_archive archive
+</pre>
+
+</li>
+
+</ul>
+
+Usually at this point you should have enough disk space freed up. Now you need to tune the SlicePolicy on both the Hub and Probe Config files so they dont fill up again.
+
+h5. References 
+
+# "trisulProbeConfig.xml":/docs/ref/trisulconfig.html  - for setting max GB retention of pcaps.
+# "trisulHubConfig.xml":/docs/ref/trisulhubconfig.html  - for setting days of metrics.
+
+
+
+h2. Best practices
+
+Here are some best practices for large deployments.
+
+# Run Trisul for 3-4 days to get an idea of data growth per day. Use that information to size the disks.
+# Prefer XFS filesystem over EXT4 due to the large number of inodes supported
+# Consider using LVM so you can easily expand a filled up volume by adding new disk capacity
+# Prefer RAID-0 for the Probe PCAPS for higher write performance
+# Prefer RAID-5 for the Hub for resilience 
+# For large enterprises, mount the @/archive@ on your NAS if you have one
+# Try to use "PCAP pruning rules":/docs/ug/caps/packetstorage.html  eg, dont store Netflix,YouTube videos packets

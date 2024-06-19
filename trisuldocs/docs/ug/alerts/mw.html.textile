@@ -1,0 +1,44 @@
+h1.  Malware and Blacklist alerts 
+
+p(autohint info-circle danger). 
+*This feature requires the Trisul Badfellas plugin*
+See "Trisul Badfellas":/docs/ug/install/badfellas.html
+
+
+The Trisul Badfellas plugin adds comprehensive threat detection capabilities to Trisul based on multiple blacklists which are included with the plugin
+
+Some of the alerts 
+  # Communication with known malicious IPs
+  # Retrieving malware from malicious URLs
+  # Falling victim to Phishing sites
+  # Trying to query DNS for known malicious domain names
+
+
+h2.  What can you do with these alerts ? 
+
+You can get useful reports like
+
+  # Top 100 hosts with malware in my enterprise
+  # Infection trends over time
+  # Breakup of malware types (ZeUS, Gumblar, GhostNet, etc)
+  # Retrieve suspected malware flows
+  # Pull suspected malware packets into Wireshark or Unsniff
+  # Script using TRP
+
+
+h2. Viewing blacklist alerts
+
+
+p(autohint hand-o-right info). 
+Select Alerts -> Blacklist
+
+
+
+h2.  Evasions 
+
+Trisul is resistant to :
+  * TCP frag attacks - it  reassembles TCP before constructing the URL requested & HTTP Host
+  * Both DNS requests and replies are checked for any malicious domains
+  * Minor permutations in domains and URLs are automatically handled.
+
+
