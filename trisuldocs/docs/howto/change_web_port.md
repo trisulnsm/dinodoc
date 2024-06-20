@@ -1,12 +1,11 @@
-Change the Trisul webserver port
-================================
+# Change the Trisul webserver port
 
 The Trisul webserver listens on port 3000 by default.
 
-Steps to change Web Trisul ports
---------------------------------
+## Steps to change Web Trisul ports
 
 <ul class="step-text">
+
 <li>
 
 ##### Shutdown Web Trisul
@@ -14,22 +13,26 @@ Steps to change Web Trisul ports
 pre. systemctl stop webtrisuld
 
 </li>
+
 <li>
 
 ##### Change nginx.conf
 
--   Open the `/usr/local/share/webtrisul/build/nginx.conf` file as shown
+  - Open the `/usr/local/share/webtrisul/build/nginx.conf` file as shown
 
-<!-- -->
+<!-- end list -->
 
-     
-      server {
-        listen 3000;
-        server_name localhost;
+``` 
+ 
+  server {
+    listen 3000;
+    server_name localhost;
+```
 
--   Change the 3000 to your new port
+  - Change the 3000 to your new port
 
 </li>
+
 <li>
 
 ##### Start webtrisul
@@ -37,6 +40,7 @@ pre. systemctl stop webtrisuld
 pre. systemctl start webtrisuld
 
 </li>
+
 <li>
 
 ##### Change the report port option
@@ -46,6 +50,7 @@ Login as admin and go to *Webadmin: Manage -\> App Settings* and set the
 of WebTrisul that generates periodic PDF reports.
 
 </li>
+
 <li>
 
 ##### Optional : Change the WebSockets 3003 port
@@ -53,10 +58,11 @@ of WebTrisul that generates periodic PDF reports.
 For *real time stabbers* Trisul uses Web Sockets on port 3003. To move
 this to another port
 
--   Open the `/usr/local/share/webtrisul/build/thin-nginxd` and change
+  - Open the `/usr/local/share/webtrisul/build/thin-nginxd` and change
     3003 to your new port
 
 </li>
+
 </ul>
 
 End of task

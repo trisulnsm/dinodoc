@@ -1,15 +1,12 @@
-Howtos
-======
+# Howtos
 
 Short descriptions of how to accomplish specific tasks with Trisul.
 
-List of howtos
---------------
+## List of howtos
 
 Click on topics from the left menu to view.
 
-Popular
--------
+## Popular
 
 ### [How to install on Security Onion](/docs/howto/installseco.html)
 

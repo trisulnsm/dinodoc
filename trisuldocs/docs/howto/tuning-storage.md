@@ -1,13 +1,11 @@
-Tuning database usage
-=====================
+# Tuning database usage
 
 The default deployment of Trisul will store all metrics at its native
 resolution. This is by design so the Trisul database can be used as a
 source for incident response, post breach audit, and compliance. However
 this can result in relatively high storage.
 
-Finding out disk usage per day
-------------------------------
+## Finding out disk usage per day
 
 To find out how much disk is being used per day.
 
@@ -31,7 +29,7 @@ The following table shows per *Slice* storage. A *Slice* is a unit of
 storage in Trisul, typically each day has two slices. Hence to get the
 storage for a day you add the storage of slices with the same date.
 
-![](images/dbstatus2.png){width="600px"}
+![](images/dbstatus2.png)
 
 In the above picture for the day 09-07-2022 represented by the two
 slices highlighted. The total storage for that day would be **4.07 GB +
@@ -43,10 +41,9 @@ Each database slice further contains many storage subsections of the
 Trisul database, you can use the *Analyze Storage* option. This is used
 by Trisul Engineers to further fine tune the database.
 
-![](images/dbstatus3.png){width="600px"}
+![](images/dbstatus3.png)
 
-Tuning the database
--------------------
+## Tuning the database
 
 The default install of Trisul Network Analytics stores data for 92 days,
 i.e. 3 months.
@@ -68,7 +65,7 @@ every single flow because malware may only use small flows.
 
 Customers whose primary use cases are *Visiblility* and *Detection*
 features of Trisul can dramatically reduce the size of the flow database
-by using "Volume Cutoff Bytes". See [User Guide: Flow
+by using “Volume Cutoff Bytes”. See [User Guide: Flow
 Tuning](/docs/ug/flow/tuning.html#optimize_flow_handling)
 
 #### Set Volume Cutoff Bytes to 1MB
@@ -76,20 +73,21 @@ Tuning](/docs/ug/flow/tuning.html#optimize_flow_handling)
 The flow database has a property that it uses a fixed amount of storage
 regardless of the datatransfer. Traffic research indicates that 80% of
 flows transfer less than 10% of total traffic. Hence if you set the
-'Volume Cutoff Bytes' to 1MB it will dramatically reduce the storage by
-roughly 80%. You can adjust this value for further optimization gains.
+‘Volume Cutoff Bytes’ to 1MB it will dramatically reduce the storage
+by roughly 80%. You can adjust this value for further optimization
+gains.
 
-![](images/dbstatus4.png){width="600px"}
+![](images/dbstatus4.png)
 
 #### Advantages and disadvantages of Volume Cutoff bytes
 
 By setting the Volume Cutoff Bytes to a value like 1MB - the customer
 gains the following
 
--   All flows that transferred greater than 1MB are still stored, hence
+  - All flows that transferred greater than 1MB are still stored, hence
     full visibility is still available for large flows
--   The total size of the Trisul database is greatly reduced
--   This allows customers to store more number of days with the same
+  - The total size of the Trisul database is greatly reduced 
+  - This allows customers to store more number of days with the same
     storage
 
 The following disadvantages for customers whose use case includes
@@ -99,28 +97,26 @@ security, incident response, and compliance.
     that transferred less than the 1MB flow cutoff.
 
 In general , we recommend customers whose primary use case is visibilty
-and network monitoring to set a "Volume Cutoff Bytes" of 1MB for maximum
+and network monitoring to set a “Volume Cutoff Bytes” of 1MB for maximum
 optimization of disk.
 
-Optimize Edges
---------------
+## Optimize Edges
 
 Edge Analytics are an advanced Trisul feature used primary for security
-investigations. "Edges" can also use up quite a bit of disk.
+investigations. “Edges” can also use up quite a bit of disk.
 
--   You can disable Edges by opening the Trisul Config file and disable
+  - You can disable Edges by opening the Trisul Config file and disable
     the Edge options. See [Edge
     trisulProbeConfig](/docs/ref/trisulconfig.html#edges)
 
-Counter groups
---------------
+## Counter groups
 
 Counter groups have the following parameters that can be tuned
 
--   High Water and Low Water --- This impacts how many "items" of this
-    counter group are stored.
--   Topper Traffic Only --- If you set this , then only keys that make
-    it to a topper list are stored.
--   Top Count --- By setting lower values you can control the storage.
+  - High Water and Low Water — This impacts how many “items” of this
+    counter group are stored. 
+  - Topper Traffic Only — If you set this , then only keys that make it
+    to a topper list are stored.
+  - Top Count — By setting lower values you can control the storage.
 
 See [Counter Group Settings](/docs/ug/cg/settings.html#editing_settings)

@@ -1,5 +1,4 @@
-Using Trisul with web proxies
-=============================
+# Using Trisul with web proxies
 
 Trisul is most effective monitoring perimeters of trust boundaries. In
 an enterprise scenario, this usually means monitoring on either side of
@@ -7,8 +6,7 @@ a corporate firewall. This works beautifully because you can log all
 kinds of network & security data exchanged across your boundary by just
 monitoring a few external ports.
 
-The proxy problem
------------------
+## The proxy problem
 
 There is a however a big problem in the real world, the humble web
 proxy. Proxy servers like Squid, Bluecoat, F5, Cisco, etc make it easy
@@ -31,8 +29,7 @@ multiple ports.
 
 The recommended solution is to use the X-Forwarded-For HTTP header.
 
-X-Forwarded-For (XFF)
----------------------
+## X-Forwarded-For (XFF)
 
 Trisul supports the X-Forwarded-For, also known as XFF HTTP header which
 contains the end user IPs. Most proxies including Squid have the ability
@@ -55,13 +52,12 @@ proxy3 (proxy3 appears as remote address of the request).
 
 </div>
 
-Configure XFF tracking in Trisul
---------------------------------
+## Configure XFF tracking in Trisul
 
 To enable XFF tracking in Trisul you need to edit a parameter in the
 trisulConfig.xml file as specified below.
 
-\%(hint command)Set the `EnableXFFDeproxy` option to TRUE in the
+%(hint command)Set the `EnableXFFDeproxy` option to TRUE in the
 [Reassembly section of the Trisul Config
 file](/docs/ref/trisulconfig.html#reassembly%)
 
@@ -69,17 +65,17 @@ The XFF feature require a few supporting features to be enabled as well.
 
 Make sure these are enabled in the trisulConfig.xml file as well.
 
-\* Enable the `TCPFlowTrack` option\
-\* Enable the `TCPReassembly` option\
+\* Enable the `TCPFlowTrack` option  
+\* Enable the `TCPReassembly` option  
 \* Enable the `IPDefrag` option
 
 The above features are needed because Trisul needs to reassemble the
 HTTP headers accurately to reliably process the XFF headers.
 
-[Note]{.notice} You need to restart Trisul for this to take effect.
+<span class="notice">Note</span> You need to restart Trisul for this to
+take effect.
 
-Trisul reports
---------------
+## Trisul reports
 
 With XFF enabled, Trisul will replace the IP address of the proxy with
 that of the endpoint in all monitored objects. All traffic, flows,
@@ -89,9 +85,9 @@ as if the proxy never existed.
 Some key points :
 
 \# A small number of bytes up until the XFF header will continue to be
-metered against the proxy.\
+metered against the proxy.  
 \# If the XFF header is not found the entire flow is metered against the
-proxy.\
-\# The proxy becomes transparent as far as HTTP traffic is concerned.\
+proxy.  
+\# The proxy becomes transparent as far as HTTP traffic is concerned.  
 \# Raw packets stored by Trisul are re-stamped with the IP of the end
 station.
