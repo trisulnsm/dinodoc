@@ -46,17 +46,3 @@ systemctl start webtrisuld
 Login as admin and go to *Webadmin: Manage -\> App Settings* and set the
 *Web Server Port* to your new port. This is used by an internal module
 of WebTrisul that generates periodic PDF reports.
-
-
-
-### Optional : Change the WebSockets 3003 port
-
-For *real time stabbers* Trisul uses Web Sockets on port 3003. To move
-this to another port
-
-  - Open the `/usr/local/share/webtrisul/build/thin-nginxd` and change
-    3003 to your new port
-
-
-
-End of task
