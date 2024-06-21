@@ -146,7 +146,7 @@ Time Alerts*
 
 ## More things to do
 
-###### How to move the Trisul database to /nsm ?
+### How to move the Trisul database to /nsm ?
 
 
 Trisul stores its data under `/usr/local/var`, Security Onion likes to
@@ -155,14 +155,14 @@ store it in `/nsm`.
 You will need to use the Domain management CLI tools `trisulctl_probe`
 and `trisulctl_hub` commands to move the database to the `/nsm` volume.
 
-##### Move probe DB
+### Move probe DB
 
 ``` language-bash
 trisulctl_probe
 relocate context domain0 probe0 default 
 ```
 
-##### Move hub DB
+### Move hub DB
 
 ``` language-bash
 trisulctl_hub
@@ -173,7 +173,7 @@ For more see [Relocate database](/docs/ug/basicusage/reloc.html) or type
 `help relocate` in the domain management CLI tool.
 
 
-###### How to switch to NETFLOW mode
+### How to switch to NETFLOW mode
 
 
 You can choose to use Trisul on the Security Onion box to monitor
@@ -187,7 +187,7 @@ of Trisul.
 1.  Use the default context for PCAP based monitoring
 2.  Spin up a second, new context say `nf1` for monitoring Netflow
 
-##### New context for netflow
+### New context for netflow
 
 ``` language-bash
 trisulctl_hub
@@ -198,7 +198,7 @@ Then follow instructions in [Configure
 Netflow](/docs/ug/netflow/netflow_setup.html) on the nf1 context.
 
 
-###### How to automatically start the Trisul Probe on reboot
+### How to automatically start the Trisul Probe on reboot
 
 
 By default, the Web Server and the Trisul Hub components start
@@ -210,7 +210,7 @@ update-rc.d trisul-probe0-context0 defaults
 ```
 
 
-###### How to add a new remote Probe
+### How to add a new remote Probe
 
 
 Trisul can also be deployed in a distributed hub and probe
@@ -218,7 +218,7 @@ configuration. See instructions for [How to add a new
 Probe](/docs/ug/domain/deploy_probe.html)
 
 
-###### How to change network interfaces amd web server ports
+### How to change network interfaces amd web server ports
 
 
 \* Listen on an interface other than eth0
@@ -228,7 +228,7 @@ Probe](/docs/ug/domain/deploy_probe.html)
 \* Enable SSL for the web interface [Docs](/docs/howto/sslforwebtr.html)
 
 
-###### How to stop and start Trisul processes
+### How to stop and start Trisul processes
 
 
 If you want to stop all Trisul processes on a Security Onion system
@@ -250,7 +250,7 @@ service webtrisuld start
 ```
 
 
-###### Are there any other useful plugins?
+### Are there any other useful plugins?
 
 
 You may want to install the following plugins from the [Download
@@ -261,5 +261,5 @@ Page](/download/index.html)
 3.  [Geo](/docs/ug/install/geoasn.html)
 
 Also checkout the NEW Trisul Apps. Login as admin and select “Web
-Admin\>Apps”
+Admin Apps”
 

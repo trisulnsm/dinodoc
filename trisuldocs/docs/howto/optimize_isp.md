@@ -7,18 +7,18 @@ hosts traffic tracking storage.
 
 We recommend the following policy.
 
-\* Track all IPs in the service provider domain (the service provider
+- Track all IPs in the service provider domain (the service provider
 customers)  
-\* Track only the top 1000 or so external IPs (out in the internet)  
-\* Optionally increase the bucket size to a 5 minute resolution.
+- Track only the top 1000 or so external IPs (out in the internet)  
+- Optionally increase the bucket size to a 5 minute resolution.
 
 ## Specify ISP Home Network
 
 Login as Admin -\> Select Context and profile -\> Home Networks
 
-\# Click on **Add a network**  
-\# Enter the IP and Subnet mask of the home network  
-\# Repeat for all the IP ranges belonging to the ISP
+Step 1: Click on **Add a network**  
+Step 2: Enter the IP and Subnet mask of the home network  
+Step 3: Repeat for all the IP ranges belonging to the ISP
 
 ## Modify host tracking policy
 
@@ -27,13 +27,13 @@ statistics for the top 1000 items.
 
 Login as Admin -\> Select Context and profile -\> Counter Groups
 
-\# You are shown with a counter group list  
-\# Click on Counter Group Name in Counter group list and check the
+Step 1: You are shown with a counter group list  
+Step 2: Click on Counter Group Name in Counter group list and check the
 **TopperTrafficOnly** and Save  
-\# In counter group list click on Hosts “Toppers” link  
-\# Change the topper count from 50 to 1000 for the `Total meter` (item
+Step 3: In counter group list click on Hosts “Toppers” link  
+Step 4: Change the topper count from 50 to 1000 for the `Total meter` (item
 0)  
-\# Save
+Step 5: Save
 
 ## Enable the Internal and External counter groups
 

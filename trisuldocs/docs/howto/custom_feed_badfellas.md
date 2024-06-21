@@ -44,12 +44,11 @@ following.
 
 ``` language-csv
 # FeedName,indicator,description
-# 
+
 MYBADLIST<TAB>masterkey.com.ua<TAB>Malicious host possibly hosting Palevo 
 MYBADLIST<TAB>ms4all.twoplayers.net<TAB>Malicious host possibly hosting Palev
 MYBADLIST<TAB>94.100.215.170<TAB>Possible scanning 
 MYBADLIST<TAB>http://friends-webcam-fun2.blogspot.com/wechat.php<TAB>Phishing host 
-..
 ```
 
 ## Automatically refreshing the feed
@@ -112,7 +111,7 @@ connect it to Badfellas in the following way.
     <Update>
       <Sources>
         <Source>
->         <URL>file:///tmp/myfeed_1.tsv</URL>     <--- add this line only
+         <URL>file:///tmp/myfeed_1.tsv</URL>     <--- add this line only>
           <Target>badfellas-local-0.tsv</Target>
         </Source>
 

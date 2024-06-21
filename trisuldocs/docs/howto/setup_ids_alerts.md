@@ -38,7 +38,7 @@ Start Snort in `unsock` mode
 Select the “How to start snort” to get the command line options as shown
 in the screenshot. You can then copy-paste that into a terminal.
 
-<img src="images/start_snort.png" alt="" style="display:block;margin: 0 auto"></img>
+![](images/start_snort.png)
 
 ```language-lua
 snort -A unsock -l

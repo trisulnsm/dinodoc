@@ -34,11 +34,12 @@ Set the value of */proc/sys/fs/suid\_dumpable* to *2*
 ### Where is the core file ?
 
 By default The core file will be placed in */tmp* and will be called
-*core.xxxx* where //xxxx// is the PID of the trisul process that
+ `core.xxxx` where //xxxx// is the PID of the trisul process that
 crashed. You can change this filename by modifying the
-*/etc/sysctl.conf* file.
+`/etc/sysctl.conf` file.
 
-Add the following lines to */etc/sysctl.conf*
+Add the following lines to `/etc/sysctl.conf`
+```
 
 pre..
 
@@ -54,6 +55,7 @@ net.ipv4.ip\_forward = 0
 …  
 kernel.core\_pattern = /tmp/core.%e.%p  
 \[root@localhost \~\]\#
+```
 
 ### When it crashes
 
@@ -63,10 +65,12 @@ time to fire up gdb and determine the cause of the crash.
 You must do this as root, because the saved core file is only readable
 by root.
 
+```
 pre..  
 gdb /usr/local/bin/trisul\_checked /tmp/core.trisul.3297  
 (gdb) bt  
 .. prints the stack…
+```
 
 You may then send the stack trace to us so we can help fix the cause of
 the crash.

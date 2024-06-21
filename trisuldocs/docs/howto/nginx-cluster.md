@@ -3,8 +3,8 @@
 The default install of Webtrisul comes with 5 instances of *thin*
 servers with a *nginx* reverse proxy. This should be sufficient for many
 sites, but you can increase the number of servers if  
-\* you experience sluggishness  
-\* if you have many simultaneous users
+- you experience sluggishness  
+- if you have many simultaneous users
 
 ## How to increase the number of backend *thin* servers
 

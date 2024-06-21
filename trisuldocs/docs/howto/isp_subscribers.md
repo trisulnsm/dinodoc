@@ -1,7 +1,7 @@
 # Offer subscriber reports
 
-div(note).  
-**Did you know that you can use Trisul to offer subscriber reports ?**  
+
+## Did you know that you can use Trisul to offer subscriber reports ?  
 You can setup Trisul to monitor subscribers from a central location and
 then provide each subscriber a web login to view their own reports. You
 can use this to build a value added service offering.
@@ -16,14 +16,14 @@ Some terms :
 ## What is included ?
 
 Trisul allows you to :  
-\# Create a web user/password and associate that with one or more
+- Create a web user/password and associate that with one or more
 services  
-\# The subscriber can then logon to Trisul and is immediately taken to
+- The subscriber can then logon to Trisul and is immediately taken to
 their services page  
-\# A subscriber can only view their own services and are not allowed to
+- A subscriber can only view their own services and are not allowed to
 see anything else  
-\# A subscriber can generate PDF outputs of reports  
-\# A subscriber can change his/her own password
+- A subscriber can generate PDF outputs of reports  
+- A subscriber can change his/her own password
 
 This page describes how you can accomplish such a setup.
 
@@ -32,16 +32,16 @@ This page describes how you can accomplish such a setup.
 Trisul needs to monitor traffic to all subscriber networks. There are a
 few options you can choose from depending on your service topology.
 
-\# **Customer premises managed switch (dynamic IP)**  
-**** Have the customer switch export Netflow or Sflow to your datacenter
+### Customer premises managed switch (dynamic IP)
+Have the customer switch export Netflow or Sflow to your datacenter
 where Trisul is running  
-\# **Customer premises unmanaged switch / modem (dynamic IP)**  
-**** Enable Netflow or Sflow at your edge routers  
-**** Enable port spanning at your uplinks where all subscriber traffic
+### Customer premises unmanaged switch / modem (dynamic IP)
+Enable Netflow or Sflow at your edge routers  
+Enable port spanning at your uplinks where all subscriber traffic
 can be visible. You may need to procure a optical tap if link speeds are
 upwards of a few Gbps  
-\# **Customer has static IPs**  
-**** This is the easiest, since you can map IPs to subscribers. Just
+### Customer has static IPs
+This is the easiest, since you can map IPs to subscribers. Just
 enable flow at core routers or use port spanning at the uplink
 
 ## Create the subscriber user
@@ -49,7 +49,7 @@ enable flow at core routers or use port spanning at the uplink
 To create a user (subscriber) and map him to a set of services:
 
 <span class="command hint">Select admin -\> Users</span>  
-\* Click on **Create a new user**
+- Click on **Create a new user**
 
 This will bring you to the screen shown below. Specify all the fields as
 described in the [Manage Users](/docs/ug/webadmin/userroles.html)
@@ -69,9 +69,9 @@ turned on, only specify the interface. The IP will be automatically
 considered for reporting.
 
 Then complete the task.  
-\# Specify an initial password, you will send this to the user can then
+- Specify an initial password, you will send this to the user can then
 change it.  
-\# If you want to allow multiple logins from the user, check this box.
+- If you want to allow multiple logins from the user, check this box.
 This depends on your overall service offering.
 
 Press Save and complete the task. Now you can send the username +
@@ -83,8 +83,8 @@ The subscriber upon visiting the Trisul login page will enter the
 username and password you have created for him.
 
 The user is immediately taken to the report page containing :  
-\# Data for the first service  
-\# Data for the current day (midnight till now)
+- Data for the first service  
+- Data for the current day (midnight till now)
 
 The user can select a different service or a different day using the
 easy to use drop down lists.
@@ -108,8 +108,8 @@ A typical screenshot of what a subscriber might see upon logging in.
 
 #### Further steps
 
-\# Click on the PDF link to generate a PDF report.  
-\# Click on the **See utilization for entire week** to view [long term
+- Click on the PDF link to generate a PDF report.  
+- Click on the **See utilization for entire week** to view [long term
 usage charts](/docs/ug/tools/analyze_item.html)
 
 ### Showing subscriber static IP data
