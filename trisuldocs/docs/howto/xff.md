@@ -84,10 +84,10 @@ as if the proxy never existed.
 
 Some key points :
 
-\# A small number of bytes up until the XFF header will continue to be
+- A small number of bytes up until the XFF header will continue to be
 metered against the proxy.  
-\# If the XFF header is not found the entire flow is metered against the
+- If the XFF header is not found the entire flow is metered against the
 proxy.  
-\# The proxy becomes transparent as far as HTTP traffic is concerned.  
-\# Raw packets stored by Trisul are re-stamped with the IP of the end
+- The proxy becomes transparent as far as HTTP traffic is concerned.  
+- Raw packets stored by Trisul are re-stamped with the IP of the end
 station.

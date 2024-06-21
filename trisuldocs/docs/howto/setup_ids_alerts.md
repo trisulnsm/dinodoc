@@ -16,8 +16,8 @@ if you prefer Suricata.
 
 
 Trisul can accept alerts in two formats from a named Unix socket  
-\# **in Unified format** : for use with `snort -A unsock` option  
-\# **in Unified2 format** : for use with barnyard2
+- **in Unified format** : for use with `snort -A unsock` option  
+- **in Unified2 format** : for use with barnyard2
 
 
 Connecting Snort to Trisul using `unsock`
@@ -25,7 +25,7 @@ Connecting Snort to Trisul using `unsock`
 
 All you have to do is start snort with the correct options. Trisul
 automatically picks up the alerts.  
-\* Start Trisul Probe
+- Start Trisul Probe
 
 ``` 
  Start Trisul via _Admin -> Start/Stop Tasks -> Start Trisul Probe_
@@ -132,7 +132,7 @@ A diagram that shows the relationship between the various pieces.
 ## More things to do
 
 
-###### How to change the path of the unix socket
+#### How to change the path of the unix socket
 
 
 The default install of every Trisul Probe listens on a unix socket at
@@ -142,7 +142,7 @@ You can change this by editing the
 in the config file.
 
 
-###### How to read a PCAP file and generate alerts
+#### How to read a PCAP file and generate alerts
 
 
 A new tool called [importpcap\_ids](/docs/ug/basicusage/snort.html) uses

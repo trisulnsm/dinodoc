@@ -6,7 +6,6 @@ To start the HTTPS version use the `webtrisulssld` service instead of
 `webtrisuld`
 
 ``` language-bash
-
 # stop the HTTP server 
 systemctl stop webtrisuld 
 
@@ -16,7 +15,7 @@ systemctl start webtrisulssld
 
 Now you can access the web interface via **https://my.trisulhost.com**
 
-**Replace demo certificate/key pair**  
+### Replace demo certificate/key pair
 Ensure you replace the demo certificate and key with new ones specific
 for your organization as described below
 
@@ -62,7 +61,6 @@ You can set the SSL service as the default service , which is
 automatically started on each reboot.
 
 ``` language-bash
-
 # disable the HTTP service 
 systemctl disable webtrisuld
 
