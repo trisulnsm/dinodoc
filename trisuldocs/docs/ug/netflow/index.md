@@ -131,11 +131,11 @@ Trisul’s default input mode is raw packet capture. But Trisul also has
 **comprehensive support** for Netflow v5/v9/JFlow/IPFIX/and SFlow
 metering.
 
-| advantages of netflow input | disadvantages |
-|----|----|
-| easier distributed deployment | no packet based traffic metering like DNS, HTTP, SSL analysis,etc |
-| less expensive hardware | limited security visibility |
-| scales far better than packets | cannot access packets for forensics or malware analysis |
+| advantages of netflow input    | disadvantages                                                     |
+| ------------------------------ | ----------------------------------------------------------------- |
+| easier distributed deployment  | no packet based traffic metering like DNS, HTTP, SSL analysis,etc |
+| less expensive hardware        | limited security visibility                                       |
+| scales far better than packets | cannot access packets for forensics or malware analysis           |
 
 <div class="info hand-o-right autohint">
 
@@ -172,20 +172,20 @@ Interfaces for getting to the Device Specific view.
 
 The following docs contain further instructions to setup Netflow
 
-1.  [Setup Netflow](netflow_setup.html) — How to switch Trisul into a
-    Netflow mode
-2.  [Netflow Configuration Wizard](netflow_wizard.html) — Using the
-    Netflow Config Wizard to customize, use SNMP to resolve,setup Email
-    alerts, etc
-3.  [Routers and Interfaces](routers_and_interfaces.html) — The Device
-    Drilldown tool that allows you to select a router, view interfaces,
-    drilldown into an interface
-4.  [Using Interface Tracking](interface_tracker.html) — Enabling
-    *Interface Tracking* a feature that allows long term accurate
-    analysis of Hosts, Apps, Protocols into and out of an interface
-5.  [Interface Drilldown](drilldown.html) — Using the Interface
-    Drilldown Screen
-6.  [Netflow Sources Dashboard](sources.html) — The netflow sources
-    dashboard
-7.  [Using SNMP](snmp.html) — Using SNMP to complement Netflow device
-    views
+1. [Setup Netflow](netflow_setup.html) — How to switch Trisul into a
+   Netflow mode
+2. [Netflow Configuration Wizard](netflow_wizard.html) — Using the
+   Netflow Config Wizard to customize, use SNMP to resolve,setup Email
+   alerts, etc
+3. [Routers and Interfaces](routers_and_interfaces.html) — The Device
+   Drilldown tool that allows you to select a router, view interfaces,
+   drilldown into an interface
+4. [Using Interface Tracking](interface_tracker.html) — Enabling
+   *Interface Tracking* a feature that allows long term accurate
+   analysis of Hosts, Apps, Protocols into and out of an interface
+5. [Interface Drilldown](drilldown.html) — Using the Interface
+   Drilldown Screen
+6. [Netflow Sources Dashboard](sources.html) — The netflow sources
+   dashboard
+7. [Using SNMP](snmp.html) — Using SNMP to complement Netflow device
+   views
