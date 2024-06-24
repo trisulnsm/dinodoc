@@ -22,13 +22,13 @@ To allow for accurate long term drilldowns of interfaces.
 
 You can create this report in three ways
 
-1.  **from raw flows** — Filter all the flows for that interface then
-    aggregate the Hosts snapshot them into a time series.
-2.  **from Top-N flows** — Another option used by many competing netflow
-    tools is to just consider the Top-N flows
-3.  **from Top-N Conversations** — A third option is to use rolled up
-    top flows rolled up into conversations - ie dropping the port
-    information.
+1. **from raw flows** — Filter all the flows for that interface then
+   aggregate the Hosts snapshot them into a time series.
+2. **from Top-N flows** — Another option used by many competing netflow
+   tools is to just consider the Top-N flows
+3. **from Top-N Conversations** — A third option is to use rolled up
+   top flows rolled up into conversations - ie dropping the port
+   information.
 
 None of these work satisfactorily in practice, particularly over high
 traffic links, such as those seen in ISP, Large Enterprises, or Data
