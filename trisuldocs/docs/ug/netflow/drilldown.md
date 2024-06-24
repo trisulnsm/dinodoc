@@ -9,36 +9,41 @@ The Interface Drilldown tool looks slightly different depending on if
 
 - **With Interface Tracker** — when interface has the tracker (shows up
   with eye <i class='fa fa-eye'></i> icon) enabled. You will see
-  addition detail such as Hosts In/Out/Total and Apps In/Out/Total
-  trends.
+  additional tabs such as Hosts Track/Apps Track.
   
-  ![](images/intf_with_tracker.png)
-
-- **Without Interface Tracker** — without interface tracker you will be
-  shown totals of Host and Apps In/Out/Total but you will not be able to
-  see Time Series trends of these counters.
+  ![](images/intf_hopsts_with_tracker.png)
   
-    ![](images/intf_without_tracker.png)
+  - **Without Interface Tracker** — without interface tracker you will be
+    shown totals of Host and Apps In/Out/Total but you will not be able to
+    see Time Series trends of these counters. 
+  
+    ![](images/intf_traffic.png)
 
 ## Using
 
 :::note navigation
 
 Selecting Drilldown against any Netflow interface in the [Routers and
-Interfaces
-Tool](/docs/ug/netflow/routers_and_interfaces.html#routers_and_interfaces)
+Interfaces Tool](/docs/ug/netflow/routers_and_interfaces.html#routers_and_interfaces)
 
 :::
+
+The following page is displayed.
+
+
+![](images/intf_traffic%20-%20Copy.png)
 
 *Interface drilldown : showing the form for Time, Router, Interface
 selection*
 
-![](images/flowdrill1.png)
-
 ## Search Form
+
+:::note navigation 
 
 Click the **Show search form** to open up a form where you can control
 the following.
+
+:::
 
 ![](images/intf_drilldown_search_form.png)
 
@@ -58,7 +63,7 @@ You can change the interface, time interval, topper count etc.
 The Interface utilization title line shows
 
 **Volumes**  
-Shows Total, Received, and Transmit volumes on the interface
+Shows Total, Received, and Transmitted volumes on the interface
 
 **Download**  
 Allows you to download the drilldown report as PDF or XLSX worksheets
@@ -89,19 +94,23 @@ Also see : [Netflow Wizard Trackers](netflow_wizard.html#trackers)
 ## Traffic Chart
 
 Traffic chart shows the transmit and receive traffic on the interface
-for the selected time window. The guages on the right show the LATEST
+for the selected time window. The legends on the bottom show the LATEST
 values.
 
-![](images/drill-traffic.png)
+![](images/intf_traffic.png)
 
 ## Utilization
 
 Similar to traffic numbers, this tab shows Utilization numbers relative
 to interface speed.
 
+![](images/intf_util.png)
+
 ## Hosts
 
 For IP based reporting.
+
+![](images/intf_hosts.png)
 
 ### Basic Top Hosts Report
 
@@ -122,7 +131,7 @@ the inteface(Egress)
 On the right side,we have the traffic charts which helps you to detect
 the hosts that are causing spikes.
 
-![](images/drill_with_tracker.png)
+![](images/intf_hopsts_with_tracker.png)
 
 ## Apps
 
@@ -136,14 +145,14 @@ This feature in trisul is a deep drilldown of top applications by
 total,into and out of an interface. This is only available after
 enabling [Interface Tracker](interface_tracker.html) .
 
-![](images/drilldown_apps.png)
+![](images/intf_apps_with_tracker.png)
 
 ## Top Conversations or Talkers
 
 Top conversations are nothing but the talkers. The conversations between
 the source and the destination in volume bytes.
 
-![](images/drilldown_talkers.png)
+![](images/intf_conversation.png)
 
 ## Raw Flows
 
@@ -151,23 +160,23 @@ Raw Flows shows details against every flow sorted by volume. It contains
 information like protocol,source IP, source port, destination IP,
 destination port, duration of flows, etc.
 
-![](images/drilldown_raw_flows.png)
+![](images/intf_raw_flows.png)
 
 ## Interface Traffic Matrix - Chord Diagram
 
 A useful tool that represents traffic flows between interfaces. A chord
 diagram looks like the picture below. The interface being drilldown is
 represented a chord and the other interfaces are shown as smaller chords
-sending or receiving traffic from the subject interface.
+sending or receiving traffic from the subject interface. This is only available after
+enabling [Cross Key](/docs/ug/cg/custom.html#cross_key_counter_groups) .
 
-![](images/drill-chord.png)
+!!![](images/interface%20matrix-light.png)
 
 ## ASN, NBAR, and Other Details
 
-These are available in the interface drilldowns if the proper [Flow
-Taggers](/docs/ug/flow/tagger.html) are created ahead of time for them.
+These are available in the interface drilldowns if the proper trackers are created ahead of time when [Cross Key](/docs/ug/cg/custom.html#cross_key_counter_groups)is enabled for them.
 
-![](images/drill-asn.png)
+![](images/asn_crosskey.png)
 
 ### ASN details
 
