@@ -14,22 +14,22 @@ with IP flow records.
 In Cisco Flexible Netflow the following commands can be added to collect
 source and destination MAC addresses.
 
-``` language-bash
+```language-bash
  match datalink mac source address input
  match datalink mac destination address input
 ```
 
 The chief use case for collecting L2 MAC addresses in Netflow is to
 
-- collect the L2 MAC address can reliably identify a subscriber endpoint
+- collecting the L2 MAC address can reliably identify a subscriber endpoint
   in an ISP edge network scenario.
 
 The following counter groups show L2 data
 
-|        |                                                       |
-|--------|-------------------------------------------------------|
-| MAC    | Traffic transmit and receive per MAC address          |
-| DirMAC | Traffic flows over a L2 Link, a pair of MAC addresses |
+| Counter Group | L2 Data                                               |
+| ------------- | ----------------------------------------------------- |
+| MAC           | Traffic transmit and receive per MAC address          |
+| DirMAC        | Traffic flows over a L2 Link, a pair of MAC addresses |
 
 The following picture shows where these counters can be found.
 
@@ -43,9 +43,9 @@ shown under the counter group “VLAN Stats”
 
 The following counter groups show L2 data
 
-|           |                                 |
-|-----------|---------------------------------|
-| VLANStats | 802.11 VLAN IDs traffic metrics |
+| Counter Group | L2 Data                         |
+| ------------- | ------------------------------- |
+| VLANStats     | 802.11 VLAN IDs traffic metrics |
 
 ## Tos DiffServ
 
@@ -61,16 +61,16 @@ deploys ToS and this information is exported in Netflow.
 
 Trisul supports collecting the following Netflow template fields.
 
-|  |  |  |
-|----|----|----|
-| 5 | ipClassOfService | For IPv4: the full 8 bit value of the IP ToS field. For IPv6: the 8-bit value of the Class of Service field |
-| 195 | ipDiffServCodePoint | The most significant 6 bits of the IPv4 TOS field or the IPv6 Traffic Class field |
-| 196 | ipPrecedence | The first 3 bits of the IPv4 TOS field or the IPv6 Traffic Class field. Value range 0-7 |
+|     |                     |                                                                                                             |
+| --- | ------------------- | ----------------------------------------------------------------------------------------------------------- |
+| 5   | ipClassOfService    | For IPv4: the full 8 bit value of the IP ToS field. For IPv6: the 8-bit value of the Class of Service field |
+| 195 | ipDiffServCodePoint | The most significant 6 bits of the IPv4 TOS field or the IPv6 Traffic Class field                           |
+| 196 | ipPrecedence        | The first 3 bits of the IPv4 TOS field or the IPv6 Traffic Class field. Value range 0-7                     |
 
 The following counter groups show ToS data
 
 |               |                                            |
-|---------------|--------------------------------------------|
+| ------------- | ------------------------------------------ |
 | IP ToS        | The full 8-bit ToS field                   |
 | IP Precedence | Meters the traffic per ipProecedence       |
 | IP DSCP       | Meters the traffic per DiffServ code point |
@@ -93,7 +93,7 @@ by RFC 791 in 1981 and is now generally deprecated , but there may be
 some legacy networks still using this feature
 
 |     |                      |
-|-----|----------------------|
+| --- | -------------------- |
 | 000 | Routine              |
 | 001 | Priority             |
 | 010 | Immediate            |
