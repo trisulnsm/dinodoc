@@ -2,22 +2,19 @@
 
 Describes the Interface drilldown tool that appears when you select
 “Drilldown” against any interface in the [Routers and Interfaces
-Tool](/docs/ug/netflow/routers_and_interfaces.html#routers_and_interfaces)
+Tool](/docs/ug/netflow/routers_and_interfaces.html#routers_and_interfaces). The options in Interface Drilldown tool looks slightly different depending on if [Interface Tracking](interface_tracker.html) is enabled or not.
 
-The Interface Drilldown tool looks slightly different depending on if
-[Interface Tracking](interface_tracker.html) is enabled or not.
+## Without Interface Tracker
 
-- **With Interface Tracker** — when interface has the tracker (shows up
-  with eye <i class='fa fa-eye'></i> icon) enabled. You will see
-  additional tabs such as Hosts Track/Apps Track.
-  
-  ![](images/intf_hopsts_with_tracker.png)
-  
-  - **Without Interface Tracker** — without interface tracker you will be
-    shown totals of Host and Apps In/Out/Total but you will not be able to
-    see Time Series trends of these counters. 
-  
-    ![](images/intf_traffic.png)
+This is the screen of your interface without tracker that shows the tabs including Traffic, Util, Flow Hosts, Flow Apps, Conversation, Raw Flows and Matrix. Without interface tracker the "Flow Hosts" and "Flow Apps" shows the totals of Host and Apps In/Out/Total but you will not be able to see Time Series trends of those counters.
+
+![](images/intf_traffic.png)
+
+## With Interface Tracker
+
+When the interface has the tracker enabled it is indicated by the Eye icon on the additional tabs such as Hosts Track/Apps Track as shown below.
+
+![](images/intf_hopsts_with_tracker.png) 
 
 ## Using
 
@@ -28,10 +25,9 @@ Interfaces Tool](/docs/ug/netflow/routers_and_interfaces.html#routers_and_interf
 
 :::
 
-The following page is displayed.
+The following page that contains the traffic chart is displayed.
 
-
-![](images/intf_traffic%20-%20Copy.png)
+![](images/intf_traffic_chart.png)
 
 *Interface drilldown : showing the form for Time, Router, Interface
 selection*
@@ -40,8 +36,7 @@ selection*
 
 :::note navigation 
 
-Click the **Show search form** to open up a form where you can control
-the following.
+Click the **Show search form** on the top right to open up a form where you can control the following.
 
 :::
 
@@ -58,9 +53,11 @@ You can change the interface, time interval, topper count etc.
 
 ## Information Shown
 
+Once the "Change router and interface" form is set and submitted, it takes you to the Interface utilization window.
+
 ![](images/drilldown-tabs.png)
 
-The Interface utilization title line shows
+On top of the tabs you can see the interface utilization data that includes, 
 
 **Volumes**  
 Shows Total, Received, and Transmitted volumes on the interface
@@ -91,7 +88,7 @@ as a Tab.
 
 Also see : [Netflow Wizard Trackers](netflow_wizard.html#trackers)
 
-## Traffic Chart
+## Traffic
 
 Traffic chart shows the transmit and receive traffic on the interface
 for the selected time window. The legends on the bottom show the LATEST
@@ -99,20 +96,20 @@ values.
 
 ![](images/intf_traffic.png)
 
-## Utilization
+## Util
 
 Similar to traffic numbers, this tab shows Utilization numbers relative
 to interface speed.
 
 ![](images/intf_util.png)
 
-## Hosts
+## Flow Hosts
 
 For IP based reporting.
 
 ![](images/intf_hosts.png)
 
-### Basic Top Hosts Report
+### Hosts Track
 
 Shows Top N Hosts IP addresses sending or receiving traffic on the
 interface.
@@ -126,14 +123,14 @@ and out of an interface. This is only available after enabling
 Top hosts into interface are the hosts that are transmitting into the
 interface(Ingress)  
 Top hosts out of interface are the hosts that are transmitting out of
-the inteface(Egress)
+the interface(Egress)
 
-On the right side,we have the traffic charts which helps you to detect
+On the right side,we have the traffic chart which helps you to detect
 the hosts that are causing spikes.
 
 ![](images/intf_hopsts_with_tracker.png)
 
-## Apps
+## Apps Track
 
 ### Default Top Apps Report
 
@@ -149,8 +146,7 @@ enabling [Interface Tracker](interface_tracker.html) .
 
 ## Top Conversations or Talkers
 
-Top conversations are nothing but the talkers. The conversations between
-the source and the destination in volume bytes.
+Top conversations are nothing but the talkers. The screen displays the conversations between the source and the destination in volume bytes.
 
 ![](images/intf_conversation.png)
 
@@ -167,14 +163,11 @@ destination port, duration of flows, etc.
 A useful tool that represents traffic flows between interfaces. A chord
 diagram looks like the picture below. The interface being drilldown is
 represented a chord and the other interfaces are shown as smaller chords
-sending or receiving traffic from the subject interface. This is only available after
-enabling [Cross Key](/docs/ug/cg/custom.html#cross_key_counter_groups) .
-
-!!![](images/interface%20matrix-light.png)
+sending or receiving traffic from the subject interface. This is only available after enabling [Cross Key](/docs/ug/cg/custom.html#cross_key_counter_groups) ![](images/interface_matrix_light.png)
 
 ## ASN, NBAR, and Other Details
 
-These are available in the interface drilldowns if the proper trackers are created ahead of time when [Cross Key](/docs/ug/cg/custom.html#cross_key_counter_groups)is enabled for them.
+These are available in the interface drilldowns if the proper trackers are created ahead of time when [Cross Key](/docs/ug/cg/custom.html#cross_key_counter_groups) is enabled for them.
 
 ![](images/asn_crosskey.png)
 
