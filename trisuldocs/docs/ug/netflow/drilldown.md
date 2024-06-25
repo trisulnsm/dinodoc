@@ -42,7 +42,7 @@ Click the **Show search form** on the top right to open up a form where you can 
 
 ![](images/intf_drilldown_search_form.png)
 
-You can change the interface, time interval, topper count etc.
+You can change the router, interface, time interval, and topper count.
 
 | Field            | Description                                                                                 |
 | ---------------- | ------------------------------------------------------------------------------------------- |
@@ -51,9 +51,11 @@ You can change the interface, time interval, topper count etc.
 | Time Frame       | Change the time interval for the report                                                     |
 | Top Count        | Controls how many **Top** items are shown in topper views of Hosts, Apps, Conversations etc |
 
+Once the "Change router and interface" form is set and submitted , it takes you to the Interface utilization window.
+
 ## Information Shown
 
-Once the "Change router and interface" form is set and submitted, it takes you to the Interface utilization window.
+
 
 ![](images/drilldown-tabs.png)
 

@@ -2,28 +2,23 @@
 
 Interface Tracker is a streaming analytics feature of Trisul you need to
 enable on a Netflow Interface level to acquire ability to create
-separate monitoring for hosts applications and protocols on each
+separate monitoring for hosts, applications and protocols on each
 interface.
 
 ## Purpose of interface tracking
 
 To allow for accurate long term drilldowns of interfaces.
 
-<div class='panel panel-info panel-body'>
-
 ![](images/iftrack-eye.png)
-
-</div>
 
 ### How it works
 
-> Say you want a report of Top Hosts over time on interface ge/0/0 for 2
-> days.
+>  Say you want a report of Top Hosts over time on interface ge/0/0 for 2 days.
 
 You can create this report in three ways
 
 1. **from raw flows** — Filter all the flows for that interface then
-   aggregate the Hosts snapshot them into a time series.
+   aggregate the Hosts and snapshot them into a time series.
 2. **from Top-N flows** — Another option used by many competing netflow
    tools is to just consider the Top-N flows
 3. **from Top-N Conversations** — A third option is to use rolled up
@@ -54,7 +49,7 @@ calculation is about 20-30MB/per-interface/per-day. It may not seem much
 but if you have 1000s of interfaces it could add up. Hence by default ,
 this feature is disabled.
 
-A second point is the *interface tracker* is not very useful for low
+Second point is that the *interface tracker* is not really necessary for low
 traffic interfaces. When there are less number of flows, the *raw flows*
 based analytics provides sufficient accuracy.
 
@@ -62,49 +57,44 @@ based analytics provides sufficient accuracy.
 
 There are multiple ways to do this.
 
-#### Enable on Top-100 interfaces
+### Enable on Top-100 interfaces
 
 This is the recommended method. After running Trisul for a while it
 would have discovered all of the routers and interfaces automatically.
 This method creates 100 trackers for the top interfaces. This should be
 suitable for most large organizations.
 
-<div class="success hand-o-right autohint">
+> By selecting “Enable interfaces for top 100” in the “Interfaces” tab or using the “Select a Router to display interfaces” dropdown from the [Netflow Wizard](netflow_wizard.html#interfaces_)
 
-Select “Enable interfaces for top 100” in the “Routers table”:
-
-</div>
-
-\_or using the “Interfaces” tab of the [Netflow
-Wizard](netflow_wizard.html#interfaces_)
-
-<div class="success hand-o-right autohint">
+:::note navigation
 
 Login as admin, then select Context: Default -\> profile0 -\> then
 Netflow Wizard  
-Then in the Interfaces tab select [Enable interfaces for top
-100](routers_and_interfaces.html)
+Then in the Interfaces tab click on the "Interface tracking" drop down button and select "[Enable interfaces for top 100](routers_and_interfaces.html)"
 
-</div>
+:::
 
-#### Enable on per interface basis
+Or
 
-<div class="success hand-o-right autohint">
+### Enable on per interface basis
 
-Select “Enable Interface Tracker” in the interface table menu on the
-[Router Interfaces](routers_and_interfaces.html) tool
+You can also choose the interfaces on a particular router and enable interface tracking on them
 
-</div>
+:::note navigation
 
-#### Disable interface tracking
+In the same Interfaces tab Click on the "Select a router to display Interfaces" dropdown button and choose a particular router which displays the number interfaces on that router. From the number of interfaces displayed, click on the check boxes of the interfaces that you want to enable interface tracking and Select “Enable Interface Tracking” from the "Interface Tracking" menu on the [Router Interfaces](routers_and_interfaces.html) tool
+
+:::
+
+## Disable interface tracking
 
 If you want to disable interface tracking
 
-<div class="success hand-o-right autohint">
+:::note navigation
 
 Login as admin, then select Context: Default -\> profile0 -\> then
 Netflow Wizard  
 Then in the Interfaces tab select [Disable interface
-tracking](routers_and_interfaces.html)
+tracking](routers_and_interfaces.html) from the "Interface Tracking" drop down button
 
-</div>
+:::
