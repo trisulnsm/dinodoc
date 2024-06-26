@@ -1,0 +1,10 @@
+{
+  "label": "Netflow Monitoring",
+  "link": {
+    "type": "generated-index",
+    "title": "Netflow Monitoring with Trisul "
+  },
+  "customProps": {
+    "description": "This section describes the features known as Trisul Neflow Analzyer"
+  }
+}
