@@ -13,26 +13,26 @@ environment. It is available on both hub and probe nodes.
 
 #### Usage
 
-``` language-bash
+```language-bash
 source /usr/local/share/trisul-probe/trisbashrc [domain] [probe] [contextname]
 # default domain = domain0, probe=probe0, context=context0
 ```
 
 For setting the environment to the default trisul context, `context0`
 
-``` language-bash
+```language-bash
 source /usr/local/share/trisul-probe/trisbashrc 
 ```
 
 For setting the environment to context named `10gige`
 
-``` language-bash
+```language-bash
 source /usr/local/share/trisul-probe/trisbashrc 10gig3
 ```
 
 For setting the environment to context named `10gige` on `probeEAST`
 
-``` language-bash
+```language-bash
 source /usr/local/share/trisul-probe/trisbashrc domain0 probeEAST 10gig3
 ```
 
@@ -61,20 +61,20 @@ source /usr/local/share/trisul-probe/trisbashrc domain0 probeEAST 10gig3
 
 #### Usage
 
-``` language-bash
+```language-bash
 source /usr/local/share/trisul-hub/trisbashrc [domain] [hub] [contextname]
 # default domain = domain0, hub=hub0, context=context0
 ```
 
 For setting the environment to the default trisul context, `context0`
 
-``` language-bash
+```language-bash
 source /usr/local/share/trisul-hub/trisbashrc 
 ```
 
 For setting the environment to context named `10gige`
 
-``` language-bash
+```language-bash
 source /usr/local/share/trisul-hub/trisbashrc domain0 hub0 10gig3
 ```
 

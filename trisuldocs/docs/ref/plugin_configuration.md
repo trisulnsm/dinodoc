@@ -6,11 +6,11 @@ Trisul consists of two base configs - the
 control how various metrics are computed you can tweak the following
 Plugin configuration files.
 
-  - What are plugins?  
-    Trisul is a network analytics platform and hence most of the actual
-    metering functionality are implemented as native plugins. Hence the
-    name “plugin configuration”. Each plugin has a GUID, the plugin
-    config files therefore are created with a GUID in them.
+- What are plugins?  
+  Trisul is a network analytics platform and hence most of the actual
+  metering functionality are implemented as native plugins. Hence the
+  name “plugin configuration”. Each plugin has a GUID, the plugin
+  config files therefore are created with a GUID in them.
 
 ## Plugin config editor
 
@@ -20,7 +20,7 @@ and edit these plugin config files.
 
 Type the following command to bring up the editor.
 
-``` language-bash
+```language-bash
 sudo /usr/local/share/trisul-probe/cfgedit 
 ```
 
@@ -34,7 +34,7 @@ Usage: `cfgedit [domain-name] [probe-id] [context-name]`
 
 Some examples
 
-``` language-bash
+```language-bash
 # to edit configs for default context 
 sudo /usr/local/share/trisul-probe/cfgedit 
 
@@ -99,16 +99,16 @@ Application Names.
 
 ### Specifying rules
 
-  - attribute k  
-    the key to update the Base Domains counter group
-  - attribute x  
-    the regex in RE2 format that matches
-  - order of matching  
-    the first match is selected
+- attribute k  
+  the key to update the Base Domains counter group
+- attribute x  
+  the regex in RE2 format that matches
+- order of matching  
+  the first match is selected
 
 <!-- end list -->
 
-``` language-xml
+```language-xml
 <Rule>     <k> WHATSAPP        </k><x>  whatsapp                                         </x></Rule>
 <Rule>     <k> FACEBOOK        </k><x>  (facebook|fbcdn|fb\.me)                          </x></Rule>
 <Rule>     <k> YOUTUBE         </k><x>  (youtube|ytimg|googlevideo|ggpht|gvt1\.com)      </x></Rule>
@@ -235,9 +235,9 @@ How HTTP Hosts are metered.
 
 DomainDepth if you have a HTTP host like `lax25.sjv.y1.youtube.com`
 
-|   |                      |
-| - | -------------------- |
-| 0 | indicates fulldomain |
-| 1 | com                  |
-| 2 | youtube.com          |
-| 3 | y1.youtube.com       |
+|     |                      |
+| --- | -------------------- |
+| 0   | indicates fulldomain |
+| 1   | com                  |
+| 2   | youtube.com          |
+| 3   | y1.youtube.com       |

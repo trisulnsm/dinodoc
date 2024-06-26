@@ -11,8 +11,7 @@ to re-encrypt all the PCAP files.
 
 Type `man trisul_reencrypt` for a complete list of available options.
 
-``` language-bash
-
+```language-bash
 trisul_reencrypt - rencrypts Trisul packet capture files with a new passphrase
 
 
