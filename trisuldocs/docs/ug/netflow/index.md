@@ -10,7 +10,7 @@ Trisul supports Netflow v1, v5, and Netflow v9, Flexible Netflow, and all versio
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Monitor bandwidth usage<br/>  Device and interface drilldown<br/>  Over 200 Metrics,TopN,BottomN<br/>  NO ROLL UPS<br/>  Full resolution metrics<br/>  LIVE Real Time views<br/>  Powerful alerting<br/>  Long term interface drilldowns | Store ALL flows<br/>  No rollups or loss of info<br/>  Drilldown flows from interfaces<br/>  Powerful Flow Query<br/>  Graph Analytics for Flows<br/>  Enrich withFlow Taggers<br/>  Long timeframe Top-K flows<br/>  Detect Exfil and Long Sessions | Threat monitoring<br/>  Threshold Band<br/>  Detect anomalies in metrics<br/>  Identify compromised hosts<br/>  Query IP spaces<br/>  Over 20 Retro Analysis tools<br/>  Complement Packet based Trisul<br/>  TRAI ISP Compliance |
 
-## ## Introduction to Netflow for Trisul
+## Introduction to Netflow for Trisul
 
 Netflow is a very handy mechanism to acquire network data from a very large number of network elements in a cost effective manner. For maximum visiblity, we recommend you enable Netflow all over your network and send the logs to a Trisul context.
 
@@ -20,7 +20,7 @@ The following diagram shows an example deployment.
 
 Configure routers/switches to send Netflow (JFLOW,IPFIX,SFlow,etc) to Trisul-Probe
 
-## ## Advantages of Netflow vs Packet Capture
+## Advantages of Netflow vs Packet Capture
 
 Trisul’s default input mode is raw packet capture. But Trisul also has **comprehensive support** for Netflow v5/v9/JFlow/IPFIX/and SFlow metering.
 
@@ -32,7 +32,7 @@ Trisul’s default input mode is raw packet capture. But Trisul also has **comp
 
 > Tip: You can use Packet based Trisul to do full NSM (Network Security Monitoring) at perimeter and Netflow to gain visibilty into lateral traffic inside your network.
 
-## ## Global vs Device View
+## Global vs Device View
 
 This may be confusing for those coming to Trisul from traditional netflow solutions. Most of the Trisul dashboards are **Global views** that represent the sum total of all the interfaces in your network. If you see metrics for *8.8.8.8* it represents the TOTAL traffic to *8.8.8.8* from all the routers in your network.
 
@@ -42,7 +42,7 @@ If you log on for the first time into a Netflow instance you may get a dashboard
 
 ![](images/Current_host.png)
 
-## ## Links
+## Links
 
 The following docs contain further instructions to setup Netflow
 
