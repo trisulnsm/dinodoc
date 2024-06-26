@@ -37,8 +37,6 @@ the following.
 
 > While using this mode, make sure the [TrisulMode in trisulConfig.xml](/docs/ref/trisulconfig.html#app) is set to TAP (the default) and not NETFLOW_TAP
 
-</div>
-
 ### Netflow and PCAP on the same interface
 
 If you have Netflow and PCAP on the same interface (say eth0). You would
