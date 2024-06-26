@@ -9,7 +9,7 @@ traffic charts, etc.
 To enable SNMP you need to install the following packages on the
 Trisul-Hub node.
 
-``` language-bash
+```language-bash
 # ubuntu
 apt install snmp
 
@@ -22,13 +22,13 @@ yum install net-snmp net-snmp-utils
 You need to first specify the authentication details for each SNMP
 device.
 
-<div class="info hand-o-right autohint">
+:::note navigation
 
 Login as user, then select \_Netflow \> Router and Interfaces
 
-</div>
+:::
 
-![](images/snmp1.png)
+![](images/snmp_settings.png)
 
 Click on SNMP Settings and enter the SNMP v2 or SNMP v3 parameters.
 
@@ -36,14 +36,14 @@ Click on SNMP Settings and enter the SNMP v2 or SNMP v3 parameters.
 
 When you click the *Options* menu
 
-|  |  |
-|----|----|
-| Key Dashboard | Every Item in trisul has a key. Similarly every router is associated with an unique key and this options fetches the key details for every device |
-| Long Term Chart | You can view the long term traffic trends as a chart using this option |
-| SNMP Settings | Configure SNMPv2 or SNMPv3 parameters. |
+| Settings                               | Description                                                                                                                                                                           |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Key Dashboard                          | Every Item in trisul has a key. Similarly every router is associated with an unique key and this options fetches the key details for every device                                     |
+| Long Term Chart                        | You can view the long term traffic trends as a chart using this option                                                                                                                |
+| SNMP Settings                          | Configure SNMPv2 or SNMPv3 parameters.                                                                                                                                                |
 | SNMP resolve router and interface name | Query the SNMP device and automatically assign names to the router and all the interfaces using the “Interface Name” value in the SNMP MIB. Usually this is like `Gigabit/1/0/12` etc |
-| Router Tracker | Router tracker feature enables the detailed analysis of hosts and applications at device level |
-| Show Router Description | Show the router description in the table. This is the value of sysDescr from the SNMP MIB |
+| Router Tracker                         | Router tracker feature enables the detailed analysis of hosts and applications at device level                                                                                        |
+| Show Router Description                | Show the router description in the table. This is the value of sysDescr from the SNMP MIB                                                                                             |
 
 ### When the IP address of the SNMP agent is different
 
@@ -57,29 +57,26 @@ need to specify a *Key Attribute* for the router called
 - Select *Options \> Key Dashboard*
 - Select *Assign user label / Edit attributes* as shown below
 
-![](images/snmp2.png)
+![](images/snmp_edit_label.png)
 
-- Scroll down to the *Attributes* section and add the following string
-  `snmp.management_ip=10.x.x.x` replace with actual IP.
+Scroll down to the *Attributes* section and add the following string
+`snmp.management_ip=10.x.x.x` replace with actual IP.
+
 - Update
 
 Now you should be able to resolve the router and inteface names.
 
 ## Viewing SNMP traffic charts
 
-<div class="info hand-o-right autohint">
+> Against any interface select Options
 
-Against any interface select Options
-
-</div>
-
-![](images/snmp3.png)
+![](images/router_interface_options.png)
 
 You get the following options
 
-|  |  |
-|----|----|
-| Live SNMP | This brings up a live 5 second updated view of SNMP In/Out traffic chart for that interface. |
+| Settings           | Description                                                                                                                                                                        |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Live SNMP          | This brings up a live 5 second updated view of SNMP In/Out traffic chart for that interface.                                                                                       |
 | SNMP Key Dashboard | If you have the *Trisul SNMP APP* installed, Trisul automatically polls all interfaces and maintains historical charts. This takes you to the key dashboard for historical charts. |
 
 ### Live SNMP
@@ -87,7 +84,7 @@ You get the following options
 Shows a 10-sec updated chart of network traffic on the interface
 obtained via SNMP. A very useful debugging tool.
 
-![](images/livesnmp.png)
+![](images/live_snmp.png)
 
 ## Configuring SNMP Globally.
 
@@ -99,10 +96,10 @@ settings to configure SNMp in a single shot.
 
 To configure this, Login as Admin
 
-<div class="info hand-o-right autohint">
+:::note navigation
 
 Click on Manage -\> App Settings -\> SNMP Settings.
 
-</div>
+:::
 
-![](images/snmp_global.png)
+![](images/snmp_app_setting.png)    
