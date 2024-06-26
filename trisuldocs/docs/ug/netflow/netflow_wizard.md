@@ -23,7 +23,7 @@ You will see a Check mark against each option that is configured
 correctly
 
 *Showing Netflow Wizard for the Default context*  
-![](images/nfwizard1.png)
+![](images/netflow-wizard.png)
 
 Notice the wizard has 6 Tabs.
 
@@ -50,6 +50,8 @@ The current setting is shown just below the form items.
 | Select Netflow/SFlow ports          | Enter the UDP ports that are mapped to Netflow. If you want to enter a new port click on *Set Netflow Ports* then enter a Port Number and select “Netflow” from the drop down list.                                                                                        |
 | Select counter groups for Netflow   | In Netflow mode many packet based counter groups such as HTTP Hosts, DNS Counters, SSL/TLS certificate metrics are not available. Select *Choose Counters* then scroll to the bottom for *Advanced Options* then select *Typical enterprise Netflow counter configuration* |
 | Switch Trisul Probes to NETFLOW_TAP | The Probe nodes have to be in `NETFLOW_TAP` mode. Click the button and ensure that the *Packets or Netflow* parameter is changed to `NETFLOW_TAP` from `TAP`.                                                                                                              |
+| Edges                               | Enables the database containing the streaming graph of relationship between different entities                                                                                                                                                                             |
+| Ring                                | Enable to capture raw packets                                                                                                                                                                                                                                              |
 
 ## Routers
 
@@ -63,7 +65,7 @@ you to perform the following tasks on the discovered routers.
 
 Select routers and then :
 
-|                         |                                                                  |
+| Configurations required | Description                                                      |
 | ----------------------- | ---------------------------------------------------------------- |
 | SNMP Settings           | Read community string for discovery                              |
 | Resolve Router Names    | Using SNMP sysName                                               |
@@ -82,7 +84,7 @@ discovered interfaces.
 
 Select interfaces and then :
 
-|                                           |                                                                       |
+| Configurations required                   | Description                                                           |
 | ----------------------------------------- | --------------------------------------------------------------------- |
 | Enable Interface Tracking for **Top 100** | Enables the Interface Tracking feature for the busiest 100 interfaces |
 | Enable Interface Tracking                 | Enables Interface Tracking on the selected intefaces                  |
@@ -95,13 +97,13 @@ Select interfaces and then :
 This page allows you to configure real time E-Mail alerts for various
 conditions.
 
-|                        |                                                                                                                                                                                                                          |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Email Account settings | Outgoing SMTP email account                                                                                                                                                                                              |
-| Recipients             | Email IDs of those who want to receive the alerts                                                                                                                                                                        |
-| Notification Service   | Must be started and running                                                                                                                                                                                              |
-| Alerts to syslog       | Select which alert types go to SYSLOG. Trisul sends out Emails only for those alerts that are sent to SYSLOG. To send an alert type to SYSLOG, click on the button and select any SYSLOG alert level in the next screen. |
-| Syslog readable        | Checks if syslog files on the hub node are readable                                                                                                                                                                      |
+| Configurations required | Description                                                                                                                                                                                                              |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Email Account settings  | Outgoing SMTP email account                                                                                                                                                                                              |
+| Recipients              | Email IDs of those who want to receive the alerts                                                                                                                                                                        |
+| Notification Service    | Must be started and running                                                                                                                                                                                              |
+| Alerts to syslog        | Select which alert types go to SYSLOG. Trisul sends out Emails only for those alerts that are sent to SYSLOG. To send an alert type to SYSLOG, click on the button and select any SYSLOG alert level in the next screen. |
+| Syslog readable         | Checks if syslog files on the hub node are readable                                                                                                                                                                      |
 
 Once you go through the items in this wizard you will have a robust
 Netflow based monitoring system.
@@ -121,7 +123,7 @@ Enable these to provide drilldowns from router interfaces to these
 metrics.These appear as Tabs in the [Router and Interface
 Drilldown](drilldown.html#information_shown) pages.
 
-|                                  |                                                                                                              |
+| Configurations required          | Description                                                                                                  |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | Track ASN Per Interface          | Outgoing SMTP email account                                                                                  |
 | Track Protocol Per Interface     | For each interface track IP protocol usage for TCP, UDP, etc.                                                |
@@ -132,7 +134,7 @@ Drilldown](drilldown.html#information_shown) pages.
 
 ### For ISP (Internet Service Provider)
 
-|                                     |                                                                                                          |
+| Configurations required             | Description                                                                                              |
 | ----------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | Track ASN for Subnets               | Allows ISP to define IP subnets and assign them to customers, then track AS wise usage of those subnets. |
 | Track ASN for Locations             | Allows ISP to define Locations as a group of routers then track AS wise traffic for the entire location  |
@@ -144,8 +146,8 @@ Drilldown](drilldown.html#information_shown) pages.
 
 Generate alerts when any interface utilization crosses these thresholds
 
-|        |                                                            |
-| ------ | ---------------------------------------------------------- |
-| High   | If interfaces crossed 90% it will give high level alerts   |
-| Medium | If interfaces crossed 80% it will give medium level alerts |
-| Low    | If interfaces crossed 70% it will give low level alerts    |
+| Configurations requried | Description                                                |
+| ----------------------- | ---------------------------------------------------------- |
+| High                    | If interfaces crossed 90% it will give high level alerts   |
+| Medium                  | If interfaces crossed 80% it will give medium level alerts |
+| Low                     | If interfaces crossed 70% it will give low level alerts    |
