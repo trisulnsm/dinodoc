@@ -1,4 +1,4 @@
-# trisul\_reencrypt : Reencrypt PCAP files
+# trisul_reencrypt : Reencrypt PCAP files
 
 Trisul stores all its PCAP files in an encrypted format. It uses a
 stream encryption cipher AES-128-CTR. Using `trisul_reencrypt` you can

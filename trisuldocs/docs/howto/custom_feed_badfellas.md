@@ -76,8 +76,6 @@ Open the badfellas feed config file
 vi /usr/local/var/lib/trisul-config/domain0/allcontexts/feeds/feed-2F3CCCA3-38D4-4773-97AB-3ED732F82533/rules.xml`
 ```
 
-
-
 Notice the feed config file `rules.xml` consists of *Update* sections.
 
 ```
