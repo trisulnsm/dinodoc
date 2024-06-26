@@ -8,11 +8,11 @@ describes how you can add your own feeds to the framework.
 
 The basic method is the following
 
-1.  Pre process your feed into a TAB separated file in a particular
-    directory or URL on the HUB node 
-2.  Point the Badfellas plugin to that file or URL for distribution to
-    the PROBE nodes
-3.  You can add any number of these feeds
+1. Pre process your feed into a TAB separated file in a particular
+   directory or URL on the HUB node 
+2. Point the Badfellas plugin to that file or URL for distribution to
+   the PROBE nodes
+3. You can add any number of these feeds
 
 **Advanced** : If you want to have maximum control of the Intel
 framework processing, you can use the [LUA API](/docs/lua) alongside the
@@ -30,19 +30,19 @@ directory that is readable by the Web Trisul user, which is by default
 Indicators can be any of the usual IOCs (Indicators of Compromise). They
 include
 
-1.  IPv4/v6 Addresses
-2.  Domain names
-3.  URLs
-4.  File Hashes
-5.  Info contained in SSL Certs  
-    and about 10 others.
+1. IPv4/v6 Addresses
+2. Domain names
+3. URLs
+4. File Hashes
+5. Info contained in SSL Certs  
+   and about 10 others.
 
 ### Sample file
 
 A sample TSV file named `/tmp/myfeed1.tsv` would look like the
 following.
 
-``` language-csv
+```language-csv
 # FeedName,indicator,description
 
 MYBADLIST<TAB>masterkey.com.ua<TAB>Malicious host possibly hosting Palevo 
@@ -72,8 +72,11 @@ The GUID part is scary, but that is the GUID of the Badfellas plugin.
 
 Open the badfellas feed config file
 
-`vi
-/usr/local/var/lib/trisul-config/domain0/allcontexts/feeds/feed-2F3CCCA3-38D4-4773-97AB-3ED732F82533/rules.xml`
+```bash
+vi /usr/local/var/lib/trisul-config/domain0/allcontexts/feeds/feed-2F3CCCA3-38D4-4773-97AB-3ED732F82533/rules.xml`
+```
+
+
 
 Notice the feed config file `rules.xml` consists of *Update* sections.
 
@@ -84,7 +87,6 @@ Notice the feed config file `rules.xml` consists of *Update* sections.
         <Frequency>
           .. how frequently do you want to download and refresh 
     </Update>
-
 ```
 
 ### Connect your feed into Badfellas
@@ -95,17 +97,15 @@ connect your TAB separated processed feed in this section.
 Say you have saved your file in a location `/tmp/myfeed_1.tsv` You can
 connect it to Badfellas in the following way.
 
-  - Edit the file
-    `/usr/local/var/lib/trisul-config/domain0/allcontexts/feeds/feed-2F3CCCA3-38D4-4773-97AB-3ED732F82533/rules.xml`
-    
-  - Add your TSV file (indicated by the `<-- add this line only` caption
-    )
+- Edit the file
+  `/usr/local/var/lib/trisul-config/domain0/allcontexts/feeds/feed-2F3CCCA3-38D4-4773-97AB-3ED732F82533/rules.xml`
+
+- Add your TSV file (indicated by the `<-- add this line only` caption
+  )
 
 <!-- end list -->
 
-``` language-xml
-
-
+```language-xml
   ..  locate the Update section at the bottom of the config file 
   .. 
     <Update>

@@ -24,7 +24,7 @@ connected by an AND or OR logical operator.
 
 > A constraint is a mapping of a counter group with keys in that group.
 
-``` 
+```
   A single constraint
       {guid}=k1,k2,k3         (match these keys)
       {guid}!k1,k2,k3         (match all except these keys)
@@ -35,11 +35,11 @@ connected by an AND or OR logical operator.
       constraint1&constraint2 (constraint1 AND constraint 2 must match)
 ```
 
-%(hint tip)A list of GUIDs can be found [here](/docs/ref/guid.html)
+A list of GUIDs can be found [here](/docs/ref/guid.html)
 
 ## Online rule builder
 
-Trisul has an online [rule builder](/docs/ug/tools/rule_builder.html) to
+Trisul has an online rule builder to
 help you create these rules in an interactive way.
 
 ## Examples
@@ -48,17 +48,18 @@ Some examples will help illustrate the concept.
 
 ### Applications on ports 80, 81, 82, 83
 
-````
+```
 {C51B48D4-7876-479E-B0D9-BD9EFF03CE2E}=p-0050,p-0051,p-0052,p-0053  
-````
+```
 
 The GUID in the above example represents the applications counter group
 and the p-0050,.. represent the keys. So in order to effectively
 construct the constraint you need to know:  
-\# The GUID of the counter group (you can cut and paste from *Customize
-\> Counters \> All Counter Groups \> Click on a group*)  
-\# How keys are constructed in the group (cut and paste from the Key
-dashboard)
+
+1. The GUID of the counter group (you can cut and paste from *Customize Counters > All Counter Groups > Click on a group*)
+
+2. How keys are constructed in the group (cut and paste from the Key
+   dashboard)
 
 ### Hosts 192.168.1.2, 192.168.1.10, and all hosts between 192.168.1.100 to 192.168.1.192
 
@@ -67,6 +68,7 @@ The hosts are keyed by hex digits separated by a period C0.A8.01.01 =
 192.168.1.1
 
 So our expression is  
+
 ```
 {4CD742B1-C1CA-4708-BE78-0FCA2EB01A86}=C0.A8.01.02,C0.A8.01.0A,C0.A8.01.64\~C0.A8.01.C0  
 ```
@@ -88,8 +90,7 @@ constraints.
 
 Building on the above examples, if you want to filter
 
-\* Traffic on ports 80,81,82,83 only on non USA or Canada traffic
-
+- Traffic on ports 80,81,82,83 only on non USA or Canada traffic
 
 ```
 {C51B48D4-7876-479E-B0D9-BD9EFF03CE2E}=p-0050,p-0051,p-0052,p-0053&{00990011-44bd-4c55-891a-77823d59161b}\!us,ca  

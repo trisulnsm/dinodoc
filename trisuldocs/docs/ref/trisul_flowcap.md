@@ -7,10 +7,13 @@ to dramatically reduce the size of PCAP files.
 
 In Trisul, PCAP policies can be specified
 
-- During live capture  
-  at capture time you can control PCAP policies see [controlling
-  packet storage](/docs/ug/caps/packetstorage.html)
-- Post capture  
+- During live capture 
+  
+  At capture time you can control PCAP policies see controlling
+  packet storage
+
+- Post capture
+  
   trisul\_flowcap can be used to prune these already collected files.
   Lets you create custom policies such as. Prune 10MB/flow for 1
   month, then reduce to 100K/flow.
@@ -195,4 +198,5 @@ trisulProbeConfig.xml
 The Trisul probe configuration file. This is typically located in /usr/local/etc/trisul-probe under subdirectory domain0/probe0/context0. This file is requires because trisul_flowcap needs to use the probe protocol dissectors to locate the IP and IPv6 headers.
 
 AUTHORS
+Trisul Network Analytics © 2020 https://trisul.org
 ```

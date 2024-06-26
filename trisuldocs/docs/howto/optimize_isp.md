@@ -8,7 +8,7 @@ hosts traffic tracking storage.
 We recommend the following policy.
 
 - Track all IPs in the service provider domain (the service provider
-customers)  
+  customers)  
 - Track only the top 1000 or so external IPs (out in the internet)  
 - Optionally increase the bucket size to a 5 minute resolution.
 
@@ -40,15 +40,15 @@ Step 5: Save
 These are built in counter groups that divide the IP’s into two separate
 groups
 
-  - Internal Hosts  
-    setup to track stats for all IPs in the home network
-  - External Hosts  
-    setup to track stats for only the top 1000 IPs on the internet
-    (external)
+- Internal Hosts  
+  setup to track stats for all IPs in the home network
+- External Hosts  
+  setup to track stats for only the top 1000 IPs on the internet
+  (external)
 
 You can customize these two groups further if you wish (for example to
 increase the top 1000 hosts in the external group to the top 5000)
 
-\* Enable the first two groups “Internal Hosts” and “External Hosts”
+-  Enable the first two groups “Internal Hosts” and “External Hosts”
 
 Restart trisul for changes to take effect.

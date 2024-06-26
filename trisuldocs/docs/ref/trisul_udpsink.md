@@ -25,7 +25,9 @@ If you are using the default NETFLOW port 2055
 If you want to change the port number from 2055 to your custom port.
 Type.
 
-    systemctl edit trisul-udpsink --full
+```bash
+systemctl edit trisul-udpsink --full
+```
 
 Change the port number from 2055 to your preferred.
 

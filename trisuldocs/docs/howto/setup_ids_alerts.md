@@ -2,38 +2,34 @@
 
 There are two ways you can send IDS alerts into Trisul
 
-1.  Use a Unix Socket and send Unified2 or Snort (Unified) format alerts
-    to that socket
-2.  Use the [LUA Input Filter](/docs/lua/inputfilter.html) API 
+1. Use a Unix Socket and send Unified2 or Snort (Unified) format alerts
+   to that socket
+2. Use the [LUA Input Filter](/docs/lua/inputfilter.html) API 
 
 Suricata-EVE APP
-
 
 The newly released Trisul APP [Suricata
 EVE](https://medium.com/@vivekrj/how-to-get-suricata-eve-alerts-into-trisul-network-analytics-and-why-f3015d7280e0)
 allows you to easily integrate Suricata alerts. You can give that a try
-if you prefer Suricata.
-
+if you prefer Suricata. 
 
 Trisul can accept alerts in two formats from a named Unix socket  
+
 - **in Unified format** : for use with `snort -A unsock` option  
 - **in Unified2 format** : for use with barnyard2
 
-
 Connecting Snort to Trisul using `unsock`
-
 
 All you have to do is start snort with the correct options. Trisul
 automatically picks up the alerts.  
+
 - Start Trisul Probe
 
-``` 
+```
  Start Trisul via _Admin -> Start/Stop Tasks -> Start Trisul Probe_
 ```
 
-
 Start Snort in `unsock` mode
-
 
 Select the “How to start snort” to get the command line options as shown
 in the screenshot. You can then copy-paste that into a terminal.
@@ -59,8 +55,7 @@ Barnyard2 uses the socket name *barnyard2\_alert* ; edit the
 [IDSAlerts UnixSocket](/docs/ref/trisulconfig.html#idsalerts) parameter
 to send the alerts to `/tmp/barnyard2_alert`
 
-``` language-xml
-
+```xml
 <IDSAlerts>
     <Enabled>True</Enabled>
     <UnixSocket>/tmp/barnyard2_alert</UnixSocket>
@@ -71,7 +66,7 @@ to send the alerts to `/tmp/barnyard2_alert`
 
 #### Start Trisul
 
-1.  Start Trisul via *Admin -\> Start/Stop Tasks -\> Start Trisul*
+1. Start Trisul via *Admin -\> Start/Stop Tasks -\> Start Trisul*
 
 #### Start barnyard2
 
@@ -88,9 +83,9 @@ Run barnyard2 like the following
 
     barnyard2 -c barnyard2.conf  -l /tmp -o /tmp/byin/unified2.alert.*
 
-  - ensure the `-l /tmp` which sends the alerts to the unixsocket
-    `/tmp/barnyard2_alert` 
-  - assuming the unified2 files at in */tmp/byin*
+- ensure the `-l /tmp` which sends the alerts to the unixsocket
+  `/tmp/barnyard2_alert` 
+- assuming the unified2 files at in */tmp/byin*
 
 ### Suricata note
 
@@ -102,7 +97,7 @@ Analytics?](https://medium.com/@vivekrj/how-to-get-suricata-eve-alerts-into-tris
 First edit the suricata.yaml file and check if Unified2 logging is
 enabled. You can disable all other logging.
 
-``` language=yaml
+```language=yaml
  # alert output for use with Barnyard2
 - unified2-alert:
     enabled: yes
@@ -117,7 +112,7 @@ just a convention for barnyard input directory, You can use any name you
 want)). This will cause suricata to write files of the form
 *unified2..log* in the */tmp/byin* directory.
 
-``` language-bash
+```language-bash
 suricata -c suricata.yaml -l /tmp/byin -i eth0
 ```
 
@@ -127,13 +122,9 @@ A diagram that shows the relationship between the various pieces.
 
 ![](images/unsock.png)
 
-
-
 ## More things to do
 
-
 #### How to change the path of the unix socket
-
 
 The default install of every Trisul Probe listens on a unix socket at
 `/usr/local/var/lib/trisul-probe/domain0/probe0/context0/run/snort_alert`
@@ -141,15 +132,13 @@ You can change this by editing the
 [IDSAlert/UnixSocket](/docs/ref/trisulconfig.html#idsalerts) parameter
 in the config file.
 
-
 #### How to read a PCAP file and generate alerts
-
 
 A new tool called [importpcap\_ids](/docs/ug/basicusage/snort.html) uses
 snort to run the normal Analytics as well as IDS over PCAP dumps. The
 optional *context=* argument allows you to create multiple separate
 datasets in Trisul.
 
-``` language-bash
+```language-bash
 importpcap_ids pcap_dump_name  context=newdataset1
 ```
