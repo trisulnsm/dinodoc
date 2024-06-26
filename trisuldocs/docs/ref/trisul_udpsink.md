@@ -18,7 +18,7 @@ The preferred method is to edit the trisul-udpsink systemd service.
 
 If you are using the default NETFLOW port 2055
 
-``` 
+```
     systemctl start trisul-udpsink
 ```
 
@@ -36,8 +36,7 @@ create new services with different port numbers.
 
 You can run the program manually like so
 
-``` 
-
+```
 trisul_udpsink 2055 
 ```
 

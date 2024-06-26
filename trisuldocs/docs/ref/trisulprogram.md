@@ -6,9 +6,9 @@ The *trisul* executable is the actual probe process. One instance of
 trisul will run for every context. You rarely need to run this command
 manually, instead
 
-1.  use the web interface menu *Admin \> Start/Stop Tasks \> Start
-    Trisul on each probe*
-2.  use `trisulctl_probe start context ctxname` command line tool 
+1. use the web interface menu *Admin \> Start/Stop Tasks \> Start
+   Trisul on each probe*
+2. use `trisulctl_probe start context ctxname` command line tool 
 
 ## Full Command line
 
