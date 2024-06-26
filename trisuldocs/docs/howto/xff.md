@@ -65,9 +65,11 @@ The XFF feature require a few supporting features to be enabled as well.
 
 Make sure these are enabled in the trisulConfig.xml file as well.
 
-\* Enable the `TCPFlowTrack` option  
-\* Enable the `TCPReassembly` option  
-\* Enable the `IPDefrag` option
+- Enable the `TCPFlowTrack` option  
+
+-  Enable the `TCPReassembly` option  
+
+-  Enable the `IPDefrag` option
 
 The above features are needed because Trisul needs to reassemble the
 HTTP headers accurately to reliably process the XFF headers.
@@ -85,9 +87,9 @@ as if the proxy never existed.
 Some key points :
 
 - A small number of bytes up until the XFF header will continue to be
-metered against the proxy.  
+  metered against the proxy.  
 - If the XFF header is not found the entire flow is metered against the
-proxy.  
+  proxy.  
 - The proxy becomes transparent as far as HTTP traffic is concerned.  
 - Raw packets stored by Trisul are re-stamped with the IP of the end
-station.
+  station.

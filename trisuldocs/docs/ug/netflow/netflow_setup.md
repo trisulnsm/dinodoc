@@ -1,3 +1,8 @@
+---
+
+sidebar_position: 1
+---
+
 # Configure Netflow
 
 Trisul has the capability to use Netflow like telemetry to gain deep

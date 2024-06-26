@@ -36,11 +36,15 @@ Text) Groups](#fts_groups)
 
 ## Built in Counter Groups
 
+:::note 
+
 To view all counter groups login as Admin  context0:profile0 
 Counter Groups
 
-| s   |           guid                             | name                           |
-| --- | -------------------------------------- | --------------------------- |
+:::
+
+| s   | guid                                     | name                        |
+| --- | ---------------------------------------- | --------------------------- |
 | 1   | `{889900CC-0063-11A5-8380-FEBDBABBDBEA}` | Internal Hosts              |
 | 2   | `{00AA77BB-0063-11A5-8380-FEBDBABBDBEA}` | External Hosts              |
 | 3   | `{EEF95297-0C8D-4673-AD6B-F4BD2345FD69}` | Web Hosts                   |
@@ -80,8 +84,8 @@ Counter Groups
 
 Flow like artifacts.
 
-|     |                                        |                                               |
-| --- | -------------------------------------- | --------------------------------------------- |
+|     |                                          |                                               |
+| --- | ---------------------------------------- | --------------------------------------------- |
 | 1   | `{99A78737-4B41-4387-8F31-8077DB917336}` | IP Flows. Eg TCP/UDP/ICMP/GRE and other flows |
 
 ## Alert Groups
@@ -90,8 +94,8 @@ If you are writing a LUA script and want to generate an alert without
 having to create your own alert group - just use the *User Alerts*
 group.
 
-|                                        |                                                |
-| -------------------------------------- | ---------------------------------------------- |
+|                                          |                                                |
+| ---------------------------------------- | ---------------------------------------------- |
 | `{9AFD8C08-07EB-47E0-BF05-28B4A7AE8DC9}` | IDS Alerts from Snort/Suricata via Unix Socket |
 | `{5E97C3A3-41DB-4E34-92C3-87C904FAB83E}` | Blacklist alerts from Trisul Badfellas plugin  |
 | `{03AC6B72-FDB7-44C0-9B8C-7A1975C1C5BA}` | Threshold Crossing Alerts                      |
@@ -102,8 +106,8 @@ group.
 
 Similar to the concept of “Logs” in other systems.
 
-|     |                                        |                  |
-| --- | -------------------------------------- | ---------------- |
+|     |                                          |                  |
+| --- | ---------------------------------------- | ---------------- |
 | 1   | `{D1E27FF0-6D66-4E57-BB91-99F76BB2143E}` | DNS Resources    |
 | 2   | `{4EF9DEB9-4332-4867-A667-6A30C5900E9E}` | URL Resources    |
 | 3   | `{5AEE3F0B-9304-44BE-BBD0-0467052CF468}` | SSL Certificates |
@@ -112,8 +116,8 @@ Similar to the concept of “Logs” in other systems.
 
 FTS groups are full text search documents in parseable form.
 
-|     |                                        |                               |
-| --- | -------------------------------------- | ----------------------------- |
+|     |                                          |                               |
+| --- | ---------------------------------------- | ----------------------------- |
 | 1   | `{9FEB8ADE-ADBB-49AD-BC68-C6A02F389C71}` | SSL Certificate FTS           |
 | 2   | `{28217924-E7A5-4523-993C-44B52758D5A8}` | HTTP Header FTS               |
 | 2   | `{09B305DF-078C-4B9E-8E2F-EA64B7326880}` | Full text dump of DNS records |
@@ -122,8 +126,8 @@ FTS groups are full text search documents in parseable form.
 
 You need these GUIDs when writing LUA protocol handler scripts.
 
-|          |                                        |
-| -------- | -------------------------------------- |
+|          |                                          |
+| -------- | ---------------------------------------- |
 | Ethernet | `{974FB098-DE46-45db-94DA-8D64A3BBCDE5}` |
 | IPv4     | `{0A2C724B-5B9F-4ba6-9C97-B05080558574}` |
 | IPv6     | `{85C0CCED-DA8D-4029-924A-A6AB87F62EF8}` |

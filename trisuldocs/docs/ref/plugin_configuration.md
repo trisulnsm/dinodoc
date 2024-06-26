@@ -6,7 +6,7 @@ Trisul consists of two base configs - the
 control how various metrics are computed you can tweak the following
 Plugin configuration files.
 
-- What are plugins?  
+- **What are plugins?**  
   Trisul is a network analytics platform and hence most of the actual
   metering functionality are implemented as native plugins. Hence the
   name “plugin configuration”. Each plugin has a GUID, the plugin

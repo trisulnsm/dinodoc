@@ -1,4 +1,4 @@
-# # Trisul Executable
+# Trisul Executable
 
 The *trisul* executable is located in `/usr/local/bin/`.
 
@@ -43,7 +43,6 @@ Usage: trisul [--version|--machineid|--listdev] | [-demon|-nodemon]  /path/to/co
 You need to get the machineid in order to upgrade Trisul from the 3-day window free version to a licensed version.
 
 ```bash
-
 [root@li76-90 ~]# trisul --machineid
 00551AD4-CA00-BE16-3A42-1ACCFD6BF00D
 ```
@@ -51,18 +50,17 @@ You need to get the machineid in order to upgrade Trisul from the 3-day window f
 ### Listing all available interface
 
 ```bash
-
 [vivek@localhost trisul]$   trisul --listdev
 [sudo] password for vivek: 
 ---------------------------------------------------------------------------
 Num     Name            Description 
 ---------------------------------------------------------------------------
-1  	eth0           	not available
-2  	wlan0          	not available
-3  	usbmon1        	USB bus number 1
-4  	usbmon2        	USB bus number 2
-5  	any            	Pseudo-device that captures on all interfaces
-6  	lo             	not available
+1      eth0               not available
+2      wlan0              not available
+3      usbmon1            USB bus number 1
+4      usbmon2            USB bus number 2
+5      any                Pseudo-device that captures on all interfaces
+6      lo                 not available
 ---------------------------------------------------------------------------
 ```
 
@@ -100,10 +98,6 @@ To specify a run mode, go to Admin Tasks > Start/Stop Tasks then select run mode
 | **idsalertoverlay** | IDS alerts from unix socket<br/>Overlay metrics on to existing data |                                                                    |
 | **lua**             | a lua script drives the pipeline                                    | -in lua-importscript.lua -args passed as T.args to your LUA script |
 
-
-
-
-
 :::note Required Libs
 
 For PF_RING and other runmodes marked *requires libs* you need to copy the appropriate libXX.so file into `/usr/local/lib/trisul-probe`. Trisul only ships with a stub implementation. For example : if you want to use PF_RING. Copy the compiled libpfring.so file into `/usr/local/lib/trisul-probe`. This is due to licensing issues.
@@ -116,7 +110,6 @@ Examples
 
 ```bash
 trisul -demon /usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml -mode online_rxring
-
 ```
 
 #### Normal run attached to terminal
@@ -131,8 +124,6 @@ All capture files must be in tcpdump (libpcap) format. Trisul supports both big 
 
 1. PCAP files in directory are automatically processed in order of the timestamp of the first packet in each file.
 2. capture files can be gzip or bzip2. The prefix must be gz or bzip2 of bz2.
-   
-   
 
 :::note
 
@@ -149,7 +140,6 @@ trisul -nodemon /usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeC
 Each trisul context is defined by the corresponding trisulConfig `contextname` folder.
 
 ```bash
-
 trisul -demon /usr/local/etc/trisul-probe/domain0/probe0/context_satellitelinks/trisulProbeConfig.xml -mode online_libpcap
 ```
 
@@ -175,5 +165,4 @@ If you want your inputfilter script at `/home/kev/read_tcp.lua` to drive the
 
 ```bash
 trisul -demon /usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml -mode lua -in /home/kev/read_tcp.lua -args argstolua-script
-
 ```
