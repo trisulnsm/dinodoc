@@ -112,20 +112,23 @@ The Ring section allows you to control.
 
 Controls how much of raw packet data is stored. There are three areas *oper*, *ref*, and *archive* The packet slices are always written in *oper* then slide into *ref* , *archive*, and then deleted as specified by the SlicePolicy below.
 
-oper
+**Oper**
 
+|            |     |                                                                                                     |
+| ---------- | --- | --------------------------------------------------------------------------------------------------- |
 | SliceCount | 32  | Number of operational slices. The size of each slices is fixed as specified by FileSizeKB parameter |
+
+**Reference**
+
+|            |     |                                                                                            |
+| ---------- | --- | ------------------------------------------------------------------------------------------ |
+| SliceCount | 32  | Number of reference slices. Setting this to zero will move slices straight to the archive. |
+
+**Archive**
+
+|            |     |                                                                                                     |
 | ---------- | --- | --------------------------------------------------------------------------------------------------- |
-
-Reference 
-
-| SliceCount | 32  | **Number of reference slices. Setting this to zero will move slices straight to the archive.** |
-| ---------- | --- | ---------------------------------------------------------------------------------------------- |
-
-Archive
-
 | SLiceCount | 0   | Number of archive slices. If you set this to 0, slices move directly to /dev/null (ie are deleted). |
-| ---------- | --- | --------------------------------------------------------------------------------------------------- |
 
 ## Rule Chain
 
