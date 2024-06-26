@@ -241,7 +241,7 @@ Controls TCP Reassembly.
 | MaxBytes     | 0        |                                                                                                                                                                                                                                                       |
 | KickoffBytes | 5000     | Some meter within Trisul must express an interest in reassembled data for a given flow before this limit is reached. Otherwise reassembly is stopped at this point for this flow.                                                                     |
 | Ports        |          | Traffic on these ports are reassembled. By default Trisul this is "" because uses heuristics to detect applications independent of port. You can override this behaviour by setting to a string like 3000,80,443,22,21 to reassemble only these ports |
-| Direction    | INOUT    | Options<br/><br/>**IN**<br/>     Only the IN direction; direction of first SYN+ACK is reassembled<br/>**OUT**<br/>     Only the OUT direction; direction of initial SYN is reassembled<br/>``**INOUT**<br/>     Both directions are reassembled       |
+| Direction    | INOUT    | Options<br/><br/>**IN**<br/>     Only the IN direction; direction of first SYN+ACK is reassembled<br/>**OUT**<br/>     Only the OUT direction; direction of initial SYN is reassembled<br/>**INOUT**<br/>     Both directions are reassembled         |
 
 ## Applications
 
