@@ -18,10 +18,10 @@ You will be shown the DB status page like this
 
 The following data is shown on this page
 
-1.  Count of objects - Sessions (flows), resources, and alerts
-2.  Total disk usage in oper, ref, and archive points
-3.  Per slice , per day usage
-4.  PCAP usage
+1. Count of objects - Sessions (flows), resources, and alerts
+2. Total disk usage in oper, ref, and archive points
+3. Per slice , per day usage
+4. PCAP usage
 
 ### Per day storage
 
@@ -84,17 +84,17 @@ gains.
 By setting the Volume Cutoff Bytes to a value like 1MB - the customer
 gains the following
 
-  - All flows that transferred greater than 1MB are still stored, hence
-    full visibility is still available for large flows
-  - The total size of the Trisul database is greatly reduced 
-  - This allows customers to store more number of days with the same
-    storage
+- All flows that transferred greater than 1MB are still stored, hence
+  full visibility is still available for large flows
+- The total size of the Trisul database is greatly reduced 
+- This allows customers to store more number of days with the same
+  storage
 
 The following disadvantages for customers whose use case includes
 security, incident response, and compliance.
 
-1.  During incident response you will not be able to find small flows
-    that transferred less than the 1MB flow cutoff.
+1. During incident response you will not be able to find small flows
+   that transferred less than the 1MB flow cutoff.
 
 In general , we recommend customers whose primary use case is visibilty
 and network monitoring to set a “Volume Cutoff Bytes” of 1MB for maximum
@@ -105,18 +105,18 @@ optimization of disk.
 Edge Analytics are an advanced Trisul feature used primary for security
 investigations. “Edges” can also use up quite a bit of disk.
 
-  - You can disable Edges by opening the Trisul Config file and disable
-    the Edge options. See [Edge
-    trisulProbeConfig](/docs/ref/trisulconfig.html#edges)
+- You can disable Edges by opening the Trisul Config file and disable
+  the Edge options. See [Edge
+  trisulProbeConfig](/docs/ref/trisulconfig.html#edges)
 
 ## Counter groups
 
 Counter groups have the following parameters that can be tuned
 
-  - High Water and Low Water — This impacts how many “items” of this
-    counter group are stored. 
-  - Topper Traffic Only — If you set this , then only keys that make it
-    to a topper list are stored.
-  - Top Count — By setting lower values you can control the storage.
+- High Water and Low Water — This impacts how many “items” of this
+  counter group are stored. 
+- Topper Traffic Only — If you set this , then only keys that make it
+  to a topper list are stored.
+- Top Count — By setting lower values you can control the storage.
 
-See [Counter Group Settings](/docs/ug/cg/settings.html#editing_settings)
+See [Counter Group Settings](/docs/ug/cg/settings.html#editing_settings)Ensure you replace the demo certificate and key with new ones specific for your organization as described below

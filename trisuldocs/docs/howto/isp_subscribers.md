@@ -8,7 +8,7 @@ can use this to build a value added service offering.
 
 Some terms :
 
-- Subscriber  
+- Subscriber 
   A customer of the ISP/MSP
 - Service  
   Indentifed by static IPs or router sub interfaces
@@ -17,14 +17,14 @@ Some terms :
 
 Trisul allows you to :  
 
-- Create a web user/password and associate that with one or more
-  services  
-- The subscriber can then logon to Trisul and is immediately taken to
-  their services page  
-- A subscriber can only view their own services and are not allowed to
-  see anything else  
-- A subscriber can generate PDF outputs of reports  
-- A subscriber can change his/her own password
+1. Create a web user/password and associate that with one or more
+   services  
+2. The subscriber can then logon to Trisul and is immediately taken to
+   their services page  
+3. A subscriber can only view their own services and are not allowed to
+   see anything else  
+4. A subscriber can generate PDF outputs of reports  
+5. A subscriber can change his/her own password
 
 This page describes how you can accomplish such a setup.
 
@@ -32,8 +32,6 @@ This page describes how you can accomplish such a setup.
 
 Trisul needs to monitor traffic to all subscriber networks. There are a
 few options you can choose from depending on your service topology.
-
-
 
 1. **Customer premises managed switch (dynamic IP)**
    
@@ -52,8 +50,6 @@ few options you can choose from depending on your service topology.
    
    1. This is the easiest, since you can map IPs to subscribers. Just
       enable flow at core routers or use port spanning at the uplink
-      
-      
 
 ## Create the subscriber user
 

@@ -8,17 +8,19 @@ There are two ways you can send IDS alerts into Trisul
 
 Suricata-EVE APP
 
+:::note[Suricata-EVE APP]
+
 The newly released Trisul APP [Suricata
 EVE](https://medium.com/@vivekrj/how-to-get-suricata-eve-alerts-into-trisul-network-analytics-and-why-f3015d7280e0)
-allows you to easily integrate Suricata alerts. You can give that a try
-if you prefer Suricata. 
+
+:::
 
 Trisul can accept alerts in two formats from a named Unix socket  
 
 - **in Unified format** : for use with `snort -A unsock` option  
 - **in Unified2 format** : for use with barnyard2
 
-Connecting Snort to Trisul using `unsock`
+## Connecting Snort to Trisul using `unsock`
 
 All you have to do is start snort with the correct options. Trisul
 automatically picks up the alerts.  
@@ -29,7 +31,7 @@ automatically picks up the alerts.
  Start Trisul via _Admin -> Start/Stop Tasks -> Start Trisul Probe_
 ```
 
-Start Snort in `unsock` mode
+- Start Snort in `unsock` mode 
 
 Select the “How to start snort” to get the command line options as shown
 in the screenshot. You can then copy-paste that into a terminal.
@@ -75,13 +77,17 @@ send alerts into the Unix socket.
 
 Edit barnyard2.conf and add the *alert\_unixsock* output option.
 
-    #
-    # output alert_fast: stdout
-    output alert_unixsock
+```bash
+#
+# output alert_fast: stdout
+output alert_unixsock
+```
 
 Run barnyard2 like the following
 
-    barnyard2 -c barnyard2.conf  -l /tmp -o /tmp/byin/unified2.alert.*
+```bash
+barnyard2 -c barnyard2.conf  -l /tmp -o /tmp/byin/unified2.alert.*
+```
 
 - ensure the `-l /tmp` which sends the alerts to the unixsocket
   `/tmp/barnyard2_alert` 
