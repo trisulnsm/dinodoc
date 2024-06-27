@@ -64,8 +64,9 @@ The steps are :
 Once complete a crontab entry will be automatically created to backup at
 4:00AM daily. You may adjust this later.
 
-    ### Backup trisul configuration####
-    0 4 * * * /usr/local/share/trisul-hub/setup_backup.sh /usr/local/share/trisul-hub/setup_backup.conf
+### Backup trisul configuration
+
+`0 4 * * * /usr/local/share/trisul-hub/setup_backup.sh /usr/local/share/trisul-hub/setup_backup.conf`
 
 The backups are placed in the remote directory in a single tar.gz file
 with the HOSTNAME and TIMSTAMP of the backup
