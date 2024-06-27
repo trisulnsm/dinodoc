@@ -1,3 +1,7 @@
+---
+title: Netflow Configuration Wizard
+sidebar_position: 7
+---
 # Netflow Configuration Wizard
 
 This configuration wizard pulls together various configuration options

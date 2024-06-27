@@ -1,3 +1,7 @@
+---
+title: Using SNMP
+sidebar_position: 4
+---
 # Using SNMP
 
 Trisul can use SNMP to complement Netflow. You can use it to discover

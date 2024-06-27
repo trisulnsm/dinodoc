@@ -1,3 +1,7 @@
+---
+title: Layer2 and QoS
+sidebar_position: 9 
+---
 # Layer 2 and QoS
 
 This section outlines some of the Layer 2 and QoS related features
