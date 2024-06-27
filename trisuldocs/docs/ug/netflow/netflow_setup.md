@@ -1,6 +1,6 @@
 ---
-
-sidebar_position: 1
+title: Configure Netflow
+sidebar_position: 2
 ---
 
 # Configure Netflow

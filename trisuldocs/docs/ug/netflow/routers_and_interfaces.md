@@ -1,3 +1,7 @@
+---
+title: Routers and interfaces
+sidebar_position: 3
+---
 # Routers and Interfaces
 
 The main tool you will need to work with **Device level** views of

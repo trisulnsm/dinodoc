@@ -1,3 +1,7 @@
+---
+title: Netflow Sources Dashboard
+sidebar_position: 11
+---
 # Netflow Sources Dashboard
 
 The Netflow Sources dashboard provide you the following system level
