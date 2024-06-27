@@ -5,7 +5,7 @@ Trisul comes built in with support for secure access via HTTPS.
 To start the HTTPS version use the `webtrisulssld` service instead of
 `webtrisuld`
 
-``` language-bash
+```language-bash
 # stop the HTTP server 
 systemctl stop webtrisuld 
 
@@ -15,7 +15,12 @@ systemctl start webtrisulssld
 
 Now you can access the web interface via **https://my.trisulhost.com**
 
-### Replace demo certificate/key pair
+:::note[**Replace demo certificate/key pair**]
+
+Ensure you replace the demo certificate and key with new ones specific for your organization as described below
+
+:::
+
 Ensure you replace the demo certificate and key with new ones specific
 for your organization as described below
 
@@ -40,13 +45,13 @@ your new certificate/key files.
 
 The following changes has to be made in the nginx.conf file
 
-1.  nginx.conf file is located in the /usr/local/share/webtrisul/build
-    directory
-2.  Do the following changes to under the server section
+1. nginx.conf file is located in the /usr/local/share/webtrisul/build
+   directory
+2. Do the following changes to under the server section
 
 <!-- end list -->
 
-``` language-nginx
+```language-nginx
 server {
     listen 443;
     ssl                  on;
@@ -60,7 +65,7 @@ server {
 You can set the SSL service as the default service , which is
 automatically started on each reboot.
 
-``` language-bash
+```language-bash
 # disable the HTTP service 
 systemctl disable webtrisuld
 

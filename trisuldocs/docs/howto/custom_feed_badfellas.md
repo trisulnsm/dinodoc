@@ -124,7 +124,7 @@ connect it to Badfellas in the following way.
         <RunAt>0200</RunAt>
         <Frequency>3600</Frequency>
       </Run>
-    </Update>
+    </Update
 ```
 
 That is it. Now your feed is integrated into Trisul. The lists will be

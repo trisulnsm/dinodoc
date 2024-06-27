@@ -26,6 +26,8 @@ easier to start RAT. See the screencast below.
 
 ## Demo
 
-The following screencast shows RAT in action.
+The following screencast shows RAT in action
 
-<asciinema-player src="cast/rat.cast" poster="npt:0:6" ></asciinema-player>
+![Image](./images/rat1.png)
+
+![image](./images/rat2.png)

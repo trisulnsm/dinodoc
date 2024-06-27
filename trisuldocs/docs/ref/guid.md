@@ -84,7 +84,7 @@ Counter Groups
 
 Flow like artifacts.
 
-|     |                                          |                                               |
+| s   | guid                                     | name                                          |
 | --- | ---------------------------------------- | --------------------------------------------- |
 | 1   | `{99A78737-4B41-4387-8F31-8077DB917336}` | IP Flows. Eg TCP/UDP/ICMP/GRE and other flows |
 
@@ -94,7 +94,7 @@ If you are writing a LUA script and want to generate an alert without
 having to create your own alert group - just use the *User Alerts*
 group.
 
-|                                          |                                                |
+| guid                                     | name                                           |
 | ---------------------------------------- | ---------------------------------------------- |
 | `{9AFD8C08-07EB-47E0-BF05-28B4A7AE8DC9}` | IDS Alerts from Snort/Suricata via Unix Socket |
 | `{5E97C3A3-41DB-4E34-92C3-87C904FAB83E}` | Blacklist alerts from Trisul Badfellas plugin  |
@@ -106,7 +106,7 @@ group.
 
 Similar to the concept of “Logs” in other systems.
 
-|     |                                          |                  |
+| s   | guid                                     | name             |
 | --- | ---------------------------------------- | ---------------- |
 | 1   | `{D1E27FF0-6D66-4E57-BB91-99F76BB2143E}` | DNS Resources    |
 | 2   | `{4EF9DEB9-4332-4867-A667-6A30C5900E9E}` | URL Resources    |
@@ -116,7 +116,7 @@ Similar to the concept of “Logs” in other systems.
 
 FTS groups are full text search documents in parseable form.
 
-|     |                                          |                               |
+| s   | guid                                     | name                          |
 | --- | ---------------------------------------- | ----------------------------- |
 | 1   | `{9FEB8ADE-ADBB-49AD-BC68-C6A02F389C71}` | SSL Certificate FTS           |
 | 2   | `{28217924-E7A5-4523-993C-44B52758D5A8}` | HTTP Header FTS               |
@@ -126,7 +126,7 @@ FTS groups are full text search documents in parseable form.
 
 You need these GUIDs when writing LUA protocol handler scripts.
 
-|          |                                          |
+| name     | guid                                     |
 | -------- | ---------------------------------------- |
 | Ethernet | `{974FB098-DE46-45db-94DA-8D64A3BBCDE5}` |
 | IPv4     | `{0A2C724B-5B9F-4ba6-9C97-B05080558574}` |
