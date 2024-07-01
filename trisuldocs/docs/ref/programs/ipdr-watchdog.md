@@ -54,17 +54,47 @@ Run this script as root user
 
 :::
 
-| Option | Default value    | Info                                     | Example |
-| ------ | ---------------- | ---------------------------------------- | ------- |
-| -c     | context0         |                                          |         |
-| -n     | 2                |                                          |         |
-| -s     | Your system name |                                          |         |
-| -k     | 0                |                                          |         |
-| -t     | 70               |                                          |         |
-| -g     | No default value |                                          |         |
-| -f     | 0                |                                          |         |
-| -j     | /10* * * * *     |                                          |         |
-| -i     | 0                |                                          |         |
-| -e     | -                | If you need to ignore particular context |         |
-| -r     | -                |                                          |         |
-| -h     | -                |                                          |         |
+| Option | Default value    | Info                                                                                                                                              | Example                                                                 |
+| ------ | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| -c     | context0         |                                                                                                                                                   | ./ipdr_watchdog_installer.sh  -c context0                               |
+| -n     | 2                | No of engine present each trisul can have multiple engines based on the usage                                                                     | ./ipdr_watchdog_installer.sh  -n 4                                      |
+| -s     | Your system name | Name for your system                                                                                                                              | ./ipdr_watchdog_installer.sh  -s trisul-system                          |
+| -k     | 0                | If the system runs successfully it send mail for every run                                                                                        | ./ipdr_watchdog_installer.sh  -k                                        |
+| -t     | 70               | The differnence between the log entry and current time should be less than or equal to t                                                          | ./ipdr_watchdog_installer.sh  -t 90                                     |
+| -g     | No default value | Search for the particular guuid log entry                                                                                                         | ./ipdr_watchdog_installer.sh  -g "2314BB8E-2BCC-4B86-8AA2-677E5554C0FE" |
+| -f     | 0                | Runs in flow mode                                                                                                                                 | ./ipdr_watchdog_installer.sh  -f                                        |
+| -j     | /10* * * * *     | Assign cronjob in crontab                                                                                                                         | ./ipdr_watchdog_installer.sh  -j /20* * * * *                           |
+| -i     | -                | Print the output of the command in terminal                                                                                                       | ./ipdr_watchdog_installer.sh  -i                                        |
+| -e     | -                | Ignores the particular context                                                                                                                    | ./ipdr_watchdog_installer.sh  -c context0 -c context_demo               |
+| -r     | 0                | If the system is down then the script try to restart the hub and probe for first cycle and for next cycle if the system is down then it send mail | ./ipdr_watchdog_installer.sh  -r                                        |
+| -h     | -                | Prints the help command for smoth run                                                                                                             | ./ipdr_watchdog_installer.sh  -h                                        |
+
+:::note
+
+The script should with either -f or -g option as argument 
+
+:::
+
+
+
+## Examples
+
+- To check the script is providing the exact output run the script with -i option it provide the output in console
+
+![ipdr_watchdog](./images/ipdr_watchdog1.png)
+
+
+
+![ipdr_watchdog](./images/ipdr_watchdog2.png)
+
+- To assign cronjob for continuous monitoring run this script without -i option
+
+![](./images/ipdr_watchdog3.png)
+
+
+
+Example1 Explanation
+
+- ENGINE0 & ENGINE1 mention the number of engine present in the trisul . Each system will have different engine based on the config files.
+
+- DROPPED parameter should not be 0 . If so , then it send mail
