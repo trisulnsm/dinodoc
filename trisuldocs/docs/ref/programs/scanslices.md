@@ -62,12 +62,6 @@ Scan each and every slice in the directory by comparing with metaslice db and pr
 
 - /usr/local/share/trisul-hub/scan_slices.sh -m ref 
   
-  ![Scan-slices](./programs/images/scan_slices1.png)
-  
-  At the end of the result , you will be shown  no.of slices present , no.of slices not-present , no of mismatched-date. 
+  ![Scan-slices](./images/scan_slices1.png)
 
-- ![scan_slices](./programs/images/scanslices2.png)
-
-
-
-
+- ![scan_slices](./images/scanslices2.png)
