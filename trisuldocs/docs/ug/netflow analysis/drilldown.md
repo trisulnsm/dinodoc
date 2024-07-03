@@ -1,7 +1,10 @@
 ---
+
 title: Netflow Sources Dashboard
 sidebar_position: 8
+
 ---
+
 # Interface Drilldown
 
 Describes the Interface drilldown tool that appears when you select
@@ -58,8 +61,6 @@ You can change the router, interface, time interval, and topper count.
 Once the "Change router and interface" form is set and submitted , it takes you to the Interface utilization window.
 
 ## Information Shown
-
-
 
 ![](images/drilldown-tabs.png)
 
