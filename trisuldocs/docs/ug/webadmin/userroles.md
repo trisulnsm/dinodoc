@@ -1,44 +1,48 @@
 # User Roles
 
-Trisul web users fall into three roles  
-\# Administrators  
-\# Forensics Operators  
-\# Operators  
-\# Subscriber
+Trisul web users fall into three roles
 
-div(info).  
-The default built-in user called **admin**. You can create other users
-with the same privileges.  
-<span class="label-danger label">Important</span> The built-in admin
-user cannot be deleted.
+- Administrators  
+
+- Forensics Operators  
+
+- Operators  
+
+- Subscriber
+
+The default built-in user called **admin**. You can create other users with the same privileges.  
+
+> Important:  The built-in admin user cannot be deleted.
 
 ## Roles
 
 There are four roles that a user can possess.
 
-| Role name | Powers |
-|----|----|
-| Administrator | Can do anything |
-| Operators | No admin powers. Can only monitor traffic. Cannot look at flows, resources, or raw packets |
+| Role name           | Powers                                                                                                          |
+| ------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Administrator       | Can do anything                                                                                                 |
+| Operators           | No admin powers. Can only monitor traffic. Cannot look at flows, resources, or raw packets                      |
 | Forensics Operators | No admin powers. Can monitor traffic, but also inspect in depth what anyone is doing, down to the packet level. |
-| Subscriber | No admin powers. Can investigate subscribed IPs or Interfaces |
+| Subscriber          | No admin powers. Can investigate subscribed IPs or Interfaces                                                   |
 
 A role is but a set of allowed and disallowed operations. You can change
 what a role is allowed to do
 
-div(info).  
 Login as `admin` user to manage user roles.
 
-<div class="info hand-o-right autohint">
+:::note navigation
 
 Select *Webadmin* \> Manage -\> Roles
 
-</div>
+:::
 
 For each role  
-\# The **red** color operations are disallowed  
-\# The **green** color operations are allowed  
-\# The **blue** color operations are read only
+
+- The **red** color operations are prevented 
+
+- The **green** color operations are allowed  
+
+- The **blue** color operations are read only
 
 ## Inactivity security timeout
 
@@ -49,9 +53,10 @@ automatically logged out. They will then have to present their
 login/password again to re-enter the system.
 
 You can increase inactivity timeout  
-p(autohint hand-o-right info).  
-To access, Select Manage -\> App settings -\> Web Server -\> Idle
-Timeout  
+:::note navigation 
+To access, Select Manage -\> App settings -\> Web Server -\> Idle Timeout  
+:::
+
 If you want to disable it - set it to some *huge value* (1000000
 seconds)
 
@@ -59,19 +64,24 @@ seconds)
 
 All login activity is logged by the server
 
-div(info).  
-Login as `admin` user to view login activity.
+> Login as `admin` user to view login activity.
 
-<div class="info hand-o-right autohint">
+:::note navigation
 
 Select *Webadmin* -\> Manage -\> Auth Log
 
-</div>
+:::
 
 The following details are logged by the server  
-\* Login time  
-\* Login IP  
-\* Login Status  
-\* Reason for failure to login (eg, wrong password)  
-\* Logout (with reason)  
-\* Inactivity timeout log
+
+- Login time  
+
+- Login IP  
+
+- Login Status  
+
+- Reason for failure to login (eg, wrong password)  
+
+- Logout (with reason)  
+
+- Inactivity timeout log
