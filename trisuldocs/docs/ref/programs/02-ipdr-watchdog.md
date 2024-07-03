@@ -75,23 +75,17 @@ The script should with either -f or -g option as argument
 
 :::
 
-
-
 ## Examples
 
 - To check the script is providing the exact output run the script with -i option it provide the output in console
 
 ![ipdr_watchdog](./images/ipdr_watchdog1.png)
 
-
-
 ![ipdr_watchdog](./images/ipdr_watchdog2.png)
 
 - To assign cronjob for continuous monitoring run this script without -i option
 
 ![](./images/ipdr_watchdog3.png)
-
-
 
 Example1 Explanation
 
