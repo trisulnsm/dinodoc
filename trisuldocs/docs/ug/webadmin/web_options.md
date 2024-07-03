@@ -1,0 +1,138 @@
+# Application Options
+
+This page describes the web application settings.
+
+### Customize
+
+<div class="info hand-o-right autohint">
+
+To access this login as `admin` and select WebAdmin Manage -\> App
+Settings
+
+</div>
+
+![](images/webtrisul_options.png)
+
+## UI
+
+| Option | Default Value | Description |
+|----|----|----|
+| Explore Flows Max Items | 2000 | When retrieving flows stop when these many flows are reached. All flow based calculations will be done using these many flows. The next parameter *Explore Flows Show In Tables* specifies how many of these will show up in raw flow tables on the web UI. |
+| Flows shown in tables | 500 | Show these many ‘top flows’ in raw flow tables. |
+| Flow Legs Correlation | No | Enable correlation of same flow reported by multiple Netflow devices |
+| Include NAT Flow Legs Correlation | No | Correlate flows from multiple netwflow devices even if one of them does NAT |
+| User Password Minimum length | 6 | Minimum characters you can use in user password |
+| Show Real-time alet counts | No | Show the alert count box which is usually found on the top right corner of each page |
+| Log Level | INFO | Filter expression for viewing log files , includes expressions like : |
+| Show Interfaces per Router | 1000 | Shows top-N interfaces in netflow mode |
+| Enable Captcha | false | Enable captcha validation in login page |
+
+## Netflow
+
+| Option | Default Value | Description |
+|----|----|----|
+| Show Interfaces Per Router | 100 | Per router show these many top interfaces in Netflow mode |
+| Include Dest Port(Conversations) | false | Show port name or number like http and https in inteface drilldown page |
+
+## Proxy Server
+
+Web Trisul needs to reach out to the internet for two things.
+
+1.  to download latest threat feeds for the BadFellas plugin
+2.  to install Trisul Apps which are hosted on Github
+
+If your Trisul-Hub node does not have internet access you need to
+configure a proxy server.
+
+| Option | Default Value | Description |
+|----|----|----|
+| Proxy Server IP |  | Address of the proxy server |
+| Proxy Server User Name |  | Specify the Username if required by the proxy |
+| Proxy Server User Password |  | Specify the Password if required by the proxy |
+
+#### Test it
+
+- Login as admin
+- Go to *Webadmin \> Manage \> Apps*
+- If you get a list of packages without the error “Check your internet
+  connection error”, the connection is working.
+
+## Packet Inspection
+
+| Option | Default Value | Description |
+|----|----|----|
+| Deep Packet Inspection limit | 21600 Secs | Time limit for deep packet inspection |
+| Deep packet inspection content limit | 100 M | Maximum number of bytes to be retrieved as a result of the packet retrieval \_Pull packets operation |
+
+## Web Server
+
+| Option | Default Value | Description |
+|----|----|----|
+| Idle timeout | 15 | Time set to logged webtrisul when idle |
+| Server port | 3000 | The webserver port. This setting is used by some cron tasks (like report mailers). If you move the default nginx port make sure you reflect that change here. |
+| Web Server Security | NONE | Used by report jobs. Is web server using SSL? |
+
+## Schedule and Email reports
+
+| Option | Default Value | Description |
+|----|----|----|
+| Business Hour | 00:00:00-23:59:59 | Business hours time used to restrict default report generation time window for each day |
+| Default mail to send schedule report | Automatic scheduled report will be send to this E-Mail |  |
+| Automatically email scheduled reports | YES | Global setting that controls if scheduled reports are mailed out |
+| Automatically email threshold crossing alert summaries | No | Global setting that controls if TCA reports are mailed out |
+| Show generated in report page header | true | show generated time in report page title |
+
+## Email Alerts
+
+| Option | Default Value | Description |
+|----|----|----|
+| Email Alert Business Days | M,T,W,T,~~,~~,- | When you want to receive email alerts |
+| Email Alert Business Hours | Business hours time used to restrict default report generation time window for each day |  |
+
+## Chart
+
+| Option | Default Value | Description |
+|----|----|----|
+| Conversation Chart Ring items | 10 | Number of peers to be shown in the conversation ring. This chart appears in the ***Tools -\> Investigate IP Activity*** analysis |
+| Show data value tooltips | 0 | Show timeseries data point as a tooltip |
+| Show Percentile | 0 | Show a 95th percentile line on charts. Enter 98 to show 98th percentile, 0 to disable |
+| Enable Animation | true | Show animation while rendring chart |
+| Real Time Data Display | 1 Hour | How many data points to be retined in the real time graph |
+
+## Dashboard and modules
+
+| Option | Default Value | Description |
+|----|----|----|
+| Default items in Top-N Dashboards | 10 | All Top-N starts show these many by default, with a “More” button to expand. |
+| Show module description | Yes | A description if shown below each module to help you understand what is being shown. If you are a power user and would like to hide this text, then set this to False |
+| Show help tips for menu items | Yes | A tooltip is shown for menu items to help you learn about the various options. You can turn these off if you are already familiar with the UI |
+| Show country flags for IPs | true | Show country flags for IPs in dashbaord |
+
+## SNMP Settings
+
+| Option | Default Value | Description |
+|----|----|----|
+| SNMP Version | 1 | SNMP version v1 or v2c or v3. Select V3 to show SNMPv3 parameters |
+| SNMP Read Community | 0 | SNMP read community string |
+
+## DR Settings
+
+| Option      | Description                                      |
+|-------------|--------------------------------------------------|
+| DR Hub IP   | IP address of the DR Hub machine. Eg:192.168.3.1 |
+| DR Hub Port | Port number for trp connection                   |
+
+## MyMRTG
+
+| Option | Default Value | Description |
+|----|----|----|
+| Refresh Page Interval | 60 | MRTG customer page default refresh interval |
+| Chart Title | routerip_routername | Customize chart tile for MRTG customer |
+| Chart Subtitle | ifname_ifalias | Customize chart subtile for MRTG customer |
+
+## API Keys
+
+| Option | Default Value | Description |
+|----|----|----|
+| Google API Key |  | Google map API key. You need this to view the Geo map |
+| Microsoft Teams Webhook URL |  | Incoming MS Teams Webhook URL. This is used to automatically send alerts to a Team channel. |
