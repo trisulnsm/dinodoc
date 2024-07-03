@@ -17,9 +17,7 @@ The T.async methods are designed for use in scripts that are involve some I/O th
 
 Using the methods in T.async you can perform these tasks out of the main pipeline in a separate thread pool.
 
-
-
-![](./images/tasync.png)
+![](../images/tasync.png)
 
 ### Number of async worker threads
 
@@ -63,8 +61,6 @@ T.async:copy( path, "/tmp/xyz.txt")
 ### Method 3 : Copying a file using T.schedule
 
 T.async:schedule described in the next section allows you to run any lua function out of the fast path and then call back in when results are available. Here is how you would do it using that method.
-
- 
 
 ```lua
 T.async:schedule(
@@ -132,8 +128,6 @@ T.async:schedule(
 This small snippet shows the usage
 
 Task: calculate sha1sum of extracted file
-
- 
 
 ```lua
 onfile_http  = function ( engine, timestamp, flowkey,
