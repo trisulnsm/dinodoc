@@ -11,10 +11,10 @@ A Trisul netflow customer desires to create *cust1* who can only view
 *routers A,B,C* metrics and another user *cust2* who can only see
 *routers X,Y*
 
-1.  Create a resource group called *custgroup1* and select routers A,B,C
-2.  Create a resource group called *custgroup2* and select routers X,Y
-3.  Edit user *cust1* and assign *custgroup1* to it
-4.  Edit user *cust2* and assign *custgroup2* to it
+1. Create a resource group called *custgroup1* and select routers A,B,C
+2. Create a resource group called *custgroup2* and select routers X,Y
+3. Edit user *cust1* and assign *custgroup1* to it
+4. Edit user *cust2* and assign *custgroup2* to it
 
 Now when *cust1* logs in he/she can only see the two routers assigned to
 him/her.
@@ -35,24 +35,21 @@ represents a router or a netflow capable device
 
 I want to assign specific router interfaces to users  
 Select the *FlowIntfs* counter groups. FlowIntfs = Flow Interfaces
-represents a netflow capable interface flow interfaces \|
+represents a netflow capable interface flow interfaces 
 
-<div class="info hand-o-right autohint">
+:::note navigation
 
 Login as admin and select *Context: default \> Admin Tasks \> User
 Resources*
 
-</div>
+:::
 
-<div class='text-center panel panel-info'>
+![](images/user_resourcegroups.png)
 
-![](images/resource_group_list.png)  
 *Showing all user resource groups with button on top right to create a
 new resource group*
 
-</div>
-
-You are shown a list of already configured resource groups.
+    You are shown a list of already configured resource groups.
 
 Select “New Resource Group” from the top right.
 
@@ -62,12 +59,9 @@ This step is very simple. Just create an empty resource group with a
 name and description. The name can be short such as “East Zone Devices”
 and a longer description.
 
-<div class='text-center panel panel-info'>
+![](images/edit_new_resourcegroup.png)
 
-![](images/user_resources.png)  
 *Create an empty Resource Group with a name, you will add keys later*
-
-</div>
 
 Next you have to add resources to this group.
 
@@ -76,12 +70,9 @@ Next you have to add resources to this group.
 Select the *Add/Edit Resources* button against the newly created
 resource group.
 
-<div class='text-center panel panel-info'>
+![](images/addordit_resources.png)
 
-![](images/add_edit_resources.png)  
 *Click to add or edit resources to the new group*
-
-</div>
 
 Give a name for this particular collection of items ; such as *East Zone
 Routers*
@@ -90,27 +81,21 @@ Select a counter group from which you will select items. See the
 Terminology section above. If you want to select Routers then select
 *FlowGens* as the counter group.
 
-<div class='text-center panel panel-info'>
+![](images/countergroup_edituserresource.png)
 
-![](images/resource_group_select1.png)  
 *Select a counter group. Here we select FlowGens to create a group of
 routers*
-
-</div>
 
 Next you have to select *Keys* these are items from the group that have
 already been discovered and monitored. For example : If you have
 selected FlowGens (Routers) you will be selecting the routers to add to
 this group.
 
-<div class='text-center panel panel-info'>
+![](images/keys_userresources.png)
 
-![](images/resource_group_select2.png)  
 *Select routers to add to this group*
 
-</div>
-
-After you select the keys the resouerce group has been created. You can
+After you select the keys the resource group has been created. You can
 then follow the similar process to add or edit keys at a later time. You
 can add any number of keys to a counter group and you can add different
 counter groups in this manner. A common error is to select a counter
@@ -118,34 +103,24 @@ group twice and trying add keys to both. That will result in an error.
 The correct way is to create two level counter groups say “East” and
 “West” and add keys “Routers” to each of them.
 
-<div class="info exclamation-triangle autohint">
-
-You can only add a counter group once to a single group. If you want to
-create two groups of routers say *East* and *West* routers then create a
-new Resource Group as many times as you want
-
-</div>
+> You can only add a counter group once to a single group. If you want to create two groups of routers say *East* and *West* routers then create a new Resource Group as many times as you want
 
 ## Assigning resource groups to users
 
 This section describes how you can assign a resource group to a user.
 That restricts that users view to only items in that group.
 
-<div class="info hand-o-right autohint">
+:::note navigation
 
-Login as admin and select *Context: default \> Admin Tasks \> User
-Resources*
+Login as admin and select *WebAdmin: Manage \> Users*
 
-</div>
+:::
 
 Then against the user select the *Options \> Assign Resources*
 
-<div class='text-center panel panel-info'>
+![](images/assignresources_userresource.png)
 
-![](images/user_assign_group.png)  
 *Assign resource groups to a user*
-
-</div>
 
 Then select the resource groups to assign to this user.
 
