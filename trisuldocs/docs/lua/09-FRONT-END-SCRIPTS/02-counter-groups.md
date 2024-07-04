@@ -6,9 +6,9 @@ Creates a new counter group and associated meters.
 
 The table countergroup has three sections
 
-1. [control](https://trisul.org/docs/lua/counter_group.html#table_control) — the GUID (unique ID of new counter group), name, and description
-2. [meters](https://trisul.org/docs/lua/counter_group.html#table_meters) — the meters and their variable types
-3. [keyinfo](https://trisul.org/docs/lua/counter_group.html#table_keyinfo) — fixed key mappings
+1. [control](/docs/lua/FRONT-END-SCRIPTS/counter-groups#table-control) — the GUID (unique ID of new counter group), name, and description
+2. [meters](/docs/lua/FRONT-END-SCRIPTS/counter-groups#table-meters ) — the meters and their variable types
+3. [keyinfo](/docs/lua/FRONT-END-SCRIPTS/counter-groups#table-keyinfo ) — fixed key mappings
 
 ## Structure
 
@@ -16,22 +16,22 @@ The table countergroup has three sections
 
 Table `countergroup`
 
-| name                                                                          | description                                                      |
-| ----------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| table [control](https://trisul.org/docs/lua/counter_group.html#table_control) | Specifies the name and other attributes of the new counter group |
-| table [meters](https://trisul.org/docs/lua/counter_group.html#table_meters)   | The meters you want the new counter group to have                |
-| table [keyinfo](https://trisul.org/docs/lua/counter_group.html#table_keyinfo) | Static key mappings                                              |
+| name                                                                        | description                                                      |
+| --------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| table [control](/docs/lua/FRONT-END-SCRIPTS/counter-groups#table-keyinfo  ) | Specifies the name and other attributes of the new counter group |
+| table [meters]( /docs/lua/FRONT-END-SCRIPTS/counter-groups#table-meters )   | The meters you want the new counter group to have                |
+| table [keyinfo](/docs/lua/FRONT-END-SCRIPTS/counter-groups#table-keyinfo  ) | Static key mappings                                              |
 
 ### Table `control`
 
 The control table assigns a unique GUID to the counter group and attaches it to a particular layer in the network protocol stack.
 
-| guid                   | string | A unique guid that identifies the group. See section on GUIDs                                                                                                                                                                                                                                                                                                   |
-| ---------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name                   | string | Name of the counter group. Keep it short < 15 chars                                                                                                                                                                                                                                                                                                             |
-| description            | string | A slightly longer description , it will appear in the Admin user interface                                                                                                                                                                                                                                                                                      |
-| bucketsize             | number | Resolution of the counter group for all meters in seconds. If you are not sure, just use the value `60` for the default bucket size of 60 seconds                                                                                                                                                                                                               |
-| resolver_guid Optional | string | GUID of a another counter group which will be used to resolve the keys of this new counter group into labels and readable names. For example if you are creating a new counter group that uses IP addresses you can set `resolver_guid` to that of `Hosts {4CD742B1-C1CA-4708-BE78-0FCA2EB01A86}` See [Well known GUIDS](https://trisul.org/docs/ref/guid.html) |
+| guid                   | string | A unique guid that identifies the group. See section on GUIDs                                                                                                                                                                                                                                                                             |
+| ---------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name                   | string | Name of the counter group. Keep it short < 15 chars                                                                                                                                                                                                                                                                                       |
+| description            | string | A slightly longer description , it will appear in the Admin user interface                                                                                                                                                                                                                                                                |
+| bucketsize             | number | Resolution of the counter group for all meters in seconds. If you are not sure, just use the value `60` for the default bucket size of 60 seconds                                                                                                                                                                                         |
+| resolver_guid Optional | string | GUID of a another counter group which will be used to resolve the keys of this new counter group into labels and readable names. For example if you are creating a new counter group that uses IP addresses you can set `resolver_guid` to that of `Hosts {4CD742B1-C1CA-4708-BE78-0FCA2EB01A86}` See [Well known GUIDS](/docs/ref/guid ) |
 
 ### Table `meters`
 
@@ -51,7 +51,7 @@ Each meter line defines the following
 
 | 0   | Meter ID      | must start from 0                                                                                                                               |
 | --- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | Vartype       | type of meter, see the global named [T.k.vartype](https://trisul.org/docs/lua/obj_globalt.html#constants_t.k.vartype)                           |
+| 1   | Vartype       | type of meter, see the global named [T.k.vartype](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-global#constantstkvartype )                             |
 | 2   | Top-N size    | how many toppers do you want to track for the this metric. Can be changed from the GUI                                                          |
 | 3   | Bottom-N size | how many bottom-K do you want to track for this metric. Can be changed from the GUI                                                             |
 | 4   | Name          | Meter name (keep it short < 10 chars)                                                                                                           |

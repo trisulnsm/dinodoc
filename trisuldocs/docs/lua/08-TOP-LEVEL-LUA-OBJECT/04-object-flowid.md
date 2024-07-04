@@ -4,9 +4,9 @@ In Trisul, flows are identified by a strings that look like this `06A:C0.A8.01.
 
 The string encodes the tuples that make up the flow. The FlowID object described in this page makes working with these types of strings easier.
 
-## [Structure of flow key in Trisul](https://trisul.org/docs/lua/obj_flowid.html#structure_of_flow_key_in_trisul)
+## Structure of flow key in Trisul
 
-Trisul support 3 types of flows 1) plain IPv4 2) IPv4 with Netflow and 3) Plain IPv6. The following image shows the structure of these 3 flow IDs. Luckily you never have to construct these keys yourselfs. LUA calls into your functions that involve a network flow will use an object called *FlowID* that wraps this for you. See [How to get or create a flowID](https://trisul.org/docs/lua/obj_flowid.html#how_to_get_or_create_a_flow_id)
+Trisul support 3 types of flows 1) plain IPv4 2) IPv4 with Netflow and 3) Plain IPv6. The following image shows the structure of these 3 flow IDs. Luckily you never have to construct these keys yourselfs. LUA calls into your functions that involve a network flow will use an object called *FlowID* that wraps this for you. See [How to get or create a flowID](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid#how-to-get-or-create-a-flow-id )
 
 ![](../images/flowkey.png)
 
@@ -43,7 +43,7 @@ For example : `ipa` might return `FF020000000000000000000000000002` where `
 
 ## How to get or create a flow ID
 
-You can create the flowID string manually using the above formula. In Trisul LUA Scripting you rarely would need to create the flow ID because it is passed to you in many cases by the framework. For example : The [onnewresource](https://trisul.org/docs/lua/resource_monitor.html#function_onnewresource "e,resource") method in the Resource Monitor scripts pass you a flow object.
+You can create the flowID string manually using the above formula. In Trisul LUA Scripting you rarely would need to create the flow ID because it is passed to you in many cases by the framework. For example : The [onnewresource](/docs/lua/BACK-END-SCRIPTS/resource-monitor#functiononnewresource ) method in the Resource Monitor scripts pass you a flow object.
 
 So you simply use that as shown here
 
@@ -56,7 +56,7 @@ onflush=function(engine,resource)
                ip);
 ```
 
-Alternately in some script types like [simplecounter](https://trisul.org/docs/lua/simple_counter.html) you do not have access to a flowID, you can construct one using the [Packet:flowid](https://trisul.org/docs/lua/obj_packet.html#methods) method.
+Alternately in some script types like [simplecounter](/docs/lua/FRONT-END-SCRIPTS/simple-counter) you do not have access to a flowID, you can construct one using the [Packet:flowid](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-packet#methods ) method.
 
 ```lua
 onpacket=function(engine,layerdata)

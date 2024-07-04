@@ -1,18 +1,18 @@
 # Object HttpHeader
 
-The *HTTPHeader* object wraps the HTTP request and response headers along with status codes and other information. You do not construct this object directly , this is passed to you when you are working with [HTTP File Extraction scripts](https://trisul.org/docs/lua/fileextract.html)
+The *HTTPHeader* object wraps the HTTP request and response headers along with status codes and other information. You do not construct this object directly , this is passed to you when you are working with [HTTP File Extraction scripts](/docs/lua/FRONT-END-SCRIPTS/file-extract )
 
-| name                                                                                | input params                             | return value | description                                                                                                                                                  |
-| ----------------------------------------------------------------------------------- | ---------------------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| is_request                                                                          | –                                        | boolean      | True if the header is a HTTP request header                                                                                                                  |
-| is_response                                                                         | –                                        | boolean      | True if the header is a HTTP response header                                                                                                                 |
-| get_path                                                                            | –                                        | string       | The path in the HTTP request URI                                                                                                                             |
-| get_value                                                                           | string                                   | string       | Get the value of the requested HTTP header, Returns `nil` if header not found.                                                                               |
-| get_all_headers                                                                     | –                                        | table        | Return a table of attribute => value pairs                                                                                                                   |
-| get_method                                                                          | –                                        | string       | For requests GET/POST/HEAD or other methods                                                                                                                  |
-| get_status                                                                          | –                                        | number       | HTTP Status Code 200=OK                                                                                                                                      |
-| is_method                                                                           | string                                   | bool         | Check header method. `hdr:is_method("POST")` is short cut for `hdr:get_method()=="POST"` @                                                                   |
-| [match_value](https://trisul.org/docs/lua/obj_httpheader.html#function_match_value) | string – header_name, string value_regex | bool         | Short cut for `get_value` + `match(..)` check if the header value matches the specified regex (see example 3 below). The regex must be Google RE2 compatible |
+| name                                                                                  | input params                             | return value | description                                                                                                                                                  |
+| ------------------------------------------------------------------------------------- | ---------------------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| is_request                                                                            | –                                        | boolean      | True if the header is a HTTP request header                                                                                                                  |
+| is_response                                                                           | –                                        | boolean      | True if the header is a HTTP response header                                                                                                                 |
+| get_path                                                                              | –                                        | string       | The path in the HTTP request URI                                                                                                                             |
+| get_value                                                                             | string                                   | string       | Get the value of the requested HTTP header, Returns `nil` if header not found.                                                                               |
+| get_all_headers                                                                       | –                                        | table        | Return a table of attribute => value pairs                                                                                                                   |
+| get_method                                                                            | –                                        | string       | For requests GET/POST/HEAD or other methods                                                                                                                  |
+| get_status                                                                            | –                                        | number       | HTTP Status Code 200=OK                                                                                                                                      |
+| is_method                                                                             | string                                   | bool         | Check header method. `hdr:is_method("POST")` is short cut for `hdr:get_method()=="POST"` @                                                                   |
+| [match_value](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-http-header#functionmatch_value ) | string – header_name, string value_regex | bool         | Short cut for `get_value` + `match(..)` check if the header value matches the specified regex (see example 3 below). The regex must be Google RE2 compatible |
 
 ### Usage examples
 
@@ -63,7 +63,7 @@ resp_header:get_all_headers() => {"Transfer-Encoding" = "chunked", "Date" = "Tue
 debugger.lua>
 ```
 
-## [Function `match_value`](https://trisul.org/docs/lua/obj_httpheader.html#function_match_value)
+## Function `match_value`
 
 Matches a field against a regex (partial match).
 
@@ -79,11 +79,11 @@ Just a convenience function that you will find very handy when inspecting HTTP�
 
 ### Return value
 
-True
+**True**
 
 the header value matches the regex
 
-False
+**False**
 
 the header does not exist or the value does not match
 

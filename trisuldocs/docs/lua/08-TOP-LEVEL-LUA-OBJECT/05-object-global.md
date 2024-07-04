@@ -4,27 +4,28 @@ The global table named `T` can be accessed from anywhere. It defines some cons
 
 ## Global Table `T` index
 
-| T.contextid                                                          | A number that identifies the threading execution context of this lua script. You can have more than one instance of your script loaded see [Threading](https://trisul.org/docs/lua/basics.html#threading) |
-| -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| T.execution_contextid                                                | Same as `T.contextid`                                                                                                                                                                                     |
-| T.probeid                                                            | A string that identifies the probe within the domain running this script, such as `probe0`                                                                                                                |
-| T.probeversion                                                       | The version of the *Trisul Probe* running this script, such as `6.5.2779`                                                                                                                                 |
-| T.context_name                                                       | The database context name.                                                                                                                                                                                |
-| T.args                                                               | The `-args` command line option from [trisul](https://trisul.org/docs/ref/trisulprogram.html)                                                                                                             |
-| T.enginetype                                                         | A string `backend` or `frontend` – scripts may want to use this                                                                                                                                           |
-| [T.host](https://trisul.org/docs/lua/obj_globalt.html#table_t.host)  | Host methods that can be called from LUA                                                                                                                                                                  |
-| [T.K](https://trisul.org/docs/lua/obj_globalt.html#table_t.k)        | Constants                                                                                                                                                                                                 |
-| [T.util](https://trisul.org/docs/lua/obj_globalt.html#table_t.util)  | Utility methods                                                                                                                                                                                           |
-| [T.async](https://trisul.org/docs/lua/obj_tasync.html)               | Methods to call async LUA functions out of fast packet path                                                                                                                                               |
-| [T.re2](https://trisul.org/docs/lua/obj_globalt.html#function_t.re2) | A fast and powerful regex engine (Google RE2)                                                                                                                                                             |
-| [T.ac](https://trisul.org/docs/lua/obj_globalt.html#function_t.ac)   | A minimal but fast Aho-Corasick multi pattern matcher                                                                                                                                                     |
-| [T.log](https://trisul.org/docs/lua/obj_globalt.html#function_t.log) | Function to log a message that goes into the main Trisul logging framework.                                                                                                                               |
-|                                                                      |                                                                                                                                                                                                           |
-| T.countergroups                                                      | A table of ( countergroup name, guid ) currently loaded. Only for backend scripts. For frontend scripts this field has a nil                                                                              |
-| T.resourcegroups                                                     | Backend scripts only : A table of ( resourcegroup name, guid ) currently loaded.                                                                                                                          |
-| T.ftsgroups                                                          | Backend scripts only : A table of ( FTS (Full Text Search) name, guid ) currently loaded.                                                                                                                 |
-| T.sessiongroups                                                      | Backend scripts only : A table of ( session group name, guid ) currently loaded.                                                                                                                          |
-| [T.env](https://trisul.org/docs/lua/obj_globalt.html#table_t.env)    | Environment and Trisul Config file                                                                                                                                                                        |
+| Name                                                                | info                                                                                                                                                                                         |
+| ------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| T.contextid                                                         | A number that identifies the threading execution context of this lua script. You can have more than one instance of your script loaded see [Threading](/docs/lua/scripting-basics#threading) |
+| T.execution_contextid                                               | Same as `T.contextid`                                                                                                                                                                        |
+| T.probeid                                                           | A string that identifies the probe within the domain running this script, such as `probe0`                                                                                                   |
+| T.probeversion                                                      | The version of the *Trisul Probe* running this script, such as `6.5.2779`                                                                                                                    |
+| T.context_name                                                      | The database context name.                                                                                                                                                                   |
+| T.args                                                              | The `-args` command line option from [trisul](/docs/ref/programs/trisulprogram)                                                                                                              |
+| T.enginetype                                                        | A string `backend` or `frontend` – scripts may want to use this                                                                                                                              |
+| [T.host](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-global#tablethost )  | Host methods that can be called from LUA                                                                                                                                                     |
+| [T.K](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-global#tabletk )        | Constants                                                                                                                                                                                    |
+| [T.util](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-global#table-tutil ) | Utility methods                                                                                                                                                                              |
+| [T.async](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-tasync)             | Methods to call async LUA functions out of fast packet path                                                                                                                                  |
+| [T.re2](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-global#functiontre2)  | A fast and powerful regex engine (Google RE2)                                                                                                                                                |
+| [T.ac](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-global#functiontac )   | A minimal but fast Aho-Corasick multi pattern matcher                                                                                                                                        |
+| [T.log](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-global#functiontlog ) | Function to log a message that goes into the main Trisul logging framework.                                                                                                                  |
+|                                                                     |                                                                                                                                                                                              |
+| T.countergroups                                                     | A table of ( countergroup name, guid ) currently loaded. Only for backend scripts. For frontend scripts this field has a nil                                                                 |
+| T.resourcegroups                                                    | Backend scripts only : A table of ( resourcegroup name, guid ) currently loaded.                                                                                                             |
+| T.ftsgroups                                                         | Backend scripts only : A table of ( FTS (Full Text Search) name, guid ) currently loaded.                                                                                                    |
+| T.sessiongroups                                                     | Backend scripts only : A table of ( session group name, guid ) currently loaded.                                                                                                             |
+| [T.env](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-global#tabletenv )    | Environment and Trisul Config file                                                                                                                                                           |
 
 ## Table `T.host`
 
@@ -32,16 +33,16 @@ Interact with the Trisul environment.
 
 Use the object calling notation `T.host:function(..)` to invoke these methods.
 
-| Name           | In                                                        | Out                                               | Description                                                                                           |
-| -------------- | --------------------------------------------------------- | ------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| get_homenets   | none                                                      | Table, Array of [ `string` IP, `string` Netmask ] | Get home networks defined by Trisul.                                                                  |
+| Name           | In                                                        | Out                                               | Description                                                                                             |
+| -------------- | --------------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| get_homenets   | none                                                      | Table, Array of [ `string` IP, `string` Netmask ] | Get home networks defined by Trisul.                                                                    |
 | is_homenet     | `number` 32bit IPv4 or `string` IPv4 in dotted decimal    | `bool`                                            | Is the 32-bit IPv4 address within the home network?<br/><br/> LUACopy`T.host:is_homenet(“192.168.2.1”)` |
-| is_homenet_key | `string` IPv4 in trisul key format                        | `bool`                                            | Is the Trisul key format IP address in the home network.                                              |
-| get_configpath | none                                                      | `string` directory                                | Configuration directory                                                                               |
-| get_datapath   | none                                                      | `string` directory                                | Data directory                                                                                        |
-| createkey      | `guid` counter group id, `string` – key, `string` – label |                                                   | Create a userlabel for a given key. Use this to pre-load human labels for keys                        |
-| prepare_config | `guid` – plugin id, `string` template file                | plugin config                                     | Prepare a configuration file for your plugin                                                          |
-| broadcast      | `guid` – message id, `guid` class id, `string` message    | none                                              | Broadcast a state update to other plugins                                                             |
+| is_homenet_key | `string` IPv4 in trisul key format                        | `bool`                                            | Is the Trisul key format IP address in the home network.                                                |
+| get_configpath | none                                                      | `string` directory                                | Configuration directory                                                                                 |
+| get_datapath   | none                                                      | `string` directory                                | Data directory                                                                                          |
+| createkey      | `guid` counter group id, `string` – key, `string` – label |                                                   | Create a userlabel for a given key. Use this to pre-load human labels for keys                          |
+| prepare_config | `guid` – plugin id, `string` template file                | plugin config                                     | Prepare a configuration file for your plugin                                                            |
+| broadcast      | `guid` – message id, `guid` class id, `string` message    | none                                              | Broadcast a state update to other plugins                                                               |
 
 ## Table `T.K`
 
@@ -55,7 +56,7 @@ Pre-defined constants to use with other Lua functions.
 
 Constants : Types of counters.
 
-This table defines counter types supported by Trisul. You typically use this table when creating custom [countergroups](https://trisul.org/docs/lua/counter_group.html)
+This table defines counter types supported by Trisul. You typically use this table when creating custom [countergroups](/docs/lua/FRONT-END-SCRIPTS/counter-groups )
 
 | COUNTER            | Increment a counter that resets to zero at start of every time bucket                                                                                                                                                          |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -81,19 +82,19 @@ Useful utility functions written in C, exported to LUA via T.util table. We fi
 local hexstr= T.util.bin2hex( binstr)
 ```
 
-| Name      | In                                                              | Out                                  | Description                                                                                                                                                                        |
-| --------- | --------------------------------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ntop      | `number` 32-bit IPv4                                            | `string` IP in dotted decimal format | Convert a 32 bit number to IPv4 address string                                                                                                                                     |
-| pton      | `string` ip in dotted decimal                                   | `number` 32 bit IP address           | Convert an IPv4 address string to a number                                                                                                                                         |
-| bor       | `number` p ,`number` q                                          | `number` p OR q                      | bitwise OR of two numbers                                                                                                                                                          |
-| band      | `number` p,`number` q                                           | `number` p AND q                     | bitwise AND of two numbers                                                                                                                                                         |
+| Name      | In                                                              | Out                                  | Description                                                                                                                                                                         |
+| --------- | --------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ntop      | `number` 32-bit IPv4                                            | `string` IP in dotted decimal format | Convert a 32 bit number to IPv4 address string                                                                                                                                      |
+| pton      | `string` ip in dotted decimal                                   | `number` 32 bit IP address           | Convert an IPv4 address string to a number                                                                                                                                          |
+| bor       | `number` p ,`number` q                                          | `number` p OR q                      | bitwise OR of two numbers                                                                                                                                                           |
+| band      | `number` p,`number` q                                           | `number` p AND q                     | bitwise AND of two numbers                                                                                                                                                          |
 | testbit32 | `number` p, `number` (bit position)                             | `bool`                               | Test bit position of a 32 bit number. LSB=0, MSB=31<br/>T.util.testbit32(num,8)@ returns true if bit 8 = 1                                                                          |
 | bitval32  | `number` p, `number` (start bit), `number` width                | `number`                             | Get value of continous bits.<br/>`T.util.bitval32(num,20,4)` returns the numeric value of bits 20,19,18,17. Bit numbering start from 0 (C-style)                                    |
-| split     | `string` the string to split, `string` the delimiter            | array of `string` tokens             | Split a string into tokens `local tok_array = T.util.split(args,',')`                                                                                                              |
-| splitm    | `string` the string to split, `string` the delimiter            | multiple `string` returns            | Split a string into tokens and returns multiple values. Example `local flowid,path = T.util.splitm(args,',')`                                                                      |
+| split     | `string` the string to split, `string` the delimiter            | array of `string` tokens             | Split a string into tokens `local tok_array = T.util.split(args,',')`                                                                                                               |
+| splitm    | `string` the string to split, `string` the delimiter            | multiple `string` returns            | Split a string into tokens and returns multiple values. Example `local flowid,path = T.util.splitm(args,',')`                                                                       |
 | hash      | `string` to hash , *optional* `number` number of bits wide hash | `number` the hash code               | Compute a hash of the input string – Uses Murmur2 hash, output is n-bits wide.<br/>`local h =T.util.hash("Mystring",16)` The second argument nbits is optional with a default of 32 |
-| bin2hex   | `string` can include binary                                     | `string` the hex                     | Convert the binary to hex                                                                                                                                                          |
-| hex2bin   | `string` a hex                                                  | `string` binary                      | Convert the hex to binary string                                                                                                                                                   |
+| bin2hex   | `string` can include binary                                     | `string` the hex                     | Convert the binary to hex                                                                                                                                                           |
+| hex2bin   | `string` a hex                                                  | `string` binary                      | Convert the hex to binary string                                                                                                                                                    |
 
 :::note
 
@@ -108,9 +109,9 @@ The LUA regex functionality is quite limited. [Google RE2](https://code.googl
 1. T.re2 also allows you to employ very common string matching idioms like `(octet-stream|application-x|application-pdf)` which arent available in Lua’s find method.
 2. T.re2 allows you to precompile the regexes once and run them later
 
-| Name  | In                       | Out                                                      | Description                                                                                                                    |
-| ----- | ------------------------ | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| T.re2 | string, table (optional) | A [re2 object](https://trisul.org/docs/lua/obj_re2.html) | Precompile the regex string and return an re2 object. The optional second argument is a table containing boolean RE2::Options. |
+| Name  | In                       | Out                                                        | Description                                                                                                                    |
+| ----- | ------------------------ | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| T.re2 | string, table (optional) | A [re2 object](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-RE2 ) | Precompile the regex string and return an re2 object. The optional second argument is a table containing boolean RE2::Options. |
 
 ### RE2 Options
 
@@ -165,8 +166,8 @@ We create a RE2 object with a regex and the “case_sensitive” and another opt
 
 A fast and minimal Aho-Corasick multi pattern matcher.
 
-| T.ac | table (An array of patterns) | An [AC object](https://trisul.org/docs/lua/obj_globalt.html#ac) | Load all the patterns into an AC matcher and return an [AC matcher object](https://trisul.org/docs/lua/obj_globalt.html#ac) |
-| ---- | ---------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| T.ac | table (An array of patterns) | An [AC object](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-global ) | Load all the patterns into an AC matcher and return an [AC matcher object](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-global) |
+| ---- | ---------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 
 A sample illustrating a typical use.
 
@@ -185,13 +186,37 @@ onload = function()
    ac_headers:match_all(...)
 ```
 
-## [Function `T.log`](https://trisul.org/docs/lua/obj_globalt.html#function_t.log)
+## Function `T.ac`
 
-Adds a log message to the main Trisul log file. Trisul automatically adds the lua script filename to the log message so you know where the message is actually coming from. Also see [Printing and Logging from LUA script](https://trisul.org/docs/lua/basics.html#print_and_logging)
+A fast and minimal Aho-Corasick multi pattern matcher.
+
+| T.ac | table (An array of patterns) | An [AC object](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-global ) | Load all the patterns into an AC matcher and return an [AC matcher object]/docs/lua/TOP-LEVEL-LUA-OBJECT/object-global) |
+| ---- | ---------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+
+A sample illustrating a typical use.
+
+A sample illustrating a typical use.
+
+```lua
+onload = function() 
+    -- add patterns in array and create a new AC matcher 
+    ac_headers   = T.ac({ "Host:",
+                        "User-Agent:",
+                        "Referer",
+                        "Server:",
+                        "Content-Type:",
+                        "Content-Length:"} )
+
+
+   -- later on you can use the match methods
+   ac_headers:match_all(...)## Function `T.log`
+```
+
+Adds a log message to the main Trisul log file. Trisul automatically adds the lua script filename to the log message so you know where the message is actually coming from. Also see [Printing and Logging from LUA script](/docs/lua/scripting-basics#print-and-logging )
 
 | Name         | In                                                                                                                   | Out  | Description                                                                                                                                                                             |
 | ------------ | -------------------------------------------------------------------------------------------------------------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| T.log        | [T.K.loglevel](https://trisul.org/docs/lua/obj_globalt.html#table_t.k) – optional loglevel<br/>`string` – log message | none | Log a message to the Trisul log file, usually located for the default setup in `/usr/local/var/log/trisul-probe/domain0/probe0/context0` . The default loglevel is `T.K.loglevel.DEBUG` |
+| T.log        | [T.K.loglevel](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-global#tabletk ) – optional loglevel<br/>`string` – log message | none | Log a message to the Trisul log file, usually located for the default setup in `/usr/local/var/log/trisul-probe/domain0/probe0/context0` . The default loglevel is `T.K.loglevel.DEBUG` |
 | T.logerror   | `string` – msg                                                                                                       | none | Useful shortcut to log a message with loglevel of ERROR. `T.logerror(msg)` is the same as `T.log(T.K.loglevel.ERROR,msg)`                                                               |
 | T.logwarning | `string` – msg                                                                                                       | none | Log a message with WARN category                                                                                                                                                        |
 | T.logdebug   | `string` – msg                                                                                                       | none | Log a message with DEBUG category                                                                                                                                                       |
@@ -209,13 +234,35 @@ T.log(T.K.loglevel.ERROR, "This is an error from my LUA script")
 T.logerror( "This is an error message from my LUA script, same as above T.log() call")
 ```
 
----
+## Function `T.log`
 
-## [Table `T.alertgroups`](https://trisul.org/docs/lua/obj_globalt.html#table_t.alertgroups)
+Adds a log message to the main Trisul log file. Trisul automatically adds the lua script filename to the log message so you know where the message is actually coming from. Also see [Printing and Logging from LUA script](/docs/lua/scripting-basics#print-and-logging )
+
+| Name         | In                                                                                                                   | Out  | Description                                                                                                                                                                             |
+| ------------ | -------------------------------------------------------------------------------------------------------------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| T.log        | [T.K.loglevel](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-global#tabletk ) – optional loglevel<br/>`string` – log message | none | Log a message to the Trisul log file, usually located for the default setup in `/usr/local/var/log/trisul-probe/domain0/probe0/context0` . The default loglevel is `T.K.loglevel.DEBUG` |
+| T.logerror   | `string` – msg                                                                                                       | none | Useful shortcut to log a message with loglevel of ERROR. `T.logerror(msg)` is the same as `T.log(T.K.loglevel.ERROR,msg)`                                                               |
+| T.logwarning | `string` – msg                                                                                                       | none | Log a message with WARN category                                                                                                                                                        |
+| T.logdebug   | `string` – msg                                                                                                       | none | Log a message with DEBUG category                                                                                                                                                       |
+| T.loginfo    | `string` – msg                                                                                                       | none | Log a message with INFO category                                                                                                                                                        |
+
+## Usage
+
+The following snippets demonstrates the usage of T.log
+
+```lua
+T.log( T.K.loglevel.INFO,  "Your log message from lua ")
+T.log( "This message has uses the default DEBUG log level  ")
+
+T.log(T.K.loglevel.ERROR, "This is an error from my LUA script")
+T.logerror( "This is an error message from my LUA script, same as above T.log() call")
+```
+
+## Table `T.alertgroups`
 
 This section applies equally to T.countergroups, T.resourcegroups, T.sessionggroups, T.ftsgroups as well.
 
-The purpose for this table is to provide a searchable `name` to `guid` mapping table of all the alertgroups currently loaded in Trisul. The backend [alert_monitor](https://trisul.org/docs/lua/alert_monitor.html) scripts require you to specify a GUID that identifies the entity you are attaching the script to. If you do not know the GUID of the alert group but you know the name, you can use this table. See below.
+The purpose for this table is to provide a searchable `name` to `guid` mapping table of all the alertgroups currently loaded in Trisul. The backend [alert_monitor](/docs/lua/BACK-END-SCRIPTS/alert-monitor ) scripts require you to specify a GUID that identifies the entity you are attaching the script to. If you do not know the GUID of the alert group but you know the name, you can use this table. See below.
 
 ### Example alert_monitor code
 
@@ -247,16 +294,16 @@ alert_monitor  = (
 
 ---
 
-## [Table `T.env`](https://trisul.org/docs/lua/obj_globalt.html#table_t.env)
+## Table `T.env`
 
 Trisul environment. Allows you to read probe configuration for the context in which the LUA script is loaded.
 
-| Name              | In                                            | Out                                   | Description                                                                                                                                                                                                                                                                        |
-| ----------------- | --------------------------------------------- | ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| configfile        |                                               | `string` – path of config file        | Full path of the trisulProbeConfig.xml file used by the running Trisul instance                                                                                                                                                                                                    |
-| get_config        | `string` – ‘xml path’. See description column | `string` – value of config parameter  | Read a configuration parameter from the [Trisul Probe configuration file](https://trisul.org/docs/ref/trisulconfig.html). The XML Path supported is a very simple format “Node>Node>..Node”. So to read the config parameter *User* under *App* parent node the path is `App>User` |
-| domain_configfile |                                               | `string` – path of domain config file | Full path of the domain.xml configuration file used by the running instance. This config file is mainly used when your scripts want to connect and communicate to domain elements, such as TRP queries.                                                                            |
-| get_domain_config | `string` – ‘xml path’.                        | `string` – config value               | Similar to `get_config` above but for the domain config file. Typical example `T.env.get_domain_config("Domain>LocalReq")` to find a local endpoint to connect to TRP                                                                                                              |
+| Name              | In                                            | Out                                   | Description                                                                                                                                                                                                                                                        |
+| ----------------- | --------------------------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| configfile        |                                               | `string` – path of config file        | Full path of the trisulProbeConfig.xml file used by the running Trisul instance                                                                                                                                                                                    |
+| get_config        | `string` – ‘xml path’. See description column | `string` – value of config parameter  | Read a configuration parameter from the [Trisul Probe configuration file](/docs/ref/trisulProbe-config ). The XML Path supported is a very simple format “Node>Node>..Node”. So to read the config parameter *User* under *App* parent node the path is `App>User` |
+| domain_configfile |                                               | `string` – path of domain config file | Full path of the domain.xml configuration file used by the running instance. This config file is mainly used when your scripts want to connect and communicate to domain elements, such as TRP queries.                                                            |
+| get_domain_config | `string` – ‘xml path’.                        | `string` – config value               | Similar to `get_config` above but for the domain config file. Typical example `T.env.get_domain_config("Domain>LocalReq")` to find a local endpoint to connect to TRP                                                                                              |
 
 ### Usage
 

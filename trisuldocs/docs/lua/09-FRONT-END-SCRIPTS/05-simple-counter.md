@@ -14,10 +14,10 @@ Lua function called for each packet. You can use contents of the packet to creat
 
 The simplecounter table attaches the onpacket(..) function to a particular protocol layer.
 
-| protocol_guid | string                                                                                                                   | Which protocol do you want to attach this group to?  <br/>Trisul will invoke this counter group only for packets where that protocol is present and with a pointer to the payload at that protocol  <br/>A list of [common protocol GUIDs are here](https://trisul.org/docs/ref/guid.html#protocols) |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| onpacket      | function ( [engine](https://trisul.org/docs/lua/obj_engine.html) , [layer](https://trisul.org/docs/lua/obj_layer.html) ) | `onpacket(..)` is the main function where your LUA code goes. It is called for each packet with a layer object corresponding to the protocol_guid above                                                                                                                                              |
-| flow_counter  | bool                                                                                                                     | **Optional** When set to `true`, this counter turns into a NETFLOW_TAP mode counter. Use this if you want to use this script with NETFLOW_TAP mode processing. Default is `false`                                                                                                                    |
+| protocol_guid | string                                                                                                                       | Which protocol do you want to attach this group to?  <br/>Trisul will invoke this counter group only for packets where that protocol is present and with a pointer to the payload at that protocol  <br/>A list of [common protocol GUIDs are here](/docs/ref/guid#protocols ) |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| onpacket      | function ( [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) , [layer](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-layer ) ) | `onpacket(..)` is the main function where your LUA code goes. It is called for each packet with a layer object corresponding to the protocol_guid above                                                                                                                        |
+| flow_counter  | bool                                                                                                                         | **Optional** When set to `true`, this counter turns into a NETFLOW_TAP mode counter. Use this if you want to use this script with NETFLOW_TAP mode processing. Default is `false`                                                                                              |
 
 A typical simplecounter table looks like the following
 
@@ -25,13 +25,13 @@ A typical simplecounter table looks like the following
 
 The onpacket function is where your LUA code goes. You can inspect the packet bytes, then apply your own logic and interact with the Trisul engine.
 
-| engine | An [Engine](https://trisul.org/docs/lua/simple_counter.html#engine) object that allows you to interact with Trisul         |
-| ------ | -------------------------------------------------------------------------------------------------------------------------- |
-| layer  | A [Layer](https://trisul.org/docs/lua/simple_counter.html#layer) object pointing to the `protocol_guid` you have specified |
+| engine | An [Engine](/docs/lua/FRONT-END-SCRIPTS/simple-counter ) object that allows you to interact with Trisul          |
+| ------ | ---------------------------------------------------------------------------------------------------------------- |
+| layer  | A [Layer](/docs/lua/FRONT-END-SCRIPTS/simple-counter ) object pointing to the `protocol_guid` you have specified |
 
 ### The `layer` parameter
 
-This code dumps the IP header and the size of the IP layer. Once again the GUID “(0A2C724B-5B9F-4ba6-9C97-B05080558574)” represents the [IPv4 protocol](https://trisul.org/docs/ref/guid.html#protocols)
+This code dumps the IP header and the size of the IP layer. Once again the GUID “(0A2C724B-5B9F-4ba6-9C97-B05080558574)” represents the [IPv4 protocol](/docs/ref/guid#protocols )
 
 ```lua
 simplecounter = (
@@ -67,4 +67,4 @@ Hexdump
 
 ### The `engine` parameter
 
-Typically the end result of your LUA processing will result in a call to one of the [Engine](https://trisul.org/docs/lua/simple_counter.html#engine) methods.
+Typically the end result of your LUA processing will result in a call to one of the [Engine](/docs/lua/FRONT-END-SCRIPTS/simple-counter ) methods.

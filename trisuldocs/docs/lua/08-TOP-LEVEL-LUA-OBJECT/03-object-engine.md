@@ -401,7 +401,7 @@ Removes a flow based counter.
 
 ### Purpose
 
-Remove a previous flow based counter added by [add_flow_counter](https://trisul.org/docs/lua/obj_engine.html#function_add_flow_counter)
+Remove a previous flow based counter added by [add_flow_counter](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functionadd_flow_counter )
 
 ### Parameters
 
@@ -429,7 +429,7 @@ Add a text label to a IP flow. You can then search for flows using this string.
 
 ### Parameters
 
-| flowkey | string | identifies the flow that you want to attach a counter to. Usually you get this from [flow:id](https://trisul.org/docs/lua/obj_flowid.html)                                                                     |
+| flowkey | string | identifies the flow that you want to attach a counter to. Usually you get this from [flow:id](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid )                                                                   |
 | ------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | tag     | string | a short text label that is attached to the flow. You can attach multiple tags to a flow but the total length of all tags must be less than 64 bytes. If you add tags >= 64 bytes the extra tags are discarded. |
 
@@ -460,7 +460,7 @@ None.
 
 ### Usage
 
-A common use of `instanceid` is to construct filenames for log files. Another use is when you have scheduled scripts and you only want to run them once. In that case, you only run your code when `engine:instanceid()=="0"` See [engine_monitor](https://trisul.org/docs/lua/engine_monitor.html) for more.
+A common use of `instanceid` is to construct filenames for log files. Another use is when you have scheduled scripts and you only want to run them once. In that case, you only run your code when `engine:instanceid()=="0"` See [engine_monitor](/docs/lua/BACK-END-SCRIPTS/engine-monitor ) for more.
 
 ---
 
@@ -512,7 +512,7 @@ None
 
 ## Function `new_flow_record`
 
-Use this method only when you are writing an [Input Filter](https://trisul.org/docs/lua/inputfilter.html) plugin importing feeds with “Netflow like” flow records.
+Use this method only when you are writing an [Input Filter](/docs/lua/FRONT-END-SCRIPTS/input-filters ) plugin importing feeds with “Netflow like” flow records.
 
 ### Purpose
 
@@ -567,7 +567,7 @@ Stop reassembly and reconstruction of this flow.
 
 ### Purpose
 
-This method is useful in various contexts like [file extraction](https://trisul.org/docs/lua/fileextract.html) and [reassembly](https://trisul.org/docs/lua/reassembly.html)
+This method is useful in various contexts like [file extraction](/docs/lua/FRONT-END-SCRIPTS/file-extract ) and [reassembly](/docs/lua/FRONT-END-SCRIPTS/tcp-reassembly )
 
 The main use of this method is when you need to see the beginning bytes of a TCP flow to determine whether you are interested in further reassembly. Turning off reassembly of TCP streams you are not interested in can save significant CPU and memory.
 
@@ -733,10 +733,10 @@ This function adds the following uni-directional edges from a given *vertex*
 
 ### Parameters
 
-| flow_key    | a string | A string representing a flow. This is in [FlowID format](https://trisul.org/docs/lua/obj_flowid.html) You typically get this string as inputs to your lua function |
-| ----------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| target_guid | a GUID   | type of Vertex-B. This can be a counter group id, alert group id, or any other group id                                                                            |
-| target_key  | string   | key of Vertex-B                                                                                                                                                    |
+| flow_key    | a string | A string representing a flow. This is in [FlowID format](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid ) You typically get this string as inputs to your lua function |
+| ----------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| target_guid | a GUID   | type of Vertex-B. This can be a counter group id, alert group id, or any other group id                                                                              |
+| target_key  | string   | key of Vertex-B                                                                                                                                                      |
 
 ### Return value
 
@@ -801,14 +801,14 @@ Adds an attribute-name=attribute-value to a flow.
 
 ### Purpose
 
-Flow attributes can be attached to any flow. You can then write other scripts that can listen to these attributes using [reassembly/onattribute](https://trisul.org/docs/lua/reassembly.html#function_onattribute) and work on them.
+Flow attributes can be attached to any flow. You can then write other scripts that can listen to these attributes using [reassembly/onattribute](/docs/lua/FRONT-END-SCRIPTS/tcp-reassembly#function-onattribute) and work on them.
 
 ### Parameters
 
-| flow_key        | string | A string representing a [FlowID](https://trisul.org/docs/lua/obj_flowid.html) |
-| --------------- | ------ | ----------------------------------------------------------------------------- |
-| attribute_name  | string | type of attribute. Example HTTP-User-Agent                                    |
-| attribute_value | string | attribute value, Example “Mozilla …”                                          |
+| flow_key        | string | A string representing a [FlowID](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid ) |
+| --------------- | ------ | ------------------------------------------------------------------------------- |
+| attribute_name  | string | type of attribute. Example HTTP-User-Agent                                      |
+| attribute_value | string | attribute value, Example “Mozilla …”                                            |
 
 ### Return value
 

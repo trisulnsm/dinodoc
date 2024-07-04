@@ -27,15 +27,15 @@ The table alertgroup has a single section called control that assigns a GUID t
    }
    ```
 
-| name                                                                        | description                                    |
-| --------------------------------------------------------------------------- | ---------------------------------------------- |
-| table [control](https://trisul.org/docs/lua/alert_group.html#table_control) | assigns a name and guid to the new alert group |
+| name                                                                    | description                                    |
+| ----------------------------------------------------------------------- | ---------------------------------------------- |
+| table [control](/docs/lua/FRONT-END-SCRIPTS/alert-groups#tablecontrol ) | assigns a name and guid to the new alert group |
 
 ## Table `control`
 
 The control table assigns a unique GUID to the new alert group.
 
-| guid        | string | A [guid](https://trisul.org/docs/ref/guid.html) that identifies the group. |
-| ----------- | ------ | -------------------------------------------------------------------------- |
-| name        | string | Name of the alert group. Keep it short < 15 chars                          |
-| description | string |                                                                            |
+| guid        | string | A [guid](/docs/ref/guid) that identifies the group. |
+| ----------- | ------ | --------------------------------------------------- |
+| name        | string | Name of the alert group. Keep it short < 15 chars   |
+| description | string |                                                     |

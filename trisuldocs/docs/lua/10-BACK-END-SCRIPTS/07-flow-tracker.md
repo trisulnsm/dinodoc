@@ -55,9 +55,9 @@ Called before each flow is flushed. The flow is completed or a snapshot of a lon
 
 ### Parameters
 
-| engine | A [Backend Engine](https://trisul.org/docs/lua/obj_engine.html) object | use this object to add metrics, alerts, or alerts into the Trisul framework |
-| ------ | ---------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| flow   | A [flow](https://trisul.org/docs/lua/sg_monitor.html#flow)             | a flow object                                                               |
+| engine | A [Backend Engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, alerts, or alerts into the Trisul framework |
+| ------ | ------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
+| flow   | A [flow](/docs/lua/BACK-END-SCRIPTS/session-grp-monitor#flow )           | a flow object                                                               |
 
 ### Return value
 
@@ -77,9 +77,9 @@ Before a flush starts. Use ths if you need to perform some per-snapshot computat
 
 ### Parameters
 
-| engine    | An [engine](https://trisul.org/docs/lua/obj_engine.html) object | use this object to add metrics, alerts, or alerts into the Trisul framework |
-| --------- | --------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| timestamp | Timestamp                                                       | Timestamps seconds `tv_sec`                                                 |
+| engine    | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, alerts, or alerts into the Trisul framework |
+| --------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| timestamp | Timestamp                                                         | Timestamps seconds `tv_sec`                                                 |
 
 ### Return value
 
@@ -99,9 +99,9 @@ When a snapshot flush is complete. use this to perform some per-snapshot computa
 
 ### Parameters
 
-| engine    | An [engine](https://trisul.org/docs/lua/obj_engine.html) object | use this object to add metrics, alerts, or alerts into the Trisul framework |
-| --------- | --------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| timestamp | Timestamp                                                       | Timestamps seconds `tv_sec`                                                 |
+| engine    | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine) object | use this object to add metrics, alerts, or alerts into the Trisul framework |
+| --------- | ---------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| timestamp | Timestamp                                                        | Timestamps seconds `tv_sec`                                                 |
 
 ### Return value
 
@@ -123,11 +123,11 @@ If you define a onmetronome(..) function you will be plugged into the Trisul met
 
 ### Parameters
 
-| engine        | An [Engine](https://trisul.org/docs/lua/obj_engine.html) object | use this object to add metrics, resources, or alerts into the Trisul framework |
-| ------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| timestamp     | Number                                                          | Current timestamp (tv_sec epoch seconds)                                       |
-| tick_count    | Number                                                          | An incremeting tick counter                                                    |
-| tick_interval | Number                                                          | The tick interval, in seconds.                                                 |
+| engine        | An [Engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine) object | use this object to add metrics, resources, or alerts into the Trisul framework |
+| ------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| timestamp     | Number                                                           | Current timestamp (tv_sec epoch seconds)                                       |
+| tick_count    | Number                                                           | An incremeting tick counter                                                    |
+| tick_interval | Number                                                           | The tick interval, in seconds.                                                 |
 
 ### Return value
 

@@ -2,7 +2,7 @@
 
 :::note
 
-FRONTEND SCRIPT 
+**FRONTEND SCRIPT **
 
 :::
 
@@ -16,13 +16,13 @@ Trisul has the ability to extract content from network traffic. Typical content 
 
 You need to supply code for one or more of the following functions.
 
-| [filter_flow](https://trisul.org/docs/lua/fileextract.html#function_filter_flow)         | function( engine, timestamp, flowkey)                                                           | Called on new flow, return true to process, false to skip              |
-| ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| [filter](https://trisul.org/docs/lua/fileextract.html#function_filter)                   | Function( engine, timestamp, flowkey, header )                                                  | Call on req/resp header. Return True to extract, False to skip         |
-| [onpayload_raw](https://trisul.org/docs/lua/fileextract.html#function_onpayload_raw)     | function(engine, timestamp, flowkey, direction, seekpos, buffer)                                | Called for every chunk of newly reassembled raw bytes                  |
-| [onpayload_http](https://trisul.org/docs/lua/fileextract.html#function_onpayload_http)   | function(engine, timestamp, flowkey, path, req_header, resp_header, direction, seekpos, buffer) | Called for each piece of the reassembled file is built                 |
-| [onfile_http](https://trisul.org/docs/lua/fileextract.html#function_onfile_http)         | function ( engine, timestamp, flowkey, path, req_header, resp_header, length, is_partial )      | File is available in ramfs, use the headers to decide how to handle it |
-| [onterminateflow](https://trisul.org/docs/lua/fileextract.html#function_onterminateflow) | function(engine, timestamp, flowkey)                                                            | Called when a flow is terminated                                       |
+| [filter_flow](/docs/lua/FRONT-END-SCRIPTS/file-extract#function-filter_flow )         | function( engine, timestamp, flowkey)                                                           | Called on new flow, return true to process, false to skip              |
+| ------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| [filter](/docs/lua/FRONT-END-SCRIPTS/file-extract#function-filter )                   | Function( engine, timestamp, flowkey, header )                                                  | Call on req/resp header. Return True to extract, False to skip         |
+| [onpayload_raw](/docs/lua/FRONT-END-SCRIPTS/file-extract#function-onpayload_raw )     | function(engine, timestamp, flowkey, direction, seekpos, buffer)                                | Called for every chunk of newly reassembled raw bytes                  |
+| [onpayload_http](/docs/lua/FRONT-END-SCRIPTS/file-extract#function-onpayload_http )   | function(engine, timestamp, flowkey, path, req_header, resp_header, direction, seekpos, buffer) | Called for each piece of the reassembled file is built                 |
+| [onfile_http](/docs/lua/FRONT-END-SCRIPTS/file-extract#function-onfile_http )         | function ( engine, timestamp, flowkey, path, req_header, resp_header, length, is_partial )      | File is available in ramfs, use the headers to decide how to handle it |
+| [onterminateflow](/docs/lua/FRONT-END-SCRIPTS/file-extract#function-onterminateflow ) | function(engine, timestamp, flowkey)                                                            | Called when a flow is terminated                                       |
 
 ## LUA functions reference
 
@@ -48,10 +48,10 @@ When a new flow is first seen but no reassembly has started yet
 
 ### Parameters
 
-| engine    | An [Engine](https://trisul.org/docs/lua/obj_engine.html) object | use this object to add metrics, resources, or alerts into the Trisul framework |
-| --------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| timestamp | number                                                          | Timestamp seconds when the first packet in the flow was seen                   |
-| flow      | A [FlowID](https://trisul.org/docs/lua/obj_flowid.html) object  | use this to determine IPs and Ports involved in the flow                       |
+| engine    | An [Engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, resources, or alerts into the Trisul framework |
+| --------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| timestamp | number                                                            | Timestamp seconds when the first packet in the flow was seen                   |
+| flow      | A [FlowID](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid ) object  | use this to determine IPs and Ports involved in the flow                       |
 
 ### Return value
 
@@ -70,7 +70,7 @@ filter_flow = function(engine, timestamp, flow )
   end
 ```
 
-## [Function filter](https://trisul.org/docs/lua/fileextract.html#function_filter)
+## Function filter
 
 ### Purpose
 
@@ -84,11 +84,11 @@ When each heade, request or response is available.
 
 `filter = function( engine, timestamp, flowkey, header)`
 
-| engine    | An [Engine](https://trisul.org/docs/lua/obj_engine.html) object        | use this object to add metrics, resources, or alerts into the Trisul framework                      |
-| --------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| timestamp | number                                                                 | Timestamp seconds when the first packet in the flow was seen                                        |
-| flowkey   | A [FlowID](https://trisul.org/docs/lua/obj_flowid.html) object         | use this to determine IPs and Ports involved in the flow                                            |
-| header    | A [HTTPHeader](https://trisul.org/docs/lua/obj_httpheader.html) object | use this object to query HTTP header fields like Content-Type to decide if you want the file or not |
+| engine    | An [Engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object         | use this object to add metrics, resources, or alerts into the Trisul framework                      |
+| --------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| timestamp | number                                                                    | Timestamp seconds when the first packet in the flow was seen                                        |
+| flowkey   | A [FlowID](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid ) object          | use this to determine IPs and Ports involved in the flow                                            |
+| header    | A [HTTPHeader](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-http-header ) object | use this object to query HTTP header fields like Content-Type to decide if you want the file or not |
 
 #### Usage
 
@@ -105,13 +105,13 @@ The difference between this function and `onpayload_http` is that `onpayload_
 
 ### Parameters
 
-| engine    | An [Engine](https://trisul.org/docs/lua/obj_engine.html) object | use this object to add metrics, resources, or alerts into the Trisul framework          |
-| --------- | --------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| timestamp | number                                                          | Timestamp seconds when the first packet in the flow was seen                            |
-| flowkey   | A [FlowID](https://trisul.org/docs/lua/obj_flowid.html) object  | use this to determine IPs and Ports involved in the flow                                |
-| direction | number                                                          | 0 = OUT payload in client>server direction (same as the original SYN) 1 = server>client |
-| seekpos   | number                                                          | Seek position byte position from the beginning of the stream                            |
-| buffer    | A Buffer object                                                 | represents the reassembled bytes                                                        |
+| engine    | An [Engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object    | use this object to add metrics, resources, or alerts into the Trisul framework          |
+| --------- | -------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| timestamp | number                                                               | Timestamp seconds when the first packet in the flow was seen                            |
+| flowkey   | A [FlowID](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-http-header) object | use this to determine IPs and Ports involved in the flow                                |
+| direction | number                                                               | 0 = OUT payload in client>server direction (same as the original SYN) 1 = server>client |
+| seekpos   | number                                                               | Seek position byte position from the beginning of the stream                            |
+| buffer    | A Buffer object                                                      | represents the reassembled bytes                                                        |
 
 ### Return value
 
@@ -148,16 +148,16 @@ onpayload_http(.. 400, buffer(length=0) ) -- end of stream
 
 ### Parameters
 
-| engine          | An [Engine](https://trisul.org/docs/lua/obj_engine.html) object        | use this object to add metrics, resources, or alerts into the Trisul framework                                                                                                                                            |
-| --------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| timestamp       | number                                                                 | Timestamp seconds when the first packet in the flow was seen                                                                                                                                                              |
-| flowkey         | A [FlowID](https://trisul.org/docs/lua/obj_flowid.html) object         | use this to determine IPs and Ports involved in the flow                                                                                                                                                                  |
-| path            | uniquely identifies a stream                                           | You can use this path and concatenate payloads. `path` includes the ‘ramfs’ directory along with a synthesized file name for the content, you can use a regex to split the filename from the directory. see example below |
-| request_header  | A [HTTPHeader](https://trisul.org/docs/lua/obj_httpheader.html) object | the request HTTP Header                                                                                                                                                                                                   |
-| response_header | A [HTTPHeader](https://trisul.org/docs/lua/obj_httpheader.html)        | the response HTTP header                                                                                                                                                                                                  |
-| direction       | number                                                                 | 0 = OUT payload in client>server direction (same as the original SYN) 1 = server>client                                                                                                                                   |
-| seekpos         | number                                                                 | Seek position byte position from the beginning of the stream                                                                                                                                                              |
-| buffer          | A [Buffer](https://trisul.org/docs/lua/obj_buffer.html) object         | represents the reassembled bytes. A zero length buffer indicates end of stream                                                                                                                                            |
+| engine          | An [Engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object         | use this object to add metrics, resources, or alerts into the Trisul framework                                                                                                                                            |
+| --------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| timestamp       | number                                                                    | Timestamp seconds when the first packet in the flow was seen                                                                                                                                                              |
+| flowkey         | A [FlowID](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid ) object          | use this to determine IPs and Ports involved in the flow                                                                                                                                                                  |
+| path            | uniquely identifies a stream                                              | You can use this path and concatenate payloads. `path` includes the ‘ramfs’ directory along with a synthesized file name for the content, you can use a regex to split the filename from the directory. see example below |
+| request_header  | A [HTTPHeader](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-http-header ) object | the request HTTP Header                                                                                                                                                                                                   |
+| response_header | A [HTTPHeader](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-http-header )        | the response HTTP header                                                                                                                                                                                                  |
+| direction       | number                                                                    | 0 = OUT payload in client>server direction (same as the original SYN) 1 = server>client                                                                                                                                   |
+| seekpos         | number                                                                    | Seek position byte position from the beginning of the stream                                                                                                                                                              |
+| buffer          | A [Buffer](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-buffer ) object          | represents the reassembled bytes. A zero length buffer indicates end of stream                                                                                                                                            |
 
 ### Return value
 
@@ -200,15 +200,15 @@ When a file is available on the ramfs file system.
 
 `onfile_http = function( engine, timestamp, flowkey, path, request_header, resp_header, length, is_chunk )`
 
-| engine          | An [Engine](https://trisul.org/docs/lua/obj_engine.html) object        | use this object to add metrics, resources, or alerts into the Trisul framework                                                                                                                                                                                                                                                                                                                                  |
-| --------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| timestamp       | number                                                                 | Timestamp seconds. Seconds since Jan 1 1970                                                                                                                                                                                                                                                                                                                                                                     |
-| flowkey         | A [FlowID](https://trisul.org/docs/lua/obj_flowid.html) object         | use this to determine IPs and Ports involved in the flow                                                                                                                                                                                                                                                                                                                                                        |
-| path            | String                                                                 | Path on ramfs where the file is available. The path is constructed from the requested URI, hostname, and a unique ID. You can copy this off /ramfs to any filename you want just like a regular linux file. If the path is a partial file (see “Chunk” below) the path of the form `{dirname}/{filename}.[offset].part`. You have to use a regex to extract the filename. See the example in the usage section. |
-| request_header  | A [HTTPHeader](https://trisul.org/docs/lua/obj_httpheader.html) object | the request HTTP Header                                                                                                                                                                                                                                                                                                                                                                                         |
-| response_header | A [HTTPHeader](https://trisul.org/docs/lua/obj_httpheader.html) object | the response HTTP header                                                                                                                                                                                                                                                                                                                                                                                        |
-| length          | Number                                                                 | Size of the file                                                                                                                                                                                                                                                                                                                                                                                                |
-| is_chunk        | Boolean                                                                | Whether the file is a ‘chunk’. See *Usage*                                                                                                                                                                                                                                                                                                                                                                      |
+| engine          | An [Engine](docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object          | use this object to add metrics, resources, or alerts into the Trisul framework                                                                                                                                                                                                                                                                                                                                  |
+| --------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| timestamp       | number                                                                    | Timestamp seconds. Seconds since Jan 1 1970                                                                                                                                                                                                                                                                                                                                                                     |
+| flowkey         | A [FlowID](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid  ) object         | use this to determine IPs and Ports involved in the flow                                                                                                                                                                                                                                                                                                                                                        |
+| path            | String                                                                    | Path on ramfs where the file is available. The path is constructed from the requested URI, hostname, and a unique ID. You can copy this off /ramfs to any filename you want just like a regular linux file. If the path is a partial file (see “Chunk” below) the path of the form `{dirname}/{filename}.[offset].part`. You have to use a regex to extract the filename. See the example in the usage section. |
+| request_header  | A [HTTPHeader](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-http-header ) object | the request HTTP Header                                                                                                                                                                                                                                                                                                                                                                                         |
+| response_header | A [HTTPHeader](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-http-header ) object | the response HTTP header                                                                                                                                                                                                                                                                                                                                                                                        |
+| length          | Number                                                                    | Size of the file                                                                                                                                                                                                                                                                                                                                                                                                |
+| is_chunk        | Boolean                                                                   | Whether the file is a ‘chunk’. See *Usage*                                                                                                                                                                                                                                                                                                                                                                      |
 
 ### Return value
 
@@ -279,10 +279,10 @@ When a TCP flow is terminated. You can use this to clean up any state you main
 
 ### Parameters
 
-| engine    | An [Engine](https://trisul.org/docs/lua/obj_engine.html) object | use this object to add metrics, resources, or alerts into the Trisul framework |
-| --------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| timestamp | number                                                          | Timestamp seconds. seconds since epoch Jan 1 1970                              |
-| flowkey   | A [FlowID](https://trisul.org/docs/lua/obj_flowid.html) object  | use this to determine IPs and Ports involved in the flow                       |
+| engine    | An [Engine](docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, resources, or alerts into the Trisul framework |
+| --------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| timestamp | number                                                           | Timestamp seconds. seconds since epoch Jan 1 1970                              |
+| flowkey   | A [FlowID](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid ) object | use this to determine IPs and Ports involved in the flow                       |
 
 ### Return value
 

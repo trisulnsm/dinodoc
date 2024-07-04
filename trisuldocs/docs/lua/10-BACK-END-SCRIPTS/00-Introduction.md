@@ -20,12 +20,12 @@ Since Trisul Network Analytics is a streaming analyzer. You get a single pass ov
 
 The following script types are available – within each script type you listen to one streaming ‘topic’ or subset. If you want to monitor metrics for the *Hosts counter group* you would choose the *cg_monitor* script type and within that script listen to the *Hosts* stream.
 
-| Name                                                                  | Called when                  | Notes                                                                           |
-| --------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------- |
-| [engine_monitor](https://trisul.org/docs/lua/engine_monitor.html)     | Periodically                 | on a 1 minute timer you can support SNMP and other data input tools into Trisul |
-| [cg_monitor](https://trisul.org/docs/lua/cg_monitor.html)             | Counter group metrics events | Use for traffic, top-N, cardinality analytics                                   |
-| [sg_monitor](https://trisul.org/docs/lua/sg_monitor.html)             | Flow metrics                 | On new flow, when flow is flushed,                                              |
-| [alert_monitor](https://trisul.org/docs/lua/alert_monitor.html)       | Alert stream                 | Process alerts in Lua                                                           |
-| [resource_monitor](https://trisul.org/docs/lua/resource_monitor.html) | Resource stream              | HTTP requests, DNS events, TLS, File hashes stream                              |
-| [fts_monitor](https://trisul.org/docs/lua/fts_monitor.html)           | Full Text Search docs        | Documents HTTP headers, full TLS Certs                                          |
-| [flow_tracker](https://trisul.org/docs/lua/flow_tracker.html)         | Flow tracker                 | Create your own custom flow tracker – top-K flow snapshots                      |
+| Name                                                                          | Called when                  | Notes                                                                           |
+| ----------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------- |
+| [engine_monitor](/docs/lua/BACK-END-SCRIPTS/engine-monitor )                  | Periodically                 | on a 1 minute timer you can support SNMP and other data input tools into Trisul |
+| [cg_monitor](/docs/lua/BACK-END-SCRIPTS/counter-grp-monitor#tablecg_monitor ) | Counter group metrics events | Use for traffic, top-N, cardinality analytics                                   |
+| [sg_monitor](/docs/lua/BACK-END-SCRIPTS/session-grp-monitor )                 | Flow metrics                 | On new flow, when flow is flushed,                                              |
+| [alert_monitor](/docs/lua/BACK-END-SCRIPTS/alert-monitor )                    | Alert stream                 | Process alerts in Lua                                                           |
+| [resource_monitor](/docs/lua/BACK-END-SCRIPTS/resource-monitor )              | Resource stream              | HTTP requests, DNS events, TLS, File hashes stream                              |
+| [fts_monitor](/docs/lua/BACK-END-SCRIPTS/FTS-monitor )                        | Full Text Search docs        | Documents HTTP headers, full TLS Certs                                          |
+| [flow_tracker](/docs/lua/BACK-END-SCRIPTS/flow-tracker )                      | Flow tracker                 | Create your own custom flow tracker – top-K flow snapshots                      |

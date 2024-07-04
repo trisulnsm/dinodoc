@@ -1,24 +1,24 @@
 # Object T.async
 
-The T.async interface provides methods to help you do long running I/O tasks that do not block the fast packet pipeline path. For introduction to Async scripting operations. See [Async operations introduction](https://trisul.org/docs/lua/async.html)
+The T.async interface provides methods to help you do long running I/O tasks that do not block the fast packet pipeline path. For introduction to Async scripting operations. See [Async operations introduction](/docs/lua/TOP-LEVEL-LUA-OBJECT/async-exec )
 
-## [Purpose of T.async](https://trisul.org/docs/lua/obj_tasync.html#purpose_of_t.async)
+## Purpose of T.async
 
-To execute long running I/O tasks in a separate worker pool to prevent blocking the Trisul streaming pipelines. The default worker thread pool size is 1, it can be increased at the script level by [TrisulPlugin.request_async_workers](https://trisul.org/docs/lua/basics.html#structure_of_a_lua_script) parameter
+To execute long running I/O tasks in a separate worker pool to prevent blocking the Trisul streaming pipelines. The default worker thread pool size is 1, it can be increased at the script level by [TrisulPlugin.request_async_workers](/docs/lua/scripting-basics#structure-of-a-lua-script ) parameter
 
-## [Methods](https://trisul.org/docs/lua/obj_tasync.html#methods)
+## Methods
 
-| function                                                                     | parameters                                                                            | what it does                                                                                                        |
-| ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| [cat](https://trisul.org/docs/lua/obj_tasync.html#t.async.cat)               | from_file, to_file                                                                    | Append one file to another                                                                                          |
-| [copy](https://trisul.org/docs/lua/obj_tasync.html#t.async.copy)             | from_file, to_file                                                                    | Copy one file to another.                                                                                           |
-| [rm](https://trisul.org/docs/lua/obj_tasync.html#t.async.rm)                 | filename : string                                                                     | Delete a file                                                                                                       |
-| [copybuffer](https://trisul.org/docs/lua/obj_tasync.html#t.async.copybuffer) | from_buffer (a [Buffer](https://trisul.org/docs/lua/obj_buffer.html) object), to_file | Append buffer content bytes to the target file                                                                      |
-| [schedule](https://trisul.org/docs/lua/obj_tasync.html#t.async:schedule)     | a LUA schedule block                                                                  | Runs the LUA functions in the block asynchronosly and re-enter the fast path at a later time when results are ready |
+| function                                                                            | parameters                                                                              | what it does                                                                                                        |
+| ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| [cat](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-tasync#functiontasynccat )              | from_file, to_file                                                                      | Append one file to another                                                                                          |
+| [copy](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-tasync#functiontasynccopy )            | from_file, to_file                                                                      | Copy one file to another.                                                                                           |
+| [rm](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-tasync#functiontasyncrm )                | filename : string                                                                       | Delete a file                                                                                                       |
+| [copybuffer](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-tasync#functiontasynccopybuffer) | from_buffer (a [Buffer](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-buffer ) object), to_file | Append buffer content bytes to the target file                                                                      |
+| [schedule](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-tasync#tasync )                    | a LUA schedule block                                                                    | Runs the LUA functions in the block asynchronosly and re-enter the fast path at a later time when results are ready |
 
 ---
 
-## [Function `T.async.cat`](https://trisul.org/docs/lua/obj_tasync.html#function_t.async.cat)
+## Function `T.async.cat`
 
 Appends file1 to file2.
 
@@ -38,15 +38,13 @@ None
 
 #### Usage
 
- 
-
 ```lua
 ..
 T.async.cat("/tmpfs/k/file1.data", "/home/nsm/files/file123.dat")
 ..
 ```
 
-## [Function `T.async.copy`](https://trisul.org/docs/lua/obj_tasync.html#function_t.async.copy)
+## Function `T.async.copy`
 
 Copies file1 to file2.
 
@@ -85,20 +83,21 @@ None
 
 ---
 
-## [Function `T.async.copybuffer`](https://trisul.org/docs/lua/obj_tasync.html#function_t.async.copybuffer)
+## Function `T.async.copybuffer`]
 
-Operations on writing [Buffer](https://trisul.org/docs/lua/obj_buffer.html) contents to files.
+Operations on writing [Buffer](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-buffer ) contents to files.
 
 ### Purpose
 
-Write contents of a [buffer](https://trisul.org/docs/lua/obj_buffer.html) object to disk.
+Write contents of a [buffer](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-buffer ) object to disk.
 
 ### Parameters
 
-| buff                | A [Buffer](https://trisul.org/docs/lua/obj_buffer.html) object | an object usually passed by Trisul into your LUA script                                                                                                                |
-| ------------------- | -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| filename            | `filename` string                                              | filename to write to. File is created if it doesnt exist                                                                                                               |
-| position (optional) | `seelpos` number                                               | **Optional** At what position do you want to write the buffer. If this parameter is not specified the default mode of `copybuffer` is to append to the end of the file |
+| Name                | Info                                                             | Description                                                                                                                                                            |
+| ------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| buff                | A [Buffer](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-buffer ) object | an object usually passed by Trisul into your LUA script                                                                                                                |
+| filename            | `filename` string                                                | filename to write to. File is created if it doesnt exist                                                                                                               |
+| position (optional) | `seelpos` number                                                 | **Optional** At what position do you want to write the buffer. If this parameter is not specified the default mode of `copybuffer` is to append to the end of the file |
 
 ### Return value
 
@@ -118,7 +117,7 @@ T.async.copybuffer( payload_buffer, "/home/nsm/files/file123.dat")
 T.async.copybuffer( payload_buffer, "/home/nsm/files/file123.dat", seekpos )
 ```
 
-## [T.async:schedule](https://trisul.org/docs/lua/obj_tasync.html#t.async:schedule)
+## T.async:schedule
 
 T.async methods *cp,cat,rm,copybuffer* described above accomplish very specific tasks. Using the `T.async:schedule` method described below you can run any arbitrary LUA code out of the main packet pipeline.
 
@@ -174,11 +173,3 @@ onfile_http  = function ( engine, timestamp, flowkey,
 
   end,
 ```
-
-[](https://trisul.org/docs/lua/obj_tasync.html#)
-
-Copyright © 2020. Trisul Network Analytics trisul.org
-
-- [FAQ](https://trisul.org/faq)
-   - [Support](https://trisul.org/support)
-   - [Contact us](mailto:info@unleashnetworks.com)
