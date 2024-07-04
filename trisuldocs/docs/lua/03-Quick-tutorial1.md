@@ -25,7 +25,7 @@ Get started by learning where to place LUA scripts, how to run in development 
    
    1. Now lets run Trisul over a sample PCAP file. Use your own or download a sample PCAP from tutorial.pcap
    
-   2. Run the trisulctl_probe CLI tool command ‘testbench’ which will run your scripts in a single threaded mode attached to your terminal. See [Development Environment](https://trisul.org/docs/lua/debugger.html) *Sample run shown below*
+   2. Run the trisulctl_probe CLI tool command ‘testbench’ which will run your scripts in a single threaded mode attached to your terminal. See [Development Environment](/docs/lua/developer-env) *Sample run shown below*
       
       ```lua
       cd /tmp
@@ -69,13 +69,13 @@ Get started by learning where to place LUA scripts, how to run in development 
 
 2. The entire plugin is inside a LUA table called “TrisulPlugin” `TrisulPlugin = { ..}`
 
-3. The LUA table [*id*](https://trisul.org/docs/lua/basics.html#id_block) contains info about the script
+3. The LUA table [*id*](/docs/lua/scripting-basics#id-block) contains info about the script
 
-4. The `onload` and `onunload` [functions](https://trisul.org/docs/lua/basics.html#onload_and_onload) are called by the engine when the script is load/unloaded
+4. The `onload` and `onunload` [functions](/docs/lua/scripting-basics#onload-and-onload) are called by the engine when the script is load/unloaded
 
 5. Within the *onload* and *onunload* function you can access a global called **T**
 
-6. The [global **T** exposes several methods](https://trisul.org/docs/lua/obj_globalt.html) like `T.log` to interact with Trisul
+6. The [global **T** exposes several methods](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-global) like `T.log` to interact with Trisul
    
    That is the model of the Trisul LUA API, your script will be called at various times depending on the type of script.
    
@@ -131,10 +131,10 @@ Get started by learning where to place LUA scripts, how to run in development 
 
 Some useful tips for development.
 
-1. Switch to [single threaded mode](https://trisul.org/docs/ref/trisulconfig.html#tuning)
+1. Switch to [single threaded mode](/docs/ref/trisulProbe-config#tuning)
 2. Use a PCAP file to develop your script instead of live traffic
 3. Run over the PCAPs with `-nodemon` mode to output LUA `print(..)` statements on the console
 
 ### Next steps
 
-Congrats! You have written your first LUA script, although it doesnt do much. Lets move on to the next Tutorial : [How to write a simplecounter](https://trisul.org/docs/lua/tutorial2.html)
+Congrats! You have written your first LUA script, although it doesnt do much. Lets move on to the next Tutorial : [How to write a simplecounter](/docs/lua/Quick-Tutorial2)

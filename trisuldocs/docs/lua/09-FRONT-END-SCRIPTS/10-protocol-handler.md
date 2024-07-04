@@ -19,10 +19,10 @@ Download a well documented skeleton script from here to copy and get started
 
 ##[Table `protocol_handler`
 
-| name                                                                                         | type                                                            | description                                                                                |
-| -------------------------------------------------------------------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| table [control](https://trisul.org/docs/lua/protocol_handler.html#table_control)             | table                                                           | assign a name and GUID to this protocol                                                    |
-| function [parselayer](https://trisul.org/docs/lua/protocol_handler.html#function_parselayer) | function( [layer](https://trisul.org/docs/lua/obj_layer.html) ) | given a packet consume N bytes for this protocol and tell Trisul what the next protocol is |
+| name                                                                                     | type                                                            | description                                                                                |
+| ---------------------------------------------------------------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| table [control](/docs/lua/FRONT-END-SCRIPTS/protocol-handler#tablecontrol )              | table                                                           | assign a name and GUID to this protocol                                                    |
+| function [parselayer](/docs/lua/FRONT-END-SCRIPTS/protocol-handler#function-parselayer ) | function( [layer](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-layer ) | given a packet consume N bytes for this protocol and tell Trisul what the next protocol is |
 
 ## Table `control`
 
@@ -30,10 +30,10 @@ The control table assigns a unique GUID to this protocol and a name. You can t
 
 | name                | type             | description                                                                                                                                                                                                             |
 | ------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| guid                | string           | A unique guid that identifies this new protocol. Use `trisulctl_probe testbench guid` to generate a [new GUID](https://trisul.org/docs/ref/guid.html)                                                                   |
+| guid                | string           | A unique guid that identifies this new protocol. Use `trisulctl_probe testbench guid` to generate a [new GUID](/docs/ref/guid )                                                                                         |
 | name                | string           | Name of the counter group. Keep it short < 15 chars                                                                                                                                                                     |
 | description         | string           | optional                                                                                                                                                                                                                |
-| host_protocol_guid  | string           | Which lower layer protocol do you want to attach to. To find the GUID for your host protocol such as UDP or IP see [Common protocol GUIDs](https://trisul.org/docs/ref/guid.html#protocols)                             |
+| host_protocol_guid  | string           | Which lower layer protocol do you want to attach to. To find the GUID for your host protocol such as UDP or IP see [Common protocol GUIDs](/docs/ref/guid#protocols )                                                   |
 | host_protocol_ports | array of numbers | array of port numbers of the host protocol to which you want to attach. These could be TCP/UDP prots, EtherTypes, IP protocol numbers, or other [Access Points](https://trisul.org/docs/ug/webadmin/access_points.html) |
 
 ### Sample control block
@@ -77,8 +77,8 @@ When a packet arrives that is attached to this protocol. Remember you can attach
 
 ### Parameters
 
-| layer | a [Layer](https://trisul.org/docs/lua/obj_layer.html) object | the layer object contains the packet bytes that are above the lower constructed layer. you can use the layer object to navigate the previously constructed layers. |
-| ----- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| layer | a [Layer](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-layer ) object | the layer object contains the packet bytes that are above the lower constructed layer. you can use the layer object to navigate the previously constructed layers. |
+| ----- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
 ### Return value
 

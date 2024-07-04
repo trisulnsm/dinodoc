@@ -16,17 +16,17 @@ Packet Storage skeleton script
 
 You need to supply code for one or more of the following functions.
 
-| [filter](https://trisul.org/docs/lua/packet_storage.html#function_filter)                 | function(engine,timestamp,flowkey)               | called when a new flow starts. Examine the flow tuples and decide the packet (pcap) storage policy                                     |
-| ----------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| [filter_payload](https://trisul.org/docs/lua/packet_storage.html#function_filter_payload) | function(engine, time, flow, dir, seekpos, buff) | called when first chunk of TCP data has been reassembled. Use this if you want to examine the headers and decide packet storage policy |
+| [filter](/docs/lua/FRONT-END-SCRIPTS/pcap-storage#tablepacket_storage )             | function(engine,timestamp,flowkey)               | called when a new flow starts. Examine the flow tuples and decide the packet (pcap) storage policy                                     |
+| ----------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| [filter_payload](/docs/lua/FRONT-END-SCRIPTS/pcap-storage#function-filter_payload ) | function(engine, time, flow, dir, seekpos, buff) | called when first chunk of TCP data has been reassembled. Use this if you want to examine the headers and decide packet storage policy |
 
 ## Table `packet_storage`
 
 You need to supply code for one or more of the following functions.
 
-| [filter](https://trisul.org/docs/lua/packet_storage.html#function_filter)                 | function(engine,timestamp,flowkey)               | called when a new flow starts. Examine the flow tuples and decide the packet (pcap) storage policy                                     |
-| ----------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| [filter_payload](https://trisul.org/docs/lua/packet_storage.html#function_filter_payload) | function(engine, time, flow, dir, seekpos, buff) | called when first chunk of TCP data has been reassembled. Use this if you want to examine the headers and decide packet storage policy |
+| [filter](/docs/lua/FRONT-END-SCRIPTS/pcap-storage#tablepacket_storage )             | function(engine,timestamp,flowkey)               | called when a new flow starts. Examine the flow tuples and decide the packet (pcap) storage policy                                     |
+| ----------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| [filter_payload](/docs/lua/FRONT-END-SCRIPTS/pcap-storage#function-filter_payload ) | function(engine, time, flow, dir, seekpos, buff) | called when first chunk of TCP data has been reassembled. Use this if you want to examine the headers and decide packet storage policy |
 
 ## LUA objects reference
 
@@ -40,7 +40,7 @@ Your script needs to supply one or more of these functions listed below.
 
 ## Function filter
 
-Allows you to determine packet storage policy on a per-flow basis. This allows a fine-grained control that may not be possible using the built in method outlined in [Controlling Packet Storage](https://trisul.org/docs/lua/packet_storage.html)
+Allows you to determine packet storage policy on a per-flow basis. This allows a fine-grained control that may not be possible using the built in method outlined in [Controlling Packet Storage](/docs/lua/FRONT-END-SCRIPTS/pcap-storage )
 
 ### When called
 
@@ -48,10 +48,10 @@ When a new flow is established, but no packets have been stored for that flow ye
 
 ### Parameters
 
-| engine    | An [Engine](https://trisul.org/docs/lua/obj_engine.html) object | use this object to add metrics, resources, or alerts into the Trisul framework |
-| --------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| timestamp | number                                                          | Timestamp seconds when the first packet in the flow was seen                   |
-| flowkey   | A [FlowID](https://trisul.org/docs/lua/obj_flowid.html) object  | use this to determine IPs and Ports involved in the flow                       |
+| engine    | An [Engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, resources, or alerts into the Trisul framework |
+| --------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| timestamp | number                                                            | Timestamp seconds when the first packet in the flow was seen                   |
+| flowkey   | A [FlowID](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid ) object  | use this to determine IPs and Ports involved in the flow                       |
 
 ### Return value
 
@@ -97,13 +97,13 @@ When the first chunk of TCP reassembled data is available on the flow. This me
 
 ### Parameters
 
-| engine    | An [Engine](https://trisul.org/docs/lua/obj_engine.html) object | use this object to add metrics, resources, or alerts into the Trisul framework          |
-| --------- | --------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| timestamp | number                                                          | Timestamp seconds when the first packet in the flow was seen                            |
-| flowkey   | A [FlowID](https://trisul.org/docs/lua/obj_flowid.html) object  | use this to determine IPs and Ports involved in the flow                                |
-| direction | number                                                          | 0 = OUT payload in client>server direction (same as the original SYN) 1 = server>client |
-| seekpos   | number                                                          | Seek position byte position from the beginning of the stream                            |
-| buffer    | A [Buffer](https://trisul.org/docs/lua/obj_buffer.html) object  | represents the reassembled bytes                                                        |
+| engine    | An [Engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, resources, or alerts into the Trisul framework          |
+| --------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| timestamp | number                                                            | Timestamp seconds when the first packet in the flow was seen                            |
+| flowkey   | A [FlowID](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid ) object  | use this to determine IPs and Ports involved in the flow                                |
+| direction | number                                                            | 0 = OUT payload in client>server direction (same as the original SYN) 1 = server>client |
+| seekpos   | number                                                            | Seek position byte position from the beginning of the stream                            |
+| buffer    | A [Buffer](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid ) object  | represents the reassembled bytes                                                        |
 
 ### Return value
 
@@ -153,4 +153,4 @@ end,
 
 Rules when you have multiple scripts
 
-1. if two LUA scripts return conflicting values. then the more liberal type of storage policy is used. If `a.lua` returns `0 - dont store packet` for a flow F, and `b.lua` returns `1 - store full packet` than the latter is chosen.
+- if two LUA scripts return conflicting values. then the more liberal type of storage policy is used. If `a.lua` returns `0 - dont store packet` for a flow F, and `b.lua` returns `1 - store full packet` than the latter is chosen.

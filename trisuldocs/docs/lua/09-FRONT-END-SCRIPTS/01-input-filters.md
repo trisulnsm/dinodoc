@@ -39,10 +39,10 @@ inputfilter = {
 }
 ```
 
-| name                                                                           | description                                |
-| ------------------------------------------------------------------------------ | ------------------------------------------ |
-| function [step](https://trisul.org/docs/lua/inputfilter.html#step)             | called when trisul ready for new packet(s) |
-| function [step_alert](https://trisul.org/docs/lua/inputfilter.html#step_alert) | called when trisul ready for new alert(s)  |
+| name                | description                                |
+| ------------------- | ------------------------------------------ |
+| function step       | called when trisul ready for new packet(s) |
+| function step_alert | called when trisul ready for new alert(s)  |
 
 ## LUA functions reference
 
@@ -63,9 +63,9 @@ Process a packet or a batch of packets. You can do two things.
 
 ### Parameters
 
-| newpacket | An [Packet](https://trisul.org/docs/lua/obj_packet.html) object | if you wish to construct a new packet, use the `set_packet` method to set the packet bytes |
-| --------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| engine    | An [Engine](https://trisul.org/docs/lua/obj_engine.html) object | use this object to add metrics, resources, or alerts into the Trisul framework             |
+| newpacket | An Packet object | if you wish to construct a new packet, use the `set_packet` method to set the packet bytes |
+| --------- | ---------------- | ------------------------------------------------------------------------------------------ |
+| engine    | An Engine object | use this object to add metrics, resources, or alerts into the Trisul framework             |
 
 ### Return value
 
