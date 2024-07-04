@@ -1,0 +1,84 @@
+# HTTP Header FTS
+
+All HTTP headers including requests (GET, POST,..etc) and responses
+(HTTP OK, errors ) are stored in the FTS index.
+
+## What is stored ?
+
+The entire HTTP request or response body is treated as a single
+document. All fields are stored in the index except the following which
+have high variability. You can generate reports by User-Agent, Server,
+Content-Type, or any of the fields in the HTTP Header.
+
+<div class="info-circle autohint">
+
+The following HTTP fields are excluded from the index.  
+Cookie, Set-Cookie, Date, Expires, Last-Modified,E-Tag, P3P, ETag,
+Cache-Control, Keep-Alive,Age,Last-Modified, If-, Location,
+Content-Length, Referer
+
+</div>
+
+The following extra attributes are added by Trisul to aid some kinds of
+useful queries
+
+1.  CODE - HTTP response code
+2.  URI - The full URL
+
+#### Sample document
+
+A typical document looks like this
+
+
+    POST /ajax/ufi/like.php HTTP/1.1
+    Host: www.facebook.com
+    User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:11.0) Gecko/20100101 Firefox/11.0
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    Accept-Language: en-us,en;q=0.5
+    Accept-Encoding: gzip, deflate
+    Connection: keep-alive
+    X-SVN-Rev: 810660
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+    Referer: http://www.facebook.com/
+    Content-Length: 368
+
+## Using
+
+<div class="info hand-o-right autohint">
+
+Select Resources -\> HTTP Header FTS
+
+</div>
+
+Follow instructions in the [FTS](fts.html) documentation.
+
+## Special tips for HTTP Header FTS
+
+#### Special attributes
+
+You should leverage the special attributes URI and CODE to narrow down
+your search.
+
+<div class="image-with-caption">
+
+![](images/ftsh1.png)  
+Showing URI and CODE attributes.
+
+</div>
+
+#### Documents to flows
+
+Once you have sufficiently narrowed down your documents of interest.
+
+- Switch to Flows
+- Use the *Options* dropdown menu and the *URLs in flow* to switch to
+  the URL normal index page.
+- Use the *Download PCAP* button at the top to download all the flows
+  shown at once
+
+<div class="image-with-caption">
+
+![](images/ftsh2.png)  
+Click on options to bring up pivoting options to other kinds of data
+
+</div>
