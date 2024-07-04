@@ -1,5 +1,4 @@
 ---
-
 title: Using SNMP
 sidebar_position: 4
 

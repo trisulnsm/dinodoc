@@ -1,5 +1,4 @@
 ---
-
 title: Netflow vs SNMP
 sidebar_position: 10
 

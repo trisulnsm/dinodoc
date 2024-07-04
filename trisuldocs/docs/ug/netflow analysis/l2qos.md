@@ -1,5 +1,4 @@
 ---
-
 title: Layer2 and QoS
 sidebar_position: 9 
 
@@ -61,8 +60,6 @@ various ways to provide specialized services.
 
 > These counters will only be activated if the target environment traffic
 > deploys ToS and this information is exported in Netflow.
-
-</div>
 
 Trisul supports collecting the following Netflow template fields.
 

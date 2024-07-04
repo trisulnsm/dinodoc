@@ -1,5 +1,4 @@
 ---
-
 title: Routers and interfaces
 sidebar_position: 3
 

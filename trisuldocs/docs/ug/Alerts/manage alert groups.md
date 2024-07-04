@@ -44,4 +44,4 @@ The alerts generated appear immediately on the user interface. You can also setu
 2. Send alerts via [email](https://trisul.org/docs/ug/alerts/email_settings.html)
 3. Send alerts via [SMS service](https://trisul.org/docs/ug/alerts/sms_settings.html)
 
-The Email and SMS services work by reading the SYSLOG alerts. Ensure SYSLOG forwarding is enabled for each alert type.
+> The Email and SMS services work by reading the SYSLOG alerts. Ensure SYSLOG forwarding is enabled for each alert type.
