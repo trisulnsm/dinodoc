@@ -1,6 +1,6 @@
 # Quickstart tutorial 2 – A simple counter
 
-Congrats, you’ve made it to the second tutorial in the series. In the [first instalment](https://trisul.org/docs/lua/tutorial1.html) , we got our feet wet by writing a very simple hello world script. It didnt no much beyond printing a few log messages, but it taught us how to setup scripting. In this tutorial 2, we will write a simple script that meters packet lengths.
+Congrats, you’ve made it to the second tutorial in the series. In the [first instalment](/docs/lua/Quick-tutorial1) , we got our feet wet by writing a very simple hello world script. It didnt no much beyond printing a few log messages, but it taught us how to setup scripting. In this tutorial 2, we will write a simple script that meters packet lengths.
 
 ## Packet Length Histogram counter
 
@@ -8,13 +8,13 @@ Once again as in Tutorial-1, lets run the script first and then explore details.
 
 :::info[GOALS]
 
- Develop useful Packet Length Histogram counter. How many packets > 1400,1000-1400,500-1000,etc. How to run in production mode, how to write a [simplecounter](https://trisul.org/docs/lua/simple_counter.html) script to plug into each packet, how to view results.
+ Develop useful Packet Length Histogram counter. How many packets > 1400,1000-1400,500-1000,etc. How to run in production mode, how to write a [simplecounter](/docs/lua/FRONT-END-SCRIPTS/simple-counter) script to plug into each packet, how to view results.
 
 :::
 
 1. ## Get pktlen.lua
    
-   1. Download [pktlen.lua](https://raw.githubusercontent.com/trisulnsm/trisul-scripts/master/lua/tutorial/tutorial2/pktlen.lua) into the [lua scripts directory](https://trisul.org/docs/lua/basics.html#installing_and_uninstalling) `/usr/local/lib/trisul-probe/plugins/lua` *A sample run is shown below*
+   1. Download [pktlen.lua](https://raw.githubusercontent.com/trisulnsm/trisul-scripts/master/lua/tutorial/tutorial2/pktlen.lua) into the [lua scripts directory](/docs/lua/scripting-basics) `/usr/local/lib/trisul-probe/plugins/lua` *A sample run is shown below*
       
       ```lua
       cd /usr/local/lib/trisul-probe/plugins/lua
@@ -72,13 +72,13 @@ Lets look a bit deeper into th script `countergroup` and `simplecounter` sec
 
 The Trisul LUA API consists of about 16 different “script types”. In this tutorial , pktlen.lua uses the countergroup and simplecounter script types. You can even place the countergroup and simplecounter tables in separate files if you want.
 
-1. The [id block](https://trisul.org/docs/lua/basics.html#id_block) just identifies the plugin to Trisul, we’ve already see this in Tutorial 1
-2. The [`countergroup` block](https://trisul.org/docs/lua/counter_group.html) defines a new counter group
-3. The [`simplecounter` block](https://trisul.org/docs/lua/simple_counter.html) is where you count packets
+1. The [id block](/docs/lua/scripting-basics#id-block) just identifies the plugin to Trisul, we’ve already see this in Tutorial 1
+2. The [`countergroup` block](/docs/lua/FRONT-END-SCRIPTS/counter-groups) defines a new counter group
+3. The [`simplecounter` block](/docs/lua/FRONT-END-SCRIPTS/simple-counter) is where you count packets
 
 ## **The countergroup block**
 
-[Reference : countergroup](https://trisul.org/docs/lua/simple_counter.html)
+[Reference : countergroup](/docs/lua/FRONT-END-SCRIPTS/simple-counter)
 
 Since we are creating a new counter group that meters Packet Lengths, we use a `countergroup` block to create a new group called “Packet Length”.
 
@@ -121,8 +121,6 @@ You will notice the counter group has two sub blocks called control and meters.
 
                     we select 30 seconds as the resolution for this group
 
-
-
 ### The `meters` section
 
 We define two meters
@@ -133,7 +131,7 @@ We define two meters
 
 ## **The simplecounter block**
 
-[Reference : simplecounter](https://trisul.org/docs/lua/simple_counter.html)
+[Reference : simplecounter](/docs/lua/FRONT-END-SCRIPTS/simple-counter)
 
 Finally, we’ve landed at the most critical part of the plugin. This is where your LUA code actually goes.
 
@@ -147,7 +145,7 @@ We want to tap packets at the IP layer, so we define the protocol_guid as
 
 protocol_guid
 
-            at which layer do we want to listen to packets. The guid `{0A2C724B-5B9F-4ba6-9C97-B05080558574}` in the example stands for IP. See [Well Known GUIDs](https://trisul.org/docs/ref/guid.html#protocols)
+            at which layer do we want to listen to packets. The guid `{0A2C724B-5B9F-4ba6-9C97-B05080558574}` in the example stands for IP. See [Well Known GUIDs](/docs/ref/guid#protocols)
 
 ```lua
 simplecounter = {
@@ -193,10 +191,8 @@ Key things to remember
 What we’re doing
 
 1. We get the “wire length” from layer:packet(), then group it into 7 keys based on length
-2. Call the update_counter methods in the [Engine object](https://trisul.org/docs/lua/obj_engine.html#object_engine)
+2. Call the update_counter methods in the [Engine object](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine)
 
 Thats it ! The rest is taken care of by Trisul. We have a brand new counter group called Packet Length.
 
 **Congrats !** You are now well on your way to writing your own scripts. Just browse the code samples on [GitHub](https://github.com/trisulnsm/trisul-scripts/tree/master/lua) and check out the documentaton on the left navigation.
-
-
