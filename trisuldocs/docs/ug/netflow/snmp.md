@@ -4,13 +4,13 @@ sidebar_position: 4
 
 ---
 
-# 13.4.Using SNMP
+# Using SNMP
 
 Trisul can use SNMP to complement Netflow. You can use it to discover
 Device names, interface names, interface speeds, plot real time SNMP
 traffic charts, etc.
 
-## 13.4.1.Package
+## Package
 
 To enable SNMP you need to install the following packages on the
 Trisul-Hub node.
@@ -23,7 +23,7 @@ apt install snmp
 yum install net-snmp net-snmp-utils 
 ```
 
-## 13.4.2.Configuring SNMP
+## Configuring SNMP
 
 You need to first specify the authentication details for each SNMP
 device.
@@ -38,7 +38,7 @@ Login as user, then select \_Netflow \> Router and Interfaces
 
 Click on SNMP Settings and enter the SNMP v2 or SNMP v3 parameters.
 
-## 13.4.3.Resolving names
+## Resolving names
 
 When you click the *Options* menu
 
@@ -72,7 +72,7 @@ Scroll down to the *Attributes* section and add the following string
 
 Now you should be able to resolve the router and inteface names.
 
-## 13.4.4.Viewing SNMP traffic charts
+## Viewing SNMP traffic charts
 
 > Against any interface select Options
 
@@ -92,7 +92,7 @@ obtained via SNMP. A very useful debugging tool.
 
 ![](images/live_snmp.png)
 
-## 13.4.5.Configuring SNMP Globally.
+## Configuring SNMP Globally.
 
 Suppose if there are no devices listed in the routers and interfaces,
 you want to resolve device names if no per-device settings are found,

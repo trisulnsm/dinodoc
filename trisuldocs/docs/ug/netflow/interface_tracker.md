@@ -4,14 +4,14 @@ sidebar_position: 5
 
 ---
 
-# 13.5.Interface Tracking
+# Interface Tracking
 
 Interface Tracker is a streaming analytics feature of Trisul you need to
 enable on a Netflow Interface level to acquire ability to create
 separate monitoring for hosts, applications and protocols on each
 interface.
 
-## 13.5.1.Purpose of interface tracking
+## Purpose of interface tracking
 
 To allow for accurate long term drilldowns of interfaces.
 
@@ -59,7 +59,7 @@ Second point is that the *interface tracker* is not really necessary for low
 traffic interfaces. When there are less number of flows, the *raw flows*
 based analytics provides sufficient accuracy.
 
-## 13.5.2.Enabling interface Tracking
+## Enabling interface Tracking
 
 There are multiple ways to do this.
 
@@ -70,13 +70,13 @@ would have discovered all of the routers and interfaces automatically.
 This method creates 100 trackers for the top interfaces. This should be
 suitable for most large organizations.
 
-> By selecting “Enable interfaces for top 100” in the “Interfaces” tab or using the “Select a Router to display interfaces” dropdown from the [Netflow Wizard](netflow_wizard.html#interfaces_)
+> By selecting “Enable interfaces for top 100” in the “Interfaces” tab or using the “Select a Router to display interfaces” dropdown from the [Netflow Wizard](netflow_wizard#netflow_wizard)
 
 :::note navigation
 
 Login as admin, then select Context: Default -\> profile0 -\> then
 Netflow Wizard  
-Then in the Interfaces tab click on the "Interface tracking" drop down button and select "[Enable interfaces for top 100](routers_and_interfaces.html)"
+Then in the Interfaces tab click on the "Interface tracking" drop down button and select "[Enable interfaces for top 100](routers_and_interfaces#routers_and_interfaces)"
 
 :::
 
@@ -88,7 +88,7 @@ You can also choose the interfaces on a particular router and enable interface t
 
 :::note navigation
 
-In the same Interfaces tab Click on the "Select a router to display Interfaces" dropdown button and choose a particular router which displays the number interfaces on that router. From the number of interfaces displayed, click on the check boxes of the interfaces that you want to enable interface tracking and Select “Enable Interface Tracking” from the "Interface Tracking" menu on the [Router Interfaces](routers_and_interfaces.html) tool
+In the same Interfaces tab Click on the "Select a router to display Interfaces" dropdown button and choose a particular router which displays the number interfaces on that router. From the number of interfaces displayed, click on the check boxes of the interfaces that you want to enable interface tracking and Select “Enable Interface Tracking” from the "Interface Tracking" menu on the [Router Interfaces](routers_and_interfaces#routers_and_interfaces) tool
 
 :::
 
@@ -101,6 +101,6 @@ If you want to disable interface tracking
 Login as admin, then select Context: Default -\> profile0 -\> then
 Netflow Wizard  
 Then in the Interfaces tab select [Disable interface
-tracking](routers_and_interfaces.html) from the "Interface Tracking" drop down button
+tracking](routers_and_interfaces#routers_and_interfaces) from the "Interface Tracking" drop down button
 
 :::

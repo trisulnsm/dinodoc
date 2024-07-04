@@ -1,4 +1,4 @@
-# 11.1. Reports
+# Reports
 
 Trisul comes with dozens of pre-defined reports for your use. You can
  either view them on the browser or send them via email periodically.
@@ -7,23 +7,27 @@ Trisul comes with dozens of pre-defined reports for your use. You can
 
 The central place where all reports can be accessed is via the Reports menu. You can also download various reports in CSV or PDF formats in different sections in Trisul.
 
+:::note navigation
+
 Select *Reports* in the left menu section
+
+:::
 
 #### Creating your own reports
 
 Using the [Trisul Remote Protocol API](https://trisul.org/docs/trp) you can write Ruby scripts that create your own reports.
 
-## 11.1.1 Report time
+## Report time
 
 For each report type, you can easily select a number of predefined time windows as shown in the image below
 
-![](image/reporttime.png)
+![](./image/reporttime.png)
 
 *Figure:Report*
 
 You can also click on “Custom” to select any time window of your choice.
 
-## 11.1.2 List of reports by type
+## List of reports by type
 
 #### Report types
 

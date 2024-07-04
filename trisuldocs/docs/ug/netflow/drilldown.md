@@ -4,11 +4,11 @@ sidebar_position: 8
 
 ---
 
-# 13.8.Interface Drilldown
+# Interface Drilldown
 
 Describes the Interface drilldown tool that appears when you select
 “Drilldown” against any interface in the [Routers and Interfaces
-Tool](/docs/ug/netflow/routers_and_interfaces.html#routers_and_interfaces). The options in Interface Drilldown tool looks slightly different depending on if [Interface Tracking](interface_tracker.html) is enabled or not.
+Tool](routers_and_interfaces#routers_and_interfaces). The options in Interface Drilldown tool looks slightly different depending on if [Interface Tracking](interface_tracker#interface_tracker) is enabled or not.
 
 ## Without Interface Tracker
 
@@ -22,12 +22,12 @@ When the interface has the tracker enabled it is indicated by the Eye icon on th
 
 ![](images/intf_hopsts_with_tracker.png) 
 
-## 13.8.1.Using
+## Using
 
 :::note navigation
 
 Selecting Drilldown against any Netflow interface in the [Routers and
-Interfaces Tool](/docs/ug/netflow/routers_and_interfaces.html#routers_and_interfaces)
+Interfaces Tool](routers_and_interfaces#routers_and_interfaces)
 
 :::
 
@@ -38,7 +38,7 @@ The following page that contains the traffic chart is displayed.
 *Interface drilldown : showing the form for Time, Router, Interface
 selection*
 
-## 13.8.2.Search Form
+#### Search form
 
 :::note navigation 
 
@@ -59,7 +59,7 @@ You can change the router, interface, time interval, and topper count.
 
 Once the "Change router and interface" form is set and submitted , it takes you to the Interface utilization window.
 
-## 13.8.3.Information Shown
+#### Information shown
 
 ![](images/drilldown-tabs.png)
 
@@ -73,9 +73,7 @@ Allows you to download the drilldown report as PDF or XLSX worksheets
 
 Below the title, the interface drilldown is displayed as tabs. Some of
 these tabs are dynamically created. If you have created a [Crosskey
-Counter Group](/docs/ug/cg/custom.html#cross_key_counter_groups) with
-Flow-Interfaces as the first group, then the second group will be shown
-as a Tab.
+Counter Group](custom#cross_key_counter_groups) with Flow-Interfaces as the first group, then the second group will be shown as a Tab.
 
 | Panel | Name               | Description                                                                                                                                                                                            |
 | ----- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -92,9 +90,9 @@ as a Tab.
 | 11    | ASN, NBAR, QoS etc | These appear dynamically depending on whether these features are enabled or not                                                                                                                        |
 | 12    | MixedBandwidth     | ISP specific use case shows the same data as ASN but groups them into cache traffic vs internet traffic                                                                                                |
 
-Also see : [Netflow Wizard Trackers](netflow_wizard.html#trackers)
+Also see : [Netflow Wizard Trackers](netflow_wizard#trackers)
 
-## 13.8.4.Traffic
+## Traffic chart
 
 Traffic chart shows the transmit and receive traffic on the interface
 for the selected time window. The legends on the bottom show the LATEST
@@ -102,14 +100,14 @@ values.
 
 ![](images/intf_traffic.png)
 
-## 13.8.5.Util
+## Util
 
 Similar to traffic numbers, this tab shows Utilization numbers relative
 to interface speed.
 
 ![](images/intf_util.png)
 
-## 13.8.6.Flow Hosts
+## Hosts
 
 For IP based reporting.
 
@@ -124,7 +122,7 @@ interface.
 
 This feature in trisul is a deep drilldown of top hosts by total,into
 and out of an interface. This is only available after enabling
-[Interface Tracker](interface_tracker.html) .
+[Interface Tracker](interface_tracker#interface_tracker) .
 
 Top hosts into interface are the hosts that are transmitting into the
 interface(Ingress)  
@@ -136,7 +134,7 @@ the hosts that are causing spikes.
 
 ![](images/intf_hopsts_with_tracker.png)
 
-## 13.8.7.Apps Track
+## Apps
 
 ### Default Top Apps Report
 
@@ -146,17 +144,17 @@ Shows top applications by receive and transmit on the interface.
 
 This feature in trisul is a deep drilldown of top applications by
 total,into and out of an interface. This is only available after
-enabling [Interface Tracker](interface_tracker.html) .
+enabling [Interface Tracker](interface_tracker#interface_tracker) .
 
 ![](images/intf_apps_with_tracker.png)
 
-## 13.8.8.Top Conversations or Talkers
+## Top Conversations or Talkers]
 
 Top conversations are nothing but the talkers. The screen displays the conversations between the source and the destination in volume bytes.
 
 ![](images/intf_conversation.png)
 
-## 13.8.9.Raw Flows
+## Raw Flows
 
 Raw Flows shows details against every flow sorted by volume. It contains
 information like protocol,source IP, source port, destination IP,
@@ -164,16 +162,16 @@ destination port, duration of flows, etc.
 
 ![](images/intf_raw_flows.png)
 
-## 13.8.10.Interface Traffic Matrix - Chord Diagram
+## Interface Traffic Matrix – Chord diagram]
 
 A useful tool that represents traffic flows between interfaces. A chord
 diagram looks like the picture below. The interface being drilldown is
 represented a chord and the other interfaces are shown as smaller chords
-sending or receiving traffic from the subject interface. This is only available after enabling [Cross Key](/docs/ug/cg/custom.html#cross_key_counter_groups) ![](images/interface_matrix_light.png)
+sending or receiving traffic from the subject interface. This is only available after enabling [Cross Key](custom#cross_key_counter_groups) ![](images/interface_matrix_light.png)
 
-## 13.8.11.ASN, NBAR, and Other Details
+## ASN, NBAR, and other details
 
-These are available in the interface drilldowns if the proper trackers are created ahead of time when [Cross Key](/docs/ug/cg/custom.html#cross_key_counter_groups) is enabled for them.
+These are available in the interface drilldowns if the proper trackers are created ahead of time when [Cross Key](custom#cross_key_counter_groups) is enabled for them.
 
 ![](images/asn_crosskey.png)
 
