@@ -3,7 +3,7 @@ title: Configure Netflow
 sidebar_position: 2
 ---
 
-# Configure Netflow
+# 13.2.Configure Netflow
 
 Trisul has the capability to use Netflow like telemetry to gain deep
 visibility into your traffic performance, monitor traffic flows, and
@@ -12,7 +12,7 @@ Netflow v5/v9/JFlow/IPFIX/and SFlow metering. This document describes
 *step-by-step* on how you can setup Trisul to process Netflow and
 *Netflow-like* metering.
 
-## Steps
+## 13.2.1.Steps
 
 ### Step 1: Configure your routers
 
@@ -76,7 +76,7 @@ Use the UI to change the mode from the default “Packet capture” to
 Congratulations!! Now wait for about 10 minutes for Netflow data to
 start showing up.
 
-## Netflow wizard
+## 13.2.2.Netflow wizard
 
 Use the [Netflow Wizard](netflow_wizard.html) to
 
@@ -84,7 +84,7 @@ Use the [Netflow Wizard](netflow_wizard.html) to
 2. Change the Home Networks
 3. Change the UDP Ports that are mapped to Netflow
 
-## Verify Templates
+## 13.2.3.Verify Templates
 
 Netflow v9, IPFIX, JFlow, Netstream are technologies that use a concept
 of Template records. These are special records sent by the router which

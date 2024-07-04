@@ -1,13 +1,16 @@
 ---
+
 title: Netflow vs SNMP
 sidebar_position: 10
+
 ---
-# Netflow vs SNMP
+
+# 13.10.Netflow vs SNMP
 
 Trisul has a advanced feature that provides bandwidth mapping of the
 SNMP vs Netflow Traffic from every router and interface.
 
-## Installing the SNMP vs Netflow App
+## 13.10.1.Installing the SNMP vs Netflow App
 
 To enable this feature, you must install the SNMP vs Netflow app from
 Trisul Apps. To Install the app,
@@ -22,7 +25,7 @@ Select the ‘*Install*’ option to install the app.
 
 ![](images/snmp_vs_netflow_app.png)
 
-## SNMP vs Netflow Chart
+## 13.10.2.SNMP vs Netflow Chart
 
 If you want to have a comparison between the SNMP and Netflow records
 for any router or interface,
@@ -40,8 +43,8 @@ You will get a dialog box as follows.
 
 You can fill in the required fields and submit them.
 
-| Field         | Description
-| ------------- | ----------
+| Field         | Description                                                                               |
+| ------------- | ----------------------------------------------------------------------------------------- |
 | Time Selector | Select the desired time from the time selector box                                        |
 | Routers       | Select any desired router                                                                 |
 | Interfaces    | Select any interface from respective router or select multiple interfaces for that router |

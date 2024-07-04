@@ -1,8 +1,11 @@
 ---
+
 title: Netflow Configuration Wizard
 sidebar_position: 7
+
 ---
-# Netflow Configuration Wizard
+
+# 13.7.Netflow Configuration Wizard
 
 This configuration wizard pulls together various configuration options
 into one place.
@@ -14,7 +17,7 @@ into one place.
 5. Create Trackers
 6. Create utilization alerts
 
-## Using the Wizard
+## 13.7.1.Using the Wizard
 
 :::note navigation
 
@@ -41,7 +44,7 @@ Notice the wizard has 6 Tabs.
 6. **Utilization Alert** — Generate alerts when any interface
    utilization crosses specific level of thresholds
 
-## Basic configuration
+## 13.7.2.Basic configuration
 
 Here you can configure the most common items related to Netflow.
 
@@ -57,7 +60,7 @@ The current setting is shown just below the form items.
 | Edges                               | Enables the database containing the streaming graph of relationship between different entities                                                                                                                                                                             |
 | Ring                                | Enable to capture raw packets                                                                                                                                                                                                                                              |
 
-## Routers
+## 13.7.3.Routers
 
 After Trisul has collected Netflow for a while, it automatically
 builds a map of Routers and their attached Interfaces. This page allows
@@ -77,7 +80,7 @@ Select routers and then :
 | Resolve Interface Alias | Use IF-MIB alias to assign names to discovered router interfaces |
 | SNMP Port Map           | Map netstream ifindex with snmp ifindex                          |
 
-## Interfaces
+## 13.7.4.Interfaces
 
 This tab allows you to enable the “Interface Tracking” features for
 discovered interfaces.
@@ -96,7 +99,7 @@ Select interfaces and then :
 | Create TCA                                | Create TCA for selected interfaces                                    |
 | Delete TCA                                | Delete TCA for selected interfaces                                    |
 
-## Configure Email alerts
+## 13.7.5.Configure Email alerts
 
 This page allows you to configure real time E-Mail alerts for various
 conditions.
@@ -112,7 +115,7 @@ conditions.
 Once you go through the items in this wizard you will have a robust
 Netflow based monitoring system.
 
-## Trackers
+## 13.7.6.Trackers
 
 Trackers are streaming algorithms that convert flow or packet metrics
 into sub metrics for hosts per interface, apps per interface, NBAR-APPID
@@ -146,7 +149,7 @@ Drilldown](drilldown.html#information_shown) pages.
 | Track Mixed Bandwidth Per Interface | For each interface track mixed bandwidth(peerig vs internet)                                             |
 | Track Mixed Bandwidth for Subnets   | For each interface track mixed bandwidth(peerig vs internet)                                             |
 
-## Utilization Alert
+## 13.7.7.Utilization Alert
 
 Generate alerts when any interface utilization crosses these thresholds
 

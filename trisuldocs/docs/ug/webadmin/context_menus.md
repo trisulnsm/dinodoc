@@ -1,10 +1,10 @@
-# Context Menus
+# 12.17. Context Menus
 
 A Trisul context is a separate instance of Trisul with its own isolated
 database, configuration, and processes. To know more about contexts,
 Refer to [Working with Contexts](/docs/ug/domain/contexts.html)
 
-## Admin Tasks
+## 12.17.1.Admin Tasks
 
 All the administrative functions are being done here right from
 starting/stopping Hub and Probe nodes to monitoring Netflow and BGP in
@@ -160,7 +160,7 @@ Status of the DR Site from the primary site.
 
 Refer [Disaster Recovery](/docs/ug/ha/dr.html)
 
-## Profile Menu
+## 12.17.2.Profile Menu
 
 The Profile Menu has all the basic configuration related traffic
 monitoring, flows, custom counters, Alerts, Resources and Advanced Tools

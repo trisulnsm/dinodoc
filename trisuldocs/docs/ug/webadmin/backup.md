@@ -1,4 +1,4 @@
-# Backups
+# 12.14.Backups
 
 There are two categories of data you might want back up :
 
@@ -13,7 +13,7 @@ For a large data platform like Trisul , configuration backup is of main
 importance. The databases tend to be of very large Terabyte sizes. The
 recommended solution for full scale data backup is to setup a DR node.
 
-## Directories
+## 12.14.1.Directories
 
 :::note
 
@@ -35,7 +35,7 @@ backup tools.
 | /usr/local/etc   | config                                               |
 | /usr/local/bin   | executables                                          |
 
-## Daily config backup
+## 12.14.2.Daily config backup
 
 Using the `install_setup_backup.sh` tool.
 
@@ -78,7 +78,7 @@ If you have a distributed setup, copy the `install_setup_backup.sh`
 into the /usr/local/share/trisul-probe or trisul-hub directories and
 repeat the above steps.
 
-## Restore
+## 12.14.3.Restore
 
 To restore the backup. Locate the backup with the correct timestamp you
 wish to use and untar the backup file.

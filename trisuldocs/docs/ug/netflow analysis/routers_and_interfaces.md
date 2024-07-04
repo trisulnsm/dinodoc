@@ -1,8 +1,11 @@
 ---
+
 title: Routers and interfaces
 sidebar_position: 3
+
 ---
-# Routers and Interfaces
+
+# 13.3.Routers and Interfaces
 
 The main tool you will need to work with **Device level** views of
 Netflow is the ***Routers and Interfaces*** tool. You can select a
@@ -19,7 +22,7 @@ To access Routers and Interfaces : Select Netflow > Routers and Interfaces
 The Routers and Interfaces Tool  
 ![](images/router_interface.png)
 
-## Using the router interface tool
+## 13.3.1.Using the router interface tool
 
 The screen has 4 major parts,
 
@@ -44,7 +47,7 @@ The screen has 4 major parts,
 From the interface table there are a number of drilldown options
 available.
 
-## Drilldown from the interfaces table
+## 13.3.2.Drilldown from the interfaces table
 
 Having selected a router and interface you can drilldown and access the
 following by Clicking on the three lines drop down option on the right side against each interfaces.

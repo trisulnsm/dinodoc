@@ -1,11 +1,10 @@
 ---
-
 title: Netflow Sources Dashboard
 sidebar_position: 8
 
 ---
 
-# Interface Drilldown
+# 13.8.Interface Drilldown
 
 Describes the Interface drilldown tool that appears when you select
 “Drilldown” against any interface in the [Routers and Interfaces
@@ -23,7 +22,7 @@ When the interface has the tracker enabled it is indicated by the Eye icon on th
 
 ![](images/intf_hopsts_with_tracker.png) 
 
-## Using
+## 13.8.1.Using
 
 :::note navigation
 
@@ -39,7 +38,7 @@ The following page that contains the traffic chart is displayed.
 *Interface drilldown : showing the form for Time, Router, Interface
 selection*
 
-## Search Form
+## 13.8.2.Search Form
 
 :::note navigation 
 
@@ -60,7 +59,7 @@ You can change the router, interface, time interval, and topper count.
 
 Once the "Change router and interface" form is set and submitted , it takes you to the Interface utilization window.
 
-## Information Shown
+## 13.8.3.Information Shown
 
 ![](images/drilldown-tabs.png)
 
@@ -95,7 +94,7 @@ as a Tab.
 
 Also see : [Netflow Wizard Trackers](netflow_wizard.html#trackers)
 
-## Traffic
+## 13.8.4.Traffic
 
 Traffic chart shows the transmit and receive traffic on the interface
 for the selected time window. The legends on the bottom show the LATEST
@@ -103,14 +102,14 @@ values.
 
 ![](images/intf_traffic.png)
 
-## Util
+## 13.8.5.Util
 
 Similar to traffic numbers, this tab shows Utilization numbers relative
 to interface speed.
 
 ![](images/intf_util.png)
 
-## Flow Hosts
+## 13.8.6.Flow Hosts
 
 For IP based reporting.
 
@@ -137,7 +136,7 @@ the hosts that are causing spikes.
 
 ![](images/intf_hopsts_with_tracker.png)
 
-## Apps Track
+## 13.8.7.Apps Track
 
 ### Default Top Apps Report
 
@@ -151,13 +150,13 @@ enabling [Interface Tracker](interface_tracker.html) .
 
 ![](images/intf_apps_with_tracker.png)
 
-## Top Conversations or Talkers
+## 13.8.8.Top Conversations or Talkers
 
 Top conversations are nothing but the talkers. The screen displays the conversations between the source and the destination in volume bytes.
 
 ![](images/intf_conversation.png)
 
-## Raw Flows
+## 13.8.9.Raw Flows
 
 Raw Flows shows details against every flow sorted by volume. It contains
 information like protocol,source IP, source port, destination IP,
@@ -165,14 +164,14 @@ destination port, duration of flows, etc.
 
 ![](images/intf_raw_flows.png)
 
-## Interface Traffic Matrix - Chord Diagram
+## 13.8.10.Interface Traffic Matrix - Chord Diagram
 
 A useful tool that represents traffic flows between interfaces. A chord
 diagram looks like the picture below. The interface being drilldown is
 represented a chord and the other interfaces are shown as smaller chords
 sending or receiving traffic from the subject interface. This is only available after enabling [Cross Key](/docs/ug/cg/custom.html#cross_key_counter_groups) ![](images/interface_matrix_light.png)
 
-## ASN, NBAR, and Other Details
+## 13.8.11.ASN, NBAR, and Other Details
 
 These are available in the interface drilldowns if the proper trackers are created ahead of time when [Cross Key](/docs/ug/cg/custom.html#cross_key_counter_groups) is enabled for them.
 
@@ -183,5 +182,4 @@ These are available in the interface drilldowns if the proper trackers are creat
 If you closely observe the chart you may notice that if you sum up the
 volumes in each of the ASN may be more than the interface volume. This
 is because for every flow there are TWO AS Numbers. The Source and
-Destination AS. Hence a 100 GB download from AS-1 will show up as AS-1
-100GB Transmit and AS-2 100GB Receive.
+Destination AS. Hence a 100 GB download from AS-1 will show up as AS-1 100GB Transmit and AS-2 100GB Receive.    

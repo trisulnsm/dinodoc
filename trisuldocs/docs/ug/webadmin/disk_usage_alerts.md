@@ -1,11 +1,11 @@
-# Disk usage alerts
+# 12.19.Disk usage alerts
 
 This page describes how to get email alerts when disk usage exceeds a
 certain threshold.
 
 > By default disk usage alerting is not enabled.
 
-## Pre-requisites
+## 12.19.1.Pre-requisites
 
 Before you enable disk usage alerts you need to do two things.
 
@@ -17,7 +17,7 @@ Specify outgoing email server credentials. see [Setup Email](/docs/ug/reports/em
 
 Allow alert delivery via email see [Email alert delivery](/docs/ug/alerts/email_settings.html#basic_steps_to_enable_email_alerts)
 
-## Edit configuration files
+## 12.19.2.Edit configuration files
 
 To enable disk alert threshold, you need to edit the hub and probe configuration files.
 
@@ -53,7 +53,7 @@ the disk percent threshold value for the probe node
     <UsageRedMark>90</UsageRedMark>
 ```
 
-## Viewing alerts
+## 12.19.3.Viewing alerts
 
 When disk usage crosses the thresholds set an “User Alert” will be
 generated.

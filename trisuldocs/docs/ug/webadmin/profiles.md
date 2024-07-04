@@ -1,10 +1,10 @@
-# Packet capture settings
+# 12.3. Packet capture settings
 
 A single instance of Trisul can listen on one or more network
 interfaces. This page describes how you can add or edit packet capture
 parameters for any profile.
 
-## View list of capture profiles
+## 12.3.1.View list of capture profiles
 
 :::note navigation
 
@@ -17,7 +17,7 @@ By default, only **eth0** is enabled. There are some other disabled
 entries for debugging purposes. If you want to listen on, say eth1 you
 can create a new profile and enable that one.
 
-## Create a new capture profile
+## 12.3.2.Create a new capture profile
 
 Say you want to create a new network adapter for profile0 in context0.
 
@@ -93,7 +93,7 @@ how packets are distributed across streams
 ***Stream config***  
 Full NTPL command.
 
-## Specifying a BPF Filter for AFPACKET and RXRING
+## 12.3.3.Specifying a BPF Filter for AFPACKET and RXRING
 
 :::note navigation
 
@@ -105,7 +105,7 @@ Select the active Interface and Click Create Adapter
 
 In the "BPF Filter" enter the expression such as `host 192.168.2.11 or host 10.29.1.1` or bytecode output of `tcpdump -ddd`
 
-## Express adapter creation wizard
+## 12.3.4.Express adapter creation wizard
 
 Click on “Create Adapter” on the top right to quickly create capture
 profiles for flow based load balancing.
@@ -143,18 +143,18 @@ for flow based load balancing.
 | Number of streams | Number of AF FANOUT streams for flow based load balancing (eg, 2,4,etc) |
 | Fanout Group ID   | AF Packet Fanout Group ID for flow based load balancing (Example 999)   |
 
-## Enable or Disable the profile
+## 12.3.5.Enable or Disable the profile
 
 - Click **Enable** or **Disable** in the Profile list
 
 - To disable all adapters, click on the “Disable All” button
 
-## Edit the profile
+## 12.3.6.Edit the profile
 
 - Click **Edit** in the Profile list  
 
 - Edit the fields as shown in “Add..”
 
-## Delete the profile
+## 12.3.7.Delete the profile
 
 - Click **Delete** in the profile list.

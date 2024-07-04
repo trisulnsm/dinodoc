@@ -1,13 +1,16 @@
 ---
+
 title: Layer2 and QoS
 sidebar_position: 9 
+
 ---
-# Layer 2 and QoS
+
+# 13.9.Layer 2 and QoS
 
 This section outlines some of the Layer 2 and QoS related features
 available in Trisul Network Analytics.
 
-## Layer 2 metrics
+## 13.9.1.Layer 2 metrics
 
 Netflow is considered to be a Layer 3 IP level technologies. However, it
 is possible to configure IPFIX to export MAC address information along
@@ -51,15 +54,13 @@ The following counter groups show L2 data
 | ------------- | ------------------------------- |
 | VLANStats     | 802.11 VLAN IDs traffic metrics |
 
-## Tos DiffServ
+## 13.9.2.Tos DiffServ
 
 Every IP Packet includes a 1-byte ToS field that has been used in
 various ways to provide specialized services.
 
-<div class="success hand-o-right autohint">
-
-These counters will only be activated if the target environment traffic
-deploys ToS and this information is exported in Netflow.
+> These counters will only be activated if the target environment traffic
+> deploys ToS and this information is exported in Netflow.
 
 </div>
 

@@ -1,8 +1,11 @@
 ---
+
 title: Using Packets and Netflow Together
 sidebar_position: 6
+
 ---
-# Using Packets and Netflow together
+
+# 13.6.Using Packets and Netflow together
 
 Trisul can also consume a mix of Netflow and raw packets on the same or
 on different interfaces. The way this feature works is :
@@ -14,7 +17,7 @@ on different interfaces. The way this feature works is :
 If you want to only consume Netflow then refer to the [Netflow Setup
 Howto](/docs/ug/netflow/netflow_setup.html)
 
-## How to use this mode
+## 13.6.1.How to use this mode
 
 To use this mixed mode - we use a different technique than that
 described in the [Netflow only

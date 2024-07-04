@@ -1,4 +1,4 @@
-# IPDR Settings
+# 12.20.IPDR Settings
 
 Internet Protocol Data Records storage is a ISP compliance feature that
 is supported by Trisul Network Analytics. With this feature ISP can use
@@ -11,7 +11,7 @@ This page describes the configuration settings for
    server
 2. NAT SysLog - Port where NAT syslog messages are sent
 
-## Settings form
+## 12.20.1.Settings form
 
 :::note navigation
 
@@ -44,7 +44,7 @@ Upon changing these parameters. Restart the trisul_ipdrd service.
 systemctl restart trisul-ipdr
 ```
 
-## Configuring FTP
+## 12.20.2.Configuring FTP
 
 ### Create key pair on Trisul IPDR Hub node
 

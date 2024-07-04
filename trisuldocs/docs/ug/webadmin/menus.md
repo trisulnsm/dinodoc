@@ -1,9 +1,9 @@
-# Menus
+# 12.5.Menus
 
 You can customize which items appear on the menu panel. You can control
 both the parent and sublevel menu items and positions.
 
-## Create a new menu
+## 12.5.1.Create a new menu
 
 You can either create a new item or clone an existing one and modify
 some parameters.
@@ -45,7 +45,7 @@ Select Admin -\> Menu Manager
 1. Click **Clone** in the menu list
 2. Edit the required fields and click **Create** button
 
-## Manage Menus
+## 12.5.2.Manage Menus
 
 You can rearrange the menu
 

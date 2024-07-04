@@ -1,9 +1,9 @@
-# View logs
+# 12.15.View logs
 
 For troubleshooting you can view various logs from the web interface
 itself.
 
-## Viewing web server logs
+## 12.15.1.Viewing web server logs
 
 :::note navigation
 
@@ -37,7 +37,7 @@ View email log sent by trisul
 
 Download SNMP command and dumps for debugging purposes
 
-## Viewing probe and hub logs
+## 12.15.2.Viewing probe and hub logs
 
 Hub and Probe logs represent the actual Trisul processes running
 processing network traffic. They are linked to a particular context. To
@@ -56,7 +56,7 @@ below.
 
 ![](images/startstop_task.png)
 
-## Log directory
+## 12.15.3.Log directory
 
 If you want the raw webserver log it can be found on the Trisul Hub
 server at `/usr/local/var/log/trisul-hub/webtrisul`  

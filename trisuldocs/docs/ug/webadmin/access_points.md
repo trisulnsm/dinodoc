@@ -1,8 +1,8 @@
-# Access Points
+# 12.7. Access Points
 
 Connect protocols to ports. Common use case is to specify Netflow ports
 
-## Access Point List
+## 12.7.1. Access Point List
 
 Login as `admin` user to manage access points.
 
@@ -12,7 +12,7 @@ Select *Context : default \> profile0 -\> Access Points*
 
 :::
 
-## Add a new access point
+## 12.7.2.Add a new access point
 
 Login as `admin` user to manage access points.
 

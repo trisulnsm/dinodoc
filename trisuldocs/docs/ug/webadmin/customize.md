@@ -1,4 +1,4 @@
-# Customizing Trisul for an OEM
+# 12.9.Customizing Trisul for an OEM
 
 If you are an OEM you can rebrand and customize the look of the product.
 
@@ -7,7 +7,7 @@ If you are an OEM you can rebrand and customize the look of the product.
 
 2. Design new themes
 
-## oemsettings.rb
+## 12.9.1.oemsettings.rb
 
 The OEM settings file is located in `usr/local/share/webtrisul/config/initializers/oem_settings.rb` This is
 the only file you need to change.
@@ -15,7 +15,7 @@ the only file you need to change.
 > You must restart the web server for changes made to the
 > ***oem_settings.rb*** file to take effect
 
-## Fields
+## 12.9.2.Fields
 
 You may modify these fields to suit your environment.
 
