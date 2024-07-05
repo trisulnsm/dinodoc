@@ -8,9 +8,9 @@ Single machine in the default **Packet Capture Mode** with typical small
 enterprise load of 50-200Mbps. \[ See [Setup Trisul for Packet Capture
 Mode](/docs/ug/install/input_packets.html) \]
 
-| Hardware | System Requirements |
-|----|----|
-| **Bare Metal** | 4 Core 3Ghz Intel i3/i5/i7/or Xeon class, 8GB RAM, 2x1Gb LAN. SATA or 10K SAS for PCAP storage |
+| Hardware            | System Requirements                                                                                                                                                                                                        |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Bare Metal**      | 4 Core 3Ghz Intel i3/i5/i7/or Xeon class, 8GB RAM, 2x1Gb LAN. SATA or 10K SAS for PCAP storage                                                                                                                             |
 | **Virtual Machine** | 8 vCPU Cores, 12GB RAM, 2x1Gb LAN. VM Port Group mirror feature enabled to receieve the raw packets. VM is not recommended in Packet Capture mode when total load is greater than 500Mbps. Consider bare metal deployment. |
 
 ## In Netflow mode
@@ -19,9 +19,9 @@ Single machine in **NETFLOW mode** monitoring a router/switch with 1Gbps
 load. \[ See [Setup Trisul for NETFLOW
 mode](/docs/ug/netflow/index.html) \]
 
-| Hardware | System Requirements |
-|----|----|
-| **Bare Metal** | 4 Core 3Ghz Intel i3/i5/i7/or Xeon class, 8GB RAM, 2x1Gb LAN. SATA storage |
+| Hardware            | System Requirements                                                        |
+| ------------------- | -------------------------------------------------------------------------- |
+| **Bare Metal**      | 4 Core 3Ghz Intel i3/i5/i7/or Xeon class, 8GB RAM, 2x1Gb LAN. SATA storage |
 | **Virtual Machine** | 6 Core 3Ghz Intel i3/i5/i7/or Xeon class, 8GB RAM, 2x1Gb LAN. SATA storage |
 
 Virtual Machine is preferred in Netflow mode for enterprise class load.
@@ -32,7 +32,7 @@ Trisul is available on the following operating systems. Go to the
 [Download Center](/download) to get access to the latest packages
 
 |                  |                 |
-|------------------|-----------------|
+| ---------------- | --------------- |
 | Ubuntu 18.04 LTS | 64-bits         |
 | Ubuntu 16.04 LTS | 64-bits         |
 | CentOS 7.x       | 64-bits         |
@@ -47,9 +47,9 @@ installed on different O/S.
 
 The load profile of the Probe and Hub components.
 
-| Node type | Description | Load profile | Scaling tip |
-|----|----|----|----|
-| Trisul Hub | Database node | Very high disk write IOPS, high read IOPS when queried, sequential write pattern, high network I/O to probe nodes | Add RAM 4GB per probe, 2 3Ghz Cores per probe |
+| Node type    | Description                          | Load profile                                                                                                                                                                                                     | Scaling tip                                                              |
+| ------------ | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Trisul Hub   | Database node                        | Very high disk write IOPS, high read IOPS when queried, sequential write pattern, high network I/O to probe nodes                                                                                                | Add RAM 4GB per probe, 2 3Ghz Cores per probe                            |
 | Trisul Probe | PCAP storage and streaming analytics | Very high CPU bound, high memory usage, diversity of traffic, TCP Reassembly features. For PCAP storage high sequential Disk I/O need RAID-0 array for \> 1Gbps disk. High network I/O when flushing to Hub node | Add more CPU cores, bigger cache, faster memory, 10G NIC or accelerators |
 
 <div class="info info-circle autohint">
@@ -64,9 +64,9 @@ up the requirements.
 The Trisul hub is a data storage and query node with a high bandwidth
 and low latency I/O to the Trisul Probes.
 
-| Mode | scaling metric | additional resource needed |
-|----|----|----|
-| Hub | For every medium volume probe + every 5 concurrent users | 1 3Ghz Core + 2GB DDR4 |
+| Mode | scaling metric                                           | additional resource needed |
+| ---- | -------------------------------------------------------- | -------------------------- |
+| Hub  | For every medium volume probe + every 5 concurrent users | 1 3Ghz Core + 2GB DDR4     |
 
 Disk sizing is a key concern of the hub. The way Trisul-Hub works is
 data from each probe is stored in a separate layer. Since Trisul is used
@@ -91,10 +91,10 @@ the future.
 
 Some guidelines in table below for sizing the Trisul Probe node.
 
-| Mode | scaling metric | additional resource needed |
-|----|----|----|
-| Raw Packets | For every 200-400Mbps with TCP Reassembly features | 1 3Ghz Core + 4GB DDR4 |
-| Raw Packets | For every 200-400Mbps without TCP Reassembly features | 0.5 3Ghz Core + 1GB DDR4 |
+| Mode        | scaling metric                                        | additional resource needed |
+| ----------- | ----------------------------------------------------- | -------------------------- |
+| Raw Packets | For every 200-400Mbps with TCP Reassembly features    | 1 3Ghz Core + 4GB DDR4     |
+| Raw Packets | For every 200-400Mbps without TCP Reassembly features | 0.5 3Ghz Core + 1GB DDR4   |
 
 <div class='alert alert-danger'>
 
@@ -126,10 +126,10 @@ The relevant scaling metric is Netflow volume. The mapping typically is
   number of endpoints and unique flows , this translates to more memory
   and slightly more CPU resources
 
-| Mode | scaling metric | additional resource needed |
-|----|----|----|
-| Enterprise Netflow | for every 10Mbps NETFLOW traffic | \+ 1 3Ghz Core + 4GB RAM |
-| ISP Netflow | for every 10Mbps NETFLOW traffic | <u>1 2 3Ghz Core</u> 8GB RAM |
+| Mode               | scaling metric                   | additional resource needed   |
+| ------------------ | -------------------------------- | ---------------------------- |
+| Enterprise Netflow | for every 10Mbps NETFLOW traffic | \+ 1 3Ghz Core + 4GB RAM     |
+| ISP Netflow        | for every 10Mbps NETFLOW traffic | <u>1 2 3Ghz Core</u> 8GB RAM |
 
 <div class='alert alert-success'>
 
@@ -154,9 +154,9 @@ Click Dashboards \> Show All \> Netflow Sources
 
 The following charts are displayed :
 
-| chart shown | meaning | remarks |
-|----|----|----|
-| Router Interfaces | Bandwidth seen on top router interfaces |  |
-| Flow Records | Netflow records per second |  |
-| Flow Sources | Bandwidth per netflow exporter (router) |  |
-| <i class='fa fa-desktop'/> Netflow data volume | Total Netflow bandwidth | Use the max observed value from this chart for sizing |
+| chart shown                                    | meaning                                 | remarks                                               |
+| ---------------------------------------------- | --------------------------------------- | ----------------------------------------------------- |
+| Router Interfaces                              | Bandwidth seen on top router interfaces |                                                       |
+| Flow Records                                   | Netflow records per second              |                                                       |
+| Flow Sources                                   | Bandwidth per netflow exporter (router) |                                                       |
+| <i class='fa fa-desktop'/> Netflow data volume | Total Netflow bandwidth                 | Use the max observed value from this chart for sizing |

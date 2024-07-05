@@ -1,4 +1,4 @@
-# Install Trisul
+# Install trisul
 
 Trisul is a distributed network analytics system that can be installed on off the shelf hardware. Beginners and users of the Free License will want to install all the packages on a single server. Advanced users can split the Hub and Probe nodes and roll out a distributed deployment.
 
@@ -72,8 +72,6 @@ You can use rpm or yum to install the packages.
 ### Adding the YUM repository
 
 You only have to do this once to add the Trisul repository to yum.repos.d
-
- 
 
 ```bash
 cd /etc/yum.repos.d

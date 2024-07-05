@@ -1,4 +1,4 @@
-# Upgrading Trisul
+# Upgrading trisul
 
 An upgrade is simply an uninstall followed by a new install.
 
@@ -43,5 +43,3 @@ If you are getting an error with using the Group commands, try upgrading individ
 yum  remove trisul-hub trisul-probe webtrisul
 yum  install trisul-hub trisul-probe webtrisul
 ```
-
-
