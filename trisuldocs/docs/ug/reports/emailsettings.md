@@ -6,11 +6,7 @@ Note You need a valid SMTP email account (even Gmail will work).
 
 ## How to setup E-Mail
 
-:::note navigation
-
 Select *Reports → Email settings*
-
-:::
 
 1. Press **Configure Email**
 2. Enter the following information
@@ -28,11 +24,7 @@ Select *Reports → Email settings*
 
 After you have configured the email settings, its a good idea to send a test email to see if everything works.
 
-:::note navigation
-
 Select *Reports → Email settings*
-
-:::
 
 1. Press Edit
 2. Enter the “Target Email ID” and press Send Test Email
@@ -43,11 +35,7 @@ Web Trisul supports Email sending with SMTP Relay provided by Pepipost.com. Here
 
 #### Get Pepipost credentials
 
-:::note navigation
-
 Login to your Pepipost account and go to *Settings > Integrations > SMTP Relay*
-
-:::
 
 Save the user name and password as shown in the picture below.
 

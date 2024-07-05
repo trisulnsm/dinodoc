@@ -1,9 +1,9 @@
-# 12.16.Admin Menus
+# Admin Menus
 
 A Short description about the functions of all the menus in Admin. Each 
 Menu has a specific role towards functioning of Trisul as a platform.
 
-## 12.16.1. Manage
+## Manage
 
 It has all the functional level menus associated with the UI. Any changes to be done in UI can be configured or modified through several menus listed here.
 
@@ -42,13 +42,13 @@ There are two steps to setting up a user to login via LDAP
 1. Configure LDAP domain
 2. Create a user and specify he/she be authenticated against an LDAP domain
 
-Refer to the [ldap login](https://trisul.org/docs/ug/webadmin/ldap_login.html) for Instructions
+Refer to the [ldap login](ldap_login#ldap_login) for Instructions
 
 ### Roles
 
 Provides a list of Roles and Permissions each operator has. Roles specify which category of user is allowed to do what operations
 
-Refer to the [User Roles](https://trisul.org/docs/ug/webadmin/userroles.html) for detailed information
+Refer to the [User Roles](userroles#userroles) for detailed information
 
 ### Auth Log
 
@@ -62,13 +62,13 @@ App Settings are used to make modifications in the Web Interface. You can direct
 
 This menu is dedicated to configure Email server for scheduling automatic Reports and Alert based reports. Any existing Email Reports will be listed here.
 
-To know how to setup Email-Server and Alert based emails, Refer to the [Email Settings](https://trisul.org/docs/ug/reports/emailsettings.html)
+To know how to setup Email-Server and Alert based emails, Refer to the [Email Settings](setup_email#emailsettings)
 
 ### Modules
 
 Modules are the building blocks of the dashboard based user interface. Several Modules put together are dashboards. Modules are much more feature specific. This menu provides a list of available modules that are being actively used in the Web Interface.
 
-To create a new module, Refer to the [Modules](https://trisul.org/docs/ug/ui/dashmod_intro.html#modules) for instructions.
+To create a new module, Refer to the [Modules](docs/ug/ui/dashmod_intro#modules) for instructions.
 
 ### Dashboards
 
@@ -82,7 +82,7 @@ Live Dashboards are used to present current or recent network activity. The to t
 **Retro Dashboards**  
 Retro Dashboards are used for historical analysis hence need you to 
 select a Time Interval. Retro Dashboards can be found in the Retro Tools
- page under [Commonly Used Retro Analysis](https://trisul.org/docs/ug/cg/retrotools.html#commonly_used_retro_analysis) tool
+ page under [Commonly Used Retro Analysis](docs/ug/cg/retrotools#commonly_used_retro_analysis) tool
 
 ### Menu Manager
 
