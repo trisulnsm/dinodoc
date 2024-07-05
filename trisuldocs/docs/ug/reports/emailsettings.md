@@ -39,7 +39,7 @@ Login to your Pepipost account and go to *Settings > Integrations > SMTP Relay*
 
 Save the user name and password as shown in the picture below.
 
-![](image/pepipost.png)
+![](images/pepipost.png)
 
 #### Configure email settings in Trisul
 

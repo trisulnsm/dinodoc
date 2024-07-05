@@ -19,7 +19,7 @@ Login as `user` . Select Reports → Readymade. Click on the Custom Reports tab.
 
 You can create your own custom report by clicking on the ‘Create New Report’ option.
 
-![](image/flexi_report.png)
+![](images/flexi_report.png)
 
 *Flexible report Index view*
 
@@ -38,7 +38,7 @@ There are five different kinds of reports that you can create.
 - Metrics Table Report
 - Alert Count Report
 
-![](image/flexi_chart_type.png)
+![](images/flexi_chart_type.png)
 
 *Available Flexible Report types*
 
@@ -49,7 +49,7 @@ groups. for example if you want to find the volume of http and https,
 you will use counter group as apps and enter key as http and https. You 
 will find a dialog box
 
-![](image/volume_type.png)
+![](images/volume_type.png)
 
 *Search Form for Volume type report*
 
@@ -73,7 +73,7 @@ To view the report, select the three dots symbol near the newly
 created report. Select ’generate report option to generate the report 
 you have created
 
-![](image/volume_type_report.png)
+![](images/volume_type_report.png)
 
 *Sample pdf for Volume based flexible report*
 
@@ -82,7 +82,7 @@ you have created
 This kind of report is used to provide bandwidth report for several 
 metrics in the form of colourful charts. You will find a dialog box.
 
-![](image/traffic_type.png)
+![](images/traffic_type.png)
 
 *Search form for traffic type report*
 
@@ -106,7 +106,7 @@ To view the report, select the three dots symbol near the newly
 created report. Select ‘generate report’ option to generate the report 
 you have created
 
-![](image/traffic_type_report.png)
+![](images/traffic_type_report.png)
 
 *Sample pdf for Traffic chart based report*
 
@@ -115,7 +115,7 @@ you have created
 This kind of report is generally used to view toppers from several 
 counter groups in the form of a table. You will find a dialog box
 
-![](image/toppers_type.png)
+![](images/toppers_type.png)
 
 *Search form for toppers type report*
 
@@ -138,7 +138,7 @@ To view the report, select the three dots symbol near the newly
 created report. Select ‘generate report’ option to generate the report 
 you have created
 
-![](image/toppers_type_report.png)
+![](images/toppers_type_report.png)
 
 *Sample pdf for Toppers based report*
 
@@ -147,7 +147,7 @@ you have created
 For instance, if you want a volume report for all metrics(total,recieved,transmit,etc) for a particular counter group for a
  particular key, we can use metrics table.
 
-![](image/metrics_type.png)
+![](images/metrics_type.png)
 
 *Search form for Metrics type report*
 
@@ -170,7 +170,7 @@ To view the report, select the three dots symbol near the newly
 created report. Select ‘generate report option to generate the report 
 you have created’
 
-![](image/metrics_type_report.png)
+![](images/metrics_type_report.png)
 
 *Sample pdf for Metrics based reports*
 
@@ -178,7 +178,7 @@ you have created’
 
 This is specially for alert based reports.
 
-![](image/alert_type.png)
+![](images/alert_type.png)
 
 *Search form for alert type report*
 
@@ -200,7 +200,7 @@ To view the report, select the three dots symbol near the newly
 created report. Select ‘generate report’ option to generate the report 
 you have created
 
-![](image/alert_type_report.png)
+![](images/alert_type_report.png)
 
 *Sample pdf for alert type reports*
 
@@ -211,7 +211,7 @@ can edit any type of flexi report individually using the edit symbol.
 
 You can also delete the report by clicking on the ‘x’ symbol.
 
-![](image/flexi_saved_report.png)
+![](images/flexi_saved_report.png)
 
 *Saved Flexible Reports*
 

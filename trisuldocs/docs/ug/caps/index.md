@@ -6,7 +6,7 @@ is key to the practice of Network Security Monitoring. Raw packets is
 not just useful for security applications but also for network 
 performance troubleshooting. For example, you can pull up ARP/Spanning Tree packets which can help you nail a layer 2 issue.[Packet Capture Basics](https://trisul.org/docs/ug/caps/fullcontent.html) describes the design of in greater detail.
 
-![](image/pcapmenu.png)
+![](images/pcapmenu.png)
 
 ### Use cases
 

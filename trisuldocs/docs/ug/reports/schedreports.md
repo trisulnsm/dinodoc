@@ -25,7 +25,7 @@ Select Reports → Schedule
 2. Click **Schedule a new report**
 3. Fill out these fields
 
-![](image/schedule_new_report.png)
+![](images/schedule_new_report.png)
 
 Here is the table with the description of all available fields to schedule a new report.
 
@@ -45,13 +45,13 @@ Here is the table with the description of all available fields to schedule a new
 
 Once you schedule the report, all your scheduled reports will appear on the index page and you can toggle from there.
 
-![](image/sched_report.png)
+![](images/sched_report.png)
 
 You can check if the report has been sent successfully to the 
 destination mail address by clicking on the options button on the right 
 corner and selecting the ‘Run Status’ option.
 
-![](image/sched_report.png)
+![](images/sched_report.png)
 
 You have the PDF option to download the scheduled report manually.
 

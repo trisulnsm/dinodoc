@@ -6,7 +6,7 @@ In a majority of situations, you can identify what a particular flow is
 about by examining the initial packets of the flow. Previously you had 
 to click on “Pull Packets” next to a flow to pull out a PCAP into an application like Unsniff or Wireshark. Now you can click on “Show Headers” along side each flow.
 
-![](image/pcapmenu.png)
+![](images/pcapmenu.png)
 
 Figure: “Show Headers” for a text and hex dump of packets at top of flow
 

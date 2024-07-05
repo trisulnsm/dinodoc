@@ -32,7 +32,7 @@ Raw packets are stored in three directories.
 As each directory gets filled up, the oldest slice from that directory 
 moves to the next area. Slices from the archive silently move to `/dev/null`(they are deleted). The figure below illustrates the concept. Note that trisul only writes to the *oper* slices.
 
-![](image/fullcontent.png)
+![](images/fullcontent.png)
 
 You have to edit the following parameters to suit your environment.
 
@@ -53,7 +53,7 @@ With these in mind, you can save money while getting peak performance
  by mapping faster disks to the operational area. An example is shown 
 below :
 
-![](image/fullcontentdisk.png)
+![](images/fullcontentdisk.png)
 
 ## Flexible policies for volume reduction
 

@@ -9,7 +9,7 @@ menu items
 1. “Download PCAP”
 2. “Quick PCAP view”
 
-![](image/pcapmenu2.png)
+![](images/pcapmenu2.png)
 
 ## Download PCAP
 
@@ -37,7 +37,7 @@ shown in three panes.
 
 See image below
 
-![](image/quickpcap.png)
+![](images/quickpcap.png)
 
 Once you are satisfied you can download the PCAP file and save it for further analysis or problem report.
 
@@ -69,7 +69,7 @@ Goto Retro → Retro Tools → Select Timeframe → Pull Packets
 
 :::
 
-![](image/pcaplimits.png)
+![](images/pcaplimits.png)
 
 You have three options here
 
