@@ -1,4 +1,4 @@
-# Trisul Edges – streaming graph analytics
+# Trisul edges – streaming graph analytics
 
 *Trisul Edge* brings the power of graph analytics to the Trisul platform. It lets you discover relationships between various metric items. This section introduces the *Trisul Edge* feature and then describes how to use the Trisul User Interface to explore these relationships
 
