@@ -1,4 +1,4 @@
-# 12.18.User Resources
+# User Resources
 
 User resources allow you to assign network devices, interfaces, IP
 addresses, IP subnets or any other network entity to named groups. These
@@ -19,7 +19,7 @@ A Trisul netflow customer desires to create *cust1* who can only view
 Now when *cust1* logs in he/she can only see the two routers assigned to
 him/her.
 
-## 12.18.1.Creat    ing a resource group
+## Creating a resource group
 
 The first step is to create a group and select and put resources into
 the group.
@@ -105,7 +105,7 @@ The correct way is to create two level counter groups say “East” and
 
 > You can only add a counter group once to a single group. If you want to create two groups of routers say *East* and *West* routers then create a new Resource Group as many times as you want
 
-## 12.18.2.Assigning resource groups to users
+## Assigning resource groups to users
 
 This section describes how you can assign a resource group to a user.
 That restricts that users view to only items in that group.
@@ -124,7 +124,7 @@ Then against the user select the *Options \> Assign Resources*
 
 Then select the resource groups to assign to this user.
 
-## 12.18.3.Troubleshooting
+## Troubleshooting
 
 #### Cannot see user groups when I select “Assign Resources”
 

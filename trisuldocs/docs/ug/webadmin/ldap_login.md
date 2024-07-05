@@ -1,4 +1,4 @@
-# 12.13.LDAP Login
+# LDAP Login
 
 The LDAP (Lightweight Directory Access Protocol) is a login option that
 authenticates users against an LDAP server.
@@ -16,7 +16,7 @@ Authentication” appears at the login screen as shown below.
 *If you configure an LDAP domain, a checkbox will be shown on the login
 page*
 
-## 12.13.1.View LDAP domains
+## View LDAP domains
 
 This page shows a list of LDAP domains configured in Trisul.
 
@@ -64,7 +64,7 @@ a LDAP domain.
    *Search Filter* field. This is usually like mail or uid
 5. Trisul users are then created using this information.
 
-## 12.13.2.Configure LDAP Domain
+## Configure LDAP Domain
 
 The first step is to configure the LDAP domain against which the
 authentication will be done.
@@ -93,7 +93,7 @@ Fill in the details as shown below.
 | Login with bind only          | If checked, the LDAP login process only uses the user name to bind rather than the default way of using the connection user name and password first and then bind the user                                                                                                                                                |
 | Append to username            | The string specified in this field will automatically appended to the user name. A features to help the user avoid typing the full login names. For example : if you set this to *`unitedfederalbankname.com_ then the user who had to type  _mike`unitedfederalbankname.com* only has to type *mike* at the login screen |
 
-## 12.13.3.Create a LDAP enabled user
+## Create a LDAP enabled user
 
 Next you need to create a new LDAP user.
 
@@ -116,12 +116,12 @@ Here there are two options
 As per your company policy you can choose to create any one of the two
 types of users.
 
-## 12.13.4.Admin user is always local
+## Admin user is always local
 
 The super admin user with login name = *admin* always uses a local
 login.
 
-## 12.13.5.Login mode
+## Login mode
 
 After you create a LDAP Domain, the login screen will show a checkbox
 called “LDAP authentication”.
@@ -132,7 +132,7 @@ called “LDAP authentication”.
    “LDAP authentication” checkbox they will use the local
    login/password.
 
-## 12.13.6.Troubleshooting
+## Troubleshooting
 
 If you experience errors you can try the following.
 

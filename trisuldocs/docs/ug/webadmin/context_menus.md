@@ -1,10 +1,10 @@
-# 12.17. Context Menus
+# Context Menus
 
 A Trisul context is a separate instance of Trisul with its own isolated
 database, configuration, and processes. To know more about contexts,
-Refer to [Working with Contexts](/docs/ug/domain/contexts.html)
+Refer to [Working with Contexts](/docs/ug/domain/contexts)
 
-## 12.17.1.Admin Tasks
+## Admin Tasks
 
 All the administrative functions are being done here right from
 starting/stopping Hub and Probe nodes to monitoring Netflow and BGP in
@@ -65,7 +65,7 @@ slice and you can calculate accordingly as to how much days data can be
 stored depending on the size of the disk.
 
 > To configure the DB storage retention policy refer to [Configuring disk
-> storage](/docs/ug/install/configure_storage.html)
+> storage](/docs/ug/install/configure_storage)
 
 You can also view the disk occupied by each counter-group in a SLICE
 every-day. This is helpful in tuning the system.
@@ -91,7 +91,7 @@ License types are :
    3. Unlimited : As many as your hardware can support
 
 To Install a new License, Refer to the [Installing Trisul
-License](/docs/ug/install/license.html) for instructions
+License](/docs/ug/install/licensel) for instructions
 
 ### Schedule Email Reports
 
@@ -107,7 +107,7 @@ intervals.
 4. Monthly
 
 To know more about how to schedule Reports, Refer to [Schedule
-Reports](/docs/ug/reports/schedreports.html)
+Reports](reports/schedreports)
 
 ### BGP Route Reciever
 
@@ -160,7 +160,7 @@ Status of the DR Site from the primary site.
 
 Refer [Disaster Recovery](/docs/ug/ha/dr.html)
 
-## 12.17.2.Profile Menu
+## Profile Menu
 
 The Profile Menu has all the basic configuration related traffic
 monitoring, flows, custom counters, Alerts, Resources and Advanced Tools

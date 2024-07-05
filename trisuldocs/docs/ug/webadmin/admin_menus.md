@@ -62,7 +62,7 @@ App Settings are used to make modifications in the Web Interface. You can direct
 
 This menu is dedicated to configure Email server for scheduling automatic Reports and Alert based reports. Any existing Email Reports will be listed here.
 
-To know how to setup Email-Server and Alert based emails, Refer to the [Email Settings](setup_email#emailsettings)
+To know how to setup Email-Server and Alert based emails, Refer to the [Email Settings](docs/ug/reports/emailsettings)
 
 ### Modules
 

@@ -7,7 +7,7 @@ Use the menu on the left to explore.
 ## Click for more info
 
 |                                                                      |
-|----------------------------------------------------------------------|
+| -------------------------------------------------------------------- |
 | [Manage Users](/docs/ug/webadmin/manageusers.html)                   |
 | [LDAP Domain](/docs/ug/webadmin/ldap_login.html)                     |
 | [Menus](/docs/ug/webadmin/menus.html)                                |

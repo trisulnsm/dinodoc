@@ -1,107 +1,70 @@
-# Reports
+# PDF Reports
 
-Trisul comes with dozens of pre-defined reports for your use. You can
- either view them on the browser or send them via email periodically.
+This section describes the readymade reports available in Trisul.
+
+### Installing librsvg2
+
+Trisul requires the **librsvg2** library in order to generate charts for PDF reports. This is not included in the installation package as it 
+requires several megabytes of packages. You can however easily install 
+it yourself.
+
+```bash
+# on ubuntu
+sudo apt-get install librsvg2-bin
+# on centos
+yum install librsvg2-tools
+```
+
+If fonts on your charts are not displaying properly , you may also need to install the following package.
+
+Install the *ms-fonts* package found on [rpm.pbone.net](http://rpm.pbone.net/index.php3/stat/4/idpl/30428080/dir/centos_7/com/ms-fonts-1.1-2.4.noarch.rpm.html)
+
+```bash
+wget ftp://ftp.pbone.net/mirror/ftp5.gwdg.de/pub/opensuse/repositories/home:/Kenzy:/packages/CentOS_7/noarch/ms-fonts-1.1-2.4.noarch.rpm
+
+rpm -Uvh ms-fonts-1.1-2.4.noarch.rpm
+```
 
 ### Accessing reports
 
-The central place where all reports can be accessed is via the Reports menu. You can also download various reports in CSV or PDF formats in different sections in Trisul.
+Select *Reports* by clicking on the PDF Icon in the top menu section
 
-:::note navigation
+### Categories
 
-Select *Reports* in the left menu section
+The reports are grouped into :
 
-:::
+| Executive                   | Single click reports for traffic and security overviews                       |
+| --------------------------- | ----------------------------------------------------------------------------- |
+| End Points and Applications | Detailed usage reports for a particular IP, application, or Netflow interface |
+| ISP Peering Analytics       | Top Level ISP Reports for AS,Country,Prefix, etc                              |
+| Commonly Used               | Single click commonly used reports                                            |
+| Netflow                     | Commonly used netflow reports                                                 |
+| Direct reports              | Reports for any type of counter, flow, or security data types in Trisul       |
 
-#### Creating your own reports
+## Time Range
 
-Using the [Trisul Remote Protocol API](https://trisul.org/docs/trp) you can write Ruby scripts that create your own reports.
+The various time ranges are explained below :
 
-## Report time
+| Today Till Now | From midnight today till now                                |
+| -------------- | ----------------------------------------------------------- |
+| Yesterday      | 24 hours yesterday                                          |
+| Pick day       | Pick a day from a calendar from the past 3 months           |
+| Pick week      | Pick a day to generate a weekly report for that entire week |
+| Custom         | Directly specify a from date and to date                    |
 
-For each report type, you can easily select a number of predefined time windows as shown in the image below
+## Customizing the PDF
 
-![](./image/reporttime.png)
+You can customize the PDF to include your organizations logo and taglines.
 
-*Figure:Report*
+##### Adding logos
 
-You can also click on “Custom” to select any time window of your choice.
+1. Logos can be placed in the 3 corners of the PDF except the top-right
+2. You need to replace 3 images (32×32) in the /usr/local/share/webtrisul/public/images directory
+3. The images names are expected to named as follows
+4. logo_tlhs.png → This image is placed on the top-left of the PDF
+5. logo_blhs.png → This image is placed on the bottom-left of the PDF
+6. logo_brhs.png → This image is placed on the bottom-right of the PDF
 
-## List of reports by type
+##### Customizing names
 
-#### Report types
-
-1. **Executive** — At a glance
-2. **Endpoints and Applications** — Of particular entities like an IP, port, router
-3. **ISP Peering Analytics** — AS,Prefix Reports from ISP Dashboards
-4. **Commonly Used** — Popular counter groups, top hosts, apps, etc
-5. **Direct Reports** — Generate reports for any metrics , alerts, or flows
-6. **Custom Reports** — You can generate your own reports
-
-### Executive
-
-| Report Name                       | Description                                                                                                                                                   |
-| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Consolidated IP Report            | Total,in and out bandwidth traffic with top Internal hosts,top apps and port network layer protocols.                                                         |
-| Executive Network                 | Total usage,alerts,bandwidth utilization                                                                                                                      |
-| Internet Service Provider         | Total bandwith,Hosts,Apps,Top ASNumber and Countries lists                                                                                                    |
-| Subscriber Activity               | [An overview of all your internal hosts](https://trisul.org/docs/ug/reports/available_reports.html#subscriber_activity)                                       |
-| Router and Interfaces             | [Traffic details per router and about top router interfaces](https://trisul.org/docs/ug/reports/available_reports.html#routers_and_interfaces)                |
-| Malware, botnet, virus infections | [A summary of all your internal hosts that might be compromised](https://trisul.org/docs/ug/reports/available_reports.html#malware,_botnet,_virus_infections) |
-| “IDS Alerts”                      | Summary of top [IDS](https://trisul.org/docs/ug/reports/available_reports.html#ids) (Intrusion Detection System) alerts via Snort/Suricata                    |
-| Deep drilldown of Internal Hosts  | A comprehensive drilldown of [internal host activity](https://trisul.org/docs/ug/reports/available_reports.html#deep_drilldown_of_internal_hosts)             |
-| Deep drilldown of External Hosts  | A comprehensive drilldown of [external hosts](https://trisul.org/docs/ug/reports/available_reports.html#deep_drilldown_of_external_hosts)                     |
-| Deep drilldown of Applications    | A comprehensive drilldown of [applications](https://trisul.org/docs/ug/reports/available_reports.html#deep_drilldown_of_applications)                         |
-
-### Endpoint and Applications
-
-| Report Name         | Description                                                                                                                                             |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Endpoint IP Address | Generates a summary report for a specific [IP Address](https://trisul.org/docs/ug/reports/available_reports.html#endpoint_report)                       |
-| Application         | Generates a summary report for a specific [port / application](https://trisul.org/docs/ug/reports/available_reports.html#application_report)            |
-| Static IP Report    | Generates Total,in and out bandwidth consume chart for a specific [IP](https://trisul.org/docs/ug/reports/available_reports.html#ip_utilization_report) |
-
-### ISP Peering Analytics
-
-| Report Name                     | Description                                                        |
-| ------------------------------- | ------------------------------------------------------------------ |
-| AS Summary Report               | Generates a detailed AS Report for all Routers and Interfaces      |
-| AS Report per Interface         | Generates a Detailed AS Report per Interface                       |
-| Geo Country Traffic per Gateway | Country to ISP gateway mapping reports                             |
-| Prefix Summary                  | Generates a detailed report for prefixes in and out of ISP network |
-
-### Commonly used Report
-
-| Report Name      | Description                                          |
-| ---------------- | ---------------------------------------------------- |
-| Key usage report | Track usage of key activity from any counter groups. |
-| Hosts            | Get report of top hosts on your networ               |
-| Apps             | Get report of top applications on your network.      |
-| Internal Hosts   | Get report of top internal hosts on your network.    |
-| External Hosts   | Get report of top external hosts on your network.    |
-| ASNumber         | Get report of top ASNumber on your network.          |
-| country          | Get report of top countries on your network.         |
-
-### Netflow
-
-| Report name               | Description                                                                 |
-| ------------------------- | --------------------------------------------------------------------------- |
-| Interfaces Utilization    | Utilization report for selected Interfaces from Routers                     |
-| Explore Router Interface  | Flow based report for a particular Interface                                |
-| Interface Usage Drilldown | Generates Report for traffic bandwidth and users for a particular Interface |
-| Routers and Interfaces    | Router and Interface activity                                               |
-
-### Direct Reports
-
-| Report Name        | Description                                                                                                                        |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
-| Top Traffic Report | [Get toppers for any counter group](https://trisul.org/docs/ug/reports/available_reports.html#top_traffic_report)                  |
-| Top Session Report | [Get top flows on your network](https://trisul.org/docs/ug/reports/available_reports.html#top_sessions_report)                     |
-| Security Report    | Overview of all security alerts seen by trisul [alerts](https://trisul.org/docs/ug/reports/available_reports.html#security_report) |
-
-### Custom Reports
-
-| Field       | Description                                                                                                  |
-| ----------- | ------------------------------------------------------------------------------------------------------------ |
-| Report JSON | [Flexible Reports in JSON Format](https://trisul.org/docs/ug/reports/flexible_reports.html#flexible_reports) |
-| Select Time | Select the desired time                                                                                      |
+Refer to the [oem_settings](https://trisul.org/docs/ug/webadmin/customize.html) for instructions.

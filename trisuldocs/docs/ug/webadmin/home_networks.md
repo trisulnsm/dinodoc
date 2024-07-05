@@ -1,4 +1,4 @@
-# 12.6.Home Networks
+# Home Networks
 
 Several features of Trisul depend on being able to tell which IPs belong
 to your home network and which are to be treated as external. The rough
@@ -14,7 +14,7 @@ here.
 
 :::
 
-## 12.6.1.Terminology
+## Terminology
 
 Here is a quick description of terminology related to the concept of
 home networks.
@@ -37,7 +37,7 @@ Both Source IP and Dest IP are not in your home network.
 
 > Note For ISPs, the AS numbers constituting the Home Network are all the AS whose routes are announced by the home AS. See [Home Networks for ISP](#home_networks_in_isp_solution) section
 
-## 12.6.2.Add a new home network
+## Add a new home network
 
 It pays to be accurate about your home network as it can impact several
 reports and views. If you want to add a new subnet to your home network
@@ -63,7 +63,7 @@ You are shown the following screen
 
 - Click **Create** button to add a new home network
 
-### 12.6.3.Adding home networks in bulk
+### Adding home networks in bulk
 
 When you click on “Add” in the Home Networks screen you can see the Add
 form below
@@ -153,7 +153,7 @@ added as a I-BGP peer to the customer router or a BGP Route Reflector.
 For more see “Configuring BGP”. This information is combined with
 downstream peering information to obtain a list of Home AS.
 
-## 12.6.4.Viewing traffic direction
+## Viewing traffic direction
 
 The Home Network is a crucial part of Trisul reports. Apart from the
 “Internal Hosts”, “External Hosts” classification - you can see the

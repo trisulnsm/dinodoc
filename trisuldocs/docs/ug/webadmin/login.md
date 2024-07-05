@@ -1,4 +1,4 @@
-# 12.1.Logging in
+# Logging in
 
 > You need to use a **SVG capable browser** like Firefox,
 > Chrome, Opera, Safari to work with Trisul.  
@@ -10,7 +10,7 @@ Trisul can be accessed by pointing your browser to :
 
 - via HTTPS
 
-## 12.1.1.First login
+## First login
 
 If this is the first time you are logging in , use the built-in `admin`
 user or `user` user.
@@ -27,7 +27,7 @@ password = `user`
 
 Once logged in please change the password.
 
-## 12.1.2.Contexts
+## Contexts
 
 [Contexts](/docs/ug/domain/index.html#contexts) are multiple analysis domains in Trisul. At login time you must select the context you wish to analyze. Hover your mouse over each context name to get a description of what the context contains.
 
@@ -36,11 +36,11 @@ is not shown.
 
 ![](images/login_screen.png)
 
-## 12.1.3.Logout
+## Logout
 
 You can logout by clicking the **logout** at the top left.
 
-## 12.1.4.Inactivity security timeout
+## Inactivity security timeout
 
 Due to the sensitive nature of the data presented by Trisul, there is an
 inactivity timeout associated with each user. If no user interaction is
@@ -60,7 +60,7 @@ Server -\> Idle Timeout
 If you want to disable it - set it to some **huge value** (1000000
 seconds)
 
-## 12.1.5.Login rules
+## Login rules
 
 - If you login from a second location, Trisul will kick the first
   session out. (like yahoo/gmail/etc)  

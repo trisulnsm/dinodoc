@@ -1,4 +1,4 @@
-# 12.8. Background tasks
+# Background tasks
 
 Trisul installs the following background tasks
 
@@ -12,7 +12,7 @@ Trisul installs the following background tasks
 | threshold_update_bands | 12:15:00 AM   | Updates the trisul training data                                                     |
 | summary_counts_update  | 1:00:00 AM    | Updates flow,resource,fts count                                                      |
 
-## 12.8.1.View or modify
+## View or modify
 
 Trisul uses the regular unix `crontab` to schedule background tasks.
 
@@ -42,7 +42,7 @@ Trisul uses the regular unix `crontab` to schedule background tasks.
 
 > Login as root, then type : pre(language-bash). crontab -e
 
-## 12.8.2.Background tasks log files
+## 1Background tasks log files
 
 Login as `admin` user to manage menus.
 

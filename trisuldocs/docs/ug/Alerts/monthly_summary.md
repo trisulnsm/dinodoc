@@ -1,4 +1,4 @@
-# 9.7. Monthly Summary
+# Monthly Summary
 
 Trisul will show you alerts grouped by Priority. You can click on the totals and get a further breakup grouped by type.
 
@@ -7,7 +7,7 @@ Some applications :
 - Traffic by IN/OUT per host per day
 - Malware alerts per day (using the Trisul Badfellas plugin)
 
-## 9.7.1 How to use
+## How to use
 
 :::note navigation
 

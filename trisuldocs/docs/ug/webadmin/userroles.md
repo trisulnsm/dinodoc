@@ -1,4 +1,4 @@
-# 12.4.User Roles
+# User Roles
 
 Trisul web users fall into three roles
 
@@ -14,7 +14,7 @@ The default built-in user called **admin**. You can create other users with the 
 
 > Important:  The built-in admin user cannot be deleted.
 
-## 12.4.1.Roles
+## Roles
 
 There are four roles that a user can possess.
 
@@ -44,7 +44,7 @@ For each role
 
 - The **blue** color operations are read only
 
-## 12.4.2.Inactivity security timeout
+## Inactivity security timeout
 
 Due to the sensitive nature of the data presented by Trisul, there is an
 inactivity timeout associated with each user. If no user interaction is
@@ -60,7 +60,7 @@ To access, Select Manage -\> App settings -\> Web Server -\> Idle Timeout
 If you want to disable it - set it to some *huge value* (1000000
 seconds)
 
-## 12.4.3.Authentication Audit Log
+## Authentication Audit Log
 
 All login activity is logged by the server
 

@@ -1,8 +1,8 @@
-# 12.2.Manage Users
+# Manage Users
 
 Manage users and their access levels.
 
-## 12.2.1.Types of users
+## Types of users
 
 A brand new install of Trisul has two users pre-provisioned
 
@@ -24,7 +24,7 @@ else a normal operator would do on a regular basis.
 > 6.0.  
 > All the operations in this page require an admin user.
 
-## 12.2.2.Create a new user
+## Create a new user
 
 Login as `admin` user to create a new user
 
@@ -55,7 +55,7 @@ Select Web Admin -\> Manage -\> Users
 > For Example if you specified `Email` as filter attribute in LDAP domain
 > configuration then you need to enter you email in User Name field.
 
-## 12.2.3.Edit existing user
+## Edit existing user
 
 Login as `admin` user to create a new user
 
@@ -76,7 +76,7 @@ form to reset password. You will be shown the new automatically
 generated password. Please send it to the user and have them create a
 new password immediately on login.
 
-## 12.2.4.Delete User
+## Delete User
 
 You have to have admin rights as well as the user you are trying to
 delete must be logged off.
@@ -91,7 +91,7 @@ Select Web Admin -\> Manage -\> Users
 
 Click the **Delete** link next to the user
 
-## 12.2.5.Change Own Password
+## Change Own Password
 
 - Click the user name `dropdown` list at the top right side
 

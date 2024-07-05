@@ -1,4 +1,4 @@
-# 9.9. Threshold Band Anomaly alerts
+# Threshold Band Anomaly alerts
 
 **NEW**
 
@@ -16,7 +16,7 @@ background while the actual metric is shown as the curve.
 
 ![](image/tband1.png)
 
-## 9.9.1 How it works
+## How it works
 
 The feature is enabled by two separate processes.
 
@@ -49,7 +49,7 @@ continuosly checks if the metric is within the expected band for that
 day and time period. If it is out of bounds it generates “Threshold Band
  Alert”.
 
-## 9.9.2 Configuring
+## Configuring
 
 ### Creating a new Threshold Band Anomaly monitor for a particular counter
 
@@ -107,7 +107,7 @@ Once a band has been created. It is automatically updated by a
 special cron task every night. There is no further configuration 
 required.
 
-## 9.9.3 Viewing alerts
+## Viewing alerts
 
 Once an anomaly is detected Trisul generates an alert, similar to an 
 Intrusion Detection or Flow Tracker alert. This appears in the top right
@@ -130,7 +130,7 @@ changes dramatically.
 
 ![](image/tband3.png)
 
-## 9.9.4 Deleting alerts
+## Deleting alerts
 
 The default approach of Trisul is not to delete anything. TCAs just rollover as they age out.
 

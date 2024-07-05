@@ -37,7 +37,7 @@ To access this login as `admin` and select WebAdmin Manage -\> App Settings
 | Show Interfaces Per Router       | 100           | Per router show these many top interfaces in Netflow mode               |
 | Include Dest Port(Conversations) | false         | Show port name or number like http and https in inteface drilldown page |
 
-## 12.10.3.Proxy Server
+## Proxy Server
 
 Web Trisul needs to reach out to the internet for two things.
 
@@ -60,14 +60,14 @@ configure a proxy server.
 - If you get a list of packages without the error “Check your internet
   connection error”, the connection is working.
 
-## 12.10.4.Packet Inspection
+## Packet Inspection
 
 | Option                               | Default Value | Description                                                                                          |
 | ------------------------------------ | ------------- | ---------------------------------------------------------------------------------------------------- |
 | Deep Packet Inspection limit         | 21600 Secs    | Time limit for deep packet inspection                                                                |
 | Deep packet inspection content limit | 100 M         | Maximum number of bytes to be retrieved as a result of the packet retrieval \_Pull packets operation |
 
-## 12.10.5.Web Server
+## Web Server
 
 | Option              | Default Value | Description                                                                                                                                                   |
 | ------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -75,7 +75,7 @@ configure a proxy server.
 | Server port         | 3000          | The webserver port. This setting is used by some cron tasks (like report mailers). If you move the default nginx port make sure you reflect that change here. |
 | Web Server Security | NONE          | Used by report jobs. Is web server using SSL?                                                                                                                 |
 
-## 12.10.6.Schedule and Email reports
+## Schedule and Email reports
 
 | Option                                                 | Default Value     | Description                                                                             |
 | ------------------------------------------------------ | ----------------- | --------------------------------------------------------------------------------------- |
@@ -86,14 +86,14 @@ configure a proxy server.
 | Show generated in report page header                   | true              | show generated time in report page title                                                |
 | Attachment Format                                      | PDF               | Schedule report email attached format                                                   |
 
-## 12.10.7.Email Alerts
+## Email Alerts
 
 | Option                     | Default Value     | Description                                                                             |
 | -------------------------- | ----------------- | --------------------------------------------------------------------------------------- |
 | Email Alert Business Days  | M,T,W,T,-,-,-     | When you want to receive email alerts                                                   |
 | Email Alert Business Hours | 00:00:00-23:59:59 | Business hours time used to restrict default report generation time window for each day |
 
-## 12.10.8.Chart
+## Chart
 
 | Option                        | Default Value | Description                                                                                                                      |
 | ----------------------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------- |
@@ -103,7 +103,7 @@ configure a proxy server.
 | Enable Animation              | true          | Show animation while rendring chart                                                                                              |
 | Real Time Data Display        | 1 Hour        | How many data points to be retined in the real time graph                                                                        |
 
-## 12.10.9.Dashboard and modules
+## Dashboard and modules
 
 | Option                            | Default Value | Description                                                                                                                                                           |
 | --------------------------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -112,14 +112,14 @@ configure a proxy server.
 | Show help tips for menu items     | Yes           | A tooltip is shown for menu items to help you learn about the various options. You can turn these off if you are already familiar with the UI                         |
 | Show country flags for IPs        | true          | Show country flags for IPs in dashbaord                                                                                                                               |
 
-## 12.10.10.SNMP Settings
+## SNMP Settings
 
 | Option              | Default Value | Description                                                       |
 | ------------------- | ------------- | ----------------------------------------------------------------- |
 | SNMP Version        | 1             | SNMP version v1 or v2c or v3. Select V3 to show SNMPv3 parameters |
 | SNMP Read Community | 0             | SNMP read community string                                        |
 
-## 12.10.10.1.Advanced SNMP Settings
+## Advanced SNMP Settings
 
 | Option                   | Default value | Description                                                                                    |
 | ------------------------ | ------------- | ---------------------------------------------------------------------------------------------- |
@@ -129,14 +129,14 @@ configure a proxy server.
 | Resolve Router Name      | true          | Update label from snmp router name.Set false to keep overrided value                           |
 | SNMP Command Prefix      |               | Append the text before the SNMP commmand                                                       |
 
-## 12.10.11.DR Settings
+## DR Settings
 
 | Option      | Description                                      |
 | ----------- | ------------------------------------------------ |
 | DR Hub IP   | IP address of the DR Hub machine. Eg:192.168.3.1 |
 | DR Hub Port | Port number for trp connection                   |
 
-## 12.10.12.MyMRTG
+## MyMRTG
 
 | Option                | Default Value       | Description                                 |
 | --------------------- | ------------------- | ------------------------------------------- |
@@ -144,7 +144,7 @@ configure a proxy server.
 | Chart Title           | routerip_routername | Customize chart tile for MRTG customer      |
 | Chart Subtitle        | ifname_ifalias      | Customize chart subtile for MRTG customer   |
 
-## 12.10.13.API Keys
+## API Keys
 
 | Option                      | Description                                                                                 |
 | --------------------------- | ------------------------------------------------------------------------------------------- |
