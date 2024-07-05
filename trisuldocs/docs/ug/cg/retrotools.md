@@ -145,7 +145,7 @@ complete.
 
 :::
 
-![](images/retrotools/raw_packets.png)
+![](images/raw_packets.png)
 
 **Using the tool**
 
@@ -170,6 +170,6 @@ You have to select an item and a set of stats to chart for that item.
 The result will be a chart showing most recent 7 days of data arranged
 by day.
 
-![](images/retrotools/analyze_key.png)
+![](images/analyze_key.png)
 
-This tool will take you to the [Long term traffic trends](/docs/ug/tools/analyze_item.html) tool with the start time and other selections automatically filled in.
+ tool will take you to the [Long term traffic trends](/docs/ug/tools/analyze_item.html) tool with the start time and other selections automatically filled in.

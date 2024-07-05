@@ -126,7 +126,8 @@ Login as Admin -\> Select Context and profile -\> Under Custom Counters
 
 :::
 
-![](images/keyset1.png)  
+![](images/keyset1.png)
+
 *Creating a new Keyset Counter Group*
 
 Fill out these fields
