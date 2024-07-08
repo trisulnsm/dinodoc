@@ -1,3 +1,11 @@
+---
+
+sidebar_position: 4
+
+sidebar_label: Flow Tracker Alerts
+
+--- 
+
 # Flow Tracker Alerts
 
 Trisul provides a powerful way to generate an alert when certain types of flow activity occurs. Also see [Flow Trackers](/docs/ug/flow/tracker) for instructions on using Flow Trackers which is a pre-requisite to creating Flow Tracker Alerts (this section).

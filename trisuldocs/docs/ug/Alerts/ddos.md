@@ -1,3 +1,11 @@
+---
+
+sidebar_position: 11
+
+sidebar_label: Detecting volumetric attacks
+
+---
+
 # Detecting volumetric attacks
 
 Using the TCA [Threshold Crossing Alerts](/docs/ug/alerts/tca) and the TB [Threshold Band Alerts](/docs/ug/alerts/tband) it is easy to configure Trisul Network Analytics to detect volumetric attacks such as DDoS Distributed Denial of Service.

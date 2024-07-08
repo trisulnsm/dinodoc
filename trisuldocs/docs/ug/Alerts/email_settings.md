@@ -1,3 +1,11 @@
+---
+
+sidebar_position: 2
+
+sidebar_label: Email Alert Delivery
+
+--- 
+
 # Email alert delivery
 
 This page describes how you can configure Trisul to send you an email when any alert fires.
