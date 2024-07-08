@@ -79,13 +79,13 @@ The following alternate method places the new License files directly in the corr
 
 1. Put the new license file in `/usr/local/etc/trisul-probe`
    1. **Change the name** of the new file to `LicenseKey.txt` **OR**
-   2. **Edit the** [LicenseFile parameter in trisulProbeConfig.xml](https://trisul.org/docs/ref/trisulconfig.html#app) to point to the new file. The `trisulProbeConfig.xml` file is a per-context config file found under `/usr/local/etc/trisul-probe/domain0/probe0/context0` directory.
+   2. **Edit the** [LicenseFile parameter in trisulProbeConfig.xml](/docs/ref/trisulProbe-config#app ) to point to the new file. The `trisulProbeConfig.xml` file is a per-context config file found under `/usr/local/etc/trisul-probe/domain0/probe0/context0` directory.
 
 #### Install license on Trisul Hub node
 
 1. Put the new license file in `/usr/local/etc/trisul-hub`
    1. **Change the name** of the new file to `LicenseKey.txt` **OR**
-   2. **Edit the** [LicenseFile parameter in trisulHubConfig.xml](https://trisul.org/docs/ref/trisulconfig.html#app) to point to the new file. The `trisulHubConfig.xml` file is a per-context file found under `/usr/local/etc/trisul-hub/domain0/hub0/contextXYZ` directory.
+   2. **Edit the** [LicenseFile parameter in trisulHubConfig.xml](/docs/ref/trisulProbe-config#app ) to point to the new file. The `trisulHubConfig.xml` file is a per-context file found under `/usr/local/etc/trisul-hub/domain0/hub0/contextXYZ` directory.
 
 #### Restart Trisul Hub and Probe node
 
@@ -111,4 +111,4 @@ If you move any Trisul node (Probe or Hub) to a new machine or VM, send us the n
 
 ## Upgrading a Trisul 6.5 production license to 7.0
 
-See [How to upgrade 6.5 production license](https://trisul.org/docs/ug/install/license65update.html)
+See [How to upgrade 6.5 production license](/docs/ug/install/18-6.5productlicesne )

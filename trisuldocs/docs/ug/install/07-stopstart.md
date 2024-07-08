@@ -1,6 +1,6 @@
 # Start and stop Trisul
 
-Describes how you can start and stop Trisul components. For a more detailed explanation see [Basic Usage: Start and stop](https://trisul.org/docs/ug/basicusage/startstop.html)
+Describes how you can start and stop Trisul components. For a more detailed explanation see [Basic Usage: Start and stop](/docs/ug/install/stopstart)
 
 ## Running Web Trisul
 
@@ -31,8 +31,8 @@ ufw allow 3003
 
 Also see :
 
-1. [Using HTTPS for the webserver](https://trisul.org/docs/howto/sslforwebtr.html)
-2. [Changing the webserver port](https://trisul.org/docs/howto/change_web_port.html)
+1. [Using HTTPS for the webserver](/docs/howto/sslforwebtr)
+2. [Changing the webserver port](/docs/howto/change_web_port )
 
 ## Running Trisul
 
@@ -57,5 +57,5 @@ The trisulctl_probe/hub tools execute commands on all nodes in the domain.
 
 Also see :
 
-1. [CLI tool trisulctl_hub](https://trisul.org/docs/ref/trisulctl_hub.html)
-2. [CLI tool trisulctl_probe](https://trisul.org/docs/ref/trisulctl_hub.html)
+1. [CLI tool trisulctl_hub](/docs/ref/trisul_hub)
+2. [CLI tool trisulctl_probe](/docs/ref/trisul_probe)

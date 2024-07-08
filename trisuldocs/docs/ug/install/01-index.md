@@ -10,15 +10,15 @@ page](https://www.trisul.org/download/) first.
 
 This section covers how to get a *single box* install of Trisul up and
 running. For distributed installation see [Distributed
-monitoring](/docs/ug/domain/index.html)
+monitoring](/docs/ug/domain/index.md)
 
 ## Plug Trisul into your network
 
 There are three major ways to get data into Trisul. Click on each link
 for detailed instructions.
 
-|                                |                                |                                                                                                                                                                                      |
-| ------------------------------ | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <i class="fa fa-th"/>          | Live packet capture            | Configure a Port Mirror (SPAN Port), use a Network Tap, or a Linux Inline Bridge. <br/>Read [Setup packet capture for Trisul](/docs/ug/install/input_packets.html)                   |
-| <i class="fa fa-sitemap"/>     | Netflow from routers, switches | Configure your routers, switch to send Netflow, SFLOW, IPFIX or other similar flow information to Trisul. <br/> Read [Setup Netflow for Trisul](/docs/ug/install/input_netflow.html) |
-| <i class="fa fa-file-text-o"/> | Read PCAP dumps                | Read PCAP files dumped by a third party program like tcpdump <br/> Read [Process PCAP dumps with Trisul](/docs/howto/offline_proc.html)                                              |
+| Name                           | Info                                                                                                                                                                               |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Live packet capture            | Configure a Port Mirror (SPAN Port), use a Network Tap, or a Linux Inline Bridge. <br/>Read [Setup packet capture for Trisul](/docs/ug/install/setup-pkt-capture)                  |
+| Netflow from routers, switches | Configure your routers, switch to send Netflow, SFLOW, IPFIX or other similar flow information to Trisul. <br/> Read [Setup Netflow for Trisul](/docs/ug/install/setup-netflow.md) |
+| Read PCAP dumps                | Read PCAP files dumped by a third party program like tcpdump <br/> Read [Process PCAP dumps with Trisul](/docs/howto/offline_proc.md)                                              |

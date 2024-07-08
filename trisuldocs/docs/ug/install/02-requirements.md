@@ -6,7 +6,7 @@ Computing requirements needed to run Trisul.
 
 Single machine in the default **Packet Capture Mode** with typical small
 enterprise load of 50-200Mbps. \[ See [Setup Trisul for Packet Capture
-Mode](/docs/ug/install/input_packets.html) \]
+Mode](/docs/ug/install/setup-pkt-capture) \]
 
 | Hardware            | System Requirements                                                                                                                                                                                                        |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -17,7 +17,7 @@ Mode](/docs/ug/install/input_packets.html) \]
 
 Single machine in **NETFLOW mode** monitoring a router/switch with 1Gbps
 load. \[ See [Setup Trisul for NETFLOW
-mode](/docs/ug/netflow/index.html) \]
+mode](/docs/ug/netflow/) ]
 
 | Hardware            | System Requirements                                                        |
 | ------------------- | -------------------------------------------------------------------------- |
@@ -29,9 +29,9 @@ Virtual Machine is preferred in Netflow mode for enterprise class load.
 ## Operating system
 
 Trisul is available on the following operating systems. Go to the
-[Download Center](/download) to get access to the latest packages
+[Download Center](https://www.trisul.org/download/) to get access to the latest packages
 
-|                  |                 |
+| OS               | Bits            |
 | ---------------- | --------------- |
 | Ubuntu 18.04 LTS | 64-bits         |
 | Ubuntu 16.04 LTS | 64-bits         |
@@ -52,12 +52,8 @@ The load profile of the Probe and Hub components.
 | Trisul Hub   | Database node                        | Very high disk write IOPS, high read IOPS when queried, sequential write pattern, high network I/O to probe nodes                                                                                                | Add RAM 4GB per probe, 2 3Ghz Cores per probe                            |
 | Trisul Probe | PCAP storage and streaming analytics | Very high CPU bound, high memory usage, diversity of traffic, TCP Reassembly features. For PCAP storage high sequential Disk I/O need RAID-0 array for \> 1Gbps disk. High network I/O when flushing to Hub node | Add more CPU cores, bigger cache, faster memory, 10G NIC or accelerators |
 
-<div class="info info-circle autohint">
-
 If you are placing Trisul Hub and Probe on the same box, then simply add
 up the requirements.
-
-</div>
 
 ### Trisul Hub sizing
 
@@ -74,14 +70,10 @@ a lot in security applications no data is summarized or rolled up. To
 get an idea of how much data is being added every day, you can let
 Trisul run for a while and then check the following
 
-<div class="info hand-o-right autohint">
-
 Login as Admin -\> Context (default) -\> Admin Tasks -\> DB Status
 
-</div>
-
 You can get the database growth per day by looking at the “Database
-slices” table. Click on the <i class='fa fa-bar-chart'/> icon to bring
+slices” table. Click on the icon to bring
 up a trend of database growth. This can help you size the system into
 the future.
 
@@ -96,17 +88,13 @@ Some guidelines in table below for sizing the Trisul Probe node.
 | Raw Packets | For every 200-400Mbps with TCP Reassembly features    | 1 3Ghz Core + 4GB DDR4     |
 | Raw Packets | For every 200-400Mbps without TCP Reassembly features | 0.5 3Ghz Core + 1GB DDR4   |
 
-<div class='alert alert-danger'>
-
-##### <i class='fa fa-list'/> Typical Configuration - Packet Capture
+##### Typical Configuration - Packet Capture
 
 A typical 500-700Mbps full blown SMB 500 IP license can run on the
 following hardware. Conservative numbers
 
 - Intel Core i7 with 8 Cores , 16GB RAM
 - add 4xSATA in RAID-0 for PCAP storage
-
-</div>
 
 For more diverse networks say 8Gbps ; add more memory and Cores
 
@@ -131,32 +119,24 @@ The relevant scaling metric is Netflow volume. The mapping typically is
 | Enterprise Netflow | for every 10Mbps NETFLOW traffic | \+ 1 3Ghz Core + 4GB RAM     |
 | ISP Netflow        | for every 10Mbps NETFLOW traffic | <u>1 2 3Ghz Core</u> 8GB RAM |
 
-<div class='alert alert-success'>
-
-##### <i class='fa fa-list'/> Typical Configuration - Netflow mode
+##### Typical Configuration - Netflow mode
 
 A typical 800-1Gbps Enterprise Netflow with unlimited number of router
 interfaces will run on the following hardware. Conservative
 
 - Intel Xeon/Core 3Ghz 8 Cores , 8GB RAM
 
-</div>
-
 While these are typical numbers, every network is different. You can
 install Trisul-Probe then observe the netflow volume using the *Netflow
 Sources* dashboard.
 
-<div class="info hand-o-right autohint">
-
-Click Dashboards \> Show All \> Netflow Sources
-
-</div>
+Click Dashboards  Show All  Netflow Sources
 
 The following charts are displayed :
 
-| chart shown                                    | meaning                                 | remarks                                               |
-| ---------------------------------------------- | --------------------------------------- | ----------------------------------------------------- |
-| Router Interfaces                              | Bandwidth seen on top router interfaces |                                                       |
-| Flow Records                                   | Netflow records per second              |                                                       |
-| Flow Sources                                   | Bandwidth per netflow exporter (router) |                                                       |
-| <i class='fa fa-desktop'/> Netflow data volume | Total Netflow bandwidth                 | Use the max observed value from this chart for sizing |
+| chart shown         | meaning                                 | remarks                                               |
+| ------------------- | --------------------------------------- | ----------------------------------------------------- |
+| Router Interfaces   | Bandwidth seen on top router interfaces |                                                       |
+| Flow Records        | Netflow records per second              |                                                       |
+| Flow Sources        | Bandwidth per netflow exporter (router) |                                                       |
+| Netflow data volume | Total Netflow bandwidth                 | Use the max observed value from this chart for sizing |
