@@ -8,7 +8,7 @@ groups, meters, and keys.
 ***Counter Group***  
 A type of network entity being measured.
 
-[Built-in counter groups](/docs/ug/cg/intro.html#types) ship with Trisul. You can create your own [custom counter groups](custom.html)
+[Built-in counter groups](/docs/ug/cg/intro#types) ship with Trisul. You can create your own [custom counter groups](custom)
 
 Trisul measures Hosts, MACs, Applications, Subnets, VLANs, and 12 other
 counter groups.

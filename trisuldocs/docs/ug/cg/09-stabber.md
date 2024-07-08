@@ -8,22 +8,22 @@ activity within a 5 second delay.
 > the thermometer you **stab** into a piece of cake in the oven to check
 > its temperature.
 
-[Key Traffic Stabber](#key_traffic_stabber)  
+[Key Traffic Stabber](/docs/ug/cg/stabber#key-traffic-stabber)  
 
 Graphs network traffic of any item in real time. *Example : Plot
 transmitted and received traffic of your mail server.*  
 
-[Counter Group Stabber](#counter_group_stabber)  
+[Counter Group Stabber](/docs/ug/cg/stabber#counter-group-stabber)  
 
 Shows most active items in any counter group. *Example : Show most
 active applications by total traffic.*  
 
-[Flow Stabber](#flow_stabber)  
+[Flow Stabber](/docs/ug/cg/stabber#flow-stabber)  
 
 Currently active flows for a host or port. *Example : Show flows for IP
 10.18.10.10*  
 
-[Alert Stabber](#alert_stabber)  
+[Alert Stabber](/docs/ug/cg/stabber#alert-stabber)  
 
 Real time animated view of all alert activity in your network.  
 
@@ -51,7 +51,7 @@ There are three ways to access real time stabbers.
 
 ### 2. From any key dashboard
 
-Lets say you are investigating an arbitrary item using the [Key Dashboard](/docs/ug/ui/dashboards.html#key_dashboard)
+Lets say you are investigating an arbitrary item using the [Key Dashboard](/docs/ug/ui/dashboards#key_dashboard)
 
 1. Click on a Real Time Stabbers from the menu as shown below
 

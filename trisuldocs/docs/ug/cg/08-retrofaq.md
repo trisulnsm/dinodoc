@@ -7,7 +7,7 @@ Complex network analysis in plain English.
 
 If you deal with networks on a daily basis you are bound to perform a
 particular analysis repeatedly. You can certainly use one of the [Retro
-Tools](retrotools.html) to accomplish your task but it can get
+Tools](retrotools) to accomplish your task but it can get
 repetitive and tiring.
 
 For example, you may start by selecting a time interval and want to find

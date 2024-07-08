@@ -28,7 +28,7 @@ Lets look at some examples.
 Using the LUA `packet_storage` API you can write a LUA script that gets called when a new flow is detected. You can specify 
 what policy to apply to all packets in that flow. Some links :
 
-- LUA packet_storage [API Documentation](https://trisul.org/docs/lua/packet_storage.html)
+- LUA packet_storage [API Documentation](/docs/lua/FRONT-END-SCRIPTS/pcap-storage)
 - Github [trisul-scripts samples](https://github.com/trisulnsm/trisul-scripts/tree/master/lua/frontend_scripts/packetstore)
 
 The rest of this document will describe static rules.
@@ -39,7 +39,7 @@ For the first example, lets keep it simple and prevent both TCP and UDP. We will
 
 To put this rule into effect,
 
-1. open the [trisulConfig.xml](https://trisul.org/docs/ref/trisulconfig.html#ring) file and locate the Ring section
+1. open the [trisulConfig.xml](/docs/ref/trisulProbe-config#ring) file and locate the Ring section
 2. change the `<RuleChain>` section to look like this
 
 ```xml
@@ -55,16 +55,16 @@ To put this rule into effect,
     <Rule mode="IGNORE">{C51B48D4-7876-479E-B0D9-BD9EFF03CE2E}=p-00A1,p-00A2,p-0035</Rule>
 ```
 
-The strange looking string under the IGNORE item is the rule in [Trisul filter format](https://trisul.org/docs/ref/trisul_filter_format.html)  
+The strange looking string under the IGNORE item is the rule in [Trisul filter format](/docs/ref/trisul_filter_format)  
 The rule `{C51B48D4-7876-479E-B0D9-BD9EFF03CE2E}=p-00A1,p-00A2,p-0035` merely says `COUNTER_GROUP_APPLICATIONS = Ports 161,162,53`
 
-The GUID refers to the counter group applications and p-00A0 denotes the port number 160 in p-HEX-Port format. You can use any counter group ID depending on what you want to achieve. [See here for a list of common counter groups](https://trisul.org/docs/ug/cg/custom.html)
+The GUID refers to the counter group applications and p-00A0 denotes the port number 160 in p-HEX-Port format. You can use any counter group ID depending on what you want to achieve. [See here for a list of common counter groups](/docs/ug/cg/custom)
 
 ### Example 2 : Only exclude UDP ports SNMP and DNS
 
 Lets extend the previous example and make it apply only to UDP ports 161,162 (snmp) and 53 (dns). Any traffic using TCP on these ports will be saved by Trisul.
 
-Now we already know that the expression `{C51B48D4-7876-479E-B0D9-BD9EFF03CE2E}=p-00A1,p-00A2,p-0035` will match the required ports, we need to add the UDP constraint to it. Scanning the [list of well known GUIDs](https://trisul.org/docs/ref/guid.html) we find the counter group Network Layer that counts IP protocols such as TCP/UDP/ICMP/GRE etc. We pick up the GUID `{E89BCD56-30AD-40F5-B1C8-8B7683F440BD}` and the IP protocol number 17 for UDP. Converting that to hex we get 11.
+Now we already know that the expression `{C51B48D4-7876-479E-B0D9-BD9EFF03CE2E}=p-00A1,p-00A2,p-0035` will match the required ports, we need to add the UDP constraint to it. Scanning the [list of well known GUIDs](/docs/ref/guid) we find the counter group Network Layer that counts IP protocols such as TCP/UDP/ICMP/GRE etc. We pick up the GUID `{E89BCD56-30AD-40F5-B1C8-8B7683F440BD}` and the IP protocol number 17 for UDP. Converting that to hex we get 11.
 
 The final expression is
 

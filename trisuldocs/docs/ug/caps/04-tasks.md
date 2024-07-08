@@ -16,24 +16,24 @@ leaving Trisul. If you want the entire flow, you can always click on
 
 ### Disable full packet capture
 
-Set the [Ring – Enabled](https://trisul.org/docs/ref/trisulconfig.html#ring) parameter to `False` and restart Trisul. Packet logging will be disabled.
+Set the [Ring – Enabled](/docs/ref/trisulProbe-config#ring) parameter to `False` and restart Trisul. Packet logging will be disabled.
 
 ### Allocate a fixed 100GB disk space for full packet captures
 
 To store 100×1GB files in the Operational area.
 
-1. Locate the [Ring – Slice Policy – Operational – SliceCount](https://trisul.org/docs/ref/trisulconfig.html#ring) paramter
+1. Locate the [Ring – Slice Policy – Operational – SliceCount](/docs/ref/trisulProbe-config#ring) paramter
 2. Set the SliceCount to 100
 
 ### I dont want to store SYSLOG packets because I send them to splunk
 
-You have to use Rules to exclude the SYSLOG protocols from getting stored. Check out the [controlling storage example](https://trisul.org/docs/ug/caps/packetstorage.html#examples)
+You have to use Rules to exclude the SYSLOG protocols from getting stored. Check out the [controlling storage example](/docs/ug/caps/packetstorage#examples)
 
 ### I want to find all flows containing a malware payload pattern
 
-Use the [payload search tool](https://trisul.org/docs/ug/tools/payload_search.html)
+Use the [payload search tool](/docs/ug/tools/payload_search)
 
 ### How can I change the AES CTR password ?
 
-The passphrase is read from the file specified in [Ring – Passphrase File](https://trisul.org/docs/ref/trisulconfig.html#ring) If you change the passphrase, older data is currently not accessible. 
+The passphrase is read from the file specified in [Ring – Passphrase File](/docs/ref/trisulProbe-config#ring) If you change the passphrase, older data is currently not accessible. 
 Trisul will support rekeying of old data in a future release.

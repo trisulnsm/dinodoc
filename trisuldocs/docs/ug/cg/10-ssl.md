@@ -70,5 +70,5 @@ root CA*
 
 ## Usage tips
 
-1. [SSL Cert resources](/docs/ug/resources/sslcerts.html) allow you to search for hashes in bulk
-2. [SSL Cert FTS](/docs/ug/resources/ftsssl.html) allow you to search for arbitrary strings in certificates
+1. [SSL Cert resources](/docs/ug/resources/sslcerts) allow you to search for hashes in bulk
+2. [SSL Cert FTS](/docs/ug/resources/ftsssl) allow you to search for arbitrary strings in certificates

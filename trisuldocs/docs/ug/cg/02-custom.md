@@ -5,7 +5,7 @@ type of metering for their environment. Trisul lets you build your own
 advanced traffic metering on top of the existing counter groups. The
 following types of custom counter groups are supported.
 
-[Filtered Counter Group](#filtered_counter_groups)  
+[Filtered Counter Group](/docs/ug/cg/custom#filtered-counter-groups)  
 **Meter only a subset of an existing counter group by applying a
 filter**
 
@@ -13,7 +13,7 @@ Example : A counter group called “Web Hosts” that only counts HTTP and
 HTTPS traffic. The parent group is “Hosts” and the filter is “Apps
 80(http) and 443(https)”
 
-[Keyset counter group](#keyset_counter_groups)  
+[Keyset counter group](/docs/ug/cg/custom#keyset-counter-groups)  
 **Meter groups of keys rather than individual keys from a host group**
 
 Example : A new counter group called *My apps* which extends the *Apps*
@@ -23,14 +23,14 @@ keysets. Similarly you can count groups of IPs as Web Servers,
 Workstations, VOIP Phones by specifying those groups from the Hosts
 counter group.
 
-[Stat based counter group](#traffic_based_counter_groups)  
+[Stat based counter group](/docs/ug/cg/custom#stat-based-counter-groups)  
 **Count only keys that whose values match a mathematical value**
 
 Example : A new counter group called *Scanners*, which extends the
 *Hosts* counter group but only when the meter *Security Alerts* is more
 than 0.
 
-[Rule based counter group](#rule_based_counter_groups)  
+[Rule based counter group](/docs/ug/cg/custom#rule-based-counter-groups)  
 **Specify arbitrary rules matching your business needs**
 
 Example : A new counter group called *Corporate apps* which extends the
@@ -38,7 +38,7 @@ Example : A new counter group called *Corporate apps* which extends the
 80 and subnet = 10.2.2.0/24. You can chain any number of rules to build
 your custom metering.
 
-[Cross Keys counter group](#cross_key_counter_groups)  
+[Cross Keys counter group](/docs/ug/cg/custom#cross-key-counter-groups)  
 **Cross product of two or three counter groups**
 
 Example : A new counter group called *Traffic Flows* which is cross
@@ -47,7 +47,7 @@ keys in this new counter group with be a combination of both. Another
 example is *Geo Flows* which is a cross product of three counter groups
 *Internal Hosts X Country X External Hosts*
 
-[Cardinality counting](#cardinality_counting)  
+[Cardinality counting](/docs/ug/cg/custom#cardinality-counting)  
 **Count uniques X of Y**
 
 Cardinality counters are not a new counter group. You can add up to two
@@ -101,7 +101,7 @@ Login as Admin -\> Select Context and profile -\> Under Custom Counters
 
 ### Custom group
 
-For more advanced custom counters you can use the [LUA API](/docs/lua)
+For more advanced custom counters you can use the [LUA API](/docs/lua/getting-started)
 to measure any subset of metrics
 
 ------------------------------------------------------------------------
@@ -238,7 +238,7 @@ It works like this :
 
 1. Derive from a parent group such as hosts / applications / macs  
 
-2. Specify a chain of rules in [Trisul Filter Format](/docs/ref/trisul_filter_format.html)  
+2. Specify a chain of rules in [Trisul Filter Format](/docs/ref/trisul_filter_format)  
 
 3. The first rule that matches determines the meter key  
 

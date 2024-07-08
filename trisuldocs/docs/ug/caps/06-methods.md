@@ -2,7 +2,7 @@
 
 This document describes the different ways you can drilldown to raw 
 packet captures from the Trisul user interface. If you are interested in
- programatically retreiving PCAPs refer to the [Trisul Remote Protocol guide](https://trisul.org/docs/trp/) Trisul allows you to directly drilldown into packets from a number of 
+ programatically retreiving PCAPs refer to the [Trisul Remote Protocol guide](/docs/trp/) Trisul allows you to directly drilldown into packets from a number of 
 investigation points. The key thing to look for are the following two 
 menu items
 
@@ -86,4 +86,4 @@ To make the feature usable and resistant to massive download requests
 | ----------------------------- | ------- | ------------------------------------------------------------------------------------- |
 | Content download limit        | 100MB   | maximum download needs to be < 100MB                                                  |
 
-both these parameters can be edited from [App Settings](https://trisul.org/docs/ug/webadmin/web_options.html)
+both these parameters can be edited from [App Settings](/docs/ug/webadmin/web_options)

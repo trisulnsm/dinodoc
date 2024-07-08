@@ -39,7 +39,7 @@ You have to edit the following parameters to suit your environment.
 1. Size of each slice (file storing raw packets)
 2. Number of slices (files) in *oper*, *ref*, and *archive* areas
 
-See the [trisulConfig.xml](https://trisul.org/docs/ref/trisulconfig.html) documentation for more details.
+See the [trisulConfig.xml](/docs/ref/trisulProbe-config) documentation for more details.
 
 ## Mapping disks to slices
 
@@ -91,7 +91,7 @@ Rule chain :
 
 > if nothing matches
 
-For detailed syntax for specifying the rule chain, see the Ring section in [trisulConfig.xml](https://trisul.org/docs/ref/trisulconfig.html#ring)
+For detailed syntax for specifying the rule chain, see the Ring section in [trisulConfig.xml](/docs/ref/trisulProbe-config#ring)
 
 ## Encrypted content
 
@@ -105,4 +105,4 @@ Storing them in the clear :
 
 Trisul encrypts all content by default using AES-128 in CTR mode. The disk subsystem never sees clear text packets.
 
-To change the passphrase, see the *PassphraseFile* parameter in [trisulConfig.xml](https://trisul.org/docs/ref/trisulconfig.html#ring)
+To change the passphrase, see the *PassphraseFile* parameter in [trisulConfig.xml](/docs/ref/trisulProbe-config#ring)

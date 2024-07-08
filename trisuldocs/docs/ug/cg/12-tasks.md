@@ -35,11 +35,11 @@ Toppers</span>
 <span class="command hint">Select *Retro* from menu</span>
 
 Now you can apply various [Retro Analysis
-Tools](/docs/ug/cg/retrotools.html) to investigate
+Tools](/docs/ug/cg/retrotools) to investigate
 
 ### I want to see details of a particular IP, but it isnt showing up anywhere for me to click ?
 
-1. [Use the search box](http:/docs/ug/ui/search.html#the_search_box)
+1. [Use the search box](/docs/ug/ui/search#the_search_box)
 2. Click on “View Details” to go to the key dashboard
 3. Use any of the tools on the key dashboard
 
@@ -48,7 +48,7 @@ Tools](/docs/ug/cg/retrotools.html) to investigate
 <span class="command hint">Select *Retro* from the menu</span>
 
 - Select the time interval of interest
-- Find [Flow Tracker](/docs/ug/cg/retrotools.html#track_flows) tool in
+- Find [Flow Tracker](/docs/ug/cg/retrotools#track_flows) tool in
   retro dashboard
 - Select **Traffic** and click **Analyze**
 
@@ -65,19 +65,20 @@ If you can see the IP in live dashboards
 ***Method 2***  
 
 1. Follow instructions in [Using
-   Search](/docs/ug/ui/search.html#the_search_box)
+   Search](/docs/ug/ui/search#the_search_box)
 2. And click **Flows** in Real Time stabbers in [Key
-   Details](/docs/ug/ui/dashboards.html#key_details) modules
+   Details](/docs/ug/ui/dashboards#key_details) modules
 
-See [Real Time Stabber](/docs/ug/cg/stabber.html#flow_stabber)
+See [Real Time Stabber](/docs/ug/cg/stabber#flow_stabber)
 
 ### Store only 1MB worth of packets of each flow
 
-<span class="command hint">Open [Trisul
-Configuration](/docs/ref/trisulconfig.html#redis) file as root</span>
+- Open [Trisul
+  Configuration](/docs/ref/trisulProbe-config) file as root
 
 - Edit `<Rule mode="FLOWCAP1M"></Rule>`
-- Read [Tuning packet storage](/docs/ug/caps/packetstorage.html) for
+
+- Read [Tuning packet storage](/docs/ug/caps/packetstorage) for
   more examples
 
 ### How can I draw long term bandwidth usage charts ?
@@ -109,4 +110,4 @@ Select Tools -\> Long Term Traffic
 
  Select Customize -\> Counters -\> Keysets -\>Add new Keyset Counter Group
 
-Click [Keyset Counter Group](/docs/ug/cg/custom.html#keyset_counter_groups) for more.
+Click [Keyset Counter Group](/docs/ug/cg/custom#keyset_counter_groups) for more.

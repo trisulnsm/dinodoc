@@ -6,25 +6,25 @@ Now you need to select an analysis tool to apply to the time interval.
 You have to pick one of the following tools shown just below the time
 selector.
 
-| Name of tool                                                                    | Why you want to use this tool                                                                                                                                                       |
-| ------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Commonly used retro analysis](#commonly_used_retro_analysis)                   | All your retro dashboards show up here. Each dashboard features multiple modules showing results of retro analysis. Examples are : Layer 2 Activity, Hosts and Applications, etc    |
-| [Investigate activity of a specific IP](#investigate_activity_of_a_specific_ip) | Investigate complete activity of a host in selected interval. Details include conversations, flows, security alerts, malware activity, peer connections, upload / download data etc |
-| [Counter Group toppers](#counter_group_toppers)                                 | Who were the toppers in a counter group for a statistic ? Also shows topper trends in time interval with ability to do a [cross drill](#cross_drill) on any of them                 |
-| [Show traffic chart for an item](#show_traffic_chart_for_an_item)               | Draw charts for any item such as a host, app, subnet                                                                                                                                |
-| [Security Alerts retro](#security_alerts_retro)                                 | Various views of alert activity seen in selected interval                                                                                                                           |
-| [Investigate users of an application](#investigate_users_of_an_application)     | Investigate complete activity of an application. Who the top users are of that application and other details split up by upload / download                                          |
-| [Flow trackers](#flow_trackers)                                                 | View top flows in the timeframe based on various criteria                                                                                                                           |
-| [Pull packets](#pull_packets)                                                   | Get raw packets in tcpdump/libpcap format matching a certain key                                                                                                                    |
-| [Long term traffic charts](#long_term_traffic_charts)                           | Used to see daily trends in traffic. Arranges traffic by day on top of each other so you can observe busy hours etc                                                                 |
+| Name of tool                                                                                          | Why you want to use this tool                                                                                                                                                       |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Commonly used retro analysis](/docs/ug/cg/retrotools#commonly-used-retro-analysis)                   | All your retro dashboards show up here. Each dashboard features multiple modules showing results of retro analysis. Examples are : Layer 2 Activity, Hosts and Applications, etc    |
+| [Investigate activity of a specific IP](/docs/ug/cg/retrotools#investigate-activity-of-a-specific-ip) | Investigate complete activity of a host in selected interval. Details include conversations, flows, security alerts, malware activity, peer connections, upload / download data etc |
+| [Counter Group toppers](/docs/ug/cg/retrotools#counter-group-toppers)                                 | Who were the toppers in a counter group for a statistic ? Also shows topper trends in time interval with ability to do a [cross drill](#cross_drill) on any of them                 |
+| [Show traffic chart for an item](/docs/ug/cg/retrotools#show-traffic-chart-for-an-item)               | Draw charts for any item such as a host, app, subnet                                                                                                                                |
+| [Security Alerts retro](/docs/ug/cg/retrotools#security-alerts-retro)                                 | Various views of alert activity seen in selected interval                                                                                                                           |
+| [Investigate users of an application](/docs/ug/cg/retrotools#investigate-users-of-an-application)     | Investigate complete activity of an application. Who the top users are of that application and other details split up by upload / download                                          |
+| [Flow trackers](/docs/ug/cg/retrotools#flow-trackers)                                                 | View top flows in the timeframe based on various criteria                                                                                                                           |
+| [Pull packets](/docs/ug/cg/retrotools#pull-packets)                                                   | Get raw packets in tcpdump/libpcap format matching a certain key                                                                                                                    |
+| [Long term traffic charts](/docs/ug/cg/retrotools#long-term-traffic-charts)                           | Used to see daily trends in traffic. Arranges traffic by day on top of each other so you can observe busy hours etc                                                                 |
 
 ## Commonly used retro analysis
 
-Select a [retro dashboard](/docs/ug/ui/dashmod_intro.html#dashboard_types) to apply to the time interval.
+Select a [retro dashboard](/docs/ug/ui/dashmod_intro#dashboard_types) to apply to the time interval.
 
 Some of the built in retro dashboards are :
 
-> You can create your own [retro dashboards](/docs/ug/ui/dashmod_intro.html#creating_a_new_dashboard)
+> You can create your own [retro dashboards](/docs/ug/ui/dashmod_intro#creating_a_new_dashboard)
 > They will show up in this dropdown list
 
 |                        |                                                                                                                                                                                 |
@@ -53,7 +53,7 @@ The analysis includes
 5. Blacklisted activity (malware/botnet) if any
 6. Individual flows
 
-Trisul will then run the [Investigate IP](/docs/ug/tools/investigate_ip_activity.html) analysis tool for the
+Trisul will then run the [Investigate IP](/docs/ug/tools/investigate_ip_activity) analysis tool for the
 selected items and time interval.
 
 ## Counter Group toppers
@@ -104,7 +104,7 @@ The analysis includes
 3. Peers
 4. Top individual flows involving this app
 
-The analysis will take you to the [Explore](/docs/ug/tools/explore_flows.html) tool with the selected
+The analysis will take you to the [Explore](/docs/ug/tools/explore_flows) tool with the selected
 items and time interval.
 
 ## Flow trackers
@@ -114,7 +114,7 @@ criteria.
 
 Some of the built in trackers are :
 
-> You can create your own [flow trackers](/docs/ug/flow/tracker.html) They will show up in this dropdown list
+> You can create your own [flow trackers](/docs/ug/flow/tracker) They will show up in this dropdown list
 
 |                 |                                                                                                         |
 | --------------- | ------------------------------------------------------------------------------------------------------- |
@@ -138,7 +138,7 @@ There are some caps on this feature to prevent accidental misuse.
 1. By default only 5MB of raw data is retrieved
 2. By default only 1800s (30minutes) of interval can be analyzed
 
-If you wish to change these settings, go to [App Settings](/docs/ug/webadmin/web_options.html) and change the *Deep
+If you wish to change these settings, go to [App Settings](/docs/ug/webadmin/web_options) and change the *Deep
 Packet Inspection Limit* and *Deep Packet Inspection Content Limit*.
 Please be aware that in busy network analyzing packets can take time to
 complete.
@@ -156,7 +156,7 @@ You have two ways to use this tool to pull up raw packets.
    Japan.  
    Counter group = `Apps` and key = `smtp` will get email packets.
 2. **Packets matching expression** -\> [Trisul Filter
-   Format](/docs/ref/trisul_filter_format.html) is a flexible way of constructing filters. You can enter an expression to run more sophisticated packet queries.  
+   Format](/docs/ref/trisul_filter_format) is a flexible way of constructing filters. You can enter an expression to run more sophisticated packet queries.  
    Enter the string `{C51B48D4-7876-479E-B0D9-BD9EFF03CE2E}=p-0050,p-0051,p-0052,p-0053` to retrieve packets for ports 80,81,82, and 83.
 
 Upon running the tool, your browser will automatically download a PCAP
@@ -172,4 +172,4 @@ by day.
 
 ![](images/analyze_key.png)
 
- tool will take you to the [Long term traffic trends](/docs/ug/tools/analyze_item.html) tool with the start time and other selections automatically filled in.
+ tool will take you to the [Long term traffic trends](/docs/ug/tools/analyze_item) tool with the start time and other selections automatically filled in.

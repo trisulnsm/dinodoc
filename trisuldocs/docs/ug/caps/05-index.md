@@ -4,7 +4,7 @@ As Trisul meters network traffic, it continuously saves raw packets for
 future analysis.The ability to call upon raw packets, or full content, 
 is key to the practice of Network Security Monitoring. Raw packets is 
 not just useful for security applications but also for network 
-performance troubleshooting. For example, you can pull up ARP/Spanning Tree packets which can help you nail a layer 2 issue.[Packet Capture Basics](https://trisul.org/docs/ug/caps/fullcontent.html) describes the design of in greater detail.
+performance troubleshooting. For example, you can pull up ARP/Spanning Tree packets which can help you nail a layer 2 issue.[Packet Capture Basics](/docs/ug/caps/fullcontent) describes the design of in greater detail.
 
 ![](images/pcapmenu.png)
 
@@ -30,14 +30,14 @@ Jump to common network analysis tasks
 - Disable full packet captures
 - Allocate 100GB disk space for full packet captures
 - I dont want to store SYSLOG packets because I send them to splunk  
-  [View all tasks](https://trisul.org/docs/ug/caps/tasks.html)
+  [View all tasks](/docs/ug/caps/tasks)
 
 ### Tips
 
 - Narrow down your analysis time interval
 - Adjust the maximum time interval and volume limit caps if needed
 - Use the Payload Search Tool if you are looking for pattern
-- For recurring tasks – use the programmatic interface [Trisul Remote Protocol](https://trisul.org/docs/trp/)
+- For recurring tasks – use the programmatic interface [Trisul Remote Protocol](/docs/trp/)
 - Familiarize yourself with Wireshark
 - Use Unsniff Network Analyzer for reconstructing activity
 
@@ -45,4 +45,4 @@ Jump to common network analysis tasks
 
 Trisul Remote Protocol allows you to write simple scripts in Ruby to automate complex and repetitive tasks.
 
-- Your first [Hello Packets](https://trisul.org/docs/trp/trpgemsteps.html) example in Ruby
+- Your first [Hello Packets](/docs/trp/trpgemsteps) example in Ruby

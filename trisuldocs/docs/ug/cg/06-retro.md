@@ -107,11 +107,11 @@ Allows you to analyze your network traffic, flows, and alerts by asking
 questions in plain English. You can build you own FAQ questions as you
 continue to work with Trisul.
 
-[See the Retro FAQ section for more on this](retrofaq.html)
+[See the Retro FAQ section for more on this](retrofaq)
 
 ### Retro Tools
 
 Individual analysis tools you can use to drilldown into the selected
 time interval in dozens of ways.
 
-[See the Retro Tools section for more](retrotools.html)
+[See the Retro Tools section for more](retrotools)
