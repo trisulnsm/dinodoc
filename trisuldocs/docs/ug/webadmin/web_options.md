@@ -1,4 +1,4 @@
-# 12.10.Application Options
+# Application Options
 
 This page describes the web application settings.
 
@@ -12,7 +12,7 @@ To access this login as `admin` and select WebAdmin Manage -\> App Settings
 
 ![](images/webtrisul_options.png)
 
-## 12.10.1.UI
+## UI
 
 | Option                            | Default Value | Description                                                                                                                                                                                                                                                 |
 | --------------------------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -29,7 +29,7 @@ To access this login as `admin` and select WebAdmin Manage -\> App Settings
 | Disk usage alert percentage       | 90            | shows disk usage alert for the specified percentage                                                                                                                                                                                                         |
 | Hide context selection            | false         | Keep in unchecked if you dont want to hide context selection in login page                                                                                                                                                                                  |
 
-## 12.10.2.Netflow
+## Netflow
 
 | Option                           | Default Value | Description                                                             |
 | -------------------------------- | ------------- | ----------------------------------------------------------------------- |

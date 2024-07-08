@@ -29,7 +29,7 @@ The following steps are needed to forward email alerts.
   
   :::note navigation
   
-  Login as Admin → Manage → [Email Settings](https://trisul.org/docs/ug/reports/emailsettings.html)
+  Login as Admin → Manage → [Email Settings](/docs/ug/reports/emailsettings)
   
   :::
 
@@ -37,7 +37,7 @@ The following steps are needed to forward email alerts.
   
   :::note navigation
   
-  Login as Admin → Manage → [Email Settings](https://trisul.org/docs/ug/reports/emailsettings.html) → Select “Configure Email Alerts”
+  Login as Admin → Manage → [Email Settings](/docs/ug/reports/emailsettings) → Select “Configure Email Alerts”
   
   :::
 

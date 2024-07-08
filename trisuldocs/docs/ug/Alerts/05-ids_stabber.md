@@ -22,7 +22,7 @@ To access select Dashboards → Real Time Alerts
 
 ### Requirements
 
-The real time alert visualizer is a type of real time stabber. See the section of [Real Time Stabbers](https://trisul.org/docs/ug/cg/stabber.html) for more. Since it requires browsers with support for WebSockets and LocalStorage, using the latest version of Google Chrome is a safe bet.
+The real time alert visualizer is a type of real time stabber. See the section of [Real Time Stabbers](/docs/ug/cg/stabber) for more. Since it requires browsers with support for WebSockets and LocalStorage, using the latest version of Google Chrome is a safe bet.
 
 ## Using the real time alert stabber
 
@@ -89,4 +89,4 @@ clearing the name cache. They are rebuilt.
 
 Some useful links
 
-1. [How to connect Trisul to accept IDS alerts from Snort](https://trisul.org/docs/howto/setup_ids_alerts.html)
+1. [How to connect Trisul to accept IDS alerts from Snort](/docs/howto/setup_ids_alerts)

@@ -1,6 +1,6 @@
 # Detecting volumetric attacks
 
-Using the TCA [Threshold Crossing Alerts](https://trisul.org/docs/ug/alerts/tca.html) and the TB [Threshold Band Alerts](https://trisul.org/docs/ug/alerts/tband.html) it is easy to configure Trisul Network Analytics to detect volumetric attacks such as DDoS Distributed Denial of Service.
+Using the TCA [Threshold Crossing Alerts](/docs/ug/alerts/tca) and the TB [Threshold Band Alerts](/docs/ug/alerts/tband) it is easy to configure Trisul Network Analytics to detect volumetric attacks such as DDoS Distributed Denial of Service.
 
 Configuring DDoS detection in Trisul gives you the following features
 
@@ -68,7 +68,7 @@ DDos Alerts are dispatched like normal TCA alerts. They are seen on screen or ca
 
 ### Automated actions
 
-The alert message generated include the IP under attack and other details. You can use the [Alert Monitor Trisul LUA API](https://trisul.org/docs/lua/alert_monitor.html) to automate responses upon receiving the alert. Some of the responses can include.
+The alert message generated include the IP under attack and other details. You can use the [Alert Monitor Trisul LUA API](/docs/lua/BACK-END-SCRIPTS/Alert_monitor) to automate responses upon receiving the alert. Some of the responses can include.
 
 1. Use GoBGP to announce a custom route
 2. Trigger a RTBH to block the IP under attack or BGP FlowSpec to divert traffic to a scrubbing centre

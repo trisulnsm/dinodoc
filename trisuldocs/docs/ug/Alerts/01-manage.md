@@ -1,4 +1,4 @@
-# 9.1. Manage Alert Groups
+# Manage Alert Groups
 
 An “Alert Group” represents a type of alert. Trisul ships with 6 Alert groups
 
@@ -9,9 +9,9 @@ An “Alert Group” represents a type of alert. Trisul ships with 6 Alert group
 5. Threshold Band Alerts : When a meter value drifts outside a “trained” band of normal values
 6. System Alerts : From Trisul self monitoring, packet drops, memory pressure etc.
 
-You can create your own alert types using the [alertgroup LUA API](https://trisul.org/docs/lua/alert_group.html) Alert groups you create using the LUA API will also show up in Trisul and be managed along with the built in alert groups.
+You can create your own alert types using the [alertgroup LUA API](/docs/lua/FRONT-END-SCRIPTS/alert-groups) Alert groups you create using the LUA API will also show up in Trisul and be managed along with the built in alert groups.
 
-## 9.1.1 Viewing alert groups
+## Viewing alert groups
 
 To view all alert groups currently in the system.
 
@@ -36,12 +36,12 @@ For each alert type you can choose the Syslog policy by
 
 From the Alert Groups table → Select a Syslog Level → Select DISABLED to prevent sending to syslog
 
-## 9.1.2 Viewing and forwarding alerts
+## Viewing and forwarding alerts
 
 The alerts generated appear immediately on the user interface. You can also setup the following
 
 1. Sending alerts to "SYSLOG
-2. Send alerts via [email](https://trisul.org/docs/ug/alerts/email_settings.html)
-3. Send alerts via [SMS service](https://trisul.org/docs/ug/alerts/sms_settings.html)
+2. Send alerts via [email](/docs/ug/alerts/email_settings)
+3. Send alerts via [SMS service](/docs/ug/alerts/sms_settings)
 
 > The Email and SMS services work by reading the SYSLOG alerts. Ensure SYSLOG forwarding is enabled for each alert type.

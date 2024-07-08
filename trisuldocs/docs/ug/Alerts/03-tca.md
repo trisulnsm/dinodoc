@@ -140,7 +140,7 @@ This allows you to export and share displayed alerts
 
 This module auto updates itself as new TCAs are generated. You can add this module to any dashboard position.
 
-[How to add modules to dashboard](https://trisul.org/docs/ug/ui/dashmod_intro.html#modules)
+[How to add modules to dashboard](/docs/ug/ui/dashmod_intro#modules)
 
 ## Deleting TCAs
 
@@ -181,15 +181,15 @@ A commonly used TCA is on Netflow mode routers and interfaces. When a TCA is cre
 This allows the receiver of the email to immediately spot the source 
 of the alert without even logging on to Trisul Network Analytics.
 
-> Enabling inteface tracking allows for richer TCA alerts. See [Netflow Interface Trackers](https://trisul.org/docs/ug/netflow/interface_tracker.html)
+> Enabling inteface tracking allows for richer TCA alerts. See [Netflow Interface Trackers](/docs/ug/netflow/interface_tracker)
 
 ### Real time email
 
-Configure [Email Alerting](https://trisul.org/docs/ug/alerts/email_settings.html) for real time alerts.
+Configure [Email Alerting](/docs/ug/alerts/email_settings) for real time alerts.
 
 ### Periodic email digest
 
-You can [schedule](https://trisul.org/docs/ug/reports/schedreports.html#schedule_your_reports) a **Threshold Crossing Alert** report which will automatically email you a list of TCAs that fired on a hourly or daily basis.
+You can [schedule](/docs/ug/reports/schedreports#schedule_your_reports) a **Threshold Crossing Alert** report which will automatically email you a list of TCAs that fired on a hourly or daily basis.
 
 1. A single consolidated email is sent out containing details of all TCAs
 2. No email is sent out if there are no TCAs to report

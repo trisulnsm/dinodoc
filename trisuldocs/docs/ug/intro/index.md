@@ -27,7 +27,7 @@ Use the table of contents on the left to navigate the user guide. The following 
 
 | [Working with the UI](https://trisul.org/docs/ug/ui/index.html)         | How to navigate the UI ? Using the modules and dashboards                                                      |
 | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| [Traffic monitoring](https://trisul.org/docs/ug/cg/index.html)          | How to perform long term and real time traffic monitoring ? How to create<br/>your own counting policies ?      |
+| [Traffic monitoring](https://trisul.org/docs/ug/cg/index.html)          | How to perform long term and real time traffic monitoring ? How to create<br/>your own counting policies ?     |
 | [Raw packets and resources](https://trisul.org/docs/ug/caps/index.html) | How to use and customize the full packet capture storage ? How to setup policies to control what gets stored ? |
 | [Flow analysis](https://trisul.org/docs/ug/flow/index.html)             | How to use flow data ? How to track interesting flows and tag flows with text labels ?                         |
 | [Alerts](https://trisul.org/docs/ug/alerts/index.html)                  | How to view alerts ? How to setup threshold crossing and flow alerts ?                                         |

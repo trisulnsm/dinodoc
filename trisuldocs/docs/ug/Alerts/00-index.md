@@ -22,13 +22,13 @@ Threshold bands are created for selected metrics based on past
 historical activity. Metrics are continously compared with expected 
 values and alerts are generated if they fall out of bounds.
 
-- [Threshold Band Anomaly alerts](https://trisul.org/docs/ug/alerts/tband.html)
+- [Threshold Band Anomaly alerts](/docs/ug/alerts/tband)
 
 ### Threshold Crossing Alerts
 
 Notifies you when ever any traffic meter crosses pre-configured hi and lo water marks.
 
-- [Working with TCAs](https://trisul.org/docs/ug/alerts/tca.html)
+- [Working with TCAs](/docs/ug/alerts/tca)
 
 ### Flow Tracker Alerts
 
@@ -36,14 +36,14 @@ Alert on certain predefined flow activity. For example : Alert on
 flows that upload 20MB or more out of your network. There are many other
  types of flow activity that can be alerted upon as well.
 
-- [Flow Tracker Alerts](https://trisul.org/docs/ug/alerts/ft.html)
+- [Flow Tracker Alerts](/docs/ug/alerts/ft)
 
 ### Intrusion Alerts (IDS)
 
 Trisul interfaces with Snort/Suricata using Unix Sockets. The alerts are correlated with other traffic metrics.
 
-- [The web based Real Time Alert Console](https://trisul.org/docs/ug/alerts/ids_stabber.html)
-- [Connecting Trisul with Snort via a Unix Socket](https://trisul.org/docs/howto/setup_ids_alerts.html)
+- [The web based Real Time Alert Console](/docs/ug/alerts/ids_stabber)
+- [Connecting Trisul with Snort via a Unix Socket](/docs/howto/setup_ids_alerts)
 
 ### Blacklist alerts (Badfellas)
 
@@ -52,16 +52,16 @@ traffic and hold it up against millions of blacklisted entities. Any
 traffic that trips one of the blacklists, be it spam, phishing attacks, 
 botnet C&C, is flagged.
 
-- [Installing the BadFellas plugin](https://trisul.org/docs/ug/install/badfellas.html)
-- [Badfellas Alerts](https://trisul.org/docs/ug/alerts/mw.html)
+- [Installing the BadFellas plugin](/docs/ug/install/badfellas-plugin)
+- [Badfellas Alerts](/docs/ug/alerts/mw)
 
 ## Viewing and forwarding alerts
 
 The alerts generated appear immediately on the user interface. You can also setup the following
 
-1. Sending alerts to [SYSLOG](https://trisul.org/docs/ref/trisulconfig.html#syslog) – from where you can send it to your other logging / alerting tools
-2. Send alerts via [email](https://trisul.org/docs/ug/alerts/email_settings.html)
-3. Send alerts via [SMS service](https://trisul.org/docs/ug/alerts/sms_settings.html)
-4. Send alerts to [Microsoft Teams](https://trisul.org/docs/ug/alerts/msteams.html)
+1. Sending alerts to [SYSLOG](/docs/ug/Alerts/manage) – from where you can send it to your other logging / alerting tools
+2. Send alerts via [email](/docs/ug/alerts/email_settings)
+3. Send alerts via [SMS service](/docs/ug/alerts/sms_settings)
+4. Send alerts to [Microsoft Teams](/docs/ug/alerts/msteams)
 
-The Email and SMS services work by reading the SYSLOG alerts. So you need [ensure SYSLOG alerting is enabled](https://trisul.org/docs/ref/trisulconfig.html#syslog) in trisulConfig.xml. It is enabled by default.
+The Email and SMS services work by reading the SYSLOG alerts. So you need [ensure SYSLOG alerting is enabled](/docs/ug/Alerts/manage) in trisulConfig.xml. It is enabled by default.

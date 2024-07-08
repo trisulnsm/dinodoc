@@ -28,7 +28,7 @@ To activate the Webhook and send alerts to Teams. Do the following steps
 
 :::note navigation
 
-login as *admin* Then go to [App Settings](https://trisul.org/docs/ug/webadmin/web_options.html) > API >
+login as *admin* Then go to [App Settings](/docs/ug/webadmin/web_options) > API >
 
 :::
 
