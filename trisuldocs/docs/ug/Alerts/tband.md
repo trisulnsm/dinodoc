@@ -1,3 +1,10 @@
+---
+sidebar_position: 9
+
+sidebar_label: Threshold Band Anomaly Alerts
+
+---
+
 # Threshold Band Anomaly alerts
 
 **NEW**

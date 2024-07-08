@@ -1,3 +1,10 @@
+---
+sidebar_position: 1
+
+sidebar_label: Manage Alert Groups
+
+---
+
 # Manage Alert Groups
 
 An “Alert Group” represents a type of alert. Trisul ships with 6 Alert groups

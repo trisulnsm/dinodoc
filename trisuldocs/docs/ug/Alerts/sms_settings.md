@@ -1,3 +1,11 @@
+---
+
+sidebar_position: 8
+
+sidebar_label: SMS Alert Delivery
+
+---
+
 # SMS alert delivery
 
 If you have access to an SMS Message Gateway you can dispatch alerts via SMS to your Mobile phone.
