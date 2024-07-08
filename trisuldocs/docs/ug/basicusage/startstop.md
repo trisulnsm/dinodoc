@@ -111,7 +111,7 @@ trisulctl_hub  stop domain
 
 ## Start and stop contexts
 
-A [context is an independent instance](/docs/ug/domain/index#contexts) of Trisul. Initially you
+A [context is an independent instance](/docs/ug/domain#contexts) of Trisul. Initially you
 only have a single context named `default` you may create additional
 contexts to create a multi-tenant setup. You can start/stop contexts on
 each probe or hub independently.
