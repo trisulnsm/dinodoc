@@ -38,7 +38,7 @@ sudo apt-get install trisul-probe
 <Highlight color="#1877F2">RUN ON PROBE</Highlight>
 
 :::note **First time?** Switch domain0 to distributed network TCP mode. Make
-sure you have followed the steps in [Switching to a distributed domain](change_domain.html#switching_to_a_distributed_domain) from the default single machine domain.
+sure you have followed the steps in [Switching to a distributed domain](change_domain#switching_to_a_distributed_domain) from the default single machine domain.
 
 :::
 
@@ -140,7 +140,7 @@ Layer                  ProbeID
 2                      probeWEST           
 ```
 
-See the <a href='/docs/ref/trisulhubconfig.html#probes' target="_blank">Probe to Context Layer mapping reference </a>
+See the [Probe to Context Layer mapping reference ](/docs/ref/trisulHub-config#probes)
 
 ### 7.Run change_endpoints for hub context (for first probe only)
 

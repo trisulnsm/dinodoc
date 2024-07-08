@@ -7,7 +7,7 @@ form the centre piece of Trisul 6.0 distributed environment.
 2. **trisulctl_probe** — manage a domain from a probe
 
 This section explains the various operations you can perform with these
-tools. For more details ; see [trisulctl_hub Reference](/docs/ref/trisulctl_hub.html) and [trisulctl_probe Reference](/docs/ref/trisulctl_probe.html)
+tools. For more details : see [trisulctlhub Reference](/docs/ref/trisul_hub) and [trisulctl_probe Reference](/docs/ref/trisul_probe)
 
 ## Frequently used commands
 
@@ -142,7 +142,7 @@ The trisulctl_probe/hub tools have a powerful CLI. Some features are
 There is a very nifty set of bash aliases called `trisbashrc` on the
 `/usr/local/share/trisul-probe` and `trisul-hub` directories. To add
 these macros to your shell environment. See [trisbashrc
-Reference](/docs/ref/trisbashrc.html@) for a complete list of useful
+Reference](/docs/ref/trisbashrc) for a complete list of useful
 shortcuts.
 
 ## Start and stop domain
@@ -273,11 +273,11 @@ The `trisulctl_hub` is the CLI tool for domain hub management. Think of
 trisulctl_hub as a administrator tool.
 
 For a complete list of commands check out the [trisulctl_hub
-Reference](/docs/ref/trisulctl_hub.html)
+Reference](/docs/ref/trisul_hub)
 
 ## trisulctl_probe
 
 The `trisulctl_probe` is the CLI tool for manage probes.
 
 For a complete list of commands check out the [trisulctl_probe
-Reference](/docs/ref/trisulctl_probe.html)
+Reference](/docs/ref/trisul_probe)

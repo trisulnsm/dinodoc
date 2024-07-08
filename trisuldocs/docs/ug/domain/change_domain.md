@@ -150,38 +150,32 @@ The new domain files have been placed at :
 Next you need to install the domain certificate on all probes and hub
 nodes.
 
-\* share the `/usr/local/share/trisul-hub/domain0.cert` offline with all
-probe nodes
+- share the `/usr/local/share/trisul-hub/domain0.cert` offline with all
+  probe nodes
 
-\* install new domain cert on hub0
+- install new domain cert on hub0
 
-<pre class="language-bash">
-
+```
 sudo trisulctl_hub install domain
 /usr/local/share/trisul-hub/domain0.cert
-
-</pre>
+```
 
 say YES if it asks you if you want to “Update the existing domain0
 certificate”
 
-\* install the new domain cert on each probe. The domain0.cert in this
-example is placed in the *mycerts* directory
+- install the new domain cert on each probe. The domain0.cert in this
+  example is placed in the *mycerts* directory
 
-<pre class="language-bash">
-
+```
 sudo trisulctl_probe install domain /home/unpl/mycerts/domain0.cert
+```
 
-</pre>
+- then restart domain on all nodes
 
-\* then restart domain on all nodes
-
-<pre class="language-bash">
-
+```
 sudo trisulctl_probe restart domain  
 sudo trisulctl_hub restart domain
-
-</pre>
+```
 
 Use `trisulctl` commands `list nodes` and `info context` to check if all
 nodes have joined the new domain.All the distributed nodes must get

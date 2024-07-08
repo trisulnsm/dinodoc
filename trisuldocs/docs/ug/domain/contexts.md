@@ -1,6 +1,6 @@
 # Working with contexts
 
-A Trisul [*context*](/docs/ug/domain/index.html#contexts) is a separate
+A Trisul [*context*](/docs/ug/domain/index#contexts) is a separate
 instance of Trisul with its own isolated database, configuration, and
 processes. The primary use cases for contexts are :
 
@@ -16,7 +16,7 @@ them.
 
 #### Other links
 
-[CLI tools for domain management](trisulctl.html) describes the `trisulctl_probe` and `trisulctl_hub` tools. Either tool can be used to manage contexts. In a distributed Trisul domain with multiple hubs and probes, ensure that all nodes are up before creating a context.
+[CLI tools for domain management](trisulctl) describes the `trisulctl_probe` and `trisulctl_hub` tools. Either tool can be used to manage contexts. In a distributed Trisul domain with multiple hubs and probes, ensure that all nodes are up before creating a context.
 
 ## Creating a new context
 
@@ -117,7 +117,7 @@ To do that
 - Select the contexts allowed for this user using *Allowed Contexts*
   option.
 
-For more : [Web Admin Manage Users](/docs/ug/webadmin/manageusers.html)
+For more : [Web Admin Manage Users](/docs/ug/webadmin/manageusers)
 
 ### View reports from a context
 
