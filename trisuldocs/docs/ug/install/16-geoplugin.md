@@ -35,7 +35,7 @@ In order to work accurately, this plugin needs an upto-date Geo location databas
 
 To automatically download databases you need to sign up with [Maxmind](https://www.maxmind.com/) for an API Key. Then put that key into the feed configuration file shown below.
 
-Use [cfgedit](https://trisul.org/docs/ref/plugin_configuration.html) to edit the config settings. Select the *Trisul Geo* option in the menu.
+Use [cfgedit](/docs/ref/plugin_configuration ) to edit the config settings. Select the *Trisul Geo* option in the menu.
 
 Once installed Trisul will automatically keep the databases updated at 2AM everyday. See the Frequency parameter in the config file.
 
@@ -60,7 +60,7 @@ The main parameters you may be interested to edit are :
 
 ## Editing the config file
 
-The Geo.xml contains config parameters as well as global ‘feed’ items. The config items shown in the above table are updated in the usual manner. Using the [cfg.edit tool on the probe](https://trisul.org/docs/ref/plugin_configuration.html#plugin_config_editor)
+The Geo.xml contains config parameters as well as global ‘feed’ items. The config items shown in the above table are updated in the usual manner. Using the [cfg.edit tool on the probe](/docs/ref/plugin_configuration )
 
 The feeds are updated on the hub node as shown below.
 

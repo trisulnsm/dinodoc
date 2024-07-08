@@ -8,7 +8,7 @@ Trisul is a distributed network analytics system that can be installed on off th
 
 Trisul Network Analytics uses the normal APT (Ubuntu) and YUM (Redhat) tools for releasing packages. There are two custom repositories
 
-- CentOS/RHEL : https://trisul.org/download/trisulfull.repo
+- CentOS/RHEL : https://trisul.org/download/trisulfull.rhttps://www.trisul.org/download/trisulfull.repo/epo
 - Ubuntu : https://trisul.org/repos/apt/debian
 
 The Trisul Network Analytics system consists of 3 Core and 3 Optional Plugin packages.
@@ -109,8 +109,8 @@ Some of the things you may want to change are :
 
 | [TrisulMode](https://trisul.org/docs/ref/trisulconfig.html#app) | Default is *TAP*, if you are feeding Netflow change this to *NETFLOW_TAP*        |
 | --------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| [Ring](https://trisul.org/docs/ref/trisulconfig.html#ring)      | Default is enabled, disable if you do not want to store packets                  |
-| [User](https://trisul.org/docs/ref/trisulconfig.html#app)       | Default is *trisul.trisul*. Change if you want trisul to run as an existing user |
+| [Ring](/docs/ref/trisulProbe-config#ring )                      | Default is enabled, disable if you do not want to store packets                  |
+| [User](/docs/ref/trisulProbe-config#app )                       | Default is *trisul.trisul*. Change if you want trisul to run as an existing user |
 
 ### Tweaking application parameters from the web interface
 
@@ -130,4 +130,4 @@ The default installation and the free license allows you to put all componments 
 
 ## Next. Starting and stopping Trisul
 
-The next section you want to read is [Starting and Stopping Trisul](https://trisul.org/docs/ug/install/startstop.html)
+The next section you want to read is [Starting and Stopping Trisul](/docs/ug/install/stopstart )

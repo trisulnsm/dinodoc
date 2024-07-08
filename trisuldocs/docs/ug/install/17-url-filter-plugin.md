@@ -30,7 +30,7 @@ We got the above screenshot by
 
 1. Going to Retro Analysis
 2. Selecting 11 hours of traffic
-3. Applying the [Counter Group Activity](https://trisul.org/docs/ug/cg/retrotools.html#counter_group_activity) tool for the URLCategory group
+3. Applying the [Counter Group Activity](/docs/ug/cg/retrotools ) tool for the URLCategory group
 
 You might want to “Cross Drill” if you wish to see which IPs surfed pron etc
 

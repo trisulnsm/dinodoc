@@ -20,7 +20,7 @@ The following diagram shows how you can configure a SPAN port and feed packets
 
 **SPAN example** ports `ge/0/0/1` and `ge/0/0/12` traffic mirrored to `ge/0/0/6` which is then connected to Trisul-Probe
 
-## [2.13.2 Using Network Taps](https://trisul.org/docs/ug/install/input_packets.html#using_network_taps)
+## Using Network Taps
 
 SPAN ports quickly become unweildy as network speeds increase. Network taps are available as Copper and Optical modules that are the preferred choice for high speed networks.
 
@@ -88,8 +88,6 @@ Copy`yum install  bridge-utils`
 To create a network bridge, create a file in the `/etc/sysconfig/network-scripts/` directory called `ifcfg-br0`  
 sample `/etc/sysconfig/network-scripts/ifcfg-br0`
 
- 
-
 ```bash
 DEVICE=br0
 TYPE=Bridge
@@ -103,8 +101,6 @@ DELAY=0
 ```
 
 To complete the bridge another interface is created, or an existing interface is modified, and pointed to the bridge interface sample `/etc/sysconfig/network-scripts/ifcfg-eth0`
-
- 
 
 ```bash
 DEVICE=eth0

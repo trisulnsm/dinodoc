@@ -51,7 +51,7 @@ The most common scenario is to `tail -f` the Trisul Probe logs. You can use th
   tailf.ns
   ```
 
-Read about [trisbashrc](https://trisul.org/docs/ref/trisbashrc.html) aliases
+Read about [trisbashrc](/docs/ref/trisbashrc) aliases
 
 Similarly for the Hub Node
 

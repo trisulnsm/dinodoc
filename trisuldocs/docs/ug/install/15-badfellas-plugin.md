@@ -208,7 +208,7 @@ Check all URLs seen
 
 In the URL Top-1million lists URLs below this as considered as Fat Tail
 
-Locate the [rules.xml file](https://trisul.org/docs/ug/install/badfellas.html#feeds)
+Locate the [rules.xml file](/docs/ug/install/badfellas-plugin#feeds )
 
 ```xml
 <TrisulPluginConfiguration>
@@ -223,4 +223,4 @@ Locate the [rules.xml file](https://trisul.org/docs/ug/install/badfellas.html#f
 
 ## Also read
 
-See the [Badfellas Malware alerts section](https://trisul.org/docs/ug/alerts/mw.html) in the User Guide
+See the [Badfellas Malware alerts section](/docs/ug/Alerts/mw ) in the User Guide
