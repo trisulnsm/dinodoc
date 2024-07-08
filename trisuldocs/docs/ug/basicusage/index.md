@@ -25,7 +25,7 @@ reasons are
 - incorrect network adapter : By default `trisul-probe` listens for
   traffic on `eth0` If you do not have an `eth0` on the box the you need
   to switch the network adapter to the correct one using the steps in
-  [Configuring packet capture adapters](/docs/ug/webadmin/profiles.html)
+  [Configuring packet capture adapters](/docs/ug/webadmin/profiles)
 
 ##### Login as a normal user
 

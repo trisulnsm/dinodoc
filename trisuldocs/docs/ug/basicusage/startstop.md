@@ -2,9 +2,9 @@
 
 The startup process involves.
 
-1. **start the [domain](#start_and_stop_the_domain_process)** — The control plane for Trisul probes and hubs
-2. **start the [context](#start_and_stop_contexts)** — Probes and hubs
-3. **start the [webserver](#start_and_stop_webtrisul)** — The user interface
+1. start the **domain**— The control plane for Trisul probes and hubs
+2. start the **context** — Probes and hubs
+3. start the **webserver** — The user interface
 
 ### Example to start all processes
 
@@ -35,7 +35,7 @@ This is done automatically only once at system startup time.
 
 :::note **CLI tools trisulctl_hub and trisulctl_probe**  
 Domain tasks cannot be performed by the Web Interface. Use the CLI app
-[trisulctl_probe](/docs/ref/trisulctl_probe.html) on the probes and [trisulctl_hub](/docs/ref/trisulctl_hub.html) on the hubs.
+[trisulctl_probe](/docs/ref/trisul_probe) on the probes and [trisulctl_hub](/docs/ref/trisul_hub) on the hubs.
 
 :::
 
@@ -111,7 +111,7 @@ trisulctl_hub  stop domain
 
 ## Start and stop contexts
 
-A [context is an independent instance](/docs/ug/domain/index.html#contexts) of Trisul. Initially you
+A [context is an independent instance](/docs/ug/domain/index#contexts) of Trisul. Initially you
 only have a single context named `default` you may create additional
 contexts to create a multi-tenant setup. You can start/stop contexts on
 each probe or hub independently.
@@ -230,7 +230,7 @@ To check errors with systemctl use `journalctl -u webtrisuld`
 
 The service name for the SSL webserver is *webtrisulssld*
 
-See : [How to switch to SSL Web Server](/docs/howto/sslforwebtr.html)
+See : [How to switch to SSL Web Server](/docs/howto/sslforwebtr)
 
 ```language-bash
 sudo systemctl start webtrisulssld

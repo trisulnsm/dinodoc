@@ -3,12 +3,10 @@
 A domain is the top level group to which probes and hubs are members.
 This section describes the concepts and operations on the domain.
 
-> The central concept to a Trisul Network Analytics domain is the
-> [CURVE](http://curvezmq.org/) “certificate” key pair. The nodes that
+> The central concept to a Trisul Network Analytics domain is the [CURVE](http://curvezmq.org/) “certificate” key pair. The nodes that
 > connect to the domain must authenticate using this certificate. The
 > steps in this section therefore mostly deal with creating this
 > certificate and installing them.
-
 
 ## Domain Certificate
 
@@ -89,12 +87,13 @@ update the certificate do :
 
 1. Type `trisulctl_probe`
 2. Stop the domain `stop domain domain0`
-3. Install the new certificate
-   `install domain /home/mydir/domain0.cert`
+3. Install the new certificate `install domain /home/mydir/domain0.cert`
 4. Start the domain
 
 Follow the same process to update the new domain certificate extra hub
 nodes.
+
+## Probe Authentication
 
 ## Probe Authentication
 

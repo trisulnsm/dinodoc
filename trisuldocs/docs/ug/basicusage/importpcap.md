@@ -22,6 +22,6 @@ This command does the following
 ### More links
 
 - For Step-by-step instructions see [Import PCAP
-  dumps](/docs/ug/caps/pcap_import.html)
+  dumps](/docs/ug/caps/pcap_import)
 - To import PCAP with IDS context merged in see [Import PCAP with
-  IDS](snort.html)
+  IDS](snort)
