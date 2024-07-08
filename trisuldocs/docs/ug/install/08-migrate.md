@@ -65,22 +65,18 @@ The following will not be migrated automatically
   /usr/local/etc/trisul/trisulConfig_erskkn.xml
   /usr/local/etc/trisul/trisulConfig.xml.prev
   ```
-  
-  
-  
+
   This means you have the `default` context and the context named `erskkn`
-  
-  ```bash
-  # The usage of the migration script is
-  Usage : mig_5_6.sh [contextname]
-  # to migrate context erskkn type
-  ./mig_5_6.sh erskkn
-  ```
-  
-  
-  
+
+```bash
+# The usage of the migration script is
+Usage : mig_5_6.sh [contextname]
+# to migrate context erskkn type
+./mig_5_6.sh erskkn
+```
+
   **DONE** Your 6.0 contexts are now ready. You can login as admin/admin and start the probes.
-  
+
   You can run the next step in the background.
 
 - ### Migrate the flows
@@ -92,8 +88,6 @@ The following will not be migrated automatically
   ```bash
   /usr/local/bin/tool_fswmigrate`
   ```
-  
-  
 
 - ### WebTrisul : Recreate the users
   
