@@ -18,9 +18,9 @@ import { Icon } from '@iconify/react';
 
 <Icon icon="mdi:github" height="25" />  [TRP sample scripts](https://github.com/trisulnsm/trisul-scripts/tree/master/trp )
 
-<Icon icon="logos:chrome" height="25" /> [Programming model](https://github.com/trisulnsm/trisul-scripts/tree/master/trp) 
+<Icon icon="logos:chrome" height="25" /> [Programming model](./progmodel ) 
 
-<Icon icon="logos:chrome" height="25" /> [TrisulRP Ruby Gem RDOCs (External)](https://github.com/trisulnsm/trisul-scripts/tree/master/trp)
+<Icon icon="logos:chrome" height="25" /> [TrisulRP Ruby Gem RDOCs (External)](../ref/trpproto )
 
 ## Other links
 
@@ -34,16 +34,14 @@ import { Icon } from '@iconify/react';
 
 Beginner ? Here are some ready to run scripts from our open [Github repo](https://github.com/trisulnsm/trisul-scripts) to get you started
 
-
-
-##### [print_resources.rb](https://trisul.org/docs/trp/samples/resources_step_by_step.html)
+##### [print_resources.rb](./samples/resources_step_by_step)
 
 Print HTTP URLs seen by Trisul over a recent time interval. This is a step-by-step tutorial that also explains how to work with IPs and hostnames.
 
-##### [flows_for_ip.rb](https://trisul.org/docs/trp/samples/flows_for_ip.html)
+##### [flows_for_ip.rb](./samples/flows_for_ip)
 
 View top 100 flows for an IP in a time window.
 
-##### [pcap_simple.rb](https://trisul.org/docs/trp/samples/pcap_simple.html)
+##### [pcap_simple.rb](./samples/pcap_simple)
 
 Get all SMTP and DNS packets in last one hour as a PCAP
