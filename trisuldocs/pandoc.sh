@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pandoc --version
+#pandoc --version
 
 for i
 do

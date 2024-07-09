@@ -30,4 +30,20 @@ import { Icon } from '@iconify/react';
 
 <Icon icon="logos:chrome" height="25" /> [ The trp.proto file - if you want to write clients in any language supported by protocol buffers](https://trisul.org/docs/ref/trpproto.html)
 
-| demo | 
+## GITHUB CODE SAMPLES
+
+Beginner ? Here are some ready to run scripts from our open [Github repo](https://github.com/trisulnsm/trisul-scripts) to get you started
+
+
+
+##### [print_resources.rb](https://trisul.org/docs/trp/samples/resources_step_by_step.html)
+
+Print HTTP URLs seen by Trisul over a recent time interval. This is a step-by-step tutorial that also explains how to work with IPs and hostnames.
+
+##### [flows_for_ip.rb](https://trisul.org/docs/trp/samples/flows_for_ip.html)
+
+View top 100 flows for an IP in a time window.
+
+##### [pcap_simple.rb](https://trisul.org/docs/trp/samples/pcap_simple.html)
+
+Get all SMTP and DNS packets in last one hour as a PCAP
