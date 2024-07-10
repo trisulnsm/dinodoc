@@ -1,3 +1,10 @@
+---
+sidebar_position: 03
+
+sidebar_label: Import PCAP Dumps
+
+---
+
 # Import PCAP dumps
 
 Trisul is capable of importing giant packet capture (PCAP) dumpfiles.

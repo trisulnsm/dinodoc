@@ -1,3 +1,11 @@
+---
+
+sidebar_position: 04
+
+sidebar_label: Relocate Trisul Database
+
+---
+
 # Relocate Trisul database
 
 There are two major places where Trisul per-context data is stored.

@@ -1,20 +1,27 @@
+---
+sidebar_position: 12
+
+sidebar_label: Tasks
+
+---
+
 # Tasks
 
 ### How can I view real time traffic ?
 
-<span class="command hint">Select Dashboards -\> Real Time Network
-Traffic</span>
+Select Dashboards -\> Real Time Network
+Traffic
 
 ### How can I view the top hosts by usage ?
 
-<span class="command hint">Select Dashboards -\> Hosts</span>
+Select Dashboards -\> Hosts
 
 ### How can I view the top hosts by usage to within 3 seconds ?
 
 For real time traffic stats you need to use the Stabber feature.
 
-<span class="command hint">Select Dashboards -\> Real Time Network
-Traffic</span>
+Select Dashboards -\> Real Time Network
+Traffic
 
 1. Click on the tag next to any host
 2. Select *Real time stab: Toppers*
@@ -23,8 +30,8 @@ Traffic</span>
 
 You need to use the *Real Time Stab Toppers* tool.
 
-<span class="command hint">Select Tools. Then click on Real Time Stab
-Toppers</span>
+Select Tools. Then click on Real Time Stab
+Toppers
 
 1. Select the Counter Group, in this case **MAC**
 2. Select the meter, in this case **TRANSMIT**
@@ -32,7 +39,7 @@ Toppers</span>
 
 ### Investigate past activity
 
-<span class="command hint">Select *Retro* from menu</span>
+Select *Retro* from menu
 
 Now you can apply various [Retro Analysis
 Tools](/docs/ug/cg/retrotools) to investigate
@@ -45,7 +52,7 @@ Tools](/docs/ug/cg/retrotools) to investigate
 
 ### Find out which flows caused a traffic pattern
 
-<span class="command hint">Select *Retro* from the menu</span>
+Select *Retro* from the menu
 
 - Select the time interval of interest
 - Find [Flow Tracker](/docs/ug/cg/retrotools#track_flows) tool in
@@ -74,7 +81,7 @@ See [Real Time Stabber](/docs/ug/cg/stabber#flow_stabber)
 ### Store only 1MB worth of packets of each flow
 
 - Open [Trisul
-  Configuration](/docs/ref/trisulProbe-config) file as root
+  Configuration](/docs/ref/trisulconfig) file as root
 
 - Edit `<Rule mode="FLOWCAP1M"></Rule>`
 
@@ -83,7 +90,7 @@ See [Real Time Stabber](/docs/ug/cg/stabber#flow_stabber)
 
 ### How can I draw long term bandwidth usage charts ?
 
-<span class="command hint">Select Tools -\> Long Term Traffic</span>
+Select Tools -\> Long Term Traffic
 
 ***Example***  
 Draw long term bandwidth usage chart for port-80(http)

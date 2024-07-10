@@ -1,3 +1,10 @@
+---
+sidebar_position: 06
+
+sidebar_label: Import PCAP with IDS
+
+---
+
 # Import PCAP with IDS
 
 Runs a PCAP dump and indexes Trisul’s statistics, flow, and packet data

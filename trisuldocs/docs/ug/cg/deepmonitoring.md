@@ -1,3 +1,9 @@
+---
+sidebar_position: 11
+
+sidebar_label: Deep Monitoring of IP Assets
+
+---
 # Deep Monitoring of IP assets
 
 A common use case is to enabled enhanced monitoring of specific assets.

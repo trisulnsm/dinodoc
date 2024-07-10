@@ -1,3 +1,11 @@
+---
+
+sidebar_position: 01
+
+sidebar_label: Traffic Metering Concepts
+
+---
+
 # Traffic metering concepts
 
 This section attempts to briefly explain the basic concepts of counter

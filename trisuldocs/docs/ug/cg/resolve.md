@@ -1,3 +1,11 @@
+---
+
+sidebar_position: 04
+
+sidebar_label: Name Resolution
+
+---
+
 # Name resolution
 
 You can assign a user friendly name for any type of item.

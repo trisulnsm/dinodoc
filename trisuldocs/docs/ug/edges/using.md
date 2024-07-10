@@ -1,8 +1,7 @@
 ---
-
 sidebar_position: 2
 
-sidebar_label: Working
+sidebar_label: Working with Edges
 
 ---
 
@@ -19,7 +18,7 @@ All exploration is done in a tool called the “Edge Graph Explorer”.
 
 ## Enable Feature
 
-New installations of Trisul will already have *Edges* enabled. If you are upgrading an older install, ensure that you add the following line in [trisulProbeConfig.xml](https://trisul.org/docs/ref/trisulconfig.html#edges)
+New installations of Trisul will already have *Edges* enabled. If you are upgrading an older install, ensure that you add the following line in [trisulProbeConfig.xml](/docs/ref/trisulconfig#edges)
 
 ```xml
 <Edges> <Enable>True</Enable> </Edges>

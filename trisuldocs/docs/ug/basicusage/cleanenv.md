@@ -1,3 +1,11 @@
+---
+
+sidebar_position: 03
+
+sidebar_label: Cleaning the Database
+
+---
+
 # Cleaning the database
 
 Sometimes you need to delete all the data and start over.

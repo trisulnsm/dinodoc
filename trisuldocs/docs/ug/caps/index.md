@@ -1,3 +1,10 @@
+---
+
+sidebar_position: 0
+
+sidebar_label: Packet Captures
+
+---
 # Full packet capture
 
 As Trisul meters network traffic, it continuously saves raw packets for 

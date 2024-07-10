@@ -16,7 +16,7 @@ An “Alert Group” represents a type of alert. Trisul ships with 6 Alert group
 5. Threshold Band Alerts : When a meter value drifts outside a “trained” band of normal values
 6. System Alerts : From Trisul self monitoring, packet drops, memory pressure etc.
 
-You can create your own alert types using the [alertgroup LUA API](/docs/lua/FRONT-END-SCRIPTS/alert-groups) Alert groups you create using the LUA API will also show up in Trisul and be managed along with the built in alert groups.
+You can create your own alert types using the [alertgroup LUA API](/docs/lua/FRONT-END-SCRIPTS/alert_group) Alert groups you create using the LUA API will also show up in Trisul and be managed along with the built in alert groups.
 
 ## Viewing alert groups
 

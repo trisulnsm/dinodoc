@@ -1,3 +1,10 @@
+---
+
+sidebar_position: 01
+
+sidebar_label: Basic Usage
+
+---
 # First login
 
 Congrats ! You now have a Trisul login screen and may be wondering where

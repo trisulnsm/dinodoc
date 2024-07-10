@@ -1,3 +1,10 @@
+---
+sidebar_position: 02
+
+sidebar_label: Starting and Stopping Trisul
+
+---
+
 # Starting and stopping Trisul
 
 The startup process involves.

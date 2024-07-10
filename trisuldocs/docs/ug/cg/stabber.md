@@ -1,3 +1,10 @@
+---
+sidebar_position: 09
+
+sidebar_label: Real Time Stabbers
+
+---
+
 # Real Time Stabbers
 
 Real time stabbers allow you to monitor various types of network

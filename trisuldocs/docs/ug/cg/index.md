@@ -1,3 +1,11 @@
+---
+
+sidebar_position: 00
+
+sidebar_label: Traffic Monitoring
+
+---
+
 # Traffic Monitoring with Trisul
 
 Traffic monitoring is the central task of Trisul. Out of the box, Trisul
@@ -22,7 +30,7 @@ data.
 
 ##### Packet capture
 
-The default mode. Trisul does all its analytics by directly capturing packets from the network. Learn how to [capture packets](/docs/ug/install/setup-pkt-capture) for Trisul NSM.
+The default mode. Trisul does all its analytics by directly capturing packets from the network. Learn how to [capture packets](/docs/ug/install/input_packets) for Trisul NSM.
 
 ##### Netflow
 

@@ -1,3 +1,10 @@
+---
+sidebar_position: 3
+
+sidebar_label: Threshold Crossing Alerts (TCAs)
+
+---
+
 # Threshold crossing alerts (TCAs)
 
 You can assign thresholds to any meter value. Trisul continuously 

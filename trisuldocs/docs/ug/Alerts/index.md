@@ -52,7 +52,7 @@ traffic and hold it up against millions of blacklisted entities. Any
 traffic that trips one of the blacklists, be it spam, phishing attacks, 
 botnet C&C, is flagged.
 
-- [Installing the BadFellas plugin](/docs/ug/install/badfellas-plugin)
+- [Installing the BadFellas plugin](/docs/ug/install/badfellas)
 - [Badfellas Alerts](/docs/ug/alerts/mw)
 
 ## Viewing and forwarding alerts

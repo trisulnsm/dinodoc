@@ -1,3 +1,11 @@
+---
+
+sidebar_position: 05
+
+sidebar_label: PCAP Drilldown Methods
+
+---
+
 # PCAP drilldown methods
 
 This document describes the different ways you can drilldown to raw 

@@ -1,3 +1,9 @@
+---
+sidebar_position: 02
+
+sidebar_label: Custom Counter Groups
+
+---
 # Custom counter groups
 
 Trisul ships with 40-50 counter groups. Often users want some special

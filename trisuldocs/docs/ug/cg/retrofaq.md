@@ -1,3 +1,9 @@
+---
+sidebar_position: 08
+
+sidebar_label: Retro Q & A
+
+---
 # Retro Q & A
 
 Complex network analysis in plain English.
