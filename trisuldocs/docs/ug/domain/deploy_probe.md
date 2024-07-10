@@ -1,3 +1,8 @@
+---
+sidebar_position: 03
+sidebar_label: Deploy a New Probe
+---
+
 import Highlight from '/src/components/Highlighter/Highlight';
 
 # Deploy a new probe
@@ -27,7 +32,7 @@ probe node using the CLI tool `trisulctl_probe` or
 <Highlight color="#1877F2">RUN ON PROBE</Highlight>
 
 On the new machine, install the `trisul-probe` package as explained in
-the [Downloads page](/download)
+the [Downloads page](https://www.trisul.org/download/)
 
 ```language-bash
 sudo apt-get install trisul-probe
@@ -140,7 +145,7 @@ Layer                  ProbeID
 2                      probeWEST           
 ```
 
-See the [Probe to Context Layer mapping reference ](/docs/ref/trisulHub-config#probes)
+See the [Probe to Context Layer mapping reference ](/docs/ref/trsulhubconfig#probes)
 
 ### 7.Run change_endpoints for hub context (for first probe only)
 

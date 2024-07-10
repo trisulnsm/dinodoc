@@ -1,3 +1,11 @@
+---
+
+sidebar_position: 07
+
+sidebar_label: Complete IP Flow Logger
+
+---
+
 # Complete IP Flow logger
 
 Trisul can be put into a mode where it does full flow logging even at
@@ -57,7 +65,7 @@ Use a new flow compressor specifically designed for IPDR flow log. This
 high performance compressor can store a flow with NAT in as little as 14
 bytes.
 
-Open the [trisulHubConfig.xml](/docs/ref/trisulhubconfig.html#advanced_db_parameters) file and specify the following in Advanced DB Parameters.
+Open the [trisulHubConfig.xml](/docs/ref/trsulhubconfig#advanced_db_parameters) file and specify the following in Advanced DB Parameters.
 
 - Use a new compressor `lz4-ipv4-call-log-with-nat`
 - Disable microsecond timestamps
@@ -103,7 +111,7 @@ be performing the queries. This login has no other privileges other than
 do perform the query required for complaince. The powerful `trisul_ipdr`
 service described above ensures the data is provided as a download or
 pushed directly to a Secure FTP (SFTP) server. Sometimes we have noticed
-agent requests resulting in several GB of output which cannot be downloaded over a browser. See [Configure IPDR Settings](/docs/ug/webadmin/ipdr-settings.html) on how to setup the SFTP server.
+agent requests resulting in several GB of output which cannot be downloaded over a browser. See [Configure IPDR Settings](/docs/ug/webadmin/ipdr-settings) on how to setup the SFTP server.
 
 The following diagram shows the workflow
 
@@ -142,8 +150,7 @@ after another. The results are obtained in the following two methods
 Download directly from Web Browser  
 For queries that result in a reasonable file size (default 100MB) the
 agent can directly download the results by pressing the *Download*
-button. See [IPDR Settings \> Download File
-Size](/docs/ug/webadmin/ipdr-settings.html) to adjust this limit.
+button. See [IPDR Settings \> Download File Size](/docs/ug/webadmin/ipdr-settings) to adjust this limit.
 
 Get it from a secure FTP server  
 Regardless of the limit, if a Secure FTP (SFTP) server is configured the
@@ -212,13 +219,13 @@ following columns and options are shown
 We suggest the following configuration parameters for a minimal IPDR
 deployment.
 
-| Config file                                                         | Parameter                            | Set this to                      | Notes                                                                                                                                                                |
-| ------------------------------------------------------------------- | ------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Netflow config](/docs/ref/netflow-config.html)                     | AppMode                              | ipdr                             | Sets the Netflow processing to IPDR                                                                                                                                  |
-| [Hub Config](/docs/ref/trisulhubconfig.html#advanced_db_parameters) | DBParamters \> FlowStream \> AppMode | lz4-ip-call-log-with-nat-pro-max | Sets the database schema and compression code to pro-max                                                                                                             |
-| [Probe Config file](/docs/ref/trisulconfig.html#tuning)             | Tuning \> DisableFlowTupleFeedback   | true                             | Disables monitoring of flow tuples by IP and Application. If this is enabled, there will be connection metrics for every IP and App, could waste disk space for IPDR |
-| [Probe Config file](/docs/ref/trisulconfig.html#edges)              | Edges \> EnableFlowEdges             | false                            | Disable Edge graph generation for space savings                                                                                                                      |
+| Config file                                                   | Parameter                            | Set this to                      | Notes                                                                                                                                                                |
+| ------------------------------------------------------------- | ------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Netflow config](/docs/ref/netflow-config)                    | AppMode                              | ipdr                             | Sets the Netflow processing to IPDR                                                                                                                                  |
+| [Hub Config](/docs/ref/trsulhubconfig#advanced_db_parameters) | DBParamters \> FlowStream \> AppMode | lz4-ip-call-log-with-nat-pro-max | Sets the database schema and compression code to pro-max                                                                                                             |
+| [Probe Config file](/docs/ref/trisulconfig#tuning)            | Tuning \> DisableFlowTupleFeedback   | true                             | Disables monitoring of flow tuples by IP and Application. If this is enabled, there will be connection metrics for every IP and App, could waste disk space for IPDR |
+| [Probe Config file](/docs/ref/trisulconfig#edges)             | Edges \> EnableFlowEdges             | false                            | Disable Edge graph generation for space savings                                                                                                                      |
 
 ### References
 
-Also see [IPDR FTP Settings](/docs/ug/webadmin/ipdr-settings.html)
+Also see [IPDR FTP Settings](/docs/ug/webadmin/ipdr-settings)

@@ -8,23 +8,23 @@ datasets. This section describes the tools available to work with flows.
 
 ##### Tools: working with flows in Trisul
 
-[Flow Tracker](https://trisul.org/docs/ug/flow/tracker.html)
+[Flow Tracker](/docs/ug/flow/tracker)
 
 Tracks the top-N flows matching a certain criteria over a certain period of time.
 
-[Flow Tagger](https://trisul.org/docs/ug/flow/tagger.html)
+[Flow Tagger](/docs/ug/flow/tagger)
 
 Tags interesting flows based on observation of certain types of traffic.
 
-[Real Time Stabber](https://trisul.org/docs/ug/flow/stabber.html)
+[Real Time Stabber](/docs/ug/flow/stabber)
 
 A stabber that enables you to monitor _currently active_ flows involving a host or application
 
-[Explore Flows](https://trisul.org/docs/ug/tools/explore_flows.html)
+[Explore Flows](/docs/ug/tools/explore_flows)
 
 General purpose flow query
 
-[Investigate IP activity](https://trisul.org/docs/ug/tools/investigate_ip_activity.html)
+[Investigate IP activity](/docs/ug/tools/investigate_ip_activity)
 
 Investigate all flow based and alert activity of an IP
 
@@ -36,7 +36,7 @@ Investigate all flow based and alert activity of an IP
 - Search flows for IP
 - Optimize full content storage (eg, store only first 1M of each flow)
 
-[All tasks](https://trisul.org/docs/ug/flow/tasks.html)
+[All tasks](/docs/ug/flow/tasks)
 
 ### Working with flows
 

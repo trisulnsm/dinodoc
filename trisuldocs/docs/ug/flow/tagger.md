@@ -1,3 +1,11 @@
+---
+
+sidebar_position: 01
+
+sidebar_label: Flow Taggers
+
+---
+
 # Flow Taggers
 
 Flow Taggers assign one or more text labels to flows in real time. These
@@ -44,18 +52,18 @@ tagger*
 
 Fill out the details as shown
 
-|         |                                                                         |
-| ------- | ----------------------------------------------------------------------- |
-| **Tag** | A short string. Alphanumeric only                                       |
-| Name    | A descriptive name, this name will appear while viewing tagged flows    |
-| Group   | An optional tag group to name space the tags                            |
-| Rule    | A string in [Trisul Filter Format](/docs/ref/trisul_filter_format.html) |
+|         |                                                                      |
+| ------- | -------------------------------------------------------------------- |
+| **Tag** | A short string. Alphanumeric only                                    |
+| Name    | A descriptive name, this name will appear while viewing tagged flows |
+| Group   | An optional tag group to name space the tags                         |
+| Rule    | A string in [Trisul Filter Format](/docs/ref/trisul_filter_format)   |
 
 ### Entering the rule
 
 #### Directly enter the rule
 
-If you are familiar with the [Trisul Filter Format](/docs/ref/trisul_filter_format.html) you may enter the string
+If you are familiar with the [Trisul Filter Format](/docs/ref/trisul_filter_format) you may enter the string
 directly here. For example : Flows to China and India can be marked by
 the expression `{00990011-44BD-4C55-891A-77823D5916B}=CN,IN` This means
 the keys CN and IN in the counter group Country (identified by the GUID)
@@ -63,7 +71,7 @@ the keys CN and IN in the counter group Country (identified by the GUID)
 #### The rule builder
 
 This is the easier way to construct the *Tagger Tag* expression. See
-[Rule Builder](/docs/ug/tools/rule_builder.html)
+[Rule Builder](/docs/ug/tools/rule_builder)
 
 ## Automatic flow tagging
 
@@ -91,7 +99,7 @@ To automatically tag flows with the URL Category
 A flow tag is nothing but a string label added to each flow. Using
 Tagger groups you can add a namespace to the tags. When you add tags to
 a namespace they are grouped together when using the [Aggregate
-Flows](/docs/ug/tools/aggregate_flows.html) tool.
+Flows](/docs/ug/tools/aggregate_flows) tool.
 
 The following shows an Automatic flow tagger that attaches the AS number
 of source and destination IP to each flow. We have added a tag group
@@ -108,8 +116,8 @@ attached to the tag.
 
 You can view the flow tags in a couple of ways.
 
-1. Use the [Flow taggers](/docs/ug/tools/flow_tagger.html) tool to see
+1. Use the [Flow taggers](/docs/ug/tools/flow_tagger) tool to see
    a list of top flows for each tag you have set up.
 2. Search for flows by tagname using the [Explore
-   flows](/docs/ug/tools/explore_flows.html) tool.
-3. Use the [Aggregate Flows](/docs/ug/tools/aggregate_flows.html) tool.
+   flows](/docs/ug/tools/explore_flows) tool.
+3. Use the [Aggregate Flows](/docs/ug/tools/aggregate_flows) tool.

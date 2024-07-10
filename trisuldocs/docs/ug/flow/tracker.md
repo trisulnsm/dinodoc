@@ -1,3 +1,11 @@
+---
+
+sidebar_position: 02
+
+sidebar_label: Flow Trackers
+
+---
+
 # Flow Trackers
 
 A flow tracker is used to capture and save snapshots of top flows

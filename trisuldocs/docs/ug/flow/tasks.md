@@ -1,3 +1,11 @@
+---
+
+sidebar_position: 05
+
+sidebar_label: Common Tasks
+
+---
+
 # Common Tasks
 
 ## Query flows
@@ -7,7 +15,7 @@ If you know the IP address
 1. Click on Tools -\> Explore flows
 2. Just type in your query “ip=192.168.2.81” in the box
 
-For more details read the section on [Explore Flows](/docs/ug/tools/explore_flows.html)
+For more details read the section on [Explore Flows](/docs/ug/tools/explore_flows)
 
 ## Total flow and traffic based summary for an IP
 

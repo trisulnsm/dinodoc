@@ -1,3 +1,10 @@
+---
+sidebar_position: 08
+
+sidebar_label: IPDR Export Format
+
+---
+
 # IPDR Export format
 
 This page describes the fields when you export flows using this IPDR *IP Data Record* feature.
@@ -124,7 +131,7 @@ The CSV format is shown here:
 
 ![](images/ipdr-csv-format.png)
 
-A sample working CSV file can be downloaded from here [Sample_IPDR_Customer_Import.CSV](https://trisul.org/assets/SAMPLE_IPDR_CUSTOMER_SUBNET_MAPPINGS.csv) You can edit the information as needed.
+A sample working CSV file can be downloaded from here [Sample_IPDR_Customer_Import.CSV](/assets/SAMPLE_IPDR_CUSTOMER_SUBNET_MAPPINGS.csv) You can edit the information as needed.
 
 - Step 1 : Select the CSV file
 - Step 2 : Select the column numbers, if you followed the sample file above you can skip this step and directly press IMPORT

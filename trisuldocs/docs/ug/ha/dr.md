@@ -1,3 +1,8 @@
+---
+sidebar_position: 01
+sidebar_label: Configuring Primary Backup DR Systems
+---
+
 # Configuring Primary Backup DR systems
 
 This document describes how you can setup a backup Trisul Network Analytics system as a DR (Disaster Recovery) node.
@@ -9,8 +14,6 @@ Terminology : In some places , we use DR node to refer to the Backup node, and D
 Terminology : In some places , we use DR node to refer to the Backup node, and DC node to refer to the Primary node. DC stands for Data Center.
 
 :::
-
-
 
 ## Prerequisities
 
@@ -31,8 +34,6 @@ Run on the PRIMARY (DC) node. Sets up the incremental replication processes fr
 trisul-hub-primary-health-check
 
 Runs on the BACKUP (DR) node. Checks the PING reachability of PRIMARY nodes. For contexts other than the default context this service is called `trisul-hub-primary-health-check-contextname`
-
-
 
 ## Configuring DR on Primary and Backup sites
 
@@ -68,13 +69,9 @@ Do these for both PRIMARY-BACKUP and BACKUP-PRIMARY directions.
 
 :::
 
-
-
 #### Use ssh-keygen
 
 Login as the trisul user and use `ssh-keygen` to create a key pair. Press ENTER to skip the passphrase.
-
-
 
 ```bash
 su trisul
@@ -86,8 +83,6 @@ Enter file in which to save the key (/home/trisul/.ssh/id_rsa):
 skip the passphrase
 ..
 ```
-
-
 
 #### Use ssh-copy-id to setup login
 
@@ -106,8 +101,6 @@ ssh-copy-id trisul@primary
 ```
 
 At this point , both sides should be able to login to each other without a password.
-
-
 
 ## Configure the primary site replication
 
@@ -146,15 +139,11 @@ rtt min/avg/max/mdev = 0.197/0.197/0.197/0.000 ms
 
 Further customization can be done by editing the `DCDRReplicationSettings.conf` file shown above.
 
-
-
 ## Configure the backup node health check
 
 The backup node service performs a health check on pre-defined IP addresses in the primary site. If ALL the IPs are unrechable for a predefinied period of time [default 7 minutes], the service declares the PRIMARY site to be down. Then starts the Trisul Probe Processes on the backup site and the service stops.
 
 Use install-replication-backup.sh to configure the backup node.
-
-
 
 ```bash
 root@ubuntuDR:/usr/local/share/trisul-hub# ./install-replication-backup.sh 
@@ -178,8 +167,6 @@ Enter IP of paired  PRIMARY hub       : 192.168.2.140
   * Customize in config file /usr/local/etc/trisul-hub/domain0/hub0/context0/DRDCHealthCheck.conf
 ```
 
-
-
 #### Further customization for PRI-BAK replication
 
 Further customization can be done by editing the `DRDCHealthCheck.conf` file shown above.
@@ -202,8 +189,6 @@ On the BACKUP node.
 systemctl start trisul-hub-primary-health-check
 ```
 
-
-
 ### View log files about the status of the processes
 
 on primary  
@@ -211,8 +196,6 @@ on primary
 
 on backup  
 `journalctl -fu trisul-hub-primary-health-check`
-
-
 
 ## Failover
 
@@ -227,8 +210,6 @@ arrange the packets to be sent to the backup system
 Netflow mode
 
 the Netflow streams have to be sent to the backup probe addresses. This can be accomplished by a load balancer or other methods.
-
-
 
 ## Restoration
 
@@ -247,8 +228,6 @@ The process is :
   
   Ensure all processes are stopped on the primary system
 
-
-
 ```bash
 trisulctl_hub stop context all
 ```
@@ -256,8 +235,6 @@ trisulctl_hub stop context all
 ### on BACKUP : Copy the data to the PRIMARY
 
 Now we need to copy the data from the running backup system onto the primary. This will include all the data that was collected during the downtime of the primary.
-
-
 
 :::info
 
@@ -273,13 +250,9 @@ cd /usr/local/share/trisul-hub
 ./restore_sync_dr_dc.sh /usr/local/etc/trisul-hub/domain0/hub0/context0/DRDCHealthCheck.conf
 ```
 
-
-
 This will run for a while, copying all the changes back to the DC site.
 
 when the copying finishes you will see a message like the following.
-
-
 
 ```bash
 ..
@@ -298,17 +271,12 @@ root@ubuntuDR:/usr/local/share/trisul-hub#
 
 Now you are ready to
 
-
-
 ### on BACKUP : Stop the probes
 
 You can manually stop the probes on the backup node. You should not stop the hub nodes however. Run the following command to stop the default context on probe0.
 
-
-
 ```bash
 trisulctl_hub stop context default@probe0
-
 ```
 
 ### on BACKUP : Switch back to BACKUP mode
@@ -328,8 +296,6 @@ trisulctl_hub
 start context default
 ```
 
-
-
 ### on PRIMARY : switch back to PRIMARY mode
 
 This step will put the system back into PRIMARY BACKUP configuration.
@@ -348,11 +314,7 @@ Select Context: default > Admin Tasks > DC DR Status
 
 :::
 
-
-
 ![](./images/drdcstatus.png)
-
-
 
 The following information is shown:
 

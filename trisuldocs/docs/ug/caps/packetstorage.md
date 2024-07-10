@@ -1,5 +1,4 @@
 ---
-
 sidebar_position: 02
 
 sidebar_label: Controlling Packet Storage

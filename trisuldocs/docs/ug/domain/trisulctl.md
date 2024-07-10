@@ -1,3 +1,8 @@
+---
+sidebar_position: 01
+sidebar: label: Domain Management Tools
+---
+
 # Domain Management Tools
 
 Trisul includes two command line tools for managing domain nodes. These

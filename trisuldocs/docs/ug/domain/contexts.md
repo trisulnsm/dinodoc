@@ -1,6 +1,11 @@
+---
+sidebar_position: 05
+sidebar_label: Working with Contexts
+---
+
 # Working with contexts
 
-A Trisul [*context*](/docs/ug/domain/index#contexts) is a separate
+A Trisul [*context*](/docs/ug/domain#contexts) is a separate
 instance of Trisul with its own isolated database, configuration, and
 processes. The primary use cases for contexts are :
 

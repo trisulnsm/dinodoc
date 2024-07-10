@@ -1,3 +1,8 @@
+---
+sidebar_position: 00
+sidebar_label: Manage a Trisul Domain
+---
+
 # Trisul distributed domain concepts
 
 Trisul 6.0 is a *streaming* *distributed* analytics platform. There are

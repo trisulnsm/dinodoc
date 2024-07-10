@@ -1,3 +1,8 @@
+---
+sidebar_position: 00
+sidebar_label: High Availability
+---
+
 # High Availability
 
 Trisul Network Analytics supports the following high availability options

@@ -1,3 +1,10 @@
+---
+sidebar_position: 04
+
+sidebar_label: Tuning Options
+
+---
+
 # Tuning options
 
 This section describes options available to tweak flow handling.
