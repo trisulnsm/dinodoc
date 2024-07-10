@@ -1,0 +1,13 @@
+{
+  "position": 3,
+  "label": "Basic Usage",
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "title": "Basic Usage"
+  },
+  "customProps": {
+    "description": "This description can be used in the swizzled DocCard"
+  }
+}
