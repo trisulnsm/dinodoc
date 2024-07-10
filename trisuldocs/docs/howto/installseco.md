@@ -224,7 +224,7 @@ service webtrisuld start
 ### Are there any other useful plugins?
 
 You may want to install the following plugins from the [Download
-Page](/download/index.html)
+Page](https://www.trisul.org/download/)
 
 1. [URL Filter](/docs/ug/install/urlfilter.html)
 2. [BadFellas](/docs/ug/install/badfellas.html)
