@@ -1,3 +1,8 @@
+---
+sidebar_position: 3
+sidebar_label: Packet Capture Settings
+---
+
 # Packet capture settings
 
 A single instance of Trisul can listen on one or more network

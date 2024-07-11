@@ -1,3 +1,8 @@
+---
+sidebar_position: 14
+sidebar_label: Backups
+---
+
 # Backups
 
 There are two categories of data you might want back up :

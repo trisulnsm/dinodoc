@@ -1,3 +1,8 @@
+---
+sidebar_position: 4
+sidebar_label: User Roles
+---
+
 # User Roles
 
 Trisul web users fall into three roles

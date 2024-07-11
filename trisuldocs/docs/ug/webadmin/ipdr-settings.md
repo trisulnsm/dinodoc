@@ -1,3 +1,8 @@
+---
+sidebar_position: 20
+sidebar_label: IPDR Settings
+---
+
 # IPDR Settings
 
 Internet Protocol Data Records storage is a ISP compliance feature that

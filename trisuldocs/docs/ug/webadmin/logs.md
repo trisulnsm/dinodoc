@@ -1,3 +1,8 @@
+---
+sidebar_position: 15
+sidebar_label: View Logs
+---
+
 # View logs
 
 For troubleshooting you can view various logs from the web interface

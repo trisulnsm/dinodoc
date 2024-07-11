@@ -1,3 +1,8 @@
+---
+sidebar_position: 19
+sidebar_label: Disk Usage Alerts
+---
+
 # Disk usage alerts
 
 This page describes how to get email alerts when disk usage exceeds a
@@ -23,7 +28,7 @@ To enable disk alert threshold, you need to edit the hub and probe configuration
 
 ### Setup disk usage thresholds on Hub node
 
-Edit the [trisulHubConfig.xml](/docs/ref/trisulhubconfig.html) file and set the following parameters under SlicePolicy.
+Edit the [trisulHubConfig.xml](/docs/ref/trsulhubconfig) file and set the following parameters under SlicePolicy.
 
 ***UsageRedMark*** 
 
@@ -44,7 +49,7 @@ Similarly set threshold values for all three storage areas, oper/ref/archive. Yo
 
 ### Setup disk usage thresholds on Probe node
 
-Edit the [trisulProbeConfig.xml](/docs/ref/trisulconfig.html) file and set the following value.
+Edit the [trisulProbeConfig.xml](/docs/ref/trisulconfig) file and set the following value.
 
 ***UsageRedMark***
 the disk percent threshold value for the probe node

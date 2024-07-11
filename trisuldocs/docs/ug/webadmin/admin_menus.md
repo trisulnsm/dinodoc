@@ -1,3 +1,8 @@
+---
+sidebar_position: 16
+sidebar_label: Admin Menus
+---
+
 # Admin Menus
 
 A Short description about the functions of all the menus in Admin. Each 
@@ -62,13 +67,13 @@ App Settings are used to make modifications in the Web Interface. You can direct
 
 This menu is dedicated to configure Email server for scheduling automatic Reports and Alert based reports. Any existing Email Reports will be listed here.
 
-To know how to setup Email-Server and Alert based emails, Refer to the [Email Settings](docs/ug/reports/emailsettings)
+To know how to setup Email-Server and Alert based emails, Refer to the [Email Settings](/docs/ug/reports/emailsettings)
 
 ### Modules
 
 Modules are the building blocks of the dashboard based user interface. Several Modules put together are dashboards. Modules are much more feature specific. This menu provides a list of available modules that are being actively used in the Web Interface.
 
-To create a new module, Refer to the [Modules](docs/ug/ui/dashmod_intro#modules) for instructions.
+To create a new module, Refer to the [Modules](/docs/ug/ui/dashmod_intro#modules) for instructions.
 
 ### Dashboards
 
@@ -82,7 +87,7 @@ Live Dashboards are used to present current or recent network activity. The to t
 **Retro Dashboards**  
 Retro Dashboards are used for historical analysis hence need you to 
 select a Time Interval. Retro Dashboards can be found in the Retro Tools
- page under [Commonly Used Retro Analysis](docs/ug/cg/retrotools#commonly_used_retro_analysis) tool
+ page under [Commonly Used Retro Analysis](/docs/ug/cg/retrotools#commonly-used-retro-analysis) tool
 
 ### Menu Manager
 

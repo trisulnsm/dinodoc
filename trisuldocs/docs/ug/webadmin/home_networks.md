@@ -1,3 +1,8 @@
+---
+sidebar_position: 6
+sidebar_label: Home Networks
+---
+
 # Home Networks
 
 Several features of Trisul depend on being able to tell which IPs belong
@@ -35,7 +40,7 @@ Both Source IP and Dest IP are in your home network
 
 Both Source IP and Dest IP are not in your home network.
 
-> Note For ISPs, the AS numbers constituting the Home Network are all the AS whose routes are announced by the home AS. See [Home Networks for ISP](#home_networks_in_isp_solution) section
+> Note For ISPs, the AS numbers constituting the Home Network are all the AS whose routes are announced by the home AS. See [Home Networks for ISP](/docs/ug/webadmin/home_networks#home-networks-in-isp-solution) section
 
 ## Add a new home network
 
@@ -122,7 +127,7 @@ Lets walk through the above example.
    AS100 is present in the AS PATH attribute.
 6. We then compute the final Home Networks as {100,200,210,300,400}
 
-This final set is used by Trisul in the [Netflow configuration file in the HomeASNumbers](/docs/ref/netflow-config.html#homeasnumbers) parameter using a periodic update mechanism.
+This final set is used by Trisul in the [Netflow configuration file in the HomeASNumbers](/docs/ref/netflow-config#homeasnumbers) parameter using a periodic update mechanism.
 
 Some points to be noted.
 
@@ -181,7 +186,7 @@ The following chart gives you the traffic details in each direction.
 
 Trisul has the ability to use Flow Taggers to tag each flow with a direction hint based on the endpoint Home Addresses.
 
-1. Enable the [TagFlowsWithDirection](/docs/ref/netflow-config.html#tagflowswithdirection) setting in the Netflow configuration file
+1. Enable the [TagFlowsWithDirection](/docs/ref/netflow-config#tagflowswithdirection) setting in the Netflow configuration file
 2. You can then go to Tools \> Explore Flows to search for flows with
    the appropriate tag.
 3. For example to see all *Transit* flows , enter `tag=[dir]transit` in
@@ -191,4 +196,4 @@ Trisul has the ability to use Flow Taggers to tag each flow with a direction hin
 
 *Figure: search for directional flows using a custom flow tagger*
 
-Also see user guide sections: [Flow Taggers](/docs/ug/flow/tagger.html), [Explore Flows](/docs/ug/tools/explore_flows.html)
+Also see user guide sections: [Flow Taggers](/docs/ug/flow/tagger), [Explore Flows](/docs/ug/tools/explore_flows)

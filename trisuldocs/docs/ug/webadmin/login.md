@@ -1,3 +1,8 @@
+---
+sidebar_position: 1
+sidebar_label: Logging In
+---
+
 # Logging in
 
 > You need to use a **SVG capable browser** like Firefox,

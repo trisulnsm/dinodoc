@@ -1,3 +1,8 @@
+---
+sidebar_position: 5
+sidebar_label: Menus
+---
+
 # Menus
 
 You can customize which items appear on the menu panel. You can control

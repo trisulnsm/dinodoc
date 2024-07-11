@@ -1,3 +1,8 @@
+---
+sidebar_position: 7
+sidebar_label: Access Points
+---
+
 # Access Points
 
 Connect protocols to ports. Common use case is to specify Netflow ports

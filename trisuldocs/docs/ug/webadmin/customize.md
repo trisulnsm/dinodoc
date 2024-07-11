@@ -1,3 +1,8 @@
+---
+sidebar_position: 9
+sidebar_label: Customizing Trisul for an OEM
+---
+
 # Customizing Trisul for an OEM
 
 If you are an OEM you can rebrand and customize the look of the product.

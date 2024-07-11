@@ -1,3 +1,8 @@
+---
+sidebar_position: 17
+sidebar_label: Context Menus
+---
+
 # Context Menus
 
 A Trisul context is a separate instance of Trisul with its own isolated
@@ -91,7 +96,7 @@ License types are :
    3. Unlimited : As many as your hardware can support
 
 To Install a new License, Refer to the [Installing Trisul
-License](/docs/ug/install/licensel) for instructions
+License](/docs/ug/install/license) for instructions
 
 ### Schedule Email Reports
 
@@ -107,7 +112,7 @@ intervals.
 4. Monthly
 
 To know more about how to schedule Reports, Refer to [Schedule
-Reports](reports/schedreports)
+Reports](/docs/ug/reports/schedreports)
 
 ### BGP Route Reciever
 
@@ -363,14 +368,14 @@ groups
    pressure etc.
 
 You can create your own alert types using the [alertgroup LUA
-API](/docs/lua/alert_group.html) Alert groups you create using the LUA API will also show up in Trisul and be managed along with the built in alert groups.
+API](/docs/lua/FRONT-END-SCRIPTS/alert_group) Alert groups you create using the LUA API will also show up in Trisul and be managed along with the built in alert groups.
 
-Refer [All Alert Groups](/docs/ug/alerts/manage.html)
+Refer [All Alert Groups](/docs/ug/alerts/manage)
 
 ### Flow Tracker Alert
 
 Trisul provides a powerful way to generate an alert when certain types
-of flow activity occurs. Also see [Flow Trackers](/docs/ug/flow/tracker.html) for instructions on using Flow
+of flow activity occurs. Also see [Flow Trackers](/docs/ug/flow/tracker) for instructions on using Flow
 Trackers which is a pre-requisite to creating Flow Tracker Alerts (this
 section).
 
@@ -380,7 +385,7 @@ The alerts
 2. can be sent in near real time (1-5 sec) via email or Text Message
    (SMS)
 
-Refer [Flow Tracker Alert](/docs/ug/alerts/ft.html) for Instructions.
+Refer [Flow Tracker Alert](/docs/ug/alerts/ft) for Instructions.
 
 ### Threshold Crossing
 
@@ -439,7 +444,7 @@ indexes them separately.
 This Menu is used to provide a list of all resource groups available in
 Trisul
 
-Refer [Resource Groups](/docs/ug/resources/overview.html)
+Refer [Resource Groups](/docs/ug/resources/oveview)
 
 ### All FTS Groups
 
