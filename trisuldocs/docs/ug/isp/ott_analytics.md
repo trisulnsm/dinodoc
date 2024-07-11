@@ -1,3 +1,8 @@
+---
+sidebar_position: 4
+sidebar_label: OTT Analytics in Trisul
+---
+
 # OTT Analytics in trisul
 
 Some ISP need visibility into OTT (Over the Top) media platforms such as
@@ -13,12 +18,8 @@ Used for marketing optimization.
 This app works by integrating a real time DNS packet capture feed into
 the Trisul pipeline. The following diagram shows the integrations.
 
-<div class="image-with-caption">
-
 ![](images/ott_diagram.png)  
 OTT diagaram
-
-</div>
 
 This is combined with a fully customizable rules file that converts
 domain names into applications. The built in rules file can identity
@@ -34,16 +35,12 @@ OTT App monitoring is available in two formats.
 - On a per interface basis, however unlike the other apps there is a
   limit of 4 interfaces per router.
 
-<div class="info hand-o-right autohint">
+:::note navigation
 
 To access, Login as user & Select Dashboard -\> Show All -\> Enter ‘OTT
 Internet Apps’ in Filter
 
-</div>
-
-<div class="image-with-caption">
+:::
 
 ![](images/ott_dashboard.png)  
 OTT dashboard
-
-</div>

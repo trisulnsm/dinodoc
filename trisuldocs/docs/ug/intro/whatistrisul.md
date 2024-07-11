@@ -1,3 +1,8 @@
+---
+sidebar_position: 1
+sidebar_label: What is Trisul
+---
+
 # What is Trisul
 
 Trisul Network Analytics is a software suite that takes network packets
@@ -56,15 +61,15 @@ API](/docs/lua)
 
 The following table contains a list of things you can do with Trisul.
 
-| Feature | Description |
-|----|----|
-| Platform | Linux based with support for special hardware accelerators |
-| Technology | Streaming analytics with a custom backend storage and reporting included. No need to deploy and maintain a Elastic Search cluster or expensive log management products |
-| Traffic Analysis | More than just bandwidth or basic SNMP or Netflow monitoring. Over 150+ traffic metrics out of the box at all layers. |
-| Flow Monitoring | Supports Netflow technologies as ingest mechanism. If ingesting packets, Trisul builds flow records and stores them. The specially designed flow database can scale to billions of flows per day with instant query times. |
-| Metadata collection | A key element of NSM - Network Security Monitoring is the ability to log metadata. HTTP URLs, Domain details, SSL/TLS certificates, reconstructed binaries downloaded. |
-| Security Alerts | Interfaces with IDS systems like Suricata to ingest alerts. The alerts are integrated into the other types of data. |
-| Packet storage | A sophisticated packet indexing and storage system is included. You can create custom policies down to the flow level to regulate the storage requirements. |
+| Feature               | Description                                                                                                                                                                                                                                                                                                               |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Platform              | Linux based with support for special hardware accelerators                                                                                                                                                                                                                                                                |
+| Technology            | Streaming analytics with a custom backend storage and reporting included. No need to deploy and maintain a Elastic Search cluster or expensive log management products                                                                                                                                                    |
+| Traffic Analysis      | More than just bandwidth or basic SNMP or Netflow monitoring. Over 150+ traffic metrics out of the box at all layers.                                                                                                                                                                                                     |
+| Flow Monitoring       | Supports Netflow technologies as ingest mechanism. If ingesting packets, Trisul builds flow records and stores them. The specially designed flow database can scale to billions of flows per day with instant query times.                                                                                                |
+| Metadata collection   | A key element of NSM - Network Security Monitoring is the ability to log metadata. HTTP URLs, Domain details, SSL/TLS certificates, reconstructed binaries downloaded.                                                                                                                                                    |
+| Security Alerts       | Interfaces with IDS systems like Suricata to ingest alerts. The alerts are integrated into the other types of data.                                                                                                                                                                                                       |
+| Packet storage        | A sophisticated packet indexing and storage system is included. You can create custom policies down to the flow level to regulate the storage requirements.                                                                                                                                                               |
 | New : Graph Analytics | Trisul EDGE is a new feature set that brings Graph Analytics. Graph analytics builds relationship networks between various network entities seen by Trisul. For example you can click on a particular “Certificate Authority” to open up its neighbors to see which organizations, IPs, used certificates issued by them. |
 
-For an exhaustive list go to [Features page](/features)
+For an exhaustive list go to [Features page](https://www.trisul.org/features/)

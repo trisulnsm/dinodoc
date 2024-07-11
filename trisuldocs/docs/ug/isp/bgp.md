@@ -1,3 +1,8 @@
+---
+sidebar_position: 1
+sidebar_label: Configuring BGP
+---
+
 # Configuring BGP
 
 This section describes how to configure BGP in Trisul ISP.

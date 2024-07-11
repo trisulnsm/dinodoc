@@ -1,3 +1,7 @@
+---
+sidebar_position: 0
+sidebar_label: Introduction
+---
 # For ISPs
 
 # Introduction
@@ -22,12 +26,8 @@ following.
 The following diagram is an overview of integration points (some are
 optional) for a Netflow based ISP analytics solution.
 
-<div class="image-with-caption">
-
 ![](images/network_diagram.png)  
 Network Integration Diagram
-
-</div>
 
 The following data source ingestion are supported. Except the Netflow
 others are optional.
@@ -61,9 +61,9 @@ Netflow and BGP.
 
 ![](images/trisul-bgp.png)
 
-- To Configure BGP in Trisul, Refer [Trisul-BGP](/docs/ug/isp/bgp.html)
+- To Configure BGP in Trisul, Refer [Trisul-BGP](/docs/ug/isp/bgp)
 
 <!-- -->
 
 - To install Trisul APPs and dashboards specific to ISP analytics, Refer
-  [ISP Analytics](/docs/ug/isp/ispapps.html#install_trisul_apps)
+  [ISP Analytics](/docs/ug/isp/isapps#install_trisul_apps)
