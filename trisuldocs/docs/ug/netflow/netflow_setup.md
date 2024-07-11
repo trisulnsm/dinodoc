@@ -64,7 +64,7 @@ Use the UI to change the mode from the default “Packet capture” to
 - Adjust the sampling rate. If some of your devices uses *flow sampling*
   then you may have to manually configure that in Trisul. To do that you
   have to edit the Netflow configuration file and add the [Device-IP to
-  Sampling Rate mapping](netflow-config#sampling_rates)
+  Sampling Rate mapping](/docs/ref/netflow-config#sampling-rates)
 
 ### Step 5: Restart trisul-probe and finish
 
@@ -105,7 +105,7 @@ You can see the template database on each probe. This is updated every
 
 ### Advanced configuration
 
-You can tweak the [netflow configuration file](netflow-config#netflow-config) for more advanced settings.
+You can tweak the [netflow configuration file](/docs/ref/netflow-config) for more advanced settings.
 
 Typically, you dont need to do this because the defaults have been
 carefully selected for you.

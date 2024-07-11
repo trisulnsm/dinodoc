@@ -73,7 +73,7 @@ Allows you to download the drilldown report as PDF or XLSX worksheets
 
 Below the title, the interface drilldown is displayed as tabs. Some of
 these tabs are dynamically created. If you have created a [Crosskey
-Counter Group](custom#cross_key_counter_groups) with Flow-Interfaces as the first group, then the second group will be shown as a Tab.
+Counter Group](/docs/ug/cg/custom#cross-key-counter-groups) with Flow-Interfaces as the first group, then the second group will be shown as a Tab.
 
 | Panel | Name               | Description                                                                                                                                                                                            |
 | ----- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -167,11 +167,11 @@ destination port, duration of flows, etc.
 A useful tool that represents traffic flows between interfaces. A chord
 diagram looks like the picture below. The interface being drilldown is
 represented a chord and the other interfaces are shown as smaller chords
-sending or receiving traffic from the subject interface. This is only available after enabling [Cross Key](custom#cross_key_counter_groups) ![](images/interface_matrix_light.png)
+sending or receiving traffic from the subject interface. This is only available after enabling [Cross Key](/docs/ug/cg/custom#cross-key-counter-groups) ![](images/interface_matrix_light.png)
 
 ## ASN, NBAR, and other details
 
-These are available in the interface drilldowns if the proper trackers are created ahead of time when [Cross Key](custom#cross_key_counter_groups) is enabled for them.
+These are available in the interface drilldowns if the proper trackers are created ahead of time when [Cross Key](/docs/ug/cg/custom#cross-key-counter-groups) is enabled for them.
 
 ![](images/asn_crosskey.png)
 
