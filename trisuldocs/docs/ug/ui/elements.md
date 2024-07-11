@@ -1,3 +1,8 @@
+---
+sidebar_position: 4
+sidebar_label: UI Elements
+---
+
 # UI Elements
 
 This section contains a quick overview of the user interface elements

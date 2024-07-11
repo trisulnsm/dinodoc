@@ -1,3 +1,8 @@
+---
+sidebar_position: 3
+sidebar_label: Dashboards and Modules
+---
+
 # Dashboards and Modules
 
 A *dashboard* is a web page that contains *modules* at various
@@ -27,7 +32,7 @@ overview dashboard
 
 You can see that this dashboard is nothing but four modules laid out in
 two columns. Trisul has well defined column positions into which you can
-place modules. See [Module Positions](#module_positions)
+place modules. See [Module Positions](/docs/ug/ui/dashmod_intro#how-to-add-modules-to-the-dashboard)
 
 Lets take a closer look at the dashboard shown above.
 
@@ -97,7 +102,7 @@ To create a new dashboard
 | Key              | A unique identifier for this dashboard(No special characters).                                                                                      |
 | Name             | Dashboard title                                                                                                                                     |
 | Description      | Subtitle                                                                                                                                            |
-| Dashboard type   | LIVE or RETRO (see [Dashboard Types](/docs/ug/ui/dashmod_intro.html#dashboard_types))                                                               |
+| Dashboard type   | LIVE or RETRO (see [Dashboard Types](/docs/ug/ui/dashmod_intro))                                                                                    |
 | Position Left    | Click on *Add module* to select modules. Module numbers are shown separated by commas and you can split them into columns using the pipe character. |
 | Position Right   | As above                                                                                                                                            |
 | Position Top1    | As above                                                                                                                                            |
@@ -209,7 +214,7 @@ Select Customize -\> UI -\> Modules
 
 ##### Method - III
 
-- Click -\> Plus on the [module toolbar](/docs/ug/ui/dashmod_intro.html#module_toolbars)  
+- Click -\> Plus on the [module toolbar](/docs/ug/ui/dashmod_intro#module-toolbars)  
 
 - A list of dashboards are available.  
 
@@ -222,7 +227,7 @@ dashboard and rearrange if required.
 
 To edit a module from a dashboard
 
-- Click -\>pencil icon on the [module toolbar](/docs/ug/ui/dashmod_intro.html#module_toolbars)
+- Click -\>pencil icon on the [module toolbar](/docs/ug/ui/dashmod_intro#module-toolbars)
 
 You can also edit it by selecting Customize -\> UI -\> Modules.
 
@@ -230,7 +235,7 @@ You can also edit it by selecting Customize -\> UI -\> Modules.
 
 To delete a module from a dashboard
 
-- Click -\> Minus on the [module toolbar](/docs/ug/ui/dashmod_intro.html#module_toolbars)
+- Click -\> Minus on the [module toolbar](/docs/ug/ui/dashmod_intro#module-toolbars)
 
 You can also delete it by selecting Customize -\> UI -\> Dashboards.
 

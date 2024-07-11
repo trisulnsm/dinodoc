@@ -1,3 +1,8 @@
+---
+sidebar_position: 5
+sidebar_label: Using Search
+---
+
 # Using search
 
 You can use the *Search* tool to find items of interest.

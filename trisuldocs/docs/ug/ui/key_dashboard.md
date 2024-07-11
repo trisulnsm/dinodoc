@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+sidebar_label: Key Dashboard
+---
+
 # Key dashboard
 
 The *Key Dashboard* is a special type of dashboard used to view and

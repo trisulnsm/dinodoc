@@ -1,3 +1,8 @@
+---
+sidebar_position: 0
+sidebar_label: Navigating the UI
+---
+
 # Introduction to Web Trisul
 
 Web Trisul is the application that allows you to visualize, search,

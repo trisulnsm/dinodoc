@@ -1,3 +1,8 @@
+---
+sidebar_position: 6
+sidebar_label: Custom Dashboard Packages
+---
+
 # Custom Dashboard Packages
 
 Share dashboards and modules with others

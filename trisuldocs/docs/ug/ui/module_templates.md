@@ -1,3 +1,8 @@
+---
+sidebar_position: 7
+sidebar_label: Module Templates
+---
+
 # Module Templates
 
 You can create your own module by creating an instance of a module
@@ -5,54 +10,54 @@ template.
 
 This is a list of all module templates supported by Trisul.
 
-| ID  | Type of data        | Link                                                                                                                   |
-| --- | ------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| 1   | Topper              | [Current toppers in a list](module_templates.html#current_toppers_in_a_list)                                           |
-| 2   | Topper              | [Current toppers in a chart](module_templates.html#current_toppers_in_a_chart)                                         |
-| 3   | Topper              | [Retro toppers in a list](module_templates.html#retro_toppers_in_a_list)                                               |
-| 4   | Topper              | [Retro toppers in a chart](module_templates.html#retro_toppers_in_a_chart)                                             |
-| 5   | Topper              | [Recent toppers in a list](module_templates.html#recent_toppers_in_a_list)                                             |
-| 6   | Topper              | [Current toppers history](module_templates.html#current_toppers_history)                                               |
-| 7   | Topper              | [Retro toppers history](module_templates.html#retro_toppers_history)                                                   |
-| 8   | Topper              | [Browse toppers](module_templates.html#browse_toppers)                                                                 |
-| 9   | Specific item       | [Recent key history chart](module_templates.html#recent_key_history_chart)                                             |
-| 10  | Specific item       | [Show key details](module_templates.html#show_key_details)                                                             |
-| 11  | Specific item       | [Retro analysis time selector](module_templates.html#retro_analysis_time_selector)                                     |
-| 12  | Specific item       | [Key history flexible charting tool](module_templates.html#key_history_flexible_charting_tool)                         |
-| 13  | Specific item       | [Key calendar](module_templates.html#key_calendar)                                                                     |
-| 14  | IDS Alerts          | [Recent IDS alerts - raw](module_templates.html#recent_ids_alerts_-raw)                                                |
-| 15  | IDS Alerts          | [Recent IDS alerts - aggregated](module_templates.html#recent_ids_alerts_-aggregated)                                  |
-| 16  | Miscellaneous       | [Network stats](module_templates.html#network_stats)                                                                   |
-| 17  | Miscellaneous       | [System stats](module_templates.html#system_stats)                                                                     |
-| 18  | Miscellaneous       | [Network, system, database stats](module_templates.html#network,system,database_stats)                                 |
-| 19  | Flows               | [Session Trackers in custom time interval](module_templates.html#session_trackers_in_custom_time_interval)             |
-| 20  | Flows               | [Recent top sessions (defunct)](module_templates.html#recent_top_sessions_(defunct))                                   |
-| 21  | Flows               | [Top sessions for a key](module_templates.html#top_sessions_for_a_key)                                                 |
-| 22  | TCA Alerts          | [Recently fired threshold crossing alerts](module_templates.html#recently_fired_threshold_crossing_alerts)             |
-| 23  | Retro analysis      | [Standard retro analysis paths](module_templates.html#standard_retro_analysis_paths)                                   |
-| 24  | Retro analysis      | [Retro analysis of an IP](module_templates.html#retro_analysis_of_an_ip)                                               |
-| 25  | Retro analysis      | [PDF report for an IP in selected time interval](module_templates.html#pdf_report_for_an_ip_in_selected_time_interval) |
-| 26  | Retro analysis      | [Counter group retro analysis](module_templates.html#counter_group_retro_analysis)                                     |
-| 27  | Retro analysis      | [Explore retro(defunct)](module_templates.html#explore_retro(defunct))                                                 |
-| 28  | Retro analysis      | [Netflow retro (defunct)](module_templates.html#netflow_retro_(defunct))                                               |
-| 29  | IDS Alerts          | [Alerts for a specific key](module_templates.html#alerts_for_a_specific_key)                                           |
-| 30  | Retro analysis      | [Investigate application users](module_templates.html#investigate_application_users)                                   |
-| 31  | Retro analysis      | [Most active sessions](module_templates.html#most_active_sessions)                                                     |
-| 32  | Retro analysis      | [Security](module_templates.html#security)                                                                             |
-| 33  | Scatter Retro       | [Scatter](module_templates.html#scatter)                                                                               |
-| 34  | Flexible Chart      | [Chart anything](module_templates.html#chart_anything)                                                                 |
-| 35  | Custom HTML         | [Any Custom HTML text](module_templates.html#any_custom_html_text)                                                     |
-| 36  | Pull packets retro  | [Pull out raw packets in a timeframe and filter](module_templates.html#pull_out_raw_packets_in_a_timeframe_and_filter) |
-| 37  | Flow Tracker Alerts | [Recently fired flow tracker alerts](module_templates.html#recently_fired_flow_tracker_alerts)                         |
-| 38  | Blacklist alerts    | [Recent alerts from badfellas plugin](module_templates.html#recent_alerts_from_badfellas_plugin)                       |
-| 39  | Flow tracker        | [List of flow trackers](module_templates.html#investigate_flow_tracker)                                                |
-| 40  | App In/Out Trend    | [Top applications into and out of your network](module_templates.html#app_in/out_trend)                                |
-| 41  | Retro analysis      | [Network FAQ](module_templates.html#my_favorites)                                                                      |
-| 42  | Topper Trends       | [IDS Alerts by sigid](module_templates.html#topper_trends)                                                             |
-| 43  | Retro analysis      | [Traffic trends of a particular item](module_templates.html#analyze_with_key)                                          |
-| 44  | Retro analysis      | [Drill down into a counter group](module_templates.html#cross_drill)                                                   |
-| 45  | TCA details         | [TCA Alerts for a item](module_templates.html#show_tca_details)                                                        |
-| 46  | Retro usage         | [counter group to view top users by various meters](module_templates.html#explore_retro_usage)                         |
+| ID     | Type of data        | Link                                                                                                                          |
+| ------ | ------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| 1      | Topper              | [Current toppers in a list](/docs/ug/ui/module_templates#current-toppers-in-a-list)                                           |
+| 2      | Topper              | [Current toppers in a chart](/docs/ug/ui/module_templates#current-toppers-in-a-chart)                                         |
+| 3      | Topper              | [Retro toppers in a list](/docs/ug/ui/module_templates#retro-toppers-in-a-list)                                               |
+| 4      | Topper              | [Retro toppers in a chart](/docs/ug/ui/module_templates#retro-toppers-in-a-chart)                                             |
+| 5      | Topper              | [Recent toppers in a list](/docs/ug/ui/module_templates#recent-toppers-in-a-list)                                             |
+| 6      | Topper              | [Current toppers history](/docs/ug/ui/module_templates#current-toppers-history)                                               |
+| 7      | Topper              | [Retro toppers history](/docs/ug/ui/module_templates#retro-toppers-history)                                                   |
+| 8      | Topper              | [Browse toppers](/docs/ug/ui/module_templates#browse-toppers)                                                                 |
+| 9      | Specific item       | [Recent key history chart](/docs/ug/ui/module_templates#recent-key-history-chart)                                             |
+| 10     | Specific item       | [Show key details](/docs/ug/ui/module_templates#show-key-details)                                                             |
+| 11     | Specific item       | [Retro analysis time selector](/docs/ug/ui/module_templates#retro-analysis-time-selector)                                     |
+| 12     | Specific item       | [Key history flexible charting tool](/docs/ug/ui/module_templates#key-history-flexible-charting-tool)                         |
+| 13     | Specific item       | [Key calendar](/docs/ug/ui/module_templates#key-calendar)                                                                     |
+| 14     | IDS Alerts          | [Recent IDS alerts - raw](/docs/ug/ui/module_templates#recent-ids-alerts--raw)                                                |
+| 15     | IDS Alerts          | [Recent IDS alerts - aggregated](/docs/ug/ui/module_templates#recent-ids-alerts--aggregated)                                  |
+| 16     | Miscellaneous       | [Network stats](/docs/ug/ui/module_templates#network-stats)                                                                   |
+| 17     | Miscellaneous       | [System stats](/docs/ug/ui/module_templates#system-stats)                                                                     |
+| 18     | Miscellaneous       | [Network, system, database stats](/docs/ug/ui/module_templates#networksystemdataabase-stats)                                  |
+| 19     | Flows               | [Session Trackers in custom time interval](/docs/ug/ui/module_templates#session-trackers-in-custom-time-interval)             |
+| 20     | Flows               | [Recent top sessions (defunct)](/docs/ug/ui/module_templates#top-sessions-for-a-key)                                          |
+| 21     | Flows               | [Top sessions for a key](/docs/ug/ui/module_templates#top-sessions-for-a-key)                                                 |
+| 22     | TCA Alerts          | [Recently fired threshold crossing alerts](/docs/ug/ui/module_templates#recently-fired-threshold-crossing-alerts)             |
+| 23     | Retro analysis      | [Standard retro analysis paths](/docs/ug/ui/module_templates#standard-retro-analysis-paths)                                   |
+| 24     | Retro analysis      | [Retro analysis of an IP](/docs/ug/ui/module_templates#retro-analysis-of-an-ip)                                               |
+| 25     | Retro analysis      | [PDF report for an IP in selected time interval](/docs/ug/ui/module_templates#pdf-report-for-an-ip-in-selected-time-interval) |
+| 26     | Retro analysis      | [Counter group retro analysis](/docs/ug/ui/module_templates#counter-group-retro-analysis)                                     |
+| 27     | Retro analysis      | [Explore retro(defunct)](/docs/ug/ui/module_templates#explore-retrodefunct)                                                   |
+| 28     | Retro analysis      | [Netflow retro (defunct)](/docs/ug/ui/module_templates#netflow-retrodefunct)                                                  |
+| 29     | IDS Alerts          | [Alerts for a specific key](/docs/ug/ui/module_templates#alerts-for-a-specific-key)                                           |
+| 30     | Retro analysis      | [Investigate application users](m/docs/ug/ui/module_templates#investigate-application-users)                                  |
+| 31     | Retro analysis      | [Most active sessions](/docs/ug/ui/module_templates#most-active-sessions)                                                     |
+| 32     | Retro analysis      | [Security](/docs/ug/ui/module_templates#security)                                                                             |
+| 33     | Scatter Retro       | [Scatter](/docs/ug/ui/module_templates#scatter)                                                                               |
+| 34     | Flexible Chart      | [Chart anything](/docs/ug/ui/module_templates#chart-anything)                                                                 |
+| 35     | Custom HTML         | [Any Custom HTML text](module_templates.html#any_custom_html_text)                                                            |
+| **36** | Pull packets retro  | [Pull out raw packets in a timeframe and filter](module_templates.html#pull_out_raw_packets_in_a_timeframe_and_filter)        |
+| **37** | Flow Tracker Alerts | [Recently fired flow tracker alerts](module_templates.html#recently_fired_flow_tracker_alerts)                                |
+| **38** | Blacklist alerts    | [Recent alerts from badfellas plugin](module_templates.html#recent_alerts_from_badfellas_plugin)                              |
+| 39     | Flow tracker        | [List of flow trackers](/docs/ug/ui/module_templates#investigate-flow-tracker)                                                |
+| 40     | App In/Out Trend    | [Top applications into and out of your network](/docs/ug/ui/module_templates#app-inout-trend)                                 |
+| 41     | Retro analysis      | [Network FAQ](/docs/ug/ui/module_templates#my-favorites)                                                                      |
+| 42     | Topper Trends       | [IDS Alerts by sigid](/docs/ug/ui/module_templates#topper-trends)                                                             |
+| 43     | Retro analysis      | [Traffic trends of a particular item](/docs/ug/ui/module_templates#analyze-with-key)                                          |
+| 44     | Retro analysis      | [Drill down into a counter group](/docs/ug/ui/module_templates#cross-drill)                                                   |
+| 45     | TCA details         | [TCA Alerts for a item](/docs/ug/ui/module_templates#show-tca-details)                                                        |
+| 46     | Retro usage         | [counter group to view top users by various meters](/docs/ug/ui/module_templates#explore-retro-usage)                         |
 
 ## Module Parameters
 
@@ -548,19 +553,19 @@ Chart any combination of items you want on any chart surface.
 
 ### Parameters
 
-| ParameterName | Type    | DefaultValue | Description                                                                        |
-| ------------- | ------- | ------------ | ---------------------------------------------------------------------------------- |
-| Topcount      | Integer | 10           | Draws chart for this many items                                                    |
-| Cullcount     | Integer | 0            | hows toppers eliminating the top x items in a chart                                |
-| Width         | Integer | 200          | Width of the chart                                                                 |
-| Height        | Integer | 250          | Height of the chart                                                                |
-| Bucketsize    | Integer | 30           |                                                                                    |
-| Surface       | String  | STACKEDAREA  | Chart surface type.See [charts](/docs/ug/ui/elements.html#charts) section for more |
-| Recentsecs    | Time    | 6 Hour       | Draws chart for recent 6 hours                                                     |
+| ParameterName | Type    | DefaultValue | Description                                                                   |
+| ------------- | ------- | ------------ | ----------------------------------------------------------------------------- |
+| Topcount      | Integer | 10           | Draws chart for this many items                                               |
+| Cullcount     | Integer | 0            | hows toppers eliminating the top x items in a chart                           |
+| Width         | Integer | 200          | Width of the chart                                                            |
+| Height        | Integer | 250          | Height of the chart                                                           |
+| Bucketsize    | Integer | 30           |                                                                               |
+| Surface       | String  | STACKEDAREA  | Chart surface type.See [charts](/docs/ug/ui/elements#charts) section for more |
+| Recentsecs    | Time    | 6 Hour       | Draws chart for recent 6 hours                                                |
 
 ## My Favorites
 
-See [favorites](/docs/ug/cg/retrofaq.html) section for more
+See [favorites](/docs/ug/cg/retrofaq) section for more
 
 ### Parameters
 
@@ -620,11 +625,12 @@ The *models* parameters is a JSON string representing an array of
 
 Each item in the array consists of :
 
-| Counter Group ID             | A GUID representing a counter group - [see here for a list](/docs/ref/guid.html) |
-| ---------------------------- | -------------------------------------------------------------------------------- |
-| Key                          | A key within the counter group (eg a Host, Application, Subnet) etc              |
-| Meter ID                     | A meter ID - eg Bytes In/ Connections etc                                        |
-| Label as it appears on chart | Label for this item                                                              |
+|                              |                                                                             |
+| ---------------------------- | --------------------------------------------------------------------------- |
+| Counter Group ID             | A GUID representing a counter group - [see here for a list](/docs/ref/guid) |
+| Key                          | A key within the counter group (eg a Host, Application, Subnet) etc         |
+| Meter ID                     | A meter ID - eg Bytes In/ Connections etc                                   |
+| Label as it appears on chart | Label for this item                                                         |
 
 For example if you want to plot Inbound Vs Outbound traffic relative to
 your home network.

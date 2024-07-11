@@ -1,3 +1,8 @@
+---
+sidebar_position: 1
+sidebar_label: Default Dashboards
+---
+
 # Default dashboards
 
 Trisul ships with a bunch of default dashboards which you will be seeing
