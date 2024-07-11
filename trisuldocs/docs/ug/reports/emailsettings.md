@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+sidebar_label: Setup E-Mail
+---
+
 # Setup E-Mail
 
 Describes how you can setup an email account to send outgoing email reports and alerts.

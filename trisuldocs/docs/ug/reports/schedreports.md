@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+sidebar_label: Schedule Email Reports
+---
 # Schedule email reports
 
 You can have Trisul automatically email reports periodically.
@@ -105,7 +109,7 @@ Select Customize → App Settings
 
 Check the **Automatically email scheduled reports**
 
-> Note: Ensure you have set up your [Email Settings](https://trisul.org/docs/ug/reports/emailsettings.html)
+> Note: Ensure you have set up your [Email Settings](/docs/ug/reports/emailsettings)
 
 ## Troubleshooting
 

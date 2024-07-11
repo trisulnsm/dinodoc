@@ -1,3 +1,8 @@
+---
+sidebar_position: 4
+sidebar_label: Custom Reports
+---
+
 # Custom Reports
 
 We have introduced a new feature called the Flexible reports with 

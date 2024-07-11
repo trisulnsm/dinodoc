@@ -1,3 +1,8 @@
+---
+sidebar_position: 5
+sidebar_label: All Reports
+---
+
 # All Reports
 
 ### Endpoints & Application
@@ -83,13 +88,13 @@ You get the maximum out of this report when you set the bandwidth cap and enable
 
 ##### Enable per-port metering for this IP
 
-- Create a [filtered counter group](https://trisul.org/docs/ug/cg/custom.html#filtered_counter_groups)
+- Create a [filtered counter group](/docs/ug/cg/custom#filtered_counter_groups)
 - Parent = Apps, Filter = Hosts and enter the IP
 - Name the new counter group `APPS_IPAddress`. Example : `APPS_192.168.1.22`
 
 ##### Enable per-protocol metering for this IP
 
-- Create a [filtered counter group](https://trisul.org/docs/ug/cg/custom.html#filtered_counter_groups)
+- Create a [filtered counter group](/docs/ug/cg/custom#filtered_counter_groups)
 - Parent = *Network Layer Stats*, Filter = *Hosts* and enter the IP
 - Name the new counter group `PROTO_IPAddress`. Example : `PROTO_192.168.1.22`
 
@@ -126,7 +131,7 @@ is running in Netflow mode.
 Requires the Badfellas plugin
 
 A summary of all your internal hosts that might be compromised. The 
-determination of compromise is based on blacklisting implemented by the [Badfellas plugin](https://trisul.org/docs/ug/install/badfellas.html)
+determination of compromise is based on blacklisting implemented by the [Badfellas plugin](/docs/ug/install/badfellas)
 
 ---
 
@@ -251,7 +256,7 @@ Steps to generate a Security Report
 
 ## Custom Key Report
 
-This is used to generate report for the [custom key monitors](https://trisul.org/docs/ug/cg/ckey.html)
+This is used to generate report for the [custom key monitors](/docs/ug/cg/ckey)
 
 Steps to generate a Custom Key Report
 

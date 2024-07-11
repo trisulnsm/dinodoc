@@ -1,3 +1,8 @@
+---
+sidebar_position: 1
+sidebar_label: PDF Reports
+---
+
 # PDF Reports
 
 This section describes the readymade reports available in Trisul.
@@ -67,4 +72,4 @@ You can customize the PDF to include your organizations logo and taglines.
 
 ##### Customizing names
 
-Refer to the [oem_settings](https://trisul.org/docs/ug/webadmin/customize.html) for instructions.
+Refer to the [oem_settings](/docs/ug/webadmin/customize) for instructions.
