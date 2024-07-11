@@ -1,3 +1,8 @@
+---
+sidebar_position: 6
+sidebar_label: Monthly Charts
+---
+
 # Monthly Charts
 
 You can now display daily totals for any meters for any item on a

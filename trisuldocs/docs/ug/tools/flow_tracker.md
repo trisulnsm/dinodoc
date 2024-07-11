@@ -1,3 +1,8 @@
+---
+sidebar_position: 3
+sidebar_label: Flow Trackers
+---
+
 # Flow Trackers
 
 Flow trackers are special filters to monitor top flows matching a set

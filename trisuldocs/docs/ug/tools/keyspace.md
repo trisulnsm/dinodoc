@@ -1,3 +1,8 @@
+---
+sidebar_position: 4
+sidebar_label: Search Key Space
+---
+
 # Search Key Space
 
 The Search Key Space tool allows you search for activity for all keys

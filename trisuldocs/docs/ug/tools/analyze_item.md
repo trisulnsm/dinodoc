@@ -1,3 +1,8 @@
+---
+sidebar_position: 5
+sidebar_label: Long Term Traffic
+---
+
 # Long Term Traffic
 
 > **Purpose** : Show long term traffic trends of aparticular item.

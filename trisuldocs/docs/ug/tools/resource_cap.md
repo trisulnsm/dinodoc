@@ -1,3 +1,8 @@
+---
+sidebar_position: 10
+sidebar_label: Resource Cap
+---
+
 # Resource Cap
 
 Resource cap is used to calculate additional bandwidth usage.

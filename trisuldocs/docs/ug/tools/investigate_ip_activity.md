@@ -1,3 +1,8 @@
+---
+sidebar_position: 7
+sidebar_label: Investigate IP Activity
+---
+
 # Investigate IP Activity
 
 Use this tool to analyze host activity over a timeframe. Trisul will

@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+sidebar_label: Flow Tagger
+---
+
 # Flow Tagger
 
 ## How to use

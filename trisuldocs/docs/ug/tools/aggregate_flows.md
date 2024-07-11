@@ -1,3 +1,8 @@
+---
+sidebar_position: 11
+sidebar_label: Aggregate Flows
+---
+
 # Aggregate flows
 
 Query for flows and show aggregated statistics for each tuple.

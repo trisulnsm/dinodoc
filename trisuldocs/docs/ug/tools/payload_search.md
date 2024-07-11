@@ -1,3 +1,8 @@
+---
+sidebar_position: 8
+sidebar_label: Payload Search
+---
+
 # Payload Search
 
 If you have full packet capture enabled, you can search your network
@@ -22,8 +27,7 @@ You can search for
 Trisul will reassemble and check all TCP streams in both directions for
 a match. If HTTP compression and chunked encoding are used, they are
 also factored in. Finally Trisul will show you a list of flows that
-match along with a highlighted context – you can then pull the packets
-as a PCAP file into [Unsniff Network Analyzer](http://www.google.com/search?q=unsniff) for further analysis.
+match along with a highlighted context.
 
 :::note For maximum benefit, you
 need to use *Payload Search* in conjunction with a network forensic

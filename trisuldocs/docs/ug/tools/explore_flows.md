@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+sidebar_label: Explore Flows
+---
 # Explore flows
 
 Fast general purpose search for flows.

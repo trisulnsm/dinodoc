@@ -1,3 +1,8 @@
+---
+sidebar_position: 9
+sidebar_label: Rule Builder
+---
+
 # Rule Builder
 
 Used to build a rule for use for flow taggers, custom metering, etc.
@@ -5,6 +10,13 @@ Used to build a rule for use for flow taggers, custom metering, etc.
 ## Trisul Rule Format
 
 See [Trisul Filter Format](/docs/ref/trisul_filter_format.html#format) section for more details
+
+---
+
+sidebar_position: 9
+sidebar_label: Rule Builder
+
+---
 
 ## How to use
 

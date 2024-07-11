@@ -1,3 +1,8 @@
+---
+sidebar_position: 12
+sidebar_label: Export Flows
+---
+
 # Export flows
 
 Export raw flows for an IP to a CSV File that can be imported into
