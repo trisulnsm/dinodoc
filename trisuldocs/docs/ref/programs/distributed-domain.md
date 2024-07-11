@@ -1,5 +1,8 @@
-# Distributed-Domain
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
+
+# Distributed-Domain
 ## Prerequisite
 
 - Downloafd the trisul from official [website](https://www.trisul.org/get-started/) .
@@ -8,11 +11,25 @@
 
 - Check if expect script is present , If not install the package.
 
+  <Tabs className="unique-tabs">
+    <TabItem value="UBUNTU"  default>
+      ```bash
+      sudo apt install expect
+      ```
+    </TabItem>
+    <TabItem value="ORACLE" >
+      ```bash
+      sudo yum install expect
+      ```
+    </TabItem>
+  </Tabs>
+
 - Install probe in Trisul-probe server , for multiple probe install probe on each server.
 
 - Configure ssh on all Trisul-server
 
 First , you need to change the Hub-server  to distributed domain . Follow the below steps :
+
 
 ### Trisul-Hub server
 
