@@ -1,9 +1,14 @@
+---
+sidebar_position: 1
+sidebar_label: Overview
+---
+
 # Overview
 
 Resources are objects linked to intrusion or forensic indicators. They
 are transferred over the network. Trisul pulls them out, stores, and
 indexes them separately.
-
+s
 ## Normal vs Full Text Search (FTS)
 
 In theory, all resources can be reconstructed from PCAPs at the time
@@ -23,12 +28,12 @@ searching allows you to group and drilldown on selected attributes.
 
 ### Resources - normal index
 
-1.  Domains - pulled out by observing DNS protocol messages
-2.  URLS - GET and POST URLs
-3.  SSL Certificates - Hashes and Subjects
+1. Domains - pulled out by observing DNS protocol messages
+2. URLS - GET and POST URLs
+3. SSL Certificates - Hashes and Subjects
 
 ### Resources - full text search
 
-1.  HTTP headers - not just the URLs as in the normal index, but entire
-    HTTP request and response headers
-2.  SSL Certificates - the entire certificate chain in text form
+1. HTTP headers - not just the URLs as in the normal index, but entire
+   HTTP request and response headers
+2. SSL Certificates - the entire certificate chain in text form

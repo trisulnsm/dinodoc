@@ -20,15 +20,14 @@ The entire certificate chain is the document.
 
 In addition, Trisul stores the following extra fields in the FTS index
 
-1.  **chain_depth_x** - the number of certificates in the chain
-2.  **DERSHA1** - a hash of each ASN DER certificate in the chain
-3.  **PUBKEYSHA1** - a hash of the public key of each certificate. This
-    is a hash of only the subjectPublicKey string and does not include
-    the algorithm part. See
-    [RFC3280](http://www.ietf.org/rfc/rfc3280.txt)
+1. **chain_depth_x** - the number of certificates in the chain
+2. **DERSHA1** - a hash of each ASN DER certificate in the chain
+3. **PUBKEYSHA1** - a hash of the public key of each certificate. This
+   is a hash of only the subjectPublicKey string and does not include
+   the algorithm part. See
+   [RFC3280](http://www.ietf.org/rfc/rfc3280.txt)
 
 #### Sample document
-
 
     (.. cert 1 details..)
     SHA1:c5fdccbc7795b69dd60cea91aaa1711921d18726
@@ -65,12 +64,12 @@ search for SHA1 hashes from intelligence feeds.
 
 Use the special attributes
 
-1.  chain_depth_x -\> Search for chain_depth_1 to locate possible self
-    signed certificates
-2.  PUBKEY and DERSHA -\> Use them to search for particular
-    certificates.
-3.  CN (Common Name) -\> a great place to start looking and for
-    narrowing your queries
+1. chain_depth_x -\> Search for chain_depth_1 to locate possible self
+   signed certificates
+2. PUBKEY and DERSHA -\> Use them to search for particular
+   certificates.
+3. CN (Common Name) -\> a great place to start looking and for
+   narrowing your queries
 
 <div class="image-with-caption">
 

@@ -1,6 +1,10 @@
+---
+sidebar_position: 5
+sidebar_label: Full Text Search
+--- 
+
 # Full Text Search
 
-<span class="label-important label">New in R 3.0</span>
 
 Some resources extracted by Trisul are unstructured but are critical to
 look up fast. These types of resources are stored in a Full Text Search
@@ -58,11 +62,7 @@ the document.
 
 ## Using FTS tools
 
-<div class="hand-o-right autohint">
-
-Enter keyword(s) into the box
-
-</div>
+>Enter keyword(s) into the box
 
 ### Using the faceted results
 
@@ -73,12 +73,8 @@ The following screenshot describes how the UI works.
 
 Results are presented as shown below.
 
-<div class="image-with-caption">
-
 ![](images/ftsi1.png)  
 Components of the FTS user interface, common to all FTS types
-
-</div>
 
 #### Attributes
 
@@ -93,12 +89,8 @@ the results are updated.
 
 Notice we only have two documents matching in the screenshot below
 
-<div class="image-with-caption">
-
 ![](images/ftsi2.png)  
 Results updated after adding attribute value to search
-
-</div>
 
 #### Document content
 
@@ -109,28 +101,17 @@ Notice the **Flow Count** column. This indicates the number of times
 this unique document was seen. Clicking on it leads you to the flows
 page.
 
-<div class="image-with-caption">
-
 ![](images/ftsi3.png)  
 Fragment of document matching the keywords
-
-</div>
 
 #### Flows
 
 Each FTS document is transferred by a flow. The Flows tab gives you a
 list of flows along with the document which was transferred by it.
 
-<div class="success thumbs-o-up autohint">
-
-Use the flows tab to pivot into packets or other types of flow based
+>Use the flows tab to pivot into packets or other types of flow based
 investigation.
 
-</div>
-
-<div class="image-with-caption">
 
 ![](images/ftsi4.png)  
 Flows that transferred documents matching the FTS search
-
-</div>

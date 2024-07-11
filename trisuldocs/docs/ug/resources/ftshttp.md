@@ -1,3 +1,8 @@
+---
+sidebar_position: 6
+sidebar_label: HTTP Header FTS
+--- 
+
 # HTTP Header FTS
 
 All HTTP headers including requests (GET, POST,..etc) and responses
@@ -10,14 +15,12 @@ document. All fields are stored in the index except the following which
 have high variability. You can generate reports by User-Agent, Server,
 Content-Type, or any of the fields in the HTTP Header.
 
-<div class="info-circle autohint">
-
+:::note
 The following HTTP fields are excluded from the index.  
 Cookie, Set-Cookie, Date, Expires, Last-Modified,E-Tag, P3P, ETag,
 Cache-Control, Keep-Alive,Age,Last-Modified, If-, Location,
 Content-Length, Referer
-
-</div>
+:::
 
 The following extra attributes are added by Trisul to aid some kinds of
 useful queries
@@ -44,11 +47,9 @@ A typical document looks like this
 
 ## Using
 
-<div class="info hand-o-right autohint">
-
+:::note navigation
 Select Resources -\> HTTP Header FTS
-
-</div>
+:::
 
 Follow instructions in the [FTS](fts.html) documentation.
 
@@ -59,12 +60,8 @@ Follow instructions in the [FTS](fts.html) documentation.
 You should leverage the special attributes URI and CODE to narrow down
 your search.
 
-<div class="image-with-caption">
-
 ![](images/ftsh1.png)  
 Showing URI and CODE attributes.
-
-</div>
 
 #### Documents to flows
 
@@ -76,9 +73,5 @@ Once you have sufficiently narrowed down your documents of interest.
 - Use the *Download PCAP* button at the top to download all the flows
   shown at once
 
-<div class="image-with-caption">
-
 ![](images/ftsh2.png)  
 Click on options to bring up pivoting options to other kinds of data
-
-</div>

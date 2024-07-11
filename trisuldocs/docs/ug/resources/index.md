@@ -1,3 +1,8 @@
+---
+sidebar_position: 0
+sidebar_label: Resources
+--- 
+
 # Resources
 
 Working with meta objects like domain names, URLs, HTTP headers, and SSL certificates extracted and stored by Trisul.
@@ -7,9 +12,8 @@ Working with meta objects like domain names, URLs, HTTP headers, and SSL cer
 
 ### Sections
 
-1. [Resources overview](https://www.trisul.org/docs/ug/resources/overview.html)
-2. [Full text search](https://www.trisul.org/docs/ug/resources/fts.html)
-3. [How to ..](https://www.trisul.org/docs/ug/resources/tasks.html)
-4. [Automation with TRP scripting](https://www.trisul.org/docs/trp/index.html)
+1. [Resources overview](/docs/ug/resources/oveview)
+2. [Full text search](/docs/ug/resources/fts)
+3. [Automation with TRP scripting](/docs/trp)
 
 

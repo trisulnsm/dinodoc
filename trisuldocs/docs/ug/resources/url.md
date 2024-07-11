@@ -1,3 +1,8 @@
+---
+sidebar_position: 3
+sidebar_label: URL Resources
+--- 
+
 # URL Resources
 
 Trisul can log all HTTP URLs seen by reassembling HTTP packets.
@@ -11,12 +16,8 @@ This screen allows you to generate reports URLs based on the following
 - Regular Expressions for URL
 - String match
 
-<div class="image-with-caption">
-
 ![](images/url_resources.png)  
 URL Resources
-
-</div>
 
 ### Using this feature
 
@@ -25,28 +26,26 @@ URL Resources
 Trisul needs to reassembly HTTP headers to pull out the URL information.
 To enable this :
 
-1.  Locate the [Reassembly](/docs/ref/trisulconfig.html#reassembly)
-    section in the trisulConfig.xml file
-2.  Set the *TCPFlowTrack* and *TCPReassembly* `Enabled` option to TRUE
-3.  Restart Trisul
+1. Locate the [Reassembly](/docs/ref/trisulconfig.html#reassembly)
+   section in the trisulConfig.xml file
+2. Set the *TCPFlowTrack* and *TCPReassembly* `Enabled` option to TRUE
+3. Restart Trisul
 
 ##### View & Query URLs
 
-<div class="info hand-o-right autohint">
-
+:::note navigation
 Click on Resources —\> URL Resources to bring up the screen
-
-</div>
+:::
 
 You can search by :
 
-1.  IP
-2.  Exclude these IPS
-3.  Pair of IPs
-4.  Port
-5.  Timeframe
-6.  Regex Pattern
-7.  Invert Regex Pattren
+1. IP
+2. Exclude these IPS
+3. Pair of IPs
+4. Port
+5. Timeframe
+6. Regex Pattern
+7. Invert Regex Pattren
 
 The results page have links to drilldown into flows, traffic, and
 packets for every URL visited.
