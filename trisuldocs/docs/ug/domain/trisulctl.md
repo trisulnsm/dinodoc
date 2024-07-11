@@ -1,6 +1,5 @@
 ---
-sidebar_position: 01
-sidebar_label: Domain Management Tools
+sidebar_position: 1
 ---
 
 # Domain Management Tools

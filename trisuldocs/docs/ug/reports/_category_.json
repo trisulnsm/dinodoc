@@ -1,0 +1,9 @@
+
+{
+  "label": "Reports",
+  "position": 11,
+  "link": {
+    "type": "generated-index",
+    "description": "Viewing and scheduling reports via email, create custom reports, description of reports"
+  }
+}

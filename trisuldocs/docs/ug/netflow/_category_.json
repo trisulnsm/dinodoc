@@ -1,10 +1,9 @@
+
 {
-  "label": "NetFlow Monitoring",
+  "label": "NetFlow Analysis",
+  "position": 13,
   "link": {
     "type": "generated-index",
-    "title": "Netflow Monitoring with Trisul "
-  },
-  "customProps": {
-    "description": "This section describes the features known as Trisul Neflow Analzyer"
+    "description": "Trisul NetFlow Analyzer - viewing device and interface drilldowns, NetFlow configuration"
   }
 }
