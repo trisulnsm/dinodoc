@@ -1,0 +1,9 @@
+
+{
+  "label": "High Availability",
+  "position": 17,
+  "link": {
+    "type": "generated-index",
+    "description": "Fault tolerance features Disaster Recovery  and High Availability modes "
+  }
+}

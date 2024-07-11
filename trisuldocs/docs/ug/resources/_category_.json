@@ -1,0 +1,9 @@
+
+{
+  "label": "Resources",
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "description": "Resources are metadata like DNS, HTTP, SSL Certs extracted from traffic"
+  }
+}
