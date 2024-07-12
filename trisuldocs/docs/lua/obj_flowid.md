@@ -8,7 +8,7 @@ The string encodes the tuples that make up the flow. The FlowID object described
 
 Trisul support 3 types of flows 1) plain IPv4 2) IPv4 with Netflow and 3) Plain IPv6. The following image shows the structure of these 3 flow IDs. Luckily you never have to construct these keys yourselfs. LUA calls into your functions that involve a network flow will use an object called *FlowID* that wraps this for you. See [How to get or create a flowID](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid#how-to-get-or-create-a-flow-id )
 
-![](../images/flowkey.png)
+![](images/flowkey.png)
 
 ## Methods
 

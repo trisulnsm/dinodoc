@@ -17,7 +17,7 @@ The T.async methods are designed for use in scripts that are involve some I/O th
 
 Using the methods in T.async you can perform these tasks out of the main pipeline in a separate thread pool.
 
-![](../images/tasync.png)
+![](images/tasync.png)
 
 ### Number of async worker threads
 
