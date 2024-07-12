@@ -45,6 +45,18 @@ const FeatureList = [
       </>
     ),
   },
+
+  {
+    title: 'Trisul DevZone Wiki',
+    Svg: require('@site/static/img/undraw_dog_c7i6.svg').default,
+    linkto: 'https://trisul.org/devzone',
+    description: (
+      <>
+        The Trisul Network Analytics DevZone is a DokuWiki site which contains several tips and tricks, sample device configurations and more.
+      </>
+    ),
+  },
+
 ];
 
 function Feature({Svg, title, description, linkto}) {
