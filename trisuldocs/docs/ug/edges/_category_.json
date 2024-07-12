@@ -1,9 +1,13 @@
-
 {
-  "label": "Edges - Graph Analytics",
-  "position": 15,
+  "position": 4,
+  "label": "Basic Usage",
+  "collapsible": true,
+  "collapsed": true,
   "link": {
     "type": "generated-index",
-    "description": "Introducing graph analytics, the edge and vertex explorer"
+    "title": "Basic Usage"
+  },
+  "customProps": {
+    "description": "This description can be used in the swizzled DocCard"
   }
 }
