@@ -1,9 +1,13 @@
-
 {
-  "label": "Edges - Graph Analytics",
   "position": 15,
+  "label": "Graph Analytics",
+  "collapsible": true,
+  "collapsed": true,
   "link": {
     "type": "generated-index",
-    "description": "Introducing graph analytics, the edge and vertex explorer"
+    "title": "Graph Analytics"
+  },
+  "customProps": {
+    "description": "What are Edges? Graph analytics help you uncover relationships"
   }
 }

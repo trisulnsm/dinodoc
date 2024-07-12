@@ -12,19 +12,7 @@ Navigate to the following sections
  - Getting started 
  - Your first dashboard
 
-Start here if you are new to the platform. 
 
-### Traffic Analytics
+import DocCardList from '@theme/DocCardList';
 
-
-### Flow Analytics
-
-
-### Alerts
-
-### Packet Analytics
-
-### Graph Analytics
-
-### Trisul NetFlow Analyzer
-
+<DocCardList />

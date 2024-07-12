@@ -20,7 +20,7 @@ Linux offers a memory backed filesystem called *ramfs* aka *tmpfs* Trisul’
 
 The flow looks like this
 
-![](../images/arch1.png)
+![](images/arch1.png)
 
 ### Creating the ramfs filesytem
 

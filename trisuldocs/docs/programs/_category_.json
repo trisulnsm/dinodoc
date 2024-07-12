@@ -1,0 +1,11 @@
+{
+  "label": "Programs",
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "Program Section"
+  },
+  "customProps": {
+    "description": "This section contains a description of config files and programs "
+  }
+}

@@ -7,7 +7,7 @@ in the last 6 hours.
 
 **Usage**
 
-```ruby
+```rb
 ruby alerts_query.rb trisul.org 12001
 ```
 
