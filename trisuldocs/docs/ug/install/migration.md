@@ -1,3 +1,7 @@
+---
+sidebar_position: 7
+---
+
 # Migration instructions
 
 From one release to another of Trisul, the following data might need migration.

@@ -1,9 +1,7 @@
 ---
-sidebar_position: 05
-
-sidebar_label: Importing a PCAP file
-
+sidebar_position: 4
 ---
+
 # Importing a PCAP file
 
 How to create a new context by importing PCAP (packet capture) dumps.

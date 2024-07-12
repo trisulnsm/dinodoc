@@ -5,12 +5,17 @@ Trisul is a distributed monitoring system with a number of
 We first explain how you can install all components on a single box and
 then slowly expand to explore distributed installation.
 
+
 **Is this your first install?** Follow the [Steps in the Download
 page](https://www.trisul.org/download/) first.
 
 This section covers how to get a *single box* install of Trisul up and
 running. For distributed installation see [Distributed
 monitoring](/docs/ug/domain/index.md)
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />
 
 ## Plug Trisul into your network
 

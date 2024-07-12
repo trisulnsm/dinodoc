@@ -2,8 +2,4 @@
 {
   "label": "Installation",
   "position": 2,
-  "link": {
-    "type": "generated-index",
-    "description": "Installation and getting to a login web page"
-  }
 }

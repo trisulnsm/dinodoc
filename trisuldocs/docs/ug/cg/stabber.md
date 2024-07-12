@@ -1,8 +1,5 @@
 ---
 sidebar_position: 09
-
-sidebar_label: Real Time Stabbers
-
 ---
 
 # Real Time Stabbers

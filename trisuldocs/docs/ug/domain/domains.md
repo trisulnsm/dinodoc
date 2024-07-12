@@ -1,6 +1,5 @@
 ---
-sidebar_position: 04
-sidebar_label: Domains
+sidebar_position: 4
 ---
 
 # Domains

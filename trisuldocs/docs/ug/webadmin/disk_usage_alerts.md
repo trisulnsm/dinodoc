@@ -1,6 +1,5 @@
 ---
 sidebar_position: 19
-sidebar_label: Disk Usage Alerts
 ---
 
 # Disk usage alerts

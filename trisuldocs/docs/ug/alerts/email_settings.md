@@ -1,9 +1,5 @@
 ---
-
 sidebar_position: 2
-
-sidebar_label: Email Alert Delivery
-
 --- 
 
 # Email alert delivery

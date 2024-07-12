@@ -2,8 +2,4 @@
 {
   "label": "Trisul Domains",
   "position": 3,
-  "link": {
-    "type": "generated-index",
-    "description": "The concept of Trisul monitoring domain"
   }
-}

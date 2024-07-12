@@ -1,12 +1,11 @@
----
-sidebar_position: 0
-sidebar_label: Reports
----
-
 # Reports
 
 Trisul comes with dozens of pre-defined reports for your use. You can
  either view them on the browser or send them via email periodically.
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />
 
 ### Accessing reports
 

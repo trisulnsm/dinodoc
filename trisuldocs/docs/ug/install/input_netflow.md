@@ -1,3 +1,7 @@
+---
+sidebar_position: 11
+---
+
 # Setup Trisul with Netflow
 
 This section describes how you can setup Trisul to accept Netflow or Netflow “like” measurements IPFIX, JFLOW, SFLOW.

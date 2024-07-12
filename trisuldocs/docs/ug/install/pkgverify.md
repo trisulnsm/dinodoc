@@ -1,3 +1,7 @@
+---
+sidebar_position: 5
+---
+
 # Verifying packages
 
 All of our DEB and RPM packages are signed with our GPG key.

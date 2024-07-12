@@ -1,8 +1,5 @@
 ---
 sidebar_position: 3
-
-sidebar_label: Threshold Crossing Alerts (TCAs)
-
 ---
 
 # Threshold crossing alerts (TCAs)

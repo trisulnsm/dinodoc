@@ -1,8 +1,5 @@
 ---
 sidebar_position: 04
-
-sidebar_label: FAQ
-
 ---
 
 # FAQ

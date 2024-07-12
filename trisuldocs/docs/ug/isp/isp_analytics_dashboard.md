@@ -1,6 +1,5 @@
 ---
 sidebar_position: 3
-sidebar_label: ISP Analytics Dashboard
 ---
 
 # ISP Analytics Dashboard

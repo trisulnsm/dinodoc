@@ -1,9 +1,7 @@
 ---
 sidebar_position: 07
-
-sidebar_label: Retro Analysis Tools
-
 ---
+
 # Retro analysis tools
 
 You have selected a time interval you want to focus on - whats next ?

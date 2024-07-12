@@ -1,15 +1,12 @@
----
-
-sidebar_position: 01
-
-sidebar_label: Basic Usage
-
----
 # First login
 
 Congrats ! You now have a Trisul login screen and may be wondering where
 to go next. This page will get you from the login screen to the
 dashboards where you can view your first stats.
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />
 
 ## Viewing stats
 

@@ -1,6 +1,5 @@
 ---
 sidebar_position: 8
-sidebar_label: Background Tasks
 ---
 
 # Background tasks

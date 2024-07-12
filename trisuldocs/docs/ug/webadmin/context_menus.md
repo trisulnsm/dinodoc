@@ -1,6 +1,5 @@
 ---
 sidebar_position: 17
-sidebar_label: Context Menus
 ---
 
 # Context Menus

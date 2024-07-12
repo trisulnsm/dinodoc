@@ -2,8 +2,4 @@
 {
   "label": "Basic Usage",
   "position": 4,
-  "link": {
-    "type": "generated-index",
-    "description": "Logging and starting to capture data. To get to a few basic dashboards"
   }
-}

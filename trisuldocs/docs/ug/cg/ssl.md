@@ -1,8 +1,5 @@
 ---
 sidebar_position: 10
-
-sidebar_label: SSL/TLS Metering
-
 ---
 
 # SSL/TLS Metering

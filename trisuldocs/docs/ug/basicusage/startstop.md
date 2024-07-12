@@ -1,8 +1,5 @@
 ---
-sidebar_position: 02
-
-sidebar_label: Starting and Stopping Trisul
-
+sidebar_position: 1
 ---
 
 # Starting and stopping Trisul

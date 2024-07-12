@@ -1,9 +1,5 @@
 ---
-
 sidebar_position: 02
-
-sidebar_label: Flow Trackers
-
 ---
 
 # Flow Trackers

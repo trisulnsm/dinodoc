@@ -1,11 +1,11 @@
----
-title:     Trisul with Netflow
-sidebar_position: 1
----
-
 # Trisul with Netflow
 
 This section explains how you can setup Trisul in Netflow mode. In this mode, Trisul uses Netflow and other flow telemetry to drive its analytics engine instead of raw packets. This section describes how to configure Netflow mode, to analyze from a *Device perspective*, and how to use advanced features such as “Interface Tracking”.
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />
+
 
 ## Key Features of Trisul Netflow
 

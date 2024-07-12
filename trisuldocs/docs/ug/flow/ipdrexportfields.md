@@ -1,8 +1,5 @@
 ---
 sidebar_position: 08
-
-sidebar_label: IPDR Export Format
-
 ---
 
 # IPDR Export format

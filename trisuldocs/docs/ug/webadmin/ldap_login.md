@@ -1,3 +1,7 @@
+---
+sidebar_position: 13
+---
+
 # LDAP Login
 
 The LDAP (Lightweight Directory Access Protocol) is a login option that

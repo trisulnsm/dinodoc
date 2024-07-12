@@ -1,3 +1,7 @@
+---
+sidebar_position: 8
+---
+
 # Configure disk storage
 
 Trisul’s disk requirements depend on how much you want to retain :

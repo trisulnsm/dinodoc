@@ -1,7 +1,5 @@
 ---
-title: Layer2 and QoS
-sidebar_position: 9 
-
+sidebar_position: 8
 ---
 
 # Layer 2 and QoS

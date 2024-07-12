@@ -1,3 +1,7 @@
+---
+sidebar_position: 12
+---
+
 # Setup packet captures for Trisul
 
 This section explains the various methods to acquire raw network packets from your infrastructure and into a Trisul Probe.

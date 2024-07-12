@@ -1,3 +1,7 @@
+---
+sidebar_position: 14
+---
+
 # Geo Plugin
 
 The Geo plugin is an add-on package to Trisul. It enhances the base Trisul functionality by adding

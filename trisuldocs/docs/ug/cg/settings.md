@@ -1,8 +1,5 @@
 ---
 sidebar_position: 03
-
-sidebar_label: Counter Group Settings
-
 ---
 # Counter Group Settings
 

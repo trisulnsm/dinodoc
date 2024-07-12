@@ -1,9 +1,5 @@
 ---
-
 sidebar_position: 4
-
-sidebar_label: Flow Tracker Alerts
-
 --- 
 
 # Flow Tracker Alerts

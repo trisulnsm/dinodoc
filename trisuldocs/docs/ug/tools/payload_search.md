@@ -1,6 +1,5 @@
 ---
 sidebar_position: 8
-sidebar_label: Payload Search
 ---
 
 # Payload Search

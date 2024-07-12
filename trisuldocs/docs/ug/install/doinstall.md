@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # Install trisul
 
 Trisul is a distributed network analytics system that can be installed on off the shelf hardware. Beginners and users of the Free License will want to install all the packages on a single server. Advanced users can split the Hub and Probe nodes and roll out a distributed deployment.

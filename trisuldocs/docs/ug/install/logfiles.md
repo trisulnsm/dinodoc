@@ -1,3 +1,7 @@
+---
+sidebar_position: 9
+---
+
 # Viewing log files
 
 Trisul has a rich logging and monitoring framework. This section explains

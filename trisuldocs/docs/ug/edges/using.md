@@ -1,11 +1,6 @@
 ---
-sidebar_position: 2
-
-sidebar_label: Working with Edges
-
+sidebar_position: 1
 ---
-
-# 
 
 # Working with Edges
 

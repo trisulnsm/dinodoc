@@ -1,8 +1,3 @@
----
-sidebar_position: 00
-sidebar_label: Manage a Trisul Domain
----
-
 # Trisul distributed domain concepts
 
 Trisul 6.0 is a *streaming* *distributed* analytics platform. There are
@@ -12,13 +7,19 @@ are not just dumb collectors but actually contain the main streaming
 analytics function. You can even connect the output of a Trisul Probe to
 a separate backend like Elastic Search.
 
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />
+
 The following diagram illustrates the components involved
 
 1. the **domain** *domain0*
 2. the **trisul-probe** nodes *probe0* *probeEAST* and *probeWEST*
 3. the **trisul-hub** node *hub0*
 
-Trisul domain components
+![](images/dom.png)
+
+*Trisul domain components*
 
 The domain represents a top level management group within which you
 create a topology of *probe* nodes and *hub* nodes. All the nodes are

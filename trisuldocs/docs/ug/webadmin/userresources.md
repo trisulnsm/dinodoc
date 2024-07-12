@@ -1,6 +1,5 @@
 ---
 sidebar_position: 18
-sidebar_label: User Resources
 ---
 
 # User Resources

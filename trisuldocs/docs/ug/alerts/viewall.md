@@ -1,10 +1,7 @@
 ---
-
 sidebar_position: 10
-
-sidebar_label: Summary of All Alerts
-
 ---
+
 # Summary of all alerts
 
 There are many different types of alerts supported by Trisul. In 

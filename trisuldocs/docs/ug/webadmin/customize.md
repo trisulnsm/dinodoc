@@ -1,6 +1,5 @@
 ---
 sidebar_position: 9
-sidebar_label: Customizing Trisul for an OEM
 ---
 
 # Customizing Trisul for an OEM

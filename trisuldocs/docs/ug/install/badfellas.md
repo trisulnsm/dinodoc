@@ -1,3 +1,7 @@
+---
+sidebar_position: 13
+---
+
 # BadFellas plugin
 
 The Badfellas plugin checks your network traffic against millions of indicators to detect malicious activity.

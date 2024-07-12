@@ -2,8 +2,4 @@
 {
   "label": "Packet Captures",
   "position": 8,
-  "link": {
-    "type": "generated-index",
-    "description": "Packet capture, L7 analysis, viewing and downloading PCAPS "
-  }
 }

@@ -1,8 +1,5 @@
 ---
-sidebar_position: 13
-
-sidebar_label: Microsoft Teams Delivery
-
+sidebar_position: 12
 ---
 
 # Microsoft Teams delivery

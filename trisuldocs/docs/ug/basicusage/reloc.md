@@ -1,9 +1,5 @@
 ---
-
-sidebar_position: 04
-
-sidebar_label: Relocate Trisul Database
-
+sidebar_position: 3
 ---
 
 # Relocate Trisul database

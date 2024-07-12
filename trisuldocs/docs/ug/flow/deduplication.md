@@ -1,8 +1,5 @@
 ---
 sidebar_position: 06
-
-sidebar_label: Flow Legs and Duplication
-
 ---
 
 # Flow Legs and duplication

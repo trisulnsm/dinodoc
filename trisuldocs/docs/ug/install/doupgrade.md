@@ -1,3 +1,7 @@
+---
+sidebar_position: 4
+---
+
 # Upgrading trisul
 
 An upgrade is simply an uninstall followed by a new install.

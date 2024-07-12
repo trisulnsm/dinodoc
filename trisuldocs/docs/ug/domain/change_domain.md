@@ -1,6 +1,5 @@
 ---
-sidebar_position: 02
-sidebar_label: Change Domain Settings
+sidebar_position: 2
 ---
 
 import Highlight from '/src/components/Highlighter/Highlight';

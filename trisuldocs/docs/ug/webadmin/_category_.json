@@ -2,8 +2,4 @@
 {
   "label": "Web Admin",
   "position": 12,
-  "link": {
-    "type": "generated-index",
-    "description": "Webserver admin, settings, configuration, user creation"
-  }
 }

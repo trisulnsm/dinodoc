@@ -1,6 +1,5 @@
 ---
-sidebar_position: 03
-sidebar_label: Deploy a New Probe
+sidebar_position: 3
 ---
 
 import Highlight from '/src/components/Highlighter/Highlight';

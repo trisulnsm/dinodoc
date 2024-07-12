@@ -1,9 +1,4 @@
-
 {
-  "label": "NetFlow Analysis",
+  "label": "Netflowlow Monitoring",
   "position": 13,
-  "link": {
-    "type": "generated-index",
-    "description": "Trisul NetFlow Analyzer - viewing device and interface drilldowns, NetFlow configuration"
-  }
 }

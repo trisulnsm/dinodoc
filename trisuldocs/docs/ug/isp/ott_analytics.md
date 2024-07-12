@@ -1,6 +1,5 @@
 ---
 sidebar_position: 4
-sidebar_label: OTT Analytics in Trisul
 ---
 
 # OTT Analytics in trisul

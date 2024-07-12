@@ -1,8 +1,3 @@
----
-sidebar_position: 00
-sidebar_label: High Availability
----
-
 # High Availability
 
 Trisul Network Analytics supports the following high availability options
@@ -14,6 +9,10 @@ A high availability redundant hub probe setup within the same data centre. The c
 **DR**
 
 setup a disaster recovery node typically in another data center.
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />
 
 ## HA
 

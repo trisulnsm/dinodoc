@@ -1,9 +1,7 @@
 ---
 sidebar_position: 05
-
-sidebar_label: Custom Key Monitors
-
 ---
+
 # Custom Key Monitors
 
 Custom Key Monitors allow you to monitor a set of items in real time,

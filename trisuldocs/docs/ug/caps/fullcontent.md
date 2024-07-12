@@ -1,8 +1,5 @@
 ---
 sidebar_position: 01
-
-sidebar_label: Packet Capture Basics
-
 ---
 
 # Packet Capture Basics

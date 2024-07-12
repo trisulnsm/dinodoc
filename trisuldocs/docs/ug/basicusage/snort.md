@@ -1,8 +1,5 @@
 ---
-sidebar_position: 06
-
-sidebar_label: Import PCAP with IDS
-
+sidebar_position: 5
 ---
 
 # Import PCAP with IDS

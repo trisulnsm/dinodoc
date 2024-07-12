@@ -1,8 +1,5 @@
 ---
 sidebar_position: 1
-
-sidebar_label: Manage Alert Groups
-
 ---
 
 # Manage Alert Groups

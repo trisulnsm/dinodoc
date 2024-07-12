@@ -2,8 +2,4 @@
 {
   "label": "For ISPs",
   "position": 16,
-  "link": {
-    "type": "generated-index",
-    "description": "Internet Service Provider features such as BGP, ASN and Prefix Analytics, Route Analytics"
-  }
 }

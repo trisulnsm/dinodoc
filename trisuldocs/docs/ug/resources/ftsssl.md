@@ -1,3 +1,7 @@
+---
+sidebar_position: 7
+---
+
 # SSL Certificates FTS
 
 All SSL Certificate chains are stored in the full text index.

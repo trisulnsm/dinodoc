@@ -1,9 +1,5 @@
 ---
-
-sidebar_position: 03
-
-sidebar_label: Cleaning the Database
-
+sidebar_position: 2
 ---
 
 # Cleaning the database

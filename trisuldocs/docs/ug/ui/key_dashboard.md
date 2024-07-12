@@ -1,6 +1,5 @@
 ---
 sidebar_position: 2
-sidebar_label: Key Dashboard
 ---
 
 # Key dashboard

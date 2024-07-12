@@ -1,7 +1,5 @@
 ---
-title: Netflow Sources Dashboard
-sidebar_position: 8
-
+sidebar_position: 7
 ---
 
 # Interface Drilldown

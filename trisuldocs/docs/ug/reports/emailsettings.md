@@ -1,6 +1,5 @@
 ---
 sidebar_position: 2
-sidebar_label: Setup E-Mail
 ---
 
 # Setup E-Mail

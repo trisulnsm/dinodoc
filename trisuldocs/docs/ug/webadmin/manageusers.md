@@ -1,6 +1,5 @@
 ---
 sidebar_position: 2
-sidebar_label: Manage Users
 ---
 
 # Manage Users

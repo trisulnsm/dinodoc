@@ -1,6 +1,5 @@
 ---
 sidebar_position: 20
-sidebar_label: IPDR Settings
 ---
 
 # IPDR Settings

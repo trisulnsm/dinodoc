@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # System requirements
 
 Computing requirements needed to run Trisul.

@@ -1,3 +1,7 @@
+---
+sidebar_position: 11
+---
+
 # Plugin Data Updates
 
 Shows status of automatic feed updates for Badfellas, Geo, URLfilter

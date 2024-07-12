@@ -1,6 +1,5 @@
 ---
 sidebar_position: 1
-sidebar_label: What is Trisul
 ---
 
 # What is Trisul

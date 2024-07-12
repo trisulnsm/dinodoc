@@ -1,8 +1,5 @@
 ---
 sidebar_position: 8
-
-sidebar_label: SMS Alert Delivery
-
 ---
 
 # SMS alert delivery

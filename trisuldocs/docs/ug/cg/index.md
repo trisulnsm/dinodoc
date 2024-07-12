@@ -1,11 +1,3 @@
----
-
-sidebar_position: 00
-
-sidebar_label: Traffic Monitoring
-
----
-
 # Traffic Monitoring with Trisul
 
 Traffic monitoring is the central task of Trisul. Out of the box, Trisul
@@ -13,6 +5,13 @@ Traffic monitoring is the central task of Trisul. Out of the box, Trisul
 Applications, Hosts, VLAN, MAC, etc. A "Counter Group":intro.html is 
 the key concept you need to know about in Traffic Monitoring with 
 Trisul.
+
+
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />
+
 
 ### Traffic analysis features
 

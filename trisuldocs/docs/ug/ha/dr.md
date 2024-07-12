@@ -1,6 +1,5 @@
 ---
 sidebar_position: 01
-sidebar_label: Configuring Primary Backup DR Systems
 ---
 
 # Configuring Primary Backup DR systems

@@ -1,8 +1,5 @@
 ---
 sidebar_position: 5
-
-sidebar_label: Real Time Alert Stabber
-
 ---
 
 # Real Time Alert Stabber

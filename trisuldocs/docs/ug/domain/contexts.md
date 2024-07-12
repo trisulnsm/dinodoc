@@ -1,6 +1,5 @@
 ---
-sidebar_position: 05
-sidebar_label: Working with Contexts
+sidebar_position: 5
 ---
 
 # Working with contexts

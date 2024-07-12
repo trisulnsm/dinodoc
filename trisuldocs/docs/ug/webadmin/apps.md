@@ -1,6 +1,5 @@
 ---
 sidebar_position: 12
-sidebar_label: Trisul Apps
 ---
 
 # Trisul Apps

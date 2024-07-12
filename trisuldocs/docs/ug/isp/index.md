@@ -1,7 +1,4 @@
----
-sidebar_position: 0
-sidebar_label: Introduction
----
+
 # For ISPs
 
 # Introduction
@@ -9,7 +6,13 @@ sidebar_label: Introduction
 Several ISPs have deployed Trisul in their networks to gain deep
 insights into their peering and routing efficiencies. In addition to the
 normal metrics, device, and interface level drilldowns made available in
-Trisul Netflow Analytics , the Trisul ISP configuration adds the
+Trisul Netflow Analytics.
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />
+
+The Trisul ISP configuration adds the
 following.
 
 1. Peering Analytics

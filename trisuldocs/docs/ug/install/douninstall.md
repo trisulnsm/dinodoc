@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # Uninstall
 
 Trisul packages can be uninstalled like any other linux package.

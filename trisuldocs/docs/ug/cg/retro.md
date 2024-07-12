@@ -1,9 +1,7 @@
 ---
 sidebar_position: 06
-
-sidebar_label: Performing Retro Analysis
-
 ---
+
 # Performing Retro analysis
 
 Retro analysis is short for retrospective analysis. When applied to

@@ -1,6 +1,5 @@
 ---
 sidebar_position: 16
-sidebar_label: Admin Menus
 ---
 
 # Admin Menus

@@ -1,11 +1,10 @@
----
-sidebar_position: 0
-sidebar_label: Introduction
----
-
 # Trisul User Guide
 
 Trisul Network Analytics includes everything you need to deploy a distributed Network Traffic and Security Monitoring solution across your enterprise. This User Guide is an operational guide that includes topics related to installing, administering, and using the web interface to navigate, view reports, set alerts, and monitoring your network.
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />
 
 ### Other user documentation
 

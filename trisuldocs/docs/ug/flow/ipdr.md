@@ -1,9 +1,5 @@
 ---
-
 sidebar_position: 07
-
-sidebar_label: Complete IP Flow Logger
-
 ---
 
 # Complete IP Flow logger

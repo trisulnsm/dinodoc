@@ -1,9 +1,5 @@
 ---
-
 sidebar_position: 01
-
-sidebar_label: Flow Taggers
-
 ---
 
 # Flow Taggers

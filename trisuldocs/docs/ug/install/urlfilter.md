@@ -1,3 +1,7 @@
+---
+sidebar_position: 15
+---
+
 # URL Filter Plugin
 
 URL Blacklisting is a common way to enforce enterprise web surfing policy. A blacklist contains a number of well known URLs categorized into groups like ‘video’/‘internet radio’/‘news’/‘prOn’/‘games’ etc. They are then automatically blocked by web proxies or firewalls.

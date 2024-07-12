@@ -1,3 +1,7 @@
+---
+sidebar_position: 10
+---
+
 # Installing a new License
 
 This section describes how you can install a new License File to replace the default [Free 3-day](https://trisul.org/free) rolling window license.

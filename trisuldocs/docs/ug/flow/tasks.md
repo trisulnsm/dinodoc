@@ -1,9 +1,5 @@
 ---
-
 sidebar_position: 05
-
-sidebar_label: Common Tasks
-
 ---
 
 # Common Tasks

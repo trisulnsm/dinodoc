@@ -2,8 +2,4 @@
 {
   "label": "Navigating the UI",
   "position": 5,
-  "link": {
-    "type": "generated-index",
-    "description": "Understanding the user inteface layout and elements"
-  }
 }
