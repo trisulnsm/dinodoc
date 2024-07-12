@@ -28,6 +28,6 @@ easier to start RAT. See the screencast below.
 
 The following screencast shows RAT in action
 
-![Image](./images/rat1.png)
+<figure>![image](images/rat1.png)<figcaption>rat tool screenshot showing live Trisul performance</figcaption></figure>
 
 ![image](./images/rat2.png)

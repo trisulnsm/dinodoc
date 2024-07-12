@@ -17,7 +17,7 @@ import TabItem from '@theme/TabItem';
       sudo apt install expect
       ```
     </TabItem>
-    <TabItem value="ORACLE" >
+    <TabItem value="RHEL" >
       ```bash
       sudo yum install expect
       ```
