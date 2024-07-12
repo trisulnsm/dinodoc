@@ -41,6 +41,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
+		  sidebarCollapsed: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -66,6 +67,7 @@ const config = {
         },
         items: [
           {to: '/docs/ug', label: 'User Guide', position: 'left'},
+          {to: '/docs/lua', label: 'API', position: 'left'},
           {
             href: 'https://github.com/trisulnsm/dinodoc',
             label: 'GitHub',

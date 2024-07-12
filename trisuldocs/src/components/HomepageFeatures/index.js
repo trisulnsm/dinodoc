@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Getting Started',
-    linkto: '/docs/ug/getting-started',
+    linkto: '/docs/ug/intro/free',
     Svg: require('@site/static/img/undraw_onboarding_re_6osc.svg').default,
     description: (
       <>
