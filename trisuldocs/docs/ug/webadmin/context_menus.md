@@ -122,7 +122,7 @@ BGP Status on all probes.
 > To start the BGP Receiver you need root privileges on the probe, then
 > type **systemctl start trisul-bgp**
 
-To know more on Trisul-BGP concept, See [Trisul-BGP](/docs/ug/isp/bgp.html)
+To know more on Trisul-BGP concept, See [Trisul-BGP](/docs/ug/isp/bgp)
 
 ### Netflow Template DB
 
@@ -163,7 +163,7 @@ Status of the DR Site from the primary site.
 
 ![](images/dr_traffic_chart.png)
 
-Refer [Disaster Recovery](/docs/ug/ha/dr.html)
+Refer [Disaster Recovery](/docs/ug/ha/dr)
 
 ## Profile Menu
 
@@ -183,7 +183,7 @@ network interface or adapters that we specify.
 This menu helps you to configure the adapter to which you want Trisul to
 listen to.
 
-For more about [selecting a capture adapter or interface](/docs/ug/webadmin/profiles.html)
+For more about [selecting a capture adapter or interface](/docs/ug/webadmin/profiles)
 
 ### Home Networks
 
@@ -200,7 +200,7 @@ You are shown the form with following fields
 | Network Number | Enter a network number : Example 19.28.182.0 or Enter a newtork number with CIDR : Example 192.168.182.0/24 |
 | Network Mask   | Enter a subnet mask : Example 255.255.255.0                                                                 |
 
-Refer to [Home Networks](/docs/ug/webadmin/home_networks.html)
+Refer to [Home Networks](/docs/ug/webadmin/home_networks)
 
 > Click on **Create** to add a new home network
 
@@ -211,7 +211,7 @@ Access points map protocols to ports. For example if you want to decode
 UDP port 5556 as Netflow you can edit UDP then map Port 5556 to the
 Netflow protocol.
 
-Refer to [Access Points](/docs/ug/webadmin/access_points.html)
+Refer to [Access Points](/docs/ug/webadmin/access_points)
 
 ### Counter Groups
 
@@ -225,7 +225,7 @@ It provides a list of available counter groups with Name,Description,Type, Bucke
 > You can manually edit the parameters in counter groups by selecting
 > **edit** option.
 
-Refer to [Trisul Counter Groups](/docs/ug/cg/settings.html)
+Refer to [Trisul Counter Groups](/docs/ug/cg/settings)
 
 ### View Meters
 
@@ -235,7 +235,7 @@ Installing additional plugins will usually give you even more meters which will 
 It provides the Detailed metrics of each counter group like Total, In,
 Out, BucketSize, TopperBucketsize, GUID, etc
 
-Refer to [Trisul Traffic Meters](/docs/ref/meters.html)
+Refer to [Trisul Traffic Meters](/docs/ref/meters)
 
 ### Netflow Wizard
 
@@ -249,7 +249,7 @@ This menu allows you to configure Netflow.
 5. You can configure your routers and interfaces and also resolve your
    IPs from here.
 
-Refer to [Netflow Wizard](/docs/ug/netflow/netflow_wizard.html)
+Refer to [Netflow Wizard](/docs/ug/netflow/netflow_wizard)
 
 ### Filtered Counter
 
@@ -260,14 +260,14 @@ Meter a subset of a group that matches a set of keys from another group.
 Filtered counter group are invaluable in setting up cross-group
 counters.
 
-Refer to [Filtered Counter](/docs/ug/cg/custom.html#filtered_counter_groups)
+Refer to [Filtered Counter](/docs/ug/cg/custom#filtered_counter_groups)
 
 ### Keysets
 
 A new counter group that aggregates sets of keys from a host counter
 group. Essentially monitors a “group of keys” as a single key.
 
-To create a Keyset counter group, Refer to [Keyset Counter](/docs/ug/cg/custom.html#keyset_counter_groups)
+To create a Keyset counter group, Refer to [Keyset Counter](/docs/ug/cg/custom#keyset_counter_groups)
 
 ### Stat Based
 
@@ -277,7 +277,7 @@ value.
 Creates a subset of a parent group consisting only of items who meet a
 certain meter criteria.
 
-Refer to [Stat Based Counter](/docs/ug/cg/custom.html#stat_based_counter_groups)
+Refer to [Stat Based Counter](/docs/ug/cg/custom#stat_based_counter_groups)
 
 ### Rule Based
 
@@ -287,11 +287,11 @@ custom-meter your network traffic.
 It works like this :
 
 \# Derive from a parent group such as hosts / applications / macs  
-\# Specify a chain of rules in [Trisul Filter Format](/docs/ref/trisul_filter_format.html)  
+\# Specify a chain of rules in [Trisul Filter Format](/docs/ref/trisul_filter_format)  
 \# The first rule that matches determines the meter key  
 \# If no rule matches the key falls through to the parent counter group
 
-Refer to [Rule Based Counter](/docs/ug/cg/custom.html#rule_based_counter_groups)
+Refer to [Rule Based Counter](/docs/ug/cg/custom#rule_based_counter_groups)
 
 ### Crosskeys
 
@@ -300,7 +300,7 @@ crossing the *Applications X Hosts* counter group you setup a new
 counter group with *Hosts-App* keys this lets you monitor traffic
 statistics for Hosts-App flows.
 
-Refer to [Crosskey Counter](/docs/ug/cg/custom.html#cross_key_counter_groups)
+Refer to [Crosskey Counter](/docs/ug/cg/custom#cross_key_counter_groups)
 
 ### Cardinality
 
@@ -313,7 +313,7 @@ following restriction :
 
 - A maximum of 2 cardinality counters are allowed per counter group.
 
-Refer to [Cardinality Counter](/docs/ug/cg/custom.html#cardinality_counting)
+Refer to [Cardinality Counter](/docs/ug/cg/custom#cardinality_counting)
 
 ### Session Groups
 
@@ -335,7 +335,7 @@ flows’. Those are flows transferring a huge volume of data. But as you
 shall see below this is not the only type of tracker. Flow trackers are
 also necessary for you to use flow tracker alerts.
 
-Refer to [Flow Tracker](/docs/ug/flow/tracker.html)
+Refer to [Flow Tracker](/docs/ug/flow/tracker)
 
 ### Flow Tagger
 
@@ -349,7 +349,7 @@ Some examples
 2. Mark flows to China or Ukraine as `"CHUKR"`
 3. Mark all non-HTTP flows to your subnet 10.18.10.0/24 as `"SUSPECT"`
 
-Refer to [Flow Tagger](/docs/ug/flow/tagger.html)
+Refer to [Flow Tagger](/docs/ug/flow/tagger)
 
 ### Alert Groups
 
@@ -394,7 +394,7 @@ monitors the value of the traffic meter against the configured
 thresholds and generates a “Threshold Crossing Alert” if the value
 crosses the thresholds.
 
-Refer to [Threshold Crossing Alert](/docs/ug/alerts/tca.html)
+Refer to [Threshold Crossing Alert](/docs/ug/alerts/tca)
 
 ### Threshold Band
 
@@ -407,7 +407,7 @@ The band
 2. day of week based so weekends are tracked separately
 3. can handle holidays and spikey days
 
-Refer to [Threshold Band Crossing Alerts](/docs/ug/alerts/tband.html)
+Refer to [Threshold Band Crossing Alerts](/docs/ug/alerts/tband)
 
 ### Setup Email Alerts
 
@@ -454,10 +454,10 @@ look up fast. These types of resources are stored in a Full Text Search
 
 Currently the following FTS resources are supported.
 
-1. **[SSL Certificate Chains](/docs/ug/resources/ftsssl.html)** - the full printed form with all extensions and attributes
-2. **[HTTP Headers](/docs/ug/resources/ftshttp.html)** - all HTTP request and response headers
+1. **[SSL Certificate Chains](/docs/ug/resources/ftsssl)** - the full printed form with all extensions and attributes
+2. **[HTTP Headers](/docs/ug/resources/ftshttp)** - all HTTP request and response headers
 
-Refer to [FTS Groups](/docs/ug/resources/fts.html)
+Refer to [FTS Groups](/docs/ug/resources/fts)
 
 ### Trisul Protocols
 
@@ -476,7 +476,7 @@ protocol a new GUID will be assigned.
 This menu provides a list of all the Trisul Plugin Classes,their
 configuration files and when their data was refreshed.
 
-Refer to [Trisul Plugins](/docs/ref/plugin_configuration.html)
+Refer to [Trisul Plugins](/docs/ref/plugin_configuration)
 
 ### Bulk Ping Groups
 
