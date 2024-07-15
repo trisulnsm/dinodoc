@@ -4,7 +4,7 @@
 
 Flow tracking is a streaming algorithm that captures real time snapshots of **interesting** flows. You need to decide what flows are interesting – they could be elephant flows transferring large volume of data, or long lived flows, or video flows between 10AM and 5PM, etc.
 
-You can create flow trackers using the Trisul Web Interface – see [Flow Tracker](https://trisul.org/docs/ug/flow/tracker.html) When you create Flow Trackers from the UI you are however only allowed to use fixed criteria like IP Addresses, Ports, Volume, or Duration. The LUA flow tracker described here gives you the ultimate control over the process. For example you can create a tracker that says : “Track all flows from 10.240.0.0/16 subnet but exclude ports < 1024 and 12001,12002,10004 and IP 45.19.22.123”. This kind of complex rule building allows you to be endlessly creative and sharply focused. The LUA based flow tracker also allows you to be stateful – you can be guided by an Intel feed, or DNS.
+You can create flow trackers using the Trisul Web Interface – see [Flow Tracker](/docs/ug/flow/tracker) When you create Flow Trackers from the UI you are however only allowed to use fixed criteria like IP Addresses, Ports, Volume, or Duration. The LUA flow tracker described here gives you the ultimate control over the process. For example you can create a tracker that says : “Track all flows from 10.240.0.0/16 subnet but exclude ports < 1024 and 12001,12002,10004 and IP 45.19.22.123”. This kind of complex rule building allows you to be endlessly creative and sharply focused. The LUA based flow tracker also allows you to be stateful – you can be guided by an Intel feed, or DNS.
 
 ## Structure
 
@@ -17,10 +17,10 @@ The table consists the following
 | field                                                                               | type                                                                                                                     | description                                                                                       |
 | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
 | control                                                                             | Table                                                                                                                    | Details about the flow tracker. See below                                                         |
-| [onbeginflush](https://trisul.org/docs/lua/flow_tracker.html#function_onbeginflush) | function [engine](https://trisul.org/docs/lua/obj_engine.html)                                                           | Before starting a snapshot interval                                                               |
-| [getmetric](https://trisul.org/docs/lua/flow_tracker.html#function_getmetric)       | function [engine](https://trisul.org/docs/lua/obj_engine.html), [flow](https://trisul.org/docs/lua/sg_monitor.html#flow) | Compute and return a metric for this flow, return 0 or nil to discard this from the flow tracker. |
-| [onendflush](https://trisul.org/docs/lua/flow_tracker.html#function_onendflush)     | function [engine](https://trisul.org/docs/lua/obj_engine.html)                                                           | After all snapshots have been flushed                                                             |
-| [onmetronome](https://trisul.org/docs/lua/flow_tracker.html#function_onmetronome)   | function(engine, timestamp, tick_count, tick_interval)                                                                   | called every second if present                                                                    |
+| [onbeginflush](/docs/lua/flow_tracker#functiononbeginflush) | function [engine](/docs/lua/obj_engine)                                                           | Before starting a snapshot interval                                                               |
+| [getmetric](/docs/lua/flow_tracker#functiongetmetric)       | function [engine](/docs/lua/obj_engine), [flow](https://trisul.org/docs/lua/sg_monitor.html#flow) | Compute and return a metric for this flow, return 0 or nil to discard this from the flow tracker. |
+| [onendflush](/docs/lua/flow_tracker#functiononendflush)     | function [engine](/docs/lua/obj_engine)                                                           | After all snapshots have been flushed                                                             |
+| [onmetronome](/docs/lua/flow_tracker#functiononmetronome)   | function(engine, timestamp, tick_count, tick_interval)                                                                   | called every second if present                                                                    |
 
 ### Table `control`
 
@@ -55,9 +55,9 @@ Called before each flow is flushed. The flow is completed or a snapshot of a lon
 
 ### Parameters
 
-| engine | A [Backend Engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, alerts, or alerts into the Trisul framework |
+| engine | A [Backend Engine](/docs/lua/obj_engine) object | use this object to add metrics, alerts, or alerts into the Trisul framework |
 | ------ | ------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
-| flow   | A [flow](/docs/lua/BACK-END-SCRIPTS/session-grp-monitor#flow )           | a flow object                                                               |
+| flow   | A [flow](/docs/lua/sg_monitor#flow)           | a flow object                                                               |
 
 ### Return value
 
@@ -77,7 +77,7 @@ Before a flush starts. Use ths if you need to perform some per-snapshot computat
 
 ### Parameters
 
-| engine    | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, alerts, or alerts into the Trisul framework |
+| engine    | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, alerts, or alerts into the Trisul framework |
 | --------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | timestamp | Timestamp                                                         | Timestamps seconds `tv_sec`                                                 |
 
@@ -99,7 +99,7 @@ When a snapshot flush is complete. use this to perform some per-snapshot computa
 
 ### Parameters
 
-| engine    | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine) object | use this object to add metrics, alerts, or alerts into the Trisul framework |
+| engine    | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, alerts, or alerts into the Trisul framework |
 | --------- | ---------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | timestamp | Timestamp                                                        | Timestamps seconds `tv_sec`                                                 |
 
@@ -123,7 +123,7 @@ If you define a onmetronome(..) function you will be plugged into the Trisul met
 
 ### Parameters
 
-| engine        | An [Engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine) object | use this object to add metrics, resources, or alerts into the Trisul framework |
+| engine        | An [Engine](/docs/lua/obj_engine) object | use this object to add metrics, resources, or alerts into the Trisul framework |
 | ------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | timestamp     | Number                                                           | Current timestamp (tv_sec epoch seconds)                                       |
 | tick_count    | Number                                                           | An incremeting tick counter                                                    |

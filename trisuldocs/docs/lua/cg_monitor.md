@@ -16,15 +16,15 @@ The table consists the following
 
 | counter_guid                                                                                    | String or function returning string                                                            | Counter Group to attach to for monitoring          |
 | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| [onbeginflush](/docs/lua/BACK-END-SCRIPTS/counter-grp-monitor#functiononbeginflush )            | [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) , timestamp                            | Before starting to flush all metrics to db         |
-| [onflush](/docs/lua/BACK-END-SCRIPTS/counter-grp-monitor#functiononflush )                      | [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ), timestamp, key, arrayofmetrics        | Called for each key as they are being flushed      |
-| [onendflush](/docs/lua/BACK-END-SCRIPTS/counter-grp-monitor#functiononendflush )                | [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine )                                        | After all keys have been flushed for this interval |
-| [onbegintopperflush](/docs/lua/BACK-END-SCRIPTS/counter-grp-monitor#functiononbegintopperflush) | [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ), timestamp, meter                      | Before flushing toppers for this meter             |
-| [ontopperflush](/docs/lua/BACK-END-SCRIPTS/counter-grp-monitor#functionontopperflush )          | [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) , key, metric                          | Called for each topper item                        |
-| [onendtopperflush](/docs/lua/BACK-END-SCRIPTS/counter-grp-monitor#functiononendtopperflush )    | [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) , meter                                | After topper flush                                 |
-| [onupdate](https://trisul.org/docs/lua/cg_monitor.html#function_onupdate)                       | [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ), timestamp, key, arrayofmetrics        | As each update happens (1sec resolution)           |
-| [onnewkey](/docs/lua/BACK-END-SCRIPTS/counter-grp-monitor#functiononnewkey )                    | [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ), timestamp, key                        | A new key was discovered within the stream window. |
-| [onmetronome](/docs/lua/BACK-END-SCRIPTS/counter-grp-monitor#functiononmetronome )              | [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) , timestamp, tick_count, tick_interval | called every second ( Tick Interval)               |
+| [onbeginflush](/docs/lua/cg_monitor#functiononbeginflush)            | [engine](/docs/lua/obj_engine) , timestamp                            | Before starting to flush all metrics to db         |
+| [onflush](/docs/lua/cg_monitor#functiononflush)                      | [engine](/docs/lua/obj_engine), timestamp, key, arrayofmetrics        | Called for each key as they are being flushed      |
+| [onendflush](/docs/lua/cg_monitor#functiononendflush)                | [engine](/docs/lua/obj_engine)                                        | After all keys have been flushed for this interval |
+| [onbegintopperflush](/docs/lua/cg_monitor#functiononbegintopperflush) | [engine](/docs/lua/obj_engine), timestamp, meter                      | Before flushing toppers for this meter             |
+| [ontopperflush](/docs/lua/cg_monitor#functionontopperflush)          | [engine](/docs/lua/obj_engine) , key, metric                          | Called for each topper item                        |
+| [onendtopperflush](/docs/lua/cg_monitor#functiononendtopperflush)    | [engine](/docs/lua/obj_engine) , meter                                | After topper flush                                 |
+| [onupdate](/docs/lua/cg_monitor#functiononupdate)                       | [engine](/docs/lua/obj_engine), timestamp, key, arrayofmetrics        | As each update happens (1sec resolution)           |
+| [onnewkey](/docs/lua/cg_monitor#functiononnewkey)                    | [engine](/docs/lua/obj_engine), timestamp, key                        | A new key was discovered within the stream window. |
+| [onmetronome](/docs/lua/cg_monitor#functiononmetronome)              | [engine](/docs/lua/obj_engine) , timestamp, tick_count, tick_interval | called every second ( Tick Interval)               |
 
 ## Functions Reference
 
@@ -52,7 +52,7 @@ onendflush(..)
 
 ### Parameters
 
-| engine    | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, counter items, or counter items into the Trisul framework |
+| engine    | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, counter items, or counter items into the Trisul framework |
 | --------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | timestamp | Timestamp                                                         | Timestamps seconds `tv_sec`                                                               |
 
@@ -72,7 +72,7 @@ Just before each counter item is flushed to the database. The maximum delay betw
 
 ### Parameters
 
-| engine         | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, counter items, or counter items into the Trisul framework |
+| engine         | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, counter items, or counter items into the Trisul framework |
 | -------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | timestamp      | Timestamp                                                         | Timestamps seconds `tv_sec`                                                               |
 | key            | string                                                            | the key identifying the counter item                                                      |
@@ -98,7 +98,7 @@ Just before each counter item is flushed to the database. The maximum delay betw
 
 ### Parameters
 
-| engine         | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, counter items, or counter items into the Trisul framework |
+| engine         | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, counter items, or counter items into the Trisul framework |
 | -------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | timestamp      | Timestamp                                                         | Timestamps seconds `tv_sec`                                                               |
 | key            | string                                                            | the key identifying the counter item                                                      |
@@ -122,7 +122,7 @@ When all the counter items in this timeslice have been flushed to the database.
 
 ### Parameters
 
-| engine    | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, counter items, or counter items into the Trisul framework |
+| engine    | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, counter items, or counter items into the Trisul framework |
 | --------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | timestamp | Timestamp                                                         | Timestamps seconds `tv_sec`                                                               |
 
@@ -162,7 +162,7 @@ onendtopperflush(..)
 
 ### Parameters
 
-| engine    | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, counter items, or counter items into the Trisul framework                                                                                         |
+| engine    | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, counter items, or counter items into the Trisul framework                                                                                         |
 | --------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | timestamp | Timestamp                                                         | Timestamps seconds `tv_sec`                                                                                                                                                       |
 | meter     | number                                                            | The meter number representing the topper tracker set. For example : when “Top Hosts By Connections” are flushed – the meter will be 6 where 6 represents the metric “Connections” |
@@ -185,7 +185,7 @@ When each topper item is flushed.
 
 ### Parameters
 
-| engine | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine )  object | use this object to add metrics, counter items, or counter items into the Trisul framework |
+| engine | An [engine](/docs/lua/obj_engine)  object | use this object to add metrics, counter items, or counter items into the Trisul framework |
 | ------ | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
 | key    | string                                                             | The topper item                                                                           |
 | metric | number                                                             | The metric for the key and the meter. Remember the meter is sent in onbegintopperflush    |
@@ -208,7 +208,7 @@ When all the topper items for a particular metric have been flushed
 
 ### Parameters
 
-| engine | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, counter items, or counter items into the Trisul framework |
+| engine | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, counter items, or counter items into the Trisul framework |
 | ------ | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | meter  | number                                                            | The meter number                                                                          |
 
@@ -235,7 +235,7 @@ A streaming update to a counter item. This will update a metric value in real ti
 
 ### Parameters
 
-| engine         | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | engine use ths to add your results back into the Trisul framework |
+| engine         | An [engine](/docs/lua/obj_engine) object | engine use ths to add your results back into the Trisul framework |
 | -------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
 | timestamp      | Timestamp                                                         | Timestamps seconds `tv_sec`                                       |
 | key            | string                                                            | the key identifying the counter item                              |
@@ -259,7 +259,7 @@ When “new” keys are seen by Trisul in this counter group. Trisul uses a Bloo
 
 ### Parameters
 
-| engine    | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | engine use ths to add your results back into the Trisul framework |
+| engine    | An [engine](/docs/lua/obj_engine) object | engine use ths to add your results back into the Trisul framework |
 | --------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
 | timestamp | Timestamp                                                         | Timestamps seconds `tv_sec`                                       |
 | key       | string                                                            | the key identifying the counter item                              |
@@ -282,7 +282,7 @@ If you define a onmetronome(..) function you will be plugged into the Trisul met
 
 ### Parameters
 
-| engine        | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine )  object | use this object to add metrics, resources, or alerts into the Trisul framework |
+| engine        | An [engine](/docs/lua/obj_engine)  object | use this object to add metrics, resources, or alerts into the Trisul framework |
 | ------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
 | timestamp     | Number                                                             | Current timestamp (tv_sec epoch seconds)                                       |
 | tick_count    | Number                                                             | An incremeting tick counter                                                    |

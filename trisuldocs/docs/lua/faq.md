@@ -5,15 +5,15 @@ Common questions about Trisul scripting
 1 . **Why are so many instances of my LUA script active  ?**
 
 Trisul spins up as many instances of your LUA script as required. However during main packet processing  
-the number of active LUA script instances is determined by the [InflightTokens](/docs/ref/trisulProbe-config#tuning ) parameter in the config file
+the number of active LUA script instances is determined by the [InflightTokens](/docs/ref/trisulconfig#tuning) parameter in the config file
 
 2 . **So there are 16 types of scripts, what should I use ?**
 
-Use the Trisul [selector cheat sheet](/docs/lua/script_cheat_sheet ) to pick the script type that you need to code up.
+Use the Trisul [selector cheat sheet](/docs/lua/selector) to pick the script type that you need to code up.
 
 3 . **How to switch to single threaded mode ?**
 
-Trisul uses the InflightTokens parameter in [trisulConfig.xml](/docs/ref/trisulProbe-config#tuning) to determine the number of processing threads per stream. Set that to 1 from the default 2.
+Trisul uses the InflightTokens parameter in [trisulConfig.xml](/docs/ref/trisulconfig#tuning) to determine the number of processing threads per stream. Set that to 1 from the default 2.
 
 4 . **Isnt LUA too slow for per-packet processing ?**
 
