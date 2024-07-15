@@ -60,7 +60,7 @@ To create a user (subscriber) and map him to a set of services:
 - Click on **Create a new user**
 
 This will bring you to the screen shown below. Specify all the fields as
-described in the [Manage Users](/docs/ug/webadmin/userroles.html)
+described in the [Manage Users](/docs/ug/webadmin/userroles)
 section of the User Guide. Pay specific attention to the following
 fields
 
@@ -120,7 +120,7 @@ A typical screenshot of what a subscriber might see upon logging in.
 
 - Click on the PDF link to generate a PDF report.  
 - Click on the **See utilization for entire week** to view [long term
-  usage charts](/docs/ug/tools/analyze_item.html)
+  usage charts](/docs/ug/tools/analyze_item)
 
 ### Showing subscriber static IP data
 
@@ -159,6 +159,6 @@ logical interface.
 #### Can I offer more advanced reports with drilldowns ?
 
 You can also run a complete instance Trisul as a separate
-[context](/docs/ug/domain/index.html#contexts). This will allow the user
+[context](/docs/ug/domain/index#contexts). This will allow the user
 to drill down deeply into his traffic. You may offer this as an enhanced
 reporting package service.

@@ -7,8 +7,8 @@ Describes how you can setup Trisul for capturing and writing to disk at
 
 Trisul can use any number of threads but the number of **active pipeline
 threads** is determined by the
-[`InflightTokens`](/docs/ref/trisulconfig.html#tuning) parameter in the
-[config file](/docs/ref/trisulconfig.html#tuning) . By default the value
+[`InflightTokens`](/docs/ref/trisulconfig#tuning) parameter in the
+[config file](/docs/ref/trisulconfig#tuning) . By default the value
 is 2, which means Trisul at full load will use around 200% CPU.
 
 ![](images/10g1.png)

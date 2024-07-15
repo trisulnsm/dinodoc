@@ -16,7 +16,7 @@ Root privileges needed to edit
 
 :::note
 
-Also see [trisulHubConfig.xml](https://www.trisul.org/docs/ref/trisulhubconfig.html) for editing Hub node parameters 
+Also see [trisulHubConfig.xml](/docs/ref/trisulhubconfig) for editing Hub node parameters 
 
 :::
 
@@ -136,11 +136,11 @@ Rule chains are used to control full packet storage policies.
 
 :::note
 
-If you desire even more fine grained control of packet storage policy on a per-flow basis see the [Packet Storage LUA Script type](https://www.trisul.org/docs/lua/packet_storage.html) 
+If you desire even more fine grained control of packet storage policy on a per-flow basis see the [Packet Storage LUA Script type](/docs/lua/packet_storage) 
 
 :::
 
-- Each rule is an expression in the [Trisul filter format](https://www.trisul.org/docs/ref/trisul_filter_format.html)
+- Each rule is an expression in the [Trisul filter format](/docs/ref/trisul_filter_format)
 
 - Treatment of each packet is one of : Store full packet, Store header, or Ignore
 
@@ -268,7 +268,7 @@ Controls the HTTP file extraction feature.
 
 :::note
 
-Need tempfs partition :   If you enable File Extraction you also need to create a special in-memory *TMPFS* partition (also known as *RAMFS* partition). <br/>Quickest way to create this is to use `trisulctl_probe createramfs probe0 default` A 100MB partition would suffice for loads < 1Gbps. For more read [File Extraction LUA API in detail](https://www.trisul.org/docs/lua/fileextractoverview.html) 
+Need tempfs partition :   If you enable File Extraction you also need to create a special in-memory *TMPFS* partition (also known as *RAMFS* partition). <br/>Quickest way to create this is to use `trisulctl_probe createramfs probe0 default` A 100MB partition would suffice for loads < 1Gbps. For more read [File Extraction LUA API in detail](/docs/lua/fileextractoverview) 
 
 :::
 
@@ -328,7 +328,7 @@ Fine tune the packet processing pipeline for peak performance.
 | FlowMemcapPolicy         | FLEXIBLE | Determines how Trisul copes under severe load. This can happen on a very busy network or under a DDoS attack against Trisul itself or elsewhere on the network. Trisul detects this condition when Hi Water marks are crossed for counters or flows.<br/>The available options are :<br/>`FLEXIBLE` Trisul is not too rigid about the Hi Water mark, it allows usage to grow beyond the high water mark within the streaming window (1-minute)<br/>`FIXED` When a Hi Water mark is hit, no *new* counters are flows are accepted. Existing ones are metered as usual. At the next flush interval, the counters or flows are pruned down to the low water mark and things proceed as usual |
 | StreamingWindowMSecs     | 60000    | The streaming window in milliseconds. The default value is 1 minute. Do not change this unless you have a very good reason                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | DisableFlowTupleFeedback | false    | Flow tuple feedback is a feature in Trisul that allows you to measure per-IP and per-APP connection metrics. This can be overkill for some environments like ISP’s who deal with millions of flows/sec. Disable this in those environemts. We also suggest disabling this option when the FeedbackQueue (FBQ) sees pressure leading to spiky IP and App flow connection metrics.                                                                                                                                                                                                                                                                                                          |
-| MaxTCARangeAlerts        | 100      | When using TCA range alerts (see [TCA](/docs/ug/alerts/tca.html#configuring) generate only these many alerts. The reason we need a safety cap on this feature is an incorrect configuration with a TCA range can result in uncontrolled alerts (eg when any IP crosses 1Kbps). For safety we have chosen a cap or 100                                                                                                                                                                                                                                                                                                                                                                     |
+| MaxTCARangeAlerts        | 100      | When using TCA range alerts (see [TCA](/docs/ug/alerts/tca#configuring) generate only these many alerts. The reason we need a safety cap on this feature is an incorrect configuration with a TCA range can result in uncontrolled alerts (eg when any IP crosses 1Kbps). For safety we have chosen a cap or 100                                                                                                                                                                                                                                                                                                                                                                          |
 
 ## Edges
 

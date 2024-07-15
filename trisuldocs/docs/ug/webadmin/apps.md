@@ -13,7 +13,7 @@ You can install, upgrade, install Trisul Apps right from the web interface.
 :::note
 
 You need internet access to github.com to use this feature.  
-Check [Proxy Settings](https://trisul.org/docs/ug/webadmin/web_options.html#proxy_settings) if you are behind a proxy server
+Check [Proxy Settings](/docs/ug/webadmin/web_options#proxy_settings) if you are behind a proxy server
 
 :::
 

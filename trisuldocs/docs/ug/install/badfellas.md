@@ -158,7 +158,7 @@ Using external mechanism place your custom feed in a Tab Separated file with the
 
 #### Step 2 : Add your file as a source feed for Badfellas automatic updates
 
-Locate the feed `rules.xml` file [as described in feeds](https://trisul.org/docs/ug/install/badfellas.html#feeds)
+Locate the feed `rules.xml` file [as described in feeds](/docs/ug/install/badfellas#feeds)
 
 Find the local feed section
 

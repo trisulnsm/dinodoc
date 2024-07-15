@@ -59,7 +59,7 @@ trisulConfig.xml file as specified below.
 
 %(hint command)Set the `EnableXFFDeproxy` option to TRUE in the
 [Reassembly section of the Trisul Config
-file](/docs/ref/trisulconfig.html#reassembly%)
+file](/docs/ref/trisulconfig#reassembly%)
 
 The XFF feature require a few supporting features to be enabled as well.
 

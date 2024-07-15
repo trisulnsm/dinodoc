@@ -66,7 +66,7 @@ every single flow because malware may only use small flows.
 Customers whose primary use cases are *Visiblility* and *Detection*
 features of Trisul can dramatically reduce the size of the flow database
 by using “Volume Cutoff Bytes”. See [User Guide: Flow
-Tuning](/docs/ug/flow/tuning.html#optimize_flow_handling)
+Tuning](/docs/ug/flow/tuning#optimize_flow_handling)
 
 #### Set Volume Cutoff Bytes to 1MB
 
@@ -107,7 +107,7 @@ investigations. “Edges” can also use up quite a bit of disk.
 
 - You can disable Edges by opening the Trisul Config file and disable
   the Edge options. See [Edge
-  trisulProbeConfig](/docs/ref/trisulconfig.html#edges)
+  trisulProbeConfig](/docs/ref/trisulconfig#edges)
 
 ## Counter groups
 
@@ -119,4 +119,4 @@ Counter groups have the following parameters that can be tuned
   to a topper list are stored.
 - Top Count — By setting lower values you can control the storage.
 
-See [Counter Group Settings](/docs/ug/cg/settings.html#editing_settings)Ensure you replace the demo certificate and key with new ones specific for your organization as described below
+See [Counter Group Settings](/docs/ug/cg/settings#editing_settings)Ensure you replace the demo certificate and key with new ones specific for your organization as described below

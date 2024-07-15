@@ -68,7 +68,7 @@ sudo service webtrisuld restart
 ## 3 . Adjust the config file
 
 Almost there. You need to make a couple of changes to the [config
-file](/docs/ref/trisulconfig.html) to connect to IDS alerts from
+file](/docs/ref/trisulconfig) to connect to IDS alerts from
 barnyard2.
 
 - Open the config file in
@@ -119,7 +119,7 @@ Then Go to Context : default \> Admin Tasks \> Start/Stop Tasks and
 restart the Hub and Probe(s)
 
 **Default eth0** By default Trisul listens on eth0, if you wish to
-change it read [Change capture adapter](/docs/ug/webadmin/profiles.html)
+change it read [Change capture adapter](/docs/ug/webadmin/profiles)
 
 **Congratulations \!** You have finished installing Trisul.
 
@@ -151,14 +151,14 @@ trisulctl_hub
 relocate context domain0 hub0 default 
 ```
 
-For more see [Relocate database](/docs/ug/basicusage/reloc.html) or type
+For more see [Relocate database](/docs/ug/basicusage/reloc) or type
 `help relocate` in the domain management CLI tool.
 
 ### How to switch to NETFLOW mode
 
 You can choose to use Trisul on the Security Onion box to monitor
 Netflow. Follow the instructions in [Configure
-Netflow](/docs/ug/netflow/netflow_setup.html) to start consuming Netflow
+Netflow](/docs/ug/netflow/netflow_setup) to start consuming Netflow
 (and SFLOW/IPFIX/JFLOW etc).
 
 You can even do the following once you are comfortable with one instance
@@ -175,7 +175,7 @@ create context nf1
 ```
 
 Then follow instructions in [Configure
-Netflow](/docs/ug/netflow/netflow_setup.html) on the nf1 context.
+Netflow](/docs/ug/netflow/netflow_setup) on the nf1 context.
 
 ### How to automatically start the Trisul Probe on reboot
 
@@ -191,15 +191,15 @@ update-rc.d trisul-probe0-context0 defaults
 
 Trisul can also be deployed in a distributed hub and probe
 configuration. See instructions for [How to add a new
-Probe](/docs/ug/domain/deploy_probe.html)
+Probe](/docs/ug/domain/deploy_probe)
 
 ### How to change network interfaces amd web server ports
 
 \* Listen on an interface other than eth0
-[Docs](/docs/ug/webadmin/profiles.html) 
+[Docs](/docs/ug/webadmin/profiles) 
 \* Move Web server ports from 3000 and 3003
-[Docs](/docs/howto/change_web_port.html)  
-\* Enable SSL for the web interface [Docs](/docs/howto/sslforwebtr.html)
+[Docs](/docs/howto/change_web_port)  
+\* Enable SSL for the web interface [Docs](/docs/howto/sslforwebtr)
 
 ### How to stop and start Trisul processes
 
@@ -226,9 +226,9 @@ service webtrisuld start
 You may want to install the following plugins from the [Download
 Page](https://www.trisul.org/download/)
 
-1. [URL Filter](/docs/ug/install/urlfilter.html)
-2. [BadFellas](/docs/ug/install/badfellas.html)
-3. [Geo](/docs/ug/install/geoasn.html)
+1. [URL Filter](/docs/ug/install/urlfilter)
+2. [BadFellas](/docs/ug/install/badfellas)
+3. [Geo](/docs/ug/install/geoasn)
 
 Also checkout the NEW Trisul Apps. Login as admin and select “Web
 Admin Apps”
