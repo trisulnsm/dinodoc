@@ -153,6 +153,6 @@ The same example, now pinning the disk writer (RAID) thread to CPU 5
 2. Disable the full content store if you dont need it
 3. Disable TCP reassembly if you are only interested in basic metering.
    Go to the config file and [set all the
-   reassembly](/docs/ref/trisulProbe-config#reassembly) options to FALSE
+   reassembly](/docs/ref/trisulconfig#reassembly) options to FALSE
 4. Make sure the RAID stripe size is equal to the `PcapRAIDStripeSize`
    parameter

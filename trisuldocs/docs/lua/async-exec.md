@@ -4,7 +4,7 @@ This section describes the concepts behind async execution within Trisul LUA s
 
 ## Table `T.async`
 
-The [T.async](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-tasync ) interface provides methods to help you do long running I/O tasks that do not block the streaming pipeline. The tasks are executed by a separate worker thread pool and when the results are ready, they re-enter the pipeline path. The number of worker threads is by default 1 but can be increased by the [`request_async_workers` parameter](/docs/lua/scripting-basics#structure-of-a-lua-script ) at the plug-in level.
+The [T.async](/docs/lua/obj_tasync) interface provides methods to help you do long running I/O tasks that do not block the streaming pipeline. The tasks are executed by a separate worker thread pool and when the results are ready, they re-enter the pipeline path. The number of worker threads is by default 1 but can be increased by the [`request_async_workers` parameter](/docs/lua/basics#structure_of_a_lua_script) at the plug-in level.
 
 ## Purpose of T.async
 
@@ -21,7 +21,7 @@ Using the methods in T.async you can perform these tasks out of the main pipelin
 
 ### Number of async worker threads
 
-Use the global parameter [TrisulPlugin.request_async_workers](/docs/lua/scripting-basics#structure-of-a-lua-script ) to change the default number of worker threads (1).
+Use the global parameter [TrisulPlugin.request_async_workers](/docs/lua/basics#structure_of_a_lua_script) to change the default number of worker threads (1).
 
 ## Usage
 
@@ -84,7 +84,7 @@ T.async:schedule(
 
 Run arbirary LUA code in async manner
 
-[T.async methods](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-tasync ) `cp` `cat` accomplish very specific tasks. Using the `T.async:schedule` method you can run any arbitrary LUA code off the main packet pipeline.
+[T.async methods](/docs/lua/obj_tasync) `cp` `cat` accomplish very specific tasks. Using the `T.async:schedule` method you can run any arbitrary LUA code off the main packet pipeline.
 
 ### Methods
 
@@ -94,7 +94,7 @@ T.async:schedule expects a table with the following fields
 | --------- | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | data      | string                                                                               | a string that is passed on to the onexecute function below                                                                                                                                                                                                                                                            |
 | onexecute | function( in_data)                                                                   | **called on separate worker thread** A function that accepts the `data` string specified. This function executes in a separate thread/task from the packet pipeline. You do your processing and optionally return a ‘response’ string. See rules below                                                                |
-| onresult  | function([engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ), in_data, out_data) | **called on main Trisul thread** if your script in `onexecute` on the separate thread returns string, Trisul will re-enter the fast path and call the `onresult` function with the result string. You can then update the `engine` parameter by adding metrics, generating alerts, or interact with Trisul in any way |
+| onresult  | function([engine](/docs/lua/obj_engine), in_data, out_data) | **called on main Trisul thread** if your script in `onexecute` on the separate thread returns string, Trisul will re-enter the fast path and call the `onresult` function with the result string. You can then update the `engine` parameter by adding metrics, generating alerts, or interact with Trisul in any way |
 
 #### Skeleton async execution
 

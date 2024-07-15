@@ -14,4 +14,4 @@ Click on topics from the left menu to view.
 
 ### [How to run Trisul on 10G networks](./10gcapture)
 
-### [How to configure Trisul for Netflow](./netflow_setup)
+### [How to configure Trisul for Netflow](/docs/ug/netflow/netflow_setup)

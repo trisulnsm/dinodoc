@@ -6,7 +6,7 @@ You can attach your LUA script to listen to various events in the alert stream
 
 ### Common Alert Groups GUIDs
 
-For quick reference here are the common Alert Group [GUIDs](/docs/ref/guid ) For a full list Login as Admin > profil0 > Alert Groups
+For quick reference here are the common Alert Group [GUIDs](/docs/lua/basics#on_guids) For a full list Login as Admin > profil0 > Alert Groups
 
 | \{9AFD8C08-07EB-47E0-BF05-28B4A7AE8DC9\} | IDS Alerts from Snort/Suricata via Unix Socket              |
 | ---------------------------------------- | ----------------------------------------------------------- |
@@ -29,12 +29,12 @@ The table consists the following
 | field                                                                                | type                                                                                                                                   | description                                                                                                                                       |
 | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | alert_guid                                                                           | String                                                                                                                                 | Type of alert. See [alert guids](/docs/ref/guid#alert_groups ) for a list of built in GUIDs. View (Admin) Profile > Alert Groups for a full list. |
-| [onnewalert](/docs/lua/alert_monitor#function_onnewalert)           | function [engine](/docs/lua/obj_engine), [alert](/docs/lua/alert_monitor#object_alert) | A new alert was seen. Sent within 1 sec of seeing the alert                                                                                       |
-| [onbeginflush](/docs/lua/alert_monitor#function_onbeginflush) | function[engine](/docs/lua/obj_engine)                                                                        | Before starting to flush all metrics to db                                                                                                        |
-| [flushfilter](//docs/lua/alert_monitor#function_flushfilter)        | function [engine](/docs/lua/obj_engine), [alert](/docs/lua/alert_monitor#object_alert) | Return true if you want to save in DB, false to skip this                                                                                         |
-| [onflush](/docs/lua/alert_monitor#function_onflush)                 | function [engine](/docs/lua/obj_engine), [alert](/docs/lua/alert_monitor#object_alert)                                                             | Called for each alert as they are being flushed                                                                                                   |
-| [onendflush](/docs/lua/alert_monitor#function_onendflush)     | function[engine](/docs/lua/obj_engine)                                                                        | After all alert have been flushed for this interval                                                                                               |
-| [onmetronome](/docs/lua/alert_monitor#function_onmetronome)   | function(engine, timestamp, tick_count, tick_interval)                                                                                 | called every second ( Tick Interval)                                                                                                              |
+| [onnewalert](/docs/lua/alert_monitor#functiononnewalert)           | function [engine](/docs/lua/obj_engine), [alert](/docs/lua/alert_monitor#object_alert) | A new alert was seen. Sent within 1 sec of seeing the alert                                                                                       |
+| [onbeginflush](/docs/lua/alert_monitor#functiononbeginflush) | function[engine](/docs/lua/obj_engine)                                                                        | Before starting to flush all metrics to db                                                                                                        |
+| [flushfilter](/docs/lua/alert_monitor#functionflushfilter)        | function [engine](/docs/lua/obj_engine), [alert](/docs/lua/alert_monitor#object_alert) | Return true if you want to save in DB, false to skip this                                                                                         |
+| [onflush](/docs/lua/alert_monitor#functiononflush)                 | function [engine](/docs/lua/obj_engine), [alert](/docs/lua/alert_monitor#object_alert)                                                             | Called for each alert as they are being flushed                                                                                                   |
+| [onendflush](/docs/lua/alert_monitor#functiononendflush)     | function[engine](/docs/lua/obj_engine)                                                                        | After all alert have been flushed for this interval                                                                                               |
+| [onmetronome](/docs/lua/alert_monitor#functiononmetronome)   | function(engine, timestamp, tick_count, tick_interval)                                                                                 | called every second ( Tick Interval)                                                                                                              |
 
 ## Objects Reference
 
@@ -45,7 +45,7 @@ The following objects are passed to functions in `alert_monitor`
 | field             | return type                                                    | description                                                                                                                                                                                                                                                                                                  |
 | ----------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | timestamp         | number,number                                                  | The time when the item was seen. Seconds in `tv_sec` format, and Microseconds `tv_usec`.<br/><br/>LUACopy`local secs=alert:timestamp()          - if you only want seconds local secs,usecs=alert:timestamp()    - if you want seconds, usecs local printable = os.date(‘%c’, secs) — if you want printable` |
-| flow              | A [flow object](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid ) | The flow that generated the alert. Check for `nil` as this may not be available for all type of alerts.                                                                                                                                                                                                      |
+| flow              | A [flow object](/docs/lua/obj_flowid) | The flow that generated the alert. Check for `nil` as this may not be available for all type of alerts.                                                                                                                                                                                                      |
 | source_ip         | string                                                         | Source IP Address                                                                                                                                                                                                                                                                                            |
 | source_port       | string                                                         | Source Port                                                                                                                                                                                                                                                                                                  |
 | destination_ip    | string                                                         | Destination IP Address                                                                                                                                                                                                                                                                                       |
@@ -77,9 +77,9 @@ Immediately upon receiving a new alert.
 
 ### Parameters
 
-| engine | A [Backend Engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object       | use this object to add metrics, alerts, or alerts into the Trisul framework |
+| engine | A [Backend Engine](/docs/lua/obj_engine) object       | use this object to add metrics, alerts, or alerts into the Trisul framework |
 | ------ | ------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
-| alert  | A [alert](/docs/lua/BACK-END-SCRIPTS/alert-monitor#functiononnewalert ) object | the alert                                                                   |
+| alert  | A [alert](/docs/lua/alert_monitor#object_alert) object | the alert                                                                   |
 
 ### Return value
 
@@ -99,7 +99,7 @@ When an alert flush operation is about to start. The sequence is *onbeginflush*
 
 ### Parameters
 
-| engine    | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, alerts, or alerts into the Trisul framework |
+| engine    | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, alerts, or alerts into the Trisul framework |
 | --------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | timestamp | Timestamp                                                         | Timestamps seconds `tv_sec`                                                 |
 
@@ -121,9 +121,9 @@ Just before each alert is flushed to the database. The maximum delay between get
 
 ### Parameters
 
-| engine | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object               | use this object to add metrics, alerts, or alerts into the Trisul framework |
+| engine | An [engine](/docs/lua/obj_engine) object               | use this object to add metrics, alerts, or alerts into the Trisul framework |
 | ------ | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| alert  | An [alert](/docs/lua/BACK-END-SCRIPTS/alert-monitor#functiononnewalert ) object | the alert                                                                   |
+| alert  | An [alert](/docs/lua/alert_monitor#object_alert) object | the alert                                                                   |
 
 ### Return value
 
@@ -143,9 +143,9 @@ Just before an alert is about to be flushed to the database.
 
 ### Parameters
 
-| engine | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object               | use this object to add metrics, alerts, or alerts into the Trisul framework |
+| engine | An [engine](/docs/lua/obj_engine) object               | use this object to add metrics, alerts, or alerts into the Trisul framework |
 | ------ | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| alert  | An [alert](/docs/lua/BACK-END-SCRIPTS/alert-monitor#functiononnewalert ) object | the alert                                                                   |
+| alert  | An [alert](/docs/lua/alert_monitor#object_alert) object | the alert                                                                   |
 
 ### Return value
 
@@ -171,7 +171,7 @@ When all the alerts in this timeslice have been flushed to the database.
 
 ### Parameters
 
-| engine    | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, alerts, or alerts into the Trisul framework |
+| engine    | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, alerts, or alerts into the Trisul framework |
 | --------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | timestamp | Timestamp                                                         | Timestamps seconds `tv_sec`                                                 |
 
@@ -193,7 +193,7 @@ If you define a onmetronome(..) function you will be plugged into the Trisul met
 
 ### Parameters
 
-| engine        | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, resources, or alerts into the Trisul framework |
+| engine        | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, resources, or alerts into the Trisul framework |
 | ------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | timestamp     | Number                                                            | Current timestamp (tv_sec epoch seconds)                                       |
 | tick_count    | Number                                                            | An incremeting tick counter                                                    |

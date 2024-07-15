@@ -159,6 +159,6 @@ logical interface.
 #### Can I offer more advanced reports with drilldowns ?
 
 You can also run a complete instance Trisul as a separate
-[context](/docs/ug/domain/index#contexts). This will allow the user
+[context](/docs/ug/domain#contexts). This will allow the user
 to drill down deeply into his traffic. You may offer this as an enhanced
 reporting package service.
