@@ -4,7 +4,7 @@ There are two ways you can send IDS alerts into Trisul
 
 1. Use a Unix Socket and send Unified2 or Snort (Unified) format alerts
    to that socket
-2. Use the [LUA Input Filter](/docs/lua/inputfilter.html) API 
+2. Use the [LUA Input Filter](/docs/lua/inputfilter) API 
 
 Suricata-EVE APP
 
@@ -54,7 +54,7 @@ multiple outputs. Trisul can connect to `barnyard2` using the
 ### Change the socket name to barnyard2\_alert
 
 Barnyard2 uses the socket name *barnyard2\_alert* ; edit the  
-[IDSAlerts UnixSocket](/docs/ref/trisulconfig.html#idsalerts) parameter
+[IDSAlerts UnixSocket](/docs/ref/trisulconfig#idsalerts) parameter
 to send the alerts to `/tmp/barnyard2_alert`
 
 ```xml
@@ -135,12 +135,12 @@ A diagram that shows the relationship between the various pieces.
 The default install of every Trisul Probe listens on a unix socket at
 `/usr/local/var/lib/trisul-probe/domain0/probe0/context0/run/snort_alert`
 You can change this by editing the
-[IDSAlert/UnixSocket](/docs/ref/trisulconfig.html#idsalerts) parameter
+[IDSAlert/UnixSocket](/docs/ref/trisulconfig#idsalerts) parameter
 in the config file.
 
 #### How to read a PCAP file and generate alerts
 
-A new tool called [importpcap\_ids](/docs/ug/basicusage/snort.html) uses
+A new tool called [importpcap\_ids](/docs/ug/basicusage/snort) uses
 snort to run the normal Analytics as well as IDS over PCAP dumps. The
 optional *context=* argument allows you to create multiple separate
 datasets in Trisul.

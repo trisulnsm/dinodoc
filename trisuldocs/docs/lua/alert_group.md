@@ -29,7 +29,7 @@ The table alertgroup has a single section called control that assigns a GUID t
 
 | name                                                                    | description                                    |
 | ----------------------------------------------------------------------- | ---------------------------------------------- |
-| table [control](/docs/lua/FRONT-END-SCRIPTS/alert-groups#tablecontrol ) | assigns a name and guid to the new alert group |
+| table [control](/docs/lua/alert_group#table_control ) | assigns a name and guid to the new alert group |
 
 ## Table `control`
 
