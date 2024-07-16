@@ -105,7 +105,7 @@ Login as Admin -\> Select Context and profile -\> Under Custom Counters
 
 ### Custom group
 
-For more advanced custom counters you can use the [LUA API](/docs/lua/getting-started)
+For more advanced custom counters you can use the [LUA API](/docs/lua/tutorial1)
 to measure any subset of metrics
 
 ------------------------------------------------------------------------

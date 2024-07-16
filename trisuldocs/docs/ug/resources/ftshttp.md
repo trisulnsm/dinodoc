@@ -50,7 +50,7 @@ A typical document looks like this
 Select Resources -\> HTTP Header FTS
 :::
 
-Follow instructions in the [FTS](fts.html) documentation.
+Follow instructions in the [FTS](fts) documentation.
 
 ## Special tips for HTTP Header FTS
 

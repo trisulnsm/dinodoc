@@ -18,7 +18,7 @@ A quick recap of the hierarchy and terminology first:
     - **Meter** - A metric within the key. For example ( Number of
       connections )
 
-For more read [Traffic Metering Concepts](/docs/ug/cg/intro.html)
+For more read [Traffic Metering Concepts](/docs/ug/cg/intro)
 
 ### How to access the key dashboard
 
@@ -89,7 +89,7 @@ Resolve the name for this key. Works for all IP addresses and AS Numbers
 ***Edit***  
 Edit the User label for this key manually
 
-See the [resolve name](/docs/ug/cg/resolve.html) section for more
+See the [resolve name](/docs/ug/cg/resolve) section for more
 details.
 
 ### Drilldown options

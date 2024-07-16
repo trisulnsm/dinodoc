@@ -35,7 +35,7 @@ connected by an AND or OR logical operator.
       constraint1&constraint2 (constraint1 AND constraint 2 must match)
 ```
 
-A list of GUIDs can be found [here](/docs/ref/guid.html)
+A list of GUIDs can be found [here](/docs/ref/guid)
 
 ## Online rule builder
 

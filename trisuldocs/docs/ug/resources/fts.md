@@ -11,10 +11,10 @@ look up fast. These types of resources are stored in a Full Text Search
 
 Currently the following FTS resources are supported.
 
-1.  **[SSL Certificate Chains](ftsssl.html)** - the full printed form
+1.  **[SSL Certificate Chains](ftsssl)** - the full printed form
     with all extensions and attributes
-2.  **[HTTP Headers](ftshttp.html)** - all HTTP request and response
-    headers
+2.  **[HTTP Headers](ftshttp)** - all HTTP request and response
+    headerss
 
 ## Documents and attributes
 

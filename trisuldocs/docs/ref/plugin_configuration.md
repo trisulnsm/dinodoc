@@ -54,17 +54,17 @@ Here is a list of all the current plugin configuration options.
 | Name                                              | Description                                                    |
 | ------------------------------------------------- | -------------------------------------------------------------- |
 | [Hosts](plugin_configuration#hosts)               | IP address based metering                                      |
-| [Base Domains](plugin_configuration#base_domains) | DNS Base Domains metering (rules, regexes, etc)                |
+| [Base Domains](plugin_configuration#base-domains) | DNS Base Domains metering (rules, regexes, etc)                |
 | [Netflow](/docs/ref/netflow-config)               | NETFLOW/IPFIX policy. Link to a separate reference document.   |
 | [SFlow](plugin_configuration#sflow)               | SFLOW policy.                                                  |
-| [TCP Flows](plugin_configuration#tcp_flows)       | TCP Flow metering, subnets, etc                                |
-| [UDP Proto](plugin_configuration#udp_proto)       | UDP Protocol parsing and metering                              |
-| [TCP Proto](plugin_configuration#tcp_proto)       | TCP Protocol parsing and metering                              |
-| [App Ports](plugin_configuration#app_ports)       | Application counting, special server ports                     |
+| [TCP Flows](plugin_configuration#tcp-flows)       | TCP Flow metering, subnets, etc                                |
+| [UDP Proto](plugin_configuration#udp-protocol-dissector)       | UDP Protocol parsing and metering                              |
+| [TCP Proto](plugin_configuration#tcp-proto)       | TCP Protocol parsing and metering                              |
+| [App Ports](plugin_configuration#app-ports)       | Application counting, special server ports                     |
 | [Mac](plugin_configuration#mac)                   | MAC layer, directional, broadcast metering etc                 |
-| [IP Tunnels](plugin_configuration#ip_tunnels)     | Used for 3GPP mobility (contact us)                            |
+| [IP Tunnels](plugin_configuration#ip-tunnels)     | Used for 3GPP mobility (contact us)                            |
 | [DNS](plugin_configuration#dns)                   | Control DNS extraction, resource, Full Text Search, etc        |
-| [Http Hosts](plugin_configuration#http_hosts)     | HTTP Host header depth setting                                 |
+| [Http Hosts](plugin_configuration#http-hosts)     | HTTP Host header depth setting                                 |
 | [Geo](/docs/ug/install/geoasn)                    | Controls Geo plugin, country and ASN metering rules            |
 | [Badfellas](/docs/ug/install/badfellas)           | Controls Badfellas lists, how they are refreshed, custom rules |
 | [Urlfilter](/docs/ug/install/urlfilter)           | URL Filter database and rules                                  |

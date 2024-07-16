@@ -25,7 +25,7 @@ URL Resources
 Trisul needs to reassembly HTTP headers to pull out the URL information.
 To enable this :
 
-1. Locate the [Reassembly](/docs/ref/trisulconfig.html#reassembly)
+1. Locate the [Reassembly](/docs/ref/trisulconfig#reassembly)
    section in the trisulConfig.xml file
 2. Set the *TCPFlowTrack* and *TCPReassembly* `Enabled` option to TRUE
 3. Restart Trisul

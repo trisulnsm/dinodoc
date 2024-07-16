@@ -32,7 +32,7 @@ Lets look at some examples.
 Using the LUA `packet_storage` API you can write a LUA script that gets called when a new flow is detected. You can specify 
 what policy to apply to all packets in that flow. Some links :
 
-- LUA packet_storage [API Documentation](/docs/lua/FRONT-END-SCRIPTS/packet_storage)
+- LUA packet_storage [API Documentation](/docs/lua/packet_storage)
 - Github [trisul-scripts samples](https://github.com/trisulnsm/trisul-scripts/tree/master/lua/frontend_scripts/packetstore)
 
 The rest of this document will describe static rules.

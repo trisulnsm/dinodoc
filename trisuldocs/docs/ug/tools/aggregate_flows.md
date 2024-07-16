@@ -23,7 +23,7 @@ Select Tools -\>Explore Flows
 
 :::
 
-Use the same query mechanism as the [Export Flows](explore_flows.html) tool.
+Use the same query mechanism as the [Export Flows](explore_flows) tool.
 
 ## Data displayed
 

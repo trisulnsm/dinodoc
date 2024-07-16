@@ -13,7 +13,7 @@ The results are presented in terms of
 
 > Only the first matching *Max Flows (default 10K)* are retrieved. Please
 > narrow down your query to within this limit. Also see the [Export
-> Flows](export_flows.html) and [Aggregate Flows](aggregate_flows.html) tools which work with larger matches and provide different functionality.
+> Flows](export_flows) and [Aggregate Flows](aggregate_flows) tools which work with larger matches and provide different functionality.
 
 ![](images/Explore_flows.png)  
 *Explore flows*
@@ -145,7 +145,7 @@ Below the visualization you can find the following panels
 2. Top Applications — Applications
 3. Internal hosts — Volume by interal hosts
 4. External hosts — Volume by external hosts
-5. Flow taggers — Volume by any tags you have created (see [Flow Taggers](/docs/ug/flow/tagger.html) )
+5. Flow taggers — Volume by any tags you have created (see [Flow Taggers](/docs/ug/flow/tagger) )
 6. Routers — volume from each router
 7. Interfaces In — Volume of Inbound Flows from Interfaces
 8. Interfaces Out — Volume of Outbound Flows from Interfaces

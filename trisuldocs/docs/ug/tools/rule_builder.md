@@ -8,7 +8,7 @@ Used to build a rule for use for flow taggers, custom metering, etc.
 
 ## Trisul Rule Format
 
-See [Trisul Filter Format](/docs/ref/trisul_filter_format.html#format) section for more details
+See [Trisul Filter Format](/docs/ref/trisul_filter_format#format) section for more details
 
 ---
 

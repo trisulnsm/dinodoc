@@ -367,7 +367,7 @@ groups
    pressure etc.
 
 You can create your own alert types using the [alertgroup LUA
-API](/docs/lua/FRONT-END-SCRIPTS/alert_group) Alert groups you create using the LUA API will also show up in Trisul and be managed along with the built in alert groups.
+API](/docs/lua/alert_group) Alert groups you create using the LUA API will also show up in Trisul and be managed along with the built in alert groups.
 
 Refer [All Alert Groups](/docs/ug/alerts/manage)
 

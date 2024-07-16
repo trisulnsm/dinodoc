@@ -14,7 +14,7 @@ analysis of the flow database over large timeframes.
 A common use case of Flow Trackers is to track the so called ‘Elephant
 flows’. Those are flows transferring a huge volume of data. But as you
 shall see below this is not the only type of tracker. Flow trackers are
-also necessary for you to use [flow tracker alerts](/docs/ug/alerts/ft.html).
+also necessary for you to use [flow tracker alerts](/docs/ug/alerts/ft).
 
 ## Built in trackers
 
@@ -149,4 +149,4 @@ Select Tools -\> Flow Tracker
 
 ## Alerting on flow tracker activity
 
-See [Flow Tracker Alert](/docs/ug/alerts/ft.html) section.
+See [Flow Tracker Alert](/docs/ug/alerts/ft) section.

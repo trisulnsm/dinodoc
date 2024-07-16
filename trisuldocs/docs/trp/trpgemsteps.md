@@ -81,7 +81,7 @@ conn = "ipc:///usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/trp_0"
 To connect remotely to a TRP server you have to run the server on a
 normal TCP socket. For this you need to change the
 `Server>ZMQConnection` [parameter in
-trisulHubConfig.xml](/docs/ref/trisulhubconfig.html#server) as shown
+trisulHubConfig.xml](/docs/ref/trisulhubconfig#server) as shown
 below.
 
 Say if you wanted the TRP server to listen on TCP Port 12007
@@ -126,4 +126,4 @@ Then re-run the program
     "hello from trp"
 
 We are now ready to move on to more [advanced
-scripts](code_samples.html)
+scripts](code_samples)

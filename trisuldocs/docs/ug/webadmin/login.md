@@ -10,7 +10,7 @@ sidebar_position: 1
 
 Trisul can be accessed by pointing your browser to :  
 
-- via HTTP on port *3000*. [Instructions to change this to another port](/docs/howto/index.html) 
+- via HTTP on port *3000*. [Instructions to change this to another port](/docs/howto/index) 
 
 - via HTTPS
 
@@ -33,7 +33,7 @@ Once logged in please change the password.
 
 ## Contexts
 
-[Contexts](/docs/ug/domain/index.html#contexts) are multiple analysis domains in Trisul. At login time you must select the context you wish to analyze. Hover your mouse over each context name to get a description of what the context contains.
+[Contexts](/docs/ug/domain/index#contexts) are multiple analysis domains in Trisul. At login time you must select the context you wish to analyze. Hover your mouse over each context name to get a description of what the context contains.
 
 If you only have one context, which is the most common case, the choice
 is not shown.

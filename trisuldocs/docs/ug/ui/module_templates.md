@@ -40,12 +40,12 @@ This is a list of all module templates supported by Trisul.
 | 27  | Retro analysis      | [Explore retro(defunct)](/docs/ug/ui/module_templates#explore-retrodefunct)                                                   |
 | 28  | Retro analysis      | [Netflow retro (defunct)](/docs/ug/ui/module_templates#netflow-retrodefunct)                                                  |
 | 29  | IDS Alerts          | [Alerts for a specific key](/docs/ug/ui/module_templates#alerts-for-a-specific-key)                                           |
-| 30  | Retro analysis      | [Investigate application users](m/docs/ug/ui/module_templates#investigate-application-users)                                  |
+| 30  | Retro analysis      | [Investigate application users](/docs/ug/ui/module_templates#investigate-application-users)                                  |
 | 31  | Retro analysis      | [Most active sessions](/docs/ug/ui/module_templates#most-active-sessions)                                                     |
 | 32  | Retro analysis      | [Security](/docs/ug/ui/module_templates#security)                                                                             |
 | 33  | Scatter Retro       | [Scatter](/docs/ug/ui/module_templates#scatter)                                                                               |
 | 34  | Flexible Chart      | [Chart anything](/docs/ug/ui/module_templates#chart-anything)                                                                 |
-| 35  | Custom HTML         | [Any Custom HTML text](module_templates.html#any_custom_html_text)                                                            |
+| 35  | Custom HTML         | [Any Custom HTML text](module_templates#any_custom_html_text)                                                            |
 | 36  | Pull packets retro  | [Pull out raw packets in a timeframe and filter](/docs/ug/cg/retrotools#pull-packets)                                         |
 | 37  | Flow Tracker Alerts | [Recently fired flow tracker alerts](/docs/ug/alerts/ft)                                                                      |
 | 38  | Blacklist alerts    | [Recent alerts from badfellas plugin](/docs/ug/alerts/mw)                                                                     |
@@ -581,7 +581,7 @@ See [favorites](/docs/ug/cg/retrofaq) section for more
 | Width         | Integer | 200          | Width of the chart                                                                 |
 | Height        | Integer | 250          | Height of the chart                                                                |
 | Bucketsize    | Integer | 30           | IDS                                                                                |
-| Surface       | String  | STACKEDAREA  | Chart surface type.See [charts](/docs/ug/ui/elements.html#charts) section for more |
+| Surface       | String  | STACKEDAREA  | Chart surface type.See [charts](/docs/ug/ui/elements#charts) section for more |
 | Recentsecs    | Time    | 6 Hour       | Draws chart for recent 6 hours                                                     |
 | Cgguid        | string  | \-           | Counter Group ID                                                                   |
 | Statid        | Integer | 0            |                                                                                    |
