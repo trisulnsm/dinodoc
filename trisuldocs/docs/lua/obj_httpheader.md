@@ -1,6 +1,6 @@
 # Object HttpHeader
 
-The *HTTPHeader* object wraps the HTTP request and response headers along with status codes and other information. You do not construct this object directly , this is passed to you when you are working with [HTTP File Extraction scripts](/docs/lua/FRONT-END-SCRIPTS/file-extract )
+The *HTTPHeader* object wraps the HTTP request and response headers along with status codes and other information. You do not construct this object directly , this is passed to you when you are working with [HTTP File Extraction scripts](/docs/lua/fileextract)
 
 | name                                                                                  | input params                             | return value | description                                                                                                                                                  |
 | ------------------------------------------------------------------------------------- | ---------------------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -12,7 +12,7 @@ The *HTTPHeader* object wraps the HTTP request and response headers along wi
 | get_method                                                                            | –                                        | string       | For requests GET/POST/HEAD or other methods                                                                                                                  |
 | get_status                                                                            | –                                        | number       | HTTP Status Code 200=OK                                                                                                                                      |
 | is_method                                                                             | string                                   | bool         | Check header method. `hdr:is_method("POST")` is short cut for `hdr:get_method()=="POST"` @                                                                   |
-| [match_value](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-http-header#functionmatch_value ) | string – header_name, string value_regex | bool         | Short cut for `get_value` + `match(..)` check if the header value matches the specified regex (see example 3 below). The regex must be Google RE2 compatible |
+| [match_value](/docs/lua/obj_httpheader#functionmatch_value) | string – header_name, string value_regex | bool         | Short cut for `get_value` + `match(..)` check if the header value matches the specified regex (see example 3 below). The regex must be Google RE2 compatible |
 
 ### Usage examples
 

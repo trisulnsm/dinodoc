@@ -15,27 +15,27 @@ The Lua table `sg_monitor = {..}` can contain one or more of the following han
 | field                                                                                | type                                                                                                                              | when called                                                                                                        |
 | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
 | session_guid                                                                         | String (optional)                                                                                                                 | Session group id. The default is `{99A78737-4B41-4387-8F31-8077DB917336}` for IPv4/IPv6 flows                      |
-| [onnewflow](/docs/lua/BACK-END-SCRIPTS/session-grp-monitor#functiononnewflow )       | Function( [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ), [flow](/docs/lua/BACK-END-SCRIPTS/session-grp-monitor#flow ))  | A new flow was seen. The [flow](/docs/lua/BACK-END-SCRIPTS/session-grp-monitor#flow ) contains details of the flow |
-| [onupdate](/docs/lua/BACK-END-SCRIPTS/session-grp-monitor#functiononupdate )         | Function( [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ), [flow](/docs/lua/BACK-END-SCRIPTS/session-grp-monitor#flow ))  | Some metrics were update in the flow object. This can be called as much as every second per flow.                  |
-| [onterminate](/docs/lua/BACK-END-SCRIPTS/session-grp-monitor#functiononterminate)    | Function( [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) , [flow](/docs/lua/BACK-END-SCRIPTS/session-grp-monitor#flow )) | Flow terminated                                                                                                    |
-| [onbeginflush](/docs/lua/BACK-END-SCRIPTS/session-grp-monitor#functiononbeginflush ) | Function( [Engine](https://trisul.org/docs/lua/obj_engine.html), ts)                                                              | Before starting to flush all metrics to db                                                                         |
-| [flushfilter](/docs/lua/BACK-END-SCRIPTS/session-grp-monitor#functionflushfilter )   | Function( [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ), [flow](/docs/lua/BACK-END-SCRIPTS/session-grp-monitor#flow ))  | Before flushing each flow. Return *true* if you want to save flow in DB, return *false* to skip this flow          |
-| [onflush](https://trisul.org/docs/lua/sg_monitor.html#function_onflush)              | Function( [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ), [flow](/docs/lua/BACK-END-SCRIPTS/session-grp-monitor#flow ))  | Called for each flow as they are being flushed                                                                     |
-| [onendflush](/docs/lua/BACK-END-SCRIPTS/session-grp-monitor#functiononflush )        | Function( [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ), [flow](/docs/lua/BACK-END-SCRIPTS/session-grp-monitor#flow ))  | After all flows have been flushed for this interval                                                                |
-| [onmetronome]( /docs/lua/BACK-END-SCRIPTS/session-grp-monitor#functiononmetronome )  | Function( [[engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) , timestamp, tick_count, tick_interval)                        | called every second ( Tick Interval)                                                                               |
+| [onnewflow](/docs/lua/sg_monitor#functiononnewflow)       | Function( [engine](/docs/lua/obj_engine), [flow](/docs/lua/sg_monitor#flow))  | A new flow was seen. The [flow](/docs/lua/sg_monitor#flow) contains details of the flow |
+| [onupdate](/docs/lua/sg_monitor#functiononupdate)         | Function( [engine](/docs/lua/obj_engine), [flow](/docs/lua/sg_monitor#flow))  | Some metrics were update in the flow object. This can be called as much as every second per flow.                  |
+| [onterminate](/docs/lua/sg_monitor#functiononterminate)    | Function( [engine](/docs/lua/obj_engine) , [flow](//docs/lua/sg_monitor#flow)) | Flow terminated                                                                                                    |
+| [onbeginflush](/docs/lua/sg_monitor#functiononbeginflush) | Function( [Engine](/docs/lua/obj_engine), ts)                                                              | Before starting to flush all metrics to db                                                                         |
+| [flushfilter](/docs/lua/sg_monitor#functionflushfilter)   | Function( [engine](/docs/lua/obj_engine), [flow](/docs/lua/sg_monitor#flow))  | Before flushing each flow. Return *true* if you want to save flow in DB, return *false* to skip this flow          |
+| [onflush](/docs/lua/sg_monitor#functiononflush)              | Function( [engine](/docs/lua/obj_engine), [flow](/docs/lua/sg_monitor#flow))  | Called for each flow as they are being flushed                                                                     |
+| [onendflush](/docs/lua/sg_monitor#functiononendflush)        | Function( [engine](/docs/lua/obj_engine), [flow](/docs/lua/sg_monitor#flow))  | After all flows have been flushed for this interval                                                                |
+| [onmetronome](/docs/lua/sg_monitor#functiononmetronome)  | Function( [[engine](/docs/lua/obj_engine) , timestamp, tick_count, tick_interval)                        | called every second ( Tick Interval)                                                                               |
 
 ## Objects Reference
 
 ## Flow
 
-Represents a flow and all its metrics. Note that you can access the `f:flow()` [object](https://trisul.org/docs/lua/obj_flowid.html) which gives you access to the tuples like source_ip, destination_ip, ports, etc.
+Represents a flow and all its metrics. Note that you can access the `f:flow()` [object](/docs/lua/obj_flowid) which gives you access to the tuples like source_ip, destination_ip, ports, etc.
 
 | field            | return type                                                                  | description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | ---------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | key              | string                                                                       | A unique string identifying the flow. Same as `flow():id()` below                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| flow             | [FlowID](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid)                       | a FlowID object representing the flow tuples like source_ip, port, destination_ip, port etc                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| flow             | [FlowID](/docs/lua/obj_flowid)                       | a FlowID object representing the flow tuples like source_ip, port, destination_ip, port etc                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | time_window      | number,number                                                                | start and last activity time seconds (a tv_sec Unix epoch time) of the flow. `starttm,lasttm = flow:time_window()`.                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| state            | [flow state](/docs/lua/BACK-END-SCRIPTS/session-grp-monitor#session-state  ) | The state of the flow, whether it is timeout, RST, FIN, or closed normally.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| state            | [flow state](/docs/lua/sg_monitor#session-state) | The state of the flow, whether it is timeout, RST, FIN, or closed normally.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | az_bytes         | number                                                                       | number of bytes in a→z direction. the A-side can be obtained from `session:flow():ipa_readable()`                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | za_bytes         | bytes seen in z→a direction                                                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | az_packets       | number                                                                       | number packets seen in a→z direction                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
@@ -43,7 +43,7 @@ Represents a flow and all its metrics. Note that you can access the `f:flow()`�
 | az_payload_bytes | number                                                                       | a→z payload bytes does not include the network headers, only the TCP payload                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | za_payload_bytes | number                                                                       | z→a payload bytes does not include the network headers, only the TCP payload                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | tags             | string                                                                       | a pipe separated string of all tags attached to the flow                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| add_tag          | –                                                                            | Example `flow:add_tag("suspect")` allows you to add a tag to the set of tags already there.<br/>USAGE NOTE<br/>When to use `add_tag` vs [`engine:tag_flow(..)`](https://trisul.org/docs/lua/obj_engine.html#function_tag_flow) When writing *session_group_monitor* plugins you want to use `add_tag` because it directly modifies the flow tag. `tag_flow(..)` sends the new flowtag as a message back to the streaming analytics pipeline, the tag can be lost if the flow is terminated or flushed before the flowtag message is processed by the flusher. |
+| add_tag          | –                                                                            | Example `flow:add_tag("suspect")` allows you to add a tag to the set of tags already there.<br/>USAGE NOTE<br/>When to use `add_tag` vs [`engine:tag_flow(..)`](/docs/lua/obj_engine#functiontag_flow) When writing *session_group_monitor* plugins you want to use `add_tag` because it directly modifies the flow tag. `tag_flow(..)` sends the new flowtag as a message back to the streaming analytics pipeline, the tag can be lost if the flow is terminated or flushed before the flowtag message is processed by the flusher. |
 | setup_rtt        | number                                                                       | For TCP flows only – Round Trip Time in **microseconds** as measured by the TCP handshake                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | retransmissions  | number                                                                       | Number of retransmitted sequence numbers observed, total of both directions                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
@@ -97,9 +97,9 @@ When a new flow is detected. A new flow is detected when a metric for a new flow
 
 ### Parameters
 
-| engine | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, resources, or alerts into the Trisul framework |
+| engine | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, resources, or alerts into the Trisul framework |
 | ------ | ----------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| flow   | A [Flow](https://trisul.org/docs/lua/sg_monitor.html#flow) object | the flow                                                                       |
+| flow   | A [Flow](/docs/lua/sg_monitor#flow) object | the flow                                                                       |
 
 ### Return value
 
@@ -126,9 +126,9 @@ This is called when any event or metric is detected on a flow.
 
 ### Parameters
 
-| engine | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine )  object | use this object to add metrics, resources, or alerts into the Trisul framework |
+| engine | An [engine](/docs/lua/obj_engine)  object | use this object to add metrics, resources, or alerts into the Trisul framework |
 | ------ | ------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| flow   | A [Flow](https://trisul.org/docs/lua/sg_monitor.html#flow) object  | the flow                                                                       |
+| flow   | A [Flow](/docs/lua/sg_monitor#flow) object  | the flow                                                                       |
 
 ### Return value
 
@@ -150,9 +150,9 @@ When a normal TCP flow termination is detected or when the flow is timedout fr
 
 ### Parameters
 
-| engine | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine )  object | use this object to add metrics, resources, or alerts into the Trisul framework |
+| engine | An [engine](/docs/lua/obj_engine)  object | use this object to add metrics, resources, or alerts into the Trisul framework |
 | ------ | ------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| flow   | A [Flow](https://trisul.org/docs/lua/sg_monitor.html#flow) object  | the flow                                                                       |
+| flow   | A [Flow](/docs/lua/sg_monitor#flow) object  | the flow                                                                       |
 
 ### Return value
 
@@ -174,7 +174,7 @@ When accumulated streaming metrics for all flows are about to be flushed to the 
 
 ### Parameters
 
-| engine    | An[engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, resources, or alerts into the Trisul framework |
+| engine    | An[engine](/docs/lua/obj_engine) object | use this object to add metrics, resources, or alerts into the Trisul framework |
 | --------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | timestamp | A timestamp (tv_sec) value                                       | timestamp value – number of seconds since Jan 1 1970                           |
 
@@ -197,13 +197,13 @@ Process each flow as they are flushed.
 Just before each flow is flushed to the backend database. At this point all the metrics are attached to the flow and ready for consumption.
 
 **Long running flows**  
-Long running flows can be flushed multiple times, by default every 300 seconds/5 minutes. Use the [flow:state](https://trisul.org/docs/lua/sg_monitor.html#session_state) to filter them out if you want to process only terminated flows.
+Long running flows can be flushed multiple times, by default every 300 seconds/5 minutes. Use the [flow:state](/docs/lua/sg_monitor#session-state) to filter them out if you want to process only terminated flows.
 
 ### Parameters
 
-| engine | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, resources, or alerts into the Trisul framework |
+| engine | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, resources, or alerts into the Trisul framework |
 | ------ | ----------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| flow   | A [Flow](https://trisul.org/docs/lua/sg_monitor.html#flow) object | the flow                                                                       |
+| flow   | A [Flow](/docs/lua/sg_monitor#flow) object | the flow                                                                       |
 
 ### Return value
 
@@ -225,9 +225,9 @@ Just before each flow is flushed to the database. You can look at the contents o
 
 ### Parameters
 
-| engine | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, resources, or alerts into the Trisul framework |
+| engine | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, resources, or alerts into the Trisul framework |
 | ------ | ----------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| flow   | A [Flow](https://trisul.org/docs/lua/sg_monitor.html#flow) object | the flow                                                                       |
+| flow   | A [Flow](/docs/lua/sg_monitor#flow) object | the flow                                                                       |
 
 ### Return value
 
@@ -262,7 +262,7 @@ When all the flows are flushed for this cycle. You can clean up here what you in
 
 ### Parameters
 
-| engine | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine )  object | use this object to add metrics, resources, or alerts into the Trisul framework |
+| engine | An [engine](/docs/lua/obj_engine)  object | use this object to add metrics, resources, or alerts into the Trisul framework |
 | ------ | ------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
 
 ### Return value
@@ -285,7 +285,7 @@ If you define a onmetronome(..) function you will be plugged into the Trisul met
 
 ### Parameters
 
-| engine        | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, resources, or alerts into the Trisul framework |
+| engine        | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, resources, or alerts into the Trisul framework |
 | ------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | timestamp     | Number                                                            | Current timestamp (tv_sec epoch seconds)                                       |
 | tick_count    | Number                                                            | An incremeting tick counter                                                    |
