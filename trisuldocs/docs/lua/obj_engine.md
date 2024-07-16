@@ -733,7 +733,7 @@ This function adds the following uni-directional edges from a given *vertex*
 
 ### Parameters
 
-| flow_key    | a string | A string representing a flow. This is in [FlowID format](/docs/lua/obj_flowid ) You typically get this string as inputs to your lua function |
+| flow_key    | a string | A string representing a flow. This is in [FlowID format](/docs/lua/obj_flowid) You typically get this string as inputs to your lua function |
 | ----------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | target_guid | a GUID   | type of Vertex-B. This can be a counter group id, alert group id, or any other group id                                                                              |
 | target_key  | string   | key of Vertex-B                                                                                                                                                      |

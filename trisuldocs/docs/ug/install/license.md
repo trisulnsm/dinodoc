@@ -33,12 +33,12 @@ Once you have decided which license type suits you, you need to get the Trisul M
 Login as Admin → Select Context :default → Licensing
 
 *Getting the machine-id from the Admin UI*  
-![](https://trisul.org/docs/ug/install/images/machineid.png)
+![](images/machineid.png)
 
 Click on the machine ID link against each node to get the machineID as shown below
 
 *Showing the Upload button used to install new license files*  
-![](https://trisul.org/docs/ug/install/images/machineid_value.png)
+![](images/machineid_value.png)
 
 ### Alternate method: get Machine ID using command line
 
@@ -56,7 +56,7 @@ The license size depends on the number of maximum number of simultnaneously acti
 
 Login as Admin → Select Context → Licensing
 
-![](https://trisul.org/docs/ug/install/images/license.png)
+![](images/license.png)
 
 The chart shows the active internal hosts in the past 24 hours. Click on “Long Term Trends” to see a longer time window
 
@@ -73,7 +73,7 @@ Login as Admin → Select Context :default → Licensing
 On the Licensing page you can click on the Upload Button shown in the image below to select the new License file and upload it.
 
 *Showing the Upload button used to install new license files*  
-![](https://trisul.org/docs/ug/install/images/license_upload.png)
+![](images/license_upload.png)
 
 ### Alternate method: Install new licenses using the Command Line
 
@@ -83,7 +83,7 @@ The following alternate method places the new License files directly in the corr
 
 1. Put the new license file in `/usr/local/etc/trisul-probe`
    1. **Change the name** of the new file to `LicenseKey.txt` **OR**
-   2. **Edit the** [LicenseFile parameter in trisulProbeConfig.xml](/docs/ref/trisulProbe-config#app ) to point to the new file. The `trisulProbeConfig.xml` file is a per-context config file found under `/usr/local/etc/trisul-probe/domain0/probe0/context0` directory.
+   2. **Edit the** [LicenseFile parameter in trisulProbeConfig.xml](/docs/ref/trisulconfig#app ) to point to the new file. The `trisulProbeConfig.xml` file is a per-context config file found under `/usr/local/etc/trisul-probe/domain0/probe0/context0` directory.
 
 #### Install license on Trisul Hub node
 

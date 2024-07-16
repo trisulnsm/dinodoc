@@ -25,7 +25,7 @@ Get started by learning where to place LUA scripts, how to run in development 
    
    1. Now lets run Trisul over a sample PCAP file. Use your own or download a sample PCAP from tutorial.pcap
    
-   2. Run the trisulctl_probe CLI tool command ‘testbench’ which will run your scripts in a single threaded mode attached to your terminal. See [Development Environment](/docs/lua/developer-env) *Sample run shown below*
+   2. Run the trisulctl_probe CLI tool command ‘testbench’ which will run your scripts in a single threaded mode attached to your terminal. See [Development Environment](/docs/lua/debugger) *Sample run shown below*
       
       ```lua
       cd /tmp

@@ -107,14 +107,14 @@ By default, all Trisul Probes will listen on `PCAP` mode on interface `eth0`�
 
 ### Customizing the probe
 
-The trisul configuration file is created in [/usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml](https://trisul.org/docs/ref/trisulconfig.html)
+The trisul configuration file is created in [/usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml](https://trisul.org/docs/ref/trisulconfig)
 
 Some of the things you may want to change are :
 
-| [TrisulMode](https://trisul.org/docs/ref/trisulconfig.html#app) | Default is *TAP*, if you are feeding Netflow change this to *NETFLOW_TAP*        |
+| [TrisulMode](https://trisul.org/docs/ref/trisulconfig#app) | Default is *TAP*, if you are feeding Netflow change this to *NETFLOW_TAP*        |
 | --------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| [Ring](/docs/ref/trisulProbe-config#ring )                      | Default is enabled, disable if you do not want to store packets                  |
-| [User](/docs/ref/trisulProbe-config#app )                       | Default is *trisul.trisul*. Change if you want trisul to run as an existing user |
+| [Ring](/docs/ref/trisulProbe-config#ring)                      | Default is enabled, disable if you do not want to store packets                  |
+| [User](/docs/ref/trisulProbe-config#app)                       | Default is *trisul.trisul*. Change if you want trisul to run as an existing user |
 
 ### Tweaking application parameters from the web interface
 
@@ -134,4 +134,4 @@ The default installation and the free license allows you to put all componments 
 
 ## Next. Starting and stopping Trisul
 
-The next section you want to read is [Starting and Stopping Trisul](/docs/ug/install/stopstart )
+The next section you want to read is [Starting and Stopping Trisul](/docs/ug/install/startstop)

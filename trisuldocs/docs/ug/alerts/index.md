@@ -65,11 +65,11 @@ botnet C&C, is flagged.
 
 The alerts generated appear immediately on the user interface. You can also setup the following
 
-1. Sending alerts to [SYSLOG](/docs/ug/Alerts/manage) – from where you can send it to your other logging / alerting tools
+1. Sending alerts to [SYSLOG](/docs/ug/alerts/manage) – from where you can send it to your other logging / alerting tools
 2. Send alerts via [email](/docs/ug/alerts/email_settings)
 3. Send alerts via [SMS service](/docs/ug/alerts/sms_settings)
 4. Send alerts to [Microsoft Teams](/docs/ug/alerts/msteams)
 
-The Email and SMS services work by reading the SYSLOG alerts. So you need [ensure SYSLOG alerting is enabled](/docs/ug/Alerts/manage) in trisulConfig.xml. It is enabled by default.
+The Email and SMS services work by reading the SYSLOG alerts. So you need [ensure SYSLOG alerting is enabled](/docs/ug/alerts/manage) in trisulConfig.xml. It is enabled by default.
 
 

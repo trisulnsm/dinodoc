@@ -88,7 +88,7 @@ When a new flow is first seen. This method is not called when LUA plugins have
 | engine    | An [Engine](/docs/lua/obj_engine) object | use this object to add metrics, resources, or alerts into the Trisul framework |
 | --------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | timestamp | number                                                            | Timestamp seconds when the first packet in the flow was seen                   |
-| flowkey   | A [FlowID](docs/lua/obj_flowid) object  | use this to determine IPs and Ports involved in the flow                       |
+| flowkey   | A [FlowID](/docs/lua/obj_flowid) object  | use this to determine IPs and Ports involved in the flow                       |
 
 ### Return value
 
@@ -113,7 +113,7 @@ When a TCP flow is terminated either by the normal TCP procedures or by time
 | engine    | An [Engine](/docs/lua/obj_engine) object | use this object to add metrics, resources, or alerts into the Trisul framework |
 | --------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | timestamp | number                                                            | Timestamp seconds. seconds since epoch Jan 1 1970                              |
-| flowkey   | A [FlowID](docs/lua/obj_flowid) object  | use this to determine IPs and Ports involved in the flow                       |
+| flowkey   | A [FlowID](/docs/lua/obj_flowid) object  | use this to determine IPs and Ports involved in the flow                       |
 
 ### Return value
 
@@ -150,7 +150,7 @@ Due to the co-operative execution of multiple LUA scripts as well as Trisul’
 | engine    | An [Engine](/docs/lua/obj_engine) object | use this object to add metrics, resources, or alerts into the Trisul framework                                           |
 | --------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | timestamp | number                                                            | Timestamp seconds when the first packet in the flow was seen                                                             |
-| flowkey   | A [FlowID](docs/lua/obj_flowid) object  | use this to determine IPs and Ports involved in the flow                                                                 |
+| flowkey   | A [FlowID](/docs/lua/obj_flowid) object  | use this to determine IPs and Ports involved in the flow                                                                 |
 | direction | number                                                            | - 0 = IN payload in server → client direction<br/>- 1 = OUT payload in client → server direction (same as the first SYN) |
 | seekpos   | number                                                            | Seek position byte position from the beginning of the stream                                                             |
 | buffer    | A [Buffer](/docs/lua/obj_buffer) object  | represents the reassembled bytes                                                                                         |
@@ -186,7 +186,7 @@ We encourage you to use the onattribute function if you can find your object of 
 | engine          | An [Engine](/docs/lua/obj_engine)object | use this object to add metrics, resources, or alerts into the Trisul framework |
 | --------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | timestamp       | number                                                           | Timestamp seconds when the first packet in the flow was seen                   |
-| flowkey         | A [FlowID](docs/lua/obj_flowid) object | use this to determine IPs and Ports involved in the flow                       |
+| flowkey         | A [FlowID](/docs/lua/obj_flowid) object | use this to determine IPs and Ports involved in the flow                       |
 | attribute_type  | string                                                           | The type of attribute. See note below                                          |
 | attribute_value | string                                                           | The attribute value                                                            |
 

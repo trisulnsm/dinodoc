@@ -22,7 +22,7 @@ The following script types are available – within each script type you listen 
 
 | Name                                                                          | Called when                  | Notes                                                                           |
 | ----------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------- |
-| [engine_monitor](/docs/lua/engine_monitor )                  | Periodically                 | on a 1 minute timer you can support SNMP and other data input tools into Trisul |
+| [engine_monitor](/docs/lua/engine_monitor)                  | Periodically                 | on a 1 minute timer you can support SNMP and other data input tools into Trisul |
 | [cg_monitor](/docs/lua/cg_monitor) | Counter group metrics events | Use for traffic, top-N, cardinality analytics                                   |
 | [sg_monitor](/docs/lua/sg_monitor)                 | Flow metrics                 | On new flow, when flow is flushed,                                              |
 | [alert_monitor](/docs/lua/alert_monitor)                    | Alert stream                 | Process alerts in Lua                                                           |
