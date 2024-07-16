@@ -57,7 +57,7 @@ description of each of these modules. They are mostly self explanatory.
 | Module                      | Usage                                                                                                                                  |
 | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | Traffic History             | Most recent 1hr traffic history. Note you can click on *View Trends* and *Retro Analysis* within the chart to expand this time window. |
-| [Key Details](#key_details) | Various drilldown options pertaining to this key                                                                                       |
+| [Key Details](/docs/ug/ui/key_dashboard#key-details) | Various drilldown options pertaining to this key                                                                                       |
 | A la carte statistics       | Flexible charting tool (quick and easy)                                                                                                |
 | TCA Details                 | Shows recent threshold crossing alerts, if any                                                                                         |
 | Flow Activity               | Displays recent top flows                                                                                                              |

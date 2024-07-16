@@ -6,7 +6,7 @@ sidebar_position: 7
 
 Describes the Interface drilldown tool that appears when you select
 “Drilldown” against any interface in the [Routers and Interfaces
-Tool](routers_and_interfaces#routers_and_interfaces). The options in Interface Drilldown tool looks slightly different depending on if [Interface Tracking](interface_tracker#interface_tracker) is enabled or not.
+Tool](routers_and_interfaces). The options in Interface Drilldown tool looks slightly different depending on if [Interface Tracking](interface_tracker) is enabled or not.
 
 ## Without Interface Tracker
 

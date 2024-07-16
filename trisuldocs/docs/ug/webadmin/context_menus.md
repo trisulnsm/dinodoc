@@ -259,14 +259,14 @@ Meter a subset of a group that matches a set of keys from another group.
 Filtered counter group are invaluable in setting up cross-group
 counters.
 
-Refer to [Filtered Counter](/docs/ug/cg/custom#filtered_counter_groups)
+Refer to [Filtered Counter](/docs/ug/cg/custom#filtered-counter-groups)
 
 ### Keysets
 
 A new counter group that aggregates sets of keys from a host counter
 group. Essentially monitors a “group of keys” as a single key.
 
-To create a Keyset counter group, Refer to [Keyset Counter](/docs/ug/cg/custom#keyset_counter_groups)
+To create a Keyset counter group, Refer to [Keyset Counter](/docs/ug/cg/custom#keyset-counter-groups)
 
 ### Stat Based
 
@@ -276,7 +276,7 @@ value.
 Creates a subset of a parent group consisting only of items who meet a
 certain meter criteria.
 
-Refer to [Stat Based Counter](/docs/ug/cg/custom#stat_based_counter_groups)
+Refer to [Stat Based Counter](/docs/ug/cg/custom#stat-based-counter-groups)
 
 ### Rule Based
 
@@ -290,7 +290,7 @@ It works like this :
 \# The first rule that matches determines the meter key  
 \# If no rule matches the key falls through to the parent counter group
 
-Refer to [Rule Based Counter](/docs/ug/cg/custom#rule_based_counter_groups)
+Refer to [Rule Based Counter](/docs/ug/cg/custom#rule-based-counter-groups)
 
 ### Crosskeys
 
@@ -299,7 +299,7 @@ crossing the *Applications X Hosts* counter group you setup a new
 counter group with *Hosts-App* keys this lets you monitor traffic
 statistics for Hosts-App flows.
 
-Refer to [Crosskey Counter](/docs/ug/cg/custom#cross_key_counter_groups)
+Refer to [Crosskey Counter](/docs/ug/cg/custom#cross-key-counter-groups)
 
 ### Cardinality
 
@@ -312,7 +312,7 @@ following restriction :
 
 - A maximum of 2 cardinality counters are allowed per counter group.
 
-Refer to [Cardinality Counter](/docs/ug/cg/custom#cardinality_counting)
+Refer to [Cardinality Counter](/docs/ug/cg/custom#cardinality-counting)
 
 ### Session Groups
 

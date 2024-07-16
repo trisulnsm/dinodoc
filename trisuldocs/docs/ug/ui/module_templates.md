@@ -40,23 +40,22 @@ This is a list of all module templates supported by Trisul.
 | 27  | Retro analysis      | [Explore retro(defunct)](/docs/ug/ui/module_templates#explore-retrodefunct)                                                   |
 | 28  | Retro analysis      | [Netflow retro (defunct)](/docs/ug/ui/module_templates#netflow-retrodefunct)                                                  |
 | 29  | IDS Alerts          | [Alerts for a specific key](/docs/ug/ui/module_templates#alerts-for-a-specific-key)                                           |
-| 30  | Retro analysis      | [Investigate application users](/docs/ug/ui/module_templates#investigate-application-users)                                  |
+| 30  | Retro analysis      | [Investigate application users](/docs/ug/ui/module_templates#investigate-application-users)                                   |
 | 31  | Retro analysis      | [Most active sessions](/docs/ug/ui/module_templates#most-active-sessions)                                                     |
 | 32  | Retro analysis      | [Security](/docs/ug/ui/module_templates#security)                                                                             |
 | 33  | Scatter Retro       | [Scatter](/docs/ug/ui/module_templates#scatter)                                                                               |
 | 34  | Flexible Chart      | [Chart anything](/docs/ug/ui/module_templates#chart-anything)                                                                 |
-| 35  | Custom HTML         | [Any Custom HTML text](module_templates#any_custom_html_text)                                                            |
-| 36  | Pull packets retro  | [Pull out raw packets in a timeframe and filter](/docs/ug/cg/retrotools#pull-packets)                                         |
-| 37  | Flow Tracker Alerts | [Recently fired flow tracker alerts](/docs/ug/alerts/ft)                                                                      |
-| 38  | Blacklist alerts    | [Recent alerts from badfellas plugin](/docs/ug/alerts/mw)                                                                     |
-| 39  | Flow tracker        | [List of flow trackers](/docs/ug/ui/module_templates#investigate-flow-tracker)                                                |
-| 40  | App In/Out Trend    | [Top applications into and out of your network](/docs/ug/ui/module_templates#app-inout-trend)                                 |
-| 41  | Retro analysis      | [Network FAQ](/docs/ug/ui/module_templates#my-favorites)                                                                      |
-| 42  | Topper Trends       | [IDS Alerts by sigid](/docs/ug/ui/module_templates#topper-trends)                                                             |
-| 43  | Retro analysis      | [Traffic trends of a particular item](/docs/ug/ui/module_templates#analyze-with-key)                                          |
-| 44  | Retro analysis      | [Drill down into a counter group](/docs/ug/ui/module_templates#cross-drill)                                                   |
-| 45  | TCA details         | [TCA Alerts for a item](/docs/ug/ui/module_templates#show-tca-details)                                                        |
-| 46  | Retro usage         | [counter group to view top users by various meters](/docs/ug/ui/module_templates#explore-retro-usage)                         |
+| 35  | Pull packets retro  | [Pull out raw packets in a timeframe and filter](/docs/ug/cg/retrotools#pull-packets)                                         |
+| 36  | Flow Tracker Alerts | [Recently fired flow tracker alerts](/docs/ug/alerts/ft)                                                                      |
+| 37  | Blacklist alerts    | [Recent alerts from badfellas plugin](/docs/ug/alerts/mw)                                                                     |
+| 38  | Flow tracker        | [List of flow trackers](/docs/ug/ui/module_templates#investigate-flow-tracker)                                                |
+| 39  | App In/Out Trend    | [Top applications into and out of your network](/docs/ug/ui/module_templates#app-inout-trend)                                 |
+| 40  | Retro analysis      | [Network FAQ](/docs/ug/ui/module_templates#my-favorites)                                                                      |
+| 41  | Topper Trends       | [IDS Alerts by sigid](/docs/ug/ui/module_templates#topper-trends)                                                             |
+| 42  | Retro analysis      | [Traffic trends of a particular item](/docs/ug/ui/module_templates#analyze-with-key)                                          |
+| 43  | Retro analysis      | [Drill down into a counter group](/docs/ug/ui/module_templates#cross-drill)                                                   |
+| 44  | TCA details         | [TCA Alerts for a item](/docs/ug/ui/module_templates#show-tca-details)                                                        |
+| 45  | Retro usage         | [counter group to view top users by various meters](/docs/ug/ui/module_templates#explore-retro-usage)                         |
 
 ## Module Parameters
 
@@ -574,17 +573,17 @@ See [favorites](/docs/ug/cg/retrofaq) section for more
 
 ## Topper Trends
 
-| ParameterName | Type    | DefaultValue | Description                                                                        |
-| ------------- | ------- | ------------ | ---------------------------------------------------------------------------------- |
-| Topcount      | Integer | 10           | Draws chart for this many items                                                    |
-| Cullcount     | Integer | 0            | hows toppers eliminating the top x items in a chart                                |
-| Width         | Integer | 200          | Width of the chart                                                                 |
-| Height        | Integer | 250          | Height of the chart                                                                |
-| Bucketsize    | Integer | 30           | IDS                                                                                |
+| ParameterName | Type    | DefaultValue | Description                                                                   |
+| ------------- | ------- | ------------ | ----------------------------------------------------------------------------- |
+| Topcount      | Integer | 10           | Draws chart for this many items                                               |
+| Cullcount     | Integer | 0            | hows toppers eliminating the top x items in a chart                           |
+| Width         | Integer | 200          | Width of the chart                                                            |
+| Height        | Integer | 250          | Height of the chart                                                           |
+| Bucketsize    | Integer | 30           | IDS                                                                           |
 | Surface       | String  | STACKEDAREA  | Chart surface type.See [charts](/docs/ug/ui/elements#charts) section for more |
-| Recentsecs    | Time    | 6 Hour       | Draws chart for recent 6 hours                                                     |
-| Cgguid        | string  | \-           | Counter Group ID                                                                   |
-| Statid        | Integer | 0            |                                                                                    |
+| Recentsecs    | Time    | 6 Hour       | Draws chart for recent 6 hours                                                |
+| Cgguid        | string  | \-           | Counter Group ID                                                              |
+| Statid        | Integer | 0            |                                                                               |
 
 ## Analyze with key
 

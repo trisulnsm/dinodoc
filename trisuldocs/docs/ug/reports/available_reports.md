@@ -87,13 +87,13 @@ You get the maximum out of this report when you set the bandwidth cap and enable
 
 ##### Enable per-port metering for this IP
 
-- Create a [filtered counter group](/docs/ug/cg/custom#filtered_counter_groups)
+- Create a [filtered counter group](/docs/ug/cg/custom#filtered-counter-groups)
 - Parent = Apps, Filter = Hosts and enter the IP
 - Name the new counter group `APPS_IPAddress`. Example : `APPS_192.168.1.22`
 
 ##### Enable per-protocol metering for this IP
 
-- Create a [filtered counter group](/docs/ug/cg/custom#filtered_counter_groups)
+- Create a [filtered counter group](/docs/ug/cg/custom#filtered-counter-groups)
 - Parent = *Network Layer Stats*, Filter = *Hosts* and enter the IP
 - Name the new counter group `PROTO_IPAddress`. Example : `PROTO_192.168.1.22`
 
