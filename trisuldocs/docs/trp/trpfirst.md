@@ -3,7 +3,7 @@
 Lets look at a sample program in Ruby that sends a Hello Request command
 to Trisul and gets back a Hello Response.
 
-Also see : [Programming model](trpprogmodel) , [Messages and
+Also see : [Programming model](/docs/trp/trpprogramodel) , [Messages and
 Fields](/docs/ref/trpproto)
 
 div(info). **Pre-requisites** You must have Ruby installed on your
