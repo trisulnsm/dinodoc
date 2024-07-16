@@ -128,7 +128,7 @@ The CSV format is shown here:
 
 ![](images/ipdr-csv-format.png)
 
-A sample working CSV file can be downloaded from here [Sample_IPDR_Customer_Import.CSV](/assets/SAMPLE_IPDR_CUSTOMER_SUBNET_MAPPINGS.csv) You can edit the information as needed.
+A sample working CSV file can be edited with the information as needed.
 
 - Step 1 : Select the CSV file
 - Step 2 : Select the column numbers, if you followed the sample file above you can skip this step and directly press IMPORT
