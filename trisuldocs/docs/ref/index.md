@@ -15,12 +15,12 @@ Links to Reference for all configuration files
 Here are some commonly used config files.
 
  - The main Trisul-PROBE config file : [trisulProbeConfig.xml](trisulconfig)
- - The main Trisul-HUB config file : [trisulHubConfig.xml](trisulhubconfig)
+ - The main Trisul-HUB config file : [trisulHubConfig.xml](trsulhubconfig)
  - The Netflow config file : [netflow-config](netflow-config) 
 
 ## Plugin Config files
 
-Each subsystem has its own config file. The files are named PI-xxxx.xml See [Plugin Configuration](plugin-configuration)
+Each subsystem has its own config file. The files are named PI-xxxx.xml See [Plugin Configuration](/docs/ref/plugin_configuration)
 
 
 

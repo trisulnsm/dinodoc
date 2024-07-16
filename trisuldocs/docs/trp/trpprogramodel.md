@@ -2,7 +2,7 @@
 
 The main motivation of Trisul Remote Protocol is to allow remote
 automation of forensics tasks. From a single workstation you can
-[connect](/docs/trp) to any number of Trisul probes and run
+[connect](/docs/trp/) to any number of Trisul probes and run
 your custom analysis and forensics tools.
 
 TRP is a message based request-response protocol. The protocol is built

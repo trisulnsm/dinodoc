@@ -232,7 +232,7 @@ The [ID Block](/docs/lua/basics#id-block) a must for all plugins
 
 **onload/onunload**
 
-called when framework [loads or unloads](docs/lua/basics#onload-and-onload) the script
+called when framework [loads or unloads](/docs/lua/basics#onload-and-onload) the script
 
 **message_subscriptions**
 

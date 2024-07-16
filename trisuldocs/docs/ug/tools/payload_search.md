@@ -72,4 +72,4 @@ for further analysis.
 
 ### API Access
 
-Using the [Trisul Remote Protocol](/docs/trp/index) you can even automate the whole process.
+Using the [Trisul Remote Protocol](/docs/trp/) you can even automate the whole process.

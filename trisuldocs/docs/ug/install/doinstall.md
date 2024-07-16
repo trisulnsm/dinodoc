@@ -113,8 +113,8 @@ Some of the things you may want to change are :
 
 | [TrisulMode](https://trisul.org/docs/ref/trisulconfig#app) | Default is *TAP*, if you are feeding Netflow change this to *NETFLOW_TAP*        |
 | --------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| [Ring](/docs/ref/trisulProbe-config#ring)                      | Default is enabled, disable if you do not want to store packets                  |
-| [User](/docs/ref/trisulProbe-config#app)                       | Default is *trisul.trisul*. Change if you want trisul to run as an existing user |
+| [Ring](/docs/ref/trisulconfig#ring)                      | Default is enabled, disable if you do not want to store packets                  |
+| [User](/docs/ref/trisulconfig#app)                       | Default is *trisul.trisul*. Change if you want trisul to run as an existing user |
 
 ### Tweaking application parameters from the web interface
 

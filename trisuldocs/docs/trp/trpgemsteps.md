@@ -55,9 +55,6 @@ p resp.message
 end
 ```
 
-
-
-
 This program tries to setup a local TRP connection over the Local Unix
 Socket `ipc://..` and simply prints “hello from trp” if it worked.
 
@@ -104,8 +101,6 @@ default@hub0</code>
 Then change the connection string to `tcp://192.168.2.201:12007` in the
 hellotrp.rb example
 
-
-
 ```ruby
 require ‘trisulrp’
 
@@ -116,9 +111,6 @@ TrisulRP::Protocol.get_response_zmq(conn,req) do \|resp\|
 p resp.message  
 end
 ```
-
-
-
 
 Then re-run the program
 
