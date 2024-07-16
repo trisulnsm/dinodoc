@@ -30,3 +30,20 @@ Trisul system self monitoring
 | 12  | Reads IO           | 0         | 0            | VT_DELTA_RATE_ROUTER | ios     |
 | 13  | Writes IO          | 0         | 0            | VT_DELTA_RATE_ROUTER | ios     |
 | 14  | PCAP disk bw       | 0         | 0            | VT_RATE_COUNTER      | Bps     |
+
+
+### GlobalFlush-1 Time 
+### CPU Total          
+### CPU Trisul         
+### Mem Total          
+### Mem System         
+### Mem Trisul         
+### Disk Total         
+### Disk Used          
+### GlobalFlush-0 Time 
+### Dropped Pkts       
+### Processed Pkts     
+### Dropped Percent    
+### Reads IO           
+### Writes IO          
+### PCAP disk bw      
