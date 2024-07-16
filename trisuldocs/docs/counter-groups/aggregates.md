@@ -36,16 +36,16 @@ Aggregate statistics
 
 ### Layer 2 Multicast
 
-## Layer 2 Unicast
+### Layer 2 Unicast
 
-## Layer 3 Broadcast  
+### Layer 3 Broadcast  
 
-## Layer 3 Multicast  
+### Layer 3 Multicast  
 
-## Layer 3 Unicast 
+### Layer 3 Unicast 
 
-## Fragments
+### Fragments
 
-## Unused Cardinality counter
+### Unused Cardinality counter
 
-## Unused Cardinality counter
+### Unused Cardinality counter

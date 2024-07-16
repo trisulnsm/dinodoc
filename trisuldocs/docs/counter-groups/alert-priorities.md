@@ -17,7 +17,7 @@ IDS Alert Priorities
 | 1   | Unused Cardinality counter | 20        | 20           | VT_GAUGE   | Uniques |
 | 2   | Unused Cardinality counter | 20        | 20           | VT_GAUGE   | Uniques |
 
-## Total Alerts    
-## Unused Cardinality counter
-## Unused Cardinality counter
+### Total Alerts    
+### Unused Cardinality counter
+### Unused Cardinality counter
 

@@ -18,7 +18,9 @@ Netflow ASN
 | 3   | Recv from Downstream AS    | 10        | 0            | VT_RATE_COUNTER | Bps     |
 | 4   | Transmit to Downstream AS  | 10        | 0            | VT_RATE_COUNTER | Bps     |
 
-
-
-
+### Total                      
+### Recv from Upstream AS      
+### Transmit to Upstream AS    
+### Recv from Downstream AS    
+### Transmit to Downstream AS 
 

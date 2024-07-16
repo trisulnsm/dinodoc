@@ -2,13 +2,13 @@
 
 Traffic by App-ID as exported by Palo Alto etc
 
-# Counter groups
+## Counter groups
 
 | GUID                                     | TYPE   | Bucke Size (secs) | Topper Bucket(Secs): |
 | ---------------------------------------- | ------ | ----------------- | -------------------- |
 | `{9021F5D3-FEFB-401B-99EC-EF2ACD088578}` | Native | 60                | 300                  |
 
-# Meter list
+## Meter list
 
 | ID  | DESCRIPTION                | TOP COUNT | BOTTOM COUNT | TYPE            | UNITS   |
 | --- | -------------------------- | --------- | ------------ | --------------- | ------- |
@@ -20,9 +20,9 @@ Traffic by App-ID as exported by Palo Alto etc
 | 5   | Flows                      | 50        | 0            | VT_COUNTER      | flws    |
 
 
-## Total       
-## Download  
-## Upload     
-## Transit      
-## Internal   
-## Flows   
+### Total       
+### Download  
+### Upload     
+### Transit      
+### Internal   
+### Flows   

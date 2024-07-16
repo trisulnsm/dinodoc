@@ -1,17 +1,18 @@
-# Flow-BGP-NextHop
+# Flow-TOS
 
-Netflow BGP-NextHop
-
-# Counter groups
+## Counter group
 
 | GUID                                     | TYPE   | Bucke Size (secs) | Topper Bucket(Secs): |
 | ---------------------------------------- | ------ | ----------------- | -------------------- |
-| `{FC61EC07-BED0-4734-C64C-F5932FD8B943}` | Native | 60                | 300                  |
+| `{393B5EBC-AB41-4387-8F31-8077DB917336}` | Native | 60                | 300                  |
 
-# Meter list
+## Meter list
 
 | ID  | DESCRIPTION | TOP COUNT | BOTTOM COUNT | TYPE            | UNITS |
 | --- | ----------- | --------- | ------------ | --------------- | ----- |
 | 0   | Total       | 10        | 0            | VT_RATE_COUNTER | Bps   |
+| 1   | Flows       | 10        | 0            | VT_COUNTER      | Flws  |
 
-## Total       
+### Total
+### Flows
+
