@@ -1,4 +1,4 @@
-# Introduction to counter groups
+# Introduction
 
 Counter Groups are the primary way in which metrics are organized in Trisul Network Analytics.
 
