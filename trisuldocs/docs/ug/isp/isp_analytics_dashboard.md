@@ -213,7 +213,7 @@ Prefix Analytics in Trisul provides a deep drilldown of each prefix with
 interfacea.
 
 Refer [Prefix Analytics
-Drilldown](/docs/ug/isp/isp_analytics_dashboard#prefix_analytics_drilldown)
+Drilldown](/docs/ug/isp/isp_analytics_dashboard#prefix-analytics-drilldown)
 
 ## Peering Analytics Drilldown
 

@@ -23,6 +23,6 @@ for detailed instructions.
 
 | Name                           | Info                                                                                                                                                           |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Live packet capture            | Configure a Port Mirror (SPAN Port), use a Network Tap, or a Linux Inline Bridge. <br/>Read [Setup packet capture for Trisul](input-packets)                   |
-| Netflow from routers, switches | Configure your routers, switch to send Netflow, SFLOW, IPFIX or other similar flow information to Trisul. <br/> Read [Setup Netflow for Trisul](input-netflow) |
+| Live packet capture            | Configure a Port Mirror (SPAN Port), use a Network Tap, or a Linux Inline Bridge. <br/>Read [Setup packet capture for Trisul](input_packets)                   |
+| Netflow from routers, switches | Configure your routers, switch to send Netflow, SFLOW, IPFIX or other similar flow information to Trisul. <br/> Read [Setup Netflow for Trisul](input_netflow) |
 | Read PCAP dumps                | Read PCAP files dumped by a third party program like tcpdump <br/> Read [Process PCAP dumps with Trisul](/docs/howto/offline_proc.md)                          |

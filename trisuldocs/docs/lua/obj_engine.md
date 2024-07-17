@@ -27,7 +27,7 @@ ERR_NOTAVAIL: add_flow_counter() is not available for backend scripts
 | [add_alert_full](/docs/lua/obj_engine#functionadd_alert_full)                    | F B          | Same as add alert with with a priority and classification. Used for IDS alert types |
 | [add_alert_tca](/docs/lua/obj_engine#functionadd_alert_tca)                 | F B          | For alerts based on metric values and threshold crossing events`                    |
 | [add_resource](/docs/lua/obj_engine#functionadd_resource)                   | F B          | Add a new resource with metadata and contents to Trisul                             |
-| [timestamp](/docs/lua/obj_engine#functiontimestamp )                         | F B          | The latest timestamp seen by the engine                                             |
+| [timestamp](/docs/lua/obj_engine#functiontimestamp)                         | F B          | The latest timestamp seen by the engine                                             |
 | [add_flow_counter](/docs/lua/obj_engine#functionadd_flow_counter)           | F            | Add a flow counter                                                                  |
 | [reset_flow_counter](/docs/lua/obj_engine#functionreset_flow_counter)        | F            | Removes all flow counters, then does an add_flow_counter                            |
 | [tag_flow](/docs/lua/obj_engine#functiontag_flow)                           | F B          | Tag a flow with a label. Y                                                          |

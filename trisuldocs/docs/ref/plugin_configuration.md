@@ -59,7 +59,7 @@ Here is a list of all the current plugin configuration options.
 | [SFlow](plugin_configuration#sflow)               | SFLOW policy.                                                  |
 | [TCP Flows](plugin_configuration#tcp-flows)       | TCP Flow metering, subnets, etc                                |
 | [UDP Proto](plugin_configuration#udp-protocol-dissector)       | UDP Protocol parsing and metering                              |
-| [TCP Proto](/docs/ref/plugin_configuration#tcp-proto)       | TCP Protocol parsing and metering                              |
+| [TCP Proto](/docs/ref/plugin_configuration#udp-protocol-dissector)       | TCP Protocol parsing and metering                              |
 | [App Ports](plugin_configuration#app-ports)       | Application counting, special server ports                     |
 | [Mac](plugin_configuration#mac)                   | MAC layer, directional, broadcast metering etc                 |
 | [IP Tunnels](plugin_configuration#ip-tunnels)     | Used for 3GPP mobility (contact us)                            |

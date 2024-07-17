@@ -69,7 +69,7 @@ If you can see the IP in live dashboards
 ***Method 2***  
 
 1. Follow instructions in [Using
-   Search](/docs/ug/ui/search#the_search_box)
+   Search](/docs/ug/ui/search#the-search-box)
 2. And click **Flows** in Real Time stabbers in [Key
    Details](/docs/ug/ui/key_dashboard#key-details) modules
 

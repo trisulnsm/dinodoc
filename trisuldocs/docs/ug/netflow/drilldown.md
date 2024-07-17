@@ -6,7 +6,7 @@ sidebar_position: 7
 
 Describes the Interface drilldown tool that appears when you select
 “Drilldown” against any interface in the [Routers and Interfaces
-Tool](routers_and_interfaces). The options in Interface Drilldown tool looks slightly different depending on if [Interface Tracking](interface_tracker) is enabled or not.
+Tool](/docs/ug/netflow/routers_and_interfaces). The options in Interface Drilldown tool looks slightly different depending on if [Interface Tracking](/docs/ug/netflow/interface_tracker) is enabled or not.
 
 ## Without Interface Tracker
 
@@ -25,7 +25,7 @@ When the interface has the tracker enabled it is indicated by the Eye icon on th
 :::note navigation
 
 Selecting Drilldown against any Netflow interface in the [Routers and
-Interfaces Tool](routers_and_interfaces#routers_and_interfaces)
+Interfaces Tool](/docs/ug/netflow/routers_and_interfaces)
 
 :::
 
@@ -120,7 +120,7 @@ interface.
 
 This feature in trisul is a deep drilldown of top hosts by total,into
 and out of an interface. This is only available after enabling
-[Interface Tracker](interface_tracker#interface_tracker) .
+[Interface Tracker](/docs/ug/netflow/interface_tracker) .
 
 Top hosts into interface are the hosts that are transmitting into the
 interface(Ingress)  
@@ -142,7 +142,7 @@ Shows top applications by receive and transmit on the interface.
 
 This feature in trisul is a deep drilldown of top applications by
 total,into and out of an interface. This is only available after
-enabling [Interface Tracker](interface_tracker#interface_tracker) .
+enabling [Interface Tracker](/docs/ug/netflow/interface_tracker) .
 
 ![](images/intf_apps_with_tracker.png)
 
