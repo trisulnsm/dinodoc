@@ -18,7 +18,7 @@ import { Icon } from '@iconify/react';
 
 <Icon icon="mdi:github" height="25" />  [TRP sample scripts](https://github.com/trisulnsm/trisul-scripts/tree/master/trp )
 
-<Icon icon="logos:chrome" height="25" /> [Programming model](./progmodel ) 
+<Icon icon="logos:chrome" height="25" /> [Programming model](/docs/trp/trpprogramodel) 
 
 <Icon icon="logos:chrome" height="25" /> [TrisulRP Ruby Gem RDOCs (External)](../ref/trpproto )
 

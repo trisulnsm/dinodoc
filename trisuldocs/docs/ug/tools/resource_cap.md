@@ -10,7 +10,7 @@ Resource cap is used to calculate additional bandwidth usage.
 
 You can set a resource cap value
 
-1. Goto [key dashboard](/docs/ug/ui/dashboards.html#key_dashboard)
+1. Goto [key dashboard](/docs/ug/ui/key_dashboard)
 2. Click the Create cap in the key dashboard module
 3. You will be redirected to Resorce cap creation page
 
@@ -23,7 +23,7 @@ You can set a resource cap value
 
 ## Edit Resource cap
 
-1. Goto [key dashboard](/docs/ug/ui/dashboards.html#key_dashboard)
+1. Goto [key dashboard](/docs/ug/ui/key_dashboard)
 2. Click the Edit cap in the key dashboard module
 3. You will be redirected to Resorce cap edit page
 
@@ -64,7 +64,7 @@ change the business hour time
 
 ### Schedule Report with business hours time
 
-To [schedule](/docs/ug/reports/schedreports.html) a new report
+To [schedule](/docs/ug/reports/schedreports) a new report
 
 :::note navigation
 
@@ -82,7 +82,7 @@ Enable **Business Hours only** to get daily reports for business hours
 ## Create Filtered Counter Group
 
 You have to configure [filter counter
-groups](/docs/ug/cg/custom.html#filtered_counter_groups) to get usage
+groups](/docs/ug/cg/custom#filtered-counter-groups) to get usage
 port details for particular IP
 
 :::note navigation

@@ -21,7 +21,7 @@ You can search for
 
 ### How this works
 
-> Make sure you have full packet capture and flow tracking enabled in the [trisulConfig.xml](/docs/ref/trisulconfig.html) file
+> Make sure you have full packet capture and flow tracking enabled in the [trisulConfig.xml](/docs/ref/trisulconfig) file
 
 Trisul will reassemble and check all TCP streams in both directions for
 a match. If HTTP compression and chunked encoding are used, they are
@@ -72,4 +72,4 @@ for further analysis.
 
 ### API Access
 
-Using the [Trisul Remote Protocol](/docs/trp/index.html) you can even automate the whole process.
+Using the [Trisul Remote Protocol](/docs/trp/) you can even automate the whole process.

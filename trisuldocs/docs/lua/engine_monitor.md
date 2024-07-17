@@ -22,13 +22,13 @@ The Lua table `engine_monitor = {..}` can contain one or more of the following
 
 | field                                                                           | type                                                                                                     | when called                                                                                   |
 | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| [onbeginflush](/docs/lua/BACK-END-SCRIPTS/engine-monitor#functiononbeginflush ) | Function( [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine) , timestamp)                            | streaming window snapshot about to start. By default called every minute on top of the minute |
-| [onendflush](/docs/lua/BACK-END-SCRIPTS/engine-monitor#functiononendflush )     | Function( [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine), timestamp)                             | when a streaming window was snapshotted and closed.                                           |
-| [onmetronome](/docs/lua/BACK-END-SCRIPTS/engine-monitor#functiononmetronome )   | Function( [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ), timestamp, tick_count, tick_interval) | Called every second                                                                           |
+| [onbeginflush](/docs/lua/engine_monitor#functiononbeginflush) | Function( [engine](/docs/lua/obj_engine) , timestamp)                            | streaming window snapshot about to start. By default called every minute on top of the minute |
+| [onendflush](/docs/lua/engine_monitor#functiononendflush)     | Function( [engine](/docs/lua/obj_engine), timestamp)                             | when a streaming window was snapshotted and closed.                                           |
+| [onmetronome](/docs/lua/engine_monitor#functiononmetronome)   | Function( [engine](/docs/lua/obj_engine), timestamp, tick_count, tick_interval) | Called every second                                                                           |
 
 ### Threading note
 
-The backend engine is multi-threaded, the number of threads matches the *StatsEngine>Flushers* in [trisulHubConfig.xml](/docs/ref/trisulHub-config). You can use `engine.instanceid() == "0"` to run your script on one instance only.
+The backend engine is multi-threaded, the number of threads matches the *StatsEngine>Flushers* in [trisulHubConfig.xml](/docs/ref/trsulhubconfig). You can use `engine.instanceid() == "0"` to run your script on one instance only.
 
 ## Functions Reference
 
@@ -52,7 +52,7 @@ This is called every 60 seconds by default. This is the size of the streaming an
 
 ### Parameters
 
-| engine    | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine) object | use this object to add metrics, resources, or alerts into the Trisul framework. Remember that this is a backend engine. |
+| engine    | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, resources, or alerts into the Trisul framework. Remember that this is a backend engine. |
 | --------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | timestamp | Timestamp seconds                                                | the current time in Unix epoch time “tv_sec” seconds.                                                                   |
 
@@ -78,7 +78,7 @@ When a snapshot window is complete.
 
 ### Parameters
 
-| engine    | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine) object | use this object to add metrics, resources, or alerts into the Trisul framework. Remember that this is a backend engine. |
+| engine    | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, resources, or alerts into the Trisul framework. Remember that this is a backend engine. |
 | --------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | timestamp | Timestamp seconds                                                | the current time in Unix epoch time “tv_sec” seconds.                                                                   |
 
@@ -102,7 +102,7 @@ If you define a onmetronome(..) function you will be plugged into the Trisul met
 
 ### Parameters
 
-| engine        | An [Engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine) object | use this object to add metrics, resources, or alerts into the Trisul framework |
+| engine        | An [Engine](/docs/lua/obj_engine) object | use this object to add metrics, resources, or alerts into the Trisul framework |
 | ------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | timestamp     | Number                                                           | Current timestamp (tv_sec epoch seconds)                                       |
 | tick_count    | Number                                                           | An incremeting tick counter                                                    |

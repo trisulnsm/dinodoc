@@ -61,7 +61,7 @@ Use a new flow compressor specifically designed for IPDR flow log. This
 high performance compressor can store a flow with NAT in as little as 14
 bytes.
 
-Open the [trisulHubConfig.xml](/docs/ref/trsulhubconfig#advanced_db_parameters) file and specify the following in Advanced DB Parameters.
+Open the [trisulHubConfig.xml](/docs/ref/trsulhubconfig#advanced-db-parameters) file and specify the following in Advanced DB Parameters.
 
 - Use a new compressor `lz4-ipv4-call-log-with-nat`
 - Disable microsecond timestamps
@@ -218,7 +218,7 @@ deployment.
 | Config file                                                   | Parameter                            | Set this to                      | Notes                                                                                                                                                                |
 | ------------------------------------------------------------- | ------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Netflow config](/docs/ref/netflow-config)                    | AppMode                              | ipdr                             | Sets the Netflow processing to IPDR                                                                                                                                  |
-| [Hub Config](/docs/ref/trsulhubconfig#advanced_db_parameters) | DBParamters \> FlowStream \> AppMode | lz4-ip-call-log-with-nat-pro-max | Sets the database schema and compression code to pro-max                                                                                                             |
+| [Hub Config](/docs/ref/trsulhubconfig#advanced-db-parameters) | DBParamters \> FlowStream \> AppMode | lz4-ip-call-log-with-nat-pro-max | Sets the database schema and compression code to pro-max                                                                                                             |
 | [Probe Config file](/docs/ref/trisulconfig#tuning)            | Tuning \> DisableFlowTupleFeedback   | true                             | Disables monitoring of flow tuples by IP and Application. If this is enabled, there will be connection metrics for every IP and App, could waste disk space for IPDR |
 | [Probe Config file](/docs/ref/trisulconfig#edges)             | Edges \> EnableFlowEdges             | false                            | Disable Edge graph generation for space savings                                                                                                                      |
 

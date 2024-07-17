@@ -55,9 +55,6 @@ p resp.message
 end
 ```
 
-
-
-
 This program tries to setup a local TRP connection over the Local Unix
 Socket `ipc://..` and simply prints “hello from trp” if it worked.
 
@@ -81,7 +78,7 @@ conn = "ipc:///usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/trp_0"
 To connect remotely to a TRP server you have to run the server on a
 normal TCP socket. For this you need to change the
 `Server>ZMQConnection` [parameter in
-trisulHubConfig.xml](/docs/ref/trisulhubconfig.html#server) as shown
+trisulHubConfig.xml](/docs/ref/trsulhubconfig#server) as shown
 below.
 
 Say if you wanted the TRP server to listen on TCP Port 12007
@@ -104,8 +101,6 @@ default@hub0</code>
 Then change the connection string to `tcp://192.168.2.201:12007` in the
 hellotrp.rb example
 
-
-
 ```ruby
 require ‘trisulrp’
 
@@ -117,13 +112,10 @@ p resp.message
 end
 ```
 
-
-
-
 Then re-run the program
 
     [trisul@localhost t1] ruby hellotrp.rb 
     "hello from trp"
 
 We are now ready to move on to more [advanced
-scripts](code_samples.html)
+scripts](code_samples)

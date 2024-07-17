@@ -17,12 +17,12 @@ Interface into the TCP Reassembly Engine using LUA. Your LUA scripts can
 
 You need to supply code for one or more of the following functions.
 
-| [filter](/docs/lua/FRONT-END-SCRIPTS/tcp-reassembly#function-filters )          | function( engine, timestamp, flowkey )                           | called when a new flow starts. Examine the flow tuples and determine if you are interested in reassembly.                                                |
+| [filter](/docs/lua/reassembly#function-filters)          | function( engine, timestamp, flowkey )                           | called when a new flow starts. Examine the flow tuples and determine if you are interested in reassembly.                                                |
 | ------------------------------------------------------------------------------- | ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [onpayload](/docs/lua/FRONT-END-SCRIPTS/tcp-reassembly#function-onpayload )     | function(engine, timestamp, flowkey, direction, seekpos, buffer) | Called for every chunk of newly reassembled raw bytes                                                                                                    |
-| [onnewflow](/docs/lua/FRONT-END-SCRIPTS/tcp-reassembly#function-onnewflow )     | function(engine, timestamp, flowkey)                             | Called when a new flow is established                                                                                                                    |
-| [onterminateflow](/docs/lua/reassembly.html#function_onterminateflow )          | function(engine, timestamp, flowkey)                             | Called when a flow is terminated                                                                                                                         |
-| [onattribute](/docs/lua/FRONT-END-SCRIPTS/tcp-reassembly#function-onattribute ) | function(engine, timestamp, flowkey, attr_name, attr_value)      | Trisul’s native processors found some flow attribute. You get a chance to handle it. Examples are : HTTP Content Type, TLS Certificates, HTTP Hosts, etc |
+| [onpayload](/docs/lua/reassembly#function-onpayload)     | function(engine, timestamp, flowkey, direction, seekpos, buffer) | Called for every chunk of newly reassembled raw bytes                                                                                                    |
+| [onnewflow](/docs/lua/reassembly#function-onnewflow)     | function(engine, timestamp, flowkey)                             | Called when a new flow is established                                                                                                                    |
+| [onterminateflow](/docs/lua/reassembly#function-onterminateflow)          | function(engine, timestamp, flowkey)                             | Called when a flow is terminated                                                                                                                         |
+| [onattribute](/docs/lua/reassembly#function-onattribute) | function(engine, timestamp, flowkey, attr_name, attr_value)      | Trisul’s native processors found some flow attribute. You get a chance to handle it. Examples are : HTTP Content Type, TLS Certificates, HTTP Hosts, etc |
 
 ## LUA functions reference
 
@@ -40,10 +40,10 @@ When a new flow is established.
 
 ### Parameters
 
-| engine    | An [Engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, resources, or alerts into the Trisul framework |
+| engine    | An [Engine](/docs/lua/obj_engine) object | use this object to add metrics, resources, or alerts into the Trisul framework |
 | --------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | timestamp | number                                                            | Timestamp seconds when the first packet in the flow was seen                   |
-| flowkey   | A [FlowID](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid ) object  | use this to determine IPs and Ports involved in the flow                       |
+| flowkey   | A [FlowID](/docs/lua/obj_flowid) object  | use this to determine IPs and Ports involved in the flow                       |
 
 ### Return value
 
@@ -85,10 +85,10 @@ When a new flow is first seen. This method is not called when LUA plugins have
 
 ### Parameters
 
-| engine    | An [Engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, resources, or alerts into the Trisul framework |
+| engine    | An [Engine](/docs/lua/obj_engine) object | use this object to add metrics, resources, or alerts into the Trisul framework |
 | --------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | timestamp | number                                                            | Timestamp seconds when the first packet in the flow was seen                   |
-| flowkey   | A [FlowID](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid ) object  | use this to determine IPs and Ports involved in the flow                       |
+| flowkey   | A [FlowID](/docs/lua/obj_flowid) object  | use this to determine IPs and Ports involved in the flow                       |
 
 ### Return value
 
@@ -110,10 +110,10 @@ When a TCP flow is terminated either by the normal TCP procedures or by time
 
 ### Parameters
 
-| engine    | An [Engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, resources, or alerts into the Trisul framework |
+| engine    | An [Engine](/docs/lua/obj_engine) object | use this object to add metrics, resources, or alerts into the Trisul framework |
 | --------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | timestamp | number                                                            | Timestamp seconds. seconds since epoch Jan 1 1970                              |
-| flowkey   | A [FlowID](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid ) object  | use this to determine IPs and Ports involved in the flow                       |
+| flowkey   | A [FlowID](/docs/lua/obj_flowid) object  | use this to determine IPs and Ports involved in the flow                       |
 
 ### Return value
 
@@ -147,13 +147,13 @@ Due to the co-operative execution of multiple LUA scripts as well as Trisul’
 
 ### Parameters
 
-| engine    | An [Engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, resources, or alerts into the Trisul framework                                           |
+| engine    | An [Engine](/docs/lua/obj_engine) object | use this object to add metrics, resources, or alerts into the Trisul framework                                           |
 | --------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | timestamp | number                                                            | Timestamp seconds when the first packet in the flow was seen                                                             |
-| flowkey   | A [FlowID](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid ) object  | use this to determine IPs and Ports involved in the flow                                                                 |
+| flowkey   | A [FlowID](/docs/lua/obj_flowid) object  | use this to determine IPs and Ports involved in the flow                                                                 |
 | direction | number                                                            | - 0 = IN payload in server → client direction<br/>- 1 = OUT payload in client → server direction (same as the first SYN) |
 | seekpos   | number                                                            | Seek position byte position from the beginning of the stream                                                             |
-| buffer    | A [Buffer](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-buffer ) object  | represents the reassembled bytes                                                                                         |
+| buffer    | A [Buffer](/docs/lua/obj_buffer) object  | represents the reassembled bytes                                                                                         |
 
 ### Return value
 
@@ -183,10 +183,10 @@ We encourage you to use the onattribute function if you can find your object of 
 
 ### Parameters
 
-| engine          | An [Engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine )object | use this object to add metrics, resources, or alerts into the Trisul framework |
+| engine          | An [Engine](/docs/lua/obj_engine)object | use this object to add metrics, resources, or alerts into the Trisul framework |
 | --------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | timestamp       | number                                                           | Timestamp seconds when the first packet in the flow was seen                   |
-| flowkey         | A [FlowID](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid ) object | use this to determine IPs and Ports involved in the flow                       |
+| flowkey         | A [FlowID](/docs/lua/obj_flowid) object | use this to determine IPs and Ports involved in the flow                       |
 | attribute_type  | string                                                           | The type of attribute. See note below                                          |
 | attribute_value | string                                                           | The attribute value                                                            |
 

@@ -18,7 +18,7 @@ Root privileges needed to edit
 
 :::note
 
-Also see [trisulProbeConfig.xml](/docs/ref/trisulconfig.html) for editing Probe node parameters
+Also see [trisulProbeConfig.xml](/docs/ref/trisulconfig) for editing Probe node parameters
 
 :::
 

@@ -126,7 +126,7 @@ Lets walk through the above example.
    AS100 is present in the AS PATH attribute.
 6. We then compute the final Home Networks as {100,200,210,300,400}
 
-This final set is used by Trisul in the [Netflow configuration file in the HomeASNumbers](/docs/ref/netflow-config#homeasnumbers) parameter using a periodic update mechanism.
+This final set is used by Trisul in the Netflow configuration file in the [HomeASNumbers](pathname:///docs/ref/netflow-config#HomeASNumbers) parameter using a periodic update mechanism.
 
 Some points to be noted.
 
@@ -185,7 +185,7 @@ The following chart gives you the traffic details in each direction.
 
 Trisul has the ability to use Flow Taggers to tag each flow with a direction hint based on the endpoint Home Addresses.
 
-1. Enable the [TagFlowsWithDirection](/docs/ref/netflow-config#tagflowswithdirection) setting in the Netflow configuration file
+1. Enable the [TagFlowsWithDirection](pathname:///docs/ref/netflow-config#TagFlowsWithDirection) setting in the Netflow configuration file
 2. You can then go to Tools \> Explore Flows to search for flows with
    the appropriate tag.
 3. For example to see all *Transit* flows , enter `tag=[dir]transit` in

@@ -1,20 +1,20 @@
 # Object T.async
 
-The T.async interface provides methods to help you do long running I/O tasks that do not block the fast packet pipeline path. For introduction to Async scripting operations. See [Async operations introduction](/docs/lua/TOP-LEVEL-LUA-OBJECT/async-exec )
+The T.async interface provides methods to help you do long running I/O tasks that do not block the fast packet pipeline path. For introduction to Async scripting operations. See [Async operations introduction](/docs/lua/async-exec)
 
 ## Purpose of T.async
 
-To execute long running I/O tasks in a separate worker pool to prevent blocking the Trisul streaming pipelines. The default worker thread pool size is 1, it can be increased at the script level by [TrisulPlugin.request_async_workers](/docs/lua/scripting-basics#structure-of-a-lua-script ) parameter
+To execute long running I/O tasks in a separate worker pool to prevent blocking the Trisul streaming pipelines. The default worker thread pool size is 1, it can be increased at the script level by [TrisulPlugin.request_async_workers](/docs/lua/basics#structure-of-a-lua-script) parameter
 
 ## Methods
 
 | function                                                                            | parameters                                                                              | what it does                                                                                                        |
 | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| [cat](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-tasync#functiontasynccat )              | from_file, to_file                                                                      | Append one file to another                                                                                          |
-| [copy](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-tasync#functiontasynccopy )            | from_file, to_file                                                                      | Copy one file to another.                                                                                           |
-| [rm](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-tasync#functiontasyncrm )                | filename : string                                                                       | Delete a file                                                                                                       |
-| [copybuffer](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-tasync#functiontasynccopybuffer) | from_buffer (a [Buffer](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-buffer ) object), to_file | Append buffer content bytes to the target file                                                                      |
-| [schedule](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-tasync#tasync )                    | a LUA schedule block                                                                    | Runs the LUA functions in the block asynchronosly and re-enter the fast path at a later time when results are ready |
+| [cat](/docs/lua/obj_tasync#functiontasynccat)              | from_file, to_file                                                                      | Append one file to another                                                                                          |
+| [copy](/docs/lua/obj_tasync#functiontasynccopy)            | from_file, to_file                                                                      | Copy one file to another.                                                                                           |
+| [rm](/docs/lua/obj_tasync#functiontasyncrm)                | filename : string                                                                       | Delete a file                                                                                                       |
+| [copybuffer](/docs/lua/obj_tasync#functiontasynccopybuffer) | from_buffer (a [Buffer](/docs/lua/obj_buffer) object), to_file | Append buffer content bytes to the target file                                                                      |
+| [schedule](/docs/lua/obj_tasync#tasync)                    | a LUA schedule block                                                                    | Runs the LUA functions in the block asynchronosly and re-enter the fast path at a later time when results are ready |
 
 ---
 
@@ -85,17 +85,17 @@ None
 
 ## Function `T.async.copybuffer`]
 
-Operations on writing [Buffer](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-buffer ) contents to files.
+Operations on writing [Buffer](/docs/lua/obj_buffer) contents to files.
 
 ### Purpose
 
-Write contents of a [buffer](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-buffer ) object to disk.
+Write contents of a [buffer](/docs/lua/obj_buffer) object to disk.
 
 ### Parameters
 
 | Name                | Info                                                             | Description                                                                                                                                                            |
 | ------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| buff                | A [Buffer](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-buffer ) object | an object usually passed by Trisul into your LUA script                                                                                                                |
+| buff                | A [Buffer](/docs/lua/obj_buffer) object | an object usually passed by Trisul into your LUA script                                                                                                                |
 | filename            | `filename` string                                                | filename to write to. File is created if it doesnt exist                                                                                                               |
 | position (optional) | `seelpos` number                                                 | **Optional** At what position do you want to write the buffer. If this parameter is not specified the default mode of `copybuffer` is to append to the end of the file |
 

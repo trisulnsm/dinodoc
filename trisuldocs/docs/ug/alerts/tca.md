@@ -193,7 +193,7 @@ Configure [Email Alerting](/docs/ug/alerts/email_settings) for real time alerts.
 
 ### Periodic email digest
 
-You can [schedule](/docs/ug/reports/schedreports#schedule_your_reports) a **Threshold Crossing Alert** report which will automatically email you a list of TCAs that fired on a hourly or daily basis.
+You can [schedule](/docs/ug/reports/schedreports#schedule-a-new-report) a **Threshold Crossing Alert** report which will automatically email you a list of TCAs that fired on a hourly or daily basis.
 
 1. A single consolidated email is sent out containing details of all TCAs
 2. No email is sent out if there are no TCAs to report

@@ -14,7 +14,7 @@ selector.
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Commonly used retro analysis](/docs/ug/cg/retrotools#commonly-used-retro-analysis)                   | All your retro dashboards show up here. Each dashboard features multiple modules showing results of retro analysis. Examples are : Layer 2 Activity, Hosts and Applications, etc    |
 | [Investigate activity of a specific IP](/docs/ug/cg/retrotools#investigate-activity-of-a-specific-ip) | Investigate complete activity of a host in selected interval. Details include conversations, flows, security alerts, malware activity, peer connections, upload / download data etc |
-| [Counter Group toppers](/docs/ug/cg/retrotools#counter-group-toppers)                                 | Who were the toppers in a counter group for a statistic ? Also shows topper trends in time interval with ability to do a [cross drill](#cross_drill) on any of them                 |
+| [Counter Group toppers](/docs/ug/cg/retrotools#counter-group-toppers)                                 | Who were the toppers in a counter group for a statistic ? Also shows topper trends in time interval with ability to do a cross drill on any of them                 |
 | [Show traffic chart for an item](/docs/ug/cg/retrotools#show-traffic-chart-for-an-item)               | Draw charts for any item such as a host, app, subnet                                                                                                                                |
 | [Security Alerts retro](/docs/ug/cg/retrotools#security-alerts-retro)                                 | Various views of alert activity seen in selected interval                                                                                                                           |
 | [Investigate users of an application](/docs/ug/cg/retrotools#investigate-users-of-an-application)     | Investigate complete activity of an application. Who the top users are of that application and other details split up by upload / download                                          |
@@ -24,11 +24,11 @@ selector.
 
 ## Commonly used retro analysis
 
-Select a [retro dashboard](/docs/ug/ui/dashmod_intro#dashboard_types) to apply to the time interval.
+Select a [retro dashboard](/docs/ug/ui/dashmod_intro) to apply to the time interval.
 
 Some of the built in retro dashboards are :
 
-> You can create your own [retro dashboards](/docs/ug/ui/dashmod_intro#creating_a_new_dashboard)
+> You can create your own [retro dashboards](/docs/ug/ui/dashmod_intro#creating-a-new-dashboard)
 > They will show up in this dropdown list
 
 |                        |                                                                                                                                                                                 |

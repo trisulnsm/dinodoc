@@ -14,7 +14,7 @@ You can use the *Search* tool to find items of interest.
 
 > If you wish to search for resources like HTTP URLs and DNS
 > names, you will be redirected to their search forms which are more
-> flexible. See [URL Resources](/docs/ug/resources/url.html) and [DNS Resources](/docs/ug/resources/dns.html)
+> flexible. See [URL Resources](/docs/ug/resources/url) and [DNS Resources](/docs/ug/resources/dns)
 
 ## The search box
 

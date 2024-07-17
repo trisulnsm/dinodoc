@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Start and stop Trisul
 
-Describes how you can start and stop Trisul components. For a more detailed explanation see [Basic Usage: Start and stop](/docs/ug/install/stopstart)
+Describes how you can start and stop Trisul components. For a more detailed explanation see [Basic Usage: Start and stop](/docs/ug/install/startstop)
 
 ## Running Web Trisul
 

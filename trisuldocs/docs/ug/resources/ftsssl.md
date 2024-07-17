@@ -53,7 +53,7 @@ Select Resources -\> SSL Certificate FTS
 
 </div>
 
-Then follow instructions in the [FTS](fts.html) documentation.
+Then follow instructions in the [FTS](fts) documentation.
 
 <div class="lightbulb-o autohint">
 

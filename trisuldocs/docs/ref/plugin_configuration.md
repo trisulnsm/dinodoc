@@ -1,8 +1,8 @@
 # Plugin Configuration
 
 Trisul consists of two base configs - the
-[Trisul-Probe](trisulconfig.html) config file and the
-[Trisul-Hub](trisulhubconfig.html) config file. If you wish to finely
+[Trisul-Probe](trisulconfig) config file and the
+[Trisul-Hub](trsulhubconfig) config file. If you wish to finely
 control how various metrics are computed you can tweak the following
 Plugin configuration files.
 
@@ -51,23 +51,23 @@ sudo /usr/local/share/trisul-probe/cfgedit context_firewall
 
 Here is a list of all the current plugin configuration options.
 
-| Name                                                   | Description                                                    |
-| ------------------------------------------------------ | -------------------------------------------------------------- |
-| [Hosts](plugin_configuration.html#hosts)               | IP address based metering                                      |
-| [Base Domains](plugin_configuration.html#base_domains) | DNS Base Domains metering (rules, regexes, etc)                |
-| [Netflow](/docs/ref/netflow-config.html)               | NETFLOW/IPFIX policy. Link to a separate reference document.   |
-| [SFlow](plugin_configuration.html#sflow)               | SFLOW policy.                                                  |
-| [TCP Flows](plugin_configuration.html#tcp_flows)       | TCP Flow metering, subnets, etc                                |
-| [UDP Proto](plugin_configuration.html#udp_proto)       | UDP Protocol parsing and metering                              |
-| [TCP Proto](plugin_configuration.html#tcp_proto)       | TCP Protocol parsing and metering                              |
-| [App Ports](plugin_configuration.html#app_ports)       | Application counting, special server ports                     |
-| [Mac](plugin_configuration.html#mac)                   | MAC layer, directional, broadcast metering etc                 |
-| [IP Tunnels](plugin_configuration.html#ip_tunnels)     | Used for 3GPP mobility (contact us)                            |
-| [DNS](plugin_configuration.html#dns)                   | Control DNS extraction, resource, Full Text Search, etc        |
-| [Http Hosts](plugin_configuration.html#http_hosts)     | HTTP Host header depth setting                                 |
-| [Geo](/docs/ug/install/geoasn.html)                    | Controls Geo plugin, country and ASN metering rules            |
-| [Badfellas](/docs/ug/install/badfellas.html)           | Controls Badfellas lists, how they are refreshed, custom rules |
-| [Urlfilter](/docs/ug/install/urlfilter.html)           | URL Filter database and rules                                  |
+| Name                                              | Description                                                    |
+| ------------------------------------------------- | -------------------------------------------------------------- |
+| [Hosts](plugin_configuration#hosts)               | IP address based metering                                      |
+| [Base Domains](plugin_configuration#base-domains) | DNS Base Domains metering (rules, regexes, etc)                |
+| [Netflow](/docs/ref/netflow-config)               | NETFLOW/IPFIX policy. Link to a separate reference document.   |
+| [SFlow](plugin_configuration#sflow)               | SFLOW policy.                                                  |
+| [TCP Flows](plugin_configuration#tcp-flows)       | TCP Flow metering, subnets, etc                                |
+| [UDP Proto](plugin_configuration#udp-protocol-dissector)       | UDP Protocol parsing and metering                              |
+| [TCP Proto](/docs/ref/plugin_configuration#udp-protocol-dissector)       | TCP Protocol parsing and metering                              |
+| [App Ports](plugin_configuration#app-ports)       | Application counting, special server ports                     |
+| [Mac](plugin_configuration#mac)                   | MAC layer, directional, broadcast metering etc                 |
+| [IP Tunnels](plugin_configuration#ip-tunnels)     | Used for 3GPP mobility (contact us)                            |
+| [DNS](plugin_configuration#dns)                   | Control DNS extraction, resource, Full Text Search, etc        |
+| [Http Hosts](plugin_configuration#http-hosts)     | HTTP Host header depth setting                                 |
+| [Geo](/docs/ug/install/geoasn)                    | Controls Geo plugin, country and ASN metering rules            |
+| [Badfellas](/docs/ug/install/badfellas)           | Controls Badfellas lists, how they are refreshed, custom rules |
+| [Urlfilter](/docs/ug/install/urlfilter)           | URL Filter database and rules                                  |
 
 ## Hosts
 
@@ -120,7 +120,7 @@ Application Names.
 /usr/local/etc/trisul-probe/domain0/probe0/context0/PI-819CEF8E-B6DB-431B-97D0-7DB2A5EA5392.xml`
 
 See [Netflow configuration file
-parameters](/docs/ref/netflow-config.html) The SFLOW options have the
+parameters](/docs/ref/netflow-config) The SFLOW options have the
 same meaning as those of the Netflow configuration.
 
 ## TCP Flows

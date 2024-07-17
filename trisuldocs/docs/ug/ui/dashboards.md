@@ -25,7 +25,7 @@ Hover your mouse over the ‘?’ icon to get a description of the module.
 A live view of current host activity. Internal hosts are shown on the
 left side and the external hosts on the right side. Hosts are
 automatically classified as internal or external based on the [Home
-Networks](/docs/ug/webadmin/home_networks.html). Under the screenshot you can find a description of each module.
+Networks](/docs/ug/webadmin/home_networks). Under the screenshot you can find a description of each module.
 
 ![](images/dashboards/host.png)  
 *Current active internal and external hosts dashboard*
@@ -108,7 +108,7 @@ A top level overview of network activity.
 ## Security
 
 A view of network activity from a security viewpoint. This dashboard is
-most useful when you have connected Trisul to an [IDS feed](/docs/howto/setup_ids_alerts.html).
+most useful when you have connected Trisul to an [IDS feed](/docs/howto/setup_ids_alerts).
 
 | Module                       | Description                                                                                                                                                           |
 | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -131,7 +131,7 @@ most useful when you have connected Trisul to an [IDS feed](/docs/howto/setup_id
 ## Sessions
 
 Shows most significant currently active IP flows. This is based on [Flow
-Trackers](/docs/ug/tools/flow_tracker.html) a special type of streaming analytics snapshot used in Trisul. The following classes of flows are displayed.
+Trackers](/docs/ug/tools/flow_tracker) a special type of streaming analytics snapshot used in Trisul. The following classes of flows are displayed.
 
 | Module               | Description                                                                                                                                                                                                                               |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -182,7 +182,7 @@ from border routers peering AS BGP information
 
 Monitor traffic uploaded and download on a per-Country basis. The
 Country Code can also be added to every single flow using [Automatic
-Flow Taggers](/docs/ug/flow/tagger.html) The included statistics are Top-K, Time Series Traffic Profile for planning and trending, and Bottom-K for outlier and security applications. You can even map the traffic down to the City/County level.
+Flow Taggers](/docs/ug/flow/tagger) The included statistics are Top-K, Time Series Traffic Profile for planning and trending, and Bottom-K for outlier and security applications. You can even map the traffic down to the City/County level.
 
 ### Traffic upload and download
 
@@ -200,7 +200,7 @@ destinations on a Geographical map as well. To enter your Google API
 :::note navigation
 
 This feature requires you to [enter a valid Google API
-KEY](/docs/ug/webadmin/web_options.html#ui) via *Customize -\> App Settings -\> UI*
+KEY](/docs/ug/webadmin/web_options#ui) via *Customize -\> App Settings -\> UI*
 
 :::
 
@@ -211,7 +211,7 @@ KEY](/docs/ug/webadmin/web_options.html#ui) via *Customize -\> App Settings -\> 
 
 A real time visualization of IDS alert activity. Note this is true
 realtime using WebSockets PUSH. The dashboard is described in detail in
-[IDS Alert Stabber](/docs/ug/alerts/ids_stabber.html)
+[IDS Alert Stabber](/docs/ug/alerts/ids_stabber)
 
 Real Time Stabbers are a Trisul feature that allow the Trisul Probe
 network to directly push events on to the browser.
@@ -243,7 +243,7 @@ seconds real time.
 ### Real time stabbers
 
 You can watch any metric , Top-K, or Flows in real time using the [Real
-Time Stabbers (read more)](/docs/ug/cg/stabber.html)
+Time Stabbers (read more)](/docs/ug/cg/stabber)
 
 ------------------------------------------------------------------------
 
@@ -288,4 +288,4 @@ dashboards. You can check them out one by one.
 The intent of this page is to give you an idea of the default dashboards
 we have pinned to the menu out of the box.
 
-See also [Some interesting dashboards](interesting_dashboards.html)
+See also [Some interesting dashboards](interesting_dashboards)

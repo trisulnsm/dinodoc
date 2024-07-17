@@ -49,9 +49,9 @@ You can :
 
 For more information see also:  
 
-- [About the built in dashboards](dashboards.html).   
+- [About the built in dashboards](dashboards).   
 
-- [Dashboards and modules](dashmod_intro.html).
+- [Dashboards and modules](dashmod_intro).
 
 ## Context Menus
 
@@ -82,7 +82,7 @@ available currently.
 - PDF -\> Click to convert the current page into PDF report.
 
 - Retro FAQ -\>Name the analysis and add it to the
-  [Q&A](/docs/ug/cg/retrofaq.html)
+  [Q&A](/docs/ug/cg/retrofaq)
 
 Sample form shows the analysis
 

@@ -15,11 +15,11 @@ Before you enable disk usage alerts you need to do two things.
 
 **Setup Email**
 
-Specify outgoing email server credentials. see [Setup Email](/docs/ug/reports/emailsettings.html)
+Specify outgoing email server credentials. see [Setup Email](/docs/ug/reports/emailsettings)
 
 **Enable email alert delivery**
 
-Allow alert delivery via email see [Email alert delivery](/docs/ug/alerts/email_settings.html#basic_steps_to_enable_email_alerts)
+Allow alert delivery via email see [Email alert delivery](/docs/ug/alerts/email_settings#basic-steps-to-enable-email-alerts)
 
 ## Edit configuration files
 

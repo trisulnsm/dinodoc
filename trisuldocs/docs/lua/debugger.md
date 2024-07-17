@@ -28,7 +28,7 @@ Only runs the frontend *fast* engine. Use this to test frontend scripts. This 
 
 `trisulctl_probe testbench runluainput <lua-input-filter> <data-file>`
 
-Use this to test LUA [input filter scripts](/docs/lua/FRONT-END-SCRIPTS/input-filters ). Run the input filter LUA passing the `data-file` as the argument to it. This argument is passed as `T.args` to your input filter script.
+Use this to test LUA [input filter scripts](/docs/lua/inputfilter). Run the input filter LUA passing the `data-file` as the argument to it. This argument is passed as `T.args` to your input filter script.
 
 ### The special ‘debug0’ context
 

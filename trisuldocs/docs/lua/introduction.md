@@ -22,10 +22,10 @@ The following script types are available – within each script type you listen 
 
 | Name                                                                          | Called when                  | Notes                                                                           |
 | ----------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------- |
-| [engine_monitor](/docs/lua/BACK-END-SCRIPTS/engine-monitor )                  | Periodically                 | on a 1 minute timer you can support SNMP and other data input tools into Trisul |
-| [cg_monitor](/docs/lua/BACK-END-SCRIPTS/counter-grp-monitor#tablecg_monitor ) | Counter group metrics events | Use for traffic, top-N, cardinality analytics                                   |
-| [sg_monitor](/docs/lua/BACK-END-SCRIPTS/session-grp-monitor )                 | Flow metrics                 | On new flow, when flow is flushed,                                              |
-| [alert_monitor](/docs/lua/BACK-END-SCRIPTS/alert-monitor )                    | Alert stream                 | Process alerts in Lua                                                           |
-| [resource_monitor](/docs/lua/BACK-END-SCRIPTS/resource-monitor )              | Resource stream              | HTTP requests, DNS events, TLS, File hashes stream                              |
-| [fts_monitor](/docs/lua/BACK-END-SCRIPTS/FTS-monitor )                        | Full Text Search docs        | Documents HTTP headers, full TLS Certs                                          |
-| [flow_tracker](/docs/lua/BACK-END-SCRIPTS/flow-tracker )                      | Flow tracker                 | Create your own custom flow tracker – top-K flow snapshots                      |
+| [engine_monitor](/docs/lua/engine_monitor)                  | Periodically                 | on a 1 minute timer you can support SNMP and other data input tools into Trisul |
+| [cg_monitor](/docs/lua/cg_monitor) | Counter group metrics events | Use for traffic, top-N, cardinality analytics                                   |
+| [sg_monitor](/docs/lua/sg_monitor)                 | Flow metrics                 | On new flow, when flow is flushed,                                              |
+| [alert_monitor](/docs/lua/alert_monitor)                    | Alert stream                 | Process alerts in Lua                                                           |
+| [resource_monitor](/docs/lua/resource_monitor)              | Resource stream              | HTTP requests, DNS events, TLS, File hashes stream                              |
+| [fts_monitor](/docs/lua/fts_monitor)                        | Full Text Search docs        | Documents HTTP headers, full TLS Certs                                          |
+| [flow_tracker](/docs/lua/flow_tracker)                      | Flow tracker                 | Create your own custom flow tracker – top-K flow snapshots                      |

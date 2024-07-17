@@ -47,10 +47,10 @@ You can also click on “Custom” to select any time window of your choice.
 | Consolidated IP Report            | Total,in and out bandwidth traffic with top Internal hosts,top apps and port network layer protocols.                                  |
 | Executive Network                 | Total usage,alerts,bandwidth utilization                                                                                               |
 | Internet Service Provider         | Total bandwith,Hosts,Apps,Top ASNumber and Countries lists                                                                             |
-| Subscriber Activity               | [An overview of all your internal hosts](/docs/ug/reports/available_reports#subscriber_activity)                                       |
-| Router and Interfaces             | [Traffic details per router and about top router interfaces](/docs/ug/reports/available_reports#routers_and_interfaces)                |
-| Malware, botnet, virus infections | [A summary of all your internal hosts that might be compromised](/docs/ug/reports/available_reports#malware,_botnet,_virus_infections) |
-| “IDS Alerts”                      | Summary of top [IDS](/docs/ug/reports/available_reports#ids) (Intrusion Detection System) alerts via Snort/Suricata                    |
+| Subscriber Activity               | [An overview of all your internal hosts](/docs/ug/reports/available_reports#subscriber-activity)                                       |
+| Router and Interfaces             | [Traffic details per router and about top router interfaces](/docs/ug/reports/available_reports#routers-and-interfaces)                |
+| Malware, botnet, virus infections | [A summary of all your internal hosts that might be compromised](/docs/ug/reports/available_reports#malware-botnet-virus-infections) |
+| “IDS Alerts”                      | Summary of top [IDS](/docs/ug/reports/available_reports#intrusion-alerts) (Intrusion Detection System) alerts via Snort/Suricata                    |
 | Deep drilldown of Internal Hosts  | A comprehensive drilldown of [internal host activity](/docs/ug/reports/available_reports#deep-drilldown-of-internal-hosts)             |
 | Deep drilldown of External Hosts  | A comprehensive drilldown of [external hosts](/docs/ug/reports/available_reports#deep-drilldown-of-external-hosts)                     |
 | Deep drilldown of Applications    | A comprehensive drilldown of [applications](/docs/ug/reports/available_reports#deep-drilldown-of-applications)                         |
@@ -59,9 +59,9 @@ You can also click on “Custom” to select any time window of your choice.
 
 | Report Name         | Description                                                                                                                      |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| Endpoint IP Address | Generates a summary report for a specific [IP Address](/docs/ug/reports/available_reports#endpoint_report)                       |
-| Application         | Generates a summary report for a specific [port / application](/docs/ug/reports/available_reports#application_report)            |
-| Static IP Report    | Generates Total,in and out bandwidth consume chart for a specific [IP](/docs/ug/reports/available_reports#ip_utilization_report) |
+| Endpoint IP Address | Generates a summary report for a specific [IP Address](/docs/ug/reports/available_reports#endpoint-report)                       |
+| Application         | Generates a summary report for a specific [port / application](/docs/ug/reports/available_reports#application-report)            |
+| Static IP Report    | Generates Total,in and out bandwidth consume chart for a specific [IP](/docs/ug/reports/available_reports#ip-utilization-report) |
 
 ### ISP Peering Analytics
 
@@ -97,13 +97,13 @@ You can also click on “Custom” to select any time window of your choice.
 
 | Report Name        | Description                                                                                                 |
 | ------------------ | ----------------------------------------------------------------------------------------------------------- |
-| Top Traffic Report | [Get toppers for any counter group](/docs/ug/reports/available_reports#top_traffic_report)                  |
-| Top Session Report | [Get top flows on your network](/docs/ug/reports/available_reports#top_sessions_report)                     |
-| Security Report    | Overview of all security alerts seen by trisul [alerts](/docs/ug/reports/available_reports#security_report) |
+| Top Traffic Report | [Get toppers for any counter group](/docs/ug/reports/available_reports#top-traffic-report)                  |
+| Top Session Report | [Get top flows on your network](/docs/ug/reports/available_reports#top-sessions-report)                     |
+| Security Report    | Overview of all security alerts seen by trisul [alerts](//docs/ug/reports/available_reports#security-report) |
 
 ### Custom Reports
 
 | Field       | Description                                                                           |
 | ----------- | ------------------------------------------------------------------------------------- |
-| Report JSON | [Flexible Reports in JSON Format](/docs/ug/reports/flexible_reports#flexible_reports) |
+| Report JSON | [Flexible Reports in JSON Format](/docs/ug/reports/flexible_reports) |
 | Select Time | Select the desired time                                                               |

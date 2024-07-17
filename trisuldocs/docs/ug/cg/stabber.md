@@ -55,7 +55,7 @@ There are three ways to access real time stabbers.
 
 ### 2. From any key dashboard
 
-Lets say you are investigating an arbitrary item using the [Key Dashboard](/docs/ug/ui/dashboards#key_dashboard)
+Lets say you are investigating an arbitrary item using the [Key Dashboard](/docs/ug/ui/key_dashboard)
 
 1. Click on a Real Time Stabbers from the menu as shown below
 

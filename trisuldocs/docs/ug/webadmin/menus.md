@@ -30,7 +30,7 @@ Select *Webadmin* -\> Manage -\> Menu Manager
 | ----------- | ------------------------------------------------------------ |
 | Menu Name   | Name of the menu                                             |
 | Parent Menu | Select a parent if this is a submenu or select **No Parent** |
-| Role ID     | [User Roles](/docs/ug/webadmin/userroles.html)               |
+| Role ID     | [User Roles](/docs/ug/webadmin/userroles)               |
 | Description | Description of the menu                                      |
 | Controller  |                                                              |
 | Action      |                                                              |

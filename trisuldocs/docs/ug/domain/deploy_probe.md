@@ -42,7 +42,7 @@ sudo apt-get install trisul-probe
 <Highlight color="#1877F2">RUN ON PROBE</Highlight>
 
 :::note **First time?** Switch domain0 to distributed network TCP mode. Make
-sure you have followed the steps in [Switching to a distributed domain](change_domain#switching_to_a_distributed_domain) from the default single machine domain.
+sure you have followed the steps in [Switching to a distributed domain](/docs/ug/domain/change_domain#switching-to-a-distributed-domain) from the default single machine domain.
 
 :::
 

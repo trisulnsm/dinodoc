@@ -18,7 +18,7 @@ A quick recap of the hierarchy and terminology first:
     - **Meter** - A metric within the key. For example ( Number of
       connections )
 
-For more read [Traffic Metering Concepts](/docs/ug/cg/intro.html)
+For more read [Traffic Metering Concepts](/docs/ug/cg/intro)
 
 ### How to access the key dashboard
 
@@ -57,7 +57,7 @@ description of each of these modules. They are mostly self explanatory.
 | Module                      | Usage                                                                                                                                  |
 | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | Traffic History             | Most recent 1hr traffic history. Note you can click on *View Trends* and *Retro Analysis* within the chart to expand this time window. |
-| [Key Details](#key_details) | Various drilldown options pertaining to this key                                                                                       |
+| [Key Details](/docs/ug/ui/key_dashboard#key-details) | Various drilldown options pertaining to this key                                                                                       |
 | A la carte statistics       | Flexible charting tool (quick and easy)                                                                                                |
 | TCA Details                 | Shows recent threshold crossing alerts, if any                                                                                         |
 | Flow Activity               | Displays recent top flows                                                                                                              |
@@ -89,7 +89,7 @@ Resolve the name for this key. Works for all IP addresses and AS Numbers
 ***Edit***  
 Edit the User label for this key manually
 
-See the [resolve name](/docs/ug/cg/resolve.html) section for more
+See the [resolve name](/docs/ug/cg/resolve) section for more
 details.
 
 ### Drilldown options

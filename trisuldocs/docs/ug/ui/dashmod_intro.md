@@ -115,7 +115,7 @@ To create a new dashboard
 
 In Modules information is presented in tables and charts . You can
 create your own modules using the pre-existing module template.Trisul
-has 40 different types of modules.See [Module Templates](/docs/ug/ui/module_templates.html) for more information about modules.
+has 40 different types of modules.See [Module Templates](/docs/ug/ui/module_templates) for more information about modules.
 
 ### Create new modules
 
@@ -201,7 +201,7 @@ Select Customize -\> UI -\> Modules
 
 ##### Method - II
 
-- Click -\> Plus on the [dashboard toolbar](/docs/ug/ui/dashmod_intro.html#toolbars)  
+- Click -\> Plus on the [dashboard toolbar](/docs/ug/ui/dashmod_intro#toolbars)  
 
 - A list of available modules will appear.  
 

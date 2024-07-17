@@ -10,7 +10,7 @@ Computing requirements needed to run Trisul.
 
 Single machine in the default **Packet Capture Mode** with typical small
 enterprise load of 50-200Mbps. \[ See [Setup Trisul for Packet Capture
-Mode](/docs/ug/install/setup-pkt-capture) \]
+Mode](//docs/ug/install/input_packets) \]
 
 | Hardware            | System Requirements                                                                                                                                                                                                        |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

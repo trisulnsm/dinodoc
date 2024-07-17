@@ -25,7 +25,7 @@ address and note down the following
 
 The following ports are configured by default for Netflow and SFlow
 processing. The versions and flavors are automatically detected. To view
-or change these, use the [Netflow Wizard](netflow_wizard#netflow_wizard) from Context: default -\>profile0 -\> Netflow Wizard
+or change these, use the [Netflow Wizard](netflow_wizard) from Context: default -\>profile0 -\> Netflow Wizard
 
 - Traffic on UDP ports 2055,2056,2057,9500,9993 is interpreted as
   Netflow/IPFIX/JFlow.
@@ -53,7 +53,7 @@ Use the UI to change the mode from the default “Packet capture” to
 
 ### Step 4: Make further tweaks using the Netflow Setup Wizard
 
-- Login as Admin and open the [Netflow Wizard](netflow_wizard#netflow_wizard) by selecting *Context:default -\> profile0 -\> Netflow Wizard*
+- Login as Admin and open the [Netflow Wizard](netflow_wizard) by selecting *Context:default -\> profile0 -\> Netflow Wizard*
 
 - Specify the interfaces and ports receiving Netflow that you noted down
   in *Step 1*
@@ -77,7 +77,7 @@ start showing up.
 
 ## Netflow wizard
 
-Use the [Netflow Wizard](netflow_wizard#netflow_wizard) to
+Use the [Netflow Wizard](netflow_wizard) to
 
 1. Change interface eth0 on which we are getting Netflow
 2. Change the Home Networks

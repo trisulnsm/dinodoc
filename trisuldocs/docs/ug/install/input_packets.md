@@ -20,7 +20,7 @@ If you are installing Trisul on a Virtual Machine, you may need to put the Virtu
 
 The following diagram shows how you can configure a SPAN port and feed packets into Trisul. See your switch vendor’s documentation on configurating a Port SPAN session. [ [Cisco SPAN documentation](https://www.cisco.com/c/en/us/support/docs/switches/catalyst-6500-series-switches/10570-41.html) ]
 
-![](https://trisul.org/docs/ug/install/images/portmirror.png)
+![](images/portmirror.png)
 
 **SPAN example** ports `ge/0/0/1` and `ge/0/0/12` traffic mirrored to `ge/0/0/6` which is then connected to Trisul-Probe
 
@@ -28,7 +28,7 @@ The following diagram shows how you can configure a SPAN port and feed packets
 
 SPAN ports quickly become unweildy as network speeds increase. Network taps are available as Copper and Optical modules that are the preferred choice for high speed networks.
 
-![](https://trisul.org/docs/ug/install/images/networktap.png)
+![](images/networktap.png)
 
 Network Tap used with 10G optical fiber. Each direction needs a tap and sent to two ports on Trisul-Probe
 
@@ -36,7 +36,7 @@ Network Tap used with 10G optical fiber. Each direction needs a tap and sent to 
 
 For small office networks you can even use 2 Ports of the box running Trisul and create a bridge. This places Trisul as an inline device.
 
-![](https://trisul.org/docs/ug/install/images/bridge.png)
+![](images/bridge.png)
 
 Bridge : Use the Trisul-Probe inline as a bridge. Useful for small deployments
 

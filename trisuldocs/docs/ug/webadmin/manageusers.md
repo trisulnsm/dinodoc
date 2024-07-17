@@ -47,7 +47,7 @@ Select Web Admin -\> Manage -\> Users
 | User Name            | The long name of user                                                    |
 | Name                 | Login name for user, no spaces, keep it short                            |
 | Role                 | Webtrisul user Roles .See ” Roles”:userroles.html section for more       |
-| LDAP Login           | User can use [LDAP](/docs/ug/webadmin/ldap_login.html) password to login |
+| LDAP Login           | User can use [LDAP](/docs/ug/webadmin/ldap_login) password to login |
 | Password             | Password for user                                                        |
 | Password Again       | Repeat the password again                                                |
 | Allow multiple Login | Allow concurrent login option to user                                    |

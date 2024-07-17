@@ -125,7 +125,7 @@ counter groups for this purpose.
 
 Enable these to provide drilldowns from router interfaces to these
 metrics.These appear as Tabs in the [Router and Interface
-Drilldown](drilldown#information_shown) pages.
+Drilldown](/docs/ug/netflow/drilldown#information-shown) pages.
 
 | Configurations required          | Description                                                                                                  |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------ |

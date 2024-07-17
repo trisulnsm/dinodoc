@@ -14,7 +14,7 @@ certificates in two forms to aid two usage scenarios
 | 2   | **FTS index**    | Arbitrary search of all fields in certificates to aid drilldowns |
 
 In this section, we describe the usage of the normal index. See the
-section on [FTS Index](ftsssl.html) for details about the FTS index.
+section on [FTS Index](ftsssl) for details about the FTS index.
 
 For each SSL/TLS connection, Trisul stores in the normal index.
 

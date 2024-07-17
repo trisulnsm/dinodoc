@@ -11,7 +11,7 @@ Currently there are only two FTS doc types built in to Trisul
 
 ### Common FTS Groups GUIDs
 
-For quick reference these are the common [FTS GUIDs](https://trisul.org/docs/lua/basics.html#on_guids) For a full list Login as Admin > profil0 > All FTS Groups
+For quick reference these are the common [FTS GUIDs](/docs/lua/basics#on-guids) For a full list Login as Admin > profil0 > All FTS Groups
 
 | \{9FEB8ADE-ADBB-49AD-BC68-C6A02F389C71\} | SSL Certificate FTS           |
 | ---------------------------------------- | ----------------------------- |
@@ -29,11 +29,11 @@ The Lua table `fts_monitor = {..}` can contain one or more of the following ha
 | field        | type                                                                                                                   | when called                                                                                                                   |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | fts_guid     | String                                                                                                                 | Type of fts. Example `{5AEE3F0B-9304-44BE-BBD0-0467052CF468}` for SSL Certs.See [Well known guids](/docs/ref/guid#fts-groups) |
-| onnewfts     | Function( [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ), [fts](/docs/lua/BACK-END-SCRIPTS/FTS-monitor#fts )) | A new fts was seen. Sent within 1 sec of seeing the fts                                                                       |
-| onbeginflush | Function( [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine))                                                      | Before starting to flush all metrics to db                                                                                    |
-| flushfilter  | Function( [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ), [fts](/docs/lua/BACK-END-SCRIPTS/FTS-monitor#fts )) | Return true if you want to save in DB, false to skip this                                                                     |
-| onflush      | Function( [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ), [fts](/docs/lua/BACK-END-SCRIPTS/FTS-monitor#fts )) | Called for each fts as they are being flushed                                                                                 |
-| onendflush   | [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine )                                                                | After all fts have been flushed for this interval                                                                             |
+| onnewfts     | Function( [engine](/docs/lua/obj_engine), [fts](/docs/lua/fts_monitor#fts)) | A new fts was seen. Sent within 1 sec of seeing the fts                                                                       |
+| onbeginflush | Function( [engine](/docs/lua/obj_engine))                                                      | Before starting to flush all metrics to db                                                                                    |
+| flushfilter  | Function( [engine](/docs/lua/obj_engine), [fts](/docs/lua/fts_monitor#fts)) | Return true if you want to save in DB, false to skip this                                                                     |
+| onflush      | Function( [engine](/docs/lua/obj_engine), [fts](/docs/lua/fts_monitor#fts)) | Called for each fts as they are being flushed                                                                                 |
+| onendflush   | [engine](/docs/lua/obj_engine)                                                                | After all fts have been flushed for this interval                                                                             |
 
 ## Objects Reference
 
@@ -45,7 +45,7 @@ The object has the following fields
 | --------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | timestamp | number,number                                                 | The time when the item was seen. Seconds in `tv_sec` format, and Microseconds `tv_usec`.<br/><br/> LUACopy`local secs=alert:timestamp()          - if you only want seconds local secs,usecs=alert:timestamp()    - if you want seconds, usecs local printable = os.date(‘%c’, secs) — if you want printable` |
 | key       | string                                                        | The unique string identifying the document                                                                                                                                                                                                                                                                    |
-| flow      | A [flow object](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid) | the IP flow from which this document was extracted                                                                                                                                                                                                                                                            |
+| flow      | A [flow object](/docs/lua/obj_flowid) | the IP flow from which this document was extracted                                                                                                                                                                                                                                                            |
 | text      | string                                                        | The text of the document.                                                                                                                                                                                                                                                                                     |
 
 ### Example use of object
@@ -68,9 +68,9 @@ When a new FTS document is created by Trisul.
 
 ### Parameters
 
-| engine | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, FTSs, or alerts into the Trisul framework |
+| engine | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, FTSs, or alerts into the Trisul framework |
 | ------ | ----------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| FTS    | A [FTS object](/docs/lua/BACK-END-SCRIPTS/FTS-monitor#fts )       | the FTS                                                                   |
+| FTS    | A [FTS object](/docs/lua/fts_monitor#fts)       | the FTS                                                                   |
 
 ### Return value
 
@@ -94,7 +94,7 @@ Before FTS documents are flushed to the hub node.
 
 ### Parameters
 
-| engine    | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, FTSs, or alerts into the Trisul framework |
+| engine    | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, FTSs, or alerts into the Trisul framework |
 | --------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | timestamp | Timestamp                                                         | Timestamps seconds `tv_sec`                                               |
 
@@ -118,9 +118,9 @@ Before each FTS doc is flushed to the hub node.
 
 ### Parameters
 
-| engine | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine )object | use this object to add metrics, FTSs, or alerts into the Trisul framework |
+| engine | An [engine](/docs/lua/obj_engine)object | use this object to add metrics, FTSs, or alerts into the Trisul framework |
 | ------ | ---------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| FTS    | An [FTS object](/docs/lua/BACK-END-SCRIPTS/FTS-monitor#fts)      | the FTS document                                                          |
+| FTS    | An [FTS object](/docs/lua/fts_monitor#fts)      | the FTS document                                                          |
 
 ### Return value
 
@@ -143,9 +143,9 @@ If you return `false` from this method, the “onflush”#function_onflush wil
 
 ### Parameters
 
-| engine | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, FTSs, or alerts into the Trisul framework |
+| engine | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, FTSs, or alerts into the Trisul framework |
 | ------ | ----------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| FTS    | A [FTS object](/docs/lua/BACK-END-SCRIPTS/FTS-monitor#fts)        | the FTS document                                                          |
+| FTS    | A [FTS object](/docs/lua/fts_monitor#fts)        | the FTS document                                                          |
 
 ### Return value
 
@@ -184,7 +184,7 @@ onendflush()
 
 ### Parameters
 
-| engine    | An [engine](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine ) object | use this object to add metrics, FTSs, or alerts into the Trisul framework |
+| engine    | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, FTSs, or alerts into the Trisul framework |
 | --------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | timestamp | Timestamp                                                         | Timestamps seconds `tv_sec`                                               |
 

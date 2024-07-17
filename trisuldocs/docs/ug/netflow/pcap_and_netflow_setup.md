@@ -12,12 +12,12 @@ on different interfaces. The way this feature works is :
 2. Other packets will be treated as usual
 
 If you want to only consume Netflow then refer to the [Netflow Setup
-Howto](netflow_setup#netflow_setup)
+Howto](netflow_setup)
 
 ## How to use this mode
 
 To use this mixed mode - we use a different technique than that
-described in the [Netflow only setup](netflow_setup#netflow_setup)
+described in the [Netflow only setup](netflow_setup)
 
 We now enable netflow on a per-adapter mode.
 

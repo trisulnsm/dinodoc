@@ -54,7 +54,7 @@ multiple outputs. Trisul can connect to `barnyard2` using the
 ### Change the socket name to barnyard2\_alert
 
 Barnyard2 uses the socket name *barnyard2\_alert* ; edit the  
-[IDSAlerts UnixSocket](/docs/ref/trisulconfig#idsalerts) parameter
+[IDSAlerts UnixSocket](/docs/ref/trisulconfig#ids-alerts) parameter
 to send the alerts to `/tmp/barnyard2_alert`
 
 ```xml
@@ -135,7 +135,7 @@ A diagram that shows the relationship between the various pieces.
 The default install of every Trisul Probe listens on a unix socket at
 `/usr/local/var/lib/trisul-probe/domain0/probe0/context0/run/snort_alert`
 You can change this by editing the
-[IDSAlert/UnixSocket](/docs/ref/trisulconfig#idsalerts) parameter
+[IDSAlert/UnixSocket](/docs/ref/trisulconfig#ids-alerts) parameter
 in the config file.
 
 #### How to read a PCAP file and generate alerts

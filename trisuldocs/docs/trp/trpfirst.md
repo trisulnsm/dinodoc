@@ -3,8 +3,8 @@
 Lets look at a sample program in Ruby that sends a Hello Request command
 to Trisul and gets back a Hello Response.
 
-Also see : [Programming model](trpprogmodel.html) , [Messages and
-Fields](/docs/ref/trpproto.html)
+Also see : [Programming model](/docs/trp/trpprogramodel) , [Messages and
+Fields](/docs/ref/trpproto)
 
 div(info). **Pre-requisites** You must have Ruby installed on your
 machine
@@ -21,7 +21,7 @@ As root run
 ## Step 2 : Generate the Ruby TRP definitions
 
 The TRP protocol is completely defined in a file called *trp.proto*.
-[Download the file](/docs/ref/trpproto.html) and save it in your working
+[Download the file](/docs/ref/trpproto) and save it in your working
 directory. You then need to process the trp.proto file and generate
 bindings for your language.
 

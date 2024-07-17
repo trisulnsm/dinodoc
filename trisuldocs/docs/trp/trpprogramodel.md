@@ -2,18 +2,18 @@
 
 The main motivation of Trisul Remote Protocol is to allow remote
 automation of forensics tasks. From a single workstation you can
-[connect](/docs/trp/index.html) to any number of Trisul probes and run
+[connect](/docs/trp/) to any number of Trisul probes and run
 your custom analysis and forensics tools.
 
 TRP is a message based request-response protocol. The protocol is built
 using [Google Protocol Buffers](//code.google.com/p/protobuf) which
 provides a language neutral, backward compatible, and compact format.
 You can write scripts in any language such as Ruby, Python, or Java by
-using the protocol definition file [trp.proto](/docs/ref/trpproto.html)
+using the protocol definition file [trp.proto](/docs/ref/trpproto)
 and binding them to a language of your choice.
 
 div(success). All TRP messages are described in the [TRP Messages and
-Fields](/docs/ref/trpproto.html) page.
+Fields](/docs/ref/trpproto) page.
 
 ## Request response
 
@@ -27,7 +27,7 @@ clients to access the data collected by Trisul.
 \* TRP is based on [Protocol Buffers](//code.google.com/p/protobuf/) a
 data interchange format introduced by Google.  
 \* The entire protocol is specified in a single file called
-[trp.proto](/docs/ref/trpproto.html)  
+[trp.proto](/docs/ref/trpproto)  
 \* Allows clients to be written in **Ruby/Python/Java/C#/C** and any
 language supported by Google Protocol Buffers  
 \* Secure TLS with client authentication and Access Control Lists  

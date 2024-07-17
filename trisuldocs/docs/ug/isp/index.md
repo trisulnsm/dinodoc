@@ -69,4 +69,4 @@ Netflow and BGP.
 <!-- -->
 
 - To install Trisul APPs and dashboards specific to ISP analytics, Refer
-  [ISP Analytics](/docs/ug/isp/isapps#install_trisul_apps)
+  [ISP Analytics](/docs/ug/isp/isapps#install-trisul-apps)

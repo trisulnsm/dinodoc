@@ -10,7 +10,7 @@ criteria.
 You can select any of the built in or custom flow trackers to view the
 top flows in that tracker over the past 1 hour.
 
-see [Flow Trackers](/docs/ug/flow/tracker.html) for more
+see [Flow Trackers](/docs/ug/flow/tracker)for more
 
 ![](images/output/flow_trackers.png)  
 *Flow trackers*

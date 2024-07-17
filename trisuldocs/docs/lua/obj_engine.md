@@ -8,8 +8,8 @@ You call methods on this object to add metrics, objects, flows, or other types o
 
 A summary of the functions available in this object.
 
-- F – functions that can be called from [Frontend](/docs/lua/scripting-basics#frontend-and-backend-scripts) scripts
-- B – functions that can be called from [Backend](/docs/lua/scripting-basics#frontend-and-backend-scripts) scripts
+- F – functions that can be called from [Frontend](/docs/lua/basics#frontend-and-backend-scripts) scripts
+- B – functions that can be called from [Backend](/docs/lua/basics#frontend-and-backend-scripts) scripts
 
 If you call functions that are not available you will get the following error
 
@@ -19,30 +19,30 @@ ERR_NOTAVAIL: add_flow_counter() is not available for backend scripts
 
 | Name                                                                                                 | Availability | Description                                                                         |
 | ---------------------------------------------------------------------------------------------------- | ------------ | ----------------------------------------------------------------------------------- |
-| [update_counter](/docs/lua/obj_engine.html#function_update_counter )                                 | F B          | Updates a meter for a key with a particular value                                   |
-| [update_counter_bytes](/docs/lua/obj_engine.html#function_update_counter )                           | F            | Updates a meter for a key but with a value of wire_length in the packet             |
-| [update_counter_raw](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functionupdate_counter_raw )       | F B          | Update counter raw is a variant of update_counter.                                  |
-| [update_key_info](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functionupdate_key_info )             | F B          | Set a user friendly label or a description for a key                                |
-| [ add_alert](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functionadd_alert )                        | F B          | Add an alert                                                                        |
-| [add_alert_full](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functionadd_alert )                    | F B          | Same as add alert with with a priority and classification. Used for IDS alert types |
-| [add_alert_tca](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functionadd_alert_tca )                 | F B          | For alerts based on metric values and threshold crossing events`                    |
-| [add_resource](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functionadd_resource )                   | F B          | Add a new resource with metadata and contents to Trisul                             |
-| [timestamp](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functiontimestamp )                         | F B          | The latest timestamp seen by the engine                                             |
-| [add_flow_counter](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functionadd_flow_counter )           | F            | Add a flow counter                                                                  |
-| [reset_flow_counter](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functionreset_flow_counter)        | F            | Removes all flow counters, then does an add_flow_counter                            |
-| [tag_flow](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functiontag_flow )                           | F B          | Tag a flow with a label. Y                                                          |
-| [instanceid](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functioninstanceid )                       | F B          | Engine Instance identifier                                                          |
-| [probeid](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functionprobeid )                             | F B          | Trisul probe id of the engine                                                       |
-| [update_flow](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functionupdate_flow )                     | F            | Update a flow based metric                                                          |
-| [new_flow_record](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functionnew_flow_record )             | F            | Inform framework about a new flow record                                            |
-| [set_flow_duration](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functionset_flow_duration )         | F            | Set the duration of the flow in seconds                                             |
-| [disable_reassembly](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functiondisable_reassembly )       | F            | Stop TCP reassembly of this flow                                                    |
-| [post_message_frontend](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functionpost_message_frontend ) | F B          | Post a message to other LUA plugins attached to the packet (frontend) pipeline      |
-| [post_message_backend](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functionpost_message_backend )   | F B          | Post a message to other LUA plugins in the metrics (backend) pipeline               |
-| [add_edge](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functionadd_edge )                           | F B          | Add a single edge to the Trisul Streaming Graph Analytics pipeline                  |
-| [add_flow_edges](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functionadd_flow_edges )               | F B          | Automatically add edges from a network flow to a given vertex.                      |
-| [set_key_attribute](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functionset_key_attribute )         | F B          | Set an arbitrary \{attribute-name,value}\ pair for any key                          |
-| [add_flow_attribute](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functionadd_flow_attribute )       | F B          | Add an \{attribute-name,value\} pair for any flow for other Lua script to pick up.  |
+| [update_counter](/docs/lua/obj_engine#functionupdate_counter)                                 | F B          | Updates a meter for a key with a particular value                                   |
+| [update_counter_bytes](/docs/lua/obj_engine#functionupdate_counter_bytes)                           | F            | Updates a meter for a key but with a value of wire_length in the packet             |
+| [update_counter_raw](/docs/lua/obj_engine#functionupdate_counter_raw)       | F B          | Update counter raw is a variant of update_counter.                                  |
+| [update_key_info](/docs/lua/obj_engine#functionupdate_key_info)             | F B          | Set a user friendly label or a description for a key                                |
+| [ add_alert](/docs/lua/obj_engine#functionadd_alert)                        | F B          | Add an alert                                                                        |
+| [add_alert_full](/docs/lua/obj_engine#functionadd_alert_full)                    | F B          | Same as add alert with with a priority and classification. Used for IDS alert types |
+| [add_alert_tca](/docs/lua/obj_engine#functionadd_alert_tca)                 | F B          | For alerts based on metric values and threshold crossing events`                    |
+| [add_resource](/docs/lua/obj_engine#functionadd_resource)                   | F B          | Add a new resource with metadata and contents to Trisul                             |
+| [timestamp](/docs/lua/obj_engine#functiontimestamp)                         | F B          | The latest timestamp seen by the engine                                             |
+| [add_flow_counter](/docs/lua/obj_engine#functionadd_flow_counter)           | F            | Add a flow counter                                                                  |
+| [reset_flow_counter](/docs/lua/obj_engine#functionreset_flow_counter)        | F            | Removes all flow counters, then does an add_flow_counter                            |
+| [tag_flow](/docs/lua/obj_engine#functiontag_flow)                           | F B          | Tag a flow with a label. Y                                                          |
+| [instanceid](/docs/lua/obj_engine#functioninstanceid)                       | F B          | Engine Instance identifier                                                          |
+| [probeid](/docs/lua/obj_engine#functionprobeid)                             | F B          | Trisul probe id of the engine                                                       |
+| [update_flow](/docs/lua/obj_engine#functionupdate_flow)                     | F            | Update a flow based metric                                                          |
+| [new_flow_record](/docs/lua/obj_engine#functionnew_flow_record)             | F            | Inform framework about a new flow record                                            |
+| [set_flow_duration](/docs/lua/obj_engine#functionset_flow_duration)         | F            | Set the duration of the flow in seconds                                             |
+| [disable_reassembly](/docs/lua/obj_engine#functiondisable_reassembly)       | F            | Stop TCP reassembly of this flow                                                    |
+| [post_message_frontend](/docs/lua/obj_engine#functionpost_message_frontend) | F B          | Post a message to other LUA plugins attached to the packet (frontend) pipeline      |
+| [post_message_backend](/docs/lua/obj_engine#functionpost_message_backend)   | F B          | Post a message to other LUA plugins in the metrics (backend) pipeline               |
+| [add_edge](/docs/lua/obj_engine#functionadd_edge)                           | F B          | Add a single edge to the Trisul Streaming Graph Analytics pipeline                  |
+| [add_flow_edges](/docs/lua/obj_engine#functionadd_flow_edges)               | F B          | Automatically add edges from a network flow to a given vertex.                      |
+| [set_key_attribute](/docs/lua/obj_engine#functionset_key_attribute)         | F B          | Set an arbitrary \{attribute-name,value}\ pair for any key                          |
+| [add_flow_attribute](/docs/lua/obj_engine#functionadd_flow_attribute)       | F B          | Add an \{attribute-name,value\} pair for any flow for other Lua script to pick up.  |
 
 ## Function `update_counter`
 
@@ -58,9 +58,9 @@ Update a counter with a value. Recall that the heirarchy in Trisul is
 
 #### Also see
 
-Use [update_counter_raw](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functionupdate_counter_raw) if
+Use [update_counter_raw](/docs/lua/obj_engine#functionupdate_counter_raw) if
 
-1. you are updating `GAUGE` or `AVERAGE` meter [data types](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-global#tabletk )
+1. you are updating `GAUGE` or `AVERAGE` meter [data types](/docs/lua/obj_globalt#constantstkvartype)
 2. you are updating more than 8 metrics for the same key
 
 ### Parameters
@@ -94,11 +94,11 @@ engine:update_counter( "{4CD742B1-C1CA-4708-BE78-0FCA2EB01A87}", "182.28.22.123"
 
 FRONTEND ONLY
 
-Adds a single metric to the Trisul framework. Same as [update_counter](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-global#tabletk ) but where the metric value is the packet wire length.
+Adds a single metric to the Trisul framework. Same as [update_counter](/docs/lua/obj_engine#functionupdate_counter) but where the metric value is the packet wire length.
 
 ### Purpose
 
-When used with [simplecounter](/docs/lua/FRONT-END-SCRIPTS/simple-counter) and other front end scripts – this method adds a metric with the wire length of the packet context in which it is called.
+When used with [simplecounter](/docs/lua/simple_counter) and other front end scripts – this method adds a metric with the wire length of the packet context in which it is called.
 
 ### Parameters
 
@@ -119,15 +119,15 @@ This method is only available on frontend scripts.
 
 ## Function `update_counter_raw`
 
-A variation of [update_counter](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functionupdate_counter)
+A variation of [update_counter](/docs/lua/obj_engine#functionupdate_counter)
 
 ### Purpose
 
-This does exactly the same thing as [update_counter](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functionupdate_counter) with the following difference.
+This does exactly the same thing as [update_counter](/docs/lua/obj_engine#functionupdate_counter) with the following difference.
 
 1. this version has a slightly lower performance
 2. use this method if you want to update a large number of keys for a single counter group . **More than 8 keys**
-3. you are updating `GAUGE` or `AVERAGE` meter [data types](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-global#tabletk)
+3. you are updating `GAUGE` or `AVERAGE` meter [data types](/docs/lua/obj_globalt#constantstkvartype)
 
 ### Parameters
 
@@ -194,13 +194,13 @@ Add an alert to the Trisul framework.
 
 ### Purpose
 
-Lets you add a simple alert to the Trisul pipeline. This simple version only contains a priority, alert-type, and description. Also see [add_alert_full](https://trisul.org/docs/lua/obj_engine.html#function_add_alert_full) and [add_alert_tca](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functionadd_alert_tca) for more specific variants.
+Lets you add a simple alert to the Trisul pipeline. This simple version only contains a priority, alert-type, and description. Also see [add_alert_full](/docs/lua/obj_engine#functionadd_alert_full) and [add_alert_tca](/docs/lua/obj_engine#functionadd_alert_tca) for more specific variants.
 
 ### Parameters
 
-| alert guid | `guid` string | Identifies the type of alert. See [GUIDs](/docs/lua/scripting-basics#on-guids)                                                                        |
+| alert guid | `guid` string | Identifies the type of alert. See [GUIDs](/docs/lua/basics#on-guids)                                                                        |
 | ---------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| flowkey    | string or nil | the [flowid string](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid) of the flow which caused the alert. `nil` if alert not related to a particular flow |
+| flowkey    | string or nil | the [flowid string](/docs/lua/obj_flowid) of the flow which caused the alert. `nil` if alert not related to a particular flow |
 | alertkey   | string        | the type of alert within the group. Think of this as a *Signature ID*                                                                                 |
 | priority   | number        | the alert priority. typically 1 = high, 2 = medium, 3 = low. But you can use your priorities if you are using your own alert groups                   |
 | message    | string        | a dispatch message                                                                                                                                    |
@@ -211,7 +211,7 @@ None
 
 ### Usage
 
-The following example adds a Priority 1 alert to the general purpose [User Alerts](/docs/ref/guid#alert-groups ) group.
+The following example adds a Priority 1 alert to the general purpose [User Alerts](/docs/ref/guid#alert-groups) group.
 
 ```lua
 engine:add_alert("{B5F1DECB-51D5-4395-B71B-6FA730B772D9}", -- GUID for 'User Alerts' group
@@ -234,9 +234,9 @@ Same as `add_alert` but with classification and priority fields. To make it co
 
 ### Parameters
 
-| alert guid     | `guid` string     | Identifies the type of alert. See [GUIDs](/docs/lua/scripting-basics#on-guids)                                                                        |
+| alert guid     | `guid` string     | Identifies the type of alert. See [GUIDs](/docs/lua/basics#on-guids)                                                                        |
 | -------------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| flowkey        | string or nil     | the [flowid string](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid) of the flow which caused the alert. `nil` if alert not related to a particular flow |
+| flowkey        | string or nil     | the [flowid string](/docs/lua/obj_flowid) of the flow which caused the alert. `nil` if alert not related to a particular flow |
 | alertkey       | string            | the type of alert within the group. Think of this as a *Signature ID*                                                                                 |
 | classification | string            | Optional: a type of alert. This is for compatibility with popular IDS systems like Snort and Suricata                                                 |
 | priority       | number            | the alert priority. typically 1 = high, 2 = medium, 3 = low. But you can use your priorities if you are using your own                                |
@@ -261,7 +261,7 @@ Same as `add_alert` family but designed for metrics based alerting.
 
 ### Parameters
 
-| alert guid | `guid` string | Identifies the type of alert. See [GUIDs](/docs/lua/scripting-basics#on-guids)                                                                     |
+| alert guid | `guid` string | Identifies the type of alert. See [GUIDs](/docs/lua/basics#on-guids)                                                                     |
 | ---------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | tca_id     | number        | a number that uniquely identifies a type of threshold you’ve defined elsewhere. Example : a TCA , Threshold Band, or Flow Tracker alert in Trisul. |
 | status     | string        | a string `FIRED` crossed threshold event or `CLEAR` when condition is clear and metric back in limits                                              |
@@ -285,9 +285,9 @@ Resources are meta data which you can log and search on. You can create your own
 
 ### Parameters
 
-| resource_id         | a GUID                                                                    | Resource group ID. See [GUIDs](/docs/lua/scripting-basics#on-guids)                               |
+| resource_id         | a GUID                                                                    | Resource group ID. See [GUIDs](/docs/lua/basics#on-guids)                               |
 | ------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| flowkey             | a string in [FlowID](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid) format | The flow containing this resource. You can get the flow ID from a packet.                         |
+| flowkey             | a string in [FlowID](/docs/lua/obj_flowid) format | The flow containing this resource. You can get the flow ID from a packet.                         |
 | uri                 | a string                                                                  | The metadata that identifies the resource. This can be thought of a summary of the full log entry |
 | contents (optional) | a string                                                                  | The actual resource (less than 32K). This of this as the complete log line                        |
 
@@ -366,7 +366,7 @@ If you detect a particular flow to be carrying YouTube video you can attach a co
 
 #### Note on the `Direction` parameter
 
-Use Direction=0 to update a Total traffic counter and Directions 1,2 to update IN/OUT separately. In the snippet below you’ve [created your own counter group](/docs/lua/FRONT-END-SCRIPTS/counter-groups) with GUID `{55F..}` with three meters 0=Total,1=Xmit,2=Recv. You can see how to update the *Totals* counter Direction=0 and In/Out counters
+Use Direction=0 to update a Total traffic counter and Directions 1,2 to update IN/OUT separately. In the snippet below you’ve [created your own counter group](/docs/lua/counter_group) with GUID `{55F..}` with three meters 0=Total,1=Xmit,2=Recv. You can see how to update the *Totals* counter Direction=0 and In/Out counters
 
 ```lua
 -- Direction 0 : update both OUT and IN direction packets to the same counter
@@ -401,7 +401,7 @@ Removes a flow based counter.
 
 ### Purpose
 
-Remove a previous flow based counter added by [add_flow_counter](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-engine#functionadd_flow_counter )
+Remove a previous flow based counter added by [add_flow_counter](/docs/lua/obj_engine#functionadd_flow_counter)
 
 ### Parameters
 
@@ -429,7 +429,7 @@ Add a text label to a IP flow. You can then search for flows using this string.
 
 ### Parameters
 
-| flowkey | string | identifies the flow that you want to attach a counter to. Usually you get this from [flow:id](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid )                                                                   |
+| flowkey | string | identifies the flow that you want to attach a counter to. Usually you get this from [flow:id](/docs/lua/obj_flowid)                                                                   |
 | ------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | tag     | string | a short text label that is attached to the flow. You can attach multiple tags to a flow but the total length of all tags must be less than 64 bytes. If you add tags >= 64 bytes the extra tags are discarded. |
 
@@ -460,7 +460,7 @@ None.
 
 ### Usage
 
-A common use of `instanceid` is to construct filenames for log files. Another use is when you have scheduled scripts and you only want to run them once. In that case, you only run your code when `engine:instanceid()=="0"` See [engine_monitor](/docs/lua/BACK-END-SCRIPTS/engine-monitor ) for more.
+A common use of `instanceid` is to construct filenames for log files. Another use is when you have scheduled scripts and you only want to run them once. In that case, you only run your code when `engine:instanceid()=="0"` See [engine_monitor](/docs/lua/engine_monitor) for more.
 
 ---
 
@@ -512,7 +512,7 @@ None
 
 ## Function `new_flow_record`
 
-Use this method only when you are writing an [Input Filter](/docs/lua/FRONT-END-SCRIPTS/input-filters ) plugin importing feeds with “Netflow like” flow records.
+Use this method only when you are writing an [Input Filter](/docs/lua/inputfilter) plugin importing feeds with “Netflow like” flow records.
 
 ### Purpose
 
@@ -567,7 +567,7 @@ Stop reassembly and reconstruction of this flow.
 
 ### Purpose
 
-This method is useful in various contexts like [file extraction](/docs/lua/FRONT-END-SCRIPTS/file-extract ) and [reassembly](/docs/lua/FRONT-END-SCRIPTS/tcp-reassembly )
+This method is useful in various contexts like [file extraction](/docs/lua/fileextract) and [reassembly](/docs/lua/reassembly)
 
 The main use of this method is when you need to see the beginning bytes of a TCP flow to determine whether you are interested in further reassembly. Turning off reassembly of TCP streams you are not interested in can save significant CPU and memory.
 
@@ -664,7 +664,7 @@ Add a new uni-directional edge to the *edge stream*. This is part of the new Tr
 
 In Graph Analytics lingo, an *edge* is two vertices joined with a connection. The `add_edge` method allows to you push a simple Edge to the Trisul streaming pipeline.
 
-![](https://trisul.org/docs/lua/images/lua-edge1.png)
+![](images/lua-edge1.png)
 
 The above picture explains the following terms
 
@@ -733,7 +733,7 @@ This function adds the following uni-directional edges from a given *vertex*
 
 ### Parameters
 
-| flow_key    | a string | A string representing a flow. This is in [FlowID format](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid ) You typically get this string as inputs to your lua function |
+| flow_key    | a string | A string representing a flow. This is in [FlowID format](/docs/lua/obj_flowid) You typically get this string as inputs to your lua function |
 | ----------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | target_guid | a GUID   | type of Vertex-B. This can be a counter group id, alert group id, or any other group id                                                                              |
 | target_key  | string   | key of Vertex-B                                                                                                                                                      |
@@ -801,11 +801,11 @@ Adds an attribute-name=attribute-value to a flow.
 
 ### Purpose
 
-Flow attributes can be attached to any flow. You can then write other scripts that can listen to these attributes using [reassembly/onattribute](/docs/lua/FRONT-END-SCRIPTS/tcp-reassembly#function-onattribute) and work on them.
+Flow attributes can be attached to any flow. You can then write other scripts that can listen to these attributes using [reassembly/onattribute](/docs/lua/reassembly#function-onattribute) and work on them.
 
 ### Parameters
 
-| flow_key        | string | A string representing a [FlowID](/docs/lua/TOP-LEVEL-LUA-OBJECT/object-flowid ) |
+| flow_key        | string | A string representing a [FlowID](/docs/lua/obj_flowid) |
 | --------------- | ------ | ------------------------------------------------------------------------------- |
 | attribute_name  | string | type of attribute. Example HTTP-User-Agent                                      |
 | attribute_value | string | attribute value, Example “Mozilla …”                                            |
