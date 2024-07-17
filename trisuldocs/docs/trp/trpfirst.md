@@ -9,12 +9,14 @@ Fields](/docs/ref/trpproto.html)
 div(info). **Pre-requisites** You must have Ruby installed on your
 machine
 
-## Step 1 : Install the ruby_protobuf gem
+## Step 1 : Install required gems
 
 As root run
 
-      gem install protobuf
-      gem install ffi-rzmq
+```bash
+  gem install protobuf
+  gem install ffi-rzmq
+```
 
 ## Step 2 : Generate the Ruby TRP definitions
 
@@ -131,13 +133,13 @@ Before you run the program :
 
 Now run the program
 
-    C:\Users\Vivek\Documents\devbo>ruby testtrp.rb ipc:///usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/trp_0
+
+```sh
+    $ruby testtrp.rb ipc:///usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/trp_0
     
     Got Hello Response
     Got Hello Response
     Station ID          : TRP:1 
     Station ID  Request : TRP_TUTORIAL
     Message             : hello from trp
-    
-    
-    C:\Users\Vivek\Documents\devbo>
+```
