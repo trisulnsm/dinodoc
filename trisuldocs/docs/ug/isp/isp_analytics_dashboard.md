@@ -23,7 +23,7 @@ Trisul provides a global level dashboard for ISP Analytics that includes
 several menus with various functionalities.
 
 To install the ISP dashboard apps, Refer [ISP Analytics
-Dashboard](/docs/ug/isp/isapps#install_trisul_apps)
+Dashboard](/docs/ug/isp/isapps#install-trisul-apps)
 
 ## ISP Overview
 

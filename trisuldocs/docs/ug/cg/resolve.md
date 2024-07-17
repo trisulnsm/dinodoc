@@ -16,7 +16,7 @@ clicking on a link or by searching for a specific item.
 1. You can also edit by clicking the link on the IP or Port from any
    module or table  
 
-2. You will be redirected to [Key Traffic](/docs/ug/ui/dashboards#key_dashboard) dashboard  
+2. You will be redirected to [Key Traffic](/docs/ug/ui/key_dashboard) dashboard  
 
 3. Find the module **Key Details** and click the “Edit” link
 

@@ -43,7 +43,7 @@ Tools](/docs/ug/cg/retrotools) to investigate
 
 ### I want to see details of a particular IP, but it isnt showing up anywhere for me to click ?
 
-1. [Use the search box](/docs/ug/ui/search#the_search_box)
+1. [Use the search box](/docs/ug/ui/search#the-search-box)
 2. Click on “View Details” to go to the key dashboard
 3. Use any of the tools on the key dashboard
 
@@ -52,7 +52,7 @@ Tools](/docs/ug/cg/retrotools) to investigate
 Select *Retro* from the menu
 
 - Select the time interval of interest
-- Find [Flow Tracker](/docs/ug/cg/retrotools#track_flows) tool in
+- Find [Flow Tracker](/docs/ug/cg/retrotools#flow-trackers) tool in
   retro dashboard
 - Select **Traffic** and click **Analyze**
 
@@ -71,9 +71,9 @@ If you can see the IP in live dashboards
 1. Follow instructions in [Using
    Search](/docs/ug/ui/search#the_search_box)
 2. And click **Flows** in Real Time stabbers in [Key
-   Details](/docs/ug/ui/dashboards#key_details) modules
+   Details](/docs/ug/ui/key_dashboard#key-details) modules
 
-See [Real Time Stabber](/docs/ug/cg/stabber#flow_stabber)
+See [Real Time Stabber](/docs/ug/cg/stabber#flow-stabber)
 
 ### Store only 1MB worth of packets of each flow
 
@@ -114,4 +114,4 @@ Select Tools -\> Long Term Traffic
 
  Select Customize -\> Counters -\> Keysets -\>Add new Keyset Counter Group
 
-Click [Keyset Counter Group](/docs/ug/cg/custom#keyset_counter_groups) for more.
+Click [Keyset Counter Group](/docs/ug/cg/custom#keyset-counter-groups) for more.

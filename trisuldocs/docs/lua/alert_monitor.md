@@ -6,7 +6,7 @@ You can attach your LUA script to listen to various events in the alert stream
 
 ### Common Alert Groups GUIDs
 
-For quick reference here are the common Alert Group [GUIDs](/docs/lua/basics#on_guids) For a full list Login as Admin > profil0 > Alert Groups
+For quick reference here are the common Alert Group [GUIDs](/docs/lua/basics#on-guids) For a full list Login as Admin > profil0 > Alert Groups
 
 | \{9AFD8C08-07EB-47E0-BF05-28B4A7AE8DC9\} | IDS Alerts from Snort/Suricata via Unix Socket              |
 | ---------------------------------------- | ----------------------------------------------------------- |
@@ -28,7 +28,7 @@ The table consists the following
 
 | field                                                                                | type                                                                                                                                   | description                                                                                                                                       |
 | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| alert_guid                                                                           | String                                                                                                                                 | Type of alert. See [alert guids](/docs/ref/guid#alert_groups ) for a list of built in GUIDs. View (Admin) Profile > Alert Groups for a full list. |
+| alert_guid                                                                           | String                                                                                                                                 | Type of alert. See [alert guids](/docs/ref/guid#alert-groups) for a list of built in GUIDs. View (Admin) Profile > Alert Groups for a full list. |
 | [onnewalert](/docs/lua/alert_monitor#functiononnewalert)           | function [engine](/docs/lua/obj_engine), [alert](/docs/lua/alert_monitor#object-alert) | A new alert was seen. Sent within 1 sec of seeing the alert                                                                                       |
 | [onbeginflush](/docs/lua/alert_monitor#functiononbeginflush) | function[engine](/docs/lua/obj_engine)                                                                        | Before starting to flush all metrics to db                                                                                                        |
 | [flushfilter](/docs/lua/alert_monitor#functionflushfilter)        | function [engine](/docs/lua/obj_engine), [alert](/docs/lua/alert_monitor#object-alert) | Return true if you want to save in DB, false to skip this                                                                                         |

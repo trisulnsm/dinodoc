@@ -284,7 +284,7 @@ One important point is your script may be loaded and unloaded several times by T
 
 ## print and logging
 
-Your script can use [`T.log(..)`](/docs/lua/obj_globalt#function_t.log) to log into the Trisul probe log files and take advantage of all of its features. You can also use the standard LUA `print(..)` statements in your code to debug your script.
+Your script can use [`T.log(..)`](/docs/lua/obj_globalt#functiontlog) to log into the Trisul probe log files and take advantage of all of its features. You can also use the standard LUA `print(..)` statements in your code to debug your script.
 
 ### Where are the Trisul-Probe log files
 

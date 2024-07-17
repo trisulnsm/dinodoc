@@ -29,10 +29,10 @@ $ trisulctl_probe testbench guid
 Here is a list of most common GUIDs that refers to various entities
 within Trisul.
 
-Jump to [Counter Groups](#built_in_counter_groups) | [Session
-Groups](#session_groups) | [Alert Groups](#alert_groups) |
-[Resources](#resource_groups) | [Protocols](#protocols) | [FTS (Full
-Text) Groups](#fts_groups)
+Jump to [Counter Groups](/docs/ref/guid#built_in_counter_groups) | [Session
+Groups](/docs/ref/guid#session_groups) | [Alert Groups](/docs/ref/guid#session_groups) |
+[Resources](/docs/ref/guid#resource_groups) | [Protocols](/docs/ref/guid#protocols) | [FTS (Full
+Text) Groups](/docs/ref/guid#fts_groups)
 
 ## Built in Counter Groups
 

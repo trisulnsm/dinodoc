@@ -11,7 +11,7 @@ Currently there are only two FTS doc types built in to Trisul
 
 ### Common FTS Groups GUIDs
 
-For quick reference these are the common [FTS GUIDs](/docs/lua/basics#on_guids) For a full list Login as Admin > profil0 > All FTS Groups
+For quick reference these are the common [FTS GUIDs](/docs/lua/basics#on-guids) For a full list Login as Admin > profil0 > All FTS Groups
 
 | \{9FEB8ADE-ADBB-49AD-BC68-C6A02F389C71\} | SSL Certificate FTS           |
 | ---------------------------------------- | ----------------------------- |
