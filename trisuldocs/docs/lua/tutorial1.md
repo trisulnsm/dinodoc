@@ -12,7 +12,7 @@ Get started by learning where to place LUA scripts, how to run in development 
 
 :::
 
-1. ## Get hello.lua and put it in the plugins directory
+1. ### Get hello.lua and put it in the plugins directory
    
    1. Download the sample [hello.lua](https://raw.githubusercontent.com/trisulnsm/trisul-scripts/master/lua/tutorial/tutorial1/hello.lua) script and save it in the lua scripts directory `/usr/local/lib/trisul-probe/plugins/lua` *Sample run shown below
       
@@ -21,7 +21,7 @@ Get started by learning where to place LUA scripts, how to run in development 
       wget https://raw.githubusercontent.com/trisulnsm/trisul-scripts/master/lua/tutorial/tutorial1/hello.lua
       ```
 
-2. ## Run Trisul over a PCAP file
+2. ### Run Trisul over a PCAP file
    
    1. Now lets run Trisul over a sample PCAP file. Use your own or download a sample PCAP from tutorial.pcap
    
@@ -33,7 +33,7 @@ Get started by learning where to place LUA scripts, how to run in development 
       trisulctl_probe testbench run tutorial.pcap
       ```
 
-3. Output
+3. ### Output
    
    1. Here is the output you will see as Trisul discovers and loads all the lua scripts including your *hello.lua*
       
@@ -45,12 +45,12 @@ Get started by learning where to place LUA scripts, how to run in development 
       Replacing image with 
       /usr/local/bin/trisul  -nodemon /usr/local/etc/trisul-probe/domain0/probe0/context_debug0/trisulProbeConfig.xml -mode offline -in Test.pcap
       ```
-      
+     ```lua 
       Onload – hello world  
       Onunload  – bye  
       Onload – hello world  
       Onunload  – bye
-      
+      ```
       ```
       
       ```
@@ -135,6 +135,6 @@ Some useful tips for development.
 2. Use a PCAP file to develop your script instead of live traffic
 3. Run over the PCAPs with `-nodemon` mode to output LUA `print(..)` statements on the console
 
-### Next steps
+## Next steps
 
 Congrats! You have written your first LUA script, although it doesnt do much. Lets move on to the next Tutorial : [How to write a simplecounter](/docs/lua/tutorial2)

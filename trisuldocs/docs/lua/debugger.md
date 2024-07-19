@@ -6,7 +6,7 @@ Explains how to use a “development mode” and use the LUA debugger.
 
 While starting to write your LUA scripts it is better to first target a single threaded and single backend engine. This allows you to get the LUA script functionality right. It is also much easier to debug a single threaded Trisul engine calling your LUA scripts.
 
-## testbench run options
+## Testbench run options
 
 The following testbench commands are available.
 

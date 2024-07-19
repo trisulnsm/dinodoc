@@ -72,8 +72,9 @@ For [development and test purposes](/docs/lua/debugger) you can set the `TRIS
 
 put your *.lua script in this directory, it will be automatically deployed to all probes.
 
-| **Global** loaded on all probes | `/usr/local/var/lib/trisul-hub/domain0/config0/context0/profile0/lua` |
+|           Probe                 |                        Location                                       |
 | ------------------------------- | --------------------------------------------------------------------- |
+| **Global** loaded on all probes | `/usr/local/var/lib/trisul-hub/domain0/config0/context0/profile0/lua` |
 
 ### Subdirectories
 

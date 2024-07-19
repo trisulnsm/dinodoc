@@ -12,7 +12,7 @@ Once again as in Tutorial-1, lets run the script first and then explore details.
 
 :::
 
-1. ## Get pktlen.lua
+1. ### Get pktlen.lua
    
    1. Download [pktlen.lua](https://raw.githubusercontent.com/trisulnsm/trisul-scripts/master/lua/tutorial/tutorial2/pktlen.lua) into the [lua scripts directory](/docs/lua/basics) `/usr/local/lib/trisul-probe/plugins/lua` *A sample run is shown below*
       
@@ -21,7 +21,7 @@ Once again as in Tutorial-1, lets run the script first and then explore details.
       wget https://raw.githubusercontent.com/trisulnsm/trisul-scripts/master/lua/tutorial/tutorial2/pktlen.lua
       ```
 
-2. Run Trisul over a PCAP file
+2. ### Run Trisul over a PCAP file
    
    1. Login as root or as the user specified in the trisulProbeConfig.xml file (default : trisul)
    
@@ -35,7 +35,7 @@ Once again as in Tutorial-1, lets run the script first and then explore details.
    
    There will be no output. You need to login to Web Trisul to find out what just happened.
 
-3. Login to Webtrisul context “tut2”
+3. ### Login to Webtrisul context “tut2”
    
    1. Login to Webtrisul, you will see a new context called “tut2” at the login screen. Select that and login. Then Go to Retro > Counters
    
@@ -72,7 +72,7 @@ Lets look a bit deeper into th script `countergroup` and `simplecounter` sec
 
 The Trisul LUA API consists of about 16 different “script types”. In this tutorial , pktlen.lua uses the countergroup and simplecounter script types. You can even place the countergroup and simplecounter tables in separate files if you want.
 
-1. The [id block](/docs/lua/basics#id-block) just identifies the plugin to Trisul, we’ve already see this in Tutorial 1
+1. The [`id block`](/docs/lua/basics#id-block) just identifies the plugin to Trisul, we’ve already see this in Tutorial 1
 2. The [`countergroup` block](/docs/lua/counter_group) defines a new counter group
 3. The [`simplecounter` block](/docs/lua/simple_counter) is where you count packets
 
