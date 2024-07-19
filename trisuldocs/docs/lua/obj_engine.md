@@ -454,9 +454,10 @@ There may be multiple `engine` contexts in Trisul. This string identifies each
 None.
 
 ### Return value
-
+| Type | Info |
+------------------------------------------------------------------------------------------------------------------------------------------------------------- |---|
 | String | Representing the instance of the engine object you are working with. This string is random string like “77BAB82” for Frontend scripts. For backend scripts, this string is the instance number such as “0”, “1”, “2” etc. |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
 
 ### Usage
 
@@ -478,8 +479,10 @@ None.
 
 ### Return value
 
-| String | The probe id such as `probe0` that identifies the domain probe id of the engine |
+| Type  | Info |
 | ------ | ------------------------------------------------------------------------------- |
+| String | The probe id such as `probe0` that identifies the domain probe id of the engine |
+
 
 ### Usage
 
@@ -573,8 +576,9 @@ The main use of this method is when you need to see the beginning bytes of a TC
 
 ### Parameters
 
-| key | string | a string representing a flow in SessKey format |
+| Name | Type  | Info                                           |
 | --- | ------ | ---------------------------------------------- |
+| key | string | a string representing a flow in SessKey format |
 
 ### Return value
 

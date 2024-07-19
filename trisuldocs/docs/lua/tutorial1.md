@@ -54,7 +54,6 @@ Get started by learning where to place LUA scripts, how to run in development 
       ```
       
       ```
-
 > Congratulations! You have just run your first LUA script on Trisul
 
    ** Exploring hello.lua **

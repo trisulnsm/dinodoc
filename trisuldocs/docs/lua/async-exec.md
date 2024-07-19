@@ -2,7 +2,7 @@
 
 This section describes the concepts behind async execution within Trisul LUA scripting framework. Please refer to [`T.async`](/docs/lua/obj_tasync) documentation for function reference. This section explains the motivation and design of this execution model.
 
-## Table `T.async`
+### Table `T.async`
 
 The [T.async](/docs/lua/obj_tasync) interface provides methods to help you do long running I/O tasks that do not block the streaming pipeline. The tasks are executed by a separate worker thread pool and when the results are ready, they re-enter the pipeline path. The number of worker threads is by default 1 but can be increased by the [`request_async_workers` parameter](/docs/lua/basics#structure-of-a-lua-script) at the plug-in level.
 

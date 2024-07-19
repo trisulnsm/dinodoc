@@ -27,7 +27,7 @@ The global table named `T` can be accessed from anywhere. It defines some cons
 | T.sessiongroups                                                     | Backend scripts only : A table of ( session group name, guid ) currently loaded.                                                                                                             |
 | [T.env](/docs/lua/obj_globalt#tabletenv)    | Environment and Trisul Config file                                                                                                                                                           |
 
-## Table `T.host`
+### Table `T.host`
 
 Interact with the Trisul environment.
 
@@ -44,7 +44,7 @@ Use the object calling notation `T.host:function(..)` to invoke these methods.
 | prepare_config | `guid` – plugin id, `string` template file                | plugin config                                     | Prepare a configuration file for your plugin                                                            |
 | broadcast      | `guid` – message id, `guid` class id, `string` message    | none                                              | Broadcast a state update to other plugins                                                               |
 
-## Table `T.K`
+### Table `T.K`
 
 Pre-defined constants to use with other Lua functions.
 
@@ -52,7 +52,7 @@ Pre-defined constants to use with other Lua functions.
 | -------- | ----------- | ---------------------------------------------------------------------------------------------------- |
 | vartypes | Meter types | COUNTER, RATE_COUNTER, GAUGE, RUNNING_COUNTER                                                        |
 
-## Constants `T.K.vartype`
+### Constants `T.K.vartype`
 
 Constants : Types of counters.
 
@@ -72,7 +72,7 @@ window
 
 every counter group has a streaming window of *bucketsize* seconds. This is by default 60 seconds, but can be as low as 1 second.
 
-## Table T.util
+### Table T.util
 
 Useful utility functions written in C, exported to LUA via T.util table. We find them most handy for network related scripting.
 
@@ -246,7 +246,7 @@ Adds a log message to the main Trisul log file. Trisul automatically adds the lu
 | T.logdebug   | `string` – msg                                                                                                       | none | Log a message with DEBUG category                                                                                                                                                       |
 | T.loginfo    | `string` – msg                                                                                                       | none | Log a message with INFO category                                                                                                                                                        |
 
-## Usage
+### Usage
 
 The following snippets demonstrates the usage of T.log
 

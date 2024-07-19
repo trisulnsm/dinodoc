@@ -4,7 +4,7 @@ An Aho-Corasick multi pattern matcher created with [`T.ac( _pattern_array_ )`](
 
 This is a convenience utility provided to you by the Trisul framework because multi pattern matching is such a frequent need in network analytics applications.
 
-### Creating the object
+## Creating the object
 
 The object is created and stored in a global state, either as a global variable or as a member in the `Global T` table. Note that the global states are per-file not across LUA files.
 
@@ -22,10 +22,10 @@ T.patternMatcher:match_one(..)
 
 A summary of the functions available in this object.
 
-| Name      | In     | Out   | Description                                                                                                                                                         |
-| --------- | ------ | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name      | In     | Out   | Description  |
+| --------- | ------ | ----- | ------------ |
 | match_all | string | table | Matches all patterns. The matches are returned in a table<br/>\{ pattern_matched = position <br/>>The position indicates the last matching character, not the first. |
-| match_one | string | table | Same as match_all, but stops after finding a single match. Use this method for alerting on pattern matches.                                                         |
+| match_one | string | table | Same as match_all, but stops after finding a single match. Use this method for alerting on pattern matches.                                                      |
 
 ## Function `match_all`
 
@@ -37,8 +37,13 @@ Use this parameter passed to your Lua function to integrate your data into the T
 
 ### Parameters
 
-| text | string | the text to be matched |
-| ---- | ------ | ---------------------- |
+<table>
+    <tr>
+        <td>text</td>
+        <td>string</td>
+        <td>the text to be matched </td>
+    </tr>
+</table>
 
 ### Return value
 

@@ -37,13 +37,13 @@ The two streaming pipelines are shown below
 
 A script is attached either to the [frontend or the backend pipeline](/docs/lua/basics#stream-processing) It cannot be attached to both. You do not have to do anything special to mark your script as attaching to frontend or backend. The “type of script” you write is automatically detected and attached to the correct place. We will shortly see what types of scripts are available.
 
-| Frontend script types                                                                                               | Backend script types                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Marked in docs as F or FRONTEND                                                                                     | Marked in docs as B or BACKEND                                                                                               |
-| Fast path                                                                                                           | Slow path                                                                                                                    |
-| Works on packets and flows                                                                                          | Works on metrics stream                                                                                                      |
-| Time budget in milliseconds, slow scripts will result in packet drops as the buffers fill up                        | Time budget in 10-15 seconds, slow scripts will result in some metrics getting dropped                                       |
-| Loaded on probe start                                                                                               | Loadad and unloaded dynamically on running system                                                                            |
+| Frontend script types          | Backend script types                           |
+| ------------------------------ | ---------------------------------------------- |
+| Marked in docs as F or FRONTEND          | Marked in docs as B or BACKEND       |
+| Fast path                                | Slow path                            |
+| Works on packets and flows               | Works on metrics stream              |
+| Time budget in milliseconds, slow scripts will result in packet drops as the buffers fill up                        | Time budget in 10-15 seconds, slow scripts will result in some metrics getting dropped                                    |
+| Loaded on probe start                    | Loadad and unloaded dynamically on running system    |
 | Script types : Input Filter , Simple Counter, Reassembly Handler, File Extraction , PCAP storage , Protocol Handler | Script types : Engine Monitor, Alert Monitor, Counter Monitor, Session Monitor, Resource Monitor, FTS Monitor , Flow Tracker |
 
 ## Skeleton Script
