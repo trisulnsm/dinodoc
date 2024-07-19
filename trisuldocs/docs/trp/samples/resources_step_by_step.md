@@ -8,10 +8,10 @@ Print all HTTP URLs over the past 6 hours.
 
 We divide this tutorial into steps, each step demonstrating an aspect of TRP
 
-1. [Step 1](https://www.trisul.org/docs/trp/samples/resources_step_by_step.html#step_1_:_find_matching_resources) – Retrieve matching resource IDs
-2. [Step 2](https://www.trisul.org/docs/trp/samples/resources_step_by_step.html#step_2_:_find_matching_resources) – Print attributes of each matching resource
-3. [Step 3](https://www.trisul.org/docs/trp/samples/resources_step_by_step.html#step_3_:_find_matching_resources) – Show readable IP addresses and port numbers
-4. [Step 4](https://www.trisul.org/docs/trp/samples/resources_step_by_step.html#step_4_:_find_matching_resources) – Show host names and port lables
+1. [Step 1](/docs/trp/samples/resources_step_by_step#step-1--find-matching-resources) – Retrieve matching resource IDs
+2. [Step 2](/docs/trp/samples/resources_step_by_step#step-2--print-details-of-each-resource) – Print attributes of each matching resource
+3. [Step 3](/docs/trp/samples/resources_step_by_step#step-3--show-keys-in-readable-format) – Show readable IP addresses and port numbers
+4. [Step 4](/docs/trp/samples/resources_step_by_step#step-4--show-hostnames) – Show host names and port lables
 
 ## Step 1 : Find matching resources
 
@@ -187,7 +187,7 @@ p "Source IP   = #{item.source_ip.readable}"
   ..
 ```
 
-## code
+### code
 
 ```ruby
 require 'rubygems' if RUBY_VERSION < '1.9'
@@ -244,7 +244,7 @@ TrisulRP::Protocol.get_response_zmq(conn,req) do |resp|
 end
 ```
 
-## Run Step 3
+### Run Step 3
 
 ```ruby
 [devbox@localhost t2]$ ruby resouce.rb ipc:///usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/trp_0
@@ -280,7 +280,7 @@ p "Source IP   = #{item.source_ip.label}"
   ..
 ```
 
-## Code
+### Code
 
 ```ruby
 require 'rubygems' if RUBY_VERSION < '1.9'

@@ -39,13 +39,14 @@ A client sends a request message to Trisul and waits for a response to
 that message. The protocol is synchronous. This means that you cannot
 have multiple outstanding requests on a single connection. You may
 however open any number of connections to Trisul.
-
+```
 The typical steps a developer needs to do :  
-\# Construct a TRP message you want to send by filling in the
+# Construct a TRP message you want to send by filling in the
 appropriate fields  
-\# Serialize the message to a string  
-\# Send across a 4 byte message length in **network byte** order  
-\# Send across the serialized message itself  
-\# Read a 4 byte response message length in **network byte** order  
-\# Parse the response message  
-\# Process the response as you see fit
+# Serialize the message to a string  
+# Send across a 4 byte message length in **network byte** order  
+# Send across the serialized message itself  
+# Read a 4 byte response message length in **network byte** order  
+# Parse the response message  
+# Process the response as you see fit
+```

@@ -16,11 +16,11 @@ Follow the instructions to install protobuf (usually the ./configure +
 make + make install routine)
 
 To test whether the installation was successful try running protoc
-
+```
     root@vivek-hardy:~# protoc
     Missing input file.
     root@vivek-hardy:~#
-
+```
 Everything is fine if you get output similar to the above.
 
 ## Step 2 : Install the Java SDK
@@ -49,9 +49,9 @@ will be writing the TRP program).
 
 ## Step 3 : Process the trp.proto file
 
-<code>  
+```proto
 protoc trp.proto —java_out .  
-</code>
+```
 
 This will create a TRP/trp.java file which contains all the Java
 bindings necessary.
@@ -145,7 +145,7 @@ catch (IOException ex)
 
 Lets compile and run the program. The usage is  
 ``` *java TestTRP <IP/hostname of Trisul> <port number>* ```
-
+```
     [akhil@localhost s4]$ javac TestTRP.java
     [akhil@localhost s4]$ java TestTRP 192.168.1.7 12001
     [akhil@localhost s4]$ java TestTRP 192.168.1.7 12001
@@ -161,3 +161,4 @@ Lets compile and run the program. The usage is
     Thu Jan 01 05:42:29 IST 1970
     **************************************************
     [akhil@localhost s4]$
+```

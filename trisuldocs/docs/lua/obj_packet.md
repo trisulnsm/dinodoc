@@ -38,8 +38,10 @@ Indicate to Trisul whether you want to store this particular packet or not. This
 
 ### Parameters
 
-| policy_flags | number | 0 = Dont store this packet  <br/>1 = Store this full packet including payload  <br/>2 = Store this packet headers only |
+| Name | Type | Info |
 | ------------ | ------ | ---------------------------------------------------------------------------------------------------------------------- |
+| policy_flags | number | 0 = Dont store this packet  <br/>1 = Store this full packet including payload  <br/>2 = Store this packet headers only |
+
 
 ### Return value
 

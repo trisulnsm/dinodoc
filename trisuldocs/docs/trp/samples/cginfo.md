@@ -9,7 +9,7 @@ This sample does two things
 
 The only difference between the two is for the former we have to specify a *:counter_group* guid parameter. For the latter, we leave it blank forcing Trisul to retrieve all the counter group information.
 
-See [here for a list of common GUIDs](https://www.trisul.org/docs/ref/guid.html). You can also go to // Customize > Counters > Meters // to get the GUIDs of all counter groups running on your system.
+See [here for a list of common GUIDs](/docs/ref/guid.md). You can also go to // Customize > Counters > Meters // to get the GUIDs of all counter groups running on your system.
 
 
 

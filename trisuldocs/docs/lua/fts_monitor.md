@@ -12,9 +12,9 @@ Currently there are only two FTS doc types built in to Trisul
 ### Common FTS Groups GUIDs
 
 For quick reference these are the common [FTS GUIDs](/docs/lua/basics#on-guids) For a full list Login as Admin > profil0 > All FTS Groups
-
-| \{9FEB8ADE-ADBB-49AD-BC68-C6A02F389C71\} | SSL Certificate FTS           |
+| Guid                                     | Info                          |
 | ---------------------------------------- | ----------------------------- |
+| \{9FEB8ADE-ADBB-49AD-BC68-C6A02F389C71\} | SSL Certificate FTS           |
 | \{28217924-E7A5-4523-993C-44B52758D5A8\} | HTTP Header FTS               |
 | \{09B305DF-078C-4B9E-8E2F-EA64B7326880\} | Full text dump of DNS records |
 
@@ -35,9 +35,9 @@ The Lua table `fts_monitor = {..}` can contain one or more of the following ha
 | onflush      | Function( [engine](/docs/lua/obj_engine), [fts](/docs/lua/fts_monitor#fts)) | Called for each fts as they are being flushed                                                                                 |
 | onendflush   | [engine](/docs/lua/obj_engine)                                                                | After all fts have been flushed for this interval                                                                             |
 
-## Objects Reference
+### Objects Reference
 
-## FTS
+### FTS
 
 The object has the following fields
 

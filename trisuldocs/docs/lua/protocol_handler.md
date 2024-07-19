@@ -17,14 +17,14 @@ Download a well documented skeleton script from here to copy and get started
 
 [Protocol Handler skeleton script](https://github.com/trisulnsm/trisul-scripts/blob/master/lua/skeletons/protocol_handler.lua)
 
-##[Table `protocol_handler`
+### Table `protocol_handler`
 
 | name                                                                                     | type                                                            | description                                                                                |
 | ---------------------------------------------------------------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
 | table [control](/docs/lua/protocol_handler#tablecontrol)              | table                                                           | assign a name and GUID to this protocol                                                    |
 | function [parselayer](/docs/lua/protocol_handler#function-parselayer) | function( [layer](/docs/lua/obj_layer) | given a packet consume N bytes for this protocol and tell Trisul what the next protocol is |
 
-## Table `control`
+### Table `control`
 
 The control table assigns a unique GUID to this protocol and a name. You can then use [Access Points](/docs/ug/webadmin/access_points) to connect this protocol to a lower layer.
 
@@ -49,11 +49,11 @@ This is what a new DHCP protocol handler `control` section would look like.
     host_protocol_ports = { 67,68 }                                -- we want UDP ports 67,68
   }
   ```
-  ## LUA functions reference
+## LUA functions reference
 
 The only function in this script type is called *parselayer*
 
-## Function parselayer
+### Function parselayer
 
 In networking a protocol breakdown of a packet results in a “protocol layer tree”. For example a DNS packet would be typically made up of
 
@@ -78,8 +78,10 @@ When a packet arrives that is attached to this protocol. Remember you can attach
 
 ### Parameters
 
-| layer | a [Layer](/docs/lua/obj_layer) object | the layer object contains the packet bytes that are above the lower constructed layer. you can use the layer object to navigate the previously constructed layers. |
+|Name | object | Info |
 | ----- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| layer | a [Layer](/docs/lua/obj_layer) object | the layer object contains the packet bytes that are above the lower constructed layer. you can use the layer object to navigate the previously constructed layers. |
+
 
 ### Return value
 

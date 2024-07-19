@@ -8,7 +8,7 @@ You can extend Trisul’s functionality by creating your own Alert Groups in add
 
 **[New Alert Group skeleton script]([trisul-scripts/lua/skeletons/new_alert_group.lua at master · trisulnsm/trisul-scripts · GitHub](https://github.com/trisulnsm/trisul-scripts/blob/master/lua/skeletons/new_alert_group.lua))**
 
-## Table `alertgroup`
+### Table `alertgroup`
 
 The table alertgroup has a single section called control that assigns a GUID to the group.
 
@@ -31,7 +31,7 @@ The table alertgroup has a single section called control that assigns a GUID t
 | ----------------------------------------------------------------------- | ---------------------------------------------- |
 | table [control](/docs/lua/alert_group#tablecontrol ) | assigns a name and guid to the new alert group |
 
-## Table `control`
+### Table `control`
 
 The control table assigns a unique GUID to the new alert group.
 

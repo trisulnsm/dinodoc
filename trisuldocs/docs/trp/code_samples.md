@@ -4,8 +4,6 @@
 
 Have you first read the [step-by-step tutorial](trpgemsteps)
 
-
-
 If you have, then you know  
 \* how to set up a TRP environment  
 \* how to securely connect to a Trisul instance  

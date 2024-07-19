@@ -28,7 +28,7 @@ import { Icon } from '@iconify/react';
 
 <Icon icon="mdi:github" height="25" /> [The trisulrp ruby gem project on Github. Pulls welcome!](https://github.com/trisulnsm/trisulrp)
 
-<Icon icon="logos:chrome" height="25" /> [ The trp.proto file - if you want to write clients in any language supported by protocol buffers](https://trisul.org/docs/ref/trpproto.html)
+<Icon icon="logos:chrome" height="25" /> [ The trp.proto file - if you want to write clients in any language supported by protocol buffers](/docs/ref/trpproto)
 
 ## GITHUB CODE SAMPLES
 

@@ -63,8 +63,9 @@ Process a packet or a batch of packets. You can do two things.
 
 ### Parameters
 
-| newpacket | An Packet object | if you wish to construct a new packet, use the `set_packet` method to set the packet bytes |
+| Name  | Object | Info |
 | --------- | ---------------- | ------------------------------------------------------------------------------------------ |
+| newpacket | An Packet object | if you wish to construct a new packet, use the `set_packet` method to set the packet bytes |
 | engine    | An Engine object | use this object to add metrics, resources, or alerts into the Trisul framework             |
 
 ### Return value
@@ -102,6 +103,7 @@ When the `step_alert` is called – you need to return
 :::info[NO BLOCK]
 
 Do not block in the step_alert function. This means you cant wait on some socket connection on an alert. Use Non Blocking socket or file reads.
+:::
 
 If you have an alert, return this table with the following fields
 

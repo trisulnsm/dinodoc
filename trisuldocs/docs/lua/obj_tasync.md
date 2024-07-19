@@ -18,7 +18,7 @@ To execute long running I/O tasks in a separate worker pool to prevent blocking 
 
 ---
 
-## Function `T.async.cat`
+### Function `T.async.cat`
 
 Appends file1 to file2.
 
@@ -44,7 +44,7 @@ T.async.cat("/tmpfs/k/file1.data", "/home/nsm/files/file123.dat")
 ..
 ```
 
-## Function `T.async.copy`
+### Function `T.async.copy`
 
 Copies file1 to file2.
 
@@ -83,15 +83,15 @@ None
 
 ---
 
-## Function `T.async.copybuffer`]
+### Function `T.async.copybuffer`
 
 Operations on writing [Buffer](/docs/lua/obj_buffer) contents to files.
 
-### Purpose
+## Purpose
 
 Write contents of a [buffer](/docs/lua/obj_buffer) object to disk.
 
-### Parameters
+## Parameters
 
 | Name                | Info                                                             | Description                                                                                                                                                            |
 | ------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -99,11 +99,11 @@ Write contents of a [buffer](/docs/lua/obj_buffer) object to disk.
 | filename            | `filename` string                                                | filename to write to. File is created if it doesnt exist                                                                                                               |
 | position (optional) | `seelpos` number                                                 | **Optional** At what position do you want to write the buffer. If this parameter is not specified the default mode of `copybuffer` is to append to the end of the file |
 
-### Return value
+## Return value
 
 None
 
-### Usage
+## Usage
 
 ```lua
 ..

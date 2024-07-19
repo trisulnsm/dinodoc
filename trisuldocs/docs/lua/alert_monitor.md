@@ -7,14 +7,14 @@ You can attach your LUA script to listen to various events in the alert stream
 ### Common Alert Groups GUIDs
 
 For quick reference here are the common Alert Group [GUIDs](/docs/lua/basics#on-guids) For a full list Login as Admin > profil0 > Alert Groups
-
-| \{9AFD8C08-07EB-47E0-BF05-28B4A7AE8DC9\} | IDS Alerts from Snort/Suricata via Unix Socket              |
-| ---------------------------------------- | ----------------------------------------------------------- |
-| \{5E97C3A3-41DB-4E34-92C3-87C904FAB83E\} | Blacklist alerts from Trisul Badfellas plugin               |
-| \{03AC6B72-FDB7-44C0-9B8C-7A1975C1C5BA\} | Threshold Crossing Alerts                                   |
-| \{18CE5961-38FF-4AEA-BAF8-2019F3A09063\} | Flow Tracker Alerts                                         |
-| \{F69C2462-ECEA-45B8-B1CB-F90342D37A4F\} | System Alerts Alerts regarding Trisul’s resources and state |
-| \{B5F1DECB-51D5-4395-B71B-6FA730B772D9\} | User Alerts General purpose alert group                     |
+|Guid|Info|
+|------------------------------------------|-------------------------------------------------------------|
+| `{9AFD8C08-07EB-47E0-BF05-28B4A7AE8DC9}` | IDS Alerts from Snort/Suricata via Unix Socket              |
+| `{5E97C3A3-41DB-4E34-92C3-87C904FAB83E}` | Blacklist alerts from Trisul Badfellas plugin               |
+| `{03AC6B72-FDB7-44C0-9B8C-7A1975C1C5BA}` | Threshold Crossing Alerts                                   |
+| `{18CE5961-38FF-4AEA-BAF8-2019F3A09063}` | Flow Tracker Alerts                                         |
+| `{F69C2462-ECEA-45B8-B1CB-F90342D37A4F}` | System Alerts Alerts regarding Trisul’s resources and state |
+| `{B5F1DECB-51D5-4395-B71B-6FA730B772D9}` | User Alerts General purpose alert group                     |
 
 Any other type of custom alert you create using the [alert_group](/docs/lua/alert_group) lua
 
@@ -61,7 +61,7 @@ The following objects are passed to functions in `alert_monitor`
 | status            | string                                                         | Alert status. Usually `ALARM` or `CLEAR` but can include other values you set via AlertStatus in the Input Filter                                                                                                                                                                                            |
 | ack_flag          | number                                                         | Acknowledge flag. 0=not ack, 1=ack                                                                                                                                                                                                                                                                           |
 
-### Example use of object
+## Example use of object
 
 ## Functions Reference
 

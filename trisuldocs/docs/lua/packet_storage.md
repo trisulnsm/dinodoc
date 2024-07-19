@@ -20,19 +20,11 @@ You need to supply code for one or more of the following functions.
 | ----------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
 | [filter_payload](/docs/lua/packet_storage#function-filter_payload) | function(engine, time, flow, dir, seekpos, buff) | called when first chunk of TCP data has been reassembled. Use this if you want to examine the headers and decide packet storage policy |
 
-## Table `packet_storage`
-
-You need to supply code for one or more of the following functions.
-
-| [filter](/docs/lua/packet_storage#tablepacket_storage)             | function(engine,timestamp,flowkey)               | called when a new flow starts. Examine the flow tuples and decide the packet (pcap) storage policy                                     |
-| ----------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| [filter_payload](/docs/lua/packet_storage#function-filter_payload) | function(engine, time, flow, dir, seekpos, buff) | called when first chunk of TCP data has been reassembled. Use this if you want to examine the headers and decide packet storage policy |
 
 ## LUA objects reference
 
 The following objects are specific to this feature.
 
-*none*
 
 ## LUA functions reference
 
