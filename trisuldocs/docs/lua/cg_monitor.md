@@ -1,6 +1,6 @@
 # Counter Group Monitor
 
-BACKEND SCRIPT
+BACKEND SCRIPT
 
 Monitor counter group activity.
 
@@ -10,29 +10,29 @@ Get called when metrics related to a counter group are computed and stored.
 
 [Counter Group Monitor skeleton script](https://github.com/trisulnsm/trisul-scripts/blob/master/lua/skeletons/cg_monitor.lua)
 
-## Table `cg_monitor`
+## Table `cg_monitor`
 
 The table consists the following
 
 | counter_guid                                                          | String or function returning string                                   | Counter Group to attach to for monitoring          |
 | --------------------------------------------------------------------- | --------------------------------------------------------------------- | -------------------------------------------------- |
-| [onbeginflush](/docs/lua/cg_monitor#functiononbeginflush)             | [engine](/docs/lua/obj_engine) , timestamp                            | Before starting to flush all metrics to db         |
+| [onbeginflush](/docs/lua/cg_monitor#functiononbeginflush)             | [engine](/docs/lua/obj_engine) , timestamp                            | Before starting to flush all metrics to db         |
 | [onflush](/docs/lua/cg_monitor#functiononflush)                       | [engine](/docs/lua/obj_engine), timestamp, key, arrayofmetrics        | Called for each key as they are being flushed      |
 | [onendflush](/docs/lua/cg_monitor#functiononendflush)                 | [engine](/docs/lua/obj_engine)                                        | After all keys have been flushed for this interval |
 | [onbegintopperflush](/docs/lua/cg_monitor#functiononbegintopperflush) | [engine](/docs/lua/obj_engine), timestamp, meter                      | Before flushing toppers for this meter             |
-| [ontopperflush](/docs/lua/cg_monitor#functionontopperflush)           | [engine](/docs/lua/obj_engine) , key, metric                          | Called for each topper item                        |
-| [onendtopperflush](/docs/lua/cg_monitor#functiononendtopperflush)     | [engine](/docs/lua/obj_engine) , meter                                | After topper flush                                 |
+| [ontopperflush](/docs/lua/cg_monitor#functionontopperflush)           | [engine](/docs/lua/obj_engine) , key, metric                          | Called for each topper item                        |
+| [onendtopperflush](/docs/lua/cg_monitor#functiononendtopperflush)     | [engine](/docs/lua/obj_engine) , meter                                | After topper flush                                 |
 | [onupdate](/docs/lua/cg_monitor#functiononupdate)                     | [engine](/docs/lua/obj_engine), timestamp, key, arrayofmetrics        | As each update happens (1sec resolution)           |
 | [onnewkey](/docs/lua/cg_monitor#functiononnewkey)                     | [engine](/docs/lua/obj_engine), timestamp, key                        | A new key was discovered within the stream window. |
-| [onmetronome](/docs/lua/cg_monitor#functiononmetronome)               | [engine](/docs/lua/obj_engine) , timestamp, tick_count, tick_interval | called every second ( Tick Interval)               |
+| [onmetronome](/docs/lua/cg_monitor#functiononmetronome)               | [engine](/docs/lua/obj_engine) , timestamp, tick_count, tick_interval | called every second ( Tick Interval)               |
 
 ## Functions Reference
 
-## Function `onbeginflush`
+## Function `onbeginflush`
 
 ### Purpose
 
-Before a counter group is flushed to the Trisul database on the Hub node. Trisul is a streaming analytics system. By default every 60 seconds the analytics are snapshotted and sent to the database node (hub). The *onbeginflush* function is therefore called every 60 seconds.
+Before a counter group is flushed to the Trisul database on the Hub node. Trisul is a streaming analytics system. By default every 60 seconds the analytics are snapshotted and sent to the database node (hub). The *onbeginflush* function is therefore called every 60 seconds.
 
 ### When called
 
@@ -52,9 +52,9 @@ onendflush(..)
 
 ### Parameters
 
-| engine    | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, counter items, or counter items into the Trisul framework |
+| engine    | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, counter items, or counter items into the Trisul framework |
 | --------- | ---------------------------------------- | ----------------------------------------------------------------------------------------- |
-| timestamp | Timestamp                                | Timestamps seconds `tv_sec`                                                               |
+| timestamp | Timestamp                                | Timestamps seconds `tv_sec`                                                               |
 
 ### Return value
 
@@ -68,13 +68,13 @@ Custom processing before each counter item is flushed. Perhaps write to your own
 
 ### When called
 
-Just before each counter item is flushed to the database. The maximum delay between getting a `onnewcounter item` and a corresponding `onflush(..)` for that counter item is 60 seconds.
+Just before each counter item is flushed to the database. The maximum delay between getting a `onnewcounter item` and a corresponding `onflush(..)` for that counter item is 60 seconds.
 
 ### Parameters
 
-| engine         | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, counter items, or counter items into the Trisul framework |
+| engine         | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, counter items, or counter items into the Trisul framework |
 | -------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------- |
-| timestamp      | Timestamp                                | Timestamps seconds `tv_sec`                                                               |
+| timestamp      | Timestamp                                | Timestamps seconds `tv_sec`                                                               |
 | key            | string                                   | the key identifying the counter item                                                      |
 | arrayofmetrics | array of numbers                         | array of metrics. array item 0 refers to meter 0 and so forth                             |
 
@@ -84,7 +84,7 @@ Ignored
 
 ### Example
 
-## Function `onflush`
+## Function `onflush`
 
 ### 
 
@@ -94,13 +94,13 @@ Custom processing before each counter item is flushed. Perhaps write to your own
 
 ### When called
 
-Just before each counter item is flushed to the database. The maximum delay between getting a `onnewcounter item` and a corresponding `onflush(..)` for that counter item is 60 seconds.
+Just before each counter item is flushed to the database. The maximum delay between getting a `onnewcounter item` and a corresponding `onflush(..)` for that counter item is 60 seconds.
 
 ### Parameters
 
-| engine         | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, counter items, or counter items into the Trisul framework |
+| engine         | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, counter items, or counter items into the Trisul framework |
 | -------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------- |
-| timestamp      | Timestamp                                | Timestamps seconds `tv_sec`                                                               |
+| timestamp      | Timestamp                                | Timestamps seconds `tv_sec`                                                               |
 | key            | string                                   | the key identifying the counter item                                                      |
 | arrayofmetrics | array of numbers                         | array of metrics. array item 0 refers to meter 0 and so forth                             |
 
@@ -110,7 +110,7 @@ Ignored
 
 ### Example
 
-## Function `onendflush`
+## Function `onendflush`
 
 ### Purpose
 
@@ -122,9 +122,9 @@ When all the counter items in this timeslice have been flushed to the database.
 
 ### Parameters
 
-| engine    | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, counter items, or counter items into the Trisul framework |
+| engine    | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, counter items, or counter items into the Trisul framework |
 | --------- | ---------------------------------------- | ----------------------------------------------------------------------------------------- |
-| timestamp | Timestamp                                | Timestamps seconds `tv_sec`                                                               |
+| timestamp | Timestamp                                | Timestamps seconds `tv_sec`                                                               |
 
 ### Return value
 
@@ -132,11 +132,11 @@ Ignored
 
 ### Example
 
-## Function `onbegintopperflush`
+## Function `onbegintopperflush`
 
 ### Purpose
 
-Topper snapshotting is a key streaming analytics step in Trisul. Just as raw metrics are tracked using the *onbeginflush*, *onflush*, and *onendflush* functions documented above, topper snapshot flushes can be handled by you using the *onbegintopperflush*, *ontopperflush*, *onendtopperflush* functions.
+Topper snapshotting is a key streaming analytics step in Trisul. Just as raw metrics are tracked using the *onbeginflush*, *onflush*, and *onendflush* functions documented above, topper snapshot flushes can be handled by you using the *onbegintopperflush*, *ontopperflush*, *onendtopperflush* functions.
 
 ### When called
 
@@ -162,9 +162,9 @@ onendtopperflush(..)
 
 ### Parameters
 
-| engine    | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, counter items, or counter items into the Trisul framework                                                                                         |
+| engine    | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, counter items, or counter items into the Trisul framework                                                                                         |
 | --------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| timestamp | Timestamp                                | Timestamps seconds `tv_sec`                                                                                                                                                       |
+| timestamp | Timestamp                                | Timestamps seconds `tv_sec`                                                                                                                                                       |
 | meter     | number                                   | The meter number representing the topper tracker set. For example : when “Top Hosts By Connections” are flushed – the meter will be 6 where 6 represents the metric “Connections” |
 
 ### Return value
@@ -173,7 +173,7 @@ Ignored
 
 ### Example
 
-## Function `ontopperflush`
+## Function `ontopperflush`
 
 ### Purpose
 
@@ -185,7 +185,7 @@ When each topper item is flushed.
 
 ### Parameters
 
-| engine | An [engine](/docs/lua/obj_engine)  object | use this object to add metrics, counter items, or counter items into the Trisul framework |
+| engine | An [engine](/docs/lua/obj_engine)  object | use this object to add metrics, counter items, or counter items into the Trisul framework |
 | ------ | ----------------------------------------- | ----------------------------------------------------------------------------------------- |
 | key    | string                                    | The topper item                                                                           |
 | metric | number                                    | The metric for the key and the meter. Remember the meter is sent in onbegintopperflush    |
@@ -196,7 +196,7 @@ Ignored
 
 ### Example
 
-## Function `onendtopperflush`
+## Function `onendtopperflush`
 
 ### Purpose
 
@@ -208,7 +208,7 @@ When all the topper items for a particular metric have been flushed
 
 ### Parameters
 
-| engine | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, counter items, or counter items into the Trisul framework |
+| engine | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, counter items, or counter items into the Trisul framework |
 | ------ | ---------------------------------------- | ----------------------------------------------------------------------------------------- |
 | meter  | number                                   | The meter number                                                                          |
 
@@ -218,10 +218,10 @@ Ignored
 
 ### Example
 
-## Function `onupdate`
+## Function `onupdate`
 
 :::info[**High frequency function**  ]
-For busy networks this can result in thousands of updates every second. Keep your LUA function `onupdate(..)` efficient and avoid I/O or blocking.
+For busy networks this can result in thousands of updates every second. Keep your LUA function `onupdate(..)` efficient and avoid I/O or blocking.
 
 :::
 
@@ -235,9 +235,9 @@ A streaming update to a counter item. This will update a metric value in real ti
 
 ### Parameters
 
-| engine         | An [engine](/docs/lua/obj_engine) object | engine use ths to add your results back into the Trisul framework |
+| engine         | An [engine](/docs/lua/obj_engine) object | engine use ths to add your results back into the Trisul framework |
 | -------------- | ---------------------------------------- | ----------------------------------------------------------------- |
-| timestamp      | Timestamp                                | Timestamps seconds `tv_sec`                                       |
+| timestamp      | Timestamp                                | Timestamps seconds `tv_sec`                                       |
 | key            | string                                   | the key identifying the counter item                              |
 | arrayofmetrics | array of numbers                         | array of metrics. array item 0 refers to meter 0 and so forth     |
 
@@ -247,7 +247,7 @@ Ignored
 
 ### Example
 
-## Function `onnewkey`
+## Function `onnewkey`
 
 ### Purpose
 
@@ -259,9 +259,9 @@ When “new” keys are seen by Trisul in this counter group. Trisul uses a Bloo
 
 ### Parameters
 
-| engine    | An [engine](/docs/lua/obj_engine) object | engine use ths to add your results back into the Trisul framework |
+| engine    | An [engine](/docs/lua/obj_engine) object | engine use ths to add your results back into the Trisul framework |
 | --------- | ---------------------------------------- | ----------------------------------------------------------------- |
-| timestamp | Timestamp                                | Timestamps seconds `tv_sec`                                       |
+| timestamp | Timestamp                                | Timestamps seconds `tv_sec`                                       |
 | key       | string                                   | the key identifying the counter item                              |
 
 ### Return value
@@ -270,7 +270,7 @@ Ignored
 
 ### Example
 
-## Function `onmetronome`
+## Function `onmetronome`
 
 ### Purpose
 
@@ -282,7 +282,7 @@ If you define a onmetronome(..) function you will be plugged into the Trisul met
 
 ### Parameters
 
-| engine        | An [engine](/docs/lua/obj_engine)  object | use this object to add metrics, resources, or alerts into the Trisul framework |
+| engine        | An [engine](/docs/lua/obj_engine)  object | use this object to add metrics, resources, or alerts into the Trisul framework |
 | ------------- | ----------------------------------------- | ------------------------------------------------------------------------------ |
 | timestamp     | Number                                    | Current timestamp (tv_sec epoch seconds)                                       |
 | tick_count    | Number                                    | An incremeting tick counter                                                    |

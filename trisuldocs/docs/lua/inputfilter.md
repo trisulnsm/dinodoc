@@ -2,13 +2,13 @@
 
 Custom data acquisition for driving the Trisul pipelines.
 
-1. read packet data from non PCAP sources
+1. read packet data from non PCAP sources
 2. process “flow like” data from arbitrary formats
 3. plug into custom alert platforms
 
 ### Running these type of scripts
 
-Unlike other LUA scripts the `input_filter` script needs to be run on the command line because it drives the Trisul-Probe.
+Unlike other LUA scripts the `input_filter` script needs to be run on the command line because it drives the Trisul-Probe.
 
 ```lua
 trisul -demon /usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml \
@@ -21,7 +21,7 @@ trisul -demon /usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeCon
 
 ### Arguments in T.args
 
-All input filter scripts can access the global variable `T.args` this is the parameter that is passed using `.. -args args123` while running the Trisul Probe executable.
+All input filter scripts can access the global variable `T.args` this is the parameter that is passed using `.. -args args123` while running the Trisul Probe executable.
 
 ```lua
 inputfilter = {
@@ -46,7 +46,7 @@ inputfilter = {
 
 ## LUA functions reference
 
-The *step* functions are called by Trisul framework at the appropriate time.
+The *step* functions are called by Trisul framework at the appropriate time.
 
 ## Function step
 
@@ -65,13 +65,13 @@ Process a packet or a batch of packets. You can do two things.
 
 | Name  | Object | Info |
 | --------- | ---------------- | ------------------------------------------------------------------------------------------ |
-| newpacket | An Packet object | if you wish to construct a new packet, use the `set_packet` method to set the packet bytes |
+| newpacket | An Packet object | if you wish to construct a new packet, use the `set_packet` method to set the packet bytes |
 | engine    | An Engine object | use this object to add metrics, resources, or alerts into the Trisul framework             |
 
 ### Return value
 
-Return `true` if you want to be called again  
-Return `false` if you have EOF.
+Return `true` if you want to be called again  
+Return `false` if you have EOF.
 
 ### Example
 
@@ -93,12 +93,12 @@ No parameters
 
 ### Return value – alert
 
-The Trisul framework will call `step_alert` at appropriate times making sure it wont starve any of the sources.
+The Trisul framework will call `step_alert` at appropriate times making sure it wont starve any of the sources.
 
-When the `step_alert` is called – you need to return
+When the `step_alert` is called – you need to return
 
-1. **nil** – if you dont have any alert to process.
-2. **the following table** – if you do have an alert.
+1. **nil** – if you dont have any alert to process.
+2. **the following table** – if you do have an alert.
 
 :::info[NO BLOCK]
 
@@ -109,7 +109,7 @@ If you have an alert, return this table with the following fields
 
 | field              | type        | mandatory/optional  | description                                                                                                                                                          |
 | ------------------ | ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **AlertGroupGUID** | guid string | **mandatory field** | A GUID that specifies the type of alert                                                                                                                              |
+| **AlertGroupGUID** | guid string | **mandatory field** | A GUID that specifies the type of alert                                                                                                                              |
 | **TimestampSecs**  | numeric     | **mandatory field** | epoch secs                                                                                                                                                           |
 | TimestampUsecs     | numeric     | default 0           | epoch usecs                                                                                                                                                          |
 | **SigIDKey**       | string      | **mandatory field** | SignatureID or someother type of key that uniquely identifies the type of alert                                                                                      |
@@ -117,17 +117,17 @@ If you have an alert, return this table with the following fields
 | SensorID           | numeric     | default 0           | Which sensor                                                                                                                                                         |
 | ProtocolFamily     | numeric     | default 0           | Protocol family 0 = IPv4 or 1=IPv6 – we dont actually use this to interpret the SourceIP and DestIP fields, just pass it onto the storage for correlation with snort |
 | SourceIP           | string      | default “0.0.0.0”   | The IPv4 or IPv6 address. Hostnames are not allowed                                                                                                                  |
-| SourcePort         | string      | default “0”         | port number or any string identifying non TCP/UDP transport eg. `igmp` or `icmp01` to denote ICMP message type 1                                                     |
+| SourcePort         | string      | default “0”         | port number or any string identifying non TCP/UDP transport eg. `igmp` or `icmp01` to denote ICMP message type 1                                                     |
 | DestIP             | string      | default “0.0.0.0”   | IPv4 or v6 address string                                                                                                                                            |
 | DestPort           | string      | default “0”         | See Source Port                                                                                                                                                      |
-| Protocol           | numeric     | default 0           | IP Protocol number. “6” for TCP, “17” for UDP etc                                                                                                                    |
-| SigGenerator       | numeric     | default 0           | snort SigGenerator, we dont process just send it to backend storage for correlation with SIEM                                                                        |
+| Protocol           | numeric     | default 0           | IP Protocol number. “6” for TCP, “17” for UDP etc                                                                                                                    |
+| SigGenerator       | numeric     | default 0           | snort SigGenerator, we dont process just send it to backend storage for correlation with SIEM                                                                        |
 | SigRev             | numeric     | default 0           | Signature revision                                                                                                                                                   |
-| ClassificationKey  | string      | default “c-xx”      | The type of classification. CID in Snort parlance                                                                                                                    |
+| ClassificationKey  | string      | default “c-xx”      | The type of classification. CID in Snort parlance                                                                                                                    |
 | Priority           | numeric     | default 1           | Alert Priority (1 = Crit, 2=Maj, 3=Minor)                                                                                                                            |
 | EventID            | numeric     | default 0           | Snort compatiable used for correlation only                                                                                                                          |
 | AcknowledgeFlag    | numeric     | default 0           | 0=Unacknowledged Alert, 1=Acknowledged                                                                                                                               |
 | AlertDetails       | string      | default ""          | Any extra text you want to append to the alert (searchable via Trisul)                                                                                               |
-| AlertStatus        | string      | default “ALARM”     | ALARM or CLEAR. Actually you can set it to any string that is meaningful to your particular alert group                                                              |
+| AlertStatus        | string      | default “ALARM”     | ALARM or CLEAR. Actually you can set it to any string that is meaningful to your particular alert group                                                              |
 
 #### Usage

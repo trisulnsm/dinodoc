@@ -1,14 +1,14 @@
 # Asynchronous execution intro
 
-This section describes the concepts behind async execution within Trisul LUA scripting framework. Please refer to [`T.async`](/docs/lua/obj_tasync) documentation for function reference. This section explains the motivation and design of this execution model.
+This section describes the concepts behind async execution within Trisul LUA scripting framework. Please refer to [`T.async`](/docs/lua/obj_tasync) documentation for function reference. This section explains the motivation and design of this execution model.
 
-### Table `T.async`
+### Table `T.async`
 
-The [T.async](/docs/lua/obj_tasync) interface provides methods to help you do long running I/O tasks that do not block the streaming pipeline. The tasks are executed by a separate worker thread pool and when the results are ready, they re-enter the pipeline path. The number of worker threads is by default 1 but can be increased by the [`request_async_workers` parameter](/docs/lua/basics#structure-of-a-lua-script) at the plug-in level.
+The [T.async](/docs/lua/obj_tasync) interface provides methods to help you do long running I/O tasks that do not block the streaming pipeline. The tasks are executed by a separate worker thread pool and when the results are ready, they re-enter the pipeline path. The number of worker threads is by default 1 but can be increased by the [`request_async_workers` parameter](/docs/lua/basics#structure-of-a-lua-script) at the plug-in level.
 
 ## Purpose of T.async
 
-Recall that the Trisul LUA api supports ‘frontend’ (fast path) and ‘backend’ (slow path) scripts.
+Recall that the Trisul LUA api supports ‘frontend’ (fast path) and ‘backend’ (slow path) scripts.
 
 The T.async methods are designed for use in scripts that are involve some I/O that can block the streaming pipeline.
 
@@ -21,14 +21,14 @@ Using the methods in T.async you can perform these tasks out of the main pipelin
 
 ### Number of async worker threads
 
-Use the global parameter [TrisulPlugin.request_async_workers](/docs/lua/basics#structure-of-a-lua-script) to change the default number of worker threads (1).
+Use the global parameter [TrisulPlugin.request_async_workers](/docs/lua/basics#structure-of-a-lua-script) to change the default number of worker threads (1).
 
 ## Usage
 
 This small snippet shows the use case
 
 :::note[Use case]
-Copy the file pointed to by `path` into `/tmp/xyz.txt` file
+Copy the file pointed to by `path` into `/tmp/xyz.txt` file
 
 :::
 
@@ -46,11 +46,11 @@ There are two ways to approach this
 os.execute( "cp "..path.." /tmp/xyz.txt")")`
 ```
 
-This would work, but the problem is while the `os.execute(..)` is copying the file, the packet pipeline is blocked. This may result in packet loss. We therefore recommend that whenever you do I/O you use any of the T.async methods.
+This would work, but the problem is while the `os.execute(..)` is copying the file, the packet pipeline is blocked. This may result in packet loss. We therefore recommend that whenever you do I/O you use any of the T.async methods.
 
 ### Method 2 : Copying a file async (does not block fast path)
 
-This method uses the `T.async:copy` function to do this async
+This method uses the `T.async:copy` function to do this async
 
 ```lua
 -- save path to /tmp/xyz
@@ -82,9 +82,9 @@ T.async:schedule(
 
 ### Purpose
 
-Run arbirary LUA code in async manner
+Run arbirary LUA code in async manner
 
-[T.async methods](/docs/lua/obj_tasync) `cp` `cat` accomplish very specific tasks. Using the `T.async:schedule` method you can run any arbitrary LUA code off the main packet pipeline.
+[T.async methods](/docs/lua/obj_tasync) `cp` `cat` accomplish very specific tasks. Using the `T.async:schedule` method you can run any arbitrary LUA code off the main packet pipeline.
 
 ### Methods
 
@@ -93,8 +93,8 @@ T.async:schedule expects a table with the following fields
 | Name      | In                                                                                   | Description                                                                                                                                                                                                                                                                                                           |
 | --------- | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | data      | string                                                                               | a string that is passed on to the onexecute function below                                                                                                                                                                                                                                                            |
-| onexecute | function( in_data)                                                                   | **called on separate worker thread** A function that accepts the `data` string specified. This function executes in a separate thread/task from the packet pipeline. You do your processing and optionally return a ‘response’ string. See rules below                                                                |
-| onresult  | function([engine](/docs/lua/obj_engine), in_data, out_data) | **called on main Trisul thread** if your script in `onexecute` on the separate thread returns string, Trisul will re-enter the fast path and call the `onresult` function with the result string. You can then update the `engine` parameter by adding metrics, generating alerts, or interact with Trisul in any way |
+| onexecute | function( in_data)                                                                   | **called on separate worker thread** A function that accepts the `data` string specified. This function executes in a separate thread/task from the packet pipeline. You do your processing and optionally return a ‘response’ string. See rules below                                                                |
+| onresult  | function([engine](/docs/lua/obj_engine), in_data, out_data) | **called on main Trisul thread** if your script in `onexecute` on the separate thread returns string, Trisul will re-enter the fast path and call the `onresult` function with the result string. You can then update the `engine` parameter by adding metrics, generating alerts, or interact with Trisul in any way |
 
 #### Skeleton async execution
 
