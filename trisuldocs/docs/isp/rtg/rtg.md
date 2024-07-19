@@ -111,9 +111,9 @@ Click on the Menu icon to download the data in other desirable formats including
 
 Click on the Home icon to reset from the zoom selection if you have panned in for detailed view.
 
-Click on the *View Yearly Chart* button
+Click on the *View Yearly Chart* button and the following window will open up for the selected key.
 
-Screesnshot
+![](images/mrtg_yearlychart.png)
 
 This will give you a granular view of daily,weekly,monthly and yearly charts which can be monitored in a more detailed time frame .
 
