@@ -6,13 +6,13 @@
 
 :::
 
-Trisul has the ability to extract content from network traffic. Typical content include files transferred using HTTP and other protocols like FTP, SMTP, and others. Trisul allows you to control the entire file extraction process using LUA scripts.
+Trisul has the ability to extract content from network traffic. Typical content include files transferred using HTTP and other protocols like FTP, SMTP, and others. Trisul allows you to control the entire file extraction process using LUA scripts.
 
 ## Structure
 
 **[File extraction skeleton script ](https://github.com/trisulnsm/trisul-scripts/blob/master/lua/skeletons/filex_monitor.lua)**
 
-## Table `filex_monitor`
+## Table `filex_monitor`
 
 You need to supply code for one or more of the following functions.
 
@@ -24,14 +24,14 @@ You need to supply code for one or more of the following functions.
 | [onfile_http](/docs/lua/fileextract#function-onfile_http)         | function ( engine, timestamp, flowkey, path, req_header, resp_header, length, is_partial )      | File is available in ramfs, use the headers to decide how to handle it |
 | [onterminateflow](/docs/lua/fileextract#function-onterminateflow) | function(engine, timestamp, flowkey)                                                            | Called when a flow is terminated                                       |
 
-## LUA functions reference
+## LUA functions reference
 
 The file extraction architecture in Trisul is the following :
 
 - You can write lua functions which will be called during various stages of file extraction
 - If a function is not defined, there is no impact
-- You can use the `onpayload_` functions to support streaming bytes
-- At the end the file is written in a `/tmpfs` a memory file system.
+- You can use the `onpayload_` functions to support streaming bytes
+- At the end the file is written in a `/tmpfs` a memory file system.
 - You can ignore the file or copy it over using our Async interface to a disk based file system.
 
 The following section describes each of the functions.
@@ -48,15 +48,15 @@ When a new flow is first seen but no reassembly has started yet
 
 ### Parameters
 
-| engine    | An [Engine](/docs/lua/obj_engine) object | use this object to add metrics, resources, or alerts into the Trisul framework |
+| engine    | An [Engine](/docs/lua/obj_engine) object | use this object to add metrics, resources, or alerts into the Trisul framework |
 | --------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | timestamp | number                                                            | Timestamp seconds when the first packet in the flow was seen                   |
-| flow      | A [FlowID](/docs/lua/obj_flowid) object  | use this to determine IPs and Ports involved in the flow                       |
+| flow      | A [FlowID](/docs/lua/obj_flowid) object  | use this to determine IPs and Ports involved in the flow                       |
 
 ### Return value
 
-Return `true` if you want files to be extracted for this flow  
-Return `false` if you are not interested in this flow.
+Return `true` if you want files to be extracted for this flow  
+Return `false` if you are not interested in this flow.
 
 ```lua
 filter_flow = function(engine, timestamp, flow )
@@ -74,7 +74,7 @@ filter_flow = function(engine, timestamp, flow )
 
 ### Purpose
 
-Control if you want to reassemble certain types of content or not. You are given access to HTTP request and response headers and then you decide by looking at the header fields if you want the content.
+Control if you want to reassemble certain types of content or not. You are given access to HTTP request and response headers and then you decide by looking at the header fields if you want the content.
 
 ### When called
 
@@ -84,11 +84,11 @@ When each heade, request or response is available.
 
 `filter = function( engine, timestamp, flowkey, header)`
 
-| engine    | An [Engine](/docs/lua/obj_engine) object         | use this object to add metrics, resources, or alerts into the Trisul framework                      |
+| engine    | An [Engine](/docs/lua/obj_engine) object         | use this object to add metrics, resources, or alerts into the Trisul framework                      |
 | --------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | timestamp | number                                                                    | Timestamp seconds when the first packet in the flow was seen                                        |
-| flowkey   | A [FlowID](/docs/lua/obj_flowid) object          | use this to determine IPs and Ports involved in the flow                                            |
-| header    | A [HTTPHeader](/docs/lua/obj_httpheader) object | use this object to query HTTP header fields like Content-Type to decide if you want the file or not |
+| flowkey   | A [FlowID](/docs/lua/obj_flowid) object          | use this to determine IPs and Ports involved in the flow                                            |
+| header    | A [HTTPHeader](/docs/lua/obj_httpheader) object | use this object to query HTTP header fields like Content-Type to decide if you want the file or not |
 
 #### Usage
 
@@ -96,20 +96,20 @@ When each heade, request or response is available.
 
 ### Purpose
 
-If you want streaming access to raw reassembled TCP payload.
+If you want streaming access to raw reassembled TCP payload.
 
 ### When called
 
-Called when a new chunk of reassembled data is available on a TCP connection.  
-The difference between this function and `onpayload_http` is that `onpayload_raw` works at the TCP stream level. So you will get HTTP headers as well as raw HTTP layer data. The raw HTTP data can be chunked and compressed.
+Called when a new chunk of reassembled data is available on a TCP connection.  
+The difference between this function and `onpayload_http` is that `onpayload_raw` works at the TCP stream level. So you will get HTTP headers as well as raw HTTP layer data. The raw HTTP data can be chunked and compressed.
 
 ### Parameters
 
-| engine    | An [Engine](/docs/lua/obj_engine) object    | use this object to add metrics, resources, or alerts into the Trisul framework          |
+| engine    | An [Engine](/docs/lua/obj_engine) object    | use this object to add metrics, resources, or alerts into the Trisul framework          |
 | --------- | -------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | timestamp | number                                                               | Timestamp seconds when the first packet in the flow was seen                            |
-| flowkey   | A [FlowID](/docs/lua/obj_flowid) object | use this to determine IPs and Ports involved in the flow                                |
-| direction | number                                                               | 0 = OUT payload in client>server direction (same as the original SYN) 1 = server>client |
+| flowkey   | A [FlowID](/docs/lua/obj_flowid) object | use this to determine IPs and Ports involved in the flow                                |
+| direction | number                                                               | 0 = OUT payload in client>server direction (same as the original SYN) 1 = server>client |
 | seekpos   | number                                                               | Seek position byte position from the beginning of the stream                            |
 | buffer    | A Buffer object                                                      | represents the reassembled bytes                                                        |
 
@@ -129,11 +129,11 @@ end,
 
 ### Purpose
 
-Provide streaming access to reassembled and reconstructed HTTP content.
+Provide streaming access to reassembled and reconstructed HTTP content.
 
 ### When called
 
-When each chunk of HTTP content is available. You will just be able to concatenate (cat) the streaming payloads to the target file and build the full content. If you are interested in complete files, write the `onfile_http` function. This method is called with a zero length buffer to indicate end of the content.
+When each chunk of HTTP content is available. You will just be able to concatenate (cat) the streaming payloads to the target file and build the full content. If you are interested in complete files, write the `onfile_http` function. This method is called with a zero length buffer to indicate end of the content.
 
 The sequence of a typical large file is
 
@@ -148,16 +148,16 @@ onpayload_http(.. 400, buffer(length=0) ) -- end of stream
 
 ### Parameters
 
-| engine          | An [Engine](/docs/lua/obj_engine) object         | use this object to add metrics, resources, or alerts into the Trisul framework                                                                                                                                            |
+| engine          | An [Engine](/docs/lua/obj_engine) object         | use this object to add metrics, resources, or alerts into the Trisul framework                                                                                                                                            |
 | --------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | timestamp       | number                                                                    | Timestamp seconds when the first packet in the flow was seen                                                                                                                                                              |
-| flowkey         | A [FlowID](/docs/lua/obj_flowid) object          | use this to determine IPs and Ports involved in the flow                                                                                                                                                                  |
-| path            | uniquely identifies a stream                                              | You can use this path and concatenate payloads. `path` includes the ‘ramfs’ directory along with a synthesized file name for the content, you can use a regex to split the filename from the directory. see example below |
-| request_header  | A [HTTPHeader](/docs/lua/obj_httpheader) object | the request HTTP Header                                                                                                                                                                                                   |
-| response_header | A [HTTPHeader](/docs/lua/obj_httpheader)        | the response HTTP header                                                                                                                                                                                                  |
-| direction       | number                                                                    | 0 = OUT payload in client>server direction (same as the original SYN) 1 = server>client                                                                                                                                   |
+| flowkey         | A [FlowID](/docs/lua/obj_flowid) object          | use this to determine IPs and Ports involved in the flow                                                                                                                                                                  |
+| path            | uniquely identifies a stream                                              | You can use this path and concatenate payloads. `path` includes the ‘ramfs’ directory along with a synthesized file name for the content, you can use a regex to split the filename from the directory. see example below |
+| request_header  | A [HTTPHeader](/docs/lua/obj_httpheader) object | the request HTTP Header                                                                                                                                                                                                   |
+| response_header | A [HTTPHeader](/docs/lua/obj_httpheader)        | the response HTTP header                                                                                                                                                                                                  |
+| direction       | number                                                                    | 0 = OUT payload in client>server direction (same as the original SYN) 1 = server>client                                                                                                                                   |
 | seekpos         | number                                                                    | Seek position byte position from the beginning of the stream                                                                                                                                                              |
-| buffer          | A [Buffer](/docs/lua/obj_buffer) object          | represents the reassembled bytes. A zero length buffer indicates end of stream                                                                                                                                            |
+| buffer          | A [Buffer](/docs/lua/obj_buffer) object          | represents the reassembled bytes. A zero length buffer indicates end of stream                                                                                                                                            |
 
 ### Return value
 
@@ -183,14 +183,14 @@ The following snippet receives payloads and concatenates in an file.
 
 Pay attention to a couple of things we are doing here.
 
-1. **regex path** : The path names contain the full path of the `/ramfs` directory. So we use a regex to pick out the filename path. We then use that filename on a normal disk filesystem – in this example /tmp/kk
-2. **async copy** : We are using `T.async:copybuffer(..)` We could have just copied it directly from here. But because these LUA methods are called in the “fast path” of packets, we typically do the IO in the background. See `T.async` for methods.
+1. **regex path** : The path names contain the full path of the `/ramfs` directory. So we use a regex to pick out the filename path. We then use that filename on a normal disk filesystem – in this example /tmp/kk
+2. **async copy** : We are using `T.async:copybuffer(..)` We could have just copied it directly from here. But because these LUA methods are called in the “fast path” of packets, we typically do the IO in the background. See `T.async` for methods.
 
 ## Function onfile_http
 
 ### Purpose
 
-A fully reconstructed file is available in the `ramfs` directory. You write LUA code to do what you want with it. Usually you would copy it out of ramfs onto a real disk for further processing.
+A fully reconstructed file is available in the `ramfs` directory. You write LUA code to do what you want with it. Usually you would copy it out of ramfs onto a real disk for further processing.
 
 ### When called
 
@@ -200,15 +200,15 @@ When a file is available on the ramfs file system.
 
 `onfile_http = function( engine, timestamp, flowkey, path, request_header, resp_header, length, is_chunk )`
 
-| engine          | An [Engine](/docs/lua/obj_engine) object          | use this object to add metrics, resources, or alerts into the Trisul framework                                                                                                                                                                                                                                                                                                                                  |
+| engine          | An [Engine](/docs/lua/obj_engine) object          | use this object to add metrics, resources, or alerts into the Trisul framework                                                                                                                                                                                                                                                                                                                                  |
 | --------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | timestamp       | number                                                                    | Timestamp seconds. Seconds since Jan 1 1970                                                                                                                                                                                                                                                                                                                                                                     |
-| flowkey         | A [FlowID](/docs/lua/obj_flowid) object         | use this to determine IPs and Ports involved in the flow                                                                                                                                                                                                                                                                                                                                                        |
-| path            | String                                                                    | Path on ramfs where the file is available. The path is constructed from the requested URI, hostname, and a unique ID. You can copy this off /ramfs to any filename you want just like a regular linux file. If the path is a partial file (see “Chunk” below) the path of the form `{dirname}/{filename}.[offset].part`. You have to use a regex to extract the filename. See the example in the usage section. |
-| request_header  | A [HTTPHeader](/docs/lua/obj_httpheader) object | the request HTTP Header                                                                                                                                                                                                                                                                                                                                                                                         |
-| response_header | A [HTTPHeader](/docs/lua/obj_httpheader) object | the response HTTP header                                                                                                                                                                                                                                                                                                                                                                                        |
+| flowkey         | A [FlowID](/docs/lua/obj_flowid) object         | use this to determine IPs and Ports involved in the flow                                                                                                                                                                                                                                                                                                                                                        |
+| path            | String                                                                    | Path on ramfs where the file is available. The path is constructed from the requested URI, hostname, and a unique ID. You can copy this off /ramfs to any filename you want just like a regular linux file. If the path is a partial file (see “Chunk” below) the path of the form `{dirname}/{filename}.[offset].part`. You have to use a regex to extract the filename. See the example in the usage section. |
+| request_header  | A [HTTPHeader](/docs/lua/obj_httpheader) object | the request HTTP Header                                                                                                                                                                                                                                                                                                                                                                                         |
+| response_header | A [HTTPHeader](/docs/lua/obj_httpheader) object | the response HTTP header                                                                                                                                                                                                                                                                                                                                                                                        |
 | length          | Number                                                                    | Size of the file                                                                                                                                                                                                                                                                                                                                                                                                |
-| is_chunk        | Boolean                                                                   | Whether the file is a ‘chunk’. See *Usage*                                                                                                                                                                                                                                                                                                                                                                      |
+| is_chunk        | Boolean                                                                   | Whether the file is a ‘chunk’. See *Usage*                                                                                                                                                                                                                                                                                                                                                                      |
 
 ### Return value
 
@@ -216,7 +216,7 @@ Ignored
 
 ### Usage
 
-The following code is a simple copy of the file on `/ramfs` and pulls it out to `/home/kevin/contents`
+The following code is a simple copy of the file on `/ramfs` and pulls it out to `/home/kevin/contents`
 
 ```lua
 -- save all content to /home/kevin/contents
@@ -238,9 +238,9 @@ The following code is a simple copy of the file on `/ramfs` and pulls it out t
 
 #### Handling very large files
 
-The most typical uses of file extraction are to catch malware, exploit kits, compromised PDF, and binaries and the like. These files are typically small less than 10MB or so. If you wish to extract really large files, then this section is for you.
+The most typical uses of file extraction are to catch malware, exploit kits, compromised PDF, and binaries and the like. These files are typically small less than 10MB or so. If you wish to extract really large files, then this section is for you.
 
-Since Trisul dumps all the content in a `ramfs` partition which is backed by physical memory, there are limits on how much you can store there. Very large files or long running files (like streaming video) can fill up the partition and cause the file extraction to stop. By default Trisul chunks files into 5MB chunks and hands them to your LUA. You can then discard, do some scanning, or append to the target file on a disk partition.
+Since Trisul dumps all the content in a `ramfs` partition which is backed by physical memory, there are limits on how much you can store there. Very large files or long running files (like streaming video) can fill up the partition and cause the file extraction to stop. By default Trisul chunks files into 5MB chunks and hands them to your LUA. You can then discard, do some scanning, or append to the target file on a disk partition.
 
 The following example handles both simple files and chunks.
 
@@ -275,14 +275,14 @@ Called when a flow is terminated.
 
 ### When called
 
-When a TCP flow is terminated. You can use this to clean up any state you maintain for HTTP objects that were transferred on this flow.
+When a TCP flow is terminated. You can use this to clean up any state you maintain for HTTP objects that were transferred on this flow.
 
 ### Parameters
 
-| engine    | An [Engine](/docs/lua/obj_engine) object | use this object to add metrics, resources, or alerts into the Trisul framework |
+| engine    | An [Engine](/docs/lua/obj_engine) object | use this object to add metrics, resources, or alerts into the Trisul framework |
 | --------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | timestamp | number                                                           | Timestamp seconds. seconds since epoch Jan 1 1970                              |
-| flowkey   | A [FlowID](/docs/lua/obj_flowid) object | use this to determine IPs and Ports involved in the flow                       |
+| flowkey   | A [FlowID](/docs/lua/obj_flowid) object | use this to determine IPs and Ports involved in the flow                       |
 
 ### Return value
 

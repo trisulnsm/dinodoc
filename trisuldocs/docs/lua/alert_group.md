@@ -2,17 +2,17 @@
 
 Create a new Alert Group.
 
-You can extend Trisul’s functionality by creating your own Alert Groups in addition to Trisul built in ones. You can then use the LUA API to generate alerts for that group. They will be integrated into the user interface and the metrics backend seamlessly.
+You can extend Trisul’s functionality by creating your own Alert Groups in addition to Trisul built in ones. You can then use the LUA API to generate alerts for that group. They will be integrated into the user interface and the metrics backend seamlessly.
 
 ## Structure
 
 **[New Alert Group skeleton script]([trisul-scripts/lua/skeletons/new_alert_group.lua at master · trisulnsm/trisul-scripts · GitHub](https://github.com/trisulnsm/trisul-scripts/blob/master/lua/skeletons/new_alert_group.lua))**
 
-## Table `alertgroup`
+### Table `alertgroup`
 
-The table alertgroup has a single section called control that assigns a GUID to the group.
+The table alertgroup has a single section called control that assigns a GUID to the group.
 
-1. `control` — the GUID, name, and description
+1. `control` — the GUID, name, and description
    
    ```lua
    alertgroup = {
@@ -29,13 +29,13 @@ The table alertgroup has a single section called control that assigns a GUID t
 
 | name                                                                    | description                                    |
 | ----------------------------------------------------------------------- | ---------------------------------------------- |
-| table [control](/docs/lua/alert_group#tablecontrol ) | assigns a name and guid to the new alert group |
+| table [control](/docs/lua/alert_group#table-control ) | assigns a name and guid to the new alert group |
 
-## Table `control`
+### Table `control`
 
-The control table assigns a unique GUID to the new alert group.
+The control table assigns a unique GUID to the new alert group.
 
-| guid        | string | A [guid](/docs/ref/guid) that identifies the group. |
+| guid        | string | A [guid](/docs/ref/guid) that identifies the group. |
 | ----------- | ------ | --------------------------------------------------- |
 | name        | string | Name of the alert group. Keep it short < 15 chars   |
 | description | string |                                                     |

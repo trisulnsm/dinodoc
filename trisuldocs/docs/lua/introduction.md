@@ -18,14 +18,14 @@ Since Trisul Network Analytics is a streaming analyzer. You get a single pass ov
 
 ## List of backend script types
 
-The following script types are available – within each script type you listen to one streaming ‘topic’ or subset. If you want to monitor metrics for the *Hosts counter group* you would choose the *cg_monitor* script type and within that script listen to the *Hosts* stream.
+The following script types are available – within each script type you listen to one streaming ‘topic’ or subset. If you want to monitor metrics for the *Hosts counter group* you would choose the *cg_monitor* script type and within that script listen to the *Hosts* stream.
 
 | Name                                                                          | Called when                  | Notes                                                                           |
 | ----------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------- |
-| [engine_monitor](/docs/lua/engine_monitor)                  | Periodically                 | on a 1 minute timer you can support SNMP and other data input tools into Trisul |
+| [engine_monitor](/docs/lua/engine_monitor)                  | Periodically                 | on a 1 minute timer you can support SNMP and other data input tools into Trisul |
 | [cg_monitor](/docs/lua/cg_monitor) | Counter group metrics events | Use for traffic, top-N, cardinality analytics                                   |
 | [sg_monitor](/docs/lua/sg_monitor)                 | Flow metrics                 | On new flow, when flow is flushed,                                              |
 | [alert_monitor](/docs/lua/alert_monitor)                    | Alert stream                 | Process alerts in Lua                                                           |
-| [resource_monitor](/docs/lua/resource_monitor)              | Resource stream              | HTTP requests, DNS events, TLS, File hashes stream                              |
-| [fts_monitor](/docs/lua/fts_monitor)                        | Full Text Search docs        | Documents HTTP headers, full TLS Certs                                          |
+| [resource_monitor](/docs/lua/resource_monitor)              | Resource stream              | HTTP requests, DNS events, TLS, File hashes stream                              |
+| [fts_monitor](/docs/lua/fts_monitor)                        | Full Text Search docs        | Documents HTTP headers, full TLS Certs                                          |
 | [flow_tracker](/docs/lua/flow_tracker)                      | Flow tracker                 | Create your own custom flow tracker – top-K flow snapshots                      |

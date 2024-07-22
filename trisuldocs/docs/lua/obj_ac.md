@@ -1,12 +1,12 @@
 # Object AC (Aho-Corasick)
 
-An Aho-Corasick multi pattern matcher created with [`T.ac( _pattern_array_ )`](https://trisul.org/docs/lua/obj_ac.html#t.ac)
+An Aho-Corasick multi pattern matcher created with [`T.ac( _pattern_array_ )`](/docs/lua/obj_ac)
 
 This is a convenience utility provided to you by the Trisul framework because multi pattern matching is such a frequent need in network analytics applications.
 
-### Creating the object
+## Creating the object
 
-The object is created and stored in a global state, either as a global variable or as a member in the `Global T` table. Note that the global states are per-file not across LUA files.
+The object is created and stored in a global state, either as a global variable or as a member in the `Global T` table. Note that the global states are per-file not across LUA files.
 
 ```lua
 onload = function()
@@ -22,12 +22,12 @@ T.patternMatcher:match_one(..)
 
 A summary of the functions available in this object.
 
-| Name      | In     | Out   | Description                                                                                                                                                         |
-| --------- | ------ | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name      | In     | Out   | Description  |
+| --------- | ------ | ----- | ------------ |
 | match_all | string | table | Matches all patterns. The matches are returned in a table<br/>\{ pattern_matched = position <br/>>The position indicates the last matching character, not the first. |
-| match_one | string | table | Same as match_all, but stops after finding a single match. Use this method for alerting on pattern matches.                                                         |
+| match_one | string | table | Same as match_all, but stops after finding a single match. Use this method for alerting on pattern matches.                                                      |
 
-## Function `match_all`
+## Function `match_all`
 
 Tries to match all patterns against the input text.
 
@@ -37,8 +37,13 @@ Use this parameter passed to your Lua function to integrate your data into the T
 
 ### Parameters
 
-| text | string | the text to be matched |
-| ---- | ------ | ---------------------- |
+<table>
+    <tr>
+        <td>text</td>
+        <td>string</td>
+        <td>the text to be matched </td>
+    </tr>
+</table>
 
 ### Return value
 
@@ -46,9 +51,9 @@ A table of matches. See the debug output below
 
 ### Usage
 
-In this example we are attempting to match a list of hostnames against a DNS Full Text Search text.
+In this example we are attempting to match a list of hostnames against a DNS Full Text Search text.
 
-The code at the point the `dbg()` is called is shown below
+The code at the point the `dbg()` is called is shown below
 
 ```lua
 onload = function()
@@ -64,7 +69,7 @@ onflush= function(dbengine, fts)
 ..
 ```
 
-Using the debugger, we can inspect the return value `m`  
+Using the debugger, we can inspect the return value `m`  
 
 ```lua
 debugger.lua> p m
@@ -74,7 +79,7 @@ fts:text() => "QUERY\9ID: 39219\9Flags:0×0100\9QDCount:1\9ANCount:0\9NSCount:0\
 debugger.lua>
 ```
 
-## Function `match_one`
+## Function `match_one`
 
 Match all the strings in the pattern against the input text.  
-Stop at the first match. The `match_all` tries to match all patterns and does not stop after the first match.
+Stop at the first match. The `match_all` tries to match all patterns and does not stop after the first match.

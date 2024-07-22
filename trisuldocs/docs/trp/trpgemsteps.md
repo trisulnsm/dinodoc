@@ -5,14 +5,16 @@ sending and receiving commands. For this exercise, we use the Ruby
 programming language.
 
 **The task**  
-\# Connect securely to a remote Trisul  
-\# Send a Hello Request  
-\# Print the Hello Response
+```
+# Connect securely to a remote Trisul  
+# Send a Hello Request  
+# Print the Hello Response
 
 The goal of the tutorial is to get you familiar with :  
-\# Basic structure of a TRP script  
-\# Running Trisul server in TRP mode  
-\# Using the trisulrp gem
+# Basic structure of a TRP script  
+# Running Trisul server in TRP mode  
+# Using the trisulrp gem
+```
 
 ## The environment
 
@@ -113,9 +115,9 @@ end
 ```
 
 Then re-run the program
-
+```
     [trisul@localhost t1] ruby hellotrp.rb 
     "hello from trp"
-
+```
 We are now ready to move on to more [advanced
 scripts](code_samples)

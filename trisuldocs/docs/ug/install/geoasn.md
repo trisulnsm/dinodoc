@@ -18,7 +18,7 @@ The plugin can connect to MaxMind and IP2LOC online databases with your APIKEY,
 
 Here is a screenshot to give you an idea of what functionality is added by this plugin.
 
-| ![By ASN](https://trisul.org/docs/ug/install/images/asn.png "By ASN")  <br/>Traffic by ASN | ![Traffic by country](https://trisul.org/docs/ug/install/images/country.png "Traffic by country")  <br/>Traffic by country |
+| ![By ASN](./images/asn.png "By ASN")  <br/>Traffic by ASN | ![Traffic by country](./images/country.png "Traffic by country")  <br/>Traffic by country |
 | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
 
 ## Setup
@@ -43,7 +43,7 @@ Use [cfgedit](/docs/ref/plugin_configuration ) to edit the config settings. Se
 
 Once installed Trisul will automatically keep the databases updated at 2AM everyday. See the Frequency parameter in the config file.
 
-::
+:::
 
 The main parameters you may be interested to edit are :
 

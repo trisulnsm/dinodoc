@@ -26,7 +26,7 @@ In a number of places in Trisul, you will see a list of keys within a counter gr
 - Select the “View Edge Graph” menu to bring up the Graph Explorer.
 - If you use “Retro Analysis” the time period is automatically set to the focus time window.
 
-![](https://trisul.org/docs/ug/edges/images/tool1.png)
+![](./images/tool1.png)
 
 ## Tools > Edge Graph
 

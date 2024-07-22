@@ -26,7 +26,7 @@ The following screenshot shows :
 2. Total volume of traffic in each category
 3. PIE chart to give you a rough idea
 
-![Showing traffic by category](https://trisul.org/docs/ug/install/images/urlf.png)
+![Showing traffic by category](./images/urlf.png)
 
 URL Filter
 

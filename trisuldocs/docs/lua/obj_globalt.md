@@ -11,40 +11,40 @@ The global table named `T` can be accessed from anywhere. It defines some consta
 | T.probeid                                                           | A string that identifies the probe within the domain running this script, such as `probe0`                                                                                                   |
 | T.probeversion                                                      | The version of the *Trisul Probe* running this script, such as `6.5.2779`                                                                                                                    |
 | T.context_name                                                      | The database context name.                                                                                                                                                                   |
-| T.args                                                              | The`-args` command line option from [trisul](/docs/programs/trisulprogram)                                                                                                              |
+| T.args                                                              | The `-args` command line option from [trisul](/docs/programs/trisulprogram)                                                                                                              |
 | T.enginetype                                                        | A string `backend` or `frontend` – scripts may want to use this                                                                                                                              |
-| [T.host](/docs/lua/obj_globalt#tablethost)  | Host methods that can be called from LUA                                                                                                                                                     |
-| [T.K](/docs/lua/obj_globalt#tabletk)        | Constants                                                                                                                                                                                    |
+| [T.host](/docs/lua/obj_globalt#table-thost)  | Host methods that can be called from LUA                                                                                                                                                     |
+| [T.K](/docs/lua/obj_globalt#table-tk)        | Constants                                                                                                                                                                                    |
 | [T.util](/docs/lua/obj_globalt#table-tutil) | Utility methods                                                                                                                                                                              |
 | [T.async](/docs/lua/obj_tasync)             | Methods to call async LUA functions out of fast packet path                                                                                                                                  |
-| [T.re2](/docs/lua/obj_globalt#functiontre2)  | A fast and powerful regex engine (Google RE2)                                                                                                                                                |
-| [T.ac](/docs/lua/obj_globalt#functiontac)   | A minimal but fast Aho-Corasick multi pattern matcher                                                                                                                                        |
-| [T.log](/docs/lua/obj_globalt#functiontlog) | Function to log a message that goes into the main Trisul logging framework.                                                                                                                  |
+| [T.re2](/docs/lua/obj_globalt#function-tre2)  | A fast and powerful regex engine (Google RE2)                                                                                                                                                |
+| [T.ac](/docs/lua/obj_globalt#function-tac)   | A minimal but fast Aho-Corasick multi pattern matcher                                                                                                                                        |
+| [T.log](/docs/lua/obj_globalt#function-tlog) | Function to log a message that goes into the main Trisul logging framework.                                                                                                                  |
 |                                                                     |                                                                                                                                                                                              |
 | T.countergroups                                                     | A table of ( countergroup name, guid ) currently loaded. Only for backend scripts. For frontend scripts this field has a nil                                                                 |
 | T.resourcegroups                                                    | Backend scripts only : A table of ( resourcegroup name, guid ) currently loaded.                                                                                                             |
 | T.ftsgroups                                                         | Backend scripts only : A table of ( FTS (Full Text Search) name, guid ) currently loaded.                                                                                                    |
 | T.sessiongroups                                                     | Backend scripts only : A table of ( session group name, guid ) currently loaded.                                                                                                             |
-| [T.env](/docs/lua/obj_globalt#tabletenv)    | Environment and Trisul Config file                                                                                                                                                           |
+| [T.env](/docs/lua/obj_globalt#table-tenv)    | Environment and Trisul Config file                                                                                                                                                           |
 
-## Table `T.host`
+### Table `T.host`
 
 Interact with the Trisul environment.
 
 Use the object calling notation `T.host:function(..)` to invoke these methods.
 
-| Name           | In           | Out      | Description                     |
-| -------------- | ----------- | --------- | ------------------------------ |
-| get_homenets   | none            | Table, Array of [`string`IP,`string`Netmask ] | Get home networks defined by Trisul.                                                                    |
-| is_homenet     | `number` 32bit IPv4 or `string` IPv4 in dotted decimal    | `bool` | Is the 32-bit IPv4 address within the home network?<br/><br/> <code> T.host:is_homenet(“192.168.2.1”)</code> |
+| Name           | In                                                        | Out                                               | Description                                                                                             |
+| -------------- | --------------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| get_homenets   | none                                                      | Table, Array of [ `string` IP, `string` Netmask ] | Get home networks defined by Trisul.                                                                    |
+| is_homenet     | `number` 32bit IPv4 or `string` IPv4 in dotted decimal    | `bool`                                            | Is the 32-bit IPv4 address within the home network?<br/><br/> LUACopy`T.host:is_homenet(“192.168.2.1”)` |
 | is_homenet_key | `string` IPv4 in trisul key format                        | `bool`                                            | Is the Trisul key format IP address in the home network.                                                |
-| get_configpath | none                                                      | `string` directory | Configuration directory                                                                                 |
-| get_datapath   | none                                                      | `string` directory  | Data directory                                                                                          |
+| get_configpath | none                                                      | `string` directory                                | Configuration directory                                                                                 |
+| get_datapath   | none                                                      | `string` directory                                | Data directory                                                                                          |
 | createkey      | `guid` counter group id, `string` – key, `string` – label |                                                   | Create a userlabel for a given key. Use this to pre-load human labels for keys                          |
 | prepare_config | `guid` – plugin id, `string` template file                | plugin config                                     | Prepare a configuration file for your plugin                                                            |
 | broadcast      | `guid` – message id, `guid` class id, `string` message    | none                                              | Broadcast a state update to other plugins                                                               |
 
-## Table `T.K`
+### Table `T.K`
 
 Pre-defined constants to use with other Lua functions.
 
@@ -52,7 +52,7 @@ Pre-defined constants to use with other Lua functions.
 | -------- | ----------- | ---------------------------------------------------------------------------------------------------- |
 | vartypes | Meter types | COUNTER, RATE_COUNTER, GAUGE, RUNNING_COUNTER                                                        |
 
-## Constants `T.K.vartype`
+### Constants `T.K.vartype`
 
 Constants : Types of counters.
 
@@ -72,7 +72,7 @@ window
 
 every counter group has a streaming window of *bucketsize* seconds. This is by default 60 seconds, but can be as low as 1 second.
 
-## Table T.util
+### Table T.util
 
 Useful utility functions written in C, exported to LUA via T.util table. We find them most handy for network related scripting.
 
@@ -161,9 +161,30 @@ We create a RE2 object with a regex and the “case_sensitive” and another opt
 
     my_regex = T.re2("User-Agent\\s*:\\s*(.*)\r\n",  ( case_sensitive = true, posix_syntax = true))
 
-  end
+  end## [Function `T.ac`](/docs/lua/obj_globalt#function-_t.ac)
 ```
 
+A fast and minimal Aho-Corasick multi pattern matcher.
+
+| T.ac | table (An array of patterns) | An [AC object](/docs/lua/obj_ac) | Load all the patterns into an AC matcher and return an [AC matcher object](/docs/lua/obj_ac) |
+| ---- | ---------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+
+A sample illustrating a typical use.
+
+```lua
+onload = function() 
+    -- add patterns in array and create a new AC matcher 
+    ac_headers   = T.ac(( "Host:",
+                        "User-Agent:",
+                        "Referer",
+                        "Server:",
+                        "Content-Type:",
+                        "Content-Length:") )
+
+
+   -- later on you can use the match methods
+   ac_headers:match_all(...)
+```
 
 ## Function `T.ac`
 
@@ -171,6 +192,8 @@ A fast and minimal Aho-Corasick multi pattern matcher.
 
 | T.ac | table (An array of patterns) | An [AC object](/docs/lua/obj_ac) | Load all the patterns into an AC matcher and return an [AC matcher object](/docs/lua/obj_ac) |
 | ---- | ---------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+
+A sample illustrating a typical use.
 
 A sample illustrating a typical use.
 
@@ -193,7 +216,7 @@ Adds a log message to the main Trisul log file. Trisul automatically adds the lu
 
 | Name         | In                                                                                                                   | Out  | Description                                                                                                                                                                             |
 | ------------ | -------------------------------------------------------------------------------------------------------------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| T.log        | [T.K.loglevel](/docs/lua/obj_globalt#tabletk) – optional loglevel<br/>`string` – log message | none | Log a message to the Trisul log file, usually located for the default setup in `/usr/local/var/log/trisul-probe/domain0/probe0/context0` . The default loglevel is `T.K.loglevel.DEBUG` |
+| T.log        | [T.K.loglevel](/docs/lua/obj_globalt#table-tk) – optional loglevel<br/>`string` – log message | none | Log a message to the Trisul log file, usually located for the default setup in `/usr/local/var/log/trisul-probe/domain0/probe0/context0` . The default loglevel is `T.K.loglevel.DEBUG` |
 | T.logerror   | `string` – msg                                                                                                       | none | Useful shortcut to log a message with loglevel of ERROR. `T.logerror(msg)` is the same as `T.log(T.K.loglevel.ERROR,msg)`                                                               |
 | T.logwarning | `string` – msg                                                                                                       | none | Log a message with WARN category                                                                                                                                                        |
 | T.logdebug   | `string` – msg                                                                                                       | none | Log a message with DEBUG category                                                                                                                                                       |
@@ -217,7 +240,7 @@ Adds a log message to the main Trisul log file. Trisul automatically adds the lu
 
 | Name         | In                                                                                                                   | Out  | Description                                                                                                                                                                             |
 | ------------ | -------------------------------------------------------------------------------------------------------------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| T.log        | [T.K.loglevel](/docs/lua/obj_globalt#tabletk) – optional loglevel<br/>`string` – log message | none | Log a message to the Trisul log file, usually located for the default setup in `/usr/local/var/log/trisul-probe/domain0/probe0/context0` . The default loglevel is `T.K.loglevel.DEBUG` |
+| T.log        | [T.K.loglevel](/docs/lua/obj_globalt#table-tk) – optional loglevel<br/>`string` – log message | none | Log a message to the Trisul log file, usually located for the default setup in `/usr/local/var/log/trisul-probe/domain0/probe0/context0` . The default loglevel is `T.K.loglevel.DEBUG` |
 | T.logerror   | `string` – msg                                                                                                       | none | Useful shortcut to log a message with loglevel of ERROR. `T.logerror(msg)` is the same as `T.log(T.K.loglevel.ERROR,msg)`                                                               |
 | T.logwarning | `string` – msg                                                                                                       | none | Log a message with WARN category                                                                                                                                                        |
 | T.logdebug   | `string` – msg                                                                                                       | none | Log a message with DEBUG category                                                                                                                                                       |

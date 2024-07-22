@@ -10,14 +10,14 @@ A summary of the functions available in this object.
 | ------------------------------------------------------------------------------- | ---------------------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | size                                                                            |                              | number         | size of the buffer containing the raw bytes                                                                                               |
 | length                                                                          |                              | number         | same as size                                                                                                                              |
-| [hexdump](/docs/lua/obj_buffer#functionhexdump)         | offset, size (both optional) | string         | string with hexdump of the buffer in canonical format. Specify offset, size to dump a subset                                              |
+| [hexdump](/docs/lua/obj_buffer#function-hexdump)         | offset, size (both optional) | string         | string with hexdump of the buffer in canonical format. Specify offset, size to dump a subset                                              |
 | hval_8                                                                          | offset                       | number         | returns the byte at buffer+offset                                                                                                         |
 | hval_16                                                                         | offset                       | number         | same as *ntohs( )* on the 2 bytes at buffer+offset                                                                                        |
 | hval_24                                                                         | offset                       | number         | The 3 byte (24 bit) number at buffer_offset                                                                                               |
 | hval_32                                                                         | offset                       | number         | same as *ntohl( )* on the 4 bytes at buffer+offset                                                                                        |
-| [tostring](/docs/lua/obj_buffer#functiontostring)      | offset, size (both optional) | string         | `tostring()` returns the full string to LUA `tostring(offset,size)` returns the substring of *size* bytes starting and including *offset* |
-| [appendtofile](/docs/lua/obj_buffer#functionappendtofile)  | filename | string         | append the contents of the buffer to the filename specified |
-| [writetofile](/docs/lua/obj_buffer#functionwritetofile) | filename, offset | string, number | write the contents of the buffer to the filename specified at the offset |
+| [tostring](/docs/lua/obj_buffer#function-tostring)      | offset, size (both optional) | string         | `tostring()` returns the full string to LUA `tostring(offset,size)` returns the substring of *size* bytes starting and including *offset* |
+| [appendtofile](/docs/lua/obj_buffer#function-appendtofile)  | filename                     | string         | append the contents of the buffer to the filename specified                                                                               |
+| [writetofile](/docs/lua/obj_buffer#function-writetofile) | filename, offset             | string, number | write the contents of the buffer to the filename specified at the offset                                                                  |
 
 ## Function reference
 
@@ -33,14 +33,17 @@ Dump the buffer in canonical hex dump format and return a string. Very useful wh
 
 **Note** : The offset starts at 0. Watch out for this because LUA strings start at 1.
 
+| Parameter | optional | Info |
+|---|---|---|
 | offset | optional : default 0              | offset from start of buffer. **NOTE: Offset start from 0 , unlike the normal LUA array of 1** |
-| ------ | --------------------------------- | --------------------------------------------------------------------------------------------- |
 | size   | optional: default `buffer:size()` | Number of bytes to dump in hex                                                                |
 
 ### Return value
 
-| string | Hexdump of requested string |
+| Parameter | Info |
 | ------ | --------------------------- |
+| string | Hexdump of requested string |
+
 
 ### Usage
 
@@ -83,15 +86,16 @@ Gets the buffer into a LUA string for further processing. You can get the full b
 The offset starts at 0. Watch out for this because LUA strings start at 1.
 
 :::
-
-| offset | optional : default 0              | offset from start of buffer. **NOTE: Offset start from 0 , unlike the normal LUA array of 1** |
-| ------ | --------------------------------- | --------------------------------------------------------------------------------------------- |
-| size   | optional: default `buffer:size()` | Number of bytes to retrieve                                                                   |
+| Parameter | Optional | Info |
+| ------ | --------------------------------- | ---------------------------------------- |
+| offset | optional : default 0   | offset from start of buffer. **NOTE: Offset start from 0 , unlike the normal LUA array of 1** |
+| size   | optional: default `buffer:size()` | Number of bytes to retrieve              |
 
 ### Return value
 
-| string | LUA string bytes |
+| parameter | info |
 | ------ | ---------------- |
+| string | LUA string bytes |
 
 ### Usage
 
@@ -105,8 +109,10 @@ This is typically used by scripts for extracting contents to a disk file.
 
 ### Parameters
 
-| filename | string | The file where you want to append to. If file does not exit, it is created. |
+|Name      | Type |               Info                                                          |
 | -------- | ------ | --------------------------------------------------------------------------- |
+| filename | string | The file where you want to append to. If file does not exit, it is created. |
+
 
 ### Return value
 
@@ -124,8 +130,9 @@ Typically used by scripts that do reassembly that need to write at particular of
 
 ### Parameters
 
-| filename | string | The file where you want to append to. If file does not exit, it is created.                                                                                                  |
-| -------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name | Type | Info |
+|-----|-----|-----|
+| filename | string | The file where you want to append to. If file does not exit, it is created.  |
 | offset   | number | The seek position of the file. NOTE: Offset is 0 based unlike LUA arrays which are 1 based. Essentially this method from the C side does `lseek(..)` followed by `write(..)` |
 
 ### Return value

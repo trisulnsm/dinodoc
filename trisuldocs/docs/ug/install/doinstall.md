@@ -107,11 +107,11 @@ By default, all Trisul Probes will listen on `PCAP` mode on interface `eth0`�
 
 ### Customizing the probe
 
-The trisul configuration file is created in [/usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml](https://trisul.org/docs/ref/trisulconfig)
+The trisul configuration file is created in [/usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml](/docs/ref/trisulconfig)
 
 Some of the things you may want to change are :
 
-| [TrisulMode](https://trisul.org/docs/ref/trisulconfig#app) | Default is *TAP*, if you are feeding Netflow change this to *NETFLOW_TAP*        |
+| [TrisulMode](/docs/ref/trisulconfig#app) | Default is *TAP*, if you are feeding Netflow change this to *NETFLOW_TAP*        |
 | --------------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | [Ring](/docs/ref/trisulconfig#ring)                      | Default is enabled, disable if you do not want to store packets                  |
 | [User](/docs/ref/trisulconfig#app)                       | Default is *trisul.trisul*. Change if you want trisul to run as an existing user |
