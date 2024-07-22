@@ -161,7 +161,7 @@ We create a RE2 object with a regex and the “case_sensitive” and another opt
 
     my_regex = T.re2("User-Agent\\s*:\\s*(.*)\r\n",  ( case_sensitive = true, posix_syntax = true))
 
-  end## [Function `T.ac`](https://trisul.org/docs/lua/obj_globalt.html#function_t.ac)
+  end## [Function `T.ac`](/docs/lua/obj_globalt#function_t.ac)
 ```
 
 A fast and minimal Aho-Corasick multi pattern matcher.

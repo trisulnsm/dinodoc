@@ -6,7 +6,7 @@ sidebar_position: 13
 
 The Badfellas plugin checks your network traffic against millions of indicators to detect malicious activity.
 
-![Badfellas malware tracker screenshot](https://trisul.org/docs/ug/install/images/Badfellas.png)
+![Badfellas malware tracker screenshot](./images/Badfellas.png)
 
 Blacklist Alerts
 

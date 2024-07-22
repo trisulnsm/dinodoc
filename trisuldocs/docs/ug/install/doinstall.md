@@ -107,7 +107,7 @@ By default, all Trisul Probes will listen on `PCAP` mode on interface `eth0`�
 
 ### Customizing the probe
 
-The trisul configuration file is created in [/usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml](https://trisul.org/docs/ref/trisulconfig)
+The trisul configuration file is created in [/usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml](/docs/ref/trisulconfig)
 
 Some of the things you may want to change are :
 

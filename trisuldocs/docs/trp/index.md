@@ -8,7 +8,7 @@ Write reusable scripts to create your own reports in any format, automate huntin
 
 This short step by step tutorial explains how you can get a ruby script running and exchange a simple HelloMessage with the Trisul server.
 
-- [Step by step tutorial using Ruby](https://trisul.org/docs/trp/trpgemsteps.html)
+- [Step by step tutorial using Ruby](/docs/trp/trpgemsteps.md)
 
 ## DOCUMENTATION
 
