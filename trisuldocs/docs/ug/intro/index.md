@@ -10,9 +10,9 @@ import DocCardList from '@theme/DocCardList';
 
 Links to various other documentation apart from this User Guide.
 
-1. [What is Trisul](/docs/ug/intro/whatistrisul) : What can Trisul do for you ? For first timers.
-2. [Trisul Reference](/docs/ref) : Various config files and command line tools
-3. [Howtos](/docs/howto) : How to solve specific use cases with Trisul  
+1. [Trisul Reference](/docs/ref) : Various config files and command line tools
+2. [Howtos](/docs/howto) : How to solve specific use cases with Trisul  
+3. [Trisul for ISPs](/docs/isp/) : This document describes the Trisul ISP features
 
 ### Developer guides
 

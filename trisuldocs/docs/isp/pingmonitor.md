@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # PING Monitor
 
 ## Create PING Groups:
