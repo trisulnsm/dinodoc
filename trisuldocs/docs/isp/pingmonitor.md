@@ -113,6 +113,7 @@ PING 8.8.8.8 (8.8.8.8): 56 data bytes
 4 packets transmitted, 4 packets received, 0.0% packet loss
 round-trip min/avg/max = 14.3/14.5/14.6 ms
 ```
+
 Similarly, to send ping requests to a large number of IP addresses simultaneously and check their availability, enter the command,
 
 `trisul_bulkping -demon /usr/local/etc/trisul-probe/domain0/probe0/context0/trrisulProbeConfig.xml`
