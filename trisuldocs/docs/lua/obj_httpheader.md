@@ -12,7 +12,7 @@ The *HTTPHeader* object wraps the HTTP request and response headers along with s
 | get_method                                                                            | –                                        | string       | For requests GET/POST/HEAD or other methods                                                                                                                  |
 | get_status                                                                            | –                                        | number       | HTTP Status Code 200=OK                                                                                                                                      |
 | is_method                                                                             | string                                   | bool         | Check header method. `hdr:is_method("POST")` is short cut for `hdr:get_method()=="POST"` @                                                                   |
-| [match_value](/docs/lua/obj_httpheader#functionmatch_value) | string – header_name, string value_regex | bool         | Short cut for `get_value` + `match(..)` check if the header value matches the specified regex (see example 3 below). The regex must be Google RE2 compatible |
+| [match_value](/docs/lua/obj_httpheader#function-match_value) | string – header_name, string value_regex | bool         | Short cut for `get_value` + `match(..)` check if the header value matches the specified regex (see example 3 below). The regex must be Google RE2 compatible |
 
 ### Usage examples
 

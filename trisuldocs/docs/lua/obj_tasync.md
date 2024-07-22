@@ -4,16 +4,16 @@ The T.async interface provides methods to help you do long running I/O tasks tha
 
 ## Purpose of T.async
 
-To execute long running I/O tasks in a separate worker pool to prevent blocking the Trisul streaming pipelines. The default worker thread pool size is 1, it can be increased at the script level by [TrisulPlugin.request_async_workers](/docs/lua/basics#structure-of-a-lua-script) parameter
+To execute long running I/O tasks in a separate worker pool to prevent blocking the Trisul streaming pipelines. The default worker thread pool size is 1, it can be increased at the script level by [TrisulPlugin.request_async_workers](/docs/lua/basics#structure-of-a-lua--script) parameter
 
 ## Methods
 
 | function                                                                            | parameters                                                                              | what it does                                                                                                        |
 | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| [cat](/docs/lua/obj_tasync#functiontasynccat)              | from_file, to_file                                                                      | Append one file to another                                                                                          |
-| [copy](/docs/lua/obj_tasync#functiontasynccopy)            | from_file, to_file                                                                      | Copy one file to another.                                                                                           |
-| [rm](/docs/lua/obj_tasync#functiontasyncrm)                | filename : string                                                                       | Delete a file                                                                                                       |
-| [copybuffer](/docs/lua/obj_tasync#functiontasynccopybuffer) | from_buffer (a [Buffer](/docs/lua/obj_buffer) object), to_file | Append buffer content bytes to the target file                                                                      |
+| [cat](/docs/lua/obj_tasync#function-tasynccat)              | from_file, to_file                                                                      | Append one file to another                                                                                          |
+| [copy](/docs/lua/obj_tasync#function-tasynccopy)            | from_file, to_file                                                                      | Copy one file to another.                                                                                           |
+| [rm](/docs/lua/obj_tasync#function-tasyncrm)                | filename : string                                                                       | Delete a file                                                                                                       |
+| [copybuffer](/docs/lua/obj_tasync#function-tasynccopybuffer) | from_buffer (a [Buffer](/docs/lua/obj_buffer) object), to_file | Append buffer content bytes to the target file                                                                      |
 | [schedule](/docs/lua/obj_tasync#tasync)                    | a LUA schedule block                                                                    | Runs the LUA functions in the block asynchronosly and re-enter the fast path at a later time when results are ready |
 
 ---

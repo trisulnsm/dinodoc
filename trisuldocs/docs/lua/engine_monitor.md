@@ -22,9 +22,9 @@ The Lua table `engine_monitor = {..}` can contain one or more of the following h
 
 | field                                                                           | type                                                                                                     | when called                                                                                   |
 | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| [onbeginflush](/docs/lua/engine_monitor#functiononbeginflush) | Function( [engine](/docs/lua/obj_engine) , timestamp)                            | streaming window snapshot about to start. By default called every minute on top of the minute |
-| [onendflush](/docs/lua/engine_monitor#functiononendflush)     | Function( [engine](/docs/lua/obj_engine), timestamp)                             | when a streaming window was snapshotted and closed.                                           |
-| [onmetronome](/docs/lua/engine_monitor#functiononmetronome)   | Function( [engine](/docs/lua/obj_engine), timestamp, tick_count, tick_interval) | Called every second                                                                           |
+| [onbeginflush](/docs/lua/engine_monitor#function-onbeginflush) | Function( [engine](/docs/lua/obj_engine) , timestamp)                            | streaming window snapshot about to start. By default called every minute on top of the minute |
+| [onendflush](/docs/lua/engine_monitor#function-onendflush)     | Function( [engine](/docs/lua/obj_engine), timestamp)                             | when a streaming window was snapshotted and closed.                                           |
+| [onmetronome](/docs/lua/engine_monitor#function-onmetronome)   | Function( [engine](/docs/lua/obj_engine), timestamp, tick_count, tick_interval) | Called every second                                                                           |
 
 ### Threading note
 

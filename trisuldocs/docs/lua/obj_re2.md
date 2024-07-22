@@ -10,7 +10,7 @@ A summary of the functions available in this object.
 
 ### Creation
 
-You need to use the [T.re2](/docs/lua/obj_globalt#functiontre2) method to create a precompiled regex object. After the creation, you can invoke the following function to run the matches.
+You need to use the [T.re2](/docs/lua/obj_globalt#function-tre2) method to create a precompiled regex object. After the creation, you can invoke the following function to run the matches.
 
 ### Functions
 

@@ -52,7 +52,7 @@ simplecounter = (
 
 The above snippet works as follows
 
-- print the IP layer length via `layer:layer_bytes()` See [Layer](/docs/lua/simple_counter#layer)
+- print the IP layer length via `layer:layer_bytes()` See [Layer](/docs/lua/simple_counter#the-layer-parameter)
 - dump the 20 byte IP header using `layer:rawbytes():hexdump()`
 
 ```lua

@@ -51,7 +51,7 @@ Each meter line defines the following
 
 | 0   | Meter ID      | must start from 0                                                                                                                               |
 | --- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | Vartype       | type of meter, see the global named [T.k.vartype](/docs/lua/obj_globalt#constantstkvartype)                             |
+| 1   | Vartype       | type of meter, see the global named [T.k.vartype](/docs/lua/obj_globalt#constants-tkvartype)                             |
 | 2   | Top-N size    | how many toppers do you want to track for the this metric. Can be changed from the GUI                                                          |
 | 3   | Bottom-N size | how many bottom-K do you want to track for this metric. Can be changed from the GUI                                                             |
 | 4   | Name          | Meter name (keep it short < 10 chars)                                                                                                           |

@@ -19,30 +19,30 @@ ERR_NOTAVAIL: add_flow_counter() is not available for backend scripts
 
 | Name                                                                                                 | Availability | Description                                                                         |
 | ---------------------------------------------------------------------------------------------------- | ------------ | ----------------------------------------------------------------------------------- |
-| [update_counter](/docs/lua/obj_engine#functionupdate_counter)                                 | F B          | Updates a meter for a key with a particular value                                   |
-| [update_counter_bytes](/docs/lua/obj_engine#functionupdate_counter_bytes)                           | F            | Updates a meter for a key but with a value of wire_length in the packet             |
-| [update_counter_raw](/docs/lua/obj_engine#functionupdate_counter_raw)       | F B          | Update counter raw is a variant of update_counter.                                  |
-| [update_key_info](/docs/lua/obj_engine#functionupdate_key_info)             | F B          | Set a user friendly label or a description for a key                                |
-| [ add_alert](/docs/lua/obj_engine#functionadd_alert)                        | F B          | Add an alert                                                                        |
-| [add_alert_full](/docs/lua/obj_engine#functionadd_alert_full)                    | F B          | Same as add alert with with a priority and classification. Used for IDS alert types |
-| [add_alert_tca](/docs/lua/obj_engine#functionadd_alert_tca)                 | F B          | For alerts based on metric values and threshold crossing events`                    |
-| [add_resource](/docs/lua/obj_engine#functionadd_resource)                   | F B          | Add a new resource with metadata and contents to Trisul                             |
-| [timestamp](/docs/lua/obj_engine#functiontimestamp)                         | F B          | The latest timestamp seen by the engine                                             |
-| [add_flow_counter](/docs/lua/obj_engine#functionadd_flow_counter)           | F            | Add a flow counter                                                                  |
-| [reset_flow_counter](/docs/lua/obj_engine#functionreset_flow_counter)        | F            | Removes all flow counters, then does an add_flow_counter                            |
-| [tag_flow](/docs/lua/obj_engine#functiontag_flow)                           | F B          | Tag a flow with a label. Y                                                          |
-| [instanceid](/docs/lua/obj_engine#functioninstanceid)                       | F B          | Engine Instance identifier                                                          |
-| [probeid](/docs/lua/obj_engine#functionprobeid)                             | F B          | Trisul probe id of the engine                                                       |
-| [update_flow](/docs/lua/obj_engine#functionupdate_flow)                     | F            | Update a flow based metric                                                          |
-| [new_flow_record](/docs/lua/obj_engine#functionnew_flow_record)             | F            | Inform framework about a new flow record                                            |
-| [set_flow_duration](/docs/lua/obj_engine#functionset_flow_duration)         | F            | Set the duration of the flow in seconds                                             |
-| [disable_reassembly](/docs/lua/obj_engine#functiondisable_reassembly)       | F            | Stop TCP reassembly of this flow                                                    |
-| [post_message_frontend](/docs/lua/obj_engine#functionpost_message_frontend) | F B          | Post a message to other LUA plugins attached to the packet (frontend) pipeline      |
-| [post_message_backend](/docs/lua/obj_engine#functionpost_message_backend)   | F B          | Post a message to other LUA plugins in the metrics (backend) pipeline               |
-| [add_edge](/docs/lua/obj_engine#functionadd_edge)                           | F B          | Add a single edge to the Trisul Streaming Graph Analytics pipeline                  |
-| [add_flow_edges](/docs/lua/obj_engine#functionadd_flow_edges)               | F B          | Automatically add edges from a network flow to a given vertex.                      |
-| [set_key_attribute](/docs/lua/obj_engine#functionset_key_attribute)         | F B          | Set an arbitrary \{attribute-name,value}\ pair for any key                          |
-| [add_flow_attribute](/docs/lua/obj_engine#functionadd_flow_attribute)       | F B          | Add an \{attribute-name,value\} pair for any flow for other Lua script to pick up.  |
+| [update_counter](/docs/lua/obj_engine#function-update_counter)                                 | F B          | Updates a meter for a key with a particular value                                   |
+| [update_counter_bytes](/docs/lua/obj_engine#function-update_counter_bytes)                           | F            | Updates a meter for a key but with a value of wire_length in the packet             |
+| [update_counter_raw](/docs/lua/obj_engine#function-update_counter_raw)       | F B          | Update counter raw is a variant of update_counter.                                  |
+| [update_key_info](/docs/lua/obj_engine#function-update_key_info)             | F B          | Set a user friendly label or a description for a key                                |
+| [ add_alert](/docs/lua/obj_engine#function-add_alert)                        | F B          | Add an alert                                                                        |
+| [add_alert_full](/docs/lua/obj_engine#function-add_alert_full)                    | F B          | Same as add alert with with a priority and classification. Used for IDS alert types |
+| [add_alert_tca](/docs/lua/obj_engine#function-add_alert_tca)                 | F B          | For alerts based on metric values and threshold crossing events`                    |
+| [add_resource](/docs/lua/obj_engine#function-add_resource)                   | F B          | Add a new resource with metadata and contents to Trisul                             |
+| [timestamp](/docs/lua/obj_engine#function-timestamp)                         | F B          | The latest timestamp seen by the engine                                             |
+| [add_flow_counter](/docs/lua/obj_engine#function-add_flow_counter)           | F            | Add a flow counter                                                                  |
+| [reset_flow_counter](/docs/lua/obj_engine#function-reset_flow_counter)        | F            | Removes all flow counters, then does an add_flow_counter                            |
+| [tag_flow](/docs/lua/obj_engine#function-tag_flow)                           | F B          | Tag a flow with a label. Y                                                          |
+| [instanceid](/docs/lua/obj_engine#function-instanceid)                       | F B          | Engine Instance identifier                                                          |
+| [probeid](/docs/lua/obj_engine#function-probeid)                             | F B          | Trisul probe id of the engine                                                       |
+| [update_flow](/docs/lua/obj_engine#function-update_flow)                     | F            | Update a flow based metric                                                          |
+| [new_flow_record](/docs/lua/obj_engine#function-new_flow_record)             | F            | Inform framework about a new flow record                                            |
+| [set_flow_duration](/docs/lua/obj_engine#function-set_flow_duration)         | F            | Set the duration of the flow in seconds                                             |
+| [disable_reassembly](/docs/lua/obj_engine#function-disable_reassembly)       | F            | Stop TCP reassembly of this flow                                                    |
+| [post_message_frontend](/docs/lua/obj_engine#function-post_message_frontend) | F B          | Post a message to other LUA plugins attached to the packet (frontend) pipeline      |
+| [post_message_backend](/docs/lua/obj_engine#function-post_message_backend)   | F B          | Post a message to other LUA plugins in the metrics (backend) pipeline               |
+| [add_edge](/docs/lua/obj_engine#function-add_edge)                           | F B          | Add a single edge to the Trisul Streaming Graph Analytics pipeline                  |
+| [add_flow_edges](/docs/lua/obj_engine#function-add_flow_edges)               | F B          | Automatically add edges from a network flow to a given vertex.                      |
+| [set_key_attribute](/docs/lua/obj_engine#function-set_key_attribute)         | F B          | Set an arbitrary \{attribute-name,value}\ pair for any key                          |
+| [add_flow_attribute](/docs/lua/obj_engine#function-add_flow_attribute)       | F B          | Add an \{attribute-name,value\} pair for any flow for other Lua script to pick up.  |
 
 ## Function `update_counter`
 
@@ -58,9 +58,9 @@ Update a counter with a value. Recall that the heirarchy in Trisul is
 
 #### Also see
 
-Use [update_counter_raw](/docs/lua/obj_engine#functionupdate_counter_raw) if
+Use [update_counter_raw](/docs/lua/obj_engine#function-update_counter_raw) if
 
-1. you are updating `GAUGE` or `AVERAGE` meter [data types](/docs/lua/obj_globalt#constantstkvartype)
+1. you are updating `GAUGE` or `AVERAGE` meter [data types](/docs/lua/obj_globalt#constants-tkvartype)
 2. you are updating more than 8 metrics for the same key
 
 ### Parameters
@@ -94,7 +94,7 @@ engine:update_counter( "{4CD742B1-C1CA-4708-BE78-0FCA2EB01A87}", "182.28.22.123"
 
 FRONTEND ONLY
 
-Adds a single metric to the Trisul framework. Same as [update_counter](/docs/lua/obj_engine#functionupdate_counter) but where the metric value is the packet wire length.
+Adds a single metric to the Trisul framework. Same as [update_counter](/docs/lua/obj_engine#function-update_counter) but where the metric value is the packet wire length.
 
 ### Purpose
 
@@ -119,15 +119,15 @@ This method is only available on frontend scripts.
 
 ## Function `update_counter_raw`
 
-A variation of [update_counter](/docs/lua/obj_engine#functionupdate_counter)
+A variation of [update_counter](/docs/lua/obj_engine#function-update_counter)
 
 ### Purpose
 
-This does exactly the same thing as [update_counter](/docs/lua/obj_engine#functionupdate_counter) with the following difference.
+This does exactly the same thing as [update_counter](/docs/lua/obj_engine#function-update_counter) with the following difference.
 
 1. this version has a slightly lower performance
 2. use this method if you want to update a large number of keys for a single counter group . **More than 8 keys**
-3. you are updating `GAUGE` or `AVERAGE` meter [data types](/docs/lua/obj_globalt#constantstkvartype)
+3. you are updating `GAUGE` or `AVERAGE` meter [data types](/docs/lua/obj_globalt#constants-tkvartype)
 
 ### Parameters
 
@@ -194,7 +194,7 @@ Add an alert to the Trisul framework.
 
 ### Purpose
 
-Lets you add a simple alert to the Trisul pipeline. This simple version only contains a priority, alert-type, and description. Also see [add_alert_full](/docs/lua/obj_engine#functionadd_alert_full) and [add_alert_tca](/docs/lua/obj_engine#functionadd_alert_tca) for more specific variants.
+Lets you add a simple alert to the Trisul pipeline. This simple version only contains a priority, alert-type, and description. Also see [add_alert_full](/docs/lua/obj_engine#function-add_alert_full) and [add_alert_tca](/docs/lua/obj_engine#function-add_alert_tca) for more specific variants.
 
 ### Parameters
 
@@ -401,7 +401,7 @@ Removes a flow based counter.
 
 ### Purpose
 
-Remove a previous flow based counter added by [add_flow_counter](/docs/lua/obj_engine#functionadd_flow_counter)
+Remove a previous flow based counter added by [add_flow_counter](/docs/lua/obj_engine#function-add_flow_counter)
 
 ### Parameters
 

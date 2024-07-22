@@ -1,6 +1,6 @@
 # Object AC (Aho-Corasick)
 
-An Aho-Corasick multi pattern matcher created with [`T.ac( _pattern_array_ )`](/docs/lua/obj_ac#t.ac)
+An Aho-Corasick multi pattern matcher created with [`T.ac( _pattern_array_ )`](/docs/lua/obj_ac)
 
 This is a convenience utility provided to you by the Trisul framework because multi pattern matching is such a frequent need in network analytics applications.
 
