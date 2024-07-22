@@ -285,7 +285,7 @@ One important point is your script may be loaded and unloaded several times by T
 
 ## print and logging
 
-Your script can use [`T.log(..)`](/docs/lua/obj_globalt#functiontlog) to log into the Trisul probe log files and take advantage of all of its features. You can also use the standard LUA `print(..)` statements in your code to debug your script.
+Your script can use [`T.log(..)`](/docs/lua/obj_globalt#function-tlog) to log into the Trisul probe log files and take advantage of all of its features. You can also use the standard LUA `print(..)` statements in your code to debug your script.
 
 ### Where are the Trisul-Probe log files
 
@@ -329,7 +329,7 @@ Any LUA script can call the `postmessage_frontend` and `postmessage_backend` fun
 
 Both these variant accept two parameters that match the ones in *onmessage*
 
-For details : See documentation of [postmessage_frontend](/docs/lua/obj_engine#functionpost_message_frontend) and [postmessage_backend](/docs/lua/obj_engine#functionpost_message_backend)
+For details : See documentation of [postmessage_frontend](/docs/lua/obj_engine#function-post_message_frontend) and [postmessage_backend](/docs/lua/obj_engine#function-post_message_backend)
 
 ### Broadcasts and message_subscriptions
 

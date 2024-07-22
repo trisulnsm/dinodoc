@@ -2,7 +2,7 @@
 
 Create a new Resource Group.
 
-You can extend Trisul’s functionality by creating your own Resource Groups in addition to Trisul built in ones like HTTP URLs, SSL Certs, DNS Records, File Hashes, etc. You can then use the LUA API method [engine:add_resource](/docs/lua/obj_engine#functionadd_resource) to generate resource logs for that group.
+You can extend Trisul’s functionality by creating your own Resource Groups in addition to Trisul built in ones like HTTP URLs, SSL Certs, DNS Records, File Hashes, etc. You can then use the LUA API method [engine:add_resource](/docs/lua/obj_engine#function-add_resource) to generate resource logs for that group.
 
 ## Structure
 
@@ -16,7 +16,7 @@ The table resourcegroup has a single section called control that assigns a GUID 
 
 | name                                                                       | description                                       |
 | -------------------------------------------------------------------------- | ------------------------------------------------- |
-| table [control](/docs/lua/resource_group#tablecontrol) | assigns a name and guid to the new resource group |
+| table [control](/docs/lua/resource_group#table-control) | assigns a name and guid to the new resource group |
 
 ## Table `control`
 

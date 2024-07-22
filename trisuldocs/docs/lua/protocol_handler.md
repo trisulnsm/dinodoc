@@ -21,7 +21,7 @@ Download a well documented skeleton script from here to copy and get started
 
 | name                                                                                     | type                                                            | description                                                                                |
 | ---------------------------------------------------------------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| table [control](/docs/lua/protocol_handler#tablecontrol)              | table                                                           | assign a name and GUID to this protocol                                                    |
+| table [control](/docs/lua/protocol_handler#table-control)              | table                                                           | assign a name and GUID to this protocol                                                    |
 | function [parselayer](/docs/lua/protocol_handler#function-parselayer) | function( [layer](/docs/lua/obj_layer) | given a packet consume N bytes for this protocol and tell Trisul what the next protocol is |
 
 ### Table `control`

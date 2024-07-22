@@ -16,15 +16,15 @@ The table consists the following
 
 | counter_guid                                                          | String or function returning string                                   | Counter Group to attach to for monitoring          |
 | --------------------------------------------------------------------- | --------------------------------------------------------------------- | -------------------------------------------------- |
-| [onbeginflush](/docs/lua/cg_monitor#functiononbeginflush)             | [engine](/docs/lua/obj_engine) , timestamp                            | Before starting to flush all metrics to db         |
-| [onflush](/docs/lua/cg_monitor#functiononflush)                       | [engine](/docs/lua/obj_engine), timestamp, key, arrayofmetrics        | Called for each key as they are being flushed      |
-| [onendflush](/docs/lua/cg_monitor#functiononendflush)                 | [engine](/docs/lua/obj_engine)                                        | After all keys have been flushed for this interval |
-| [onbegintopperflush](/docs/lua/cg_monitor#functiononbegintopperflush) | [engine](/docs/lua/obj_engine), timestamp, meter                      | Before flushing toppers for this meter             |
-| [ontopperflush](/docs/lua/cg_monitor#functionontopperflush)           | [engine](/docs/lua/obj_engine) , key, metric                          | Called for each topper item                        |
-| [onendtopperflush](/docs/lua/cg_monitor#functiononendtopperflush)     | [engine](/docs/lua/obj_engine) , meter                                | After topper flush                                 |
-| [onupdate](/docs/lua/cg_monitor#functiononupdate)                     | [engine](/docs/lua/obj_engine), timestamp, key, arrayofmetrics        | As each update happens (1sec resolution)           |
-| [onnewkey](/docs/lua/cg_monitor#functiononnewkey)                     | [engine](/docs/lua/obj_engine), timestamp, key                        | A new key was discovered within the stream window. |
-| [onmetronome](/docs/lua/cg_monitor#functiononmetronome)               | [engine](/docs/lua/obj_engine) , timestamp, tick_count, tick_interval | called every second ( Tick Interval)               |
+| [onbeginflush](/docs/lua/cg_monitor#function-onbeginflush)             | [engine](/docs/lua/obj_engine) , timestamp                            | Before starting to flush all metrics to db         |
+| [onflush](/docs/lua/cg_monitor#function-onflush)                       | [engine](/docs/lua/obj_engine), timestamp, key, arrayofmetrics        | Called for each key as they are being flushed      |
+| [onendflush](/docs/lua/cg_monitor#function-onendflush)                 | [engine](/docs/lua/obj_engine)                                        | After all keys have been flushed for this interval |
+| [onbegintopperflush](/docs/lua/cg_monitor#function-onbegintopperflush) | [engine](/docs/lua/obj_engine), timestamp, meter                      | Before flushing toppers for this meter             |
+| [ontopperflush](/docs/lua/cg_monitor#function-ontopperflush)           | [engine](/docs/lua/obj_engine) , key, metric                          | Called for each topper item                        |
+| [onendtopperflush](/docs/lua/cg_monitor#function-onendtopperflush)     | [engine](/docs/lua/obj_engine) , meter                                | After topper flush                                 |
+| [onupdate](/docs/lua/cg_monitor#function-onupdate)                     | [engine](/docs/lua/obj_engine), timestamp, key, arrayofmetrics        | As each update happens (1sec resolution)           |
+| [onnewkey](/docs/lua/cg_monitor#function-onnewkey)                     | [engine](/docs/lua/obj_engine), timestamp, key                        | A new key was discovered within the stream window. |
+| [onmetronome](/docs/lua/cg_monitor#function-onmetronome)               | [engine](/docs/lua/obj_engine) , timestamp, tick_count, tick_interval | called every second ( Tick Interval)               |
 
 ## Functions Reference
 

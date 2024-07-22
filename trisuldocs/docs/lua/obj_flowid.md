@@ -43,7 +43,7 @@ For example : `ipa` might return `FF020000000000000000000000000002` where `ipa_r
 
 ## How to get or create a flow ID
 
-You can create the flowID string manually using the above formula. In Trisul LUA Scripting you rarely would need to create the flow ID because it is passed to you in many cases by the framework. For example : The [onnewresource](/docs/lua/resource_monitor#functiononnewresource) method in the Resource Monitor scripts pass you a flow object.
+You can create the flowID string manually using the above formula. In Trisul LUA Scripting you rarely would need to create the flow ID because it is passed to you in many cases by the framework. For example : The [onnewresource](/docs/lua/resource_monitor#function-onnewresource) method in the Resource Monitor scripts pass you a flow object.
 
 So you simply use that as shown here
 
