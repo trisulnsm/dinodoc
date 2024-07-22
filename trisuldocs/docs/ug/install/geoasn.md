@@ -43,7 +43,7 @@ Use [cfgedit](/docs/ref/plugin_configuration ) to edit the config settings. Se
 
 Once installed Trisul will automatically keep the databases updated at 2AM everyday. See the Frequency parameter in the config file.
 
-::
+:::
 
 The main parameters you may be interested to edit are :
 
