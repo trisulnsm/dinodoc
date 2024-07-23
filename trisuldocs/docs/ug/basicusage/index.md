@@ -1,6 +1,6 @@
 # First login
 
-Congrats ! You now have a Trisul login screen and may be wondering where
+Congrats! You now have a Trisul login screen and may be wondering where
 to go next. This page will get you from the login screen to the
 dashboards where you can view your first stats.
 
@@ -16,7 +16,7 @@ Login as username = `admin` password=`admin`
 
 ##### Start Trisul
 
-- Go to `Context : default > Admin Tasks > Start/Stop` Tasks
+- Go to `Context : default > Admin Tasks > Start/Stop Tasks`
 - Press the start button for `trisul-hub` and `trisul-probe`
 - Make sure both the components are started. They should be in “UP”
   state.
@@ -27,7 +27,7 @@ The error message is usually displayed right below. The most common
 reasons are
 
 - incorrect network adapter : By default `trisul-probe` listens for
-  traffic on `eth0` If you do not have an `eth0` on the box the you need
+  traffic on `eth0` If you do not have an `eth0` on the box then you need
   to switch the network adapter to the correct one using the steps in
   [Configuring packet capture adapters](/docs/ug/webadmin/profiles)
 
