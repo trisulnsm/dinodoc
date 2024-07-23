@@ -1,6 +1,6 @@
 # Trisul distributed domain concepts
 
-Trisul 6.0 is a *streaming* *distributed* analytics platform. There are
+Trisul 7.0 is a *streaming* *distributed* analytics platform. There are
 “Trisul Probes” which acquire and process network data and there are
 “Trisul Hubs” which provide the database function. The “Trisul Probes”
 are not just dumb collectors but actually contain the main streaming
@@ -61,7 +61,7 @@ The rules
 3. a context database is stored on a single hub - currently only on `hub0`
 4. you select a context while logging in to the web interface
 
-:::note **Contexts** A context is a separate database
+:::note **Contexts**: A context is a separate database
 
 :::
 
@@ -69,11 +69,11 @@ The rules
 
 Profiles are just configuraton for probes inside of a context. Typically
 you would want each probe in a context to use the same profile. A
-profile includes such things as counter groups, thresholds, flow
+profile includes counter groups, thresholds, flow
 trackers, and the other things that you would find when you login as
-Admin > Admin.
+Admin.
 
-:::note **Profiles** are just configuration for probes
+:::note **Profiles**: are just configuration for probes
 
 :::
 
@@ -95,11 +95,11 @@ A probe can run in multiple contexts and multiple domains. There will be
 different instances of the probes running isolated from each other.
 
 Probes are managed using the `trisulctl_probe` command line tool 
-:::note **Probes** transform packets into analytics streams.
+:::note **Probes**: transform packets into analytics streams.
 
 :::
 
-:::note **Packages** The “trisul-probe” package provides the Probe function
+:::note **Packages**: The “trisul-probe” package provides the Probe function
 
 :::
 
@@ -124,8 +124,8 @@ and cryptography. See [CurveMQ](http://curvezmq.org/) for more.
 1. Each node needs a certificate key pair to connect to the domain
 2. The command line tools trisulctl_probe and trisulctl_hub allow you
    to manage the whole setup easily
-3. 
-4. fddfdff
+
+
 
 A domain is the top level group to which probes and hubs are members.
 This section describes the concepts and operations on the domain.

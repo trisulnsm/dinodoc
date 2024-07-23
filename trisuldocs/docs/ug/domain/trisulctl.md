@@ -5,7 +5,7 @@ sidebar_position: 1
 # Domain Management Tools
 
 Trisul includes two command line tools for managing domain nodes. These
-form the centre piece of Trisul 6.0 distributed environment.
+form the centre piece of Trisul 7.0 distributed environment.
 
 1. **trisulctl_hub** — used to manage a domain from a admin perspective
 2. **trisulctl_probe** — manage a domain from a probe
@@ -87,7 +87,7 @@ trisulctl_hub command “start context” is executed.
 The trisulctl\_ tools are placed in `/usr/local/bin` when the probe/hub
 packages are installed. The default install of Trisul puts the Probe and
 Hub on a single machine, so both the trisulctl_hub and trisulctl_probe
-are available.
+are available.    
 
 To invoke the tools
 
@@ -146,8 +146,7 @@ The trisulctl_probe/hub tools have a powerful CLI. Some features are
 There is a very nifty set of bash aliases called `trisbashrc` on the
 `/usr/local/share/trisul-probe` and `trisul-hub` directories. To add
 these macros to your shell environment. See [trisbashrc
-Reference](/docs/ref/trisbashrc) for a complete list of useful
-shortcuts.
+Reference](/docs/ref/trisbashrc) for a complete list of useful shortcuts.
 
 ## Start and stop domain
 
@@ -160,7 +159,7 @@ stop the domain as shown below.
 
 The command to start a domain are.
 
-|                  |                                                                              |
+| Command          | Description                                                                  |
 | ---------------- | ---------------------------------------------------------------------------- |
 | `start domain`   | Start domain processes on local node, no effect if domain is already running |
 | `stop domain`    | Stop domain processes on local node.                                         |
@@ -174,7 +173,7 @@ The command to start a domain are.
 You can check if you have successfully joined a domain using a couple of
 commands
 
-|                |                                            |
+| Command        | Description                                |
 | -------------- | ------------------------------------------ |
 | `list nodes`   | print all nodes currently joined to domain |
 | `info context` | print all contexts on all nodes            |
@@ -184,7 +183,7 @@ commands
 On `quit` the CLI tool exits but the domain processes still run in the
 backgruound. To stop it :
 
-|               |             |
+| Command       | Description |
 | ------------- | ----------- |
 | `stop domain` | stop domain |
 
@@ -201,7 +200,7 @@ Trisul installs a context named `default` or `context0`
 
 The commands
 
-|                                           |                                                        |
+| Command                                   | Description                                            |
 | ----------------------------------------- | ------------------------------------------------------ |
 | `start context default`                   | Start the default context on all nodes                 |
 | `start context context0`                  | Start the context named `context0` - same as `default` |
@@ -222,7 +221,7 @@ Type `help log` for examples.
 
 The commands
 
-|                                          |                                                                                                                                                                                                                                                                                       |
+| Command                                  | Description                                                                                                                                                                                                                                                                           |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `stop context default`                   | Stops the default context on all nodes                                                                                                                                                                                                                                                |
 | <code>stop context default@hub0</code>   | Stop only the context on `hub0` node. The context will still be running on other nodes.                                                                                                                                                                                               |
@@ -233,7 +232,7 @@ The commands
 You can check if you have successfully joined a domain using a couple of
 commands
 
-|                        |                                                   |
+| Command                | Description                                       |
 | ---------------------- | ------------------------------------------------- |
 | `info context default` | Print context information for the default context |
 | `info context`         | Print info about all contexts                     |
@@ -264,7 +263,7 @@ them ask for confirmation
   configuration are removed. **Note** you cannot delete the default
   context so that is treated as a reset
 
-|                          |                                                                                                      |
+| Command                  | Description                                                                                          |
 | ------------------------ | ---------------------------------------------------------------------------------------------------- |
 | `reset context default`  | clear data but keep the configuration                                                                |
 | `delete context default` | remove the entire context, data and config. You can create a new context with that name if you want. |

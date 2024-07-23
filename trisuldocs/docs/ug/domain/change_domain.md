@@ -104,7 +104,7 @@ with different TCP endpoints.
 
 You enter the following information
 
-|                     |                                                                                                               |
+| Fields              | Description                                                                                                   |
 | ------------------- | ------------------------------------------------------------------------------------------------------------- |
 | Domain ID           | use `domain0` - we’re trying to create a new cert                                                             |
 | Domain Description  | a text description of the domain, goes in the cert file                                                       |

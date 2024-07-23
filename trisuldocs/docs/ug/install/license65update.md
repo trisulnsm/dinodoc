@@ -4,7 +4,7 @@ sidebar_position: 16
 
 # How to upgrade 6.5 production license
 
-Trisul customers who are running production systems need to first contact us and obtain an upgraded Trisul Network Analytics 7.0 Production license first.
+Trisul customers who are running production systems need to first contact us and obtain an upgraded Trisul Network Analytics 7.0 Production license.
 
 Merely updating packages without getting a new production license will result in an error like the following
 

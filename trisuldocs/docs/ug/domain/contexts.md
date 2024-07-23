@@ -84,7 +84,7 @@ processes.
 The login screen now has the new context dropdown, but for the `admin`
 user this will be disabled.
 
-![](images/newcontext.png)
+![](images/contextlogin.png)
 
 *Login page with the new context*
 
@@ -95,7 +95,7 @@ Login as admin will bring you to the admin screen for the contexts.
 Once you login as admin you will be shown the configuration for all the
 contexts. See the below image.
 
-![](images/contextadmin.png)
+![](images/mycontexts.png)
 
 *Select the context to open the configuration for that*
 
@@ -128,9 +128,9 @@ For more : [Web Admin Manage Users](/docs/ug/webadmin/manageusers)
 While logging in simply select the context you wish to view.
 
 If you are already logged in you can simply switch the context from the
-top level menu itself.
+menu on the top left itself.
 
-![](images/switchcontext.png)
+![](images/switchcontexts.png)
 
 *Already logged in users can switch context using the menu*
 

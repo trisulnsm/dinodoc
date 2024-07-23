@@ -18,8 +18,8 @@ The plugin can connect to MaxMind and IP2LOC online databases with your APIKEY,
 
 Here is a screenshot to give you an idea of what functionality is added by this plugin.
 
-| ![By ASN](./images/asn.png "By ASN")  <br/>Traffic by ASN | ![Traffic by country](./images/country.png "Traffic by country")  <br/>Traffic by country |
-| --------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| ![](images/trafficbyasn.png) <br/>Traffic by ASN | ![](images/trafficbycountry.png) <br/>Traffic by country |
+| ------------------------------------------------ | -------------------------------------------------------- |
 
 ## Setup
 
@@ -53,7 +53,7 @@ The main parameters you may be interested to edit are :
 | SampleRate        | 32                     | In packet mode, sample rate. Lookup Geo database only once every so many packets                                                                                                                                                                                                                     |
 | MeterCountry      | TRUE                   | Enable Country Wise metering                                                                                                                                                                                                                                                                         |
 | MeterASN          | TRUE                   | Enable ASN Wise metering                                                                                                                                                                                                                                                                             |
-| MeterCity         | FALSE                  | Enable City/Location metering – ![](https://trisul.org/docs/ug/install/WARNING) This will result in about 500MB RAM extra usage, disabled by default                                                                                                                                                 |
+| MeterCity         | FALSE                  | Enable City/Location metering –  This will result in about 500MB RAM extra usage, disabled by default                                                                                                                                                                                                |
 | MeterPrefix       | TRUE                   | Enable Network Prefixs (AS numbers as found in BGP)                                                                                                                                                                                                                                                  |
 | MeterASPATH       | FALSE                  | Meter AS Path based on the BGP Peering established by Trisul with the routers<br/>Feature used in ISP environments                                                                                                                                                                                   |
 | HomeASNumbers     |                        | Enter the ASNumber of the Trisul customer. This is required to calculate Upload/Download direction for the ASNumber Counter group<br/>Feature used in ISP environments                                                                                                                               |
@@ -102,7 +102,7 @@ Enter your Maxmind APIKEY in the provided space YOURLICENSEKEYHERE. For ISP�
 
 ## Commercial
 
-FOr high accuracy it is reccommended to purchase a license from https://www.maxmind.com for the following GeoLite2 products.
+For high accuracy it is reccommended to purchase a license from https://www.maxmind.com for the following GeoLite2 products.
 
 1. GeoLite2 Country
 2. GeoLite2 ASN
