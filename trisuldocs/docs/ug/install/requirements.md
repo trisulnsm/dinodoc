@@ -69,7 +69,7 @@ and low latency I/O to the Trisul Probes.
 | Hub  | For every medium volume probe + every 5 concurrent users | 1 3Ghz Core + 2GB DDR4     |
 
 Disk sizing is a key concern of the hub. The way Trisul-Hub works is
-data from each probe is stored in a separate layer. Since Trisul is used
+data from each probe is stored in a separate layer. Since Trisul is used in
 a lot in security applications no data is summarized or rolled up. To
 get an idea of how much data is being added every day, you can let
 Trisul run for a while and then check the following
