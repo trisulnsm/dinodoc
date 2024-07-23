@@ -184,7 +184,7 @@ A LUA script follows the following structure.
 2. the fields `id` , `onload`, `onunload`, and `onmessage` can appear with any script type
 3. the actual script appears within a sub table with the name of the script type, eg `simple_counter`
 4. you can put multiple script types in a single LUA file, they will be loaded on to different LuaJIT VM
-5. See [hello.lua sample](https://github.com/trisulnsm/trisul-scripts/blob/master/lua/hello/hello2.lua)
+5. See [hello.lua sample](https://github.com/trisulnsm/trisul-scripts/blob/master/lua/tutorial/tutorial1/hello.lua)
 
 The following snippet shows the structure of a typical LUA script (all methods except the id block are options )
 

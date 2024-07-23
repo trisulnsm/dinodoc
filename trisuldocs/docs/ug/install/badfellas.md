@@ -69,7 +69,7 @@ The Badfellas package installs stub copies of the following blacklists. These fe
 
 | Name                     | Type                                                                                                                                                  | Source |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| DNS blackhole list       | [malwaredomains.lehigh.edu](http://malwaredomains.lehigh.edu/) List keeps track of domains known to propagate malware and spyware                     |        |
+| DNS blackhole list       | [malwaredomains.lehigh.edu](http://sbc.io/hosts/hosts) List keeps track of domains known to propagate malware and spyware                     |        |
 | Malicious/scanner IPs    | [Dshield.org](https://www.dshield.org/) The well known DSHIELD list                                                                                   |        |
 | IP Blocklist             | [feodotracker.abuse.ch](https://feodotracker.abuse.ch/blocklist/) contains IP addresses (IPv4) used as C&C communication channel by the Feodo Trojan. |        |
 | Malware domain + urls    | [Malware Domain List](http://www.malwaredomainlist.com/)<br/>Domains hosting latest malware                                                           |        |
@@ -80,7 +80,7 @@ The Badfellas package installs stub copies of the following blacklists. These fe
 | URLs                     | [Ransomware Domain URLs](https://ransomwaretracker.abuse.ch/blocklist/) show list of ransomware urls                                                  |        |
 | SSL Blacklist            | [SSL Blacklist](https://sslbl.abuse.ch/) contains list of bad SSL certificates                                                                        |        |
 | Domains                  | Contains top 1 million domains list                                                                                                                   |        |
-| TOR nodes                | [TOR nodes](https://www.dan.me.uk/tornodes) Checks if any of your network hosts are involved in TOR proxy activitiy                                   |        |
+| TOR nodes                | [TOR nodes](https://www.dan.me.uk/torlist/?full) Checks if any of your network hosts are involved in TOR proxy activitiy                                   |        |
 | AlienVault IP Reputation | Flags IPs with poor reputation. This list includes scanners and other mischief                                                                        |        |
 | SSL Blacklist            | Hashes of malicious SSL certificates sourced from sslbl.abuse.ch                                                                                      |        |
 
