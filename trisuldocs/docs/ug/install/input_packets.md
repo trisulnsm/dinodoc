@@ -40,7 +40,7 @@ For small office networks you can even use 2 Ports of the box running Trisul and
 
 Bridge : Use the Trisul-Probe inline as a bridge. Useful for small deployments
 
-### Bridging Ethrenet Connections
+### Bridging Ethernet Connections
 
 A bridge allows you to connect two or more network segments together allowing devices to join the network when it’s not possible to connect them directly to a router or switch
 

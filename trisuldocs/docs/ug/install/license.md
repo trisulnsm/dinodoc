@@ -19,7 +19,7 @@ License types are :
 1. Free 3-Day License : The free license gives you tremendous value as it gets you all of the real time analytics and the most recent 3 days for historical analysis
 2. Production License : depends on the number of active internal endpoints in your Home Network space
    1. Small Business : 500 simultaneously active Internal IPs
-   2. Medium : 2000 simultaneously active Internal IPs
+   2. Medium : 3000 simultaneously active Internal IPs
    3. Unlimited : As many as your hardware can support
 
 For more information see the [Licensing FAQ](https://trisul.org/pricing)
@@ -30,7 +30,11 @@ Once you have decided which license type suits you, you need to get the Trisul M
 
 ### Getting the Machine ID
 
+:::note navigation
+
 Login as Admin → Select Context :default → Licensing
+
+:::
 
 *Getting the machine-id from the Admin UI*  
 ![](images/machineid.png)
@@ -54,7 +58,11 @@ The string looks like this :
 
 The license size depends on the number of maximum number of simultnaneously active Internal IPs. To get this number
 
+:::note navigation
+
 Login as Admin → Select Context → Licensing
+
+:::
 
 ![](images/license.png)
 
@@ -68,7 +76,11 @@ A new license file is typically named *License.\{emailid\}.txt* **You need a L
 
 This is the recommended method suitable for most deployments. You just have to upload the new license to the Hubs and Probe nodes using the *License page*
 
+:::note navigation
+
 Login as Admin → Select Context :default → Licensing
+
+:::
 
 On the Licensing page you can click on the Upload Button shown in the image below to select the new License file and upload it.
 

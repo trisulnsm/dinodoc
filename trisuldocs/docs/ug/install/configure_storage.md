@@ -19,10 +19,11 @@ One of the first things you need to do is to calculate how much disk you are goi
 
 1. Logon to the web interface as *admin* then select the *Admin Tasks → DB Status*
 2. From the *Database Slices* section you can check how much Disk Space is being used per day.
-3. Lower down , from the “Full Content” section you can see how much disk space is being used for packets.
-4. Click on the “Bar chart” icon above each item to see DB Growth Trends
+3. Lower down , from the “Raw packet storage slices” section you can see how much disk space is being used for packets.
+   
+   
 
-If you are trying to recover from a 100% full disk you may not be able to access the web interface. Add new disk space as desribed below and retry these steps.
+If you are trying to recover from a 100% full disk you may not be able to access the web interface. Add new disk space as described below and retry these steps.
 
 ## Data locations on the Probe Nodes
 
@@ -72,13 +73,13 @@ On the Hub you specify how many days you want to retain data. To specify the val
 
 If the Trisul disk fills up 100% you may not be able to access the web interface and of course Trisul will stop working. To recover from this error follow these steps.
 
-- ##### Mount new partition
+- ##### Step 1: Mount new partition
   
   Create a new partition with enough space and mount the new partition, say on `/mnt/trisul_extra`[Trisul Hub Configuration File - Trisul Documentation](/docs/ref/trsulhubconfig)
   
   We will be moving some packet capture and metrics to this new area to free up some space.
 
-- ##### Move the Probe archive to the new volume
+- ##### Step 2: Move the Probe archive to the new volume
   
   The idea here is to move the packet capture `archive` directory to the new volume and create a soft link to point to it in the old location.
   
@@ -88,17 +89,17 @@ If the Trisul disk fills up 100% you may not be able to access the web interface
       ln -sf /mnt/trisul_extra/probe_archive archive
   ```
 
-- ##### Check if enough disk is freed up and repeat
+- ##### Step 3:Check if enough disk is freed up and repeat
   
   Use the `df` command to check if now enough disk is available. If it is not available repeat Step 2 for the `/ref` directory and then if required for the `/oper` directory.
   
-  :::note**[Check disk space]** 
+  :::note **[Check disk space]** 
   
   At this step, if disk usage drop to about 70-80% you can stop here and skip Step 4. You should be able to restart the Web Server and then the other Trisul components.
   
   :::
 
-- ##### Move the Hub archive to the new volume
+- ##### Step 4: Move the Hub archive to the new volume
   
   Similar to the probe node we want to move the Hub data to the new partition and create a soft link to point to it.
   

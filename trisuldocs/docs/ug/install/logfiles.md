@@ -25,7 +25,7 @@ The locations of these files are :
 | type        | what it is                              | default location                                                                                                                                                                  | files                                                                                          |
 | ----------- | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | Application | main trisul probe process               | `/usr/local/var/log/trisul-probe/domain0/probe0/context0` replace the domain, probe, and context with the actual fields if you have created your own contexts                     | ns-.log – trisul probe logs, xLuaX.log redirected print() statements from LUA script instances |
-| Domain      | domain processes that co-ordinate nodes | `/usr/local/var/log/trisul-probe/domain0/probe0` replace with probe ID. each probe has its own domain processes because they are independent entities even if on the same machine | cp-XX.log probe logs                                                                           |
+| Domain      | domain processes that co-ordinate nodes | `/usr/local/var/log/trisul-probe/domain0/probe0` replace with probe ID. Each probe has its own domain processes because they are independent entities even if on the same machine | cp-XX.log probe logs                                                                           |
 
 ### On the Hub nodes
 
@@ -67,7 +67,7 @@ Similarly for the Hub Node
 
 ## Remote viewing
 
-Using the trisulctl_ tools you can view log files on any node. This is a really powerful feature that even allows you to `tail` logs on any node. A common use cause is to investigate errors on remote probes from a central hub location.
+Using the trisulctl_ tools you can view log files on any node. This is a really powerful feature that even allows you to `tail` logs on any node. A common use case is to investigate errors on remote probes from a central hub location.
 
 Say you are on the Hub node and want to view the *ns* log on probe1
 

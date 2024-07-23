@@ -12,14 +12,14 @@ The Geo plugin is an add-on package to Trisul. It enhances the base Trisul funct
 4. A Prefix Counter Group – for IP Prefix (AS BGP blocks) wise metering
 5. BGP metrics for ISP applications
 
-The plugin can connect to MaxMind and IP2LOC online databases with your APIKEY, periodi cally download, and integrate Geo Metrics from them into Trisul.
+The plugin can connect to MaxMind and IP2LOC online databases with your APIKEY, periodically download, and integrate Geo Metrics from them into Trisul.
 
 ## Samples
 
 Here is a screenshot to give you an idea of what functionality is added by this plugin.
 
 | ![By ASN](./images/asn.png "By ASN")  <br/>Traffic by ASN | ![Traffic by country](./images/country.png "Traffic by country")  <br/>Traffic by country |
-| ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
+| --------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 
 ## Setup
 

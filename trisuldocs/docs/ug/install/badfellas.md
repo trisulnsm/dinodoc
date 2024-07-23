@@ -101,9 +101,11 @@ To view the status of feed updates, whether the downloads were successful or not
 
 :::note
 
-Login as admin, then select *Webadmin > Manage > Plugin Data Updates* This shows the feed status.
+Login as admin, then select *Webadmin > Manage > Plugin Data Updates* 
 
 :::
+
+This shows the feed status.
 
 ## Installation
 
@@ -118,7 +120,7 @@ dpkg -i trisul_badfellas-1.0.153.amd64.deb
 
 ##### Upgrading
 
-Simple uninstall the old package and reinstall the new package.
+Simply uninstall the old package and reinstall the new package.
 
 #### A sample install
 
