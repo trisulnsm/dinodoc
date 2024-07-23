@@ -68,7 +68,7 @@ Get started by learning where to place LUA scripts, how to run in development mo
 
 2. The entire plugin is inside a LUA table called “TrisulPlugin” `TrisulPlugin = { ..}`
 
-3. The LUA table [*id*](//docs/lua/basics#id-block) contains info about the script
+3. The LUA table [*id*](/docs/lua/basics#id-block) contains info about the script
 
 4. The `onload` and `onunload` [functions](/docs/lua/basics#onload-and-onload) are called by the engine when the script is load/unloaded
 
