@@ -8,8 +8,9 @@ This is similar to the MRTG software that all ISPs are familiar with.
 
 ## Monitoring Bandwidth
 
-You can see the bandwidth consumption in visual graphics and download them as report from logging in as user.
+You can see the bandwidth consumption in visual graphics as chart and download them as report from logging in as user.
 *Login as user*
+
 You have now landed on the subscriber user window.
 
 ![](images/mrtg_mrtgcust1home.png)

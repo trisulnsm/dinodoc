@@ -77,11 +77,10 @@ Trisul run for a while and then check the following
 Login as Admin -\> Context (default) -\> Admin Tasks -\> DB Status
 
 You can get the database growth per day by looking at the “Database
-slices” table. Click on the icon to bring
-up a trend of database growth. This can help you size the system into
+slices” table. This can help you size the system into
 the future.
 
-![](images/dbgrowth.png)
+![](images/install_sysreq_databseslices.png)
 
 ### Probe sizing : Packet capture
 
