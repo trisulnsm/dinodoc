@@ -27,7 +27,8 @@ left side and the external hosts on the right side. Hosts are
 automatically classified as internal or external based on the [Home
 Networks](/docs/ug/webadmin/home_networks). Under the screenshot you can find a description of each module.
 
-![](images/dashboards/host.png)  
+![](images/dashboards/current-hosts.png)
+
 *Current active internal and external hosts dashboard*
 
 The Hosts dashboard consists of the following modules
@@ -82,12 +83,12 @@ drilldown.
 4. system performance,
 5. security alert trends
 
-![](images/dashboards/live_overview.png)  
+![](images/dashboards/live-dashboard-1.png)  
 *Live 1-min network traffic and security summary*
 
 Shows Top Internal Hosts, External Hosts, and Apps in 1-min real time.
 
-![](images/dashboards/rtoverview2.png)  
+![](images/dashboards/live-dashboard-2.png)  
 *Live charts with Application usage*
 
 ------------------------------------------------------------------------
@@ -160,12 +161,12 @@ Number” from the dropdown
 
 ### Monitor Total volume per AS
 
-![](images/dashboards/asnumbers.png)  
+![](images/dashboards/asn.png)  
 *Showing Total Traffic to and From AS*
 
 ### Monitor Time series traffic profile per AS
 
-![](images/dashboards/asn2.png)  
+![](images/dashboards/asn-2.png)  
 *Showing Timeseries Traffic profiles per Autonomous System at Gateways*
 
 The Autonomous System traffic is monitored using two mechanisms
@@ -173,7 +174,7 @@ The Autonomous System traffic is monitored using two mechanisms
 ***From packets***  
 using a built in database of AS IP Prefixes
 
-***From netflow*** 
+***From netflow***  
 from border routers peering AS BGP information
 
 ------------------------------------------------------------------------
@@ -189,23 +190,8 @@ Flow Taggers](/docs/ug/flow/tagger) The included statistics are Top-K, Time Seri
 Keep track of which countries give most traffic , flows, Top-N, Bottom-N
 and Time series trending supported.
 
-![](images/dashboards/country.png)  
+![](images/dashboards/country1.png)  
 *Showing Top-N country traffic by upload and download*
-
-#### Geo map
-
-You can put in your Google API key to plot the top traffic sources and
-destinations on a Geographical map as well. To enter your Google API
-
-:::note navigation
-
-This feature requires you to [enter a valid Google API
-KEY](/docs/ug/webadmin/web_options#ui) via *Customize -\> App Settings -\> UI*
-
-:::
-
-![](images/dashboards/geomap.png)  
-*Show top traffic sources on a geographical map*
 
 ## Real Time Alerts
 
@@ -230,7 +216,7 @@ underlying Real Time Stabbers framework. The stats are pushed directly
 to the browser from the Probe network, so the data is typically 1-2
 seconds real time.
 
-![](images/dashboards/rt_traffic.png)  
+![](images/dashboards/Real-Time-Traffid.png)  
 *Watch a live situation of network traffic*
 
 | Module             | Description                                                                                                 |

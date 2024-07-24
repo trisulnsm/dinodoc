@@ -132,7 +132,7 @@ To create a new module
 ### How to add modules to empty dashboard
 
 You can create and add new modules as well as existing modules to empty
-dashbord.  
+dashboard.  
 Create an empty live dashboard dashboard. Don’t add any modules.
 
 - Select Dashboard -\> Show all  
@@ -171,7 +171,7 @@ Create an empty live dashboard dashboard. Don’t add any modules.
 
 #### Add existing modules to empty dashbord
 
-- Click Add Existing Modules to add existing modules to empty dashbpard  
+- Click Add Existing Modules to add existing modules to empty dashboard  
 
 - Select module postion and modules.
 
