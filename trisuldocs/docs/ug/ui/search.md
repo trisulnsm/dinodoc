@@ -22,7 +22,7 @@ The search box is located below the side menu bar as shown here.
 
 Enter some search text here and press *Enter*
 
-![The Search Box](images/search_box.png "The Search Box")
+![](images/dashboards/searchbar.png)
 
 ## Search results
 
@@ -34,4 +34,4 @@ query.
 
 Click on the View Details button to explore further
 
-![Search Results](images/search_results.png "Search Results")
+![](images/dashboards/searchresult.png)

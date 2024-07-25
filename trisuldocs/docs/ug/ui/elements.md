@@ -30,7 +30,7 @@ You can hide the entire side menu panel.
 
 - Click -\> gripper or Ctrl+ M.
 
-![](images/elements/gripper.png)
+![](images/dashboards/hidemenu.png)
 
 ## Dashboards
 
@@ -60,7 +60,7 @@ item.
 
 **The context menu is a very handy way to get around Trisul**
 
-![](images/elements/context-menu.png)
+![](images/dashboards/contextmenu.png)
 
 ## Analysis Forms
 
@@ -72,7 +72,7 @@ These forms have a striped background throughout the app.
 In the sample form below, you can notice the *Hide* button on the top
 right corner.
 
-![](images/elements/sampleform.png)
+![](images/dashboards/hidesearchform.png)
 
 ## Toolbars
 
@@ -86,21 +86,21 @@ available currently.
 
 Sample form shows the analysis
 
-![](images/elements/toolbar.png)
+![](images/dashboards/pdfretrofaq.png)
 
 ## Packets and Flows drilldown buttons
 
 In the sample form below,common cues to indicate that you can view
 related flows or download a PCAP is mentioned.
 
-![](images/elements/flows_and_packets.png)
+![](images/dashboards/packetsnflowsdrilldown.png)
 
 ## Autocomplete
 
 All relevant form fields in Trisul are autocomplete capable. This
 functionality is triggered when you enter three or more characters.
 
-![Autocomplete 3 characters trigger](images/elements/autocomplete.png "Autocomplete 3 characters trigger")
+![](images/dashboards/autocomplete.png)
 
 ## Charts
 

@@ -28,7 +28,7 @@ Select Customize -\> UI -\> Share Dashboards
 | Author              |                           |
 | Version             |                           |
 
-choose the dashboards from the list you want to share
+Choose the dashboards from the list you want to share and click *Create Package*
 
 ## Install dashboard package
 
@@ -48,7 +48,7 @@ You can import a dashboard in two methods
 
 ### From a tar.gz or json file
 
-Plase upload a valid tar.gz or json file and click import button to
+Please upload a valid tar.gz or json file and click import button to
 import a dashboard
 
 Upload your dashboard file
@@ -57,4 +57,4 @@ Upload your dashboard file
 
 Please enter the valid json url to import a dashboard from URL.
 
-![](images/import_dashboard_url.png)
+![](images/dashboards/importfromurl.png)

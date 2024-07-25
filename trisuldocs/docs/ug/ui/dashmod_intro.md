@@ -46,7 +46,7 @@ Lets take a closer look at the dashboard shown above.
 
 You can control dashboard layout and contents by using the toolbars.
 
-\* Dashboard toolbars can be accessed from the right side corner of each
+Dashboard toolbars can be accessed from the right side corner of each
 dashboard window.
 
 ![](images/toolbars/dashboard_icons.png)  
@@ -139,7 +139,7 @@ Create an empty live dashboard dashboard. Don’t add any modules.
 
 - Select the empty dashboard you have created
 
-![](images/add_modules_empty_dashboard.png)  
+![](images/dashboards/dashmod.png)  
 *Empty dashboard ready to add modules to it*
 
 #### Create a module from your favorite keys and meters
@@ -148,10 +148,9 @@ Create an empty live dashboard dashboard. Don’t add any modules.
 
 - Select the Counter Group and Keys to add modules to the dashboard.  
 
-- If you want plot multiple keys in one module(per meter) check the
-  Multiple Keys box.  
+- If you want to plot multiple keys in one module(per meter) give them with comma separations.
 
-- Default all selected meters ploted in one module(per key).
+- By default all selected meters are ploted in one module (per key).
 
 #### Create Modules from topper
 
@@ -161,9 +160,9 @@ Create an empty live dashboard dashboard. Don’t add any modules.
 
 - Click Add modules button to add modules to dashboard
 
-#### Create live module from your favorite keys and meters
+#### Create real time stabber module from your favorite keys and meters
 
-- Create live module from your favorite keys and meters  
+- Create real time stabber module from your favorite keys and meters  
 
 - Select the Counter Group and Keys to add modules to the dashboard.  
 
@@ -187,13 +186,13 @@ To add a module to a specific position
 
 - A list of available dashboards will appear.  
 
-- Click -\> Edit option for the dashboard you want to add the module to.  
+- Click -\> Customize option for the dashboard you want to add the module to.  
 
-- Click -\> Add Module button in any position.  
+- Click on the plus icon on the modules layout to add Module button in any position.  
 
 - You will be shown a list of modules.  
 
-- Select the modules and click -\> Select button to take changes.
+- Select the modules and click -\> Save changes button to take changes.
 
 You can also specify the module number of your choice at any point.To
 find the module numbers,  
@@ -201,19 +200,21 @@ Select Customize -\> UI -\> Modules
 
 ##### Method - II
 
-- Click -\> Plus on the [dashboard toolbar](/docs/ug/ui/dashmod_intro#toolbars)  
+Go to Dashboards -> Current Hosts and
+
+- Click -\> Customize on the [dashboard toolbar](/docs/ug/ui/dashmod_intro#toolbars)  on the top right corner
 
 - A list of available modules will appear.  
 
-- Module position can be seen at the top of the form.  
+- Module position can be seen on the layout view.  
 
 - Select a position and a module you wish to add to that position.  
 
-- Click -\> Save.
+- Click -\> Update.
 
 ##### Method - III
 
-- Click -\> Plus on the [module toolbar](/docs/ug/ui/dashmod_intro#module-toolbars)  
+- Click -\> Customize on the [module toolbar](/docs/ug/ui/dashmod_intro#module-toolbars)  
 
 - A list of dashboards are available.  
 
@@ -249,9 +250,9 @@ Generally Models are numbered as 1,2,3,etc. Supported operators are
 For eg. Add two Metrics, You have to enter arithmetic expression as
 (1+2),(3-4) or Metric 1 as a percentage of 2 and 3 as 1%(2+3)
 
-![](images/arithmetic_expr.png)
+![](images/dashboards/arithmeticexpressionfields.png)
 
 A custom module dashboard with arithmetic expressions will look like
 this.
 
-![](images/custom_mod_dashboard.png)
+![](images/dashboards/arithmeticexpressionchart.png)
