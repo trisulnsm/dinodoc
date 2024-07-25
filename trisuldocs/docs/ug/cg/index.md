@@ -2,16 +2,12 @@
 
 Traffic monitoring is the central task of Trisul. Out of the box, Trisul
  measures over 120 parameters about 16 different "things" such as 
-Applications, Hosts, VLAN, MAC, etc. A "Counter Group":intro.html is 
-the key concept you need to know about in Traffic Monitoring with 
+Applications, Hosts, VLAN, MAC, etc. A "Counter Group": [Traffic metering concepts](/docs/ug/cg/intro) is the key concept you need to know about in Traffic Monitoring with 
 Trisul.
-
-
 
 import DocCardList from '@theme/DocCardList';
 
 <DocCardList />
-
 
 ### Traffic analysis features
 
@@ -21,21 +17,18 @@ You can monitor any metric in real time using [Real time stabbers](/docs/ug/cg/s
 
 ##### Historical analysis
 
-Use [retro analysis](/docs/ug/cg/retro) tools, long term traffic charts, monthly usage reports and other tools 
-for historical analysis. Trisul does not summarize or roll up any old 
+Use [retro analysis](/docs/ug/cg/retro) tools, long term traffic charts, monthly usage reports and other tools for historical analysis. Trisul does not summarize or roll up any old 
 data.
 
 ### Data acquisition methods
 
 ##### Packet capture
 
-The default mode. Trisul does all its analytics by directly capturing packets from the network. Learn how to [capture packets](/docs/ug/install/input_packets) for Trisul NSM.
+Packet capture is the default mode. Trisul does all its analytics by directly capturing packets from the network. Learn how to [capture packets](/docs/ug/install/input_packets) for Trisul NSM.
 
 ##### Netflow
 
-Can also accept [Netflow](/docs/ug/netflow/netflow_setup) v5, v9, SFLOW, and IPFIX instead of packets. This is a powerful 
-low-cost way to gain total visibility into your internal network traffic
- without a TAP and Probe rollout with packet capture techniques.
+Trisul also accept [Netflow](/docs/ug/netflow/netflow_setup) v5, v9, SFLOW, and IPFIX instead of packets. This is a powerful and low-cost way to gain total visibility into your internal network traffic without a TAP and Probe rollout with packet capture techniques.
 
 ### Task list
 
@@ -47,7 +40,7 @@ Jump to common network analysis tasks
 - Set up **flow trackers** to analyze specific activity
 - Investigate past activity
 - Enable metering which depend on flows not packets
-- Optimize full content storage (eg, store only first 1M of each flow)
+- Optimize full content storage (eg, store only first 1MB of each flow)
 
 [View all tasks](/docs/ug/cg/tasks)
 

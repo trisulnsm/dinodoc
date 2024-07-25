@@ -116,7 +116,7 @@ round-trip min/avg/max = 14.3/14.5/14.6 ms
 
 Similarly, to send ping requests to a large number of IP addresses simultaneously and check their availability, enter the command,
 
-`trisul_bulkping -demon /usr/local/etc/trisul-probe/domain0/probe0/context0/trrisulProbeConfig.xml`
+`trisul_bulkping -demon /usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml`
 
 This will start sending a series of ICMP echo request messages to multiple IP addresses as a bulk at certain intervals.
 
@@ -132,6 +132,6 @@ Once you have checked the reachability of the host you can stop the process by u
 
 where 1234 is the PID. Once you have the PID, enter
 
-`sudo kill -9 xxxx //PID` to force stop the process.
+`sudo kill -9 xxxx //xxxx is PID` to force stop the process.
 
 As you have now stopped the process, you can verify the state of the IP address which will be reflected on the *dashboard* as packetloss/down.
