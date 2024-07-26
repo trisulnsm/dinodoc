@@ -96,7 +96,6 @@ const sidebars = {
 						"lua/reassembly",
 						"lua/packet_storage",
 						"lua/protocol_handler",
-						"lua/message_monitor",
 					],
 
 				},
