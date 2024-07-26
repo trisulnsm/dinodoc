@@ -1,10 +1,7 @@
 # File Extraction
 
-:::note
+<span class='badge badge--info'>FRONT-END SCRIPT</span>
 
-**FRONTEND SCRIPT **
-
-:::
 
 Trisul has the ability to extract content from network traffic. Typical content include files transferred using HTTP and other protocols like FTP, SMTP, and others. Trisul allows you to control the entire file extraction process using LUA scripts.
 

@@ -1,8 +1,8 @@
 # PCAP storage
 
-**FRONT-END SCRIPT**
+<span class='badge badge--info'>FRONT-END SCRIPT</span>
 
-### Control packet storage policy on a per flow basis
+Control packet storage policy on a per flow basis
 
 Trisul has a sophisticated packet storage engine which allows you to control what packets get stored. For most cases you can use the built in packet storage policy configuration outlined in [Controlling Packet Storage](/docs/ug/caps/packetstorage)
 
@@ -12,12 +12,13 @@ If you want even more fine grained control of the PCAP storage policy on a per f
 
 Packet Storage skeleton script
 
-## Table `packet_storage`
+### Table `packet_storage`
 
 You need to supply code for one or more of the following functions.
 
-| [filter](/docs/lua/packet_storage#table-packet_storage)             | function(engine,timestamp,flowkey)               | called when a new flow starts. Examine the flow tuples and decide the packet (pcap) storage policy                                     |
-| ----------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| name | type| desc|
+| ---- | ----| ---|
+| [filter](/docs/lua/packet_storage#table-packet_storage)             | function(engine,timestamp,flowkey)  | called when a new flow starts. Examine the flow tuples and decide the packet (pcap) storage policy |
 | [filter_payload](/docs/lua/packet_storage#function-filter_payload) | function(engine, time, flow, dir, seekpos, buff) | called when first chunk of TCP data has been reassembled. Use this if you want to examine the headers and decide packet storage policy |
 
 
@@ -30,22 +31,22 @@ The following objects are specific to this feature.
 
 Your script needs to supply one or more of these functions listed below.
 
-## Function filter
+### Function `filter`
 
 Allows you to determine packet storage policy on a per-flow basis. This allows a fine-grained control that may not be possible using the built in method outlined in [Controlling Packet Storage](/docs/lua/packet_storage)
 
-### When called
+#### When called
 
 When a new flow is established, but no packets have been stored for that flow yet.
 
-### Parameters
+#### Parameters
 
 | engine    | An [Engine](/docs/lua/obj_engine) object | use this object to add metrics, resources, or alerts into the Trisul framework |
 | --------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | timestamp | number                                                            | Timestamp seconds when the first packet in the flow was seen                   |
 | flowkey   | A [FlowID](/docs/lua/obj_flowid) object  | use this to determine IPs and Ports involved in the flow                       |
 
-### Return value
+#### Return value
 
 Your script must examine the flow tuples and return one of the following values that determine how packets will be stored for that flow.
 
@@ -62,7 +63,7 @@ Your script must examine the flow tuples and return one of the following values 
 
 other values returned will be ignored and treated as “-1”.
 
-### Example
+#### Example
 
 The following example specifically excludes packets from `192.168.2.8` from being stored
 
@@ -79,15 +80,17 @@ filter = function(engine, timestamp, flow )
   end
 ```
 
-## Function filter_payload
+---
+
+### Function `filter_payload`
 
 Presents the first chunk of payload transmitted in each direction of the flow. Use this function if you need to see the actual bytes inside the flow to decide if you want to save the packets or not.
 
-### When called
+#### When called
 
 When the first chunk of TCP reassembled data is available on the flow. This method is called only once for the first chunk.
 
-### Parameters
+#### Parameters
 
 | engine    | An [Engine](/docs/lua/obj_engine) object | use this object to add metrics, resources, or alerts into the Trisul framework          |
 | --------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
@@ -97,7 +100,7 @@ When the first chunk of TCP reassembled data is available on the flow. This meth
 | seekpos   | number                                                            | Seek position byte position from the beginning of the stream                            |
 | buffer    | A [Buffer](/docs/lua/obj_buffer) object  | represents the reassembled bytes                                                        |
 
-### Return value
+#### Return value
 
 Your script must examine the flow tuples and return one of the following values that determine how packets will be stored for that flow.
 
@@ -114,7 +117,7 @@ Your script must examine the flow tuples and return one of the following values 
 
 other values returned will be ignored and treated as “-1”.
 
-### Example
+#### Example
 
 The following example
 

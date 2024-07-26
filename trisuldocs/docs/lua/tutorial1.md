@@ -1,12 +1,15 @@
-# Quickstart tutorial 1 – Getting started
+# Tutorial 1 Getting started
 
-This tutorial will get you started from scratch to a working script. We will assume you have installed Trisul and Web Trisul. You do not need to install LUA because it is embedded into the Trisul Probe.
+This tutorial will get you started from scratch to a working script. 
+
+
+We will assume you have installed Trisul and Web Trisul. You do not need to install LUA because it is embedded into the Trisul Probe.
 
 ## Hello World
 
 Lets get started with a simple “hello world” example. We will run the script first, see its output, and then start exploring it.
 
-:::note[GOALS]
+:::info[GOALS]
 
 Get started by learning where to place LUA scripts, how to run in development mode, how to view logs.
 
@@ -23,13 +26,11 @@ Get started by learning where to place LUA scripts, how to run in development mo
 
 2. ### Run Trisul over a PCAP file
    
-   1. Now lets run Trisul over a sample PCAP file. Use your own or download a sample PCAP from tutorial.pcap
+   1. Now lets run Trisul over a sample PCAP file. Use your own or download a sample PCAP from [Github tutorial.pcap](https://github.com/trisulnsm/trisul-scripts/raw/master/lua/tutorial/tutorial1/tutorial.pcap?raw=true)
    
    2. Run the trisulctl_probe CLI tool command ‘testbench’ which will run your scripts in a single threaded mode attached to your terminal. See [Development Environment](/docs/lua/debugger) *Sample run shown below*
       
       ```lua
-      cd /tmp
-      wget https://github.com/trisulnsm/trisul-scripts/raw/master/lua/tutorial/tutorial1/tutorial.pcap?raw=true -O tutorial.pcap
       trisulctl_probe testbench run tutorial.pcap
       ```
 
@@ -44,21 +45,52 @@ Get started by learning where to place LUA scripts, how to run in development mo
         ✓ domain node hub0 ready
       Replacing image with 
       /usr/local/bin/trisul  -nodemon /usr/local/etc/trisul-probe/domain0/probe0/context_debug0/trisulProbeConfig.xml -mode offline -in Test.pcap
-      ```
-     ```lua 
+
       Onload – hello world  
       Onunload  – bye  
       Onload – hello world  
       Onunload  – bye
       ```
-      ```
-      
-      ```
-> Congratulations! You have just run your first LUA script on Trisul
 
-   ** Exploring hello.lua **
+
+> :clap: Congratulations! You have just run your first LUA script on Trisul
+
+
+
+## Exploring hello.lua
 
    The script [hello.lua](https://github.com/trisulnsm/trisul-scripts/blob/master/lua/tutorial/tutorial1/hello.lua) looks like this
+
+
+```lua title="hello.lua" {6-12,14-17,20-22} showLineNumbers
+--
+-- Basic working script, just prints hello
+--
+TrisulPlugin = {
+
+  id = {
+    name = "Hello World",
+    description = "Nothing much ",
+    author = "Unleash",
+    version_major = 1,
+    version_minor = 0,
+  },
+
+  onload = function()
+    print("Onload - hello world  "); 
+    T.host:log(T.K.loglevel.INFO, "Hello world now in log file ");
+  end,
+
+
+  onunload = function ()
+    print("Onunload  - bye  ");
+  end,
+
+}
+
+```
+
+The key parts of the script are shown here 
 
    ![](./images/tutorial1_structure.png)
 

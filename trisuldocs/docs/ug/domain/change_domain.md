@@ -187,7 +187,8 @@ listed here.
 
 ### Run change_endpoints for hub context (for first probe only)
 
-<Highlight color="#FF0000">RUN ON HUB</Highlight><Highlight color="#1877F2">ONLY FOR FIRST PROBE</Highlight>
+<span class="badge badge--danger">RUN ON HUB</span>
+<span class="badge badge--info">ONLY FOR FIRST PROBE</span>
 
 By default , Trisul uses an IPC connection for each Hub node. If this is
 the first remote probe you are adding. You  

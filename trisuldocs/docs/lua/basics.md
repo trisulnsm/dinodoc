@@ -15,9 +15,7 @@ The Trisul LUA API allows you to extend the functionality of Trisul by plugging 
 7. dozens of other applications. see [samples](https://github.com/trisulnsm/trisul-scripts/tree/master/lua) and [Trisul Apps](https://github.com/trisulnsm/apps)
 
 :::info
-
 Trisul embeds LuaJIT 2.1.0-beta3 compatiable with LUA version 5.1. Ensure your scripts are compatible with Lua 5.1 and not 5.2.
-
 :::
 
 ## Stream Processing
@@ -37,9 +35,10 @@ The two streaming pipelines are shown below
 
 A script is attached either to the [frontend or the backend pipeline](/docs/lua/basics#stream-processing) It cannot be attached to both. You do not have to do anything special to mark your script as attaching to frontend or backend. The “type of script” you write is automatically detected and attached to the correct place. We will shortly see what types of scripts are available.
 
+
 | Frontend script types          | Backend script types                           |
 | ------------------------------ | ---------------------------------------------- |
-| Marked in docs as F or FRONTEND          | Marked in docs as B or BACKEND       |
+| Marked in docs as <span class="badge badge--info">F</span> or <span class="badge badge--info">FRONTEND</span>| Marked in docs as <span class="badge badge--warning">B</span> or <span class="badge badge--warning">BACKEND</span>       |
 | Fast path                                | Slow path                            |
 | Works on packets and flows               | Works on metrics stream              |
 | Time budget in milliseconds, slow scripts will result in packet drops as the buffers fill up                        | Time budget in 10-15 seconds, slow scripts will result in some metrics getting dropped                                    |

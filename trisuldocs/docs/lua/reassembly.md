@@ -1,6 +1,6 @@
 # TCP Reassembly
 
-FRONTEND SCRIPT
+<span class='badge badge--info'>FRONT-END SCRIPT</span>
 
 Interface into the TCP Reassembly Engine using LUA. Your LUA scripts can
 

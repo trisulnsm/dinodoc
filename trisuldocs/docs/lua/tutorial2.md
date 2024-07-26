@@ -1,4 +1,4 @@
-# Quickstart tutorial 2 – A simple counter
+# Tutorial 2 A simple counter
 
 Congrats, you’ve made it to the second tutorial in the series. In the [first instalment](/docs/lua/tutorial1) , we got our feet wet by writing a very simple hello world script. It didnt no much beyond printing a few log messages, but it taught us how to setup scripting. In this tutorial 2, we will write a simple script that meters packet lengths.
 
@@ -6,7 +6,7 @@ Congrats, you’ve made it to the second tutorial in the series. In the [first i
 
 Once again as in Tutorial-1, lets run the script first and then explore details.
 
-:::info[GOALS]
+:::info [GOALS]
 
  Develop useful Packet Length Histogram counter. How many packets > 1400,1000-1400,500-1000,etc. How to run in production mode, how to write a [simplecounter](/docs/lua/simple_counter) script to plug into each packet, how to view results.
 

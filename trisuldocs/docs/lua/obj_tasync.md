@@ -8,13 +8,13 @@ To execute long running I/O tasks in a separate worker pool to prevent blocking 
 
 ## Methods
 
-| function                                                                            | parameters                                                                              | what it does                                                                                                        |
-| ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| [cat](/docs/lua/obj_tasync#function-tasynccat)              | from_file, to_file                                                                      | Append one file to another                                                                                          |
-| [copy](/docs/lua/obj_tasync#function-tasynccopy)            | from_file, to_file                                                                      | Copy one file to another.                                                                                           |
-| [rm](/docs/lua/obj_tasync#function-tasyncrm)                | filename : string                                                                       | Delete a file                                                                                                       |
-| [copybuffer](/docs/lua/obj_tasync#function-tasynccopybuffer) | from_buffer (a [Buffer](/docs/lua/obj_buffer) object), to_file | Append buffer content bytes to the target file                                                                      |
-| [schedule](/docs/lua/obj_tasync#tasync)                    | a LUA schedule block                                                                    | Runs the LUA functions in the block asynchronosly and re-enter the fast path at a later time when results are ready |
+| function | parameters| what it does|
+| ---- | ------ | --- |
+| [cat](/docs/lua/obj_tasync#function-tasynccat)| from_file,to_file| Append one file to another|
+| [copy](/docs/lua/obj_tasync#function-tasynccopy)| from_file,to_file| Copy one file to another|
+| [rm](/docs/lua/obj_tasync#function-tasyncrm) | filename : string | Delete a file|
+| [copybuffer](/docs/lua/obj_tasync#function-tasynccopybuffer) | from_buffer (a [Buffer](/docs/lua/obj_buffer) object), to_file | Append buffer content bytes to the target file |
+| [schedule](/docs/lua/obj_tasync#tasync)| a LUA schedule block | Runs the LUA functions in the block asynchronosly and re-enter the fast path at a later time when results are ready |
 
 ---
 
@@ -43,6 +43,8 @@ None
 T.async.cat("/tmpfs/k/file1.data", "/home/nsm/files/file123.dat")
 ..
 ```
+
+---
 
 ### Function `T.async.copy`
 
@@ -87,11 +89,11 @@ None
 
 Operations on writing [Buffer](/docs/lua/obj_buffer) contents to files.
 
-## Purpose
+#### Purpose
 
 Write contents of a [buffer](/docs/lua/obj_buffer) object to disk.
 
-## Parameters
+#### Parameters
 
 | Name                | Info                                                             | Description                                                                                                                                                            |
 | ------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -99,11 +101,11 @@ Write contents of a [buffer](/docs/lua/obj_buffer) object to disk.
 | filename            | `filename` string                                                | filename to write to. File is created if it doesnt exist                                                                                                               |
 | position (optional) | `seelpos` number                                                 | **Optional** At what position do you want to write the buffer. If this parameter is not specified the default mode of `copybuffer` is to append to the end of the file |
 
-## Return value
+#### Return value
 
 None
 
-## Usage
+#### Usage
 
 ```lua
 ..
@@ -117,14 +119,16 @@ T.async.copybuffer( payload_buffer, "/home/nsm/files/file123.dat")
 T.async.copybuffer( payload_buffer, "/home/nsm/files/file123.dat", seekpos )
 ```
 
-## T.async:schedule
+---
+
+### Function `T.async:schedule`
 
 T.async methods *cp,cat,rm,copybuffer* described above accomplish very specific tasks. Using the `T.async:schedule` method described below you can run any arbitrary LUA code out of the main packet pipeline.
 
 **T.async:schedule**  
 Imagine your LUA script needed to look up a dictionary of Malware online, you would write the LUA code to do that and use the `schedule` method to push it out of the fast path.
 
-### Methods
+#### Methods
 
 T.async:schedule expects a table with the following fields
 
@@ -133,7 +137,7 @@ T.async:schedule expects a table with the following fields
 | onexecute | function( in_data)                  | **called on SLOWPATH** A function that accepts the `data` string specified. This function executes in a separate thread/task from the packet pipeline. You do your processing and optionally return a ‘response’ string. See rules below                                                                    |
 | onresult  | function(engine, in_data, out_data) | **called on FASTPATH** if your script in `onexecute` on the separate thread returns string, Trisul will re-enter the fast path and call the `onresult` function with the result string. You can then update the `engine` parameter by adding metrics, generating alerts, or interact with Trisul in any way |
 
-### Usage
+#### Usage
 
 This small snippet shows the usage
 

@@ -1,4 +1,4 @@
-# Asynchronous execution intro
+# Asynchronous execution
 
 This section describes the concepts behind async execution within Trisul LUA scripting framework. Please refer to [`T.async`](/docs/lua/obj_tasync) documentation for function reference. This section explains the motivation and design of this execution model.
 

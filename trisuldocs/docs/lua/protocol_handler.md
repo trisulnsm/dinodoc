@@ -1,15 +1,14 @@
 # Protocol Handler
 
-**FRONTEND SCRIPT**
+<span class='badge badge--info'>FRONT-END SCRIPT</span>
 
 A custom protocol handler is used to construct a ‘protocol layer stack’. The script takes a packet at a given layer and is responsible for
 
 1. consume N bytes at that layer
 2. tell Trisul framework what protocol the next layer is
 
-### An example
-
-One use case of such a script could be to do port agnostic protocol identification. For instance you can treat packets on UDP Port 8883 as either Netflow protocol or SFlow protocol depending on the router IP address that sent the packet.
+> #### An example
+> You can create a script to handle a new SYSLOG protocol which will then handle packets to UDP Port 514
 
 ## Structure
 
@@ -19,8 +18,8 @@ Download a well documented skeleton script from here to copy and get started
 
 ### Table `protocol_handler`
 
-| name                                                                                     | type                                                            | description                                                                                |
-| ---------------------------------------------------------------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| name  | type | description  |
+| ---- | ---- | ------ |
 | table [control](/docs/lua/protocol_handler#table-control)              | table                                                           | assign a name and GUID to this protocol                                                    |
 | function [parselayer](/docs/lua/protocol_handler#function-parselayer) | function( [layer](/docs/lua/obj_layer) | given a packet consume N bytes for this protocol and tell Trisul what the next protocol is |
 
@@ -28,8 +27,8 @@ Download a well documented skeleton script from here to copy and get started
 
 The control table assigns a unique GUID to this protocol and a name. You can then use [Access Points](/docs/ug/webadmin/access_points) to connect this protocol to a lower layer.
 
-| name                | type             | description                                                                                                                                                                                                             |
-| ------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name  | type | description |
+| ----- | ----- | ------ |
 | guid                | string           | A unique guid that identifies this new protocol. Use `trisulctl_probe testbench guid` to generate a [new GUID](/docs/ref/guid)                                                                                         |
 | name                | string           | Name of the counter group. Keep it short < 15 chars                                                                                                                                                                     |
 | description         | string           | optional                                                                                                                                                                                                                |
@@ -68,29 +67,29 @@ Trisul constructs such a tree for each packet. The *protocol_handler* script cre
 2. if so how many bytes of the packet apply to this protocol
 3. what is the next protocol
 
-### Purpose
+#### Purpose
 
 Parse or dissect a packet data buffer at a given layer and construct the protocol tree to the next layer protocol.
 
-### When called
+#### When called
 
 When a packet arrives that is attached to this protocol. Remember you can attach a protocol to any layer using the “Access Points”
 
-### Parameters
+#### Parameters
 
 |Name | object | Info |
-| ----- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ----- | ---- | ------ |
 | layer | a [Layer](/docs/lua/obj_layer) object | the layer object contains the packet bytes that are above the lower constructed layer. you can use the layer object to navigate the previously constructed layers. |
 
 
-### Return value
+#### Return value
 
 The return values
 
 1. return nil → if this packet is not recognized by this protocol
 2. return N, protocol_guid → where n= number of bytes eaten at this layer, guid = next layer protocol (or nil)
 
-### Example
+#### Example
 
 The following example shows how you can handle the DHCP protocol example.  
 DHCP runs on top of UDP and there is no next protocol, it is the last one. So you consume all the bytes and return nil.
