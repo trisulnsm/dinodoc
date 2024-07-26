@@ -4,28 +4,27 @@ The global table named `T` can be accessed from anywhere. It defines some consta
 
 ## Global Table `T` index
 
-| Name                                                                | info                                                                                                                                                                                         |
-| ------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| T.contextid                                                         | A number that identifies the threading execution context of this lua script. You can have more than one instance of your script loaded see [Threading](/docs/lua/basics#threading) |
-| T.execution_contextid                                               | Same as `T.contextid`                                                                                                                                                                        |
-| T.probeid                                                           | A string that identifies the probe within the domain running this script, such as `probe0`                                                                                                   |
-| T.probeversion                                                      | The version of the *Trisul Probe* running this script, such as `6.5.2779`                                                                                                                    |
-| T.context_name                                                      | The database context name.                                                                                                                                                                   |
-| T.args                                                              | The `-args` command line option from [trisul](/docs/programs/trisulprogram)                                                                                                              |
-| T.enginetype                                                        | A string `backend` or `frontend` – scripts may want to use this                                                                                                                              |
-| [T.host](/docs/lua/obj_globalt#table-thost)  | Host methods that can be called from LUA                                                                                                                                                     |
-| [T.K](/docs/lua/obj_globalt#table-tk)        | Constants                                                                                                                                                                                    |
-| [T.util](/docs/lua/obj_globalt#table-tutil) | Utility methods                                                                                                                                                                              |
-| [T.async](/docs/lua/obj_tasync)             | Methods to call async LUA functions out of fast packet path                                                                                                                                  |
-| [T.re2](/docs/lua/obj_globalt#function-tre2)  | A fast and powerful regex engine (Google RE2)                                                                                                                                                |
-| [T.ac](/docs/lua/obj_globalt#function-tac)   | A minimal but fast Aho-Corasick multi pattern matcher                                                                                                                                        |
-| [T.log](/docs/lua/obj_globalt#function-tlog) | Function to log a message that goes into the main Trisul logging framework.                                                                                                                  |
-|                                                                     |                                                                                                                                                                                              |
-| T.countergroups                                                     | A table of ( countergroup name, guid ) currently loaded. Only for backend scripts. For frontend scripts this field has a nil                                                                 |
-| T.resourcegroups                                                    | Backend scripts only : A table of ( resourcegroup name, guid ) currently loaded.                                                                                                             |
-| T.ftsgroups                                                         | Backend scripts only : A table of ( FTS (Full Text Search) name, guid ) currently loaded.                                                                                                    |
-| T.sessiongroups                                                     | Backend scripts only : A table of ( session group name, guid ) currently loaded.                                                                                                             |
-| [T.env](/docs/lua/obj_globalt#table-tenv)    | Environment and Trisul Config file                                                                                                                                                           |
+| Name| Info |
+| --- | ----- |
+| T.contextid | A number that identifies the threading execution context of this lua script. You can have more than one instance of your script loaded see [Threading](/docs/lua/basics#threading) |
+| T.execution_contextid | Same as `T.contextid`  |
+| T.probeid | A string that identifies the probe within the domain running this script, such as `probe0`|
+| T.probeversion | The version of the *Trisul Probe* running this script, such as `7.0.2779` |
+| T.context_name | The database context name. |
+| T.args | The `-args` command line option from [trisul](/docs/programs/trisulprogram)|
+| T.enginetype | A string `backend` or `frontend` – scripts may want to use this |
+| [T.host](/docs/lua/obj_globalt#table-thost)  | Host methods that can be called from LUA |
+| [T.K](/docs/lua/obj_globalt#table-tk)        | Constants |
+| [T.util](/docs/lua/obj_globalt#table-tutil) | Utility methods |
+| [T.async](/docs/lua/obj_tasync)  | Methods to call async LUA functions out of fast packet path |
+| [T.re2](/docs/lua/obj_globalt#function-tre2)  | A fast and powerful regex engine (Google RE2) |
+| [T.ac](/docs/lua/obj_globalt#function-tac)   | A minimal but fast Aho-Corasick multi pattern matcher |
+| [T.log](/docs/lua/obj_globalt#function-tlog) | Function to log a message that goes into the main Trisul logging framework.|
+| T.countergroups  | A table of ( countergroup name, guid ) currently loaded. Only for backend scripts. For frontend scripts this field has a nil    |
+| T.resourcegroups | Backend scripts only : A table of ( resourcegroup name, guid ) currently loaded. |
+| T.ftsgroups  | Backend scripts only : A table of ( FTS (Full Text Search) name, guid ) currently loaded.|
+| T.sessiongroups | Backend scripts only : A table of ( session group name, guid ) currently loaded.|
+| [T.env](/docs/lua/obj_globalt#table-tenv)    | Environment and Trisul Config file |
 
 ### Table `T.host`
 
@@ -33,24 +32,25 @@ Interact with the Trisul environment.
 
 Use the object calling notation `T.host:function(..)` to invoke these methods.
 
-| Name           | In                                                        | Out                                               | Description                                                                                             |
-| -------------- | --------------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| get_homenets   | none                                                      | Table, Array of [ `string` IP, `string` Netmask ] | Get home networks defined by Trisul.                                                                    |
+| Name  | In | Out | Description|
+| ----- | ---- | ---- | ---- |
+| get_homenets   | none | Table, Array of [ `string` IP, `string` Netmask ] | Get home networks defined by Trisul.|
 | is_homenet     | `number` 32bit IPv4 or `string` IPv4 in dotted decimal    | `bool`                                            | Is the 32-bit IPv4 address within the home network?<br/><br/> LUACopy`T.host:is_homenet(“192.168.2.1”)` |
-| is_homenet_key | `string` IPv4 in trisul key format                        | `bool`                                            | Is the Trisul key format IP address in the home network.                                                |
-| get_configpath | none                                                      | `string` directory                                | Configuration directory                                                                                 |
-| get_datapath   | none                                                      | `string` directory                                | Data directory                                                                                          |
+| is_homenet_key | `string` IPv4 in trisul key format     | `bool`       | Is the Trisul key format IP address in the home network.    |
+| get_configpath | none    | `string` directory  | Configuration directory |
+| get_datapath   | none    | `string` directory   | Data directory  |
 | createkey      | `guid` counter group id, `string` – key, `string` – label |                                                   | Create a userlabel for a given key. Use this to pre-load human labels for keys                          |
 | prepare_config | `guid` – plugin id, `string` template file                | plugin config                                     | Prepare a configuration file for your plugin                                                            |
-| broadcast      | `guid` – message id, `guid` class id, `string` message    | none                                              | Broadcast a state update to other plugins                                                               |
+| broadcast      | `guid` – message id, `guid` class id, `string` message    | none  | Broadcast a state update to other plugins      |
 
 ### Table `T.K`
 
 Pre-defined constants to use with other Lua functions.
 
-| loglevel | Log levels  | EMERG, FATAL, ALERT, CRIT, ERROR, WARN, NOTICE, INFO, DEBUG Usage : `print(T.K.loglevel.ERROR) => 4` |
-| -------- | ----------- | ---------------------------------------------------------------------------------------------------- |
-| vartypes | Meter types | COUNTER, RATE_COUNTER, GAUGE, RUNNING_COUNTER                                                        |
+| Name | Type | Numeric values |
+| -------- | ------- | ----- |
+| loglevel | Log levels  | EMERG, FATAL, ALERT, CRIT, ERROR, WARN, NOTICE, INFO, DEBUG <br/>Usage : `print(T.K.loglevel.ERROR) => 4` |
+| vartypes | Meter types | COUNTER, RATE_COUNTER, GAUGE, RUNNING_COUNTER |
 
 ### Constants `T.K.vartype`
 
@@ -58,19 +58,18 @@ Constants : Types of counters.
 
 This table defines counter types supported by Trisul. You typically use this table when creating custom [countergroups](/docs/lua/counter_group)
 
-| COUNTER            | Increment a counter that resets to zero at start of every time bucket                                                                                                                                                          |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| RATE_COUNTER       | Equal to COUNTER / Bucket Size in seconds                                                                                                                                                                                      |
-| GAUGE              | Instantaneous values                                                                                                                                                                                                           |
-| RUNNING_COUNTER    | Increment or decrement a counter, does not reset every time bucket                                                                                                                                                             |
-| AVERAGE            | Average of all samples in the window.                                                                                                                                                                                          |
+
+| Meter Type | Description |
+|---|---|
+| COUNTER            | Increment a counter that resets to zero at start of every time bucket|
+| RATE_COUNTER       | Equal to COUNTER / Bucket Size in seconds|
+| GAUGE              | Instantaneous values|
+| RUNNING_COUNTER    | Increment or decrement a counter, does not reset every time bucket|
+| AVERAGE            | Average of all samples in the window.|
 | DELTA_RATE_COUNTER | Delta counter per second. Use this for SNMP like samples that represent a running counter but when you need to do a *c2 – c1* to get the total volume. The RATE part indicates that the final value will be (c2-c1)/bucketsize |
-| MAXIMUM            | Maximum of all samples in the window                                                                                                                                                                                           |
-| MINIMUM            | Minimum of all samples in the window                                                                                                                                                                                           |
+| MAXIMUM            | Maximum of all samples in the window |
+| MINIMUM            | Minimum of all samples in the window |
 
-window
-
-every counter group has a streaming window of *bucketsize* seconds. This is by default 60 seconds, but can be as low as 1 second.
 
 ### Table T.util
 
@@ -82,12 +81,12 @@ Useful utility functions written in C, exported to LUA via T.util table. We find
 local hexstr= T.util.bin2hex( binstr)
 ```
 
-| Name      | In                                                              | Out                                  | Description                                                                                                                                                                         |
-| --------- | --------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ntop      | `number` 32-bit IPv4                                            | `string` IP in dotted decimal format | Convert a 32 bit number to IPv4 address string                                                                                                                                      |
-| pton      | `string` ip in dotted decimal                                   | `number` 32 bit IP address           | Convert an IPv4 address string to a number                                                                                                                                          |
-| bor       | `number` p ,`number` q                                          | `number` p OR q                      | bitwise OR of two numbers                                                                                                                                                           |
-| band      | `number` p,`number` q                                           | `number` p AND q                     | bitwise AND of two numbers                                                                                                                                                          |
+| Name  | In | Out | Description   |
+| ----- | ---- | ---- | ---- |
+| ntop  | `number` 32-bit IPv4  | `string` IP in dotted decimal format | Convert a 32 bit number to IPv4 address string |
+| pton  | `string` ip in dotted decimal  | `number` 32 bit IP address | Convert an IPv4 address string to a number  |
+| bor   | `number` p ,`number` q   | `number` p OR q  | bitwise OR of two numbers |
+| band  | `number` p,`number` q  | `number` p AND q   | bitwise AND of two numbers |
 | testbit32 | `number` p, `number` (bit position)                             | `bool`                               | Test bit position of a 32 bit number. LSB=0, MSB=31<br/>T.util.testbit32(num,8)@ returns true if bit 8 = 1                                                                          |
 | bitval32  | `number` p, `number` (start bit), `number` width                | `number`                             | Get value of continous bits.<br/>`T.util.bitval32(num,20,4)` returns the numeric value of bits 20,19,18,17. Bit numbering start from 0 (C-style)                                    |
 | split     | `string` the string to split, `string` the delimiter            | array of `string` tokens             | Split a string into tokens `local tok_array = T.util.split(args,',')`                                                                                                               |

@@ -2,14 +2,17 @@
 
 The Trisul metrics engine.
 
-You call methods on this object to add metrics, objects, flows, or other types of information. This is the most important object you will be working with.
+You call methods on this object to add metrics, objects, flows, or other types of information. 
 
-## Functions
+> :goat: This is the most important object you will be working with.
+
+
+## Functions and types 
 
 A summary of the functions available in this object.
 
-- F – functions that can be called from [Frontend](/docs/lua/basics#frontend-and-backend-scripts) scripts
-- B – functions that can be called from [Backend](/docs/lua/basics#frontend-and-backend-scripts) scripts
+- <span class="badge badge--info">F</span> – functions that can be called from [Frontend](/docs/lua/basics#frontend-and-backend-scripts) scripts
+- <span class="badge badge--warning">B</span> – functions that can be called from [Backend](/docs/lua/basics#frontend-and-backend-scripts) scripts
 
 If you call functions that are not available you will get the following error
 
