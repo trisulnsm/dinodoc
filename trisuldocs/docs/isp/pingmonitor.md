@@ -4,7 +4,18 @@ sidebar_position: 1
 
 # PING Monitor
 
-## Create PING Groups:
+PING Monitor allows ISP to monitor a select number of devices for the following 
+ - reachability
+ - packet drops
+ - latency
+
+Using this feature ISPs typically keep track of the health of their key infrastructure elements like routers, mux, servers etc. 
+
+To use this feature create PING Groups, these are groups of device IP addresses that represent some part of their network such as customers, infra, servers, etc.  Once these groups are created you view the PING monitor dashboards and see which devices are down, having poor latency, etc.
+
+
+
+## Create PING Groups
 
  Ping groups are collections of IP addresses that are grouped together for monitoring purposes. These groups are organized and managed to monitor multiple devices or hosts based on various criteria, such as their function, location, or importance.
 
@@ -43,7 +54,7 @@ You have now successfully created a PING group!
 
 The newly added PING groups are now available for edit on the Ping monitor window.
 
-## Manage IPs:
+## Add IPs to the PING Group
 
 Once you have added the Ping groups to the Ping Monitor module you can add the IPs to be monitored on that Ping group.
 
@@ -52,7 +63,7 @@ Once you have added the Ping groups to the Ping Monitor module you can add the I
 To manage IPs on the PING groups,
 Click on the dropdown option button on the right side against the PING group you would like to manage. From the list of dropdown options click *Manage IPs*.
 
-![](images/pingaddip2.png)
+![](images/ping-arrow.png)
 
 Click on the *Add* button to add or remove IPs to be monitored with PING in this group. The *Add Ping Target to group* module will appear with the following fields.
 
