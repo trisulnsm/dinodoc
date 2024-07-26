@@ -7,6 +7,51 @@ sidebar_position: 4
 This section contains a quick overview of the user interface elements
 used by Trisul.
 
+
+## UI Layout
+
+There are two layouts in Trisul 
+- Admin Layout 
+- User Layout
+
+### User Layout
+
+When you login as a non admin user you will see the following layout 
+
+![User Layout](images/userlayout.png)  
+
+
+Observe three sections 
+- Top Panel
+- Menu Panel
+- Dashboard Panel 
+
+
+### Top Panel details
+
+The top panel contains the following items
+
+![Top panel](images/topbar.png)   
+
+#### Shortcut
+
+Click on the Shortcut button to hide and unhide the side menu. This will provide you with extra screen space when necessary.
+#### Trisul Logo
+
+Clicking on the logo takes you to the home page.
+#### Search Bar
+You can use the Search tool to find items of your interest.
+#### License Detail
+You can check the validity of your License here.
+#### Alerts and Notifications
+![](images/alertsnnotifications.png)
+You can check for the alerts and notifications on External IDS, Threshold Crossing, Threshold Band Alerts, Blacklist Activity and Flow tracker here.
+#### Host Name
+This shows the host's name. All time zones in Trisul are displayed in the host's time zone.
+
+
+
+
 ## Menus
 
 A fully customizable multi open collapsible menu system.
