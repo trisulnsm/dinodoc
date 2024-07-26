@@ -138,17 +138,17 @@ The retro chart is even more interactive :
 
 The following surfaces are available
 
-|                                    |     |                                  |
-| ---------------------------------- | --- | -------------------------------- |
-| PIE                                |     | BUTTERFLY                        |
-| ![](images/charts/pie.png)         |     | ![](images/charts/butterfly.png) |
-| STACKEDAREA                        |     | LINE                             |
-| ![](images/charts/stackedarea.png) |     | ![](images/charts/line.png)      |
-| SQUARELINE                         |     | BUBBLE                           |
-| ![](images/charts/squareline.png)  |     | ![](images/charts/bubble.png)    |
-| BAR                                |     | AREA                             |
-| ![](images/charts/bar.png)         |     | ![](images/charts/area.png)      |
-| LINETABLE                          |     |                                  |
+|                                    |     |                             |
+| ---------------------------------- | --- | --------------------------- |
+| PIE                                |     | MRTG                        |
+| ![](images/charts/pie.png)         |     |                             |
+| STACKEDAREA                        |     | LINE                        |
+| ![](images/charts/stackedarea.png) |     | ![](images/charts/line.png) |
+| SQUARELINE                         |     | BUBBLE                      |
+| ![](images/charts/squareline.png)  |     |                             |
+| BAR                                |     | AREA                        |
+| ![](images/charts/bar.png)         |     | ![](images/charts/area.png) |
+| LINETABLE                          |     |                             |
 
 ### Download PCAP button
 
