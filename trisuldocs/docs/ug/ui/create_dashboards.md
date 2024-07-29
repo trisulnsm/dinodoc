@@ -1,4 +1,4 @@
-Create Dashboards
+# Create Dashboards
 
 With Dashboards you can :  
 
@@ -35,6 +35,8 @@ Go to Dashboard-> Show all-> Click New
 Once you have filled all the fields, Click Create.
 
 You have now succesfully created a new dashboard!
+
+## Explore a Newly Added Dashboard
 
 Now you are at the new dashboard panel with the added modules where you can monitor the metrics of the module. The newly created dashboard displays the graphical chart of the meters along with following elements.
 
@@ -88,6 +90,46 @@ Click on *Add to menu* on the dashboard you would like to add to the menu. That'
 
 You can now easily access the dashboard right from the menu!
 
-## How to edit a Dashboard
+## How to remove a Dashboard from the Menu
 
-To edit a Dashboard, from the list of dashboards go to the dashboard you would like to edit. And click on the Dashboard toolbar, the three dots on the top right corner of the dashboard and click Customize.
+Go to Customize-> UI-> Menu Manager
+
+![](images/removefrommenu.png)
+
+There will be a list of all dashboards. Find the dashboard you would like to remove from the menu and Click Delete. This will only remove the dashboard from the menu and your dashboard itself will not be deleted.
+
+## How to Edit a Dashboard
+
+To edit a Dashboard, from the list of dashboards go to the dashboard you would like to edit. And click on the [Dashboard toolbar](/docs/ug/ui/dashmod_intro#dashboard-toolbars), the three dots on the top right corner of the dashboard and click Customize.
+
+## How to Delete/Clone/Export a Dashboard
+
+To delete a dashboard, 
+
+:::note path
+
+Go to Dashboards-> Show all-> Manage
+
+:::
+
+![](images/deletedashboard.png)
+
+From the list of dashboards, click on the three dots on the right side against the dashboard you would like to delete. and click **Delete**. Your Dashboard is now deleted.
+
+From the same menu, click **Clone** in case you need to take a copy of the dashboard before deleting the dashboard.
+
+You can also share the dashboard across different contexts by clicking **Export to App JSON** on the same menu. This will download the Dashboard in JSON format to your device.
+
+## How to Import a Dashboard
+
+To import a dashboard,
+
+:::note path
+
+Go to Dashboards-> Show all-> Import a dashboard package
+
+:::
+
+![](images/importdashboard.png)
+
+You can import a dashboard in tar.gz format or as a json file. Click on the adjacent tab if you would like to import a dashboard from the URL.
