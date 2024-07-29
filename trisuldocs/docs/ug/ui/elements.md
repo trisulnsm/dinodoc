@@ -7,10 +7,10 @@ sidebar_position: 4
 This section contains a quick overview of the user interface elements
 used by Trisul.
 
-
 ## UI Layout
 
 There are two layouts in Trisul 
+
 - Admin Layout 
 - User Layout
 
@@ -20,37 +20,57 @@ When you login as a non admin user you will see the following layout
 
 ![User Layout](images/userlayout.png)  
 
-
 Observe three sections 
+
 - Top Panel
 - Menu Panel
 - Dashboard Panel 
-
 
 ### Top Panel details
 
 The top panel contains the following items
 
-![Top panel](images/topbar.png)   
+![Top panel](images/topbar.png)  
 
-#### Shortcut
+1) #### Menu Toggle
+   
+   Click on the Menu toggle button to hide and unhide the side menu. This will provide you with extra screen space when necessary.
 
-Click on the Shortcut button to hide and unhide the side menu. This will provide you with extra screen space when necessary.
-#### Trisul Logo
+2) #### Trisul Logo
 
 Clicking on the logo takes you to the home page.
-#### Search Bar
-You can use the Search tool to find items of your interest.
-#### License Detail
-You can check the validity of your License here.
-#### Alerts and Notifications
+
+3) #### Search Bar
+
+You can use the Search bar tool to find items of your interest.
+
+4) #### Alerts and Notifications
+
 ![](images/alertsnnotifications.png)
 You can check for the alerts and notifications on External IDS, Threshold Crossing, Threshold Band Alerts, Blacklist Activity and Flow tracker here.
-#### Host Name
+
+5) #### License Detail
+
+You can check the validity of your License here.
+
+6) #### Probe Switch
+   
+   ![](images/probeswitch.png)
+   
+   You can switch between probes and check on the probe health by clicking on the probe switch. By default it is set to Probe0.
+
+7) #### Dark/Light Mode
+   
+      You can switch between dark and light modes to change the appearance of the screen here.
+
+8) #### Host Name
+
 This shows the host's name. All time zones in Trisul are displayed in the host's time zone.
 
-
-
+9) #### Account
+   
+    ![](images/account.png)
+    Clicking on the account button you can get the account history, change password, and signout from the current account. 
 
 ## Menus
 
@@ -58,39 +78,37 @@ A fully customizable multi open collapsible menu system.
 
 #### Basic operations
 
+![](images/menus.png)
+
 Clicking on menu item opens a page with all options.
 
 Expanding a menu item opens most popular items.
 
 Trisul remembers the expanded state of the menu per user.
 
-### User panel
-
-You can logout, change password, and view the current Trisul Context in
-the user panel.
-
-### Hiding the menu
-
-You can hide the entire side menu panel.
-
-- Click -\> gripper or Ctrl+ M.
-
-![](images/dashboards/hidemenu.png)
+1) #### Shortcut Menu
+   
+   ![](images/shortcutbutton.png)
 
 ## Dashboards
 
 Dashboards are used to present network analysis modules by placing them
+on specific locations on a web page. 
+
+Dashboards are used to present network analysis modules by placing them
 on specific locations on a web page.
 
-You can :  
 
-- Add / remove / reposition modules.  
+![](images/livedashboard1.png)
+The Dash board contains the following elements
 
-- Change module parameters.  
-
-- Create your own new dashboards.  
-
-- Share your dashboards.
+| Elements                                                             | Function                                                                                                                                                                                                                            |
+| -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1) Dashboard Name                                                    | This is the name of the dashboard.                                                                                                                                                                                                  |
+| 2)  Dashboard Description                                            | This gives you the description of the dashboard                                                                                                                                                                                     |
+| 3) Data Time Period                                                  | The time shown on the top right corner of the dashboard is the time data was available since till now.                                                                                                                              |
+| 4) [Dashboard Toolbar](/docs/ug/ui/dashmod_intro#dashboard-toolbars) | By clicking on the three dots at the top right corner of the dashboard you can edit the dashboard including customizing it, toggle labels, set as default dashboard, expand all modules, collapse all modules, and download as PDF. |
+| 5) Modules                                                           | Modules are represented in the forms of charts and tables.                                                                                                                                                                          |
 
 For more information see also:  
 
@@ -98,14 +116,7 @@ For more information see also:
 
 - [Dashboards and modules](dashmod_intro).
 
-## Context Menus
-
-A context menu available can be identified by a little tag next to an
-item.
-
-**The context menu is a very handy way to get around Trisul**
-
-![](images/dashboards/contextmenu.png)
+##### 
 
 ## Analysis Forms
 

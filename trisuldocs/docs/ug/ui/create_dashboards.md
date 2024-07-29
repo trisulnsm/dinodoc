@@ -1,0 +1,93 @@
+Create Dashboards
+
+With Dashboards you can :  
+
+- Add / remove / reposition modules.  
+
+- Change module parameters.  
+
+- Create your own new dashboards.  
+
+- Share your dashboards.
+
+## Add a Dashboard
+
+To create a dashboard,
+
+![](images/newdashboard.png)
+
+:::note path
+Go to Dashboard-> Show all-> Click New
+
+:::
+
+*Create a new dashboard* window opens up with the following fields
+
+![](images/createdashboard.png)
+
+| Fields         | Description                                                                                                                                                                                 |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name           | Enter the name of the dashboard                                                                                                                                                             |
+| Description    | Enter a short description of the dashboard                                                                                                                                                  |
+| Modules Layout | Click on the Plus icon and select from the list of modules you would like to add to this dashboard                                                                                          |
+| Layout View    | You can view the layout of the added modules as it appears on the dashboard here. You can also rearrange by clicking dragging to the desired position and adjust the width of each modules. |
+
+Once you have filled all the fields, Click Create.
+
+You have now succesfully created a new dashboard!
+
+Now you are at the new dashboard panel with the added modules where you can monitor the metrics of the module. The newly created dashboard displays the graphical chart of the meters along with following elements.
+
+![](images/modules.png)
+
+1) #### Time Window
+   
+   You can set the time window for the selected dashboard from 5 mins to any desirable time by choosing a custom time and date.
+
+2) #### Topper Count
+   
+   You can choose from 5 to 500 topper counts for the current dashboard.
+
+3) #### Module Name and description
+   
+   Displays the name of the module and a short description
+
+4) #### Module Toolbar
+   
+   Displays the description of the module.
+
+5) #### Module Icons
+   
+   The module icons are useful in traversing the graphical chart in detail. Icons from right to left includes,
+   
+   - PDF- Click on the PDF icon on the  top righ corner of the module to download the chart data in PDF.
+   
+   - Key Dashboard- Click on the Key Dashboard icon to view and edit the Key details of this module
+   
+   - Menu- Click on the three lines icon and select from the list of download options  SVG, PNG and CSV to donwload in that particular format
+   
+   - Home- Click on the home icon to reset zoom.
+
+6) #### Legend Table
+   
+   This table gives you a quick output of values including Max, Min, Avg, Latest, Total and 0th Percentile. If you have added more than one metrics the same will be reflected for each metrics differentiated by color.
+
+## How to add a Dashboard to the Menu
+
+Go to *All Dashboards*
+
+:::note path
+
+Dashboards-> Show All
+
+:::
+
+![](images/addtomenu.png)
+
+Click on *Add to menu* on the dashboard you would like to add to the menu. That's it.
+
+You can now easily access the dashboard right from the menu!
+
+## How to edit a Dashboard
+
+To edit a Dashboard, from the list of dashboards go to the dashboard you would like to edit. And click on the Dashboard toolbar, the three dots on the top right corner of the dashboard and click Customize.
