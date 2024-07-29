@@ -12,22 +12,19 @@ Listen to stream events and attach your own counters based on it.
 
 ## Structure
 
-Message Monitor skeleton script
+Use the Message Monitor [skeleton script](https://raw.githubusercontent.com/trisulnsm/trisul-scripts/master/lua/skeletons/message_monitor.lua) to get started 
 
-### Table `messagemonitor`
+## Table `messagemonitor`
 
 You need to supply code for one or more of the following functions.
 
 | name | type| desc|
 | ---- | ----| ---|
-| [onnewflowrecord](#onnewflowrecord) | function(engine,flow, bytes_az, bytes_za, packets_az, packets_za) | called when a new NetFlow record is seen |
+| [onnewflowrecord](#function-onnewflowrecord) | function(engine,flow, bytes_az, bytes_za, packets_az, packets_za) | called when a new NetFlow record is seen |
 
 
-## LUA functions reference
 
-Your script needs to supply one or more of these functions listed below.
-
-### Function `onnewflowrecord`
+## Function `onnewflowrecord`
 
 Called for every NetFlow record.
 
@@ -61,7 +58,6 @@ See [FlowID](/docs/lua/obj_flowid) object reference to figure out how to access 
 
 
 ```lua
-
 onnewflowrecord = function(engine, flowid, bytes_az, bytes_za, packets_az, packets_za)
 
 
@@ -77,7 +73,6 @@ onnewflowrecord = function(engine, flowid, bytes_az, bytes_za, packets_az, packe
 
 
 end
-
 ```
 
 

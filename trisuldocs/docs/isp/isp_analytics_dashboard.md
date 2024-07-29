@@ -22,8 +22,7 @@ following.
 Trisul provides a global level dashboard for ISP Analytics that includes
 several menus with various functionalities.
 
-To install the ISP dashboard apps, Refer [ISP Analytics
-Dashboard](/docs/ug/isp/isapps#install-trisul-apps)
+To install the ISP dashboard apps, Refer [ISP Analytics Dashboard](isapps#install-trisul-apps)
 
 ## ISP Overview
 
@@ -36,8 +35,7 @@ and Download of AS Traffic in bytes.
 
 :::note navigation
 
-To access, Login as user & Select Dashboard -\> Show All -\> Enter ‘ISP
-Overview’ in Filter
+To access, Login as user & Select Dashboard -> Show All -> Enter ‘ISP Overview’ in Filter
 
 :::
 
@@ -106,8 +104,7 @@ Peering Analytics in Trisul provides a deep drilldown of each peer AS to
 know the Transmit/Recieve from upstream/downstream of the particular
 peer AS with interfaces.
 
-Refer [Peering Analytics
-Drilldown](/docs/ug/isp/isp_analytics_dashboard#peering-analytics-drilldown)
+Refer [Peering Analytics Drilldown](isp_analytics_dashboard#peering-analytics-drilldown)
 
 #### Traffic Chart
 
@@ -137,8 +134,7 @@ Peering Analytics - Top Prefixes
 #### Explore flows
 
 Explore flows maps every flow that is associated with the Peer AS. To
-know more about explore flows, Refer [Explore
-Flows](/docs/ug/tools/explore_flows)
+know more about explore flows, Refer [Explore Flows](/docs/ug/tools/explore_flows)
 
 ![](images/peering_exploreflows.png)  
 Peering Analytics - Explore Flows
@@ -212,8 +208,7 @@ Prefix Analytics - Key Dashboard
 Prefix Analytics in Trisul provides a deep drilldown of each prefix with
 interfacea.
 
-Refer [Prefix Analytics
-Drilldown](/docs/ug/isp/isp_analytics_dashboard#prefix-analytics-drilldown)
+Refer [Prefix Analytics Drilldown](isp_analytics_dashboard#prefix-analytics-drilldown)
 
 ## Peering Analytics Drilldown
 
@@ -321,8 +316,7 @@ Country Analytics in Trisul provides a deep drilldown of each country to
 know the Transmit/Recieve from upstream/downstream of the particular
 country with several other interfaces.
 
-Refer [Country Analytics
-Drilldown](/docs/ug/isp/isp_analytics_dashboard#country-analytics-drilldown)
+Refer [Country Analytics Drilldown](isp_analytics_dashboard#country-analytics-drilldown)
 
 ## Country Analytics Drilldown
 

@@ -26,7 +26,7 @@ The global table named `T` can be accessed from anywhere. It defines some consta
 | T.sessiongroups | Backend scripts only : A table of ( session group name, guid ) currently loaded.|
 | [T.env](/docs/lua/obj_globalt#table-tenv)    | Environment and Trisul Config file |
 
-### Table `T.host`
+## Table `T.host`
 
 Interact with the Trisul environment.
 
@@ -43,7 +43,7 @@ Use the object calling notation `T.host:function(..)` to invoke these methods.
 | prepare_config | `guid` – plugin id, `string` template file                | plugin config                                     | Prepare a configuration file for your plugin                                                            |
 | broadcast      | `guid` – message id, `guid` class id, `string` message    | none  | Broadcast a state update to other plugins      |
 
-### Table `T.K`
+## Table `T.K`
 
 Pre-defined constants to use with other Lua functions.
 
@@ -71,7 +71,7 @@ This table defines counter types supported by Trisul. You typically use this tab
 | MINIMUM            | Minimum of all samples in the window |
 
 
-### Table T.util
+## Table T.util
 
 Useful utility functions written in C, exported to LUA via T.util table. We find them most handy for network related scripting.
 
@@ -108,27 +108,27 @@ The LUA regex functionality is quite limited. [Google RE2](https://code.google.c
 1. T.re2 also allows you to employ very common string matching idioms like `(octet-stream|application-x|application-pdf)` which arent available in Lua’s find method.
 2. T.re2 allows you to precompile the regexes once and run them later
 
-| Name  | In                       | Out                                                        | Description                                                                                                                    |
-| ----- | ------------------------ | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Name  | In  | Out | Description  |
+| ----- | --- | -- | ----- |
 | T.re2 | string, table (optional) | A [re2 object](/docs/lua/obj_re2) | Precompile the regex string and return an re2 object. The optional second argument is a table containing boolean RE2::Options. |
 
-### RE2 Options
+#### RE2 Options
 
 The following RE2 options are supported, the default values are in parantheses
 
 ```lua
 //   utf8             (true)  text and pattern are UTF-8; otherwise Latin-1
-    //   posix_syntax     (false) restrict regexps to POSIX egrep syntax
-    //   longest_match    (false) search for longest match, not first match
-    //   log_errors       (true)  log syntax and execution errors to ERROR
-    //   literal          (false) interpret string as literal, not regexp
-    //   never_nl         (false) never match \n, even if it is in regexp
-    //   never_capture    (false) parse all parens as non-capturing
-    //   case_sensitive   (true)  match is case-sensitive (regexp can override
-    //                              with (?i) unless in posix_syntax mode)
+//   posix_syntax     (false) restrict regexps to POSIX egrep syntax
+//   longest_match    (false) search for longest match, not first match
+//   log_errors       (true)  log syntax and execution errors to ERROR
+//   literal          (false) interpret string as literal, not regexp
+//   never_nl         (false) never match \n, even if it is in regexp
+//   never_capture    (false) parse all parens as non-capturing
+//   case_sensitive   (true)  match is case-sensitive (regexp can override
+//                              with (?i) unless in posix_syntax mode)
 ```
 
-### Simple use
+#### Simple use
 
 A sample illustrating a typical use.
 
@@ -150,7 +150,7 @@ A sample illustrating a typical use.
     end
 ```
 
-### With RE2 options
+#### With RE2 options
 
 We create a RE2 object with a regex and the “case_sensitive” and another option
 
@@ -213,15 +213,15 @@ onload = function()
 
 Adds a log message to the main Trisul log file. Trisul automatically adds the lua script filename to the log message so you know where the message is actually coming from. Also see [Printing and Logging from LUA script](/docs/lua/basics#print-and-logging)
 
-| Name         | In                                                                                                                   | Out  | Description                                                                                                                                                                             |
-| ------------ | -------------------------------------------------------------------------------------------------------------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name   | In   | Out  | Description  |
+| ---- | ---- | ---- | --------------- |
 | T.log        | [T.K.loglevel](/docs/lua/obj_globalt#table-tk) – optional loglevel<br/>`string` – log message | none | Log a message to the Trisul log file, usually located for the default setup in `/usr/local/var/log/trisul-probe/domain0/probe0/context0` . The default loglevel is `T.K.loglevel.DEBUG` |
-| T.logerror   | `string` – msg                                                                                                       | none | Useful shortcut to log a message with loglevel of ERROR. `T.logerror(msg)` is the same as `T.log(T.K.loglevel.ERROR,msg)`                                                               |
-| T.logwarning | `string` – msg                                                                                                       | none | Log a message with WARN category                                                                                                                                                        |
-| T.logdebug   | `string` – msg                                                                                                       | none | Log a message with DEBUG category                                                                                                                                                       |
-| T.loginfo    | `string` – msg                                                                                                       | none | Log a message with INFO category                                                                                                                                                        |
+| T.logerror   | `string` – msg  | none | Useful shortcut to log a message with loglevel of ERROR. `T.logerror(msg)` is the same as `T.log(T.K.loglevel.ERROR,msg)` |
+| T.logwarning | `string` – msg | none | Log a message with WARN category|
+| T.logdebug   | `string` – msg | none | Log a message with DEBUG category|
+| T.loginfo    | `string` – msg | none | Log a message with INFO category|
 
-### Usage
+#### Usage
 
 The following snippets demonstrates the usage of T.log
 
@@ -245,7 +245,7 @@ Adds a log message to the main Trisul log file. Trisul automatically adds the lu
 | T.logdebug   | `string` – msg                                                                                                       | none | Log a message with DEBUG category                                                                                                                                                       |
 | T.loginfo    | `string` – msg                                                                                                       | none | Log a message with INFO category                                                                                                                                                        |
 
-### Usage
+#### Usage
 
 The following snippets demonstrates the usage of T.log
 
@@ -259,11 +259,13 @@ T.logerror( "This is an error message from my LUA script, same as above T.log() 
 
 ## Table `T.alertgroups`
 
-This section applies equally to T.countergroups, T.resourcegroups, T.sessionggroups, T.ftsgroups as well.
+:::success[Applicability]
+This section applies equally to `T.countergroups`, `T.resourcegroups`, `T.sessionggroups`, `T.ftsgroups` as well.
+:::
 
 The purpose for this table is to provide a searchable `name` to `guid` mapping table of all the alertgroups currently loaded in Trisul. The backend [alert_monitor](/docs/lua/alert_monitor) scripts require you to specify a GUID that identifies the entity you are attaching the script to. If you do not know the GUID of the alert group but you know the name, you can use this table. See below.
 
-### Example alert_monitor code
+#### Example alert_monitor code
 
 If you know the GUID of the alert group named `Malware Domain` as `(FAC478BC-8891-0009-5F31-80774B010086)` you can attach an alert monitor as shown below
 
@@ -297,14 +299,14 @@ alert_monitor  = (
 
 Trisul environment. Allows you to read probe configuration for the context in which the LUA script is loaded.
 
-| Name              | In                                            | Out                                   | Description                                                                                                                                                                                                                                                        |
-| ----------------- | --------------------------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| configfile        |                                               | `string` – path of config file        | Full path of the trisulProbeConfig.xml file used by the running Trisul instance                                                                                                                                                                                    |
+| Name | In | Out | Description   |
+| --- | --- | --- | --------- |
+| configfile        |  | `string` – path of config file        | Full path of the trisulProbeConfig.xml file used by the running Trisul instance|
 | get_config        | `string` – ‘xml path’. See description column | `string` – value of config parameter  | Read a configuration parameter from the [Trisul Probe configuration file](/docs/ref/trisulconfig). The XML Path supported is a very simple format “Node>Node>..Node”. So to read the config parameter *User* under *App* parent node the path is `App>User` |
-| domain_configfile |                                               | `string` – path of domain config file | Full path of the domain.xml configuration file used by the running instance. This config file is mainly used when your scripts want to connect and communicate to domain elements, such as TRP queries.                                                            |
-| get_domain_config | `string` – ‘xml path’.                        | `string` – config value               | Similar to `get_config` above but for the domain config file. Typical example `T.env.get_domain_config("Domain>LocalReq")` to find a local endpoint to connect to TRP                                                                                              |
+| domain_configfile |  | `string` – path of domain config file | Full path of the domain.xml configuration file used by the running instance. This config file is mainly used when your scripts want to connect and communicate to domain elements, such as TRP queries. |
+| get_domain_config | `string` – ‘xml path’. | `string` – config value  | Similar to `get_config` above but for the domain config file. Typical example `T.env.get_domain_config("Domain>LocalReq")` to find a local endpoint to connect to TRP  |
 
-### Usage
+#### Usage
 
 The most common use case of `T.env` is to find out where the following directories :
 

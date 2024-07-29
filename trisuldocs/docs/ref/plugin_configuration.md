@@ -67,7 +67,6 @@ Here is a list of all the current plugin configuration options.
 | [Http Hosts](plugin_configuration#http-hosts)     | HTTP Host header depth setting                                 |
 | [Geo](/docs/ug/install/geoasn)                    | Controls Geo plugin, country and ASN metering rules            |
 | [Badfellas](/docs/ug/install/badfellas)           | Controls Badfellas lists, how they are refreshed, custom rules |
-| [Urlfilter](/docs/ug/install/urlfilter)           | URL Filter database and rules                                  |
 
 ## Hosts
 
