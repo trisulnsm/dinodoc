@@ -14,7 +14,7 @@ To execute long running I/O tasks in a separate worker pool to prevent blocking 
 | [copy](/docs/lua/obj_tasync#function-tasynccopy)| from_file,to_file| Copy one file to another|
 | [rm](/docs/lua/obj_tasync#function-tasyncrm) | filename : string | Delete a file|
 | [copybuffer](/docs/lua/obj_tasync#function-tasynccopybuffer) | from_buffer (a [Buffer](/docs/lua/obj_buffer) object), to_file | Append buffer content bytes to the target file |
-| [schedule](/docs/lua/obj_tasync#tasync)| a LUA schedule block | Runs the LUA functions in the block asynchronosly and re-enter the fast path at a later time when results are ready |
+| [schedule](/docs/lua/obj_tasync#function-tasyncschedule)| a LUA schedule block | Runs the LUA functions in the block asynchronosly and re-enter the fast path at a later time when results are ready |
 
 ---
 

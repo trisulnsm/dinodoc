@@ -2,10 +2,11 @@
 
 The Trisul LUA API allows you to build your own powerful tooling on top of the Trisul platform. The embedded LuaJIT interpreter offers almost close to C performance.
 
-## Latest-News
+## Latest-News  :newspaper: 
 
 | Date |News  |
 |---|---|
+| 27-Jul-2024  | New LUA type [`message_monitor` ](/docs/lua/message_monitor) to listen to NetFlow records among other things|
 | 6-Sep-2023  | Added `flow_counter` for [simple_counter](/docs/lua/simple_counter) to allow calling in NETFLOW_TAP mode|
 | 20-Nov-2022 | New attribute `resolver_guid` for new Counter Groups|
 | 25-Jun-2020 | New methods `T.contextname`, `T.env.domain_configfile` added to `T` to retrieve context_name and query Trisul domain configuration parameters.|

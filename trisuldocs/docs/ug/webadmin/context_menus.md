@@ -121,7 +121,7 @@ BGP Status on all probes.
 > To start the BGP Receiver you need root privileges on the probe, then
 > type **systemctl start trisul-bgp**
 
-To know more on Trisul-BGP concept, See [Trisul-BGP](/docs/ug/isp/bgp)
+To know more on Trisul-BGP concept, See [Trisul-BGP](/docs/isp/bgp)
 
 ### Netflow Template DB
 

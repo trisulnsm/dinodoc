@@ -1,5 +1,11 @@
 # Installing Trisul on Security Onion
 
+
+:::danger[LEGACY]
+This documentation refers to an older version of a third party software. The instructions may not work for the current version of those software.
+:::
+
+
 [Security Onion](http://securityonion.blogspot.com/) is a Linux Distro
 which makes it dead easy to deploy a full fledged Network Security
 Monitoring system. This document describes how you can install Trisul on
@@ -8,7 +14,7 @@ this distro.
 Trisul adds network traffic charts and flow analytics to your Security
 Onion based NSM.
 
-## 1 . Install Trisul
+## Install Trisul
 
 1. Follow the instructions for **Ubuntu 16.04** on the [Download](https://trisul.org/download) page and install Trisul packages on your Security
    Onion box.
@@ -34,14 +40,14 @@ Onion based NSM.
    sudo ufw allow 3003 
    ```
 
-## 2. Change user to sguil from trisul
+## Change user to sguil from trisul
 
 By default all Trisul processes and data are owner by the user `trisul`
 You need to change the user to `sguil` so it integrates better with the
 rest of the Security Onion processes. In particular, Trisul needs to
 read the Barnyard2 Unix Socket that is owned by `sguil`.
 
-## 2.1 . Change the hub and probe permissions to sguil
+## Change the hub and probe permissions to sguil
 
     Run `sudo trisulctl_hub` then on the CLI enter the following. Type
 
@@ -57,7 +63,7 @@ sudo trisulctl_probe
 changeuser domain domain0 sguil.sguil
 ```
 
-## 2.2  Restart web server
+## Restart web server
 
 Restart the webserver under new ownership of `sguil`
 
@@ -65,7 +71,7 @@ Restart the webserver under new ownership of `sguil`
 sudo service webtrisuld restart
 ```
 
-## 3 . Adjust the config file
+## Adjust the config file
 
 Almost there. You need to make a couple of changes to the [config
 file](/docs/ref/trisulconfig) to connect to IDS alerts from
@@ -94,7 +100,7 @@ barnyard2.
   </code>
   ```
 
-## 4 . Configure and restart Barnyard
+## Configure and restart Barnyard
 
 - Open the barnyard2 configuration file in `/etc/nsm/xx-yy-eth0/barnyard2-1.conf` and add the following line at the
   end of configuration file.
@@ -112,7 +118,7 @@ barnyard2.
   sudo nsm_sensor_ps-restart --only-barnyard2
   ```
 
-## 5 . Start Trisul from the web interface
+## Start Trisul from the web interface
 
 Go to `ip:3000` then login as admin/admin  
 Then Go to Context : default \> Admin Tasks \> Start/Stop Tasks and
@@ -223,12 +229,10 @@ service webtrisuld start
 
 ### Are there any other useful plugins?
 
-You may want to install the following plugins from the [Download
-Page](https://www.trisul.org/download/)
+You may want to [sign up and install the following two plugins](https://www.trisul.org/get-started/)
 
-1. [URL Filter](/docs/ug/install/urlfilter)
-2. [BadFellas](/docs/ug/install/badfellas)
-3. [Geo](/docs/ug/install/geoasn)
+1. [BadFellas](/docs/ug/install/badfellas)
+2. [Geo](/docs/ug/install/geoasn)
 
 Also checkout the NEW Trisul Apps. Login as admin and select “Web
 Admin Apps”
