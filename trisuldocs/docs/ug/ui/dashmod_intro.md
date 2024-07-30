@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Dashboards and Modules
+# Introduction to Dashboards and Modules
 
 A *dashboard* is a web page that contains *modules* at various
 positions.

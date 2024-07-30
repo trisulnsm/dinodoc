@@ -1,6 +1,6 @@
-# Create Dashboards
+# Dashboards
 
-With Dashboards you can :  
+With Dashboards you can, 
 
 - Add / remove / reposition modules.  
 
