@@ -38,7 +38,7 @@ You have now succesfully created a new dashboard!
 
 ## Explore a Newly Added Dashboard
 
-Now you are at the new dashboard panel with the added modules where you can monitor the metrics of the module. The newly created dashboard displays the graphical chart of the meters along with following elements.
+Once you have created a new dashboard, Now you are at the new dashboard panel with the added modules where you can monitor the metrics of the module. The newly created dashboard displays the graphical chart of the meters along with following elements.
 
 ![](images/modules.png)
 
@@ -84,9 +84,11 @@ Dashboards-> Show All
 
 :::
 
+Click on *Add to menu* on the dashboard you would like to add to the menu.
+
 ![](images/addtomenu.png)
 
-Click on *Add to menu* on the dashboard you would like to add to the menu. That's it.
+That's it.
 
 You can now easily access the dashboard right from the menu!
 
