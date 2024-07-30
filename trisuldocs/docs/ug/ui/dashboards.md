@@ -9,16 +9,9 @@ as soon as you first log in. This page describes each of them.
 
 :::note navigation
 
-Select *Dashboards Show All* to see all Live Dashboards
+Select *Dashboards-> Show All* to see all Live Dashboards
 
 :::
-
-### Dashboard modules help
-
-Hover your mouse over the ‘?’ icon to get a description of the module.
-
-![](images/dashboards/dashhelp.png)  
-*Getting help for each module*
 
 ## Current Hosts
 
@@ -33,18 +26,18 @@ Networks](/docs/ug/webadmin/home_networks). Under the screenshot you can find a 
 
 The Hosts dashboard consists of the following modules
 
-| Module Title                     | Description                                                                                                                         |
-| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Inbound Vs Outbound              | Inbound vs outbound traffic relative to your home network                                                                           |
-| Active Flows                     | Number of active flows                                                                                                              |
-| Top Internal Hosts - Total       | Top Internal Hosts by Total traffic, you can click on “More” to see more                                                            |
-| Top External Hosts - Total       | Top External Hosts by Total traffic                                                                                                 |
-| Top Internal Hosts - IN          | Top Internal Hosts by with most received traffic (downloaders)                                                                      |
-| Top External Hosts - IN          | Top External Hosts by with most received traffic (downloaders)                                                                      |
-| Top Internal Hosts - OUT         | Top Internal Hosts by most sent traffic (uploaders)                                                                                 |
-| Top External Hosts - OUT         | Top External Hosts by most sent traffic                                                                                             |
-| Top Internal Hosts - Connections | Top Internal Hosts by most “Active Connections”. The numbers indicate a count of currently active connections (flows) for that host |
-| Top External Hosts - Connections | Top External Hosts by “Active Connections IP”                                                                                       |
+| Module Title                            | Description                                                                                                                             |
+| --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Inbound Vs Outbound                     | Inbound vs outbound traffic relative to your home network                                                                               |
+| Active Flows                            | Number of active flows in the past T hours                                                                                              |
+| Latest Top Internal Hosts - Total       | The Top Internal Hosts by Total traffic in the latest 5 minutes                                                                         |
+| Latest Top External Hosts - Total       | Hosts outside home network (external hosts) with the most total traffic in the latest 5 minutes                                         |
+| Latest Top Internal Hosts - IN          | Top Internal Hosts by with most received traffic (downloaders) in the latest time interval (5 minutes by default)                       |
+| Latest Top External Hosts - IN          | Top External Hosts by with most received traffic (downloaders) in the latest time interval (5 minutes by default)                       |
+| Latest Top Internal Hosts - OUT         | Top Internal Hosts by most sent traffic (uploaders) in the latest topper interval (Default 5 minutes)                                   |
+| Latest Top External Hosts - OUT         | Top External hosts sending most traffic to your network in the latest topper interval (Default 5 minutes)                               |
+| Latest Top Internal Hosts - Connections | Top Ithe Internal hosts maintaining the most number of active TCP and UDP connections in the latest 5 minutes (default topper interval) |
+| Latest Top External Hosts - Connections | the External hosts with most number of connections in the latest 5 minutes (the default topper interval)                                |
 
 ## Current Apps
 
@@ -56,17 +49,17 @@ using the time window dropwdown.
 
 The modules in it are
 
-| Module Title            | Description                                                                                                       |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Application Trends      | Top applications into and out of your network. This is a trend report that only shows the toppers traffic trends. |
-| Live Apps By Total      | Bandwidth used by the Top-K applications - total traffic                                                          |
-| Live Apps By Connection | Top applications by concurrent connections. These are IP connections - UDP/TCP/ICMP etc                           |
-| Live Apps Into Network  | Bandwidth used by Top-N applications downloading data into your home network                                      |
-| Live Apps Outof Network | Bandwidth used by Top-N application uploading data out of your home network                                       |
-| Apps By Total           | Volume (GB) transferred by top-K apps                                                                             |
-| Apps By Connection      | Apps by connections over the time                                                                                 |
-| Apps By Volume Incoming | Volume of data (GB) per App downloading data into your home network                                               |
-| Apps By Volume Outgoing | Volume of data (GB) per App uploading data out of your home network                                               |
+| Module Title                         | Description                                                                                                       |
+| ------------------------------------ | ----------------------------------------------------------------------------------------------------------------- |
+| Application Trends                   | Top applications into and out of your network. This is a trend report that only shows the toppers traffic trends. |
+| Current Top Apps - List              | Bandwidth used by the Top-K applications - total traffic                                                          |
+| Current Apps by conns                | Top applications by concurrent connections count. These are IP connections - UDP/TCP/ICMP etc                     |
+| Apps into network                    | Bandwidth used by Top-N applications downloading data into your home network                                      |
+| Apps Outof Network                   | Bandwidth used by Top-N application uploading data out of your home network                                       |
+| Apps by volume in past 1 Hr          | Volume (GB) transferred by top-K apps                                                                             |
+| Apps by connections in past 1 Hr     | Apps by connections over the time                                                                                 |
+| Apps by volume incoming in past 1 Hr | Volume of data (GB) per App downloading data into your home network                                               |
+| Apps by volume outgoing in past 1 Hr | Volume of data (GB) per App uploading data out of your home network                                               |
 
 ------------------------------------------------------------------------
 
@@ -74,7 +67,7 @@ The modules in it are
 
 Automatically updated overview of network summary activites.
 
-Monitor live the following in easy charts with Click Through to more
+Monitor the following live in easy charts with Click Through to more
 drilldown.
 
 1. total 24-hr bandwidth with yesterdays chart for comparison

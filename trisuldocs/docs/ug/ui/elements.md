@@ -89,6 +89,14 @@ Trisul remembers the expanded state of the menu per user.
 1) #### Shortcut Menu
    
    ![](images/shortcutbutton.png)
+   
+   Clicking on the shortcut menu you can quickly navigate to the home, routers and interfaces, and explore flows from any page.
+2. ## Context Menu
+   
+      You can switch between different contexts from the context menu. 
+3) ## Menu Items
+   
+   Click on each menu item and you can see the sub menus under each menu item expanded. Click Show all as not all sub menus would show up here.
 
 ## Dashboards
 
@@ -98,7 +106,6 @@ on specific locations on a web page.
 Dashboards are used to present network analysis modules by placing them
 on specific locations on a web page.
 
-
 ![](images/livedashboard1.png)
 The Dash board contains the following elements
 
@@ -106,7 +113,7 @@ The Dash board contains the following elements
 | -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1) Dashboard Name                                                    | This is the name of the dashboard.                                                                                                                                                                                                  |
 | 2)  Dashboard Description                                            | This gives you the description of the dashboard                                                                                                                                                                                     |
-| 3) Data Time Period                                                  | The time shown on the top right corner of the dashboard is the time data was available since till now.                                                                                                                              |
+| 3) Data Time Period                                                  | The time shown on the top right corner of the dashboard is since the time data was available till now.                                                                                                                              |
 | 4) [Dashboard Toolbar](/docs/ug/ui/dashmod_intro#dashboard-toolbars) | By clicking on the three dots at the top right corner of the dashboard you can edit the dashboard including customizing it, toggle labels, set as default dashboard, expand all modules, collapse all modules, and download as PDF. |
 | 5) Modules                                                           | Modules are represented in the forms of charts and tables.                                                                                                                                                                          |
 
@@ -116,7 +123,39 @@ For more information see also:
 
 - [Dashboards and modules](dashmod_intro).
 
-##### 
+## Admin Layout
+
+When you login as admin you will see the admin layout which is different from the user layout.
+
+![](images/adminlayout.png)
+
+The Admin panel consists of the following elements,
+
+1) ## Admin Menu
+   
+   ![](images/admincontextmenu.png)
+   
+   1) The three dots on the top right corner of the context menu is the **shortcut menu** where you can quickly navigate to home, users, settings, and apps from any page.
+   
+   2) The **Context toggle** dropdown helps you switch between different contexts.
+   
+   3) Clicking on **Web Admin** you can manage admin settings, manage users, and manage UI settings.
+   
+   4) By clicking on the **Context Manager** menu, it allows you to change context names and descriptions only.
+   
+   5) Clicking on **Context Menu** helps you manage each context separately. By default it is set in Context:default but you can add more contexts to this menu. 
+
+2) ## Manage Menu
+   
+   The manage menu is the expansion of the menu items clicked from Admin menu that shows up sub menus of that particular menu item.
+
+3) ## Top Panel
+   
+   The top panel of admin layout is similar to the [top panel.](/docs/ug/ui/elements#top-panel-details) of the user layout.
+
+4) ## Start/Stop Tasks
+   
+   ![](images/startorstoptasks.png)
 
 ## Analysis Forms
 
@@ -194,17 +233,17 @@ The retro chart is even more interactive :
 
 The following surfaces are available
 
-|                                    |     |                             |
-| ---------------------------------- | --- | --------------------------- |
-| PIE                                |     | MRTG                        |
-| ![](images/charts/pie.png)         |     |                             |
-| STACKEDAREA                        |     | LINE                        |
-| ![](images/charts/stackedarea.png) |     | ![](images/charts/line.png) |
-| SQUARELINE                         |     | BUBBLE                      |
-| ![](images/charts/squareline.png)  |     |                             |
-| BAR                                |     | AREA                        |
-| ![](images/charts/bar.png)         |     | ![](images/charts/area.png) |
-| LINETABLE                          |     |                             |
+|                                    |     |                               |
+| ---------------------------------- | --- | ----------------------------- |
+| PIE                                |     | MRTG                          |
+| ![](images/charts/pie.png)         |     |                               |
+| STACKEDAREA                        |     | LINE                          |
+| ![](images/charts/stackedarea.png) |     | ![](images/charts/line.png)   |
+| SQUARELINE                         |     | BUBBLE                        |
+| ![](images/charts/squareline.png)  |     | ![](images/charts/bubble.png) |
+| BAR                                |     | AREA                          |
+| ![](images/charts/bar.png)         |     | ![](images/charts/area.png)   |
+| LINETABLE                          |     |                               |
 
 ### Download PCAP button
 
