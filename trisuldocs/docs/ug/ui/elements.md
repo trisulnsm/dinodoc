@@ -152,10 +152,38 @@ The Admin panel consists of the following elements,
 3) ## Top Panel
    
    The top panel of admin layout is similar to the [top panel.](/docs/ug/ui/elements#top-panel-details) of the user layout.
-
-4) ## Start/Stop Tasks
    
-   ![](images/startorstoptasks.png)
+   1) ## Start/Stop Tasks
+      
+      ![](images/startorstoptasks.png)
+      
+      1) Click on the three dots on the top right corner of the start/stop tasks and click Set as home if you would like to set this as your home page.
+      
+      2) On the top left you can see the name of the domain trisul is running on
+      
+      3) Adjacent to the domain name on the right, the current time on the web server is displayed.
+      
+      4) Name of the tasks say hub/probe are given in the table. By default it is hub0 and probe0 for primary.
+      
+      5) You can check if you are running a recent version by checking on the version name in the second column of the table
+      
+      6) Clicking on the profile drop down shows a list of profiles under probe0. By default it is profile0.
+      
+      7) The run mode drop down list shows the packet capture algorithms used by the probe. Even in Netflow mode Trisul uses packet capture.
+      
+      8) You can switch between netflow mode or packet capture mode by clicking on the drop down list and set it.
+      
+      9) Shows the interface name. eth0 is the interface name for probe0 by default.
+      
+      10) You can check the status of hub0 and probe0 and start/stop the tasks clicking on start/stop.
+      
+      11) If you click the three lines againts the hub0 it will show you the following menu
+          
+          ![](images/hub0.png)
+          
+          If you click on the three lines against the probe0 it will show the following menu
+          
+          ![](images/probe0.png)
 
 ## Analysis Forms
 
