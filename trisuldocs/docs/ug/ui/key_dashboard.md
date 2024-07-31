@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 9
 ---
 
 # Key dashboard
@@ -54,14 +54,14 @@ description of each of these modules. They are mostly self explanatory.
 
 ![](images/dashboards/key_dashboard.png)
 
-| Module                      | Usage                                                                                                                                  |
-| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| Traffic History             | Most recent 1hr traffic history. Note you can click on *View Trends* and *Retro Analysis* within the chart to expand this time window. |
+| Module                                               | Usage                                                                                                                                  |
+| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Traffic History                                      | Most recent 1hr traffic history. Note you can click on *View Trends* and *Retro Analysis* within the chart to expand this time window. |
 | [Key Details](/docs/ug/ui/key_dashboard#key-details) | Various drilldown options pertaining to this key                                                                                       |
-| A la carte statistics       | Flexible charting tool (quick and easy)                                                                                                |
-| TCA Details                 | Shows recent threshold crossing alerts, if any                                                                                         |
-| Flow Activity               | Displays recent top flows                                                                                                              |
-| Daily Report                | Click on a calendar day to get a PDF report with detailed usage                                                                        |
+| A la carte statistics                                | Flexible charting tool (quick and easy)                                                                                                |
+| TCA Details                                          | Shows recent threshold crossing alerts, if any                                                                                         |
+| Flow Activity                                        | Displays recent top flows                                                                                                              |
+| Daily Report                                         | Click on a calendar day to get a PDF report with detailed usage                                                                        |
 
 ## Key Details
 

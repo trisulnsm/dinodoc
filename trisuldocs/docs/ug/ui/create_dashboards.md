@@ -1,3 +1,7 @@
+---
+sidebar_position: 6
+---
+
 # Dashboards
 
 With Dashboards you can, 

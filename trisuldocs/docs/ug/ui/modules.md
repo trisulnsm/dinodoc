@@ -1,3 +1,7 @@
+---
+sidebar_position: 6
+---
+
 # Modules
 
 Modules are customized metrics represented in the form of single values, visuals like charts and tables that allows you to analyze and extract insights from network traffic, traffic patterns, detect anomalies, identify threats. You can add any number of modules to your dashboard. 
@@ -12,7 +16,7 @@ Modules are the building blocks of dashboards. There are different types of modu
 
 ### How to Create Modules
 
-To create a new module
+To create a new module,
 
 :::note path
 
@@ -40,7 +44,7 @@ You can see the list of modules that you can add to the new dashboard here.
 
 Similarly, to add modules to an existing dashboard, [customize the dashboard](/docs/ug/ui/create_dashboards#how-to-edit-a-dashboard) and follow the same steps as adding a module to new dashboard.
 
-Alternatively you can also add modules to an existing dashboard. For that ,from the list of [all dashboards](/docs/ug/ui/dashmod_intro#view-a-dashboardall-dashboards), click on the three lines on the right side against the dashboard you would like to add the module to and click Customize. 
+Alternatively you can also navigate from the list of [all dashboards](/docs/ug/ui/dashmod_intro#view-a-dashboardall-dashboards), click on the [dashboard toolbar](/docs/ug/ui/dashmod_intro#dashboard-toolbars) against the dashboard you would like to add the module to and click Customize. 
 
 ### How to Edit a Module
 
@@ -65,40 +69,6 @@ If you have observed a module that you would like to add as a new module, you ca
 ![](images/clonemodule.png)
 
 Similarly to **delete a module**, click Delete.
-
-#### Create a module from your favorite keys and meters
-
-- Click create a module from your favorite keys and meters
-
-- Select the Counter Group and Keys to add modules to the dashboard.
-
-- If you want to plot multiple keys in one module(per meter) give them with comma separations.
-
-- By default all selected meters are ploted in one module (per key).
-
-#### Create Modules from topper
-
-- Click create Modules from topper
-
-- Select keys from topper list. (You can change Counter and Meters)
-
-- Click Add modules button to add modules to dashboard
-
-#### Create real time stabber module from your favorite keys and meters
-
-- Create real time stabber module from your favorite keys and meters
-
-- Select the Counter Group and Keys to add modules to the dashboard.
-
-- Click Add modules button to add modules to dashboard
-
-#### Add existing modules to empty dashbord
-
-- Click Add Existing Modules to add existing modules to empty dashboard
-
-- Select module postion and modules.
-
-- Click Add button to add selected modules to dashboard.
 
 ### Creating Modules with Arithmetic Expressions
 
