@@ -10,9 +10,9 @@ Module templates typically include parameters for key elements, such as,
 
 - Variables: parameters for data that will be used in the module. For example Name, Counter Groups, Meters, Keys.
 
-- Functions: reusable blocks of code that perform specific tasks. For example Aggregation, Max, Min, Avg.
+- Functions: paramateres for reusable blocks of code that perform specific tasks. For example Aggregation, Max, Min, Avg.
 
-- Conditionals: logical statements that control the flow of the module. For example Key Filter, Inverse Key filter.
+- Conditionals: parameters for logical statements that control the flow of the module. For example Key Filter, Inverse Key filter.
 
 You can create your own module by creating an instance of a module
 template. Select one module template from the list and fill out the required parameters to create a module.
@@ -21,28 +21,30 @@ This is a list of all module templates supported by Trisul.
 
 ![](images/moduletypes.png)
 
-|     | Link                 |
-| --- | -------------------- |
-| 1   | Key Traffic          |
-| 2   | Toppers Traffic      |
-| 3   | Toppers Trend        |
-| 4   | Current Toppers      |
-| 5   | Retro Toppers        |
-| 6   | Single Value         |
-| 7   | Real Time Traffic    |
-| 8   | Real Time Single     |
-| 9   | Real Time Toppers    |
-| 10  | Favorite Key Traffic |
-| 11  | Traffic Chart        |
-| 12  | Alert List           |
-| 13  | Alert Count          |
-| 14  | Existing Modules     |
-| 15  | Custome URL Page     |
+|     | Module Templates                                                          |
+| --- | ------------------------------------------------------------------------- |
+| 1   | [Key Traffic](/docs/ug/ui/module_templates#key-traffic)                   |
+| 2   | [Toppers Traffic](/docs/ug/ui/module_templates#toppers-traffic)           |
+| 3   | [Toppers Trend](/docs/ug/ui/module_templates#toppers-traffic)             |
+| 4   | [Current Toppers](/docs/ug/ui/module_templates#current-toppers)           |
+| 5   | [Retro Toppers](/docs/ug/ui/module_templates#retro-toppers)               |
+| 6   | [Single Value](/docs/ug/ui/module_templates#single-value)                 |
+| 7   | [Real Time Traffic](/docs/ug/ui/module_templates#real-time-traffic)       |
+| 8   | [Real Time Single](/docs/ug/ui/module_templates#real-time-single)         |
+| 9   | [Real Time Toppers](/docs/ug/ui/module_templates#real-time-toppers)       |
+| 10  | [Favorite Key Traffic](/docs/ug/ui/module_templates#favorite-key-traffic) |
+| 11  | [Traffic Chart](/docs/ug/ui/module_templates#traffic-chart)               |
+| 12  | [Alert List](/docs/ug/ui/module_templates#alert-list)                     |
+| 13  | [Alert Count](/docs/ug/ui/module_templates#alert-count)                   |
+| 14  | [Existing Modules](/docs/ug/ui/module_templates#existing-modules)         |
+| 15  | [Custome URL Page](/docs/ug/ui/module_templates#custom-url-page)          |
 
 ## Module Parameters
 
 Every module has a set of parameters that controls what is displayed and
-how it is displayed.
+how it is displayed. Module paramaters include name, description, key, meter, surface, countergroup etc. 
+
+Explore more on each modules and their parameters in the following.
 
 ## Key Traffic
 
@@ -53,6 +55,8 @@ A "Key Traffic" module in Trisul is designed to monitor and analyze network traf
 - Count and measure the traffic associated with each key.
 
 - Provide visualization and reporting on the top keys, traffic volumes, and trends.
+
+![](images/keytraffic_modtemp.png)
 
 ### Parameters
 
@@ -72,6 +76,10 @@ A "Key Traffic" module in Trisul is designed to monitor and analyze network traf
 
 Toppers Traffic module is a customizable template that displays top traffic statistics, such as top hosts, top flows, and top applications, and more in a graphical visualization.
 
+This is a sample module showing the toppers traffic of top 10 ASNumbers in upload bytes in chart and table.
+
+![](images/topperstraffic_modtemp.png)
+
 ### Parameters
 
 | Parameter name | Default value | Description                                                                                            |
@@ -87,6 +95,10 @@ Toppers Traffic module is a customizable template that displays top traffic stat
 ## Toppers Trend
 
 A pre-configured template for visualizing network traffic changes over time like to identify unusual patterns or spikes in traffic etc.
+
+This sample module of Toppers Trend shows the Top 10 ASNumbers' trends in network traffic over time
+
+![](images/topperstrend_modtemp.png)
 
 ### Parameters
 
@@ -104,6 +116,10 @@ A pre-configured template for visualizing network traffic changes over time like
 
 Current toppers module displays top traffic statistics in the latest five minutes in the table format, including top hosts, top flows, and top applications, and more.
 
+The following sample of Current Toppers module shows which top 10 ASNumbers are toppers in the latest five minutes.
+
+![](images/currenttoppers_modtemp.png)
+
 ### Parameters
 
 | Parameter name     | Default value | Description                                                              |
@@ -120,6 +136,10 @@ Current toppers module displays top traffic statistics in the latest five minute
 
 A module that displays historical top traffic statistics, showing past top hosts, top flows, and top applications in the table format.
 
+This example of retro toppers module shows the top ASNumbers of past. You can click More to load more past toppers.
+
+![](images/retrotoppers_modtemp.png)
+
 ### Parameters
 
 | Parameter name     | Default value | Description                                                              |
@@ -135,6 +155,10 @@ A module that displays historical top traffic statistics, showing past top hosts
 ## Single value
 
 This Single value module displays a single, key performance indicator (KPI) or metric in a single value. For example "Current Network Traffic: 1.2 GB/s", "Network Uptime: 99.9%", etc.
+
+This is an example of Single Value module which shows the total bandwidth of aggregates in a single value.
+
+![](/home/sathana/bldart/td0/dinodoc/trisuldocs/docs/ug/ui/images/singlevalue_modtemp.png)
 
 ### Parameters
 
@@ -155,6 +179,10 @@ This Single value module displays a single, key performance indicator (KPI) or m
 
 Real Time Traffic module displays the real-time network traffic information providing a live view of bandwidth usage, applications generating most traffic, real-time alert signatures  etc. The data is refreshed every five minutes.
 
+This is an example of Real Time Traffic module of both Inbound vs Outbound differentiated by different colors as you can see.
+
+![](images/realtimetraffic_modtemp.png)
+
 ### Parameters
 
 | Parameter name       | Default value | Description                                                                                                          |
@@ -169,6 +197,8 @@ Real Time Traffic module displays the real-time network traffic information prov
 ## Real Time Single
 
 Real Time Single module is the same as Single value module except the data displayed is in real time. Real time data is refreshed every five minutes.
+
+![]()
 
 ### Parameters
 
@@ -188,6 +218,10 @@ Real Time Single module is the same as Single value module except the data displ
 
 Real Time Toopers module is the same  as the Toppers traffic module except the Toppers traffic is displayed in real time. The real time data are refreshed every five minutes.
 
+The following example is the Real Time Toppers module for Top 10 ASNumbers in Upload Bytes.
+
+![](images/realtimetoppers_modtemp.png)
+
 ### Parameters
 
 | Parameter name | Default value | Description                                            |
@@ -200,7 +234,11 @@ Real Time Toopers module is the same  as the Toppers traffic module except the T
 
 ## Favorite Key Traffic
 
-The Favorite Key Traffic Module is the same as Key Traffic module except this can be customized where you can select and display the traffic data for your most important keys or frequently accessed traffic metrics in a single, convenient dashboard. 
+The Favorite Key Traffic Module is the same as [Key Traffic](/docs/ug/ui/module_templates#key-traffic) module except this can be customized where you can select and display the traffic data for your most important keys or frequently accessed traffic metrics in a single, convenient dashboard. 
+
+This is the Favorite Key Traffic module showing a module for the key SYS:GROUP_TOTALS for the countergroup ASNumbers in upload bytes.
+
+![](images/favoritekeytraffic_modtemp.png)
 
 ### Parameters
 
@@ -215,7 +253,7 @@ The Favorite Key Traffic Module is the same as Key Traffic module except this ca
 
 ## Traffic Chart
 
-Traffic chart module is the same as Key traffic module except this module can be customized where you can select and display the traffic data for the selected keys ploted per meter in one module or in separate modules.
+Traffic chart module is the same as [Key traffic](/docs/ug/ui/module_templates#key-traffic) module except this module can be customized where you can select and display the traffic data for the selected keys ploted per meter in one module or in separate modules for each keys.
 
 The following example shows 
 
@@ -239,7 +277,7 @@ The following example shows
 
 ## Alert List
 
-Alert List module displays a list of active alerts or notifications, providing a centralized view of network issues or events that require attention.
+The Alert List module displays a list of active alerts or notifications, providing a centralized view of network issues or events that require attention.
 
 ![](images/alertlist_modtemp.png)
 
@@ -276,15 +314,15 @@ The Alert Count Module displays the total number of active alerts, providing a q
 
 ## Existing Modules
 
-The existing modules module provides a centralized view of all existing modules in the system, allowing you to easily select and add them to the dashboard. Select the modules you would like to add and click Select. 
+The existing modules module provides a centralized view of all existing modules in the system, allowing you to easily select from inside the dashboard and add them to the dashboard. Select the modules you would like to add and click Select. 
 
 ![](images/existingmodules_modtemp.png)
 
 ## Custom URL Page
 
-The Custom URL Page Module allows you to create a custom page with a unique URL, displaying specific data, metrics, or information into your module.
+The Custom URL Page Module allows you to create a custom module by providing a page URL. This displays specific data, metrics, or information of that page into your module.
 
-In the following example, the URL of the map has been given as input and that page has been added as a module.
+In the following example, the URL of the Trisul's flow map has been given as input and information on that page has been added as a module.
 
 ![](images/urlpage_modtemp.png)
 
