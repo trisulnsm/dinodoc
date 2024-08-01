@@ -10,24 +10,23 @@ groups, meters, and keys.
 ## Counters, meters, and keys
 
 ***Counter Group***  
-A type of network entity being measured.
 
-[Built-in counter groups](/docs/ug/cg/intro#types) ship with Trisul. You can create your own [custom counter groups](custom)
+CounterGroup is a collection of related counters that measure specific aspects of network traffic. Think of it like a folder that holds multiple papers (counters) that track different things, like a student's grades in different subjects.
 
-Trisul measures Hosts, MACs, Applications, Subnets, VLANs, and 12 other
-counter groups.
+There are a number of [Built-in counter groups](/docs/ug/cg/intro#types) that ships with Trisul. You can create your own [custom counter groups](custom) Trisul measures Hosts, MACs, Applications, Subnets, VLANs, and 12 other counter groups.
 
 ***A Meter***  
-A parameter or data point within a counter group.
 
-Trisul collects info about Total Bytes, Packets,Receive, Transmit, Num
+A Meter is a single counter that measures a specific aspect of network traffic, such as upload bytes, packets, or number of connections. Meter is like the actual grade (value) written on the math paper, like 85%.
+
+Trisul collects info about Total Bytes, Packets, Receive, Transmit, Number of 
 active connections, Alerts and 10 other items. Each of these is called a
 meter. So the *Host* counter group tracks 12 meters.
 
 ***A Key***  
-An instance or a member of a counter group
+A Key is a unique identifier that defines a specific counter within a CounterGroup. Think of it like a specific paper (counter) in the folder that tracks one particular subject, like Math.
 
-Within the Host counters group, the IP Address `10.10.255.7` is a key. A
+For example, within the Host counters group, the IP Address `10.10.255.7` is a key. A
 counter group can have millions of keys.
 
 ### A picture

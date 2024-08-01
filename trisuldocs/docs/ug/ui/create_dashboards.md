@@ -1,5 +1,6 @@
 ---
 sidebar_position: 6
+
 ---
 
 # Dashboards
@@ -64,15 +65,7 @@ Once you have created a new dashboard, Now you are at the new dashboard panel wi
 
 5) #### Module Icons
    
-   The module icons are useful in traversing the graphical chart in detail. Icons from right to left includes,
-   
-   - PDF- Click on the PDF icon on the  top righ corner of the module to download the chart data in PDF.
-   
-   - Key Dashboard- Click on the Key Dashboard icon to view and edit the Key details of this module
-   
-   - Menu- Click on the three lines icon and select from the list of download options  SVG, PNG and CSV to donwload in that particular format
-   
-   - Home- Click on the home icon to reset zoom.
+   The [module icons](/docs/ug/ui/elements#module-icons) are useful in traversing the graphical chart in detail.
 
 6) #### Legend Table
    

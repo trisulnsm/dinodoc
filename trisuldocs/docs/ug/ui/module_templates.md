@@ -158,7 +158,7 @@ This Single value module displays a single, key performance indicator (KPI) or m
 
 This is an example of Single Value module which shows the total bandwidth of aggregates in a single value.
 
-![](/home/sathana/bldart/td0/dinodoc/trisuldocs/docs/ug/ui/images/singlevalue_modtemp.png)
+![](images/singlevalue_modtemp.png)
 
 ### Parameters
 
@@ -197,8 +197,6 @@ This is an example of Real Time Traffic module of both Inbound vs Outbound diffe
 ## Real Time Single
 
 Real Time Single module is the same as Single value module except the data displayed is in real time. Real time data is refreshed every five minutes.
-
-![]()
 
 ### Parameters
 

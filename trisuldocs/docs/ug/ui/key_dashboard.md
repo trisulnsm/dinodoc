@@ -4,19 +4,15 @@ sidebar_position: 9
 
 # Key dashboard
 
-The *Key Dashboard* is a special type of dashboard used to view and
-drilldown from “Keys”. In Trisul terminology a Key is an item within a
-counter group. Clicking on any key will take you to the Key Dashboard
-from there you can pivot to a number of different analysis paths.
+The Key Dashboard is like a hub that allows you to dive deeper into a specific Key's data and explore related analysis paths. It's a powerful tool for investigating and understanding network traffic in Trisul. Clicking on any key in a dashboard will take you to the Key Dashboard of that particular key.
 
 A quick recap of the hierarchy and terminology first:
 
-- **Counter Group** - A type or entity being measured. For example
-  (Hosts)
-  - **Key** - A specific item being measured within the Counter group.
-    For example (google.com)
-    - **Meter** - A metric within the key. For example ( Number of
-      connections )
+- CounterGroup is a collection of related counters that measure specific aspects of network traffic like hosts. 
+
+- A Key is a unique identifier that defines a specific counter within a CounterGroup. For example, google.com.
+
+- A Meter is a single counter that measures a specific aspect of network traffic, such as upload bytes, packets, or number of connections.
 
 For more read [Traffic Metering Concepts](/docs/ug/cg/intro)
 
@@ -26,21 +22,20 @@ There are two ways to get to the key dashboard
 
 #### 1. By clicking
 
-<span class="command hint">Click on any item in any page to open the key
-dashboard for that item</span>
+Click on any Key on any dashboard in any page to open the Key Dashboard for that Key
 
 Some examples :
 
-|                                |                                                         |
-| ------------------------------ | ------------------------------------------------------- |
-| ![](images/keydashaccess1.png) | All hosts are linked to their respective key dashboards |
-| ![](images/keydashaccess2.png) | Hosts/Ports for these malware alerts are linked         |
+|                               |                                                             |
+| ----------------------------- | ----------------------------------------------------------- |
+| ![](images/keydashboard1.png) | All ASNumbers are linked to their respective key dashboards |
+| ![](images/keydashboard2.png) | All hosts are linked to their respective key dashboards     |
 
 Note that you can also click on PIE and BUBBLE chart items.
 
 #### 2. By searching
 
-Type in a search and click on search results
+Type in a search item and click on search results
 
 The search method is very useful if you want to see details of something
 that is not visible on any of the screens shown by Trisul. For example :
@@ -52,16 +47,22 @@ on any lists for you to click on.
 The default key dashboard has the following modules. Here is a brief
 description of each of these modules. They are mostly self explanatory.
 
-![](images/dashboards/key_dashboard.png)
+![](images/keydashboard3.png)
 
-| Module                                               | Usage                                                                                                                                  |
-| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| Traffic History                                      | Most recent 1hr traffic history. Note you can click on *View Trends* and *Retro Analysis* within the chart to expand this time window. |
-| [Key Details](/docs/ug/ui/key_dashboard#key-details) | Various drilldown options pertaining to this key                                                                                       |
-| A la carte statistics                                | Flexible charting tool (quick and easy)                                                                                                |
-| TCA Details                                          | Shows recent threshold crossing alerts, if any                                                                                         |
-| Flow Activity                                        | Displays recent top flows                                                                                                              |
-| Daily Report                                         | Click on a calendar day to get a PDF report with detailed usage                                                                        |
+| Module                                                  | Usage                                                           |
+| ------------------------------------------------------- | --------------------------------------------------------------- |
+| 1) Traffic History                                      | Most recent 1hr traffic history                                 |
+| 2) [Key Details](/docs/ug/ui/key_dashboard#key-details) | Various drilldown options pertaining to this key                |
+| 3) A la carte statistics                                | Flexible charting tool (quick and easy)                         |
+| 4)Flow Activity                                         | Displays recent top flows                                       |
+| 5)Daily Report                                          | Click on a calendar day to get a PDF report with detailed usage |
+| TCA Details                                             | Shows recent threshold crossing alerts, if any                  |
+
+## Traffic History
+
+With Traffic History module you can view the amount of data total, transmitted or received over a specific period for that particular Key. The most recent one hour traffic history can be drilled down in more detail over different time points.
+
+![](images/traffichistory.png)
 
 ## Key Details
 
@@ -71,12 +72,37 @@ to the key.
 
 This module is split into two panels.
 
-1. Info on left -\> Contains details about the key including
-   resolved/user assigned labels.
-2. Tools on right -\> Drilldown tools for further investigation about
+1. Info on the left -\> Contains details about the key
+2. Tools on the right -\> Drilldown tools for further investigation about
    key
 
-![](images/key_details.png)
+![](images/keydetails.png)
+
+The information on the left includes,
+
+1) Represents: Represensts the IP address
+
+2) Counter Group: Information on which counter group of the key
+
+3) User Label: This is the tag name assigned to the particular key
+
+4) Key Format: This is the hexadecimal of the key
+   
+   Tools on the right side are already existing menus from home page available here handily for investigation of the key. 
+   
+   ### Set Label/ Edit
+   
+   ![](images/setlabeloredit.png)
+   
+   1) Click on **Assign User Label/Edit attributes** if you want to change the label name, description, or edit attributes  and click update.
+   
+   2) Click **Clear attributes** to clear the attributes of the key.
+   
+   3) Click **Set Valid Start Time** to set start time for the key.
+   
+   4) Clicking on **Resolve**, resolves the name of the IP if any.
+   
+   
 
 ### Name Resolution
 
