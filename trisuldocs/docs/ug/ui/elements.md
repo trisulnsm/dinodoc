@@ -7,22 +7,6 @@ sidebar_position: 4
 This section contains a quick overview of the user interface elements
 used by Trisul.
 
-## Module Icons
-
-![](images/moduleicons.png)
-
-The module icons are useful in traversing the graphical chart in detail. Icons from right to left includes,
-
-- PDF- Click on the PDF icon on the top righ corner of the module to download the chart data in PDF.
-
-- Key Dashboard- Click on the Key Dashboard icon to view and edit the Key details of this module
-
-- Live SNMP- To view the Live data i.e., until the latest one minute click Live SNMP icon and it gets refreshed every 10 seconds. This icon is not available on all modules rather on relevant ones.
-
-- Menu- Click on the three lines icon and select from the list of download options SVG, PNG and CSV to donwload in that particular format
-
-- Home- Click on the home icon to reset zoom.
-
 ## Analysis Forms
 
 These forms have a striped background throughout the app.
@@ -99,22 +83,50 @@ functionality is triggered when you enter three or more characters.
 
 ## Charts
 
-Trisul supports rich interactive charts. Many modules allow you to
-select a chart surface and specify other parameters such as width and
-height.
+Trisul supports a number of intuitive chart surfaces that render the statistical data in a rich interactive way.
 
-### Interactions
+### Module Icons
 
-Charts are interactive.
+![](images/moduleicons.png)
 
-You can :  
+The module icons are useful in traversing the graphical chart in detail. Icons from right to left includes,
 
-- Hover your mouse over an item such as a PIE slice and get a tooltip with
-  values  
+- **PDF**- Click on the PDF icon on the top righ corner of the module to download the chart data in PDF.
 
-- Click on a chart item and go to the `key` dashboard  
+- **Key Dashboard**- Click on the Key Dashboard icon to view and edit the Key details of this module
 
-- Click on a chart item in the legend area to `show/hide` the item  
+- **Live SNMP**- To view the Live data i.e., until the latest one minute click Live SNMP icon and it gets refreshed every 10 seconds. This icon is not available on all modules rather on relevant ones.
+
+- **Menu**- Click on the three lines icon and select from the list of download options SVG, PNG and CSV to donwload in that particular format
+
+- **Home**- Click on the home icon to reset zoom.
+
+### Chart Interactions
+
+Many modules allow you to select a chart surface and enables you to view the data at that particular point of time.
+
+With interactive charts you can,
+
+1) Hover your mouse over an item such as a PIE slice and get a tooltip with
+   values  
+
+![](images/netflowvolume.png)
+
+2) You can click on any key items on the chart and it will take you to the [Key dashboard](/docs/ug/ui/key_dashboard) of that Key.
+
+![](images/keydashboard1.png)
+
+3) Click on a chart item in the legend area to `show/hide` the item  
+
+For example in the following chart both Inbound and Outbound items in the legend are enabled.
+
+| ![](images/legend1.png) |
+| ----------------------- |
+
+You can click on any of the items like Inbound or inbound in the legend area to hide or unhide that data from the chart like in these examples.
+
+| ![](images/legend2.png) | ![](images/legend3.png) |
+| ----------------------- | ----------------------- |
 
 - Click on the `Expand Legend` spot to get a detailed legend  
   Auto refresh the charts via Ajax calls
@@ -129,9 +141,9 @@ The retro chart is even more interactive :
 
 - Use the selected time interval to perform drill down retro analysis
 
-### Available surfaces
+### Trisul Chart Surfaces
 
-The following surfaces are available
+These are some of the intuitive chart surfaces in Trisul. 
 
 |                                    |     |                               |
 | ---------------------------------- | --- | ----------------------------- |
@@ -145,14 +157,9 @@ The following surfaces are available
 | ![](images/charts/bar.png)         |     | ![](images/charts/area.png)   |
 |                                    |     |                               |
 
-### Download PCAP button
+## Download PCAP button
 
 On tables featuring a “Download PCAP” button, clicking on the button
 will result in Trisul computing a “Packet Scan plan” and then
 downloading all of the requested entities into a single merged PCAP
 file.
-
-### Column select
-
-On tables featuring a “Cols” link, clicking on it will let you choose
-the columns you want displayed.

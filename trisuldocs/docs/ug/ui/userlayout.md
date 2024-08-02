@@ -1,6 +1,8 @@
 ---
-sidebar_position: 2
+
+sidebar_position: 1
 ---
+
 # User Layout
 
 When you login as a non admin user you will see the following layout 
@@ -57,9 +59,10 @@ This shows the host's name. All time zones in Trisul are displayed in the host's
 9) #### Account
    
     ![](images/account.png)
-    
+   
     Clicking on the account button you can get the account history, change password, and signout from the current account. 
-    ## Menus
+   
+   ## Menus
 
 A fully customizable multi open collapsible menu system.
 
