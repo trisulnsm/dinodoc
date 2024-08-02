@@ -66,5 +66,10 @@ The Monthly summary dashboard is very useful for planning, billing,
 traffic management, and other activities. It shows totals of any metric
 on a calendar with per-day metrics.
 
-![](images/dashboards/monthlysummary.png)  
-*Monthly totals chart showing total bandwidth usage*
+In the Search Criteria, you can select any number of meters to show in the monthly summary chart.
+
+![](images/monthlysummary1.png)
+
+In this example you can see that we have selected Aggregates of Total and Packets metrics that can be viewed in the chart.
+
+![](images/monthlysummary2.png)
