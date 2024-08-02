@@ -58,13 +58,13 @@ description of each of these modules. They are mostly self explanatory.
 | 5)Daily Report                                          | Click on a calendar day to get a PDF report with detailed usage |
 | TCA Details                                             | Shows recent threshold crossing alerts, if any                  |
 
-## Traffic History
+1) ## Traffic History
 
 With Traffic History module you can view the amount of data total, transmitted or received over a specific period for that particular Key. The most recent one hour traffic history can be drilled down in more detail over different time points.
 
 ![](images/traffichistory.png)
 
-## Key Details
+2) ## Key Details
 
 Lets pay special attention to the **Key Details** module. This is the
 jumping point where you have access to various drilldown tools related
@@ -89,34 +89,23 @@ The information on the left includes,
 4) Key Format: This is the hexadecimal of the key
    
    Tools on the right side are already existing menus from home page available here handily for investigation of the key. 
-   
-   ### Set Label/ Edit
-   
+
+### Set Label/ Edit
+
    ![](images/setlabeloredit.png)
-   
-   1) Click on **Assign User Label/Edit attributes** if you want to change the label name, description, or edit attributes  and click update.
-   
-   2) Click **Clear attributes** to clear the attributes of the key.
-   
-   3) Click **Set Valid Start Time** to set start time for the key.
-   
-   4) Clicking on **Resolve**, resolves the name of the IP if any.
-   
-   
 
-### Name Resolution
+1) Assigning a user friendly name such as a hostname to an IP is a common
+   operation. Click on **Assign User Label/Edit attributes** if you want to change the label name, description, or edit attributes  and click update. See the [resolve name](/docs/ug/cg/resolve) section for more details.
 
-Assigning a user friendly name such as a hostname to an IP is a common
-operation.
+2) Click **Clear attributes** to clear the attributes of the key.
 
-***Resolve***  
-Resolve the name for this key. Works for all IP addresses and AS Numbers
+3) Click **Set Valid Start Time** to set start time for the key.
 
-***Edit***  
-Edit the User label for this key manually
+4) Clicking on **Resolve**, and this resolves the name for this key. Works for all IP addresses and AS Numbers.
 
-See the [resolve name](/docs/ug/cg/resolve) section for more
-details.
+5) You can click **Resolve using nmblookup**, to resolve names using nmblookup. nmblookup, a part of samba suite resolves NetBIOS names (example, computer names) to IP addresses
+
+6) Click **Create Bandwidth Cap**, and set the amount of data you can upload or download. Exceeding this limit can result in a additional fee and can be viewed in the chart. Bandwidth is usually given in JSON format. For example, 5 Mbps should be given as {"bw": 5000000}.
 
 ### Drilldown options
 
@@ -124,16 +113,39 @@ details.
 
 The most common ones are described below.
 
-|                       |                                                                                                                                                                                                                                                                                                                                                        |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Detailed Activity     | What is this station doing ?<br/>Open up the Investigate IP tool for this key for the last 1 hour.                                                                                                                                                                                                                                                     |
-| View Conversations    | Who is this station talking to ? <br/> Open up a Flow Based Investigation for this IP/Port/or Netflow Router Interface for the past one hour.                                                                                                                                                                                                          |
-| Retro analyze         | Go back in time<br/>Open up a historical reto analysis for this key. The retro forms are all pre-filled with details about this key.                                                                                                                                                                                                                   |
-| Long Term Charts      | View historical usage.<br/>Open up the Long term analysis tool                                                                                                                                                                                                                                                                                         |
-| Others In Subnet      | #In /24 → Find active 24 subnet keys in past traffic<br/>#In /22 → Find active 22 subnet keys in past traffic<br/>#In /16 → Find active 16 subnet keys in past traffic                                                                                                                                                                                 |
-| Create TCA            | Create a threshold crossing alerts for this key.<br/>See this for more                                                                                                                                                                                                                                                                                 |
-| Create Threshold Band | Create and view training data                                                                                                                                                                                                                                                                                                                          |
-| Security Alerts       | Recent IDS alert activity                                                                                                                                                                                                                                                                                                                              |
-| Resources             | Recent resources requested<br/>Recent URL and DNS resources requested by this key                                                                                                                                                                                                                                                                      |
-| Real Time Stabbers    | Open real time monitoring stabbers (5 sec)<br/>You can now watch specific network activity with a 5 second delay. The three options available are<br/># Traffic → Real time traffic chart for this key<br/># Toppers → View top keys in the same counter group as this one<br/># Flows → View live flows related to this key (only for Hosts and Apps) |
-| Download PCAP         | Download a PCAP file related to this item                                                                                                                                                                                                                                                                                                              |
+|                        |                                                                                                                                                                                                                                                                                                                              |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Host Conversations     | Shows the Raw Flow conversations of the selected Key                                                                                                                                                                                                                                                                         |
+| Aggregated Flows       | Shows the aggregated conversations like top 10 source IPs, top 10 destination ports etc.                                                                                                                                                                                                                                     |
+| Alerts                 | Shows the alerts found in the selected Key                                                                                                                                                                                                                                                                                   |
+| Traffic Chart          | Shows the traffic chart of the particular Key selected                                                                                                                                                                                                                                                                       |
+| Long Term Charts       | You can view the historical usage.<br/>Opens up the Long term analysis tool                                                                                                                                                                                                                                                  |
+| View Edge Graph        | You can view the relationships between different network entities such as hosts, protocols, IP addresses etc as a graphical representation.                                                                                                                                                                                  |
+| Download PCAP          | Download a PCAP file related to this Key                                                                                                                                                                                                                                                                                     |
+| Detailed Activity      | What is this station doing ?<br/>Open up the Investigate IP tool for this key for the last 1 hour.                                                                                                                                                                                                                           |
+| Query Flows by Tag     | Filter and analyze network traffic based on specific tags or labels. These tags can be assigned to network flows like sequences of packets based on various criteria, such as:<br/>Protocol (e.g., HTTP, FTP, SSH)<br/>Port numbers etc.<br/> The filtered flows are displayed, showing detailed information about each flow |
+| Aggregate Flows by Tag | Group and summarize network traffic based on specific tags or labels.                                                                                                                                                                                                                                                        |
+
+### Subnets
+
+#In /24 → Find active 24 subnet keys in past traffic  
+#In /22 → Find active 22 subnet keys in past traffic  
+#In /16 → Find active 16 subnet keys in past traffic
+
+3) ## A La Carte Statistics
+
+![](images/alacartestatistics.png)
+
+With A La Carte Statistics you can select specific statistical metrics, select a time frame, and a chart surface you prefer and click Draw chat. This displays a personalized view on your dashboard. 
+
+4) ## Flow Activity
+   
+   ![](images/flowactivity.png)
+   
+   With Flow Activity you can gain insights into network traffic details like Protocol, Source IP, Source Port, Destination IP, Destination Port, Volume, Start time, Duration, Probe, Tags, Packet Capture available for that item and Flow State. Each Flow can be further filtered using the three lines option button against each flow.
+
+5) ### Daily Report
+   
+   ![](images/dailyreport.png)
+   
+   You can click on any date on the daily report module and get the traffic report for that date in PDF format.
