@@ -81,9 +81,9 @@ functionality is triggered when you enter three or more characters.
 
 ![](images/dashboards/autocomplete.png)
 
-## Charts
+## Charts and Chart Interactions
 
-Trisul supports a number of intuitive chart surfaces that render the statistical data in a rich interactive way.
+Trisul supports a number of intuitive chart surfaces that render the statistical data in a rich interactive way. And you can drilldown on the chart using module icons and legend table. Many modules allow you to select a chart surface and enables you to view the data at that particular point of time.
 
 ### Module Icons
 
@@ -101,37 +101,45 @@ The module icons are useful in traversing the graphical chart in detail. Icons f
 
 - **Home**- Click on the home icon to reset zoom.
 
-### Chart Interactions
+### Legend Table
 
-Many modules allow you to select a chart surface and enables you to view the data at that particular point of time.
-
-With interactive charts you can,
-
-1) Hover your mouse over an item such as a PIE slice and get a tooltip with
-   values  
-
-![](images/netflowvolume.png)
-
-2) You can click on any key items on the chart and it will take you to the [Key dashboard](/docs/ug/ui/key_dashboard) of that Key.
-
-![](images/keydashboard1.png)
-
-3) Click on a chart item in the legend area to `show/hide` the item  
+Click on a chart item in the **legend** area to `show/hide` the item
 
 For example in the following chart both Inbound and Outbound items in the legend are enabled.
 
-| ![](images/legend1.png) |
-| ----------------------- |
+| ![](images/legendtable.png) |
+| --------------------------- |
 
-You can click on any of the items like Inbound or inbound in the legend area to hide or unhide that data from the chart like in these examples.
+You can click on any of the items like Inbound or inbound in the legend area to **hide or unhide** that data from the chart like in these examples.
 
 | ![](images/legend2.png) | ![](images/legend3.png) |
 | ----------------------- | ----------------------- |
 
-- Click on the `Expand Legend` spot to get a detailed legend  
-  Auto refresh the charts via Ajax calls
+Click on the `Expand Legend` spot to get a detailed legend  
+Auto refresh the charts via Ajax calls
 
-The retro chart is even more interactive :  
+### Tooltip
+
+Hover your mouse over an item such as a PIE slice or line graph and get a tooltip with values at different intervals.
+
+![](images/netflowvolume.png)
+
+### Key Dashboard
+
+You can click on any key items on the chart and it will take you to the [Key dashboard](/docs/ug/ui/key_dashboard) of that Key.
+
+![](images/keydashboard1.png)
+
+### Retro Charts
+
+Click on any of the module toolbar and click View historical to view the retro chart of that particular module
+
+![](images/retrochart2.png)
+
+Select a time frame and view the retro chart for that particular past time period.
+  ![](images/retrochart.png)
+
+The retro charts are even more interactive :  
 
 - Click and select an area  
 
