@@ -62,6 +62,6 @@ This module shows the top routers sending NetFlow that has the maximum bandwidth
 
 ## NetFlow Not Received
 
+This module sends you alerts when you configure new routers and if any router stops sending NetFlow. You can configure to receive a mail upon each alert.
 
-
-![](images/ipdrstatistics2.png)
+![](images/ipdrstatistics3.png)
