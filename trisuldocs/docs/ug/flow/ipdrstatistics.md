@@ -84,6 +84,6 @@ This module sends you alerts when you configure new routers and if any router st
 
 AAA protocols, commonly used with dynamic IP address assignment may not accurately map IP addresses to users/devices leading to incorrect analysis. Trisul processes these AAA files to help map IP addresses to specific users, devices, or applications, enabling accurate IPDR analysis. 
 
-This AAA file status module in Trisul can provide the real-time count for today till now which can provide accurate insights for further analysis.
+This AAA file status module in Trisul can provide the count for today till now.
 
 ![](images/ipdr-aaa-status.png)
