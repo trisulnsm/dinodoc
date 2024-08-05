@@ -18,7 +18,7 @@ Password: `ipdr@@123`
 
 You can see the following screen of IPDR NetFlow Statistics Dashboard.
 
-![](images/ipdrstatistics1.png)
+![](images/ipdrstatisticspage.png)
 
 Trisul IPDR NetFlow Statistics dashboard consists of the following modules.
 
