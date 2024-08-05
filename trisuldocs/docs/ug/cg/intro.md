@@ -11,13 +11,17 @@ groups, meters, and keys.
 
 ***Counter Group***  
 
-CounterGroup is a collection of related counters that measure specific aspects of network traffic. Think of it like a folder that holds multiple papers (counters) that track different things, like a student's grades in different subjects.
+CounterGroup is a collection of related counters that measure specific aspects of network traffic. Think of it like a notebook that holds multiple pages (counters) that track different things, like a student's grades in different subjects. 
 
-There are a number of [Built-in counter groups](/docs/ug/cg/intro#types) that ships with Trisul. You can create your own [custom counter groups](custom) Trisul measures Hosts, MACs, Applications, Subnets, VLANs, and 12 other counter groups.
+- **CounterGroup** (notebook) = "Network Traffic Monitoring""
+
+- **Counters** (pages) = individual metrics, such as: Hosts, MACs, Applications, Subnets, VLANs.
+
+There are a number of [Built-in counter groups](/docs/ug/cg/intro#types) that ships with Trisul. You can also create your own [custom counter groups](custom). Trisul measures 12+ counter groups that contain multiple counters to track various aspects of network traffic.
 
 ***A Meter***  
 
-A Meter is a single counter that measures a specific aspect of network traffic, such as upload bytes, packets, or number of connections. Meter is like the actual grade (value) written on the math paper, like 85%.
+A Meter is the measurement of a single counter that measures a specific aspect of network traffic, such as upload bytes, packets, or number of connections. Meter is like the actual grade (value) written on the math paper, like 85%.
 
 Trisul collects info about Total Bytes, Packets, Receive, Transmit, Number of 
 active connections, Alerts and 10 other items. Each of these is called a
