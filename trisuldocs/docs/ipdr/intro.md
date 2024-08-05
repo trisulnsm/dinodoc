@@ -34,10 +34,10 @@ With Trisul IPDR you can,
    
    On the Left side of the screen you can find the IPDR menu where you can navigate to,
    
-   1) [Query Logs](/docs/ug/flow/querying_using_ipdr)
+   1) [Query Logs](querying_using_ipdr)
    
-   2) [IPDR Dashboard](/docs/ug/flow/ipdrdashboard)
+   2) [IPDR Dashboard](ipdrdashboard)
    
-   3) [IPDR Statistics](/docs/ug/flow/ipdrstatistics)
+   3) [IPDR Statistics](ipdrstatistics)
    
    4) Show all. Click on Show all to view all other tools and dashboards for analysis.

@@ -76,6 +76,7 @@ const config = {
           {to: '/docs/ug', label: 'User Guide', position: 'left'},
           {to: '/docs/lua', label: 'API', position: 'left'},
           {to: '/docs/ref', label: 'Reference', position: 'left'},
+          {to: '/docs/ipdr', label: 'IPDR', position: 'left'},
           {
             href: 'https://github.com/trisulnsm/dinodoc',
             label: 'GitHub',

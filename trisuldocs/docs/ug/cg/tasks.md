@@ -43,7 +43,7 @@ Tools](/docs/ug/cg/retrotools) to investigate
 
 ### I want to see details of a particular IP, but it isnt showing up anywhere for me to click ?
 
-1. [Use the search box](/docs/ug/ui/search#the-search-box)
+1. [Use the search box](/docs/ug/ui/elements#the-search-box)
 2. Click on “View Details” to go to the key dashboard
 3. Use any of the tools on the key dashboard
 
@@ -68,8 +68,7 @@ If you can see the IP in live dashboards
 
 ***Method 2***  
 
-1. Follow instructions in [Using
-   Search](/docs/ug/ui/search#the-search-box)
+1. Follow instructions in [Using Search](/docs/ug/ui/elements#the-search-box)
 2. And click **Flows** in Real Time stabbers in [Key
    Details](/docs/ug/ui/key_dashboard#key-details) modules
 

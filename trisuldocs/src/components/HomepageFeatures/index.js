@@ -25,6 +25,16 @@ const FeatureList = [
     ),
   },
   {
+    title: 'IPDR Guide',
+    linkto: '/docs/ipdr',
+    Svg: require('@site/static/img/undraw_react_re_g3ui.svg').default,
+    description: (
+      <>
+        User and Admin Guide for the IP Data Record Logging solution. 
+      </>
+    ),
+  },
+  {
     title: 'Config Files Reference',
     linkto: '/docs/ref',
     Svg: require('@site/static/img/undraw_set_preferences_kwia.svg').default,
