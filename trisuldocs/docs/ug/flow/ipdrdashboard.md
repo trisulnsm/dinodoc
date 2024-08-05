@@ -126,7 +126,7 @@ The actual report contains the data of detailed metrics of network activity incl
 | Duration     | The length of time the network activity occurred                          |
 | UserID       | Unique identifier assigned to the user                                    |
 | SubscriberID | Unique identifier assigned to the subscriber (example, customer, account) |
-| NatIP        | The public IP address assigned to a device or user by a NAT device        |
+| NatIP        | The private IP address assigned to a device or user by a NAT device       |
 | NatPort      | The port number assigned to a device or user by a NAT device.             |
 | DeviceIP     | The private IP address of the device                                      |
 | CustName     | Name of the customer                                                      |

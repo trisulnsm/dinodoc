@@ -21,7 +21,7 @@ There are a number of [Built-in counter groups](/docs/ug/cg/intro#types) that sh
 
 ***A Meter***  
 
-A Meter is a single counter that measures a specific aspect of network traffic, such as upload bytes, packets, or number of connections. Meter is like the actual grade (value) written on the math paper, like 85%.
+A Meter is the measurement of a single counter that measures a specific aspect of network traffic, such as upload bytes, packets, or number of connections. Meter is like the actual grade (value) written on the math paper, like 85%.
 
 Trisul collects info about Total Bytes, Packets, Receive, Transmit, Number of 
 active connections, Alerts and 10 other items. Each of these is called a
