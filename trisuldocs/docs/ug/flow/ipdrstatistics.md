@@ -1,8 +1,22 @@
+---
+sidebar_position: 12
+---
+
 # IPDR NetFlow Statistics
 
 IPDR NetFlow statistics dashboard contains modules of statistical network usage data that ISPs collect.
 
-Lets explore the Trisul IPDR NetFlow Statistics dashboard from this example.
+Lets explore the modules of Trisul IPDR NetFlow Statistics dashboard from this example.  
+
+:::note Navigation
+
+Login as User name: `dotuser` and
+
+Password: `ipdr@@123`
+
+:::
+
+You can see the following screen of IPDR NetFlow Statistics Dashboard.
 
 ![](images/ipdrstatistics1.png)
 
@@ -62,6 +76,6 @@ This module shows the top routers sending NetFlow that has the maximum bandwidth
 
 ## NetFlow Not Received
 
-This module sends you alerts when you configure new routers and if any router stops sending NetFlow. You can configure to receive a mail upon each alert.
+This module sends you alerts when you configure new routers and if any router stops sending NetFlow. You can [configure](/docs/ug/alerts/email_settings) to receive a mail upon each alert.
 
 ![](images/ipdrstatistics3.png)

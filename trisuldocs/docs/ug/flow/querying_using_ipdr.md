@@ -1,6 +1,21 @@
+---
+sidebar_position: 10
+---
 # How to Query Using IPDR Form
 
-With IPDR Query Form, you can request detailed records of internet activity from network devices. Here is the snapshot of Trisul IPDR Query Form.
+With IPDR Query Form, you can request detailed records of internet activity from network devices. 
+
+To view Trisul IPDR Query form,
+
+:::note Navigation
+
+Login as User name: `dotuser` and
+
+Password: `ipdr@@123`
+
+:::
+
+Here is the snapshot of Trisul IPDR Query Form.
 
 ![](images/ipdrqueryform.png)
 
