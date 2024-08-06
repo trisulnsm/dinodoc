@@ -47,7 +47,7 @@ your custom metering.
 
 Example : A new counter group called *Traffic Flows* which is cross
 product of two counter groups *Internal Hosts X External Hosts*. The
-keys in this new counter group with be a combination of both. Another
+keys in this new counter group will be a combination of both. Another
 example is *Geo Flows* which is a cross product of three counter groups
 *Internal Hosts X Country X External Hosts*
 
@@ -85,12 +85,12 @@ Some examples :
 
 :::note navigation
 
-Login as Admin -\> Select Context and profile -\> Under Custom Counters
+Login as Admin -\> Select Context and profile0 -\> Under Custom Counters
 -\>Filtered
 
 :::
 
-1. Click the button “New Filtered Counter Group”  
+1. Click the button “Create New”  
 
 2. You will be redirected to a page with following fields
 
@@ -114,7 +114,7 @@ to measure any subset of metrics
 
 A new counter group that aggregates sets of keys from a host counter
 group. This can be used to group IP addresses , port numbers, network
-intefaces and then count the aggregate. Some examples are shown below
+interfaces and then count the aggregate. Some examples are shown below
 
 | New Keyset Counter Group | Host/Parent Group | Key sets |
 | ------------------------ | ----------------- | -------- |
