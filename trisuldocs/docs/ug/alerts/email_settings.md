@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
---- 
+---
 
 # Email alert delivery
 
@@ -15,15 +15,17 @@ The way the alerting pipeline works is the following.
 
 Trisul has a new Email Alert Wizard that lets you configure everything from one place.
 
-To access that
+To access that Login as Admin
 
 :::note navigation
 
-Login as Admin → Select Context and profile → Under Alerts → Email Alerts Wizard
+Go to Context: default → Profile0 → Alerts → Setup Email
 
 :::
 
-You can just follow the steps in the wizard.
+This will take you to the Email Alerts Wizard as shown in this example. And against each settings it will be shown if the service is configured or disabled. 
+
+![](image/emailalertswizard.png)
 
 ## Basic steps to enable email alerts
 
@@ -31,39 +33,68 @@ The following steps are needed to forward email alerts.
 
 - ##### Setup SMTP Server to send emails
   
-  :::note navigation
+  In the Email Alerts Configuration Wizard, Click Email Account Settings. This will open the Email server account settings.
   
-  Login as Admin → Manage → [Email Settings](/docs/ug/reports/emailsettings)
+  ![](image/emailsettings1.png)
   
-  :::
+  This is where you configure the email addresses that you want to be sent from and the recipient email addresses.
+  
+  In ths window, Click on Configure email server.  And you can configure an Email server using which Web Trisul will send outgoing mails by filling up the following fields.
+  
+  | Fields                        | Description                                                                                                                                                   |
+  | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | Email Server                  | Hostname or IP of the SMTP server                                                                                                                             |
+  | SMTP Port Number              | SMTP Port (Usually 25. For Gmail use 587)                                                                                                                     |
+  | Authentication Protocol       | Click from the drop down list of authenticaton protocols                                                                                                      |
+  | From Email Address            | This is displayed as the sender's address on the recipient's inbox                                                                                            |
+  | Password/API Key              | Email Password,API Key,or Provider password like pepipost,sendgrid                                                                                            |
+  | Disable SSL Cert verification | Disable certificate verification. Eg, if your email server uses self signed certificates                                                                      |
+  | SMTP Relay User (optional)    | Use this to send SMTP email via relays like sendgrid,mailchimp,pepipost etc. This is the user id given to you by the provider. Leave it blank if not required |
+
+Once provoding all the fields, Click Save and the email server configuration for outgoing mails is done.
 
 - ##### Ensure who receives the Alert Emails
   
-  :::note navigation
+  Again, from the Email server account settings, Click Configure automatic email alert recipients. Or you can also configure from Email Alerts Configuration Wizard and click Configure Email Alerts Recipients. This is where you specify where to send emails when alerts fire. 
   
-  Login as Admin → Manage → [Email Settings](/docs/ug/reports/emailsettings) → Select “Configure Email Alerts”
+  Provide the following fields to configure automatic email alert delivery to the recipients.
   
-  :::
+  | Fields                   | Descriptions                                                                      |
+  | ------------------------ | --------------------------------------------------------------------------------- |
+  | Send alerts via email To | Email address of receiver. You can only enter one address, use cc to add multiple |
+  | Cc                       | Add multiple recipient addresses seperated by comma(,)                            |
+  | Bcc                      | Add multiple recipient addresses seperated by comma(,)                            |
+  | Signature                | Enter a block of text that can be automatically appended to the end of your email |
+  
+  Once providing all the fields, Click Save and the configuration for automatic email alert delivery to the recipients is done.
+
+- ##### Start/Stop an Email Notification Service
+  
+  In the Email Alerts Configuration Wizard, Click Start/Stop. This will take you to the administrative tasks page. In the Email notification service module as shown in this example, it will be shown if the email notification service is enabled or stopped. 
+  
+  ![](image/emailsettings2.png)
+  
+  Click Start to start sending alerts as email notifications. Otherwise click Stop to stop the email notification service.
+  
+  The email notification service logtails the syslog and dispatches alerts. The service is careful not to flood < 5 minutes and can automatically create digests if alert volume are too high.
 
 - ##### Ensure alerts are forwarded to syslog
   
-  :::note navigation
+  From the Email Alerts Configuration Wizard, click "Alerts go to syslog". This will open the alert groups window and you can see the list of all the alert groups and their GUIDs status. You can see the total number of alert groups and the number of alert groups currently enabled and disabled right next to the title. You can disable all the alert groups by clicking "Disable all" on the top right corner.
   
-  Login as Admin → Select Context > profile → “View Alert Groups” > Check if your alert is forwarded to syslog/email. Use “Edit” to enable
+  ![](image/emailsettings3.png)
   
-  :::
+  The alert groups table contains the following components and options.
+  
+  | Components              | Descriptions                                                                                              |
+  | ----------------------- | --------------------------------------------------------------------------------------------------------- |
+  | Name                    | Name of the Alert Group                                                                                   |
+  | Description/GUID        | Description of the Alert group and its GUID                                                               |
+  | Status                  | Status of the Alert group if its enabled or disabled                                                      |
+  | Forward to syslog/email | Syslog level to automatically forward all alerts in this group to syslog and email                        |
+  | Option toolbar          | You can edit or disable each alert group by clicking on the three lines options against each alert group. |
 
-- ##### Start the email Notification service
-  
-  The email notification service logtails the syslog and dispatches 
-  alerts. The service is careful not to flood < 5 minutes and can 
-  automatically create digests if alert volume are too high.
-  
-  :::note navigation
-  
-  Login as Admin → Manage > Start/Stop Tasks → "Start Email Notification Service
-  
-  :::
+These components can be edited or disabled by clicking on the option toolbar against each alert group. Once providing all the fields, click Update to save the configuration.
 
 ## Advanced customization of email subjects and bodies
 
