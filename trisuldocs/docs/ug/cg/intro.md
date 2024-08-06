@@ -15,20 +15,20 @@ CounterGroup is a collection of related counters that measure specific aspects o
 
 - **CounterGroup** (notebook) = "Network Traffic Monitoring""
 
-- **Counters** (pages) = individual metrics, such as: Hosts, MACs, Applications, Subnets, VLANs.
+- **Counters** (pages) = individual metrics such as: Hosts, MACs, Applications, Subnets, VLANs.
 
-There are a number of [Built-in counter groups](/docs/ug/cg/intro#types) that ships with Trisul. You can also create your own [custom counter groups](custom). Trisul measures 12+ counter groups that contain multiple counters to track various aspects of network traffic.
+There are a number of [Built-in counter groups](/docs/ug/cg/intro#types) that ship with Trisul. You can also create your own [custom counter groups](custom). Trisul measures 12+ counter groups that contain multiple counters to track various aspects of network traffic.
 
 ***A Meter***  
 
-A Meter is the measurement of a single counter that measures a specific aspect of network traffic, such as upload bytes, packets, or number of connections. Meter is like the actual grade (value) written on the math paper, like 85%.
+A Meter is the measurement of a single counter that measures a specific aspect of network traffic, such as upload bytes, number of packets, or number of connections. Meter is like the actual grade (value) written on the math subject, like 85%.
 
 Trisul collects info about Total Bytes, Packets, Receive, Transmit, Number of 
 active connections, Alerts and 10 other items. Each of these is called a
 meter. So the *Host* counter group tracks 12 meters.
 
 ***A Key***  
-A Key is a unique identifier that defines a specific counter within a CounterGroup. Think of it like a specific paper (counter) in the folder that tracks one particular subject, like Math.
+A Key is a unique identifier that labels a specific counter within a CounterGroup. Think of it like a header on a pageheader of a specific page (counter) in the notebook that tracks one particular subject, like Math.
 
 For example, within the Host counters group, the IP Address `10.10.255.7` is a key. A
 counter group can have millions of keys.
@@ -46,7 +46,7 @@ The following example illustrates the concept of
 As an example, if we wanted to refer to **“Transmit traffic of host
 192.168.1.2”** :
 
-![](images/meters.png)
+![](images/trafficmeteringconcepts.png)
 
 The entities of interest are
 
