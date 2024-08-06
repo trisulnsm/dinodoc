@@ -1,5 +1,5 @@
 ---
-sidebar_position: 9
+sidebar_position: 1
 ---
 
 # Trisul IPDR
@@ -20,7 +20,7 @@ With Trisul IPDR you can,
    
    Login as Username: `dotuser`
    
-   And Passord: ipdr@@123
+   And Password: `ipdr@@123`
    
    :::
    

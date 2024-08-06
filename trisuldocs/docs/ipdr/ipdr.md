@@ -1,5 +1,5 @@
 ---
-sidebar_position: 07
+sidebar_position: 2
 ---
 
 # Complete IP Flow logger
