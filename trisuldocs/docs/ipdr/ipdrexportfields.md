@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 7
 ---
 
 # IPDR Export format
@@ -46,7 +46,7 @@ You can view new and previous IPDR queries in the IPDR Dashboard.
 
 :::note navigation
 
-Goto IPDR Logs → IPDR Dashboard
+Login as dotuser-> Goto IPDR Logs-> IPDR Dashboard
 
 :::
 
@@ -68,7 +68,7 @@ The MS Excel fields looks like this below.
 
 ## NAT details
 
-If the NAT is performed on the device exporting the NetFlow the information is automatically added and available. If NAT is done in a different device, then please enable NetFlow on that device. CGNAT is similar.
+If the NAT is performed on the device exporting the NetFlow, the information is automatically added and available. If NAT is done in a different device, then please enable NetFlow on that device. CGNAT is similar.
 
 ## AAA details
 

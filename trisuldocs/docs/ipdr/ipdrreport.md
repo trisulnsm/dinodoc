@@ -1,3 +1,7 @@
+---
+sidebar_position: 6
+---
+
 # IPDR Report
 
 The IPDR service is asynchoronous, this allows agents to submit multiple
