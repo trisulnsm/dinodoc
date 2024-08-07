@@ -1,5 +1,6 @@
 ---
 sidebar_position: 02
+
 ---
 
 # Custom counter groups
@@ -406,7 +407,7 @@ Go to Admin \> Web Admin \> Manage \> Apps
 
 Using the normal Retro Counters tool you can see the composite keys
 
-![](images/crosskeydoc3.png)
+![](images/intext.png)
 
 ### Example 2 : Three Groups Hosts App flows
 
