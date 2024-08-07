@@ -19,6 +19,10 @@ following information on a per flow basis.
 > (i) IPDR Parameters for IPv4/IPv6 to be stored in respect of Wireless/Wireline internet services.  
 > (ii) Parameters to be stored in SYSLOG of Network Address Translation
 
+| ![](images/IPDRLetter-4.png) | ![](images/IPDRLetter-5.png) |
+| ---------------------------- | ---------------------------- |
+| ![](images/IPDRLetter-6.png) | ![](images/IPDRLetter-7.png) |
+
 *See DoT Guideline no 8520-01/98-LR/Vol.(IX) Pt 1 dated 16/12/2021 Parameters for Internel Protocol Detail Record (IPDR) and SYSLOG of Network Address Translation (NAT)*
 
 #### Parameters to be collected
