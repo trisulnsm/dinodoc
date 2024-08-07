@@ -20,6 +20,9 @@ Here is the snapshot of Trisul IPDR Query Form.
 
 ![](images/ipdrqueryform.png)
 
+> As per compliance requirements agent queries are based on IPv4 or IPv6
+> IP address. 
+
 ## Form Structure
 
 Trisul IPDR Query Form consists of the following fields,

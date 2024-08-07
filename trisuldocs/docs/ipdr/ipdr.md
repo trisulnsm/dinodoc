@@ -1,12 +1,12 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # Complete IP Flow logger
 
 Trisul can be put into a mode where it does full flow logging even at
-ISP scale. This mode is typically used to meet Telco compliance
-requirements.
+ISP scale. This [IPDR mode](/docs/ipdr/ipdrmode) is typically used to meet Telco compliance
+requirements. But it is not exclusive for ISPs, various stakeholders also utilize Trisul IPDR including LEAs, Network Admins, Security teams etc.
 
 The name for this feature is **Trisul IPDR** ( IP Data Record)
 
@@ -48,7 +48,7 @@ The Trisul IPDR solution can accept a variety of inputs to create and
 maintain the IPDR log for compliance. The following diagram explains the
 architecture.
 
-![](images/ipdrarch.png)
+![](images/obtainingdatatelemetry.png)
 
 Fig 1. Accepts Netflow, Sflow, IPFIX, NAT and Radius syslog
 
@@ -108,7 +108,7 @@ systemctl start trisul-ipdr
 
 The system is designed to create a special login to the agent who will
 be performing the queries. This login has no other privileges other than
-do perform the query required for complaince. The powerful `trisul_ipdr`
+to perform the query required for complaince. The powerful `trisul_ipdr`
 service described above ensures the data is provided as a download or
 pushed directly to a Secure FTP (SFTP) server. Sometimes we have noticed
 agent requests resulting in several GB of output which cannot be downloaded over a browser. See [Configure IPDR Settings](/docs/ug/webadmin/ipdr-settings) on how to setup the SFTP server.
@@ -122,97 +122,7 @@ Fig 2. Agent login, submit, download, FTP workflow
 #### Agent login with special ID
 
 The agent is given a separate login and password with a dashboard that
-shows only one option. To retrieve IPDR logs.
-
-#### Agent enter query
-
-As per compliance requirements agent queries are based on IPv4 or IPv6
-IP address. The agent enters the query here by
-
-- enter the IP address  
-  source , destination, or NAT address supported
-- select a time window for the query
-
-The fields are marked by the arrows in the figure shown below
-
-![](images/ipdr-form.png)
-
-Fig 3. Enter IP address and time window
-
-#### Get results from IPDR Dashboard
-
-The IPDR service is asynchoronous, this allows agents to submit multiple
-long queries and wait for results without having to submit them one
-after another. The results are obtained in the following two methods
-
-##### Secure FTP or Download
-
-Download directly from Web Browser  
-For queries that result in a reasonable file size (default 100MB) the
-agent can directly download the results by pressing the *Download*
-button. See [IPDR Settings \> Download File Size](/docs/ug/webadmin/ipdr-settings) to adjust this limit.
-
-Get it from a secure FTP server  
-Regardless of the limit, if a Secure FTP (SFTP) server is configured the
-results file is copied to that server automatically. The advantage of
-this option is very large file sizes can be sent automatically to the
-FTP server rather than the user having to download from the browser.
-
-##### File name
-
-Once completed the IPDR log will have a name like
-`765f9124f705735ad54f9c87223eecd4944a0aa7.txt` This is to ensure the
-integrity of the file from tampering. The file name is `SHA-1Hash.txt`
-where the file contents are hashed to produce the file name.
-
-##### Cancellation
-
-The user can cancel long running tasks by pressing the *Cancel* button.
-The results that have been retrieved up until that point is immediately
-made available for download and/or FTP.
-
-## IPDR Control Dashboard
-
-The dashboard is divided into two parts as shown below
-
-***Basic metrics***  
-This shows key metrics of the flow rate, database size, and bandwidth
-
-***Control table***  
-IPDR Queries that have been submitted and current status and download
-options.
-
-![](images/ipdr-dashboard.png)
-
-Fig 4. IPDR Dashboard
-
-### Metrics panels
-
-The following metric modules are shown for a statistical overview.
-
-| Module          | Description                                                                                                      |
-| --------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Total Sessions  | Total number of flows stored in the database. The bar chart below shows flows stored per day over the past week. |
-| Total DB Size   | Storage used. The bar chart below shows the DB size per day over the past week                                   |
-| Flows/minute    | Number of flows flushed per minute. The line chart shows flows flushed/minute over the last 24 hours             |
-| Total Bandwidth | Total network bandwidth seen. The line chart shows Bps over the last 24 hours                                    |
-
-### Control table
-
-The control table has a row for every query that has been submitted. The
-following columns and options are shown
-
-| Column           | Description                                                                                                                                                                                                   |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Username         | The user who submitted the query                                                                                                                                                                              |
-| Status           | The current status of the query. Status codes are                                                                                                                                                             |
-| Requested Time   | Time when the user submitted the IPDR query request                                                                                                                                                           |
-| IP               | IP address for which IPDR query was issued                                                                                                                                                                    |
-| Query Start Time | Time when the query was started by the trisul_ipdr query service                                                                                                                                              |
-| Query End Time   | Time when the query completed                                                                                                                                                                                 |
-| Message          | Progress message of query. This contains text like `25% complete. 1250 flows exported` For completed requests the partial file name is displayed, you can place your mouse on the file name for the full name |
-| Size             | Size of the results file                                                                                                                                                                                      |
-| Options Buttons  | The following buttons are available                                                                                                                                                                           |
+shows only one option to retrieve IPDR logs. Once logged in the agent can submit query using [Trisul IPDR Query form](/docs/ipdr/querying_using_ipdr) and view the [IPDR dashboard](/docs/ipdr/ipdrdashboard) for the queried IP addresses. The [IPDR reports](/docs/ipdr/ipdrreport) are then downloaded from web browser or FTP server.
 
 ## Tuning
 
