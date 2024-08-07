@@ -99,9 +99,9 @@ Login as Admin -\> Select Context and profile0 -\> Under Custom Counters
 | Counter Group Name | Counter Group name                                                                                          |
 | Description        | Descriptiom about the counter group                                                                         |
 | Parent Group       | Choose parent counter group from the drop down list                                                         |
-| Filter Group       |                                                                                                             |
+| Filter Group       | Choose filter counter group from the drop down list                                                         |
 | Key List           | Comma separated list of keys/ranges: `Port-80, 192.168.1.2, Port-5000~Port-8000, 192.168.1.1~192.168.1.255` |
-| Inverse Key List   |                                                                                                             |
+| Inverse Key List   | The parent will be filtered by all keys Except those in this list.                                          |
 
 ### Custom group
 
@@ -116,21 +116,21 @@ A new counter group that aggregates sets of keys from a host counter
 group. This can be used to group IP addresses , port numbers, network
 interfaces and then count the aggregate. Some examples are shown below
 
-| New Keyset Counter Group | Host/Parent Group | Key sets |
-| ------------------------ | ----------------- | -------- |
-| MyApps                   | Apps              |          |
-| ServerFarm               | Hosts             |          |
+| New Keyset Counter Group | Host/Parent Group | Key sets                                                                                                                                    |
+| ------------------------ | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| MyApps                   | Apps              | Ports 80,445,8080 = WEB<br/>Ports 3000-4000 = VoIP<br/>Ports 18001,18002,19001 = TRADING                                                    |
+| ServerFarm               | Hosts             | IPs 10.1.17.1,10.1.18.1 = GATEWAYS<br/>IPs 10.1.17.40 to 50 = MANAGEMENT IPs<br/>10.1.19.1 to 255 = HR<br/>..build other business groupings |
 
 ### Creating a Keyset Counter Group
 
 :::note navigation
 
-Login as Admin -\> Select Context and profile -\> Under Custom Counters
+Login as Admin -\> Select Context:default-> profile0 -\> Custom Counters
 -\> Keysets
 
 :::
 
-![](images/keyset1.png)
+![](images/create_keyset_countergroup.png)
 
 *Creating a new Keyset Counter Group*
 
@@ -152,7 +152,7 @@ Directions to Create new keyset counter groups
 
 :::note navigation
 
-Login as Admin -\> Select Context and profile -\> Under Custom Counters
+Login as Admin -\> Select Context :default -> profile0 -\>  Custom Counters
 -\> Keysets
 
 :::
@@ -160,13 +160,14 @@ Login as Admin -\> Select Context and profile -\> Under Custom Counters
 1. The list of keyset counter groups will appear
 2. Click the option “Add/Edit keys” against the group name.
 
-![](images/keyset2.png)  
+![](images/addoredit_keysetcountergroup.png)
+
 *How to group keys together*
 
 1. Click the *Add/Edit Keys* to edit keysets
 2. You will be redirected to a page with following fields
 
-![](images/keyset3.png)  
+![](images/addoredit_keysetcountergroup1.png)
 *Adding two IPs and an IP range to a group called BACKUPHOSTS*
 
 | Field Name | Description                                                                                                   |
@@ -210,8 +211,9 @@ Examples :
 
 :::note navigation
 
-Login as Admin -\> Select Context and profile -\> Under Custom Counters
--\> Stat Based
+Login as Admin -\> Select Context 
+
+:default-> profile0 -\> Custom Counters-\> Stat Based
 
 :::
 
@@ -222,14 +224,14 @@ Login as Admin -\> Select Context and profile -\> Under Custom Counters
 
 3. You will be redirected to a page with following fields
 
-| Field Name           | Description                                               |
-| -------------------- | --------------------------------------------------------- |
-| Counter Group Name   | The Counter Group statval Name                            |
-| Description          | Description about counter group statval                   |
-| Parent Counter Group |                                                           |
-| Stat ID              |                                                           |
-| Operator             |                                                           |
-| Stat Val             | Example : 8Mbps, 2000, 6Kbps (default units is bytes/sec) |
+| Field Name           | Description                                                        |
+| -------------------- | ------------------------------------------------------------------ |
+| Counter Group Name   | The Counter Group statval Name                                     |
+| Description          | Description about counter group statval                            |
+| Parent Counter Group | Select a Parent from the drop down list of parent counter groups   |
+| Stat ID              | Select a Stat ID from the drop down list of Stat IDs               |
+| Operator             | Choose an operator that you want to perform from the dropdown list |
+| Stat Val             | Example : 8Mbps, 2000, 6Kbps (default units is bytes/sec)          |
 
 ------------------------------------------------------------------------
 
@@ -300,7 +302,7 @@ After creation , the user is redirected to a page which lists the
 available rule based counter groups
 
 Now click the ***Edit Rules*** option for the counter group , which
-leads you o another page , whose fields are as follows
+leads you to another page , whose fields are as follows
 
 | FieldName   | Description                       |
 | ----------- | --------------------------------- |
@@ -342,7 +344,7 @@ following restriction :
 
 :::note navigation
 
-Login as Admin -\> Select Context and profile -\> Under Custom Counters
+Login as Admin -\> Select Context:default-> profile0 -\> Custom Counters
 -\> Cardinality
 
 :::
@@ -394,9 +396,11 @@ billions of flows. To solve this we setup a Cross Key Counter group of
 
 > We use the Sankey Crosskey Trisul APP to visualize the flows. 
 
+To install Sankey Crossdrill,
+
 :::note navigation
 
-Go to Admin \> Web Admin \> Manage \> Apps to install
+Go to Admin \> Web Admin \> Manage \> Apps 
 
 :::
 
@@ -415,7 +419,7 @@ group with *Internal Hosts X Applications X External Hosts*
 
 :::note navigation
 
-Go to Admin \> Web Admin \> Manage \> Apps to install
+Go to Admin \> Web Admin \> Manage \> Apps
 
 :::
 
@@ -423,7 +427,7 @@ Go to Admin \> Web Admin \> Manage \> Apps to install
 
 :::note navigation
 
-Login as Admin -\> Select Context and profile -\> Under Custom Counters
+Login as Admin -\> Select Context:default-> profile0 -\> Custom Counters
 -\> Crosskeys
 
 :::
@@ -468,8 +472,8 @@ cross key counter group.
 
 :::note navigation 
 
-Go to Admin \> Web Admin \> Manage \> Apps to install
+Go to Admin \> Web Admin \> Manage \> Apps 
 
 :::
 
-![](images/sankeyapp.png)
+![](images/sankeyapps.png)
