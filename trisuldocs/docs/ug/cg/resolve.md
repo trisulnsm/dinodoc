@@ -77,16 +77,7 @@ little load on your DNS servers as possible.
 
 ### How to Enable Automatic Name Resolution
 
-:::note navigation
-
-Customize -\> App Settings
-
-:::
-
-1. Enable **Automatically resolve** top IPs option.
-
-Once enabled wait for about 10-15 minutes for hostnames to start
-appearing in your UI.
+By default in hub config the "resolve ip"" is set to true which automatically resolves IP addresses. You can disable by configuring it in the [hubconfig](/docs/ref/trsulhubconfig#resolveip).
 
 ## Export labels to CSV file
 

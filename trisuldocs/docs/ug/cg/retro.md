@@ -13,7 +13,7 @@ have occurred.
 > types of data in **unsummarized** form. Since everything is correlated
 > to traffic, you can drill in any direction from traffic patterns,
 > flows, alerts, URLs and Domains. You are always one step away from
-> pulling up raw packets relevant you where you are at in your analysis.
+> pulling up raw packets relevant to where you are at in your analysis.
 
 ### Introduction
 
@@ -38,13 +38,14 @@ observing a traffic chart.
 
 To select a time window  
 
-1. Simply click and drag your mouse  
+1. Simply click and drag your mouse  over the chart to select specific time range
 
 2. Details of the current time selection is shown in the band  
 
 3. All tools and FAQ now correspond to the time interval selected
 
-![](images/retro_time.png)  
+![](images/retrotimeselector.png)
+
 Retro time selector
 
 ### Select using a calendar
@@ -52,17 +53,17 @@ Retro time selector
 You may also skip the chart entirely and use a calendar to manually
 select a time window.
 
-1. Click on the *Select \>* tab above the chart as shown in the image
-   below
+1. Click on the *Custom/Select* tab above the chart as shown in the image
+   below and choose Custom range to view the retro chart for that time window.
 
-![](images/retro_date.png)
+![](images/calendarretro.png)
 
 ### Expanding the selection window
 
 Click on the tabs Hours, Days, Weeks to display wider windows in the
 chart below.
 
-|       |                           |
+| Tabs  | Description               |
 | ----- | ------------------------- |
 | Hours | Shows the recent 48 hours |
 | Days  | Shows the recent 8 days   |
@@ -72,10 +73,8 @@ You can then zoom in to the timeframe of interest
 
 ### Zoom / Pan
 
-When you move your mouse over the time selector the zoom/pan tools are
-shown. You can select a time interval and zoom into it multiple times as
-well as zoom out. You can also pan left and right which is a way to see
-the previous time window.
+When you select a particular area on the chart over the time selector the zoom/pan tools are shown as small icons below the chart. You can zoom into it multiple times as
+well as zoom out. You can also pan left and right which is a way to see the previous time window.
 
 ### Raw packet / full content availability
 

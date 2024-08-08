@@ -4,7 +4,7 @@ sidebar_position: 05
 
 # Custom Key Monitors
 
-Custom Key Monitors allow you to monitor a set of items in real time,
+Custom Key Monitors allow you to monitor a set of key items in real time,
 irrespective of whether they show up in the toppers list or not. You can
 think of them as subset of a counter group that is “special” to you. For
 example, the IP (Hosts counter group) 192.168.14.16 is our internal
@@ -27,30 +27,26 @@ Directions to create new custom key monitors
 
 :::note navigation
 
-Select Customize -\> Custom Key Monitors
+Select Customize -\> Show all-> Custom Key Monitors
 
 :::
 
-1. Click **Add Custom Key Monitor**  
+1. Click **New**  
 
 2. The page displays a series of options which are discussed below
 
-| Field Name  | Description                                                 |
-| ----------- | ----------------------------------------------------------- |
-| Name        | Denotes the name of the Custom key monitor                  |
-| Group Name  | Counter item of the key                                     |
-| Description | Few words describing the function of the custom key monitor |
+| Field Name    | Description                                                 |
+| ------------- | ----------------------------------------------------------- |
+| Name          | Denotes the name of the Custom key monitor                  |
+| Description   | Few words describing the function of the custom key monitor |
+| Counter Group | Select one counter group from the dropdown list             |
+| Meters        | Select any number of meters from the list                   |
 
-1. After completing all the fields , click create  
+After completing all the fields , click create. This leads to page listing all the custom key monitors. Now click **Add/Edit Keys**, which shows a page with a text-area , user
+can type in the application keys which are to be traced (eg: p-0050, p
+–0016) and click **Add Keys** and add as many keys as you want and click **Done adding** when completed.
 
-2. This leads to page listing all the custom key monitors  
-
-3. Now click **Edit Stats**, which shows a page showing all meters in
-   the counter group , choose the desired meter . Click **Update**.  
-
-4. Now click **Edit Keys**, which shows a page with a text-area , user
-   can type in the application keys which are to be traced (eg: p-0050, p
-   –0016)
+![](images/ckeymonitor.png)
 
 ## Viewing data
 
@@ -58,9 +54,11 @@ Directions to view Custom Key Monitors
 
 :::note navigation
 
-Select Customize -\> Custom Key Monitors
+Select Customize -\> Show all-> Custom Key Monitors
 
 :::
+
+![](images/ckeymonitorlist.png)
 
 1. The page show a list of created custom key monitors  
 
@@ -71,22 +69,12 @@ Select Customize -\> Custom Key Monitors
 
 Directions to generate reports for custom key monitors
 
-1. Click on **Reports** in the top menu  
+You can generate custom key reports in two ways.
 
-2. Under the **All Available Reports** section , find the option Custom
-   Key Report  
+1) From the custom key monitor list, click on the option toolbar on the right side against each custom key and click **Generate**. This will generate a report is PDF format which can be downloaded.
 
-3. Parallel to this you can find several options such as *Today till
-   now\|Yesterday\|Pick Day\|Pick Week\|Pick Month\|Custom*  
+![](images/generatereportckey.png)
 
-4. The options indicate the time interval for which the report has to
-   generated  
+2) You can also download the custom key report by clicking on a particular key and entering into its detailed view page to view the report before downloading. On that page, on top right corner you can click on the option toolbar. And click Download PDF to download that report.
 
-5. On clicking any one of the option leads to page showing the various
-   custom key monitors for selected time interval  
-
-6. Click the desired custom key , which leads to a page revealing a
-   detailed view of the custom key  
-
-7. A PDF icon is found in the top right corner of this page , click the
-   icon to generate the PDF
+![](images/ckeyreport.png)

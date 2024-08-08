@@ -11,8 +11,7 @@ Complex network analysis in plain English.
 
 If you deal with networks on a daily basis you are bound to perform a
 particular analysis repeatedly. You can certainly use one of the [Retro
-Tools](retrotools) to accomplish your task but it can get
-repetitive and tiring.
+Tools](retrotools) to accomplish your task but for certain cases that can get repetitive and tiring.
 
 For example, you may start by selecting a time interval and want to find
 out the following as a matter of routine.
@@ -28,8 +27,7 @@ out the following as a matter of routine.
 - What were the most voluminous flows ?
 
 Typically you would select an appropriate Retro Tool, type in the
-information you wish to seek and submit. Retro Q & A makes this whole
-process painless. The advantages :
+information you wish to seek and submit for each analysis. But with Retro Q & A this whole process becomes painless. The advantages include,
 
 - Any time based analysis can be converted into a Question  
 
@@ -50,12 +48,12 @@ To access select Retro -\> Retro FAQ
 
 You will then be presented with a UI similar to this one shown below.
 
-![](images/faq.png)
+![](images/retrofaq.png)
 
 Here is how you use the UI.
 
 ***The time selector***  
-Drag and select a time interval of interest
+Drag and select a time interval of interest to zoom or pan the detailed view. You can also custom select time range using calendar.
 
 ***The questions***  
 Simply click on a question to run the corresponding analysis for the
@@ -76,13 +74,13 @@ create your own questions customized to your network. This is how it
 works.
 
 - If Trisul determines that a particular query can be turned into a
-  question; a star will appear on the toolbar area as shown here. Click on
-  the star icon.
+  question, a star will appear on the toolbar area as shown here. Click on
+  the Add to favorites star icon.
 
-![](images/fav.png)
+![](images/addtofav.png)
 
-- Enter a question name and optionally a set of tags using the \#
-  symbol
+Enter a question name and optionally a set of tags using the \#
+symbol
 
 > An example : If you type in
 > `What is the bandwidth utilized by my server 10.10.200.10 ? #server #bandwidth`  
@@ -102,4 +100,10 @@ To access, select Customize -\> Retro Favorites
 
 :::
 
-The form shown allows you to manage these questions.
+This will show a list of already available retro questions that can be managed easily.
+
+![](images/faqlist.png)
+
+Click on the option toolbar on the right side against each question. And click **Edit**. The following screen will be displayed with editable form. You can edit the question as  you want and URL and click **Update**.
+
+![](images/faqedit.png)
