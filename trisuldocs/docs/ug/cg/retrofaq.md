@@ -4,7 +4,7 @@ sidebar_position: 08
 
 # Retro Q & A
 
-Complex network analysis in plain English.
+Retro FAQs are complex network analysis like analysing network traffic, flows, and alerts rendered in plain English as a question for easy access.
 
 > Powerful network analysis presented in a “Stack Overflow” style
 > **tagged Q & A** format.
@@ -12,6 +12,8 @@ Complex network analysis in plain English.
 If you deal with networks on a daily basis you are bound to perform a
 particular analysis repeatedly. You can certainly use one of the [Retro
 Tools](retrotools) to accomplish your task but for certain cases that can get repetitive and tiring.
+
+Retro FAQs are like handy answers (dashboards) for your repetitive questions (analysis) where you can just do the analysis in one click from the list of already saved questions.
 
 For example, you may start by selecting a time interval and want to find
 out the following as a matter of routine.
@@ -26,8 +28,7 @@ out the following as a matter of routine.
 
 - What were the most voluminous flows ?
 
-Typically you would select an appropriate Retro Tool, type in the
-information you wish to seek and submit for each analysis. But with Retro Q & A this whole process becomes painless. The advantages include,
+Typically you would select an appropriate Retro Tool, type in the information you wish to seek and submit for each analysis. But with Retro Q & A this whole process becomes painless. With Retro FAQ you can ,
 
 - Any time based analysis can be converted into a Question  
 
@@ -55,7 +56,7 @@ Here is how you use the UI.
 ***The time selector***  
 Drag and select a time interval of interest to zoom or pan the detailed view. You can also custom select time range using calendar.
 
-***The questions***  
+***Network FAQ***  
 Simply click on a question to run the corresponding analysis for the
 interval selected.
 

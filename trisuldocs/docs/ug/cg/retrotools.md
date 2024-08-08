@@ -20,7 +20,7 @@ You have to pick one of the following tools shown.
 
 | Name of tool                                                                            | Why you want to use this tool                                                                                                                                                       |
 | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Network FAQ                                                                             |                                                                                                                                                                                     |
+| [Network FAQ](/docs/ug/cg/retrotools#network-faq)                                       | Complex network analysis like analysing network traffic, flows, and alerts rendered in plain English as a question for easy access.                                                 |
 | [Counter Group toppers](/docs/ug/cg/retrotools#counter-group-toppers)                   | Who were the toppers in a counter group for a statistic ? Also shows topper trends in time interval with ability to do a cross drill on any of them                                 |
 | [Investigate IP activity](/docs/ug/cg/retrotools#investigate-activity-of-a-specific-ip) | Investigate complete activity of a host in selected interval. Details include conversations, flows, security alerts, malware activity, peer connections, upload / download data etc |
 | [Investigate application](/docs/ug/cg/retrotools#investigate-users-of-an-application)   | Investigate complete activity of an application. Who the top users are of that application and other details split up by upload / download                                          |
@@ -28,26 +28,59 @@ You have to pick one of the following tools shown.
 | [Show traffic chart for an item](/docs/ug/cg/retrotools#show-traffic-chart-for-an-item) | Draw charts for any item such as a host, app, subnet                                                                                                                                |
 | [IDS Alerts](/docs/ug/cg/retrotools#security-alerts-retro)                              | Various views of alert activity seen in selected interval                                                                                                                           |
 | [Flow trackers](/docs/ug/cg/retrotools#flow-trackers)                                   | View top flows in the timeframe based on various criteria                                                                                                                           |
-| Explore Flows                                                                           |                                                                                                                                                                                     |
-| Traffic Charts                                                                          |                                                                                                                                                                                     |
+| [Explore Flows](/docs/ug/cg/retrotools#explore-flows)                                   | Streaming flow visualization based on the popular<br/>parallel co-ordinates paradigm.                                                                                               |
+| [Traffic Charts](/docs/ug/cg/retrotools#show-traffic-chart-for-an-item)                 | View usage charts for a particular item for selected time interval.                                                                                                                 |
 | [Pull packets](/docs/ug/cg/retrotools#pull-packets)                                     | Get raw packets in tcpdump/libpcap format matching a certain key                                                                                                                    |
-| View Edges                                                                              |                                                                                                                                                                                     |
+| [View Edges](/docs/ug/cg/retrotools#view-edges)                                         |                                                                                                                                                                                     |
 
-## Counter Group toppers
+## Network FAQ
 
-View the toppers for a counter group and meter.
+Network FAQ is a tool that allows you to save and easily access frequently performed network analyses. You can access the dashboards in a click to monitor, understand your network traffic, hosts, and alerts.
+
+To view Network FAQ,
+
+:::note navigation
+
+Go to Retro-> Retro tools-> Network FAQ
+
+:::
+
+This is an example of the Network FAQ module.
+
+![](images/networkfaq.png)
+
+Refer [Retro Q&A](/docs/ug/cg/retrofaq) for more details.
+
+## Counter Group Toppers
+
+Counter Group Toppers views the top entities (e.g., hosts, ports, protocols) that exhibit the highest values for a specific network traffic metric or counter.
+
+To view Counter Group Toppers,
+
+:::note navigation
+
+Go to Retro-> Retro tools-> Counter Group Toppers
+
+:::
 
 For example : You can select counter group *Hosts* and meter
 *Connections* to view hosts with most connections in the selected
 interval.
 ![](images/countergroupretro.png)
 
-The information is presented in lists, charts, and a trend chart.
+The information is presented as dashboards in lists, charts, and a trend chart.
 
-## Investigate IP activity
+## Investigate IP Activity
 
-Enter an IP address or a host name to view detailed activity of that
-host.
+Enter an IP address or a host name to monitor and analyze network traffic to understand the behavior and patterns of that specific IP address.
+
+To investigate an IP activity,
+
+:::note navigation
+
+Go to Retro-> Retro tools-> Investigate IP activity
+
+:::
 
 ![](images/investigateipretro.png)
 
@@ -60,41 +93,63 @@ The analysis includes
 
 Trisul will then run the [Investigate IP](/docs/ug/tools/investigate_ip_activity) analysis tool for the selected items and time interval.
 
-## Investigate users of an application
+## Investigate Users of an Application
 
 Complete break up of behavior of an application.
 
-The analysis includes
+To investigate any application,
 
-1. IP conversation matrix for this app
-2. Tops IPs transmitting and receiving app
-3. Peers
-4. Top individual flows involving this app
+:::note navigation
 
-The analysis will take you to the [Explore](/docs/ug/tools/explore_flows) tool with the selected
-items and time interval.
+Go to Retro-> Retro tools-> Investigate Application
 
-## Show traffic chart for an item
+:::
 
-View usage charts for a particular item for selected time interval.
+Enter an port value say p-0587 and you will  get the detailed activity including the flows matching the time interval, activity details like top peers, top apps, flow taggers, interfaces, etc.
 
-For example : You can just type **smtp** in the box and view all
-statistics for the requested application in charts and tables. You can
-then save them as PDF if you wish.
+![](images/applicationretro.png)
 
-![](images/showtrafficretro.png)
+The analysis will take you to the [Explore](/docs/ug/tools/explore_flows) tool with the selected items and time interval.
 
-## Security Alerts retro
+## Long Term Traffic Charts
+
+Draw long term charts designed to aid time of day based comparisons. View charts of network traffic patterns over an extended period, typically weeks, months, or even years.
+
+To view Long term traffic charts,
+
+:::note navigation
+
+Go to Retro-> Retro tools-> Long Term Traffic Charts
+
+:::
+
+You have to select an item and a set of stats to chart for that item.
+The result will be a chart showing most recent 7 days of data arranged
+by day.
+
+![](images/longtermcharts.png)
+
+You can click on the **Show Search Form** on the top right for long term traffic charts and click on any date range in the **Time Frame**window to view the traffic for that selected time period. This tool will take you to the [Long term traffic trends](/docs/ug/tools/analyze_item) tool with the start time and other selections automatically filled in.
+
+## Security Alerts Retro
 
 Slice and dice IDS events from different angles in selected time
 interval.
+
+To view IDS Alerts,
+
+:::note navigation
+
+Go to Retro-> Retro tools-> IDS Alerts
+
+:::
 
 The available selections in the drop down list *View IDS Alerts By* are:
 
 > From any of the alert analysis you have drilldown options to flows and
 > raw packets
 
-|                    |                                             |
+| View IDS ALerts by | Description                                 |
 | ------------------ | ------------------------------------------- |
 | Alert types        | Show aggregated alerts grouped by signature |
 | Top attackers      | Top source IPs which originated the alerts  |
@@ -103,16 +158,24 @@ The available selections in the drop down list *View IDS Alerts By* are:
 | By Classificiation | Alerts grouped by classification            |
 | All alerts         | Individual alerts received                  |
 
-## Flow trackers
+## Flow Trackers
 
 Flow trackers are used to monitor and store top flows matching specific
 criteria.
+
+To view Flow Trackers,
+
+:::note navigation
+
+Go to Retro-> Retro tools-> Flow Trackers
+
+:::
 
 Some of the built in trackers are :
 
 > You can create your own [flow trackers](/docs/ug/flow/tracker) They will show up in this dropdown list
 
-|                 |                                                                                                         |
+| Flow Trackers   | Description                                                                                             |
 | --------------- | ------------------------------------------------------------------------------------------------------- |
 | Traffic         | Flows with maximum volume transferred (both directions together)                                        |
 | Long lived      | Flows which stayed alive for longest time                                                               |
@@ -122,12 +185,53 @@ Some of the built in trackers are :
 | Suspicious      | Flows that fired a blacklist based even, either by IP, requesting a domain name, or by requesting a URL |
 | FilterFailed    | Flows that don’t use any of the well known ports                                                        |
 
+## Explore Flows
+
+With Explore Flows tool you can view detailed network flow information including source and destination IP addresses, ports, and protocols. 
+
+To view Explore Flows tool,
+
+:::note navigation
+
+Go to Retro-> Retro tools-> Explore Flows
+
+:::
+
+![](images/exploreflowsretro.png)
+
+> Click on the little question mark hint near the search expression toolbar to  Enter an expression like **ip=19.168.211.10** or ip=gmail.com or ip=fe80::fe08:7ad1 or port=smtp or port=p-0050 or port=80 and drill down into specific flows to investigate their traffic behavior.
+
+## Show Traffic Chart for an Item
+
+With Show traffic charts, you can view usage charts for a particular item for selected time interval.
+
+To view Traffic charts,
+
+:::note navigation
+
+Go to Retro-> Retro tools-> Traffic Charts
+
+:::
+
+For example : You can just type **smtp** in the box and view all
+statistics for the requested application in charts and tables. You can
+then save them as PDF if you wish.
+
+![](images/showtrafficretro.png)
+
 ## Pull Packets
 
 Pull up a sample of raw packets for the selected time interval and
 additional criteria.
 
-:::note
+To view Pull Packets,
+
+:::note navigation
+
+Go to Retro-> Retro tools-> Pull Packets
+:::
+
+![](images/pullpacketsretro.png)
 
 There are some caps on this feature to prevent accidental misuse.
 
@@ -138,10 +242,6 @@ If you wish to change these settings, go to [App Settings](/docs/ug/webadmin/web
 Packet Inspection Limit* and *Deep Packet Inspection Content Limit*.
 Please be aware that in busy network analyzing packets can take time to
 complete.
-
-:::
-
-![](images/raw_packets.png)
 
 **Using the tool**
 
@@ -154,18 +254,9 @@ You have two ways to use this tool to pull up raw packets.
 2. **Packets matching expression** -\> [Trisul Filter
    Format](/docs/ref/trisul_filter_format) is a flexible way of constructing filters. You can enter an expression to run more sophisticated packet queries.  
    Enter the string `{C51B48D4-7876-479E-B0D9-BD9EFF03CE2E}=p-0050,p-0051,p-0052,p-0053` to retrieve packets for ports 80,81,82, and 83.
+3. **Handy Shortcuts**-> Clicking on Handy Shortcuts you get an option to "Get all packets" to download all the packets
 
 Upon running the tool, your browser will automatically download a PCAP
 file containing the requested packets.
 
-## Long term traffic charts
-
-Draw long term charts designed to aid time of day based comparisons.
-
-You have to select an item and a set of stats to chart for that item.
-The result will be a chart showing most recent 7 days of data arranged
-by day.
-
-![](images/analyze_key.png)
-
- tool will take you to the [Long term traffic trends](/docs/ug/tools/analyze_item) tool with the start time and other selections automatically filled in.
+## View Edges

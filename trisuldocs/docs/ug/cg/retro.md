@@ -38,9 +38,9 @@ observing a traffic chart.
 
 To select a time window  
 
-1. Simply click and drag your mouse  over the chart to select specific time range
+1. Simply click and drag your mouse  over the chart to select specific time range on the Time selector
 
-2. Details of the current time selection is shown in the band  
+2. Details of the current time selection is shown in the green band 
 
 3. All tools and FAQ now correspond to the time interval selected
 
