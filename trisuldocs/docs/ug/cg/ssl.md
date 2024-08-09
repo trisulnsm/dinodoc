@@ -25,6 +25,18 @@ list
 
 :::
 
+### TLS Counter Group Tabs
+
+The TLS counter groups on retro counter will open the Counter group TLS Orgs/TLS Ciphers/TLS CAs toppers for each meter of the selected counter group in four tabs namely,
+
+1) [Topper Counts](/docs/ug/cg/ssl#topper-counts)
+
+2) [Topper Trends](/docs/ug/cg/ssl#topper-trends)
+
+3) [Bottom Counts](/docs/ug/cg/ssl#bottom-count)
+
+4) [Pie Chart](/docs/ug/cg/ssl#pie-chart)
+
 ### Topper Counts
 
 By default it will open the Topper counts tab that will allow you to view the toppers for each meter of the counter group from top down (ascending order).
@@ -46,8 +58,9 @@ On the same module click on the Bottom count tab to view the toppers for each me
 
 ![](images/bottomcounttls.png)
 
-You can also generate long term usage reports with several charts like
-the pie chart shown below using Retro Tools.
+### Pie Chart
+
+Click on the Pie chart tab on the same module or you can also generate long term usage reports with several charts like the pie chart shown below using Retro Tools.
 
 :::note navigation
 
@@ -60,17 +73,32 @@ TLS Orgs
 
 ## TLS Ciphers
 
-Meters traffic by the “cipher suite” used by SSL/TLS connections. The
-cipher suite is a combination of the encryption and the key-exchange
-algorithm used.
+TLS Ciphers allows metering of traffic by the “cipher suite” used by SSL/TLS connections. The cipher suite is a combination of the encryption and the key-exchange
+algorithm used. Example: 
 
-![](images/sslcg2.png)  
+- TLS_RSA_WITH_AES_128_CBC_SHA
+
+- TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+  
+  To open TLS Ciphers countergroup,
+  
+  :::note navigation
+  
+  Select Retro -> Retro Counters -> Choose Ciphers from the dropdown
+  list
+  
+  :::
+  
+  This will open [TLS counter group tabs](/docs/ug/cg/ssl#tls-counter-group-tabs) for Counter Group TLS Ciphers for each meter.
+
+![](images/tlsciphers.png)
+
 *Figure: Meter 0 (Total Traffic) = Bytes per suite, Meter 1 (Hits) = SSL/TLS
 flows per suite*
 
 ## TLS Certificate authorities
 
-Tracks the certificate chains of SSL/TLS connections. It takes the
+Trisul tracks the certificate chains of SSL/TLS connections. It takes the
 Issuer Common Name of each certificate in the chain and meters it in the
 following manner.
 
@@ -82,7 +110,21 @@ following manner.
 This is optimized for long term queries, you can select a week or a
 month as look at any suspicious root or intermediate CAs.
 
-![](images/sslcg1.png)  
+To open TLS Ciphers countergroup,
+
+:::note navigation
+
+Select Retro -> Retro Counters -> Choose CAs from the dropdown
+list
+
+:::
+
+This will open [TLS counter group tabs](/docs/ug/cg/ssl#tls-counter-group-tabs) for Counter Group TLS CAs for each meter.
+
+
+
+![](images/tlsca.png)
+
 *Figure: Meter 0 (Inter CA) = flows as intermediate CA, Meter 1 (Hits) = flows as
 root CA*
 
