@@ -67,7 +67,7 @@ Click on any key item from a dashboard that takes you into the key dashboard of 
 
 ![](images/rtstabbers1.png)
 
-### 3. From the menu
+### 3. From the Menu
 
 :::note navigation
 
@@ -75,60 +75,69 @@ Select Tools -\> Real Time Stab Toppers
 
 :::
 
-1. Select a counter group
-2. Select one *or* more meters
-3. A set of stabber windows each corresponding to top activity of the
-   meters selected is shown
+1. Select a counter group from the dropdown list
+2. Select a meter for that countergroup from the dropdown list
+3. Click Live Update
+4. A Stabber window of countergroup corresponding top activity of the meters selected is shown
 
 ## Key Traffic Stabber
 
-![](images/stabberlink_traffic.png)
+Now lets explore each of the Real Time Stabber options in detail. Real Time Stabbers options include,
 
-Use this to continuously monitor traffic (bandwidth) used by a
-particular item with a 5-second delay.
+1) Real Time Stabber: Traffic Chart
 
-1. zoom - select a time interval with mouse
-2. pan - ctrl + mouse
-3. smoothen - enter a number -say 5 or 10 in the box
+2) Real Time Stabber: Flow Activity
 
-![](images/kt_stabber.png)  
+3) Real Time Stabber: Toppers
+
+![](images/rtstabbers2.png)
+
+### Real Time Stabber: Traffic Chart
+
+Use Real Time Stabber: Traffic Chart to continuously monitor traffic (bandwidth) used by a particular key item with a 5-second delay.
+
+Click and drag to zoom a particular time interval with mouse. Use the [Module icons](/docs/ug/ui/elements#module-icons) and [Legend table](/docs/ug/ui/elements#legend-table) for further inspection.
+
+![](images/rtstabbers3.png)
+
 Real time key traffic chart.
 
-## Counter Group Stabber
+## Real Time Stabber: Flow Activity
 
-![](images/stabberlink_toppers.png)
+Real Time Stabber: Flow Activity hows the real time flow activity for any host or port.
 
-Top users of any counter group with a 5-second delay.
+This is an example of live view, as each flow progresses the numbers keep updating in
+real time.
 
-The image below shows a counter group stabber viewing top
-`Internal Hosts` based on the meter `Incoming Bandwidth`.
+![](images/rtstabbers4.png)
 
-![](images/cg_stabber.png)  
-Real time counter group toppers.
-
-## Flow Stabber
-
-![](images/stabberlink_flows.png)
-
-Real time flow activity for any host or port.
-
-1. This is a live view, as each flow progresses the numbers update in
-   real time.
-
-![](images/flow_stabber.png)  
 Real time top flows for an item.
 
+## Real Time Stabber: Toppers
+
+With Real Time Stabber: Toppers, you can view the top users of any counter group with a 5-second delay.
+
+The image below shows a counter group stabber viewing top `Internal Hosts` based on the meter `Total`.
+
+![](images/rtstabbers5.png)
+
+Real time counter group toppers.
+
 ## Alert Stabber
-
-:::note navigation
-
-Select Dashboards -\> Real Time Alerts
-
-:::
 
 A real time view into all IDS alert activity in your network. As new
 alerts come in they are animated and then transitioned onto the real
 time visualization.
+
+To view Real Time Alert Stabber,
+
+:::note navigation
+
+Go to Dashboards -\> Real Time Alerts
+
+:::
+
+With Real Time Alert Stabber you can get,
 
 1. Live view optimized to handle large volumes
 2. Interactive bubbles allow you to sift through different alert types
