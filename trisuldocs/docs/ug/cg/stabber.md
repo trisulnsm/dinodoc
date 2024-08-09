@@ -47,19 +47,25 @@ There are three ways to access real time stabbers.
 
 ### 1. From the context menu in any module
 
-1. Click on the little tag symbol beside any item to bring up the
+1. Click on the little tag symbol on the right side beside any key item to bring up the
    contextual menu
-2. Select a real time stabbers from the choices shown
 
-![](images/stabberlink.png)
+2. Select one real time stabbers options from the choices shown below including, 
+- Real Time Stabber: Traffic Chart
+
+- Real Time Stabber: Flow Activity
+
+- Real Time Stabber: Toppers
+
+![](images/rtstabbers.png)
 
 ### 2. From any key dashboard
 
 Lets say you are investigating an arbitrary item using the [Key Dashboard](/docs/ug/ui/key_dashboard)
 
-1. Click on a Real Time Stabbers from the menu as shown below
+Click on any key item from a dashboard that takes you into the key dashboard of that key. In the Key Details module click on the Real Time Stabbers from the menu as sshown in this example.
 
-![](images/keydash_stabber.png)
+![](images/rtstabbers1.png)
 
 ### 3. From the menu
 

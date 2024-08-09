@@ -31,7 +31,7 @@ You have to pick one of the following tools shown.
 | [Explore Flows](/docs/ug/cg/retrotools#explore-flows)                                   | Streaming flow visualization based on the popular<br/>parallel co-ordinates paradigm.                                                                                               |
 | [Traffic Charts](/docs/ug/cg/retrotools#show-traffic-chart-for-an-item)                 | View usage charts for a particular item for selected time interval.                                                                                                                 |
 | [Pull packets](/docs/ug/cg/retrotools#pull-packets)                                     | Get raw packets in tcpdump/libpcap format matching a certain key                                                                                                                    |
-| [View Edges](/docs/ug/cg/retrotools#view-edges)                                         |                                                                                                                                                                                     |
+| [View Edges](/docs/ug/cg/retrotools#view-edges)                                         | Edges are graph database showing how the metrics are related to each other beyond the  flow connection.                                                                             |
 
 ## Network FAQ
 
@@ -260,3 +260,17 @@ Upon running the tool, your browser will automatically download a PCAP
 file containing the requested packets.
 
 ## View Edges
+
+With Trisul's streaming analytics, hundreds of metrics are captured and the Edges help discover how the metrics are related to each other beyond the flow connection. 
+
+To view Edges,
+
+:::note navigation
+
+Go to Retro-> Retro tools-> View Edges
+
+:::
+
+![](images/viewedges.png)
+
+Learn more about Edges in [Trisul Edges](/docs/ug/edges/)- Streaming Graph Analytics.
