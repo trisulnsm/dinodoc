@@ -137,10 +137,10 @@ Go to Dashboards -\> Real Time Alerts
 
 :::
 
-With Real Time Alert Stabber you can get,
+With Real Time Alert Stabber you can,
 
 1. Live view optimized to handle large volumes
 2. Interactive bubbles allow you to sift through different alert types
 3. Real time aggregated list gives you instant overview
 
-![](images/ids_stabber.png)
+![](images/rtstabbers6.png)
