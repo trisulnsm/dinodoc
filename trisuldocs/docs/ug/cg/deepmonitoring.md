@@ -4,7 +4,7 @@ sidebar_position: 11
 
 # Deep Monitoring of IP assets
 
-A common use case is to enabled enhanced monitoring of specific assets.
+A common use case is to enable enhanced monitoring of specific assets.
 These assets are identified by IPv4/IPv6 addresses.
 
 Deep Monitoring is a feature that enables the following features :
@@ -29,11 +29,11 @@ Most commonly used in the following scenarios
 
 ## How to enable deep monitoring
 
-Login as admin user.
+Login as admin.
 
 :::note navigation
 
-Select Context (default) -\> profile0 -\> Filtered Counter Groups
+Select Context (default) -\> profile0 -\> Custom Counters-> Filtered Counter Groups
 
 :::
 
@@ -41,21 +41,24 @@ You are shown a list of Filtered Counter groups.
 
 :::note navigation
 
-Select “Create deep monitoring for IP”
+Click Create New-> Create deep monitoring for an IP
 
 :::
 
-Now fill out the following form fields
+![](images/deepmonitoringforip.png)
 
-|                              |                                                                                                                                                           |
+Now fill out the following form fields.
+
+| Fields                       | Description                                                                                                                                               |
 | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Name associated with this IP | A name associated with this IP address, can be a customer name, server name, etc                                                                          |
 | Description                  | A description for this IP, this is shown in PDF reports for this IP. You can setup group by prepending a GROUP Name and then a Pipe character (see below) |
-| Bandwidth allocated          | Enter full value; eg 512000 for 512Kbps                                                                                                                   |
+| IP Address                   | The IP Address you want to setup deep monitoring                                                                                                          |
+| Bandwidth cap                | Enter full value; eg 512000 for 512Kbps                                                                                                                   |
 | Track Hosts                  | Disable this if you do not want to track hosts communicating with this IP.                                                                                |
 
 You can also optionally schedule a daily E-Mail report for this IP by
-filling out the next fields.
+filling out the optional fields. And click Create.
 
 > Important: Restart Trisul Probes for this feature to take effect
 
