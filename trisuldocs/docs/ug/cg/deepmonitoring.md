@@ -97,8 +97,8 @@ You can pull up PDF reports from this page.
 
 The reports include the following information
 
-1. Total bandwidth IN/OUT for the IP
-2. Breakup IN/OUT traffic of Peers talking to this IP
-3. Breakup IN/OUT traffic of Apps
-4. Breakup IN/OUT traffic of Protocols
-5. Totals
+1. Total bandwidth of the IP
+2. Transmit bandwidth of the IP
+3. Received Bandwidth of the IP
+4. Timeframes where usage overshot bandwidth cap
+5. Total Excess Bandwidth

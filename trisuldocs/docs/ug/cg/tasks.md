@@ -93,7 +93,7 @@ Draw long term bandwidth usage chart for port-80(http)
 
 - Select Apps from Counter Group and Total from meters  
 
-- Eneter port-80 in item box  
+- Enter port-80 in item box  
 
 - Click Analyze
 
