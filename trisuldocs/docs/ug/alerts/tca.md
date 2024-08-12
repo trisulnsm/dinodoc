@@ -144,11 +144,9 @@ This allows you to export and share displayed alerts
 
 This module auto updates itself as new TCAs are generated. You can add this module to any dashboard position.
 
-<<<<<<< HEAD
 [How to add modules to dashboard](/docs/ug/ui/modules#how-to-create-modules)
-=======
+
 [How to add modules to dashboard](/docs/ug/ui/dashmod_intro)
->>>>>>> 54d1bb106c52b3815a5b0f801e20162bb054b558
 
 ## Deleting TCAs
 
