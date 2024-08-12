@@ -87,7 +87,7 @@ To view deep monitoring reports
 
 :::note navigation
 
-Login as normal user -\> Reports -\> Deep Monitoring
+Login as user -\> Reports -\> Show All-> Static IPs
 
 :::
 

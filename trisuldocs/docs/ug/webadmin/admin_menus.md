@@ -72,7 +72,7 @@ To know how to setup Email-Server and Alert based emails, Refer to the [Email Se
 
 Modules are the building blocks of the dashboard based user interface. Several Modules put together are dashboards. Modules are much more feature specific. This menu provides a list of available modules that are being actively used in the Web Interface.
 
-To create a new module, Refer to the [Modules](/docs/ug/ui/dashmod_intro#modules) for instructions.
+To create a new module, Refer to the [Modules](/docs/ug/ui/modules#how-to-create-modules) for instructions.
 
 ### Dashboards
 
@@ -86,7 +86,7 @@ Live Dashboards are used to present current or recent network activity. The to t
 **Retro Dashboards**  
 Retro Dashboards are used for historical analysis hence need you to 
 select a Time Interval. Retro Dashboards can be found in the Retro Tools
- page under [Commonly Used Retro Analysis](/docs/ug/cg/retrotools#commonly-used-retro-analysis) tool
+ page under [Commonly Used Retro Analysis](/docs/ug/cg/retrotools) tool
 
 ### Menu Manager
 

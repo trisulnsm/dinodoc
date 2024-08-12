@@ -17,12 +17,12 @@ activity within a 5 second delay.
 Graphs network traffic of any item in real time. *Example : Plot
 transmitted and received traffic of your mail server.*  
 
-[Counter Group Stabber](/docs/ug/cg/stabber#counter-group-stabber)  
+[Counter Group Stabber](/docs/ug/cg/stabber#3-from-the-menu)  
 
 Shows most active items in any counter group. *Example : Show most
 active applications by total traffic.*  
 
-[Flow Stabber](/docs/ug/cg/stabber#flow-stabber)  
+[Flow Stabber](/docs/ug/cg/stabber#real-time-stabber-flow-activity)  
 
 Currently active flows for a host or port. *Example : Show flows for IP
 10.18.10.10*  
@@ -102,7 +102,7 @@ Click and drag to zoom a particular time interval with mouse. Use the [Module ic
 
 Real time key traffic chart.
 
-## Real Time Stabber: Flow Activity
+### Real Time Stabber: Flow Activity
 
 Real Time Stabber: Flow Activity hows the real time flow activity for any host or port.
 
@@ -113,7 +113,7 @@ real time.
 
 Real time top flows for an item.
 
-## Real Time Stabber: Toppers
+### Real Time Stabber: Toppers
 
 With Real Time Stabber: Toppers, you can view the top users of any counter group with a 5-second delay.
 

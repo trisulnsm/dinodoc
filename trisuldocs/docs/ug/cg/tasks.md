@@ -6,8 +6,7 @@ sidebar_position: 12
 
 ### How can I view real time traffic ?
 
-Select Dashboards -\> Real Time Network
-Traffic
+Select Dashboards -\> Real Time Traffic
 
 ### How can I view the top hosts by usage ?
 
@@ -17,8 +16,7 @@ Select Dashboards -\> Hosts
 
 For real time traffic stats you need to use the Stabber feature.
 
-Select Dashboards -\> Real Time Network
-Traffic
+Select Dashboards -\> Real Time Network Traffic
 
 1. Click on the tag next to any host
 2. Select *Real time stab: Toppers*
@@ -72,7 +70,7 @@ If you can see the IP in live dashboards
 2. And click **Flows** in Real Time stabbers in [Key
    Details](/docs/ug/ui/key_dashboard#key-details) modules
 
-See [Real Time Stabber](/docs/ug/cg/stabber#flow-stabber)
+See [Real Time Stabber](/docs/ug/cg/stabber#real-time-stabber-flow-activity)
 
 ### Store only 1MB worth of packets of each flow
 

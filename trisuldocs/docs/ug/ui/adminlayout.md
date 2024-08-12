@@ -30,7 +30,7 @@ The Admin panel consists of the following elements,
 
 3) ## Top Panel
    
-   The top panel of admin layout is similar to the [top panel.](/docs/ug/ui/elements#top-panel-details) of the user layout.
+   The top panel of admin layout is similar to the [top panel](/docs/ug/ui/userlayout#top-panel-details) of the user layout.
    
    1) ## Start/Stop Tasks
       

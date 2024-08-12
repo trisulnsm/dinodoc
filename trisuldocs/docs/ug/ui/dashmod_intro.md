@@ -31,7 +31,7 @@ overview dashboard
 
 You can see that this dashboard is nothing but four modules laid out in
 two columns. Trisul has well defined column positions into which you can
-place modules. See [Module Positions](/docs/ug/ui/dashmod_intro#how-to-add-modules-to-the-dashboard)
+place modules. See [Module Positions](/docs/ug/ui/modules#add-modules-to-a-newexisting-dashboard)
 
 Lets take a closer look at the dashboard shown above.
 
@@ -128,3 +128,5 @@ The following operations can be performed using the toolbars:
 | Historical Chart      | View long term historical view of this chart         |
 | Remove from Dashboard | Remove module from this dashboard                    |
 | Disable               | Disable / Enable this module                         |
+
+# 
