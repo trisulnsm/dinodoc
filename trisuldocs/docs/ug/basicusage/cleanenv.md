@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Cleaning the database
+# Cleaning the Database
 
 Sometimes you need to delete all the data and start over.
 
@@ -42,7 +42,7 @@ trisul_hub(domain0)\> stop context default
 
 - you can do a `info context` to confirm the data is deleted.
 
-### Delete only specific probe data
+### Delete Only Specific Probe Data
 
 > Use the *contextname@node* syntax
 

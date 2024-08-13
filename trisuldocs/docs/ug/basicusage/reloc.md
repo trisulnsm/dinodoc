@@ -2,19 +2,19 @@
 sidebar_position: 3
 ---
 
-# Relocate Trisul database
+# Relocate Trisul Database
 
 There are two major places where Trisul per-context data is stored.
 
-1. **on each probe** - the pcaps, runtime data like extracted files,
+1. **On each probe** - the pcaps, runtime data like extracted files,
    etc
-2. **on the hub** - the main streaming metrics DB
+2. **On the hub** - the main streaming metrics DB
 
 By default - on both these nodes the root directory under which these
 are stored are `/usr/local/var` . Use the `relocate` CLI command to move
 this to a different volume.
 
-## relocate context
+## Relocate Context
 
 :::note **Run on each node**  
 The `relocate context` command must be on a node-by-node basis.
@@ -24,7 +24,7 @@ The `relocate context` command must be on a node-by-node basis.
 You only need to run the relocate command on the nodes (probes and hub)
 that you want to. Follow these steps.
 
-## relocate on hub
+## Relocate on Hub
 
 Use the `trisulctl_hub relocate context` command.
 
@@ -52,7 +52,7 @@ The tool will then run some checks and ask you for a confirmation.
 - Once the relocation is done. You can restart the context using
   `start context default`
 
-## relocate on each probe
+## Relocate on Each Probe
 
 Use the `trisulctl_probe relocate context` command on each probe.
 

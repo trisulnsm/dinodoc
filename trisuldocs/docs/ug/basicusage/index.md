@@ -1,4 +1,4 @@
-# First login
+# First Login
 
 Congrats! You now have a Trisul login screen and may be wondering where
 to go next. This page will get you from the login screen to the
@@ -8,7 +8,7 @@ import DocCardList from '@theme/DocCardList';
 
 <DocCardList />
 
-## Viewing stats
+## Viewing Stats
 
 ##### Login
 
@@ -21,7 +21,7 @@ Login as username = `admin` password=`admin`
 - Make sure both the components are started. They should be in “UP”
   state.
 
-**Getting an error here?**
+**Getting an Error Here?**
 
 The error message is usually displayed right below. The most common
 reasons are
@@ -31,7 +31,7 @@ reasons are
   to switch the network adapter to the correct one using the steps in
   [Configuring packet capture adapters](/docs/ug/webadmin/profiles)
 
-##### Login as a normal user
+##### Login as a Normal User
 
 Now you should log out and admin and log back in as a normal user in
 order to view the reports.

@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Importing a PCAP file
+# Importing a PCAP File
 
 How to create a new context by importing PCAP (packet capture) dumps.
 
@@ -23,7 +23,7 @@ This command does the following
 - to view results ; logon to Web Trisul and in the login screen select
   *mass1*
 
-### More links
+### More Links
 
 - For Step-by-step instructions see [Import PCAP
   dumps](/docs/ug/caps/pcap_import)

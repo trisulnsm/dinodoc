@@ -7,7 +7,7 @@ sidebar_position: 5
 Runs a PCAP dump and indexes Trisul’s statistics, flow, and packet data
 with IDS alerts.
 
-## Two pass analysis
+## Two Pass Analysis
 
 The tool included in the trisul-probe package called `importpcap_ids` is
 used to import a PCAP dump. The tool essentially orchestrates a 2-pass

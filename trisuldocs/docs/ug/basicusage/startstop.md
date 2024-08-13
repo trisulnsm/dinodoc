@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Starting and stopping Trisul
+# Starting and Stopping Trisul
 
 The startup process involves.
 
@@ -10,7 +10,7 @@ The startup process involves.
 2. start the **context** — Probes and hubs
 3. start the **webserver** — The user interface
 
-### Example to start all processes
+### Example to Start All Processes
 
 The following example shows how to get the default Trisul context up and
 running from scratch.
@@ -31,7 +31,7 @@ systemctl start webtrisuld
 
 The following sections go a bit deeper into each startup process.
 
-## Start and stop the domain process
+## Start and Stop the Domain Process
 
 Each probe and hub node needs a *domain* process to be up and running.
 This enables the node to communicate with the other nodes in the domain.
@@ -43,7 +43,7 @@ Domain tasks cannot be performed by the Web Interface. Use the CLI app
 
 :::
 
-### Starting the domain processes on the hub node
+### Starting the Domain Processes on the Hub Node
 
 The domain processes on the hub node control the following
 functionalities
@@ -80,7 +80,7 @@ trisul_hub(domain0)> start domain
 - To stop the domain use `stop domain`.
 - Use `list nodes` command to see the status of the domain.
 
-### Starting the domain on the probe node(s)
+### Starting the Domain on the Probe Node(s)
 
 Now you need to start the domain on *each* probe node. By default you
 only have one probe called `probe0`.
@@ -95,7 +95,7 @@ To start the domain
 trisulctl_probe start domain 
 ```
 
-### Stop the domain
+### Stop the Domain
 
 You typically do not have to stop the domain process on each node. You
 only need to do this if you are updating the certificates for the nodes
@@ -113,14 +113,14 @@ and then log on to each hub node and enter
 trisulctl_hub  stop domain 
 ```
 
-## Start and stop contexts
+## Start and Stop Contexts
 
 A [context is an independent instance](/docs/ug/domain#contexts) of Trisul. Initially you
 only have a single context named `default` you may create additional
 contexts to create a multi-tenant setup. You can start/stop contexts on
 each probe or hub independently.
 
-### View contexts
+### View Contexts
 
 To view all contexts and their running states use the `info context`
 command on *trisulctl_hub* or *trisulctl_probe* tool.
@@ -139,7 +139,7 @@ trisulctl_hub (or trisulctl_probe)
 info context default
 ```
 
-### Start context using CLI
+### Start Context Using CLI
 
 To start a context from a CLI
 
@@ -170,7 +170,7 @@ start context default@probeEAST
 
 Similarly you can use the `stop context` command.
 
-### Start context using Web UI
+### Start Context Using Web UI
 
 You can also do the same thing from the Web UI.
 
@@ -182,7 +182,7 @@ You can also do the same thing from the Web UI.
 You can then just click on the Start and Stop buttons against the hub
 and probe nodes.
 
-### Stop context using CLI
+### Stop Context Using CLI
 
 To stop a context from a CLI use the `stop context` command.
 
@@ -207,7 +207,7 @@ stop context default@probeEAST
 
 You can also use `stop context all` to stop/start all contexts
 
-## Start and stop webtrisul
+## Start and Stop Webtrisul
 
 The web interface can simply be managed by the usual *systemctl* tool.
 
@@ -216,13 +216,13 @@ The service names for the webinterface are
 1. `webtrisuld` - for normal HTTP based access
 2. `webtrisulssld` - for HTTPS (SSL) access
 
-### Starting webtrisul
+### Starting Webtrisul
 
 ```language-bash
 sudo systemctl start webtrisuld
 ```
 
-### Stopping webtrisul
+### Stopping Webtrisul
 
 ```language-bash
 sudo systemctl stop webtrisuld
@@ -230,7 +230,7 @@ sudo systemctl stop webtrisuld
 
 To check errors with systemctl use `journalctl -u webtrisuld`
 
-### Starting webtrisul SSL server
+### Starting Webtrisul SSL Server
 
 The service name for the SSL webserver is *webtrisulssld*
 
@@ -240,7 +240,7 @@ See : [How to switch to SSL Web Server](/docs/howto/sslforwebtr)
 sudo systemctl start webtrisulssld
 ```
 
-## Automatically starting on boot
+## Automatically Starting on Boot
 
 Trisul startup scripts make it easy to automatically start the system on
 every boot.
@@ -261,7 +261,7 @@ To start the Trisul probe as well , do the following
 sudo systemctl enable   trisul-probe0-context0 
 ```
 
-### Starting the SSL server instead of the HTTP server
+### Starting the SSL Server Instead of the HTTP Server
 
 To start the SSL web server, you have to disable the HTTP service. See
 below.  
