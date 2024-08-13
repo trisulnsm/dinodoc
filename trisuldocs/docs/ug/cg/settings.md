@@ -91,7 +91,7 @@ Configurations -\> Counter Groups
    
    ![](images/topperpolicies.png)
 
-|                            |
+| Counter Groups             |
 | -------------------------- |
 | Total                      |
 | Received                   |

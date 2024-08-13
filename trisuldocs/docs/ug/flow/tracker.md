@@ -23,7 +23,7 @@ of it.
 
 > The default configuration of these trackers save a snapshot of 100 flows every 5 minutes.
 
-|                 |                                                                                                        |
+| Flow Tracker    | Description                                                                                            |
 | --------------- | ------------------------------------------------------------------------------------------------------ |
 | Volume          | Highest volume                                                                                         |
 | Long Lived      | Longest duration                                                                                       |
@@ -68,9 +68,8 @@ TCP Sessions is the only option allowed by default.
 You have to select a base tracker type which you want to customize. The
 following table describes the available options.
 
-|                         |                                                                                                                                                                                  |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Tracker Type            | What it means                                                                                                                                                                    |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Based on keys           | Specify IPs or Ports in the Config String field. Only flows involving the ranges will be tracked.                                                                                |
 | Based on Negated keys   | Same as above but flows NOT involving the ranges will be tracked                                                                                                                 |
 | Based on total bytes    | Total bytes transferred. You can specify a volume constraint to track flows transferring a range of bytes. You cant use a port or IP range filter for this option                |
@@ -88,9 +87,8 @@ A short name for the tracker.
 A filter string that allows you to specify what subset of flows you want
 to consider.
 
-|                         |                                                                                                                                                                |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Tracker Type            | Config String                                                                                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | For type “total bytes”  | `lower,100,500` track flows between 100 and 500 bytes, prefer the lower side. `higher,500,2000` track flows between 500 and 2000 bytes, prefer the higher side |
 | All other tracker types | A filter string (See below)                                                                                                                                    |
 
@@ -98,9 +96,8 @@ to consider.
 
 Some examples
 
-|                             |                                             |
-| --------------------------- | ------------------------------------------- |
 | Config String               | Filter                                      |
+| --------------------------- | ------------------------------------------- |
 | `192.168.1.8`               | Flows involving 192.168.1.8                 |
 | `192.168.1.8,192.168.1.33`  | Flows involving 192.168.1.8 OR 192.168.1.33 |
 | `192.168.1.1~192.168.1.255` | Flows in subnet 192.168.1.x                 |
@@ -118,7 +115,7 @@ The main application for tracking flows transferring low payload is in
 specific security scenarios. In case you are interested in this type of
 tracker here is some additional information.
 
-|               |                                                              |
+| Flow Trackers | Description                                                  |
 | ------------- | ------------------------------------------------------------ |
 | **lower,x,y** | Track flows transferring lower volumes in the range x and y  |
 | **upper,x,y** | Track flows transferring higher volumes in the range x and y |
@@ -134,7 +131,7 @@ The default setting is Trisul tracks 100 flows per tracker every 300
 seconds. You can change it by clicking on “Edit…” and changing the
 parameters
 
-|                         |                                                             |
+| Parameters              | Description                                                 |
 | ----------------------- | ----------------------------------------------------------- |
 | Commit Interval Seconds | Granularity of storage. Default 300 seconds                 |
 | Count                   | How many flows should be stored every interval. Default 100 |

@@ -6,7 +6,7 @@ sidebar_position: 3
 
 Various terminology used in this and other guides.
 
-## List of terms
+## List of Terms
 
 Alerts  
 

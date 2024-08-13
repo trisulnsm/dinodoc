@@ -6,7 +6,7 @@ import DocCardList from '@theme/DocCardList';
 
 <DocCardList />
 
-### Other user documentation
+### Other User Documentation
 
 Links to various other documentation apart from this User Guide.
 
@@ -14,14 +14,14 @@ Links to various other documentation apart from this User Guide.
 2. [Howtos](/docs/howto) : How to solve specific use cases with Trisul  
 3. [Trisul for ISPs](/docs/isp/) : This document describes the Trisul ISP features
 
-### Developer guides
+### Developer Guides
 
 Trisul is also a platform on which you can build your own applications using Lua or Ruby/Python. Consult the developers guides listed below.
 
 1. [LUA API Guide](/docs/lua) : Custom real time analytics using LUA
 2. [TRP API Guide](/docs/trp) : Database and packet storage API  
 
-## How to use this guide
+## How to Use This Guide
 
 This guide assumes that you have installed Trisul and are able to login and view the data. If you are not at that point yet, please refer to the following resources first | [Getting Started](/docs/ug/intro/free) | [Instructions on downloading and installing](https://trisul.org/download)
 
