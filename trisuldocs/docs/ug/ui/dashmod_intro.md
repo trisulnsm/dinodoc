@@ -84,7 +84,7 @@ From the Menu, Go to Customize-> Show all-> Modules
 
 This will show a list of all available modules.
 
-To **view one particular module** from the list, check on the name of the dashboard that contains the module and navigate to that dashboard.
+To **view one particular module** from the list, check on the name of the dashboard that contains the module and navigate to that dashboard to select the module.
 
 ## Toolbars
 

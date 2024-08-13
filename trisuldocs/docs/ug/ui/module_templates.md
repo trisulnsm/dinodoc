@@ -209,7 +209,7 @@ Real Time Single module is the same as Single value module except the data displ
 | Key            | TOTALBW       | Provide the unique identifier that categorizes data in a network or a system according to the selected counter group |
 | Label          | Total Volume  | Enter a descriptive tag name assigned to a data point, group or category                                             |
 | BG Color       | Blue          | Select a desirable BG Color                                                                                          |
-| Show Gauge     | -             |                                                                                                                      |
+| Show Gauge     | -             | When enabled, Shows a gauge meter that keeps getting scaled in real time                                             |
 | Chart Color    | Blue          | Select a desirable chart color                                                                                       |
 
 ## Real Time Toppers

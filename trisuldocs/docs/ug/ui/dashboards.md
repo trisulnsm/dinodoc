@@ -145,8 +145,6 @@ Trackers](/docs/ug/tools/flow_tracker) a special type of streaming analytics sna
 
 Flows tracked include TCP/UDP/GRE/IPSEC/ and all flows at IP Layer.
 
-------------------------------------------------------------------------
-
 ## ASN Monitoring
 
 Monitor traffic by ASN. Helps you with planning peering relationships
@@ -230,8 +228,6 @@ seconds real time.
 
 You can watch any metric , Top-K, or Flows in real time using the [Real
 Time Stabbers (read more)](/docs/ug/cg/stabber)
-
-------------------------------------------------------------------------
 
 ## Active Keys Monitor
 
