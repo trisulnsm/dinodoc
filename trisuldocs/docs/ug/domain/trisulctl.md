@@ -13,13 +13,13 @@ form the centre piece of Trisul 7.0 distributed environment.
 This section explains the various operations you can perform with these
 tools. For more details : see [trisulctlhub Reference](/docs/ref/trisul_hub) and [trisulctl_probe Reference](/docs/ref/trisul_probe)
 
-## Frequently used commands
+## Frequently Used Commands
 
 Here are a few quick trisulctl\_ commands to get you start using the
 domain tools. You can read the sections below for a more thorough
 explanation.
 
-### Common commands for Probe
+### Common Commands for Probe
 
 ```
     unpl@unplu14:~$ trisulctl_probe                                 
@@ -38,7 +38,7 @@ explanation.
 
 *Quick commands for running on trisul-probe using trisulctl_probe*
 
-### Common commands for Hub
+### Common Commands for Hub
 
 Many commands that work on trisulctl_probe also work from the hub. In
 addition, the hub CLI tool has commands to authenticate new probes,
@@ -82,7 +82,7 @@ large multi probe distributed Trisul. In fact, when you use operations
 like “Start Trisul Probe” from the web interface, behind the scenes the
 trisulctl_hub command “start context” is executed.
 
-## Invoking the tools
+## Invoking the Tools
 
 The trisulctl\_ tools are placed in `/usr/local/bin` when the probe/hub
 packages are installed. The default install of Trisul puts the Probe and
@@ -130,7 +130,7 @@ Terminating 0MQ
 root@ubuntu1604:~# 
 ```
 
-## CLI features
+## CLI Features
 
 The trisulctl_probe/hub tools have a powerful CLI. Some features are
 
@@ -141,21 +141,21 @@ The trisulctl_probe/hub tools have a powerful CLI. Some features are
 3. Alias command to shortcut
 4. Unlimited history
 
-### Useful trisbashrc bash aliases
+### Useful trisbashrc Bash Aliases
 
 There is a very nifty set of bash aliases called `trisbashrc` on the
 `/usr/local/share/trisul-probe` and `trisul-hub` directories. To add
 these macros to your shell environment. See [trisbashrc
 Reference](/docs/ref/trisbashrc) for a complete list of useful shortcuts.
 
-## Start and stop domain
+## Start and Stop Domain
 
 On each node the domain processes need to be running at all times. The
 default trisul installation packages automatically add a *systemd*
 script to start and stop the domains. You can also manually start and
 stop the domain as shown below.
 
-### Start domain
+### Start Domain
 
 The command to start a domain are.
 
@@ -168,7 +168,7 @@ The command to start a domain are.
 > Starting a domain results in processes like `trisul_cp_XXX` running on
 > the node. Try `ps -ef | grep trisul_cp` to see
 
-### Checking successful join
+### Checking Successful Join
 
 You can check if you have successfully joined a domain using a couple of
 commands
@@ -178,7 +178,7 @@ commands
 | `list nodes`   | print all nodes currently joined to domain |
 | `info context` | print all contexts on all nodes            |
 
-### Stop the domain
+### Stop the Domain
 
 On `quit` the CLI tool exits but the domain processes still run in the
 backgruound. To stop it :
@@ -189,12 +189,12 @@ backgruound. To stop it :
 
 ------------------------------------------------------------------------
 
-## Start and stop contexts
+## Start and Stop Contexts
 
 A context is a separate instance of Trisul. The default installation of
 Trisul installs a context named `default` or `context0`
 
-### Start context
+### Start Context
 
 > trisulctl_probe Start/Stop context is the way you start and stop Trisul
 
@@ -212,12 +212,12 @@ are seen, it is printed on screen. This has the same effect as if you
 login to Web Trisul as *admin* and then executed *Context -\> Start/Stop
 Tasks -\> Start Probe/Hubs*
 
-#### Check logs
+#### Check Logs
 
 You can check or tailf any log on any node by using the `log` command.
 Type `help log` for examples.
 
-### Stop context
+### Stop Context
 
 The commands
 
@@ -227,7 +227,7 @@ The commands
 | <code>stop context default@hub0</code>   | Stop only the context on `hub0` node. The context will still be running on other nodes.                                                                                                                                                                                               |
 | <code>stop context default@probe0</code> | Stop only the context on `probe0` node. The data collection and processing on probe0 alone will stop. A subsequent start context will resume the data processing. This is useful if you just want to restart a particular probe without touching the other nodes in the Trisul domain |
 
-### Info context
+### Info Context
 
 You can check if you have successfully joined a domain using a couple of
 commands
@@ -251,7 +251,7 @@ probeTRISUL    default        6.0.2766     INIT    RUNNING  169.15 MB   23h 33m 
 probeUNLEASH   default        6.0.2766     INIT    RUNNING  12.478 GB   1041h 07m 24s       42      profile0       online_rxring  
 ```
 
-### Delete vs Reset context
+### Delete vs Reset Context
 
 There are two commands `reset context` and `delete context` - Both of
 them ask for confirmation

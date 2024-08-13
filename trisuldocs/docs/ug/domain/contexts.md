@@ -2,11 +2,9 @@
 sidebar_position: 5
 ---
 
-# Working with contexts
+# Working With Contexts
 
-A Trisul [*context*](/docs/ug/domain#contexts) is a separate
-instance of Trisul with its own isolated database, configuration, and
-processes. The primary use cases for contexts are :
+A Trisul [*context*](/docs/ug/domain#contexts) is a separate instance of Trisul with its own isolated database, configuration, and processes. The primary use cases for contexts are :
 
 1. multi homing separate customer networks
 2. managing different parts of a large network
@@ -18,20 +16,20 @@ of contexts with a Trisul production license.
 This document describes how you can create a new context and manage
 them.
 
-#### Other links
+#### Other Links
 
 [CLI tools for domain management](trisulctl) describes the `trisulctl_probe` and `trisulctl_hub` tools. Either tool can be used to manage contexts. In a distributed Trisul domain with multiple hubs and probes, ensure that all nodes are up before creating a context.
 
-## Creating a new context
+## Creating a New Context
 
-### Use the CLI tool command create context
+### Use the CLI Tool Command to Create Context
 
 `trisulctl_hub` and `trisulclt_probe` are CLI tools included with
 Trisul. These are used to create and delete contexts. This command will
 automatically create all required databases and configurations on all
 the probe and hub nodes.
 
-#### Context names
+#### Context Names
 
 Context names are alphanumeric and allowed to contain underscores. We
 suggest keeping the context names short less than 12 characters so they
@@ -67,7 +65,7 @@ probe0         mycontext      6.5.3002     INIT    DOWN     6.46 MB     00h 00m 
 
     
 
-### Login to the new context as admin
+### Login to the New Context as Admin
 
 After the new context has been created, you can manage it from the web
 interface.
@@ -79,25 +77,25 @@ at login time to view the data for that particular context. But, we will
 do that later. First we need to login as admin and start the new context
 processes.
 
-#### Login as admin
+#### Login as Admin
 
 The login screen now has the new context dropdown, but for the `admin`
 user this will be disabled.
 
 ![](images/contextlogin.png)
 
-*Login page with the new context*
+*Figure: Login page with the new context*
 
 Login as admin will bring you to the admin screen for the contexts.
 
-### Configure and start the new contexts
+### Configure and Start the New Contexts
 
 Once you login as admin you will be shown the configuration for all the
 contexts. See the below image.
 
 ![](images/mycontexts.png)
 
-*Select the context to open the configuration for that*
+*Figure: Select the context to open the configuration for that*
 
 You can then select the context, configure it for example using the
 Netflow Wizard, and then start it.
@@ -111,7 +109,7 @@ TO start the `newcontext` processes
 Now you have a brand new instance of Trisul with its own isolated
 database.
 
-#### Assign a user to a context
+#### Assign a User to a Context
 
 You can create users who are only allowed to view particular contexts.
 To do that
@@ -123,7 +121,7 @@ To do that
 
 For more : [Web Admin Manage Users](/docs/ug/webadmin/manageusers)
 
-### View reports from a context
+### View Reports from a Context
 
 While logging in simply select the context you wish to view.
 
@@ -132,9 +130,9 @@ menu on the top left itself.
 
 ![](images/switchcontexts.png)
 
-*Already logged in users can switch context using the menu*
+*Figure: Already logged in users can switch context using the menu*
 
-## Deleting contexts
+## Deleting Contexts
 
 Using the CLI tool you have options of :
 

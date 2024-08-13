@@ -4,13 +4,13 @@ sidebar_position: 3
 
 import Highlight from '/src/components/Highlighter/Highlight';
 
-# Deploy a new probe
+# Deploy a New Probe
 
 This section describes how you can add a new Probe to a Trisul domain.
 We will illustrate the steps involved by adding a new probe named
 **probeWEST** to an existing Trisul domain **domain0**
 
-## Overview of the process
+## Overview of the Process
 
 Adding a new probe to a Trisul domain simply involves two high level
 operations
@@ -24,9 +24,9 @@ probe node using the CLI tool `trisulctl_probe` or
 <span class="badge badge--danger">RUN ON HUB</span> using the CLI tool
 `trisulctl_hub`
 
-## Steps to add a new probeWEST to a Trisul domain
+## Steps to Add a New probeWEST to a Trisul Domain
 
-### 1. Install package trisul-probe on the new system
+### 1. Install Package trisul-probe on the New System
 
 <span class="badge badge--info">RUN ON PROBE</span>
 
@@ -37,7 +37,7 @@ the [Downloads page](https://www.trisul.org/download/)
 sudo apt-get install trisul-probe
 ```
 
-### 2. Obtain and install domain certificate
+### 2. Obtain and Install Domain Certificate
 
 <span class="badge badge--info">RUN ON PROBE</span>
 
@@ -55,7 +55,7 @@ it in a local directory and then install it.
 sudo trisulctl_probe install domain /home/unpl/domain0.cert
 ```
 
-### 3. Create and install a new probe certificate
+### 3. Create and Install a New Probe Certificate
 
 <span class="badge badge--info">RUN ON PROBE</span>
 
@@ -72,7 +72,7 @@ install probe /usr/local/share/trisul-probe/probeWEST.cert
 
 > You can see that a new probeWEST certificate + key pair is created, this certificate will be sent to the Hub node to authenticate in Step-5.
 
-### Install context on new probe
+### Install Context on New Probe
 
 <span class="badge badge--info">RUN ON PROBE</span>
 
@@ -89,7 +89,7 @@ Wrote new config file /usr/local/etc/trisul-probe/domain0/probeWEST/context0/tri
 Wrote ringpass file   /usr/local/etc/trisul-probe/domain0/probeWEST/context0/ringpass.txt
 ```
 
-### 5.Add the new probe certificate on the hub server
+### 5.Add the New Probe Certificate on the Hub Server
 
 <span class="badge badge--danger">RUN ON HUB</span>
 
@@ -109,7 +109,7 @@ Added client certificate        /usr/local/etc/trisul-hub/domain0/client_certs/p
 
 Now the probe can authenticate with the domain.
 
-### 6.Add the new probe to contexts
+### 6.Add the New Probe to Contexts
 
 <span class="badge badge--danger">RUN ON HUB</span>
 
@@ -147,7 +147,7 @@ Layer                  ProbeID
 
 See the [Probe to Context Layer mapping reference ](/docs/ref/trsulhubconfig#probes)
 
-### 7.Run change_endpoints for hub context (for first probe only)
+### 7.Run change_endpoints for Hub Context (For First Probe Only)
 
 <span class="badge badge--danger">RUN ON HUB</span><span class="badge badge--info">ONLY FOR FIRST PROBE</span>
 
@@ -166,7 +166,7 @@ need to switch the Hub to a TCP connection mode. Follow these steps.
 .. next enter a starting port number
 ```
 
-### Finishing up
+### Finishing Up
 
 Now `trisulctl_hub restart domain` and `trisulctl_probe restart domain`
 on all the hub and probe nodes respectively. Then use `list nodes` to
@@ -177,7 +177,7 @@ Congrats your new probe is now live !
 
 —end task
 
-## Uninstall a probe
+## Uninstall a Probe
 
 <span class="badge badge--danger">RUN ON HUB</span>
 
