@@ -43,8 +43,6 @@ sudo apt-get install trisul-probe
 
 :::note **First time?** Switch domain0 to distributed network TCP mode. 
 
-
-
 Make sure you have followed the steps in [Switching to a distributed domain](/docs/ug/domain/change_domain#switching-to-a-distributed-domain) from the default single machine domain.
 
 :::
@@ -151,7 +149,7 @@ See the [Probe to Context Layer mapping reference ](/docs/ref/trsulhubconfig#pro
 
 ### 7.Run change_endpoints for hub context (for first probe only)
 
-<span class="badge badge--danger">RUN ON HUB</span><span class="badge badge--info">ONLY FOR FIRST Probe</span>
+<span class="badge badge--danger">RUN ON HUB</span><span class="badge badge--info">ONLY FOR FIRST PROBE</span>
 
 By default , Trisul uses an IPC connection for each Hub node. If this is
 the first remote probe you are adding. You  

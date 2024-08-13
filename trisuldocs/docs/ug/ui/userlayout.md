@@ -1,5 +1,4 @@
 ---
-
 sidebar_position: 1
 ---
 
@@ -81,9 +80,9 @@ Trisul remembers the expanded state of the menu per user.
    ![](images/shortcutbutton.png)
    
    Clicking on the shortcut menu you can quickly navigate to the home, routers and interfaces, and explore flows from any page.
-2. ## Context Menu
+2. ## Tenants
    
-      You can switch between different contexts from the context menu. 
+      Trisul can handle multiple tenants and each tenant's data are isolated from others through logical separation. You can switch between different contexts from the list of tenants. 
 3) ## Menu Items
    
    Click on each menu item and you can see the sub menus under each menu item expanded. Click Show all as not all sub menus would show up here.
