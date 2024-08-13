@@ -4,20 +4,20 @@ sidebar_position: 01
 
 # Flow Taggers
 
-Flow Taggers assign one or more text labels to flows in real time. These
-labels are created by rules you specify. You can then search for flows
+Flow Taggers assign one or more text labels to flows in real time. These labels are created by rules you specify. i.e. Flow taggers help identify network flows based on predefined criteria (e.g., IP addresses, ports, protocols). You can then search for flows
 containing these text tags.
 
-![](images/tagger1.png)  
+![](images/flowtagger4.png)
+
 Figure: Tags are shown alongside flows
 
-#### Some examples
+#### Some Examples
 
 1. Mark flows that generated an alert with the tag `"ALRT"`
 2. Mark flows to China or Ukraine as `"CHUKR"`
 3. Mark all non-HTTP flows to your subnet 10.18.10.0/24 as `"SUSPECT"`
 
-### How it works
+### How it Works
 
 Flow taggers allow you to do things that are remarkably hard to do
 retrospectively. For example, you can create a flow tagger that will
@@ -34,42 +34,58 @@ provide.
 
 You need to restart Trisul for configuration changes to take effect
 
-To create a flow tagger
+To create a flow tagger, Login as admin,
 
 :::note navigation
 
-Goto Customize -\> Flows -\> Flow Taggers
+Goto Context: default -\> Profile0 -\> Flows-> Flow Taggers
 
 :::
 
-You will see a list of existing taggers. Trisul ships with a few
-taggers, which are disabled by default. Click on *Create a new flow
-tagger*
+![](images/flowtagger1.png)
+
+You will see a list of existing taggers. You can also find the total number of taggers, number of taggers enabled and number of taggers disabled on the top of the module. Trisul ships with a few taggers, which are disabled by default. Click on *Create a new flow tagger* on the top right as shown in the example.
+
+### Entering the Rule
+
+Once you have clicked *Create a new flow tagger* you can see a *Enter tagging rules* form open up as in this example.
+
+![](images/flowtagger2.png)
 
 Fill out the details as shown
 
-|         |                                                                      |
-| ------- | -------------------------------------------------------------------- |
-| **Tag** | A short string. Alphanumeric only                                    |
-| Name    | A descriptive name, this name will appear while viewing tagged flows |
-| Group   | An optional tag group to name space the tags                         |
-| Rule    | A string in [Trisul Filter Format](/docs/ref/trisul_filter_format)   |
+| Fields           | Description                                                                                                                                                                            |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Session Group    | Select the session group from the dropdown list                                                                                                                                        |
+| Flow Tagger Name | A descriptive label for display , explain what you're tagging with this rule                                                                                                           |
+| Tagger Tag       | Matching flows are tagged with this string. Prefix with AUTO: for automatic tags                                                                                                       |
+| Tagger Group     | For AUTO: tags only. You can specify a short group code to help distinguish keys from other groups. The tags generated will have the format [GROUPNAME]tag. Keep this short < 8 chars. |
+| Tagger Rule      | A string in [Trisul Filter Format](/docs/ref/trisul_filter_format)                                                                                                                     |
 
-### Entering the rule
-
-#### Directly enter the rule
+#### Directly Enter the Rule
 
 If you are familiar with the [Trisul Filter Format](/docs/ref/trisul_filter_format) you may enter the string
 directly here. For example : Flows to China and India can be marked by
 the expression `{00990011-44BD-4C55-891A-77823D5916B}=CN,IN` This means
 the keys CN and IN in the counter group Country (identified by the GUID)
 
-#### The rule builder
+#### The Rule Builder
 
 This is the easier way to construct the *Tagger Tag* expression. See
-[Rule Builder](/docs/ug/tools/rule_builder)
+[Rule Builder](/docs/ug/tools/rule_builder) or you can also simply click *Add rule* in the Tagger rule to open the Interactive Rule builder and fill up the following fields.
 
-## Automatic flow tagging
+![](images/flowtagger3.png)
+
+| Fields                     | Description                                                                                                          |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Combine with Previous Rule | Click on the & or \| for the operations of AND and OR  according to the condition you want to perform for the tagger |
+| Counter GUID               | Click on the counter group for GUID                                                                                  |
+| Condition                  | Click on from the binary options = or !                                                                              |
+| Key                        | Ex:192.168.1.30,192.168.1.45 OR 192.168.1.30~192.168.1.45  <br/>For automatic tagging, enter * for the key.          |
+
+Click Update Target Rule to update the specified rules.
+
+## Automatic Flow Tagging
 
 Automatic flow tagging allows you to automatically mark flows with keys
 from a counter group. For example, you can mark all flows with the
@@ -101,12 +117,10 @@ The following shows an Automatic flow tagger that attaches the AS number
 of source and destination IP to each flow. We have added a tag group
 called “asn”
 
-![](images/tag-group.png)
-
 Tags generated by this tagger automatically get an extra `[asn]`
 attached to the tag.
 
-![](images/tag-group2.png)
+![](images/flowtagger5.png)
 
 ## Viewing
 

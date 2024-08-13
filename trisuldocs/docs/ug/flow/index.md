@@ -2,14 +2,23 @@
 
 A _flow_ is piece of information that represents a record of data 
 transfer between two IP addresses. This is a crucial entity in both 
-traffic and security monitoring. Trisul stores all _flows_ in highly 
-efficient, compressed format optimized for fast queries over large 
-datasets. This section describes the tools available to work with flows.
+traffic and security monitoring. *Flow Analysis* is a network monitoring technique that examines the flow of traffic between devices, networks, or applications. It involves collecting and analyzing metadata about network flows, such as:
+
+1. Source and destination IP addresses
+
+2. Ports and protocols
+
+3. Packet sizes and counts
+
+4. Timestamps and durations
+
+5. Byte and bit counts
+
+Trisul stores all _flows_ in highly efficient, compressed format optimized for fast queries over large datasets. This section describes the tools available to work with flows.
 
 import DocCardList from '@theme/DocCardList';
 
 <DocCardList />
-
 
 ##### Howto: with flows
 
