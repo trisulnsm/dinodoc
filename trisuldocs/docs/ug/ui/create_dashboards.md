@@ -21,6 +21,8 @@ To create a dashboard,
 
 ![](images/newdashboard.png)
 
+*Figure: All Dashboards*
+
 :::note path
 Go to Dashboard-> Show all-> Click New
 
@@ -29,6 +31,8 @@ Go to Dashboard-> Show all-> Click New
 *Create a new dashboard* window opens up with the following fields
 
 ![](images/createdashboard.png)
+
+*Figure: Customize a Dashboard*
 
 | Fields         | Description                                                                                                                                                                                 |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -47,6 +51,8 @@ Once you have created a new dashboard, Now you are at the new dashboard panel wi
 
 ![](images/modules.png)
 
+*Figure: Dashboard Components*
+
 1) #### Time Window
    
    You can set the time window for the selected dashboard from 5 mins to any desirable time by choosing a custom time and date.
@@ -55,7 +61,7 @@ Once you have created a new dashboard, Now you are at the new dashboard panel wi
    
    You can choose from 5 to 500 topper counts for the current dashboard.
 
-3) #### Module Name and description
+3) #### Module Name and Description
    
    Displays the name of the module and a short description
 
@@ -71,7 +77,7 @@ Once you have created a new dashboard, Now you are at the new dashboard panel wi
    
    This table gives you a quick output of values including Max, Min, Avg, Latest, Total and 0th Percentile. If you have added more than one metrics the same will be reflected for each metrics differentiated by color.
 
-## How to add a Dashboard to the Menu
+## How to Add a Dashboard to the Menu
 
 Go to *All Dashboards*
 
@@ -85,15 +91,19 @@ Click on *Add to menu* on the dashboard you would like to add to the menu.
 
 ![](images/addtomenu.png)
 
+*Figure: Add a Dashboard to Menu*
+
 That's it.
 
 You can now easily access the dashboard right from the menu!
 
-## How to remove a Dashboard from the Menu
+## How to Remove a Dashboard From the Menu
 
 Go to Customize-> UI-> Menu Manager
 
 ![](images/removefrommenu.png)
+
+*Figure: Remove a Dashboard from the Menu*
 
 There will be a list of all dashboards. Find the dashboard you would like to remove from the menu and Click Delete. This will only remove the dashboard from the menu and your dashboard itself will not be deleted.
 
@@ -113,6 +123,8 @@ Go to Dashboards-> Show all-> Manage
 
 ![](images/deletedashboard.png)
 
+*Figure: Delete/Clone/Export a Dashboard*
+
 From the list of dashboards, click on the three dots on the right side against the dashboard you would like to delete. and click **Delete**. Your Dashboard is now deleted.
 
 From the same menu, click **Clone** in case you need to take a copy of the dashboard before deleting the dashboard.
@@ -130,5 +142,7 @@ Go to Dashboards-> Show all-> Import a dashboard package
 :::
 
 ![](images/importdashboard.png)
+
+*Figure: Import a Dashboard*
 
 You can import a dashboard in tar.gz format or as a json file. Click on the adjacent tab if you would like to import a dashboard from the URL.

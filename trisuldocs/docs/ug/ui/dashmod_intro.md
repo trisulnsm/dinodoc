@@ -21,7 +21,7 @@ Key rules about modules and dashboards:
 5. If there are no modules in a particular position that position is not
    rendered at all as trisul modules auto adjust for width.
 
-## An example - Current Hosts
+## An Example - Current Hosts
 
 The first screen you will see when you login is the Current Hosts
 overview dashboard
@@ -54,6 +54,8 @@ From the Menu, Go to Dashboards-> Show all
 
 ![](images/viewalldashboards.png)
 
+*Figure: Showing All Dashboards*
+
 This shows the list of available dashboards.
 
 **Method 2:**
@@ -65,6 +67,8 @@ From the Menu, Go to Customize-> Show all-> Dashboards
 :::
 
 ![](images/viewalldashboards1.png)
+
+*Figure: Showing All Dashboards*
 
 This also shows the list of available dashboards.
 
@@ -82,6 +86,8 @@ From the Menu, Go to Customize-> Show all-> Modules
 
 ![](images/viewallmodules.png)
 
+*Figure: Showing All Modules*
+
 This will show a list of all available modules.
 
 To **view one particular module** from the list, check on the name of the dashboard that contains the module and navigate to that dashboard to select the module.
@@ -96,7 +102,7 @@ Dashboard toolbars can be accessed from the right side corner of each
 dashboard window. 
 
 ![](images/toolbars/dashboard_icons.png)  
-*Dashboard level toolbar*
+*Figure: Dashboard level toolbar*
 
 #### Operations
 
@@ -116,7 +122,7 @@ The following operations can be performed using the toolbars:
 Module toolbar is the three dots on the top right corner of the [module](/docs/ug/ui/dashmod_intro#view-a-moduleall-modules). By clicking on the module toolbar you get a list of actions that can be done on the modules.
 
 ![](images/toolbars/module_icons.png)  
-*Module toolbar*
+*Figure: Module toolbar*
 
 #### Operations
 

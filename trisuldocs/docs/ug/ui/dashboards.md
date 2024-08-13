@@ -2,7 +2,7 @@
 sidebar_position: 7
 ---
 
-# Default dashboards
+# Default Dashboards
 
 Trisul ships with a bunch of default dashboards which you will be seeing
 as soon as you first log in. This page describes each of them.
@@ -22,7 +22,7 @@ Networks](/docs/ug/webadmin/home_networks). Under the screenshot you can find a 
 
 ![](images/dashboards/current-hosts.png)
 
-*Current active internal and external hosts dashboard*
+*Figure: Current active internal and external hosts dashboard*
 
 The Hosts dashboard consists of the following modules
 
@@ -63,7 +63,7 @@ The modules in it are
 
 ------------------------------------------------------------------------
 
-## Live network summary dashboard
+## Live Network Summary Dashboard
 
 Automatically updated overview of network summary activites.
 
@@ -79,16 +79,16 @@ drilldown.
 7. Top apps
 
 ![](images/dashboards/live-dashboard-1.png)  
-*Live 1-min network traffic and security summary*
+*Figure: Live 1-min network traffic and security summary*
 
 Shows Top Internal Hosts, External Hosts, and Apps in 1-min real time.
 
 ![](images/dashboards/live-dashboard-2.png)  
-*Live charts with Application usage*
+*Figure: Live charts with Application usage*
 
 ------------------------------------------------------------------------
 
-### Modules in the Live Overview dashboard
+### Modules in the Live Overview Dashboard
 
 A top level overview of network activity.
 
@@ -157,15 +157,15 @@ Number” from the dropdown
 
 :::
 
-### Monitor Total volume per AS
+### Monitor Total Volume Per AS
 
 ![](images/dashboards/asn.png)  
-*Showing Total Traffic to and From AS*
+*Figure: Showing Total Traffic to and From AS*
 
-### Monitor Time series traffic profile per AS
+### Monitor Time Series Traffic Profile Per AS
 
 ![](images/dashboards/asn-2.png)  
-*Showing Timeseries Traffic profiles per Autonomous System at Gateways*
+*Figure: Showing Timeseries Traffic profiles per Autonomous System at Gateways*
 
 The Autonomous System traffic is monitored using two mechanisms
 
@@ -177,13 +177,13 @@ from border routers peering AS BGP information
 
 ------------------------------------------------------------------------
 
-## Country Location based Traffic monitoring
+## Country Location Based Traffic Monitoring
 
 Monitor traffic uploaded and download on a per-Country basis. The
 Country Code can also be added to every single flow using [Automatic
 Flow Taggers](/docs/ug/flow/tagger) The included statistics are Top-K, Time Series Traffic Profile for planning and trending, and Bottom-K for outlier and security applications. You can even map the traffic down to the City/County level.
 
-### Traffic upload and download
+### Traffic Upload and Download
 
 Keep track of which countries give most traffic , flows, Top-N, Bottom-N
 and Time series trending supported.
@@ -215,7 +215,7 @@ to the browser from the Probe network, so the data is typically 1-2
 seconds real time.
 
 ![](images/dashboards/Real-Time-Traffid.png)  
-*Watch a live situation of network traffic*
+*Figure: Watch a live situation of network traffic*
 
 | Module                                                | Description                                                                                                 |
 | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -224,7 +224,7 @@ seconds real time.
 | Live view of Top Internal Hosts on Network            | Currently active Internal Hosts                                                                             |
 | Live view of Top Applications                         | Currently active top applications                                                                           |
 
-### Real time stabbers
+### Real Time Stabbers
 
 You can watch any metric , Top-K, or Flows in real time using the [Real
 Time Stabbers (read more)](/docs/ug/cg/stabber)
@@ -262,7 +262,7 @@ to the Trisul Probes themselves.
 | PCAP Disk Bandwidth            | A very useful statistic. Tells you at how much Mbps is the data throughput to disk. In a steady state with full packets enabled, a 100Mbps traffic monitor would also result in a 100Mbps disk bandwidth             |
 | Network vs PCAP Disk Bandwidth | Compare Network vs PCAP<br/>Chart is useful to test the effectiveness of your Packet Capture policy. If you have a good Pruning policy the PCAP bandwidth must be a fraction of your network bandwidth.              |
 
-## More dashboards
+## More Dashboards
 
 There are dozens of other dashboards like this and you can create your
 own. Clicking on the “Show All” menu item brings up a list of all

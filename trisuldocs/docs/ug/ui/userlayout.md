@@ -8,17 +8,21 @@ When you login as a non admin user you will see the following layout
 
 ![User Layout](images/userlayout.png)  
 
+*Figure: User Layout*
+
 Observe three sections 
 
 - Top Panel
 - Menu Panel
 - Dashboard Panel 
 
-### Top Panel details
+### Top Panel Details
 
 The top panel contains the following items
 
 ![Top panel](images/topbar.png)  
+
+*Figure: Top Panel of User Layout*
 
 1) #### Menu Toggle
    
@@ -35,6 +39,10 @@ You can use the Search bar tool to find items of your interest.
 4) #### Alerts and Notifications
 
 ![](images/alertsnnotifications.png)
+
+
+*Figure: Alerts and Notifications in Top Panel*
+
 You can check for the alerts and notifications on External IDS, Threshold Crossing, Threshold Band Alerts, Blacklist Activity and Flow tracker here.
 
 5) #### License Detail
@@ -44,6 +52,8 @@ You can check the validity of your License here.
 6) #### Probe Switch
    
    ![](images/probeswitch.png)
+   
+   *Figure: Probe Switch in Top Panel*
    
    You can switch between probes and check on the probe health by clicking on the probe switch. By default it is set to Probe0.
 
@@ -59,15 +69,19 @@ This shows the host's name. All time zones in Trisul are displayed in the host's
    
     ![](images/account.png)
    
+   *Figure: Account Switch*
+   
     Clicking on the account button you can get the account history, change password, and signout from the current account. 
    
    ## Menus
 
 A fully customizable multi open collapsible menu system.
 
-#### Basic operations
+#### Basic Operations
 
 ![](images/menus.png)
+
+*Figure: User Layout Menu*
 
 Clicking on menu item opens a page with all options.
 
@@ -78,6 +92,8 @@ Trisul remembers the expanded state of the menu per user.
 1) #### Shortcut Menu
    
    ![](images/shortcutbutton.png)
+   
+   *Figure: Shortcut Menu in User Layout Menu*
    
    Clicking on the shortcut menu you can quickly navigate to the home, routers and interfaces, and explore flows from any page.
 2. ## Tenants
@@ -96,6 +112,8 @@ Dashboards are used to present network analysis modules by placing them
 on specific locations on a web page.
 
 ![](images/livedashboard1.png)
+*Figure: Dashboard in User Layout*
+
 The Dash board contains the following elements
 
 | Elements                                                             | Function                                                                                                                                                                                                                            |

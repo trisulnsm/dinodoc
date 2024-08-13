@@ -21,6 +21,8 @@ This is a list of all module templates supported by Trisul.
 
 ![](images/moduletypes.png)
 
+*Figure: Module Templates from Dashboard Customization Option*
+
 |     | Module Templates                                                          |
 | --- | ------------------------------------------------------------------------- |
 | 1   | [Key Traffic](/docs/ug/ui/module_templates#key-traffic)                   |
@@ -58,6 +60,8 @@ A "Key Traffic" module in Trisul is designed to monitor and analyze network traf
 
 ![](images/keytraffic_modtemp.png)
 
+*Figure: Key Traffic Module*
+
 ### Parameters
 
 | Parameter name | Default value | Description                                                                                                          |
@@ -80,6 +84,8 @@ This is a sample module showing the toppers traffic of top 10 ASNumbers in uploa
 
 ![](images/topperstraffic_modtemp.png)
 
+*Figure: Toppers Traffic Module*
+
 ### Parameters
 
 | Parameter name | Default value | Description                                                                                            |
@@ -99,6 +105,8 @@ A pre-configured template for visualizing network traffic changes over time like
 This sample module of Toppers Trend shows the Top 10 ASNumbers' trends in network traffic over time
 
 ![](images/topperstrend_modtemp.png)
+
+*Figure: Toppers Trend Module*
 
 ### Parameters
 
@@ -120,6 +128,8 @@ The following sample of Current Toppers module shows which top 10 ASNumbers are 
 
 ![](images/currenttoppers_modtemp.png)
 
+*Figure: Current Toppers Module*
+
 ### Parameters
 
 | Parameter name     | Default value | Description                                                              |
@@ -140,6 +150,8 @@ This example of retro toppers module shows the top ASNumbers of past. You can cl
 
 ![](images/retrotoppers_modtemp.png)
 
+*Figure: Retro Toppers Module*
+
 ### Parameters
 
 | Parameter name     | Default value | Description                                                              |
@@ -159,6 +171,8 @@ This Single value module displays a single, key performance indicator (KPI) or m
 This is an example of Single Value module which shows the total bandwidth of aggregates in a single value.
 
 ![](images/singlevalue_modtemp.png)
+
+*Figure: Single Value Module*
 
 ### Parameters
 
@@ -182,6 +196,8 @@ Real Time Traffic module displays the real-time network traffic information prov
 This is an example of Real Time Traffic module of both Inbound vs Outbound differentiated by different colors as you can see.
 
 ![](images/realtimetraffic_modtemp.png)
+
+*Figure: Real Time Traffic Module*
 
 ### Parameters
 
@@ -220,6 +236,8 @@ The following example is the Real Time Toppers module for Top 10 ASNumbers in Up
 
 ![](images/realtimetoppers_modtemp.png)
 
+*Figure: Real Time Toppers Module*
+
 ### Parameters
 
 | Parameter name | Default value | Description                                            |
@@ -234,9 +252,11 @@ The following example is the Real Time Toppers module for Top 10 ASNumbers in Up
 
 The Favorite Key Traffic Module is the same as [Key Traffic](/docs/ug/ui/module_templates#key-traffic) module except this can be customized where you can select and display the traffic data for your most important keys or frequently accessed traffic metrics in a single, convenient dashboard. 
 
-This is the Favorite Key Traffic module showing a module for the key SYS:GROUP_TOTALS for the countergroup ASNumbers in upload bytes.
+This is the favorite Key Traffic module showing a module for the key SYS:GROUP_TOTALS for the countergroup ASNumbers in upload bytes.
 
 ![](images/favoritekeytraffic_modtemp.png)
+
+*Figure: Favorite Key Traffic module showing a module for the key SYS:GROUP_TOTALS for the countergroup ASNumbers in upload bytes.*
 
 ### Parameters
 
@@ -255,13 +275,17 @@ Traffic chart module is the same as [Key traffic](/docs/ug/ui/module_templates#k
 
 The following example shows 
 
-1) Separate modules for each key Total and Home net
+1) Separate modules for each key Total and Into Home net
 
 2) The keys- Total and Into Home Net into a single module for http and https
 
 ![](images/trafficchart1_modtemp.png)
 
+*Separate Modules for each Key Total and Into Home net*
+
 ![](images/trafficchart2_modtemp.png)
+
+*Figure: Total and Into Home Net into a Single Module*
 
 ### Parameters
 
@@ -278,6 +302,8 @@ The following example shows
 The Alert List module displays a list of active alerts or notifications, providing a centralized view of network issues or events that require attention.
 
 ![](images/alertlist_modtemp.png)
+
+*Figure: Alert List Module*
 
 ### Parameters
 
@@ -298,6 +324,8 @@ The Alert Count Module displays the total number of active alerts, providing a q
 
 ![](images/alertcount_modtemp.png)
 
+*Figure: Alert Count Module*
+
 ### Parameters
 
 | Parameter name   | Default value | Description                                                              |
@@ -316,6 +344,8 @@ The existing modules module provides a centralized view of all existing modules 
 
 ![](images/existingmodules_modtemp.png)
 
+*Figure: Existing Modules to Add (From inside of Dashboard)*
+
 ## Custom URL Page
 
 The Custom URL Page Module allows you to create a custom module by providing a page URL. This displays specific data, metrics, or information of that page into your module.
@@ -323,6 +353,8 @@ The Custom URL Page Module allows you to create a custom module by providing a p
 In the following example, the URL of the Trisul's flow map has been given as input and information on that page has been added as a module.
 
 ![](images/urlpage_modtemp.png)
+
+*Figure: Showing Trisul's Flow Map*
 
 ### Parameters
 

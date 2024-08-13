@@ -19,6 +19,10 @@ right corner.
 
 ![](images/dashboards/hidesearchform.png)
 
+*Figure: Analysis Form Showing Hide Button*
+
+
+
 ## Toolbars
 
 The toolbar area is the big title area at the top.There are two options
@@ -33,14 +37,18 @@ Sample form shows the analysis
 
 ![](images/dashboards/pdfretrofaq.png)
 
-## Packets and Flows drilldown buttons
+*Figure: Showing Analysis Options*
+
+## Packets and Flows Drilldown Buttons
 
 In the sample form below,common cues to indicate that you can view
 related flows or download a PCAP is mentioned.
 
 ![](images/dashboards/packetsnflowsdrilldown.png)
 
-### Using search
+*Figure: Showing Packets and Flows Drilldown Buttons*
+
+### Using Search
 
 You can use the *Search* tool to find items of interest.
 
@@ -54,7 +62,7 @@ You can use the *Search* tool to find items of interest.
 > names, you will be redirected to their search forms which are more
 > flexible. See [URL Resources](/docs/ug/resources/url) and [DNS Resources](/docs/ug/resources/dns)
 
-## The search box
+## The Search Box
 
 The search box is located below the side menu bar as shown here.
 
@@ -62,7 +70,9 @@ Enter some search text here and press *Enter*
 
 ![](images/dashboards/searchbar.png)
 
-## Search results
+*Figure: Search Box*
+
+## Search Results
 
 The *search results* page contains all items that might match your
 query.
@@ -70,16 +80,20 @@ query.
 1. Searching for amazon.com will return x.y.amazon.com.
 2. Searches are case insensitive
 
-Click on the View Details button to explore further
+Click on the View button to explore further
 
 ![](images/dashboards/searchresult.png) 
 
-## Autocomplete
+*Figure: Search Result Page*
+
+## AutoComplete
 
 All relevant form fields in Trisul are autocomplete capable. This
 functionality is triggered when you enter three or more characters.
 
 ![](images/dashboards/autocomplete.png)
+
+*Figure: Showing AutoComplete Option of Long Term Analysis Form*
 
 ## Charts and Chart Interactions
 
@@ -89,7 +103,7 @@ Trisul supports a number of intuitive chart surfaces that render the statistical
 
 ![](images/moduleicons.png)
 
-The module icons are useful in traversing the graphical chart in detail. Icons from right to left includes,
+*Figure: Module Icons*
 
 - **PDF**- Click on the PDF icon on the top righ corner of the module to download the chart data in PDF.
 
@@ -110,10 +124,14 @@ For example in the following chart both Inbound and Outbound items in the legend
 | ![](images/legendtable.png) |
 | --------------------------- |
 
+*Figure: Showing Legend Table in a Module*
+
 You can click on any of the items like Inbound or inbound in the legend area to **hide or unhide** that data from the chart like in these examples.
 
 | ![](images/legend2.png) | ![](images/legend3.png) |
 | ----------------------- | ----------------------- |
+
+*Figure: Showing Hide/Unhide data from Chart using Legend Table Meters*
 
 Click on the `Expand Legend` spot to get a detailed legend  
 Auto refresh the charts via Ajax calls
@@ -124,11 +142,15 @@ Hover your mouse over an item such as a PIE slice or line graph and get a toolti
 
 ![](images/netflowvolume.png)
 
+*Figure: Showing Tooltip in a Graph Module*
+
 ### Key Dashboard
 
 You can click on any key items on the chart and it will take you to the [Key dashboard](/docs/ug/ui/key_dashboard) of that Key.
 
 ![](images/keydashboard1.png)
+
+*Figure: Key Dashboard*
 
 ### Retro Charts
 
@@ -136,8 +158,12 @@ Click on any of the module toolbar and click View historical to view the retro c
 
 ![](images/retrochart2.png)
 
+*Figure: View Historical Option from Module Toolbar*
+
 Select a time frame and view the retro chart for that particular past time period.
   ![](images/retrochart.png)
+
+*Figure: Retro Chart with Time Frame*
 
 The retro charts are even more interactive :  
 

@@ -2,7 +2,7 @@
 sidebar_position: 9
 ---
 
-# Key dashboard
+# Key Dashboard
 
 The Key Dashboard is like a hub that allows you to dive deeper into a specific Key's data and explore related analysis paths. It's a powerful tool for investigating and understanding network traffic in Trisul. Clicking on any key in a dashboard will take you to the Key Dashboard of that particular key.
 
@@ -16,11 +16,11 @@ A quick recap of the hierarchy and terminology first:
 
 For more read [Traffic Metering Concepts](/docs/ug/cg/intro)
 
-### How to access the key dashboard
+### How to Access the Key Dashboard
 
 There are two ways to get to the key dashboard
 
-#### 1. By clicking
+#### 1. By Clicking
 
 Click on any Key on any dashboard in any page to open the Key Dashboard for that Key
 
@@ -31,9 +31,11 @@ Some examples :
 | ![](images/keydashboard1.png) | All ASNumbers are linked to their respective key dashboards |
 | ![](images/keydashboard2.png) | All hosts are linked to their respective key dashboards     |
 
+*Figure: Showing Keys on Dashboards for Different Counter Groups*
+
 Note that you can also click on PIE and BUBBLE chart items.
 
-#### 2. By searching
+#### 2. By Searching
 
 Type in a search item and click on search results
 
@@ -42,12 +44,14 @@ that is not visible on any of the screens shown by Trisul. For example :
 You want to search for a host `mail.trisul.org` but it isnt showing up
 on any lists for you to click on.
 
-### Using the key dashboard
+### Using the Key Dashboard
 
 The default key dashboard has the following modules. Here is a brief
 description of each of these modules. They are mostly self explanatory.
 
 ![](images/keydashboard3.png)
+
+*Figure: Key Dashboard Components*
 
 | Module                                                  | Usage                                                           |
 | ------------------------------------------------------- | --------------------------------------------------------------- |
@@ -64,6 +68,8 @@ With Traffic History module you can view the amount of data total, transmitted o
 
 ![](images/traffichistory.png)
 
+*Figure: Traffic History Module in Key Dashboard*
+
 2) ## Key Details
 
 Lets pay special attention to the **Key Details** module. This is the
@@ -77,6 +83,8 @@ This module is split into two panels.
    key
 
 ![](images/keydetails.png)
+
+*Figure: Key Details in Key Dashboard*
 
 The information on the left includes,
 
@@ -94,6 +102,8 @@ The information on the left includes,
 
    ![](images/setlabeloredit.png)
 
+*Figure: Set/Edit Label from Key Dashboard*
+
 1) Assigning a user friendly name such as a hostname to an IP is a common
    operation. Click on **Assign User Label/Edit attributes** if you want to change the label name, description, or edit attributes  and click update. See the [resolve name](/docs/ug/cg/resolve) section for more details.
 
@@ -107,7 +117,7 @@ The information on the left includes,
 
 6) Click **Create Bandwidth Cap**, and set the amount of data you can upload or download. Exceeding this limit can result in a additional fee and can be viewed in the chart. Bandwidth is usually given in JSON format. For example, 5 Mbps should be given as `{"bw": 5000000}`.
 
-### Drilldown options
+### Drilldown Options
 
 > The contents shown here depend on the type of key being displayed
 
@@ -136,16 +146,22 @@ The most common ones are described below.
 
 ![](images/alacartestatistics.png)
 
+*Figure: A La Carte Statistics in Key Dashboard*
+
 With A La Carte Statistics you can select specific statistical metrics, select a time frame, and a chart surface you prefer and click Draw chat. This displays a personalized view on your dashboard. 
 
 4) ## Flow Activity
    
    ![](images/flowactivity.png)
    
+   *Figure: Recent Flow Activity in Key Dashboard*
+   
    With Flow Activity you can gain insights into network traffic details like Protocol, Source IP, Source Port, Destination IP, Destination Port, Volume, Start time, Duration, Probe, Tags, Packet Capture available for that item and Flow State. Each Flow can be further filtered using the three lines option button against each flow.
 
 5) ### Daily Report
    
    ![](images/dailyreport.png)
+   
+   *Figure: Daily Report Module in Key Dashboard*
    
    You can click on any date on the daily report module and get the traffic report for that date in PDF format.

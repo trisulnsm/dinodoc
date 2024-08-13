@@ -26,6 +26,8 @@ Select Customize-> UI-> Modules-> Add New Module
 
 ![](images/addnewmodule.png)
 
+*Figure: Add New Module Options*
+
 From the list of module types select one and fill out the fields.
 
 ### Add Modules to a New/Existing Dashboard
@@ -41,6 +43,8 @@ In the Module Layout-> Click on the Plus icon
 You can see the list of modules that you can add to the new dashboard here.
 
 ![](images/moduletypes.png)
+
+*Figure: Module Templates*
 
 Similarly, to add modules to an existing dashboard, [customize the dashboard](/docs/ug/ui/create_dashboards#how-to-edit-a-dashboard) and follow the same steps as adding a module to new dashboard.
 
@@ -70,12 +74,14 @@ If you have observed a module that you would like to add as a new module, you ca
 
 ![](images/clonemodule.png)
 
+*Figure: Toolbar Showing Options Clone/Delete a Module from the Dashboard*
+
 Similarly to **delete a module**, click Delete.
 
 ### Creating Modules with Arithmetic Expressions
 
 You can also create modules with the help of arithmetic 
-expressions.You can combine different metrics together and show in a 
+expressions. You can combine different metrics together and show in a 
 module.
 
 Generally Models are numbered as 1,2,3,etc. Supported operators are +,_,*,%,/,()
@@ -85,7 +91,11 @@ For eg. Add two Metrics, You have to enter arithmetic expression as
 
 ![](images/dashboards/arithmeticexpressionfields.png)
 
+*Figure: Form to Create a Module Using Arithmetic Expression*
+
 A custom module dashboard with arithmetic expressions will look like
 this.
 
 ![](images/dashboards/arithmeticexpressionchart.png)
+
+*Figure: Arithmetic Expression Module*

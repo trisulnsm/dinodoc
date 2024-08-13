@@ -8,11 +8,15 @@ When you login as admin you will see the admin layout which is different from th
 
 ![](images/adminlayout.png)
 
+*Figure: Admin Layout*
+
 The Admin panel consists of the following elements,
 
 1) ## Admin Menu
    
    ![](images/admincontextmenu.png)
+   
+   *Figure: Admin Menu*
    
    1) The three dots on the top right corner of the context menu is the **shortcut menu** where you can quickly navigate to home, users, settings, and apps from any page.
    
@@ -35,6 +39,8 @@ The Admin panel consists of the following elements,
 4) ## Start/Stop Tasks
    
       ![](images/startorstoptasks.png)
+   
+   *Figure: Start/Stop Tasks*
    
    1) Click on the three dots on the top right corner of the start/stop tasks and click Set as home if you would like to set this as your home page.
    
@@ -60,6 +66,10 @@ The Admin panel consists of the following elements,
        
        ![](images/hub0.png)
        
+       *Figure: hub0 Options*
+       
        If you click on the three lines against the probe0 it will show the following menu
        
        ![](images/probe0.png)
+       
+       *Figure: probe0 Options*
