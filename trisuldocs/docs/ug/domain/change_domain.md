@@ -1,10 +1,11 @@
 ---
 sidebar_position: 2
+
 ---
 
 import Highlight from '/src/components/Highlighter/Highlight';
 
-# Change Domain settings
+# Change Domain Settings
 
 A Trisul distributed domain is identified by :
 
@@ -16,7 +17,7 @@ Sockets as endpoints. So by default, the Trisul-Hub and Trisul-Probe
 will run on the same physical box. This page describes how you can
 generate a new Domain Certificate to modify these settings.
 
-## IPC vs TCP domain
+## IPC vs TCP Domain
 
 Trisul uses ZeroMQ (0MQ) as the underlying transport layer. As mentioned
 above, the default install of Trisul uses IPC Unix Sockets for
@@ -25,15 +26,12 @@ above, the default install of Trisul uses IPC Unix Sockets for
 In the figure below, the domain0 uses Unix Sockets identified by the 0MQ
 connection strings `ipc:///usr/local/var..`
 
-![](images/ipctcp.png)
+| ![](images/ipctcp.png) | ![](images/tcpdomain.png) |
+| ---------------------- | ------------------------- |
 
-The figure below shows a open distributed domain that uses TCP ports
-14000 and 14001 identified by the 0MQ connection strings that start with
-`tcp://10.1.18.102:14001`
+*Figure: The Open distributed domain that uses TCP ports 14000 and 14001 identified by the 0MQ connection strings that start with* `tcp://10.1.18.102:14001` 
 
-![](images/tcpdomain.png)
-
-## domain0.cert - the certificate file
+## domain0.cert - The Certificate File
 
 Domain information is encoded in the Domain Certificate File that can be
 found at  
@@ -60,7 +58,7 @@ curve
 On the hub node there is another file called the `domain0.cert_secret`
 representing the private key file.
 
-## Switching to a distributed domain
+## Switching to a Distributed Domain
 
 Changes to the domain settings just involve regenerating a new cert+key
 pair — a new pair of files `domain0.cert` and `domain0.cert_secret`.
@@ -75,7 +73,7 @@ firewall use `systemctl stop firewalld`.
 
 :::
 
-### Stop the domain and all contexts
+### Stop the Domain and All Contexts
 
 This stops all Trisul processes on all nodes and then stops the domain0
 processes.
@@ -88,7 +86,7 @@ stop domain
 quit
 ```
 
-### Remove the old domain0.cert key pair
+### Remove the Old domain0.cert Key Pair
 
 Remove the old certs from the *share* directory.
 
@@ -97,7 +95,7 @@ sudo rm /usr/local/share/trisul-hub/domain0.cert
 sudo rm /usr/local/share/trisul-hub/domain0.cert_secret
 ```
 
-### Create a new domain0 key pair
+### Create a New domain0 Key Pair
 
 Use `trisulctl_hub create domain` to create a new certificate+key pair
 with different TCP endpoints.
@@ -144,7 +142,7 @@ probes you may deploy.
 
 :::
 
-### Install the new domain certificate
+### Install the New Domain Certificate
 
 The new domain files have been placed at :  
 
@@ -185,7 +183,7 @@ Use `trisulctl` commands `list nodes` and `info context` to check if all
 nodes have joined the new domain.All the distributed nodes must get
 listed here.
 
-### Run change_endpoints for hub context (for first probe only)
+### Run change_endpoints for Hub Context (For First Probe Only)
 
 <span class="badge badge--danger">RUN ON HUB</span>
 <span class="badge badge--info">ONLY FOR FIRST PROBE</span>
@@ -205,7 +203,7 @@ need to switch the Hub to a TCP connection mode. Follow these steps.
 .. next enter a starting port number
 ```
 
-### Finishing up
+### Finishing Up
 
 Now `trisulctl_hub restart domain` and `trisulctl_probe restart domain`
 on all the hub and probe nodes respectively. Then use `list nodes` to

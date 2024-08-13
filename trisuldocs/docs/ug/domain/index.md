@@ -1,4 +1,4 @@
-# Trisul distributed domain concepts
+# Trisul Distributed Domain Concepts
 
 Trisul 7.0 is a *streaming* *distributed* analytics platform. There are
 “Trisul Probes” which acquire and process network data and there are
@@ -19,14 +19,14 @@ The following diagram illustrates the components involved
 
 ![](images/dom.png)
 
-*Trisul domain components*
+*Figure: Trisul domain components*
 
 The domain represents a top level management group within which you
 create a topology of *probe* nodes and *hub* nodes. All the nodes are
 logical entities and you can install them all on a single physical
 machine or distribute them on different machines.
 
-## Domain nodes terminology
+## Domain Nodes Terminology
 
 The following logical concepts are key to understanding a Trisul domain.
 
@@ -125,8 +125,6 @@ and cryptography. See [CurveMQ](http://curvezmq.org/) for more.
 2. The command line tools trisulctl_probe and trisulctl_hub allow you
    to manage the whole setup easily
 
-
-
 A domain is the top level group to which probes and hubs are members.
 This section describes the concepts and operations on the domain.
 
@@ -155,13 +153,13 @@ because by default Trisul Probe and Trisul Hub reside on the same box.
 If you want to move to a TCP socket you need to create a new certificate
 as shown below with the new network ports.
 
-### Creating a new domain certificate
+### Creating a New Domain Certificate
 
 It is recommended that you create and use a fresh domain0.cert file
 after playing with Trisul for a while. This is because the Trisul
 packages all include the same file so you can get started.
 
-#### Create a new domain certificate
+#### Create a New Domain Certificate
 
 1. Type `trisulctl_hub`
 2. Enter command `create domain`
@@ -190,7 +188,7 @@ curve
     public-key = "?$*:Ze]{UxMgkRM[K[{FmmEc@wq:P4p)+#qT0c5d"
 ```
 
-#### Install the new domain certificate
+#### Install the New Domain Certificate
 
 Now you need to install the new certificate on the hub and then
 redistribute it to all the other nodes.
@@ -208,7 +206,7 @@ redistribute it to all the other nodes.
 Now you need to distribute the new `domain0.cert` file to all probes and
 hub nodes.
 
-#### Install domain certificate on probe and hub
+#### Install Domain Certificate on Probe and Hub
 
 Say you got the new domain0.cert file in /home/mydir on a probe node. To
 update the certificate do :

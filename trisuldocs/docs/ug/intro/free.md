@@ -1,7 +1,8 @@
 ---
 sidebar_position: 2
 ---
-# How to get started
+
+# How to Get Started
 
 Trisul is incredibly easy to get started on. There is no sign ups or
 credit cards - its as easy as ‘apt-get install’ or ‘yum install’.
@@ -20,7 +21,7 @@ The following links will get you up and viewing dashboards.
    firewall](/docs/ug/install/startstop) \] \| \[[your first
    login](/docs/ug/basicusage/) \]
 
-## Single probe
+## Single Probe
 
 The easiest way to start is to use our *meta packages* “Trisul Full
 (CentOS) or trisul-full (Ubuntu)”. This will install all components on a
@@ -29,7 +30,7 @@ get started. Later you can create your own data collection topology by
 distributing trisul-probes. More details about distributed [Trisul
 Domain](/docs/ug/domain)
 
-## The default Free license
+## The Default Free License
 
 The default install of Trisul automatically includes a ‘Free License’.
 This lets you run Trisul for free but restricts the database to the most
@@ -37,7 +38,7 @@ recent 3 days. This is a great way to get started. The same APIs for
 extending Trisul are available for the Free License as well. More
 details about the [Free License](https://www.trisul.org/free-license/)
 
-## Easy licensing
+## Easy Licensing
 
 At any time of running on the free license, you can upgrade to a paid
 license depending on the size of your internal network. The licensing

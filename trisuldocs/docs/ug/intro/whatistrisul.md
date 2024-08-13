@@ -18,7 +18,7 @@ response, and audit.
 capture and load balancing mechanims like PF_RING, AF_PACKET, and
 various proprietary hardware acceleration.
 
-## Who benefits from Trisul
+## Who Benefits From Trisul
 
 Trisul will help the following organizations
 
@@ -39,7 +39,7 @@ Trisul will help the following organizations
   build their own tools on top of the Trisul platform. We feature an
   open and well documented API using plain Lua and Ruby.
 
-## Multi site
+## Multi Site
 
 The data collection and streaming analysis component is called the
 *Probe* . Probes are separated from the storage and reporting part,
@@ -56,7 +56,7 @@ a well documented and fast LUA API. The database query and scripting
 automation tasks can be written using [Trisul Remote Protocol (TRP)
 API](/docs/lua)
 
-## Quick features list
+## Quick Features List
 
 The following table contains a list of things you can do with Trisul.
 

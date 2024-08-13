@@ -50,7 +50,7 @@ As an example, if we wanted to refer to **“Transmit traffic of host
 
 The entities of interest are
 
-|               |                                                                   |                                                                                                    |
+| Entity        | Description                                                       | Example as in diagram                                                                              |
 | ------------- | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | Counter Group | The Hosts counter group                                           | `{4CD742B1-xxx}` identifies the *host* counter group.                                              |
 | Key           | The individual host within the counter group, also known as a Key | C0.A8.01.02 identifies the host with IP 192.168.1.8                                                |
@@ -100,7 +100,7 @@ There are two parameters of importance.
 
 2. Topper Bucket Size
 
-|                    |                              |                                                                                                      |
+| Parameters         | Default value                | Description                                                                                          |
 | ------------------ | ---------------------------- | ---------------------------------------------------------------------------------------------------- |
 | Bucket Size        | Default 30 seconds           | Traffic data is bucketized (averaged) over this many seconds                                         |
 | Topper Bucket Size | Default 300 secs (5 minutes) | For those stat-ids for which we are tracking toppers, the toppers are stored every this many seconds |

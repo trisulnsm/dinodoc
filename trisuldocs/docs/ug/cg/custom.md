@@ -75,7 +75,7 @@ counters.
 
 Some examples :
 
-|                     |                                                                     |
+| Counter Group       | Description and Parameters                                          |
 | ------------------- | ------------------------------------------------------------------- |
 | Users of Youtube    | All IPs connecting to known YouTube IPs can be monitored separately |
 | HTTP Hosts          | Parent = Hosts, Filter = Apps (Keys = http)                         |
@@ -203,7 +203,7 @@ certain meter criteria.
 
 Examples :
 
-|                       |                 |                                                                                            |
+| Counter Group         | Description     | Meter Criteria                                                                             |
 | --------------------- | --------------- | ------------------------------------------------------------------------------------------ |
 | Internal hosts only   | Subset of hosts | When Hosts meter “Homenet” \> 0                                                            |
 | Under the radar hosts | Subset of hosts | When Hosts meter “Total” \< 2000 (hosts who only xmit or recv \< 2K bytes in an interval ) |
@@ -330,7 +330,7 @@ country see.
 By default, Trisul ships with the following three cardinality counters
 enabled.
 
-|                       |                                                              |
+| Cardinality Counter   | Description                                                  |
 | --------------------- | ------------------------------------------------------------ |
 | Unique Apps per Host  | For each host, track how many unique apps were seen          |
 | Unique Hosts per Host | For each host, track how many unique hosts (peers) were seen |
@@ -354,7 +354,7 @@ Login as Admin -\> Select Context:default-> profile0 -\> Custom Counters
 2. Click on *New Cardinality Counter*
 3. Enter the following three fields
 
-|                     |                                                                    |
+| Fields              | Description                                                        |
 | ------------------- | ------------------------------------------------------------------ |
 | Host Counter        | The counter group whose members you want to attach this counter to |
 | Cardinality Counter | The counter group whose uniqueness you want to count               |
@@ -437,7 +437,7 @@ Login as Admin -\> Select Context:default-> profile0 -\> Custom Counters
 
 This leads you to a form with these five fields.
 
-| FieldName          | Description                                                                 |
+| Field Name         | Description                                                                 |
 | ------------------ | --------------------------------------------------------------------------- |
 | Counter Group Name | Name of the counter group                                                   |
 | Description        | Description of the group                                                    |
