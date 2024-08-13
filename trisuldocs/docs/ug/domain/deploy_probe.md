@@ -19,16 +19,16 @@ operations
 2. Authorizing it on the HUB node.
 
 In the following steps, commands labeled
-<Highlight color="#1877F2">RUN ON PROBE</Highlight> must be run on the
+<span class="badge badge--info">RUN ON PROBE</span> must be run on the
 probe node using the CLI tool `trisulctl_probe` or
-<Highlight color="#FF0000">RUN ON HUB</Highlight> using the CLI tool
+<span class="badge badge--danger">RUN ON HUB</span> using the CLI tool
 `trisulctl_hub`
 
 ## Steps to add a new probeWEST to a Trisul domain
 
 ### 1. Install package trisul-probe on the new system
 
-<Highlight color="#1877F2">RUN ON PROBE</Highlight>
+<span class="badge badge--info">RUN ON PROBE</span>
 
 On the new machine, install the `trisul-probe` package as explained in
 the [Downloads page](https://www.trisul.org/download/)
@@ -39,7 +39,7 @@ sudo apt-get install trisul-probe
 
 ### 2. Obtain and install domain certificate
 
-<Highlight color="#1877F2">RUN ON PROBE</Highlight>
+<span class="badge badge--info">RUN ON PROBE</span>
 
 :::note **First time?** Switch domain0 to distributed network TCP mode. 
 
@@ -59,7 +59,7 @@ sudo trisulctl_probe install domain /home/unpl/domain0.cert
 
 ### 3. Create and install a new probe certificate
 
-<Highlight color="#1877F2">RUN ON PROBE</Highlight>
+<span class="badge badge--info">RUN ON PROBE</span>
 
 Create a new certificate/key pair for your new probe , lets call it
 `probeWEST`
@@ -76,7 +76,7 @@ install probe /usr/local/share/trisul-probe/probeWEST.cert
 
 ### Install context on new probe
 
-<Highlight color="#1877F2">RUN ON PROBE</Highlight>
+<span class="badge badge--info">RUN ON PROBE</span>
 
 Since the new probe you are about to deploy will send data to a Trisul
 context called ‘default’ you need to install that context on the new
@@ -93,7 +93,7 @@ Wrote ringpass file   /usr/local/etc/trisul-probe/domain0/probeWEST/context0/rin
 
 ### 5.Add the new probe certificate on the hub server
 
-<Highlight color="#FF0000">RUN ON HUB</Highlight>
+<span class="badge badge--danger">RUN ON HUB</span>
 
 Send the probe certificate file from Step-3 to hub server administrator.
 
@@ -113,7 +113,7 @@ Now the probe can authenticate with the domain.
 
 ### 6.Add the new probe to contexts
 
-<Highlight color="#FF0000">RUN ON HUB</Highlight>
+<span class="badge badge--danger">RUN ON HUB</span>
 
 Authorize and add the new probe to the contexts you want from the hub
 side. Use the `trisulctl_hub set config` command
@@ -151,7 +151,7 @@ See the [Probe to Context Layer mapping reference ](/docs/ref/trsulhubconfig#pro
 
 ### 7.Run change_endpoints for hub context (for first probe only)
 
-<Highlight color="#FF0000">RUN ON HUB</Highlight><Highlight color="#1877F2">ONLY FOR FIRST PROBE</Highlight>
+<span class="badge badge--danger">RUN ON HUB</span><span class="badge badge--info">ONLY FOR FIRST Probe</span>
 
 By default , Trisul uses an IPC connection for each Hub node. If this is
 the first remote probe you are adding. You  
@@ -181,7 +181,7 @@ Congrats your new probe is now live !
 
 ## Uninstall a probe
 
-<Highlight color="#FF0000">RUN ON HUB</Highlight>
+<span class="badge badge--danger">RUN ON HUB</span>
 
 Simply remove the probe certificate file from
 `/usr/local/etc/trisul-hub/domain0` . Then restart the domain. The probe
@@ -194,7 +194,7 @@ dropdown or options in the Web interface. Delete the probe from the
 `trisulHubConfig.xml` hub config files. See above section for the
 location of the file.
 
-<Highlight color="#1877F2">RUN ON PROBE</Highlight>
+<span class="badge badge--info">RUN ON PROBE</span>
 
 On the probe node, you can uninstall the probe using
 
