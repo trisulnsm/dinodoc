@@ -48,7 +48,9 @@ can type in the application keys which are to be traced (eg: p-0050, p
 
 ![](images/ckeymonitor.png)
 
-## Viewing data
+*Figure: Create Custom Key Monitor Form*
+
+## Viewing Data
 
 Directions to view Custom Key Monitors
 
@@ -60,12 +62,14 @@ Select Customize -\> Show all-> Custom Key Monitors
 
 ![](images/ckeymonitorlist.png)
 
+*Figure: Custom Key Monitor List*
+
 1. The page show a list of created custom key monitors  
 
 2. Click the name of the particular custom key , which gives an in depth
    view of the custom key
 
-## Generate reports
+## Generate Reports
 
 Directions to generate reports for custom key monitors
 
@@ -75,6 +79,10 @@ You can generate custom key reports in two ways.
 
 ![](images/generatereportckey.png)
 
+*Figure: Generate Report Option from Custom Key*
+
 2) You can also download the custom key report by clicking on a particular key and entering into its detailed view page to view the report before downloading. On that page, on top right corner you can click on the option toolbar. And click Download PDF to download that report.
 
 ![](images/ckeyreport.png)
+
+*Figure: Download Report from Key Dashboard*

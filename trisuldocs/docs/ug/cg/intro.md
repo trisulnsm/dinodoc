@@ -2,12 +2,12 @@
 sidebar_position: 01
 ---
 
-# Traffic metering concepts
+# Traffic Metering Concepts
 
 This section attempts to briefly explain the basic concepts of counter
 groups, meters, and keys.
 
-## Counters, meters, and keys
+## Counters, Meters, and Keys
 
 ***Counter Group***  
 
@@ -33,7 +33,7 @@ A Key is a unique identifier that labels a specific counter within a CounterGrou
 For example, within the Host counters group, the IP Address `10.10.255.7` is a key. A
 counter group can have millions of keys.
 
-### A picture
+### A Picture
 
 The following example illustrates the concept of  
 
@@ -48,6 +48,8 @@ As an example, if we wanted to refer to **“Transmit traffic of host
 
 ![](images/trafficmeteringconcepts.png)
 
+*Figure: Showing Transmit traffic to Demonstrate Counter Group, Key and Meter*
+
 The entities of interest are
 
 | Entity        | Description                                                       | Example as in diagram                                                                              |
@@ -56,7 +58,7 @@ The entities of interest are
 | Key           | The individual host within the counter group, also known as a Key | C0.A8.01.02 identifies the host with IP 192.168.1.8                                                |
 | Meter         | The statistic                                                     | 2 identifies Transmit Bytes in Bytes/Sec. The hosts counter group tracks about 12 different meters |
 
-## Statistics tracked for each group
+## Statistics Tracked for Each Group
 
 Trisul meters the same set of statistics for each of these keys. Each
 meter, known as stat-id, represents a statistic of interest over time.
@@ -92,7 +94,7 @@ For each Key (counter group item), Trisul tracks and stores :
 > Click on any counter group to see what meters are available. You can
 > also edit the number of toppers tracked
 
-## Data resolution
+## Data Resolution
 
 There are two parameters of importance.  
 
@@ -142,7 +144,7 @@ primitive statistics which you can build upon to create more complex
 counter groups. Built-in counter groups are backed by C code in the core
 Trisul software.
 
-### User defined
+### User Defined
 
 You can build upon the primitive counter groups to create advanced
 custom counters for your business needs. 

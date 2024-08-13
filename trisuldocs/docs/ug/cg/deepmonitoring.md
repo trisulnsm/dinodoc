@@ -18,7 +18,7 @@ Once Deep Monitoring is configured, Trisul enables streaming analytics
 for the above three groups. This allows you to pull up long term reports
 for these.
 
-## Use case
+## Use Case
 
 Most commonly used in the following scenarios
 
@@ -27,7 +27,7 @@ Most commonly used in the following scenarios
 2. Enterprise : Enable Deep Monitoring for File servers, App servers,
    Mail servers, and other key assets.
 
-## How to enable deep monitoring
+## How to Enable Deep Monitoring
 
 Login as admin.
 
@@ -46,6 +46,8 @@ Click Create New-> Create deep monitoring for an IP
 :::
 
 ![](images/deepmonitoringforip.png)
+
+*Figure: Create Deep Monitoring for an IP from Filtered Counter Group*
 
 Now fill out the following form fields.
 
@@ -81,7 +83,7 @@ the Description field by prepending a GROUPNAME with a Pipe character.
 
 Now the two IP are grouped with the name `CORPORATE`
 
-## View reports
+## View Reports
 
 To view deep monitoring reports
 

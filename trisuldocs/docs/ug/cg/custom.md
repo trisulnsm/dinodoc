@@ -3,7 +3,7 @@ sidebar_position: 02
 
 ---
 
-# Custom counter groups
+# Custom Counter Groups
 
 Trisul ships with 40-50 counter groups. Often users want some special
 type of metering for their environment. Trisul lets you build your own
@@ -18,7 +18,7 @@ Example : A counter group called “Web Hosts” that only counts HTTP and
 HTTPS traffic. The parent group is “Hosts” and the filter is “Apps
 80(http) and 443(https)”
 
-[Keyset counter group](/docs/ug/cg/custom#keyset-counter-groups)  
+[Keyset Counter Group](/docs/ug/cg/custom#keyset-counter-groups)  
 **Meter groups of keys rather than individual keys from a host group**
 
 Example : A new counter group called *My apps* which extends the *Apps*
@@ -28,14 +28,14 @@ keysets. Similarly you can count groups of IPs as Web Servers,
 Workstations, VOIP Phones by specifying those groups from the Hosts
 counter group.
 
-[Stat based counter group](/docs/ug/cg/custom#stat-based-counter-groups)  
+[Stat Based Counter Group](/docs/ug/cg/custom#stat-based-counter-groups)  
 **Count only keys that whose values match a mathematical value**
 
 Example : A new counter group called *Scanners*, which extends the
 *Hosts* counter group but only when the meter *Security Alerts* is more
 than 0.
 
-[Rule based counter group](/docs/ug/cg/custom#rule-based-counter-groups)  
+[Rule Based Counter Group](/docs/ug/cg/custom#rule-based-counter-groups)  
 **Specify arbitrary rules matching your business needs**
 
 Example : A new counter group called *Corporate apps* which extends the
@@ -43,7 +43,7 @@ Example : A new counter group called *Corporate apps* which extends the
 80 and subnet = 10.2.2.0/24. You can chain any number of rules to build
 your custom metering.
 
-[Cross Keys counter group](/docs/ug/cg/custom#cross-key-counter-groups)  
+[Cross Keys Counter Group](/docs/ug/cg/custom#cross-key-counter-groups)  
 **Cross product of two or three counter groups**
 
 Example : A new counter group called *Traffic Flows* which is cross
@@ -52,7 +52,7 @@ keys in this new counter group will be a combination of both. Another
 example is *Geo Flows* which is a cross product of three counter groups
 *Internal Hosts X Country X External Hosts*
 
-[Cardinality counting](/docs/ug/cg/custom#cardinality-counting)  
+[Cardinality Counting](/docs/ug/cg/custom#cardinality-counting)  
 **Count uniques X of Y**
 
 Cardinality counters are not a new counter group. You can add up to two
@@ -62,7 +62,7 @@ you to track *for every host* a new metric called *unique apps*
 
 ------------------------------------------------------------------------
 
-## Filtered counter groups
+## Filtered Counter Groups
 
 A cross-product counter group.
 
@@ -82,7 +82,7 @@ Some examples :
 | China Ukraine Hosts | Parent = Hosts, Filter = Country (Keys = cn,ua)                     |
 | Server Apps         | Parent = Apps, Filter = Hosts (Key = 10.10.1.18)                    |
 
-### Create new filtered counter groups
+### Create New Filtered Counter Groups
 
 :::note navigation
 
@@ -104,14 +104,14 @@ Login as Admin -\> Select Context and profile0 -\> Under Custom Counters
 | Key List           | Comma separated list of keys/ranges: `Port-80, 192.168.1.2, Port-5000~Port-8000, 192.168.1.1~192.168.1.255` |
 | Inverse Key List   | The parent will be filtered by all keys Except those in this list.                                          |
 
-### Custom group
+### Custom Group
 
 For more advanced custom counters you can use the [LUA API](/docs/lua/tutorial1)
 to measure any subset of metrics
 
 ------------------------------------------------------------------------
 
-## Keyset counter groups
+## Keyset Counter Groups
 
 A new counter group that aggregates sets of keys from a host counter
 group. This can be used to group IP addresses , port numbers, network
@@ -133,7 +133,7 @@ Login as Admin -\> Select Context:default-> profile0 -\> Custom Counters
 
 ![](images/create_keyset_countergroup.png)
 
-*Creating a new Keyset Counter Group*
+*Figure: Creating a new Keyset Counter Group*
 
 Fill out these fields
 
@@ -147,7 +147,7 @@ Fill out these fields
 Now you have created the counter group. Next you need to group keys
 together.
 
-### Group keys together
+### Group Keys Together
 
 Directions to Create new keyset counter groups
 
@@ -163,13 +163,13 @@ Login as Admin -\> Select Context :default -> profile0 -\>  Custom Counters
 
 ![](images/addoredit_keysetcountergroup.png)
 
-*How to group keys together*
+*Figure: How to group keys together*
 
 1. Click the *Add/Edit Keys* to edit keysets
 2. You will be redirected to a page with following fields
 
 ![](images/addoredit_keysetcountergroup1.png)
-*Adding two IPs and an IP range to a group called BACKUPHOSTS*
+*Figure: Adding two IPs and an IP range to a group called BACKUPHOSTS*
 
 | Field Name | Description                                                                                                   |
 | ---------- | ------------------------------------------------------------------------------------------------------------- |
@@ -191,7 +191,7 @@ You can then view the new counter group in *Retro \> Retro Counters*
 
 ------------------------------------------------------------------------
 
-## Stat based counter groups
+## Stat Based Counter Groups
 
 A new counter group consisting of items based on an observed meter
 value.
@@ -208,7 +208,7 @@ Examples :
 | Internal hosts only   | Subset of hosts | When Hosts meter “Homenet” \> 0                                                            |
 | Under the radar hosts | Subset of hosts | When Hosts meter “Total” \< 2000 (hosts who only xmit or recv \< 2K bytes in an interval ) |
 
-### Creating new Meter Value Counter Group
+### Creating New Meter Value Counter Group
 
 :::note navigation
 
@@ -236,7 +236,7 @@ Login as Admin -\> Select Context
 
 ------------------------------------------------------------------------
 
-## Rule Based counter groups
+## Rule Based Counter Groups
 
 A rule based counter group allows you the maximum flexibility to
 custom-meter your network traffic.
@@ -251,7 +251,7 @@ It works like this :
 
 4. If no rule matches the key falls through to the parent counter group
 
-### An example : Corporate applications
+### An Example : Corporate Applications
 
 You are a network admin in an enterprise and wish to meter traffic in
 terms of your applications.
@@ -310,7 +310,7 @@ leads you to another page , whose fields are as follows
 | Target Key  | Name of the target                |
 | Target Rule | The rule which should be followed |
 
-#### Specifying a target rule
+#### Specifying a Target Rule
 
 ```
     {4CD742B1-C1CA-4708-BE78-0FCA2EB01A86}=80.79.32.7A&{C51B48D4-7876-479e-B0D9-BD9EFF03CE2E}=p-0050
@@ -321,7 +321,7 @@ The above rule tracks the activities of the key `80.79.32.7A` only for
 
 ------------------------------------------------------------------------
 
-## Cardinality counting
+## Cardinality Counting
 
 Cardinality counters allow you to measure unique hits for keys within a
 counter group. For example, we can track how many unique IPs did each
@@ -369,7 +369,7 @@ country.
 2. Cardinality Counter Group = `Hosts` from dropdown
 3. Description = `Unique Hosts`
 
-### Using cardinality counters
+### Using Cardinality Counters
 
 Once configured, cardinality counters behave just like other counters.
 They appear as extra counters in the drop down lists, you can draw
@@ -377,7 +377,7 @@ charts, trend over time, even set threshold crossing alerts on them.
 
 ------------------------------------------------------------------------
 
-## Cross Key Counter groups
+## Cross Key Counter Groups
 
 This lets you monitor a cross product of two or three counter groups.
 This takes advantage of the fact that Trisul is capable of monitoring
@@ -385,7 +385,7 @@ millions of unique keys for any counter group. By crossing the
 *Applications X Hosts* counter group you setup a new counter group with
 *Unique(hosts) x Unique(apps)* keys.
 
-### Example 1 : Two Groups Host flows
+### Example 1 : Two Groups Host Flows
 
 Say you want to see Internal Hosts to External Host traffic flows - you
 can get this by querying the *Flows database* using the *Explore Flows*
@@ -394,6 +394,8 @@ billions of flows. To solve this we setup a Cross Key Counter group of
 *Internal Host x External Hosts*
 
 ![](images/crosskeydoc2.png)
+
+*Figure: CrossKey Counter Group Showing Two Groups Host Flows*
 
 > We use the Sankey Crosskey Trisul APP to visualize the flows. 
 
@@ -409,12 +411,16 @@ Using the normal Retro Counters tool you can see the composite keys
 
 ![](images/intext.png)
 
-### Example 2 : Three Groups Hosts App flows
+*Figure: Composite Keys in Retro Counter*
+
+### Example 2 : Three Groups Hosts App Flows
 
 You can cross 3 groups as well. Here we setup a new Cross Keys counter
 group with *Internal Hosts X Applications X External Hosts*
 
 ![](images/crosskeydoc1.png)
+
+*Figure: CrossKey Counter Group Showing Three Groups Hosts App Flows*
 
 > We use the Sankey Crosskey Trisul APP to visualize the flows. 
 
@@ -424,7 +430,7 @@ Go to Admin \> Web Admin \> Manage \> Apps
 
 :::
 
-### Creating a Cross Key counter group
+### Creating a Cross Key Counter Group
 
 :::note navigation
 
@@ -448,7 +454,7 @@ This leads you to a form with these five fields.
 After creation , the user is redirected to a page which lists the newly
 created group.
 
-#### Enable and Disable crosskeys
+#### Enable and Disable Crosskeys
 
 The parent counter group and the crosskey group 1 and crosskey group 2
 (if used) must be enabled. If any of them are disabled the crosskey
@@ -478,3 +484,5 @@ Go to Admin \> Web Admin \> Manage \> Apps
 :::
 
 ![](images/sankeyapps.png)
+
+*Figure: Sankey Crossdrill Apps from Trisul Apps*

@@ -10,31 +10,31 @@ import DocCardList from '@theme/DocCardList';
 
 <DocCardList />
 
-### Traffic analysis features
+### Traffic Analysis Features
 
 ##### Real Time
 
 You can monitor any metric in real time using [Real time stabbers](/docs/ug/cg/stabber). This helps with troubleshooting and real time tracking of developing situations.
 
-##### Historical analysis
+##### Historical Analysis
 
 Use [retro analysis](/docs/ug/cg/retro) tools, long term traffic charts, monthly usage reports and other tools 
 for historical analysis. Trisul does not summarize or roll up any old 
 data.
 
-### Data acquisition methods
+### Data Acquisition Methods
 
-##### Packet capture
+##### Packet Capture
 
 The default mode. Trisul does all its analytics by directly capturing packets from the network. Learn how to [capture packets](/docs/ug/install/input_packets) for Trisul NSM.
 
-##### Netflow
+##### NetFlow
 
 Can also accept [Netflow](/docs/ug/netflow/netflow_setup) v5, v9, SFLOW, and IPFIX instead of packets. This is a powerful 
 low-cost way to gain total visibility into your internal network traffic
  without a TAP and Probe rollout with packet capture techniques.
 
-### Task list
+### Task List
 
 Jump to common network analysis tasks
 
@@ -48,9 +48,9 @@ Jump to common network analysis tasks
 
 [View all tasks](/docs/ug/cg/tasks)
 
-### Related features
+### Related Features
 
-[Real Time stabbbers](/docs/ug/cg/stabber)
+[Real Time Stabbbers](/docs/ug/cg/stabber)
 
 Chart usage of any item or view toppers in any counter group in real time.
 
@@ -64,6 +64,6 @@ Select a time interval and drill down over 100 ways.
 
 Select a time interval and click on pre-defined analysis in Q&A style
 
-[Custom metering](/docs/ug/cg/custom)
+[Custom Metering](/docs/ug/cg/custom)
 
 Create your own custom counter policies.
