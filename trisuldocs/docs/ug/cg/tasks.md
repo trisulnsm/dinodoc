@@ -10,16 +10,19 @@ Select Dashboards -\> Real Time Traffic
 
 ### How can I view the top hosts by usage ?
 
-Select Dashboards -\> Hosts
+Select Dashboards -\> Current Hosts
 
 ### How can I view the top hosts by usage to within 3 seconds ?
 
 For real time traffic stats you need to use the Stabber feature.
 
-Select Dashboards -\> Real Time Network Traffic
+Select Dashboards -\> Real Time Traffic
 
-1. Click on the tag next to any host
-2. Select *Real time stab: Toppers*
+1. Click on the tag on the right side next to any host to open the [Key Dashboard](/docs/ug/ui/key_dashboard)
+
+2. And go to Key details module-> Real Time Stabbers-> Toppers
+   
+   This will show you the real time toppers for the counter group of the key for the selected meter.
 
 ### How can I view the top MAC by TRANSMIT to within 3 seconds ?
 
@@ -30,36 +33,38 @@ Toppers
 
 1. Select the Counter Group, in this case **MAC**
 2. Select the meter, in this case **TRANSMIT**
-3. Press Live Update
+3. Click Live Update
 
 ### Investigate past activity
 
 Select *Retro* from menu
 
-Now you can apply various [Retro Analysis
-Tools](/docs/ug/cg/retrotools) to investigate
+Now you can apply various [Retro Analysis Tools](/docs/ug/cg/retrotools) to investigate
 
 ### I want to see details of a particular IP, but it isnt showing up anywhere for me to click ?
 
 1. [Use the search box](/docs/ug/ui/elements#the-search-box)
-2. Click on “View Details” to go to the key dashboard
+2. Click on “View” to go to the key dashboard
 3. Use any of the tools on the key dashboard
 
 ### Find out which flows caused a traffic pattern
 
 Select *Retro* from the menu
 
-- Select the time interval of interest
-- Find [Flow Tracker](/docs/ug/cg/retrotools#flow-trackers) tool in
-  retro dashboard
-- Select **Traffic** and click **Analyze**
+- Find [Flow Tracker](/docs/ug/cg/retrotools#flow-trackers) tool in retro dashboard
+
+- Select the time interval of interest, Max flows to retrieve say n
+
+- Select **Traffic** in *select a flow tracker* field
+  
+  This will show Top n sessions by traffic right below 
 
 ### View flow activity of a particular host or port in real time
 
 ***Method 1***  
 If you can see the IP in live dashboards
 
-1. Click on the small tag next to the IP and select “Investigate”
+1. Click on the small tag on the right side next to the IP
 2. Click Real Time stab:Flow Activity
 
 <!-- -->
@@ -103,12 +108,12 @@ Select Tools -\> Long Term Traffic
 
 - Select Hosts from Counter Group and TCP SYN Sent from meters  
 
-- Eneter 10.10.1.1 in item box  
+- Enter 10.10.1.1 in item box  
 
 - Click Analyze
 
 ### I want to group IPs together for reporting for example by department ?
 
- Select Customize -\> Counters -\> Keysets -\>Add new Keyset Counter Group
+Login as admin, and  Select Context:default  -\> Profile0-> Custom Counters -\> Keysets -\> Create a new Keyset Counter Group
 
 Click [Keyset Counter Group](/docs/ug/cg/custom#keyset-counter-groups) for more.
