@@ -9,7 +9,7 @@ used by Trisul.
 
 ## Analysis Forms
 
-These forms have a striped background throughout the app.
+These forms have a blue top bar throughout the app.
 
 - You can collapse the form for analysis results.
 - You can expand the form to tweak your analysis.
