@@ -4,6 +4,8 @@ sidebar_position: 2
 
 # Admin Layout
 
+An admin layout also known as an administrator layout is a specialized layout designed for administrators who need to manage and configure the platform. With Admin Layout admins can provide grant access to users other than admins like operators, forensic operators or subscribers. Each user would be allowed to have different levels of accessibility and vsisibility to advanced features, settings, and tools according to their user roles.
+
 When you login as admin you will see the admin layout which is different from the user layout.
 
 ![](images/adminlayout.png)
