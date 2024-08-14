@@ -178,4 +178,4 @@ These are available in the interface drilldowns if the proper trackers are creat
 If you closely observe the chart you may notice that if you sum up the
 volumes in each of the ASN may be more than the interface volume. This
 is because for every flow there are TWO AS Numbers. The Source and
-Destination AS. Hence a 100 GB download from AS-1 will show up as AS-1 100GB Transmit and AS-2 100GB Receive.    
+Destination AS. Hence a 100 GB download from AS-1 will show up as AS-1 100GB Transmit and AS-2 100GB Receive.

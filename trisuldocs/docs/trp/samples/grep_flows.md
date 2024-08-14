@@ -1,6 +1,6 @@
 # Flows containing a payload pattern
 
-This example will use the payload search feature of Trisul. You can supply a pattern (text or binary) and Trisul will reassemble all TCP streams and search for that pattern.
+This example will use the payload search feature of Trisul. You can supply a pattern (text or binary) and Trisul will reassemble allTCPstreams and search for that pattern.
 
 
 

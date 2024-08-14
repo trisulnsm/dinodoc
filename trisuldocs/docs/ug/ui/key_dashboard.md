@@ -56,7 +56,7 @@ description of each of these modules. They are mostly self explanatory.
 | Module                                                  | Usage                                                           |
 | ------------------------------------------------------- | --------------------------------------------------------------- |
 | 1) Traffic History                                      | Most recent 1hr traffic history                                 |
-| 2) [Key Details](/docs/ug/ui/key_dashboard#key-details) | Various drilldown options pertaining to this key                |
+| 2)[Key Details](/docs/ug/ui/key_dashboard#key-details) | Various drilldown options pertaining to this key                |
 | 3) A la carte statistics                                | Flexible charting tool (quick and easy)                         |
 | 4)Flow Activity                                         | Displays recent top flows                                       |
 | 5)Daily Report                                          | Click on a calendar day to get a PDF report with detailed usage |
@@ -133,7 +133,7 @@ The most common ones are described below.
 | View Edge Graph        | You can view the relationships between different network entities such as hosts, protocols, IP addresses etc as a graphical representation.                                                                                                                                                                                                    |
 | Download PCAP          | Download a PCAP file related to this Key                                                                                                                                                                                                                                                                                                       |
 | Detailed Activity      | What is this station doing ?<br/>Open up the Investigate IP tool for this key for the last 1 hour.                                                                                                                                                                                                                                             |
-| Query Flows by Tag     | Filter and analyze network traffic based on specific tags or labels. These tags can be assigned to network flows like sequences of packets based on various criteria, such as:<br/>       - Protocol (e.g., HTTP, FTP, SSH)<br/>       - Port numbers etc.<br/> The filtered flows are displayed, showing detailed information about each flow |
+| Query Flows by Tag     | Filter and analyze network traffic based on specific tags or labels.These tags can be assigned to network flows like sequences of packets based on various criteria, such as:<br/>   - Protocol (e.g., HTTP, FTP, SSH)<br/>   - Port numbers etc.<br/> The filtered flows are displayed, showing detailed information about each flow |
 | Aggregate Flows by Tag | Group and summarize network traffic based on specific tags or labels.                                                                                                                                                                                                                                                                          |
 
 ### Subnets

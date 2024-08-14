@@ -1,15 +1,15 @@
 # Trisul Executable
 
-The *trisul* executable is located in `/usr/local/bin/`.
+The*trisul*executable is located in`/usr/local/bin/`.
 
-The *trisul* executable is the actual probe process. One instance of trisul will run for every context. You rarely need to run this command manually, instead
+The*trisul*executable is the actual probe process. One instance of trisul will run for every context. You rarely need to run this command manually, instead
 
-1. use the web interface menu *Admin > Start/Stop Tasks > Start Trisul on each probe*
-2. use `trisulctl_probe start context ctxname` command line tool
+1. use the web interface menu*Admin > Start/Stop Tasks > Start Trisul on each probe*
+2. use`trisulctl_probe start context ctxname`command line tool
 
 ## Full command line
 
-Just type *trisul* to have it tell you the command line options.
+Just type*trisul*to have it tell you the command line options.
 
 ```bash
 [root@li76-90 ~]# trisul
@@ -66,7 +66,7 @@ Num     Name            Description
 
 ### About run mode
 
-The **run mode** controls what capabilities of Trisul are used while running.
+The**run mode**controls what capabilities of Trisul are used while running.
 
 The run mode is a combination of
 
@@ -100,7 +100,7 @@ To specify a run mode, go to Admin Tasks > Start/Stop Tasks then select run mode
 
 :::note Required Libs
 
-For PF_RING and other runmodes marked *requires libs* you need to copy the appropriate libXX.so file into `/usr/local/lib/trisul-probe`. Trisul only ships with a stub implementation. For example : if you want to use PF_RING. Copy the compiled libpfring.so file into `/usr/local/lib/trisul-probe`. This is due to licensing issues.
+For PF_RING and other runmodes marked*requires libs*you need to copy the appropriate libXX.so file into`/usr/local/lib/trisul-probe`. Trisul only ships with a stub implementation. For example : if you want to use PF_RING. Copy the compiled libpfring.so file into`/usr/local/lib/trisul-probe`. This is due to licensing issues.
 
 :::
 
@@ -122,12 +122,12 @@ trisul -nodemon /usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeC
 
 All capture files must be in tcpdump (libpcap) format. Trisul supports both big and little endian pcap files.
 
-1. PCAP files in directory are automatically processed in order of the timestamp of the first packet in each file.
+1. PCAPfiles in directory are automatically processed in order of the timestamp of the first packet in each file.
 2. capture files can be gzip or bzip2. The prefix must be gz or bzip2 of bz2.
 
 :::note
 
-You can process a single PCAP file, a directory of PCAP files, or even nested directory trees
+You can process a singlePCAPfile, a directory ofPCAPfiles, or even nested directory trees
 
 :::
 
@@ -137,7 +137,7 @@ trisul -nodemon /usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeC
 
 #### Run trisul for context named “satellitelinks”
 
-Each trisul context is defined by the corresponding trisulConfig `contextname` folder.
+Eachtrisul contextis defined by the corresponding trisulConfig`contextname`folder.
 
 ```bash
 trisul -demon /usr/local/etc/trisul-probe/domain0/probe0/context_satellitelinks/trisulProbeConfig.xml -mode online_libpcap
@@ -145,7 +145,7 @@ trisul -demon /usr/local/etc/trisul-probe/domain0/probe0/context_satellitelinks/
 
 #### Run trisul only looking at alerts
 
-In this mode Trisul only looks at IDS alerts. The only meters activated are related to alerts, such as top hosts generating alerts, victim hosts, etc.
+In this mode Trisul only looks atIDSalerts. The only meters activated are related to alerts, such as top hosts generating alerts, victim hosts, etc.
 
 ```bash
 trisul -demon /usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml -mode idsalert
@@ -153,15 +153,15 @@ trisul -demon /usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeCon
 
 #### Run trisul only looking at alerts
 
-In this mode Trisul only looks at IDS alerts. The only meters activated are related to alerts, such as top hosts generating alerts, victim hosts, etc.
+In this mode Trisul only looks atIDSalerts. The only meters activated are related to alerts, such as top hosts generating alerts, victim hosts, etc.
 
 ```bash
 trisul -demon /usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml -mode idsalert
 ```
 
-#### Run trisul using a LUA input filter script
+#### Run trisul using aLUAinput filter script
 
-If you want your inputfilter script at `/home/kev/read_tcp.lua` to drive the Trisul pipeline use the following
+If you want yourinputfilterscript at`/home/kev/read_tcp.lua`to drive the Trisul pipeline use the following
 
 ```bash
 trisul -demon /usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml -mode lua -in /home/kev/read_tcp.lua -args argstolua-script

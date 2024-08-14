@@ -15,7 +15,7 @@ See below for typical requirements.
 
 ## NetFlow Analyzer requirements
 
-:::important[Typical Workload]
+:::important[Typical Workload start with this]
 The table below is for a medium to large Enterprise with 5000 endpoints. This should suit most customers.
 :::
 
@@ -31,7 +31,7 @@ The table below is for a medium to large Enterprise with 5000 endpoints. This sh
 
 ## Packet Capture requirements
 
-:::important[Typical workload]
+:::important[Typical workload start with this]
 The table below is for a medium enterprise workload of **500Mbps** sustained bandwidth. This should suit most customers.
 :::
 

@@ -111,7 +111,7 @@ Next , you need to add  trisul-probe to the trisul-hub . Follow this step to con
 - Creates a new domain with the TCP socket by executing below commands 
 
 ```bash
-/usr/local/bin/trisulctl_hub create domain 
+/usr/local/bin/trisulctl_hub create domain
 ```
 
 - After the domain is created , then it install the domain cert in hub by running following commands

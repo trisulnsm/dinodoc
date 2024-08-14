@@ -6,14 +6,14 @@ sidebar_position: 1
 
 The entry point into exploring the streaming graph database of Trisul is to select two items
 
-1. a *root vertex* from where you can enter the graph.
+1. a*root vertex*from where you can enter the graph.
 2. a time window
 
 All exploration is done in a tool called the “Edge Graph Explorer”.
 
 ## Enable Feature
 
-New installations of Trisul will already have *Edges* enabled. If you are upgrading an older install, ensure that you add the following line in [trisulProbeConfig.xml](/docs/ref/trisulconfig#edges)
+New installations of Trisul will already have*Edges*enabled. If you are upgrading an older install, ensure that you add the following line in[trisulProbeConfig.xml](/docs/ref/trisulconfig#edges)
 
 ```xml
 <Edges> <Enable>True</Enable> </Edges>
@@ -50,11 +50,11 @@ When you first open the Graph Explorer
 - The immediate adjacent nodes are shown
 - Each vertex group is of a different color
 - Hover mouse over a node for more drilldown options
-- Click on a node to open *its* 1 level adjacent neighbors
+- Click on a node to open*its*1 level adjacent neighbors
 
 The tool options are :
 
-| View Label     | Shows labels or readable keys. For example, how hostnames or IP addresses for the *Hosts* counter group |
+| View Label     | Shows labels or readable keys. For example, how hostnames or IP addresses for the*Hosts*counter group |
 | -------------- | ------------------------------------------------------------------------------------------------------- |
 | Treemap view   | Use a Tree map to show the graph. This is a cleaner option in some cases                                |
 | Flow grap view | Use a force directed graph to display                                                                   |

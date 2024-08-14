@@ -44,7 +44,7 @@ Click on the *New* button on the right side of the module.
 | Timeout seconds          | By default timeout seconds to wait for each PING is set to 5. Change if necessary.                                                   |
 | Retries                  | The number of Ping failure before declaring a node unreachable is set to 6 by default. Change if necessary.                          |
 | TTL                      | By default the value of TTL field used in ICMP Echo Request packets sent to this group is set to 255. Leave at default in most cases |
-| TOS                      | Enter the IP TOS Byte used in ICMP Echo Request packets sent to this group                                                           |
+| TOS                      | Enter theIP TOS Byte used in ICMP Echo Request packets sent to this group                                                           |
 | Dispatch Options         | Enter the mail id to which alert has to be sent. For example: mailto:default@unleashnetworks.com                                     |
 | Throttle Microseconds    | A microseconds delay between sending out ICMP PING packets, use only if your network caps ICMP bandwidth. -1 disables this feature.  |
 

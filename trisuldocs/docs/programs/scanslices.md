@@ -38,7 +38,7 @@ Scan each and every slice in the directory by comparing with metaslice db and pr
    | --------------- | ----------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------ |
    | -l              | list the storage pool available                             | Use this output to below argument                    | archive<br/>ref<br/>xarchive_1<br/>oper/0/<br/>oper/1/ |
    | -m storage-pool | prints the slice in the storage pool given by user          | You can run this script anywhere                     | ./scanslices.sh -m ref                                 |
-   | -d   .          | prints the current directry slice details                   | You should be in the storage pool to run this script | ./scan_slices.sh -d .                                  |
+   | -d .          | prints the current directry slice details                   | You should be in the storage pool to run this script | ./scan_slices.sh -d .                                  |
    | -d Slice-name   | Print specific slice details given by user                  | You should be in the storage pool to run this script | ./scan_slices.sh -d SLICE.eJkeR                        |
    | -a              | Prints the slice which is either missing in db or directory | this option should be run aling with -d or -m option | ./scan_slices.sh -m red -a                             |
    | -h              | Prints the usage details                                    | -                                                    | ./scan_slices.sh -h                                    |

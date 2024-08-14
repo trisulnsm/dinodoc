@@ -26,7 +26,7 @@ Trisul allows you to summon raw packets from a number of situations. Some typica
 | IDS Alerts     | You want to see the packet that caused a **shellcode** snort alert. You also want to see nearby packets to the one that caused the alert.            |
 | Other Alerts   | Pull up raw packets for threshold crossing alerts, blacklist / CnC activity or flow tracker alerts                                                   |
 | Resources      | Pull up raw packets for all HTTP flows that requested a *.dll resource                                                                               |
-| More           | Trisul has many meters in dozens of counter groups. With access to raw packets you can slice and dice statistics in a massive number of permutations |
+| More           | Trisul has many meters in dozens of counter groups. With access to raw packets you can slice and dice statistics in a massive number ofpermutations |
 
 ### Task List
 

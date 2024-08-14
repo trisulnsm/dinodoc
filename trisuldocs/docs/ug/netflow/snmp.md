@@ -106,4 +106,4 @@ Click on Manage -\> App Settings -\> SNMP Settings.
 
 :::
 
-![](images/snmp_app_setting.png)    
+![](images/snmp_app_setting.png)

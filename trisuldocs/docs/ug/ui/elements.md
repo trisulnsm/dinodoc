@@ -28,9 +28,9 @@ right corner.
 The toolbar area is the big title area at the top.There are two options
 available currently.
 
-- PDF -\> Click to convert the current page into PDF report.
+- **PDF** Click to convert the current page into PDF report.
 
-- Retro FAQ -\>Name the analysis and add it to the
+- Retro FAQ ->Name the analysis and add it to the
   [Q&A](/docs/ug/cg/retrofaq)
 
 Sample form shows the analysis

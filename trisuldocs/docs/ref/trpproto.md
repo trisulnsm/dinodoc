@@ -1,6 +1,6 @@
 # Trisul Remote Protocol
 
-The proto file shown below describes the TRP protocol.
+The proto file shown below describes theTRPprotocol.
 
 
 
@@ -11,13 +11,13 @@ For C++/Java/Python : You can use the protoc compiler from google, an example:
 
 `protoc trp.proto --python_out /tmp`
 
-For other languages (Ruby/C#/Haskell/Erlang/Javascript) visit the Google Protocol Buffers [Third Party Addons](https://code.google.com/p/protobuf/wiki/ThirdPartyAddOns) page to select an appropriate tool.
+For other languages (Ruby/C#/Haskell/Erlang/Javascript) visit the Google Protocol Buffers[Third Party Addons](https://code.google.com/p/protobuf/wiki/ThirdPartyAddOns)page to select an appropriate tool.
 
 
 
 ## trp.proto
 
-The latest `trp.proto` file is available on Github on [trisul-scripts trp.proto file](https://raw.githubusercontent.com/trisulnsm/trisul-scripts/master/trp/trp.proto)
+The latest`trp.proto`file is available on Github on[trisul-scripts trp.proto file](https://raw.githubusercontent.com/trisulnsm/trisul-scripts/master/trp/trp.proto)
 
 Automatically loaded from Github below.
 

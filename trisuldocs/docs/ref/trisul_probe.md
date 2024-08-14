@@ -7,7 +7,7 @@ The trisulctl_probe allow you to co-ordinate , manage, and run commands across a
 | `help`         | Displays help messgaes                   | help                                                  |
 | -------------- | ---------------------------------------- | ----------------------------------------------------- |
 | `quit`         | Exit trisulctl tool                      | quit                                                  |
-| `alias`        | create shortcuts for CLI                 | help alias                                            |
+| `alias`        | create shortcuts forCLI                 | help alias                                            |
 | `machineid`    | get hub machineid for licensing          | machineid                                             |
 | `checklicense` | validate a license file                  | checklicense /usr/local/etc/trisul-hub/LicenseKey.txt |
 | `log`          | view log files across nodes and contexts | log default@probe0 level=1 log=ns tail lastrun        |
@@ -54,7 +54,7 @@ The trisulctl_probe allow you to co-ordinate , manage, and run commands across a
 
 ## Developer commands
 
-| `list lua`       | list all the LUA scripts discovered in context and probe               | list lua context@probe         |
+| `list lua`       | list all theLUAscripts discovered in context and probe               | list lua context@probe         |
 | ---------------- | ---------------------------------------------------------------------- | ------------------------------ |
-| `testbench run`  | start the testbench in a debug mode, use this to test your LUA scripts | testbench run /tmp/sample.pcap |
+| `testbench run`  | start the testbench in a debug mode, use this to test yourLUAscripts | testbench run /tmp/sample.pcap |
 | `testbench guid` |                                                                        |                                |

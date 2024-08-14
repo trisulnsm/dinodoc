@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Start and stop Trisul
 
-Describes how you can start and stop Trisul components. For a more detailed explanation see [Basic Usage: Start and stop](/docs/ug/basicusage/startstop)
+Describes how you can start and stop Trisul components. For a more detailed explanation see[Basic Usage: Start and stop](/docs/ug/basicusage/startstop)
 
 ## Running Web Trisul
 
@@ -12,7 +12,7 @@ Web Trisul provides the Web UI and is configured to start automatically.
 
 ### Start and Stop Webtrisul
 
-Use the normal Linux tools to start and stop Webtrisul. The service name is `webtrisuld`
+Use the normal Linux tools to start and stop Webtrisul. The service name is`webtrisuld`
 
 ```bash
 systemctl stop webtrisuld
@@ -35,7 +35,7 @@ ufw allow 3003
 
 Also see :
 
-1. [Using HTTPS for the webserver](/docs/howto/sslforwebtr)
+1. [UsingHTTPSfor the webserver](/docs/howto/sslforwebtr)
 2. [Changing the webserver port](/docs/howto/change_web_port )
 
 ## Running Trisul
@@ -61,5 +61,5 @@ The trisulctl_probe/hub tools execute commands on all nodes in the domain.
 
 Also see :
 
-1. [CLI tool trisulctl_hub](/docs/ref/trisul_hub)
-2. [CLI tool trisulctl_probe](/docs/ref/trisul_probe)
+1. [CLItool trisulctl_hub](/docs/ref/trisul_hub)
+2. [CLItool trisulctl_probe](/docs/ref/trisul_probe)

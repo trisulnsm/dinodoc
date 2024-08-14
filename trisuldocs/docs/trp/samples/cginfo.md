@@ -7,9 +7,9 @@ This sample does two things
 - Print details about a single counter group passed on the command line
 - Print details about all available counter groups
 
-The only difference between the two is for the former we have to specify a *:counter_group* guid parameter. For the latter, we leave it blank forcing Trisul to retrieve all the counter group information.
+The only difference between the two is for the former we have to specify a*:counter_group*guid parameter. For the latter, we leave it blank forcing Trisul to retrieve all the counter group information.
 
-See [here for a list of common GUIDs](/docs/ref/guid.md). You can also go to // Customize > Counters > Meters // to get the GUIDs of all counter groups running on your system.
+See[here for a list of common GUIDs](/docs/ref/guid.md). You can also go to // Customize > Counters > Meters // to get the GUIDs of all counter groups running on your system.
 
 
 

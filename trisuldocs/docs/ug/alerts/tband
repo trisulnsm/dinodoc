@@ -81,8 +81,8 @@ You must fill this up. If you came to this page from the Key Dashboard the field
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Counter Group | The counter group.                                                                                                                                                                                      |
 | Stat ID       | Meter within the counter group                                                                                                                                                                          |
-| TargetKey     | The key within the *target counter group* on which you want to create a Band. You can enter this in either human readable format eg:Port-80, 192.168.1.33 or in Trisul key format: p-0050, C0.A8.00.01  |
-| Compare Day   | If Checked – use Day Of Week based band computations. If Unchecked – use yesterdays data to compute a band.  **NOTE** You need a licence for Day Of Week band because it needs 3 weeks of training data |
+| TargetKey     | The key within the *target counter group* on which you want to create a Band. You can enter this in either human readable formateg:Port-80, 192.168.1.33 or in Trisul key format: p-0050, C0.A8.00.01  |
+| Compare Day   | If Checked – use Day Of Week based band computations.If Unchecked – use yesterdays data to compute a band.**NOTE** You need a licence for Day Of Week band because it needs 3 weeks of training data |
 
 #### Advanced settings (optional)
 

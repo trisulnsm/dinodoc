@@ -87,7 +87,7 @@ trisulctl_hub command “start context” is executed.
 The trisulctl\_ tools are placed in `/usr/local/bin` when the probe/hub
 packages are installed. The default install of Trisul puts the Probe and
 Hub on a single machine, so both the trisulctl_hub and trisulctl_probe
-are available.    
+are available.
 
 To invoke the tools
 

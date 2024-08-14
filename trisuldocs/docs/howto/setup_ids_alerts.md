@@ -8,7 +8,7 @@ There are two ways you can send IDS alerts into Trisul
 
 Suricata-EVE APP
 
-:::note[Suricata-EVE APP]
+:::note[Suricata-EVEAPP]
 
 The newly released Trisul APP [Suricata
 EVE](https://medium.com/@vivekrj/how-to-get-suricata-eve-alerts-into-trisul-network-analytics-and-why-f3015d7280e0)
@@ -31,7 +31,7 @@ automatically picks up the alerts.
  Start Trisul via _Admin -> Start/Stop Tasks -> Start Trisul Probe_
 ```
 
-- Start Snort in `unsock` mode 
+- Start Snort in `unsock` mode
 
 Select the “How to start snort” to get the command line options as shown
 in the screenshot. You can then copy-paste that into a terminal.

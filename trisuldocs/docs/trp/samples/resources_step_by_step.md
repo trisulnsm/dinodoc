@@ -1,29 +1,29 @@
 # Step by step – working with resources
 
-This is a step by step tutorial that introduces you to all the key techniques of TRP and Ruby.
+This is a step by step tutorial that introduces you to all the key techniques ofTRPand Ruby.
 
 ### The task
 
-Print all HTTP URLs over the past 6 hours.
+Print allHTTPURLs over the past 6 hours.
 
-We divide this tutorial into steps, each step demonstrating an aspect of TRP
+We divide this tutorial into steps, each step demonstrating an aspect ofTRP
 
-1. [Step 1](/docs/trp/samples/resources_step_by_step#step-1--find-matching-resources) – Retrieve matching resource IDs
-2. [Step 2](/docs/trp/samples/resources_step_by_step#step-2--print-details-of-each-resource) – Print attributes of each matching resource
-3. [Step 3](/docs/trp/samples/resources_step_by_step#step-3--show-keys-in-readable-format) – Show readable IP addresses and port numbers
-4. [Step 4](/docs/trp/samples/resources_step_by_step#step-4--show-hostnames) – Show host names and port lables
+1. [Step 1](/docs/trp/samples/resources_step_by_step#step-1--find-matching-resources)– Retrieve matching resource IDs
+2. [Step 2](/docs/trp/samples/resources_step_by_step#step-2--print-details-of-each-resource)– Print attributes of each matching resource
+3. [Step 3](/docs/trp/samples/resources_step_by_step#step-3--show-keys-in-readable-format)– Show readable IP addresses and port numbers
+4. [Step 4](/docs/trp/samples/resources_step_by_step#step-4--show-hostnames)– Show host names and port lables
 
 ## Step 1 : Find matching resources
 
-Retrieve the Resource IDs of all matching resources. A resource id is a tuple of (slice_id,resource_id) as defined [here](https://www.trisul.org/docs/ref/trpproto.html)
+Retrieve the Resource IDs of all matching resources. A resource id is a tuple of (slice_id,resource_id) as defined[here](https://www.trisul.org/docs/ref/trpproto.html)
 
-The message we will use is [ResourceGroupRequest](https://www.trisul.org/docs/ref/trpproto.html)
+The message we will use is[ResourceGroupRequest](https://www.trisul.org/docs/ref/trpproto.html)
 
 ### Code
 
 #### What this does
 
-1. Boiler plate – includes modules from the `trisulrp` gem (see [here](http://rubydoc.info/gems/trisulrp/frames) for rdoc)
+1. Boiler plate – includes modules from the`trisulrp`gem (see[here](http://rubydoc.info/gems/trisulrp/frames)for rdoc)
 2. Opens a connection to the Trisul host and port with the private key
 3. Gets the recent 6 hour time window available
 4. Constructs a ResourceGroupRequest for RG_URL (you can use RG_DNS if you want to see domain names that were logged by Trisul)
@@ -81,7 +81,7 @@ We just printed the resource IDs returned as a string. Lets print out attributes
 
 ## Step 2 : Print details of each resource
 
-The previous step gave us five resource ids that matched our query. Now, we need to print out the attributes of each of those 5 resources. The message we need to use for that is [ResourceItemRequest](https://www.trisul.org/docs/ref/trpproto.html)
+The previous step gave us five resource ids that matched our query. Now, we need to print out the attributes of each of those 5 resources. The message we need to use for that is[ResourceItemRequest](https://www.trisul.org/docs/ref/trpproto.html)
 
 ### Code
 
@@ -169,7 +169,7 @@ The reason for that is Trisul always returns keys in a canonical format for each
 
 ## Step 3 : Show keys in readable format
 
-We need to use the the `make_readable` helper method in TrisulRP::Keys module which will show real IP addresses and ports instead of keys in the Trisul format.
+We need to use the the`make_readable`helper method in TrisulRP::Keys module which will show real IP addresses and ports instead of keys in the Trisul format.
 
 We need to change
 
@@ -352,4 +352,4 @@ Running Step 4 we get the final output.
 "URI =  GET xx.yy.zz /serve.js.php   HTTP/1.1"
 ```
 
-Thats it ! Most TRP scripts follow a similar pattern of retrieving and manipulating data.
+Thats it ! MostTRPscripts follow a similar pattern of retrieving and manipulating data.

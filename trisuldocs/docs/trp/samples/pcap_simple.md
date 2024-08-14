@@ -1,6 +1,6 @@
-# Retrieve all SMTP and DNS packets
+# Retrieve allSMTPandDNSpackets
 
-This sample uses an expression in Trisul Filter Format to retrieve all DNS (port 53) and SMTP (port 25) packets into a PCAP file. This also prints the SHA-1 hash of the packets as returned by the Trisul probe backend.
+This sample uses an expression in Trisul Filter Format to retrieve allDNS(port 53) andSMTP(port 25) packets into aPCAPfile. This also prints theSHA-1 hash of the packets as returned by the Trisul probe backend.
 
 ```ruby
 # Trisul Remote Protocol TRP Demo script

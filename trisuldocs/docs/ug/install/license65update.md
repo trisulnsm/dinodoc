@@ -51,7 +51,7 @@ Follow these steps
 
 If you erroneously uninstall the older 6.5 package without first obtaining new license files, you have two options
 
-1. Use a Trisul 6.5 RPM or DEB package file to quickly restore the old system
+1. Use a Trisul 6.5RPMorDEBpackage file to quickly restore the old system
 2. Install the Trisul 6.5 builds from the 6.5 repository we have provided as shown below.
 
 We provided access to all old 6.5 packages at these repository locations
@@ -79,7 +79,7 @@ add-apt-repository -r https://trisul.org/repos/apt/debian/v6
 apt update
 ```
 
-### CentOS/RHEL 6.5 repo
+### CentOS/RHEL6.5 repo
 
 RHEL7/CentOS7 repository for Trisul 6.5
 
@@ -89,4 +89,4 @@ RHEL8/OracleLinux8 repository for Trisul 6.5
 
 https://trisul.org//trisulfullv6-rhel8.repo
 
-Follow the instructions in the Trisul [Get Started](https://www.trisul.org/get-started/) page for instructions on how to install from repositories. You may need to sign in first.
+Follow the instructions in the Trisul[Get Started](https://www.trisul.org/get-started/)page for instructions on how to install from repositories. You may need to sign in first.

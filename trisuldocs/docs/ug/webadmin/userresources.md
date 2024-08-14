@@ -53,7 +53,7 @@ Resources*
 *Showing all user resource groups with button on top right to create a
 new resource group*
 
-    You are shown a list of already configured resource groups.
+You are shown a list of already configured resource groups.
 
 Select “New Resource Group” from the top right.
 

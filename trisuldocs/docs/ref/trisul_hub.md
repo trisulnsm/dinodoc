@@ -8,7 +8,7 @@ The trisulctl_hub allow you to co-ordinate , manage, and run commands across all
 | -------------- | ---------------------------------------- | ----------------------------------------------------- |
 | `help`         | Displays help messgaes                   | help                                                  |
 | `quit`         | Exit trisulctl tool                      | quit                                                  |
-| `alias`        | create shortcuts for CLI                 | help alias                                            |
+| `alias`        | create shortcuts forCLI                 | help alias                                            |
 | `machineid`    | get hub machineid for licensing          | machineid                                             |
 | `checklicense` | validate a license file                  | checklicense /usr/local/etc/trisul-hub/LicenseKey.txt |
 | `log`          | view log files across nodes and contexts | log default@hub0 level=1 log=fs tail lastrun          |

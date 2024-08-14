@@ -207,7 +207,7 @@ This is an example of Real Time Traffic module of both Inbound vs Outbound diffe
 | Meters               | Upload Bytes  | Shows the list of Meters to select from                                                                              |
 | Keys                 | TOTALBW       | Provide the unique identifier that categorizes data in a network or a system according to the selected counter group |
 | One module per key   | Enabled       | Each key metric is displayed in its own separate module.                                                             |
-| One module per meter | -             | When enabled, Each meter is displayed in its own separate module.                                                    |
+| One module per meter | -             | When enabled,Each meter is displayed in its own separate module.                                                    |
 | Surface              | LINE          | Diplays the selected chart surface                                                                                   |
 
 ## Real Time Single
@@ -266,7 +266,7 @@ This is the favorite Key Traffic module showing a module for the key SYS:GROUP_T
 | Meters               | Upload Bytes  | Shows the list of Meters to select from                                                                              |
 | Keys                 | TOTALBW       | Provide the unique identifier that categorizes data in a network or a system according to the selected counter group |
 | One module per key   | Enabled       | Each key metric is displayed in its own separate module.                                                             |
-| One module per meter | -             | When enabled, Each meter is displayed in its own separate module.                                                    |
+| One module per meter | -             | When enabled,Each meter is displayed in its own separate module.                                                    |
 | Surface              | LINE          | Diplays the selected chart surface                                                                                   |
 
 ## Traffic Chart

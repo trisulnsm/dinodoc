@@ -32,7 +32,7 @@ import { Icon } from '@iconify/react';
 
 ## GITHUB CODE SAMPLES
 
-Beginner ? Here are some ready to run scripts from our open [Github repo](https://github.com/trisulnsm/trisul-scripts) to get you started
+Beginner ? Here are some ready to run scripts from our open[Github repo](https://github.com/trisulnsm/trisul-scripts)to get you started
 
 ##### [print_resources.rb](./samples/resources_step_by_step)
 

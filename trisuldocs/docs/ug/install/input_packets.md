@@ -8,25 +8,25 @@ This section explains the various methods to acquire raw network packets from yo
 
 Sections in this document
 
-- **Port Mirror** – recommended for most enterprises < 500 Mbps
-- **Network Taps** – recommended for links > 500Mbps
-- **Bridges** – for small offices and appliances only
+- **Port Mirror**– recommended for most enterprises < 500 Mbps
+- **Network Taps**– recommended for links > 500Mbps
+- **Bridges**– for small offices and appliances only
 
 ### Virtual Machine configuration
 
-If you are installing Trisul on a Virtual Machine, you may need to put the Virtual Switch in promiscuous mode to capture the traffic on the Physical port span. See this link for instructions for [VMWare](https://kb.vmware.com/s/article/1004099)
+If you are installing Trisul on a Virtual Machine, you may need to put the Virtual Switch in promiscuous mode to capture the traffic on the Physical port span. See this link for instructions for[VMWare](https://kb.vmware.com/s/article/1004099)
 
 ## Configuring port mirror / SPAN Port
 
-The following diagram shows how you can configure a SPAN port and feed packets into Trisul. See your switch vendor’s documentation on configurating a Port SPAN session. [ [Cisco SPAN documentation](https://www.cisco.com/c/en/us/support/docs/switches/catalyst-6500-series-switches/10570-41.html) ]
+The following diagram shows how you can configure aSPANport and feed packets into Trisul. See your switch vendor’s documentation on configurating a PortSPANsession. [[CiscoSPANdocumentation](https://www.cisco.com/c/en/us/support/docs/switches/catalyst-6500-series-switches/10570-41.html)]
 
 ![](images/portmirror.png)
 
-**SPAN example** ports `ge/0/0/1` and `ge/0/0/12` traffic mirrored to `ge/0/0/6` which is then connected to Trisul-Probe
+**SPANexample**ports`ge/0/0/1`and`ge/0/0/12`traffic mirrored to`ge/0/0/6`which is then connected to Trisul-Probe
 
 ## Using Network Taps
 
-SPAN ports quickly become unweildy as network speeds increase. Network taps are available as Copper and Optical modules that are the preferred choice for high speed networks.
+SPANports quickly become unweildy as network speeds increase. Network taps are available as Copper and Optical modules that are the preferred choice for high speed networks.
 
 ![](images/networktap.png)
 
@@ -53,7 +53,7 @@ Install the bridge-utils package.
 Copy`sudo apt-get install bridge-utils`
 
 Automatically Create the Bridge at Start-up  
-Sample `/etc/network/interfaces file`
+Sample`/etc/network/interfaces file`
 
 ```bash
 Install the bridge-utils package.
@@ -89,8 +89,8 @@ Install the bridge-utils package.
 
 Copy`yum install  bridge-utils`
 
-To create a network bridge, create a file in the `/etc/sysconfig/network-scripts/` directory called `ifcfg-br0`  
-sample `/etc/sysconfig/network-scripts/ifcfg-br0`
+To create a network bridge, create a file in the`/etc/sysconfig/network-scripts/`directory called`ifcfg-br0`  
+sample`/etc/sysconfig/network-scripts/ifcfg-br0`
 
 ```bash
 DEVICE=br0
@@ -104,7 +104,7 @@ NM_CONTROLLED=no
 DELAY=0
 ```
 
-To complete the bridge another interface is created, or an existing interface is modified, and pointed to the bridge interface sample `/etc/sysconfig/network-scripts/ifcfg-eth0`
+To complete the bridge another interface is created, or an existing interface is modified, and pointed to the bridge interface sample`/etc/sysconfig/network-scripts/ifcfg-eth0`
 
 ```bash
 DEVICE=eth0
@@ -116,7 +116,7 @@ NM_CONTROLLED=no
 BRIDGE=br0
 ```
 
-sample `/etc/sysconfig/network-scripts/ifcfg-eth1`
+sample`/etc/sysconfig/network-scripts/ifcfg-eth1`
 
 ```bash
 DEVICE=eth1

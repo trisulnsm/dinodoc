@@ -46,9 +46,9 @@ There are more than one way to navigate to view all dashboards
 
 **Method 1:**
 
-:::note path
+:::info navigation
 
-From the Menu, Go to Dashboards-> Show all
+From the Menu, Go to *Dashboards* &rarr;  *Show all*
 
 :::
 

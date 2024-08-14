@@ -26,7 +26,7 @@ A typical HA setup is shown below. This particular setup has two hubs and two pr
 
 The topology is described below.
 
-- Probe 0 and Probe 1 are production probes. The total load Is distributed to the two probes. 4 IGW each
+- Probe 0 and Probe 1 are production probes. The total load Is distributed to the two probes. 4IGWeach
 - Probe 2 is the HA standby probe for both Probe 0 and Probe 1 (N+1 HA configuration)
 - Probe 0 and Probe 2 share a Virtual IP Address VIP1, Probe 1 and Probe 2 shared a virtual IP VIP2
 - On Probe0 or Probe1 failure, LB forwards traffic to Probe2 (the HA probe). Probe2 takes over as the new Probe-X that failed, The rest of the dataflow is not impacted.
@@ -38,7 +38,7 @@ Contact Trisul Network Analytics for more information. There are multiple option
 
 ## DR
 
-In this mode a separate Trisul instance is run in another data center. Then using Trisul’s built-in RSYNC based incremental backup solution the data is replicated continuously to the DR site.
+In this mode a separate Trisul instance is run in another data center. Then using Trisul’s built-inRSYNCbased incremental backup solution the data is replicated continuously to the DR site.
 
 The following diagram shows the working.
 

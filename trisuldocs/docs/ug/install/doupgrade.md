@@ -30,7 +30,7 @@ sudo apt-get install trisul-hub
 
 ## CentOS/RHEL
 
-For CentOS/RHEL the instructions are similar,
+For CentOS/RHELthe instructions are similar,
 
  BASHCopy`
 
