@@ -4,8 +4,8 @@ sidebar_position: 6
 
 # Other UI Elements
 
-This section contains a quick overview of the user interface elements
-used by Trisul.
+This section contains a quick overview of the user interface elements.
+Besides the already explained user layout and admin layout elements, Trisul provides other essential interactive elements like Buttons, Forms, Search box, Tooltips and more. Lets dive in and explore where you can find all these user friendly elements in the Trisul dashboards and modules and how you can interact with them. 
 
 ## Analysis Forms
 
