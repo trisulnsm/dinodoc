@@ -39,7 +39,7 @@ backup tools.
 | /usr/local/etc   | config                                               |
 | /usr/local/bin   | executables                                          |
 
-## Daily config backup
+## Daily Config Backup
 
 Using the `install_setup_backup.sh` tool.
 
@@ -68,14 +68,14 @@ The steps are :
 Once complete a crontab entry will be automatically created to backup at
 4:00AM daily. You may adjust this later.
 
-### Backup trisul configuration
+### Backup Trisul Configuration
 
 `0 4 * * * /usr/local/share/trisul-hub/setup_backup.sh /usr/local/share/trisul-hub/setup_backup.conf`
 
 The backups are placed in the remote directory in a single tar.gz file
 with the HOSTNAME and TIMSTAMP of the backup
 
-### Distributed probe
+### Distributed Probe
 
 If you have a distributed setup, copy the `install_setup_backup.sh`
 `install_setup_backup.conf` and `setup_backup.sh` files to each node

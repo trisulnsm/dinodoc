@@ -6,7 +6,7 @@ sidebar_position: 2
 
 Manage users and their access levels.
 
-## Types of users
+## Types of Users
 
 A brand new install of Trisul has two users pre-provisioned
 
@@ -22,13 +22,13 @@ The user login is for all other operations like viewing and scheduling
 reports, packet analysis, viewing alerts, and pretty much everything
 else a normal operator would do on a regular basis.
 
-> #### Trisul 7.0 new
+> #### Trisul 7.0 New
 > 
 > This splitting of web interface based on user type is new in Trisul
 > 6.0.  
 > All the operations in this page require an admin user.
 
-## Create a new user
+## Create a New User
 
 Login as `admin` user to create a new user
 
@@ -42,24 +42,24 @@ Select Web Admin -\> Manage -\> Users
 \# Click **Create a new user** button  
 \# Fill up details below
 
-| Field                | Description                                                              |
-| -------------------- | ------------------------------------------------------------------------ |
-| User Name            | The long name of user                                                    |
-| Name                 | Login name for user, no spaces, keep it short                            |
-| Role                 | Webtrisul user Roles .See ” Roles”:userroles.html section for more       |
+| Field                | Description                                                         |
+| -------------------- | ------------------------------------------------------------------- |
+| User Name            | The long name of user                                               |
+| Name                 | Login name for user, no spaces, keep it short                       |
+| Role                 | Webtrisul user Roles .See ” Roles”:userroles.html section for more  |
 | LDAP Login           | User can use [LDAP](/docs/ug/webadmin/ldap_login) password to login |
-| Password             | Password for user                                                        |
-| Password Again       | Repeat the password again                                                |
-| Allow multiple Login | Allow concurrent login option to user                                    |
-| Default Home Page    | User will be redirected to the page after successfull login              |
-| Default Dashboard    | When user logs in he/she is taken directly to this dashboard)            |
-| Allowed Context      | Restrict user to this context only                                       |
+| Password             | Password for user                                                   |
+| Password Again       | Repeat the password again                                           |
+| Allow multiple Login | Allow concurrent login option to user                               |
+| Default Home Page    | User will be redirected to the page after successfull login         |
+| Default Dashboard    | When user logs in he/she is taken directly to this dashboard)       |
+| Allowed Context      | Restrict user to this context only                                  |
 
 > For LDAP Login User Name should be LDAP filter attribute value.  
 > For Example if you specified `Email` as filter attribute in LDAP domain
 > configuration then you need to enter you email in User Name field.
 
-## Edit existing user
+## Edit Existing User
 
 Login as `admin` user to create a new user
 

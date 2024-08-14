@@ -6,7 +6,7 @@ sidebar_position: 12
 
 Trisul Apps are plugins to enhance the capabilities of Trisul.
 
-## Plugin apps to extend Trisul
+## Plugin Apps to Extend Trisul
 
 You can install, upgrade, install Trisul Apps right from the web interface.
 
@@ -29,11 +29,13 @@ From here you can install, upgrade, or uninstall Trisul Apps.
 
 ![](images/trisulapps.png)
 
+*Figure: Showing a List of Trisul Apps*
+
 ## Repositories
 
 Currently the only repository enabled is https://github.com/trisulnsm/apps
 
-## Types of apps
+## Types of Apps
 
 There are three types of Trisul Apps
 
@@ -49,7 +51,7 @@ Click on README for instructions. Some of the LUA Analytics Apps need you to ena
 
 When you install a Trisul App, it is automatically deployed to all Probe nodes.
 
-## Creating your own apps
+## Creating your Own Apps
 
 You can clone the [trisulnsm/apps](https://github.com/trisulnsm/apps) repository to see how an app is assembled.
 

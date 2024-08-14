@@ -16,6 +16,8 @@ Trisul.
 
 ![](images/admin_tasks.png)
 
+*Figure: Start/Stop Tasks in Admin Panel*
+
 ### Start/Stop Tasks
 
 This Menu is generally used to start/stop Hub and Probe nodes associated
@@ -157,10 +159,14 @@ Enter the IP and TCP Port number of the DR Site.
 
 ![](images/drsettings.png)
 
+*Figure: DR Settings*
+
 By Configuring the DR Settings,you can view the Traffic Chart and DB
 Status of the DR Site from the primary site.
 
 ![](images/dr_traffic_chart.png)
+
+*Figure: DR Traffic Chart*
 
 Refer [Disaster Recovery](/docs/ug/ha/dr)
 
@@ -173,6 +179,8 @@ called **profile0** you can click on that item to access the profile
 menu.
 
 ![](images/profile_menu.png)
+
+*Figure: Profile0 in Context: default*
 
 ### Capture Adapters
 
@@ -236,7 +244,7 @@ Out, BucketSize, TopperBucketsize, GUID, etc
 
 Refer to [Trisul Traffic Meters](/docs/ref/meters)
 
-### Netflow Wizard
+### NetFlow Wizard
 
 This menu allows you to configure Netflow.
 

@@ -48,7 +48,7 @@ For each role
 
 - The **blue** color operations are read only
 
-## Inactivity security timeout
+## Inactivity Security Timeout
 
 Due to the sensitive nature of the data presented by Trisul, there is an
 inactivity timeout associated with each user. If no user interaction is

@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Logging in
+# Logging In
 
 > You need to use a **SVG capable browser** like Firefox,
 > Chrome, Opera, Safari to work with Trisul.  
@@ -14,17 +14,17 @@ Trisul can be accessed by pointing your browser to :
 
 - via HTTPS
 
-## First login
+## First Login
 
 If this is the first time you are logging in , use the built-in `admin`
 user or `user` user.
 
-#### To configure
+#### To Configure
 
 username = `admin`  
 password = `admin`
 
-#### To view stats
+#### To View Stats
 
 user name = `user`  
 password = `user`
@@ -40,11 +40,13 @@ is not shown.
 
 ![](images/login_screen.png)
 
+*Figure: Login Screen*
+
 ## Logout
 
 You can logout by clicking the **logout** at the top left.
 
-## Inactivity security timeout
+## Inactivity Security Timeout
 
 Due to the sensitive nature of the data presented by Trisul, there is an
 inactivity timeout associated with each user. If no user interaction is
@@ -64,7 +66,7 @@ Server -\> Idle Timeout
 If you want to disable it - set it to some **huge value** (1000000
 seconds)
 
-## Login rules
+## Login Rules
 
 - If you login from a second location, Trisul will kick the first
   session out. (like yahoo/gmail/etc)  

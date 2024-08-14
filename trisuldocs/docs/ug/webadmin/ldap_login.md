@@ -17,10 +17,10 @@ After you have created a LDAP Domain , a checkbox called “LDAP
 Authentication” appears at the login screen as shown below.
 
 ![](images/ldaplogin.png)  
-*If you configure an LDAP domain, a checkbox will be shown on the login
+*Figure: If you configure an LDAP domain, a checkbox will be shown on the login
 page*
 
-## View LDAP domains
+## View LDAP Domains
 
 This page shows a list of LDAP domains configured in Trisul.
 
@@ -40,7 +40,7 @@ A list of configured domains is shown with the following details
 4. Base DN : under which users are queried
 5. Filter : the username is taken from this attribute, usually the `mail`
 
-### LDAP Domain options
+### LDAP Domain Options
 
 For each LDAP domain shown, the following options are shown at the right
 side of each row.
@@ -53,7 +53,7 @@ side of each row.
 | Sync users           | **Synchronize Users** - contact the LDAP domain server and query for users with the *Sync Users Filter* parameter then add all the users to Trisul with the username taken from the *Search Filter*. At the end of the synchronize operation you should be able to see all the users added under *Manage \> Users* |
 | Delete synced users  | Only delete the users automatically added by an earlier “Sync Users” operation. You can then go back and synchronize or manually add LDAP users                                                                                                                                                                    |
 
-### Synchronize users from LDAP
+### Synchronize Users from LDAP
 
 This feature allows Trisul to automatically query a LDAP directory using
 a particular attribute value then create users in Trisul based on its
@@ -97,7 +97,7 @@ Fill in the details as shown below.
 | Login with bind only          | If checked, the LDAP login process only uses the user name to bind rather than the default way of using the connection user name and password first and then bind the user                                                                                                                                                |
 | Append to username            | The string specified in this field will automatically appended to the user name. A features to help the user avoid typing the full login names. For example : if you set this to *`unitedfederalbankname.com_ then the user who had to type  _mike`unitedfederalbankname.com* only has to type *mike* at the login screen |
 
-## Create a LDAP enabled user
+## Create a LDAP Enabled User
 
 Next you need to create a new LDAP user.
 
@@ -120,12 +120,12 @@ Here there are two options
 As per your company policy you can choose to create any one of the two
 types of users.
 
-## Admin user is always local
+## Admin User is Always Local
 
 The super admin user with login name = *admin* always uses a local
 login.
 
-## Login mode
+## Login Mode
 
 After you create a LDAP Domain, the login screen will show a checkbox
 called “LDAP authentication”.

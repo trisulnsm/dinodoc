@@ -9,7 +9,7 @@ addresses, IP subnets or any other network entity to named groups. These
 groups can then be assigned to users. Users will then only be allowed to
 see those resource entities.
 
-### Use case - user device permissions
+### Use Case - User Device Permissions
 
 A Trisul netflow customer desires to create *cust1* who can only view
 *routers A,B,C* metrics and another user *cust2* who can only see
@@ -23,7 +23,7 @@ A Trisul netflow customer desires to create *cust1* who can only view
 Now when *cust1* logs in he/she can only see the two routers assigned to
 him/her.
 
-## Creating a resource group
+## Creating a Resource Group
 
 The first step is to create a group and select and put resources into
 the group.
@@ -50,14 +50,14 @@ Resources*
 
 ![](images/user_resourcegroups.png)
 
-*Showing all user resource groups with button on top right to create a
+*Figure: Showing all user resource groups with button on top right to create a
 new resource group*
 
     You are shown a list of already configured resource groups.
 
 Select “New Resource Group” from the top right.
 
-### Create a resource group
+### Create a Resource Group
 
 This step is very simple. Just create an empty resource group with a
 name and description. The name can be short such as “East Zone Devices”
@@ -65,18 +65,18 @@ and a longer description.
 
 ![](images/edit_new_resourcegroup.png)
 
-*Create an empty Resource Group with a name, you will add keys later*
+*Figure: Create an empty Resource Group with a name, you will add keys later*
 
 Next you have to add resources to this group.
 
-### Add resources to the group
+### Add Resources to the Group
 
 Select the *Add/Edit Resources* button against the newly created
 resource group.
 
 ![](images/addordit_resources.png)
 
-*Click to add or edit resources to the new group*
+*Figure: Click to add or edit resources to the new group*
 
 Give a name for this particular collection of items ; such as *East Zone
 Routers*
@@ -87,7 +87,7 @@ Terminology section above. If you want to select Routers then select
 
 ![](images/countergroup_edituserresource.png)
 
-*Select a counter group. Here we select FlowGens to create a group of
+*Figure: Select a counter group. Here we select FlowGens to create a group of
 routers*
 
 Next you have to select *Keys* these are items from the group that have
@@ -97,7 +97,7 @@ this group.
 
 ![](images/keys_userresources.png)
 
-*Select routers to add to this group*
+*Figure: Select routers to add to this group*
 
 After you select the keys the resource group has been created. You can
 then follow the similar process to add or edit keys at a later time. You
@@ -109,7 +109,7 @@ The correct way is to create two level counter groups say “East” and
 
 > You can only add a counter group once to a single group. If you want to create two groups of routers say *East* and *West* routers then create a new Resource Group as many times as you want
 
-## Assigning resource groups to users
+## Assigning Resource Groups to Users
 
 This section describes how you can assign a resource group to a user.
 That restricts that users view to only items in that group.
@@ -124,7 +124,7 @@ Then against the user select the *Options \> Assign Resources*
 
 ![](images/assignresources_userresource.png)
 
-*Assign resource groups to a user*
+*Figure: Assign resource groups to a user*
 
 Then select the resource groups to assign to this user.
 
@@ -136,7 +136,7 @@ Ensure that the user is allowed to access the Trisul context. Go to Edit
 User and ensure that there is atleast one context selected in “Allowed
 Contexts”
 
-#### When assigning keys to resource group I am getting: A list of keys already exists for this counter group
+#### When Assigning Keys to Resource Group I am Getting: A List of Keys Already Exists for This Counter Group
 
 You are trying to re-use a counter group for which keys are already
 assigned. In this screen you can assign keys for different groups - eg

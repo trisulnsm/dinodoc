@@ -13,6 +13,8 @@ It has all the functional level menus associated with the UI. Any changes to be 
 
 ![](images/adminmenu.png)
 
+*Figure: Admin Panel*
+
 ### Users
 
 Provides a list of all active users or subscribers that can access 

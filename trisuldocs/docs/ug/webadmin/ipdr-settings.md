@@ -15,7 +15,7 @@ This page describes the configuration settings for
    server
 2. NAT SysLog - Port where NAT syslog messages are sent
 
-## Settings form
+## Settings Form
 
 :::note navigation
 
@@ -26,11 +26,13 @@ Settings*
 
 ![](images/ipdr_settings.png)
 
-Press Edit to access the form as shown below.
+*Figure: IPDR Settings Path*
 
 ![](images/ipdr_edit_form.png)
 
-### Form fields
+*Figure: IPDR Settings Form*
+
+### Form Fields
 
 | Field              | Default | Description                                                                                                                                                                                                                       |
 | ------------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -50,7 +52,7 @@ systemctl restart trisul-ipdr
 
 ## Configuring FTP
 
-### Create key pair on Trisul IPDR Hub node
+### Create Key Pair on Trisul IPDR Hub Node
 
 On the Trisul-Hub server create a key pair like so into a file that is
 used for Trisul IPDR only. Use a file name `id_trisul_ipdr`
@@ -71,7 +73,7 @@ id_trisul_ipdr.pub      # the public key  (to be send to the target FTP server)
 id_trisul_ipd           # the private key (never to be shared, stored on Trisul-Hub)
 ```
 
-### Save the public key on the target server
+### Save the Public Key on the Target Server
 
 Now put the `id_trisul_ipdr.pub` on to the target server with the
 `Username` in the IPDR FTP Settings.
@@ -82,7 +84,7 @@ Now put the `id_trisul_ipdr.pub` on to the target server with the
 cat id_trisul_ipdr.pub >> .ssh/authorized_keys 
 ```
 
-#### Test it out
+#### Test it Out
 
 On the Trisul-Hub node check if the server works. You can use the ssh
 command to test.
