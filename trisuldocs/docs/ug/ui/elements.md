@@ -1,8 +1,8 @@
 ---
-sidebar_position: 4
+sidebar_position: 6
 ---
 
-# UI Elements
+# Other UI Elements
 
 This section contains a quick overview of the user interface elements
 used by Trisul.
@@ -20,24 +20,6 @@ right corner.
 ![](images/dashboards/hidesearchform.png)
 
 *Figure: Analysis Form Showing Hide Button*
-
-
-
-## Toolbars
-
-The toolbar area is the big title area at the top.There are two options
-available currently.
-
-- **PDF** Click to convert the current page into PDF report.
-
-- Retro FAQ ->Name the analysis and add it to the
-  [Q&A](/docs/ug/cg/retrofaq)
-
-Sample form shows the analysis
-
-![](images/dashboards/pdfretrofaq.png)
-
-*Figure: Showing Analysis Options*
 
 ## Packets and Flows Drilldown Buttons
 

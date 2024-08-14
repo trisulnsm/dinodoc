@@ -33,7 +33,7 @@ The Hosts dashboard consists of the following modules
 | Latest Top Internal Hosts - Total       | The Top Internal Hosts by Total traffic in the latest 5 minutes                                                                         |
 | Latest Top External Hosts - Total       | Hosts outside home network (external hosts) with the most total traffic in the latest 5 minutes                                         |
 | Latest Top Internal Hosts - IN          | Top Internal Hosts by with most received traffic (downloaders) in the latest time interval (5 minutes by default)                       |
-| Latest Top External Hosts - IN          | Top External Hosts by with most received traffic (downloaders)in the latest time interval (5 minutes by default)                       |
+| Latest Top External Hosts - IN          | Top External Hosts by with most received traffic (downloaders)in the latest time interval (5 minutes by default)                        |
 | Latest Top Internal Hosts - OUT         | Top Internal Hosts by most sent traffic (uploaders) in the latest topper interval (Default 5 minutes)                                   |
 | Latest Top External Hosts - OUT         | Top External hosts sending most traffic to your network in the latest topper interval (Default 5 minutes)                               |
 | Latest Top Internal Hosts - Connections | Top Ithe Internal hosts maintaining the most number of active TCP and UDP connections in the latest 5 minutes (default topper interval) |

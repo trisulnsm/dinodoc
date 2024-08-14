@@ -4,10 +4,19 @@ sidebar_position: 3
 
 # Introduction to Dashboards and Modules
 
-A *dashboard* is a web page that contains *modules* at various
-positions.
+A *Dashboard* is a visual representation of key performance indicators and metrics that are used to measure the performance of a network traffic. Using Dashboards you can easily monitor and and analyze data in real- time. A Trisul *Dashboard* contains *modules* at various positions.
 
-Key rules about modules and dashboards:
+Dashboards are,
+
+**Visual** You can use charts, graphs, tables and other visual elements to display data
+
+**Interactive** You can interact with dashboards to drilldown into details, filter data, and explore different scenarios
+
+**Real-Time** Dashboards display up to date data reflecting the current status of the network
+
+**Customizable** You can play around with dashboards that can be personalized/customized to specific needs of different users
+
+## Key Rules About *Modules* and *Dashboards*
 
 1. A dashboard may contain several modules.  
 
@@ -21,9 +30,29 @@ Key rules about modules and dashboards:
 5. If there are no modules in a particular position that position is not
    rendered at all as trisul modules auto adjust for width.
 
+*Modules* are like widgets or tiles in a *dashboard* that are individual components displaying  specific information, metrics, or data visualizations. They are the building blocks of a *dashboard* and can be customized to show various types of content. 
+
+Modules in a dashboard can be of various types including,
+
+**Charts and Graphs** Display data visualizations, such as line charts, bar charts, or pie charts.
+
+**Tables and Lists** Show tabular data, such as lists and tables.
+
+**KPIs** Display important metrics, such as numbers, percentages, or gauges.
+
+**Maps and GeoSpatial**Show geographic data, such as maps and location-based information.
+
+**Texts and Labels** Display static or dynamic text, such as titles, descriptions, or notifications.
+
+**Gauges and Meters** Display progress or measurement indicators, as in speedometers or thermometers.
+
+**Real-Time Traffic Feeds** Real-time traffic updates, including congestion, incidents, and threats.
+
+**Custom Modules** Can be developed to meet specific needs, such as integrating with external services.
+
 ## An Example - Current Hosts
 
-The first screen you will see when you login is the Current Hosts
+The first screen you will see when you login as user is the Current Hosts
 overview dashboard
 
 ![thumbnail_zoom](images/host_dashboard.png "thumbnail_zoom")  
@@ -103,6 +132,20 @@ dashboard window.
 
 ![](images/toolbars/dashboard_icons.png)  
 *Figure: Dashboard level toolbar*
+
+With Dashboard Toolbar you can
+
+**Customize** Allows you to personalize the dashboard to your preferences, such as rearranging modules, adding or removing modules, and changing the layout.
+
+**Toggle Labels** Toggles the display of labels for each module on the dashboard, providing a more detailed information.
+
+**Set as Default Dashboard** Saves the current dashboard configuration as your default view, so every time you log in, this customized dashboard will be displayed.
+
+**Expand all Modules** Opens up all collapsed modules on the dashboard, allowing you to see all the information at once.
+
+**Collapse all modules** Collapses all expanded modules on the dashboard, providing a more compact view and reducing clutter.
+
+**Download as PDF** You can exports the current dashboard view as a PDF file, and save, or share the data for reports.
 
 #### Operations
 

@@ -29,25 +29,24 @@ The top panel contains the following items
    Click on the Menu toggle button to hide and unhide the side menu. This will provide you with extra screen space when necessary.
 
 2) #### Trisul Logo
-
-Clicking on the logo takes you to the home page.
+   
+   Clicking on the logo takes you to the home page.
 
 3) #### Search Bar
-
-You can use the Search bar tool to find items of your interest.
+   
+   You can use the Search bar tool to find items of your interest.
 
 4) #### Alerts and Notifications
 
 ![](images/alertsnnotifications.png)
 
-
-*Figure: Alerts and Notifications in Top Panel*
-
-You can check for the alerts and notifications on External IDS, Threshold Crossing, Threshold Band Alerts, Blacklist Activity and Flow tracker here.
+    *Figure: Alerts and Notifications in Top Panel*
+    
+    You can check for the alerts and notifications on External IDS, Threshold Crossing, Threshold Band Alerts, Blacklist Activity and Flow tracker here.
 
 5) #### License Detail
-
-You can check the validity of your License here.
+   
+   You can check the validity of your License here.
 
 6) #### Probe Switch
    
@@ -62,8 +61,8 @@ You can check the validity of your License here.
       You can switch between dark and light modes to change the appearance of the screen here.
 
 8) #### Host Name
-
-This shows the host's name. All time zones in Trisul are displayed in the host's time zone.
+   
+   This shows the host's name. All time zones in Trisul are displayed in the host's time zone.
 
 9) #### Account
    
@@ -72,12 +71,12 @@ This shows the host's name. All time zones in Trisul are displayed in the host's
    *Figure: Account Switch*
    
     Clicking on the account button you can get the account history, change password, and signout from the current account. 
-   
-   ## Menus
 
-A fully customizable multi open collapsible menu system.
+## Menus
 
-#### Basic Operations
+   A fully customizable multi open collapsible menu system.
+
+### Basic Operations
 
 ![](images/menus.png)
 
@@ -96,10 +95,12 @@ Trisul remembers the expanded state of the menu per user.
    *Figure: Shortcut Menu in User Layout Menu*
    
    Clicking on the shortcut menu you can quickly navigate to the home, routers and interfaces, and explore flows from any page.
-2. ## Tenants
+
+2) #### Tenants
    
-      Trisul can handle multiple tenants and each tenant's data are isolated from others through logical separation. You can switch between different contexts from the list of tenants. 
-3) ## Menu Items
+   Trisul can handle multiple tenants and each tenant's data are isolated from others through logical separation. You can switch between different contexts from the list of tenants.
+
+3) #### Menu Items
    
    Click on each menu item and you can see the sub menus under each menu item expanded. Click Show all as not all sub menus would show up here.
 
