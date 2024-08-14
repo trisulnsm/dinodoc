@@ -41,7 +41,7 @@ Notice the wizard has 6 Tabs.
 6. **Utilization Alert** — Generate alerts when any interface
    utilization crosses specific level of thresholds
 
-## Basic configuration
+## Basic Configuration
 
 Here you can configure the most common items related to Netflow.
 
@@ -96,7 +96,7 @@ Select interfaces and then :
 | Create TCA                                | Create TCA for selected interfaces                                    |
 | Delete TCA                                | Delete TCA for selected interfaces                                    |
 
-## Configure Email alerts
+## Configure Email Alerts
 
 This page allows you to configure real time E-Mail alerts for various
 conditions.

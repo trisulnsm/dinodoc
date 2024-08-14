@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# Using Packets and Netflow together
+# Using Packets and Netflow Together
 
 Trisul can also consume a mix of Netflow and raw packets on the same or
 on different interfaces. The way this feature works is :
@@ -14,7 +14,7 @@ on different interfaces. The way this feature works is :
 If you want to only consume Netflow then refer to the [Netflow Setup
 Howto](netflow_setup)
 
-## How to use this mode
+## How to Use this Mode
 
 To use this mixed mode - we use a different technique than that
 described in the [Netflow only setup](netflow_setup)
@@ -40,7 +40,7 @@ the following.
 
 > While using this mode, make sure the [TrisulMode in trisulConfig.xml](/docs/ref/trisulconfig#app) is set to TAP (the default) and not NETFLOW_TAP
 
-### Netflow and PCAP on the same interface
+### Netflow and PCAP on the Same Interface
 
 If you have Netflow and PCAP on the same interface (say eth0). You would
 create two eth0 interfaces and check the “Force Netflow Mode” on only

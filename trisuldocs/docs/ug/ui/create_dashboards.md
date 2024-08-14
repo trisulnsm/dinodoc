@@ -5,7 +5,7 @@ sidebar_position: 6
 
 # Dashboards
 
-With Dashboards you can, 
+With [Dashboards](/docs/ug/ui/dashmod_intro) you can, 
 
 - Add / remove / reposition modules.  
 

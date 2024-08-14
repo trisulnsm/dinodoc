@@ -7,7 +7,7 @@ sidebar_position: 8
 This section outlines some of the Layer 2 and QoS related features
 available in Trisul Network Analytics.
 
-## Layer 2 metrics
+## Layer 2 Metrics
 
 Netflow is considered to be a Layer 3 IP level technologies. However, it
 is possible to configure IPFIX to export MAC address information along
@@ -61,7 +61,7 @@ various ways to provide specialized services.
 
 Trisul supports collecting the following Netflow template fields.
 
-|     |                     |                                                                                                             |
+| ID  | Field Name          | Description                                                                                                 |
 | --- | ------------------- | ----------------------------------------------------------------------------------------------------------- |
 | 5   | ipClassOfService    | For IPv4: the full 8 bit value of the IP ToS field. For IPv6: the 8-bit value of the Class of Service field |
 | 195 | ipDiffServCodePoint | The most significant 6 bits of the IPv4 TOS field or the IPv6 Traffic Class field                           |
@@ -69,7 +69,7 @@ Trisul supports collecting the following Netflow template fields.
 
 The following counter groups show ToS data
 
-|               |                                            |
+| Counter Group | ToS Data                                   |
 | ------------- | ------------------------------------------ |
 | IP ToS        | The full 8-bit ToS field                   |
 | IP Precedence | Meters the traffic per ipProecedence       |
@@ -92,16 +92,16 @@ Trisul meters the 8 allowed values of IP Precedence. This was introduced
 by RFC 791 in 1981 and is now generally deprecated , but there may be
 some legacy networks still using this feature
 
-|     |                      |
-| --- | -------------------- |
-| 000 | Routine              |
-| 001 | Priority             |
-| 010 | Immediate            |
-| 011 | Flash                |
-| 100 | Flash Override       |
-| 101 | Critic/Critical      |
-| 110 | Internetwork Control |
-| 111 | Network Control      |
+| IP Precedence Value | Description          |
+| ------------------- | -------------------- |
+| 000                 | Routine              |
+| 001                 | Priority             |
+| 010                 | Immediate            |
+| 011                 | Flash                |
+| 100                 | Flash Override       |
+| 101                 | Critic/Critical      |
+| 110                 | Internetwork Control |
+| 111                 | Network Control      |
 
 ### DiffServ
 
