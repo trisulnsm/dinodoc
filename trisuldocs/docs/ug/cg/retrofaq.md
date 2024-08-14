@@ -39,7 +39,7 @@ Typically you would select an appropriate Retro Tool, type in the information yo
 - Dynamically adjusting Q & A list will bubble up frequently accessed
   questions to the top
 
-## How to use
+## How To Use
 
 :::note navigation
 
@@ -50,6 +50,8 @@ To access select Retro -\> Retro FAQ
 You will then be presented with a UI similar to this one shown below.
 
 ![](images/retrofaq.png)
+
+*Figure: Retro FAQ*
 
 Here is how you use the UI.
 
@@ -68,7 +70,7 @@ The small buttons besides each question is the tag. Click on a tag to
 load all questions with the same tag into the right hand side window
 called *Tagged Questions*
 
-## Creating your own questions
+## Creating Your Own Questions
 
 Trisul ships with about 40 common questions. It is easy for you to
 create your own questions customized to your network. This is how it
@@ -79,6 +81,8 @@ works.
   the Add to favorites star icon.
 
 ![](images/addtofav.png)
+
+*Figure: Add to Favorites Option to Add Module to Retro FAQ*
 
 Enter a question name and optionally a set of tags using the \#
 symbol
@@ -91,7 +95,7 @@ symbol
 - New questions may initially show up at the bottom of the list so you
   may have to click on the “More” button to see them
 
-## Managing existing questions
+## Managing Existing Questions
 
 You can edit, retag, or delete existing questions if you wish.
 
@@ -105,6 +109,10 @@ This will show a list of already available retro questions that can be managed e
 
 ![](images/faqlist.png)
 
-Click on the option toolbar on the right side against each question. And click **Edit**. The following screen will be displayed with editable form. You can edit the question as  you want and URL and click **Update**.
+*Figure: Network FAQ List*
+
+Click on the option toolbar on the right side against each question. And click **Edit**. The following screen will be displayed with editable form. You can edit the question as  you want and URL. Then click **Update**.
 
 ![](images/faqedit.png)
+
+*Figure: Edit FAQ Question*

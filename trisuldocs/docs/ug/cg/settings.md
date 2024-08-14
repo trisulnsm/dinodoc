@@ -20,7 +20,7 @@ You can also enable or disable any counter group.
 > **Disabling a built-in counter group** will cause all
 > user-defined counter groups that depend on it to report zero usage.
 
-## Editing settings
+## Editing Settings
 
 :::note navigation
 
@@ -35,6 +35,8 @@ Configurations -\> Select Counter Groups
    page with the fields below
    
    ![](images/editcountergroups.png)
+   
+   *Figure: Editing Counter Group Form*
 
 | FieldName                           | Description                                                                                                                                                                 |
 | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -53,7 +55,7 @@ Configurations -\> Select Counter Groups
 
 Click Update to configure the counter group.
 
-## Bulk edits
+## Bulk Edits
 
 The following bulk edit options are available.
 
@@ -67,6 +69,8 @@ Configurations -\> Counter Groups -\> Advanced Options
 :::
 
 ![](images/advancedoptions.png)
+
+*Figure: Bulk Edit All Counter Groups*
 
 1. Set a bucket size for all counter groups 
 
@@ -90,6 +94,8 @@ Configurations -\> Counter Groups
    group , directs you to a page with the below fields
    
    ![](images/topperpolicies.png)
+   
+   *Figure: Editing Counter Group Topper Policies*
 
 | Counter Groups             |
 | -------------------------- |

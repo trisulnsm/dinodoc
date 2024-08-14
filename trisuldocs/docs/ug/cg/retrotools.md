@@ -2,7 +2,7 @@
 sidebar_position: 07
 ---
 
-# Retro analysis tools
+# Retro Analysis Tools
 
 You have selected a time interval you want to focus on - whats next ?
 Now you need to select an analysis tool to apply to the time interval.
@@ -15,6 +15,8 @@ Go to Retro-> Retro analysis tools
 You can find the list of retro tools below the time selector as shown in this example.
 
 ![](images/retrotools.png)
+
+*Figure: Retro Tools*
 
 You have to pick one of the following tools shown.
 
@@ -52,6 +54,8 @@ This is an example of the Network FAQ module.
 
 ![](images/networkfaq.png)
 
+*Figure: Network FAQ*
+
 Refer [Retro Q&A](/docs/ug/cg/retrofaq) for more details.
 
 ## Counter Group Toppers
@@ -71,6 +75,8 @@ For example : You can select counter group *Hosts* and meter
 interval.
 ![](images/countergroupretro.png)
 
+*Figure: Counter Group Toppers Retro Tool*
+
 The information is presented as dashboards in lists, charts, and a trend chart.
 
 ## Investigate IP Activity
@@ -86,6 +92,8 @@ Go to Retro-> Retro tools-> Investigate IP activity
 :::
 
 ![](images/investigateipretro.png)
+
+*Figure: Investigate IP Activity Rretro Tool*
 
 The analysis includes
 
@@ -112,6 +120,8 @@ Enter an port value say p-0587 and you will  get the detailed activity including
 
 ![](images/applicationretro.png)
 
+*Figure: Investigate Applications Retro Tool*
+
 The analysis will take you to the [Explore](/docs/ug/tools/explore_flows) tool with the selected items and time interval.
 
 ## Long Term Traffic Charts
@@ -131,6 +141,8 @@ The result will be a chart showing most recent 7 days of data arranged
 by day.
 
 ![](images/longtermcharts.png)
+
+*Figure: Long Term Traffic Charts Retro Tool*
 
 You can click on the **Show Search Form** on the top right for long term traffic charts and click on any date range in the **Time Frame**window to view the traffic for that selected time period. This tool will take you to the [Long term traffic trends](/docs/ug/tools/analyze_item) tool with the start time and other selections automatically filled in.
 
@@ -202,6 +214,8 @@ Go to Retro-> Retro tools-> Explore Flows
 
 ![](images/exploreflowsretro.png)
 
+*Figure: Explore Flows Retro Tool*
+
 > Click on the little question mark hint near the search expression toolbar to  Enter an expression like **ip=19.168.211.10** or ip=gmail.com or ip=fe80::fe08:7ad1 or port=smtp or port=p-0050 or port=80 and drill down into specific flows to investigate their traffic behavior.
 
 ## Show Traffic Chart for an Item
@@ -222,6 +236,8 @@ then save them as PDF if you wish.
 
 ![](images/showtrafficretro.png)
 
+*Figure: Show Traffic Chart Retro Tool*
+
 ## Pull Packets
 
 Pull up a sample of raw packets for the selected time interval and
@@ -235,6 +251,8 @@ Go to Retro-> Retro tools-> Pull Packets
 :::
 
 ![](images/pullpacketsretro.png)
+
+*Figure: Pull Packets Retro Tool*
 
 There are some caps on this feature to prevent accidental misuse.
 
@@ -275,5 +293,7 @@ Go to Retro-> Retro tools-> View Edges
 :::
 
 ![](images/viewedges.png)
+
+*Figure: View Edges Retro Tool*
 
 Learn more about Edges in [Trisul Edges](/docs/ug/edges/)- Streaming Graph Analytics.

@@ -2,7 +2,7 @@
 sidebar_position: 06
 ---
 
-# Performing Retro analysis
+# Performing Retro Analysis
 
 Retro analysis is short for retrospective analysis. When applied to
 network monitoring, it means re-examining past data sets looking to get
@@ -29,12 +29,12 @@ Retrospective analysis is basically a two part process :
 
 2. Analysis tools that depend on raw packets will need a smaller time window.
 
-## Selecting a time window
+## Selecting a Time Window
 
 The time selector allows you to select a time interval based on visually
 observing a traffic chart.
 
-### Interactive selection
+### Interactive Selection
 
 To select a time window  
 
@@ -46,9 +46,9 @@ To select a time window
 
 ![](images/retrotimeselector.png)
 
-Retro time selector
+*Figure: Retro time selector*
 
-### Select using a calendar
+### Select Using a Calendar
 
 You may also skip the chart entirely and use a calendar to manually
 select a time window.
@@ -58,7 +58,9 @@ select a time window.
 
 ![](images/calendarretro.png)
 
-### Expanding the selection window
+*Figure: Showing Custom Time Selection Uisng Calendar for Retro Chart*
+
+### Expanding the Selection Window
 
 Click on the tabs Hours, Days, Weeks to display wider windows in the
 chart below.
@@ -76,7 +78,7 @@ You can then zoom in to the timeframe of interest
 When you select a particular area on the chart over the time selector the zoom/pan tools are shown as small icons below the chart. You can zoom into it multiple times as
 well as zoom out. You can also pan left and right which is a way to see the previous time window.
 
-### Raw packet / full content availability
+### Raw Packet / Full Content Availability
 
 The time selector will have a pale yellow background for the time window
 where full packet data is available. In practice, full content capture
@@ -91,7 +93,7 @@ full capture based analysis tools like :
 > This feature is not applicable to Netflow mode or when full
 > content storage is disabled.
 
-## Running an analysis tool
+## Running an Analysis Tool
 
 Once you have selected a time window of interest, you have two options.
 

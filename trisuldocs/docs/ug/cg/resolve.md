@@ -2,7 +2,7 @@
 sidebar_position: 04
 ---
 
-# Name resolution
+# Name Resolution
 
 You can assign a user friendly name for any type of item.
 
@@ -79,7 +79,7 @@ little load on your DNS servers as possible.
 
 By default in hub config the "resolve ip"" is set to true which automatically resolves IP addresses. You can disable by configuring it in the [hubconfig](/docs/ref/trsulhubconfig#resolveip).
 
-## Export labels to CSV file
+## Export Labels to CSV file
 
 You can export assigned labels to csv file
 

@@ -31,7 +31,7 @@ Currently active flows for a host or port. *Example : Show flows for IP
 
 Real time animated view of all alert activity in your network.  
 
-## Browser requirements
+## Browser Requirements
 
 1. **Websockets** This feature requires a Websockets capable browser.
 2. **LocalStorage** Real time stabbers make extensive use of HTML5
@@ -45,7 +45,7 @@ Real time animated view of all alert activity in your network.
 
 There are three ways to access real time stabbers.
 
-### 1. From the context menu in any module
+### 1. From the Context Menu in Any Module
 
 1. Click on the little tag symbol on the right side beside any key item to bring up the
    contextual menu
@@ -59,13 +59,17 @@ There are three ways to access real time stabbers.
 
 ![](images/rtstabbers.png)
 
-### 2. From any key dashboard
+*Real Time Stabbers Option from Clicking Any Key Item Toolbar*
+
+### 2. From any Key Dashboard
 
 Lets say you are investigating an arbitrary item using the [Key Dashboard](/docs/ug/ui/key_dashboard)
 
 Click on any key item from a dashboard that takes you into the key dashboard of that key. In the Key Details module click on the Real Time Stabbers from the menu as sshown in this example.
 
 ![](images/rtstabbers1.png)
+
+*Figure: Real Time Stabbers Options from Key Dashboard*
 
 ### 3. From the Menu
 
@@ -92,6 +96,8 @@ Now lets explore each of the Real Time Stabber options in detail. Real Time Stab
 
 ![](images/rtstabbers2.png)
 
+*Figure: Real Time Stabber Options*
+
 ### Real Time Stabber: Traffic Chart
 
 Use Real Time Stabber: Traffic Chart to continuously monitor traffic (bandwidth) used by a particular key item with a 5-second delay.
@@ -100,7 +106,7 @@ Click and drag to zoom a particular time interval with mouse. Use the [Module ic
 
 ![](images/rtstabbers3.png)
 
-Real time key traffic chart.
+*Figure: Real time key traffic chart*
 
 ### Real Time Stabber: Flow Activity
 
@@ -111,7 +117,7 @@ real time.
 
 ![](images/rtstabbers4.png)
 
-Real time top flows for an item.
+*Figure: Real time top flows for an item*
 
 ### Real Time Stabber: Toppers
 
@@ -121,7 +127,7 @@ The image below shows a counter group stabber viewing top `Internal Hosts` based
 
 ![](images/rtstabbers5.png)
 
-Real time counter group toppers.
+*Figure: Real time counter group toppers.*
 
 ## Alert Stabber
 
@@ -144,3 +150,5 @@ With Real Time Alert Stabber you can,
 3. Real time aggregated list gives you instant overview
 
 ![](images/rtstabbers6.png)
+
+*Figure: Real Time Alert Stabber*
