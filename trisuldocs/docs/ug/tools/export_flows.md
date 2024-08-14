@@ -2,21 +2,21 @@
 sidebar_position: 12
 ---
 
-# Export flows
+# Export Flows
 
 Export raw flows for an IP to a CSV File that can be imported into
 Excel.
 
 ![](images/Export_IP.png)  
-*Export IP Flows-Search Form*
+*Figure: Export IP Flows-Search Form*
 
-#### Use cases
+#### Use Cases
 
 1. Compliance -quering by subscriber IP
 2. Large scale workload - this tool creates the CSV file on the server
    , then downloads the file to the client.
 
-## How to export flows by IP
+## How to Export Flows By IP
 
 :::note navigation
 

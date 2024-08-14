@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Flow Tagger
 
-## How to use
+## How to Use
 
 :::note navigation
 
@@ -18,4 +18,4 @@ tagger to view all tagged flows in that time interval.
 see [Flow Taggers](/docs/ug/tools/flow_tagger) for more
 
 ![](images/output/flow_taggers.png)  
-*Flow Tagger*
+*Figure: Flow Tagger*

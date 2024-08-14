@@ -17,7 +17,7 @@ sidebar_label: Rule Builder
 
 ---
 
-## How to use
+## How to Use
 
 :::note navigation
 
@@ -25,7 +25,7 @@ To access select Tools -\> Trisul Rule Builder
 
 :::
 
-|                                  |                                                                                                                                                  |
+| Options                          | Description                                                                                                                                      |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Combine with previous expression | Whether to AND or OR this expression with what is already in the *Tagger Rule* box above. You can ignore for simple expressions                  |
 | Counter Group                    | Select a counter group which you want to match                                                                                                   |

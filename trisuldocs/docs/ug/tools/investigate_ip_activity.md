@@ -9,9 +9,9 @@ look at traffic, flows, and alerts and produce a number of charts and
 tables summarizing the activity.
 
 ![](images/Investigate_IP.png)  
-*Investigate IP*
+*Figure: Investigate IP*
 
-## How to use
+## How to Use
 
 :::note navigation
 
