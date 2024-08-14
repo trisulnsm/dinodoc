@@ -25,7 +25,7 @@ You can create your own custom report by clicking on the ‘Create New Report’
 
 ![](images/flexi_report.png)
 
-*Flexible report Index view*
+*Figure: Flexible report Index view*
 
 You will get a dialog box with fields.
 
@@ -44,7 +44,7 @@ There are five different kinds of reports that you can create.
 
 ![](images/flexi_chart_type.png)
 
-*Available Flexible Report types*
+*Figure: Available Flexible Report types*
 
 ## Volume Report
 
@@ -55,7 +55,7 @@ will find a dialog box
 
 ![](images/volume_type.png)
 
-*Search Form for Volume type report*
+*Figure: Search Form for Volume type report*
 
 Here is the table with description for available fields to create Volume type reports.
 
@@ -79,7 +79,7 @@ you have created
 
 ![](images/volume_type_report.png)
 
-*Sample pdf for Volume based flexible report*
+*Figure: Sample pdf for Volume based flexible report*
 
 ## Traffic Chart Report
 
@@ -88,7 +88,7 @@ metrics in the form of colourful charts. You will find a dialog box.
 
 ![](images/traffic_type.png)
 
-*Search form for traffic type report*
+*Figure: Search form for traffic type report*
 
 Here is the table with description for available fields to create Traffic type reports.
 
@@ -112,7 +112,7 @@ you have created
 
 ![](images/traffic_type_report.png)
 
-*Sample pdf for Traffic chart based report*
+*Figure: Sample pdf for Traffic chart based report*
 
 ## Toppers Table Report
 
@@ -121,7 +121,7 @@ counter groups in the form of a table. You will find a dialog box
 
 ![](images/toppers_type.png)
 
-*Search form for toppers type report*
+*Figure: Search form for toppers type report*
 
 Here is the table with description for available fields to create Toppers type reports.
 
@@ -144,7 +144,7 @@ you have created
 
 ![](images/toppers_type_report.png)
 
-*Sample pdf for Toppers based report*
+*Figure: Sample pdf for Toppers based report*
 
 ## Metrics Table Report
 
@@ -153,7 +153,7 @@ For instance, if you want a volume report for all metrics(total,recieved,transmi
 
 ![](images/metrics_type.png)
 
-*Search form for Metrics type report*
+*Figure: Search form for Metrics type report*
 
 Here is the table with description for available fields to create Metric type reports.
 
@@ -176,7 +176,7 @@ you have created’
 
 ![](images/metrics_type_report.png)
 
-*Sample pdf for Metrics based reports*
+*Figure: Sample pdf for Metrics based reports*
 
 ## Alert Count Report
 
@@ -184,7 +184,7 @@ This is specially for alert based reports.
 
 ![](images/alert_type.png)
 
-*Search form for alert type report*
+*Figure: Search form for alert type report*
 
 Here is the table with description for available fields to create Alert type reports.
 
@@ -206,7 +206,7 @@ you have created
 
 ![](images/alert_type_report.png)
 
-*Sample pdf for alert type reports*
+*Figure: Sample pdf for alert type reports*
 
 ## Saved Flexi Reports
 
@@ -217,7 +217,7 @@ You can also delete the report by clicking on the ‘x’ symbol.
 
 ![](images/flexi_saved_report.png)
 
-*Saved Flexible Reports*
+*Figure: Saved Flexible Reports*
 
 ## Schedule Report
 

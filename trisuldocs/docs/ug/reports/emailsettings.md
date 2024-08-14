@@ -8,7 +8,7 @@ Describes how you can setup an email account to send outgoing email reports and 
 
 Note You need a valid SMTP email account (even Gmail will work).
 
-## How to setup E-Mail
+## How to Setup E-Mail
 
 Select *Reports → Email settings*
 
@@ -24,7 +24,7 @@ Select *Reports → Email settings*
 | Disable SSL Cert Verfication | If you are using an email server with a self signed cert, check this box to have Trisul skip the certificate validation checks.                               |
 | SMTP Relay User (optional)   | Use this to send SMTP email via relays like sendgrid,mailchimp,pepipost etc. This is the user id given to you by the provider. Leave it blank if not required |
 
-## Send a test email
+## Send a Test Email
 
 After you have configured the email settings, its a good idea to send a test email to see if everything works.
 
@@ -33,11 +33,11 @@ Select *Reports → Email settings*
 1. Press Edit
 2. Enter the “Target Email ID” and press Send Test Email
 
-## Pepipost integration
+## Pepipost Integration
 
 Web Trisul supports Email sending with SMTP Relay provided by Pepipost.com. Here is how you use it.
 
-#### Get Pepipost credentials
+#### Get Pepipost Credentials
 
 Login to your Pepipost account and go to *Settings > Integrations > SMTP Relay*
 
@@ -45,7 +45,9 @@ Save the user name and password as shown in the picture below.
 
 ![](images/pepipost.png)
 
-#### Configure email settings in Trisul
+*Figure: SMTP Relay in Pepipost Account*
+
+#### Configure Email Settings in Trisul
 
 Enter the email settings as shown
 

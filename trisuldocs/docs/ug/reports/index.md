@@ -7,7 +7,7 @@ import DocCardList from '@theme/DocCardList';
 
 <DocCardList />
 
-### Accessing reports
+### Accessing Reports
 
 The central place where all reports can be accessed is via the Reports menu. You can also download various reports in CSV or PDF formats in different sections in Trisul.
 
@@ -17,11 +17,11 @@ Select *Reports* in the left menu section
 
 :::
 
-#### Creating your own reports
+#### Creating Your Own Reports
 
 Using the [Trisul Remote Protocol API](/docs/trp) you can write Ruby scripts that create your own reports.
 
-## Report time
+## Report Time
 
 For each report type, you can easily select a number of predefined time windows as shown in the image below
 
@@ -29,7 +29,7 @@ For each report type, you can easily select a number of predefined time windows 
 
 You can also click on “Custom” to select any time window of your choice.
 
-## List of reports by type
+## List of Reports by Type
 
 #### Report types
 
@@ -42,18 +42,18 @@ You can also click on “Custom” to select any time window of your choice.
 
 ### Executive
 
-| Report Name                       | Description                                                                                                                            |
-| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| Consolidated IP Report            | Total,in and out bandwidth traffic with top Internal hosts,top apps and port network layer protocols.                                  |
-| Executive Network                 | Total usage,alerts,bandwidth utilization                                                                                               |
-| Internet Service Provider         | Total bandwith,Hosts,Apps,Top ASNumber and Countries lists                                                                             |
-| Subscriber Activity               | [An overview of all your internal hosts](/docs/ug/reports/available_reports#subscriber-activity)                                       |
-| Router and Interfaces             | [Traffic details per router and about top router interfaces](/docs/ug/reports/available_reports#routers-and-interfaces)                |
+| Report Name                       | Description                                                                                                                          |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Consolidated IP Report            | Total,in and out bandwidth traffic with top Internal hosts,top apps and port network layer protocols.                                |
+| Executive Network                 | Total usage,alerts,bandwidth utilization                                                                                             |
+| Internet Service Provider         | Total bandwith,Hosts,Apps,Top ASNumber and Countries lists                                                                           |
+| Subscriber Activity               | [An overview of all your internal hosts](/docs/ug/reports/available_reports#subscriber-activity)                                     |
+| Router and Interfaces             | [Traffic details per router and about top router interfaces](/docs/ug/reports/available_reports#routers-and-interfaces)              |
 | Malware, botnet, virus infections | [A summary of all your internal hosts that might be compromised](/docs/ug/reports/available_reports#malware-botnet-virus-infections) |
-| “IDS Alerts”                      | Summary of top [IDS](/docs/ug/reports/available_reports#intrusion-alerts) (Intrusion Detection System) alerts via Snort/Suricata                    |
-| Deep drilldown of Internal Hosts  | A comprehensive drilldown of [internal host activity](/docs/ug/reports/available_reports#deep-drilldown-of-internal-hosts)             |
-| Deep drilldown of External Hosts  | A comprehensive drilldown of [external hosts](/docs/ug/reports/available_reports#deep-drilldown-of-external-hosts)                     |
-| Deep drilldown of Applications    | A comprehensive drilldown of [applications](/docs/ug/reports/available_reports#deep-drilldown-of-applications)                         |
+| “IDS Alerts”                      | Summary of top [IDS](/docs/ug/reports/available_reports#intrusion-alerts) (Intrusion Detection System) alerts via Snort/Suricata     |
+| Deep drilldown of Internal Hosts  | A comprehensive drilldown of [internal host activity](/docs/ug/reports/available_reports#deep-drilldown-of-internal-hosts)           |
+| Deep drilldown of External Hosts  | A comprehensive drilldown of [external hosts](/docs/ug/reports/available_reports#deep-drilldown-of-external-hosts)                   |
+| Deep drilldown of Applications    | A comprehensive drilldown of [applications](/docs/ug/reports/available_reports#deep-drilldown-of-applications)                       |
 
 ### Endpoint and Applications
 
@@ -72,7 +72,7 @@ You can also click on “Custom” to select any time window of your choice.
 | Geo Country Traffic per Gateway | Country to ISP gateway mapping reports                             |
 | Prefix Summary                  | Generates a detailed report for prefixes in and out of ISP network |
 
-### Commonly used Report
+### Commonly Used Report
 
 | Report Name      | Description                                          |
 | ---------------- | ---------------------------------------------------- |
@@ -84,7 +84,7 @@ You can also click on “Custom” to select any time window of your choice.
 | ASNumber         | Get report of top ASNumber on your network.          |
 | country          | Get report of top countries on your network.         |
 
-### Netflow
+### NetFlow
 
 | Report name               | Description                                                                 |
 | ------------------------- | --------------------------------------------------------------------------- |
@@ -95,15 +95,15 @@ You can also click on “Custom” to select any time window of your choice.
 
 ### Direct Reports
 
-| Report Name        | Description                                                                                                 |
-| ------------------ | ----------------------------------------------------------------------------------------------------------- |
-| Top Traffic Report | [Get toppers for any counter group](/docs/ug/reports/available_reports#top-traffic-report)                  |
-| Top Session Report | [Get top flows on your network](/docs/ug/reports/available_reports#top-sessions-report)                     |
+| Report Name        | Description                                                                                                  |
+| ------------------ | ------------------------------------------------------------------------------------------------------------ |
+| Top Traffic Report | [Get toppers for any counter group](/docs/ug/reports/available_reports#top-traffic-report)                   |
+| Top Session Report | [Get top flows on your network](/docs/ug/reports/available_reports#top-sessions-report)                      |
 | Security Report    | Overview of all security alerts seen by trisul [alerts](//docs/ug/reports/available_reports#security-report) |
 
 ### Custom Reports
 
-| Field       | Description                                                                           |
-| ----------- | ------------------------------------------------------------------------------------- |
+| Field       | Description                                                          |
+| ----------- | -------------------------------------------------------------------- |
 | Report JSON | [Flexible Reports in JSON Format](/docs/ug/reports/flexible_reports) |
-| Select Time | Select the desired time                                                               |
+| Select Time | Select the desired time                                              |
