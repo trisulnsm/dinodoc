@@ -8,5 +8,3 @@ Working with meta objects like domain names, URLs, HTTP headers, and SSL cer
 import DocCardList from '@theme/DocCardList';
 
 <DocCardList />
-
-

@@ -6,7 +6,7 @@ sidebar_position: 7
 
 All SSL Certificate chains are stored in the full text index.
 
-## What is stored ?
+## What is Stored ?
 
 Every SSL/TLS server presents its credentials at the time of initial
 handshake by transferring its certificate. In addition to its own
@@ -16,11 +16,7 @@ entire certificate chain, not just individual certificates as a separate
 document. You can still search for individual certificates but the chain
 is the document.
 
-<div class="danger flag autohint">
-
 The entire certificate chain is the document.
-
-</div>
 
 In addition, Trisul stores the following extra fields in the FTS index
 
@@ -31,7 +27,7 @@ In addition, Trisul stores the following extra fields in the FTS index
    the algorithm part. See
    [RFC3280](http://www.ietf.org/rfc/rfc3280.txt)
 
-#### Sample document
+#### Sample Document
 
     (.. cert 1 details..)
     SHA1:c5fdccbc7795b69dd60cea91aaa1711921d18726
@@ -47,24 +43,16 @@ In addition, Trisul stores the following extra fields in the FTS index
 
 ## Using
 
-<div class="info hand-o-right autohint">
-
 Select Resources -\> SSL Certificate FTS
 
-</div>
-
 Then follow instructions in the [FTS](fts) documentation.
-
-<div class="lightbulb-o autohint">
 
 SSL Certificates are also in the normal index. Use that to do a bulk
 search for SHA1 hashes from intelligence feeds.
 
-</div>
+## Special Tips for SSL Certificate FTS
 
-## Special tips for SSL Certificate FTS
-
-#### Special attributes
+#### Special Attributes
 
 Use the special attributes
 
@@ -75,9 +63,5 @@ Use the special attributes
 3. CN (Common Name) -\> a great place to start looking and for
    narrowing your queries
 
-<div class="image-with-caption">
-
 ![](images/ftss1.png)  
-A sample faceted results, the common name field is a good place to start
-
-</div>
+*Figure: Showing a sample faceted results, the common name field is a good place to start*

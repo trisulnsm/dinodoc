@@ -1,6 +1,7 @@
 ---
+
 sidebar_position: 4
---- 
+---
 
 # SSL Certificates
 
@@ -8,7 +9,7 @@ Information contained in SSL certificates are now increasingly showing
 up in intelligence indicators. Trisul indexes information in
 certificates in two forms to aid two usage scenarios
 
-|     |                  |                                                                  |
+|     | Index            | Usage                                                            |
 | --- | ---------------- | ---------------------------------------------------------------- |
 | 1   | **Normal index** | The hash and subject information only for fast bulk lookups      |
 | 2   | **FTS index**    | Arbitrary search of all fields in certificates to aid drilldowns |
@@ -43,7 +44,7 @@ in this case Verisign.
 ## Normal Index
 
 ![](images/ssl_resources.png)  
-SSL Resources
+*Figure: SSL Resources*
 
 The whole resource is treated as a single string for query purposes.
 
@@ -56,7 +57,7 @@ Click on Resources -\> SSL Certs
 1. Open the Search Criteria box by clicking on “Show”
 2. Tabs “Search by endpoints” or “Search by regex”
 
-#### Search by endpoints
+#### Search by Endpoints
 
 You can search by
 
@@ -68,7 +69,7 @@ You can search by
 6. Regex Pattern
 7. Invert Regex Pattren
 
-#### Search by regex
+#### Search by Regex
 
 You can search by
 
@@ -78,7 +79,7 @@ You can search by
 The main use of this tool in the context of SSL Certs is to allow you to
 search for hundreds of matching hashes at once.
 
-#### Multiple substring matches
+#### Multiple Substring Matches
 
 > Use the *Search by regex* tab to compare your traffic against an intel
 > feed of bad cert SHA-1 hashes.
@@ -89,13 +90,13 @@ The screenshot below shows how you can search for multiple hashes using
 this tab.
 
 ![](images/sslnormal1.png)  
-Search Resources
+*Figure: Search Resources*
 
-#### A single perl compatible regex
+#### A Single Perl Compatible Regex
 
 Enter a single regex in the Pattern box. It must be on a single line.
 
-### Search results
+### Search Results
 
 Matching resources are shown in a table.
 

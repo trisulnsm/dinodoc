@@ -9,7 +9,7 @@ network. Even hosts that do not receive a reply or those in the
 ‘additional records’ section are pulled out.
 
 ![](images/dns_resources.png)  
-DNS Resources
+*Figure: DNS Resources*
 
 ## Searching
 
@@ -22,7 +22,7 @@ Click on Resources -\> DNS Resources
 1. Open the Search Criteria box by clicking on “Show”
 2. Tabs “Search by endpoints” or “Search by regex”
 
-### Search by endpoints
+### Search by Endpoints
 
 You can search by
 
@@ -34,26 +34,26 @@ You can search by
 6. Regex Pattern
 7. Invert Regex Pattren
 
-### Search by regex
+### Search by Regex
 
 You can search by a single regular expression or bulk substring
 matching.
 
-#### A single perl compatible regex
+#### A Single Perl Compatible Regex
 
 Enter a single regex in the Pattern box. It must be on a single line.
 
 For example `v16.cache?.*youtube.com$` will match
 `tc.v16.cache8.c.youtube.com` but not `v16.cache18.c.youtube.com`
 
-#### Multiple patterns for substring matches
+#### Multiple Patterns for Substring Matches
 
 Enter a list of patterns one per line.
 
 Use this if you want to search for hundreds of domains at once. This is
 a substring match so you cannot use any regexes.
 
-## Search results
+## Search Results
 
 Matching resources are shown in a table.
 

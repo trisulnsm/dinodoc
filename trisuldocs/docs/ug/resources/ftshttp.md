@@ -1,13 +1,14 @@
 ---
+
 sidebar_position: 6
---- 
+---
 
 # HTTP Header FTS
 
 All HTTP headers including requests (GET, POST,..etc) and responses
 (HTTP OK, errors ) are stored in the FTS index.
 
-## What is stored ?
+## What is Stored ?
 
 The entire HTTP request or response body is treated as a single
 document. All fields are stored in the index except the following which
@@ -24,13 +25,12 @@ Content-Length, Referer
 The following extra attributes are added by Trisul to aid some kinds of
 useful queries
 
-1.  CODE - HTTP response code
-2.  URI - The full URL
+1. CODE - HTTP response code
+2. URI - The full URL
 
-#### Sample document
+#### Sample Document
 
 A typical document looks like this
-
 
     POST /ajax/ufi/like.php HTTP/1.1
     Host: www.facebook.com
@@ -52,17 +52,17 @@ Select Resources -\> HTTP Header FTS
 
 Follow instructions in the [FTS](fts) documentation.
 
-## Special tips for HTTP Header FTS
+## Special Tips for HTTP Header FTS
 
-#### Special attributes
+#### Special Attributes
 
 You should leverage the special attributes URI and CODE to narrow down
 your search.
 
 ![](images/ftsh1.png)  
-Showing URI and CODE attributes.
+*Figure: Showing URI and CODE attributes*
 
-#### Documents to flows
+#### Documents to Flows
 
 Once you have sufficiently narrowed down your documents of interest.
 
@@ -73,4 +73,4 @@ Once you have sufficiently narrowed down your documents of interest.
   shown at once
 
 ![](images/ftsh2.png)  
-Click on options to bring up pivoting options to other kinds of data
+*Figure: Click on options to bring up pivoting options to other kinds of data*

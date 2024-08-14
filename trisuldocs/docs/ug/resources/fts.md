@@ -1,9 +1,9 @@
 ---
+
 sidebar_position: 5
---- 
+---
 
 # Full Text Search
-
 
 Some resources extracted by Trisul are unstructured but are critical to
 look up fast. These types of resources are stored in a Full Text Search
@@ -11,12 +11,12 @@ look up fast. These types of resources are stored in a Full Text Search
 
 Currently the following FTS resources are supported.
 
-1.  **[SSL Certificate Chains](ftsssl)** - the full printed form
-    with all extensions and attributes
-2.  **[HTTP Headers](ftshttp)** - all HTTP request and response
-    headerss
+1. **[SSL Certificate Chains](ftsssl)** - the full printed form
+   with all extensions and attributes
+2. **[HTTP Headers](ftshttp)** - all HTTP request and response
+   headerss
 
-## Documents and attributes
+## Documents and Attributes
 
 Each FTS resource is treated as a **document** which needs to be
 indexed. First a **stemmer** runs through the document and breaks it up
@@ -30,9 +30,9 @@ Documents are de-duplicated before processing to reduce the size of the
 index, sometimes dramatically. Each document is also linked back to
 **network flows** so you can pivot into other types of data.
 
-## Search features
+## Search Features
 
-### Maximum number of matches
+### Maximum Number of Matches
 
 If you use very broad or frequent terms it is easy to be overwhelmed by
 matches in a FTS scenario. For example : If you look for *Verisign* in
@@ -41,10 +41,10 @@ match every other document.
 
 Trisul only returns a maximum of 500 matches. If you want more,
 
-1.  you simply have to narrow your search terms
-2.  look for a smaller time interval
+1. you simply have to narrow your search terms
+2. look for a smaller time interval
 
-### Faceted results
+### Faceted Results
 
 Matching documents are presented along with grouped frequency of tags.
 This is called faceting. You can click on a facet to add it to the
@@ -56,24 +56,24 @@ The FTS Index also stores flows that were involved in transferring the
 document. This allow you to enter into the network side of things from
 the document.
 
-1.  One document can be transferred by any number of network flows
-2.  One flow can transfer more than one document
+1. One document can be transferred by any number of network flows
+2. One flow can transfer more than one document
 
-## Using FTS tools
+## Using FTS Tools
 
->Enter keyword(s) into the box
+> Enter keyword(s) into the box
 
-### Using the faceted results
+### Using the Faceted Results
 
 The following screenshot describes how the UI works.
 
-1.  Select a timeframe - the default is to search all the traffic today
-2.  Enter a search term and press Search..
+1. Select a timeframe - the default is to search all the traffic today
+2. Enter a search term and press Search..
 
 Results are presented as shown below.
 
 ![](images/ftsi1.png)  
-Components of the FTS user interface, common to all FTS types
+*Figure: Components of the FTS user interface, common to all FTS types*
 
 #### Attributes
 
@@ -89,9 +89,9 @@ the results are updated.
 Notice we only have two documents matching in the screenshot below
 
 ![](images/ftsi2.png)  
-Results updated after adding attribute value to search
+*Figure: Results updated after adding attribute value to search*
 
-#### Document content
+#### Document Content
 
 The primary object of interest is the document itself. Flip to the
 Documents tab to see **unique** documents seen which match the keywords.
@@ -101,16 +101,15 @@ this unique document was seen. Clicking on it leads you to the flows
 page.
 
 ![](images/ftsi3.png)  
-Fragment of document matching the keywords
+*Figure: Fragment of document matching the keywords*
 
 #### Flows
 
 Each FTS document is transferred by a flow. The Flows tab gives you a
 list of flows along with the document which was transferred by it.
 
->Use the flows tab to pivot into packets or other types of flow based
-investigation.
-
+> Use the flows tab to pivot into packets or other types of flow based
+> investigation.
 
 ![](images/ftsi4.png)  
-Flows that transferred documents matching the FTS search
+*Figure: Flows that transferred documents matching the FTS search*

@@ -1,6 +1,7 @@
 ---
+
 sidebar_position: 3
---- 
+---
 
 # URL Resources
 
@@ -16,9 +17,9 @@ This screen allows you to generate reports URLs based on the following
 - String match
 
 ![](images/url_resources.png)  
-URL Resources
+*Figure: URL Resources*
 
-### Using this feature
+### Using this Feature
 
 #### Enable TCP Reassembly
 
