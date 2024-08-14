@@ -14,7 +14,7 @@ import DocCardList from '@theme/DocCardList';
 
 *Figure: View/Download PCAP Options*
 
-### Use cases
+### Use Cases
 
 Trisul allows you to summon raw packets from a number of situations. Some typical examples,
 

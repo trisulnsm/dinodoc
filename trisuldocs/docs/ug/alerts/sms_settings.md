@@ -2,13 +2,13 @@
 sidebar_position: 8
 ---
 
-# SMS alert delivery
+# SMS Alert Delivery
 
 If you have access to an SMS Message Gateway you can dispatch alerts via SMS to your Mobile phone.
 
 Currently only dispatch of IDS alerts is supported via SMS.
 
-## Step 1: Edit the sms_settings configuration file
+## Step 1: Edit the sms_settings Configuration File
 
 The configuration file is located in  
 `/usr/local/share/webtrisul/config/initializers/sms_settings.rb`

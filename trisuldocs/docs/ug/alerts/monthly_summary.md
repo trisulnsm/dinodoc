@@ -11,7 +11,7 @@ Some applications :
 - Traffic by IN/OUT per host per day
 - Malware alerts per day (using the Trisul Badfellas plugin)
 
-## How to use
+## How to Use
 
 :::note navigation
 

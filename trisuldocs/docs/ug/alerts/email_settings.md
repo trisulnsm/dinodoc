@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Email alert delivery
+# Email Alert Delivery
 
 This page describes how you can configure Trisul to send you an email when any alert fires.
 
@@ -27,7 +27,9 @@ This will take you to the Email Alerts Wizard as shown in this example. And agai
 
 ![](image/emailalertswizard.png)
 
-## Basic steps to enable email alerts
+*Figure: Email Alerts Configuration Wizard*
+
+## Basic Steps to Enable Email Alerts
 
 The following steps are needed to forward email alerts.
 
@@ -36,6 +38,8 @@ The following steps are needed to forward email alerts.
   In the Email Alerts Configuration Wizard, Click Email Account Settings. This will open the Email server account settings.
   
   ![](image/emailsettings1.png)
+  
+  *Figure: Email Account Settings Module*
   
   This is where you configure the email addresses that you want to be sent from and the recipient email addresses.
   
@@ -74,6 +78,8 @@ Once provoding all the fields, Click Save and the email server configuration for
   
   ![](image/emailsettings2.png)
   
+  *Figure: Showing Email Notification Service Button in Admin Tasks*
+  
   Click Start to start sending alerts as email notifications. Otherwise click Stop to stop the email notification service.
   
   The email notification service logtails the syslog and dispatches alerts. The service is careful not to flood < 5 minutes and can automatically create digests if alert volume are too high.
@@ -83,6 +89,8 @@ Once provoding all the fields, Click Save and the email server configuration for
   From the Email Alerts Configuration Wizard, click "Alerts go to syslog". This will open the alert groups window and you can see the list of all the alert groups and their GUIDs status. You can see the total number of alert groups and the number of alert groups currently enabled and disabled right next to the title. You can disable all the alert groups by clicking "Disable all" on the top right corner.
   
   ![](image/emailsettings3.png)
+  
+  *Figure: Email Alerts Groups and their GUIDs*
   
   The alert groups table contains the following components and options.
   
@@ -96,7 +104,7 @@ Once provoding all the fields, Click Save and the email server configuration for
 
 These components can be edited or disabled by clicking on the option toolbar against each alert group. Once providing all the fields, click Update to save the configuration.
 
-## Advanced customization of email subjects and bodies
+## Advanced Customization of Email Subjects and Bodies
 
 Trisul uses ERB Templates to configure email subjects and bodies.
 

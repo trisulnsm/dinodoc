@@ -2,7 +2,7 @@
 sidebar_position: 10
 ---
 
-# Summary of all alerts
+# Summary of All Alerts
 
 There are many different types of alerts supported by Trisul. In 
 addition to built in alert types you can add your own types using the 
@@ -10,23 +10,23 @@ Lua plugin mechanism.
 
 This page describes how you can get an overview of alert activity across all types.
 
-## The top alert bar
+## The Top Alert Bar
 
 On top of every page there is an alert bar which shows near real time alert counts. These numbers show only *new* alert counts you last saw it.
 
 ![](image/alert-bar.png)
 
-*Alert bar showing counts*
+*Figure: Alert bar showing counts*
 
 You can click on the bar to open the counts for each type of alerts. They are color coded.
 
 ![](image/alert-bar-open.png)
 
-*Click the bar to open up individual counts. Click*
+*Figure: Click the bar to open up individual counts. Click*
 
 You can click on any type of alert displayed to start searching and analyzing those alerts.
 
-## The Show All menu
+## The Show All Menu
 
 :::note navigation
 
@@ -36,7 +36,7 @@ Select Alerts → Show all
 
 ![](image/showall-toplevel.png)
 
-*Show all alert type counts*
+*Figure: Show all alert type counts*
 
 This shows alert counts per type for today. These counts indicate total number of alerts seen from midnight today till now.
 

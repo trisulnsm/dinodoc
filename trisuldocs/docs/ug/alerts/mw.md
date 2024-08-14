@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# Malware and Blacklist alerts
+# Malware and Blacklist Alerts
 
 **This feature requires the Trisul Badfellas plugin**  
 See [Trisul Badfellas](/docs/ug/install/badfellas)
@@ -18,7 +18,7 @@ Some of the alerts
 3. Falling victim to Phishing sites
 4. Trying to query DNS for known malicious domain names
 
-## What can you do with these alerts ?
+## What Can You Do With These Alerts ?
 
 You can get useful reports like
 
@@ -29,7 +29,7 @@ You can get useful reports like
 5. Pull suspected malware packets into Wireshark or Unsniff
 6. Script using TRP
 
-## Viewing blacklist alerts
+## Viewing Blacklist Alerts
 
 :::note navigation
 

@@ -2,25 +2,25 @@
 
 You can set up Trisul to generate alerts based on network activity.
 
-
 These alerts can be
 
-- viewed on the alert bar on the top right (automatically within 1 minute)
-- analyzed from the alerts menu
-- dispatched via SYSLOG, EMAIL, or SMS notification
+- Viewed on the alert bar on the top right (automatically within 1 minute)
+- Analyzed from the alerts menu
+- Dispatched via SYSLOG, EMAIL, or SMS notification
 
 ![](image/alerts1.png)
+
+*Figure: Alerts and Notification Bar*
 
 import DocCardList from '@theme/DocCardList';
 
 <DocCardList />
 
-
-## Types of alerts
+## Types of Alerts
 
 Trisul can generate 5 different types of alerts.
 
-### Threshold Band Anomaly alerts
+### Threshold Band Anomaly Alerts
 
 **NEW**
 
@@ -51,7 +51,7 @@ Trisul interfaces with Snort/Suricata using Unix Sockets. The alerts are correla
 - [The web based Real Time Alert Console](/docs/ug/alerts/ids_stabber)
 - [Connecting Trisul with Snort via a Unix Socket](/docs/howto/setup_ids_alerts)
 
-### Blacklist alerts (Badfellas)
+### Blacklist Alerts (Badfellas)
 
 Requires the Badfellas plugin. Trisul will continuously monitor your 
 traffic and hold it up against millions of blacklisted entities. Any 
@@ -61,7 +61,7 @@ botnet C&C, is flagged.
 - [Installing the BadFellas plugin](/docs/ug/install/badfellas)
 - [Badfellas Alerts](/docs/ug/alerts/mw)
 
-## Viewing and forwarding alerts
+## Viewing and Forwarding Alerts
 
 The alerts generated appear immediately on the user interface. You can also setup the following
 
@@ -71,5 +71,3 @@ The alerts generated appear immediately on the user interface. You can also setu
 4. Send alerts to [Microsoft Teams](/docs/ug/alerts/msteams)
 
 The Email and SMS services work by reading the SYSLOG alerts. So you need [ensure SYSLOG alerting is enabled](/docs/ug/alerts/manage) in trisulConfig.xml. It is enabled by default.
-
-

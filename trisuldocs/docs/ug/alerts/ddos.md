@@ -2,7 +2,7 @@
 sidebar_position: 11
 ---
 
-# Detecting volumetric attacks
+# Detecting Volumetric Attacks
 
 Using the TCA [Threshold Crossing Alerts](/docs/ug/alerts/tca) and the TB [Threshold Band Alerts](/docs/ug/alerts/tband) it is easy to configure Trisul Network Analytics to detect volumetric attacks such as DDoS Distributed Denial of Service.
 
@@ -14,7 +14,7 @@ Configuring DDoS detection in Trisul gives you the following features
 4. Ability to run a script in response to an alert
 5. Sending Alert by Email immediately
 
-## DDoS attack types
+## DDoS Attack Types
 
 DDoS attacks typically utilize a number of hosts to send large 
 payloads to a target host. Trisul allows you to simply track all IP 
@@ -35,7 +35,7 @@ There are two steps to configuring DDoS detection
 1. Using Threshold Bands to detect anomalous traffic on key uplink traffic ports.
 2. Using Threshold Crossing Alerts to track hosts sending huge volumes of traffic
 
-### Threshold Band alerts for key uplink ports
+### Threshold Band Alerts for Key Uplink Ports
 
 Threshold Bands is a dynamic adaptive thresholding mechanism which 
 monitors traffic for 5 weeks and builds a “Profile” for expected traffic
@@ -44,11 +44,15 @@ monitors traffic for 5 weeks and builds a “Profile” for expected traffic
 
 ![](image/tband1.png)
 
+*Figure: Active Flows where Threshold Banding is Enabled*
+
 Create a large Upper Margin of say 200%. This will generate an alert when anomalous traffic is generated.
 
 ![](image/ddos-tb.png)
 
-### Create TCA with thresholds
+*Figure: Compute New Threshold Band Form*
+
+### Create TCA with Thresholds
 
 This varies from network to network, the idea is to set high enough thresholds that would trigger a DDoS.
 
@@ -66,11 +70,13 @@ The following shows a DDoS tracker for ANY host attacked with 10Gbps load with a
 
 ![](image/ddos-tca.png)
 
-## Alerts dispatch and response
+*Figure: Configure Email Alerts Form*
+
+## Alerts Dispatch and Response
 
 DDos Alerts are dispatched like normal TCA alerts. They are seen on screen or can be delivered instantly via E-Mail
 
-### Automated actions
+### Automated Actions
 
 The alert message generated include the IP under attack and other details. You can use the [Alert Monitor Trisul LUA API](/docs/lua/alert_monitor) to automate responses upon receiving the alert. Some of the responses can include.
 
@@ -114,6 +120,12 @@ Examples of the DDoS dashboard are shown below
 
 ![](image/ddos1.png)
 
+*Figure: DDoS Ingress vs Egress Ratio, Total Ingress vs Egress, and TCP vs UDP Traffic Modules*
+
 ![](image/ddos2.png)
 
+*Figure: Common DDoS Flows, DNS-Ingress vs Egress, SSDP 1900 Modules*
+
 ![](image/ddos3.png)
+
+*Figure: NTP- Ingress vs Egress, ICMP-Ingress vs Egress, DDoS Flow Monitor Modules*

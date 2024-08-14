@@ -20,11 +20,13 @@ background while the actual metric is shown as the curve.
 
 ![](image/tband1.png)
 
-## How it works
+*Figure: Active Flows where Threshold Banding is Enabled*
+
+## How it Works
 
 The feature is enabled by two separate processes.
 
-### Band computation
+### Band Computation
 
 The most important part is how the bands are computed. Currently there are two options.
 
@@ -35,7 +37,7 @@ The most important part is how the bands are computed. Currently there are two o
 
 > The Day of Week based banding requires a Licensed version of Trisul, because it needs atleast 3 weeks of training data. If you are running Trisul with a free license use the Simple band feature.
 
-#### Metrics and automatic computation
+#### Metrics and Automatic Computation
 
 You select any of the metrics available in Trisul and decide to use 
 Threshold Banding on it. This requires you to select a metric which is 
@@ -45,7 +47,7 @@ Once you enable Threshold Banding on a metric, Trisul automatically
 updates the band every night as time passes to take into account recent 
 trends. There is no configuration required to do that.
 
-### Band alerting
+### Band Alerting
 
 The band computation process pre computes expected range of values 
 for a particular metric for each time interval during the day. Trisul 
@@ -55,7 +57,7 @@ day and time period. If it is out of bounds it generates “Threshold Band
 
 ## Configuring
 
-### Creating a new Threshold Band Anomaly monitor for a particular counter
+### Creating a New Threshold Band Anomaly Monitor for a Particular Counter
 
 There are two ways
 
@@ -77,7 +79,7 @@ Click on any key in any chart → From Key Dashboard → Create Threshold Band
 
 The following fields are shown in the form
 
-#### Basic settings
+#### Basic Settings
 
 You must fill this up. If you came to this page from the Key Dashboard the fields are already pre-filled.
 
@@ -88,7 +90,7 @@ You must fill this up. If you came to this page from the Key Dashboard the field
 | TargetKey     | The key within the *target counter group* on which you want to create a Band. You can enter this in either human readable format eg:Port-80, 192.168.1.33 or in Trisul key format: p-0050, C0.A8.00.01  |
 | Compare Day   | If Checked – use Day Of Week based band computations. If Unchecked – use yesterdays data to compute a band.  **NOTE** You need a licence for Day Of Week band because it needs 3 weeks of training data |
 
-#### Advanced settings (optional)
+#### Advanced Settings (Optional)
 
 Use this section to fine tune the band computation algorithm.
 
@@ -111,13 +113,13 @@ Once a band has been created. It is automatically updated by a
 special cron task every night. There is no further configuration 
 required.
 
-## Viewing alerts
+## Viewing Alerts
 
 Once an anomaly is detected Trisul generates an alert, similar to an 
 Intrusion Detection or Flow Tracker alert. This appears in the top right
  panel.
 
-#### Alerts view
+#### Alerts View
 
 :::note navigation
 
@@ -134,7 +136,9 @@ changes dramatically.
 
 ![](image/tband3.png)
 
-## Deleting alerts
+*Figure: Showing Alerts Indicated by Labels*
+
+## Deleting Alerts
 
 The default approach of Trisul is not to delete anything. TCAs just rollover as they age out.
 

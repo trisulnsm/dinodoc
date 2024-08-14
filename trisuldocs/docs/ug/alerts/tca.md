@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Threshold crossing alerts (TCAs)
+# Threshold Crossing Alerts (TCAs)
 
 You can assign thresholds to any meter value. Trisul continuously 
 monitors the value of the traffic meter against the configured 
@@ -17,7 +17,7 @@ You can monitor a single Key or a Key Range. Some examples:
 2. monitor **IP Address 10.28.28.223** if it crosses 10Mbps for 5 minutes raise alert then CLEAR if it dips below 5 Mbps
 3. monitor **IP Range 10.28.9.0 to 10.28.10.255** raise alert if ANY IP in that range crosses 1 Gbps for 1 minute
 
-## High and Low Watermarks for alerts
+## High and Low Watermarks for Alerts
 
 The two knobs you use are Watermarks and Sustained Intervals.
 
@@ -40,6 +40,8 @@ The following picture illustrates this. Here we are setting up a TCA for :
 
 ![](image/tca.png)
 
+*Figure: Showing Illustration of Sustained Intervals*
+
 Note that :
 
 - The TCA does not fire in the zone between HI and LO water marks
@@ -48,7 +50,7 @@ Note that :
 
 ## Configuring
 
-### Creating a new TCA based on Counter group
+### Creating a new TCA Based on Counter Group
 
 :::note navigation
 
@@ -101,15 +103,15 @@ Select Alerts → Threshold Crossing Alerts
 
 ![](image/tcasigid.png)
 
-*Showing counts of alerts generated for each TCA type*
+*Figure: Showing counts of alerts generated for each TCA type*
 
-### Viewing individual alerts
+### Viewing Individual Alerts
 
 Clicking on alert count on a TCA will take you to the alerts view.
 
 ![](image/tcafired.png)
 
-*Showing list of fired and cleared alerts*
+*Figure: Showing list of fired and cleared alerts*
 
 You can see the search form in this page
 
@@ -127,7 +129,7 @@ When alerts are displayed you have the option to drilldown even further.
 
 ![](image/tcadrill.png)
 
-*TCA drilldown options and traffic charts showing the alert traffic*
+*Figure: TCA drilldown options and traffic charts showing the alert traffic*
 
 #### Exporting to PDF, CSV, Excel
 
@@ -138,7 +140,7 @@ When alerts are displayed you have the option to drilldown even further.
 
 This allows you to export and share displayed alerts
 
-### Alerts dashboard
+### Alerts Dashboard
 
 - Add the **Threshold Crossing Alert** module to any dashboard
 
@@ -164,7 +166,7 @@ Select Alerts → Threshold Crossing Alerts
 
 > This deletes all the alerts fired under that TCA , but not the TCA itself
 
-## Automatically emailing TCAs
+## Automatically Emailing TCAs
 
 There are two types of email reports you can use for notifying these TCA alerts.
 
@@ -176,7 +178,7 @@ Flows, and Top Conversations related to the alert.
 
 :::
 
-#### Intelligent TCA Email reports for routers interfaces
+#### Intelligent TCA Email Reports for Routers Interfaces
 
 A commonly used TCA is on Netflow mode routers and interfaces. When a TCA is created on such an interface the following information is automatically included in the alert email.
 
@@ -189,18 +191,18 @@ of the alert without even logging on to Trisul Network Analytics.
 
 > Enabling inteface tracking allows for richer TCA alerts. See [Netflow Interface Trackers](/docs/ug/netflow/interface_tracker)
 
-### Real time email
+### Real Time Email
 
 Configure [Email Alerting](/docs/ug/alerts/email_settings) for real time alerts.
 
-### Periodic email digest
+### Periodic Email Digest
 
 You can [schedule](/docs/ug/reports/schedreports#schedule-a-new-report) a **Threshold Crossing Alert** report which will automatically email you a list of TCAs that fired on a hourly or daily basis.
 
 1. A single consolidated email is sent out containing details of all TCAs
 2. No email is sent out if there are no TCAs to report
 
-## Bulk configuration
+## Bulk Configuration
 
 We can also configure TCAs for one or more interfaces from a particular router in bulk rather the one by one.
 

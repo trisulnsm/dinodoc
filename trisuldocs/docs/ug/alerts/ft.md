@@ -1,6 +1,7 @@
 ---
+
 sidebar_position: 4
---- 
+---
 
 # Flow Tracker Alerts
 
@@ -47,7 +48,7 @@ Select *Context : default* → profile0 → Flow Tracker Alerts
 | Priority                           | Alert Priority (1=HIGH, 2=MEDIUM, 3=LOW)                                                                                                                                   |
 | Alert Message                      | Message shown as part of the alert                                                                                                                                         |
 
-## Viewing generated alerts
+## Viewing Generated Alerts
 
 There are couple of ways to see flow alerts that fired.
 
@@ -70,12 +71,12 @@ will find the detailed report of the IP that has fired the alert.
 
 You can also download it in pdf,xlsx,csv format.
 
-## Using Search form
+## Using Search Form
 
 You can also search for flow tracker alerts at any time interval. 
 Clicking on the ‘Show Search Form’ option on the top right will show you
  the custom time frame to choose alerts for specific dates
 
-## Sending alerts by email
+## Sending Alerts by Email
 
 You can set up email alert delivery for flow trackers as described in the section [Alerts via Email](/docs/ug/alerts/email_settings)

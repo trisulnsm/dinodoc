@@ -28,11 +28,13 @@ To access select Dashboards → Real Time Alerts
 
 The real time alert visualizer is a type of real time stabber. See the section of [Real Time Stabbers](/docs/ug/cg/stabber) for more. Since it requires browsers with support for WebSockets and LocalStorage, using the latest version of Google Chrome is a safe bet.
 
-## Using the real time alert stabber
+## Using the Real Time Alert Stabber
 
 Let us examine each section of the console.
 
 ![](image/ids_stabber.png)
+
+*Figure: Real Time Alerts Stabber Module*
 
 ### Description
 
@@ -47,7 +49,7 @@ Consider the numbered orange circles in the screenshot above.
 | 5      | Aggregated alerts        | Alerts by group. Most recently active groups migrate to the top of the table. Click on an alert group to view all individual alerts in that group                                                                                                                                                                                                                                                                                                    |
 | 6      | The tool bar             | Controls various aspects of the visualization (see below)                                                                                                                                                                                                                                                                                                                                                                                            |
 
-#### The toolbar
+#### The Toolbar
 
 The toolbar (item 6 in the screenshot above) consists of :
 
