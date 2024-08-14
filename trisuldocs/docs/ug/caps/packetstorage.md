@@ -2,7 +2,7 @@
 sidebar_position: 02
 ---
 
-# Controlling packet storage
+# Controlling Packet Storage
 
 Not all organizations have the 
 luxury of storing every single packet that crosses their perimeter. 
@@ -27,7 +27,7 @@ Lets look at some examples.
 
 > You need to restart Trisul if you want any of these changes to take effect.
 
-### Dynamic rules
+### Dynamic Rules
 
 Using the LUA `packet_storage` API you can write a LUA script that gets called when a new flow is detected. You can specify 
 what policy to apply to all packets in that flow. Some links :
@@ -37,7 +37,7 @@ what policy to apply to all packets in that flow. Some links :
 
 The rest of this document will describe static rules.
 
-### Example 1 : Exclude SNMP and DNS traffic
+### Example 1 : Exclude SNMP and DNS Traffic
 
 For the first example, lets keep it simple and prevent both TCP and UDP. We will see later how to tune this to only exclude UDP ports. SNMP is UDP ports 161 + 162 and DNS is port 53.
 
@@ -64,7 +64,7 @@ The rule `{C51B48D4-7876-479E-B0D9-BD9EFF03CE2E}=p-00A1,p-00A2,p-0035` merely sa
 
 The GUID refers to the counter group applications and p-00A0 denotes the port number 160 in p-HEX-Port format. You can use any counter group ID depending on what you want to achieve. [See here for a list of common counter groups](/docs/ug/cg/custom)
 
-### Example 2 : Only exclude UDP ports SNMP and DNS
+### Example 2 : Only Exclude UDP Ports SNMP and DNS
 
 Lets extend the previous example and make it apply only to UDP ports 161,162 (snmp) and 53 (dns). Any traffic using TCP on these ports will be saved by Trisul.
 
@@ -78,7 +78,7 @@ The final expression is
 
 This will match ports 161,162,53 only if the IP protocol is 17 (UDP).
 
-### Example 3 : Store only the first 10MB of web flows
+### Example 3 : Store Only the First 10MB of Web Flows
 
 The `FLOWCAP..` directives are a very powerful feature of 
 Trisul. They allow you to store the first few bytes of large flows. This
@@ -99,7 +99,7 @@ it into the FLOWCAP10M rule. The final rule looks like this.
 <Rule mode="FLOWCAP10K"></Rule>
 ```
 
-### Example 4 : Combining rules
+### Example 4 : Combining Rules
 
 You can combine any number of rules. If you wish to flow cap web flows at 10MB and exclude all SNMP and DNS completely, the configuration looks like this.
 
@@ -116,7 +116,7 @@ You can combine any number of rules. If you wish to flow cap web flows at 10MB a
     <Rule mode="IGNORE">{C51B48D4-7876-479E-B0D9-BD9EFF03CE2E}=p-00A1,p-00A2,p-0035</Rule>
 ```
 
-### Example 5 : Inverting rules – ignore all others except DNS
+### Example 5 : Inverting Rules – Ignore All Others Except DNS
 
 This example illustrates the use of the `DefaultMode` directive. If no rule matches the default mode is applied. So all you have to do is specify `IGNORE` as the default mode and specify the DNS in the FULL section.
 

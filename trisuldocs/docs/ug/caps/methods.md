@@ -2,7 +2,7 @@
 sidebar_position: 05
 ---
 
-# PCAP drilldown methods
+# PCAP Drilldown Methods
 
 This document describes the different ways you can drilldown to raw 
 packet captures from the Trisul user interface. If you are interested in
@@ -14,6 +14,8 @@ menu items
 2. “Quick PCAP view”
 
 ![](images/pcapmenu2.png)
+
+*Figure: View PCAP/ Download PCAP Options*
 
 ## Download PCAP
 
@@ -28,7 +30,7 @@ When you click on the Download PCAP button at the top of the table
   the table. It does this by computing a packet query plan first and then 
   pulling and merging all the packets into a single PCAP file. This is a major productivity time saver.
 
-## Quick PCAP view
+## Quick PCAP View
 
 The Quick PCAP menu item was created to 
 make working with raw packets dead easy. When you select this menu 
@@ -43,9 +45,11 @@ See image below
 
 ![](images/quickpcap.png)
 
+*Figure:  Showing Quick PCAP Summary*
+
 Once you are satisfied you can download the PCAP file and save it for further analysis or problem report.
 
-## PCAPs from flows, alerts
+## PCAPs from Flows, Alerts
 
  You can download PCAPs from the following other Trisul data types. In
 
@@ -54,14 +58,14 @@ Once you are satisfied you can download the PCAP file and save it for further an
 - **resources** : Directly jump to Packets from DNS, HTTP URLs, TLS Certificates analysis
 - **full text search** : FTS documents like TLS traffic, HTTP Headers, File extraction. Click on any document and then “Download PCAP”
 
-## PCAPs for particular keys
+## PCAPs for Particular Keys
 
 For any counter item you can get the PCAPs by accessing the key dashboard and then clicking on “Download PCAP” option. This is truly unique feature of Trisul because you get PCAPs for all types of counter not just TCP/IP flows. Examples
 
 1. Key dashboard for **Counter Group : Country, Key: CN** : clicking on Download PCAP will get you packets from country=China.
 2. Key dashboard for **Counter Group : MAC, Key: 06:b4:83:e3:e3:30** : packets for a MAC address
 
-## PCAPs for anything
+## PCAPs for Anything
 
 If you want to download PCAPs for any timeframe in the past for any criteria, you need to use the Retro Tools > PCAP download tool.
 
@@ -75,13 +79,15 @@ Goto Retro → Retro Tools → Select Timeframe → Pull Packets
 
 ![](images/pcaplimits.png)
 
+*Figure: Pull Packets Form*
+
 You have three options here
 
 1. **Counter Group + Key** : select counter group and key to get packets for that item
 2. **Filter Expression** : Any arbitrary filter expression in Trisul Filter Format
 3. **Shortcuts** : “Get all packets” downloads everything in that selected time. Can be very useful.
 
-## Packet capture settings
+## Packet Capture Settings
 
 To make the feature usable and resistant to massive download requests
  Trisul uses two configuration parameters to protect the feature.

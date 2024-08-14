@@ -1,16 +1,18 @@
-# Full packet capture
+# Full Packet Capture
 
 As Trisul meters network traffic, it continuously saves raw packets for 
 future analysis.The ability to call upon raw packets, or full content, 
 is key to the practice of Network Security Monitoring. Raw packets is 
 not just useful for security applications but also for network 
-performance troubleshooting. For example, you can pull up ARP/Spanning Tree packets which can help you nail a layer 2 issue.[Packet Capture Basics](/docs/ug/caps/fullcontent) describes the design of in greater detail.
+performance troubleshooting. For example, you can pull up ARP/Spanning Tree packets which can help you nail a layer 2 issue. [Packet Capture Basics](/docs/ug/caps/fullcontent) describes the design of in greater detail.
 
 import DocCardList from '@theme/DocCardList';
 
 <DocCardList />
 
 ![](images/pcapmenu.png)
+
+*Figure: View/Download PCAP Options*
 
 ### Use cases
 
@@ -26,7 +28,7 @@ Trisul allows you to summon raw packets from a number of situations. Some typica
 | Resources      | Pull up raw packets for all HTTP flows that requested a *.dll resource                                                                               |
 | More           | Trisul has many meters in dozens of counter groups. With access to raw packets you can slice and dice statistics in a massive number of permutations |
 
-### Task list
+### Task List
 
 Jump to common network analysis tasks
 

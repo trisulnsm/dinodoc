@@ -2,7 +2,7 @@
 sidebar_position: 03
 ---
 
-# Import PCAP dumps
+# Import PCAP Dumps
 
 Trisul is capable of importing giant packet capture (PCAP) dumpfiles.
 
@@ -44,7 +44,7 @@ Say you have placed your PCAP files in `/home/tim/MyPcap01` and you want to impo
 
 This will prompt you to either create a new context named *mypcap01* or to stop an existing context *mypcap01* and reset all of its data. You need to type `YES` to confirm and proceed to the next step.
 
-- ##### Check progress
+- ##### Check Progress
   
   After trisul starts the import process you are returned back to the 
   
@@ -64,11 +64,11 @@ Source /usr/local/share/trisul-probe/trisbashrc mypcap01
 tailf.ns
 ```
 
-- ##### Login and view reports
+- ##### Login and View Reports
   
   Next login to Web Trisul at http://your-host:3000 and on the login screen select *mypcap01* context. You should have the all the charts and analytics you are looking for.
 
-## Tweak and re-run
+## Tweak and Re-run
 
 After running the first pass over the PCAP dump you might want to do the following and re-run the PCAP Dump through Trisul.
 

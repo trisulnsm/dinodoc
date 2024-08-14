@@ -21,7 +21,7 @@ Note that the [free license](https://trisul.org/free) only allows you to store a
 
 :::
 
-## Sliding slices
+## Sliding Slices
 
 Trisul uses an innovative sliding mechanism to store raw packets.
 
@@ -38,6 +38,8 @@ moves to the next area. Slices from the archive silently move to `/dev/null`(the
 
 ![](images/fullcontent.png)
 
+*Figure: Illustration Showing Movement of Slices as Each Disk gets Full*
+
 You have to edit the following parameters to suit your environment.
 
 1. Size of each slice (file storing raw packets)
@@ -45,7 +47,7 @@ You have to edit the following parameters to suit your environment.
 
 See the [trisulConfig.xml](/docs/ref/trisulconfig) documentation for more details.
 
-## Mapping disks to slices
+## Mapping Disks to Slices
 
 The slice architecture allows you to configure hardware resources for peak performance. The concept behind the optimization is :
 
@@ -59,7 +61,9 @@ below :
 
 ![](images/fullcontentdisk.png)
 
-## Flexible policies for volume reduction
+*Figure: Showing Illustration of Mapping Disks to Slices*
+
+## Flexible Policies for Volume Reduction
 
 Storing raw packets can be tricky due to the volume of storage 
 required. Not every organization has the resources to store absolutely 
@@ -84,12 +88,8 @@ Rule chain :
 
 | Rule                             | Disposition |
 | -------------------------------- | ----------- |
-|                                  | FULL        |
 | host av-server.mydomain.com      | FLOWCAP10M  |
 | app lotus-note                   | FLOWCAP1M   |
-|                                  | FLOWCAP100K |
-|                                  | FLOWCAP10K  |
-|                                  | HEADERS     |
 | host offsite-backup.mydomain.com | NONE        |
 | default                          | FULL        |
 
@@ -97,7 +97,7 @@ Rule chain :
 
 For detailed syntax for specifying the rule chain, see the Ring section in [trisulConfig.xml](/docs/ref/trisulconfig#ring)
 
-## Encrypted content
+## Encrypted Content
 
 Raw packets represent all of your network communications over an extended time period.
 

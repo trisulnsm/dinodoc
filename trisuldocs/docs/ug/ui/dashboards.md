@@ -270,5 +270,3 @@ dashboards. You can check them out one by one.
 
 The intent of this page is to give you an idea of the default dashboards
 we have pinned to the menu out of the box.
-
-See also [Some interesting dashboards](interesting_dashboards)
