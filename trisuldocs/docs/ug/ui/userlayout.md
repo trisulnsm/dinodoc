@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # User Layout
 
+In this section you can easily get to know the visual arrangement or organization of elements on the website intended for user login. The Key features and functionality are explained in the later sections. So let's get familiar with the user layout design and navigation first for starters.
+
 When you login as a non admin user you will see the following layout 
 
 ![User Layout](images/userlayout.png)  
