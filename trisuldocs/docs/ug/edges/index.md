@@ -1,5 +1,4 @@
-
-# Trisul edges – streaming graph analytics
+# Trisul Edges – Streaming Graph Analytics
 
 *Trisul Edge* brings the power of graph analytics to the Trisul platform. It lets you discover relationships between various metric items. This section introduces the *Trisul Edge* feature and then describes how to use the Trisul User Interface to explore these relationships
 
@@ -12,6 +11,8 @@ import DocCardList from '@theme/DocCardList';
 Trisul is a real time streaming analytics platform. This means we use streaming algorithms to process data in a *one pass* manner rather than the traditional way of storing data in Lucene (Elastic Search) or a RDBMS (say PostGres) and processing searches and queries on demand. A Trisul Probe can capture hundreds of metrics from network traffic but until today it did not capture how the *metrics were related to each other* beyond the flow connection. We could tell that metrics for Protocol, Ports, IP Addresses were related to a flow, but we could not tell that a TLS Cipher Suite used was related to an IP Address, a TLS Organization, or a Country. In previous releases , we used something called a “Flow Tagger” that used the *network flow* as a anchor entity which you could enrich with tags.
 
 ![](./images/edge-intro.png)
+
+*Figure: Edge Graph Showing Flow Taggers*
 
 With Trisul Edges, we bring advanced graph database features into Trisul itself. Each entity in Trisul metrics also generates information about related entities. In Graph Database architecture, the central concept is to store “connections” and “graphs of connections” as sets of **edges** and **vertices**.
 
@@ -27,6 +28,8 @@ An Edge connects two Vertices. In Trisul the rules are
 Consider the following graph.
 
 ![](./images/vertex.png)
+
+*Figure: Representation of Vertices and Edges in Edge Graph*
 
 In Trisul you start traversing graphs from a “root vertex”. In the image shown above we want to check which nodes are connected to the *TLS Certificate Authority* named “Freebit.Co.Ltd”. The graph then opens up one level to reveal its adjacent vertices. In this case we have vertices from 3 different counter groups Internal Hosts (10.x), External Hosts, and Applications. You can then expand the other nodes to reveal its adjacencies and explore the graph network.
 

@@ -18,11 +18,13 @@ import DocCardList from '@theme/DocCardList';
 
 The Trisul HA setup is based on multihoming. A single Trisul Probe flushes to two hubs – a primary and a HA hub.
 
-### HA Architecture scenario
+### HA Architecture Scenario
 
 A typical HA setup is shown below. This particular setup has two hubs and two probe nodes. There is an additional HA hub and a HA probe node.
 
 ![](./images/hascenario1.png)
+
+*Figure: HA Setup*
 
 The topology is described below.
 
@@ -43,6 +45,8 @@ In this mode a separate Trisul instance is run in another data center. Then usin
 The following diagram shows the working.
 
 ![](./images/drscenario1.png)
+
+*Figure: DR Setup*
 
 The DR site hubs and probes must be of same sizing (CPU, Memory, IO) as the nodes in the primary DC site.
 

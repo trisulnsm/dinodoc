@@ -28,6 +28,8 @@ In a number of places in Trisul, you will see a list of keys within a counter gr
 
 ![](./images/tool1.png)
 
+*Figure: View Edge Graph Menu Option*
+
 ## Tools > Edge Graph
 
 To set an arbitrary node as the “root vertex”
