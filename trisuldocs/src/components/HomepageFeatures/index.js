@@ -27,7 +27,7 @@ const FeatureList = [
   {
     title: 'IPDR Guide',
     linkto: '/docs/ipdr',
-    Svg: require('@site/static/img/undraw_react_re_g3ui.svg').default,
+    Svg: require('@site/static/img/undraw_secure_server_re_8wsq.svg').default,
     description: (
       <>
         User and Admin Guide for the IP Data Record Logging solution. 
