@@ -2,20 +2,20 @@
 sidebar_position: 11
 ---
 
-# Aggregate flows
+# Aggregate Flows
 
 Query for flows and show aggregated statistics for each tuple.
 
 The results are presented in terms of
 
-- a table for each parameter
+- A table for each parameter
 
 > Also see the Explore Flows and Export Flows which work with individual flows.
 
 ![](images/Aggregate_flows.png)  
-*Aggregate flows*
+*Figure: Aggregate flows*
 
-## How to search for flows
+## How to Search for Flows
 
 :::note navigation
 
@@ -25,11 +25,11 @@ Select Tools -\>Explore Flows
 
 Use the same query mechanism as the [Export Flows](explore_flows) tool.
 
-## Data displayed
+## Data Displayed
 
 Below the visualization you can find the following panels
 
-### Activity details
+### Activity Details
 
 Shows aggregated counts of
 

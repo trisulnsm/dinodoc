@@ -1,4 +1,4 @@
-# Analysis tools reference
+# Analysis Tools Reference
 
 import DocCardList from '@theme/DocCardList';
 

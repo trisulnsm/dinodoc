@@ -1,7 +1,9 @@
 ---
+
 sidebar_position: 1
 ---
-# Explore flows
+
+# Explore Flows
 
 Fast general purpose search for flows.
 
@@ -16,9 +18,9 @@ The results are presented in terms of
 > Flows](export_flows) and [Aggregate Flows](aggregate_flows) tools which work with larger matches and provide different functionality.
 
 ![](images/Explore_flows.png)  
-*Explore flows*
+*Figure: Explore flows*
 
-## How to search for flows
+## How to Search for Flows
 
 :::note navigation
 
@@ -34,7 +36,7 @@ You have two ways to enter the search criteria
    `destip=twitter.com,port=ssh`
 2. **advanced search** use a form to enter individual fields
 
-#### Quick Search: enter search terms directly
+#### Quick Search: Enter Search Terms Directly
 
 Just enter the search expression directly in the text box in the form
 of  
@@ -44,7 +46,7 @@ be obtained by clicking on the question mark icon next to the box.
 
 Some common examples :
 
-|                                                        |                                                                                                                                                                                             |
+| Field                                                  | Description                                                                                                                                                                                 |
 | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `srcip=208.219.88.129,destip=119.10.181.22`            | All flows between two ips                                                                                                                                                                   |
 | `ip=208.219.88.129`                                    | Match both source and destination ip                                                                                                                                                        |
@@ -59,7 +61,7 @@ Some common examples :
 | `ifout=1872`                                           | All the egress flows in a Netflow Interface.Combine with `router=` or specify router along with the interface in interface key format such as `ifout=10.0.17.180_1872` to see egress flows. |
 | `interface=1872`                                       | All flows in an Interface                                                                                                                                                                   |
 
-#### Advanced Search : use a form
+#### Advanced Search : Use a Form
 
 Flip to the Advanced Search tab and fill out one or more of the following fields. The direct search method described above allows you to search by many more fields.
 
@@ -85,9 +87,9 @@ Flip to the Advanced Search tab and fill out one or more of the following fields
 | Search Flow Count      | Stops search if flows match this count eg 2000                       |
 
 ![](images/Explore_flows_advanced.png)  
-*Explore flows-Advanced Search*
+*Figure: Explore flows-Advanced Search*
 
-## Using the interactive visualization
+## Using the Interactive Visualization
 
 Trisul features a streaming flow visualization based on the popular
 parallel co-ordinates paradigm. Search results are automatically
@@ -111,7 +113,7 @@ This is how you interpret the visualization
 
 Controls available
 
-|                |                          |                                                                                                                         |
+| Feature        | Location                 | Description                                                                                                             |
 | -------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
 | Lock/Release   | Below each vertical axis | Click on release under a vertical axis to ignore the corresponding tuple                                                |
 | Colorize       | Below each vertical axis | Flows are colorized by source ip. You can change it to get a dramatically different view by looking at different angles |
@@ -135,11 +137,11 @@ an Excel spreadsheet containing the same information in a spreadsheet.
 
 \- Raw Total Bytes
 
-## Other data displayed
+## Other Data Displayed
 
 Below the visualization you can find the following panels
 
-### Activity details
+### Activity Details
 
 1. Top peers — Peers (hosts) involved at either end of the flow
 2. Top Applications — Applications
@@ -151,15 +153,15 @@ Below the visualization you can find the following panels
 8. Interfaces Out — Volume of Outbound Flows from Interfaces
 
 ![](images/flow_activity.png)  
-*Flow*
+*Figure: Flows*
 
-### Raw flows
+### Raw Flows
 
 A table containing the top (by volume) raw flows that matched your
 criteria. You can drill down further in the following manner by clicking
 on the “Options” button near each flow
 
-|                                  |                     |                                                     |
+| Feature                          | Location            | Description                                         |
 | -------------------------------- | ------------------- | --------------------------------------------------- |
 | Flow details                     | Options menu        | More details about the flow                         |
 | URLs in flow                     | Options menu        | URL resources for this flow (HTTP only)             |
@@ -174,9 +176,9 @@ on the “Options” button near each flow
 | Add filter Dest port(http,https) | Options menu        | Filters flows only from destination port            |
 
 ![](images/explore_flows_options.png)  
-*Explore Flows-Options*
+*Figure: Explore Flows-Options*
 
-## Per hop flow analysis
+## Per Hop Flow Analysis
 
 By instrumenting your traffic analysis layer to collect packets from
 various points in your network, you can debug connection problems.
@@ -188,7 +190,7 @@ locations in the network
 2. probe-LB : collects from load balancer
 
 ![](images/tcp-app-analytics.png)  
-*Instrument from different spots*
+*Figure: Instrument from different spots*
 
 Now when you search for flows in Explore Flows, you will see the same
 from two vantage points. This helps you spot connection problems in the
@@ -197,9 +199,9 @@ Time, Number of packets, retransmissions as observed by the probes. The
 display is shown as below.
 
 ![](images/2flow.png)  
-*View flow hops, notice the table rows and the diagram*
+*Figure: View flow hops, notice the table rows and the diagram*
 
-### How to enable
+### How to Enable
 
 This feature is automatically enabled when the system detects identical
 flows from multiple probes.

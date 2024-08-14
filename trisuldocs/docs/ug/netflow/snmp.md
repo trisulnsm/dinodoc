@@ -34,9 +34,11 @@ Login as user, then select \_Netflow \> Router and Interfaces
 
 ![](images/snmp_settings.png)
 
-Click on SNMP Settings and enter the SNMP v2 or SNMP v3 parameters.
+*Figure: Showing SNMP Settings Option in Routers and Interfaces*
 
-## Resolving names
+Click on SNMP Settings and enter the SNMP v2 or SNMP v3 parameters
+
+## Resolving Names
 
 When you click the *Options* menu
 
@@ -49,7 +51,7 @@ When you click the *Options* menu
 | Router Tracker                         | Router tracker feature enables the detailed analysis of hosts and applications at device level                                                                                        |
 | Show Router Description                | Show the router description in the table. This is the value of sysDescr from the SNMP MIB                                                                                             |
 
-### When the IP address of the SNMP agent is different
+### When the IP Address of the SNMP Agent is Different
 
 In some environments, the SNMP agent runs on a different IP address than
 the one shown in the table. If this is the case, then trying to resolve
@@ -63,6 +65,8 @@ need to specify a *Key Attribute* for the router called
 
 ![](images/snmp_edit_label.png)
 
+*Figure: Showing Option to Resolve Names for Routers and Interfaces*
+
 Scroll down to the *Attributes* section and add the following string
 `snmp.management_ip=10.x.x.x` replace with actual IP.
 
@@ -70,11 +74,13 @@ Scroll down to the *Attributes* section and add the following string
 
 Now you should be able to resolve the router and inteface names.
 
-## Viewing SNMP traffic charts
+## Viewing SNMP Traffic Charts
 
 > Against any interface select Options
 
 ![](images/router_interface_options.png)
+
+*Figure: Drilldown Options for Interfaces*
 
 You get the following options
 
@@ -90,7 +96,9 @@ obtained via SNMP. A very useful debugging tool.
 
 ![](images/live_snmp.png)
 
-## Configuring SNMP Globally.
+*Figure: Live SNMP*
+
+## Configuring SNMP Globally
 
 Suppose if there are no devices listed in the routers and interfaces,
 you want to resolve device names if no per-device settings are found,
@@ -107,3 +115,4 @@ Click on Manage -\> App Settings -\> SNMP Settings.
 :::
 
 ![](images/snmp_app_setting.png)
+*Figure: SNMP Settings*    

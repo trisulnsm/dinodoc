@@ -17,9 +17,9 @@ You can search for
 4. Select a file
 
 ![](images/paysrch1.png)  
-*Figure. Search for text, binary, or files within HTTP traffic.*
+*Figure: Search for text, binary, or files within HTTP traffic.*
 
-### How this works
+### How This Works
 
 > Make sure you have full packet capture and flow tracking enabled in the [trisulConfig.xml](/docs/ref/trisulconfig) file
 
@@ -35,7 +35,7 @@ help in a limited way here.
 
 :::
 
-## How to use
+## How to Use
 
 :::note navigation
 
@@ -59,7 +59,7 @@ You can enter text, binary, or select a file from your local drive.
 
 Press **Find**, you will be shown a list of flows that match.
 
-#### Flow list
+#### Flow List
 
 You are shown a list of matching flows along with the pattern
 highlighted. This gives you some context about the pattern, so you can

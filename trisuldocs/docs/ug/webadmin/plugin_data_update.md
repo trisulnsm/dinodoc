@@ -15,3 +15,5 @@ Data Updates
 :::
 
 ![](images/plugin_update.png)
+
+*Figure: Plugin Data Feed Updates*

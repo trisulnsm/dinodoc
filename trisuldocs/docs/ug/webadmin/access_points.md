@@ -16,7 +16,7 @@ Select *Context : default \> profile0 -\> Access Points*
 
 :::
 
-## Add a new access point
+## Add a New Access Point
 
 Login as `admin` user to manage access points.
 

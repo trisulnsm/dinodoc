@@ -29,7 +29,7 @@ wget ftp://ftp.pbone.net/mirror/ftp5.gwdg.de/pub/opensuse/repositories/home:/Ken
 rpm -Uvh ms-fonts-1.1-2.4.noarch.rpm
 ```
 
-### Accessing reports
+### Accessing Reports
 
 Select *Reports* by clicking on the PDF Icon in the top menu section
 
@@ -60,7 +60,7 @@ The various time ranges are explained below :
 
 You can customize the PDF to include your organizations logo and taglines.
 
-##### Adding logos
+##### Adding Logos
 
 1. Logos can be placed in the 3 corners of the PDF except the top-right
 2. You need to replace 3 images (32×32) in the /usr/local/share/webtrisul/public/images directory
@@ -69,6 +69,6 @@ You can customize the PDF to include your organizations logo and taglines.
 5. logo_blhs.png → This image is placed on the bottom-left of the PDF
 6. logo_brhs.png → This image is placed on the bottom-right of the PDF
 
-##### Customizing names
+##### Customizing Names
 
 Refer to the [oem_settings](/docs/ug/webadmin/customize) for instructions.

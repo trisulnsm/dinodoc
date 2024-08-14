@@ -6,7 +6,7 @@ sidebar_position: 10
 
 Resource cap is used to calculate additional bandwidth usage.
 
-## Create Resource cap
+## Create Resource Cap
 
 You can set a resource cap value
 
@@ -21,20 +21,20 @@ You can set a resource cap value
 | Resource cap string | This must be a valid JSON. Ex resource cap for 10Mb the valid JSON is `{[bw](1000000}` |
 | Description         | Description of the resource cap                                                        |
 
-## Edit Resource cap
+## Edit Resource Cap
 
 1. Goto [key dashboard](/docs/ug/ui/key_dashboard)
 2. Click the Edit cap in the key dashboard module
 3. You will be redirected to Resorce cap edit page
 
-| Field Name          | Description                                                                          |
-| ------------------- | ------------------------------------------------------------------------------------ |
-| key                 | Hex format of key(readonly)                                                          |
-| Resolved key        | User readable format of key(readonly)                                                |
+| Field Name          | Description                                                                           |
+| ------------------- | ------------------------------------------------------------------------------------- |
+| key                 | Hex format of key(readonly)                                                           |
+| Resolved key        | User readable format of key(readonly)                                                 |
 | Resource cap string | This must be a valid JSON.Ex resource cap for 10Mb the valid JSON is `{[bw](1000000}` |
-| Description         | Description of the resource cap                                                      |
+| Description         | Description of the resource cap                                                       |
 
-## Resource cap report
+## Resource Cap Report
 
 Generates a resource cap report for a specific IP Address.
 
@@ -48,11 +48,11 @@ Steps to generate resource cap reports
 
 3. Click on any of the time ranges adjacent to the text box
 
-## Business Hours report
+## Business Hours Report
 
 You can get a daily report based on business hours.
 
-### Set Business Hours time
+### Set Business Hours Time
 
 :::note navigation
 
@@ -62,7 +62,7 @@ To set select Customize-\>App Settings
 
 change the business hour time
 
-### Schedule Report with business hours time
+### Schedule Report with Business Hours Time
 
 To [schedule](/docs/ug/reports/schedreports) a new report
 

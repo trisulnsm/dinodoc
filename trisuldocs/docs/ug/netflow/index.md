@@ -6,7 +6,6 @@ import DocCardList from '@theme/DocCardList';
 
 <DocCardList />
 
-
 ## Key Features of Trisul Netflow
 
 Trisul supports Netflow v1, v5, and Netflow v9, Flexible Netflow, and all versions ofSFLOW, andIPFIX. All routers and interfaces are auto discovered.
@@ -23,7 +22,7 @@ The following diagram shows an example deployment.
 
 ![](images/netflow.png)
 
-Configure routers/switches to send Netflow (JFLOW,IPFIX,SFlow,etc) to Trisul-Probe
+*Figure: Configuration of routers/switches to send Netflow (JFLOW,IPFIX,SFlow,etc) to Trisul-Probe*
 
 ## Advantages of Netflow vs Packet Capture
 
@@ -46,6 +45,8 @@ There is also comprehensive support for a**Device View**. You access that throug
 If you log on for the first time into a Netflow instance you may get a dashboard like below. The image below shows where to find the Router and Interfaces for getting to the Device Specific view.
 
 ![](images/Current_host.png)
+
+*Figure: Global vs Device View*
 
 ## Links
 

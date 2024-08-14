@@ -11,7 +11,7 @@ and a number of days. Trisul draws charts one below the other, aligned
 by time. This allows you to view daily, hourly, patterns in traffic for
 that item.
 
-## How to use
+## How to Use
 
 :::note navigation
 
@@ -32,4 +32,4 @@ To access select Tools -\> Long term traffic
 | Expression    | Combines two or more metrics unsing arithmetic expressions                                                                                 |
 
 ![](images/long_term_traffic.png)  
-*Long Term Traffic*
+*Figure: Long Term Traffic*

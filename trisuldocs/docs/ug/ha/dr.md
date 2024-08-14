@@ -2,7 +2,7 @@
 sidebar_position: 01
 ---
 
-# Configuring Primary Backup DR systems
+# Configuring Primary Backup DR Systems
 
 This document describes how you can setup a backup Trisul Network Analytics system as a DR (Disaster Recovery) node.
 
@@ -18,11 +18,11 @@ Terminology : In some places , we use DR node to refer to the Backup node, and D
 
 If you are configuring Disaster Recovery for a pre-existing Trisul install, ensure you copy the data over manually using scp first. By default, the sync intially only copies the latest 7 days during intialization.
 
-### Per context DR
+### Per Context DR
 
 The Primary-Backup configuration needs to be configured on a per-context basis. The instructions on this page applies to the*default*context. Multi tenant customers with multiple contexts need to configure for each context separately.
 
-### Service names
+### Service Names
 
 The systemd service names are
 
@@ -34,9 +34,9 @@ trisul-hub-primary-health-check
 
 Runs on theBACKUP(DR) node. Checks thePINGreachability ofPRIMARYnodes. For contexts other than the default context this service is called`trisul-hub-primary-health-check-contextname`
 
-## Configuring DR on Primary and Backup sites
+## Configuring DR on Primary and Backup Sites
 
-### Create home directories for the trisul user
+### Create Home Directories for the Trisul User
 
 On both the Primary and Backup sites , Trisul processes run under the username`trisul.trisul`. This will be used by the replication process to synchonize the data.
 
@@ -60,7 +60,7 @@ Retype new UNIX password:
 passwd: password updated successfully
 ```
 
-### Create aSSHkey pair for automatic ssh
+### Create a SSH Key Pair for Automatic SSH
 
 :::note
 
@@ -83,7 +83,7 @@ skip the passphrase
 ..
 ```
 
-#### Use ssh-copy-id to setup login
+#### Use ssh-copy-id to Setup Login
 
 Use`ssh-copy-id`to create an automatic login for the`trisul`user. THis will be used by rsync to transfer data to the backupsite.
 
@@ -101,7 +101,7 @@ ssh-copy-id trisul@primary
 
 At this point , both sides should be able to login to each other without a password.
 
-## Configure the primary site replication
+## Configure the Primary Site Replication
 
 On the primary site run the`install-replication-primary.sh`script to create the replication service.
 
@@ -138,7 +138,7 @@ rtt min/avg/max/mdev = 0.197/0.197/0.197/0.000 ms
 
 Further customization can be done by editing the`DCDRReplicationSettings.conf`file shown above.
 
-## Configure the backup node health check
+## Configure the Backup Node Health Check
 
 The backup node service performs a health check on pre-defined IP addresses in the primary site. IfALLthe IPs are unrechable for a predefinied period of time [default 7 minutes], the service declares thePRIMARYsite to be down. Then starts the Trisul Probe Processes on the backup site and the service stops.
 
@@ -170,7 +170,7 @@ Enter IP of paired  PRIMARY hub       : 192.168.2.140
 
 Further customization can be done by editing the`DRDCHealthCheck.conf`file shown above.
 
-## Start services on primary and backup nodes
+## Start Services on Primary and Backup Nodes
 
 On thePRIMARYnode, the trisul-hub-replicator service pushes the incremental changes continuously to the backup site.
 
@@ -188,7 +188,7 @@ On theBACKUPnode.
 systemctl start trisul-hub-primary-health-check
 ```
 
-### View log files about the status of the processes
+### View Log Files About the Status of the Processes
 
 on primary  
 `journalctl -fu trisul-hub-replicator`
@@ -314,6 +314,8 @@ Select Context: default > Admin Tasks > DC DR Status
 :::
 
 ![](./images/drdcstatus.png)
+
+*Figure: DC DR Status in Admin Tasks*
 
 The following information is shown:
 

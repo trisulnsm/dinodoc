@@ -9,13 +9,15 @@ enable on a Netflow Interface level to acquire ability to create
 separate monitoring for hosts, applications and protocols on each
 interface.
 
-## Purpose of interface tracking
+## Purpose of Interface Tracking
 
 To allow for accurate long term drilldowns of interfaces.
 
 ![](images/iftrack-eye.png)
 
-### How it works
+*Figure: Indication of Interface Tracker when Enabled*
+
+### How it Works
 
 >  Say you want a report of Top Hosts over time on interface ge/0/0 for 2 days.
 
@@ -45,7 +47,7 @@ The end result is that with *Interface Tracking* enabled we get 100%
 accuracy in long term drilldowns. We have deployed this on very large
 data center interfaces to perfect results.
 
-### The cost of Interface Tracking
+### The Cost of Interface Tracking
 
 Interface tracking however is not free. Creating these substreams
 require some minor CPU and more importantly extra disk space. A rough
@@ -57,11 +59,11 @@ Second point is that the *interface tracker* is not really necessary for low
 traffic interfaces. When there are less number of flows, the *raw flows*
 based analytics provides sufficient accuracy.
 
-## Enabling interface Tracking
+## Enabling Interface Tracking
 
 There are multiple ways to do this.
 
-### Enable on Top-100 interfaces
+### Enable on Top-100 Interfaces
 
 This is the recommended method. After running Trisul for a while it
 would have discovered all of the routers and interfaces automatically.
@@ -80,7 +82,7 @@ Then in the Interfaces tab click on the "Interface tracking" drop down button an
 
 Or
 
-### Enable on per interface basis
+### Enable On Per Interface Basis
 
 You can also choose the interfaces on a particular router and enable interface tracking on them
 
@@ -90,7 +92,7 @@ In the same Interfaces tab Click on the "Select a router to display Interfaces" 
 
 :::
 
-## Disable interface tracking
+## Disable Interface Tracking
 
 If you want to disable interface tracking
 

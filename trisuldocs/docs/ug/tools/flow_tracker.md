@@ -13,9 +13,9 @@ top flows in that tracker over the past 1 hour.
 see [Flow Trackers](/docs/ug/flow/tracker)for more
 
 ![](images/output/flow_trackers.png)  
-*Flow trackers*
+*Figure: Flow trackers*
 
-## How to use
+## How to Use
 
 :::note navigation
 

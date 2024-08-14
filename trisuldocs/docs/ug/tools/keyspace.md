@@ -14,7 +14,9 @@ network blocks.
 
 ![](images/kspace2.png)
 
-## Using the Key Space Search tool
+*Figure: Search Key Space Tool*
+
+## Using the Key Space Search Tool
 
 :::note navigation
 
@@ -27,12 +29,12 @@ Select Tools -\> Search Key Space
 3. Select Hosts if you are looking for netblock matches
 4. Enter a list of non-overlapping key spaces
 
-#### Key space list
+#### Key Space List
 
 The key space is entered as `key-from~key_to` Note that is a tilde
 character not a hyphen. Multiple key ranges can be entered one per line.
 
-#### Keys other than IP addresses
+#### Keys Other Than IP Addresses
 
 You can enter any arbitrary key. For example you can enter the keyspace
 `P~Z` in the country counter group to pull up activity for country codes
@@ -50,4 +52,4 @@ for human analysis. If you see a lot of matches you may want to narrow
 the key space and try again.
 
 ![](images/kspace1.png)  
-*All activity is flagged per day. Click to bring up list of flows.*
+*Figure: All activity is flagged per day. Click to bring up list of flows.*

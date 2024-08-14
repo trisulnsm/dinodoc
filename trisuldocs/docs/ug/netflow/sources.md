@@ -2,7 +2,7 @@
 sidebar_position: 10
 ---
 
-# Netflow Sources Dashboard
+# NetFlow Sources Dashboard
 
 The Netflow Sources dashboard provide you the following system level
 information on a Time Series chart.
@@ -19,7 +19,7 @@ Per Interface
 
 1. **Total volume** — bandwidth of Top 10 interfaces
 
-## Using Netflow Sources
+## Using NetFlow Sources
 
 :::note navigation
 
@@ -37,3 +37,5 @@ Things to try :
    panels.
 
 ![](images/netflow_sources.png)
+
+*Figure: NetFlow Sources*

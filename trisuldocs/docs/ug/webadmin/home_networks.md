@@ -41,7 +41,7 @@ Both Source IP and Dest IP are not in your home network.
 
 > Note For ISPs, the AS numbers constituting the Home Network are all the AS whose routes are announced by the home AS. See [Home Networks for ISP](/docs/ug/webadmin/home_networks#home-networks-in-isp-solution) section
 
-## Add a new home network
+## Add a New Home Network
 
 It pays to be accurate about your home network as it can impact several
 reports and views. If you want to add a new subnet to your home network
@@ -58,7 +58,7 @@ You are shown the following screen
 
 ![](images/homenetworks.png)
 
-*Showing a list of configured Home Network subnets*
+*Figure: Showing a list of configured Home Network subnets*
 
 - Click on **Add a network**  
 
@@ -67,14 +67,14 @@ You are shown the following screen
 
 - Click **Create** button to add a new home network
 
-### Adding home networks in bulk
+### Adding Home Networks in Bulk
 
 When you click on “Add” in the Home Networks screen you can see the Add
 form below
 
 ![](images/create_homenetwork_form.png)
 
-*Fig: The add subnetworks screen*
+*Figure: The add subnetworks screen*
 
 Here you can
 
@@ -90,7 +90,7 @@ Here you can
    elements in bulk except the three built-in private ranges. Use this
    option if you want to late add the home networks in bulk later.
 
-## Home networks in ISP solution
+## Home Networks in ISP Solution
 
 The following rule is used when deploying Trisul in ISP configuration.
 First the Home AS Number is configured into the Netflow and Geo
@@ -103,7 +103,7 @@ The following definition:
 > advertised by the network being monitored by Trisul are considered
 > Home Networks.
 
-### Collecting Home Network information through external route receivers
+### Collecting Home Network information Through External Route Receivers
 
 Trisul Network Analytics automatically collects route information from
 public and private BGP peering in places like Amsterdam, Singapore, and
@@ -137,7 +137,7 @@ Some points to be noted.
    is not advertised. Hence the traffic seen will be outgoing traffic
    from AS220 as per the policies of its peer AS200.
 
-#### Default route and AS-0 handling
+#### Default Route and AS-0 Handling
 
 1. If default routes are used in BGP routes, it may result in AS-0 in
    Trisul. For traffic direction purposes the following formula is used
@@ -150,14 +150,14 @@ Some points to be noted.
       that in mind while interpreting the “transit” and “internal”
       directions.
 
-### Collecting Home Network information through BGP
+### Collecting Home Network Information Through BGP
 
 In ISP setting, Trisul includes a built in BGP route receiver. This is
 added as a I-BGP peer to the customer router or a BGP Route Reflector.
 For more see “Configuring BGP”. This information is combined with
 downstream peering information to obtain a list of Home AS.
 
-## Viewing traffic direction
+## Viewing Traffic Direction
 
 The Home Network is a crucial part of Trisul reports. Apart from the
 “Internal Hosts”, “External Hosts” classification - you can see the

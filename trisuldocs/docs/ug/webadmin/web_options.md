@@ -16,6 +16,8 @@ To access this login as `admin` and select WebAdmin Manage -\> App Settings
 
 ![](images/webtrisul_options.png)
 
+*Figure: App Settings in Web Admin*
+
 ## UI
 
 | Option                            | Default Value | Description                                                                                                                                                                                                                                                 |
@@ -33,7 +35,7 @@ To access this login as `admin` and select WebAdmin Manage -\> App Settings
 | Disk usage alert percentage       | 90            | shows disk usage alert for the specified percentage                                                                                                                                                                                                         |
 | Hide context selection            | false         | Keep in unchecked if you dont want to hide context selection in login page                                                                                                                                                                                  |
 
-## Netflow
+## NetFlow
 
 | Option                           | Default Value | Description                                                             |
 | -------------------------------- | ------------- | ----------------------------------------------------------------------- |
@@ -79,7 +81,7 @@ configure a proxy server.
 | Server port         | 3000          | The webserver port. This setting is used by some cron tasks (like report mailers). If you move the default nginx port make sure you reflect that change here. |
 | Web Server Security | NONE          | Used by report jobs. Is web server using SSL?                                                                                                                 |
 
-## Schedule and Email reports
+## Schedule and Email Reports
 
 | Option                                                 | Default Value     | Description                                                                             |
 | ------------------------------------------------------ | ----------------- | --------------------------------------------------------------------------------------- |
@@ -107,7 +109,7 @@ configure a proxy server.
 | Enable Animation              | true          | Show animation while rendring chart                                                                                              |
 | Real Time Data Display        | 1 Hour        | How many data points to be retined in the real time graph                                                                        |
 
-## Dashboard and modules
+## Dashboard and Modules
 
 | Option                            | Default Value | Description                                                                                                                                                           |
 | --------------------------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

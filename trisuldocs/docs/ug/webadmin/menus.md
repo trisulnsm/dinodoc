@@ -7,7 +7,7 @@ sidebar_position: 5
 You can customize which items appear on the menu panel. You can control
 both the parent and sublevel menu items and positions.
 
-## Create a new menu
+## Create a New Menu
 
 You can either create a new item or clone an existing one and modify
 some parameters.
@@ -15,7 +15,7 @@ some parameters.
 div(info).  
 Login as `admin` user to manage menus.
 
-### Method - I : Create a new item
+### Method - I : Create a New Item
 
 :::note navigation
 
@@ -30,13 +30,13 @@ Select *Webadmin* -\> Manage -\> Menu Manager
 | ----------- | ------------------------------------------------------------ |
 | Menu Name   | Name of the menu                                             |
 | Parent Menu | Select a parent if this is a submenu or select **No Parent** |
-| Role ID     | [User Roles](/docs/ug/webadmin/userroles)               |
+| Role ID     | [User Roles](/docs/ug/webadmin/userroles)                    |
 | Description | Description of the menu                                      |
-| Controller  |                                                              |
-| Action      |                                                              |
+| Controller  | Parent Page that contains a number of Actions (Pages)        |
+| Action      | Actions are the actual pages with number of elements         |
 | Params Json | valid json                                                   |
 
-### Method - II : Clone an existing item
+### Method - II : Clone an Existing Item
 
 You can create a new by cloning the existing menu
 

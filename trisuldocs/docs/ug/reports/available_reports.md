@@ -15,7 +15,7 @@ Generates a summary report for a specific IP Address.
 1. Enter the IP address or host name in this box. Note that this box autocompletes hostnames.
 2. Click on any of the time ranges adjacent to the text box
 
-#### How to schedule ?
+#### How to Schedule ?
 
 You need to specify a particular host as a subject for this report.
 
@@ -32,7 +32,7 @@ Generates a summary report for a specific application (eg.HTTP, DNS, SMTP, etc)
 1. Enter an application name (such as http) or a port number (such as Port-80)
 2. Click on any of the time ranges adjacent to the text box
 
-#### How to schedule ?
+#### How to Schedule ?
 
 Needs a port or application name to run.
 
@@ -51,7 +51,7 @@ Report for traffic bandwidth and users for a particular router interface
 1. Enter a router interface name or ID. Interface names are in the format IP_ifIndex.
 2. Click on any of the time ranges adjacent to the text box
 
-#### How to schedule ?
+#### How to Schedule ?
 
 You need to specify a router interface number.
 
@@ -61,7 +61,7 @@ You need to specify a router interface number.
 
 ---
 
-## IP Utilization report
+## IP Utilization Report
 
 View bandwidth utilization of an IP.
 
@@ -75,7 +75,7 @@ This report has two modes depending on whether or not you have configured per-ap
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Advanced | Report shows everything in Simple breakup of traffic by port breakup of traffic by protocol ( UDP, TCP, ICMP, etc)                                                              |
 
-#### Configuring the advanced mode
+#### Configuring the Advanced Mode
 
 You get the maximum out of this report when you set the bandwidth cap and enable per-port and per-protocol metering.
 
@@ -97,7 +97,7 @@ You get the maximum out of this report when you set the bandwidth cap and enable
 - Parent = *Network Layer Stats*, Filter = *Hosts* and enter the IP
 - Name the new counter group `PROTO_IPAddress`. Example : `PROTO_192.168.1.22`
 
-#### How to schedule ?
+#### How to Schedule ?
 
 You need to specify a particular host as a subject for this report.
 
@@ -125,7 +125,7 @@ is running in Netflow mode.
 
 ---
 
-## Malware, botnet, virus infections
+## Malware, Botnet, Virus Infections
 
 Requires the Badfellas plugin
 
@@ -142,7 +142,7 @@ interactive traffic.
 
 ---
 
-## Intrusion alerts
+## Intrusion Alerts
 
 A comprehensive report of IDS alert activity over a period of time. Data and charts include :
 
@@ -161,7 +161,7 @@ A rudimentary 1-page anomaly report is also included :
 
 ---
 
-## Deep drilldown of Internal Hosts
+## Deep Drilldown of Internal Hosts
 
 A comprehensive drilldown of internal host activity. The data presented in the report include :
 
@@ -195,7 +195,7 @@ A comprehensive drilldown of application activity. The data presented in the rep
    2. Which internal hosts are involved
    3. Which flow tags are active
 
-## Common counter groups
+## Common Counter Groups
 
 Frequently used counter group reports. To view reports for counter groups not in this list, go to **Top Traffic Reports** and then select the counter group. This report shows the top users for each meter.
 
@@ -205,7 +205,7 @@ Frequently used counter group reports. To view reports for counter groups not in
 - ASNumber
 - Country
 
-### All available reports
+### All Available Reports
 
 This allows you to generate reports for any of the data types in 
 Trisul using a two step process. First select the type of report, then 

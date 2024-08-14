@@ -17,7 +17,7 @@ calendar. For example you can show on a monthly calendar
 
 for a Host like shadyguy.mycompany.com
 
-## How to use
+## How to Use
 
 :::note navigation
 
@@ -36,4 +36,4 @@ To access select Tools-\>Monthly Chart
 ##### Example
 
 ![](images/monthly_charts.png)  
-*Daily usage calendar for an internal IP*
+*Figure: Daily usage calendar for an internal IP*

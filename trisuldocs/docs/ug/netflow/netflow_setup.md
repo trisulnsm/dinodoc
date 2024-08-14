@@ -13,7 +13,7 @@ Netflow v5/v9/JFlow/IPFIX/and SFlow metering. This document describes
 
 ## Steps
 
-### Step 1: Configure your routers
+### Step 1: Configure your Routers
 
 Configure your routers/switches to send Netflow to the Trisul-Probe’s IP
 address and note down the following
@@ -21,7 +21,7 @@ address and note down the following
 - What interfaces on the Trisul server is getting the Netflow records
   (eth0,eth1,eth2, etc) ? What UDP ports are getting Netflow records ?
 
-#### Default ports
+#### Default Ports
 
 The following ports are configured by default for Netflow and SFlow
 processing. The versions and flavors are automatically detected. To view
@@ -31,7 +31,7 @@ or change these, use the [Netflow Wizard](netflow_wizard) from Context: default 
   Netflow/IPFIX/JFlow.
 - UDP Port 6343 is treated as SFlow.
 
-### Step 2: Confirm if Netflow records are being received
+### Step 2: Confirm if Netflow Records are Being Received
 
 This is an optional step. Use `tcpdump` to check whether Netflow records
 are indeed coming in on the Trisul interface using tcpdump.
@@ -51,7 +51,7 @@ Use the UI to change the mode from the default “Packet capture” to
 - For probe0 on the “Packets or Netflow” column, change the drop down
   from **TAP** to **NETFLOW_TAP**
 
-### Step 4: Make further tweaks using the Netflow Setup Wizard
+### Step 4: Make Further Tweaks Using the Netflow Setup Wizard
 
 - Login as Admin and open the [Netflow Wizard](netflow_wizard) by selecting *Context:default -\> profile0 -\> Netflow Wizard*
 
@@ -65,7 +65,7 @@ Use the UI to change the mode from the default “Packet capture” to
   have to edit the Netflow configuration file and add the [Device-IP to
   Sampling Rate mapping](/docs/ref/netflow-config#sampling-rates)
 
-### Step 5: Restart trisul-probe and finish
+### Step 5: Restart trisul-probe and Finish
 
 - Login as Admin. Then select *Context:default -\> Admin Tasks -\>
   Start/Stop Tasks*
@@ -75,7 +75,7 @@ Use the UI to change the mode from the default “Packet capture” to
 Congratulations!! Now wait for about 10 minutes for Netflow data to
 start showing up.
 
-## Netflow wizard
+## Netflow Wizard
 
 Use the [Netflow Wizard](netflow_wizard) to
 
@@ -102,7 +102,7 @@ Admin Tasks \> Netflow Template DB
 You can see the template database on each probe. This is updated every
 10 minutes or when a new template is received.
 
-### Advanced configuration
+### Advanced Configuration
 
 You can tweak the [netflow configuration file](/docs/ref/netflow-config) for more advanced settings.
 
