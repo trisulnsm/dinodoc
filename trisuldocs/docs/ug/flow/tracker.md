@@ -16,7 +16,7 @@ flows’. Those are flows transferring a huge volume of data. But as you
 shall see below this is not the only type of tracker. Flow trackers are
 also necessary for you to use [flow tracker alerts](/docs/ug/alerts/ft).
 
-## Built in trackers
+## Built in Trackers
 
 The following flow trackers are built in. You may create your own on top
 of it.
@@ -57,7 +57,7 @@ Select Tools -\> Flow Trackers -\>Manage
 
 :::
 
-### Fill up the fields
+### Fill up the Fields
 
 #### Session Group
 
@@ -82,7 +82,7 @@ following table describes the available options.
 
 A short name for the tracker.
 
-#### Config string
+#### Config String
 
 A filter string that allows you to specify what subset of flows you want
 to consider.
@@ -92,7 +92,7 @@ to consider.
 | For type “total bytes”  | `lower,100,500` track flows between 100 and 500 bytes, prefer the lower side. `higher,500,2000` track flows between 500 and 2000 bytes, prefer the higher side |
 | All other tracker types | A filter string (See below)                                                                                                                                    |
 
-#### Filter string format
+#### Filter String Format
 
 Some examples
 
@@ -109,7 +109,7 @@ Some examples
 | `!192.168.1.8~192.168.1.18` | Not between 192.168.1.8 and 19              |
 | the ! character             | Use in front of any filter to negate        |
 
-#### Not on volume based trackers
+#### Not on Volume Based Trackers
 
 The main application for tracking flows transferring low payload is in
 specific security scenarios. In case you are interested in this type of
@@ -125,7 +125,7 @@ Say you have configured flow trackers to track 100 flows, and there are
 the higher of the 150 flows and **lower,100,200** will count the lower
 100 of the 150 flows.
 
-## Changing parameters
+## Changing Parameters
 
 The default setting is Trisul tracks 100 flows per tracker every 300
 seconds. You can change it by clicking on “Edit…” and changing the
@@ -144,6 +144,6 @@ Select Tools -\> Flow Tracker
 
 :::
 
-## Alerting on flow tracker activity
+## Alerting on Flow Tracker Activity
 
 See [Flow Tracker Alert](/docs/ug/alerts/ft) section.

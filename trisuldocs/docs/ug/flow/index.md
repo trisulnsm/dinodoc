@@ -20,7 +20,7 @@ import DocCardList from '@theme/DocCardList';
 
 <DocCardList />
 
-##### Howto: with flows
+##### Howto: With Flows
 
 - Find out which flows caused a traffic spike
 - View flow activity of a host or port in real time
@@ -30,7 +30,7 @@ import DocCardList from '@theme/DocCardList';
 
 [All tasks](/docs/ug/flow/tasks)
 
-### Working with flows
+### Working with Flows
 
 You can do all of the following
 

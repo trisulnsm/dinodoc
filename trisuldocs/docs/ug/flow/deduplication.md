@@ -2,19 +2,19 @@
 sidebar_position: 06
 ---
 
-# Flow Legs and duplication
+# Flow Legs and Duplication
 
 Trisul Network Analytics continuously receives flow telemetry either
 from packets or from Netflow. In some cases the same flow maybe received
 from multiple devices one for each leg. De-duplication refers to the
 process where multiple flow legs are correlated.
 
-## When dup flows are received
+## When Dup Flows are Received
 
 Duplicate flows can be received in both Netflow and Packet modes. The
 following diagrams shows these two scenarios.
 
-### Packet mode flow legs
+### Packet Mode Flow Legs
 
 In packet mode, customers can deploy multiple Trisul Probe nodes at
 different locations in their network, these probes then report to a
@@ -30,7 +30,7 @@ In the above example the flow parameters are
 2. The flow *F* reported by Trisul Probe 1 to the hub
 3. The flow *F* reported by Trisul Probe 2 to the hub
 
-### Netflow mode flow legs
+### NetFlow Mode Flow Legs
 
 In Netflow mode, the same flow which traverses multiple netflow enabled
 devices can produce duplicate *flow leg* records. This affects both
@@ -47,7 +47,7 @@ In the above example the flow parameters are
 2. The flow *F* reported by router 1
 3. The flow *F* reported by router 2
 
-## Trisul handling of duplicate flows
+## Trisul Handling of Duplicate Flows
 
 The default behavior of Trisul is to keep the flows as-is because the
 router or probe information is also kept with the flow. This allows
@@ -65,7 +65,7 @@ supported by Trisul.
 
 In the rest of this page we will describe the Flow Leg correlation.
 
-## Explore flows with Flow Leg correlation
+## Explore Flows with Flow Leg Correlation
 
 If `Flow Legs Correlation` option is set in Web Trisul Options, then the
 flow query tools automatically correlate the flow legs and show them in

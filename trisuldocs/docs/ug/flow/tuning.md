@@ -2,11 +2,11 @@
 sidebar_position: 04
 ---
 
-# Tuning options
+# Tuning Options
 
 This section describes options available to tweak flow handling.
 
-## Packet capture vs Netflow
+## Packet Capture vs NetFlow
 
 The primary differences between them are :
 
@@ -17,7 +17,7 @@ The primary differences between them are :
 | flows are subordinates to traffic metering because we meter each packet directly        | traffic metering is subordinate to flows because we extract metering information from flows |
 | reassembles TCP flows and extracts resource identifiers and additional traffic metering | not available                                                                               |
 
-## Optimize flow handling
+## Optimize Flow Handling
 
 In the rare cases where you need to customize flow handling :
 
