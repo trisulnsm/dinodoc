@@ -1,7 +1,6 @@
-# Architecture
+# Advanced Settings
 
-Components and configuration notes.
-
+This page contains detailed configuration and tuning parameters. What goes on under the hood. 
 
 ## Configuring Trisul for IPDR
 

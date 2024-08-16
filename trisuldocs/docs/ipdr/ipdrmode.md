@@ -2,9 +2,10 @@
 sidebar_position: 3
 ---
 
-# Enable IPDR Mode
+# Manually set IPDR mode
 
-By default IPDR mode is disabled. Enabling IPDR (Internet Protocol Detail Record) mode in Trisul enables the collection and logging of detailed network traffic data, providing a comprehensive view of network activity.
+If you have skipped the [Mode Chooser Wizard](install) at time of first login, you can switch Trisul to IPDR mode at anytime by following the steps on this page. 
+
 
 To enable IPDR Mode, Login as Admin and,
 

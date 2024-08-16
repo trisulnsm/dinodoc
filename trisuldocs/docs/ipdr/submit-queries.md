@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# How to Query Using IPDR Form
+# Submit queries
 
 With IPDR Query Form, you can request detailed records of internet activity from network devices. 
 

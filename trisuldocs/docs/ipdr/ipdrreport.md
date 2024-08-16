@@ -1,30 +1,28 @@
----
-sidebar_position: 6
----
+# Sample reports
 
-# IPDR Report
+This page contains details about the Excel and TXT Report format containing the results. These files need to be submitted to the agency. 
 
-The IPDR service is asynchoronous, this allows agents to submit multiple
-long queries and wait for results without having to submit them one
-after another. The IPDR results are obtained in the following two methods
 
-##### Secure FTP or Download
+There are two places from where you can get the report files.
 
-**Download directly from Web Browser**  
+
+## Download directly from Web Browser
+
 For queries that result in a reasonable file size (default 100MB) the
 agent can directly download the results by pressing the *Download* button. See [IPDR Settings > Download File Size](/docs/ug/webadmin/ipdr-settings) to adjust this limit.
 
-**Get it from a secure FTP server**  
+## Get it from a secure FTP server   
+
 Regardless of the limit, if a Secure FTP (SFTP) server is configured the
 results file is copied to that server automatically. The advantage of
 this option is very large file sizes can be sent automatically to the
 FTP server rather than the user having to download from the browser.
 
-### Report Format
+## Report Format
 
 Once the user has requested a query and the query has been processed for the particular IP address the IPDR report will be generated and is available for download in .txt, excel, and CSV formats.
 
-##### File name
+### File name is SHA1 hashed 
 
 Once completed the IPDR log will have a name like `765f9124f705735ad54f9c87223eecd4944a0aa7.txt` This is to ensure the
 integrity of the file from tampering. The file name is `SHA-1Hash.txt` where the file contents are hashed to produce the file name.
