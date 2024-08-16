@@ -18,14 +18,14 @@ import DocCardList from '@theme/DocCardList';
 
 Trisul allows you to summon raw packets from a number of situations. Some typical examples,
 
-| Context        | How you get to the raw packets                                                                                                                       |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Retro analysis | You are looking at top applications around 5AM yesterday and want to pull SMB packets in that period                                                 |
-| Flows          | You want to see the content of the top 3 flows **uploading** data out of our network                                                                 |
-| Cross drill    | You can find out the top hosts and MACs contributing to DNS traffic between 5AM and 6AM last tuesday                                                 |
-| IDS Alerts     | You want to see the packet that caused a **shellcode** snort alert. You also want to see nearby packets to the one that caused the alert.            |
-| Other Alerts   | Pull up raw packets for threshold crossing alerts, blacklist / CnC activity or flow tracker alerts                                                   |
-| Resources      | Pull up raw packets for all HTTP flows that requested a *.dll resource                                                                               |
+| Context        | How you get to the raw packets                                                                                                                      |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Retro analysis | You are looking at top applications around 5AM yesterday and want to pull SMB packets in that period                                                |
+| Flows          | You want to see the content of the top 3 flows **uploading** data out of our network                                                                |
+| Cross drill    | You can find out the top hosts and MACs contributing to DNS traffic between 5AM and 6AM last tuesday                                                |
+| IDS Alerts     | You want to see the packet that caused a **shellcode** snort alert. You also want to see nearby packets to the one that caused the alert.           |
+| Other Alerts   | Pull up raw packets for threshold crossing alerts, blacklist / CnC activity or flow tracker alerts                                                  |
+| Resources      | Pull up raw packets for all HTTP flows that requested a *.dll resource                                                                              |
 | More           | Trisul has many meters in dozens of counter groups. With access to raw packets you can slice and dice statistics in a massive number ofpermutations |
 
 ### Task List
