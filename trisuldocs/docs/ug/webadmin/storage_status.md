@@ -22,6 +22,8 @@ Login as Admin &rarr; Context:default &rarr; Admin Tasks &rarr; Storage Status
 
 ![](images/storagestatus1.png)
 
+*Figure: Storage status dashboard showing disk space size information*
+
 The Storage status consists of the following information and their status details.
 
 | Information   | Description                                                         |
@@ -41,6 +43,8 @@ Disk Usage Per day is a graphical representation of the disk usage per day in ba
 
 ![](images/diskusageperday.png)
 
+*Figure: Disk Usage per day in bar chart*
+
 | Storage Data | Description                                                   |
 | ------------ | ------------------------------------------------------------- |
 | Date         | The date of the storage data you have hovered on              |
@@ -53,6 +57,8 @@ Disk Usage Per day is a graphical representation of the disk usage per day in ba
 In [Storage Pools](/docs/ug/caps/fullcontent#sliding-slices) you can view each of the storage pool's status information including the number of days since the data has started getting stored in the storage pool, the disk space used by the storage pool, and pool disk usage percentage. The Gauge meter on the lower right represents the pool disk usage percentage.
 
 ![](images/storagestatus2.png)
+
+*Figure: Storage status dashboard showing storage pools information*
 
 | Information         | Description                                                                                                                 |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------- |
@@ -80,7 +86,7 @@ Also the following table contains two tabs,
 
 ![](images/storagestatus3.png)
 
-*Figure: Day wise Slice details*
+*Figure: Day wise Slice details in storage status*
 
 | Information | Description                                             |
 | ----------- | ------------------------------------------------------- |
@@ -95,7 +101,7 @@ The second tab in the example shows 64 data slices, which is 2 slices per day fo
 
 ![](images/storagestatus4.png)
 
-*Figure: Slice wise details*
+*Figure: Slice wise details in storage status*
 
 Clicking on this tab shows you the table details,
 

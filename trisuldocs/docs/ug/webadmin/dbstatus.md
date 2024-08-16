@@ -10,6 +10,8 @@ In Trisul, the **DB Status** dashboard provides a comprehensive overview of the 
 
 ![](images/dbstatus1.png)
 
+*Figure: DB Status Dashboard showing total count of objects*
+
 The DB Status dashboard contains several sections, which can be broken down in to:
 
 1. **Sessions**: 
@@ -50,11 +52,15 @@ The Database Slices Dashboard is similar to the one in Storage Status which show
 
 ![](images/dbstatus2.png)
 
+*Figure: DB Status dashboard showing Database Slices*
+
 ## Raw Packet Storage Slices
 
 Raw Packet Storage Slices dashboard shows the amount of disk space used to store raw network traffic data in sliced format. Unlike NetFlow, all the raw PCAP slices are stored in Trisul probe.
 
 ![](images/dbstatus3.png)
+*Figure: DB Status dashboard showing raw packet storage slices*
+
 It displays the following,
 
 | Information | Description                                      |
