@@ -1,8 +1,4 @@
----
-sidebar_position: 5
----
-
-# IPDR NetFlow Statistics
+# View IPDR Statistics
 
 IPDR NetFlow statistics dashboard contains modules of statistical network usage data that ISPs collect.
 

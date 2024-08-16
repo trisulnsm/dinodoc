@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # Introduction to IPDR 
 
 Simply put, Trisul IPDR will be of interest mainly to ISPs who seek to comply with regulatory mandates pertaining to 
@@ -11,7 +7,7 @@ Simply put, Trisul IPDR will be of interest mainly to ISPs who seek to comply wi
 
 
 
-This [IPDR mode](/docs/ipdr/ipdrmode) is used to meet Telecom compliance mandates in various jurisdictions. However, it is not exclusive for ISPs, various stakeholders also utilize Trisul IPDR including LEAs, Network Admins, Security teams etc.
+This [IPDR mode](ipdrmode) is used to meet Telecom compliance mandates in various jurisdictions. However, it is not exclusive for ISPs, various stakeholders also utilize Trisul IPDR including LEAs, Network Admins, Security teams etc.
 
 The name for this feature is **Trisul IPDR** ( IP Data Record)
 
@@ -121,7 +117,7 @@ be performing the queries. This login has no other privileges other than
 to perform the query required for complaince. The powerful `trisul_ipdr`
 service described above ensures the data is provided as a download or
 pushed directly to a Secure FTP (SFTP) server. Sometimes we have noticed
-agent requests resulting in several GB of output which cannot be downloaded over a browser. See [Configure IPDR Settings](/docs/ug/webadmin/ipdr-settings) on how to setup the SFTP server.
+agent requests resulting in several GB of output which cannot be downloaded over a browser. See [Configure IPDR Settings](ipdr-settings) on how to setup the SFTP server.
 
 The following diagram shows the workflow
 
@@ -132,7 +128,7 @@ Fig 2. Agent login, submit, download, FTP workflow
 #### Agent login with special ID
 
 The agent is given a separate login and password with a dashboard that
-shows only one option to retrieve IPDR logs. Once logged in the agent can submit query using [Trisul IPDR Query form](/docs/ipdr/querying_using_ipdr) and view the [IPDR dashboard](/docs/ipdr/ipdrdashboard) for the queried IP addresses. The [IPDR reports](/docs/ipdr/ipdrreport) are then downloaded from web browser or FTP server.
+shows only one option to retrieve IPDR logs. Once logged in the agent can submit query using [Trisul IPDR Query form](submit-queries) and view the [IPDR dashboard](ipdrdashboard) for the queried IP addresses. The [IPDR reports](ipdrreport) are then downloaded from web browser or FTP server.
 
 ## Tuning
 
@@ -145,7 +141,3 @@ deployment.
 | [Hub Config](/docs/ref/trsulhubconfig#advanced-db-parameters) | DBParamters \> FlowStream \> AppMode | lz4-ip-call-log-with-nat-pro-max | Sets the database schema and compression code to pro-max                                                                                                             |
 | [Probe Config file](/docs/ref/trisulconfig#tuning)            | Tuning \> DisableFlowTupleFeedback   | true                             | Disables monitoring of flow tuples by IP and Application. If this is enabled, there will be connection metrics for every IP and App, could waste disk space for IPDR |
 | [Probe Config file](/docs/ref/trisulconfig#edges)             | Edges \> EnableFlowEdges             | false                            | Disable Edge graph generation for space savings                                                                                                                      |
-
-### References
-
-Also see [IPDR FTP Settings](/docs/ug/webadmin/ipdr-settings)
