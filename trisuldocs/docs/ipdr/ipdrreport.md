@@ -9,7 +9,7 @@ There are two places from where you can get the report files.
 ## Download directly from Web Browser
 
 For queries that result in a reasonable file size (default 100MB) the
-agent can directly download the results by pressing the *Download* button. See [IPDR Settings > Download File Size](/docs/ug/webadmin/ipdr-settings) to adjust this limit.
+agent can directly download the results by pressing the *Download* button. See [IPDR Settings > Download File Size](ipdr-settings) to adjust this limit.
 
 ## Get it from a secure FTP server   
 

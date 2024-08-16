@@ -1,7 +1,3 @@
----
-sidebar_position: 3
----
-
 # Manually set IPDR mode
 
 If you have skipped the [Mode Chooser Wizard](install) at time of first login, you can switch Trisul to IPDR mode at anytime by following the steps on this page. 

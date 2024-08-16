@@ -1,7 +1,3 @@
----
-sidebar_position: 7
----
-
 # IPDR Export format
 
 This page describes the fields when you export flows using this IPDR *IP Data Record* feature.

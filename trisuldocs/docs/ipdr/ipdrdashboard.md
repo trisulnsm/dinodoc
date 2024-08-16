@@ -1,8 +1,3 @@
----
-sidebar_position: 4
-
----
-
 # IPDR Dashboard
 
 Trisul IPDR Dashboard provides a visual representation of network activity data, providing real-time insights and analytics on internet usage patterns. It's a centralized platform that displays key metrics statistics and the output for submitted queries for IPDR logs. 
@@ -17,7 +12,7 @@ Password: `ipdr@@123`
 
 :::
 
-Once logged in and the [Trisul IPDR Query form](/docs/ipdr/querying_using_ipdr) is submitted, You can view the Trisul IPDR Dashboard and Menu.
+Once logged in and the [Trisul IPDR Query form](submit-queries) is submitted, You can view the Trisul IPDR Dashboard and Menu.
 
 This is the example of the logged in screen that you will be taken to.
 
@@ -29,7 +24,7 @@ This is the example of the logged in screen that you will be taken to.
 
    On the Left side of the screen you can find the IPDR menu where you can navigate to,
 
-1) [Query Logs](querying_using_ipdr)
+1) [Query Logs](submit-queries)
 
 2) [IPDR Dashboard](ipdrdashboard)
 
