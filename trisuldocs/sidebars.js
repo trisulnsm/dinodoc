@@ -66,16 +66,27 @@ const sidebars = {
     			link: { type: 'doc', id:'ipdr/install'},
     			items: [
     				"ipdr/install",
-    				"ipdr/ipdrmode",
     				"ipdr/ipdr-settings",
     				"ipdr/advanced"
     				]
     		},
+    		{
+    			type: "category",
+    			label: "Network Config",
+    			link: { type: 'doc', id:'ipdr/network-config'},
+    			items: [
+    				"ipdr/netflow",
+    				"ipdr/radius",
+    				"ipdr/syslog"
+    				]
+    		},
+
     		"ipdr/submit-queries",
     		"ipdr/ipdrdashboard",
     		"ipdr/ipdrstatistics",
     		"ipdr/ipdrexportfields",
-    		"ipdr/ipdrreport",
+    		"ipdr/staticip-mappings",
+    		"ipdr/scripts"
 
      ],
   	},

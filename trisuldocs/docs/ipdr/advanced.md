@@ -72,7 +72,7 @@ Fig 2. Agent login, submit, download, FTP workflow
 #### Agent login with special ID
 
 The agent is given a separate login and password with a dashboard that
-shows only one option to retrieve IPDR logs. Once logged in the agent can submit query using [Trisul IPDR Query form](submit-queries) and view the [IPDR dashboard](ipdrdashboard) for the queried IP addresses. The [IPDR reports](ipdrreport) are then downloaded from web browser or FTP server.
+shows only one option to retrieve IPDR logs. Once logged in the agent can submit query using [Trisul IPDR Query form](submit-queries) and view the [IPDR dashboard](ipdrdashboard) for the queried IP addresses. The [IPDR reports](ipdrexportfields) are then downloaded from web browser or FTP server.
 
 ## Tuning
 
