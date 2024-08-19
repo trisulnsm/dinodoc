@@ -8,9 +8,11 @@ This page describes the web application settings.
 
 ### Customize
 
+To access application setting, Login as admin and,
+
 :::note navigation
 
-To access this login as `admin` and select WebAdmin Manage -\> App Settings
+Select WebAdmin Manage -\> App Settings
 
 :::
 
@@ -53,11 +55,11 @@ Web Trisul needs to reach out to the internet for two things.
 If your Trisul-Hub node does not have internet access you need to
 configure a proxy server.
 
-| Option                     | Description                                   |
-| -------------------------- | --------------------------------------------- |
-| Proxy Server IP            | Address of the proxy server                   |
-| Proxy Server User Name     | Specify the Username if required by the proxy |
-| Proxy Server User Password | Specify the Password if required by the proxy |
+| Option                 | Description                                   |
+| ---------------------- | --------------------------------------------- |
+| Proxy Server IP        | Address of the proxy server                   |
+| Proxy Server User Name | Specify the Username if required by the proxy |
+| Proxy Server Password  | Specify the Password if required by the proxy |
 
 #### Test it
 
@@ -68,18 +70,18 @@ configure a proxy server.
 
 ## Packet Inspection
 
-| Option                               | Default Value | Description                                                                                          |
-| ------------------------------------ | ------------- | ---------------------------------------------------------------------------------------------------- |
-| Deep Packet Inspection limit         | 21600 Secs    | Time limit for deep packet inspection                                                                |
-| Deep packet inspection content limit | 100 M         | Maximum number of bytes to be retrieved as a result of the packet retrieval \_Pull packets operation |
+| Option                            | Default Value | Description                                                                                          |
+| --------------------------------- | ------------- | ---------------------------------------------------------------------------------------------------- |
+| Deep Packet Inspection limit      | 21600 Secs    | Time limit for deep packet inspection                                                                |
+| Deep packet inspection size limit | 100 M         | Maximum number of bytes to be retrieved as a result of the packet retrieval \_Pull packets operation |
 
 ## Web Server
 
-| Option              | Default Value | Description                                                                                                                                                   |
-| ------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Idle timeout        | 60            | Time set to logged webtrisul when idle                                                                                                                        |
-| Server port         | 3000          | The webserver port. This setting is used by some cron tasks (like report mailers). If you move the default nginx port make sure you reflect that change here. |
-| Web Server Security | NONE          | Used by report jobs. Is web server using SSL?                                                                                                                 |
+| Option                 | Default Value | Description                                                                                                                                                   |
+| ---------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Idle Timeout (minutes) | 60            | Time set to logged webtrisul when idle                                                                                                                        |
+| Web Server Port        | 3000          | The webserver port. This setting is used by some cron tasks (like report mailers). If you move the default nginx port make sure you reflect that change here. |
+| Web Server Security    | NONE          | Used by report jobs. Is web server using SSL?                                                                                                                 |
 
 ## Schedule and Email Reports
 

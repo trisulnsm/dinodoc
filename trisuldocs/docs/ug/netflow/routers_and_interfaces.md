@@ -13,7 +13,7 @@ To access Routers and Interfaces,
 Select Netflow -> Routers and Interfaces
 :::
 
-![](images/router_interface.png)
+![](images/routersandinterfaces_tool.png)
 
 *Figure: Routers and Interfaces Tool*
 
@@ -53,7 +53,7 @@ The *Show all router interfaces* checkbox controls the display of router interfa
 
 Router Table shows the list of all routers active in the selected time window. The table shows the number of interfaces active in the selected time window. Table shows the number of interfaces active, total volume pushed through the router and other info.
 
-![](images/routertable.png)
+![](images/routertable1.png)
 
 *Figure: Router Table*
 
@@ -107,7 +107,7 @@ Selecting specific columns enables users to tailor the table to display the info
 
 The Magic Map feature provides a graphical representation of the top interfaces across all routers, enabling direct interface selection. This visualization tool offers a network-wide perspective on relative interface volumes. 
 
-![](images/magicmap.png)
+![](images/magicmap1.png)
 
 *Figure: Magic Map Visulaization*
 
@@ -127,7 +127,7 @@ The *Filter Routers* bar, located at the upper right-hand side of the Router tab
 
 ### Router List
 
-![](images/routertabledetails.png)
+![](images/routerlist.png)
 
 *Figure: List of routers and their details in the Router Table*
 
@@ -180,7 +180,7 @@ Display a matrix showcasing the relationships and connections between different 
 
 The Interface Table is a dynamic display that populates with detailed information about all active interfaces on a selected router, specific to the chosen time frame. This table is invoked when a router is chosen from the Router Table.
 
-![](images/interfacetable.png)
+![](images/interfacetable2.png)
 
 *Figure: Interfaces Table*
 
