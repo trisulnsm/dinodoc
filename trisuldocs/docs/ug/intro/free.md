@@ -4,20 +4,20 @@ sidebar_position: 2
 
 # How to Get Started
 
-Trisul is incredibly easy to get started on. There is no sign ups or
-credit cards - its as easy as ‘apt-get install’ or ‘yum install’.
+Trisul is incredibly easy to get started on. There is no sign-ups or
+credit cards - it's as easy as ‘apt-get install’ or ‘yum install’.
 
 The following links will get you up and viewing dashboards.
 
-1. prepare a bare metal or VM and install Ubuntu or CentOS \[
+1. Prepare a bare metal or VM and install Ubuntu or CentOS \[
    [supported platforms](https://www.trisul.org/download/) \]
-2. install Trisul using normal Ubuntu or CentOS methods (apt-get or
+2. Install Trisul using normal Ubuntu or CentOS methods (apt-get or
    yum) \[ [quick install](https://www.trisul.org/download/) \]
-3. arrange for packets or Netflow to reach the Trisul Probe \[ [How to
+3. Arrange for packets or Netflow to reach the Trisul Probe \[ [How to
    feed packets to Trisul](/docs/ug/install/input_packets) , [how
    to send
-   Netflow/SFlow/IPFIX/etc](/docs/ug/install/input_netflow)\]
-4. login and start viewing \[ [running trisul, opening
+   Netflow/SFlow/IPFIX etc](/docs/ug/install/input_netflow)\]
+4. Login and start viewing \[ [running trisul, opening
    firewall](/docs/ug/install/startstop) \] \| \[[your first
    login](/docs/ug/basicusage/) \]
 
