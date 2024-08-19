@@ -6,11 +6,9 @@ Simply put, Trisul IPDR will be of interest mainly to ISPs who seek to comply wi
 - AAA logging
 
 
-
 This [IPDR mode](ipdrmode) is used to meet Telecom compliance mandates in various jurisdictions. However, it is not exclusive for ISPs, various stakeholders also utilize Trisul IPDR including LEAs, Network Admins, Security teams etc.
 
 The name for this feature is **Trisul IPDR** ( IP Data Record)
-
 
 :::warning[Compliance note]
 Every jurisdiction around the world may have their own logging mandates. This page cites the DoT India mandate as an example, however the product can be used in any jurisdiction where similar mandates are found. 

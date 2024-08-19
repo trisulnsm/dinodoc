@@ -1,22 +1,16 @@
 # IPDR Settings
 
-Internet Protocol Data Records storage is a ISP compliance feature that
-is supported by Trisul Network Analytics. With this feature ISP can use
-Trisul to index and store at very high speeds every single flow in their
-network.
-
 This page describes the configuration settings for
 
-1. FTP - credentials to automatically ship the queries to a remote
-   server
-2. NAT SysLog - Port where NAT syslog messages are sent
+- Mode - one click to configure the IPDR mode
+- FTP - credentials to automatically ship the queries to a remote  server
+- NAT SysLog - Port where NAT syslog messages are sent
 
 ## Settings form
 
 :::tip[navigation]
 
-Login as admin and select *Context:default \> Admin Tasks \> IPDR
-Settings*
+Login as admin and select *Context:default > Admin Tasks > IPDR Settings*
 
 :::
 
