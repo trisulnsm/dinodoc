@@ -180,7 +180,7 @@ Display a matrix showcasing the relationships and connections between different 
 
 The Interface Table is a dynamic display that populates with detailed information about all active interfaces on a selected router, specific to the chosen time frame. This table is invoked when a router is chosen from the Router Table.
 
-![](images/interfacetable1.png)
+![](images/interfacetable2.png)
 
 *Figure: Interfaces Table*
 
