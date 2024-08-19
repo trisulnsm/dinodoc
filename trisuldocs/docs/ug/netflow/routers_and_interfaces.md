@@ -206,7 +206,7 @@ Upon selecting a router from the router table, the Interface Table will display 
 | Out          | Total outgoing traffic (in bytes)                                                                      |
 | Context Menu | Click on the drop down button to access additional options and detailed information for each interface |
 
-## Drilldown From the Interfaces Table
+### Drilldown From the Interfaces Table
 
 Having selected a router and interface you can drilldown and access the
 following by Clicking on the three lines drop down option on the right side against each interfaces.
