@@ -33,7 +33,7 @@ Click on a section to see the config parameters inside that section.
 | StatsEngine | Database cluster tuning                                 |
 | Server      | ForTRP– server parameters                             |
 | Probes      | List of probes allowed to connect and mapping to layers |
-| IPDR        | IP Flow Detail Record (IPDR) application parameters     |
+| [IPDR](#ipdr) | IP Flow Detail Record (IPDR) application parameters     |
 | DBTasks     | Setting for various database maintenance tasks          |
 
 ## App
@@ -242,12 +242,23 @@ A database packer algorithm to speed up database reads and to defragement files.
 
 ## IPDR
 
-These paramters are for theIPDRService.IPDRis the IP Detailed Record logging service. This is a mode of storing very large number of raw flows for compliance and query purposes.
+These parameters are for the IPDR Service. IPDR is the IP Detailed Record logging service. This is a mode of storing very large number of raw flows for compliance and query purposes.
 
-| OutputDirectory | SQCONTEXTROOT/run                     | Directory where theIPDRrecord query result is dumped                                                                                                                                  |
-| --------------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ControlDB       | SQCONTEXTROOT/config/IPDRCONTROL.SQDB | The control database location                                                                                                                                                           |
-| ReportFormat    | full                                  | The format of theIPDRrecords. Available values are<br/><br/>- full – The full record in columnar report format<br/>- fullcsv – Full report inCSVformat<br/>- trai – Format forTRAI |
+
+:::tip Set automatically
+These parameters are typically set automatically when you put Trisul in the IPDR mode. 
+:::
+
+
+| Parameters | Defaults | Description |
+| ---------- | -------- | -------------------- |
+| OutputDirectory | CONTEXTROOT/run | Directory where theIPDRrecord query result is dumped|
+| ControlDB       | CONTEXTROOT/config/IPDRCONTROL.SQDB | The control database location|
+| ReportFormat    | full | The format of theIPDRrecords. Available values are<br/><br/> `full` – The full record in columnar report format<br/> `fullcsv` – Full report in CSV format<br/> `trai` – Format for TRAI |
+| AddCustomerInfo | true | Add the information from the IPDR Static IP customer mapping |
+| AAADumpFilePath | CONTEXTROOT/run/aaadumpfiles | The place where the RADIUS AAA server dumps the currently active sessions |
+| SubscriberOption | | Add Subscriber ID or other ISP specific tag , this is taken from the RADIUS AAA log files |
+| MaxRecords | 250,000 | When using the *Request Full Database Dump* this parameter controls the maximum number of records dumped.  | 
 
 ## Advanced DB Parameters
 

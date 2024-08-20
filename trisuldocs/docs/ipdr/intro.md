@@ -1,12 +1,12 @@
 # Introduction to IPDR 
 
-Simply put, Trisul IPDR will be of interest mainly to ISPs who seek to comply with regulatory mandates pertaining to 
+Trisul IPDR will be of interest mainly to ISPs who seek to comply with regulatory mandates pertaining to 
 - Storing of IP logs
 - NAT logging
 - AAA logging
 
 
-This [IPDR mode](ipdrmode) is used to meet Telecom compliance mandates in various jurisdictions. However, it is not exclusive for ISPs, various stakeholders also utilize Trisul IPDR including LEAs, Network Admins, Security teams etc.
+However, it is not exclusive for ISPs, various stakeholders also utilize Trisul IPDR including LEAs, Network Admins, Security teams etc.
 
 The name for this feature is **Trisul IPDR** ( IP Data Record)
 
@@ -126,7 +126,7 @@ Fig 2. Agent login, submit, download, FTP workflow
 #### Agent login with special ID
 
 The agent is given a separate login and password with a dashboard that
-shows only one option to retrieve IPDR logs. Once logged in the agent can submit query using [Trisul IPDR Query form](submit-queries) and view the [IPDR dashboard](ipdrdashboard) for the queried IP addresses. The [IPDR reports](ipdrreport) are then downloaded from web browser or FTP server.
+shows only one option to retrieve IPDR logs. Once logged in the agent can submit query using [Trisul IPDR Query form](submit-queries) and view the [IPDR dashboard](ipdrdashboard) for the queried IP addresses. The [IPDR reports](ipdrexportfields) are then downloaded from web browser or FTP server.
 
 ## Tuning
 
