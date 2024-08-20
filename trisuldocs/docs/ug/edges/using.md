@@ -57,9 +57,9 @@ When you first open the Graph Explorer
 The tool options are :
 
 | View Label     | Shows labels or readable keys. For example, how hostnames or IP addresses for the*Hosts*counter group |
-| -------------- | ------------------------------------------------------------------------------------------------------- |
-| Treemap view   | Use a Tree map to show the graph. This is a cleaner option in some cases                                |
-| Flow grap view | Use a force directed graph to display                                                                   |
+| -------------- | ------------------------------------------ |
+| Treemap view   | Use a Tree map to show the graph. This is a cleaner option in some cases   |
+| Flow grap view | Use a force directed graph to display  |
 
 :::tip
 

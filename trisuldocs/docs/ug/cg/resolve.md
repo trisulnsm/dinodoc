@@ -27,7 +27,7 @@ in one page.
 
 :::note navigation
 
-Select Customize -\> Show All-> Keys
+Select Customize -> Show All-> Keys
 
 :::
 
@@ -52,7 +52,7 @@ Select Customize -\> Show All-> Keys
 
 :::note navigation
 
-Select Customize -\> Show All-> Keys
+Select Customize -> Show All-> Keys
 
 :::
 
@@ -85,7 +85,7 @@ You can export assigned labels to csv file
 
 :::note navigation
 
-Select Customize -\> Show All-> Keys
+Select Customize -> Show All-> Keys
 
 :::
 
@@ -98,8 +98,8 @@ Select Customize -\> Show All-> Keys
 If for some reason you are not able to see hostnames in Trisul, try
 these steps.
 
-1. Check if there are any errors in the log. Go to *Admin -\> Web server logs
-   -\> Background Tasks Log*
+1. Check if there are any errors in the log. Go to *Admin -> Web server logs
+   -> Background Tasks Log*
 2. Check if crontab is enabled. Type `crontab -l` to check entries
 3. Check if DNS works, click on any IP to bring up key dashboard, then
    click on *Resolve*

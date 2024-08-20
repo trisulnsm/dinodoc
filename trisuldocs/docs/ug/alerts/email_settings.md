@@ -46,7 +46,7 @@ The following steps are needed to forward email alerts.
   In ths window, Click on Configure email server.  And you can configure an Email server using which Web Trisul will send outgoing mails by filling up the following fields.
   
   | Fields                        | Description                                                                                                                                                   |
-  | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | ----------------------------- | ------------------------------------------- |
   | Email Server                  | Hostname or IP of the SMTP server                                                                                                                             |
   | SMTP Port Number              | SMTP Port (Usually 25. For Gmail use 587)                                                                                                                     |
   | Authentication Protocol       | Click from the drop down list of authenticaton protocols                                                                                                      |
@@ -94,8 +94,8 @@ Once provoding all the fields, Click Save and the email server configuration for
   
   The alert groups table contains the following components and options.
   
-  | Components              | Descriptions                                                                                              |
-  | ----------------------- | --------------------------------------------------------------------------------------------------------- |
+  | Components              | Descriptions |
+  | ----------------------- | -------- |
   | Name                    | Name of the Alert Group                                                                                   |
   | Description/GUID        | Description of the Alert group and its GUID                                                               |
   | Status                  | Status of the Alert group if its enabled or disabled                                                      |

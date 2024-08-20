@@ -41,7 +41,7 @@ Select *Context : default* → profile0 → Flow Tracker Alerts
 1. Click on **Create a new Flow Tracker Alert**
 
 | FieldName                          | Description                                                                                                                                                                |
-| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ---------------------------------- | ------------------------- |
 | Name                               | A unique name for the alert                                                                                                                                                |
 | Select a Flow Tracker              | Which tracker, see section on Flow Trackers                                                                                                                                |
 | Threshold Value (bytes or seconds) | For data xfer based trackers. Specify number of bytes. Eg 10MB, 6K, 2000 (default units = bytes). For Time based trackers like Long Lived flows. Specify number of seconds |

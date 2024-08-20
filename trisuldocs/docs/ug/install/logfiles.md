@@ -22,23 +22,23 @@ The locations of these files are :
 
 ### On the Probe nodes
 
-| type        | what it is                              | default location                                                                                                                                                                  | files                                                                                          |
-| ----------- | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| type        | what it is   | default location   | files   |
+| ----------- | -------------------------------| ------------------ | -----------------|
 | Application | main trisul probe process               | `/usr/local/var/log/trisul-probe/domain0/probe0/context0`replace the domain, probe, and context with the actual fields if you have created your own contexts                     | ns-.log – trisul probe logs, xLuaX.log redirected print() statements fromLUAscript instances |
 | Domain      | domain processes that co-ordinate nodes | `/usr/local/var/log/trisul-probe/domain0/probe0`replace with probe ID. Each probe has its own domain processes because they are independent entities even if on the same machine | cp-XX.log probe logs                                                                           |
 
 ### On the Hub nodes
 
-| type        | what it is                              | default location                                                                                                  | files                                                                                        |
-| ----------- | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| Application | trisul-hub Flush process                | `/usr/local/var/log/trisul-hub/domain0/hub0/context0`replace the domain, hub, and context with the actual values | fs-.log – trisul_flushd database writer logs , qs_.log – trisul_trpdTRPdatabase query logs |
-| Domain      | domain processes that co-ordinate nodes | `/usr/local/var/log/trisul-hub/domain0/hub0`                                                                      | cp-XX.log hub logs                                                                           |
-| Domain      | domain processes that co-ordinate nodes | `/usr/local/var/log/trisul-hub/domain0`                                                                           | rt-XX.log domain router log                                                                  |
+| type        | what it is    | default location   | files  |
+| ----------- | ---------------------------- |  | ---- |
+| Application | trisul-hub Flush process    | `/usr/local/var/log/trisul-hub/domain0/hub0/context0`replace the domain, hub, and context with the actual values | fs-.log – trisul_flushd database writer logs , qs_.log – trisul_trpdTRPdatabase query logs |
+| Domain      | domain processes that co-ordinate nodes | `/usr/local/var/log/trisul-hub/domain0/hub0`  | cp-XX.log hub logs  |
+| Domain      | domain processes that co-ordinate nodes | `/usr/local/var/log/trisul-hub/domain0`  | rt-XX.log domain router log   |
 
 ### On the database
 
-| type        | what it is               | default location                          | files                                   |
-| ----------- | ------------------------ | ----------------------------------------- | --------------------------------------- |
+| type        | what it is               | default location        | files   |
+| ----------- | ------------------------ | ----------------------------------------- | -- |
 | Application | Web Trisul webserver log | `/usr/local/var/log/trisul-hub/webtrisul` | production.log – the main webserver log |
 
 ## Local viewing

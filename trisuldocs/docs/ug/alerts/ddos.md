@@ -59,7 +59,7 @@ This varies from network to network, the idea is to set high enough thresholds t
 The following TCAs should be created
 
 | Counter Group | Keys          | Meter            | Hi Water Mark | Sustained Intervals |
-| ------------- | ------------- | ---------------- | ------------- | ------------------- |
+| ------------- | ------------- | ---------------- | ------------- | -------- |
 | Hosts         | *             | Received Traffic | 10Gbps        | 1                   |
 | Hosts         | 100.10.0.0/16 | Received Traffic | 20Gbps        | 1                   |
 | Hosts         | *             | Packets          | 1Mpps         | 1                   |

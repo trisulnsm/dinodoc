@@ -1,4 +1,4 @@
-# Alert Classes 
+# Alert Classes
 
 IDS Alert Classfication
 
@@ -8,7 +8,6 @@ IDS Alert Classfication
 | ---------------------------------------- | ------ | ----------------- | -------------------- |
 | `{20BC4345-37F0-44D0-ABFF-3BED97363CB1}` | Native | 300               | 300                  |
 
-
 ## Meter List
 
 | ID  | DESCRIPTION                | TOP COUNT | BOTTOM COUNT | TYPE       | UNITS   |
@@ -17,7 +16,8 @@ IDS Alert Classfication
 | 1   | Unused Cardinality counter | 20        | 20           | VT_GAUGE   | Uniques |
 | 2   | Unused Cardinality counter | 20        | 20           | VT_GAUGE   | Uniques |
 
-### Total Alerts               
-### Unused Cardinality counter 
-### Unused Cardinality counter 
+### Total Alerts
 
+### Unused Cardinality counter
+
+### Unused Cardinality counter

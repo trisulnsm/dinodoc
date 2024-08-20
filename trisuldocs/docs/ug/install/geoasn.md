@@ -47,19 +47,19 @@ Once installed Trisul will automatically keep the databases updated at 2AM every
 
 The main parameters you may be interested to edit are :
 
-| Parameter         | Default                | Note                                                                                                                                                                                                                                                                                                 |
-| ----------------- | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ReloadListSeconds | 3600                   | Trisul checks for new files every so many seconds.                                                                                                                                                                                                                                                   |
-| SampleRate        | 32                     | In packet mode, sample rate. Lookup Geo database only once every so many packets                                                                                                                                                                                                                     |
-| MeterCountry      | TRUE                   | Enable Country Wise metering                                                                                                                                                                                                                                                                         |
-| MeterASN          | TRUE                   | EnableASNWise metering                                                                                                                                                                                                                                                                             |
-| MeterCity         | FALSE                  | Enable City/Location metering –This will result in about 500MBRAMextra usage, disabled by default                                                                                                                                                                                                |
-| MeterPrefix       | TRUE                   | Enable Network Prefixs (AS numbers as found inBGP)                                                                                                                                                                                                                                                  |
-| MeterASPATH       | FALSE                  | Meter AS Path based on theBGPPeering established by Trisul with the routers<br/>Feature used inISPenvironments                                                                                                                                                                                   |
-| HomeASNumbers     |                        | Enter the ASNumber of the Trisul customer. This is required to calculate Upload/Download direction for the ASNumber Counter group<br/>Feature used inISPenvironments                                                                                                                               |
-| DebugLevel        | 0                      | Set this to 1 to print every IP lookup                                                                                                                                                                                                                                                               |
-| BGPRibsPath       | /usr/local/var/ramdisk | The location where the TrisulBGPRoute receiver process will save the routing database.<br/>Feature used inISPenvironments                                                                                                                                                                        |
-| AddFlowEdges      | true                   | Add flow edges from Country/Prefix/ASNumber.                                                                                                                                                                                                                                                         |
+| Parameter         | Default                | Note   |
+| ----------------- | ---------------------- | --------|
+| ReloadListSeconds | 3600                   | Trisul checks for new files every so many seconds.|
+| SampleRate        | 32                     | In packet mode, sample rate. Lookup Geo database only once every so many packets  |
+| MeterCountry      | TRUE                   | Enable Country Wise metering  |
+| MeterASN          | TRUE                   | EnableASNWise metering  |
+| MeterCity         | FALSE                  | Enable City/Location metering –This will result in about 500MBRAMextra usage, disabled by default  |
+| MeterPrefix       | TRUE                   | Enable Network Prefixs (AS numbers as found inBGP) |
+| MeterASPATH       | FALSE                  | Meter AS Path based on theBGPPeering established by Trisul with the routers<br/>Feature used inISPenvironments  |
+| HomeASNumbers     |          | Enter the ASNumber of the Trisul customer. This is required to calculate Upload/Download direction for the ASNumber Counter group<br/>Feature used inISPenvironments  |
+| DebugLevel        | 0                      | Set this to 1 to print every IP lookup   |
+| BGPRibsPath       | /usr/local/var/ramdisk | The location where the TrisulBGPRoute receiver process will save the routing database.<br/>Feature used inISPenvironments |
+| AddFlowEdges      | true                   | Add flow edges from Country/Prefix/ASNumber. |
 | DirectionalMode   | true                   | This impacts the ASNumber counter group. If*DirectionalMode*is set toTRUE, external IPs are checked for ASNumber match in the geo databases. This is appropriate for enterprise and non-transit ISPs. When*DirectionalMode*is set toFALSE, then both IPs are matched against theASNdatabases |
 
 ## Editing the config file

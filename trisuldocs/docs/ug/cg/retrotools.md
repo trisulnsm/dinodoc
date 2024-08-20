@@ -20,23 +20,23 @@ You can find the list of retro tools below the time selector as shown in this ex
 
 You have to pick one of the following tools shown.
 
-| Name of tool                                                                            | Why you want to use this tool                                                                                                                                                       |
-| --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Network FAQ](/docs/ug/cg/retrotools#network-faq)                                       | Complex network analysis like analysing network traffic, flows, and alerts rendered in plain English as a question for easy access.                                                 |
-| [Counter Group toppers](/docs/ug/cg/retrotools#counter-group-toppers)                   | Who were the toppers in a counter group for a statistic ? Also shows topper trends in time interval with ability to do a cross drill on any of them                                 |
-|                                                                                         |                                                                                                                                                                                     |
-| [Investigate IP activity](/docs/ug/cg/retrotools#investigate-ip-activity)               | Investigate complete activity of a host in selected interval. Details include conversations, flows, security alerts, malware activity, peer connections, upload / download data etc |
-|                                                                                         |                                                                                                                                                                                     |
-| [Investigate IP activity](/docs/ug/cg/retrotools#investigate-ip-activity)               | Investigate complete activity of a host in selected interval. Details include conversations, flows, security alerts, malware activity, peer connections, upload / download data etc |
+| Name of tool  | Why you want to use this tool|
+| ------------- | ---|
+| [Network FAQ](/docs/ug/cg/retrotools#network-faq)  | Complex network analysis like analysing network traffic, flows, and alerts rendered in plain English as a question for easy access. |
+| [Counter Group toppers](/docs/ug/cg/retrotools#counter-group-toppers)  | Who were the toppers in a counter group for a statistic ? Also shows topper trends in time interval with ability to do a cross drill on any of them |
+|   |   |
+| [Investigate IP activity](/docs/ug/cg/retrotools#investigate-ip-activity)  | Investigate complete activity of a host in selected interval. Details include conversations, flows, security alerts, malware activity, peer connections, upload / download data etc |
+|     |      |
+| [Investigate IP activity](/docs/ug/cg/retrotools#investigate-ip-activity) | Investigate complete activity of a host in selected interval. Details include conversations, flows, security alerts, malware activity, peer connections, upload / download data etc |
 | [Investigate application](/docs/ug/cg/retrotools#investigate-users-of-an-application)   | Investigate complete activity of an application. Who the top users are of that application and other details split up by upload / download                                          |
 | [Long term traffic charts](/docs/ug/cg/retrotools#long-term-traffic-charts)             | Used to see daily trends in traffic. Arranges traffic by day on top of each other so you can observe busy hours etc                                                                 |
-| [Show traffic chart for an item](/docs/ug/cg/retrotools#show-traffic-chart-for-an-item) | Draw charts for any item such as a host, app, subnet                                                                                                                                |
-| [IDSAlerts](/docs/ug/cg/retrotools#security-alerts-retro)                               | Various views of alert activity seen in selected interval                                                                                                                           |
+| [Show traffic chart for an item](/docs/ug/cg/retrotools#show-traffic-chart-for-an-item) | Draw charts for any item such as a host, app, subnet   |
+| [IDSAlerts](/docs/ug/cg/retrotools#security-alerts-retro)   | Various views of alert activity seen in selected interval   |
 | [Flow trackers](/docs/ug/cg/retrotools#flow-trackers)                                   | View top flows in the timeframe based on various criteria                                                                                                                           |
 | [Explore Flows](/docs/ug/cg/retrotools#explore-flows)                                   | Streaming flow visualization based on the popular<br/>parallel co-ordinates paradigm.                                                                                               |
-| [Traffic Charts](/docs/ug/cg/retrotools#show-traffic-chart-for-an-item)                 | View usage charts for a particular item for selected time interval.                                                                                                                 |
-| [Pull packets](/docs/ug/cg/retrotools#pull-packets)                                     | Get raw packets in tcpdump/libpcap format matching a certain key                                                                                                                    |
-| [View Edges](/docs/ug/cg/retrotools#view-edges)                                         | Edges are graph database showing how the metrics are related to each other beyond the flow connection.                                                                              |
+| [Traffic Charts](/docs/ug/cg/retrotools#show-traffic-chart-for-an-item)                 | View usage charts for a particular item for selected time interval.    |
+| [Pull packets](/docs/ug/cg/retrotools#pull-packets)                                     | Get raw packets in tcpdump/libpcap format matching a certain key   |
+| [View Edges](/docs/ug/cg/retrotools#view-edges)                                         | Edges are graph database showing how the metrics are related to each other beyond the flow connection.   |
 
 ## Network FAQ
 
@@ -190,8 +190,8 @@ Some of the built in trackers are :
 
 > You can create your own [flow trackers](/docs/ug/flow/tracker) They will show up in this dropdown list
 
-| Flow Trackers   | Description                                                                                             |
-| --------------- | ------------------------------------------------------------------------------------------------------- |
+| Flow Trackers   |   |
+| --------------- | ----- |
 | Traffic         | Flows with maximum volume transferred (both directions together)                                        |
 | Long lived      | Flows which stayed alive for longest time                                                               |
 | Transferred Out | Flows which transferred maximum data **out** of your Home Network (Uploading)                           |
@@ -268,11 +268,11 @@ complete.
 
 You have two ways to use this tool to pull up raw packets.
 
-1. **Packets for an item** -\> Select a counter group and key.  
+1. **Packets for an item** -> Select a counter group and key.  
    Counter group = `Country` and key = `JA` will get packets from
    Japan.  
    Counter group = `Apps` and key = `smtp` will get email packets.
-2. **Packets matching expression** -\> [Trisul Filter
+2. **Packets matching expression** -> [Trisul Filter
    Format](/docs/ref/trisul_filter_format) is a flexible way of constructing filters. You can enter an expression to run more sophisticated packet queries.  
    Enter the string `{C51B48D4-7876-479E-B0D9-BD9EFF03CE2E}=p-0050,p-0051,p-0052,p-0053` to retrieve packets for ports 80,81,82, and 83.
 3. **Handy Shortcuts**-> Clicking on Handy Shortcuts you get an option to "Get all packets" to download all the packets

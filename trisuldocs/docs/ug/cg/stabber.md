@@ -75,7 +75,7 @@ Click on any key item from a dashboard that takes you into the key dashboard of 
 
 :::note navigation
 
-Select Tools -\> Real Time Stab Toppers
+Select Tools -> Real Time Stab Toppers
 
 :::
 
@@ -139,7 +139,7 @@ To view Real Time Alert Stabber,
 
 :::note navigation
 
-Go to Dashboards -\> Real Time Alerts
+Go to Dashboards -> Real Time Alerts
 
 :::
 

@@ -2,14 +2,13 @@
 
 Aggregate statistics
 
-## Counter group 
+## Counter group
 
 | GUID                                     | TYPE   | Bucke Size (secs) | Topper Bucket(Secs): |
 | ---------------------------------------- | ------ | ----------------- | -------------------- |
 | `{393B5EBC-AB41-4387-8F31-8077DB917336}` | Native | 60                | 300                  |
 
-
-## Meters List 
+## Meters List
 
 | ID  | DESCRIPTION                | TOP COUNT | BOTTOM COUNT | TYPE            | UNITS   |
 | --- | -------------------------- | --------- | ------------ | --------------- | ------- |
@@ -38,11 +37,11 @@ Aggregate statistics
 
 ### Layer 2 Unicast
 
-### Layer 3 Broadcast  
+### Layer 3 Broadcast
 
-### Layer 3 Multicast  
+### Layer 3 Multicast
 
-### Layer 3 Unicast 
+### Layer 3 Unicast
 
 ### Fragments
 

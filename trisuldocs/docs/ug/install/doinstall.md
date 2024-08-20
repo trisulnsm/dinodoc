@@ -116,8 +116,8 @@ Some of the things you may want to change are :
 
 Login to the web interface as admin/admin and you may want to change the following two parameters.
 
-| Interface     | Listens for traffic on*eth0*                 | Go to*Context Default → Profile0 → Capture Adapter*to change |
-| ------------- | --------------------------------------------- | -------------------------------------------------------------- |
+| Interface  | Listens for traffic on*eth0*  | Go to*Context Default → Profile0 → Capture Adapter*to change |
+| ------------- | ----------------- | ---------- |
 | Home Networks | Only private IP space treated as home network | Goto*Context Default → Profile0 → Home Networks*to change    |
 
 ## Distributed install

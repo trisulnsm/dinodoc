@@ -42,7 +42,7 @@ two separate routers*
 
 In the above example the flow parameters are
 
-1. The flow *F* : Source IP 10.192.192.192 Port 34774 —\> Dest IP
+1. The flow *F* : Source IP 10.192.192.192 Port 34774 —> Dest IP
    57.7.7.7 Port 443
 2. The flow *F* reported by router 1
 3. The flow *F* reported by router 2
@@ -56,12 +56,12 @@ interface. Optionally one can choose to merge the flows into a single
 flow if such drilldowns are not desired. Here are the list of options
 supported by Trisul.
 
-| Handling                           | Config                                                     | Notes                                                                                                                                                                                             |
-| ---------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Keep flows as-is                   | Default behavior                                           | Allows you to keep the flow-leg information which allows you to drilldown from router and probes                                                                                                  |
-| Merge flows                        | [Netflow Config File](/docs/ref/netflow-config#parameters) | Set the `MergeMultipleSources` Option to TRUE to de-duplicate the flows. This however removes the router information and customer will not be able to drilldown from a router interface to a flow |
-| Keep flows but Correlate dup flows | [Web Trisul Config](/docs/ug/webadmin/web_options)         | Enable the `Flow Legs Correlation` option. This allows you to merge the flows from multiple router and show it in a nice display                                                                  |
-| NAT correlation                    | [Web Trisul Config](/docs/ug/webadmin/web_options)         | Keeps the flow legs but apply source port NAT heuristics to show flow legs                                                                                                                        |
+| Handling                           | Config         | Notes       |
+| ---------------------------------- | ---------------- | ------ |
+| Keep flows as-is                   | Default behavior   | Allows you to keep the flow-leg information which allows you to drilldown from router and probes  |
+| Merge flows   | [Netflow Config File](/docs/ref/netflow-config#parameters) | Set the `MergeMultipleSources` Option to TRUE to de-duplicate the flows. This however removes the router information and customer will not be able to drilldown from a router interface to a flow |
+| Keep flows but Correlate dup flows | [Web Trisul Config](/docs/ug/webadmin/web_options)   | Enable the `Flow Legs Correlation` option. This allows you to merge the flows from multiple router and show it in a nice display    |
+| NAT correlation                    | [Web Trisul Config](/docs/ug/webadmin/web_options)         | Keeps the flow legs but apply source port NAT heuristics to show flow legs |
 
 In the rest of this page we will describe the Flow Leg correlation.
 
