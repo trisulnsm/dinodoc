@@ -1,61 +1,99 @@
 # Static IP mappings
 
-How to load customer IP mappings.
+How to add customer information, so that they are automatically filled into the output EXCEL report.
+
+## Compliance requirement
+
+The DoT compliance letter clearly mentions that the following details need to tbe provided in the output report.  These are called CAF fields. CAF stands for Customer Acquisition Form. 
+
+![caf_fields](images/letter-caf.png)
+
+*Figure: Compliance requirement to add customer info* 
 
 
-## Customer details
+:::info  Static vs AAA customers
+This feature is most useful for the static IP customers of the ISP. Because the inventory is more stable than large scale ISP providing residiential services. For the latter, talk to us to use a REST API to get the fields
+:::
 
-Adding customer details for static IP can be done in two methods
+Adding customer details for static IP customers can be done in two methods
 
-- Automatically use a REST API – since this is going to be custom work, please contact us with the API details from the ISP end.
-- Enter or upload static IP to customer mappings
+- Automatically use a REST API – contact us offline for this
+- Enter each mapping or upload a CSV file contianing all static IP to customer mappings
 
-The following section describes how enter customer mappings.
-
-### Adding Customer to IP mappings
-
-For ISPs who provide business services with static IPs for their customers, the manual mapping is the easiest option.
-
-The flow is
-
-- Add customers first
-- Assign IP addresses to customers
-
-Login as admin
+## Manually add Static IP Mappings 
 
 :::note navigation
-
-Goto Context: default → Admin Tasks → IPDR Customers
-
+Goto Context: default &rarr; Admin Tasks &rarr; IPDR Customers
 :::
 
 The column subnets shows the IP Addresses addressed to each customer along with other details.
 
-#### Add Customer
+### Add Customer
 
-Press the Add button to add a new Customer.  
-Fill in the details and add the customer.
+Press the Add button to add a new Customer.
 
-#### Add IP Subnet to Customer mapping
+Fill in the following details - these show up verbatim in the output report that you send to the authorities. 
+* **Name** - customer name
+* **Address** - address
+* **Email** - email ID of the customer
+* **Phone Number** - phone number
+* **Alt Phone Number** - optional 
+* **UserID** - UserID or subscriber ID 
+
+### Add IP Subnet to Customer mapping
+
+This is how you add static IP mappings to customers added in previous step.
 
 Press the Add/Edit Subnet option
 
-![](images/ipdr-customer-add-subnet.png)
 
-Then add the IP Address in the format you can use the plain IP address `192.168.1.23` or `192.168.1.23/32` CIDR format.
+Enter the following 
 
-Once done simply press the back button to go back to the customer mappings.
+* **IP** - the IP address or CIDR format eg `19.168.1.23` or `19.168.1.20/28` 
+- **Valid From** - the IP Assignment is valid from this date. Set this to 1-1-1970 if you want to use this for old data.
 
-#### Bulk import from Excel/CSV format
+![](images/addipmap.png)
 
-You can also import an entire customer database at once via a CSV file. If you have an EXCEL file you can save it as CSV and import it in.
+*Figure: Assigning IPs to a customer page* 
 
-The CSV format is shown here:
 
-![](images/ipdr-csv-format.png)
+Press the **ADD** button to assign this IP. You will see the new IP added as below
 
-A sample working CSV file can be edited with the information as needed.
+Once done simply press the browser **Back** button to go back to the customer list.
 
-- Step 1 : Select the CSV file
-- Step 2 : Select the column numbers, if you followed the sample file above you can skip this step and directly press IMPORT
-- Step 3 : Confirm
+
+:::info Validity timeframe of mappings - `ValidFrom` and `ValidTo` 
+The Static IP mapping captures the validity of the assignment via the *Valid From* and *Valid To* fields. While generating the IPDR Report , Trisul IPDR uses the *Valid From* and *Valid To* timestamps to fill out the customer details. Users should do a *Set Expiry* for decommissioned customers rather than *Delete* them. This allows historical mappings to be correctly filled out as per the compliance mandate. 
+:::
+
+### Delete and Set Expiry
+
+In the *List of assigned subnets to customers*  each of the assigned subnets is shown
+* IP Subnet 
+* Valid From - mapping valid From this time
+* Valid To - valid Upto this time 
+
+The right side options menu contains the following options 
+* Set Expiry - set the Expiry date to the current time
+* Delete - delete this mapping entirely
+
+
+
+## Bulk import from CSV format
+
+You can also import an entire customer database at once via a CSV file. 
+
+The CSV format is shown here, notice the header for fields. 
+
+![](images/ipdr-csv-format.png) 
+
+*Figure: CSV file sample* 
+
+A sample working CSV file can be downloaded from here [Sample_IPDR_Customer_Import.CSV](/assets/SAMPLE_IPDR_CUSTOMER_SUBNET_MAPPINGS.csv) 
+
+You can edit the information as needed.
+
+- **Step 1** : Select the CSV file
+- **Step 2** : Select the column numbers, if you followed the sample file above you can skip this step and directly press IMPORT
+- **Step 3** : Confirm
+
