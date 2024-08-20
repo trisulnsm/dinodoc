@@ -40,13 +40,13 @@ Select *Context : default* → profile0 → Flow Tracker Alerts
 
 1. Click on **Create a new Flow Tracker Alert**
 
-| FieldName                          | Description                                                                                                                                                                |
-| ---------------------------------- | ------------------------- |
-| Name                               | A unique name for the alert                                                                                                                                                |
-| Select a Flow Tracker              | Which tracker, see section on Flow Trackers                                                                                                                                |
-| Threshold Value (bytes or seconds) | For data xfer based trackers. Specify number of bytes. Eg 10MB, 6K, 2000 (default units = bytes). For Time based trackers like Long Lived flows. Specify number of seconds |
-| Priority                           | Alert Priority (1=HIGH, 2=MEDIUM, 3=LOW)                                                                                                                                   |
-| Alert Message                      | Message shown as part of the alert                                                                                                                                         |
+| FieldName                          | Description                                                                  |
+| ---------------------------------- | ---------------------------------------------------------------------------- |
+| Name                               | A unique name for the alert                                                  |
+| Select a Flow Tracker              | Which tracker, see section on Flow Trackers                                  |
+| Threshold Value (bytes or seconds) | For data xfer based trackers. Specify number of bytes. Eg 10MB, 6K, 2000 (default units = bytes). For Time based trackers like Long Lived flows. Specify number of seconds                    |
+| Priority                           | Alert Priority (1=HIGH, 2=MEDIUM, 3=LOW)                                     |
+| Alert Message                      | Message shown as part of the alert                                                                                                               |
 
 ## Viewing Generated Alerts
 

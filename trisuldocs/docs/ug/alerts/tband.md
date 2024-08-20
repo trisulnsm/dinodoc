@@ -96,14 +96,14 @@ Use this section to fine tune the band computation algorithm.
 
 > Reccomend you first create a band using the default settings, then based on alert volume. You can come back here and tweak the advanced settings below
 
-| FieldName         | Default | Description |
-| ----------------- | ------- | --------- |
-| Number of samples | 1       | The number of samples used to compute the band. The default is 1 which means last Wednesday will be compared with this Wednesday. If you set this to 5 last 5 Wednesdays will be used to compute expected band. The default is 1 so that our users can quickly use this feature without requiring many weeks of training data available. |
-| Bucket Size       | 300     | The width of each interval.  |
-| Exclude Upper     | 0       | For each interval exclude this many upper samples. Set this to 1 to exclude 1 upper outlier     
-| Exclude Lower     | 0       | For each interval exclude this many lower samples.     |
-| Margin upper      | 10      | Margin of allowance on the upper side before alert is generated                       |
-| Margin lower      | 10      | Margin of allowance on lower side before alert is generated|
+| FieldName         | Default | Description                                                                    |
+| ----------------- | ------- | ------------------------------------------------------------------------------ |
+| Number of samples | 1       | The number of samples used to compute the band. The default is 1 which means last Wednesday will be compared with this Wednesday. If you set this to 5 last 5 Wednesdays will be used to compute expected band. The default is 1 so that our users can quickly use this feature without requiring many weeks of training data available.                                                                                       |
+| Bucket Size       | 300     | The width of each interval.                                                    |
+| Exclude Upper     | 0       | For each interval exclude this many upper samples. Set this to 1 to exclude 1 upper outlier          
+| Exclude Lower     | 0       | For each interval exclude this many lower samples.                             |
+| Margin upper      | 10      | Margin of allowance on the upper side before alert is generated                                                                                                      |
+| Margin lower      | 10      | Margin of allowance on lower side before alert is generated                    |
 
 Then press the “Compute Band” button. This could take a few minutes. Once it is completed the band will be shown below.
 

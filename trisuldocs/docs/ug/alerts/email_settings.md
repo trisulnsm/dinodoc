@@ -45,15 +45,15 @@ The following steps are needed to forward email alerts.
   
   In ths window, Click on Configure email server.  And you can configure an Email server using which Web Trisul will send outgoing mails by filling up the following fields.
   
-  | Fields                        | Description                                                                                                                                                   |
-  | ----------------------------- | ------------------------------------------- |
-  | Email Server                  | Hostname or IP of the SMTP server                                                                                                                             |
-  | SMTP Port Number              | SMTP Port (Usually 25. For Gmail use 587)                                                                                                                     |
-  | Authentication Protocol       | Click from the drop down list of authenticaton protocols                                                                                                      |
-  | From Email Address            | This is displayed as the sender's address on the recipient's inbox                                                                                            |
-  | Password/API Key              | Email Password,API Key,or Provider password like pepipost,sendgrid                                                                                            |
-  | Disable SSL Cert verification | Disable certificate verification. Eg, if your email server uses self signed certificates                                                                      |
-  | SMTP Relay User (optional)    | Use this to send SMTP email via relays like sendgrid,mailchimp,pepipost etc. This is the user id given to you by the provider. Leave it blank if not required |
+  | Fields                        | Description                                                                   |
+  | ----------------------------- | ----------------------------------------------------------------------------- |
+  | Email Server                  | Hostname or IP of the SMTP server                                             |
+  | SMTP Port Number              | SMTP Port (Usually 25. For Gmail use 587)                                     |
+  | Authentication Protocol       | Click from the drop down list of authenticaton protocols                                                                                                       |
+  | From Email Address            | This is displayed as the sender's address on the recipient's inbox                                                                                                           |
+  | Password/API Key              | Email Password,API Key,or Provider password like pepipost,sendgrid                                                                                               |
+  | Disable SSL Cert verification | Disable certificate verification. Eg, if your email server uses self signed certificates                                                                                                    |
+  | SMTP Relay User (optional)    | Use this to send SMTP email via relays like sendgrid,mailchimp,pepipost etc. This is the user id given to you by the provider. Leave it blank if not required                                |
 
 Once provoding all the fields, Click Save and the email server configuration for outgoing mails is done.
 
@@ -94,13 +94,13 @@ Once provoding all the fields, Click Save and the email server configuration for
   
   The alert groups table contains the following components and options.
   
-  | Components              | Descriptions |
-  | ----------------------- | -------- |
-  | Name                    | Name of the Alert Group                                                                                   |
-  | Description/GUID        | Description of the Alert group and its GUID                                                               |
-  | Status                  | Status of the Alert group if its enabled or disabled                                                      |
-  | Forward to syslog/email | Syslog level to automatically forward all alerts in this group to syslog and email                        |
-  | Option toolbar          | You can edit or disable each alert group by clicking on the three lines options against each alert group. |
+  | Components              | Descriptions                                                                    |
+  | ----------------------- | ------------------------------------------------------------------------------- |
+  | Name                    | Name of the Alert Group                                                                                                       |
+  | Description/GUID        | Description of the Alert group and its GUID                                                                                                        |
+  | Status                  | Status of the Alert group if its enabled or disabled                                                                                                    |
+  | Forward to syslog/email | Syslog level to automatically forward all alerts in this group to syslog and email                                                                                                       |
+  | Option toolbar          | You can edit or disable each alert group by clicking on the three lines options against each alert group.                                                                                   |
 
 These components can be edited or disabled by clicking on the option toolbar against each alert group. Once providing all the fields, click Update to save the configuration.
 
