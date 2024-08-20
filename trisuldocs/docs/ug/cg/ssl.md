@@ -20,7 +20,7 @@ TLS Orgs allows for metering of traffic based on the entity specified in the Sub
 
 :::note navigation
 
-Select Retro -\> Retro Counters -\> Choose TLS Orgs from the dropdown
+Select Retro -> Retro Counters -> Choose TLS Orgs from the dropdown
 list
 
 :::
@@ -68,7 +68,7 @@ Click on the Pie chart tab on the same module or you can also generate long term
 
 :::note navigation
 
-Select Retro -\> Retro Tools -\> Select Counter Group Toppers -\> Select
+Select Retro -> Retro Tools -> Select Counter Group Toppers -> Select
 TLS Orgs
 
 :::
@@ -108,8 +108,8 @@ Trisul tracks the certificate chains of SSL/TLS connections. It takes the
 Issuer Common Name of each certificate in the chain and meters it in the
 following manner.
 
-1. Issuer CN for last cert in chain -\> Metered as Root CA
-2. Issuer CN for others -\> Metered as Intermediate CA
+1. Issuer CN for last cert in chain -> Metered as Root CA
+2. Issuer CN for others -> Metered as Intermediate CA
 
 #### Usage Tip
 

@@ -23,16 +23,16 @@ of it.
 
 > The default configuration of these trackers save a snapshot of 100 flows every 5 minutes.
 
-| Flow Tracker    | Description                                                                                            |
-| --------------- | ------------------------------------------------------------------------------------------------------ |
-| Volume          | Highest volume                                                                                         |
-| Long Lived      | Longest duration                                                                                       |
-| Transferred-In  | Highest volumes transferred **into** of your home network                                              |
-| Transferred-Out | Highest volumes transferred **out** your network                                                       |
-| Payload-In      | Highest TCP Payload transferred **into** your home network. Does not include TCP handshake packets     |
-| Payload-Out     | Highest TCP Payload volume transferred **out of** your network. Does not include TCP handshake packets |
-| Keys            | Flows involving specific hosts or subnets or applications                                              |
-| NOT Keys        | Flows not involving specific hosts or subnets or applications                                          |
+| Flow Tracker    | Description  |
+| --------------- |  |
+| Volume          | Highest volume     |
+| Long Lived      | Longest duration         |
+| Transferred-In  | Highest volumes transferred **into** of your home network      |
+| Transferred-Out | Highest volumes transferred **out** your network    |
+| Payload-In      | Highest TCP Payload transferred **into** your home network. Does not include TCP handshake packets   |
+| Payload-Out   | Highest TCP Payload volume transferred **out of** your network. Does not include TCP handshake packets |
+| Keys   | Flows involving specific hosts or subnets or applications    |
+| NOT Keys | Flows not involving specific hosts or subnets or applications                                          |
 
 ## Custom Trackers
 
@@ -53,7 +53,7 @@ trackers.
 To configure flow trackers.  
 :::note navigation
 
-Select Tools -\> Flow Trackers -\>Manage
+Select Tools -> Flow Trackers ->Manage
 
 :::
 
@@ -68,15 +68,15 @@ TCP Sessions is the only option allowed by default.
 You have to select a base tracker type which you want to customize. The
 following table describes the available options.
 
-| Tracker Type            | What it means                                                                                                                                                                    |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Based on keys           | Specify IPs or Ports in the Config String field. Only flows involving the ranges will be tracked.                                                                                |
-| Based on Negated keys   | Same as above but flows NOT involving the ranges will be tracked                                                                                                                 |
+| Tracker Type            | What it means      |
+| ----------------------- | --------|
+| Based on keys  | Specify IPs or Ports in the Config String field. Only flows involving the ranges will be tracked. |
+| Based on Negated keys   | Same as above but flows NOT involving the ranges will be tracked   |
 | Based on total bytes    | Total bytes transferred. You can specify a volume constraint to track flows transferring a range of bytes. You cant use a port or IP range filter for this option                |
-| Based on upload         | Total bytes uploaded from host within Home Network to outside the Home Network. You can specify a port or IP range filter to narrow down which flows will be considered for this |
-| Based on download       | Total bytes uploaded from host within Home Network to outside the Home Network. Filter allowed.                                                                                  |
-| Based on upload payload | Total TCP Payload bytes downloaded. This does not include the IP and TCP and other headers. Filter allowed.                                                                      |
-| Based on upload         | TCP Payload bytes uploaded. Filter allowed.                                                                                                                                      |
+| Based on upload   | Total bytes uploaded from host within Home Network to outside the Home Network. You can specify a port or IP range filter to narrow down which flows will be considered for this |
+| Based on download   | Total bytes uploaded from host within Home Network to outside the Home Network. Filter allowed.   |
+| Based on upload payload | Total TCP Payload bytes downloaded. This does not include the IP and TCP and other headers. Filter allowed.     |
+| Based on upload    | TCP Payload bytes uploaded. Filter allowed. |
 
 #### Tracker Name
 
@@ -87,8 +87,8 @@ A short name for the tracker.
 A filter string that allows you to specify what subset of flows you want
 to consider.
 
-| Tracker Type            | Config String                                                                                                                                                  |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tracker Type            | Config String   |
+| ----------------------- | ---------|
 | For type “total bytes”  | `lower,100,500` track flows between 100 and 500 bytes, prefer the lower side. `higher,500,2000` track flows between 500 and 2000 bytes, prefer the higher side |
 | All other tracker types | A filter string (See below)                                                                                                                                    |
 
@@ -140,7 +140,7 @@ parameters
 
 :::note navigation
 
-Select Tools -\> Flow Tracker
+Select Tools -> Flow Tracker
 
 :::
 

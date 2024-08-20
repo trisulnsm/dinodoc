@@ -27,7 +27,7 @@ Directions to create new custom key monitors
 
 :::note navigation
 
-Select Customize -\> Show all-> Custom Key Monitors
+Select Customize -> Show all-> Custom Key Monitors
 
 :::
 
@@ -56,7 +56,7 @@ Directions to view Custom Key Monitors
 
 :::note navigation
 
-Select Customize -\> Show all-> Custom Key Monitors
+Select Customize -> Show all-> Custom Key Monitors
 
 :::
 

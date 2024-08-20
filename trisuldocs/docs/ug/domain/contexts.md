@@ -103,7 +103,7 @@ Netflow Wizard, and then start it.
 TO start the `newcontext` processes
 
 - Click on the menu *Context: mycontext*
-- Admin Tasks \> Start/Stop Tasks
+- Admin Tasks -> Start/Stop Tasks
 - Then start the hub and probe
 
 Now you have a brand new instance of Trisul with its own isolated
@@ -114,7 +114,7 @@ database.
 You can create users who are only allowed to view particular contexts.
 To do that
 
-- Go to Web Admin \> Manage Users
+- Go to Web Admin -> Manage Users
 - Create a new User
 - Select the contexts allowed for this user using *Allowed Contexts*
   option.

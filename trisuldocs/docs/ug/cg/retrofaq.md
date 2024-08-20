@@ -32,7 +32,7 @@ Typically you would select an appropriate Retro Tool, type in the information yo
 
 - Any time based analysis can be converted into a Question  
 
-- You can tag related questions together by using \#tag  
+- You can tag related questions together by using #tag  
 
 - Simply select a time interval and click on a question  
 
@@ -43,7 +43,7 @@ Typically you would select an appropriate Retro Tool, type in the information yo
 
 :::note navigation
 
-To access select Retro -\> Retro FAQ
+To access select Retro -> Retro FAQ
 
 :::
 
@@ -84,7 +84,7 @@ works.
 
 *Figure: Add to Favorites Option to Add Module to Retro FAQ*
 
-Enter a question name and optionally a set of tags using the \#
+Enter a question name and optionally a set of tags using the #
 symbol
 
 > An example : If you type in
@@ -101,7 +101,7 @@ You can edit, retag, or delete existing questions if you wish.
 
 :::note navigation
 
-To access, select Customize -\> Retro Favorites
+To access, select Customize -> Retro Favorites
 
 :::
 

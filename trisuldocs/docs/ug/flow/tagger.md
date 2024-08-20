@@ -38,7 +38,7 @@ To create a flow tagger, Login as admin,
 
 :::note navigation
 
-Goto Context: default -\> Profile0 -\> Flows-> Flow Taggers
+Goto Context: default -> Profile0 -> Flows-> Flow Taggers
 
 :::
 
@@ -58,13 +58,13 @@ Once you have clicked *Create a new flow tagger* you can see a *Enter tagging ru
 
 Fill out the details as shown
 
-| Fields           | Description                                                                                                                                                                            |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Fields           | Description      |
+| ---------------- | ---------------------------------- |
 | Session Group    | Select the session group from the dropdown list                                                                                                                                        |
-| Flow Tagger Name | A descriptive label for display , explain what you're tagging with this rule                                                                                                           |
-| Tagger Tag       | Matching flows are tagged with this string. Prefix with AUTO: for automatic tags                                                                                                       |
+| Flow Tagger Name | A descriptive label for display , explain what you're tagging with this rule   |
+| Tagger Tag       | Matching flows are tagged with this string. Prefix with AUTO: for automatic tags     |
 | Tagger Group     | For AUTO: tags only. You can specify a short group code to help distinguish keys from other groups. The tags generated will have the format [GROUPNAME]tag. Keep this short < 8 chars. |
-| Tagger Rule      | A string in [Trisul Filter Format](/docs/ref/trisul_filter_format)                                                                                                                     |
+| Tagger Rule      | A string in [Trisul Filter Format](/docs/ref/trisul_filter_format)   |
 
 #### Directly Enter the Rule
 
@@ -83,10 +83,10 @@ This is the easier way to construct the *Tagger Tag* expression. See
 *Figure: Interactive Rule Builder*
 
 | Fields                     | Description                                                                                                         |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| -------------------------- | |
 | Combine with Previous Rule | Click on the & or \| for the operations of AND and OR according to the condition you want to perform for the tagger |
-| Counter GUID               | Click on the counter group for GUID                                                                                 |
-| Condition                  | Click on from the binary options = or !                                                                             |
+| Counter GUID               | Click on the counter group for GUID   |
+| Condition                  | Click on from the binary options = or !   |
 | Key                        | Ex:192.168.1.30,192.168.1.45 OR 192.168.1.30~192.168.1.45  <br/>For automatic tagging, enter * for the key.         |
 
 Click Update Target Rule to update the specified rules.

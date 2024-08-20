@@ -67,8 +67,8 @@ The feed will skipped at the next download. See`Frequency`parameter in the rules
 
 The Badfellas package installs stub copies of the following blacklists. These feeds are updated to the latest versions at the next scheduled update time. Within 24 hrs.
 
-| Name                     | Type                                                                                                                                                  | Source |
-| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| Name                     | Type   | Source |
+| ------------------------ | -------------- | ------ |
 | DNSblackhole list       | [malwaredomains.lehigh.edu](http://sbc.io/hosts/hosts)List keeps track of domains known to propagate malware and spyware                             |        |
 | Malicious/scanner IPs    | [Dshield.org](https://www.dshield.org/)The well knownDSHIELDlist                                                                                   |        |
 | IP Blocklist             | [feodotracker.abuse.ch](https://feodotracker.abuse.ch/blocklist/)contains IP addresses (IPv4) used as C&C communication channel by the Feodo Trojan. |        |
@@ -82,7 +82,7 @@ The Badfellas package installs stub copies of the following blacklists. These fe
 | Domains                  | Contains top 1 million domains list                                                                                                                   |        |
 | TORnodes                | [TORnodes](https://www.dan.me.uk/torlist/?full)Checks if any of your network hosts are involved inTORproxy activitiy                              |        |
 | AlienVault IP Reputation | Flags IPs with poor reputation. This list includes scanners and other mischief                                                                        |        |
-| SSLBlacklist            | Hashes of maliciousSSLcertificates sourced from sslbl.abuse.ch                                                                                      |        |
+| SSLBlacklist            | Hashes of maliciousSSLcertificates sourced from sslbl.abuse.ch    |        |
 
 ## Feed updates
 

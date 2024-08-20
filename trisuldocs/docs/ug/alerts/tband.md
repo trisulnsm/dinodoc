@@ -83,10 +83,10 @@ The following fields are shown in the form
 
 You must fill this up. If you came to this page from the Key Dashboard the fields are already pre-filled.
 
-| FieldName     | Description                                                                                                                                                                                             |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Counter Group | The counter group.                                                                                                                                                                                      |
-| Stat ID       | Meter within the counter group                                                                                                                                                                          |
+| FieldName     | Description    |
+| ------------- | ---------------|
+| Counter Group | The counter group. 
+| Stat ID       | Meter within the counter group |
 | TargetKey     | The key within the *target counter group* on which you want to create a Band. You can enter this in either human readable formateg:Port-80, 192.168.1.33 or in Trisul key format: p-0050, C0.A8.00.01  |
 | Compare Day   | If Checked – use Day Of Week based band computations.If Unchecked – use yesterdays data to compute a band.**NOTE** You need a licence for Day Of Week band because it needs 3 weeks of training data |
 
@@ -96,14 +96,14 @@ Use this section to fine tune the band computation algorithm.
 
 > Reccomend you first create a band using the default settings, then based on alert volume. You can come back here and tweak the advanced settings below
 
-| FieldName         | Default | Description                                                                                                                                                                                                                                                                                                                              |
-| ----------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Number of samples | 1       | The number of samples used to compute the band. The default is 1 which means last Wednesday will be compared with this Wednesday. If you set this to 5 last 5 Wednesdays will be used to compute expected band. The default is 1 so that our users can quickly use this feature without requiring many weeks of training data available. |
-| Bucket Size       | 300     | The width of each interval.                                                                                                                                                                                                                                                                                                              |
-| Exclude Upper     | 0       | For each interval exclude this many upper samples. Set this to 1 to exclude 1 upper outlier                                                                                                                                                                                                                                              |
-| Exclude Lower     | 0       | For each interval exclude this many lower samples.                                                                                                                                                                                                                                                                                       |
-| Margin upper      | 10      | Margin of allowance on the upper side before alert is generated                                                                                                                                                                                                                                                                          |
-| Margin lower      | 10      | Margin of allowance on lower side before alert is generated                                                                                                                                                                                                                                                                              |
+| FieldName         | Default | Description                                                                    |
+| ----------------- | ------- | ------------------------------------------------------------------------------ |
+| Number of samples | 1       | The number of samples used to compute the band. The default is 1 which means last Wednesday will be compared with this Wednesday. If you set this to 5 last 5 Wednesdays will be used to compute expected band. The default is 1 so that our users can quickly use this feature without requiring many weeks of training data available.                                                                                       |
+| Bucket Size       | 300     | The width of each interval.                                                    |
+| Exclude Upper     | 0       | For each interval exclude this many upper samples. Set this to 1 to exclude 1 upper outlier          
+| Exclude Lower     | 0       | For each interval exclude this many lower samples.                             |
+| Margin upper      | 10      | Margin of allowance on the upper side before alert is generated                                                                                                      |
+| Margin lower      | 10      | Margin of allowance on lower side before alert is generated                    |
 
 Then press the “Compute Band” button. This could take a few minutes. Once it is completed the band will be shown below.
 

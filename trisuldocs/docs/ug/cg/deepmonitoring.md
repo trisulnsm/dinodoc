@@ -33,7 +33,7 @@ Login as admin.
 
 :::note navigation
 
-Select Context (default) -\> profile0 -\> Custom Counters-> Filtered Counter Groups
+Select Context (default) -> profile0 -> Custom Counters-> Filtered Counter Groups
 
 :::
 
@@ -51,13 +51,13 @@ Click Create New-> Create deep monitoring for an IP
 
 Now fill out the following form fields.
 
-| Fields                       | Description                                                                                                                                               |
-| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Fields                       | Description          |
+| ---------------------------- | -------------------- |
 | Name associated with this IP | A name associated with this IP address, can be a customer name, server name, etc                                                                          |
 | Description                  | A description for this IP, this is shown in PDF reports for this IP. You can setup group by prepending a GROUP Name and then a Pipe character (see below) |
-| IP Address                   | The IP Address you want to setup deep monitoring                                                                                                          |
-| Bandwidth cap                | Enter full value; eg 512000 for 512Kbps                                                                                                                   |
-| Track Hosts                  | Disable this if you do not want to track hosts communicating with this IP.                                                                                |
+| IP Address                   | The IP Address you want to setup deep monitoring                 |
+| Bandwidth cap                | Enter full value; eg 512000 for 512Kbps        |
+| Track Hosts                  | Disable this if you do not want to track hosts communicating with this IP. |
 
 You can also optionally schedule a daily E-Mail report for this IP by
 filling out the optional fields. And click Create.
@@ -89,7 +89,7 @@ To view deep monitoring reports
 
 :::note navigation
 
-Login as user -\> Reports -\> Show All-> Static IPs
+Login as user -> Reports -> Show All-> Static IPs
 
 :::
 

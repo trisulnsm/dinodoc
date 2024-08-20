@@ -70,7 +70,9 @@ The chart shows the active internal hosts in the past 24 hours. Click on “Long
 
 ## Installing the License.xyz.txt file
 
-A new license file is typically named*License.\{emailid\}.txt***You need a License file for each Hub and Probe node**
+A new license file is typically named*License.\{emailid\}.txt
+
+ **You need a License file for each Hub and Probe node**
 
 ### Install using Web Interface
 
