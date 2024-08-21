@@ -39,14 +39,14 @@ Select Customize -> Show All-> Keys
 
 4. You will be redirected to a page with following fields
 
-| Field Name  | Description                                                                                                       |
-| ----------- | ----------------------------------------------------------------------------------------------------------------- |
-| Key         | A unique identifier for the entity.                                                                               |
-| Represents  | Represents this human readable identifier                                                                         |
-| Name        | A user friendly name for this key. Examples: Host names for IP Addresses, Application names for port numbers, etc |
-| Description | More information about this entity. This doesn’t show up anywhere except in the key details panel.                |
-| Valid From  | Statistics before this time are not shown                                                                         |
-| Attributes  | One attribute per line<br/>Example a=b                                                                            |
+| Field Name  | Description                                                                                    |
+| ----------- | ---------------------------------------------------------------------------------------------- |
+| Key         | A unique identifier for the entity.                                                            |
+| Represents  | Represents this human readable identifier                                                      |
+| Name        | A user friendly name for this key. Examples: Host names for IP Addresses, Application names for port numbers, etc                                                                                              |
+| Description | More information about this entity. This doesn’t show up anywhere except in the key details panel.                                                                                                         |
+| Valid From  | Statistics before this time are not shown                                                      |
+| Attributes  | One attribute per line<br/>Example a=b                                                         |
 
 ### 3 Resolve Keys in Bulk from CSV file
 

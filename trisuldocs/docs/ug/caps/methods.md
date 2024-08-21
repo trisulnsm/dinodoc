@@ -92,8 +92,8 @@ You have three options here
 To make the feature usable and resistant to massive download requests
  Trisul uses two configuration parameters to protect the feature.
 
-| Content inspection time limit | 6 hours | caps the maximum inspection interval. protects you from initiating a search for weeks |
-| ----------------------------- | ------- | ------ |
+| Content inspection time limit | 6 hours | caps the maximum inspection interval. protects you from initiating a search for weeks                                                                                                  |
+| ----------------------------- | ------- | --------------------------------------------------------------------- |
 | Content download limit        | 100MB   | maximum download needs to be < 100MB|
 
 both these parameters can be edited from [App Settings](/docs/ug/webadmin/web_options)

@@ -12,7 +12,7 @@ to click on “Pull Packets” next to a flow to pull out a PCAP into an applica
 
 ![](images/pcapmenu.png)
 
-**Figure: “Show Headers” for a text and hex dump of packets at top of flow*
+*Figure: “Show Headers” for a text and hex dump of packets at top of flow*
 
 This is extremely useful for quick analysis of flow packets without 
 leaving Trisul. If you want the entire flow, you can always click on 
