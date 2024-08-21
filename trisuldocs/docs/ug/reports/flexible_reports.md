@@ -1,13 +1,13 @@
 ---
-sidebar_position: 4
+sidebar_position: 2
 ---
 
 # Custom Reports
 
-We have introduced a new feature called the Flexible reports with which you can generate results for any metric for any counter group with a particular key. This would help users to create their own custom 
+We have introduced a new feature called the *Custom* reports with which you can generate results for any metric for any counter group with a particular key. This would help users to create their own custom 
 reports based on their needs.
 
-Flexible reports are based on three main parameters like Traffic,T oppers & Volume. Flexi reports work with Report JSON, where a common format is followed. You can refer to that and create your own reports.
+*Custom* reports are based on three main parameters like Traffic,Toppers & Volume. *Custom* reports work with Report JSON, where a common format is followed. You can refer to that and create your own reports.
 
 ## Custom Reports Page
 
@@ -24,7 +24,7 @@ Using *Create New Report* button you can create a new custom report in two ways.
 
 ![](images/flexi_report.png)
 
-*Figure: Flexible report Index view*
+*Figure: Custom report Index view*
 
 You will get a dialog box with fields.
 
@@ -67,7 +67,7 @@ The custom report list contains the following columns.
 
 ## Accessing the Custom Reports
 
-To access the Flexible reports,
+To access the Custom reports,
 
 :::note navigation
 
@@ -75,7 +75,13 @@ Login as `user` and Select Reports → Readymade →  Click on the *Custom* Repo
 
 :::
 
-Once you have created an empty report using *Create New Report* you can edit the same using the Option button against each report name. The context menu from the option button allows you to perform various functions on the report. The following functions can be performed on the selected report name.
+Once you have created an empty report using *Create New Report* you can edit the same using the Option button against each report name. The context menu from the option button allows you to perform various functions on the report. 
+
+![](images/customreport_menu.png)
+
+*Figure: Available Custom Report types*
+
+The following functions can be performed on the selected report name.
 
 | Options                                       | Description                                                    |
 | --------------------------------------------- | ---------------------------------------------------------------|
@@ -97,14 +103,11 @@ With the option button, there are six different kinds of reports that you can cr
 - Metrics Table Report
 - Alert Count Report
 
-![](images/customreport_menu.png)
-
-*Figure: Available Flexible Report types*
 
 ## Volume Report
 Volume Report in Trisul is the detailed report on traffic volume of various countergroups that you can choose from. Volume report provides insights into traffic volume, top talkers, traffic classification, and time based analysis. For example if you want to find the volume of http and https, you will use counter group as apps and enter key as http and https. 
 
-To create a volume report, Click *Volume(Max,Min)* Report from the option button against the report name under all the flexible reports. You will find the following dialog box to fill in.
+To create a volume report, Click *Volume(Max,Min)* Report from the option button against the report name under all the custom reports. You will find the following dialog box to fill in.
 
 ![](images/volumereport.png)
 
@@ -132,13 +135,13 @@ you have created
 
 ![](images/volume_type_report.png)
 
-*Figure: Sample pdf for Volume based flexible report*
+*Figure: Sample pdf for Volume based custom report*
 
 ## Traffic Chart Report
 
 A Traffic Chart Report in Trisul is a graphical representation of network traffic volume over a specified time period. It displays the amount of data transmitted (in bytes or packets) across the network, allowing you to visualize traffic patterns, trends, and anomalies. This kind of report is used to provide bandwidth report for several metrics in the form of colourful charts. 
 
-To create a traffic chart report, Click *Traffic Chart* Report from the option button against the report name under all the flexible reports. You will find the following dialog box to fill in.
+To create a traffic chart report, Click *Traffic Chart* Report from the option button against the report name under all the custom reports. You will find the following dialog box to fill in.
 
 
 ![](images/trafficchartreport.png)
@@ -174,7 +177,7 @@ you have created
 This kind of report is generally used to view toppers from several 
 counter groups in the form of a table. 
 
-To create a Toppers table report, Click *Toppers Table* Report from the option button against the newly created report name under all the flexible reports. You will find the following dialog box to fill in.
+To create a Toppers table report, Click *Toppers Table* Report from the option button against the newly created report name under all the custom reports. You will find the following dialog box to fill in.
 
 ![](images/toppers_type.png)
 
@@ -211,7 +214,7 @@ Top Listeners: Devices or hosts receiving the most network traffic
 Top Protocols: Network protocols (e.g., HTTP, FTP, SSH) generating the most traffic
 Top Flows: Network flows (connections) generating the most traffic
 
-To create a Toppers traffic chart report, Click *Toppers Traffic Chart* Report from the option button against the newly created report name under all the flexible reports. You will find the following dialog box to fill in.
+To create a Toppers traffic chart report, Click *Toppers Traffic Chart* Report from the option button against the newly created report name under all the custom reports. You will find the following dialog box to fill in.
 
 ![](images/topperstrafficchartreport.png)
 
@@ -245,7 +248,7 @@ you have created
 
 A Crosskey Drilldown Report in Trisul is a report that provides a detailed analysis of network traffic by correlating multiple keys or dimensions, such as Source IP, Destination IP, Protocol, Port, and Interface.
 
-To create a CrossKey Drilldown report, Click *CrossKey Drilldown* Report from the option button against the newly created report name under all the flexible reports. You will find the following dialog box to fill in.
+To create a CrossKey Drilldown report, Click *CrossKey Drilldown* Report from the option button against the newly created report name under all the custom reports. You will find the following dialog box to fill in.
 
 ![](images/crosskeydrilldownreport.png)
 

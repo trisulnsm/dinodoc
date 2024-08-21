@@ -1,264 +1,185 @@
 ---
-sidebar_position: 5
+sidebar_position: 1
 ---
 
-# All Reports
+# Trisul Reporting Framework
 
-### Endpoints & Application
+Trisul Reports provide summaries of network traffic data, where users can gain insights into various aspects of network activity. Trisul devised a centralized reporting system to facilitate users to easily access a wide range of network traffic reports in one place instead of navigating to various dashboards to view the each report. Based on the selected template data, Trisul generates reports with which users can,
+1) **View** the reports that are presented in user-friendly formats using tables, charts, and graphs.
+2) **Customize** reports by modifying templates, adding filters, or changing visualization options.
+3) **Schedule** for automatic generation and configure email for reports delivery.
 
-Report for a particular IP , App, or Router Interface
+Trisul further enhanced the reporting framework that consists of two reporting systems for quick analysis of common network traffic aspects. 
 
-## Endpoint Report
+1) [Readymade reports](/docs/ug/reports/available_reports) 
+2) [Custom Reports](/docs/ug/reports/flexible_reports)
 
-Generates a summary report for a specific IP Address.
+## Readymade Reports 
+Readymade Reports are built-in reports based on pre-defined templates for quick analysis of common network traffic aspects. It provides a starting point for further customization. Examples of pre-defined templates include top talkers, top listeners, inbound and outbound traffic volume.
 
-1. Enter the IP address or host name in this box. Note that this box autocompletes hostnames.
-2. Click on any of the time ranges adjacent to the text box
+There are 7 readymade reports readily available in Trisul including
+- Executive Reports
+- End Points and Applications
+- ISP Peering Analytics
+- Commonly Used
+- Netflow
+- Direct
+- Static IPs
 
-#### How to Schedule ?
 
-You need to specify a particular host as a subject for this report.
+## Custom Reports
+*[Custom Reports](/docs/ug/reports/flexible_reports)* in Trisul are customizable reports created by users that can provide tailored views of network activity to suit their requirements. These are flexible reports where users can also gain insights into network activity that can extend to other reports that may not be covered by the pre-defined *Readymade Reports*. Users can incorporate custom data and filters to help you focus on specific network activity.
 
-1. From the *Report Type* select “[Endpoint Activity] IP”
-2. In the *Report Parameters* field,
-   - enter the host details in this format : `{"IP" : "ip-address or hostname" }` Examples : `{"IP":"192.168.1.66"}` or `{"IP":"mserver.mydomain.com"}` You must include the quotes and brackets
+## Accessing Reports
 
----
+To view *Reports*, Login as user and,
+:::info Navigation
+Go to Reports-> Readymade
+:::
 
-## Application Report
+The following is the *Ready to use Reports* page where you will be landed, 
 
-Generates a summary report for a specific application (eg.HTTP, DNS, SMTP, etc)
+![](images/reportpage.png)
+*Figure: Reports Tab*
 
-1. Enter an application name (such as http) or a port number (such as Port-80)
-2. Click on any of the time ranges adjacent to the text box
+As you can see there are a number of report types as tabs and a checkbox. From here you can,
 
-#### How to Schedule ?
+- Select a report type from the list of tabs,
+- Enter the data, and
+- Click on a timeframe to generate the report. 
+- You can check the *Restrict reports to business hours only* check box on the upper right hand side to exclude non-business hours.
 
-Needs a port or application name to run.
+> You can configure the business hours by logging in as admin and navigating to, Web Admin-> Manage-> App Settings-> Schedule Email Reports
 
-1. From the *Report Type* select “[Application Activity] Application”
-2. In the *Report Parameters* field,
-   - enter the port details in this format : `{"port1" : "port or app" }` Examples : `{"port1":"Port-80"}` or `{"port1":"http"}`
+Lets explore each of the report types in detail for better understanding. 
 
----
-
-## Router Interface Report
-
-Netflow only
-
-Report for traffic bandwidth and users for a particular router interface
-
-1. Enter a router interface name or ID. Interface names are in the format IP_ifIndex.
-2. Click on any of the time ranges adjacent to the text box
-
-#### How to Schedule ?
-
-You need to specify a router interface number.
-
-1. From the *Report Type* select “[Interface Activity] interface”
-2. In the *Report Parameters* field,
-   - enter the interface details in this format : `{"interface" : "ip-address_if-index" }` Examples : `{"interface":"192.168.0.1_22"}` Where 192.168.1.22 is the router IP and 22 is the ifIndex of the interface.
-
----
-
-## IP Utilization Report
-
-View bandwidth utilization of an IP.
-
-1. In the Endpoints & Application section , locate the ‘IP usage’ option.
-2. Enter the IP address or host name in this box. Note that this box autocompletes hostnames.
-3. Click on any of the time ranges adjacent to the text box
-
-This report has two modes depending on whether or not you have configured per-app and per-protocol metering the IP.
-
-| Simple   | Report shows total / transmit / receive bandwidth. a red line correspoding to the bandwidth cap set for that IP count of how many bytes were transmitted over the bandwidth cap |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Advanced | Report shows everything in Simple breakup of traffic by port breakup of traffic by protocol ( UDP, TCP, ICMP, etc)                                                              |
-
-#### Configuring the Advanced Mode
-
-You get the maximum out of this report when you set the bandwidth cap and enable per-port and per-protocol metering.
-
-##### Setting the bandwidth cap for the IP
-
-- Click on the IP, or search for it
-- Click on “Create Cap” on the key dashboard
-- Enter the bandwidth property in this format `{"bw": 9999}`
-
-##### Enable per-port metering for this IP
-
-- Create a [filtered counter group](/docs/ug/cg/custom#filtered-counter-groups)
-- Parent = Apps, Filter = Hosts and enter the IP
-- Name the new counter group `APPS_IPAddress`. Example : `APPS_192.168.1.22`
-
-##### Enable per-protocol metering for this IP
-
-- Create a [filtered counter group](/docs/ug/cg/custom#filtered-counter-groups)
-- Parent = *Network Layer Stats*, Filter = *Hosts* and enter the IP
-- Name the new counter group `PROTO_IPAddress`. Example : `PROTO_192.168.1.22`
-
-#### How to Schedule ?
-
-You need to specify a particular host as a subject for this report.
-
-1. From the *Report Type* select “[Endpoint Activity] IP”
-2. In the *Report Parameters* field,
-   - enter the host details in this format : `{"IP" : "ip-address or hostname" }` Examples : `{"IP":"192.168.1.66"}` or `{"IP":"mserver.mydomain.com"}` You must include the quotes and brackets
 
 ### Executive Reports
+In Trisul, an Executive Report is a high-level summary of network traffic analysis, providing key insights and trends in a concise and easy-to-understand format. 
 
-One click reports that are designed to give a high level overviews.
+Executive Reports in Trisul include the following pre-defined templates for quick access,
 
-## Subscriber Activity
 
-An overview of all your **internal hosts**. The term subscribers refers to entities within your domain. The report contains bandwidth usage details, TCP connections, hosts that generated most alerts, etc.
+![](images/executivereports.png)
 
----
+*Figure: Executive reports*
 
-## Routers and Interfaces
 
-Neflow only
+| Report Name                       | Description                                                         |
+| --------------------------------- | ------------------------------------------------------------------- |
+| Consolidated IP Report            | A summary of IP address activity, including Total,in and out bandwidth traffic with top Internal hosts,top apps and port network layer protocols.                                                                                                |
+| Subscriber Activity               | An overview of all your internal hosts. The term subscribers refers to entities within your domain. The report contains bandwidth usage details, TCP connections, hosts that generated most alerts, etc.                                                                                         |
+| Malware, botnet, virus infections | Summary of all your internal hosts on the network that might be compromised. This Report template requires the Badfellas plugin. The determination of compromise is based on blacklisting implemented by the [Badfellas plugin](/docs/ug/install/badfellas)                                          |
+| IDS Alerts                        |  Summary of alerts generated by the Intrusion Detection System (IDS), including potential security threats via Snort/Suricata                                                    |
+| Deep drilldown of Internal Hosts  | Detailed analysis of internal hosts, including traffic patterns, applications used, and security threats. The data presented in the report include Most active internal hosts, For each of the top internal hosts, Which external hosts are they talking to, Which applications are they using, and Which flow tags are active.                                                                                           |
+| Deep drilldown of External Hosts  | Detailed analysis of external hosts communicating with the network, including traffic patterns and security threats. The data presented in the report include Most active external hosts (those on the internet or outside your home network), For each of the top external hosts, Which internal hosts are they talking to, Which applications are they using, and Which flow tags are active.                             |
+| Deep drilldown of Applications    | Detailed analysis of application traffic, including usage patterns, security threats, and performance metrics. The data presented in the report include Most active applications, For each of the top applications, Which external hosts are involved, Which internal hosts are involved, and Which flow tags are active.                                                                                                    |
+| System Health Reports             | Provides insights into the overall health and performance of the system in which Trisul is installed. Reports include, DB status, storage status,and active hub/probe details.        |
 
-An infrastructure report containing traffic details per router and 
-about top router interfaces. This report is only available when Trisul 
-is running in Netflow mode.
+### Endpoints and Applications Report
 
----
+*Endpoints and Applications* Report type in Trisul provides insights into IP-level traffic analysis, Conversation analysis and Security alaerts. The *Endpoint* report includes total bandwidth used by the IP, Receive/Transmit bandwidth of IP, Top applications used, Top conversations with other hosts, Alert types, Source & Destination IP, and Latest Malware Alerts. 
 
-## Malware, Botnet, Virus Infections
+And *Application* report type offers insights into port-level traffic analysis, Application usage and Traffic patterns including total bandwidth for the port number, In and Out traffic, Top hosts by total volume, Top applications, Top server hosts, Top client hosts, Top external hosts, Top tags, and Top flows.
 
-Requires the Badfellas plugin
+You can fill in the following fields in *Endpoints and Applications* report by selecting a [time frame](/docs/ug/reports/#report-time).
 
-A summary of all your internal hosts that might be compromised. The 
-determination of compromise is based on blacklisting implemented by the [Badfellas plugin](/docs/ug/install/badfellas)
+![](images/endpointsandapplicationsreports.png)
 
----
+*Figure: Endpoints and Applications Report*
 
-## Multicast vs Interactive
 
-If you are running a satellite network such as in a broadcasting or 
-trading application, this report gives you a breakup of multicast vs 
-interactive traffic.
+| Report Name         | Description                                                          |
+| ------------------- | -------------------------------------------------------------------- |
+| Endpoint IP Address | Generates a summary report for a specific IP Address                 |
+| Application         | Generates a summary report for a specific port/ application          |
 
----
+### ISP Peering Analytics Report
 
-## Intrusion Alerts
+ISP Peering Analytics in Trisul provides insights and data visualizations on traffic distribution, top traffic sources, BGP routing, and Peer AS traffic. This report includes AS summary bandwidth chart showing traffic breakup of total bandwidth usage, top AS Egress, top AS Ingress, BGP peer and origin AS report showing breakup of AS report into peer AS and origin AS using the BGP route database, top peer AS Egress, and top peer AS Ingress and more
 
-A comprehensive report of IDS alert activity over a period of time. Data and charts include :
+You can fill in the following fields in *ISP Peering Analytics* report by selecting a time frame](/docs/ug/reports/#report-time).
 
-1. Types of alerts over time
-2. counts by priority,
-3. top alerts types of each priority,
-4. top internal hosts which are alerting, top external hosts,
-5. latest 100 alerts of each priority.
+![](images/isppeeringanalyticsreports.png)
 
-#### Alert Anomaly
+*Figure: ISP Peering Analytics Report*
 
-A rudimentary 1-page anomaly report is also included :
+| Report Name                     | Description                                                        |
+| ------------------------------- | ------------------------------------------------------------------ |
+| AS Summary Report               | Generates a detailed AS Report for all Routers and Interfaces      |
+| AS Report per Interface         | Generates a Detailed AS Report per Interface                       |
+| Geo Country Traffic per Gateway | Country to ISP gateway mapping reports                             |
+| Prefix Summary                  | Generates a detailed report for prefixes in and out of ISP network |
 
-1. For each priority
-   - only list alerts which werent seen in the previous time interval
 
----
+### Commonly Used Reports
 
-## Deep Drilldown of Internal Hosts
+Some commonly used reports are built as pre-defined report templates in Trisul including Key usage report, Hosts, Apps, Internal hosts, External hosts, ASNumber, and Country.
 
-A comprehensive drilldown of internal host activity. The data presented in the report include :
+![](images/commonlyusedreports.png)
 
-1. Most active internal hosts
-2. For each of the top internal hosts
-   1. Which external hosts are they talking to
-   2. Which applications are they using
-   3. Which flow tags are active
+*Figure: Commonly Used Reports*
 
----
+You can fill in the following fields in *Commonly Used* report by selecting a time frame](/docs/ug/reports/#report-time) and providing the fields required.
 
-## Deep drilldown of External Hosts
 
-A comprehensive drilldown of external host activity. The data presented in the report include :
+| Report Name      | Description                                          |
+| ---------------- | ---------------------------------------------------- |
+| Key usage report | Track usage of key activity from any counter groups. |
+| Hosts            | Get report of top hosts on your networ               |
+| Apps             | Get report of top applications on your network.      |
+| Internal Hosts   | Get report of top internal hosts on your network.    |
+| External Hosts   | Get report of top external hosts on your network.    |
+| ASNumber         | Get report of top ASNumber on your network.          |
+| Country          | Get report of top countries on your network.         |
 
-1. Most active external hosts (those on the internet or outside your home network)
-2. For each of the top external hosts
-   1. Which internal hosts are they talking to
-   2. Which applications are they using
-   3. Which flow tags are active
+### Netflow Reports
 
----
+Trisul *Netflow* reports provide detailed analysis for traffic bandwidth and users for a particular router interface. 
 
-## Deep drilldown of Applications
+![](images/netflowreports.png)
 
-A comprehensive drilldown of application activity. The data presented in the report include :
+*Figure: Netflow Reports*
 
-1. Most active applications
-2. For each of the top applications
-   1. Which external hosts are involved
-   2. Which internal hosts are involved
-   3. Which flow tags are active
+You can fill in the following fields in *Commonly Used* report by selecting a time frame](/docs/ug/reports/#report-time) and providing the fields required. To select router interfaces from the left side of the *Interfaces utilization* window, use the single arrow for single selection and double arrow to select all.
 
-## Common Counter Groups
 
-Frequently used counter group reports. To view reports for counter groups not in this list, go to **Top Traffic Reports** and then select the counter group. This report shows the top users for each meter.
+| Report name               | Description                                                                 |
+| ------------------------- | --------------------------------------------------------------------------- |
+| Interfaces Utilization    | Utilization report for selected Interfaces from Routers                     |
+| Explore Router Interface  | Flow based report for a particular Interface                                |
+| Interface Usage Drilldown | Generates Report for traffic bandwidth and users for a particular Interface |
+| Routers and Interfaces    | Router and Interface activity                                               |
 
-- Apps
-- Internal Hosts
-- External Hosts
-- ASNumber
-- Country
 
-### All Available Reports
+### Direct Reports
 
-This allows you to generate reports for any of the data types in 
-Trisul using a two step process. First select the type of report, then 
-the entity.
+Using *Direct* reports in Trisul you can generate reports for any metrics, alerts or flows. 
 
-## Top Traffic Report
+You can fill in the following fields in *Direct* report by selecting a time frame](/docs/ug/reports/#report-time).
 
-Top users by counter group.
+![](images/directreports.png)
 
-Steps to generate Top Traffic Reports
+*Figure: Direct Reports*
 
-1. In the All available reports section , find the option ‘Top Traffic Report’
-2. Click on a desired time range, which leads to a list of counter groups
-3. Click on the desired counter group
+| Report Name        | Description                                                                          |
+| ------------------ -------------------------------------------------------------------------------------- |
+| Top Traffic Report | Get toppers for any counter group                                                    |
+| Top Session Report | Get top flows on your network                                                        |
+| Security Report    | Overview of all security alerts seen by trisul alerts                                |
 
-Some of the interesting reports in this section are.
 
-| Base Domains | Report on top web traffic. Google, Facebook, Twitter, YouTube, etc |
-| ------------ | ------------------------------------------------------------------ |
-| Countries    | How much traffic uploaded and downloaded per country               |
-| ASN          | Traffic by autonomous system number (service provider)             |
+### Static IP Reports
 
----
+*Static IP* report in Trisul provides detailed information about static IP addresses on the network. This report includes Total bandwidth received and transmitted and Timeframes where usage overshot bandwidth cap.
 
-## Top Sessions Report
+You can fill in the following fields in *Direct* report by selecting a time frame](/docs/ug/reports/#report-time) and providing a static IP.
 
-Allows you to generate reports for flow trackers. Such as top flows by volume, time, uploading, etc.
+![](images/staticipreports.png)
 
-Steps to generate the Top Sessions Report
+*Figure: Static IP Reports*
 
-1. In the All available reports section, find the option ‘Top Sessions Report’
-2. Click on a desired time range , which shows you a list of flow trackers
-3. Click on a flow tracker (such as top flows by volume) to view
-
----
-
-## Security Report
-
-Overview of all security issues in your network. This report combines data from IDS alerts, malware alerts, flow tracker alerts, and threshold crossing alerts.
-
-Steps to generate a Security Report
-
-1. In the All available reports section , find the option ‘Security Report’
-2. Click on a desired time range to generate the report
-
----
-
-## Custom Key Report
-
-This is used to generate report for the [custom key monitors](/docs/ug/cg/ckey)
-
-Steps to generate a Custom Key Report
-
-1. In the All available reports section , find the option ’Custom Key Report ’
-2. Click on a desired time interval, which leads to a list of custom key monitors
-3. Click on a custom key monitor to generate the report
+| Report Name        | Description                                                                          |
+| ------------------ | ------------------------------------------------------------------------------------ |
+| time frame](/docs/ug/reports/#report-time)         | Select a time frame group                                                    |
+| Static IP Report   | Enter a static IP                                                       |
