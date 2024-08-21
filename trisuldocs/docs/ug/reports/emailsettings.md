@@ -4,9 +4,11 @@ sidebar_position: 3
 
 # Setup E-Mail
 
-Describes how you can setup an email account to send outgoing email reports and alerts.
+When you schedule a report, the email address to be delivered to is configured in this *Email settings*
 
-Note You need a valid SMTP email account (even Gmail will work).
+This section describes how you can setup an email account to send outgoing email reports and alerts.
+
+>Note You need a valid SMTP email account (even Gmail will work).
 
 ## How to Setup E-Mail
 
@@ -16,7 +18,7 @@ Select *Reports → Email settings*
 2. Enter the following information
 
 | Email Server                 | Email server name for eg `smtp.gmail.com`                                                                                                                     |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ---------------------------- | ------------------------------------------------------------- |
 | SMTP Port Number             | Usually it is 25, Gmail and secure TLS uses 587                                                                                                               |
 | Authentication Protocol      | Select from options provided or “No auth”. If you are unsure the default usually works.                                                                       |
 | From Email Address           | Your email account fully qualified *mikep123@gmail.com*                                                                                                       |
@@ -52,7 +54,7 @@ Save the user name and password as shown in the picture below.
 Enter the email settings as shown
 
 | Email Server                 | smtp.pepipost.com                                                                     |
-| ---------------------------- | ------------------------------------------------------------------------------------- |
+| ---------------------------- | ---------------------------------------------------- |
 | SMTP Port Number             | 587                                                                                   |
 | Authentication Protocol      | Login SMTP Auth (default)                                                             |
 | From Email Address           | something@yourdomain.com. This domain integration must be completed in Pepipost first |

@@ -29,7 +29,7 @@ Select Reports → Schedule
 2. Click **Schedule a new report**
 3. Fill out these fields
 
-![](images/schedule_new_report.png)
+![](images/scheduleareport.png)
 
 *Figure: Showing Schedule a New Email Report Configuration*
 
