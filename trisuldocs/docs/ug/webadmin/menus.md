@@ -4,66 +4,83 @@ sidebar_position: 5
 
 # Menus
 
-You can customize which items appear on the menu panel. You can control
-both the parent and sublevel menu items and positions.
+Trisul *Menus* are the navigation options that allow users to interact with the software and access various features and functions. These are the main menus and their submenus that you can find on the left hand side of the Trisul platform. Here are some examples: Dashboards, Retro, Tools, and more. These *menus* help you navigate to various features and perform analytic operations.
 
-## Create a New Menu
+![](images/menus.png)  
+*Figure: Menus and Submenus*
 
-You can either create a new item or clone an existing one and modify
-some parameters.
-
-div(info).  
-Login as `admin` user to manage menus.
-
-### Method - I : Create a New Item
-
-:::note navigation
-
-Select *Webadmin* -\> Manage -\> Menu Manager
-
-:::
-
-1. Click **Create New Menu**
-2. You are shown the form with following fileds
-
-| Field Name  | Description                                                  |
-| ----------- | ------------------------------------------------------------ |
-| Menu Name   | Name of the menu                                             |
-| Parent Menu | Select a parent if this is a submenu or select **No Parent** |
-| Role ID     | [User Roles](/docs/ug/webadmin/userroles)                    |
-| Description | Description of the menu                                      |
-| Controller  | Parent Page that contains a number of Actions (Pages)        |
-| Action      | Actions are the actual pages with number of elements         |
-| Params Json | valid json                                                   |
-
-### Method - II : Clone an Existing Item
-
-You can create a new by cloning the existing menu
-
-:::note navigation
-
-Select Admin -\> Menu Manager
-
-:::
-
-1. Click **Clone** in the menu list
-2. Edit the required fields and click **Create** button
 
 ## Manage Menus
+*Manage Menus* in Trisul refers to the customization of navigation menus for the Trisul web interface for different users and contexts. To customize menus, Login as `admin` and 
 
-You can rearrange the menu
+:::info navigation
+Go to Webadmin-Manage-> Context -default-> And click UI- Menu Manager
+:::
 
-***Move Up***
+This will take you to the *Menu Manager* page with two customizations as shown in the following.
 
-Click the *Move Up* link to up the menu one level
+![](images/menumanager1.png)  
+*Figure: Menu Manager*
 
-<!-- -->
+1) [Customize Menus](/docs/ug/webadmin/menus#customize-menus)
+2) [Copy Menus](/docs/ug/webadmin/menus#copy-menus)
 
-***Move Down***
+## Customize Menus
 
-Click the *Move Down* link to down the menu one level
+Trisul's *Customize Menus* feature enables administrators to tailor navigation menus for individual users based on their login context.
 
-<!-- -->
+With *Customize Menus* you can,
+- Assign context-specific menus to users
+- Customize menus for each user login context
+- Control access to features and functionality
 
-***Delete***
-Deletes the menu
+For context-based menu customization,
+Choose *Customize Menus* in *Menu Manager* and select a *user* and select a *context* for that user and Click * Create New Menu*  
+*Create a new menu item* window opens up with the following fields.
+
+![](images/newmenu.png)
+*Figure: Create a New Menu Item*
+
+| Fields                                | Description                                                              |
+|---------------------------------------|--------------------------------------------------------------------------|
+| Menu Name                             | Enter a name for the Menu                                                |
+| Parent Menu                           | Choose from the dropdown list a parent for the menu you want to add      |
+| User Role (permissions)               | Choose from the user roles you want this menu to be available to         |
+| Description							| Enter a short description. This description will show up in the tooltip  |
+| URL to link to (controller)  			| The URL this menu links to, can be a full URL or a controller name   	   |
+| Action 								| Actions are the actual pages with number of elements  				   |
+| Params Json  							| Enter the parameters in JSON format									   |
+| Image 								| Choose an image for the menu 											   |
+
+Once you have filled all the details for these fields, Click *Create*. A New menu is now created!
+
+And the newly created menu will be reflecting on the index page of *Customize menus*
+
+
+![](images/customizemenus1.png)
+*Figure: Customize Menus*
+
+1) You can enable the **Rearrange Menu** on the upper left hand side to allow you to click and drag to rearrange the menu order
+2) The Header of each of the *Customize Menus* table represents the **Parent Menu**
+3) The list indide the table represents the **Sub Menus**
+4) You can **Clone**, **Edit**, **Set as my homepage**, and **Delete** the menus and submenus by clicking on the options from the right hand side against each menu and submenu
+5) Click on the small arrow on the upper right hand side of the header to **Expand and Collapse** the menus
+6) You can delete all the menus (including the parent menus) by clicking on the **Delete All** button the upper right hand side
+
+## Copy Menus
+
+*Copy Menus* allows administrators to duplicate existing menu configurations for efficient reuse across different users, contexts, or roles.
+
+With *Copy Menus* you can,
+- Duplicate menu structures and settings
+- Copy menus from one user or context to another
+- Edit the copied menu to make modifications
+
+To copy menus from different users and contexts,
+
+Choose *Copy Menus* in *Menu Manager* and select a *user* and select a *context* from the left hand side to copy from and select a *user* and a *context* from the right hand side to copy to. And Click *Copy*  
+  
+![](images/copymenus.png)
+*Figure: Copy Menus*
+
+You have now successfully copied the menus.
