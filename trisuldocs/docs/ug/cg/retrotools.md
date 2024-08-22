@@ -20,23 +20,21 @@ You can find the list of retro tools below the time selector as shown in this ex
 
 You have to pick one of the following tools shown.
 
-| Name of tool  | Why you want to use this tool|
-| ------------- | ---|
-| [Network FAQ](/docs/ug/cg/retrotools#network-faq)  | Complex network analysis like analysing network traffic, flows, and alerts rendered in plain English as a question for easy access. |
-| [Counter Group toppers](/docs/ug/cg/retrotools#counter-group-toppers)  | Who were the toppers in a counter group for a statistic ? Also shows topper trends in time interval with ability to do a cross drill on any of them |
-|   |   |
-| [Investigate IP activity](/docs/ug/cg/retrotools#investigate-ip-activity)  | Investigate complete activity of a host in selected interval. Details include conversations, flows, security alerts, malware activity, peer connections, upload / download data etc |
-|     |      |
-| [Investigate IP activity](/docs/ug/cg/retrotools#investigate-ip-activity) | Investigate complete activity of a host in selected interval. Details include conversations, flows, security alerts, malware activity, peer connections, upload / download data etc |
-| [Investigate application](/docs/ug/cg/retrotools#investigate-users-of-an-application)   | Investigate complete activity of an application. Who the top users are of that application and other details split up by upload / download                                          |
-| [Long term traffic charts](/docs/ug/cg/retrotools#long-term-traffic-charts)             | Used to see daily trends in traffic. Arranges traffic by day on top of each other so you can observe busy hours etc                                                                 |
-| [Show traffic chart for an item](/docs/ug/cg/retrotools#show-traffic-chart-for-an-item) | Draw charts for any item such as a host, app, subnet   |
-| [IDSAlerts](/docs/ug/cg/retrotools#security-alerts-retro)   | Various views of alert activity seen in selected interval   |
-| [Flow trackers](/docs/ug/cg/retrotools#flow-trackers)                                   | View top flows in the timeframe based on various criteria                                                                                                                           |
-| [Explore Flows](/docs/ug/cg/retrotools#explore-flows)                                   | Streaming flow visualization based on the popular<br/>parallel co-ordinates paradigm.                                                                                               |
-| [Traffic Charts](/docs/ug/cg/retrotools#show-traffic-chart-for-an-item)                 | View usage charts for a particular item for selected time interval.    |
-| [Pull packets](/docs/ug/cg/retrotools#pull-packets)                                     | Get raw packets in tcpdump/libpcap format matching a certain key   |
-| [View Edges](/docs/ug/cg/retrotools#view-edges)                                         | Edges are graph database showing how the metrics are related to each other beyond the flow connection.   |
+| Name of tool                                                                            | Why you want to use this tool                  |
+| ------------- | -------------------------------------------------------------------------------------------------|
+| [Network FAQ](/docs/ug/cg/retrotools#network-faq)                                       | Complex network analysis like analysing network traffic, flows, and alerts rendered in plain English as a question for easy access.|
+| [Counter Group toppers](/docs/ug/cg/retrotools#counter-group-toppers)                   | Who were the toppers in a counter group for a statistic ? Also shows topper trends in time interval with ability to do a cross drill on any of them                                                                                                            |
+| [Investigate IP activity](/docs/ug/cg/retrotools#investigate-ip-activity)               | Investigate complete activity of a host in selected interval. Details include conversations, flows, security alerts, malware activity, peer connections, upload / download data etc                                                                       |
+| [Investigate IP activity](/docs/ug/cg/retrotools#investigate-ip-activity)               | Investigate complete activity of a host in selected interval. Details include conversations, flows, security alerts, malware activity, peer connections, upload / download data etc                                                                       |
+| [Investigate application](/docs/ug/cg/retrotools#investigate-users-of-an-application)   | Investigate complete activity of an application. Who the top users are of that application and other details split up by upload / download                                                                                                           |
+| [Long term traffic charts](/docs/ug/cg/retrotools#long-term-traffic-charts)             | Used to see daily trends in traffic. Arranges traffic by day on top of each other so you can observe busy hours etc                  |
+| [Show traffic chart for an item](/docs/ug/cg/retrotools#show-traffic-chart-for-an-item) | Draw charts for any item such as a host, app, subnet                                                                                   |
+| [IDSAlerts](/docs/ug/cg/retrotools#security-alerts-retro)                               | Various views of alert activity seen in selected interval                                                                                 |
+| [Flow trackers](/docs/ug/cg/retrotools#flow-trackers)                                   | View top flows in the timeframe based on various criteria                                                                                |
+| [Explore Flows](/docs/ug/cg/retrotools#explore-flows)                                   | Streaming flow visualization based on the popular<br/>parallel co-ordinates paradigm.                                             |
+| [Traffic Charts](/docs/ug/cg/retrotools#show-traffic-chart-for-an-item)                 | View usage charts for a particular item for selected time interval.                                                                        |
+| [Pull packets](/docs/ug/cg/retrotools#pull-packets)                                     | Get raw packets in tcpdump/libpcap format matching a certain key                                                                      |
+| [View Edges](/docs/ug/cg/retrotools#view-edges)                                         | Edges are graph database showing how the metrics are related to each other beyond the flow connection.                             |
 
 ## Network FAQ
 
@@ -190,15 +188,15 @@ Some of the built in trackers are :
 
 > You can create your own [flow trackers](/docs/ug/flow/tracker) They will show up in this dropdown list
 
-| Flow Trackers   |   |
-| --------------- | ----- |
-| Traffic         | Flows with maximum volume transferred (both directions together)                                        |
-| Long lived      | Flows which stayed alive for longest time                                                               |
-| Transferred Out | Flows which transferred maximum data **out** of your Home Network (Uploading)                           |
-| Transferred In  | Flows which transferred maximum data **into** your Home Network (Downloading)                           |
-| Local Traffic   | Top flows internal to your Home network                                                                 |
-| Suspicious      | Flows that fired a blacklist based even, either by IP, requesting a domain name, or by requesting a URL |
-| FilterFailed    | Flows that don’t use any of the well known ports                                                        |
+| Flow Trackers   |                                                                                        |
+| --------------- | ---------------------------------------------------------------------------------------|
+| Traffic         | Flows with maximum volume transferred (both directions together)                       |
+| Long lived      | Flows which stayed alive for longest time                                              |
+| Transferred Out | Flows which transferred maximum data **out** of your Home Network (Uploading)          |
+| Transferred In  | Flows which transferred maximum data **into** your Home Network (Downloading)          |
+| Local Traffic   | Top flows internal to your Home network                                                |
+| Suspicious      | Flows that fired a blacklist based even, either by IP, requesting a domain name, or by requesting a URL                                                                                           |
+| FilterFailed    | Flows that don’t use any of the well known ports                                       |
 
 ## Explore Flows
 
