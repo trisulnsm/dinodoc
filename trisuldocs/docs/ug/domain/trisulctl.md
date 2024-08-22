@@ -209,8 +209,8 @@ The commands
 
 The domain runs the command on all the relevant nodes and if any errors
 are seen, it is printed on screen. This has the same effect as if you
-login to Web Trisul as *admin* and then executed *Context -\> Start/Stop
-Tasks -\> Start Probe/Hubs*
+login to Web Trisul as *admin* and then executed *Context -> Start/Stop
+Tasks -> Start Probe/Hubs*
 
 #### Check Logs
 
@@ -221,11 +221,11 @@ Type `help log` for examples.
 
 The commands
 
-| Command                                  | Description                                                                                                                                                                                                                                                                           |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `stop context default`                   | Stops the default context on all nodes                                                                                                                                                                                                                                                |
-| <code>stop context default@hub0</code>   | Stop only the context on `hub0` node. The context will still be running on other nodes.                                                                                                                                                                                               |
-| <code>stop context default@probe0</code> | Stop only the context on `probe0` node. The data collection and processing on probe0 alone will stop. A subsequent start context will resume the data processing. This is useful if you just want to restart a particular probe without touching the other nodes in the Trisul domain |
+| Command                                  | Description                                                           |
+| ---------------------------------------- | --------------------------------------------------------------------- |
+| `stop context default`                   | Stops the default context on all nodes                                |
+| <code>stop context default@hub0</code>   | Stop only the context on `hub0` node. The context will still be running on other nodes.                                                                                            |
+| <code>stop context default@probe0</code> | Stop only the context on `probe0` node. The data collection and processing on probe0 alone will stop. A subsequent start context will resume the data processing. This is useful if you just want to restart a particular probe without touching the other nodes in the Trisul domain                  |
 
 ### Info Context
 
@@ -256,17 +256,17 @@ probeUNLEASH   default        6.0.2766     INIT    RUNNING  12.478 GB   1041h 07
 There are two commands `reset context` and `delete context` - Both of
 them ask for confirmation
 
-- reset context —\> delete the data from the context but keep the
+- reset context —> delete the data from the context but keep the
   configuration. This is used if you want to purge all data and start
   over
-- delete context —\> delete the context itself. the data and the
+- delete context —> delete the context itself. the data and the
   configuration are removed. **Note** you cannot delete the default
   context so that is treated as a reset
 
-| Command                  | Description                                                                                          |
-| ------------------------ | ---------------------------------------------------------------------------------------------------- |
-| `reset context default`  | clear data but keep the configuration                                                                |
-| `delete context default` | remove the entire context, data and config. You can create a new context with that name if you want. |
+| Command                  | Description                                                                                                     |
+| ------------------------ | ---------------------------------------------------------------------------------- |
+| `reset context default`  | clear data but keep the                                                            |
+| `delete context default` | remove the entire context, data and config. You can create a new context with that name if you want.                                                                                               |
 
 ------------------------------------------------------------------------
 

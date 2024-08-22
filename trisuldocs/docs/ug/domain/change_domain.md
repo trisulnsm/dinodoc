@@ -102,12 +102,12 @@ with different TCP endpoints.
 
 You enter the following information
 
-| Fields              | Description  |
-| ------------------- | --- |
-| Domain ID           | use `domain0` - we’re trying to create a new cert    |
-| Domain Description  | a text description of the domain, goes in the cert file    |
-| Socket 1 (frontend) | A TCP socket ; eg tcp://192.168.2.76:12001. This is in ZeroMQ format. You should enter the IP of the Hub node |
-| Socket 2 (backend)  | A TCP socket ; eg 12002. Use a local IP  |
+| Fields              | Description                                                                                |
+| ------------------- | ------------------------------------------------------------------------------------------ |
+| Domain ID           | use `domain0` - we’re trying to create a new cert                                          |
+| Domain Description  | a text description of the domain, goes in the cert file                                    |
+| Socket 1 (frontend) | A TCP socket ; eg tcp://192.168.2.76:12001. This is in ZeroMQ format. You should enter the IP of the Hub node                                                                                                 |
+| Socket 2 (backend)  | A TCP socket ; eg 12002. Use a local IP                                                    |
 
 A run would look like this
 
