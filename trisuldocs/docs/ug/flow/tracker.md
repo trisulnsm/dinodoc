@@ -17,22 +17,24 @@ shall see below this is not the only type of tracker. Flow trackers are
 also necessary for you to use [flow tracker alerts](/docs/ug/alerts/ft).
 
 This section outlines the number of things you can do with *Flow Trackers*. With *Flow Trackers* you can:
-1) View: View flow data and analytics.
-2) Manage: Manage flow tracking configurations and settings.
-3) Create: Create custom flow tracking profiles and criteria.
+1) [**View**](/ug/flow/tracker#view-flow-trackers): View flow data and analytics.
+2) [**Manage**](/docs/ug/flow/tracker#manage-flow-trackers): Manage flow tracking configurations and settings.
+3) [**Create**](/docs/ug/flow/tracker#create-flow-trackers): Create custom flow tracking profiles and criteria.
 
 ## View Flow Trackers
 To **View** *Flow Trackers*
 :::info Navigation
 Go to Tools-> Flow Trackers
 :::
-![](images/viewflowtrackers.png)  
-*Figure: View top flows based on certain criteria*
-Once you have landed on the *Flow Trackers* page as shown in the sample, you can view the flows in three steps.
-Step 1: **Select a Time Frame** from the [*Time Selector*](/docs/ug/ui/elements#time-selector) to narrow down the flow data to a relevant interval.
-Step 2: **Specify Max flows to retrieve** allowing you to focus on the most significant or relevant flows, and avoid information overload.
+![](images/viewflowtrackers.png)    
+*Figure: View top flows based on certain criteria*  
+
+Once you have landed on the *Flow Trackers* page as shown in the sample, you can view the flows in three steps.  
+Step 1: **Select a Time Frame** from the [*Time Selector*](/docs/ug/ui/elements#time-selector) to narrow down the flow data to a relevant interval.  
+Step 2: **Specify Max flows to retrieve** allowing you to focus on the most significant or relevant flows, and avoid information overload.  
 Step 3: **Select a Flow Tracker** to view flows that match specific criteria, such as top talkers, bandwidth usage, or application-specific traffic, enabling targeted analysis and insights.
 
+## Manage Flow Trackers
 
 To **Manage***Flow Trackers*,
 
@@ -43,13 +45,7 @@ The following *Flow Trackers* window containing streaming snapshots of various t
 ![](images/flowtrackers.png)  
 *Figure: Flow Trackers List*
 
-To **Create** a new *Flow Tracker*,
-:::info navigation
-Go to Tools-> Flow Tracker-> Manage Flow Trackers-> Create a New Flow Tracker
-:::
-![](images/flowtracker.png)
-
-There are Trisul built in trackers for quick access and you can also create your own flow trackers specifying required criteria.
+There are Trisul built in trackers for quick access and you can also create your own flow trackers specifying certain criteria.
 
 ## Built in Trackers
 
@@ -71,6 +67,13 @@ of it.
 | Payload Xfer Out| Highest volume of TCP Payload data transferred **out of** your network. Does not include TCP handshake packets                                                                                                 |
 | Payload Xfer In | Highest volume of TCP Payload data transferred **into** your home network. Does not include TCP handshake packets                                                                                                 |
 
+## Create Flow Trackers
+
+To **Create** a new *Flow Tracker*,
+:::info navigation
+Go to Tools-> Flow Tracker-> Manage Flow Trackers-> Create a New Flow Tracker
+:::
+![](images/flowtracker.png)
 
 ## Custom Trackers
 
