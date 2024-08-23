@@ -179,3 +179,21 @@ On tables featuring a “Download PCAP” button, clicking on the button
 will result in Trisul computing a “Packet Scan plan” and then
 downloading all of the requested entities into a single merged PCAP
 file.
+
+## Time Selector
+The Time Selector feature enables you to define a temporal scope for functionalities like report generation, query search, flow trackers, alerts etc with a default setting of the most recent 15 minutes. Once a time window is selected, it remains fixed for functioning all the features on the page and their associated drill-downs. 
+
+![](images/timeselector.png)  
+*Feature: Time Selector*
+
+You can choose from a range of pre-defined time ranges, including:
+
+- Last 1 hour
+
+- Last 24 hours
+
+- This month
+
+- Last month and more.
+
+Alternatively, you can specify a custom date range by selecting the *Custom Range* option, which allows for the selection of a specific period from the past.

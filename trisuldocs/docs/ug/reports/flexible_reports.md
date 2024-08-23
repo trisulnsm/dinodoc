@@ -1,13 +1,12 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Custom Reports
 
-We have introduced a new feature called the *Custom* reports with which you can generate results for any metric for any counter group with a particular key. This would help users to create their own custom 
-reports based on their needs.
+*Custom Reports* in Trisul are customizable reports created by users that can provide tailored views of network activity to suit their requirements. These are flexible reports where users can also gain insights into network activity that can extend to other reports that may not be covered by the pre-defined *Readymade Reports*. Users can incorporate custom data and filters to help you focus on specific network activity i.e. any metric for any counter group with a particular key.
 
-*Custom* reports are based on three main parameters like Traffic,Toppers & Volume. *Custom* reports work with Report JSON, where a common format is followed. You can refer to that and create your own reports.
+*Custom Reports* are based on three main parameters like Traffic,Toppers & Volume. *Custom Reports* work with Report JSON, where a common format is followed. You can refer to that and create your own reports.
 
 ## Custom Reports Page
 
@@ -39,17 +38,7 @@ This will create an empty report with only Report Name and Report Title.
 Using *Filter* bar in custom report page you can fetch any particular report searching by the name of the report, title, key, countergroup, label or meter. And it will display the report in that name or all the reports containing the mentioned counter group, meter, key or label.
 
 ### Time Selector
-The Time Selector feature enables you to define a temporal scope for report generation, with a default setting of the most recent 15 minutes. Once a time window is selected, it remains fixed for generating all the reports on the page and their associated drill-downs. You can choose from a range of pre-defined time ranges, including:
-
-- Last 1 hour
-
-- Last 24 hours
-
-- This month
-
-- Last month and more.
-
-Alternatively, you can specify a custom date range by selecting the *Custom Range* option, which allows for the selection of a specific period from the past.
+Select a time frame from the [*Time Selector*](/docs/ug/ui/elements#time-selector) to narrow down the data to a relevant interval.
 
 ### Custom Report List
 The custom report list is the list of report names that has been created or imported by you. 

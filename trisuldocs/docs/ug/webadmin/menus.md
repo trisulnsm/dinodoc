@@ -35,7 +35,7 @@ With *Customize Menus* you can,
 - Control access to features and functionality
 
 For context-based menu customization,
-Choose *Customize Menus* in *Menu Manager* and select a *user* and select a *context* for that user and Click * Create New Menu*  
+Choose *Customize Menus* in *Menu Manager* and select a *user* and select a *context* for that user and Click *Create New Menu*. 
 *Create a new menu item* window opens up with the following fields.
 
 ![](images/newmenu.png)
@@ -58,14 +58,14 @@ And the newly created menu will be reflecting on the index page of *Customize me
 
 
 ![](images/customizemenus1.png)
-*Figure: Customize Menus*
+*Figure: Customize Menus Index Page*
 
-1) You can enable the **Rearrange Menu** on the upper left hand side to allow you to click and drag to rearrange the menu order
-2) The Header of each of the *Customize Menus* table represents the **Parent Menu**
-3) The list indide the table represents the **Sub Menus**
-4) You can **Clone**, **Edit**, **Set as my homepage**, and **Delete** the menus and submenus by clicking on the options from the right hand side against each menu and submenu
+1) You can enable the **Rearrange Menu** on the upper left hand side to allow you to click and drag to rearrange the menu order.
+2) The Name on the blue header of each of the *Customize Menus* table represents the name of the **Parent Menu**
+3) The list inside the table represents the **Sub Menus**.
+4) You can **Clone**, **Edit**, **Set as my homepage**, and **Delete** the menus and submenus by clicking on the options from the right hand side against each menu and submenu.
 5) Click on the small arrow on the upper right hand side of the header to **Expand and Collapse** the menus
-6) You can delete all the menus (including the parent menus) by clicking on the **Delete All** button the upper right hand side
+6) You can delete all the menus (including the parent menus) by clicking on the **Delete All** button the upper right hand side.
 
 ## Copy Menus
 
@@ -78,7 +78,7 @@ With *Copy Menus* you can,
 
 To copy menus from different users and contexts,
 
-Choose *Copy Menus* in *Menu Manager* and select a *user* and select a *context* from the left hand side to copy from and select a *user* and a *context* from the right hand side to copy to. And Click *Copy*  
+Choose *Copy Menus* in *Menu Manager* and select a *user* and select a *context* from the left hand side to "copy from" and select a *user* and a *context* from the right hand side to "copy to". And Click *Copy*  
   
 ![](images/copymenus.png)
 *Figure: Copy Menus*
