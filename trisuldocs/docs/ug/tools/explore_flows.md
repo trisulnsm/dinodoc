@@ -5,95 +5,121 @@ sidebar_position: 1
 
 # Explore Flows
 
-Fast general purpose search for flows.
-
-The results are presented in terms of
-
-- an interactive visualization based on parallel co-ordinates
-- a summary of hosts and application by upload/download, peers
-- a table of raw flows
-
-> Only the first matching *Max Flows (default 10K)* are retrieved. Please
-> narrow down your query to within this limit. Also see the [Export
-> Flows](export_flows) and [Aggregate Flows](aggregate_flows) tools which work with larger matches and provide different functionality.
-
-![](images/Explore_flows.png)  
-*Figure: Explore flows*
+Fast general purpose search for flows that allows you to deeply inspect and analyze network traffic flows.   
+With *Explore Flows* you can:
+- Investigate individual network flows in detail
+- Analyze packet-level data and netflow data for each flow
+- Identify potential security threats or performance issues
+- Visualize flow data to understand traffic patterns
 
 ## How to Search for Flows
+Search Criteria in Trisul allows you to specify filters and conditions to narrow down network traffic data and focus on specific aspects of interest.
+
+To specify a search criteria to explore flows,
 
 :::note navigation
 
-Select Tools -\>Explore Flows
+Go to Tools-> Explore Flows
 
 :::
 
-### Search Criteria
+
 
 You have two ways to enter the search criteria
 
-1. **quick search** a search expression directly like
+1. [**Quick search**](/docs/ug/tools/explore_flows#quick-search-enter-search-terms-directly) a search expression directly like
    `destip=twitter.com,port=ssh`
-2. **advanced search** use a form to enter individual fields
+2. [**Advanced search**](/docs/ug/tools/explore_flows#advanced-search--use-a-form) use a form to enter individual fields
 
-#### Quick Search: Enter Search Terms Directly
+### Quick Search: Enter Search Terms Directly
 
-Just enter the search expression directly in the text box in the form
-of  
-*field=value,field=value,….* The supported fields include
-srcip,destip,ip,net16,n2t24.. The complete list of supported fields can
-be obtained by clicking on the question mark icon next to the box.
+Quick Search allows for quick filtering of network traffic data that includes only two essential fields. Suitable for straightforward searches. 
 
-Some common examples :
+![](images/quicksearch.png)  
+*Figure: Quick Search*
 
-| Field                                                  | Description                                                                                                                                                                                 |
-| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `srcip=208.219.88.129,destip=119.10.181.22`            | All flows between two ips                                                                                                                                                                   |
-| `ip=208.219.88.129`                                    | Match both source and destination ip                                                                                                                                                        |
-| `port=5700`                                            | Port 5700                                                                                                                                                                                   |
-| `proto=gre,ip=208.219.88.129`                          | GRE protocol and IP                                                                                                                                                                         |
-| `tag=UA`                                               | Flow tag has UA (Ukraine) if you’ve set up Flow Taggers                                                                                                                                     |
-| `net24=208.219.88`                                     | All flows in the /24 subnet                                                                                                                                                                 |
-| `net16=208.219,port=smtp`                              | All smtp flows in the /16 subnet                                                                                                                                                            |
-| `ippair=192.168.1.8,59.92.15.145 (pipe separated IPs)` | All flows between the two IP pairs                                                                                                                                                          |
-| `router=10.0.17.180`                                   | All router flows                                                                                                                                                                            |
-| `ifin=1872`                                            | All the ingress flows in an Netflow Interface                                                                                                                                               |
-| `ifout=1872`                                           | All the egress flows in a Netflow Interface.Combine with `router=` or specify router along with the interface in interface key format such as `ifout=10.0.17.180_1872` to see egress flows. |
-| `interface=1872`                                       | All flows in an Interface                                                                                                                                                                   |
+With quick search you can explore flows simply in two steps.  
+**Step 1**: Select a time frame from the [*Time Selector*](/docs/ug/ui/elements#time-selector) to narrow down the flow data to the relevant time interval.  
+**Step 2**: Just enter *Search query* in the form of search expression like *field=value,field=value,...* The supported fields include *srcip,destip,ip,net16,n2t24*. The complete list of supported fields can be obtained by clicking on the question mark icon against the *Search query* field.
 
-#### Advanced Search : Use a Form
 
-Flip to the Advanced Search tab and fill out one or more of the following fields. The direct search method described above allows you to search by many more fields.
+
+
+
+Some common examples of search expressions are :
+
+| Field                                                  | Description                                            |
+| ------------------------------------------------------ | ------------------------------------------------------ |
+| `srcip=208.219.88.129,destip=119.10.181.22`            | All flows between two ips                              |
+| `ip=208.219.88.129`                                    | Match both source and destination ip                   |
+| `port=5700`                                            | Port 5700                                              |
+| `proto=gre,ip=208.219.88.129`                          | GRE protocol and IP                                    |
+| `tag=UA`                                               | Flow tag has UA (Ukraine) if you’ve set up Flow Taggers|
+| `net24=208.219.88`                                     | All flows in the /24 subnet                            |
+| `net16=208.219,port=smtp`                              | All smtp flows in the /16 subnet                       |
+| `ippair=192.168.1.8,59.92.15.145 (pipe separated IPs)` | All flows between the two IP pairs                     |
+| `router=10.0.17.180`                                   | All router flows                                       |
+| `ifin=1872`                                            | All the ingress flows in an Netflow Interface          |
+| `ifout=1872`                                           | All the egress flows in a Netflow Interface.Combine with `router=` or specify router along with the interface in interface key format such as `ifout=10.0.17.180_1872` to see egress flows.                                                                                                 |
+| `interface=1872`                               	     | All flows in an Interface                              |
+
+### Advanced Search : Use a Form
+
+Flip to the Advanced Search tab suitable for in-depth analysis. Offers a wide range of search criteria enabling complex searches with multiple conditions. 
+
+Fill in the following fields for a flexible search.
+
+![](images/advancedsearch.png)
+*Figure: Advanced Search*
 
 | Field                  | Description                                                          |
 | ---------------------- | -------------------------------------------------------------------- |
 | IP Address             | Enter an IP or host name                                             |
-| Flow Tagger            | Enter the tag name                                                   |
 | Port                   | Enter an application name or port number *"Port-80 or http example"* |
+| IP Pair                | Enter two IPs separated by a comma eg 192.168.1.2,209.216.249.58     |
 | Protocol               | TCP UDP GRE IPSEC etc                                                |
-| Flow Source            | the router sending the flow                                          |
-| Interface Index        | the interface index                                                  |
-| From                   | From Time                                                            |
-| To                     | To Time                                                              |
+| Flow Tags              | Enter the tag name                                                   |
+
+Click on the *advanced search options* in the *advanced search* to get more search criteria including the following fields.
+
+![](images/advancedsearchoption.png)  
+*Figure: Advanced Search Options*
+
+| Field                  | Description                                                          |
+|------------------------|----------------------------------------------------------------------|
 | Source IP Address      | Enter the source IP eg 192.168.1.2                                   |
 | Destination IP Address | Enter the Destination IP eg 209.216.249.58                           |
 | Routers                | Select a router from the list of available routers                   |
-| Interface              | Select an interface from the list of availbale interfaces            |
+| Interface              | Select an interface from the list of availbale interfaces            |	
+| Display Flow Count     | Displays only specified number of flows eg 500                       |
 | Source Port            | Enter the value of the source port                                   |
 | Destination Port       | Enter the value of Destination port                                  |
-| IP Pair                | Enter two IPs separated by a comma eg 192.168.1.2,209.216.249.58     |
 | Cull Count             | Leave out the top ‘n’ flows from analysis                            |
-| Display Flow Count     | Displays only specified number of flows eg 500                       |
 | Search Flow Count      | Stops search if flows match this count eg 2000                       |
+| Show Router Interfaces | Shows router interfaces for each flow                                |
 
-![](images/Explore_flows_advanced.png)  
-*Figure: Explore flows-Advanced Search*
+## Results Summary
 
-## Using the Interactive Visualization
+The Search results for Flows are presented in terms of,
+
+1) [**Parallel Co-ords**](/docs/ug/tools/explore_flows#using-the-interactive-visualization): An interactive visualization based on parallel co-ordinates
+2) [**Activity Details**](/docs/ug/tools/explore_flows#activity-details): A summary of hosts and application by upload/download, peers
+3) [**Top Conversations**](/docs/ug/tools/explore_flows#top-conversations): A table showing top conversations
+4) [**Top 100 Matching Flows**](/docs/ug/tools/explore_flows#top-matching-flows): A table of raw flows
+
+> Only the first matching *Max Flows (default 10K)* are retrieved. Please narrow down your query to within this limit. Also see the [Export Flows](export_flows) and [Aggregate Flows](aggregate_flows) tools which work with larger matches and provide different functionality.
+
+
+
+
+### Using the Interactive Visualization
 
 Trisul features a streaming flow visualization based on the popular
 parallel co-ordinates paradigm. Search results are automatically
 streamed into the viz.
+
+![](images/exploreflows1.png)
+*Figure: Parallel Co-ords- Visualization of flow data*
 
 This is how you interpret the visualization
 
@@ -111,72 +137,115 @@ This is how you interpret the visualization
    groups
 8. Flows are colorized by groups in a control tuple
 
-Controls available
+Available controls include,
 
-| Feature        | Location                 | Description                                                                                                             |
-| -------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
-| Lock/Release   | Below each vertical axis | Click on release under a vertical axis to ignore the corresponding tuple                                                |
-| Colorize       | Below each vertical axis | Flows are colorized by source ip. You can change it to get a dramatically different view by looking at different angles |
-| Toggle Labels  | Top left                 | Show hide labels                                                                                                        |
-| Labels up/down | Top left                 | Push labels below the splines so you can view the flows better                                                          |
+| Feature              | Location                 | Description                                                  |
+| ---------------------| ------------------------ | ------------------------------------------------------------ |
+| Toggle Labels        | Top left                 | Show or hide labels                                          |
+| Labels to front/back | Top left                 | Position labels on the backside of the lines so you can view the flows better                                                                                                 |
+| Toggle Stats         | Top Left                 | Show or hide Statistics                                      |
+| Stats to front/back  | Top left                 | Position Stats on the backside of the lines so you can view the flows better                                                                                                     |
+| Weight Bytes         | Top Left                 | Expands the flow details                                     |
+| Weight Flows         | Top Left                 | Collapses the flow details                                   |
+| Options              | Top Left                 | Select the data items to display on the Parallel Co-ords     |
+| Lock/Release         | Below each vertical axis | Click on release under a vertical axis to ignore the corresponding tuple                                                                                              |
+| Colorize             | Below each vertical axis | Flows are colorized by source ip. You can change it to get a dramatically different view by looking at different angles                                                       |
 
-## Export to Excel
+#### Export as Report
 
-You can click on the “Export to XLSX” button to download the report into
-an Excel spreadsheet containing the same information in a spreadsheet.
+You can click on the “Download” button to download the report into a PDF or XLSX to Excel spreadsheet. The downloaded report contains,
 
-\- Host IPs
-
-\- Readable
-
-\- Flows
-
-\- Raw Sent Bytes
-
-\- Raw Recieved Bytes  
-
-\- Raw Total Bytes
-
-## Other Data Displayed
-
-Below the visualization you can find the following panels
+- Parallel Co-ords
+- Top Peers
+- Top Apps
+- Internal Hosts
+- External Hosts
+- Flow Taggers
+- Routers
+- Interfaces In
+- Interfaces Out
+- Top Conversations
+- Top Matching Flows (100)
 
 ### Activity Details
 
-1. Top peers — Peers (hosts) involved at either end of the flow
-2. Top Applications — Applications
-3. Internal hosts — Volume by interal hosts
-4. External hosts — Volume by external hosts
-5. Flow taggers — Volume by any tags you have created (see [Flow Taggers](/docs/ug/flow/tagger) )
-6. Routers — volume from each router
-7. Interfaces In — Volume of Inbound Flows from Interfaces
-8. Interfaces Out — Volume of Outbound Flows from Interfaces
+This section provides an overview of the network activity related to a searched IP address, including top communication partners, applications, internal and external hosts, flow tags, routers, and network interfaces used for incoming and outgoing traffic. 
 
-![](images/flow_activity.png)  
-*Figure: Flows*
+![](images/topflows.png)
+*Figure: Different tabs of flow activity details*
 
-### Raw Flows
+1. **Top peers**: Peers (hosts) involved at either end of the flow. Shows the top IP addresses that have communicated with the searched IP address. This helps identify frequent communication partners.
+2. **Top Applications**:  Displays the most commonly used applications or protocols (e.g., HTTP, FTP, SSH) associated with the searched IP address.
+3. **Internal hosts**: Lists internal IP addresses that have communicated with the searched IP address.
+4. **External hosts**: Shows external IP addresses that have communicated with the searched IP address.
+5. **Flow taggers**: Displays tags or labels assigned to flows related to the searched IP address, helping identify specific types of traffic. (see [Flow Taggers](/docs/ug/flow/tagger) )
+6. **Routers**: Shows the routers through which traffic to/from the searched IP address has passed.
+7. **Interfaces In**: Displays the network interfaces (e.g., Ethernet, Wi-Fi) used for incoming traffic related to the searched IP address.
+8. **Interfaces Out**: Displays the network interfaces (e.g., Ethernet, Wi-Fi) used for outgoing traffic related to the searched IP address.
 
-A table containing the top (by volume) raw flows that matched your
-criteria. You can drill down further in the following manner by clicking
-on the “Options” button near each flow
+### Top Conversations
 
-| Feature                          | Location            | Description                                         |
-| -------------------------------- | ------------------- | --------------------------------------------------- |
-| Flow details                     | Options menu        | More details about the flow                         |
-| URLs in flow                     | Options menu        | URL resources for this flow (HTTP only)             |
-| Download PCAP                    | Button on top right | Download all the flows shown as a single PCAP       |
-| Quick PCAP view                  | Options menu        | View first 50K bytes of PCAP in hex and text format |
-| In this conversation             | Options menu        | Get all flows between these two hosts               |
-| New search for Src IP            | Options menu        | Get all flows from and to the Source IP             |
-| New search for Dest IP           | Options menu        | Get all flows from and to the Dest IP               |
-| Add filter Src IP                | Options menu        | Filters flows only from source IP                   |
-| Add filter Dest IP               | Options menu        | Filters flows only from destination Ip              |
-| Add filter Src Port              | Options menu        | Filters flows only from source port                 |
-| Add filter Dest port(http,https) | Options menu        | Filters flows only from destination port            |
+A conversation represents a set of related flows between two devices (example, a series of requests and responses). *Top Conversations* shows the most significant network conversations involving the searched IP address. 
 
-![](images/explore_flows_options.png)  
-*Figure: Explore Flows-Options*
+![](images/topconversations.png)
+*Figure: Top Conversations*
+
+This section displays the top conversations that involve the searched IP address, including:
+- Source IP
+- Destination IP
+- Application
+- NBAR/APPID if any
+- Volume
+
+You can click on the Toggle button on the upper right hand side to show or hide labels in the search results table.
+
+
+
+### Top Matching Flows
+
+A flow represents a single connection or session between two devices (example, a client-server interaction). Top Matching Flows contains a table of top raw flows (by volume) that matched your criteria. 
+
+![](images/topflows.png)
+*Figure: Top 100 Matching Flows*
+
+This section shows the top flows that involve the searched IP address, including:
+| Columns            | Description                                                                                |
+|--------------------|--------------------------------------------------------------------------------------------|
+| Protocol           | The network protocol used for the flow (example, TCP, UDP, ICMP, etc.)                     |
+| Source IP          | The IP address of the device that initiated the connection                                 |
+| Source Port        | The port number used by the source device to establish the connection                      |
+| Destination IP     | The IP address of the device that received the connection                                  |
+| Destination Port   | The port number used by the destination device to receive the connection                   |
+| Router             | The router or network device that forwarded the traffic                                    |
+| Interface In       | The network interface on the router where the traffic entered                              |
+| Interface Out      | The network interface on the router where the traffic exited                               |
+| Volume             | The total amount of data transferred in bytes (or bits) for the flow                       |
+| Start Time         | The timestamp when the flow started                                                        |
+| Duration           | The length of time the flow was active                                                     |
+| Probe              | The probe or sensor that collected the network traffic data                                |
+| Tags               | Custom tags applied to the flow for filtering, categorization, or analysis (example, "malware", "file-transfer", etc.)                                                                                 |
+
+#### Flow Options
+
+You can drill down further in the following manner by clicking on the *Options* button on the right hand side against each flow.
+
+![](images/topflowsoptions.png)
+*Figure: Options for each Top flow*
+
+| Feature                          |  Description                                        |
+| -------------------------------- | ----------------------------------------------------|
+| Flow details                     | More details about the flow                         |
+| URLs in flow                     | URL resources for this flow (HTTP only)             |
+| Quick PCAP view                  | View first 50K bytes of PCAP in hex and text format |
+| Download PCAP                    | Download all the flows shown as a single PCAP       |
+| In this conversation             | Get all flows between these two hosts               |
+| New search for Src IP            | Get all flows from and to the Source IP             |
+| New search for Dest IP           | Get all flows from and to the Dest IP               |
+| Add filter Src IP                | Filters flows only from source IP                   |
+| Add filter Dest IP               | Filters flows only from destination Ip              |
+| Add filter Src Port              | Filters flows only from source port                 |
+| Add filter Dest port(http,https) | Filters flows only from destination port            |
+
 
 ## Per Hop Flow Analysis
 
