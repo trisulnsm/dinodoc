@@ -78,7 +78,6 @@ The right side options menu contains the following options
 * Delete - delete this mapping entirely
 
 
-
 ## Bulk import from CSV format
 
 You can also import an entire customer database at once via a CSV file. 
@@ -89,7 +88,7 @@ The CSV format is shown here, notice the header for fields.
 
 *Figure: CSV file sample* 
 
-A sample working CSV file can be downloaded from here [Sample_IPDR_Customer_Import.CSV](/assets/SAMPLE_IPDR_CUSTOMER_SUBNET_MAPPINGS.csv) 
+A sample working CSV file can be downloaded from here [Sample_IPDR_Customer_Import.CSV](/data/SAMPLE_IPDR_CUSTOMER_SUBNET_MAPPINGS.csv) 
 
 You can edit the information as needed.
 

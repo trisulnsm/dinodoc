@@ -22,11 +22,6 @@ The user login is for all other operations like viewing and scheduling
 reports, packet analysis, viewing alerts, and pretty much everything
 else a normal operator would do on a regular basis.
 
-> #### Trisul 7.0 New
-> 
-> This splitting of web interface based on user type is new in Trisul
-> 6.0.  
-> All the operations in this page require an admin user.
 
 ## Create a New User
 
@@ -34,13 +29,13 @@ Login as `admin` user to create a new user
 
 :::note 
 
-Select Web Admin -\> Manage -\> Users
+Select Web Admin &rarr; Manage &rarr; Users
 
 :::
 
-\# A list of current users is shown  
-\# Click **Create a new user** button  
-\# Fill up details below
+* A list of current users is shown  
+* Click **Create a new user** button  
+* Fill up details below
 
 | Field                | Description                                                         |
 | -------------------- | ------------------------------------------------------------------- |
@@ -50,9 +45,9 @@ Select Web Admin -\> Manage -\> Users
 | LDAP Login           | User can use [LDAP](/docs/ug/webadmin/ldap_login) password to login |
 | Password             | Password for user                                                   |
 | Password Again       | Repeat the password again                                           |
-| Allow multiple Login | Allow concurrent login option to user                               |
+| Allow multiple Login | Allow concurrent login option to user. The default is `true` which means concurrent logins are allowed. <br/>When set to `false`  If a user logs in with an ID that is already logged in, the older login session will be terminated.|
 | Default Home Page    | User will be redirected to the page after successfull login         |
-| Default Dashboard    | When user logs in he/she is taken directly to this dashboard)       |
+| Default Dashboard    | When user logs in he/she is taken directly to this dashboard |
 | Allowed Context      | Restrict user to this context only                                  |
 
 > For LDAP Login User Name should be LDAP filter attribute value.  
@@ -65,7 +60,7 @@ Login as `admin` user to create a new user
 
 :::note navigation
 
-Select Web Admin -\> Manage -\> Users
+Select Web Admin &rarr; Manage &rarr; Users
 
 :::
 
@@ -89,7 +84,7 @@ Login as `admin` user to create a new user
 
 :::note navigation
 
-Select Web Admin -\> Manage -\> Users
+Select Web Admin &rarr; Manage &rarr; Users
 
 :::
 

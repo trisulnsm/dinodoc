@@ -1,0 +1,5 @@
+Subnet/IP,Cust Name,Address,Email,Phone No ,Alt Phone No,User/Cust ID
+192.168.1.1/24,Unleash Networks,"Suite 445 ,No 51, Level 4, Tower A, Ratha Tek Meadows Rd, Elcot Sez, Sholinganallur, Chennai, Tamil Nadu 600119",test@domain.com,9999999999,8888888888,UNPL123
+192.168.1.2/25,Unleash Networks,"Suite 445 ,No 51, Level 4, Tower A, Ratha Tek Meadows Rd, Elcot Sez, Sholinganallur, Chennai, Tamil Nadu 600119",test@domain.com,9999999999,8888888888,UNPL123
+10.10.10.10,Unleash Networks,"Suite 445 ,No 51, Level 4, Tower A, Ratha Tek Meadows Rd, Elcot Sez, Sholinganallur, Chennai, Tamil Nadu 600119",test@domain.com,9999999999,8888888888,UNPL123
+172.18.1.1/24,Trisul,"Suite 445 ,No 51, Level 4, Tower A, Ratha Tek Meadows Rd, Elcot Sez, Sholinganallur, Chennai, Tamil Nadu 600119",default@test.com,7777777777,6666666666,NB12456

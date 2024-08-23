@@ -2,7 +2,7 @@
 sidebar_position: 10
 ---
 
-# Application Options
+# App Settings
 
 This page describes the web application settings.
 
@@ -12,7 +12,7 @@ To access application setting, Login as admin and,
 
 :::note navigation
 
-Select WebAdmin Manage -\> App Settings
+Select Web Admin &rarr; Manage &rarr; App Settings
 
 :::
 
@@ -22,8 +22,8 @@ Select WebAdmin Manage -\> App Settings
 
 ## UI
 
-| Option                            | Default Value | Description                                                                                                                                                                                                                                                 |
-| --------------------------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Option                            | Default Value | Description   |
+| --------------------------------- | ------------- | --------------|
 | Explore Flows Max Items           | 2000          | When retrieving flows stop when these many flows are reached. All flow based calculations will be done using these many flows. The next parameter *Explore Flows Show In Tables* specifies how many of these will show up in raw flow tables on the web UI. |
 | Flows shown in tables             | 100           | Show these many ‘top flows’ in raw flow tables.                                                                                                                                                                                                             |
 | Flow Legs Correlation             | No            | Enable correlation of same flow reported by multiple Netflow devices                                                                                                                                                                                        |
@@ -64,7 +64,7 @@ configure a proxy server.
 #### Test it
 
 - Login as admin
-- Go to *Webadmin \> Manage \> Apps*
+- Go to *Webadmin &rarr; Manage &rarr; Apps*
 - If you get a list of packages without the error “Check your internet
   connection error”, the connection is working.
 
@@ -105,7 +105,7 @@ configure a proxy server.
 
 | Option                        | Default Value | Description                                                                                                                      |
 | ----------------------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| Conversation Chart Ring items | 10            | Number of peers to be shown in the conversation ring. This chart appears in the ***Tools -\> Investigate IP Activity*** analysis |
+| Conversation Chart Ring items | 10            | Number of peers to be shown in the conversation ring. This chart appears in the ***Tools -&rarr; Investigate IP Activity*** analysis |
 | Show data value tooltips      | false         | Show timeseries data point as a tooltip                                                                                          |
 | Show Percentile               | 0             | Show a 95th percentile line on charts. Enter 98 to show 98th percentile, 0 to disable                                            |
 | Enable Animation              | true          | Show animation while rendring chart                                                                                              |
@@ -115,7 +115,7 @@ configure a proxy server.
 
 | Option                            | Default Value | Description                                                                                                                                                           |
 | --------------------------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Default items in Top-N Dashboards | 10            | All Top-N starts show these many by default, with a “More” button to expand.                                                                                          |
+| Default items in Top-N Dashboards | 10            | All Top-N starts show these many by default, with a “More” button to expand. |
 | Show module description           | Yes           | A description if shown below each module to help you understand what is being shown. If you are a power user and would like to hide this text, then set this to False |
 | Show help tips for menu items     | Yes           | A tooltip is shown for menu items to help you learn about the various options. You can turn these off if you are already familiar with the UI                         |
 | Show country flags for IPs        | true          | Show country flags for IPs in dashbaord                                                                                                                               |
