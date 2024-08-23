@@ -78,7 +78,6 @@ The right side options menu contains the following options
 * Delete - delete this mapping entirely
 
 
-
 ## Bulk import from CSV format
 
 You can also import an entire customer database at once via a CSV file. 
