@@ -60,7 +60,7 @@ The AAA userid can be stored by two means
  - Real Time - example via SYSLOG records
  - Logs - from RADIUS LOG dumps processedby `trisul_aaaing`   
 
-For RealTime user id use the User ID field in the [Submit Query form](submit_query)
+For RealTime user id use the User ID field in the [Submit Query form](submit-queries)
 
 :::
 
