@@ -18,5 +18,6 @@ Trisul further enhanced the reporting framework that consists of two reporting s
 ## Report Time
 
 For each report type, you can easily select a number of predefined time windows using a [*Time Selector*](/docs/ug/ui/elements#time-selector)
+![](images/reporttime.png)
 
 
