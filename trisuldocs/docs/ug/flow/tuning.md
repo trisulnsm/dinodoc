@@ -2,20 +2,16 @@
 sidebar_position: 04
 ---
 
-# Tuning Options
+# Settings
 
 This section describes options available to tweak flow handling.
 
-## Packet Capture vs NetFlow
+:::note storing all flows and disk space 
 
-The primary differences between them are :
+The default setting is to store ALL flows regardless of size. This works great for security conscious customers but it can eat up quite a bit of disk space for large customers.  Using the Volume Cutoff Bytes parameter you can greatly reduce disk requirements. 
 
-| Packet capture mode   | Netflow mode    |
-| ---------------------- | ------------ |
-| reconstructs TCP sessions from network traffic | uses uni-directional netflow records to construct a single bi-directional one |
-| creates and stores a single bi-directional flow record | de-duplicates by pinning a flow to the first router reporting it |
-| flows are subordinates to traffic metering because we meter each packet directly  | traffic metering is subordinate to flows because we extract metering information from flows |
-| reassembles TCP flows and extracts resource identifiers and additional traffic metering | not available  |
+:::
+
 
 ## Optimize Flow Handling
 

@@ -41,14 +41,14 @@ Select Web Admin &rarr; Manage &rarr; Users
 | -------------------- | ------------------------------------------------------------------- |
 | User Name            | The long name of user                                               |
 | Name                 | Login name for user, no spaces, keep it short                       |
-| Role                 | Webtrisul user Roles .See ” Roles”:userroles.html section for more  |
+| Role                 | Webtrisul user Roles .See [Roles](userroles) section for more  |
 | LDAP Login           | User can use [LDAP](/docs/ug/webadmin/ldap_login) password to login |
 | Password             | Password for user                                                   |
 | Password Again       | Repeat the password again                                           |
 | Allow multiple Login | Allow concurrent login option to user. The default is `true` which means concurrent logins are allowed. <br/>When set to `false`  If a user logs in with an ID that is already logged in, the older login session will be terminated.|
-| Default Home Page    | User will be redirected to the page after successfull login         |
-| Default Dashboard    | When user logs in he/she is taken directly to this dashboard |
-| Allowed Context      | Restrict user to this context only                                  |
+| Default Home Page    | If set, when user logs in he/she is taken to this page. Any page not just Dashboard can be set as the Default Home Page. The user can also set this themselves by pressing the Home :house: icon. |
+| Default Dashboard    | If set, When user logs in he/she is taken directly to this dashboard. If Default Home Page is also set, that has a higher priority and that is used instead. |
+| Allowed Context      | Restrict user to these selected contexts only|
 
 > For LDAP Login User Name should be LDAP filter attribute value.  
 > For Example if you specified `Email` as filter attribute in LDAP domain
