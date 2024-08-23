@@ -60,16 +60,16 @@ of it.
 
 | Flow Tracker    | Description                                                                                   |
 | --------------- |---------------------------------------------------------------------------------------------  |
-| Traffic         | Highest volume                                                                                |
-| Long Lived      | Longest duration                                                                              |
+| Traffic         | Overall volume of network traffic                                                             |
+| Long Lived      | Connections with the longest dura                                                             |
 | Transferred-Out | Highest volumes transferred **out** your network                                              |
-| Transferred-In  | Highest volumes transferred **into** of your home network                                     |
-| Local Traffic   | 																							  |
-| Badfellas Marked| 																							  |
-| Low Volume  	  | 																							  |
+| Transferred-In  | Highest volumes transferred **into** your home network                                        |
+| Local Traffic   | Traffic within your local network															  |
+| Badfellas Marked| Suspicious or Malicious traffic																  |
+| Low Volume  	  | Connections with minimal data transfer														  |
 | Filter Failed	  | 																							  |	
-| Payload Xfer Out| Highest TCP Payload volume transferred **out of** your network. Does not include TCP handshake packets                                                                                                           |
-| Payload Xfer In | Highest TCP Payload transferred **into** your home network. Does not include TCP handshake packets                                                                                                           |
+| Payload Xfer Out| Highest volume of TCP Payload data transferred **out of** your network. Does not include TCP handshake packets                                                                                                 |
+| Payload Xfer In | Highest volume of TCP Payload data transferred **into** your home network. Does not include TCP handshake packets                                                                                                 |
 
 
 ## Custom Trackers
