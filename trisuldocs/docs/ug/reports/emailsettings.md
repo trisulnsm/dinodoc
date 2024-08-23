@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Setup E-Mail
@@ -54,7 +54,7 @@ The following edit window will open up where you can find a *Test it!* window on
 
 Enter an email address on the “Target Email ID” and click Send a Test Email.
 
-## Configure target email address
+## Configure Target Email Address
 
 Once you have configured and tested the email address for the reports to be "sent from" now lets see how to configure the target email address to automatically email the scheduled reports.
 

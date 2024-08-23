@@ -16,6 +16,41 @@ flows’. Those are flows transferring a huge volume of data. But as you
 shall see below this is not the only type of tracker. Flow trackers are
 also necessary for you to use [flow tracker alerts](/docs/ug/alerts/ft).
 
+This section outlines the number of things you can do with *Flow Trackers*. With *Flow Trackers* you can:
+1) View: View flow data and analytics.
+2) Manage: Manage flow tracking configurations and settings.
+3) Create: Create custom flow tracking profiles and criteria.
+
+## View Flow Trackers
+To **View** *Flow Trackers*
+:::info Navigation
+Go to Tools-> Flow Trackers
+:::
+![](images/viewflowtrackers.png)  
+*Figure: View top flows based on certain criteria*
+Once you have landed on the *Flow Trackers* page as shown in the sample, you can view the flows in three steps.
+Step 1: **Select a Time Frame** from the [*Time Selector*](/docs/ug/ui/elements#time-selector) to narrow down the flow data to a relevant interval.
+Step 2: **Specify Max flows to retrieve** allowing you to focus on the most significant or relevant flows, and avoid information overload.
+Step 3: **Select a Flow Tracker** to view flows that match specific criteria, such as top talkers, bandwidth usage, or application-specific traffic, enabling targeted analysis and insights.
+
+
+To **Manage***Flow Trackers*,
+
+:::info navigation
+Go to Tools-> Flow Tracker-> Manage Flow Trackers
+:::
+The following *Flow Trackers* window containing streaming snapshots of various types of flows
+![](images/flowtrackers.png)  
+*Figure: Flow Trackers List*
+
+To **Create** a new *Flow Tracker*,
+:::info navigation
+Go to Tools-> Flow Tracker-> Manage Flow Trackers-> Create a New Flow Tracker
+:::
+![](images/flowtracker.png)
+
+There are Trisul built in trackers for quick access and you can also create your own flow trackers specifying required criteria.
+
 ## Built in Trackers
 
 The following flow trackers are built in. You may create your own on top
@@ -25,14 +60,17 @@ of it.
 
 | Flow Tracker    | Description                                                                                   |
 | --------------- |---------------------------------------------------------------------------------------------  |
-| Volume          | Highest volume                                                                                |
+| Traffic         | Highest volume                                                                                |
 | Long Lived      | Longest duration                                                                              |
-| Transferred-In  | Highest volumes transferred **into** of your home network                                     |
 | Transferred-Out | Highest volumes transferred **out** your network                                              |
-| Payload-In      | Highest TCP Payload transferred **into** your home network. Does not include TCP handshake packets                                                                                                           |
-| Payload-Out     | Highest TCP Payload volume transferred **out of** your network. Does not include TCP handshake packets                                                                                                           |
-| Keys            | Flows involving specific hosts or subnets or applications                                     |
-| NOT Keys        | Flows not involving specific hosts or subnets or applications                                 |
+| Transferred-In  | Highest volumes transferred **into** of your home network                                     |
+| Local Traffic   | 																							  |
+| Badfellas Marked| 																							  |
+| Low Volume  	  | 																							  |
+| Filter Failed	  | 																							  |	
+| Payload Xfer Out| Highest TCP Payload volume transferred **out of** your network. Does not include TCP handshake packets                                                                                                           |
+| Payload Xfer In | Highest TCP Payload transferred **into** your home network. Does not include TCP handshake packets                                                                                                           |
+
 
 ## Custom Trackers
 
