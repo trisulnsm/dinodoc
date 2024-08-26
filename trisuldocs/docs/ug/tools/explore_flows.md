@@ -171,7 +171,7 @@ You can click on the “Download” button to download the report into a PDF or 
 
 This section provides an overview of the network activity related to a searched IP address, including top communication partners, applications, internal and external hosts, flow tags, routers, and network interfaces used for incoming and outgoing traffic. 
 
-![](images/topflows.png)
+![](images/activitydetails.png)
 *Figure: Different tabs of flow activity details*
 
 1. **Top peers**: Peers (hosts) involved at either end of the flow. Shows the top IP addresses that have communicated with the searched IP address. This helps identify frequent communication partners.
