@@ -26,7 +26,7 @@ The following *Search criteria* form opens up with the [*Hide/ Show Search Form*
 
 *Figure: Search Key Space Tool*
 
-You can begin your search in the *Search Key Space* form by populating the search criteria fields as in the following.
+You can begin your search in the *Search Key Space* form by populating the search criteria fields with the help of following fields and their descriptions.
 
 | Field                                              | Description													|
 |----------------------------------------------------|--------------------------------------------------------------|
