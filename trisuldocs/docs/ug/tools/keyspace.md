@@ -15,7 +15,7 @@ For example, Imagine you're a detective trying to catch the bad guys on the inte
 ## Using the Key Space Search Tool
 
 To access Trisul's *Search Key Space* tool,
-:::note navigation
+:::info navigation
 
 Select Tools -> Click Search Key Space
 

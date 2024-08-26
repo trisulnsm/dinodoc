@@ -17,7 +17,7 @@ Search Criteria in Trisul allows you to specify filters and conditions to narrow
 
 To specify a search criteria to explore flows,
 
-:::note navigation
+:::info navigation
 
 Go to Tools-> Explore Flows
 
