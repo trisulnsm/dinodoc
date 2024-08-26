@@ -98,7 +98,7 @@ Click on the *advanced search options* in the *advanced search* to get more sear
 | Search Flow Count      | Stops search if flows match this count eg 2000                       |
 | Show Router Interfaces | Shows router interfaces for each flow                                |
 
-## Results Summary
+## Explore Flows: Results Summary
 
 The Search results for Flows are presented in terms of,
 

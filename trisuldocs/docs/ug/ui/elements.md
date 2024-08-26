@@ -7,17 +7,20 @@ sidebar_position: 6
 This section contains a quick overview of the user interface elements.
 Besides the already explained user layout and admin layout elements, Trisul provides other essential interactive elements like Buttons, Forms, Search box, Tooltips and more. Lets dive in and explore where you can find all these user friendly elements in the Trisul dashboards and modules and how you can interact with them. 
 
-## Analysis Forms
+## Hide/ Show Search Form
 
-These forms have a blue top bar throughout the app.
+Throughout the app, forms featuring a distinctive *Hide/ Show search form* button on the top blue bar providing a consistent and intuitive interface for analysis and configuration.
 
-- You can collapse the form for analysis results.
-- You can expand the form to tweak your analysis.
-
-In the sample form below, you can notice the *Hide* button on the top
-right corner.
+In the sample form below, you can notice the *Hide* button on the top right corner. Click on the button for hide or show search form.
 
 ![](images/dashboards/hidesearchform.png)
+
+- **Collapse Form**  
+Click to minimize the form, hiding its contents and allowing you to focus on analysis results. This is ideal for when you want to view more data or focus on other aspects of the app.
+- **Expand Form**  
+Click to restore the form to its full height, revealing its contents and enabling you to refine your analysis parameters. This is useful when you need to adjust settings or tweak your analysis.
+
+
 
 *Figure: Analysis Form Showing Hide Button*
 
@@ -197,3 +200,29 @@ You can choose from a range of pre-defined time ranges, including:
 - Last month and more.
 
 Alternatively, you can specify a custom date range by selecting the *Custom Range* option, which allows for the selection of a specific period from the past.
+
+
+
+## Download Button
+
+This is one of the most commonly found UI elements across Trisul. Clicking on the *Download* button enables you to download the data for sharing, backup and archive.
+
+![](images/downloadbutton.png)  
+*Figure: Download button*
+
+You can export data, reports, or analytics in various formats like,  
+**PDF**: Downloads the data in Portable Document Format (PDF), suitable for printing or sharing.  
+**XLSX**: Downloads the data in Microsoft Excel format (XLSX), suitable for editing or analysis.  
+**CSV**: Downloads the data in Comma Separated Values format (CSV), suitable for importing into other applications or analysis.  
+
+## Toggle Labels
+
+
+*Toggle Labels* button in Trisul is like a toggle switch to display the labels of keys in the search results or downloaded file.
+>Note that the resolved names or labels will be displayed only if the names are already assigned.
+
+![](images/togglelabels.png)  
+*Figure: Toggle Labels*
+
+When enabled, the search result or downloaded file will include labels. When disabled, only the raw data i.e., the actual keys without labels is displayed.
+
