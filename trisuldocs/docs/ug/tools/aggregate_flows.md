@@ -75,7 +75,3 @@ These data sets provide a comprehensive view of network activity, facilitating i
 - **Router**: The router device handling the flows for the specific tuple, providing context for network topology and traffic routing.
 
 Each field in the tuple tab is sortable, enabling users to rearrange data in ascending or descending order by clicking the adjacent arrow(up/down) button, for flexible data analysis and visualization.
-
-
-
-
