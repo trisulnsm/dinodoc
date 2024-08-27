@@ -4,18 +4,16 @@ sidebar_position: 7
 
 # Investigate IP Activity
 
-Use this tool to analyze host activity over a timeframe. Trisul will
-look at traffic, flows, and alerts and produce a number of charts and
-tables summarizing the activity.
+Use this tool to analyze host activity over a timeframe. Trisul will look at traffic, flows, and alerts and produce a number of charts and tables summarizing the activity.
 
-![](images/Investigate_IP.png)  
+![](images/investigateipactivity.png)  
 *Figure: Investigate IP*
 
 ## How to Use
 
 :::note navigation
 
-To access select Tools-\> Investigate IP Activity
+To access select Tools-> Investigate IP Activity
 
 :::
 
