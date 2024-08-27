@@ -86,10 +86,15 @@ Trisul supports a number of intuitive chart surfaces that render the statistical
 
 ### Module Icons
 
+Module icons are small icons that appear atop search results or modules that contain the visual graphics like charts. Module icons provide a visual interface to facilitate interactive functionalities, thereby allowing you to engage with the chart data and perform various operations to extract deeper insights.
+
+These are the module icons that can be found in various modules across the platform.
+
 ![](images/moduleicons.png)
 
 *Figure: Module Icons*
 
+Below you can find the module icons explained from right to left of the sample image.
 - **PDF**- Click on the PDF icon on the top righ corner of the module to download the chart data in PDF.
 
 - **Key Dashboard**- Click on the Key Dashboard icon to view and edit the Key details of this module
@@ -102,24 +107,32 @@ Trisul supports a number of intuitive chart surfaces that render the statistical
 
 ### Legend Table
 
-Click on a chart item in the **legend** area to `show/hide` the item
-
-For example in the following chart both Inbound and Outbound items in the legend are enabled.
+*Legend tables* are interactive chart legends where you can click on a chart item in the legend area to toggle its visibility, showing or hiding the corresponding data series in the chart.
 
 | ![](images/legendtable.png) |
 | --------------------------- |
 
 *Figure: Showing Legend Table in a Module*
 
-You can click on any of the items like Inbound or inbound in the legend area to **hide or unhide** that data from the chart like in these examples.
+
+Example: In the chart, both Inbound and Outbound items are initially enabled. Clicking on either item in the legend will hide or show its associated data.
 
 | ![](images/legend2.png) | ![](images/legend3.png) |
 | ----------------------- | ----------------------- |
 
 *Figure: Showing Hide/Unhide data from Chart using Legend Table Meters*
 
-Click on the `Expand Legend` spot to get a detailed legend  
-Auto refresh the charts via Ajax calls
+**Expand Legend**  
+Click to view a detailed legend, providing additional information.
+
+**Auto Refresh**  
+Charts are updated automatically via Ajax calls, ensuring real-time data visualization.  
+*Legend Table* Includes statistical summaries for each network traffic search result, such as:
+- Max
+- Min
+- Average
+- Total
+- 95th percentile
 
 ### Tooltip
 
