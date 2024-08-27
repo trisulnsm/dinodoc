@@ -23,6 +23,8 @@ The following *search criteria* window opens up with a [*Hide/ Show Search Form*
 
 You can begin your search in the *Long term traffic* form by populating the search criteria fields with the help of the following fields and their descriptions.
 
+### Search Criteria
+
 | Field                                               | Description                                                 |
 | ----------------------------------------------------| ----------------------------------------------------------- |
 | CounterGroup                                        | Select a counter group to define the type of traffic data to display(example, ASN, Hosts, Apps, etc.)                                                                            |
