@@ -5,12 +5,7 @@ sidebar_position: 1
 
 # Explore Flows
 
-Fast general purpose search for flows that allows you to deeply inspect and analyze network traffic flows.   
-With *Explore Flows* you can:
-- Investigate individual network flows in detail
-- Analyze packet-level data and netflow data for each flow
-- Identify potential security threats or performance issues
-- Visualize flow data to understand traffic patterns
+*Explore Flows* is a powerful, fast, and general-purpose search tool designed for in-depth inspection and analysis of network traffic flows. This comprehensive feature enables users to scrutinize individual network flows, examine packet-level and netflow data, and identify potential security threats or performance issues.  
 
 ## How to Search for Flows
 Search Criteria in Trisul allows you to specify filters and conditions to narrow down network traffic data and focus on specific aspects of interest.
@@ -22,7 +17,6 @@ To specify a search criteria to explore flows,
 Go to Tools-> Explore Flows
 
 :::
-
 
 
 You have two ways to enter the search criteria
