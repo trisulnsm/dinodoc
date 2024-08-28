@@ -1,6 +1,6 @@
 # Trisul Edges – Streaming Graph Analytics
 
-*Trisul Edge*brings the power of graph analytics to the Trisul platform. It lets you discover relationships between various metric items. This section introduces the*Trisul Edge*feature and then describes how to use the Trisul User Interface to explore these relationships
+*Trisul Edge* brings the power of graph analytics to the Trisul platform. It lets you discover relationships between various metric items. This section introduces the *Trisul Edge* feature and then describes how to use the Trisul User Interface to explore these relationships
 
 import DocCardList from '@theme/DocCardList';
 
@@ -8,7 +8,7 @@ import DocCardList from '@theme/DocCardList';
 
 ## Introducing Trisul Edges
 
-Trisul is a real time streaming analytics platform. This means we use streaming algorithms to process data in a*one pass*manner rather than the traditional way of storing data in Lucene (Elastic Search) or aRDBMS(say PostGres) and processing searches and queries on demand. A Trisul Probe can capture hundreds of metrics from network traffic but until today it did not capture how the*metrics were related to each other*beyond the flow connection. We could tell that metrics for Protocol, Ports, IP Addresses were related to a flow, but we could not tell that aTLSCipher Suite used was related to an IP Address, aTLSOrganization, or a Country. In previous releases , we used something called a “Flow Tagger” that used the*network flow*as a anchor entity which you could enrich with tags.
+Trisul is a real time streaming analytics platform. This means we use streaming algorithms to process data in a *one pass* manner rather than the traditional way of storing data in Lucene (Elastic Search) or aRDBMS(say PostGres) and processing searches and queries on demand. A Trisul Probe can capture hundreds of metrics from network traffic but until today it did not capture how the *metrics were related to each other* beyond the flow connection. We could tell that metrics for Protocol, Ports, IP Addresses were related to a flow, but we could not tell that aTLSCipher Suite used was related to an IP Address, aTLSOrganization, or a Country. In previous releases , we used something called a “*Flow Tagger*” that used the *network flow* as an anchor entity which you could enrich with tags.
 
 ![](./images/edge-intro.png)
 *Figure: Edge Graph Showing Flow Taggers*
@@ -21,8 +21,8 @@ When you enable Trisul Edges, as Trisul processes packets, it generates a new ty
 
 An Edge connects two Vertices. In Trisul the rules are
 
-- Vertices are keys that belong to a Counter Group or an Alert Group
-- Edges are connections between vertices
+- **Vertices** are keys that belong to a Counter Group or an Alert Group
+- **Edges** are connections between vertices
 
 Consider the following graph.
 
@@ -33,7 +33,7 @@ In Trisul you start traversing graphs from a “root vertex”. In the image sho
 
 ## Limits
 
-Trisul uses a memory cap on the number of allowed neighbors per vertex. This is to prevent an explosion of edges for vertices with very large cardinality such as http protocol. Imagine how many IPs would be neighbors of theHTTPprotocol.
+Trisul uses a memory cap on the number of allowed neighbors per vertex. This is to prevent an explosion of edges for vertices with very large cardinality such as http protocol. Imagine how many IPs would be neighbors of the HTTP protocol.
 
 The limits currently in effect are :
 
