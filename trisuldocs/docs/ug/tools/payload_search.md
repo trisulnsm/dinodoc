@@ -1,10 +1,9 @@
 ---
-sidebar_position: 8
+sidebar_position: 7
 ---
 
 # Payload Search
-
-
+<span class="badge badge--primary">PCAP Mode Only</span>  
 
 The *Payload Search* Tool is a feature in Trisul that enables searching of network traffic for specific patterns, leveraging full packet capture capabilities. This section provides a comprehensive guide to using the *Payload Search* Tool, including its search capabilities and functionality.
 
