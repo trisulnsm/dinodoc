@@ -89,7 +89,10 @@ Configuring Content Inspection Width is beneficial when working with large PCAP 
 
 Upon executing a search query, the *Payload Search* Tool displays a list of matching network flows in:  
 **Highlighted Pattern Context** : Visual indicators pinpointing the matched pattern within the packet payload, facilitating contextual understanding.  
-**Flow Metadata** : Relevant flow information, enabling informed decision-making regarding further investigation.  
+**Flow Metadata** : Relevant flow information, enabling informed decision-making regarding further investigation. 
+
+![](images/payloadsearch_searchresult.png) 
+*Figure: Payload Search- Search Result*
 
 Users can then select the **Download PCAP** option to retrieve the associated packet capture file for further detailed examination using specialized tools and offline investigation.
 
