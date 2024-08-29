@@ -4,28 +4,35 @@ sidebar_position: 5
 
 # Verifying packages
 
-All of ourDEBandRPMpackages are signed with ourGPGkey.
 
-All packages are signed by ourGPGpublic key, available athttp://trisul.org/pubkey.gpg
+Official Trisul package files (RPM and DEB) for Linux-based operating systems are signed with a GnuPG key available at https://trisul.org/pubkey.gpg
+
+This page describes how you can verify these package files to ensure 
+
+- These are created by Unleash Networks official build systems
+- They have not been tampered with
+
+
+
 
 ## Verify a rpm
 
 The steps are
 
-1. Import our public key`rpm --import http://trisul.org/pubkey.gpg`
+1. Import our public key`rpm --import https://trisul.org/pubkey.gpg`
 2. Verify using`rpm --checksig trisulpackage.rpm`
 
 Look for the OK message.
 
 A sample verify session would look like below
 
-```
-[root@localhost ~]# rpm --import http://trisul.org/pubkey.gpg
-[root@localhost ~]# rpm --checksig webtrisul-3.0.1065-0.el6.x86_64.rpm
-webtrisul-3.0.1065-0.el6.x86_64.rpm: rsa sha1 (md5) pgp md5 OK
+```bash
+[root@j1] rpm --import https://trisul.org/pubkey.gpg
+[root@j1] rpm --checksig webtrisul-7.0.2522-1.el8.x86_64.rpm
+webtrisul-7.0.2522-1.el8.x86_64.rpm: digests signatures OK
 ```
 
-TheRPMverification was successful if you see the status end with**pgp md5 OK**
+The RPM verification was successful if you see the  **OK**
 
 ## Verify a deb
 
@@ -39,16 +46,15 @@ The steps are :
 A sample verify session would look like below
 
 ```bash
-nsmdemo@ubu22:~$ wget http://trisul.org/pubkey.gpg 
+nsmdemo@ubu22:~$ wget https://trisul.org/pubkey.gpg 
 nsmdemo@ubu22:~$ gpg --import pubkey.gpg 
 gpg: key A6CC1B18: public key "Unleash Networks Support (UNPL) <info@unleashnetworks.com>" imported
 gpg: Total number processed: 1
 gpg:               imported: 1  (RSA: 1)
-nsmdemo@ubu22:~$ dpkg-sig --verify trisul_3.0.1316_i386.deb 
+nsmdemo@ubu22:~$ gpg --verify webtrisul_7.0.2522-jammy_amd64.deb 
 Processing trisul_3.0.1316_i386.deb...
-GOODSIG _gpgbuilder 3024CAB9A68659FE4E4E3A0639A67B00A6CC1B18 1367065944
+gpg: Good signature from "Unleash Networks Support (UNPL) <info@unleashnetworks.com>" [unknown]
 ```
 
-The output of dpkg-sig —verify must start withGOODSIG
+Look for the **"Good signature"** message. You might get a trust warning. This command simply verifies the package is signed with the correct key.
 
-The verification was successful if you see the status line start with**GOODSIG**

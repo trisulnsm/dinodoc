@@ -6,7 +6,10 @@ sidebar_position: 3
 
 Trisul packages can be uninstalled like any other linux package.
 
-Uninstalling Trisul will not harm the data or configuration.
+:::success[Data and config will be retained]
+Uninstalling Trisul will not harm the data or configuration. You may reinstall at any time to pick where you left off.
+:::
+
 
 ## Ubuntu Uninstall
 
@@ -18,9 +21,9 @@ apt-get remove trisul-probe trisul-hub webtrisul
 
 Other ways to uninstall
 
-1. using the meta package`apt-get remove 'trisul-full'`etc for each package
-2. using`apt-get remove trisul-probe`or
-3. using dpkg manually`dpkg -r trisul-probe`etc
+1. If you have installed using the `trisul-full` meta package.  To remove everything  `apt-get remove 'trisul-full'`  
+2. Uninstall a single package  `apt-get remove trisul-probe` 
+3. Using dpkg manually `dpkg -r trisul-probe` 
 
 ## CentOS/RHEL Uninstall
 
@@ -32,21 +35,13 @@ yum remove trisul-probe trisul-hub webtrisul
 
 Other ways to uninstall.
 
-1. using the meta package`yum group remove 'Trisul Full'`etc for each package
-2. using`yum remove trisul-probe`or
-3. usingRPMmanually`rpm -e trisul-probe`etc
+1. If you installed using the meta package 'Trisul-Full - use `yum group remove 'Trisul Full'` to remove it all
+2. Uninstall each package   `yum remove trisul-probe`
+3. Use RPM to uninstall each package `rpm -e trisul-probe`
 
 ## Resetting the database clean
 
-Resetting the database removes all the traffic and metrics collected but keeps the configuration. Use this option to “start over” with a clean DB.
 
-To reset the database use the trisulctl_probe/hub*reset context*tool.
+Uninstalling does not change the data or the configuration. If you wish to purge the data.  Do so before uninstall.
 
-The following example resets the the database.
-
-```bash
-trisulctl_probe 
-stop context default
-reset context default
-.. confirmation follows..
-```
+See [Cleaning the Database](/docs/ug/basicusage/cleanenv)
