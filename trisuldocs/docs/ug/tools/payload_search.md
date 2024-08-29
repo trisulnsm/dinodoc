@@ -87,14 +87,50 @@ Configuring Content Inspection Width is beneficial when working with large PCAP 
 
 ## Search Result
 
-Upon executing a search query, the *Payload Search* Tool displays a list of matching network flows in:  
-**Highlighted Pattern Context** : Visual indicators pinpointing the matched pattern within the packet payload, facilitating contextual understanding.  
-**Flow Metadata** : Relevant flow information, enabling informed decision-making regarding further investigation. 
+Upon executing a search query, the *Payload Search* Tool displays a list of matching network flows. 
 
 ![](images/payloadsearch_searchresult.png) 
 *Figure: Payload Search- Search Result*
 
-Users can then select the **Download PCAP** option to retrieve the associated packet capture file for further detailed examination using specialized tools and offline investigation.
+The search result data includes the following details.
+
+| Column         | Description                                                                                |
+|----------------|--------------------------------------------------------------------------------------------|
+| START TIME IST | The timestamp (in Indian Standard Time) when the match was found                           |
+| IP A           | The source IP address of the network packet that matched the search criteria               |
+| PORT A         | The source port number of the network packet that matched the search criteria              |
+| IP Z           | The destination IP address of the network packet that matched the search criteria          |
+| PORT Z         | The destination port number of the network packet that matched the search criteria         |
+| PROBE          | The name of the probe that captured the network traffic containing the match               |
+| MATCH          | A snippet of the payload that matched the search criteria, providing context for the match |                 
+
+Each column in the search result table are sortable, enabling users to rearrange data in ascending or descending order by clicking the adjacent arrow(up/down) button, for flexible data analysis and visualization.
+
+### Column Button
+
+The **Column button** on the upper right-hand corner of the search result table serves as a dropdown menu, that allows you to select and customize the columns displayed in the search results. You can choose from a range of available column options, thereby tailoring the display to include only the most relevant information for your specific needs.
+
+### Download PCAP button
+
+Users can then select the [**Download PCAP**](/docs/ug/ui/elements#download-pcap-button) option to retrieve the associated packet capture file for further detailed examination using specialized tools and offline investigation.
+
+### Drilldown Options
+
+By clicking on the drilldown button corresponding to each matching packet in the search results. You can access additional detailed information and perform further functions.
+
+![](images/drilldownoptions_pcap.png)  
+*Figure: Drilldown Options for Payload Search Result*
+
+The drilldown options include the following details.
+
+| Option                   | Description                                                                         |
+|--------------------------|-------------------------------------------------------------------------------------|
+| Flow Details             | Displays comprehensive metadata about the network flow, including endpoints, flow stats, timing, and netflow.
+| Packet Headers           | Shows the raw packet headers for the selected flow in strings, hexdump and Tshark   |
+| Download PCAP            | Allows you to download the PCAP for the selected flow
+| In this Conversation     | Displays all flows involving conversation of the original matching flow, providing context on other network activity related to this IP address.                                                    |
+| Involving SOurce IP      | Displays all flows involving the source IP address of the original matching flow, providing context on other network activity related to this IP address.                                          |
+| Involving Destination IP | Displays all flows involving the destination IP address of the original matching flow, providing context on other network activity related to this IP address.                                    |
 
 ## API Access
 
