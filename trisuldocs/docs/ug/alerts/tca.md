@@ -4,20 +4,22 @@ sidebar_position: 3
 
 # Threshold Crossing Alerts (TCAs)
 
+## Overview
+
 You can assign thresholds to any meter value. Trisul continuously 
 monitors the value of the traffic meter against the configured 
 thresholds and generates a “Threshold Crossing Alert” if the value 
 crosses the thresholds.
 
-### Examples
+**Examples**
 
 You can monitor a single Key or a Key Range. Some examples:
 
-1. monitor **DNS Port-53** traffic and raise an alert if it crosses 50kbps for 3 minutes
-2. monitor **IP Address 10.28.28.223** if it crosses 10Mbps for 5 minutes raise alert then CLEAR if it dips below 5 Mbps
-3. monitor **IP Range 10.28.9.0 to 10.28.10.255** raise alert if ANY IP in that range crosses 1 Gbps for 1 minute
+1. Monitor **DNS Port-53** traffic and raise an alert if it crosses 50kbps for 3 minutes
+2. Monitor **IP Address 10.28.28.223** if it crosses 10Mbps for 5 minutes raise alert then CLEAR if it dips below 5 Mbps
+3. Monitor **IP Range 10.28.9.0 to 10.28.10.255** raise alert if ANY IP in that range crosses 1 Gbps for 1 minute
 
-## High and Low Watermarks for Alerts
+### High and Low Watermarks for Alerts
 
 The two knobs you use are Watermarks and Sustained Intervals.
 
@@ -48,31 +50,35 @@ Note that :
 - The TCA fires only once even when multiple consecutive values are over the HI water mark
 - For a TCA to fire again, the values have to dip below the LO water mark and re-cross the HI water threshold again
 
-## Configuring
+## TCA Configuration
+
+You can configure a TCA by defining the threshold values for alerts to be generated with the following details.
 
 ### Creating a new TCA Based on Counter Group
 
-:::note navigation
+To create a new TCA, Login as *User*,
 
-Select Alerts → Threshold Crossing Alerts → Configure TCA
-
+:::info navigation
+Go to Alerts-> Threshold Crossing Alerts-> Configure-> New Threshold Crossing Alert
 :::
 
-1. Click **New Threshold Crossing Alerts** , which leads to the page whose fields are described below
+TCA configuration form opens up. Fill in the threshold conditions for alerts to be generated with the help of the following fields and their description.
 
 | FieldName                    | Optional |Description                                                         |
 | ---------------------------- | -------- | -------------------------------------------------------------------|
 | Name of the alert            |          | A name for this alert, this will show up on screen and reports     |
 | Target counter group         |          | Select the target counter group from the dropdown                  |
-| Target Key or Range          |          | The key or key range within the *target counter group* on which you want to create a TCA. You may enter a single key or a key range Single key You can enter this in either human readable format eg:Port-80, 192.168.1.33 or in Trisul key format: p-0050, C0.A8.00.01 Key range Enter the first and last key in the range inclusive using a tilde *~* or *to*. Example IP range : `10.18.18.0 ~ 10.18.18.255` or port range (1 to 1024) `1 to 1024` using the *to* keyword                                                           |
+| Target Key or Range          |          | The key or key range within the *target counter group* on which you want to create a TCA. You may enter a single key or a key range<br></br>- **Single key** You can enter this in either human readable format Example: Port-80, 192.168.1.33 or in Trisul key format: p-0050, C0.A8.00.01<br></br>- **Key range** Enter the first and last key in the range inclusive using a tilde *~* or *to*. Example IP range : `10.18.18.0 ~ 10.18.18.255` or port range (1 to 1024) `1 to 1024` using the *to* keyword                                                           |
 | Target Metric                |          | Meter within the counter group                                     |
-| Hi Water Mark                |          | High threshold mark. Eg: 10Mbps, 6Kbps, 2000. Default units = bytes/sec so if you just say 10M it would be interpreted as 10Mbps depending on the meter selected                       |
+| Hi Water Mark                |          | High threshold mark. Example: 10Mbps, 6Kbps, 2000.<br></br> Default units = bytes/sec so if you just say 10M it would be interpreted as 10Mbps depending on the meter selected                       |
 | Hi Water Sustained Intervals |          | TCA triggered if over Hi Water for this many intervals             |
 | Lo Water Mark                | optional | Low threshold mark                                                 |
 | Lo Water Sustained Intervals | optional | TCA cleared if below Lo Water for this many intervals              |
 | TCA Message                  |          | When the TCA fires or clears, this message is emitted. You can see this message on Trisul UI modules and on email alerts                                                               |
 
-## Example DNS TCA
+Upon filling all the threshold values, click *Create*
+
+## Example: DNS TCA
 
 This example creates a TCA when DNS traffic crosses **1.2Mbps** for 2 minutes and clears when it drops below **600Kbps**
 
@@ -88,28 +94,43 @@ This example creates a TCA when DNS traffic crosses **1.2Mbps** for 2 minutes an
 | Lo Water Sustained Intervals | 1                                                                       |
 | TCA Message                  | DNS traffic is double of expected at 1.2Mbps, action required team !    |
 
-## Viewing TCAs
+## View TCAs
 
 There are many methods to view, search and export TCAs.
 
-:::note navigation
+To view TCAs,
 
-Select Alerts → Threshold Crossing Alerts
-
+:::info navigation
+Go to  Alerts-> Select Threshold Crossing Alerts
 :::
 
 1. You will now see a table listing all the alerts grouped by alert type and count
 2. Clicking on the number seen under the **Count** column of an alert takes you to a more detailed view of the alerts
 
-![](image/tcasigid.png)
+![](image/tca1.png)
 
 *Figure: Showing counts of alerts generated for each TCA type*
 
+The details on the TCA table are described below.
+
+| Column            | Description                                                                             |
+| ----------------- | --------------------------------------------------------------------------------------- |
+| Count             | The number of times this threshold has been crossed                                     |
+| Latest Type       | Indicates whether the threshold crossing was due to a high or low watermark event       |
+| Latest Seen IST   | The timestamp (in Indian Standard Time) when the threshold was last crossed             |
+| Latest Target     | The *key* that crossed the threshold                                                    |
+| Name              | The name of the TCA                                                                     |
+| Latest Message    | The message associated with the latest threshold crossing event                         |
+| Thresholds        | The specific threshold values that triggered the alert                                  |
+| Probe             | The monitoring probe that detected the threshold crossing                               |
+| Option Button     | Click on the Option button and select Delete all. This deletes all the alerts fired under that TCA , but not the TCA itself                                                                             |
+
+
 ### Viewing Individual Alerts
 
-Clicking on alert count on a TCA will take you to the alerts view.
+Clicking on alert count on a TCA will take you to the list of individual alerts fired by that *Alert Group*.
 
-![](image/tcafired.png)
+![](image/tca2.png)
 
 *Figure: Showing list of fired and cleared alerts*
 
@@ -150,21 +171,6 @@ This module auto updates itself as new TCAs are generated. You can add this modu
 
 [How to add modules to dashboard](/docs/ug/ui/dashmod_intro)
 
-## Deleting TCAs
-
-The default approach of Trisul is not to delete anything. TCAs just 
-rollover as they age out. Yet if you wish to explicitly delete TCAs you 
-can use the following steps :
-
-:::note navigation
-
-Select Alerts → Threshold Crossing Alerts
-
-:::
-
-1. Click the **Delete all** icon under each TCA to delete it
-
-> This deletes all the alerts fired under that TCA , but not the TCA itself
 
 ## Automatically Emailing TCAs
 
