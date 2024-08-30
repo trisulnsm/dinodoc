@@ -111,7 +111,7 @@ Go to  Alerts-> Select Threshold Crossing Alerts
 
 *Figure: Showing counts of alerts generated for each TCA type*
 
-The details on the TCA table are described below.
+The subsequent Threshold crossing *Alert Group* Table presents the following detailed information:
 
 | Column            | Description                                                                             |
 | ----------------- | --------------------------------------------------------------------------------------- |
@@ -126,19 +126,51 @@ The details on the TCA table are described below.
 | Option Button     | Click on the Option button and select Delete all. This deletes all the alerts fired under that TCA , but not the TCA itself                                                                             |
 
 
-### Viewing Individual Alerts
+### Individual Alerts
 
-Clicking on alert count on a TCA will take you to the list of individual alerts fired by that *Alert Group*.
+With Individual Alerts you can perform the following three functions:
+1) [**View individual alerts**](/docs/ug/alerts/tca#view-individual-alerts)
+2) Using the [**Search Form**](/docs/ug/alerts/tca#search-form), filter indivial alerts based on certain search criteria 
+3) Using [**Drilldown**](/docs/ug/alerts/tca#drilldowns) button, perform in-depth analysis of each individual alert
 
-![](image/tca2.png)
+#### View Individual Alerts
 
+Clicking on alert count on a TCA *Alert Group*  table will take you to the list of individual alerts fired/cleared by that particular key and metric.
+
+![](image/tcaindividualalerts.png)  
 *Figure: Showing list of fired and cleared alerts*
 
-You can see the search form in this page
+The details that you can analyze on the individual alerts result are as follows:
+| Column            | Description                                                                           |
+|-------------------|---------------------------------------------------------------------------------------|
+| Type              | The type of alert triggered                                                           |
+| Priority          | The severity level of the alert                                                       |
+| Time IST          | The timestamp of hwne the alert was triggered in Indian STandard Time (IST)           |
+| Message           | A brief description of the alert                                                      | 
+| Current Value     | By how much the threshold limit has exceeded or reduced                               |
+| Configuration     | The threshold limits of the target *key*                                              |
+| Probe             | The monitoring probe that detected the threshold crossing                             |
 
-1. To query for specific alerts enter the time window and a regex to 
-   search for alerts with message matching a certain pattern. For example 
-   enter an IP address to pick all alerts from that IP address.
+- Each column in the search result table are sortable, where you can rearrange data in ascending or descending order by clicking the adjacent arrow(up/down) button, for flexible data analysis and visualization.
+- Click on the [download](/docs/ug/ui/elements#download-button) button at the top of the alerts to get the alert details downloaded in the form of PDF and XLSX. 
+- Clicking on the *Show all TCAs* button enables you to display the list of all Threshold Crossing Alerts configured from where yoou can again edit or delete that particular TCA.
+- You can click on the *Edit this TCA* button to edit that particulat Threshold Crossing Alert (TCA) that you are into.
+
+
+
+#### Search Form
+
+To facilitate targeted queries, a *search form* with [*Hide/Show Search Form*](/docs/ug/ui/elements#hide-show-search-form) option is provided, that allows you to specify a temporal range and a regular expression (*regex*) pattern to filter alerts.   
+
+![](image/searchform_tca.png)  
+*Figure: TCA Search Form*
+
+With this *search form* you can retrieve alerts with messages matching a particular pattern, such as extracting all alerts originating from a specific IP address by entering the corresponding IP address in the search field.
+
+#### Search Form Parameters
+
+[**Time Frame**](/docs/ug/ui/elements#time-selector) Specify a temporal range to restrict search results to alerts generated within that timeframe.  
+**Search Regex** Enter a regular expression to match specific patterns in alert messages, enabling targeted filtering (example: extracting alerts from a particular IP address).
 
 ### Drilldowns
 
