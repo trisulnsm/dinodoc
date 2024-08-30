@@ -54,9 +54,9 @@ Note that :
 
 You can configure a TCA by defining the threshold values for alerts to be generated with the following details.
 
-### Creating a new TCA Based on Counter Group
+### Create a new TCA 
 
-To create a new TCA, Login as *User*,
+To create a new TCA based on Counter Group, Login as *User*,
 
 :::info navigation
 Go to Alerts-> Threshold Crossing Alerts-> Configure-> New Threshold Crossing Alert
@@ -78,7 +78,7 @@ TCA configuration form opens up. Fill in the threshold conditions for alerts to 
 
 Upon filling all the threshold values, click *Create*
 
-## Example: DNS TCA
+**Example: DNS TCA**
 
 This example creates a TCA when DNS traffic crosses **1.2Mbps** for 2 minutes and clears when it drops below **600Kbps**
 
@@ -94,7 +94,7 @@ This example creates a TCA when DNS traffic crosses **1.2Mbps** for 2 minutes an
 | Lo Water Sustained Intervals | 1                                                                       |
 | TCA Message                  | DNS traffic is double of expected at 1.2Mbps, action required team !    |
 
-## View TCAs
+### View TCAs
 
 There are many methods to view, search and export TCAs.
 
@@ -126,14 +126,15 @@ The subsequent Threshold crossing *Alert Group* Table presents the following det
 | Option Button     | Click on the Option button and select Delete all. This deletes all the alerts fired under that TCA , but not the TCA itself                                                                             |
 
 
-### Individual Alerts
+## Individual Alerts
 
 With Individual Alerts you can perform the following three functions:
 1) [**View individual alerts**](/docs/ug/alerts/tca#view-individual-alerts)
-2) Using the [**Search Form**](/docs/ug/alerts/tca#search-form), filter indivial alerts based on certain search criteria 
-3) Using [**Drilldown**](/docs/ug/alerts/tca#drilldowns) button, perform in-depth analysis of each individual alert
+2) [**Filter Individual Alerts**](/docs/ug/alerts/tca#filter-individual-alerts) using the *Search Form* based on certain search criteria, filter indivial alerts based on certain search criteria 
+3) [**In-Depth Analysis of Individual Alerts**](/docs/ug/alerts/tca#in-depth-analysis-of-individual-alerts) using the *Drilldown* button
+4) [**View Traffic Chart**](/docs/ug/alerts/tca#traffic-chart) with watermarks around the alert timestamp.
 
-#### View Individual Alerts
+### View Individual Alerts
 
 Clicking on alert count on a TCA *Alert Group*  table will take you to the list of individual alerts fired/cleared by that particular key and metric.
 
@@ -158,7 +159,7 @@ The details that you can analyze on the individual alerts result are as follows:
 - **Filter Box**: You can use the *Filter* box on the upper right corner for a quick, simple search and to narrow down large datasets of alerts.
 
 
-#### Search Form
+### Filter Individual Alerts
 
 To facilitate targeted queries, a *search form* with [*Hide/Show Search Form*](/docs/ug/ui/elements#hide-show-search-form) option is provided, that allows you to specify a temporal range and a regular expression (*regex*) pattern to filter alerts.   
 
@@ -172,17 +173,35 @@ With this *search form* you can retrieve alerts with messages matching a particu
 [**Time Frame**](/docs/ug/ui/elements#time-selector) Specify a temporal range to restrict search results to alerts generated within that timeframe.  
 **Search Regex** Enter a regular expression to match specific patterns in alert messages, enabling targeted filtering (example: extracting alerts from a particular IP address).
 
-### Drilldowns
+### In-Depth Analysis of Individual Alerts
 
-When alerts are displayed you have the option to drilldown even further.
+When alerts are displayed you have the option to drilldown even further on the enabling deep analysis on the target *key* by clicking on the *Drilldown* button against each individual alert.
+| Options                    | Description                                                                       |
+|----------------------------|-----------------------------------------------------------------------------------|
+| Drilldown                  | View detailed information on the selected interface including its utilization details and report details.                                                                                      |
+| Interface Activity         | Analyze the interface's traffic statistics including flow activities, conversations and their relationships.                                                                                         |
+| Traffic Chart              | Visualize the interface's traffic patterns over time to identify trends and anomalies.                                                                                                       |
+| Long Term Traffic Chart    | View extended traffic trends for the target interface, showing how traffic has changed over hours, days, or weeks.                                                                              |
+| View Edge Graph            | Display the target interface's connections and relationships within the network topology, helping you understand its role and dependencies.                                                      |
+| Download PCAP              | Capture packets from the target interface for in-depth analysis of traffic.       |
+| Query Flows by Tag         | Filter traffic on the target interface by specific tags                           |
+| Aggregate Flows by Tag     | Aggregated statistical information for each unique combination of tags, providing a comprehensive view of network traffic patterns.                                                                  |
+| Statistics                 | Display detailed statistics about the target interface, including utilization and  throughput details                                                                                               |
 
-1. press the tag button to bring up drilldown options similar to those found on other dashboards (see image)
-2. press the chart button to show a traffic chart around the time the 
-   alert occurred showing the Low and High water marks for reference.
+![](image/tcadrilldown.png)  
+*Figure: TCA Drilldown*
 
-![](image/tcadrill.png)
+### Traffic Chart 
 
-*Figure: TCA drilldown options and traffic charts showing the alert traffic*
+Click on the *chart* button to show a traffic chart around the time the alert occurred showing the Low and High water marks for reference.  
+
+![](image/tca_trafficchart.png)
+*Figure: Traffic Chart of Target Interface with Watermarks*
+
+The chart plots the amount of network traffic over a specified time period, centered around the alert timestamp.
+
+**Low Watermark**: A Green line indicating the minimum expected traffic volume, serving as a baseline for comparison.  
+**High Watermark**: A Red line indicating the maximum expected traffic volume, highlighting potential peaks or anomalies.
 
 
 ### Alerts Dashboard
