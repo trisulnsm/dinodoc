@@ -128,7 +128,7 @@ The subsequent Threshold crossing *Alert Group* Table presents the following det
 
 ## Individual Alerts
 
-With Individual Alerts you can perform the following three functions:
+With Individual Alerts you can perform the following functions:
 1) [**View individual alerts**](/docs/ug/alerts/tca#view-individual-alerts)
 2) [**Filter Individual Alerts**](/docs/ug/alerts/tca#filter-individual-alerts) using the *Search Form* based on certain search criteria, filter indivial alerts based on certain search criteria 
 3) [**In-Depth Analysis of Individual Alerts**](/docs/ug/alerts/tca#in-depth-analysis-of-individual-alerts) using the *Drilldown* button
@@ -154,7 +154,7 @@ The details that you can analyze on the individual alerts result are as follows:
 
 > Each column in the search result table are sortable, where you can rearrange data in ascending or descending order by clicking the adjacent arrow(up/down) button, for flexible data analysis and visualization.
 - **Download Button**: Click on the [download](/docs/ug/ui/elements#download-button) button at the top of the alerts to get the alert details downloaded in the form of PDF and XLSX. 
-- **Show All TCAs Button**: Clicking on the *Show all TCAs* button enables you to display the list of all Threshold Crossing Alerts configured from where you can again edit or delete that particular TCA.
+- **Show All TCAs Button**: Clicking on the *Show all TCAs* button enables you to display the list of all Threshold Crossing Alerts (TCAs) configured from where you can again edit or delete that particular TCA.
 - **Edit This TCA**: You can click on the *Edit this TCA* button to edit that particular Threshold Crossing Alert (TCA) that you are currently into.
 - **Filter Box**: You can use the *Filter* box on the upper right corner for a quick, simple search and to narrow down large datasets of alerts.
 
@@ -203,33 +203,15 @@ The chart plots the amount of network traffic over a specified time period, cent
 **Low Watermark**: A Green line indicating the minimum expected traffic volume, serving as a baseline for comparison.  
 **High Watermark**: A Red line indicating the maximum expected traffic volume, highlighting potential peaks or anomalies.
 
-
-### Alerts Dashboard
-
-- Add the **Threshold Crossing Alert** module to any dashboard
-
-This module auto updates itself as new TCAs are generated. You can add this module to any dashboard position.
-
-[How to add modules to dashboard](/docs/ug/ui/modules#how-to-create-modules)
-
-[How to add modules to dashboard](/docs/ug/ui/dashmod_intro)
+> You can create a Threshold Crossing Alerts(TCA) Module using [Module Templates](/docs/ug/ui/module_templates#alert-list) and add that module to any dashboard. And this module keeps auto updating itself as new TCA are generated. 
 
 
-## Automatically Emailing TCAs
+## Real Time Email Alerts and Scheduling
 
-There are two types of email reports you can use for notifying these TCA alerts.
+- You can configure email alert delivery for Threshold Crossing Alerts (TCA) using the [**Email Alerts Wizard**](/docs/ug/alerts/email_settings).  
+- You can [**Schedule a TCA Report**](/docs/ug/reports/schedreports) which will automatically email you a list of Threshold Crossing Alerts (TCAs) that got fired/cleared on a hourly or daily basis. The Report email is a single consolidated email that contains the details of all the TCAs. And no email is sent if no TCAs are generated.
 
-:::note
-
-TCA Email Alerts intelligently pull up the following relevant pieces of 
-information and include them in the email. Top Hosts, Top Apps, Top 
-Flows, and Top Conversations related to the alert.
-
-:::
-
-#### Intelligent TCA Email Reports for Routers Interfaces
-
-A commonly used TCA is on Netflow mode routers and interfaces. When a TCA is created on such an interface the following information is automatically included in the alert email.
+A commonly used Threshold Crossing Alert (TCA) is on Netflow mode: *routers and interfaces*. When a TCA is created on such an interface the following information is intelligently included in the alert email.
 
 1. Top applications on that interface which alerted
 2. Top hosts
@@ -238,39 +220,37 @@ A commonly used TCA is on Netflow mode routers and interfaces. When a TCA is cre
 This allows the receiver of the email to immediately spot the source 
 of the alert without even logging on to Trisul Network Analytics.
 
-> Enabling inteface tracking allows for richer TCA alerts. See [Netflow Interface Trackers](/docs/ug/netflow/interface_tracker)
 
-### Real Time Email
+> Enabling [interface tracking](/docs/ug/netflow/interface_tracker) allows for richer TCA alerts.
 
-Configure [Email Alerting](/docs/ug/alerts/email_settings) for real time alerts.
-
-### Periodic Email Digest
-
-You can [schedule](/docs/ug/reports/schedreports#schedule-a-new-report) a **Threshold Crossing Alert** report which will automatically email you a list of TCAs that fired on a hourly or daily basis.
-
-1. A single consolidated email is sent out containing details of all TCAs
-2. No email is sent out if there are no TCAs to report
 
 ## Bulk Configuration
 
-We can also configure TCAs for one or more interfaces from a particular router in bulk rather the one by one.
+You can also configure Threshold Crossing Alerts (TCAs) for one or more interfaces from a particular router in bulk rather the one by one.
 
-You can throw an alert if the Interface crosses 200 Mbps.
+For example: You can throw an alert if the Interface crosses 200 Mbps.
 
-:::note navigation
+To Setup Bulk Configuration, Login as *Admin*
 
-Login as Admin. Select *Context : default* → profile0 → Netflow Wizard → Interfaces
-
+:::info navigation
+Go to *Context : default*-> profile0-> Netflow Wizard-> Interfaces
 :::
+
+![](image/bulkconfiguration_tca.png)  
+*Figure: Bulk Configuration of TCA Sample Form*
+
+You can bulk configure by filling the form using the following details and their descriptions.
 
 You can select one or more interfaces from a router and Click on **Configure TCA** option to create an alert.
 
 | Field Name                   | Description                                                              |
 | ---------------------------- | ------------------------------------------------------------------------ |
-| Interfaces                   | Key for Interface                                                        |
-| Meter                        | Total,in or out                                                          |
-| Hi Water Mark                | Hi Threshold Mark                                                        |
-| Hi Water Sustained Intervals | TCA Fired only if metric values is over Hi Water for this many minutes   |
-| Lo Water Mark                | Low Threshold Mark                                                       |
-| Lo Water Sustained Mark      | TCA Cleared only if metric value is below Lo Water for this many minutes |
+| Interfaces                   | Enter the Target *Key* for Interface                                     |
+| Meter                        | Enter the type of traffic meter to measure: Total,in or out              |
+| Hi Water Mark                | Set the high threshold value (in bytes or packets) that triggers an alert when exceeded.                                                                                                 |
+| Hi Water Sustained Intervals | Specify the number of times (intervals) that the traffic must sustain above the Hi Watermark threshold to trigger an alert.                                                               |
+| Lo Water Mark                | Set the low threshold value that triggers an alert when traffic falls below this value.                                                                                                    |
+| Lo Water Sustained Mark      | Specify the number of times (intervals) that the traffic must sustain below the Lo Watermark threshold to trigger an alert.                                                               |
 | TCA Message                  | A custom message that appears when these alerts fire                     |
+
+Click Create.
