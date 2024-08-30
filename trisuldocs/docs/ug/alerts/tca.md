@@ -151,11 +151,11 @@ The details that you can analyze on the individual alerts result are as follows:
 | Configuration     | The threshold limits of the target *key*                                              |
 | Probe             | The monitoring probe that detected the threshold crossing                             |
 
-- Each column in the search result table are sortable, where you can rearrange data in ascending or descending order by clicking the adjacent arrow(up/down) button, for flexible data analysis and visualization.
-- Click on the [download](/docs/ug/ui/elements#download-button) button at the top of the alerts to get the alert details downloaded in the form of PDF and XLSX. 
-- Clicking on the *Show all TCAs* button enables you to display the list of all Threshold Crossing Alerts configured from where yoou can again edit or delete that particular TCA.
-- You can click on the *Edit this TCA* button to edit that particulat Threshold Crossing Alert (TCA) that you are into.
-
+> Each column in the search result table are sortable, where you can rearrange data in ascending or descending order by clicking the adjacent arrow(up/down) button, for flexible data analysis and visualization.
+- **Download Button**: Click on the [download](/docs/ug/ui/elements#download-button) button at the top of the alerts to get the alert details downloaded in the form of PDF and XLSX. 
+- **Show All TCAs Button**: Clicking on the *Show all TCAs* button enables you to display the list of all Threshold Crossing Alerts configured from where you can again edit or delete that particular TCA.
+- **Edit This TCA**: You can click on the *Edit this TCA* button to edit that particular Threshold Crossing Alert (TCA) that you are currently into.
+- **Filter Box**: You can use the *Filter* box on the upper right corner for a quick, simple search and to narrow down large datasets of alerts.
 
 
 #### Search Form
@@ -184,14 +184,6 @@ When alerts are displayed you have the option to drilldown even further.
 
 *Figure: TCA drilldown options and traffic charts showing the alert traffic*
 
-#### Exporting to PDF, CSV, Excel
-
-> When a table shows list of alerts
-
-1. Locate the Download button above the table
-2. Select “Download PDF”, “Download CSV” or “Download XLSX” options
-
-This allows you to export and share displayed alerts
 
 ### Alerts Dashboard
 
