@@ -2,17 +2,19 @@
 sidebar_position: 9
 ---
 
-# Threshold Band Anomaly alerts
+# Threshold Band Anomaly Alerts
 
-**NEW**
+## **Overview**
 
-Trisul can look at long term history of any metric and compute a band within with the metric is usually found.
+*Threshold Band Anomaly* (TBA) Alerts is a ML driven feature in Trisul which uses historical data (Requires at least 3 weeks of training data) to establish a dynamic threshold range for the metrics. This range serves as the baseline to identify unusual patterns in real time, alerting the users to potential issues before they escalate.
 
-The band
+## **How It Works**
 
-1. is computed for every 5 minute interval
-2. day of week based so weekends are tracked separately
-3. can handle holidays and spikey days
+Trisul employs a refined analytical technique to look at long term history of any metric and compute a band within the metric is usually found. So the band is,
+
+1. **Sampling Interval**: Threshold bands are computed for every 5-minute interval providing high-resolution anomaly detection.
+2. **Temporal Baseline Configuration**: Computation is [*Day of week based*](/docs/ug/alerts/tband#day-of-week-based) ensuring weekends are tracked separately for recognizing distinct usage patterns
+3. **Anomaly Filtering**: The Algorithm handles holidays and spikey days to adjust for irregular usage patterns, identifying and excluding outliers.
 
 The screenshot below shows a metric (Active Flows) for which 
 “Threshold Banding” is enabled. The band is shown as a grayish 
@@ -22,40 +24,33 @@ background while the actual metric is shown as the curve.
 
 *Figure: Active Flows where Threshold Banding is Enabled*
 
-## How it Works
 
-The feature is enabled by two separate processes.
+## Threshold Band Computation Methods
+There are two flexible computation options to compute the threshold band:
+1) Day of Week Based  
+2) Simple
 
-### Band Computation
+### Day of Week Based
 
-The most important part is how the bands are computed. Currently there are two options.
+This method takes into account the natural variations that occur from week to week. Like recognizing mondays might have higher traffic due to post-weekend activity, tuesdays to thursdays might have consistent traffic due to stable network usage, and fridays might have reduced server activities as employees wrap up tasks. So to capture these kind of patterns, the *Day of the Week Based* method. 
+  1) Identifies typical behavior for each day and compares the same day of the week (say wednesdays to previous wednesdays) as they often exhibit unique patterns.
+  2) Establish dynamic thresholds based on these daily patterns.
+  3) Excludes outliers
 
-1. Day of week based : This compares a Wednesday only with other 
-   Wednesdays and excludes outliers. This features requires at least 3 
-   weeks of training data.
-2. Simple : Compare with yesterday.
+> This method is available in Licensed version of Trisul since it requires atleast 3 weeks of training data
 
-> The Day of Week based banding requires a Licensed version of Trisul, because it needs atleast 3 weeks of training data. If you are running Trisul with a free license use the Simple band feature.
+### Simple
 
-#### Metrics and Automatic Computation
+This method uses a straightforward approach, comparing today's data with yesterday's data. It's ideal for metrics with minimal seasonal variations. Suitable for users with a Trisul Trial License.
 
-You select any of the metrics available in Trisul and decide to use 
-Threshold Banding on it. This requires you to select a metric which is 
-identified by a counter group, a key, and a meter id.
 
-Once you enable Threshold Banding on a metric, Trisul automatically 
-updates the band every night as time passes to take into account recent 
-trends. There is no configuration required to do that.
+## Threshold Band Anomaly Alerting Process
 
-### Band Alerting
+To enable Threshold banding Trisul requires you to select a metric which is identified by a unique combination of counter group, a key, and a meter id. Once a metric is selected, Trisul updates the threshold to keep track of the latest trends and changes in the metric's behavior. This requires no further configuration or manual intervention.
 
-The band computation process pre computes expected range of values 
-for a particular metric for each time interval during the day. Trisul 
-continuosly checks if the metric is within the expected band for that 
-day and time period. If it is out of bounds it generates “Threshold Band
- Alert”.
+Trisul employs a proactive approach to metric monitoring by pre-computing expected value ranges for each metric for defined time intervals throughout the day. Each Metric's real-time values are continuously evaluated against the pre-computed expected bands and *Threshold Band Anomaly* (TBA) alerts are generated when the metric's value exceeds the predicted range for the corresponding time period, indicating an anomalous behavior.
 
-## Configuring
+## Configuration of TBA
 
 ### Creating a New Threshold Band Anomaly Monitor for a Particular Counter
 
