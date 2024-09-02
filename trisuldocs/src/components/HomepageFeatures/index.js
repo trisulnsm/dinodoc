@@ -4,13 +4,12 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Getting Started',
-    linkto: '/docs/ug/intro/free',
+    title: 'Admin Guide',
+    linkto: '/docs/ag',
     Svg: require('@site/static/img/undraw_onboarding_re_6osc.svg').default,
     description: (
       <>
-        Introduction to the Trisul Network Analytics platform. How to install, login for 
-        the first time, get network data into the platform.
+        Getting started, installation, licensing, configuration, etc.
       </>
     ),
   },  
@@ -20,7 +19,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_react_re_g3ui.svg').default,
     description: (
       <>
-        Explore the User Guide. Configure and use Trisul NetFlow Analyzer, Trisul ISP, and other products.
+        Dashboards, Traffic Analytics, Flow querying, generating reports, viewing alerts, 
       </>
     ),
   },

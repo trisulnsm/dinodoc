@@ -44,7 +44,10 @@ The feed directory is located on the Trisul-Hub node at
 
 Inside this directory you can see`feed_xx`sub-directories representing plugins requesting feed updates. For example : GeoIP updates. The Badfellas feed is located in the subdirectory  
 
- BASHCopy`cd feed-2F3CCCA3-38D4-4773-97AB-3ED732F82533`
+```bash
+cd feed-2F3CCCA3-38D4-4773-97AB-3ED732F82533
+```
+
 
 Inside the feed directory , there is a file called`rules.xml`This contains the feed configuration.
 

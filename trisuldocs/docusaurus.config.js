@@ -73,6 +73,7 @@ const config = {
           src: 'img/logo.png',
         },
         items: [
+          {to: '/docs/ag', label: 'Admin Guide', position: 'left'},
           {to: '/docs/ug', label: 'User Guide', position: 'left'},
           {to: '/docs/lua', label: 'API', position: 'left'},
           {to: '/docs/ref', label: 'Reference', position: 'left'},
