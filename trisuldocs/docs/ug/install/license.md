@@ -127,6 +127,3 @@ The current license file is displayed as shown in the screenshot above.
 
 If you move any Trisul node (Probe or Hub) to a new machine or VM, send us the new machineid and we will reissue the License.
 
-## Upgrading a Trisul 6.5 production license to 7.0
-
-See[How to upgrade 6.5 production license](/docs/ug/install/license65update)
