@@ -102,10 +102,10 @@ There are two parameters of importance.
 
 2. Topper Bucket Size
 
-| Parameters         | Default value   | Description   |
-| ------------------ | ---------------------------- | |
-| Bucket Size        | Default 30 seconds    | Traffic data is bucketized (averaged) over this many seconds |
-| Topper Bucket Size | Default 300 secs (5 minutes) | For those stat-ids for which we are tracking toppers, the toppers are stored every this many seconds |
+| Parameters         | Default value                | Description                                                 |
+| ------------------ | -----------------------------|-------------------------------------------------------------|
+| Bucket Size        | Default 30 seconds           | Traffic data is bucketized (averaged) over this many seconds|
+| Topper Bucket Size | Default 300 secs (5 minutes) | For those stat-ids for which we are tracking toppers, the toppers are stored every this many seconds                                                                        |
 
 > You can adjust both these parameters for each counter group via the web interface.
 

@@ -8,7 +8,12 @@ You can assign a user friendly name for any type of item.
 
 ## Manually Assign a Name
 
-### 1 From the Key Dashboard
+Name Resolution for *keys* can be done in three ways
+1) [From the Key Dashboard](/docs/ug/cg/resolve#from-the-key-dashboard)
+2) [From Top Keys](/docs/ug/cg/resolve#from-top-keys)
+3) [Resolve Names in Bulk using CSV file](/docs/ug/cg/resolve#resolve-keys-in-bulk-from-csv-file)
+
+### From the Key Dashboard
 
 This is the easiest way to edit. You can come to the key dashboard by
 clicking on a link or by searching for a specific item.
@@ -20,7 +25,7 @@ clicking on a link or by searching for a specific item.
 
 3. Find the module **Key Details** and click the “Set Label/Edit” from the menu.
 
-### 2 From Top Keys
+### From Top Keys
 
 Use this if you want to see recently active keys and assign them names
 in one page.
@@ -48,7 +53,7 @@ Select Customize -> Show All-> Keys
 | Valid From  | Statistics before this time are not shown                                                      |
 | Attributes  | One attribute per line<br/>Example a=b                                                         |
 
-### 3 Resolve Keys in Bulk from CSV file
+### Resolve Keys in Bulk from CSV file
 
 :::note navigation
 
