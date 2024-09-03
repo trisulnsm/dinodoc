@@ -115,7 +115,7 @@ Real Time Stabber: Flow Activity hows the real time flow activity for any host o
 This is an example of live view, as each flow progresses the numbers keep updating in
 real time.
 
-![](images/rtstabbers4.png)
+![](images/realtimestabber_activeflows.png)
 
 *Figure: Real time top flows for an item*
 
@@ -125,7 +125,7 @@ With Real Time Stabber: Toppers, you can view the top users of any counter group
 
 The image below shows a counter group stabber viewing top `Internal Hosts` based on the meter `Total`.
 
-![](images/rtstabbers5.png)
+![](images/realtimestabbers_toppers.png)
 
 *Figure: Real time counter group toppers.*
 
