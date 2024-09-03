@@ -90,7 +90,7 @@ import TabItem from '@theme/TabItem';
    By default the script run in flow mode unless by run this script as -g option
    :::
    ### Example
-   ![ipdr_watchdog](./images/)
+   ![ipdr_watchdog](./images/ipdr_watchdog_flowmode.png)
    </TabItem>
    <TabItem value="GUUID-MODE">
    ```bash
