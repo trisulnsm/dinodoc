@@ -70,4 +70,4 @@ It displays the following,
 | Ref         | Size of the packet storage on the reference part |
 | Archive     | Size of the packet storage on the archive part   |
 
-The PCAP [tabular data ](/docs/ug/webadmin/storage_status#storage-status-tabular-data)below similar to the Storage Status tabular data which shows the PCAP information in each storage pools: oper, ref, and archive.
+The PCAP [tabular data ](storage_status#storage-status-tabular-data)below similar to the Storage Status tabular data which shows the PCAP information in each storage pools: oper, ref, and archive.

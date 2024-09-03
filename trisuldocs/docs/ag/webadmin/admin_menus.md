@@ -48,13 +48,13 @@ There are two steps to setting up a user to login via LDAP
 1. Configure LDAP domain
 2. Create a user and specify he/she be authenticated against an LDAP domain
 
-Refer to the [ldap login](/docs/ug/webadmin/ldap_login) for Instructions
+Refer to the [ldap login](/docs/ag/webadmin/ldap_login) for Instructions
 
 ### Roles
 
 Provides a list of Roles and Permissions each operator has. Roles specify which category of user is allowed to do what operations
 
-Refer to the [User Roles](/docs/ug/webadmin/userroles) for detailed information
+Refer to the [User Roles](/docs/ag/webadmin/userroles) for detailed information
 
 ### Auth Log
 

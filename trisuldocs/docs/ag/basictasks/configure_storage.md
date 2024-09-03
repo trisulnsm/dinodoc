@@ -39,7 +39,7 @@ The reason we have three directories is that they can be mounted on three separa
 
 ### Move packets to a different volume
 
-Follow the instructions for[`trisulctl_probe relocate context`](/docs/ug/basicusage/reloc)command to relocate the probe capture files to a different directory.
+Follow the instructions for[`trisulctl_probe relocate context`](/docs/ag/basictasks/reloc)command to relocate the probe capture files to a different directory.
 
 ### Decide how muchPCAPto store
 

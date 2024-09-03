@@ -1,7 +1,3 @@
----
-sidebar_position: 3
----
-
 import Highlight from '/src/components/Highlighter/Highlight';
 
 # Deploy a New Probe
@@ -30,9 +26,7 @@ probe node using the CLI tool `trisulctl_probe` or
 
 <span class="badge badge--info">RUN ON PROBE</span>
 
-On the new machine, install the `trisul-probe` package as explained in
-the [Downloads page](https://www.trisul.org/download/)
-
+On the new machine, install the `trisul-probe` package.
 ```language-bash
 sudo apt-get install trisul-probe
 ```
@@ -43,7 +37,7 @@ sudo apt-get install trisul-probe
 
 :::note **First time?** Switch domain0 to distributed network TCP mode. 
 
-Make sure you have followed the steps in [Switching to a distributed domain](/docs/ug/domain/change_domain#switching-to-a-distributed-domain) from the default single machine domain.
+Make sure you have followed the steps in [Switching to a distributed domain](/docs/ag/domain/change_domain#switching-to-a-distributed-domain) from the default single machine domain.
 
 :::
 

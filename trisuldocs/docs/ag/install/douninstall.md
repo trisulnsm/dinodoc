@@ -45,4 +45,4 @@ import TabItem from '@theme/TabItem';
 
 Uninstalling does not change the data or the configuration. If you wish to purge the data.  Do so before uninstall.
 
-See [Cleaning the Database](/docs/ug/basicusage/cleanenv)
+See [Cleaning the Database](/docs/ag/basictasks/cleanenv)

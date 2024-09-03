@@ -1,10 +1,8 @@
----
-sidebar_position: 5
----
-
 # Working With Contexts
 
-A Trisul [*context*](/docs/ug/domain#contexts) is a separate instance of Trisul with its own isolated database, configuration, and processes. The primary use cases for contexts are :
+A Trisul Context is a separate instance of Trisul with its own isolated database, configuration, and processes. 
+
+The primary use cases for contexts are :
 
 1. multi homing separate customer networks
 2. managing different parts of a large network
@@ -119,7 +117,7 @@ To do that
 - Select the contexts allowed for this user using *Allowed Contexts*
   option.
 
-For more : [Web Admin Manage Users](/docs/ug/webadmin/manageusers)
+For more : [Web Admin Manage Users](/docs/ag/webadmin/manageusers)
 
 ### View Reports from a Context
 

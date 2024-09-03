@@ -6,7 +6,7 @@ sidebar_position: 17
 
 A Trisul context is a separate instance of Trisul with its own isolated
 database, configuration, and processes. To know more about contexts,
-Refer to [Working with Contexts](/docs/ug/domain/contexts)
+Refer to [Working with Contexts](/docs/ag/domain/contexts)
 
 ## Admin Tasks
 
@@ -168,7 +168,7 @@ Status of the DR Site from the primary site.
 
 *Figure: DR Traffic Chart*
 
-Refer [Disaster Recovery](/docs/ug/ha/dr)
+Refer [Disaster Recovery](/docs/ag/ha/dr)
 
 ## Profile Menu
 
@@ -190,7 +190,7 @@ network interface or adapters that we specify.
 This menu helps you to configure the adapter to which you want Trisul to
 listen to.
 
-For more about [selecting a capture adapter or interface](/docs/ug/webadmin/profiles)
+For more about [selecting a capture adapter or interface](profiles)
 
 ### Home Networks
 
@@ -207,7 +207,7 @@ You are shown the form with following fields
 | Network Number | Enter a network number : Example 19.28.182.0 or Enter a newtork number with CIDR : Example 192.168.182.0/24 |
 | Network Mask   | Enter a subnet mask : Example 255.255.255.0                                                                 |
 
-Refer to [Home Networks](/docs/ug/webadmin/home_networks)
+Refer to [Home Networks](home_networks)
 
 > Click on **Create** to add a new home network
 
@@ -218,7 +218,7 @@ Access points map protocols to ports. For example if you want to decode
 UDP port 5556 as Netflow you can edit UDP then map Port 5556 to the
 Netflow protocol.
 
-Refer to [Access Points](/docs/ug/webadmin/access_points)
+Refer to [Access Points](access_points)
 
 ### Counter Groups
 

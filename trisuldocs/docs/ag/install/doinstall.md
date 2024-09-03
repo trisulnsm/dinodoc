@@ -191,4 +191,4 @@ The default installation and the free license allows you to put all componments 
 2. multiple trisul-probes can be installed
 3. the optional plugins packages must be installed along with trisul-probe
 
-See [Distributed Domain](/docs/ug/domain/)
+See [Distributed Domain](/docs/ag/domain/)

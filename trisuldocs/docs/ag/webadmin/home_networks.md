@@ -39,7 +39,7 @@ Both Source IP and Dest IP are in your home network
 
 Both Source IP and Dest IP are not in your home network.
 
-> Note For ISPs, the AS numbers constituting the Home Network are all the AS whose routes are announced by the home AS. See [Home Networks for ISP](/docs/ug/webadmin/home_networks#home-networks-in-isp-solution) section
+> Note For ISPs, the AS numbers constituting the Home Network are all the AS whose routes are announced by the home AS. See [Home Networks for ISP](#home-networks-in-isp-solution) section
 
 ## Add a New Home Network
 
