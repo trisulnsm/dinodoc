@@ -1,94 +1,107 @@
-# IPDR-Watchdog
+# Watch-dog
 
 ![IPDR-Watchdog](./images/watch_dog.png)
 
-Real time monitoring of trisul-IPDR system which send email alerts when IPDR is down.
+Real time monitoring of trisul-hub and trisul-probe and alert if they down.
+
+## Consists of 3-scripts
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+<TabItem value="HUB-FLUSHER-WATCHDOG" default >
+   1. Detect the status of the trisul-system by analyzing the logs
+   2. Send alert to syslog of the status of the trisul-system is down
+   3. When the system is up after the certain interval then it send alert 
+   4. Accept max of 1 context at a time
+   :::tip
+   Configure mail in trisul to receive alert
+   :bell:
+   :::
+</TabItem>
+<TabItem value="RUN-HUB-FLUSHER" >
+   1. Detect multiple context status of the trisul-system
+   2. Send alert for all the non-running context to syslog
+   3. Depends on hub_flusher_watchdog.sh script
+</TabItem>
+<TabItem value="INSTALL-CRON-HUB-WATCHDOG" >
+   1. Assign cronjob for a run-hub-flusher script with the help of given arguments
+   2. It runs for a regular interval of time and generate alert if necessary
+   3. Depends on run_hub_flusher.sh script
+   :::note
+   - Install cronjob 
+   - Configure cronjob with detfault editor
+   :::
+</TabItem>
+</Tabs>
+
+### Two Modes
+   - Flow Mode ( IPDR Customer )
+   - GUUID Mode ( Analytics Customer )
+     - In this mode , the GUUID key need to be provied 
 
 ## How it works ?
+- ### Preliminary check
+   - Check the config file is availabe for the given context
+   - Extract log file location from given context config file
+   - Checks the log file is accessbile by the script owner
+   - #### If above condition is not met then it stops
+- ### Gather information from log
+  - Access the latest log file & get the timestamp of last log
+  - For Flow Mode  - latest log with END-IPFLOW-FLUSH is fetched
+  - For GUUID Mode - latest log with user given GUUID-KEY and END-CG-FLUSH
+  - From the above logs you can get flushed value,timestamp,no.of.dropped packets. 
+- ### Processing the gathering information
+  - Check the fetched log file is empty or not.
+  - Check the flushed value not zero.
+  - Check the difference between the timestamp of log and system should not be more than fixed-sec
+  - #### If the above condition is not met the alert is generated
 
-1. First , it will check for the follwing error conditions before proceding into watchdog
-   
-   - Checks the Hub config file is present in given location.
-   
-   - Checks the Log file is accessible or not
-     
-     If above conditions fails it exit from the script
+## Requirements
+- Run this script as root
+- Check cronjob is installed 
 
-2. Location of log file is fetched from trisulHubconfig.
+## Options
 
-3. To check whether the trisul is flushing  or not it fetched the latest log entry from log file is compared with current time.The difference between them should be not greater than 10 min.If so , it triggers the syslog to send mail . 
-   
-   :::note[Tip]
-   
-   Trisul will flush every one minute 
-   
-   :::
+| Option | Default value   | Info                                  | Example                                            |
+| ------ | ----------------| ------------------------------------- | -------------------------------------------------- |
+| -c     | context0        |    Defaule context                    | ./run_hub_watchdog.sh -c context0           |
+| -n     | 2                | No of engine present each trisul can have multiple engines based on the usage                                                                     | ./run_hub_watchdog.sh -n 4                                      |
+| -s     | Your system name | Name for your system                                                                                                                              | ./run_hub_watchdog.sh -s trisul-system                          |
+| -k     | 0                | If the system runs successfully it send mail for every run                                                                                        | ./run_hub_watchdog.sh -k                                        |
+| -t     | 70               | The differnence between the log entry and current time should be less than or equal to t                                                          | ./run_hub_watchdog.sh -t 90                                     |
+| -g     | No default value | Search for the particular guuid log entry                                                                                                         | ./run_hub_watchdog.sh -g"2314BB8E-2BCC-4B86-8AA2-677E5554C0FE" |
+| -f     | 0                | Runs in flow mode                                                                                                                                 | ./run_hub_watchdog.sh -f                                        |
+| -j     | /10* * * * *     | Assign cronjob in crontab                                                                                                                         | ./run_hub_watchdog.sh -j /20* * * * *                           |
+| -i     | -                | Print verbose of the output terminal   | ./run_hub_watchdog.sh -i                                        |
+| -e     | -                | Ignores the particular context         | ./run_hub_watchdog.sh -c context0 -c context_demo               |
+| -r     | 0                | If the system is down then the script try to restart the hub and probe for first cycle and for next cycle if the system is down then it send mail | ./run_hub_watchdog.sh -r                                        |
+| -h     | -                | Prints the help command for smoth run   | ./run_hub_watchdog.sh -h                     |
 
-4. The IPDR system is sends email alert along with the log entry.  And the log file which triggers alerts is stored in tmp/IPDR_WATCHDOG_CONTEXT_STATUS/ for each context seprately until the system is up.
 
-5. You can make the script to start the hub & probe context automatically.If doesn't flush then it sends the email .
-
-## Requirement
-
-1. Install cronjob on the IPDR system . 
-   
+## How to run this script
+<Tabs>
+   <TabItem value="FLOW-MODE" default >
+   ```bash
+   /usr/local/share/trisul-hub/run_hub_watchdog.sh -c context0 -f -i
+   ```
    :::note
-   
-   For every user in system the crontab will be different . 
-
-2. Assign default editor 
-   
-   :::caution[check before running]
-   
-   Running crontab -e command in terminal should not ask for editor. If so , the script stops automatically
-   
+   By default the script run in flow mode unless by run this script as -g option
    :::
+   ### Example
+   ![ipdr_watchdog](./images/)
+   </TabItem>
+   <TabItem value="GUUID-MODE">
+   ```bash
+   /usr/local/share/trisul-hub/run_hub_watchdog.sh -c context0 -g {2314BB8E-2BCC-4B86-8AA2-677E5554C0FE} -i
+   ```
+   ![ipdr_watchdog](./images/ipdr_watchdog_guuidmode.png)
+   </TabItem>
+</Tabs>
 
-3. Configure the email email along with receiptients you want to send mail.
+When you see the example the above script is executed with argument -i
+- This is the verbose option where it prints the values in terminal
+- When you run without -i then it only print the values if the context is not running
+  
 
-4. Go to profile0 → All groups alert → and click edit option → change Send to Syslog/Email to Alert
-
-:::note
-
-Run this script as root user
-
-:::
-
-| Option | Default value    | Info                                                                                                                                              | Example                                                                 |
-| ------ | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| -c     | context0         |                                                                                                                                                   | ./ipdr_watchdog_installer.sh -c context0                               |
-| -n     | 2                | No of engine present each trisul can have multiple engines based on the usage                                                                     | ./ipdr_watchdog_installer.sh -n 4                                      |
-| -s     | Your system name | Name for your system                                                                                                                              | ./ipdr_watchdog_installer.sh -s trisul-system                          |
-| -k     | 0                | If the system runs successfully it send mail for every run                                                                                        | ./ipdr_watchdog_installer.sh -k                                        |
-| -t     | 70               | The differnence between the log entry and current time should be less than or equal to t                                                          | ./ipdr_watchdog_installer.sh -t 90                                     |
-| -g     | No default value | Search for the particular guuid log entry                                                                                                         | ./ipdr_watchdog_installer.sh -g"2314BB8E-2BCC-4B86-8AA2-677E5554C0FE" |
-| -f     | 0                | Runs in flow mode                                                                                                                                 | ./ipdr_watchdog_installer.sh -f                                        |
-| -j     | /10* * * * *     | Assign cronjob in crontab                                                                                                                         | ./ipdr_watchdog_installer.sh -j /20* * * * *                           |
-| -i     | -                | Print the output of the command in terminal                                                                                                       | ./ipdr_watchdog_installer.sh -i                                        |
-| -e     | -                | Ignores the particular context                                                                                                                    | ./ipdr_watchdog_installer.sh -c context0 -c context_demo               |
-| -r     | 0                | If the system is down then the script try to restart the hub and probe for first cycle and for next cycle if the system is down then it send mail | ./ipdr_watchdog_installer.sh -r                                        |
-| -h     | -                | Prints the help command for smoth run                                                                                                             | ./ipdr_watchdog_installer.sh -h                                        |
-
-:::note
-
-The script should with either -f or -g option as argument 
-
-:::
-
-## Examples
-
-- To check the script is providing the exact output run the script with -i option it provide the output in console
-
-![ipdr_watchdog](./images/ipdr_watchdog1.png)
-
-![ipdr_watchdog](./images/ipdr_watchdog2.png)
-
-- To assign cronjob for continuous monitoring run this script without -i option
-
-![](./images/ipdr_watchdog3.png)
-
-Example1 Explanation
-
-- ENGINE0 & ENGINE1 mention the number of engine present in the trisul . Each system will have different engine based on the config files.
-
-- DROPPED parameter should not be 0 . If so , then it send mail
