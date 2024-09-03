@@ -31,11 +31,33 @@ You can get useful reports like
 
 ## Viewing Blacklist Alerts
 
-:::note navigation
+To view *Blacklist Alerts*,
 
-Select Alerts → Blacklist
-
+:::info navigation
+Go to Alerts-> Blacklist
 :::
+
+A table of alerts generated for different signature IDs are listed 
+
+| Column           | Description                                                                                   |
+|------------------|-----------------------------------------------------------------------------------------------|
+| Signature ID     | A unique identifier for the specific threat or attack pattern detected                        |
+| Priority         | The level of severity assigned to the alert                                                   |
+| Count            | The number of times the threat or attack pattern has been detected on that Signature ID       |
+| Description      | A brief summary of the threat or attack pattern                                               |
+| Last Seen IST    | The timestamp in IST (Indian Standard Time) when the threat or attack pattern was last detected                                                                                                           |
+| Probe            | The probe that captured the traffic of the associated alert                                   |
+| Drilldown Button | Click on the Drilldown button to view the edge graph of the Signature ID, and to delete that alert                                                                                                                |
+
+By clicking on the Signature ID and the count value you will be able to view a list of recent 1000 alerts grouped by for that particular Signature ID.
+By clicking on the Priority value on the column, you will be able to view a list of recent 1000 alerts grouped by for that particular                        
+### Group By Options
+
+![](image/groupbyoptions_mw.png)  
+*Figure: Group By Options for the Blacklist Alerts*
+
+By clicking on the *Group by Options* on the top of the table, you can filter and group the generated *Blacklist Alerts* by various groups including source IP, destination IP, priority, classification, description, and view all alerts.
+
 
 ## Evasions
 
