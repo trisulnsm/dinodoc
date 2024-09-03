@@ -18,7 +18,7 @@ up flows and packets for any alert.
 
 ### Accessing
 
-:::note navigation
+:::info navigation
 
 To access select Dashboards → Real Time Alerts
 

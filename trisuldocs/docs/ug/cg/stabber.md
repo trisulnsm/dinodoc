@@ -73,9 +73,9 @@ Click on any key item from a dashboard that takes you into the key dashboard of 
 
 ### 3. From the Menu
 
-:::note navigation
+:::info navigation
 
-Select Tools -> Real Time Stab Toppers
+Select Tools-> Real Time Stab Toppers
 
 :::
 
@@ -110,7 +110,7 @@ Click and drag to zoom a particular time interval with mouse. Use the [Module ic
 
 ### Real Time Stabber: Flow Activity
 
-Real Time Stabber: Flow Activity hows the real time flow activity for any host or port.
+Real Time Stabber: Flow Activity shows the real time flow activity for any host or port.
 
 This is an example of live view, as each flow progresses the numbers keep updating in
 real time.
@@ -133,22 +133,4 @@ The image below shows a counter group stabber viewing top `Internal Hosts` based
 
 A real time view into all IDS alert activity in your network. As new
 alerts come in they are animated and then transitioned onto the real
-time visualization.
-
-To view Real Time Alert Stabber,
-
-:::note navigation
-
-Go to Dashboards -> Real Time Alerts
-
-:::
-
-With Real Time Alert Stabber you can,
-
-1. Live view optimized to handle large volumes
-2. Interactive bubbles allow you to sift through different alert types
-3. Real time aggregated list gives you instant overview
-
-![](images/rtstabbers6.png)
-
-*Figure: Real Time Alert Stabber*
+time visualization. See [Real Time Alert Stabber](/docs/ug/alerts/ids_stabber) for detailed documentation.
