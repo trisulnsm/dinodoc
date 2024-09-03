@@ -5,77 +5,112 @@ sidebar_position: 4
 
 # Flow Tracker Alerts
 
-Trisul provides a powerful way to generate an alert when certain types of flow activity occurs. Also see [Flow Trackers](/docs/ug/flow/tracker) for instructions on using Flow Trackers which is a pre-requisite to creating Flow Tracker Alerts (this section).
+Having previously configured [*Flow Trackers*](/docs/ug/flow/tracker) as described in our prior documentation, we will now proceed to outline the procedures for generating alerts based on these *Flow Trackers*. This section will focus on the creation and configuration of **Flow Tracker Alerts**, that enables the detection of specific flow activity and triggers notifications in response to pre configured threshold criteria.
 
-The alerts
-
-1. show up on the Web Interface alert tracker (top right)
-2. can be sent in near real time (1-5 sec) via email or Text Message (SMS)
+## Overview
+Trisul provides a powerful way to generate an alert when certain types of flow activity occurs.
+Once configured, *Flow Tracker Alerts* can be triggered in near real-time (latency of 1-5 seconds) prompting notifications via:
+- [Web Interface Alert Tracker](/docs/ug/ui/userlayout#alerts-and-notifications) (located in the top-right corner)
+- Email notifications
+- SMS (Text Message) notifications
 
 ## Applications
 
-You can use flow tracking alerts to be notified when a number of things happen. Some typical examples are
+You can use *Flow Tracker Alerts* to be notified when a number of things happen. Some typical examples include,
 
-1. when anyone *uploads* anything over 10MB from your network
-2. when anyone establishes a long lived session more than 1 hour out of your network
-3. when anyone *downloads* anything over 1G into your network
+1. When anyone *uploads* anything over 10MB from your network
+2. When anyone establishes a long lived session more than 1 hour out of your network
+3. When anyone *downloads* anything over 1G into your network
 
-## Configuring
+## Configuration of Flow Tracking Alerts
 
-:::note navigation
+To Configure *Flow Tracking Alerts*, Login as `user`,
 
-Select Alerts → Flow Tracking → Configure
-
+:::info navigation
+Select Alerts-> Flow Tracking-> Configure
 :::
 
-or you can create Flow Tracker Tracker Alerts per probe.
+Or you can create *Flow Tracker Tracker Alerts* per probe.
 
-Login as `admin` user to create Flow Tracker Alerts.
+For that, Login as `admin` user to create *Flow Tracker Alerts*.
 
-:::note navigation
-
-Select *Context : default* → profile0 → Flow Tracker Alerts
-
+:::info navigation
+Select *Context : default*-> profile0-> Alerts-> Flow Tracker 
 :::
 
-1. Click on **Create a new Flow Tracker Alert**
+### Create New Flow Tracker Alert
 
-| FieldName                          | Description                                                                  |
-| ---------------------------------- | ---------------------------------------------------------------------------- |
-| Name                               | A unique name for the alert                                                  |
-| Select a Flow Tracker              | Which tracker, see section on Flow Trackers                                  |
-| Threshold Value (bytes or seconds) | For data xfer based trackers. Specify number of bytes. Eg 10MB, 6K, 2000 (default units = bytes). For Time based trackers like Long Lived flows. Specify number of seconds                    |
-| Priority                           | Alert Priority (1=HIGH, 2=MEDIUM, 3=LOW)                                     |
-| Alert Message                      | Message shown as part of the alert                                                                                                               |
+Click on **Create a New Flow Tracker Alert**
 
-## Viewing Generated Alerts
+Filling in this form enables you to create an alert condition on a flow tracker. Find the fields and their description below to fill in the form.
 
-There are couple of ways to see flow alerts that fired.
+| Field                              | Description                                                                |
+| ---------------------------------- | ---------------------------------------------------------------------------|
+| Alert Name                         | A unique name for the alert                                                |
+| Select a Flow Tracker              | Which tracker, see section on Flow Trackers                                |
+| Threshold Value (Bytes or Seconds) | For data xfer based trackers. Specify number of bytes. Eg 10MB, 6K, 2000 (default units = bytes). For Time based trackers like Long Lived flows. Specify number of seconds                  |
+| Priority                           | Alert Priority (1=HIGH, 2=MEDIUM, 3=LOW)                                   |
+| Alert Message                      | Message shown as part of the alert                                         |
 
-:::note navigation
+Once providing all the details in the form, click *Create*. Now you have created a new *Flow Tracker Alert*.
 
-Select Alerts → Flow Tracking
+### View Generated Alerts
 
+There are couple of ways to see flow alerts that fired. To view the generated alerts,
+
+:::info navigation
+Go to Alerts-> Flow Tracking
+:::
+Or 
+:::info navigation
+Go to Dashboards-> Alerts-> Flow Activity Alerts
 :::
 
-:::note navigation
+Here you can find the total alerts for each flow tracker with the following details. 
 
-Select Dashboards → Alerts
+![](image/flowtrackeralerts1.png)
+*Figure: Fired Alerts*
 
-:::
+| Column                       | Description                                                                     |
+|----------------------------------------------|-----------------------------------------------------------------|
+| Priority                     | The level of severity assigned to the alert                                     |
+| Count                        | The number of times the alert has been triggered. Click on the count to see individual alerts triggered and their details                                                                    |
+| Last Seen IST                | The last time the alert was triggered (in Indian Standard Time)                 |
+| Name                         | A descriptive name for the Flow Tracker Alert                                   |
+| Latest Value                 | The latest value of the flow that triggered the alert                           |
+| Threshold                    | The threshold value configured to trigger the alert                             |
+| Probe                        | The data source that captured the flow for triggering the alert                 |
+| Action                       | Click the *Delete All* button to delete all the alerts
 
-You can also find an yellow icon with numbers which indicate the number of Flow Tracker alerts generated.
+- Click on the [*Download* button](/docs/ug/ui/elements#download-button) to download the *Flow Tracker Alerts* data in PDF, XLSX, and CSV formats.
+- You can also search for *Flow Tracker Alerts* at any time interval. Clicking on the [*Show Search Form*](/docs/ug/ui/elements#hide-show-search-form) option on the top right will show you the [Time Frame](/docs/ug/ui/elements#time-selector) to customize alerts for specific dates.
 
-You will find a screen with many trackers. Click on the number. You 
-will find the detailed report of the IP that has fired the alert.
+### View Individual Alerts
 
-You can also download it in pdf,xlsx,csv format.
+Clicking on the *count* (yellow icon) with numbers on the *Fired Alerts* that indicate the number of *Flow Tracker Alerts* generated will display the list of many trackers with the following details.   
 
-## Using Search Form
+![](image/individualalerts_ft.png)  
+*Figure: List of Individual Alerts and their Details*
 
-You can also search for flow tracker alerts at any time interval. 
-Clicking on the ‘Show Search Form’ option on the top right will show you
- the custom time frame to choose alerts for specific dates
+| Column     | Description                                                                                        |
+|------------|----------------------------------------------------------------------------------------------------|
+| Count      | The number of counts the alert has been triggered for that particular Flow> Clicking on the count takes you to further analyze the alert in more detail                                                             |
+| Priority   | The level of severity assigned to the alert                                                        |
+| IP         | The Source IP where the flow got originated                                                        |
+| Port       | The Source Port from where the Flow got emanated                                                   |
+| IP         | The Destination IP where the flow reached                                                          |
+| Port       | The Destination Port where the flow got terminated                                                 |
+| Time IST   | The time the alert got triggered (in Indian Standard Time)                                         |
+| Current    | The volume value that triggered the alert                                                          |
+| Probe      | The data source that captured the flow that triggered the alert                                    |
+| Options    | Clicking on the option button enables you to view the flow details including end points, flow stats, timing and netflow details of that particular flow.                                                        |
+
+- You can click on each IP and Port to drilldown for further analysis which will take you to the [*Key Dashboard*](/docs/ug/ui/key_dashboard). 
+ 
+- You can also [*Download*](/docs/ug/ui/elements#download-button) the *Flow Tracker Alerts* data from here in PDF, XLSX, and CSV formats.
+
+- Each column in the table of individual alerts are sortable, that enables you to rearrange data in ascending or descending order by clicking the adjacent arrow(up/down) button, for flexible data analysis and visualization.
+
 
 ## Sending Alerts by Email
 
