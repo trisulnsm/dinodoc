@@ -248,6 +248,7 @@ const sidebars = {
 							},
 							'ag/install/pkgverify',
 							'ag/install/doinstall',
+							'ag/install/selectmode',
 							'ag/install/doupgrade',
 							'ag/install/douninstall',
 						],

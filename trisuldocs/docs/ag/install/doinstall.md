@@ -95,6 +95,11 @@ import TabItem from '@theme/TabItem';
 </Tabs>
 
 
+:::tip Congrats ! next step
+
+:point_right: After installation, you should login as admin and select the ["Product Mode"](selectmode)
+:::
+
 
 ## Installing each package 
 
