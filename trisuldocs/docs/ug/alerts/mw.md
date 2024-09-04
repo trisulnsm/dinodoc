@@ -119,7 +119,7 @@ Below the summary section, a detailed alert table is displayed, presenting a com
 | Probe             |  The specific probe that detected and reported the alert                                   |
 | Drilldown Options | Clicking on the drilldown button enables a number of drilldown options including alert details, flow details, packet headers, download PCAP etc.                                                        |
 
-- Interactive functionalities of the table include : [*Column Sorter*](/docs/ug/ui/elements#column-sorter), [*Toggle Labels*](/docs/ug/ui/elements#toggle-labels), [*Download Button*](/docs/ug/ui/elements#download-button), [*Download PCAP*](/docs/ug/ui/elements#download-pcap-button), and the
+Interactive functionalities of the table include : [*Column Sorter*](/docs/ug/ui/elements#column-sorter), [*Toggle Labels*](/docs/ug/ui/elements#toggle-labels), [*Download Button*](/docs/ug/ui/elements#download-button), [*Download PCAP*](/docs/ug/ui/elements#download-pcap-button), and the
 *Check Scan* button that initializes the scan status for all the generated alerts indicating if the system has only scanned for malware or if its infected by malware.
 
 ### Drilldown Options
