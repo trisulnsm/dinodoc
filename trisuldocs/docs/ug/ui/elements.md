@@ -239,3 +239,9 @@ You can export data, reports, or analytics in various formats like,
 
 When enabled, the search result or downloaded file will include labels. When disabled, only the raw data i.e., the actual keys without labels is displayed.
 
+## Column Sorter
+
+![](images/columnsorter.png)
+*Figure: Column Sorter*
+
+*Column Sorter* is a small up/down toggle element located typically on the column header of a table of dataset containing large volume of data. When you find the *Column Sorter* arrow(up/down) button on the column header of a table, it indicates each column in the table of data are sortable, that enables you to rearrange data in ascending or descending order by clicking it, for flexible data analysis and visualization.
