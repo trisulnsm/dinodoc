@@ -60,24 +60,30 @@ import TabItem from '@theme/TabItem';
 
 ## Requirements
 - Run this script as root
-- Check cronjob is installed 
+- Check cronjob is installed
+- Configure email in trisul ( If you need email alert )
 
 ## Options
 
 | Option | Default value   | Info                                  | Example                                            |
 | ------ | ----------------| ------------------------------------- | -------------------------------------------------- |
 | -c     | context0        |    Defaule context                    | ./run_hub_watchdog.sh -c context0           |
-| -n     | 2                | No of engine present each trisul can have multiple engines based on the usage                                                                     | ./run_hub_watchdog.sh -n 4                                      |
-| -s     | Your system name | Name for your system                                                                                                                              | ./run_hub_watchdog.sh -s trisul-system                          |
-| -k     | 0                | If the system runs successfully it send mail for every run                                                                                        | ./run_hub_watchdog.sh -k                                        |
-| -t     | 70               | The differnence between the log entry and current time should be less than or equal to t                                                          | ./run_hub_watchdog.sh -t 90                                     |
-| -g     | No default value | Search for the particular guuid log entry                                                                                                         | ./run_hub_watchdog.sh -g"2314BB8E-2BCC-4B86-8AA2-677E5554C0FE" |
-| -f     | 0                | Runs in flow mode                                                                                                                                 | ./run_hub_watchdog.sh -f                                        |
-| -j     | /10* * * * *     | Assign cronjob in crontab                                                                                                                         | ./run_hub_watchdog.sh -j /20* * * * *                           |
+| -n     | 2               | No of engine present each trisul can have multiple engines based on the usage    | ./run_hub_watchdog.sh -n 4                                      |
+| -s     | Your system name | Name for your system                 | ./run_hub_watchdog.sh -s trisul-system               |
+| -k     | 0                | If the system runs successfully it send mail for every run | ./run_hub_watchdog.sh -k       |
+| -t     | 70               | The differnence between the log entry and current time should be less than or equal to t    | ./run_hub_watchdog.sh -t 90    |
+| -g     | No default value | Search for the particular guuid log entry   | ./run_hub_watchdog.sh -g"2314BB8E-2BCC-4B86-8AA2-677E5554C0FE" |
+| -f     | 0                | Runs in flow mode                    | ./run_hub_watchdog.sh -f     |
+| -j     | /10* * * * *     | Assign cronjob in crontab            | ./install_cron_hub_watchdog.sh -j /20* * * * *                 |
 | -i     | -                | Print verbose of the output terminal   | ./run_hub_watchdog.sh -i                                        |
 | -e     | -                | Ignores the particular context         | ./run_hub_watchdog.sh -c context0 -c context_demo               |
 | -r     | 0                | If the system is down then the script try to restart the hub and probe for first cycle and for next cycle if the system is down then it send mail | ./run_hub_watchdog.sh -r                                        |
 | -h     | -                | Prints the help command for smoth run   | ./run_hub_watchdog.sh -h                     |
+
+
+:::caution
+  -j option is only available for the install_cron_hub_watchdog.sh script
+:::
 
 
 ## How to run this script
@@ -103,5 +109,16 @@ import TabItem from '@theme/TabItem';
 When you see the example the above script is executed with argument -i
 - This is the verbose option where it prints the values in terminal
 - When you run without -i then it only print the values if the context is not running
+
+### Example - How alert generated when the conditions not met
+```bash
+   /usr/local/share/trisul-hub/run_hub_watchdog.sh -c rack265
+```
+![error_log](./images/log_message.png)
+
+- In above example you can see that the flush value is 0. So that it generated the alert to syslog.
+- For both flow mode & GUUID mode the alert will be same
+
+
   
 
