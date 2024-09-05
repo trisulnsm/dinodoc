@@ -21,10 +21,10 @@ payloads to a target host. Trisul allows you to simply track all IP
 Addresses in real time and alert when any of them exceed threshold for 
 the following criteria.
 
-1. transmit or receive large volume of traffic
-2. transmit or receive large number of packets
-3. generate a large number of flows with TCP SYN or SYN/ACK
-4. flood with ICMP or ARP
+1. Transmit or receive large volume of traffic
+2. Transmit or receive large number of packets
+3. Generate a large number of flows with TCP SYN or SYN/ACK
+4. Flood with ICMP or ARP
 
 Furthermore you can configure Trisul to automatically track UDP protocols for amplification attacks like SNMP, DNS, CHARGEN, NTP and others by measuring IN vs OUT traffic and setting thresholds.
 
@@ -42,7 +42,7 @@ monitors traffic for 5 weeks and builds a “Profile” for expected traffic
  volumes. Create threshold band alerts for all key uplink ports and set
  a large window.
 
-![](image/tband1.png)
+![](image/activeflows_tbandenabled.png)
 
 *Figure: Active Flows where Threshold Banding is Enabled*
 

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 # Other UI Elements
@@ -80,67 +80,6 @@ functionality is triggered when you enter three or more characters.
 
 *Figure: Showing AutoComplete Option of Long Term Analysis Form*
 
-## Charts and Chart Interactions
-
-Trisul supports a number of intuitive chart surfaces that render the statistical data in a rich interactive way. And you can drilldown on the chart using module icons and legend table. Many modules allow you to select a chart surface and enables you to view the data at that particular point of time.
-
-### Module Icons
-
-Module icons are small icons that appear atop search results or modules that contain the visual graphics like charts. Module icons provide a visual interface to facilitate interactive functionalities, thereby allowing you to engage with the chart data and perform various operations to extract deeper insights.
-
-These are the module icons that can be found in various modules across the platform.
-
-![](images/moduleicons.png)
-
-*Figure: Module Icons*
-
-Below you can find the module icons explained from right to left of the sample image.
-- **PDF**- Click on the PDF icon on the top righ corner of the module to download the chart data in PDF.
-
-- **Key Dashboard**- Click on the Key Dashboard icon to view and edit the Key details of this module
-
-- **Live SNMP**- To view the Live data i.e., until the latest one minute click Live SNMP icon and it gets refreshed every 10 seconds. This icon is not available on all modules rather on relevant ones.
-
-- **Menu**- Click on the three lines icon and select from the list of download options SVG, PNG and CSV to donwload in that particular format
-
-- **Home**- Click on the home icon to reset zoom.
-
-### Legend Table
-
-*Legend tables* are interactive chart legends where you can click on a chart item in the legend area to toggle its visibility, showing or hiding the corresponding data series in the chart.
-
-| ![](images/legendtable.png) |
-| --------------------------- |
-
-*Figure: Showing Legend Table in a Module*
-
-
-Example: In the chart, both Inbound and Outbound items are initially enabled. Clicking on either item in the legend will hide or show its associated data.
-
-| ![](images/legend2.png) | ![](images/legend3.png) |
-| ----------------------- | ----------------------- |
-
-*Figure: Showing Hide/Unhide data from Chart using Legend Table Meters*
-
-**Expand Legend**  
-Click to view a detailed legend, providing additional information.
-
-**Auto Refresh**  
-Charts are updated automatically via Ajax calls, ensuring real-time data visualization.  
-*Legend Table* Includes statistical summaries for each network traffic search result, such as:
-- Max
-- Min
-- Average
-- Total
-- 95th percentile
-
-### Tooltip
-
-Hover your mouse over an item such as a PIE slice or line graph and get a tooltip with values at different intervals.
-
-![](images/netflowvolume.png)
-
-*Figure: Showing Tooltip in a Graph Module*
 
 ### Key Dashboard
 
@@ -150,44 +89,6 @@ You can click on any key items on the chart and it will take you to the [Key das
 
 *Figure: Key Dashboard*
 
-### Retro Charts
-
-Click on any of the module toolbar and click View historical to view the retro chart of that particular module
-
-![](images/retrochart2.png)
-
-*Figure: View Historical Option from Module Toolbar*
-
-Select a time frame and view the retro chart for that particular past time period.
-  ![](images/retrochart.png)
-
-*Figure: Retro Chart with Time Frame*
-
-The retro charts are even more interactive :  
-
-- Click and select an area  
-
-- Zoom into a selection  
-
-- Pan left and right  
-
-- Use the selected time interval to perform drill down retro analysis
-
-### Trisul Chart Surfaces
-
-These are some of the intuitive chart surfaces in Trisul. 
-
-|                                    |     |                               |
-| ---------------------------------- | --- | ----------------------------- |
-| PIE                                |     | MRTG                          |
-| ![](images/charts/pie.png)         |     | ![](images/charts/mrtg.png)   |
-| STACKEDAREA                        |     | LINE                          |
-| ![](images/charts/stackedarea.png) |     | ![](images/charts/line.png)   |
-| SQUARELINE                         |     | BUBBLE                        |
-| ![](images/charts/squareline.png)  |     | ![](images/charts/bubble.png) |
-| BAR                                |     | AREA                          |
-| ![](images/charts/bar.png)         |     | ![](images/charts/area.png)   |
-|                                    |     |                               |
 
 ## Download PCAP button
 
