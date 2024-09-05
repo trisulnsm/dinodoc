@@ -24,11 +24,12 @@ yum install net-snmp net-snmp-utils
 ## Configuring SNMP
 
 You need to first specify the authentication details for each SNMP
-device.
+device.  
+For that, Login as `user` and,
 
-:::note navigation
+:::info navigation
 
-Login as user, then select \_Netflow \> Router and Interfaces
+:point_right: Go to Netflow &rarr; Router and Interfaces
 
 :::
 
@@ -42,8 +43,8 @@ Click on SNMP Settings and enter the SNMP v2 or SNMP v3 parameters
 
 When you click the *Options* menu
 
-| Settings                               | Description                                                                                                                                                                           |
-| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Settings                               | Description                                                        |
+| -------------------------------------- | ------------------------------------------------------------------ |
 | Key Dashboard                          | Every Item in trisul has a key. Similarly every router is associated with an unique key and this options fetches the key details for every device                                     |
 | Long Term Chart                        | You can view the long term traffic trends as a chart using this option                                                                                                                |
 | SNMP Settings                          | Configure SNMPv2 or SNMPv3 parameters.                                                                                                                                                |
@@ -59,19 +60,16 @@ using SNMP via the IP address shown in the routers table will fail. You
 need to specify a *Key Attribute* for the router called
 `snmp.management_ip`. Follow these steps.
 
-- First configure SNMPv2 or v3 parameters for the device.
-- Select *Options \> Key Dashboard*
+- First configure SNMP v2 or v3 parameters for the device.
+- Select *Options &rarr; Key Dashboard*
 - Select *Assign user label / Edit attributes* as shown below
 
 ![](images/snmp_edit_label.png)
 
 *Figure: Showing Option to Resolve Names for Routers and Interfaces*
 
-Scroll down to the *Attributes* section and add the following string
-`snmp.management_ip=10.x.x.x` replace with actual IP.
-
-- Update
-
+Scroll down to the *Attributes* field and add the following string
+`snmp.management_ip=10.x.x.x` replace with actual IP. And click *Update*.
 Now you should be able to resolve the router and inteface names.
 
 ## Viewing SNMP Traffic Charts
@@ -104,13 +102,13 @@ Suppose if there are no devices listed in the routers and interfaces,
 you want to resolve device names if no per-device settings are found,
 you can use this setting to configure SNMP globally. or if there are
 more number of devices with same SNMP settings, you can use this
-settings to configure SNMp in a single shot.
+settings to configure SNMP in a single shot.
 
-To configure this, Login as Admin
+To configure this, Login as `admin`
 
-:::note navigation
+:::info navigation
 
-Click on Manage -\> App Settings -\> SNMP Settings.
+Click on Web Admin: Manage &rarr; App Settings &rarr; SNMP Settings.
 
 :::
 

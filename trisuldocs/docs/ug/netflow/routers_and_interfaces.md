@@ -5,119 +5,57 @@ sidebar_position: 2
 
 # Routers and Interfaces
 
-The primary tool you will need to work with **Device level** views of Netflow is the ***Routers and Interfaces*** tool. This tool offers network monitoring, enabling you to select a timeframe and view a list of routers with traffic summaries. From there, you can select a router to view its associated interfaces, and then monitor interface activity or drill down further into hosts, applications, and flows on that interface. You can even pull up a [*Real Time stabber*](/docs/ug/cg/stabber) of any of the drilldowns, providing instant insights into network activity.
-
-To access Routers and Interfaces,
-
-:::note
-Select Netflow -> Routers and Interfaces
-:::
-
-![](images/routersandinterfaces_tool.png)
-
-*Figure: Routers and Interfaces Tool*
+The primary tool you will need to work with **Device level** views of Netflow is the ***Routers and Interfaces*** tool. This tool offers network monitoring, enabling you to select a timeframe and view a list of routers with their traffic summaries. From there, you can select a router to view its associated interfaces, and then monitor interface activity or drill down further into hosts, applications, and flows on that interface. You can even pull up a [*Real Time stabber*](/docs/ug/cg/stabber) on any of the drilldowns, providing instant insights into network activity.
 
 ## Using the Router Interface Tool
 
-The router and Interface Tool consists of three main parts,
+To access Routers and Interfaces,
 
-1. Time Selector
+:::info navigation
+:point_right: Go to Netflow -> Routers and Interfaces
+:::
+
+The router and Interface Tool consists of three main sections,
+
+1. [Time Selector](/docs/ug/ui/elements#time-selector)
 
 2. Router Table
 
 3. Interface Table
 
-## Time Selector
+![](images/routersandinterfaces_tool.png)
 
-**Time Selector Configuration**
+*Figure: Routers and Interfaces Tool*
 
-The *Time Selector* feature enables users to define a temporal scope for analysis, with a default setting of the most recent 15 minutes. Once a time window is selected, it remains fixed for all subsequent sections of the page and their associated drill-downs. Users can choose from a range of pre-defined time ranges, including:
 
-- Last 1 hour
+### Router Interface Display Configuration
 
-- Last 24 hours
+The [*Time Selector*](/docs/ug/ui/elements#time-selector) section contains the*Show all Router Interfaces* check box. This checkbox on the *Time Selector* controls the display of router interfaces in the table. When enabled, all routers and their associated interfaces are displayed in a consolidated manner. When disabled, the table only displays the router list, allowing you to select specific interfaces for each router.
 
-- This month
-
-- Last month and more.
-
-Alternatively, users can specify a custom date range by selecting the *Custom Range* option, which allows for the selection of a specific period from the past.
-
-![](images/timeselector.png)
-
-**Router Interface Display Configuration**
-
-The *Show all router interfaces* checkbox controls the display of router interfaces in the table. When enabled, all routers and their associated interfaces are displayed in a consolidated manner. When disabled, the table only displays the router list, allowing you to select specific interfaces for each router.
-
-## Router Table
+### Router Table
 
 Router Table shows the list of all routers active in the selected time window. The table shows the number of interfaces active in the selected time window. Table shows the number of interfaces active, total volume pushed through the router and other info.
+
+Find the *Router Table* below that provides the following router details and functionalities: 
+
+1) [Router Table Interactive Functionalities](#router-table-features)
+2) [Magic Map Visualization](#magic-map-visualization)
+3) [Routers List](#routers-list)
 
 ![](images/routertable1.png)
 
 *Figure: Router Table*
 
-**Router Table Features**
 
-The Router Table provides several features for customizing and exporting data:
 
-**Column Selection (Cols)**
+#### Router Table Features
 
-### Download Options
+The Router Table provides several features for customizing and exporting data on the *Routers and Interface* tables including: 
+- [Column Selector](/docs/ug/ui/elements#column-selector)
+- [Download Options](/docs/ug/ui/elements#download-button)
+- Filter Routers
 
-The router table data can be donwloaded in easy formats.
-
-![](images/download_routertable.png)
-
-*Figure: Donwload Options in Router Table*
-
-The *Download* button offers three export formats for the router table data:
-
-- Portable Document Format (PDF)
-
-- Microsoft Excel Workbook (XLSX)
-
-- Comma Separated Values (CSV)
-
-### Cols
-
-The *Cols* dropdown menu allows users to customize the columns displayed in the router table.
-
-![](images/cols_routertable.png)
-
-*Figure: Column Options in Router Table*
-
-Available column options include:
-
-- Device IP
-
-- Name
-
-- Description
-
-- System Description
-
-- Interface (Inter)
-
-- Total Volume
-
-Selecting specific columns enables users to tailor the table to display the information for those columns.
-
-### **Magic Map Visualization**
-
-The Magic Map feature provides a graphical representation of the top interfaces across all routers, enabling direct interface selection. This visualization tool offers a network-wide perspective on relative interface volumes. 
-
-![](images/magicmap1.png)
-
-*Figure: Magic Map Visulaization*
-
-**Key Functionality:**
-
-- Interfaces are grouped router-wise for enhanced organization and analysis.
-
-- Interface volumes are represented by box sizes, allowing for easy identification of high-traffic interfaces (larger boxes indicate larger data volumes).
-
-### Filtering Routers
+##### Filtering Routers
 
 ![](images/filterrouters.png)
 
@@ -125,24 +63,42 @@ The Magic Map feature provides a graphical representation of the top interfaces 
 
 The *Filter Routers* bar, located at the upper right-hand side of the Router table, enables users to filter routers by specifying an IP address. Alternatively, clicking the *search button* without entering any criteria will display all routers on the network.
 
-### Router List
+### **Magic Map Visualization**
+
+The *Magic Map* feature provides a graphical representation of the top interfaces across all routers, enabling direct interface selection. This visualization tool offers a network-wide perspective on relative interface volumes. 
+
+![](images/magicmap1.png)
+
+*Figure: Magic Map Visulaization*
+
+**Key Functionality of Magic Map**
+
+- Interfaces are grouped router-wise for enhanced organization and analysis.
+
+- Interface volumes are represented by box sizes, allowing for easy identification of high-traffic interfaces (larger boxes indicate larger data volumes).
+
+
+
+### Routers List
+
+The list of routers and their details are displayed for the selected time range. 
 
 ![](images/routerlist.png)
 
 *Figure: List of routers and their details in the Router Table*
 
-The list of routers and their details are displayed for the selected time range. The details include the following
+The details on the Routers List include the following:
 
-| Column Name  | Description                                                                                         |
-| ------------ | --------------------------------------------------------------------------------------------------- |
-| Select       | Checkbox to enable SNMP for the corresponding router                                                |
-| Device IP    | IP address assigned to the device                                                                   |
-| Name         | Name of the Router                                                                                  |
-| Desc         | Brief description of the router                                                                     |
-| Sys Desc     | System description of the router                                                                    |
-| Inter        | Number of active interfaces on the router                                                           |
-| Total Volume | Total volume of the router, displayed as a percentage and in Gigabytes (G) or Terabytes (T)         |
-| Context Menu | Click on the drop down button to access additional options and detailed information for each router |
+| Column Name  | Description                                                                                |
+| ------------ | ------------------------------------------------------------------------------------------ |
+| Select       | Checkbox to enable SNMP for the corresponding router                                       |
+| Device IP    | IP address assigned to the device                                                          |
+| Name         | Name of the Router                                                                         |
+| Desc         | Brief description of the router                                                            |
+| Sys Desc     | System description of the router                                                           |
+| Inter        | Number of active interfaces on the router                                                  |
+| Total Volume | Total volume of the router, displayed as a percentage and in Gigabytes (G) or Terabytes (T)|
+| Context Menu | Click on the drop down button to access additional options and detailed information for each router                                                                                                      |
 
 #### Routers List- Context Menu
 
@@ -178,33 +134,33 @@ Display a matrix showcasing the relationships and connections between different 
 
 ## Interfaces Table
 
-The Interface Table is a dynamic display that populates with detailed information about all active interfaces on a selected router, specific to the chosen time frame. This table is invoked when a router is chosen from the Router Table.
+The *Interface Table* is a dynamic display that populates with detailed information about all active interfaces on a selected router, specific to the chosen time frame. This table is invoked when a router is chosen from the Router Table.
 
 ![](images/interfacetable2.png)
 
 *Figure: Interfaces Table*
 
-- Clicking on a column title enables sorting in either ascending (UP) or descending (DOWN) order, facilitating data analysis and management. 
-
-- The Column, Download and Filter interface options are similar to the Router table components. 
-
-- The page size indicator, located in the upper right corner of the interface table, enables users to define the number of data records displayed per page, streamlining the viewing and management of large datasets.
+Similar to *Router Table* interactive components, the *Interfaces Table* also provides several features for customizing and exporting data including: 
+- [Column Selector](/docs/ug/ui/elements#column-selector)
+- [Download Options](/docs/ug/ui/elements#download-button)
+- [Filter Interfaces](/docs/ug/netflow/routers_and_interfaces#filtering-routers)
+- The page size indicator, located in the upper right corner of the interface table, enables users to define the number of datasets displayed per page.
 
 Upon selecting a router from the router table, the Interface Table will display comprehensive details about all interfaces active on the selected router during the specified time window. This includes the following interface details.
 
-| Column Name  | Description                                                                                            |
-| ------------ | ------------------------------------------------------------------------------------------------------ |
-| Eye Icon     | Enable the Eye icon to enable interface tracking                                                       |
-| Num          | Unique Interface Identifier                                                                            |
-| IF Name      | Name of the interface                                                                                  |
-| Alias        | Interface alias (Alternative name)                                                                     |
-| Traffic In   | Incoming traffic rate (in bps)                                                                         |
-| Traffic Out  | Outgoing traffic rate (in bps)                                                                         |
-| In Util %    | Incoming traffic utilization percentage                                                                |
-| Out Util %   | Outgoing traffic utilization percentage                                                                |
-| In           | Total incoming traffic (in bytes)                                                                      |
-| Out          | Total outgoing traffic (in bytes)                                                                      |
-| Context Menu | Click on the drop down button to access additional options and detailed information for each interface |
+| Column Name  | Description                                                                           |
+| ------------ | ------------------------------------------------------------------------------------- |
+| Eye Icon     | Enable the Eye icon to enable interface tracking                                      |
+| Num          | Unique Interface Identifier                                                           |
+| IF Name      | Name of the interface                                                                 |
+| Alias        | Interface alias (Alternative name)                                                    |
+| Traffic In   | Incoming traffic rate (in bps)                                                        |
+| Traffic Out  | Outgoing traffic rate (in bps)                                                        |
+| In Util %    | Incoming traffic utilization percentage                                               |
+| Out Util %   | Outgoing traffic utilization percentage                                               |
+| In           | Total incoming traffic (in bytes)                                                     |
+| Out          | Total outgoing traffic (in bytes)                                                     |
+| Context Menu | Click on the drop down button to access additional options and detailed information for each interface                                                                                              |
 
 ### Drilldown From the Interfaces Table
 
