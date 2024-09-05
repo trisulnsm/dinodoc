@@ -21,7 +21,6 @@ Click to minimize the form, hiding its contents and allowing you to focus on ana
 Click to restore the form to its full height, revealing its contents and enabling you to refine your analysis parameters. This is useful when you need to adjust settings or tweak your analysis.
 
 
-
 *Figure: Analysis Form Showing Hide Button*
 
 ## Packets and Flows Drilldown Buttons
@@ -146,3 +145,12 @@ When enabled, the search result or downloaded file will include labels. When dis
 *Figure: Column Sorter*
 
 *Column Sorter* is a small up/down toggle element located typically on the column header of a table of dataset containing large volume of data. When you find the *Column Sorter* arrow(up/down) button on the column header of a table, it indicates each column in the table of data are sortable, that enables you to rearrange data in ascending or descending order by clicking it, for flexible data analysis and visualization.
+
+### Column Selector
+
+The *Cols* dropdown menu allows users to customize the columns displayed in the resulting table.
+
+![](images/cols_routertable.png)  
+*Figure: Column Options*
+
+Selecting specific columns enables users to tailor the table to display the information for those columns.
