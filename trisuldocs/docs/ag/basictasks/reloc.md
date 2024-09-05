@@ -1,37 +1,31 @@
----
-sidebar_position: 3
----
-
 # Relocate Trisul Database
 
-There are two major places where Trisul per-context data is stored.
+This document explains how you can move the Trisul Database to a new storage volume.
 
-1. **On each probe** - the pcaps, runtime data like extracted files,
-   etc
-2. **On the hub** - the main streaming metrics DB
+## Probe and Hub 
 
-By default - on both these nodes the root directory under which these
-are stored are `/usr/local/var` . Use the `relocate` CLI command to move
-this to a different volume.
+Using the `relocate context` command in `trisulctl_hub`  and `trisulctl_probe` you can move all data to a new volume. 
 
-## Relocate Context
+:::info Default storage location
 
-:::note **Run on each node**  
-The `relocate context` command must be on a node-by-node basis.
+You can choose to relocate one or both of the databases. 
 
+- Relocate on the hub for metrics, flows and other data
+- Relocate on the probe for PCAP data 
+
+The default storage root location for database is  under :dvd:  `/usr/local/var` 
 :::
-
-You only need to run the relocate command on the nodes (probes and hub)
-that you want to. Follow these steps.
 
 ## Relocate on Hub
 
 Use the `trisulctl_hub relocate context` command.
 
-Say you want to relocate the *default* context database to
-`/nsm/trisuldata` ; you can run the following.
+Say you want to relocate the database to :dvd: `/nsm/trisuldata`  run the following.
 
-```language-bash
+```bash
+$ trisulctl_hub 
+
+
 trisul_hub(domain0)> relocate context  domain0 hub0 default
 ** Relocate stopping context 
    + config0              stopped  success.context0
@@ -47,22 +41,46 @@ Current size                       : 5.67 MB
 Enter new location (enter to quit) :  /nsm/trisuldata
 ```
 
-The tool will then run some checks and ask you for a confirmation.
+The `trisulctl_hub` tool will then run some checks and ask you for a confirmation.  Then the relocation will be complete. 
 
-- Once the relocation is done. You can restart the context using
-  `start context default`
+> :point_right: Restart after relocation is complete. See [here](#after-relocation-restart) for instructions
+
 
 ## Relocate on Each Probe
 
 Use the `trisulctl_probe relocate context` command on each probe.
 
-Say you want to relocate the *default* context database to
-`/nsm/trisuldata` ; you can run the following.
+Say you want to relocate the PCAP files to `/nsm/trisuldata` ;  run the following.
 
-```language-bash
-    trisulctl_probe
-    > relocate context domain0 probe0 default
-    ..
-    ..
-    Enter new location (enter to quit) : /nsm/trisuldata
+```bash
+$ trisulctl_probe
+> relocate context domain0 probe0 default
+..
+..
+Enter new location (enter to quit) : /nsm/trisuldata
 ```
+
+> :point_right: Restart after relocation is complete. See [here](#after-relocation-restart) for instructions
+
+
+## After relocation restart 
+
+After relocation you need to restart Trisul and also the Web Server.
+
+To restart Trisul 
+
+```bash
+$ trisulctl_hub
+> restart context default 
+..
+> quit
+```
+
+To restart WebTrisul
+
+
+```bash
+systemctl restart webtrisuld 
+```
+
+For more details on starting and stopping see :memo: [Start and Stop](startstop)

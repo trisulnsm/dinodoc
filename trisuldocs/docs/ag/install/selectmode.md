@@ -1,4 +1,4 @@
-# Select mode
+# Selecting the  mode
 
 Trisul Network Analytics is a general platform which can be reconfigured to very specific use cases.  
 

@@ -1,129 +1,174 @@
----
-sidebar_position: 8
----
+# Configure Retention Policy
 
-# Configure disk storage
+Data retention policy refers to the number of days you want to keep historical data. 
 
-Trisul’s disk requirements depend on how much you want to retain :
+1. How much raw packet data in **GB** (probe nodes)  **default 10GB**
+2. How much metrics, flows, alerts in **Days** (hub nodes) **default 96 days**
 
-1. How much raw packet data in GB (probe nodes)
-2. How much metrics, flows, alerts in Days (hub nodes)
 
-**Probe vs Hub**  
-The Probes store the raw packets.AESencrypted.  
-The Hubs store everything else – metrics, flows, alerts, metadata, etc.
+## Check current Per-Day Disk Usage 
 
-## Checking current database status
+One of the first things you need to do is to calculate how much disk you are going to need to meet your data retention requirements.
 
-One of the first things you need to do is to calculate how much disk you are going to need to meet your data retention requirements. Follow these steps.
 
-1. Logon to the web interface as*admin*then select the*Admin Tasks → DB Status*
-2. From the*Database Slices*section you can check how much Disk Space is being used per day.
-3. Lower down , from the “Raw packet storage slices” section you can see how much disk space is being used for packets.
-   
-   
+:::info Navigation
 
-If you are trying to recover from a 100% full disk you may not be able to access the web interface. Add new disk space as described below and retry these steps.
+:point_right: Login as Admin &rarr; Context:default &rarr; Admin Tasks &rarr; Storage Status
 
-## Data locations on the Probe Nodes
+![per day storage](images/storage_per_day.png)
 
-The raw packets are stored for each context in the following default directories. The*App > DBRoot*parameter in[trisulProbeConfig.xml](/docs/ref/trisulconfig)points to the base directory
+:::
 
-- /usr/local/var/lib/trisul-probe/domain0/probe0/context0/caps/
-  - /oper – the operational directory where Trisul*writes*packets
-  - /ref – the reference directory for recent data likely to be looked up
-  - /archive – older data  
-    As data ages they ‘cool down’ and slide from oper to ref to archive. Therefore the ‘hottest’ data slices are under /oper. For more details read[How the sliding slices work](/docs/ug/caps/fullcontent#sliding-slices )
+Here we can see  we are using **6.2 MegaBytes** of disk per day using the [Storage Status](/docs/ag/webadmin/storage_status) tool
 
-The reason we have three directories is that they can be mounted on three separate volumes if required for heavy workloads.
+  
+
+## Retention Period Hub 
+
+ 
+The default retention policy is **96 days**. 
+
+:::tip Hub Config File
+The retention period in number of days is specified in the [:memo: Trisul Hub Configuration](/docs/ref/trisulhubconfig) file. 
+:::
+
+
+The Oper/Ref/Archive areas store 32 days each for a total of 96 days. 
+
+```xml {7,13,19}
+ <SlicePolicy>
+            <SliceWindow>
+                    DAILY
+            </SliceWindow>
+            <Operational>
+                    <SliceCount>
+                            32
+                    </SliceCount>
+                    <UsageRedMark/>
+            </Operational>
+            <Reference>
+                    <SliceCount>
+                            32
+                    </SliceCount>
+                    <UsageRedMark/>
+            </Reference>
+            <Archive>
+                    <SliceCount>
+                            32
+                    </SliceCount>
+                    <UsageRedMark/>
+            </Archive>
+```
+
+
+
+### Increasing the Retention Period
+
+Simply change the Archive Slice Count from 32 to the desired number.  
+
+Say if you wanted to store 1 year of data, set the Archive Count to 301 
+
+```xml {3}
+            <Archive>
+                    <SliceCount>
+                            301
+                    </SliceCount>
+                    <UsageRedMark/>
+            </Archive>
+```
+
+You can also adjust the Oper and Ref , refer to the [Storage Architecture](/docs/ag/domain/storage_arch) document for details.
+
+## Packet Capture Size Probe 
+
+On the Probe node you can configure the total disk allocated to packet capture.  Trisul will then use a sliding mechanism to ensure the latest data is stored.
+
+
+The default maximum Packet Capture PCAP storage is **10GB**
+
+
+:::tip Max PCAP Storage 
+The packet capture storage limit is specifiied in the [:memo: Trisul Probe Configuration](/docs/ref/trisulconfig) file in two parameters
+
+- `FileSizeMB` - size of each PCAP file 
+- `SliceCount` - How many such files 
+:::
+
+
+In the example below we have a `FileSizeMB` set to  `1000MB` or 1GB and number of such files in each pool `8 + 8 + 0 = 16GB` total. 
+
+```xml {3,12,20,28}
+              </FilePrefix>
+                <FileSizeMB>
+                        1000
+                </FileSizeMB>
+                <EnableDDosNetflowTapTrail/>
+ <SlicePolicy>
+                       <Rule mode="IGNORE"/>
+                </RuleChain>
+                <SlicePolicy>
+                        <Operational>
+                                <SliceCount>
+                                        8
+                                </SliceCount>
+                                <UsageRedMark>
+                                        90
+                                </UsageRedMark>
+                        </Operational>
+                        <Reference>
+                                <SliceCount>
+                                        8
+                                </SliceCount>
+                                <UsageRedMark>
+                                        90
+                                </UsageRedMark>
+                        </Reference>
+                        <Archive>
+                                <SliceCount>
+                                        0
+                                </SliceCount>
+                                <UsageRedMark>
+                                        90
+                                </UsageRedMark>
+                        </Archive>
+                </SlicePolicy>
+        </Ring>
+
+
+
+```
+
+
+
 
 ### Move packets to a different volume
 
 Follow the instructions for[`trisulctl_probe relocate context`](/docs/ag/basictasks/reloc)command to relocate the probe capture files to a different directory.
 
-### Decide how muchPCAPto store
+### Increase the PCAP Storage
 
 On the Probe nodes, PCAPs can rapidly fill a disk volume. By default Trisul Probe is configured to store 10GB of packet data, you can increase that to match your disk size.
 
-- To specify how much GB of PCAPs you want to retain —> change the*Ring > SlicePolicy*setting in[trisulProbeConfig.xml](/docs/ref/trisulconfig )
 
-## Data locations on the Hub Nodes
 
-All of the timeseries metrics, alerts, flows and other metadata are stored on the Hub node.
+Simply change the Archive Slice Count from 0 to the desired number and/or increase the FileSizeMB parameter.
 
-The databases are stored for each context in the following default directories. The*App > DBRoot*parameter in[trisulHubConfig.xml](/docs/ref/trsulhubconfig )points to the base directory
 
-- /usr/local/var/lib/trisul-hub/domain0/hub0/context0/caps/
-  - /oper – the operational directory where Trisul writes metrics
-  - /ref – the reference directory for recent data
-  - /archive – older data  
-    Trisul slides the oldest data each day from the oper to ref to archive to /dev/null (delete)
+To store 500GB of data in 100x5GB files do this 
 
-As in the probe, we have three directories so they can be mounted on three separate volumes with different performance characteristics.
+```xml {3,10}
+              </FilePrefix>
+                <FileSizeMB>
+                        5000
+                </FileSizeMB>
+                ..
+                ..
+                <SlicePolicy>
+                        <Archive>
+                                <SliceCount>
+                                        100
+                                </SliceCount>
+                ..
 
-### Move packets to a different volume
+```
 
-Follow the instructions for[trisulctl_hub relocate context](/docs/ug/basicusage/reloc )command to relocate to a different volume.
-
-### Decide retention period
-
-On the Hub you specify how many days you want to retain data. To specify the value , change the*SlicePolicy*setting in[trisulHubConfig.xml](/docs/ref/trsulhubconfig )
-
-## Recovering from a Disk Full error
-
-If the Trisul disk fills up 100% you may not be able to access the web interface and of course Trisul will stop working. To recover from this error follow these steps.
-
-- ##### Step 1: Mount new partition
-  
-  Create a new partition with enough space and mount the new partition, say on`/mnt/trisul_extra`[Trisul Hub Configuration File - Trisul Documentation](/docs/ref/trsulhubconfig)
-  
-  We will be moving some packet capture and metrics to this new area to free up some space.
-
-- ##### Step 2: Move the Probe archive to the new volume
-  
-  The idea here is to move the packet capture`archive`directory to the new volume and create a soft link to point to it in the old location.
-  
-  ```bash
-  cd /usr/local/var/lib/trisul-probe/domain0/probe0/context0/caps/
-      mv archive /mnt/trisul_extra/probe_archive
-      ln -sf /mnt/trisul_extra/probe_archive archive
-  ```
-
-- ##### Step 3:Check if enough disk is freed up and repeat
-  
-  Use the`df`command to check if now enough disk is available. If it is not available repeat Step 2 for the`/ref`directory and then if required for the`/oper`directory.
-  
-  :::note **[Check disk space]**
-  
-  At this step, if disk usage drop to about 70-80% you can stop here and skip Step 4. You should be able to restart the Web Server and then the other Trisul components.
-  
-  :::
-
-- ##### Step 4: Move the Hub archive to the new volume
-  
-  Similar to the probe node we want to move the Hub data to the new partition and create a soft link to point to it.
-  
-  ```bash
-  cd /usr/local/var/lib/trisul-hub/domain0/hub0/context0/meters/
-      mv archive /mnt/trisul_extra/hub_archive
-      ln -sf /mnt/trisul_extra/hub_archive archive
-  ```
-
-Usually at this point you should have enough disk space freed up. Now you need to tune the SlicePolicy on both the Hub and Probe Config files so they dont fill up again.
-
-##### References
-
-1. [trisulProbeConfig.xml](/docs/ref/trisulconfig)– for setting max GB retention of pcaps.
-2. [trisulHubConfig.xml](/docs/ref/trsulhubconfig)– for setting days of metrics.
-
-## Best practices
-
-Here are some best practices for large deployments.
-
-1. Run Trisul for 3-4 days to get an idea of data growth per day. Use that information to size the disks.
-2. PreferXFSfilesystem over EXT4 due to the large number of inodes supported
-3. Consider usingLVMso you can easily expand a filled up volume by adding new disk capacity
-4. PreferRAID-0 for the ProbePCAPSfor higher write performance
-5. PreferRAID-5 for the Hub for resilience
-6. For large enterprises, mount the`/archive`on yourNASif you have one
-7. Try to use[PCAPpruning rules](/docs/ug/caps/packetstorage)eg, dont store Netflix,YouTube videos packets

@@ -1,23 +1,18 @@
-# 8.1.Packet Capture Basics
+# Storage Architecture 
 
-The Trisul raw packet engine is designed towards these goals :
 
-1. **Scaling** — The amount of data is only limited by the disk resources at your disposal
+Optimizing disk storage is a key part of Trisul. This section describes.
 
-2. **Multi disk** — Supports multiple disks to optimize $/byte
 
-3. **Flexibility** — Allows you to specify policies to cut down storage requirements
+- The concept of *Sliding Slices* 
+- How data is stored on the *Trisul Hub*
+- How data is stored on the *Trisul Probe*
+- Optimizing Packet PCAP storage on the Trisul Probe 
 
-4. **Security** — Encrypts the raw packet storage
 
-:::note free licence
 
-**Free License**  
-Note that the [free license](https://trisul.org/free) only allows you to store a maximum of 10GB per Probe. You can use rules to cut down the traffic, such as not storing encrypted traffic.
 
-:::
-
-## 8.1.1.Sliding slices
+## Sliding slices
 
 Trisul uses an innovative sliding mechanism to store raw packets.
 
@@ -32,7 +27,7 @@ Raw packets are stored in three directories.
 As each directory gets filled up, the oldest slice from that directory 
 moves to the next area. Slices from the archive silently move to `/dev/null`(they are deleted). The figure below illustrates the concept. Note that trisul only writes to the *oper* slices.
 
-![](image/fullcontent.png)
+![](images/fullcontent.png)
 
 You have to edit the following parameters to suit your environment.
 
@@ -41,7 +36,7 @@ You have to edit the following parameters to suit your environment.
 
 See the [trisulConfig.xml](https://trisul.org/docs/ref/trisulconfig.html) documentation for more details.
 
-## 8.1.2.Mapping disks to slices
+## Mapping disks to slices
 
 The slice architecture allows you to configure hardware resources for peak performance. The concept behind the optimization is :
 
@@ -53,9 +48,9 @@ With these in mind, you can save money while getting peak performance
  by mapping faster disks to the operational area. An example is shown 
 below :
 
-![](image/fullcontentdisk.png)
+![](images/fullcontentdisk.png)
 
-## 8.1.3. Flexible policies for volume reduction
+## Flexible policies for volume reduction
 
 Storing raw packets can be tricky due to the volume of storage 
 required. Not every organization has the resources to store absolutely 
@@ -93,7 +88,7 @@ Rule chain :
 
 For detailed syntax for specifying the rule chain, see the Ring section in [trisulConfig.xml](https://trisul.org/docs/ref/trisulconfig.html#ring)
 
-## 8.1.4.Encrypted content
+## Encrypted content
 
 Raw packets represent all of your network communications over an extended time period.
 
@@ -106,3 +101,15 @@ Storing them in the clear :
 Trisul encrypts all content by default using AES-128 in CTR mode. The disk subsystem never sees clear text packets.
 
 To change the passphrase, see the *PassphraseFile* parameter in [trisulConfig.xml](https://trisul.org/docs/ref/trisulconfig.html#ring)
+
+
+
+The raw packets are stored for each context in the following default directories. The*App > DBRoot*parameter in[trisulProbeConfig.xml](/docs/ref/trisulconfig)points to the base directory
+
+- /usr/local/var/lib/trisul-probe/domain0/probe0/context0/caps/
+  - /oper – the operational directory where Trisul*writes*packets
+  - /ref – the reference directory for recent data likely to be looked up
+  - /archive – older data  
+    As data ages they ‘cool down’ and slide from oper to ref to archive. Therefore the ‘hottest’ data slices are under /oper. For more details read[How the sliding slices work](/docs/ag/domain/fullcontent#sliding-slices )
+
+The reason we have three directories is that they can be mounted on three separate volumes if required for heavy workloads.

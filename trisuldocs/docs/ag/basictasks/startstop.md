@@ -1,12 +1,54 @@
----
-sidebar_position: 6
----
-
 # Start and stop Trisul
 
 Describes how you can start and stop Trisul components. 
 
-## Running Web Trisul
+
+The components 
+
+- Trisul Processes 
+  - **Trisul Hub** processes - the database
+  - **Trisul Probe** processes - the analytics 
+- WebTrisul - the webserver 
+
+
+
+## Start and Stop Trisul
+
+
+:::tip Start Stop from Web UI
+
+Login as admin to the Trisul UI 
+
+:point_right:  Select Context → Admin Tasks → Start/Stop Tasks 
+:::
+
+![startstop menu](images/startstop1.png)
+
+*Figure:  Selecting the Start Stop Menu*
+
+
+Then press Start button on Hub and Probe to bring up the Trisul System.
+
+![pressstart](images/startstop2.png)
+*Figure: Pressing Start Stop button*
+
+:::warning Start the Hub First 
+
+Both the hub and probe need to be started, Importantly the HUB needs to be started for the probe to connect and start. 
+Hence Start the HUB First, then the PROBE. During STOP follow the reverse, stop the probe first, then the hub. 
+:::
+
+
+### Start and Stop via command line
+
+The CLI tools [trisulctl_hub](/docs/ref/trisul_hub) allows you to start and stop easily from the root command line. 
+
+```bash
+$ trisulctl_hub
+> restart context default
+```
+
+## Start and Stop Web Server - WebTrisul
 
 Web Trisul provides the Web UI and is configured to start automatically.
 
@@ -18,48 +60,3 @@ Use the normal Linux tools to start and stop Webtrisul. The service name is`webt
 systemctl stop webtrisuld
 systemctl start webtrisuld
 ```
-
-### Open ports 3000 and 3003 for Webtrisul
-
-By default Webtrisul uses port 3000 and 3003 (for WebSockets) – you need to either disable the host firewall or open these two ports. Some examples
-
-```bash
-# open the ports 
-firewall-cmd --zone=public --add-port=3000/tcp
-firewall-cmd --zone=public --add-port=3003/tcp
-
-# if you are using ufw as a firewall 
-ufw allow 3000
-ufw allow 3003
-```
-
-Also see :
-
-1. [UsingHTTPSfor the webserver](/docs/howto/sslforwebtr)
-2. [Changing the webserver port](/docs/howto/change_web_port )
-
-## Running Trisul
-
-You can use the web interface or the trisulctl_probe/hub domain management tools.
-
-### Run via Webtrisul
-
-Logon as admin and then
-
-Select Context → Admin Tasks → Start/Stop Tasks → Click on Start Probe and Hub buttons
-
-### Run via command line
-
-Login as root on the Hub or Probe node and type
-
-```bash
-trisulctl_probe 
-start context default
-```
-
-The trisulctl_probe/hub tools execute commands on all nodes in the domain.
-
-Also see :
-
-1. [CLItool trisulctl_hub](/docs/ref/trisul_hub)
-2. [CLItool trisulctl_probe](/docs/ref/trisul_probe)

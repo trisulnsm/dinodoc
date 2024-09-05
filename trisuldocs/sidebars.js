@@ -251,6 +251,7 @@ const sidebars = {
 							'ag/install/selectmode',
 							'ag/install/doupgrade',
 							'ag/install/douninstall',
+							'ag/install/openports'
 						],
 				}, /* end Installation */
 

@@ -1,14 +1,14 @@
 # Trisul Hub Configuration File
 
-All configuration parameters for the Trisul Hub are stored in a singleXMLfile called**trisulHubConfig.xml**.
+All configuration parameters for the Trisul Hub are stored in a single XML file called  **trisulHubConfig.xml**
 
-Location
+Default Location 
 
 ```
-/usr/local/etc/trisul-hub/domain0/hub0/trisulHubConfig.xml
+/usr/local/etc/trisul-hub/domain0/hub0/context0/trisulHubConfig.xml
 ```
 
-*for context named data1 the path would be …hub0/context_data1/trisulHubConfig.xml*
+> for context named **data1** the path would be …hub0/context_**data1**/trisulHubConfig.xml*
 
 :::caution 
 
@@ -18,7 +18,7 @@ Root privileges needed to edit
 
 :::note
 
-Also see[trisulProbeConfig.xml](/docs/ref/trisulconfig)for editing Probe node parameters
+Also see [trisulProbeConfig.xml](/docs/ref/trisulconfig)for editing Trisul Probe parameters
 
 :::
 
