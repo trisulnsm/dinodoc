@@ -41,16 +41,18 @@ Click on SNMP Settings and enter the SNMP v2 or SNMP v3 parameters
 
 ## Resolving Names
 
-When you click the *Options* menu
+When you click the *Options* button on the right side of each router on the router table. The following list of menu will be available for drilldown.
 
 | Settings                               | Description                                                        |
 | -------------------------------------- | ------------------------------------------------------------------ |
 | Key Dashboard                          | Every Item in trisul has a key. Similarly every router is associated with an unique key and this options fetches the key details for every device                                     |
-| Long Term Chart                        | You can view the long term traffic trends as a chart using this option                                                                                                                |
+| Long Term Traffic Chart                        | You can view the long term traffic trends as a chart using this option                                                                                                                |
+| Traffic Chart | This fetches the traffic chart of the selected router.                                                                                          |
 | SNMP Settings                          | Configure SNMPv2 or SNMPv3 parameters.                                                                                                                                                |
 | SNMP resolve router and interface name | Query the SNMP device and automatically assign names to the router and all the interfaces using the “Interface Name” value in the SNMP MIB. Usually this is like `Gigabit/1/0/12` etc |
-| Router Tracker                         | Router tracker feature enables the detailed analysis of hosts and applications at device level                                                                                        |
-| Show Router Description                | Show the router description in the table. This is the value of sysDescr from the SNMP MIB                                                                                             |
+| [Interface Matrix](/docs/ug/netflow/drilldown#interface-traffic-matrix--chord-diagram) | Displays traffic flows between interfaces.                                                                                          |
+
+So, to resolve names of the routers. Click on the *SNMP Resolve Router and Interface Names* option from the drop down.
 
 ### When the IP Address of the SNMP Agent is Different
 
@@ -58,39 +60,38 @@ In some environments, the SNMP agent runs on a different IP address than
 the one shown in the table. If this is the case, then trying to resolve
 using SNMP via the IP address shown in the routers table will fail. You
 need to specify a *Key Attribute* for the router called
-`snmp.management_ip`. Follow these steps.
+`snmp.management_ip`. To do that, Follow these steps.
 
-- First configure SNMP v2 or v3 parameters for the device.
-- Select *Options &rarr; Key Dashboard*
-- Select *Assign user label / Edit attributes* as shown below
+- First configure SNMP v2 or v3 parameters for the device using the aforementioned [*Configuring SNMP*](/docs/ug/netflow/snmp#configuring-snmp) steps .
+- Then click on the *Options* button on the right side of the router name and select *Key Dashboard* from the drop down.
+- You can see the *Key Details* on the right side of the *Key Dashboard* as shown in the figure below. Click *Select *Assign user label / Edit attributes* option from *Set Label/Edit*.
 
 ![](images/snmp_edit_label.png)
 
 *Figure: Showing Option to Resolve Names for Routers and Interfaces*
 
-Scroll down to the *Attributes* field and add the following string
-`snmp.management_ip=10.x.x.x` replace with actual IP. And click *Update*.
-Now you should be able to resolve the router and inteface names.
+You can see a form where you can edit details of the *key* with number of fields. Scroll down to the *Attributes* field and add the following string `snmp.management_ip=10.x.x.x` replace with actual IP. And click *Update*.
+Now you should be able to resolve the router and interface names.
 
 ## Viewing SNMP Traffic Charts
 
-> Against any interface select Options
+You can view SNMP traffic charts for any interface from the interface table. Click on the *Options* button on the right side against any interface on the interface table.
 
 ![](images/router_interface_options.png)
 
 *Figure: Drilldown Options for Interfaces*
 
-You get the following options
+From the list of [Interface drilldown options](/docs/ug/netflow/routers_and_interfaces#drilldown-from-the-interfaces-table), you can select the following options to view SNMP traffic charts. 
 
-| Settings           | Description                                                                                                                                                                        |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Settings           | Description                                                                                |
+| ------------------ | ------------------------------------------------------------------------------------------ |
 | Live SNMP          | This brings up a live 5 second updated view of SNMP In/Out traffic chart for that interface.                                                                                       |
 | SNMP Key Dashboard | If you have the *Trisul SNMP APP* installed, Trisul automatically polls all interfaces and maintains historical charts. This takes you to the key dashboard for historical charts. |
 
+
 ### Live SNMP
 
-Shows a 10-sec updated chart of network traffic on the interface
-obtained via SNMP. A very useful debugging tool.
+The *Live SNMP* option in the interface is a very useful debugging tool that provides real time monitoring of SNMP traffic data for a specific interface. It shows a 10-sec updated chart of network traffic on the interface obtained via SNMP.
 
 ![](images/live_snmp.png)
 
@@ -98,13 +99,13 @@ obtained via SNMP. A very useful debugging tool.
 
 ## Configuring SNMP Globally
 
-Suppose if there are no devices listed in the routers and interfaces,
-you want to resolve device names if no per-device settings are found,
-you can use this setting to configure SNMP globally. or if there are
-more number of devices with same SNMP settings, you can use this
-settings to configure SNMP in a single shot.
+There are scenarios where you might want to configure SNMP globally. 
 
-To configure this, Login as `admin`
+**Scenario 1**: When you want to start monitoring devices but no devices are listed in the *routers and interfaces* section, where you want to resolve device names. In tha case, if no per-device settings are found, you can use the following setting to configure SNMP globally. 
+
+**Scenario 2**: If there are more number of devices with same SNMP settings, you can use the following settings to configure SNMP in a single shot.
+
+To configure SNMP globally, Login as `admin`
 
 :::info navigation
 
