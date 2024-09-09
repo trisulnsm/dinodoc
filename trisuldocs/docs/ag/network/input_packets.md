@@ -82,8 +82,9 @@ sudo /etc/init.d/networking restart
 **CENTOS**
 
 Install the bridge-utils package.
-
-Copy`yum install  bridge-utils`
+```bash
+yum install  bridge-utils
+```
 
 To create a network bridge, create a file in the`/etc/sysconfig/network-scripts/`directory called`ifcfg-br0`  
 sample`/etc/sysconfig/network-scripts/ifcfg-br0`
