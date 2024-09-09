@@ -4,32 +4,32 @@ sidebar_position: 10
 
 # NetFlow Sources Dashboard
 
-The Netflow Sources dashboard provide you the following system level
-information on a Time Series chart.
+## Overview
 
-Per Router (flow exporter)
+This dashboard provides an overview of Netflow data sources, including routers and interfaces. It offers insights into the volume and rate of Netflow data being processed. You can view the system level information on a Time Series chart. 
 
-1. **Flow record Rate** — number of flows per second per router being
-   processed
-2. **Flow sources** — bandwidth per router
-3. **Flow volume** — netflow bandwidth. This is an important
-   parameter. Shows the Netflow Record rate in Mbps
+### Per Router (Flow Exporter)
 
-Per Interface
+1. **Flow Record Rate**: Number of flows per second per router being processed. This indicates the volume of data being sent by each router.
+2. **Flow Sources**: Bandwidth usage (in Mbps) per router. This shows the amount of network traffic being monitored by each router.
+3. **Flow Volume**: The total Netflow bandwidth (in Mbps) being processed by Trisul. This is an important parameter showing the sum of all flow sources and indicates the overall volume of Netflow data being processed.
 
-1. **Total volume** — bandwidth of Top 10 interfaces
+### Per Interface
+
+1. **Total Volume**: The combined bandwidth usage (in Mbps) of the top 10 interfaces, ranked by their bandwidth usage. This shows the total bandwidth of the most active interfaces.
+
 
 ## Using NetFlow Sources
 
-:::note navigation
+To open the *Netflow Sources* dashboard, Login as `user` and,
 
-Select *Netflow -\> Netflow sources* to open the dashboard
-
+:::info navigation
+:point_right: Select *Netflow &rarr; Netflow Sources* 
 :::
 
 Things to try :
 
-1. Expand timeframe using the “Time Window” drop down on the top
+1. Expand timeframe using the [Time Window](/docs/ug/ui/elements#time-selector) drop down on the top
 2. Click on any item inside the chart legend to drilldown into long
    term views
 3. Click on Explore (Graph) button on top to add any chart as a

@@ -23,9 +23,9 @@ source and destination MAC addresses.
  match datalink mac destination address input
 ```
 
-The chief use case for collecting L2 MAC addresses in Netflow is to
+The chief use case for collecting L2 MAC addresses in Netflow is for
 
-- collecting the L2 MAC address can reliably identify a subscriber endpoint
+- Collecting the L2 MAC address can reliably identify a subscriber endpoint
   in an ISP edge network scenario.
 
 The following counter groups show L2 data
