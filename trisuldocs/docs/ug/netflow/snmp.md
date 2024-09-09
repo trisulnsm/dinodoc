@@ -118,22 +118,22 @@ Click on Web Admin: Manage &rarr; App Settings &rarr; SNMP Settings.
 
 | Field | Description |
 |-------------------------------|--------------------------------------------------------------------------------|
-| SNMP Version |
-| Username |
-| Auth Protocol |
-| Auth Password |
-| Priv Protocol |
-| Priv Password |
-| Context Name |
+| SNMP Version | The version of SNMP to use (e.g., v1, v2c, or v3)                                               |
+| Username | The Username for SNMP Authentication                                                                |
+| Auth Protocol | The authentication protocol to use ( MD5 or SHA)                                               |
+| Auth Password | The password for SNMP authentication                                                           |
+| Priv Protocol | The privacy protocol to use (e.g., DES or AES)                                                 |
+| Priv Password | The password for SNMP Privacy                                                                  |
+| Context Name  | The context name for SNMP v3                                                                   |
 
 Click *Advanced Settings* for further configurations.
 
 | Field | Description |
 |-------------------------------|--------------------------------------------------------------------------------|
-| Use Huawei SNMP Port Map |
-| Auto Resolve SNMP |
-| Resolve ifSpeed |
-| Resolve Router Name |
-| SNMP Command Prefix |
+| Use Huawei SNMP Port Map | Enable this if youre using Huawei devices which uses custom SNMP port mapping       |
+| Auto Resolve SNMP | Automatically resolve SNMP for interfaces                                                  |
+| Resolve ifSpeed | Resolve the interface speed (ifSpeed) using SNMP                                             |
+| Resolve Router Name | Resolve the router name using SNMP                                                       |
+| SNMP Command Prefix | Specify a prefix for SNMP commands                                                       |
 
 Once providing all the fields and ensuring the configuration, click *Save*.
