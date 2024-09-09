@@ -10,12 +10,10 @@ SNMP vs Netflow Traffic from every router and interface.
 ## Installing the SNMP vs Netflow App
 
 To enable this feature, you must install the SNMP vs Netflow app from
-Trisul Apps. To Install the app,
+Trisul Apps. To Install the app, Login as `admin` and,
 
-:::note navigation
-
-Login as Admin. Under Web Administration select *Manage \> Apps \> SNMPvsNetflow*
-
+:::info navigation
+:point_right: Go to Web Admin: Manage &rarr; Apps &rarr; SNMPvsNetflow
 :::
 
 Select the ‘*Install*’ option to install the app.
@@ -27,13 +25,11 @@ Select the ‘*Install*’ option to install the app.
 ## SNMP vs Netflow Chart
 
 If you want to have a comparison between the SNMP and Netflow records
-for any router or interface,
+for any router or interface, Login as `user` and,
 
-:::note navigation
-
-Login as User. Select *Dashboards \> Show All \> SNMPvsNetflow*
+:::info navigation
+:point_right: Go to Dashboards &rarr; Show All &rarr; SNMPvsNetflow
 Dashboard.
-
 :::
 
 You will get a dialog box as follows.
@@ -46,7 +42,7 @@ You can fill in the required fields and submit them.
 
 | Field         | Description                                                                               |
 | ------------- | ----------------------------------------------------------------------------------------- |
-| Time Selector | Select the desired time from the time selector box                                        |
+| [Time Selector](/docs/ug/ui/elements#time-selector) | Select the desired time from the time selector box                                        |
 | Routers       | Select any desired router                                                                 |
 | Interfaces    | Select any interface from respective router or select multiple interfaces for that router |
 
