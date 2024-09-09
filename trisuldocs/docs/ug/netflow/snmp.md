@@ -113,5 +113,27 @@ Click on Web Admin: Manage &rarr; App Settings &rarr; SNMP Settings.
 
 :::
 
-![](images/snmp_app_setting.png)
+![](images/globalsnmp.png)
 *Figure: SNMP Settings*    
+
+| Field | Description |
+|-------------------------------|--------------------------------------------------------------------------------|
+| SNMP Version |
+| Username |
+| Auth Protocol |
+| Auth Password |
+| Priv Protocol |
+| Priv Password |
+| Context Name |
+
+Click *Advanced Settings* for further configurations.
+
+| Field | Description |
+|-------------------------------|--------------------------------------------------------------------------------|
+| Use Huawei SNMP Port Map |
+| Auto Resolve SNMP |
+| Resolve ifSpeed |
+| Resolve Router Name |
+| SNMP Command Prefix |
+
+Once providing all the fields and ensuring the configuration, click *Save*.
