@@ -114,18 +114,20 @@ on specific locations on a web page.
 Dashboards are used to present network analysis modules by placing them
 on specific locations on a web page.
 
-![](images/livedashboard1.png)
+![](images/userlayout1.png)
 *Figure: Dashboard in User Layout*
 
 The Dash board contains the following elements
 
-| Elements                                                             | Function                                                                                                                                                                                                                            |
-| -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1) Dashboard Name                                                    | This is the name of the dashboard.                                                                                                                                                                                                  |
-| 2)  Dashboard Description                                            | This gives you the description of the dashboard                                                                                                                                                                                     |
-| 3) Data Time Period                                                  | The time shown on the top right corner of the dashboard is since the time data was available till now.                                                                                                                              |
-| 4) [Dashboard Toolbar](/docs/ug/ui/dashmod_intro#dashboard-toolbars) | By clicking on the three dots at the top right corner of the dashboard you can edit the dashboard including customizing it, toggle labels, set as default dashboard, expand all modules, collapse all modules, and download as PDF. |
-| 5) Modules                                                           | Modules are represented in the forms of charts and tables.                                                                                                                                                                          |
+| Elements                                                             | Function                                 |
+| -------------------------------------------------------------------- | ---------------------------------------- |
+| 1) Dashboard Name                                                    | This is the name of the dashboard.       |
+| 2)  Dashboard Description                                            | This gives you the description of the dashboard                                                                                                             |
+| 3) Data Time Period                                                  | The time shown on the top right corner of the dashboard is since the time data was available till now.                                                      |
+| 4) [Dashboard Toolbar](/docs/ug/ui/dashmod_intro#dashboard-toolbars) | By clicking on the three dots at the top right corner of the dashboard you can edit the dashboard including customizing it, toggle labels, set as default dashboard, expand all modules, collapse all modules, and download as PDF.                                         |
+| 5) Time Window | This enables you to select from a number of time ranges like 5 mins, 15 mins, 1 hour and more |
+| 6) Topper Count | A number of topper counts can be quickly selected to display the results in the modules in the dashboard that reflects the selected time.
+| 7) [Modules](/docs/ug/ui/modules)                                                           | Modules are represented in the forms of charts and tables.                                                                                                |
 
 For more information see also:  
 
