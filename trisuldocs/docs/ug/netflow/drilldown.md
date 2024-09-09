@@ -4,13 +4,13 @@ sidebar_position: 7
 
 # Interface Drilldown
 
-Describes the Interface drilldown tool that appears when you select
-“Drilldown” against any interface in the [Routers and Interfaces
-Tool](/docs/ug/netflow/routers_and_interfaces). The options in Interface Drilldown tool looks slightly different depending on if [Interface Tracking](/docs/ug/netflow/interface_tracker) is enabled or not.
+Describes the *Interface drilldown* tool that appears when you select
+“Drilldown” against any interface in the Interfaces table of the [*Routers and Interfaces
+Tool*](/docs/ug/netflow/routers_and_interfaces#interfaces-table). The options in Interface Drilldown tool looks slightly different on each interface depending on if [*Interface Tracking*](/docs/ug/netflow/interface_tracker) is enabled on the interface or not.
 
 ## Without Interface Tracker
 
-This is the screen of your interface without tracker that shows the tabs including Traffic, Util, Flow Hosts, Flow Apps, Conversation, Raw Flows and Matrix. Without interface tracker the "Flow Hosts" and "Flow Apps" shows the totals of Host and Apps In/Out/Total but you will not be able to see Time Series trends of those counters.
+This is the screen of your interface without tracker that shows the tabs including *Traffic, Util, Flow Hosts, Flow Apps, Conversation, Raw Flows and Matrix*. Without *interface tracker* the "*Flow Hosts*" and "*Flow Apps*" shows the totals of *Host and Apps In/Out/Total* but you will not be able to see Time Series trends of those counters.
 
 ![](images/intf_traffic.png)
 
@@ -18,7 +18,7 @@ This is the screen of your interface without tracker that shows the tabs includi
 
 ## With Interface Tracker
 
-When the interface has the tracker enabled it is indicated by the Eye icon on the additional tabs such as Hosts Track/Apps Track as shown below.
+When the interface has the tracker enabled it is indicated by the Eye icon on the additional tabs such as *Hosts Track/Apps Track* as shown below.
 
 ![](images/intf_hopsts_with_tracker.png) 
 
@@ -26,11 +26,9 @@ When the interface has the tracker enabled it is indicated by the Eye icon on th
 
 ## Using
 
-:::note navigation
-
-Selecting Drilldown against any Netflow interface in the [Routers and
+:::info navigation
+:point_right: Select Drilldown against any Netflow interface in the [Routers and
 Interfaces Tool](/docs/ug/netflow/routers_and_interfaces)
-
 :::
 
 The following page that contains the traffic chart is displayed.
@@ -42,11 +40,8 @@ selection*
 
 #### Search Form
 
-:::note navigation 
 
-Click the **Show search form** on the top right to open up a form where you can control the following.
-
-:::
+Click the **Show Search Form** on the [top right](/docs/ug/ui/elements#hide-show-search-form) to open up a form where you can control the following.
 
 ![](images/intf_drilldown_search_form.png)
 
@@ -81,26 +76,26 @@ Below the title, the interface drilldown is displayed as tabs. Some of
 these tabs are dynamically created. If you have created a [Crosskey
 Counter Group](/docs/ug/cg/custom#cross-key-counter-groups) with Flow-Interfaces as the first group, then the second group will be shown as a Tab.
 
-| Panel | Name               | Description                                                                                                                                                                                            |
-| ----- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 1     | Traffic            | Bandwidth usage of Recv and Xmit from the interface along with total volumes                                                                                                                           |
-| 2     | Utilization        | Utilization of the interface in transmit and receive directions                                                                                                                                        |
-| 3     | ASN                | ASNs active on this interface. Needs the ASN Tracker enabled                                                                                                                                           |
-| 4     | Hosts              | Top hosts into and out of the interface. If *Interface Tracker* is enabled you will see more accurate numbers and also a traffic chart. If *Track Hosts* is enabled you will see more details as well. |
-| 5     | Apps               | Top applications into and out of the interface. More detail and chart available if *interface tracking* is enabled or if *Track Apps* is enabled                                                       |
-| 6     | Flow Hosts         | Computes the hosts using this interface by querying raw flow information                                                                                                                               |
-| 7     | Flow Apps          | Computes the hosts using this interface by querying raw flow information                                                                                                                               |
-| 8     | Conversations      | Top IP source destination and destination port.                                                                                                                                                        |
-| 9     | Raw Flows          | Top Raw flows                                                                                                                                                                                          |
-| 10    | Matrix             | A chord diagram showing **interface to interface** traffic flows in transmit and receive directions. This is useful for ISPs, needs the *Track interfaces per Interface*                               |
-| 11    | ASN, NBAR, QoS etc | These appear dynamically depending on whether these features are enabled or not                                                                                                                        |
-| 12    | MixedBandwidth     | ISP specific use case shows the same data as ASN but groups them into cache traffic vs internet traffic                                                                                                |
+| Panel | Name               | Description                                                                     |
+| ----- | ------------------ | --------------------------------------------------------------------------------|
+| 1     | Traffic            | Bandwidth usage of Recv and Xmit from the interface along with total volumes    |
+| 2     | Util               | Utilization of the interface in transmit and receive directions                 |
+| 3     | ASN                | ASNs active on this interface. Needs the ASN Tracker enabled                    |
+| 4     | Hosts              | Top hosts into and out of the interface. If *Interface Tracker* is enabled you will see more accurate numbers and also a traffic chart. If *Track Hosts* is enabled you will see more details as well.|
+| 5     | Apps               | Top applications into and out of the interface. More detail and chart available if *interface tracking* is enabled or if *Track Apps* is enabled                                                   |
+| 6     | Flow Hosts         | Computes the hosts using this interface by querying raw flow information        |
+| 7     | Flow Apps          | Computes the hosts using this interface by querying raw flow information        |
+| 8     | Conversations      | Top IP source destination and destination port.                                 |
+| 9     | Raw Flows          | Top Raw flows                                                                   |
+| 10    | Matrix             | A chord diagram showing **interface to interface** traffic flows in transmit and receive directions. This is useful for ISPs, needs the *Track interfaces per Interface*                        |
+| 11    | ASN, NBAR, QoS etc | These appear dynamically depending on whether these features are enabled or not |
+| 12    | MixedBandwidth     | ISP specific use case shows the same data as ASN but groups them into cache traffic vs internet traffic                                                                                            |
 
 Also see : [Netflow Wizard Trackers](netflow_wizard#trackers)
 
 ## Traffic Chart
 
-Traffic chart shows the transmit and receive traffic on the interface
+Traffic chart shows the transmited and received traffic on the interface
 for the selected time window. The legends on the bottom show the LATEST
 values.
 
@@ -125,7 +120,7 @@ For IP based reporting.
 
 *Figure: Flow Hosts Tab of Interface Utilization*
 
-### Hosts Track
+## Hosts Track (When Interface Tracker is Enabled)
 
 Shows Top N Hosts IP addresses sending or receiving traffic on the
 interface.
@@ -166,7 +161,7 @@ enabling [Interface Tracker](/docs/ug/netflow/interface_tracker) .
 
 ## Top Conversations or Talkers
 
-Top conversations are nothing but the talkers. The screen displays the conversations between the source and the destination in volume bytes.
+Top conversations are nothing but the talkers. The screen displays *the conversations between the source and the destination* in volume bytes.
 
 ![](images/intf_conversation.png)
 
