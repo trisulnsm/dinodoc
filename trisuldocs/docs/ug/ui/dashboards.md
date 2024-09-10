@@ -131,7 +131,7 @@ most useful when you have connected Trisul to an [IDS feed](/docs/howto/setup_id
 
 ## Sessions
 
-Shows most significant currently active IP flows. This is based on [Flow Trackers](/docs/ug/tools/flow_tracker) a special type of streaming analytics snapshot used in Trisul. The following classes of flows are displayed.
+Shows most significant currently active IP flows. This is based on [Flow Trackers](/docs/lua/flow_tracker) a special type of streaming analytics snapshot used in Trisul. The following classes of flows are displayed.
 
 | Module                                               | Description                                                                                                                                                                                                                               |
 | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -115,8 +115,7 @@ Follow the steps above to add the repository, in the final step instead of 'Tris
     ```bash
     sudo apt  install trisul-hub trisul-probe webtrisul
     ```
-
-    to install the plugins
+    To install plugins
 
     ```bash
     sudo apt install trisul-badfellas trisul-geo
@@ -129,8 +128,7 @@ Follow the steps above to add the repository, in the final step instead of 'Tris
     yum install trisul-hub trisul-probe webtrisul
     ```
 
-    the following installs the plugin packages
-
+    To install plugins
     ```bash
     yum install trisul-badfellastrisul-geo
     ```
