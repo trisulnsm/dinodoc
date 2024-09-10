@@ -4,6 +4,7 @@ sidebar_position: 4
 ---
 
 # SSL Certificates
+<span class="badge badge--primary">PCAP Mode Only</span>  
 
 Information contained in SSL certificates are now increasingly showing
 up in intelligence indicators. Trisul indexes information in
@@ -50,8 +51,8 @@ The whole resource is treated as a single string for query purposes.
 
 ### Searching
 
-:::note navigation
-Click on Resources -\> SSL Certs
+:::info navigation
+:point_right: Click on Resources &rarr; SSL Certs
 :::
 
 1. Open the Search Criteria box by clicking on “Show”
@@ -109,7 +110,7 @@ Click on “Options” for further options.
    resource
 5. Add to briefcase - Add to PCAP briefcase for later download
 
-:::note navigation
-Click on “Download PCAP” button to get a PCAP file with all resources
+:::info navigation
+:point_right: Click on “Download PCAP” button to get a PCAP file with all resources
 shown in table
 :::

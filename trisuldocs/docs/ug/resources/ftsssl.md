@@ -3,6 +3,7 @@ sidebar_position: 7
 ---
 
 # SSL Certificates FTS
+<span class="badge badge--primary">PCAP Mode Only</span>  
 
 All SSL Certificate chains are stored in the full text index.
 
@@ -29,6 +30,7 @@ In addition, Trisul stores the following extra fields in the FTS index
 
 #### Sample Document
 
+```
     (.. cert 1 details..)
     SHA1:c5fdccbc7795b69dd60cea91aaa1711921d18726
     NAME:/1.3.6.1.4.1.311.60.2.1.3=IN/businessCategory=Government Entity/serialNumber=Government Entity/C=IN/ST=MAHARASHTRA/L=MUMBAI/O=STATE BANK OF INDIA/OU=INTERNET BANKING DEPARTMENT/OU=Terms of use at www.verisign.com/rpa (c)05/CN=www.onlinesbi.com
@@ -40,10 +42,13 @@ In addition, Trisul stores the following extra fields in the FTS index
     ...
     ...
     (until the root cert..)
+```
 
 ## Using
 
-Select Resources -\> SSL Certificate FTS
+:::info navigation
+Select Resources &rarr; SSL Certificate FTS
+:::
 
 Then follow instructions in the [FTS](fts) documentation.
 
@@ -56,11 +61,11 @@ search for SHA1 hashes from intelligence feeds.
 
 Use the special attributes
 
-1. chain_depth_x -\> Search for chain_depth_1 to locate possible self
+1. chain_depth_x &rarr; Search for chain_depth_1 to locate possible self
    signed certificates
-2. PUBKEY and DERSHA -\> Use them to search for particular
+2. PUBKEY and DERSHA &rarr; Use them to search for particular
    certificates.
-3. CN (Common Name) -\> a great place to start looking and for
+3. CN (Common Name) &rarr; a great place to start looking and for
    narrowing your queries
 
 ![](images/ftss1.png)  

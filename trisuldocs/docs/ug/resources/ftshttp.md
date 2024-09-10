@@ -4,6 +4,7 @@ sidebar_position: 6
 ---
 
 # HTTP Header FTS
+<span class="badge badge--primary">PCAP Mode Only</span>  
 
 All HTTP headers including requests (GET, POST,..etc) and responses
 (HTTP OK, errors ) are stored in the FTS index.
@@ -15,8 +16,7 @@ document. All fields are stored in the index except the following which
 have high variability. You can generate reports by User-Agent, Server,
 Content-Type, or any of the fields in the HTTP Header.
 
-:::note
-The following HTTP fields are excluded from the index.  
+:::note The following HTTP fields are excluded from the index.  
 Cookie, Set-Cookie, Date, Expires, Last-Modified,E-Tag, P3P, ETag,
 Cache-Control, Keep-Alive,Age,Last-Modified, If-, Location,
 Content-Length, Referer
@@ -32,6 +32,7 @@ useful queries
 
 A typical document looks like this
 
+```
     POST /ajax/ufi/like.php HTTP/1.1
     Host: www.facebook.com
     User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:11.0) Gecko/20100101 Firefox/11.0
@@ -43,11 +44,11 @@ A typical document looks like this
     Content-Type: application/x-www-form-urlencoded; charset=UTF-8
     Referer: http://www.facebook.com/
     Content-Length: 368
-
+```
 ## Using
 
-:::note navigation
-Select Resources -\> HTTP Header FTS
+:::info navigation
+Select Resources &rarr; HTTP Header FTS
 :::
 
 Follow instructions in the [FTS](fts) documentation.

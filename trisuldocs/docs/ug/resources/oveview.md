@@ -3,6 +3,7 @@ sidebar_position: 1
 ---
 
 # Overview
+<span class="badge badge--primary">PCAP Mode Only</span>  
 
 Resources are objects linked to intrusion or forensic indicators. They
 are transferred over the network. Trisul pulls them out, stores, and

@@ -1,4 +1,5 @@
 # Resources
+<span class="badge badge--primary">PCAP Mode Only</span>  
 
 Working with meta objects like domain names, URLs,HTTPheaders, andSSLcertificates extracted and stored by Trisul.
 

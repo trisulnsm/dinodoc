@@ -4,15 +4,16 @@ sidebar_position: 3
 ---
 
 # URL Resources
+<span class="badge badge--primary">PCAP Mode Only</span>  
 
 Trisul can log all HTTP URLs seen by reassembling HTTP packets.
 
 This screen allows you to generate reports URLs based on the following
 
-- query by Source IP, Dest IP, and IP Pair
-- query by Port number (Trisul automatically detects HTTP traffic on all
+- Query by Source IP, Dest IP, and IP Pair
+- Query by Port number (Trisul automatically detects HTTP traffic on all
   ports not just port 80)
-- all IP except specified
+- All IP except specified
 - Regular Expressions for URL
 - String match
 
@@ -33,8 +34,8 @@ To enable this :
 
 ##### View & Query URLs
 
-:::note navigation
-Click on Resources —\> URL Resources to bring up the screen
+:::info navigation
+:point_right: Click on Resources &rarr; URL Resources to bring up the screen
 :::
 
 You can search by :

@@ -4,6 +4,7 @@ sidebar_position: 5
 ---
 
 # Full Text Search
+<span class="badge badge--primary">PCAP Mode Only</span>  
 
 Some resources extracted by Trisul are unstructured but are critical to
 look up fast. These types of resources are stored in a Full Text Search
