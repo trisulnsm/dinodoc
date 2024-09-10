@@ -34,7 +34,7 @@ Follow directions on [Installing Trisul](/docs/ag/install/doinstall)
 
 ### Step 4: Configure the Network SPAN port or NETFLOW 
 
-Next, you need to send something to Trisul to start monitoring [Send Packets](/docs/ag/network/input_packets.md)  and/or [Send NetFlow](/docsag/network/input_netflow.md)
+Next, you need to send something to Trisul to start monitoring [Send Packets](/docs/ag/network/input_packets.md)  and/or [Send NetFlow](/docs/ag/network/input_netflow)
 
 
 ### Step 5: Login and start viewing 
