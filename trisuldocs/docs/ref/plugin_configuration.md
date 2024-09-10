@@ -2,7 +2,7 @@
 
 Trisul consists of two base configs - the
 [Trisul-Probe](trisulconfig) config file and the
-[Trisul-Hub](trsulhubconfig) config file. If you wish to finely
+[Trisul-Hub](/docs/ref/trisulhubconfig) config file. If you wish to finely
 control how various metrics are computed you can tweak the following
 Plugin configuration files.
 
@@ -65,8 +65,8 @@ Here is a list of all the current plugin configuration options.
 | [IP Tunnels](plugin_configuration#ip-tunnels)     | Used for 3GPP mobility (contact us)                            |
 | [DNS](plugin_configuration#dns)                   | Control DNS extraction, resource, Full Text Search, etc        |
 | [Http Hosts](plugin_configuration#http-hosts)     | HTTP Host header depth setting                                 |
-| [Geo](/docs/ug/install/geoasn)                    | Controls Geo plugin, country and ASN metering rules            |
-| [Badfellas](/docs/ug/install/badfellas)           | Controls Badfellas lists, how they are refreshed, custom rules |
+| [Geo](/docs/ag/install/geoasn)                    | Controls Geo plugin, country and ASN metering rules            |
+| [Badfellas](/docs/ag/install/badfellas)           | Controls Badfellas lists, how they are refreshed, custom rules |
 
 ## Hosts
 

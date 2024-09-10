@@ -16,7 +16,7 @@ Root privileges needed to edit
 
 :::note
 
-Also see[trisulHubConfig.xml](/docs/ref/trsulhubconfig)for editing Hub node parameters 
+Also see[trisulHubConfig.xml](/docs/ref/trisulhubconfig)for editing Hub node parameters 
 
 :::
 

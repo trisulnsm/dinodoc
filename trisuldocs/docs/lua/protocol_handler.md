@@ -25,7 +25,7 @@ Download a well documented skeleton script from here to copy and get started
 
 ### Table `control`
 
-The control table assigns a unique GUID to this protocol and a name. You can then use [Access Points](/docs/ug/webadmin/access_points) to connect this protocol to a lower layer.
+The control table assigns a unique GUID to this protocol and a name. You can then use [Access Points](/docs/ag/webadmin/access_points) to connect this protocol to a lower layer.
 
 | name  | type | description |
 | ----- | ----- | ------ |

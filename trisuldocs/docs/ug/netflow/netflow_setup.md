@@ -28,7 +28,7 @@ processing. The versions and flavors are automatically detected.
 
 To view or change these, Login as `admin` and,
 :::info navigation
-:point_right: Go to Context: Default &rarr;profile0 &rarr; [NetFlow Wizard](NetFlow_wizard)
+:point_right: Go to Context: Default &rarr;profile0 &rarr; [NetFlow Wizard](/docs/ug/netflow/NetFlow_wizard)
 :::
 
 - Traffic on UDP ports 2055,2056,2057,9500,9993 is interpreted as
@@ -118,7 +118,7 @@ You can see the template database on each probe. This is updated every
 
 ### Advanced Configuration
 
-You can tweak the [NetFlow configuration file](/docs/ref/NetFlow-config) for more advanced settings.
+You can tweak the [NetFlow configuration file](/docs/ref/netflow-config) for more advanced settings.
 
 Typically, you dont need to do this because the defaults have been
 carefully selected for you.

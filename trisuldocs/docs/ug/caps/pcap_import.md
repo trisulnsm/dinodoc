@@ -16,7 +16,7 @@ This document describes how you can import PCAP dumps.
 
 ## trisulctl_probe importpcap
 
-> We will be using the probe management tool [trisulctl_probe](/docs/ug/domain/trisulctl) to import the PCAPs
+> We will be using the probe management tool [trisulctl_probe](/docs/ag/domain/trisulctl) to import the PCAPs
 
 Say you have placed your PCAP files in `/home/tim/MyPcap01` and you want to import them into a new Trisul context named `mypcap01` — follow these steps.
 

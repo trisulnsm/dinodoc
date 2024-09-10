@@ -5,7 +5,7 @@ sidebar_position: 6
 # Malware and Blacklist Alerts
 
 **This feature requires the Trisul Badfellas plugin**  
-See [Trisul Badfellas](/docs/ug/install/badfellas)
+See [Trisul Badfellas](/docs/ag/install/badfellas)
 
 The Trisul Badfellas plugin adds comprehensive threat detection 
 capabilities to Trisul based on multiple blacklists which are included 

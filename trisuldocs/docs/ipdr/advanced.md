@@ -15,7 +15,7 @@ Use a new flow compressor specifically designed for IPDR flow log. This
 high performance compressor can store a flow with NAT in as little as 14
 bytes.
 
-Open the [trisulHubConfig.xml](/docs/ref/trsulhubconfig#advanced-db-parameters) file and specify the following in Advanced DB Parameters.
+Open the [trisulHubConfig.xml](/docs/ref/trisulhubconfig#advanced-db-parameters) file and specify the following in Advanced DB Parameters.
 
 - Use a new compressor `lz4-ipv4-call-log-with-nat`
 - Disable microsecond timestamps

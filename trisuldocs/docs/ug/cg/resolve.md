@@ -82,7 +82,7 @@ little load on your DNS servers as possible.
 
 ### How to Enable Automatic Name Resolution
 
-By default in hub config the "resolve ip"" is set to true which automatically resolves IP addresses. You can disable by configuring it in the [hubconfig](/docs/ref/trsulhubconfig#resolveip).
+By default in hub config the "resolve ip"" is set to true which automatically resolves IP addresses. You can disable by configuring it in the [hubconfig](/docs/ref/trisulhubconfig#resolveip).
 
 ## Export Labels to CSV file
 

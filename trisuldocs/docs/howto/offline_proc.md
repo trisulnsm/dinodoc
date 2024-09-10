@@ -15,7 +15,7 @@ the others. After analysis of the PCAP dump you can delete the context
 to free up the space.
 
 For more on contexts : see [Contexts and Domain
-concepts](/docs/ug/domain#contexts)
+concepts](/docs/ag/domain#contexts)
 
 The tools we use to import PCAP dumps support working with contexts.
 

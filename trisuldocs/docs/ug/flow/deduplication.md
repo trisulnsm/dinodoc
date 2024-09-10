@@ -60,8 +60,8 @@ supported by Trisul.
 | ---------------------------------- | ---------------- | ------ |
 | Keep flows as-is                   | Default behavior   | Allows you to keep the flow-leg information which allows you to drilldown from router and probes  |
 | Merge flows   | [Netflow Config File](/docs/ref/netflow-config#parameters) | Set the `MergeMultipleSources` Option to TRUE to de-duplicate the flows. This however removes the router information and customer will not be able to drilldown from a router interface to a flow |
-| Keep flows but Correlate dup flows | [Web Trisul Config](/docs/ug/webadmin/web_options)   | Enable the `Flow Legs Correlation` option. This allows you to merge the flows from multiple router and show it in a nice display    |
-| NAT correlation                    | [Web Trisul Config](/docs/ug/webadmin/web_options)         | Keeps the flow legs but apply source port NAT heuristics to show flow legs |
+| Keep flows but Correlate dup flows | [Web Trisul Config](/docs/ag/webadmin/web_options)   | Enable the `Flow Legs Correlation` option. This allows you to merge the flows from multiple router and show it in a nice display    |
+| NAT correlation                    | [Web Trisul Config](/docs/ag/webadmin/web_options)         | Keeps the flow legs but apply source port NAT heuristics to show flow legs |
 
 In the rest of this page we will describe the Flow Leg correlation.
 

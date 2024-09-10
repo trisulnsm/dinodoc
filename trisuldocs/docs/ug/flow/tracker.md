@@ -20,7 +20,7 @@ also necessary for you to use [flow tracker alerts](/docs/ug/alerts/ft).
 
 This section outlines the number of things you can do with *Flow Trackers*. 
 
-1) [**View**](/ug/flow/tracker#view-flow-trackers): View flow data and analytics.
+1) [**View**](/docs/ug/flow/tracker#view-flow-trackers): View flow data and analytics.
 2) [**Manage**](/docs/ug/flow/tracker#manage-flow-trackers): Manage flow tracking configurations and settings.
 3) [**Create**](/docs/ug/flow/tracker#create-flow-trackers): Create custom flow tracking profiles and criteria.
 

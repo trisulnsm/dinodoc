@@ -21,7 +21,7 @@ Here is how you get started with links to relevant pages.
 ### Step 1: Get a Linux VM or a Bare Metal machine ready 
 
 Ubuntu and RHEL/CentOS platforms supported.
-See [System Requirements](/docs/ug/install/requirements)
+See [System Requirements](/docs/ag/install/requirements)
 
 ### Step 2: Sign up and download Trisul
 
@@ -29,12 +29,12 @@ Visit the Trisul Get Started Page [and sign up there](https://www.trisul.org/dow
 
 ### Step 3: Install
 
-Follow directions on [Installing Trisul](/docs/ug/install/doinstall)
+Follow directions on [Installing Trisul](/docs/ag/install/doinstall)
 
 
 ### Step 4: Configure the Network SPAN port or NETFLOW 
 
-Next, you need to send something to Trisul to start monitoring [Send Packets](/docs/ug/install/input_packets)  and/or [Send NetFlow](/docs/ug/install/input_netflow)
+Next, you need to send something to Trisul to start monitoring [Send Packets](/docs/ag/install/input_packets)  and/or [Send NetFlow](/docs/ag/install/input_netflow)
 
 
 ### Step 5: Login and start viewing 
