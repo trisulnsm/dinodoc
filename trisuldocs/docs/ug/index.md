@@ -3,7 +3,7 @@
 This User Guide is an operational guide that includes topics related to installing, administering, and using the web interface to navigate, view reports, set alerts, and monitoring your network.
 
 :::warning[First time quick doc links]
-If you new to Trisul, follow this documentation path [*System Requirements*](/docs/ag/install/requirements)  &rarr; [*Installation*](/docs/ag/install/doinstall) &rarr;  [*Basic Usage*](/docs/ug/basicusage/) . 
+If you new to Trisul, follow this documentation path [*System Requirements*](/docs/ag/install/requirements)  &rarr; [*Installation*](/docs/ag/install/doinstall) &rarr;  [*Basic Usage*](/docs/ug/basictasks/) . 
 :::
 
 ## How to Use This Guide

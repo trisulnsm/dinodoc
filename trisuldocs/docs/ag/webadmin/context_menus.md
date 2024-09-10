@@ -71,7 +71,7 @@ slice and you can calculate accordingly as to how much days data can be
 stored depending on the size of the disk.
 
 > To configure the DB storage retention policy refer to [Configuring disk
-> storage](/docs/ug/install/configure_storage)
+> storage](/docs/ag/basictasks/configure_storage.md)
 
 You can also view the disk occupied by each counter-group in a SLICE
 every-day. This is helpful in tuning the system.

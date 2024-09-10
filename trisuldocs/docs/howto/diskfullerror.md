@@ -45,7 +45,7 @@ Usually at this point you should have enough disk space freed up. Now you need t
 ##### References
 
 1. [trisulProbeConfig.xml](/docs/ref/trisulconfig)– for setting max GB retention of pcaps.
-2. [trisulHubConfig.xml](/docs/ref/trsulhubconfig)– for setting days of metrics.
+2. [trisulHubConfig.xml](/docs/ref/trisulhubconfig)– for setting days of metrics.
 
 ## Best practices
 

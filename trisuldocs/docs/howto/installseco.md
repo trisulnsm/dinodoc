@@ -157,7 +157,7 @@ trisulctl_hub
 relocate context domain0 hub0 default 
 ```
 
-For more see [Relocate database](/docs/ug/basicusage/reloc) or type
+For more see [Relocate database](/docs/ag/basictasks/reloc.md) or type
 `help relocate` in the domain management CLI tool.
 
 ### How to switch to NETFLOW mode

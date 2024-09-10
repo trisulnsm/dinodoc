@@ -26,4 +26,4 @@ for step by step instructions.
 
 If you want to import a PCAP dump and also enrich and integrate IDS
 (Intrusion Detection System) data from Snort/Suricata read [Import PCAP
-with IDS](/docs/ug/basicusage/snort)
+with IDS](/docs/ag/basictasks/snort.md)

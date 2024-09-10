@@ -82,6 +82,6 @@ deployment.
 | Config file | Parameter | Set this to | Notes  |
 | -------- | ---- | ------- | ------------ |
 | [Netflow config](/docs/ref/netflow-config)  | AppMode                              | ipdr                             | Sets the Netflow processing to IPDR mode|
-| [Hub Config](/docs/ref/trsulhubconfig#advanced-db-parameters) | DBParamters \> FlowStream \> AppMode | lz4-ip-call-log-with-nat-pro-max | Sets the database schema and compression code to pro-max mode|
+| [Hub Config](/docs/ref/trisulhubconfig#advanced-db-parameters) | DBParamters \> FlowStream \> AppMode | lz4-ip-call-log-with-nat-pro-max | Sets the database schema and compression code to pro-max mode|
 | [Probe Config file](/docs/ref/trisulconfig#tuning)            | Tuning \> DisableFlowTupleFeedback   | true                             | Disables monitoring of flow tuples by IP and Application. If this is enabled, there will be connection metrics for every IP and App, could waste disk space for IPDR |
 | [Probe Config file](/docs/ref/trisulconfig#edges)             | Edges \> EnableFlowEdges             | false                            | Disable Edge graph generation for space savings                                                                                                                      |
