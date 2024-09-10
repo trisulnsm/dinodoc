@@ -110,6 +110,6 @@ The raw packets are stored for each context in the following default directories
   - /oper – the operational directory where Trisul*writes*packets
   - /ref – the reference directory for recent data likely to be looked up
   - /archive – older data  
-    As data ages they ‘cool down’ and slide from oper to ref to archive. Therefore the ‘hottest’ data slices are under /oper. For more details read[How the sliding slices work](/docs/ag/domain/fullcontent#sliding-slices )
+    As data ages they ‘cool down’ and slide from oper to ref to archive. Therefore the ‘hottest’ data slices are under /oper. For more details read[How the sliding slices work](/docs/ug/caps/fullcontent#sliding-slices )
 
 The reason we have three directories is that they can be mounted on three separate volumes if required for heavy workloads.

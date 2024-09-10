@@ -28,7 +28,7 @@ processing. The versions and flavors are automatically detected.
 
 To view or change these, Login as `admin` and,
 :::info navigation
-:point_right: Go to Context: Default &rarr;profile0 &rarr; [NetFlow Wizard](NetFlow_wizard)
+:point_right: Go to Context: Default &rarr;profile0 &rarr; [NetFlow Wizard](/docs/ug/netflow/netflow_wizard)
 :::
 
 - Traffic on UDP ports 2055,2056,2057,9500,9993 is interpreted as
@@ -63,7 +63,7 @@ To do that, Login as `admin` and,
 
 Login as `admin` and, 
 :::info navigation
-:point_right: Go to *Context: Default &rarr; profile0 &rarr; [NetFlow Wizard](NetFlow_wizard)*
+:point_right: Go to *Context: Default &rarr; profile0 &rarr; [NetFlow Wizard](/docs/ug/netflow/netflow_wizard)*
 :::
 
 - Specify the interfaces and ports receiving NetFlow that you noted down
@@ -74,7 +74,7 @@ Login as `admin` and,
 - Adjust the sampling rate. If some of your devices uses *flow sampling*
   then you may have to manually configure that in Trisul. To do that you
   have to edit the NetFlow configuration file and add the [Device-IP to
-  Sampling Rate mapping](/docs/ref/NetFlow-config#sampling-rates)
+  Sampling Rate mapping](/docs/ref/netflow-config#sampling-rates)
 
 ### Step 5: Restart trisul-probe and Finish
 
@@ -118,7 +118,7 @@ You can see the template database on each probe. This is updated every
 
 ### Advanced Configuration
 
-You can tweak the [NetFlow configuration file](/docs/ref/NetFlow-config) for more advanced settings.
+You can tweak the [NetFlow configuration file](/docs/ref/netflow-config) for more advanced settings.
 
 Typically, you dont need to do this because the defaults have been
 carefully selected for you.

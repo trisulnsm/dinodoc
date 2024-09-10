@@ -18,7 +18,7 @@ Select *Dashboards-> Show All* to see all Live Dashboards
 A live view of current host activity. Internal hosts are shown on the
 left side and the external hosts on the right side. Hosts are
 automatically classified as internal or external based on the [Home
-Networks](/docs/ug/webadmin/home_networks). Under the screenshot you can find a description of each module.
+Networks](/docs/ag/webadmin/home_networks). Under the screenshot you can find a description of each module.
 
 ![](images/dashboards/current-hosts.png)
 
@@ -131,8 +131,7 @@ most useful when you have connected Trisul to an [IDS feed](/docs/howto/setup_id
 
 ## Sessions
 
-Shows most significant currently active IP flows. This is based on [Flow
-Trackers](/docs/ug/tools/flow_tracker) a special type of streaming analytics snapshot used in Trisul. The following classes of flows are displayed.
+Shows most significant currently active IP flows. This is based on [Flow Trackers](/docs/ug/tools/flow_tracker) a special type of streaming analytics snapshot used in Trisul. The following classes of flows are displayed.
 
 | Module                                               | Description                                                                                                                                                                                                                               |
 | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

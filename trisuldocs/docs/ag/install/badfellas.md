@@ -217,7 +217,7 @@ Check all URLs seen
 
 In theURLTop-1million lists URLs below this as considered as Fat Tail
 
-Locate the[rules.xml file](/docs/ug/install/badfellas#feeds)
+Locate the [rules.xml file](/docs/ag/install/badfellas#feeds)
 
 ```xml
 <TrisulPluginConfiguration>

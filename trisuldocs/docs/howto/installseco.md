@@ -125,7 +125,7 @@ Then Go to Context : default \> Admin Tasks \> Start/Stop Tasks and
 restart the Hub and Probe(s)
 
 **Default eth0** By default Trisul listens on eth0, if you wish to
-change it read [Change capture adapter](/docs/ug/webadmin/profiles)
+change it read [Change capture adapter](/docs/ag/webadmin/profiles)
 
 **Congratulations \!** You have finished installing Trisul.
 
@@ -157,7 +157,7 @@ trisulctl_hub
 relocate context domain0 hub0 default 
 ```
 
-For more see [Relocate database](/docs/ug/basicusage/reloc) or type
+For more see [Relocate database](/docs/ag/basictasks/reloc.md) or type
 `help relocate` in the domain management CLI tool.
 
 ### How to switch to NETFLOW mode
@@ -197,12 +197,12 @@ update-rc.d trisul-probe0-context0 defaults
 
 Trisul can also be deployed in a distributed hub and probe
 configuration. See instructions for [How to add a new
-Probe](/docs/ug/domain/deploy_probe)
+Probe](/docs/ag/domain/deploy_probe)
 
 ### How to change network interfaces amd web server ports
 
 \* Listen on an interface other than eth0
-[Docs](/docs/ug/webadmin/profiles) 
+[Docs](/docs/ag/webadmin/profiles) 
 \* Move Web server ports from 3000 and 3003
 [Docs](/docs/howto/change_web_port)  
 \* Enable SSL for the web interface [Docs](/docs/howto/sslforwebtr)
@@ -231,8 +231,8 @@ service webtrisuld start
 
 You may want to [sign up and install the following two plugins](https://www.trisul.org/get-started/)
 
-1. [BadFellas](/docs/ug/install/badfellas)
-2. [Geo](/docs/ug/install/geoasn)
+1. [BadFellas](/docs/ag/install/badfellas)
+2. [Geo](/docs/ag/install/geoasn)
 
 Also checkout the NEW Trisul Apps. Login as admin and select “Web
 Admin Apps”

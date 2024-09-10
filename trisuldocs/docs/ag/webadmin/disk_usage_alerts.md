@@ -27,7 +27,7 @@ To enable disk alert threshold, you need to edit the hub and probe configuration
 
 ### Setup Disk Usage Thresholds on Hub Node
 
-Edit the [trisulHubConfig.xml](/docs/ref/trsulhubconfig) file and set the following parameters under SlicePolicy.
+Edit the [trisulHubConfig.xml](/docs/ref/trisulhubconfig) file and set the following parameters under SlicePolicy.
 
 ***UsageRedMark*** 
 

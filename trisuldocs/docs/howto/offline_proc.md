@@ -15,7 +15,7 @@ the others. After analysis of the PCAP dump you can delete the context
 to free up the space.
 
 For more on contexts : see [Contexts and Domain
-concepts](/docs/ug/domain#contexts)
+concepts](/docs/ag/domain#contexts)
 
 The tools we use to import PCAP dumps support working with contexts.
 
@@ -26,4 +26,4 @@ for step by step instructions.
 
 If you want to import a PCAP dump and also enrich and integrate IDS
 (Intrusion Detection System) data from Snort/Suricata read [Import PCAP
-with IDS](/docs/ug/basicusage/snort)
+with IDS](/docs/ag/basictasks/snort.md)

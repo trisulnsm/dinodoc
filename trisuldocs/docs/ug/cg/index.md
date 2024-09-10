@@ -26,7 +26,7 @@ data.
 
 ##### Packet Capture
 
-The default mode. Trisul does all its analytics by directly capturing packets from the network. Learn how to [capture packets](/docs/ug/install/input_packets) for Trisul NSM.
+The default mode. Trisul does all its analytics by directly capturing packets from the network. Learn how to [capture packets](/docs/ag/install/input_packets) for Trisul NSM.
 
 ##### NetFlow
 

@@ -257,7 +257,7 @@ There are some caps on this feature to prevent accidental misuse.
 1. By default only 5MB of raw data is retrieved
 2. By default only 1800s (30minutes) of interval can be analyzed
 
-If you wish to change these settings, go to [App Settings](/docs/ug/webadmin/web_options) and change the *Deep
+If you wish to change these settings, go to [App Settings](/docs/ag/webadmin/web_options) and change the *Deep
 Packet Inspection Limit* and *Deep Packet Inspection Content Limit*.
 Please be aware that in busy network analyzing packets can take time to
 complete.

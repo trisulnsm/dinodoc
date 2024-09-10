@@ -28,7 +28,7 @@ The Lua table `engine_monitor = {..}` can contain one or more of the following h
 
 ### Threading note
 
-The backend engine is multi-threaded, the number of threads matches the *StatsEngine>Flushers* in [trisulHubConfig.xml](/docs/ref/trsulhubconfig). You can use `engine.instanceid() == "0"` to run your script on one instance only.
+The backend engine is multi-threaded, the number of threads matches the *StatsEngine>Flushers* in [trisulHubConfig.xml](/docs/ref/trisulhubconfig). You can use `engine.instanceid() == "0"` to run your script on one instance only.
 
 ## Functions Reference
 

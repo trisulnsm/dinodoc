@@ -96,4 +96,4 @@ To make the feature usable and resistant to massive download requests
 | ----------------------------- | ------- | --------------------------------------------------------------------- |
 | Content download limit        | 100MB   | maximum download needs to be < 100MB|
 
-both these parameters can be edited from [App Settings](/docs/ug/webadmin/web_options)
+both these parameters can be edited from [App Settings](/docs/ag/webadmin/web_options)

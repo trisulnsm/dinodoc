@@ -15,7 +15,7 @@ Links to Reference for all configuration files
 Here are some commonly used config files.
 
  - The main Trisul-PROBE config file : [trisulProbeConfig.xml](trisulconfig)
- - The main Trisul-HUB config file : [trisulHubConfig.xml](trsulhubconfig)
+ - The main Trisul-HUB config file : [trisulHubConfig.xml](/docs/ref/trisulhubconfig)
  - The Netflow config file : [netflow-config](netflow-config) 
 
 ## Plugin Config files

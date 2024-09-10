@@ -73,7 +73,7 @@ The Resource group keys window appears with the following fields.
 | Keys                                | Click on the Plus icon to add the keys and click Select after adding the desirable keys to that particular resource group |
 
 :::note
-If you cannot find SNMP-Interface from the list of counter groups. Install *SNMP-Poller* from [Trisul Apps](/docs/ug/webadmin/apps) before this step and try again.
+If you cannot find SNMP-Interface from the list of counter groups. Install *SNMP-Poller* from [Trisul Apps](/docs/ag/webadmin/apps) before this step and try again.
 :::
 
 Once you have filled all the fields, Click Add. You have now successfully assigned the keys to the resource group. You can see the keys assigned to the resource groups on the bottom of the same window.

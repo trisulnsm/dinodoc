@@ -139,7 +139,7 @@ Layer                  ProbeID
 2                      probeWEST           
 ```
 
-See the [Probe to Context Layer mapping reference ](/docs/ref/trsulhubconfig#probes)
+See the [Probe to Context Layer mapping reference ](/docs/ref/trisulhubconfig#probes)
 
 ### 7.Run change_endpoints for Hub Context (For First Probe Only)
 

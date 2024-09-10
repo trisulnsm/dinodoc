@@ -60,7 +60,7 @@ To create a user (subscriber) and map him to a set of services:
 - Click on **Create a new user**
 
 This will bring you to the screen shown below. Specify all the fields as
-described in the [Manage Users](/docs/ug/webadmin/userroles)
+described in the [Manage Users](/docs/ag/webadmin/userroles)
 section of the User Guide. Pay specific attention to the following
 fields
 
@@ -159,6 +159,6 @@ logical interface.
 #### Can I offer more advanced reports with drilldowns ?
 
 You can also run a complete instance Trisul as a separate
-[context](/docs/ug/domain#contexts). This will allow the user
+[context](/docs/ag/domain#contexts). This will allow the user
 to drill down deeply into his traffic. You may offer this as an enhanced
 reporting package service.

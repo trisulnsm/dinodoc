@@ -22,8 +22,8 @@ This will take you to the *Menu Manager* page with two customizations as shown i
 ![](images/menumanager1.png)  
 *Figure: Menu Manager*
 
-1) [Customize Menus](/docs/ug/webadmin/menus#customize-menus)
-2) [Copy Menus](/docs/ug/webadmin/menus#copy-menus)
+1) [Customize Menus](/docs/ag/webadmin/menus#customize-menus)
+2) [Copy Menus](/docs/ag/webadmin/menus#copy-menus)
 
 ## Customize Menus
 

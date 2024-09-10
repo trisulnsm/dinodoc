@@ -25,7 +25,7 @@ Download a well documented skeleton script from here to copy and get started
 
 ### Table `control`
 
-The control table assigns a unique GUID to this protocol and a name. You can then use [Access Points](/docs/ug/webadmin/access_points) to connect this protocol to a lower layer.
+The control table assigns a unique GUID to this protocol and a name. You can then use [Access Points](/docs/ag/webadmin/access_points) to connect this protocol to a lower layer.
 
 | name  | type | description |
 | ----- | ----- | ------ |
@@ -33,7 +33,7 @@ The control table assigns a unique GUID to this protocol and a name. You can the
 | name                | string           | Name of the counter group. Keep it short < 15 chars                                                                                                                                                                     |
 | description         | string           | optional                                                                                                                                                                                                                |
 | host_protocol_guid  | string           | Which lower layer protocol do you want to attach to. To find the GUID for your host protocol such as UDP or IP see [Common protocol GUIDs](/docs/ref/guid#protocols)                                                   |
-| host_protocol_ports | array of numbers | array of port numbers of the host protocol to which you want to attach. These could be TCP/UDP prots, EtherTypes, IP protocol numbers, or other [Access Points](/docs/ug/webadmin/access_points) |
+| host_protocol_ports | array of numbers | array of port numbers of the host protocol to which you want to attach. These could be TCP/UDP prots, EtherTypes, IP protocol numbers, or other [Access Points](/docs/ag/webadmin/access_points) |
 
 ### Sample control block
 

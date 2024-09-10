@@ -71,7 +71,7 @@ slice and you can calculate accordingly as to how much days data can be
 stored depending on the size of the disk.
 
 > To configure the DB storage retention policy refer to [Configuring disk
-> storage](/docs/ug/install/configure_storage)
+> storage](/docs/ag/basictasks/configure_storage.md)
 
 You can also view the disk occupied by each counter-group in a SLICE
 every-day. This is helpful in tuning the system.
@@ -97,7 +97,7 @@ License types are :
    3. Unlimited : As many as your hardware can support
 
 To Install a new License, Refer to the [Installing Trisul
-License](/docs/ug/install/license) for instructions
+License](/docs/ag/license/install) for instructions
 
 ### Schedule Email Reports
 

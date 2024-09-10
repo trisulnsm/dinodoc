@@ -140,7 +140,7 @@ in the config file.
 
 #### How to read a PCAP file and generate alerts
 
-A new tool called [importpcap\_ids](/docs/ug/basicusage/snort) uses
+A new tool called [importpcap\_ids](/docs/ag/basictasks/snort.md) uses
 snort to run the normal Analytics as well as IDS over PCAP dumps. The
 optional *context=* argument allows you to create multiple separate
 datasets in Trisul.

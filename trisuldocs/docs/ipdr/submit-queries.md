@@ -68,5 +68,5 @@ To request a full dump leave all the form fields blank and press the split submi
 
 *Figure: Request full database dump. A compliance tick mark* 
 
-As a safety mechanism, the Full Database Dump is capped to 250,000 records.  This is controlled by the [IPDR > MaxRecords](/docs/ref/trsulhubconfig#ipdr) option in the Trisul Hub Configuration file. 
+As a safety mechanism, the Full Database Dump is capped to 250,000 records.  This is controlled by the [IPDR > MaxRecords](/docs/ref/trisulhubconfig#ipdr) option in the Trisul Hub Configuration file. 
 
