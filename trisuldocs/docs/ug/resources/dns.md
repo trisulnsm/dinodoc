@@ -19,6 +19,7 @@ Click on Resources &rarr; DNS Resources
 :::
 
 ![](images/searchcriteriaform.png)
+*Figure: Search Criteria Form for DNS Resources*
 
 Open the Search Criteria box by clicking on [*Show Search Form*](/docs/ug/ui/elements#hide-show-search-form) and fill in the fields with the help of following field descriptions.
 | Fields               | Descriptions                                                                            |
@@ -36,13 +37,13 @@ There are additional search criteria that allows you to narrow down your search 
 
 | Fields                 | Descriptions                                                                            |
 |------------------------|-----------------------------------------------------------------------------------------|
-| Source IP Address      | Enter he IP address of the device that sent the network traffic                         |
+| Source IP Address      | Enter the IP address of the device that sent the network traffic                         |
 | Destination IP Address | Enter the IP address of the device that received the network traffic                    |
 | Source Port            | Enter the port number of the device that sent the network traffic                       |
 | Destination Port       | Enter the port number of the device that received the network traffic                   |
 
 
-### Seach by a Single Perl Compatible Regex
+### Search by a Single Perl Compatible Regex
 
 You can search by a single regular expression or bulk substring matching. Enter a single regex in the Pattern box. It must be on a single line.
 

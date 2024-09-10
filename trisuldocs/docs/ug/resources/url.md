@@ -38,19 +38,34 @@ To enable this :
 :point_right: Click on Resources &rarr; URL Resources to bring up the screen
 :::
 
-You can search by :
+## Searching
 
-1. IP
-2. Exclude these IPS
-3. Pair of IPs
-4. Port
-5. Timeframe
-6. Regex Pattern
-7. Invert Regex Pattren
+:::info navigation
+Click on Resources &rarr; DNS Resources
+:::
 
-The results page have links to drilldown into flows, traffic, and
-packets for every URL visited.
+![](images/searchcriteriaform.png)
+*Figure: Search Criteria Form for URL Resources*
 
-## Download as CSV
+Open the Search Criteria box by clicking on [*Show Search Form*](/docs/ug/ui/elements#hide-show-search-form) and fill in the fields with the help of following field descriptions.
+| Fields               | Descriptions                                                                            |
+|----------------------|-----------------------------------------------------------------------------------------|
+| Time Frame           | Select a specific date and time range using the [Time Selector](/docs/ug/ui/elements#time-selector)to search for resources within that period                                                |
+| IP Address           | Enter a single IP address to search for resources related to that IP                    |
+| Exclude these IPs    | Enter one or more IP addresses to exclude from the search results                       |
+| Regex Pattern        | Enter a regular expression (regex) pattern to search for resources matching that pattern|
+| IP Pair              | Select two IP addresses to search for resources transferred between them                |
+| Port                 | Enter a specific port number to search for resources transferred on that port           |
+| Max Items            | Set a limit on the number of search results returned.                                   |
+| Invert Regex Pattern | Check this box to search for resources that do NOT match the regex pattern.             |
 
-From the URL table shown click on “Download as CSV”
+There are additional search criteria that allows you to narrow down your search to specific network conversations, making it easier to find the resources you're looking for. Additional search criteria include,
+
+| Fields                 | Descriptions                                                                            |
+|------------------------|-----------------------------------------------------------------------------------------|
+| Source IP Address      | Enter the IP address of the device that sent the network traffic                         |
+| Destination IP Address | Enter the IP address of the device that received the network traffic                    |
+| Source Port            | Enter the port number of the device that sent the network traffic                       |
+| Destination Port       | Enter the port number of the device that received the network traffic                   |
+
+
