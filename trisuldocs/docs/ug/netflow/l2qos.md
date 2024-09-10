@@ -37,8 +37,8 @@ The following counter groups show L2 data
 
 The following picture shows where these counters can be found.
 
-![](images/mac.png)  
-*Figure: Retro \> Retro Counters to view MAC Counters*
+![](images/mac_countergroup.png)  
+*Figure: Retro &rarr; Retro Counters to view MAC Counters*
 
 ### VLAN ID
 
