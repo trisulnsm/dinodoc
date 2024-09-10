@@ -6,7 +6,7 @@ If the Trisul disk fills up 100% you may not be able to access the web interface
 
 - ##### Step 1: Mount new partition
   
-  Create a new partition with enough space and mount the new partition, say on`/mnt/trisul_extra`[Trisul Hub Configuration File - Trisul Documentation](/docs/ref/trsulhubconfig)
+  Create a new partition with enough space and mount the new partition, say on`/mnt/trisul_extra`[Trisul Hub Configuration File - Trisul Documentation](/docs/ref/trisulhubconfig)
   
   We will be moving some packet capture and metrics to this new area to free up some space.
 

@@ -1,6 +1,6 @@
 # Add custom intel feeds into Badfellas
 
-The [Badfellas plugin](/docs/ug/install/badfellas) analyzes your
+The [Badfellas plugin](/docs/ag/install/badfellas) analyzes your
 network traffic looking for matches against millions of indicators of
 malicious activity. Out of the box, we have selected more than a dozen
 feeds that have provided consistently good results. This document
@@ -17,7 +17,7 @@ The basic method is the following
 **Advanced** : If you want to have maximum control of the Intel
 framework processing, you can use the [LUA API](/docs/lua) alongside the
 “IOC Intel Harvestor App”. See [Trisul
-APPS](/docs/ug/webadmin/apps)
+APPS](/docs/ag/webadmin/apps)
 
 ## Pre process your feed into a TAB separated file on the HUB node.
 

@@ -125,7 +125,7 @@ Then Go to Context : default \> Admin Tasks \> Start/Stop Tasks and
 restart the Hub and Probe(s)
 
 **Default eth0** By default Trisul listens on eth0, if you wish to
-change it read [Change capture adapter](/docs/ug/webadmin/profiles)
+change it read [Change capture adapter](/docs/ag/webadmin/profiles)
 
 **Congratulations \!** You have finished installing Trisul.
 

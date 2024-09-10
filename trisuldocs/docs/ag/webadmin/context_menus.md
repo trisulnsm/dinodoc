@@ -97,7 +97,7 @@ License types are :
    3. Unlimited : As many as your hardware can support
 
 To Install a new License, Refer to the [Installing Trisul
-License](/docs/ug/install/license) for instructions
+License](/docs/ag/license/install) for instructions
 
 ### Schedule Email Reports
 

@@ -33,7 +33,7 @@ Once logged in please change the password.
 
 ## Contexts
 
-[Contexts](/docs/ug/domain/#contexts) are multiple analysis domains in Trisul. At login time you must select the context you wish to analyze. Hover your mouse over each context name to get a description of what the context contains.
+[Contexts](/docs/ag/domain/#contexts) are multiple analysis domains in Trisul. At login time you must select the context you wish to analyze. Hover your mouse over each context name to get a description of what the context contains.
 
 If you only have one context, which is the most common case, the choice
 is not shown.

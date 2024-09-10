@@ -42,7 +42,7 @@ Select Web Admin &rarr; Manage &rarr; Users
 | User Name            | The long name of user                                               |
 | Name                 | Login name for user, no spaces, keep it short                       |
 | Role                 | Webtrisul user Roles .See [Roles](userroles) section for more  |
-| LDAP Login           | User can use [LDAP](/docs/ug/webadmin/ldap_login) password to login |
+| LDAP Login           | User can use [LDAP](/docs/ag/webadmin/ldap_login) password to login |
 | Password             | Password for user                                                   |
 | Password Again       | Repeat the password again                                           |
 | Allow multiple Login | Allow concurrent login option to user. The default is `true` which means concurrent logins are allowed. <br/>When set to `false`  If a user logs in with an ID that is already logged in, the older login session will be terminated.|
