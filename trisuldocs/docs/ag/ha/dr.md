@@ -174,7 +174,6 @@ Further customization can be done by editing the`DRDCHealthCheck.conf`file shown
 
 On thePRIMARYnode, the trisul-hub-replicator service pushes the incremental changes continuously to the backup site.
 
-On thePRIMARYnode.
 
 **On thePRIMARYnode**
 
@@ -182,7 +181,7 @@ On thePRIMARYnode.
 systemctl start trisul-hub-replicator
 ```
 
-On theBACKUPnode.
+**On theBACKUPnode**
 
 ```bash
 systemctl start trisul-hub-primary-health-check
