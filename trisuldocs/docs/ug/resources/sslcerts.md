@@ -25,8 +25,8 @@ section on [SSL FTS Index](ftsssl) for details about the FTS index.
 
 For each SSL/TLS connection, Trisul stores in the normal index.
 
-1. a SHA-1 hash of each DER encoded certificate in the chain
-2. the subject attributes text
+1. A SHA-1 hash of each DER encoded certificate in the chain
+2. The subject attributes text
 
 > Trisul uses heuristics to detect SSL/TLS on any port
 

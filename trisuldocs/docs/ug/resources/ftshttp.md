@@ -48,7 +48,7 @@ A typical document looks like this
 ## Using
 
 :::info navigation
-Select Resources &rarr; HTTP Header FTS
+:point_right: Select Resources &rarr; HTTP Header FTS
 :::
 
 Follow instructions in the [FTS](fts) documentation.

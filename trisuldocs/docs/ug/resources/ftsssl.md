@@ -47,7 +47,7 @@ In addition, Trisul stores the following extra fields in the FTS index
 ## Using
 
 :::info navigation
-Select Resources &rarr; SSL Certificate FTS
+:point_right: Select Resources &rarr; SSL Certificate FTS
 :::
 
 Then follow instructions in the [FTS](fts) documentation.

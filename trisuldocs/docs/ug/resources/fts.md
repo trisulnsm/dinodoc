@@ -42,8 +42,8 @@ match every other document.
 
 Trisul only returns a maximum of 500 matches. If you want more,
 
-1. you simply have to narrow your search terms
-2. look for a smaller time interval
+1. You simply have to narrow your search terms
+2. Look for a smaller time interval
 
 ### Faceted Results
 
