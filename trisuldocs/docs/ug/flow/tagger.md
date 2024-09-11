@@ -134,7 +134,7 @@ attached to the tag.
 
 You can view the flow tags in a couple of ways.
 
-1. Use the [Flow taggers](/docs/ug/tools/flow_tagger) tool to see
+1. Use the [Flow taggers](/docs/ug/flow/tagger) tool to see
    a list of top flows for each tag you have set up.
 2. Search for flows by tagname using the [Explore
    flows](/docs/ug/tools/explore_flows) tool.

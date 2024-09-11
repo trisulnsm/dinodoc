@@ -91,7 +91,7 @@ Go to Retro-> Retro tools-> Investigate IP activity
 
 ![](images/investigateipretro.png)
 
-*Figure: Investigate IP Activity Rretro Tool*
+*Figure: Investigate IP Activity Retro Tool*
 
 The analysis includes
 
@@ -100,7 +100,7 @@ The analysis includes
 3. Peers and applications and Conversations with other hosts
 4. Security attacks targeted at host. Malware and alert activity detected.
 
-Trisul will then run the [Investigate IP](/docs/ug/tools/investigate_ip_activity) analysis tool for the selected items and time interval.
+Trisul will then run the Investigate IP analysis tool for the selected items and time interval.
 
 ## Investigate Users of an Application
 

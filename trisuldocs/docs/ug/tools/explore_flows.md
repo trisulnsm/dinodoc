@@ -101,7 +101,7 @@ The Search results for Flows are presented in terms of,
 3) [**Top Conversations**](/docs/ug/tools/explore_flows#top-conversations): A table showing top conversations
 4) [**Top 100 Matching Flows**](/docs/ug/tools/explore_flows#top-matching-flows): A table of raw flows
 
-> Only the first matching *Max Flows (default 10K)* are retrieved. Please narrow down your query to within this limit. Also see the [Export Flows](/docs/ug/tools/export_flows) and [Aggregate Flows](/docs/ug/tools/aggregate_flows) tools which work with larger matches and provide different functionality.
+> Only the first matching *Max Flows (default 10K)* are retrieved. Please narrow down your query to within this limit. Also see the [Export Flows](/docs/ug/tools/explore_flows#export-as-report) and [Aggregate Flows](/docs/ug/tools/aggregate_flows) tools which work with larger matches and provide different functionality.
 
 
 
