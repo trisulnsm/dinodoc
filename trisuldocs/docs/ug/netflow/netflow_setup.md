@@ -91,7 +91,7 @@ start showing up.
 
 ## NetFlow Wizard
 
-Use the [NetFlow Wizard](NetFlow_wizard) to
+Use the [NetFlow Wizard](/docs/ug/netflow/netflow_wizard) to
 
 1. Change interface eth0 on which we are getting NetFlow
 2. Change the Home Networks
