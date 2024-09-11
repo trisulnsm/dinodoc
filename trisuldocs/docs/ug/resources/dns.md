@@ -5,6 +5,10 @@ sidebar_position: 2
 # DNS Resources
 <span class="badge badge--primary">PCAP Mode Only</span>  
 
+## Overview
+
+DNS Resources resolves domain names into their corresponding IP addresses from DNS records. Doing so, you obtain the information on actual Domain name, Resource type, IP addresses, and other DNS records. This helps network forensics by providing detailed information about network activity. Example: example.com → 192.0.2.1
+
 Trisul extracts domain names from *DNS Question and Answer records* on the
 network. Even hosts that do not receive a reply or those in the
 ‘additional records’ section are pulled out.
@@ -12,10 +16,12 @@ network. Even hosts that do not receive a reply or those in the
 ![](images/dns_resources.png)  
 *Figure: DNS Resources*
 
+As shown in the figure, each question in the [*search results*](/docs/ug/resources/dns#search-results) has a corresponding answer in the form of a resolved IP address.
+
 ## Searching
 
 :::info navigation
-Click on Resources &rarr; DNS Resources
+:point_right: Click on Resources &rarr; DNS Resources
 :::
 
 ![](images/searchcriteriaform.png)
@@ -24,7 +30,7 @@ Click on Resources &rarr; DNS Resources
 Open the Search Criteria box by clicking on [*Show Search Form*](/docs/ug/ui/elements#hide-show-search-form) and fill in the fields with the help of following field descriptions.
 | Fields               | Descriptions                                                                            |
 |----------------------|-----------------------------------------------------------------------------------------|
-| Time Frame           | Select a specific date and time range using the [Time Selector](/docs/ug/ui/elements#time-selector)to search for resources within that period                                                |
+| Time Frame           | Select a specific date and time range using the [Time Selector](/docs/ug/ui/elements#time-selector) to search for resources within that period                                                |
 | IP Address           | Enter a single IP address to search for resources related to that IP                    |
 | Exclude these IPs    | Enter one or more IP addresses to exclude from the search results                       |
 | Regex Pattern        | Enter a regular expression (regex) pattern to search for resources matching that pattern|
