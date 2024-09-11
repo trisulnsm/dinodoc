@@ -5,11 +5,11 @@ sidebar_position: 3
 
 # URL Resources
 <span class="badge badge--primary">PCAP Mode Only</span>  
-
+## Overview
 Trisul's HTTP URL logging and reporting feature allows you to generate detailed reports on HTTP URLs seen by reassembling HTTP packets. With the reassembled packets, Trisul can log the website's URL, timestamps, and other details.  
 Example: `www.example.com/index.html`
 
-### Using this Feature
+## Using this Feature
 
 #### Enable TCP Reassembly
 
@@ -74,7 +74,7 @@ And the matching resources are displayed in the search result table with the [*C
 | [Options](/docs/ug/resources/dns#option-button)          | Provides additional actions or options for each resource, such as viewing details or downloading PCAP files                                                      |
 | Resource ID      | A unique identifier assigned to each resource, used for reference and tracking.             |
 | Probe            | Indicates the probe that captured the network traffic.                                      |
-| Contents         | Displays a brief summary or preview of the resource's contents, such as a URL or domain name|
+| Contents         | Displays a brief summary or preview of the resource's contents, such as a HTTP URL, URL of the image etc |
 
 ### Option Button
 

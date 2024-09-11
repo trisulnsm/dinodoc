@@ -33,8 +33,32 @@ searching allows you to group and drilldown on selected attributes.
 2. URLS - GET and POST URLs
 3. SSL Certificates - Hashes and Subjects
 
-### Resources - Full Text Search
+### Searching
+#### Search by Endpoints
 
-1. HTTP headers - not just the URLs as in the normal index, but entire
-   HTTP request and response headers
-2. SSL Certificates - the entire certificate chain in text form
+You can search by
+
+1. IP
+2. Exclude these IPS
+3. Pair of IPs
+4. Port
+5. Timeframe
+6. Regex Pattern
+7. Invert Regex Pattren
+
+#### Search by Regex
+
+You can search by
+
+1. A single regex pattern on one line
+2. A list of substrings each on a separate line 1
+
+The main use of this tool in the context of SSL Certs is to allow you to
+search for hundreds of matching hashes at once.
+
+#### Multiple Substring Matches
+
+> Use the *Search by regex* tab to compare your traffic against an intel
+> feed of bad cert SHA-1 hashes.
+
+Enter a list of patterns one per line.

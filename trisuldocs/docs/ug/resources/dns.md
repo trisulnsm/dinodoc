@@ -3,10 +3,8 @@ sidebar_position: 2
 ---
 
 # DNS Resources
-<span class="badge badge--primary">PCAP Mode Only</span>  
-
+<span class="badge badge--primary">PCAP Mode Only</span>
 ## Overview
-
 DNS Resources resolves domain names into their corresponding IP addresses from DNS records. Doing so, you obtain the information on actual Domain name, Resource type, IP addresses, and other DNS records. This helps network forensics by providing detailed information about network activity. Example: example.com → 192.0.2.1
 
 Trisul extracts domain names from *DNS Question and Answer records* on the

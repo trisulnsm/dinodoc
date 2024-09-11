@@ -3,8 +3,13 @@
 sidebar_position: 4
 ---
 
-# SSL Certificates
+# SSL Resources
 <span class="badge badge--primary">PCAP Mode Only</span>  
+
+## Overview
+
+Trisul's SSL resource tracking feature allows you to monitor and log SSL/TLS certificate information, enabling you to identify encrypted connections, verify certificate authenticity, and analyze certificate attributes. This helps network forensics by providing insights into encrypted network activity.   
+Example: (example.com) → SSL Certificate (SHA-1 hash, subject, issuer, etc.)  
 
 Information contained in SSL certificates are now increasingly showing
 up in intelligence indicators. Trisul indexes information in
@@ -16,7 +21,7 @@ certificates in two forms to aid two usage scenarios
 | 2   | **FTS index**    | Arbitrary search of all fields in certificates to aid drilldowns |
 
 In this section, we describe the usage of the normal index. See the
-section on [FTS Index](ftsssl) for details about the FTS index.
+section on [SSL FTS Index](ftsssl) for details about the FTS index.
 
 For each SSL/TLS connection, Trisul stores in the normal index.
 
@@ -43,11 +48,6 @@ in this case Verisign.
 ```
 
 ## Normal Index
-
-![](images/ssl_resources.png)  
-*Figure: SSL Resources*
-
-The whole resource is treated as a single string for query purposes.
 
 ### Searching
 
@@ -78,59 +78,46 @@ There are additional search criteria that allows you to narrow down your search 
 | Destination IP Address | Enter the IP address of the device that received the network traffic                    |
 | Source Port            | Enter the port number of the device that sent the network traffic                       |
 | Destination Port       | Enter the port number of the device that received the network traffic                   |
-#### Search by Endpoints
 
-You can search by
+## Search Results
 
-1. IP
-2. Exclude these IPS
-3. Pair of IPs
-4. Port
-5. Timeframe
-6. Regex Pattern
-7. Invert Regex Pattren
 
-#### Search by Regex
+![](images/ssl_resources.png)  
+*Figure: SSL Resources*
 
-You can search by
+The whole resource is treated as a single string for query purposes.
 
-1. A single regex pattern on one line
-2. A list of substrings each on a separate line 1
 
-The main use of this tool in the context of SSL Certs is to allow you to
-search for hundreds of matching hashes at once.
+The first section of the search result contains a summary of "grouped by" information on Source IP, Destination IP, and Resources. Interactive functionalities on the search result include : [*Toggle Labels*](/docs/ug/ui/elements#toggle-labels), [*Download*](/docs/ug/ui/elements#download-button), and [*Download PCAP*](/docs/ug/ui/elements#download-pcap-button)
 
-#### Multiple Substring Matches
+And the matching resources are displayed in the search result table with the [*Column Sorter*](/docs/ug/ui/elements#column-sorter) that include the following details.
 
-> Use the *Search by regex* tab to compare your traffic against an intel
-> feed of bad cert SHA-1 hashes.
+| Column           | Description                                                                                 |
+|------------------|---------------------------------------------------------------------------------------------|
+| Time IST         | Displays the timestamp of when the resource was captured, in Indian Standard Time (IST) zone|
+| Source IP        | Shows the IP address of the device that sent the network traffic.                           |
+| Source Port      | Displays the port number used by the device that sent the network traffic.                  |
+| Destination IP   | Shows the IP address of the device that received the network traffic.                       |
+| Destination Port | Displays the port number used by the device that received the network traffic.              |
+| [Options](/docs/ug/resources/dns#option-button)          | Provides additional actions or options for each resource, such as viewing details or downloading PCAP files                                                      |
+| Resource ID      | A unique identifier assigned to each resource, used for reference and tracking.             |
+| Probe            | Indicates the probe that captured the network traffic.                                      |
+| Contents         | Displays a brief summary or preview of the resource's contents, such as a Certificate hash and subject information                                                                                          |
 
-Enter a list of patterns one per line.
+### Option Button
 
-The screenshot below shows how you can search for multiple hashes using
-this tab.
+Click on “Options” button and find further drilldown options including:
 
-![](images/sslnormal1.png)  
-*Figure: Search Resources*
+![](images/optionsbutton.png)  
+*Figure: Option Button*
 
-#### A Single Perl Compatible Regex
-
-Enter a single regex in the Pattern box. It must be on a single line.
-
-### Search Results
-
-Matching resources are shown in a table.
-
-Click on “Options” for further options.
-
-1. Related flow(s) - find TCP/UDP flow that transferred the resource
-2. Details - Resource details in a single page
-3. Show Headers - PCAP headers in text and hexdump (first 50K bytes)
-4. Download PCAP - PCAP containing the flow(s) that transferred the
-   resource
-5. Add to briefcase - Add to PCAP briefcase for later download
-
-:::info navigation
-:point_right: Click on “Download PCAP” button to get a PCAP file with all resources
-shown in table
-:::
+| Option                     | Description                                                                       |
+|----------------------------|-----------------------------------------------------------------------------------|
+| Resource details           | Displays detailed information about the resource, such as its type and contents.  |
+| Locate Flow                | Finds and displays the network flow (conversation) that transferred the resource. |
+| Download Certificate Chain | Downloads the SSL/TLS certificate chain associated with the resource, for further analysis.                                                                                                        |
+| Quick PCAP View            | Displays a quick view of the PCAP (packet capture) file containing the resource   |
+| Download PCAP              | Downloads the full PCAP file containing the resource                              |
+| In this Conversation       | Displays all resources transferred within the same network conversation (flow)    |
+| Involving Source IP        | Displays all resources transferred from or to the source IP address               |
+| Involving Destination IP   | Displays all resources transferred from or to the destination IP address          |
