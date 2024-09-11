@@ -9,7 +9,7 @@ Now you need to select an analysis tool to apply to the time interval.
 
 To view retro analysis tools,
 :::note navigation
-Go to Retro-> Retro analysis tools
+Go to Retro&rarr;Retro analysis tools
 :::
 
 You can find the list of retro tools below the time selector as shown in this example.
@@ -44,7 +44,7 @@ To view Network FAQ,
 
 :::note navigation
 
-Go to Retro-> Retro tools-> Network FAQ
+Go to Retro&rarr;Retro tools&rarr;Network FAQ
 
 :::
 
@@ -64,7 +64,7 @@ To view Counter Group Toppers,
 
 :::note navigation
 
-Go to Retro-> Retro tools-> Counter Group Toppers
+Go to Retro&rarr;Retro tools&rarr;Counter Group Toppers
 
 :::
 
@@ -83,9 +83,9 @@ Enter an IP address or a host name to monitor and analyze network traffic to und
 
 To investigate an IP activity,
 
-:::note navigation
+:::info navigation
 
-Go to Retro-> Retro tools-> Investigate IP activity
+:point_right: Go to Retro&rarr;Retro tools&rarr;Investigate IP activity
 
 :::
 
@@ -108,9 +108,9 @@ Complete break up of behavior of an application.
 
 To investigate any application,
 
-:::note navigation
+:::info navigation
 
-Go to Retro-> Retro tools-> Investigate Application
+:point_right: Go to Retro&rarr;Retro tools&rarr;Investigate Application
 
 :::
 
@@ -128,9 +128,9 @@ Draw long term charts designed to aid time of day based comparisons. View charts
 
 To view Long term traffic charts,
 
-:::note navigation
+:::info navigation
 
-Go to Retro-> Retro tools-> Long Term Traffic Charts
+:point_right: Go to Retro&rarr;Retro tools&rarr;Long Term Traffic Charts
 
 :::
 
@@ -151,9 +151,9 @@ interval.
 
 To view IDS Alerts,
 
-:::note navigation
+:::info navigation
 
-Go to Retro-> Retro tools-> IDS Alerts
+:point_right: Go to Retro&rarr;Retro tools&rarr;IDS Alerts
 
 :::
 
@@ -178,9 +178,9 @@ criteria.
 
 To view Flow Trackers,
 
-:::note navigation
+:::info navigation
 
-Go to Retro-> Retro tools-> Flow Trackers
+:point_right: Go to Retro&rarr;Retro tools&rarr;Flow Trackers
 
 :::
 
@@ -204,9 +204,9 @@ With Explore Flows tool you can view detailed network flow information including
 
 To view Explore Flows tool,
 
-:::note navigation
+:::info navigation
 
-Go to Retro-> Retro tools-> Explore Flows
+:point_right: Go to Retro&rarr;Retro tools&rarr;Explore Flows
 
 :::
 
@@ -222,9 +222,9 @@ With Show traffic charts, you can view usage charts for a particular item for se
 
 To view Traffic charts,
 
-:::note navigation
+:::info navigation
 
-Go to Retro-> Retro tools-> Traffic Charts
+:point_right: Go to Retro&rarr;Retro tools&rarr;Traffic Charts
 
 :::
 
@@ -243,9 +243,9 @@ additional criteria.
 
 To view Pull Packets,
 
-:::note navigation
+:::info navigation
 
-Go to Retro-> Retro tools-> Pull Packets
+:point_right: Go to Retro&rarr;Retro tools&rarr;Pull Packets
 :::
 
 ![](images/pullpacketsretro.png)
@@ -266,14 +266,14 @@ complete.
 
 You have two ways to use this tool to pull up raw packets.
 
-1. **Packets for an item** -> Select a counter group and key.  
+1. **Packets for an item** &rarr;Select a counter group and key.  
    Counter group = `Country` and key = `JA` will get packets from
    Japan.  
    Counter group = `Apps` and key = `smtp` will get email packets.
-2. **Packets matching expression** -> [Trisul Filter
+2. **Packets matching expression** &rarr;[Trisul Filter
    Format](/docs/ref/trisul_filter_format) is a flexible way of constructing filters. You can enter an expression to run more sophisticated packet queries.  
    Enter the string `{C51B48D4-7876-479E-B0D9-BD9EFF03CE2E}=p-0050,p-0051,p-0052,p-0053` to retrieve packets for ports 80,81,82, and 83.
-3. **Handy Shortcuts**-> Clicking on Handy Shortcuts you get an option to "Get all packets" to download all the packets
+3. **Handy Shortcuts**&rarr;Clicking on Handy Shortcuts you get an option to "Get all packets" to download all the packets
 
 Upon running the tool, your browser will automatically download a PCAP
 file containing the requested packets.
@@ -284,9 +284,9 @@ With Trisul's streaming analytics, hundreds of metrics are captured and the Edge
 
 To view Edges,
 
-:::note navigation
+:::info navigation
 
-Go to Retro-> Retro tools-> View Edges
+:point_right: Go to Retro&rarr;Retro tools&rarr;View Edges
 
 :::
 

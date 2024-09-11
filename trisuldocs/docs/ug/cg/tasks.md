@@ -6,21 +6,21 @@ sidebar_position: 12
 
 ### How can I view real time traffic ?
 
-Select Dashboards -> Real Time Traffic
+Select Dashboards &rarr;Real Time Traffic
 
 ### How can I view the top hosts by usage ?
 
-Select Dashboards -> Current Hosts
+Select Dashboards &rarr;Current Hosts
 
 ### How can I view the top hosts by usage to within 3 seconds ?
 
 For real time traffic stats you need to use the Stabber feature.
 
-Select Dashboards -> Real Time Traffic
+Select Dashboards &rarr;Real Time Traffic
 
 1. Click on the tag on the right side next to any host to open the [Key Dashboard](/docs/ug/ui/key_dashboard)
 
-2. And go to Key details module-> Real Time Stabbers-> Toppers
+2. And go to Key details module&rarr;Real Time Stabbers&rarr;Toppers
    
    This will show you the real time toppers for the counter group of the key for the selected meter.
 
@@ -89,7 +89,7 @@ See [Real Time Stabber](/docs/ug/cg/stabber#real-time-stabber-flow-activity)
 
 ### How can I draw long term bandwidth usage charts ?
 
-Select Tools -> Long Term Traffic
+Select Tools &rarr;Long Term Traffic
 
 ***Example***  
 Draw long term bandwidth usage chart for port-80(http)
@@ -104,7 +104,7 @@ Draw long term bandwidth usage chart for port-80(http)
 
 ### How can I chart a specific metric such as connections for host 10.10.1.1 ?
 
-Select Tools -> Long Term Traffic
+Select Tools &rarr;Long Term Traffic
 
 - Select Hosts from Counter Group and TCP SYN Sent from meters  
 
@@ -114,6 +114,6 @@ Select Tools -> Long Term Traffic
 
 ### I want to group IPs together for reporting for example by department ?
 
-Login as admin, and  Select Context:default  -> Profile0-> Custom Counters -> Keysets -> Create a new Keyset Counter Group
+Login as admin, and  Select Context:default  &rarr;Profile0&rarr;Custom Counters &rarr;Keysets &rarr;Create a new Keyset Counter Group
 
 Click [Keyset Counter Group](/docs/ug/cg/custom#keyset-counter-groups) for more.

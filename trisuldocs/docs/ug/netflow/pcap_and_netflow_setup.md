@@ -29,7 +29,7 @@ and you wish to pull them into a single instance of Trisul you would do
 the following.
 
 :::info navigation
-Go to Profile0 &rarr; Capture Adapters &rarr; Create Adapter
+:point_right: Go to Profile0 &rarr; Capture Adapters &rarr; Create Adapter
 :::
 
 ![](images/pcapnnetflow.png)

@@ -15,7 +15,7 @@ To access *Aggregate Flows*
 
 :::info navigation
 
-Go to Tools-> Select Aggregate Flows
+:point_right: Go to Tools&rarr; Select Aggregate Flows
 
 :::
 

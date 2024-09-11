@@ -31,17 +31,17 @@ Most commonly used in the following scenarios
 
 Login as admin.
 
-:::note navigation
+:::info navigation
 
-Select Context (default) -> profile0 -> Custom Counters-> Filtered Counter Groups
+:point_right: Select Context (default) &rarr; profile0 &rarr; Custom Counters&rarr; Filtered Counter Groups
 
 :::
 
 You are shown a list of Filtered Counter groups.
 
-:::note navigation
+:::info navigation
 
-Click Create New-> Create deep monitoring for an IP
+:point_right: Click Create New&rarr; Create deep monitoring for an IP
 
 :::
 
@@ -87,9 +87,9 @@ Now the two IP are grouped with the name `CORPORATE`
 
 To view deep monitoring reports
 
-:::note navigation
+:::info navigation
 
-Login as user -> Reports -> Show All-> Static IPs
+:point_right: Login as user &rarr; Reports &rarr; Show All&rarr; Static IPs
 
 :::
 

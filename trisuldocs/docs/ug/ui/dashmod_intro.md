@@ -77,7 +77,7 @@ There are more than one way to navigate to view all dashboards
 
 :::info navigation
 
-From the Menu, Go to *Dashboards* &rarr;  *Show all*
+:point_right: From the Menu, Go to *Dashboards* &rarr;  *Show all*
 
 :::
 
@@ -89,9 +89,9 @@ This shows the list of available dashboards.
 
 **Method 2:**
 
-:::note path
+:::info path
 
-From the Menu, Go to Customize-> Show all-> Dashboards
+:point_right: From the Menu, Go to Customize&rarr; Show all&rarr; Dashboards
 
 :::
 
@@ -107,9 +107,9 @@ To **open a particular dashboard**, from the list of dashboards, click on the da
 
 To view all modules,
 
-:::note path
+:::info path
 
-From the Menu, Go to Customize-> Show all-> Modules
+:point_right: From the Menu, Go to Customize&rarr; Show all&rarr; Modules
 
 :::
 
@@ -178,4 +178,3 @@ The following operations can be performed using the toolbars:
 | Remove from Dashboard | Remove module from this dashboard                    |
 | Disable               | Disable / Enable this module                         |
 
-# 

@@ -71,9 +71,9 @@ If you want to download PCAPs for any timeframe in the past for any criteria, yo
 
 To create a flow tagger
 
-:::note navigation
+:::info navigation
 
-Goto Retro → Retro Tools → Select Timeframe → Pull Packets
+:point_right: Goto Retro → Retro Tools → Select Timeframe → Pull Packets
 
 :::
 

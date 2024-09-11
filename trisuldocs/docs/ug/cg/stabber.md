@@ -75,7 +75,7 @@ Click on any key item from a dashboard that takes you into the key dashboard of 
 
 :::info navigation
 
-Select Tools-> Real Time Stab Toppers
+:point_right: Select Tools&rarr;Real Time Stab Toppers
 
 :::
 

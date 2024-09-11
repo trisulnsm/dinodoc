@@ -53,14 +53,14 @@ description of each of these modules. They are mostly self explanatory.
 
 *Figure: Key Dashboard Components*
 
-| Module                                                  | Usage                                                           |
-| ------------------------------------------------------- | --------------------------------------------------------------- |
-| 1) Traffic History                                      | Most recent 1hr traffic history                                 |
-| 2)[Key Details](/docs/ug/ui/key_dashboard#key-details) | Various drilldown options pertaining to this key                |
-| 3) A la carte statistics                                | Flexible charting tool (quick and easy)                         |
-| 4)Flow Activity                                         | Displays recent top flows                                       |
+| Module                                                  | Usage                         |
+| ------------------------------------------------------- | ----------------------------- |
+| 1) Traffic History                                      | Most recent 1hr traffic history   |
+| 2)[Key Details](/docs/ug/ui/key_dashboard#key-details) | Various drilldown options pertaining to this key  |
+| 3) A la carte statistics                                | Flexible charting tool (quick and easy)        |
+| 4)Flow Activity                                         | Displays recent top flows                      |
 | 5)Daily Report                                          | Click on a calendar day to get a PDF report with detailed usage |
-| TCA Details                                             | Shows recent threshold crossing alerts, if any                  |
+| TCA Details                                             | Shows recent threshold crossing alerts, if any  |
 
 1) ## Traffic History
 
@@ -78,8 +78,8 @@ to the key.
 
 This module is split into two panels.
 
-1. Info on the left -\> Contains details about the key
-2. Tools on the right -\> Drilldown tools for further investigation about
+1. Info on the left &rarr; Contains details about the key
+2. Tools on the right &rarr; Drilldown tools for further investigation about
    key
 
 ![](images/keydetails.png)
@@ -123,18 +123,18 @@ The information on the left includes,
 
 The most common ones are described below.
 
-| Menu                   | Description                                                                                                                                                                                                                                                                                                                                    |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Host Conversations     | Shows the Raw Flow conversations of the selected Key                                                                                                                                                                                                                                                                                           |
-| Aggregated Flows       | Shows the aggregated conversations like top 10 source IPs, top 10 destination ports etc.                                                                                                                                                                                                                                                       |
-| Alerts                 | Shows the alerts found in the selected Key                                                                                                                                                                                                                                                                                                     |
-| Traffic Chart          | Shows the traffic chart of the particular Key selected                                                                                                                                                                                                                                                                                         |
-| Long Term Charts       | You can view the historical usage.<br/>Opens up the Long term analysis tool                                                                                                                                                                                                                                                                    |
-| View Edge Graph        | You can view the relationships between different network entities such as hosts, protocols, IP addresses etc as a graphical representation.                                                                                                                                                                                                    |
-| Download PCAP          | Download a PCAP file related to this Key                                                                                                                                                                                                                                                                                                       |
-| Detailed Activity      | What is this station doing ?<br/>Open up the Investigate IP tool for this key for the last 1 hour.                                                                                                                                                                                                                                             |
-| Query Flows by Tag     | Filter and analyze network traffic based on specific tags or labels.These tags can be assigned to network flows like sequences of packets based on various criteria, such as:<br/>   - Protocol (e.g., HTTP, FTP, SSH)<br/>   - Port numbers etc.<br/> The filtered flows are displayed, showing detailed information about each flow |
-| Aggregate Flows by Tag | Group and summarize network traffic based on specific tags or labels.                                                                                                                                                                                                                                                                          |
+| Menu                   | Description                                                                  |
+| ---------------------- | ---------------------------------------------------------------------------- |
+| Host Conversations     | Shows the Raw Flow conversations of the selected Key                         |
+| Aggregated Flows       | Shows the aggregated conversations like top 10 source IPs, top 10 destination ports etc.                                                                                                    |
+| Alerts                 | Shows the alerts found in the selected Key                                   |
+| Traffic Chart          | Shows the traffic chart of the particular Key selected                       |
+| Long Term Charts       | You can view the historical usage.<br/>Opens up the Long term analysis tool  |
+| View Edge Graph        | You can view the relationships between different network entities such as hosts, protocols, IP addresses etc as a graphical representation.                                              |
+| Download PCAP          | Download a PCAP file related to this Key                                     |
+| Detailed Activity      | What is this station doing ?<br/>Open up the Investigate IP tool for this key for the last 1 hour.                                                                                            |
+| Query Flows by Tag     | Filter and analyze network traffic based on specific tags or labels.These tags can be assigned to network flows like sequences of packets based on various criteria, such as:<br/>   - Protocol (e.g., HTTP, FTP, SSH)<br/>   - Port numbers etc.<br/> The filtered flows are displayed, showing detailed information about each flow                                                                                         |
+| Aggregate Flows by Tag | Group and summarize network traffic based on specific tags or labels.        |
 
 ### Subnets
 

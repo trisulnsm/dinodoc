@@ -17,10 +17,8 @@ Trisul has a new Email Alert Wizard that lets you configure everything from one 
 
 To access that Login as Admin
 
-:::note navigation
-
-Go to Context: default → Profile0 → Alerts → Setup Email
-
+:::info navigation
+:point_right: Go to Context: default → Profile0 → Alerts → Setup Email
 :::
 
 This will take you to the Email Alerts Wizard as shown in this example. And against each settings it will be shown if the service is configured or disabled. 
@@ -96,10 +94,10 @@ Once provoding all the fields, Click Save and the email server configuration for
   
   | Components              | Descriptions                                                                    |
   | ----------------------- | ------------------------------------------------------------------------------- |
-  | Name                    | Name of the Alert Group                                                                                                       |
-  | Description/GUID        | Description of the Alert group and its GUID                                                                                                        |
-  | Status                  | Status of the Alert group if its enabled or disabled                                                                                                    |
-  | Forward to syslog/email | Syslog level to automatically forward all alerts in this group to syslog and email                                                                                                       |
+  | Name                    | Name of the Alert Group                                                         |
+  | Description/GUID        | Description of the Alert group and its GUID                                     |
+  | Status                  | Status of the Alert group if its enabled or disabled                            |
+  | Forward to syslog/email | Syslog level to automatically forward all alerts in this group to syslog and email|
   | Option toolbar          | You can edit or disable each alert group by clicking on the three lines options against each alert group.                                                                                   |
 
 These components can be edited or disabled by clicking on the option toolbar against each alert group. Once providing all the fields, click Update to save the configuration.
@@ -125,6 +123,6 @@ The file contains 5 sections. Each controlling a particular type of alert
 
 IDS alerts from Snort/Suricata processed via Trisul.
 
-| EMAIL_BLOCK_PRIORITIES | []  | Block these priorities. Set this to `[3]` to block emails for low priority alerts |
-| ---------------------- | --- | --------------------------------------------------------------------------------- |
-| EMAIL_BLOCK_SIGS       | []  | Block these signatures for email alerts                                           |
+| EMAIL_BLOCK_PRIORITIES | []  | Block these priorities. Set this to `[3]` to block emails for low priority alerts|
+| ---------------------- | --- | ---------------------------------------------------------------------------------|
+| EMAIL_BLOCK_SIGS       | []  | Block these signatures for email alerts                                          |

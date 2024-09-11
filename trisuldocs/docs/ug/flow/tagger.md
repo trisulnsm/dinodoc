@@ -36,9 +36,9 @@ You need to restart Trisul for configuration changes to take effect
 
 To create a flow tagger, Login as admin,
 
-:::note navigation
+:::info navigation
 
-Goto Context: default -> Profile0 -> Flows-> Flow Taggers
+:point_right: Goto Context: default &rarr;Profile0 &rarr;Flows&rarr;Flow Taggers
 
 :::
 

@@ -18,9 +18,9 @@ Modules are the building blocks of dashboards. There are different types of modu
 
 To create a new module,
 
-:::note path
+:::info path
 
-Select Customize-> UI-> Modules-> Add New Module
+:point_right: Select Customize&rarr; UI&rarr; Modules&rarr; Add New Module
 
 :::
 
@@ -34,9 +34,9 @@ From the list of module types select one and fill out the fields.
 
 To add modules to an empty dashboard, Create a [New Dashboard](/docs/ug/ui/create_dashboards#add-a-dashboard) by clicking New in the All dashboards page. 
 
-:::note path
+:::info path
 
-In the Module Layout-> Click on the Plus icon
+:point_right: In the Module Layout&rarr; Click on the Plus icon
 
 :::
 
@@ -58,9 +58,9 @@ There are more than one ways to edit a module from a dashboard,
 
 **Method 1:**
 
-:::note path
+:::info path
 
-Click Customize on the [module toolbar](https://trisul.org/docs/ug/ui/dashmod_intro.html#module_toolbars) from the dashboard that contains the module.
+:point_right: Click Customize on the [module toolbar](https://trisul.org/docs/ug/ui/dashmod_intro.html#module_toolbars) from the dashboard that contains the module.
 
 :::
 
@@ -84,7 +84,7 @@ You can also create modules with the help of arithmetic
 expressions. You can combine different metrics together and show in a 
 module.
 
-Generally Models are numbered as 1,2,3,etc. Supported operators are +,_,*,%,/,()
+Generally Models are numbered as 1,2,3,etc. Supported operators are `+,_,*,%,/,()`
 
 For eg. Add two Metrics, You have to enter arithmetic expression as 
 (1+2),(3-4) or Metric 1 as a percentage of 2 and 3 as 1%(2+3)

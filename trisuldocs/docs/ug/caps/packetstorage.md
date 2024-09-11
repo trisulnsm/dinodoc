@@ -11,8 +11,8 @@ dramatically without sacrificing capability.
 
 There are two ways you can control what packets get stored.
 
-1. **static rules** — you know a list of IPs, ports, other counters before hand.
-2. **dynamic rules** — you decide on a per-flow basis dynamically (using LUA)
+1. **Static rules** — you know a list of IPs, ports, other counters before hand.
+2. **Dynamic rules** — you decide on a per-flow basis dynamically (using LUA)
 
 For both static and dynamic policies, Trisul can apply four ‘treatments’ to packets.
 
@@ -43,8 +43,8 @@ For the first example, lets keep it simple and prevent both TCP and UDP. We will
 
 To put this rule into effect,
 
-1. open the [trisulConfig.xml](/docs/ref/trisulconfig#ring) file and locate the Ring section
-2. change the `<RuleChain>` section to look like this
+1. Open the [trisulConfig.xml](/docs/ref/trisulconfig#ring) file and locate the Ring section
+2. Change the `<RuleChain>` section to look like this
 
 ```xml
 ...

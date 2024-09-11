@@ -28,7 +28,7 @@ This section outlines the number of things you can do with *Flow Trackers*.
 
 To **View** *Flow Trackers*
 :::info Navigation
-Go to Tools-> Flow Trackers
+:point_right: Go to Tools&rarr;Flow Trackers
 :::
 
 ![](images/viewflowtrackers.png)    
@@ -45,7 +45,7 @@ Once you have landed on the *Flow Trackers* page as shown in the sample, you can
 To **Manage***Flow Trackers*,
 
 :::info navigation
-Go to Tools-> Flow Tracker-> Manage Flow Trackers
+:point_right: Go to Tools&rarr;Flow Tracker&rarr;Manage Flow Trackers
 :::
 
 
@@ -105,7 +105,7 @@ Creating a flow tracker consists of specifiying a **Criteria** for selecting flo
 To **Create** a new *Flow Tracker*,
 
 :::info navigation
-Go to Tools-> Flow Tracker-> Manage Flow Trackers-> Create a New Flow Tracker
+:point_right: Go to Tools&rarr;Flow Tracker&rarr;Manage Flow Trackers&rarr;Create a New Flow Tracker
 :::
 
 

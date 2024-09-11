@@ -64,9 +64,9 @@ A "Key Traffic" module in Trisul is designed to monitor and analyze network traf
 
 ### Parameters
 
-| Parameter name | Default value | Description                                                                                                          |
-| -------------- | ------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Name           | \-            | Enter a name for the module                                                                                          |
+| Parameter name | Default value | Description     |
+| -------------- | ------------- | --------------- |
+| Name           | -            | Enter a name for the module                                                                                          |
 | Description    | -             | Provide a short description of the module                                                                            |
 | Surface        | MRTG          | Diplays the selected chart surface                                                                                   |
 | Show Table     | -             | Displays the meta data of the chart like Max,Min Average and Percentile for each items in table format               |
@@ -88,15 +88,15 @@ This is a sample module showing the toppers traffic of top 10 ASNumbers in uploa
 
 ### Parameters
 
-| Parameter name | Default value | Description                                                                                            |
-| -------------- | ------------- | ------------------------------------------------------------------------------------------------------ |
-| Name           | \-            | Enter a name for the module                                                                            |
-| Description    | -             | Provide a short description of the module                                                              |
-| Surface        | MRTG          | Diplays the selected chart surface                                                                     |
+| Parameter name | Default value | Description                      |
+| -------------- | ------------- | -------------------------------- |
+| Name           | -            | Enter a name for the module        |
+| Description    | -             | Provide a short description of the module |
+| Surface        | MRTG          | Diplays the selected chart surface  |
 | Show Table     | -             | Displays the meta data of the chart like Max,Min Average and Percentile for each items in table format |
-| Counter Group  | ASNumber      | Shows the list of Counter groups to select from                                                        |
-| Meter          | Upload Bytes  | Shows the list of Meters to select from                                                                |
-| Top Count      | 10            | Enter the number of traffic data items to be displayed                                                 |
+| Counter Group  | ASNumber      | Shows the list of Counter groups to select from |
+| Meter          | Upload Bytes  | Shows the list of Meters to select from   |
+| Top Count      | 10            | Enter the number of traffic data items to be displayed  |
 
 ## Toppers Trend
 
@@ -110,15 +110,15 @@ This sample module of Toppers Trend shows the Top 10 ASNumbers' trends in networ
 
 ### Parameters
 
-| Parameter name | Default value | Description                                                                                            |
-| -------------- | ------------- | ------------------------------------------------------------------------------------------------------ |
-| Name           | \-            | Enter a name for the module                                                                            |
-| Description    | -             | Provide a short description of the module                                                              |
-| Surface        | MRTG          | Diplays the selected chart surface                                                                     |
+| Parameter name | Default value | Description                |
+| -------------- | ------------- | -------------------------- |
+| Name           | -            | Enter a name for the module |
+| Description    | -             | Provide a short description of the module  |
+| Surface        | MRTG          | Diplays the selected chart surface       |
 | Show Table     | -             | Displays the meta data of the chart like Max,Min Average and Percentile for each items in table format |
-| Counter Group  | ASNumber      | Shows the list of Counter groups to select from                                                        |
-| Meter          | Upload Bytes  | Shows the list of Meters to select from                                                                |
-| Top Count      | 10            | Enter the number of traffic data items to be displayed                                                 |
+| Counter Group  | ASNumber      | Shows the list of Counter groups to select from   |
+| Meter          | Upload Bytes  | Shows the list of Meters to select from     |
+| Top Count      | 10            | Enter the number of traffic data items to be displayed    |
 
 ## Current Toppers
 
@@ -134,7 +134,7 @@ The following sample of Current Toppers module shows which top 10 ASNumbers are 
 
 | Parameter name     | Default value | Description                                                              |
 | ------------------ | ------------- | ------------------------------------------------------------------------ |
-| Name               | \-            | Enter a name for the module                                              |
+| Name               | -            | Enter a name for the module                                              |
 | Description        | -             | Provide a short description of the module                                |
 | Top Count          | 10            | Enter the number of traffic data items to be displayed                   |
 | Counter Group      | ASNumber      | Shows the list of Counter groups to select from                          |
@@ -156,7 +156,7 @@ This example of retro toppers module shows the top ASNumbers of past. You can cl
 
 | Parameter name     | Default value | Description                                                              |
 | ------------------ | ------------- | ------------------------------------------------------------------------ |
-| Name               | \-            | Enter a name for the module                                              |
+| Name               | -            | Enter a name for the module                                              |
 | Description        | -             | Provide a short description of the module                                |
 | Counter Group      | ASNumber      | Shows the list of Counter groups to select from                          |
 | Top Count          | 10            | Enter the number of traffic data items to be displayed                   |
@@ -176,18 +176,18 @@ This is an example of Single Value module which shows the total bandwidth of agg
 
 ### Parameters
 
-| Parameter name | Default value | Description                                                                                                                                                                                              |
-| -------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Name           | \-            | Enter a name for the module                                                                                                                                                                              |
-| Description    | -             | Provide a short description of the module                                                                                                                                                                |
-| Counter Group  | ASNumber      | Shows the list of Counter groups to select from                                                                                                                                                          |
-| Meter          | Upload Bytes  | Shows the list of Meters to select from                                                                                                                                                                  |
-| Key            | TOTALBW       | Provide the unique identifier that categorizes data in a network or a system according to the selected counter group                                                                                     |
-| Label          | Total Volume  | Enter a descriptive tag name assigned to a data point, group or category                                                                                                                                 |
-| BG Color       | Blue          | Select a desirable BG Color                                                                                                                                                                              |
+| Parameter name | Default value | Description                                                               |
+| -------------- | ------------- | ------------------------------------------------------------------------- |
+| Name           | -            | Enter a name for the module                                                |
+| Description    | -             | Provide a short description of the module                                 |
+| Counter Group  | ASNumber      | Shows the list of Counter groups to select from                           |
+| Meter          | Upload Bytes  | Shows the list of Meters to select from                                   |
+| Key            | TOTALBW       | Provide the unique identifier that categorizes data in a network or a system according to the selected counter group                                                                      |
+| Label          | Total Volume  | Enter a descriptive tag name assigned to a data point, group or category  |
+| BG Color       | Blue          | Select a desirable BG Color                                               |
 | Aggregation    | Total         | Aggregates multiple data points into single value like Total: Adds up all data points (e.g., total bandwidth usage), Average: Calculates the mean of all data points (e.g., average response time), etc. |
-| Show Trends    | -             | When this check box is checked it shows the trends in a chart.                                                                                                                                           |
-| Chart Color    | Blue          | Select a desirable chart color                                                                                                                                                                           |
+| Show Trends    | -             | When this check box is checked it shows the trends in a chart.            |
+| Chart Color    | Blue          | Select a desirable chart color                                            |
 
 ## Real Time Traffic
 
@@ -201,14 +201,14 @@ This is an example of Real Time Traffic module of both Inbound vs Outbound diffe
 
 ### Parameters
 
-| Parameter name       | Default value | Description                                                                                                          |
-| -------------------- | ------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Counter Group        | ASNumber      | Shows the list of Counter groups to select from                                                                      |
-| Meters               | Upload Bytes  | Shows the list of Meters to select from                                                                              |
+| Parameter name       | Default value | Description                                                      |
+| -------------------- | ------------- | ---------------------------------------------------------------- |
+| Counter Group        | ASNumber      | Shows the list of Counter groups to select from                  |
+| Meters               | Upload Bytes  | Shows the list of Meters to select from                          |
 | Keys                 | TOTALBW       | Provide the unique identifier that categorizes data in a network or a system according to the selected counter group |
-| One module per key   | Enabled       | Each key metric is displayed in its own separate module.                                                             |
-| One module per meter | -             | When enabled,Each meter is displayed in its own separate module.                                                    |
-| Surface              | LINE          | Diplays the selected chart surface                                                                                   |
+| One module per key   | Enabled       | Each key metric is displayed in its own separate module.          |
+| One module per meter | -             | When enabled,Each meter is displayed in its own separate module.  |
+| Surface              | LINE          | Diplays the selected chart surface                                |
 
 ## Real Time Single
 
@@ -216,17 +216,17 @@ Real Time Single module is the same as Single value module except the data displ
 
 ### Parameters
 
-| Parameter name | Default value | Description                                                                                                          |
-| -------------- | ------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Name           | \-            | Enter a name for the module                                                                                          |
-| Description    | -             | Provide a short description of the module                                                                            |
-| Counter Group  | ASNumber      | Shows the list of Counter groups to select from                                                                      |
-| Meter          | Upload Bytes  | Shows the list of Meters to select from                                                                              |
+| Parameter name | Default value | Description                                                  |
+| -------------- | ------------- | ------------------------------------------------------------ |
+| Name           | -            | Enter a name for the module                                   |
+| Description    | -             | Provide a short description of the module                    |
+| Counter Group  | ASNumber      | Shows the list of Counter groups to select from              |
+| Meter          | Upload Bytes  | Shows the list of Meters to select from                      |
 | Key            | TOTALBW       | Provide the unique identifier that categorizes data in a network or a system according to the selected counter group |
-| Label          | Total Volume  | Enter a descriptive tag name assigned to a data point, group or category                                             |
-| BG Color       | Blue          | Select a desirable BG Color                                                                                          |
-| Show Gauge     | -             | When enabled, Shows a gauge meter that keeps getting scaled in real time                                             |
-| Chart Color    | Blue          | Select a desirable chart color                                                                                       |
+| Label          | Total Volume  | Enter a descriptive tag name assigned to a data point, group or category |
+| BG Color       | Blue          | Select a desirable BG Color                                  |
+| Show Gauge     | -             | When enabled, Shows a gauge meter that keeps getting scaled in real time |
+| Chart Color    | Blue          | Select a desirable chart color                               |
 
 ## Real Time Toppers
 
@@ -242,7 +242,7 @@ The following example is the Real Time Toppers module for Top 10 ASNumbers in Up
 
 | Parameter name | Default value | Description                                            |
 | -------------- | ------------- | ------------------------------------------------------ |
-| Name           | \-            | Enter a name for the module                            |
+| Name           | -            | Enter a name for the module                            |
 | Description    | -             | Provide a short description of the module              |
 | Counter Group  | ASNumber      | Shows the list of Counter groups to select from        |
 | Meter          | Upload Bytes  | Shows the list of Meters to select from                |
@@ -260,14 +260,14 @@ This is the favorite Key Traffic module showing a module for the key SYS:GROUP_T
 
 ### Parameters
 
-| Parameter name       | Default value | Description                                                                                                          |
-| -------------------- | ------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Counter Group        | ASNumber      | Shows the list of Counter groups to select from                                                                      |
-| Meters               | Upload Bytes  | Shows the list of Meters to select from                                                                              |
+| Parameter name       | Default value | Description                                                       |
+| -------------------- | ------------- | ----------------------------------------------------------------- |
+| Counter Group        | ASNumber      | Shows the list of Counter groups to select from                   |
+| Meters               | Upload Bytes  | Shows the list of Meters to select from                           |
 | Keys                 | TOTALBW       | Provide the unique identifier that categorizes data in a network or a system according to the selected counter group |
-| One module per key   | Enabled       | Each key metric is displayed in its own separate module.                                                             |
-| One module per meter | -             | When enabled,Each meter is displayed in its own separate module.                                                    |
-| Surface              | LINE          | Diplays the selected chart surface                                                                                   |
+| One module per key   | Enabled       | Each key metric is displayed in its own separate module.          |
+| One module per meter | -             | When enabled,Each meter is displayed in its own separate module.  |
+| Surface              | LINE          | Diplays the selected chart surface                                |
 
 ## Traffic Chart
 
@@ -289,13 +289,13 @@ The following example shows
 
 ### Parameters
 
-| Parameter name | Default value | Description                                                                                |
-| -------------- | ------------- | ------------------------------------------------------------------------------------------ |
-| Counter Group  | ASNumber      | Shows the list of Counter groups to select from                                            |
-| Meters         | Upload Bytes  | Shows the list of Meters to select from                                                    |
+| Parameter name | Default value | Description                                             |
+| -------------- | ------------- | ------------------------------------------------------- |
+| Counter Group  | ASNumber      | Shows the list of Counter groups to select from         |
+| Meters         | Upload Bytes  | Shows the list of Meters to select from                 |
 | Multiple Keys  | -             | Check this box if you would like to have all selected keys plotted per meter in one module |
-| Select Keys    | -             | From the list of keys select any number of keys to display                                 |
-| Filter         | -             | Enter a string of key name to search and filter                                            |
+| Select Keys    | -             | From the list of keys select any number of keys to display |
+| Filter         | -             | Enter a string of key name to search and filter         |
 
 ## Alert List
 
@@ -307,16 +307,16 @@ The Alert List module displays a list of active alerts or notifications, providi
 
 ### Parameters
 
-| Parameter name   | Default value | Description                                                                                                  |
-| ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------ |
-| Name             | \-            | Enter a name for the module                                                                                  |
-| Description      | -             | Provide a short description of the module                                                                    |
-| Top Count        | 10            | Enter the number of traffic data items to be displayed                                                       |
-| Signature ID     | -             | Provide a Signature ID like DSHIELD                                                                          |
-| Filter           | -             | Filter by signatre ID or IP addresses                                                                        |
-| Show Description | Checked       | Displays a description of each alert providing a context about the issue                                     |
+| Parameter name   | Default value | Description                                        |
+| ---------------- | ------------- | -------------------------------------------------- |
+| Name             | -            | Enter a name for the module                         |
+| Description      | -             | Provide a short description of the module          |
+| Top Count        | 10            | Enter the number of traffic data items to be displayed   |
+| Signature ID     | -             | Provide a Signature ID like DSHIELD   |
+| Filter           | -             | Filter by signatre ID or IP addresses  |
+| Show Description | Checked       | Displays a description of each alert providing a context about the issue |
 | Show Endpoints   | Checked       | Displays detailed information about the endpoints (devices, systems, or applications) related to each alert. |
-| Alert Group      | External IDS  | Select from the list of alert groups that you would like to display                                          |
+| Alert Group      | External IDS  | Select from the list of alert groups that you would like to display   |
 
 ## Alert Count
 
@@ -330,7 +330,7 @@ The Alert Count Module displays the total number of active alerts, providing a q
 
 | Parameter name   | Default value | Description                                                              |
 | ---------------- | ------------- | ------------------------------------------------------------------------ |
-| Name             | \-            | Enter a name for the module                                              |
+| Name             | -            | Enter a name for the module                                               |
 | Description      | -             | Provide a short description of the module                                |
 | Signature ID     | -             | Provide a Signature ID like DSHIELD                                      |
 | Filter           | -             | Filter by signatre ID or IP addresses                                    |
@@ -360,7 +360,7 @@ In the following example, the URL of the Trisul's flow map has been given as inp
 
 | Parameter name | Default value | Description                                                    |
 | -------------- | ------------- | -------------------------------------------------------------- |
-| Name           | \-            | Enter a name for the module                                    |
+| Name           | -            | Enter a name for the module                                    |
 | Description    | -             | Provide a short description of the module                      |
 | URL            | -             | Enter the page URL you would like to display inside the module |
 | JSON           | -             | Enter additional arguments if necessary in JSON format         |

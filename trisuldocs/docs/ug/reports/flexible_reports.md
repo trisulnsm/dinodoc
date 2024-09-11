@@ -58,9 +58,9 @@ The custom report list contains the following columns.
 
 To access the Custom reports,
 
-:::note navigation
+:::info navigation
 
-Login as `user` and Select Reports → Readymade →  Click on the *Custom* Reports tab.
+:point_right: Login as `user` and Select Reports → Readymade →  Click on the *Custom* Reports tab.
 
 :::
 

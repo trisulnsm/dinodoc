@@ -101,7 +101,7 @@ In the same Interfaces tab,
 If you want to disable interface tracking, Login as `admin`
 
 :::info navigation
-Go to Context: Default &rarr; profile0 &rarr; Netflow Wizard  
+:point_right: Go to Context: Default &rarr; profile0 &rarr; Netflow Wizard  
 :::
 
 Then in the *Interfaces tab* select "Disable interface tracking" from the "Interface Tracking" drop down button

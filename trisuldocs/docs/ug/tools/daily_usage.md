@@ -17,7 +17,7 @@ To access *Monthly Charts*,
 
 :::info navigation
 
-Go to Tools-> Select Monthly Chart
+:point_right: Go to Tools&rarr; Select Monthly Chart
 
 :::
 The search criteria window opens up with a toggle option to [*show/ hide form*](/docs/ug/ui/elements#hide-show-search-form). 

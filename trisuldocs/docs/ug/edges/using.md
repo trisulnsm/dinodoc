@@ -30,7 +30,7 @@ New installations of Trisul will already have *Edges* enabled. If you are upgrad
 - But you can access *Edge Graph* directly using specific criteria, for that,
 
 :::info navigation
-Go to Tools-> Edge Graph
+:point_right: Go to Tools&rarr;Edge Graph
 :::
 
 This will open up the *search criteria* form for the *edge graph* with [*hide/show search form*](/docs/ug/ui/elements#hide-show-search-form) option.

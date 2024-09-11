@@ -84,10 +84,10 @@ Some examples :
 
 ### Create New Filtered Counter Groups
 
-:::note navigation
+:::info navigation
 
-Login as Admin -> Select Context and profile0 -> Under Custom Counters
-->Filtered
+:point_right: Login as Admin &rarr; Select Context and profile0 &rarr; Under Custom Counters
+&rarr;Filtered
 
 :::
 
@@ -124,10 +124,10 @@ interfaces and then count the aggregate. Some examples are shown below
 
 ### Creating a Keyset Counter Group
 
-:::note navigation
+:::info navigation
 
-Login as Admin -> Select Context:default-> profile0 -> Custom Counters
--> Keysets
+:point_right: Login as Admin &rarr; Select Context:default&rarr; profile0 &rarr; Custom Counters
+&rarr; Keysets
 
 :::
 
@@ -151,10 +151,10 @@ together.
 
 Directions to Create new keyset counter groups
 
-:::note navigation
+:::info navigation
 
-Login as Admin -> Select Context :default -> profile0 ->  Custom Counters
--> Keysets
+Login as Admin &rarr; Select Context :default &rarr; profile0 &rarr;  Custom Counters
+&rarr; Keysets
 
 :::
 
@@ -210,11 +210,11 @@ Examples :
 
 ### Creating New Meter Value Counter Group
 
-:::note navigation
+:::info navigation
 
-Login as Admin -> Select Context 
+:point_right: Login as Admin &rarr; Select Context 
 
-:default-> profile0 -> Custom Counters-> Stat Based
+:default&rarr; profile0 &rarr; Custom Counters&rarr; Stat Based
 
 :::
 
@@ -282,10 +282,10 @@ Parent Group : **Applications** (guid = {})
 ### Creating a Rule Based Counter Group
 
 Directions to create a new Rule Based Counter Group  
-:::note navigation
+:::info navigation
 
-Login as Admin -> Select Context and profile -> Under Custom Counters
--> Rule Based
+:point_right: Login as Admin &rarr; Select Context and profile &rarr; Under Custom Counters
+&rarr; Rule Based
 
 :::
 
@@ -343,10 +343,10 @@ following restriction :
 
 ### Creating cardinality counters
 
-:::note navigation
+:::info navigation
 
-Login as Admin -> Select Context:default-> profile0 -> Custom Counters
--> Cardinality
+:point_right: Login as Admin &rarr; Select Context:default&rarr; profile0 &rarr; Custom Counters
+&rarr; Cardinality
 
 :::
 
@@ -401,9 +401,9 @@ billions of flows. To solve this we setup a Cross Key Counter group of
 
 To install Sankey Crossdrill,
 
-:::note navigation
+:::info navigation
 
-Go to Admin > Web Admin > Manage > Apps 
+:point_right: Go to Admin &rarr; Web Admin &rarr; Manage &rarr; Apps 
 
 :::
 
@@ -424,18 +424,18 @@ group with *Internal Hosts X Applications X External Hosts*
 
 > We use the Sankey Crosskey Trisul APP to visualize the flows. 
 
-:::note navigation
+:::info navigation
 
-Go to Admin > Web Admin > Manage > Apps
+:point_right: Go to Admin &rarr; Web Admin &rarr; Manage &rarr; Apps
 
 :::
 
 ### Creating a Cross Key Counter Group
 
-:::note navigation
+:::info navigation
 
-Login as Admin -> Select Context:default-> profile0 -> Custom Counters
--> Crosskeys
+:point_right: Login as Admin &rarr; Select Context:default&rarr; profile0 &rarr; Custom Counters
+&rarr; Crosskeys
 
 :::
 
@@ -465,9 +465,9 @@ counter group will not be created by Trisul.
 Once created , the new Cross Key counter group is just like any other
 group.
 
-:::note navigation
+:::info navigation
 
-Select Retro -> Retro Tools -> Select counter group
+:point_right: Select Retro &rarr; Retro Tools &rarr; Select counter group
 
 :::
 
@@ -477,9 +477,9 @@ cross key counter group.
 
 > We use the Sankey Crosskey Trisul APP to visualize the flows. 
 
-:::note navigation 
+:::info navigation 
 
-Go to Admin > Web Admin > Manage > Apps 
+:point_right: Go to Admin &rarr; Web Admin &rarr; Manage &rarr; Apps 
 
 :::
 

@@ -61,11 +61,11 @@ various ways to provide specialized services.
 
 Trisul supports collecting the following Netflow template fields.
 
-| ID  | Field Name          | Description                                                                                                 |
-| --- | ------------------- | ----------------------------------------------------------------------------------------------------------- |
+| ID  | Field Name          | Description                                                                   |
+| --- | ------------------- | ----------------------------------------------------------------------------- |
 | 5   | ipClassOfService    | For IPv4: the full 8 bit value of the IP ToS field. For IPv6: the 8-bit value of the Class of Service field |
-| 195 | ipDiffServCodePoint | The most significant 6 bits of the IPv4 TOS field or the IPv6 Traffic Class field                           |
-| 196 | ipPrecedence        | The first 3 bits of the IPv4 TOS field or the IPv6 Traffic Class field. Value range 0-7                     |
+| 195 | ipDiffServCodePoint | The most significant 6 bits of the IPv4 TOS field or the IPv6 Traffic Class field |
+| 196 | ipPrecedence        | The first 3 bits of the IPv4 TOS field or the IPv6 Traffic Class field. Value range 0-7 |
 
 The following counter groups show ToS data
 
@@ -79,7 +79,7 @@ The following image shows where the ToS counters can be found (see the
 highlighted section)
 
 ![](images/iptos.png)  
-*Figure: Retro \> Retro Counters to view IP ToS metrics*
+*Figure: Retro &rarr; Retro Counters to view IP ToS metrics*
 
 ### IP ToS
 

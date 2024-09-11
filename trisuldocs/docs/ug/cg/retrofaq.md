@@ -41,9 +41,9 @@ Typically you would select an appropriate Retro Tool, type in the information yo
 
 ## How To Use
 
-:::note navigation
+:::info navigation
 
-To access select Retro -> Retro FAQ
+:point_right: To access select Retro &rarr; Retro FAQ
 
 :::
 
@@ -99,9 +99,9 @@ symbol
 
 You can edit, retag, or delete existing questions if you wish.
 
-:::note navigation
+:::info navigation
 
-To access, select Customize -> Retro Favorites
+:point_right: To access, select Customize &rarr;Retro Favorites
 
 :::
 

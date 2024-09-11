@@ -22,10 +22,10 @@ You can also enable or disable any counter group.
 
 ## Editing Settings
 
-:::note navigation
+:::info navigation
 
-Login as Admin -> Context:default-> profile0 -> Basic
-Configurations -> Select Counter Groups
+:point_right: Login as Admin &rarr;Context:default&rarr;profile0 &rarr;Basic
+Configurations &rarr;Select Counter Groups
 
 :::
 
@@ -61,10 +61,10 @@ The following bulk edit options are available.
 
 To access these options:
 
-:::note navigation
+:::info navigation
 
-Login as Admin -> Select Context: default-> profile0 -> Basic
-Configurations -> Counter Groups -> Advanced Options
+:point_right: Login as Admin &rarr;Select Context: default&rarr;profile0 &rarr;Basic
+Configurations &rarr;Counter Groups &rarr;Advanced Options
 
 :::
 
@@ -82,10 +82,10 @@ Configurations -> Counter Groups -> Advanced Options
 
 Directions to edit counter group settings
 
-:::note navigation
+:::info navigation
 
-Login as Admin -> Select Context:default-> profile0 -> Basic
-Configurations -> Counter Groups  
+:point_right: Login as Admin &rarr;Select Context:default&rarr;profile0 &rarr;Basic
+Configurations &rarr;Counter Groups  
 :::
 
 1. The entire list of counter groups is shown  

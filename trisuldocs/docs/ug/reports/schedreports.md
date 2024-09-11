@@ -19,9 +19,9 @@ You may dispatch by email any of the supported report types at these intervals.
 
 To schedule a new report
 
-:::note navigation
+:::info navigation
 
-Select Reports → Schedule
+:point_right: Select Reports → Schedule
 
 :::
 
@@ -35,19 +35,19 @@ Select Reports → Schedule
 
 Here is the table with the description of all available fields to schedule a new report.
 
-| Field Name                   | Description                                                                       |
-| ---------------------------- | --------------------------------------------------------------------------------- |
-| Select a Report              | You can choose various type of reports                                            |
-| Probes                       | You can choose among different nodes if multiple probes are setup                 |
-| Run Time                     | At the top of what time do you want to run the report. The actual run times of the reports also depends on the frequency. For example if you select “2011-12-20 10:20:00” for hourly report runs. The report will be generated at 10:20, 11:20, 12:20, etc..                                                             |
-| Business Hours               | Runs the report for business hours only                                           |
-| Run Frequency                | Select from Hourly,Daily,Weekly, or Monthly                                       |
-| To                           | Email address of receiver                                                         |
-| Cc                           | Recipient received a copy of the message.                                         |
-| Bcc                          | Recipients are invisible to all the other recipients of the message               |
-| Specify a Subject            | Subject of the report                                                             |
-| Signature                    | Signature of the sender                                                           |
-| Report parameters (optional) | Optional parameters, if present must be in valid `JSON` format. This parameter is only required for these three reports Endpoint Activity, Application Activity, Router and Interfaces               |
+| Field Name                   | Description                                                                     |
+| ---------------------------- | --------------------------------------------------------------------------------|
+| Select a Report              | You can choose various type of reports                                          |
+| Probes                       | You can choose among different nodes if multiple probes are setup               |
+| Run Time                     | At the top of what time do you want to run the report. The actual run times of the reports also depends on the frequency. For example if you select “2011-12-20 10:20:00” for hourly report runs. The report will be generated at 10:20, 11:20, 12:20, etc..                                                       |
+| Business Hours               | Runs the report for business hours only                                         |
+| Run Frequency                | Select from Hourly,Daily,Weekly, or Monthly                                     |
+| To                           | Email address of receiver                                                       |
+| Cc                           | Recipient received a copy of the message.                                       |
+| Bcc                          | Recipients are invisible to all the other recipients of the message             |
+| Specify a Subject            | Subject of the report                                                           |
+| Signature                    | Signature of the sender                                                         |
+| Report parameters (optional) | Optional parameters, if present must be in valid `JSON` format. This parameter is only required for these three reports Endpoint Activity, Application Activity, Router and Interfaces             |
 
 Once you schedule the report, all your scheduled reports will appear on the index page and you can toggle from there.
 
@@ -105,9 +105,9 @@ After you have setup email, you need to enable the job that actually generates t
 
 To enable this :
 
-:::note navigation
+:::info navigation
 
-Select Customize → App Settings
+:point_right: Select Customize → App Settings
 
 :::
 
@@ -131,9 +131,9 @@ crontab -l
 
 If you are not receiving the email reports, check the logs.
 
-:::note navigation
+:::info navigation
 
-Login as Admin → WebAdmin → View Logs  
+:point_right: Login as Admin → WebAdmin → View Logs  
 Click on **Background tasks log**
 
 :::

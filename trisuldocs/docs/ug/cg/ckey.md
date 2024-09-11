@@ -25,9 +25,9 @@ You would want to use custom key monitors if :
 
 Directions to create new custom key monitors
 
-:::note navigation
+:::info navigation
 
-Select Customize -> Show all-> Custom Key Monitors
+:point_right: Select Customize &rarr; Show all&rarr; Custom Key Monitors
 
 :::
 
@@ -54,9 +54,9 @@ can type in the application keys which are to be traced (eg: p-0050, p
 
 Directions to view Custom Key Monitors
 
-:::note navigation
+:::info navigation
 
-Select Customize -> Show all-> Custom Key Monitors
+:point_right: Select Customize &rarr; Show all&rarr; Custom Key Monitors
 
 :::
 

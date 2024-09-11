@@ -59,7 +59,7 @@ You can configure a TCA by defining the threshold values for alerts to be genera
 To create a new TCA based on Counter Group, Login as *User*,
 
 :::info navigation
-Go to Alerts-> Threshold Crossing Alerts-> Configure-> New Threshold Crossing Alert
+:point_right: Go to Alerts&rarr; Threshold Crossing Alerts&rarr; Configure&rarr; New Threshold Crossing Alert
 :::
 
 TCA configuration form opens up. Fill in the threshold conditions for alerts to be generated with the help of the following fields and their description.
@@ -101,7 +101,7 @@ There are many methods to view, search and export TCAs.
 To view TCAs,
 
 :::info navigation
-Go to  Alerts-> Select Threshold Crossing Alerts
+:point_right: Go to  Alerts&rarr; Select Threshold Crossing Alerts
 :::
 
 1. You will now see a table listing all the alerts grouped by alert type and count
@@ -233,7 +233,7 @@ For example: You can throw an alert if the Interface crosses 200 Mbps.
 To Setup Bulk Configuration, Login as *Admin*
 
 :::info navigation
-Go to *Context : default*-> profile0-> Netflow Wizard-> Interfaces
+:point_right: Go to *Context : default*&rarr; profile0&rarr; Netflow Wizard&rarr; Interfaces
 :::
 
 ![](image/bulkconfiguration_tca.png)  

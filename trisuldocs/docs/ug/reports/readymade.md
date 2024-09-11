@@ -18,7 +18,7 @@ There are 7 readymade reports readily available in Trisul including
 
 To view *Reports*, Login as user and,
 :::info Navigation
-Go to Reports-> Readymade
+:point_right: Go to Reports&rarr; Readymade
 :::
 
 The following is the *Ready to use Reports* page where you will be landed, 
@@ -33,7 +33,7 @@ As you can see there are a number of report types as tabs and a checkbox. From h
 - Click on a timeframe to generate the report. 
 - You can check the *Restrict reports to business hours only* check box on the upper right hand side to exclude non-business hours.
 
-> You can configure the business hours by logging in as admin and navigating to, Web Admin-> Manage-> App Settings-> Schedule Email Reports
+> You can configure the business hours by logging in as admin and navigating to, Web Admin&rarr; Manage&rarr; App Settings&rarr; Schedule Email Reports
 
 Lets explore each of the report types in detail for better understanding. 
 

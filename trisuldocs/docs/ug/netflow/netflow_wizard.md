@@ -125,14 +125,14 @@ Enable these to provide drilldowns from router interfaces to these
 metrics.These appear as Tabs in the [Router and Interface
 Drilldown](/docs/ug/netflow/drilldown#information-shown) pages.
 
-| Configurations required          | Description                                                                                                  |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| Track ASN Per Interface          | Outgoing SMTP email account                                                                                  |
-| Track Protocol Per Interface     | For each interface track IP protocol usage for TCP, UDP, etc.                                                |
+| Configurations required          | Description                                                             |
+| -------------------------------- | ----------------------------------------------------------------------- |
+| Track ASN Per Interface          | Outgoing SMTP email account                                             |
+| Track Protocol Per Interface     | For each interface track IP protocol usage for TCP, UDP, etc.           |
 | Track AppID / NBAR per interface | For each interface track which NBAR/AppID applications are using it. Automatically tags flow with NBAR/AppID |
 | Track Interfaces Per Interface   | For each interface track other interfaces. This will enable the *Interface Matrix* in Interfaces Drilldown.  |
-| Track Hosts per interface        | Host traffic per interface                                                                                   |
-| Track Apps per interface         | Application traffic per interface                                                                            |
+| Track Hosts per interface        | Host traffic per interface                                              |
+| Track Apps per interface         | Application traffic per interface                                       |
 | Track User-ID per Interface | For each interface track User-ID from devices like Palo Alto firewalls |
 | Track App- ID per Interface | For each interface track App-ID from devices like Palo Alto firewalls |
 
@@ -142,9 +142,9 @@ Drilldown](/docs/ug/netflow/drilldown#information-shown) pages.
 | ----------------------------------- | ---------------------------------------------------------------- |
 | Track ASN for Subnets               | Allows ISP to define IP subnets and assign them to customers, then track AS wise usage of those subnets. |
 | Track ASN for Locations             | Allows ISP to define Locations as a group of routers then track AS wise traffic for the entire location  |
-| Mixed Bandwidth                     | Allows ISP to define peering vs internet traffic                                                         |
-| Track Mixed Bandwidth Per Interface | For each interface track mixed bandwidth(peerig vs internet)                                             |
-| Track Mixed Bandwidth for Subnets   | For each interface track mixed bandwidth(peerig vs internet)                                             |
+| Mixed Bandwidth                     | Allows ISP to define peering vs internet traffic                 |
+| Track Mixed Bandwidth Per Interface | For each interface track mixed bandwidth(peerig vs internet)     |
+| Track Mixed Bandwidth for Subnets   | For each interface track mixed bandwidth(peerig vs internet)     |
 
 ## Utilization Alert
 

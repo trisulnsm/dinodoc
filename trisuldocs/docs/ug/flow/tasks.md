@@ -8,7 +8,7 @@ sidebar_position: 08
 
 If you know the IP address
 
-1. Click on Tools -> Explore flows
+1. Click on Tools &rarr;Explore flows
 2. Just type in your query “ip=192.168.2.81” in the box
 
 For more details read the section on [Explore Flows](/docs/ug/tools/explore_flows)
@@ -21,13 +21,13 @@ If you can see the IP in any dashboard
 
 If you know the IP address
 
-1. Click on Tools -> Investigate IP
+1. Click on Tools &rarr;Investigate IP
 2. Select a time frame
 3. Enter the IP you want to search for
 
 ## Find out which flows caused a traffic spike
 
-1. Go to **Retro -> Retro Tools**
+1. Go to **Retro &rarr;Retro Tools**
 2. Select the spike
 3. Select **Flow Trackers** from the toolbox
 4. Select **Traffic**

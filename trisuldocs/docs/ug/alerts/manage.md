@@ -15,7 +15,7 @@ An “**Alert Group**” represents a type of alert. Trisul is pre-configured wi
 
 To view all alert groups currently in the system, Login as *Admin*
 :::info navigation
-Go to Context Profile-> Alerts-> All Alert Groups
+:point_right: Go to Context Profile-> Alerts-> All Alert Groups
 :::
 
 Upon navigation to the Alert Groups page, a comprehensive list of Alert Groups and their GUIDs are displayed, accompanied by a summary header indicating the **total** count, **enabled** count, **disabled** count of *alert groups*. 

@@ -109,7 +109,7 @@ To configure SNMP globally, Login as `admin`
 
 :::info navigation
 
-Click on Web Admin: Manage &rarr; App Settings &rarr; SNMP Settings.
+:point_right: Click on Web Admin: Manage &rarr; App Settings &rarr; SNMP Settings.
 
 :::
 

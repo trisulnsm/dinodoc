@@ -17,9 +17,9 @@ The default setting is to store ALL flows regardless of size. This works great f
 
 In the rare cases where you need to customize flow handling :
 
-:::note navigation
+:::info navigation
 
-Login as `admin` and select Context:default -> profile0 -> Session
+:point_right: Login as `admin` and select Context:default &rarr;profile0 &rarr;Session
 Groups
 
 :::

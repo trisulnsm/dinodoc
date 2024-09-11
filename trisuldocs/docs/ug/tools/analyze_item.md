@@ -12,7 +12,7 @@ To use long term traffic tool,
 
 :::info navigation
 
-Go to Tools -> Select Long Term Traffic
+:point_right: Go to Tools &rarr; Select Long Term Traffic
 
 :::
 

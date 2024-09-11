@@ -34,7 +34,7 @@ You can get useful reports like
 To view *Blacklist Alerts*,
 
 :::info navigation
-Go to Alerts-> Blacklist
+:point_right: Go to Alerts&rarr; Blacklist
 :::
 
 ![](image/blacklistalerts1.png)

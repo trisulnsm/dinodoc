@@ -23,8 +23,8 @@ To create a dashboard,
 
 *Figure: All Dashboards*
 
-:::note path
-Go to Dashboard-> Show all-> Click New
+:::info path
+:point_right: Go to Dashboard&rarr; Show all&rarr; Click New
 
 :::
 
@@ -34,11 +34,11 @@ Go to Dashboard-> Show all-> Click New
 
 *Figure: Customize a Dashboard*
 
-| Fields         | Description                                                                                                                                                                                 |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Name           | Enter the name of the dashboard                                                                                                                                                             |
-| Description    | Enter a short description of the dashboard                                                                                                                                                  |
-| Modules Layout | Click on the Plus icon and select from the list of modules you would like to add to this dashboard                                                                                          |
+| Fields         | Description                                                              |
+| -------------- | ------------------------------------------------------------------------ |
+| Name           | Enter the name of the dashboard                                          |
+| Description    | Enter a short description of the dashboard                               |
+| Modules Layout | Click on the Plus icon and select from the list of modules you would like to add to this dashboard                                                                                   |
 | Layout View    | You can view the layout of the added modules as it appears on the dashboard here. You can also rearrange by clicking dragging to the desired position and adjust the width of each modules. |
 
 Once you have filled all the fields, Click Create.
@@ -81,9 +81,9 @@ Once you have created a new dashboard, Now you are at the new dashboard panel wi
 
 Go to *All Dashboards*
 
-:::note path
+:::info path
 
-Dashboards-> Show All
+:point_right: Dashboards&rarr; Show All
 
 :::
 
@@ -99,7 +99,7 @@ You can now easily access the dashboard right from the menu!
 
 ## How to Remove a Dashboard From the Menu
 
-Go to Customize-> UI-> Menu Manager
+Go to Customize&rarr; UI&rarr; Menu Manager
 
 ![](images/removefrommenu.png)
 
@@ -115,9 +115,9 @@ To edit a Dashboard, from the list of dashboards go to the dashboard you would l
 
 To delete a dashboard, 
 
-:::note path
+:::info path
 
-Go to Dashboards-> Show all-> Manage
+:point_right: Go to Dashboards&rarr; Show all&rarr; Manage
 
 :::
 
@@ -135,9 +135,9 @@ You can also share the dashboard across different contexts by clicking **Export 
 
 To import a dashboard,
 
-:::note path
+:::info path
 
-Go to Dashboards-> Show all-> Import a dashboard package
+:point_right: Go to Dashboards&rarr; Show all&rarr; Import a dashboard package
 
 :::
 

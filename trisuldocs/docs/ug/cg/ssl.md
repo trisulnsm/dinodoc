@@ -18,9 +18,9 @@ encrypted traffic in your network.
 
 TLS Orgs allows for metering of traffic based on the entity specified in the Subject Common Name (a field in the certificate that contains the domain name or organization name) of the X.509 certificate (a digital certificate used to verify the identity of a website or organization). This counter group tells you how much of your SSL traffic is Google, Twitter, Dropbox, etc. And this visibiliy would otherwise be difficult to obtain.
 
-:::note navigation
+:::info navigation
 
-Select Retro -> Retro Counters -> Choose TLS Orgs from the dropdown
+:point_right: Select Retro &rarr;Retro Counters &rarr;Choose TLS Orgs from the dropdown
 list
 
 :::
@@ -66,9 +66,9 @@ On the same module click on the Bottom count tab to view the toppers for each me
 
 Click on the Pie chart tab on the same module or you can also generate long term usage reports with several charts like the pie chart shown below using Retro Tools.
 
-:::note navigation
+:::info navigation
 
-Select Retro -> Retro Tools -> Select Counter Group Toppers -> Select
+:point_right: Select Retro &rarr;Retro Tools &rarr;Select Counter Group Toppers &rarr;Select
 TLS Orgs
 
 :::
@@ -88,9 +88,9 @@ algorithm used. Example:
   
   To open TLS Ciphers countergroup,
   
-  :::note navigation
+  :::info navigation
   
-  Select Retro -> Retro Counters -> Choose Ciphers from the dropdown
+  :point_right: Select Retro &rarr;Retro Counters &rarr;Choose Ciphers from the dropdown
   list
   
   :::
@@ -108,8 +108,8 @@ Trisul tracks the certificate chains of SSL/TLS connections. It takes the
 Issuer Common Name of each certificate in the chain and meters it in the
 following manner.
 
-1. Issuer CN for last cert in chain -> Metered as Root CA
-2. Issuer CN for others -> Metered as Intermediate CA
+1. Issuer CN for last cert in chain &rarr;Metered as Root CA
+2. Issuer CN for others &rarr;Metered as Intermediate CA
 
 #### Usage Tip
 
@@ -118,9 +118,9 @@ month as look at any suspicious root or intermediate CAs.
 
 To open TLS Ciphers countergroup,
 
-:::note navigation
+:::info navigation
 
-Select Retro -> Retro Counters -> Choose CAs from the dropdown
+:point_right: Select Retro &rarr;Retro Counters &rarr;Choose CAs from the dropdown
 list
 
 :::

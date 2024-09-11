@@ -30,7 +30,7 @@ To access *Payload Search*,
 
 :::note navigation
 
-Go to Tools -> Select Payload Search
+:point_right: Go to Tools &rarr; Select Payload Search
 
 :::
 

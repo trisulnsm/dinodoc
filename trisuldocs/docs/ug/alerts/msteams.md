@@ -34,7 +34,7 @@ To activate the Webhook and send alerts to Teams. Login as `admin` and,
 
 :::info navigation
 
-Go to [App Settings](/docs/ag/webadmin/web_options)&rarr; API Keys&rarr; Microsoft Teams Webhook URL
+:point_right: Go to [App Settings](/docs/ag/webadmin/web_options)&rarr; API Keys&rarr; Microsoft Teams Webhook URL
 
 :::
 

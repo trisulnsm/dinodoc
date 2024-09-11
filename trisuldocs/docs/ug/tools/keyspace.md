@@ -17,7 +17,7 @@ For example, Imagine you're a detective trying to catch the bad guys on the inte
 To access Trisul's *Search Key Space* tool,
 :::info navigation
 
-Select Tools -> Click Search Key Space
+:point_right: Select Tools &rarr; Click Search Key Space
 
 :::
 The following *Search criteria* form opens up with the [*Hide/ Show Search Form*](/docs/ug/ui/elements#hide-show-search-form) option.

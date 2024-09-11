@@ -27,7 +27,7 @@ You can use *Flow Tracker Alerts* to be notified when a number of things happen.
 To Configure *Flow Tracking Alerts*, Login as `user`,
 
 :::info navigation
-Select Alerts-> Flow Tracking-> Configure
+:point_right: Select Alerts&rarr; Flow Tracking&rarr; Configure
 :::
 
 Or you can create *Flow Tracker Tracker Alerts* per probe.
@@ -35,7 +35,7 @@ Or you can create *Flow Tracker Tracker Alerts* per probe.
 For that, Login as `admin` user to create *Flow Tracker Alerts*.
 
 :::info navigation
-Select *Context : default*-> profile0-> Alerts-> Flow Tracker 
+:point_right: Select *Context : default*&rarr; profile0&rarr; Alerts&rarr; Flow Tracker 
 :::
 
 ### Create New Flow Tracker Alert
@@ -59,11 +59,11 @@ Once providing all the details in the form, click *Create*. Now you have created
 There are couple of ways to see flow alerts that fired. To view the generated alerts,
 
 :::info navigation
-Go to Alerts-> Flow Tracking
+:point_right: Go to Alerts&rarr; Flow Tracking
 :::
 Or 
 :::info navigation
-Go to Dashboards-> Alerts-> Flow Activity Alerts
+:point_right: Go to Dashboards&rarr; Alerts&rarr; Flow Activity Alerts
 :::
 
 Here you can find the total alerts for each flow tracker with the following details. 

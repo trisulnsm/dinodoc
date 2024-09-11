@@ -13,9 +13,9 @@ See [Trisul Filter Format](/docs/ref/trisul_filter_format#format) section for mo
 
 ## How to Use
 
-:::note navigation
+:::info navigation
 
-Go to Tools -> Select Rule Builder
+:point_right: Go to Tools &rarr; Select Rule Builder
 
 :::
 

@@ -13,7 +13,7 @@ When you schedule a report, the email address to be "sent from" is configured in
 To open the Email Settings,
 
 :::info Navigation
-Select *Reports → Email settings*
+:point_right: Select *Reports → Email settings*
 :::
 This will take you to the *Email Server Account Settings* page where you can configure the email address to be "sent from". For that, Click *Configure Email Server* button on the upper right hand side.
 
@@ -61,7 +61,7 @@ Once you have configured and tested the email address for the reports to be "sen
 To open *Schedule Email Reports* page, Login as `admin` and
 
 :::info Navigation
-Go to Web Admin- Manage-> Settings- App Settings-> Click Schedule Email Reports
+:point_right: Go to Web Admin- Manage&rarr; Settings- App Settings&rarr; Click Schedule Email Reports
 :::
 
 This will open up the following configuration for automatically emailing the scheduled reports.

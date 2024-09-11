@@ -72,10 +72,10 @@ tailf.ns
 
 After running the first pass over the PCAP dump you might want to do the following and re-run the PCAP Dump through Trisul.
 
-1. add new IP ranges to the Home Networks. This is the most common and immediate thing you want to do
-2. create your own custom counter groups based on what you have 
+1. Add new IP ranges to the Home Networks. This is the most common and immediate thing you want to do
+2. Create your own custom counter groups based on what you have 
    observed. For example you may want to create a new counter group for 
    “Hosts connecting to 28.88.28.11”
-3. write your own LUA analytics
+3. Write your own LUA analytics
 
 After you have changed the configuration you can just re-run the importpcap tool (Steps 1-3).

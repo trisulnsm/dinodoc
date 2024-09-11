@@ -12,7 +12,7 @@ The primary tool you will need to work with **Device level** views of Netflow is
 To access Routers and Interfaces,
 
 :::info navigation
-:point_right: Go to Netflow -> Routers and Interfaces
+:point_right: Go to Netflow &rarr; Routers and Interfaces
 :::
 
 The router and Interface Tool consists of three main sections,

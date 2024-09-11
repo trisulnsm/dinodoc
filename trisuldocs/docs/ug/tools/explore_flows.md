@@ -14,7 +14,7 @@ To specify a search criteria to explore flows,
 
 :::info navigation
 
-Go to Tools-> Explore Flows
+:point_right: Go to Tools&rarr; Explore Flows
 
 :::
 

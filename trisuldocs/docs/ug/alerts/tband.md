@@ -51,7 +51,7 @@ There are two ways to create a new Threshold Band Anomaly(TBA) monitor for a par
 Method 1
 
 :::info navigation
-Click on any *key* in a chart-> From [Key Dashboard](/docs/ug/ui/key_dashboard)-> Create Threshold Band
+:point_right: Click on any *key* in a chart&rarr; From [Key Dashboard](/docs/ug/ui/key_dashboard)&rarr; Create Threshold Band
 :::
 
 This will take you to the TBA Form but the fields of the form will be already pre-filled for you.
@@ -59,7 +59,7 @@ This will take you to the TBA Form but the fields of the form will be already pr
 Method 1
 
 :::info navigation
-Go to Alerts-> Threshold Bands-> Configure-> Create New Threshold Band
+:point_right: Go to Alerts&rarr; Threshold Bands&rarr; Configure&rarr; Create New Threshold Band
 :::
 
 You can find the configuration of TBA Form where you can fill the fields to setup and specify the threshold values.
@@ -109,7 +109,7 @@ The TBA configuration form comprises settings of three sections: Basic Configura
 Once an anomaly is detected Trisul generates an alert, similar to an Intrusion Detection or Flow Tracker alert. This appears in the top right panel.
 
 :::info navigation
-Go to Alerts-> Threshold Bands-> Click View Training Data button
+:point_right: Go to Alerts&rarr; Threshold Bands&rarr; Click View Training Data button
 :::
 
 You will see a table of data showing a list of all counters enabled for Threshold Band Alerting. 

@@ -13,8 +13,8 @@ Some applications :
 
 ## How to Use
 
-:::note navigation
+:::info navigation
 
-To access select Security→ Monthly Summary
+:point_right: To access select Security→ Monthly Summary
 
 :::
