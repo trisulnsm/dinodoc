@@ -63,7 +63,7 @@ To do that, Login as `admin` and,
 
 Login as `admin` and, 
 :::info navigation
-:point_right: Go to *Context: Default &rarr; profile0 &rarr; [NetFlow Wizard](/docs/ug/netflow/netflow_wizard)*
+:point_right: Go to *Context: Default &rarr; profile0* &rarr; [*NetFlow Wizard*](/docs/ug/netflow/netflow_wizard)
 :::
 
 - Specify the interfaces and ports receiving NetFlow that you noted down
