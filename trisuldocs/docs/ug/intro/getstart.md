@@ -39,5 +39,5 @@ Next, you need to send something to Trisul to start monitoring [Send Packets](/d
 
 ### Step 5: Login and start viewing 
 
-Congratulations! You are on Trisul.  Things to do on [First Login](/docs/ug/basictasks/)
+Congratulations! You are on Trisul.  Things to do on [First Login]
 
