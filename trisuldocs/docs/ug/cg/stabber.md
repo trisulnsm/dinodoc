@@ -102,7 +102,7 @@ Now lets explore each of the Real Time Stabber options in detail. Real Time Stab
 
 Use Real Time Stabber: Traffic Chart to continuously monitor traffic (bandwidth) used by a particular key item with a 5-second delay.
 
-Click and drag to zoom a particular time interval with mouse. Use the [Module icons](/docs/ug/ui/elements#module-icons) and [Legend table](/docs/ug/ui/elements#legend-table) for further inspection.
+Click and drag to zoom a particular time interval with mouse. Use the [Chart Interaction Controls](/docs/ug/ui/charts#chart-interaction-controls) and [Legend table](/docs/ug/ui/charts#legend-table) for further inspection.
 
 ![](images/rtstabbers3.png)
 

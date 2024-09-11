@@ -54,7 +54,7 @@ Disk Usage Per day is a graphical representation of the disk usage per day in ba
 
 ## Storage Pools
 
-In [Storage Pools](/docs/ug/caps/fullcontent#sliding-slices) you can view each of the storage pool's status information including the number of days since the data has started getting stored in the storage pool, the disk space used by the storage pool, and pool disk usage percentage. The Gauge meter on the lower right represents the pool disk usage percentage.
+In *Storage Pools* you can view each of the storage pool's status information including the number of days since the data has started getting stored in the storage pool, the disk space used by the storage pool, and pool disk usage percentage. The Gauge meter on the lower right represents the pool disk usage percentage.
 
 ![](images/storagestatus2.png)
 

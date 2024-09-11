@@ -69,9 +69,9 @@ Once you have created a new dashboard, Now you are at the new dashboard panel wi
    
    Displays the description of the module.
 
-5) #### Module Icons
+5) #### Chart Interaction Control Icons
    
-   The [module icons](/docs/ug/ui/elements#module-icons) are useful in traversing the graphical chart in detail.
+   The [Chart interaction controls](/docs/ug/ui/charts#chart-interaction-controls) are useful in traversing the graphical chart in detail.
 
 6) #### Legend Table
    
