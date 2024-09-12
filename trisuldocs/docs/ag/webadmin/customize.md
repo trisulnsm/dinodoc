@@ -42,23 +42,23 @@ You may modify these fields to suit your environment.
 
 ### About the OEM
 
-| Fields        | Defaults                                               | Description                                                |
-| ------------- | ------------------------------------------------------ | ---------------------------------------------------------- |
-| OEM_NAME      | Unleash Networks                                       | Appears in the login screen and the page footer            |
-| OEM_SITE      | http://www.unleashnetworks.com                         | Link appears in the bottom of page and in the login screen |
+| Fields        | Defaults                                               | Description                 |
+| ------------- | ------------------------------------------------------ | --------------------------- |
+| OEM_NAME      | Unleash Networks                                       | Appears in the login screen and the page footer                                                                                            |
+| OEM_SITE      | http://www.unleashnetworks.com                         | Link appears in the bottom of page and in the login screen                                                                                    |
 | OEM_TRADEMARK | Trisul ® is a registered trademark of Unleash Networks | Appears in license page, and footers                       |
 
 ### About the Product
 
-| Fields             | Defaults                              | Desciption                                                                            |
-| ------------------ | ------------------------------------- | ------------------------------------------------------------------------------------- |
-| PRODUCT_NAME       | Trisul                                | The product name to be displayed in the login and in the page header.                 |
-| PRODUCT_NAME_FULL  | Trisul Network Metering and Forensics | Carries the detailed product name which will appear in the bottom of the login screen |
-| PRODUCT_NAME_DESC  | Network Metering and Forensics        | Carries the product description , appears alongside the PRODUCT_NAME                  |
-| PRODUCT_NAME_WEB   | Web Trisul                            | Carries the name of the web-interface present.                                        |
-| PRODUCT_LOGO       | trisul.png                            | Carries the product logo, appears on the login and page header and other places       |
-| PRODUCT_LOGO_SMALL | trisul.png                            | Used mainly as a 16x16 favicon and maybe in other places.                             |
-| PRODUCT_LOGO_WHITE | trisul_white.png                      | Used mainly as a 16x16 favicon and maybe in other places.                             |
+| Fields             | Defaults                              | Desciption                                    |
+| ------------------ | ------------------------------------- | --------------------------------------------- |
+| PRODUCT_NAME       | Trisul                                | The product name to be displayed in the login and in the page header.                                                                                          |
+| PRODUCT_NAME_FULL  | Trisul Network Metering and Forensics | Carries the detailed product name which will appear in the bottom of the login screen                                                                            |
+| PRODUCT_NAME_DESC  | Network Metering and Forensics        | Carries the product description , appears alongside the PRODUCT_NAME                                                                                             |
+| PRODUCT_NAME_WEB   | Web Trisul                            | Carries the name of the web-interface present |
+| PRODUCT_LOGO       | trisul.png                            | Carries the product logo, appears on the login and page header and other places                                                                                 |
+| PRODUCT_LOGO_SMALL | trisul.png                            | Used mainly as a 16x16 favicon and maybe in other places.                                                                                                      |
+| PRODUCT_LOGO_WHITE | trisul_white.png                      | Used mainly as a 16x16 favicon and maybe in other places.                                                                                                      |
 
 ### End Customer Details
 
@@ -76,26 +76,24 @@ You may modify these fields to suit your environment.
 
 #### Report Links
 
-| Fields   | Defaults | Description                                                                                                                                                                                                                                                                                  |
-| -------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| LINK_PDF | cg       | Controls whether the Commonly used reports bring up a PDF directly or shows a HTML report with a Generate PDFlink.<br/>If set to `cg` – User views a HTML page depicting the usage activity of the counter group<br/>If set to `cg_pdf` – User gets a PDF report directly ( one click link ) |
-
-}IP_REPORT_CHART_TYPE\|LINETABLE\|available chart types “LINE” ,“AREA”
-,“SQUARELINE”,“STACKEDAREA”,“LINETABLE”\|
+| Fields   | Defaults | Description                                                                           |
+| -------- | -------- | ------------------------------------------------------------------------------------- |
+| LINK_PDF | cg       | Controls whether the Commonly used reports bring up a PDF directly or shows a HTML report with a Generate PDFlink.<br/>If set to `cg` – User views a HTML page depicting the usage activity of the counter group<br/>If set to `cg_pdf` – User gets a PDF report directly ( one click link )                              |
+|IP_REPORT_CHART_TYPE | LINETABLE | available chart types “LINE” ,“AREA”,“SQUARELINE”,“STACKEDAREA”,“LINETABLE”|
 
 ### Retro Analysis Time Selector
 
 | Fields            | Defaults | Description                                                       |
 | ----------------- | -------- | ----------------------------------------------------------------- |
-| RETRO_TIME_RANGES |          | \[ \[‘Hours’, 86400\], \[‘Days’,604800 \], \[‘Weeks’, 2419200\]\] |
+| RETRO_TIME_RANGES |          |  [[‘Hours’, 86400], [‘Days’,604800 ], [‘Weeks’, 2419200]] |
 
 Controls the time ranges shown as a tab on top the retro analysis chart. 
 
 You can set this to an empty array if you do not want any such selection
 and prefer to manually enter dates.
 
-| Fields             | Defaults | Description                                                                                                                                                                             |
-| ------------------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Fields             | Defaults | Description                                                          |
+| ------------------ | -------- | -------------------------------------------------------------------- |
 | MODULE_RECENT_SECS |          | \[ \[“15 Min”,900\], \[“30 Min”,1800\], \[“1 Hr”, 3600\], \[“3 Hr”, 10800\], \[“6 Hr”, 21600\], \[“12 Hr”, 43200\], \[“1 Day”, 86400\] , \[“1 Week”, 604800\], \[“1 Month”, 2678400\]\] |
 
 ### Extra Plugins from OEM
@@ -106,10 +104,10 @@ and prefer to manually enter dates.
 
 ### If You Have Connected Tags to Counter Groups
 
-| Fields     | Defaults                                                                                                 |
-| ---------- | -------------------------------------------------------------------------------------------------------- |
-| DEEP_DRILL | `{:name => “Country”, :guid => ‘{00990011-44BD-4C55-891A-77823D59161B}’,:valid_tags=>[“news”,“social”]}` |
-| DEEP_DRILL | `{}`                                                                                                     |
+| Fields     | Defaults                                                                                |
+| ---------- | --------------------------------------------------------------------------------------- |
+| DEEP_DRILL | `{:name => “Country”, :guid => ‘{00990011-44BD-4C55-891A-77823D59161B}’,:valid_tags=>[“news”,“social”]}`                              |
+| DEEP_DRILL | `{}`                                                                                                       |
 
 ### Default Snort Rules Directory
 

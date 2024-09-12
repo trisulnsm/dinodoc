@@ -88,7 +88,7 @@ Here you can
    it.
 2. You can press the “Delete non private networks” to delete all the
    elements in bulk except the three built-in private ranges. Use this
-   option if you want to late add the home networks in bulk later.
+   option if you want to add the home networks in bulk later.
 
 ## Home Networks in ISP Solution
 
