@@ -74,7 +74,7 @@ To know how to setup Email-Server and Alert based emails, Refer to the [Email Se
 
 Modules are the building blocks of the dashboard based user interface. Several Modules put together are dashboards. Modules are much more feature specific. This menu provides a list of available modules that are being actively used in the Web Interface.
 
-To create a new module, Refer to the [Modules](/docs/ug/ui/modules#how-to-create-modules) for instructions.
+To create a new module, Refer to the [Modules](/docs/ug/ui/modules#creating-modules) for instructions.
 
 ### Dashboards
 
