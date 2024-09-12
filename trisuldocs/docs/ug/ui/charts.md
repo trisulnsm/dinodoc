@@ -139,3 +139,31 @@ The retro charts are even more interactive :
 - Pan left and right  
 
 - Use the selected time interval to perform drill down retro analysis
+
+### Range Slider 
+
+A *Range Slider* in a chart module allows you to view a broader time range providing context and helping identify trends on a bigger picture. 
+
+![](images/rangeslider.png)
+*Figure: Range Slider*
+
+So you can select a specific time period by dragging the slider handles to choose a precise time interval, focusing on a specific segment of data. And the chart updates to display only the selected time period, allowing for detailed analysis.
+
+
+### Retro Tabs
+
+![](images/markpcapavailability.png)
+*Figure: Retro Tabs*
+The Retro Tabs feature provides a user interface element that enables users to segment and display temporal data in various time-based categories, including:
+
+    Hours Tab: Displays data aggregated at an hourly granularity, showcasing intra-day trends and patterns.
+    Days Tab: Presents data summarized on a daily basis, highlighting day-to-day variations and longer-term trends.
+    Weeks Tab: Segments data into weekly intervals, facilitating analysis of week-over-week patterns and seasonality.
+    Custom Tab: Redirects users to the Time Selector tool, allowing for flexible, user-defined time ranges and custom data segmentation.
+
+By selecting a Retro Tab, users can effortlessly switch between different time-based views of their data, gaining insights into various aspects of their temporal data distribution.
+
+### PCAP Availability
+
+![](images/markpcapavailability.png)
+*Figure: Indication of PCAP Availability*

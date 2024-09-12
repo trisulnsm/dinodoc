@@ -78,9 +78,19 @@ A "Key Traffic" module in Trisul is designed to monitor and analyze network traf
 
 ### Advanced Parameters
 
-| Parameter name | Default value | Description     |
-| -------------- | ------------- | --------------- |
-| Legend Position | Top | Choose *Top* to display the [*legend table*] above the chart, *hide* to hide the legend table and *bottom* to display the legend table below the chart |
+| Parameter name                 | Default value | Description                                                   |
+| ------------------------------ | ------------- | ------------------------------------------------------------- |
+| Legend Position                | Top           | Choose *Top* to display the [*legend table*] above the chart, *hide* to hide the legend table and *bottom* to display the legend table below the chart                          |
+| Chart Title                    | -             | Specify a custom title for the chart to provide some context                                                                                                          |
+| Height                         | 300           | Set a custom height for the chart to adjust its display size  |
+| Enable Range Slider            | -             | Toggle to enable or disable the [range slider](/docs/ug/ui/charts#range-slider), allowing users to select a specific time range                                             |
+| Mark PCAP Availability         | -             | Indicate the [availability of PCAP (Packet Capture) data](/docs/ug/ui/charts#pcap-availability), providing users with additional context                                         |
+| Show Retro Tabs/ Time Selector | -             | Toggle to display or hide [retro tabs](/docs/ug/ui/charts#retro-tabs) and [time selector](/docs/ug/ui/elements#time-selector), allowing users to navigate through historical data                                                                                                  | 
+| Counter Group (Ref Model)      | Aggregates    | Select a counter group to view aggregated data for all counter groups, rather than focusing on a specific one                                                                   |
+| Meter (Ref Model)              | Total         | Choose a meter to display aggregated data of all meters rather than focusing on specific one meter                                                                              |
+| Key (Ref Model)                | -             | Select a key to view aggregated data for all keys, rather than focusing on a specific one                                                                                       |
+| Label (Ref Model)              | -             | Customize label text for the Ref Model                        | 
+
 
 ## Toppers Traffic
 
