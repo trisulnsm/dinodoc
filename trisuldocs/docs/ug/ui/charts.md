@@ -26,12 +26,13 @@ These are some of the intuitive chart surfaces in Trisul.
 
 There are a number of interactive functionalities that are available for the charts to drilldown for further data analyses.
 
-![](images/chartelements.png)
+![](images/module_ui.png)
 *Figure: Chart Elements*
 
-1) [Chart Interaction Control Icons](/docs/ug/ui/charts#chart-interaction-controls)
-2) [Legend Table](/docs/ug/ui/charts#legend-table)
-3) [Tool Tip](/docs/ug/ui/charts#tooltip) 
+1) [Ellipsis Menu](/docs/ug/ui/charts#ellipsis-menu)
+2) [Chart Interaction Control Icons](/docs/ug/ui/charts#chart-interaction-controls)
+3) [Legend Table](/docs/ug/ui/charts#legend-table)
+4) [Tool Tip](/docs/ug/ui/charts#tooltip) 
 
 
 ## Chart Engagements
@@ -41,6 +42,18 @@ Here are some chart UI engagements with charts that enable you to engage with ch
 - **Hover**: Display additional information or context on [Tooltips](/docs/ug/ui/charts#tooltip) when hovering over a data point  
 - **Pan**: Move the chart view to focus on a specific data range or trend  
 - **Highlight**: Click and select an area on the chart to highlight which views the detailed view of the highlighted area for high resolution insights.
+
+### Ellipsis Menu
+
+Ellipsis Menu is a three dots button at the upper right hand side of the Chart module. It serves as a convenient way to access additional customizations and functionalities without cluttering the Chart interface. Click on the Ellipsis menu to: 
+
+**Customize**: Tailor the chart's appearance and settings to suit your needs.  
+**View Historical Data**: Access and view past historical data points and trends.  
+**Remove from Dashboard**: Delete the selected chart module from your current dashboard layout.  
+**Disable**: Temporarily deactivate the chart, preserving its settings for future reactivation.
+
+![](images/module_ui.png)
+*Figure: Ellipsis Menu of a Chart Module*
 
 
 ### Chart Interaction Controls
@@ -103,9 +116,9 @@ Hover your mouse over an item such as a PIE slice or line graph and get a toolti
 
 ### Retro Charts
 
-Retro Charts in Trisul retrieves graphical representation of past historical analysis data, that enables you to selectively retrieve and visualize historical network traffic patterns and trends within a specified temporal range.
+*Retro Charts* in Trisul retrieves graphical representation of past historical analysis data, that enables you to selectively retrieve and visualize historical network traffic patterns and trends within a specified temporal range.
 
-1) Click on any of the module toolbar and click *View historical* to view the retro chart of that particular module
+1) Click on any of the *ellipsis menu* and click *View historical* to view the retro chart of that particular module
 
 ![](images/retrochart2.png)
 

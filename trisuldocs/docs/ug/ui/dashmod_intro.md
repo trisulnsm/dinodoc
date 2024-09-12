@@ -159,22 +159,3 @@ The following operations can be performed using the toolbars:
 | Expand all modules       | Click on the dashboard to enable all modules                   |
 | Collapse all modules     | Click on the dashboard to disable all modules                  |
 | Download as PDF          | Export data in PDF file                                        |
-
-### Module Toolbars
-
-Module toolbar is the three dots on the top right corner of the [module](/docs/ug/ui/dashmod_intro#view-a-moduleall-modules). By clicking on the module toolbar you get a list of actions that can be done on the modules.
-
-![](images/toolbars/module_icons.png)  
-*Figure: Module toolbar*
-
-#### Operations
-
-The following operations can be performed using the toolbars:
-
-| Operation             | Description                                          |
-| --------------------- | ---------------------------------------------------- |
-| Customize             | Edit module parameters like name, description, etc.. |
-| Historical Chart      | View long term historical view of this chart         |
-| Remove from Dashboard | Remove module from this dashboard                    |
-| Disable               | Disable / Enable this module                         |
-

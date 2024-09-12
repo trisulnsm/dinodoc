@@ -4,17 +4,15 @@ sidebar_position: 5
 
 # Modules
 
-Modules are customized metrics represented in the form of single values, visuals like charts and tables that allows you to analyze and extract insights from network traffic, traffic patterns, detect anomalies, identify threats. You can add any number of modules to your dashboard. 
+Modules are the building blocks of dashboards. Modules are customized metrics represented in the form of single values, visuals like charts and tables that allows you to analyze and extract insights from network traffic, traffic patterns, detect anomalies, identify threats. You can add any number of modules to your dashboard. 
 
 Trisul has an extensive module library including prebuilt modules that has out of the box functionality that you can leverage without needing to develop custom components.
 
 You can also create your own modules using pre existing [module templates](/docs/ug/ui/module_templates). Trisul has 40 different types of modules.
 
-## Module Types
+## Creating Modules
 
-Modules are the building blocks of dashboards. There are different types of modules in Trisul and you can add modules to an empty dashboard or an existing dashboard.
-
-### How to Create Modules
+You can add different types of modules in Trisul to an empty dashboard or an existing dashboard. 
 
 To create a new module,
 
@@ -52,7 +50,7 @@ Alternatively you can also navigate from the list of [all dashboards](/docs/ug/u
 
 The module positions can also be rearranged in the layout view field in [dashboard customization](/docs/ug/ui/create_dashboards#how-to-edit-a-dashboard) window. You can rearrange by simply clicking and dragging the modules to the desired place.
 
-### How to Edit a Module
+## How to Edit a Module
 
 There are more than one ways to edit a module from a dashboard,
 
@@ -60,9 +58,12 @@ There are more than one ways to edit a module from a dashboard,
 
 :::info path
 
-:point_right: Click Customize on the [module toolbar](https://trisul.org/docs/ug/ui/dashmod_intro.html#module_toolbars) from the dashboard that contains the module.
+:point_right: Click Customize on the [Ellipsis Menu](/docs/ug/ui/charts#ellipsis-menu) from the dashboard that contains the module.
 
 :::
+
+![](images/customize_module.png)  
+*Figure: Customize Module*
 
 **Method 2:**
 
