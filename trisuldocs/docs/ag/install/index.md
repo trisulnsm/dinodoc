@@ -1,4 +1,4 @@
-# About trisul installation
+# About Trisul Installation
 
 Trisul is a distributed monitoring system with a number of
 `trisul-probe` instances all reporting back to one or more `trisul-hub`.

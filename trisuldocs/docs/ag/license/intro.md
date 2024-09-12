@@ -23,9 +23,9 @@ Once you have decided which license type suits you, you need to get the Trisul M
 
 ### Getting the Machine ID
 
-:::note navigation
+:::info navigation
 
-Login as Admin → Select Context :default → Licensing
+:point_right: Login as Admin → Select Context :default → Licensing
 
 :::
 
@@ -37,7 +37,7 @@ Click on the machine ID link against each node to get the machineID as shown bel
 *Showing the Upload button used to install new license files*  
 ![](images/machineid_value.png)
 
-### Alternate method: get Machine ID using command line
+### Alternate Method: Get Machine ID Using Command Line
 
 Using this alternate method to get the machine ID. Type the following command as send us its output.
 
@@ -54,9 +54,9 @@ That number 4087ACCD-4B0B-DE11-833A-00248CB93BDE is called the MachineID.
 
 The license size depends on the number of maximum number of simultnaneously active Internal IPs. To get this number
 
-:::note navigation
+:::info navigation
 
-Login as Admin → Select Context → Licensing
+:point_right: Login as Admin → Select Context → Licensing
 
 :::
 

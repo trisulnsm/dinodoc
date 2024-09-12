@@ -6,8 +6,8 @@ sidebar_position: 8
 
 Trisul installs the following background tasks
 
-| Task Name              | Run Frequency | Description                                                                          |
-| ---------------------- | ------------- | ------------------------------------------------------------------------------------ |
+| Task Name              | Run Frequency | Description                                   |
+| ---------------------- | ------------- | --------------------------------------------- |
 | cronmailreport         | 15 Mins       | Generates scheduled reports and mails them out                                       |
 | tca_dispatch           | 5 Mins        | Summarizes threshold crossing alerts into an email and sends it out                  |
 | data_refresh           | 30 Mins       | Automatically refresh plugins data (GeoIP, Badfellas blacklists, URLFilter database) |
@@ -55,8 +55,8 @@ at  ***/usr/local/share/webtrisul/logs/back_tasks.log***
 
 You can also access these logs from the web interface
 
-:::note navigation
+:::info navigation
 
-Select *Webadmin* -\> Manage -\> Web Server Logs -\>Background tasks log
+:point_right: Select Webadmin &rarr; Manage &rarr; Web Server Logs &rarr;Background Tasks Log
 
 :::

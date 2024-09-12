@@ -1,4 +1,4 @@
-# Start and stop Trisul
+# Start and Stop Trisul
 
 Describes how you can start and stop Trisul components. 
 
@@ -15,7 +15,7 @@ The components
 ## Start and Stop Trisul
 
 
-:::tip Start Stop from Web UI
+:::info Start Stop from Web UI
 
 Login as admin to the Trisul UI 
 
@@ -39,7 +39,7 @@ Hence Start the HUB First, then the PROBE. During STOP follow the reverse, stop 
 :::
 
 
-### Start and Stop via command line
+### Start and Stop Via Command Line
 
 The CLI tools [trisulctl_hub](/docs/ref/trisul_hub) allows you to start and stop easily from the root command line. 
 

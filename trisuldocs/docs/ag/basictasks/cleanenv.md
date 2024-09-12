@@ -3,7 +3,7 @@
 How to delete all of the traffic data but retain the configuration. 
 
 
-## Delete all traffic data 
+## Delete All Traffic Data 
 
 Use `reset context <contextname>` to delete all data. This method
 preserves all your configuration but only deletes the data. This command
@@ -44,7 +44,7 @@ trisul_hub(domain0)> stop context default
 
 - you can do a `info context` to confirm the data is deleted.
 
-## Delete only PCAP data 
+## Delete Only PCAP Data 
 
 If you only want to delete the Probe data ; i.e the raw packet capture
 and other probe specific data. You can say <code>reset context myctx1@probe0</code> 
@@ -58,7 +58,7 @@ $ trisulctl_hub
 trisul_hub(domain0)> reset context default@probe0
 ```
 
-## Delete complete context 
+## Delete Complete Context 
 
 Delete context will get rid of the configuration and all data. Use this
 if you are sure you do not want the context anymore.

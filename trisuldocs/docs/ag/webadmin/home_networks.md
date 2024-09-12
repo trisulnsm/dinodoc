@@ -47,9 +47,9 @@ It pays to be accurate about your home network as it can impact several
 reports and views. If you want to add a new subnet to your home network
 or edit an existing entry, follow these steps.
 
-:::note navigation
+:::info navigation
 
-(login as admin) Select *Context : default \> profile0 -\> Home
+:point_right: (login as admin) Select *Context : default &rarr; profile0 -&rarr; Home
 Networks*
 
 :::
@@ -165,9 +165,9 @@ following data.
 
 ### Metrics in the Aggregates Counter Group.
 
-:::note navigation
+:::info navigation
 
-Select *Tools \> Long Term Traffic*
+:point_right: Select *Tools &rarr; Long Term Traffic*
 
 :::
 
@@ -186,7 +186,7 @@ The following chart gives you the traffic details in each direction.
 Trisul has the ability to use Flow Taggers to tag each flow with a direction hint based on the endpoint Home Addresses.
 
 1. Enable the [TagFlowsWithDirection](pathname:///docs/ref/netflow-config#TagFlowsWithDirection) setting in the Netflow configuration file
-2. You can then go to Tools \> Explore Flows to search for flows with
+2. You can then go to Tools &rarr; Explore Flows to search for flows with
    the appropriate tag.
 3. For example to see all *Transit* flows , enter `tag=[dir]transit` in
    the tool's search query.

@@ -112,7 +112,7 @@ database.
 You can create users who are only allowed to view particular contexts.
 To do that
 
-- Go to Web Admin -> Manage Users
+- Go to Web Admin &rarr; Manage Users
 - Create a new User
 - Select the contexts allowed for this user using *Allowed Contexts*
   option.

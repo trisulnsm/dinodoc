@@ -62,7 +62,7 @@ the disk percent threshold value for the probe node
 When disk usage crosses the thresholds set an “User Alert” will be
 generated.
 
-> Select *Alerts \> All Alerts -\> User Alerts*
+> Select Alerts &rarr; All Alerts -&rarr; User Alerts
 
 These alerts are also delivered instantly via E-mail.
 

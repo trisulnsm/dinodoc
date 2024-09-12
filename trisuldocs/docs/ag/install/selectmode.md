@@ -1,4 +1,4 @@
-# Selecting the  mode
+# Selecting the  Mode
 
 Trisul Network Analytics is a general platform which can be reconfigured to very specific use cases.  
 
@@ -12,7 +12,7 @@ This *product*-izing process consists of customizing counters, flows, menus, das
 The default mode of Trisul is Packet Capture based Network Security Monitoring. We recommend you switch to the appropriate mode such as NetFlow Analyzer or IPDR or ISP using this step even though you can accomplish the same manually.
 :::
 
-## First login
+## First Login
 
 
 After following the steps in [installation](doinstall). You should be able to login to the UI by opening 

@@ -2,7 +2,7 @@
 sidebar_position: 13
 ---
 
-# BadFellas plugin
+# BadFellas Plugin
 
 The Badfellas plugin checks your network traffic against millions of indicators to detect malicious activity.
 
@@ -87,7 +87,7 @@ The Badfellas package installs stub copies of the following blacklists. These fe
 | AlienVault IP Reputation | Flags IPs with poor reputation. This list includes scanners and other mischief                                                                        |        |
 | SSLBlacklist            | Hashes of maliciousSSLcertificates sourced from sslbl.abuse.ch    |        |
 
-## Feed updates
+## Feed Updates
 
 The plugin will automatically download a fresh database at a set schedule. You can control when and how frequently this database is updated by modifying the`Frequency`parameter in the rules.xml file. The default setting is 1 update every day. All feeds are updated at the same frequency.
 
@@ -98,13 +98,13 @@ The plugin will automatically download a fresh database at a set schedule. You c
 </Run>
 ```
 
-### Viewing status of feed updates
+### Viewing Status of Feed Updates
 
 To view the status of feed updates, whether the downloads were successful or not.
 
 :::note
 
-Login as admin, then select*Webadmin > Manage > Plugin Data Updates*
+Login as admin, then select*Webadmin &rarr; Manage &rarr;  Plugin Data Updates*
 
 :::
 
@@ -125,7 +125,7 @@ dpkg -i trisul_badfellas-1.0.153.amd64.deb
 
 Simply uninstall the old package and reinstall the new package.
 
-#### A sample install
+#### A Sample Install
 
 When you install you should get an output like the following.
 

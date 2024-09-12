@@ -40,7 +40,7 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 
-## Resetting the database clean
+## Resetting the Database Clean
 
 
 Uninstalling does not change the data or the configuration. If you wish to purge the data.  Do so before uninstall.

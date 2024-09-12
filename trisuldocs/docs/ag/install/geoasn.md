@@ -31,7 +31,7 @@ This plugin is distributed as aRPM/DEBpackage. Follow instructions in the[Downlo
 
 Once installed, the plugin will become effective the next time you restart Trisul Probe.
 
-## Database used and API Key
+## Database Used and API Key
 
 In order to work accurately, this plugin needs an upto-date Geo location database. We currently support geo location databases from[Maxmind](https://www.maxmind.com/)The basic install includes an out of data database inCSVformat. Once install they are automatically updated weekly.
 
@@ -62,17 +62,17 @@ The main parameters you may be interested to edit are :
 | AddFlowEdges      | true                   | Add flow edges from Country/Prefix/ASNumber. |
 | DirectionalMode   | true                   | This impacts the ASNumber counter group. If*DirectionalMode*is set toTRUE, external IPs are checked for ASNumber match in the geo databases. This is appropriate for enterprise and non-transit ISPs. When*DirectionalMode*is set toFALSE, then both IPs are matched against theASNdatabases |
 
-## Editing the config file
+## Editing the Config File
 
 The Geo.xml contains config parameters as well as global ‘feed’ items. The config items shown in the above table are updated in the usual manner. Using the[cfg.edit tool on the probe](/docs/ref/plugin_configuration )
 
 The feeds are updated on the hub node as shown below.
 
-## How updates work
+## How Updates Work
 
 Trisul is a distributed system. The Geo.xml specifies*feeds*which are downloaded only once on the Hub node by a background cron process. The hub then*pushes*these feeds to all probes.
 
-## Editing feed updates
+## Editing Feed Updates
 
 To change the feed updates or to remove feeds, edit the file in the feeds directory on theHUBnodes.
 

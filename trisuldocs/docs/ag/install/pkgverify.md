@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# Verifying packages
+# Verifying Packages
 
 
 Official Trisul package files (RPM and DEB) for Linux-based operating systems are signed with a GnuPG key available at https://trisul.org/pubkey.gpg

@@ -1,9 +1,9 @@
-# Installing a License file
+# Installing a License File
 
 This section describes how you can install a new License File.
 
 
-## The License.xyz.txt file
+## The License.xyz.txt File
 
 A new license file issued by us is typically named `License.{emailid/username}.txt` it looks something like this
 
@@ -32,13 +32,13 @@ A new license file is required for every machine because it is locked to a Machi
 :::
 
 
-## Install using Web Interface
+## Install Using Web Interface
 
 This is the recommended method suitable for most deployments. You just have to upload the new license to the Hub and Probe nodes using the *License page*
 
 :::note navigation
 
-Login as Admin → Select Context :default → Licensing
+:point_right: Login as Admin → Select Context :default → Licensing
 
 :::
 
@@ -48,11 +48,11 @@ On the Licensing page you can click on the Upload Button shown in the image belo
 ![](images/license_upload.png)
 
 
-## Install new licenses using the Command Line
+## Install New Licenses Using the Command Line
 
 The following alternate method places the new License files directly in the correct directories. You can use this method if the User Interface is not suitable for you. For example : when you want automatic deployment of license files.
 
-### Install license on Trisul Probe node
+### Install License on Trisul Probe Node
 
 1. Put the new license file in `/usr/local/etc/trisul-probe` 
 1. Change the name  of the new file to `LicenseKey.txt`  *OR*
@@ -61,13 +61,13 @@ The following alternate method places the new License files directly in the corr
 
 repeat the same for the Hub (even if on the same machine)
 
-### Install license on Trisul Hub node
+### Install License on Trisul Hub Node
 
 1. Put the new license file in`/usr/local/etc/trisul-hub`
 1. Change the name** of the new file to `LicenseKey.txt` *OR*
 2. Edit the `LicenseFile` parameter in [trisulHubConfig.xml](/docs/ref/trisulconfig#app ) to point to the new file. 
 
-### Restart Trisul Hub and Probe node
+### Restart Trisul Hub and Probe Node
 
 :::info
 Please restart both hub and probe node to take effect
@@ -75,17 +75,17 @@ Please restart both hub and probe node to take effect
 
 
 
-## View the License file in effect
+## View the License File in Effect
 
-:::note
+:::info navigation
 
-Login as Admin → Select Context → Licensing
+:point_right: Login as Admin → Select Context → Licensing
 
 :::
 
 The current license file is displayed as shown in the screenshot above.
 
-## Moving an existing License to new hardware
+## Moving an Existing License to New Hardware
 
 If you move any Trisul node (Probe or Hub) to a new machine or VM, send us the new machineid and we will reissue the License.
 

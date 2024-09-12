@@ -1,4 +1,4 @@
-# Ports used
+# Ports Used
 
 
 The following ports are required to be open for the default install of Trisul 

@@ -3,7 +3,7 @@
 
 The Trisul Network Analytics system consists of 3 Core and 2 Optional Plugin packages.
 
-## Core packages
+## Core Packages
 
 :::warning required
 These three core packages are required.
@@ -16,7 +16,7 @@ These three core packages are required.
 - :ticket: **webtrisul**
   - The webserver package 
 
-## Plugin packages
+## Plugin Packages
 
 Optional packages to provide extra functionality.
 
