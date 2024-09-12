@@ -69,6 +69,8 @@ There are more than one ways to edit a module from a dashboard,
 
 Alternatively you can also edit it from the list of [all modules](/docs/ug/ui/dashmod_intro#view-a-moduleall-modules), Click on the three lines on the right side against the module you would like to edit and click Edit.
 
+Clicking on Customize will take you to customization options based on the type of module selected. To see the parameters for different types of modules, check here: [Module Templates](/docs/ug/ui/module_templates)
+
 ### How to Clone/Delete a Module from the Dashboard
 
 If you have observed a module that you would like to add as a new module, you can Clone a similar module to create new module. For that, Go to the list of [all modules](/docs/ug/ui/dashmod_intro#view-a-moduleall-modules),and from the list of available modules, Click on the three lines on the right side against the module. Now click Clone and edit the required fields.

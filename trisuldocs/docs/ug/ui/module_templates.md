@@ -62,7 +62,7 @@ A "Key Traffic" module in Trisul is designed to monitor and analyze network traf
 
 *Figure: Key Traffic Module*
 
-### Parameters
+### Basic Parameters
 
 | Parameter name | Default value | Description     |
 | -------------- | ------------- | --------------- |
@@ -75,6 +75,12 @@ A "Key Traffic" module in Trisul is designed to monitor and analyze network traf
 | Meter          | Upload Bytes  | Shows the list of Meters to select from                                                                              |
 | Key            | -             | Provide the unique identifier that categorizes data in a network or a system according to the selected counter group |
 | Label          | -             | Enter a descriptive tag name assigned to a data point, group or category                                             |
+
+### Advanced Parameters
+
+| Parameter name | Default value | Description     |
+| -------------- | ------------- | --------------- |
+| Legend Position | Top | Choose *Top* to display the [*legend table*] above the chart, *hide* to hide the legend table and *bottom* to display the legend table below the chart |
 
 ## Toppers Traffic
 
