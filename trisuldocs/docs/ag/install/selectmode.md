@@ -1,3 +1,5 @@
+# Selecting the Product Mode
+
 :::note after install
 After installing on the server you need to select the product mode as the first step.
 :::
