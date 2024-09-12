@@ -92,8 +92,8 @@ Click the **Delete** link next to the user
 
 ## Change Own Password
 
-- Click the user name `dropdown` list at the top right side
+- Click the (*Account button*](/docs/ug/ui/userlayout#account) to open the dropdown menu at the upper right hand side of the page.
 
-- Click the edit button
+- Click *My Account*
 
-- Click **Change Password** button to change password
+- Click **Change Password** button to change the password.

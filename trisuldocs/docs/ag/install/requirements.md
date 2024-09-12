@@ -2,13 +2,13 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem'; 
 
-# System requirements
+# System Requirements
 
 
 Trisul Network Analytics runs on off the shelf servers - either bare metal or VM, under a Linux operating system. 
 
 
-## Operating systems
+## Operating Systems
 
 Packages are available for the following operating systems. 
 
@@ -30,7 +30,7 @@ The two major modes of running Trisul are:
 See below for typical requirements. 
 
 
-## NetFlow Analyzer requirements
+## NetFlow Analyzer Requirements
 
 NetFlow sizing is based on number of devices and interfaces.  Click a tab that is matches your network.
 
@@ -114,7 +114,7 @@ Large enterprises with > 20,000 endpoints.
 
 
 
-## Packet Capture requirements
+## Packet Capture Requirements
 
 Packet capture sizing is based on total packet bandwidth.  This is not the link speed but rather the actual utilization of the link. Click a tab that is matches your network.
 
@@ -197,7 +197,7 @@ This is a typical configuration for 40Gbps packet capture used in ISP settings. 
 
 This section contains more detailed information about the workloads. Read this to understand incremental scaling needs.
 
-### Load profile 
+### Load Profile 
 
 The load profile of the Probe and Hub components.
 
@@ -207,7 +207,7 @@ The load profile of the Probe and Hub components.
 | Trisul Probe | PCAP storage and streaming analytics | CPU bound|  
 
 
-### Trisul Hub scaling rules 
+### Trisul Hub Scaling Rules 
 
 The Trisul hub is a data storage and query node with a high bandwidth and low latency I/O to the Trisul Probes.
 Disk sizing is a key concern of the hub.
@@ -218,7 +218,7 @@ Disk sizing is a key concern of the hub.
 
 
 
-### Trisul Probe scaling rules 
+### Trisul Probe Scaling Rules 
 
 Some guidelines in table below for sizing the Trisul Probe node.
 
@@ -226,7 +226,7 @@ Some guidelines in table below for sizing the Trisul Probe node.
 | ----------- | ----------------- | -------------------------- |
 | Raw Packets | For every 200Mbps | 1 3Ghz Core + 4GB DDR4     |
 
-### Scaling NetFlow mode
+### Scaling NetFlow Mode
 
 The relevant scaling metric is NetFlow bandwidth, this represents the total bandwidth taken by NetFlow packets. The mapping typically is
 

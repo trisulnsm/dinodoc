@@ -8,11 +8,11 @@ Sections in this document
 - **Network Taps**– recommended for links > 500Mbps
 - **Bridges**– for small offices and appliances only
 
-### Virtual Machine configuration
+### Virtual Machine Configuration
 
 If you are installing Trisul on a Virtual Machine, you may need to put the Virtual Switch in promiscuous mode to capture the traffic on the Physical port span. See this link for instructions for[VMWare](https://kb.vmware.com/s/article/1004099)
 
-## Configuring port mirror / SPAN Port
+## Configuring Port Mirror / SPAN Port
 
 The following diagram shows how you can configure aSPANport and feed packets into Trisul. See your switch vendor’s documentation on configurating a PortSPANsession. [[CiscoSPANdocumentation](https://www.cisco.com/c/en/us/support/docs/switches/catalyst-6500-series-switches/10570-41.html)]
 
@@ -28,7 +28,7 @@ SPANports quickly become unweildy as network speeds increase. Network taps are a
 
 Network Tap used with 10G optical fiber. Each direction needs a tap and sent to two ports on Trisul-Probe
 
-## Using Trisul as a bridge
+## Using Trisul as a Bridge
 
 For small office networks you can even use 2 Ports of the box running Trisul and create a bridge. This places Trisul as an inline device.
 
@@ -40,7 +40,7 @@ Bridge : Use the Trisul-Probe inline as a bridge. Useful for small deployments
 
 A bridge allows you to connect two or more network segments together allowing devices to join the network when it’s not possible to connect them directly to a router or switch
 
-#### How to bridge
+#### How to Bridge
 
 **UBUNTU**
 

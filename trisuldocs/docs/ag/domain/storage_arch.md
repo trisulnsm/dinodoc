@@ -9,10 +9,7 @@ Optimizing disk storage is a key part of Trisul. This section describes.
 - How data is stored on the *Trisul Probe*
 - Optimizing Packet PCAP storage on the Trisul Probe 
 
-
-
-
-## Sliding slices
+## Sliding Slices
 
 Trisul uses an innovative sliding mechanism to store raw packets.
 
@@ -36,7 +33,7 @@ You have to edit the following parameters to suit your environment.
 
 See the [trisulConfig.xml](https://trisul.org/docs/ref/trisulconfig.html) documentation for more details.
 
-## Mapping disks to slices
+## Mapping disks to Slices
 
 The slice architecture allows you to configure hardware resources for peak performance. The concept behind the optimization is :
 
@@ -50,7 +47,7 @@ below :
 
 ![](images/fullcontentdisk.png)
 
-## Flexible policies for volume reduction
+## Flexible Policies for Volume Reduction
 
 Storing raw packets can be tricky due to the volume of storage 
 required. Not every organization has the resources to store absolutely 
@@ -88,7 +85,7 @@ Rule chain :
 
 For detailed syntax for specifying the rule chain, see the Ring section in [trisulConfig.xml](https://trisul.org/docs/ref/trisulconfig.html#ring)
 
-## Encrypted content
+## Encrypted Content
 
 Raw packets represent all of your network communications over an extended time period.
 

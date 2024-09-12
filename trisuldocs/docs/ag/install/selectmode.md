@@ -1,10 +1,6 @@
-# Selecting the mode
-
-
 :::note after install
 After installing on the server you need to select the product mode as the first step.
 :::
-
 Trisul Network Analytics is a general platform which can be reconfigured to very specific use cases.  
 
 This *product*-izing process consists of customizing counters, flows, menus, dashboards and so on. For ease of use you can simply select the configuration set up front after installation.
@@ -25,8 +21,7 @@ The default mode of Trisul is Packet Capture based Network Security Monitoring. 
 |**Packet** <br/>Packet Capture based Network Security Monitoring (the default)|**NetFlow Analyzer**<br/>Turn into a NetFlow Monitor|**IPDR Compliance**<br/>A ISP/Telco flow and NAT logging solution for regulatory compliance|**ISP Analytics**<br/> For ISPs looking for peering analytics, BGP Route Analytics, Prefixes and so on|
 
 
-## First login
-
+## First Login
 
 After following the steps in [installation](doinstall). You should be able to login to the UI by opening 
 

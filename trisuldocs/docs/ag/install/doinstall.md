@@ -3,7 +3,7 @@
 This page contains install information about Trisul Network Analytics.
 
 
-## Installing all packages
+## Installing All Packages
 
 
 Select the instructions as per the platform of your choice to install the "Trisul-Full" meta package consisting of all packages. 
@@ -101,10 +101,10 @@ import TabItem from '@theme/TabItem';
 :::
 
 
-## Installing each package 
+## Installing Each Package 
 
 
-### Via the repository 
+### Via the Repository 
 
 Follow the steps above to add the repository, in the final step instead of 'Trisul-Full' specify the individual packages to install.
 
@@ -153,7 +153,7 @@ Download each DEB package and install them manually using the normal debian pack
 
 You can use rpm or yum to install the packages.
 
-### Adding the YUM repository
+### Adding the YUM Repository
 
 You only have to do this once to add the Trisul repository to `yum.repos.d`
 
@@ -178,7 +178,7 @@ then install the packages normally. The following example installs the Trisul co
 
 
 
-### Installing the RPM packages manually
+### Installing the RPM Packages Manually
 
 Download each RPM file and use the usual RPM tool `rpm -Uvh`to install them `rpm -Uvh trisul-probe-7.0xyz.rpm`etc.
 
@@ -186,7 +186,7 @@ Download each RPM file and use the usual RPM tool `rpm -Uvh`to install them `rpm
 ----
 
 
-## Distributed install
+## Distributed Install
 
 The default installation and the free license allows you to put all componments on a single server. Once you wish to scale up, you can deploy a number of trisul-probe’s reporting to one of more trisul-hub nodes. The rules are :
 

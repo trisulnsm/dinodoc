@@ -2,7 +2,7 @@
 sidebar_position: 9
 ---
 
-# Viewing log files
+# Viewing Log Files
 
 Trisul has a rich logging and monitoring framework. This section explains
 
@@ -10,7 +10,7 @@ Trisul has a rich logging and monitoring framework. This section explains
 2. utilities for viewing log files
 3. the ‘rat’ tool used for in depth monitoring of Trisul Probe pipelines
 
-## Log file locations
+## Log File Locations
 
 The three types of log files are
 
@@ -20,28 +20,28 @@ The three types of log files are
 
 The locations of these files are :
 
-### On the Probe nodes
+### On the Probe Nodes
 
-| type        | what it is   | default location   | files   |
+| Type        | What it is   | Default location   | Files   |
 | ----------- | -------------------------------| ------------------ | -----------------|
 | Application | main trisul probe process      | `/usr/local/var/log/trisul-probe/domain0/probe0/context0`replace the domain, probe, and context with the actual fields if you have created your own contexts                     | ns-.log – trisul probe logs, xLuaX.log redirected print() statements fromLUAscript instances |
 | Domain      | domain processes that co-ordinate nodes | `/usr/local/var/log/trisul-probe/domain0/probe0`replace with probe ID. Each probe has its own domain processes because they are independent entities even if on the same machine | cp-XX.log probe logs                                                                           |
 
-### On the Hub nodes
+### On the Hub Nodes
 
-| type        | what it is    | default location   | files  |
+| Type        | What it is    | Default location   | Files  |
 | ----------- | ---------------------------- |-----| ---- |
 | Application | trisul-hub Flush process    | `/usr/local/var/log/trisul-hub/domain0/hub0/context0`replace the domain, hub, and context with the actual values | fs-.log – trisul_flushd database writer logs , qs_.log – trisul_trpdTRPdatabase query logs |
 | Domain      | domain processes that co-ordinate nodes | `/usr/local/var/log/trisul-hub/domain0/hub0`  | cp-XX.log hub logs  |
 | Domain      | domain processes that co-ordinate nodes | `/usr/local/var/log/trisul-hub/domain0`  | rt-XX.log domain router log   |
 
-### On the database
+### On the Database
 
-| type        | what it is               | default location        | files   |
+| Type        | What it is               | Default location        | Files   |
 | ----------- | ------------------------ | ----------------------------------------- | -- |
 | Application | Web Trisul webserver log | `/usr/local/var/log/trisul-hub/webtrisul` | production.log – the main webserver log |
 
-## Local viewing
+## Local Viewing
 
 The most common scenario is to`tail -f`the Trisul Probe logs. You can use the aliases defined in`trisbashrc`to help with this.
 
@@ -65,7 +65,7 @@ Similarly for the Hub Node
 - Use`tailf.ws`to tail webtrisul logs
 - Use`cd.wl`to change directory to webtrisul log directory
 
-## Remote viewing
+## Remote Viewing
 
 Using the trisulctl_ tools you can view log files on any node. This is a really powerful feature that even allows you to`tail`logs on any node. A common use case is to investigate errors on remote probes from a central hub location.
 

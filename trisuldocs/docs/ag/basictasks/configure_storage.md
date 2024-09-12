@@ -6,7 +6,7 @@ Data retention policy refers to the number of days you want to keep historical d
 2. How much metrics, flows, alerts in **Days** (hub nodes) **default 96 days**
 
 
-## Check current Per-Day Disk Usage 
+## Check Current Per-Day Disk Usage 
 
 One of the first things you need to do is to calculate how much disk you are going to need to meet your data retention requirements.
 
@@ -141,7 +141,7 @@ In the example below we have a `FileSizeMB` set to  `1000MB` or 1GB and number o
 
 
 
-### Move packets to a different volume
+### Move Packets to a Different Volume
 
 Follow the instructions for[`trisulctl_probe relocate context`](/docs/ag/basictasks/reloc)command to relocate the probe capture files to a different directory.
 

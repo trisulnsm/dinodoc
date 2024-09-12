@@ -19,9 +19,9 @@ Check [Proxy Settings](/docs/ag/webadmin/web_options#proxy-server) if you are be
 
 To access Trisul Apps, Login as admin user
 
-:::note navigation
+:::info navigation
 
-Select *Web Admin > Manage > Apps*
+:point_right: Select Web Admin > Manage > Apps
 
 :::
 
@@ -71,39 +71,39 @@ Here is a list of all the available apps. We are constantly adding new Apps, to 
 
 **JS Dashboard Apps**
 
-| App                                | Description                                                                                                                                                                                                                               |
-|:----------------------------------:| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CIDR Explore Flows                 | View host,app,protocol topper for cidr tagger subnets                                                                                                                                                                                     |
-| Country Analytics Drilldown        | View country mappings for routers and interfaces                                                                                                                                                                                          |
-| Daily Key Report                   | Shows daily usage report for a key                                                                                                                                                                                                        |
-| Edge vertex Monitor                | Show usage report for selected guid,meters and keys                                                                                                                                                                                       |
-| Geo IP Lookup                      | Shows the ip look up. Shows ASNumber , ASNumber path,Country etc.                                                                                                                                                                         |
-| ISP Country Analytics              | View country mappings for routers and interfaces                                                                                                                                                                                          |
-| ISP External Prefixes Analytics    | View external prefixes mappings for routers and interfaces                                                                                                                                                                                |
-| ISP OTT App Analytics              | View OTT Apps mappings for routers and interfaces                                                                                                                                                                                         |
-| ISP Overview                       | Top level dashboard for ISP.Shows ASN, Peers, Prefixes, and BGP KPI for ISP                                                                                                                                                               |
-| ISP Router Geo Map                 | View country locations for your router in vector map.                                                                                                                                                                                     |
-| IXP Analytics                      | L2 IXP Traffic Analytics. Traffic Matrixat Internet Exchange Points Matrix, Per Member, traffic history of eacTX Flow for planning and billing                                                                                           |
-| Interface Traffic Matrix           | View interface to interface traffic flows. A complete and long term accurate view of interface to interface transmit and receivefic flows within a router.                                                                                |
-| Key Space Explorer                 | Search all active key space and get total usage.                                                                                                                                                                                          |
-| Multi Probe Charts                 | Draw a multi-probe chart. Shows chart data from all probes You can plot any counter group, key, and meter.                                                                                                                                |
-| PCAP Totals                        | Shows duraion,total bandwidth,packets and flows Shows total No.of Resources(http,dns,ssl) and FTS. Shows total No.of alerts for all alerts group(IDS,Blacklist,Flow Tracking,Threshold crossing). Shows No.of keys in each counter group. |
-| Path Analytics                     | Shows the top used AS PATHS. Route Per Hop Analytics-Receive Usage of busiest route segments                                                                                                                                              |
-| Peering Analytics                  | View ASN traffic maps for routers and interfaces                                                                                                                                                                                          |
-| Peering Analytics Drilldown        | View ASN mappings for routers and interfaces                                                                                                                                                                                              |
-| Prefix Analytics Drilldown         | View Prefix mappings for routers and interfaces                                                                                                                                                                                           |
-| Protocol Tree Viewer               | View metrics in a Protocol Tree                                                                                                                                                                                                           |
-| Sankey Crossdrill                  | Show sankey chart for crosskey filter counter group                                                                                                                                                                                       |
-| Search Keys                        | Search keys to check any usage activity in your network                                                                                                                                                                                   |
-| Security Overview – Internal Hosts | Shows IDS and Badfellas alerts count for internal hosts                                                                                                                                                                                   |
-| Super search host                  | Search all hosts by domain name and print total usage of each.                                                                                                                                                                            |
+| App                                | Description                                                          |
+|:----------------------------------:| ---------------------------------------------------------------------|
+| CIDR Explore Flows                 | View host,app,protocol topper for cidr tagger subnets                |
+| Country Analytics Drilldown        | View country mappings for routers and interfaces                     |
+| Daily Key Report                   | Shows daily usage report for a key                                   |
+| Edge vertex Monitor                | Show usage report for selected guid,meters and keys                  |
+| Geo IP Lookup                      | Shows the ip look up. Shows ASNumber , ASNumber path,Country etc.    |
+| ISP Country Analytics              | View country mappings for routers and interfaces                     |
+| ISP External Prefixes Analytics    | View external prefixes mappings for routers and interfaces           |
+| ISP OTT App Analytics              | View OTT Apps mappings for routers and interfaces                    |
+| ISP Overview                       | Top level dashboard for ISP.Shows ASN, Peers, Prefixes, and BGP KPI for ISP|
+| ISP Router Geo Map                 | View country locations for your router in vector map.                |
+| IXP Analytics                      | L2 IXP Traffic Analytics. Traffic Matrixat Internet Exchange Points Matrix, Per Member, traffic history of eacTX Flow for planning and billing                                          |
+| Interface Traffic Matrix           | View interface to interface traffic flows. A complete and long term accurate view of interface to interface transmit and receivefic flows within a router.                      |
+| Key Space Explorer                 | Search all active key space and get total usage.                     |
+| Multi Probe Charts                 | Draw a multi-probe chart. Shows chart data from all probes You can plot any counter group, key, and meter.                                                                              |
+| PCAP Totals                        | Shows duraion,total bandwidth,packets and flows Shows total No.of Resources(http,dns,ssl) and FTS. Shows total No.of alerts for all alerts group(IDS,Blacklist,Flow Tracking,Threshold crossing). Shows No.of keys in each counter group.                                                           |
+| Path Analytics                     | Shows the top used AS PATHS. Route Per Hop Analytics-Receive Usage of busiest route segments                                                                                       |
+| Peering Analytics                  | View ASN traffic maps for routers and interfaces                      |
+| Peering Analytics Drilldown        | View ASN mappings for routers and interfaces                          |
+| Prefix Analytics Drilldown         | View Prefix mappings for routers and interfaces                       |
+| Protocol Tree Viewer               | View metrics in a Protocol Tree                                       |
+| Sankey Crossdrill                  | Show sankey chart for crosskey filter counter group                   |
+| Search Keys                        | Search keys to check any usage activity in your network               |
+| Security Overview – Internal Hosts | Shows IDS and Badfellas alerts count for internal hosts               |
+| Super search host                  | Search all hosts by domain name and print total usage of each.        |
 | Usage Activity Heatmap             | Shows key activity usage in d3 heatmap visualization Day/Hour. Shows key usage activity hour by hour for recent 7 days. You can plotkey with any meter.                                                                                   |
 | SNMP vs Netflow                    | Compare netflow traffic with snmp traffic from interfaces                                                                                                                                                                                 |
 
 **Shared Dashboard Apps**
 
-| App                      | Description                                                                                                                                                                                                    |
-| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| App                      | Description                                                                     |
+| ------------------------ | ------------------------------------------------------------------------------- |
 | DNS monitoring           | DNS Custom Metrics and dashboards                                                                                                                                                                              |
 | ISP Dashboard Pack       | Some useful dashboards for ISP Analytics. Dashboards include Prefix analysis, Int, Ext, Toppers                                                                                                                |
 | Probe Performance        | This dashboard shows CPU usage, Memory usage, Packet drops, Disk Bandwidth for PCAPs, Read IOPs, Write IOPs, am flush performance, along with Total Bandwidth.                                                 |
@@ -113,8 +113,8 @@ Here is a list of all the available apps. We are constantly adding new Apps, to 
 
 **Lua Analytics Apps**
 
-| App                         | Description                                                                                                                                                                                                                                                                              |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| App                         | Description                                                                  |
+| --------------------------- | ---------------------------------------------------------------------------- |
 | Alienvault OTX              | Scan your traffic against AlienVault OTX intel needs the IOC-Harvestor app and Alien OTX Key.                                                                                                                                                                                            |
 | FireHOL checker             | FireHOL is a well curated set of IP that must be blocked. Shows Alerts if activity seen from FireHOL blacklist                                                                                                                                                                           |
 | Flexible CIDR Tagger        | Adds CIDR tags to flows and allows you to search fast for entire subnet flows,based on IP2Location db Country, ASN, City, and Proxy metrics based on the IP2Location databases                                                                                                           |

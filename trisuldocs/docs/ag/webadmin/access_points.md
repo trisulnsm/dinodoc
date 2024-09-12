@@ -10,9 +10,9 @@ Connect protocols to ports. Common use case is to specify Netflow ports
 
 Login as `admin` user to manage access points.
 
-:::note navigation
+:::info navigation
 
-Select *Context : default \> profile0 -\> Access Points*
+:point_right: Select *Context : default &rarr; profile0 -&rarr; Access Points*
 
 :::
 
@@ -20,9 +20,9 @@ Select *Context : default \> profile0 -\> Access Points*
 
 Login as `admin` user to manage access points.
 
-:::note navigation
+:::info navigation
 
-Select *Context : default \> profile0 -\> Access Points*
+:point_right: Select *Context : default &rarr; profile0 -&rarr; Access Points*
 
 :::
 

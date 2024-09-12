@@ -25,17 +25,17 @@ To create a new User, Select **Create a new User** option
 
 - You are shown the form with following fileds
 
-| Field Name            | Description                                                                              |
-| --------------------- | ---------------------------------------------------------------------------------------- |
-| User Name             | A username or if using LDAP, a login atrribute like mail/uid/username                    |
-| Authentication        | Local auth or a LDAP domain you have configured earlier                                  |
-| Password              | Password for local authentication. Minimum 6 characters                                  |
-| Full Name             | Optional: User full name                                                                 |
-| Role                  | User role such as operator, admin etc.                                                   |
-| Allow multiple Login  | Allow multiple concurrent login sessions for this user                                   |
-| Default Dashboard     | Select a dashboard to send the user to after login                                       |
-| Default Home Page URL | User will be redirected to this page after successful login, overrides default dashboard |
-| Allowed Contexts      | User is only allowed to login to these contexts                                          |
+| Field Name            | Description                                                                             |
+| --------------------- | ----------------------------------------------------------------------------------------|
+| User Name             | A username or if using LDAP, a login atrribute like mail/uid/username                   |
+| Authentication        | Local auth or a LDAP domain you have configured earlier                                 |
+| Password              | Password for local authentication. Minimum 6 characters                                 |
+| Full Name             | Optional: User full name                                                                |
+| Role                  | User role such as operator, admin etc.                                                  |
+| Allow multiple Login  | Allow multiple concurrent login sessions for this user                                  |
+| Default Dashboard     | Select a dashboard to send the user to after login                                      |
+| Default Home Page URL | User will be redirected to this page after successful login, overrides default dashboard|
+| Allowed Contexts      | User is only allowed to login to these contexts                                         |
 
 Select **Create User** option to create a new user.
 

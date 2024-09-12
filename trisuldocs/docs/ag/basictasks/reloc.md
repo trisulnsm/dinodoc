@@ -63,7 +63,7 @@ Enter new location (enter to quit) : /nsm/trisuldata
 > :point_right: Restart after relocation is complete. See [here](#after-relocation-restart) for instructions
 
 
-## After relocation restart 
+## After Relocation Restart 
 
 After relocation you need to restart Trisul and also the Web Server.
 

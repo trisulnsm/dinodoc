@@ -35,8 +35,8 @@ setup, Multiple profiles will be created automatically and listed here.
 
 You are shown the form with following fields
 
-| Field Name          | Description                                                                                   |
-| ------------------- | --------------------------------------------------------------------------------------------- |
+| Field Name          | Description                                                           |
+| ------------------- | --------------------------------------------------------------------- |
 | Profile Name        | Name for the profile. Name should be alpha numeric and length should not exceed 10 characters |
 | Profile Description | Describes the function of the profile created                                                 |
 | Clone from Context  | You can choose between multiple context to clone profile                                      |
@@ -149,9 +149,9 @@ and once the Primary site is down, the DR site is up.
 We can configure the Primary site in such a way that we can check if the
 DR site is running.
 
-:::note navigation
+:::info navigation
 
-Login as User. Select Manage -\> App Settings -\> DR Settings.
+:point_right: Login as User. Select Manage &rarr; App Settings &rarr; DR Settings.
 
 :::
 
@@ -202,8 +202,8 @@ you can type the IP along with the subnets.
 
 You are shown the form with following fields
 
-| Field Name     | Description                                                                                                 |
-| -------------- | ----------------------------------------------------------------------------------------------------------- |
+| Field Name     | Description                                              |
+| -------------- | -------------------------------------------------------- |
 | Network Number | Enter a network number : Example 19.28.182.0 or Enter a newtork number with CIDR : Example 192.168.182.0/24 |
 | Network Mask   | Enter a subnet mask : Example 255.255.255.0                                                                 |
 
@@ -433,9 +433,9 @@ from one place.
 
 To access that
 
-:::note navigation
+:::info navigation
 
-Login as Admin -\> Select Context and profile -\> Under Alerts -\> Email
+:point_right: Login as Admin &rarr; Select Context and profile &rarr; Under Alerts &rarr; Email
 Alerts Wizard
 
 :::
@@ -501,8 +501,8 @@ Read community. A multiple number of Router IPs can be added.
 
 > To add a new SNMP agent, Select **Add New SNMP Agent** option
 
-| Field Name          | Description                                                                                              |
-| ------------------- | -------------------------------------------------------------------------------------------------------- |
+| Field Name          | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
 | IP Address          | IP address of snmp device. You can add multiple devices at once. Specify multiple IPs separated by comma |
-| SNMP Version        | SNMP version v1 or v2c or v3. Select V3 to show SNMPv3 parameters                                        |
-| SNMP Read Community | SNMP read community string                                                                               |
+| SNMP Version        | SNMP version v1 or v2c or v3. Select V3 to show SNMPv3 parameters  |
+| SNMP Read Community | SNMP read community string                               |
