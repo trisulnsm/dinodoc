@@ -151,19 +151,31 @@ So you can select a specific time period by dragging the slider handles to choos
 
 
 ### Retro Tabs
+The *Retro Tabs* feature provides a user interface element that enables users to segment and display temporal data in various time-based categories.
 
-![](images/markpcapavailability.png)
+![](images/retrotabs.png)
 *Figure: Retro Tabs*
-The Retro Tabs feature provides a user interface element that enables users to segment and display temporal data in various time-based categories, including:
 
-    Hours Tab: Displays data aggregated at an hourly granularity, showcasing intra-day trends and patterns.
-    Days Tab: Presents data summarized on a daily basis, highlighting day-to-day variations and longer-term trends.
-    Weeks Tab: Segments data into weekly intervals, facilitating analysis of week-over-week patterns and seasonality.
-    Custom Tab: Redirects users to the Time Selector tool, allowing for flexible, user-defined time ranges and custom data segmentation.
+The time-based tabs include:
+
+  **Hours** Tab: Displays data aggregated at an hourly granularity, showcasing intra-day trends and patterns.  
+  **Days** Tab: Presents data on a daily basis, highlighting day-to-day variations and longer-term trends.  
+  **Weeks** Tab: Segments data into weekly intervals, facilitating analysis of week-over-week patterns and seasonality.  
+  **Custom** Tab: Redirects users to the [Time Selector](/docs/ug/ui/elements#time-selector), allowing for flexible, user-defined time ranges and custom data segmentation.
 
 By selecting a Retro Tab, users can effortlessly switch between different time-based views of their data, gaining insights into various aspects of their temporal data distribution.
 
 ### PCAP Availability
 
+The chart features a visual indicator to denote the availability of PCAP (Packet Capture) data during specific time periods. This indicator is displayed as a light yellow color overlay on the chart, highlighting the time ranges where PCAP data is available.
+
 ![](images/markpcapavailability.png)
-*Figure: Indication of PCAP Availability*
+*Figure: The Light Yellow Color Indicating PCAP Availability*
+
+>**Interpretation**:  
+>Time periods with a light yellow overlay indicate that PCAP data is available for that specific interval.  
+>The absence of the light yellow overlay indicates that PCAP data is not available for that time period.
+
+
+
+
