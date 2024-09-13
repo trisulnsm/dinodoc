@@ -144,51 +144,6 @@ Shows most significant currently active IP flows. This is based on [Flow Tracker
 
 Flows tracked include TCP/UDP/GRE/IPSEC/ and all flows at IP Layer.
 
-## ASN Monitoring
-
-Monitor traffic by ASN. Helps you with planning peering relationships
-with Autonomous Systems at Gateway points.
-
-:::info navigation
-
-:point_right: Select *Retro Counters* select a Time Interval and then select “AS
-Number” from the dropdown
-
-:::
-
-### Monitor Total Volume Per AS
-
-![](images/dashboards/asn.png)  
-*Figure: Showing Total Traffic to and From AS*
-
-### Monitor Time Series Traffic Profile Per AS
-
-![](images/dashboards/asn-2.png)  
-*Figure: Showing Timeseries Traffic profiles per Autonomous System at Gateways*
-
-The Autonomous System traffic is monitored using two mechanisms
-
-***From packets***  
-using a built in database of AS IP Prefixes
-
-***From netflow***  
-from border routers peering AS BGP information
-
-------------------------------------------------------------------------
-
-## Country Location Based Traffic Monitoring
-
-Monitor traffic uploaded and download on a per-Country basis. The
-Country Code can also be added to every single flow using [Automatic
-Flow Taggers](/docs/ug/flow/tagger) The included statistics are Top-K, Time Series Traffic Profile for planning and trending, and Bottom-K for outlier and security applications. You can even map the traffic down to the City/Country level.
-
-### Traffic Upload and Download
-
-Keep track of which countries give most traffic , flows, Top-N, Bottom-N
-and Time series trending supported.
-
-![](images/dashboards/country1.png)  
-*Showing Top-N country traffic by upload and download*
 
 ## Real Time Alerts
 
