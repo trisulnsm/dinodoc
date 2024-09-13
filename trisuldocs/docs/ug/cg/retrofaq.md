@@ -56,7 +56,7 @@ You will then be presented with a UI similar to this one shown below.
 Here is how you use the UI.
 
 ***The time selector***  
-Drag and select a time interval of interest to zoom or pan the detailed view. You can also custom select time range using calendar.
+Drag and select a time interval of interest to zoom or pan the detailed view. You can also custom select time range using [*Time Selector*](/docs/ug/ui/elements#time-selector).
 
 ***Network FAQ***  
 Simply click on a question to run the corresponding analysis for the

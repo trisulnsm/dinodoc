@@ -153,7 +153,7 @@ Directions to Create new keyset counter groups
 
 :::info navigation
 
-Login as Admin &rarr; Select Context :default &rarr; profile0 &rarr;  Custom Counters
+:point_right: Login as Admin &rarr; Select Context :default &rarr; profile0 &rarr;  Custom Counters
 &rarr; Keysets
 
 :::
@@ -212,9 +212,7 @@ Examples :
 
 :::info navigation
 
-:point_right: Login as Admin &rarr; Select Context 
-
-:default&rarr; profile0 &rarr; Custom Counters&rarr; Stat Based
+:point_right: Login as Admin &rarr; Select Context:default&rarr; profile0 &rarr; Custom Counters&rarr; Stat Based
 
 :::
 

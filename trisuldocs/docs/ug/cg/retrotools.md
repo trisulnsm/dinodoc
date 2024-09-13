@@ -8,8 +8,8 @@ You have selected a time interval you want to focus on - whats next ?
 Now you need to select an analysis tool to apply to the time interval.
 
 To view retro analysis tools,
-:::note navigation
-Go to Retro&rarr;Retro analysis tools
+:::info navigation
+:point_right: Go to Retro&rarr;Retro analysis tools
 :::
 
 You can find the list of retro tools below the time selector as shown in this example.
@@ -42,9 +42,9 @@ Network FAQ is a tool that allows you to save and easily access frequently perfo
 
 To view Network FAQ,
 
-:::note navigation
+:::info navigation
 
-Go to Retro&rarr;Retro tools&rarr;Network FAQ
+:point_right: Go to Retro&rarr;Retro tools&rarr;Network FAQ
 
 :::
 
@@ -62,9 +62,9 @@ Counter Group Toppers views the top entities (e.g., hosts, ports, protocols) tha
 
 To view Counter Group Toppers,
 
-:::note navigation
+:::info navigation
 
-Go to Retro&rarr;Retro tools&rarr;Counter Group Toppers
+:point_right: Go to Retro&rarr;Retro tools&rarr;Counter Group Toppers
 
 :::
 
@@ -114,13 +114,13 @@ To investigate any application,
 
 :::
 
-Enter an port value say p-0587 and you will  get the detailed activity including the flows matching the time interval, activity details like top peers, top apps, flow taggers, interfaces, etc.
+Enter a port value say p-0587 and you will  get the detailed activity including the flows matching the time interval, activity details like top peers, top apps, flow taggers, interfaces, etc.
 
 ![](images/applicationretro.png)
 
 *Figure: Investigate Applications Retro Tool*
 
-The analysis will take you to the [Explore](/docs/ug/tools/explore_flows) tool with the selected items and time interval.
+The analysis will take you to the [*Explore Flows*](/docs/ug/tools/explore_flows) tool with the selected items and time interval.
 
 ## Long Term Traffic Charts
 
@@ -142,7 +142,7 @@ by day.
 
 *Figure: Long Term Traffic Charts Retro Tool*
 
-You can click on the **Show Search Form** on the top right for long term traffic charts and click on any date range in the **Time Frame**window to view the traffic for that selected time period. This tool will take you to the [Long term traffic trends](/docs/ug/tools/analyze_item) tool with the start time and other selections automatically filled in.
+You can click on the [*Show Search Form*](/docs/ug/ui/elements#hide-show-search-form) on the top right for long term traffic charts and click on any date range in the [*Time Frame*](/docs/ug/ui/elements#time-selector) window to view the traffic for that selected time period. This tool will take you to the [Long term traffic trends](/docs/ug/tools/analyze_item) tool with the start time and other selections automatically filled in.
 
 ## Security Alerts Retro
 
@@ -237,6 +237,7 @@ then save them as PDF if you wish.
 *Figure: Show Traffic Chart Retro Tool*
 
 ## Pull Packets
+<span class="badge badge--primary">PCAP Mode Only</span>
 
 Pull up a sample of raw packets for the selected time interval and
 additional criteria.

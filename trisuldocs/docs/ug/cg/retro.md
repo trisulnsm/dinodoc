@@ -51,27 +51,7 @@ To select a time window
 ### Select Using a Calendar
 
 You may also skip the chart entirely and use a calendar to manually
-select a time window.
-
-1. Click on the *Custom/Select* tab above the chart as shown in the image
-   below and choose Custom range to view the retro chart for that time window.
-
-![](images/calendarretro.png)
-
-*Figure: Showing Custom Time Selection Uisng Calendar for Retro Chart*
-
-### Expanding the Selection Window
-
-Click on the tabs Hours, Days, Weeks to display wider windows in the
-chart below.
-
-| Tabs  | Description               |
-| ----- | ------------------------- |
-| Hours | Shows the recent 48 hours |
-| Days  | Shows the recent 8 days   |
-| Weeks | Shows the recent 16 weeks |
-
-You can then zoom in to the timeframe of interest
+select a time window using the [*Time Selector*](/docs/ug/ui/elements#time-selector) and [*Retro Tabs*](/docs/ug/ui/charts#retro-tabs).
 
 ### Zoom / Pan
 
