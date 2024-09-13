@@ -7,9 +7,9 @@ sidebar_position: 11
 Shows status of automatic feed updates for Badfellas, Geo, URLfilter
 plugins
 
-:::note navigation
+:::info navigation
 
-To access this login as `admin` and select WebAdmin Manage -\> Plugin
+:point_right: To access this login as `admin` and select WebAdmin Manage &rarr; Plugin
 Data Updates
 
 :::

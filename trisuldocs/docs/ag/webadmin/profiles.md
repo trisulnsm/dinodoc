@@ -10,10 +10,10 @@ parameters for any profile.
 
 ## View List of Capture Profiles
 
-:::note navigation
+:::info navigation
 
-Login as admin and Select *Context : default \> profile0 -\> Capture
-Adapters*
+:point_right: Login as admin and Select Context : default &rarr; profile0 &rarr; Capture
+Adapters
 
 :::
 
@@ -25,24 +25,24 @@ can create a new profile and enable that one.
 
 Say you want to create a new network adapter for profile0 in context0.
 
-:::note navigation
+:::info navigation
 
-Select *Context : default \> profile0 -\> Capture Adapters*  
+:point_right: Select Context : default &rarr; profile0 &rarr; Capture Adapters 
 Click **Create Adapter**
 
 :::
 
 A form with the following fields are displayed
 
-| Field              | Description                                                                                                                                                                                     |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Name               | A unique name for this profile                                                                                                                                                                  |
-| Network Interface  | The linux network interface name - such as *eth0*, *eth1*, *wlan0*                                                                                                                              |
+| Field              | Description                                                                  |
+| ------------------ | ---------------------------------------------------------------------------- |
+| Name               | A unique name for this profile                                               |
+| Network Interface  | The linux network interface name - such as *eth0*, *eth1*, *wlan0*           |
 | BPF Filter         | A BPF (libpcap/tcpdump) filter expression (see [notes below](/docs/ag/webadmin/profiles#specifying-a-bpf-filter-for-afpacket-and-rxring) on how to generate this for rxring mode - the default) |
-| ERSPAN Interface   | Decapsulate all ERSPAN packets on this interface. If this option is disabled, ERSPAN is counted as a single IP+GRE tunnel.                                                                      |
-| Add Ethernet FCS   | Add 4 byte FCS to packet length. Use to option to reconcile with SNMP based counters.                                                                                                           |
-| Force Netflow Mode | Force this adapter into Netflow Mode - use this option if you want to use a mix of Netflow and Packet capture on a per-adapter basis.                                                           |
-| Description        | A short description of the profile                                                                                                                                                              |
+| ERSPAN Interface   | Decapsulate all ERSPAN packets on this interface. If this option is disabled, ERSPAN is counted as a single IP+GRE tunnel.                                                                  |
+| Add Ethernet FCS   | Add 4 byte FCS to packet length. Use to option to reconcile with SNMP based counters.|
+| Force Netflow Mode | Force this adapter into Netflow Mode - use this option if you want to use a mix of Netflow and Packet capture on a per-adapter basis.                                                          |
+| Description        | A short description of the profile                                           |
 
 ### Provider Specific Options
 
@@ -109,9 +109,9 @@ Full NTPL command.
 
 ## Specifying a BPF Filter for AFPACKET and RXRING
 
-:::note navigation
+:::info navigation
 
-Select the active Interface and Click Create Adapter
+:point_right: Select the active Interface and Click Create Adapter
 
 :::
 

@@ -22,21 +22,21 @@ The default built-in user called **admin**. You can create other users with the 
 
 There are four roles that a user can possess.
 
-| Role name           | Powers                                                                                                          |
-| ------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Administrator       | Can do anything                                                                                                 |
-| Operators           | No admin powers. Can only monitor traffic. Cannot look at flows, resources, or raw packets                      |
-| Forensics Operators | No admin powers. Can monitor traffic, but also inspect in depth what anyone is doing, down to the packet level. |
-| Subscriber          | No admin powers. Can investigate subscribed IPs or Interfaces                                                   |
+| Role name           | Powers                                                                                  |
+| ------------------- | --------------------------------------------------------------------------------------- |
+| Administrator       | Can do anything                                                                         |
+| Operators           | No admin powers. Can only monitor traffic. Cannot look at flows, resources, or raw packets|
+| Forensics Operators | No admin powers. Can monitor traffic, but also inspect in depth what anyone is doing, down to the packet level.                                                                                            |
+| Subscriber          | No admin powers. Can investigate subscribed IPs or Interfaces                           |
 
 A role is but a set of allowed and disallowed operations. You can change
 what a role is allowed to do
 
 Login as `admin` user to manage user roles.
 
-:::note navigation
+:::info navigation
 
-Select *Webadmin* \> Manage -\> Roles
+:point_right: Select Webadmin &rarr; Manage &rarr; Roles
 
 :::
 
@@ -57,8 +57,8 @@ automatically logged out. They will then have to present their
 login/password again to re-enter the system.
 
 You can increase inactivity timeout  
-:::note navigation 
-To access, Select Manage -\> App settings -\> Web Server -\> Idle Timeout  
+:::info navigation 
+:point_right: To access, Select Manage &rarr; App settings &rarr; Web Server &rarr; Idle Timeout  
 :::
 
 If you want to disable it - set it to some *huge value* (1000000
@@ -70,9 +70,9 @@ All login activity is logged by the server
 
 > Login as `admin` user to view login activity.
 
-:::note navigation
+:::info navigation
 
-Select *Webadmin* -\> Manage -\> Auth Log
+:point_right: Select *Webadmin* &rarr; Manage &rarr; Auth Log
 
 :::
 

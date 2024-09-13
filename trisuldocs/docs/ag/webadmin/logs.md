@@ -9,15 +9,15 @@ itself.
 
 ## Viewing Web Server Logs
 
-:::note navigation
+:::info navigation
 
-Login as admin and select *Web Admin \> Manage \> Web Server Logs*
+:point_right: Login as admin and select *Web Admin &rarr; Manage &rarr; Web Server Logs*
 
 :::
 
 Then you can select to view any of the following types of logs
 
-***Web server log***
+***Web server Log***
 Logs for the Trisul web server.
 
 ***Background tasks log***
@@ -26,7 +26,7 @@ Logs on scheduled tasks like report mailers, blacklist downloaders etc.
 Use this to check status of automatic downloads of threat intel, geo,
 and various other lists.
 
-***Web sockets log***
+***Web Sockets Log***
 
 Errors related to the real time stabbers
 
@@ -47,10 +47,10 @@ Hub and Probe logs represent the actual Trisul processes running
 processing network traffic. They are linked to a particular context. To
 view Hub and Probe logs
 
-:::note navigation
+:::info navigation
 
-Login as admin and select *Context: default \> Admin Tasks \> Start/Stop
-Tasks*
+:point_right: Login as admin and select Context: default &rarr; Admin Tasks &rarr; Start/Stop
+Tasks
 
 :::
 

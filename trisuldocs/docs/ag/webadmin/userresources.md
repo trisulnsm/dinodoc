@@ -41,9 +41,9 @@ I want to assign specific router interfaces to users
 Select the *FlowIntfs* counter groups. FlowIntfs = Flow Interfaces
 represents a netflow capable interface flow interfaces 
 
-:::note navigation
+:::info navigation
 
-Login as admin and select *Context: default \> Admin Tasks \> User
+:point_right: Login as admin and select *Context: default &rarr; Admin Tasks &rarr; User
 Resources*
 
 :::
@@ -114,13 +114,12 @@ The correct way is to create two level counter groups say “East” and
 This section describes how you can assign a resource group to a user.
 That restricts that users view to only items in that group.
 
-:::note navigation
+:::info navigation
 
-Login as admin and select *WebAdmin: Manage \> Users*
-
+:point_right: Login as admin and select WebAdmin: Manage &rarr; Users
 :::
 
-Then against the user select the *Options \> Assign Resources*
+Then against the user select the *Options &rarr; Assign Resources*
 
 ![](images/assignresources_userresource.png)
 

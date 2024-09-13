@@ -27,9 +27,9 @@ else a normal operator would do on a regular basis.
 
 Login as `admin` user to create a new user
 
-:::note 
+:::info 
 
-Select Web Admin &rarr; Manage &rarr; Users
+:point_right: Select Web Admin &rarr; Manage &rarr; Users
 
 :::
 
@@ -58,9 +58,9 @@ Select Web Admin &rarr; Manage &rarr; Users
 
 Login as `admin` user to create a new user
 
-:::note navigation
+:::info navigation
 
-Select Web Admin &rarr; Manage &rarr; Users
+:point_right: Select Web Admin &rarr; Manage &rarr; Users
 
 :::
 
@@ -82,9 +82,9 @@ delete must be logged off.
 
 Login as `admin` user to create a new user
 
-:::note navigation
+:::info navigation
 
-Select Web Admin &rarr; Manage &rarr; Users
+:point_right: Select Web Admin &rarr; Manage &rarr; Users
 
 :::
 

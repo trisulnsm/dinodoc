@@ -24,9 +24,9 @@ page*
 
 This page shows a list of LDAP domains configured in Trisul.
 
-:::note navigation
+:::info navigation
 
-Login as admin and select *Web Admin \> Manage \> LDAP Domain*
+:point_right: Login as admin and select *Web Admin &rarr; Manage &rarr; LDAP Domain*
 
 :::
 
@@ -45,13 +45,13 @@ A list of configured domains is shown with the following details
 For each LDAP domain shown, the following options are shown at the right
 side of each row.
 
-| Option               | Description                                                                                                                                                                                                                                                                                                        |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Edit                 | Modify this LDAP domain entry                                                                                                                                                                                                                                                                                      |
-| Delete               | Delete the LDAP domain without deleting the users                                                                                                                                                                                                                                                                  |
-| Check authentication | Check if Trisul is able to successfully bind with the LDAP server                                                                                                                                                                                                                                                  |
-| Sync users           | **Synchronize Users** - contact the LDAP domain server and query for users with the *Sync Users Filter* parameter then add all the users to Trisul with the username taken from the *Search Filter*. At the end of the synchronize operation you should be able to see all the users added under *Manage \> Users* |
-| Delete synced users  | Only delete the users automatically added by an earlier “Sync Users” operation. You can then go back and synchronize or manually add LDAP users                                                                                                                                                                    |
+| Option               | Description                                                                  |
+| -------------------- | ---------------------------------------------------------------------------- |
+| Edit                 | Modify this LDAP domain entry                                                |
+| Delete               | Delete the LDAP domain without deleting the users                            |
+| Check authentication | Check if Trisul is able to successfully bind with the LDAP server            |
+| Sync users           | **Synchronize Users** - contact the LDAP domain server and query for users with the *Sync Users Filter* parameter then add all the users to Trisul with the username taken from the *Search Filter*. At the end of the synchronize operation you should be able to see all the users added under *Manage &rarr; Users* |
+| Delete synced users  | Only delete the users automatically added by an earlier “Sync Users” operation. You can then go back and synchronize or manually add LDAP users                                               |
 
 ### Synchronize Users from LDAP
 
@@ -73,37 +73,37 @@ a LDAP domain.
 The first step is to configure the LDAP domain against which the
 authentication will be done.
 
-:::note navigation
+:::info navigation
 
-Login as admin and select *Web Admin \> Manage \> LDAP Domain and Click
+:point_right: Login as admin and select *Web Admin &rarr; Manage &rarr; LDAP Domain and Click
 the Configure button*
 
 :::
 
 Fill in the details as shown below.
 
-| Field                         | Description                                                                                                                                                                                                                                                                                                               |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Domain Name                   | A descriptive name given to this LDAP domain                                                                                                                                                                                                                                                                              |
-| Domain Server                 | DNS name or IP address of the LDAP Domain Server                                                                                                                                                                                                                                                                          |
-| Port                          | LDAP port number, usually 389. If using secure LDAP , LDAPS use 636                                                                                                                                                                                                                                                       |
-| Use SSL                       | Check if box is using LDAPS. LDAP over SSL/LDAP. If this option is checked, ensure the *Port* is set correctly                                                                                                                                                                                                            |
-| Disable SSL Cert verification | When using LDAPS (LDAP over SSL/TLS) if the server is not using a certificate issued by a valid root certificate authority the SSL connection can fail. Check this box to disable SSL certificate verification.                                                                                                           |
-| Connection Login Name         | User name of the account used to connect to the LDAP server. All query operations will use this name.                                                                                                                                                                                                                     |
-| Connection Password           | Password for the connection login name                                                                                                                                                                                                                                                                                    |
-| Base DN                       | Base DN or Search DN refers to the structure of the LDAP server against which searches will be performed.                                                                                                                                                                                                                 |
-| Search Filter                 | The actual attribute name that is used to match the user. Examples : `email` or `uid` `dn` `cn`. If you specify `email` then the username would have to be the email ID eg *email=tim@company.com*                                                                                                                        |
-| Sync Users Filter             | When LDAP is used to automatically synchronize use from the LDAP server, query users with this filter and automatically add them to Trisul (only used if you want to automatically synchronize users from LDAP directory, if you want to add users manually leave this blank)                                             |
-| Login with bind only          | If checked, the LDAP login process only uses the user name to bind rather than the default way of using the connection user name and password first and then bind the user                                                                                                                                                |
-| Append to username            | The string specified in this field will automatically appended to the user name. A features to help the user avoid typing the full login names. For example : if you set this to *`unitedfederalbankname.com_ then the user who had to type  _mike`unitedfederalbankname.com* only has to type *mike* at the login screen |
+| Field                         | Description                                                                |
+| ----------------------------- | -------------------------------------------------------------------------- |
+| Domain Name                   | A descriptive name given to this LDAP domain                               |
+| Domain Server                 | DNS name or IP address of the LDAP Domain Server                           |
+| Port                          | LDAP port number, usually 389. If using secure LDAP , LDAPS use 636        |
+| Use SSL                       | Check if box is using LDAPS. LDAP over SSL/LDAP. If this option is checked, ensure the *Port* is set correctly                                                                           |
+| Disable SSL Cert verification | When using LDAPS (LDAP over SSL/TLS) if the server is not using a certificate issued by a valid root certificate authority the SSL connection can fail. Check this box to disable SSL certificate verification.                                                                                    |
+| Connection Login Name         | User name of the account used to connect to the LDAP server. All query operations will use this name.                                                                               |
+| Connection Password           | Password for the connection login name                                     |
+| Base DN                       | Base DN or Search DN refers to the structure of the LDAP server against which searches will be performed.                                                                                  |
+| Search Filter                 | The actual attribute name that is used to match the user. Examples : `email` or `uid` `dn` `cn`. If you specify `email` then the username would have to be the email ID eg *email=tim@company.com*|
+| Sync Users Filter             | When LDAP is used to automatically synchronize use from the LDAP server, query users with this filter and automatically add them to Trisul (only used if you want to automatically synchronize users from LDAP directory, if you want to add users manually leave this blank)                               |
+| Login with bind only          | If checked, the LDAP login process only uses the user name to bind rather than the default way of using the connection user name and password first and then bind the user                  |
+| Append to username            | The string specified in this field will automatically appended to the user name. A features to help the user avoid typing the full login names. For example : if you set this to *`unitedfederalbankname.com_ then the user who had to type  _mike`unitedfederalbankname.com* only has to type *mike* at the login screen                                                                                          |
 
 ## Create a LDAP Enabled User
 
 Next you need to create a new LDAP user.
 
-:::note navigation
+:::info navigation
 
-Login as admin and select *Web Admin \> Manage \> Users \> New User*
+:point_right: Login as admin and select *Web Admin &rarr; Manage &rarr; Users &rarr; New User*
 
 :::
 
@@ -144,5 +144,5 @@ If you experience errors you can try the following.
    the *Options* link
 2. Login using a LDAP enabled user and check the “LDAP Authentication”
    check box
-3. Then check the Webtrisul log file for errors using *Manage \> Web
-   Server Logs \> Web server logs*
+3. Then check the Webtrisul log file for errors using *Manage &rarr; Web
+   Server Logs &rarr; Web server logs*

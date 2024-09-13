@@ -14,7 +14,7 @@ Trisul *Menus* are the navigation options that allow users to interact with the 
 *Manage Menus* in Trisul refers to the customization of navigation menus for the Trisul web interface for different users and contexts. To customize menus, Login as `admin` and 
 
 :::info navigation
-Go to Webadmin-Manage-> And click UI- Menu Manager
+:point_right: Go to Webadmin-Manage&rarr; And click UI- Menu Manager
 :::
 
 This will take you to the *Menu Manager* page with two customizations as shown in the following.

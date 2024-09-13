@@ -56,10 +56,10 @@ login/password again to re-enter the system.
 
 You can increase inactivity timeout
 
-:::note navigation
+:::info navigation
 
-To access, Login as **Admin**. Select Manage -\> App settings -\> Web
-Server -\> Idle Timeout
+:point_right: To access, Login as **Admin**. Select Manage &rarr; App settings &rarr; Web
+Server &rarr; Idle Timeout
 
 :::
 
@@ -80,11 +80,11 @@ seconds)
 - The admin user can ***Force Logout*** any user with a **stuck**
   session. 
 
-- *Remember me** functionality is not available 
+- *Remember me* functionality is not available 
 
 - The same inactivity timeout applies to all users including admin
 
 - All login activity including inactivity timeout is logged (See *Admin
-  -\> Tasks -\> User Auth Log*)
+  &rarr; Tasks &rarr; User Auth Log*)
 
 > You can allow specific users to also login from multiple locations at
