@@ -58,7 +58,7 @@ A number of alerts generated for different signature IDs are listed in the table
 
 ### Show Search Form
 
-The *Show Search Form* enables you to search and filter alerts based on certain criteria to narrow down alert volumes.
+The [*Show Search Form*](/docs/ug/ui/elements#hide-show-search-form) enables you to search and filter alerts based on certain criteria to narrow down alert volumes.
 
 ![](image/showsearchform_mw.png)
 *Figure: Show Search Form*

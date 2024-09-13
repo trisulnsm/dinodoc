@@ -8,7 +8,7 @@ Trisul allows administrators to set up alerts based on network activity, that en
 ## Alerts Viewing Options
 
 Generated alerts can be accessed through two methods:  
-### Alert Bar   
+### Alerts Bar   
 Alerts are displayed on the top right corner of the [*user home screen*](/docs/ug/ui/userlayout), updating automatically within a 1-minute interval.  
 
 ![](image/alertsnotificationsbar.png)  

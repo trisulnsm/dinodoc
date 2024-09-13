@@ -105,11 +105,9 @@ Clicking on the *count* (yellow icon) with numbers on the *Fired Alerts* that in
 | Probe      | The data source that captured the flow that triggered the alert                                    |
 | Options    | Clicking on the option button enables you to view the flow details including end points, flow stats, timing and netflow details of that particular flow.                                                        |
 
-- You can click on each IP and Port to drilldown for further analysis which will take you to the [*Key Dashboard*](/docs/ug/ui/key_dashboard). 
+- You can click on each IP and Port to drilldown for further analysis which will take you to the [*Key Dashboard*](/docs/ug/ui/key_dashboard) and each column has a [*Column Sorter*](/docs/ug/ui/elements#column-sorter) clicking on it will sort the data in the column.
  
 - You can also [*Download*](/docs/ug/ui/elements#download-button) the *Flow Tracker Alerts* data from here in PDF, XLSX, and CSV formats.
-
-- Each column in the table of individual alerts are sortable, that enables you to rearrange data in ascending or descending order by clicking the adjacent arrow(up/down) button, for flexible data analysis and visualization.
 
 
 ## Sending Alerts by Email

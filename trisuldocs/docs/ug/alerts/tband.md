@@ -143,7 +143,7 @@ The *View Training Data* generates a graphical representation of the threshold b
 - The chart displays pre-computed threshold bands represented by dotted lines with actual data points represented by colored lines for clear identification. Alerts are indicated by a label. You can either ignore the alert if it is just over the band or you can take immediate action if the metric changes dramatically.
 - Additionally, the chart supports [interactive drill-down capabilities](/docs/ug/ui/charts#chart-interaction-controls), allowing users to zoom in on specific segments, enabling high-resolution visualization of sudden drops and spikes in the data.  
 - Click on the *Retro Dashboard* button to further analyze using *Retro Counters* and *Retro Tools*.  
-- By clicking on the *Key Dashboard* buttn, you can navigate to the *Key Dashboard* of the *key* associated with the Threshold Band Anomaly alerting.
+- By clicking on the *Key Dashboard* button, you can navigate to the [*Key Dashboard*](/docs/ug/ui/key_dashboard) of the *key* associated with the Threshold Band Anomaly alerting.
 
 #### Option Button
 

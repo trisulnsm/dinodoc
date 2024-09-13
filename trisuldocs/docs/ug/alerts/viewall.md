@@ -37,7 +37,7 @@ This allows users to:
 The *Show All* option, which offers a comprehensive overview of alert activity for the current day, thereby providing users to access and assess alert information. 
 
 :::info navigation
-:point_right: Go to Alerts-> Show all
+:point_right: Go to Alerts&rarr; Show all
 :::
 
 This shows alert counts per type for today. These counts indicate total number of alerts seen from midnight today till now.

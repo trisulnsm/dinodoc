@@ -76,7 +76,7 @@ by the following :
 
 ***Timeframe***
 
-Adjust the time window shown. The default is the past 24 hours.
+Adjust the [time window](/docs/ug/ui/elements#time-selector) shown. The default is the past 24 hours.
 
 ***Scaling***
 
