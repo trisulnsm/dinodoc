@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Introduction to Dashboards and Modules
 
-A *Dashboard* is a visual representation of key performance indicators and metrics that are used to measure the performance of a network traffic. Using Dashboards you can easily monitor and and analyze data in real- time. A Trisul *Dashboard* contains *modules* at various positions.
+A *Dashboard* is a visual representation of key performance indicators and metrics that are used to measure the performance of a network traffic. Using Dashboards you can easily monitor and analyze data in real- time. A Trisul *Dashboard* contains *modules* at various positions.
 
 Dashboards are,
 

@@ -63,9 +63,9 @@ The modules in it are
 
 ------------------------------------------------------------------------
 
-## Live Network Summary Dashboard
+## Overview Dashboard
 
-Automatically updated overview of network summary activites.
+This dashboard automatically keeps updating the live overview of network summary activites.
 
 Monitor the following live in easy charts with Click Through to more
 drilldown.
@@ -180,7 +180,7 @@ from border routers peering AS BGP information
 
 Monitor traffic uploaded and download on a per-Country basis. The
 Country Code can also be added to every single flow using [Automatic
-Flow Taggers](/docs/ug/flow/tagger) The included statistics are Top-K, Time Series Traffic Profile for planning and trending, and Bottom-K for outlier and security applications. You can even map the traffic down to the City/County level.
+Flow Taggers](/docs/ug/flow/tagger) The included statistics are Top-K, Time Series Traffic Profile for planning and trending, and Bottom-K for outlier and security applications. You can even map the traffic down to the City/Country level.
 
 ### Traffic Upload and Download
 

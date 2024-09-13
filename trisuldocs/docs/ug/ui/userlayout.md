@@ -36,7 +36,7 @@ The top panel contains the following items
 
 3) #### Search Bar
    
-   You can use the Search bar tool to find items of your interest.
+   You can use the [Search bar tool](/docs/ug/ui/elements#using-search-tool) to find items of your interest.
 
 4) #### Alerts and Notifications
 
@@ -44,7 +44,7 @@ The top panel contains the following items
 
     *Figure: Alerts and Notifications in Top Panel*
     
-    You can check for the alerts and notifications on External IDS, Threshold Crossing, Threshold Band Alerts, Blacklist Activity and Flow tracker here.
+    You can check for the alerts and notifications on External IDS, Threshold Crossing, Threshold Band Alerts, Blacklist Activity and Flow tracker here. Click the top right corner of color coded icons that represent alerts and notifications with alert count.
 
 5) #### License Detail
    

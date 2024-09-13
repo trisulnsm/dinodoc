@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Chart and Chart Interactions
 
-Trisul supports a number of intuitive chart surfaces that render the statistical data in a rich interactive way. And you can drilldown on the chart using module icons and legend table. Many modules allow you to select a chart surface and enables you to view the data at that particular point of time.
+Trisul supports a number of intuitive chart surfaces that render the statistical data in a rich interactive way. And you can drilldown on the chart using [*Chart Interaction Controls*](/docs/ug/ui/charts#chart-interaction-controls) and [*Legend Table*](/docs/ug/ui/charts#legend-table). Many modules allow you to select a chart surface and enable you to view the data at that particular point of time.
 
 ## Trisul Chart Surfaces
 
@@ -22,6 +22,14 @@ These are some of the intuitive chart surfaces in Trisul.
 | ![](images/charts/bar.png)         |     | ![](images/charts/area.png)   |
 |                                    |     |                               |
 
+## Chart Engagements
+Here are some chart UI engagements with charts that enable you to engage with charts, and gain deeper insights and data analyses:
+- **Zoom In**: Drill down to a specific data point or range for a more detailed view  
+- **Zoom Out**: View the broader data landscape to understand trends and patterns
+- **Hover**: Display additional information or context on [Tooltips](/docs/ug/ui/charts#tooltip) when hovering over a data point  
+- **Pan**: Move the chart view to focus on a specific data range or trend  
+- **Highlight**: Click and select an area on the chart to highlight which views the detailed view of the highlighted area for high resolution insights.
+
 ## Chart UI Elements
 
 There are a number of interactive functionalities that are available for the charts to drilldown for further data analyses.
@@ -31,17 +39,8 @@ There are a number of interactive functionalities that are available for the cha
 
 1) [Ellipsis Menu](/docs/ug/ui/charts#ellipsis-menu)
 2) [Chart Interaction Control Icons](/docs/ug/ui/charts#chart-interaction-controls)
-3) [Legend Table](/docs/ug/ui/charts#legend-table)
-4) [Tool Tip](/docs/ug/ui/charts#tooltip) 
-
-
-## Chart Engagements
-Here are some chart UI engagements with charts that enable you to engage with charts, and gain deeper insights and data analyses:
-- **Zoom In**: Drill down to a specific data point or range for a more detailed view  
-- **Zoom Out**: View the broader data landscape to understand trends and patterns
-- **Hover**: Display additional information or context on [Tooltips](/docs/ug/ui/charts#tooltip) when hovering over a data point  
-- **Pan**: Move the chart view to focus on a specific data range or trend  
-- **Highlight**: Click and select an area on the chart to highlight which views the detailed view of the highlighted area for high resolution insights.
+3) [Tool Tip](/docs/ug/ui/charts#tooltip) 
+4) [Legend Table](/docs/ug/ui/charts#legend-table)
 
 ### Ellipsis Menu
 
@@ -77,6 +76,14 @@ Below you can find the *CHart Interaction Control* icons explained from right to
 
 - **Home**- Click on the home icon to reset zoom.
 
+### Tooltip
+
+Hover your mouse over an item such as a PIE slice or line graph and get a tooltip with values at different intervals as shown in the figure.
+
+![](images/netflowvolume.png)
+
+*Figure: Showing Tooltip in a Graph Module*
+
 ### Legend Table
 
 *Legend tables* are interactive chart legends where you can click on a chart item in the legend area to toggle its visibility, showing or hiding the corresponding data series in the chart.
@@ -87,17 +94,15 @@ Below you can find the *CHart Interaction Control* icons explained from right to
 *Figure: Showing Legend Table in a Module*
 
 
-Example: In the chart, both Inbound and Outbound items are initially enabled. Clicking on either item in the legend will hide or show its associated data.
+Example: In the above chart, both Inbound and Outbound items are initially enabled. Clicking on either item in the legend will hide or show its associated data as shown in the charts below.
 
 | ![](images/legend2.png) | ![](images/legend3.png) |
 | ----------------------- | ----------------------- |
+| *Click on Inbound: Only Inbound data is showing* | *Click on Outbound: Only Outbound data is showing* |
 
 *Figure: Showing Hide/Unhide data from Chart using Legend Table Meters*
 
-**Expand Legend**  
-Click to view a detailed legend, providing additional information.
-
-**Auto Refresh**  
+**Auto Refresh Statistical Summaries**  
 Charts are updated automatically via Ajax calls, ensuring real-time data visualization.  
 *Legend Table* Includes statistical summaries for each network traffic search result, such as:
 - Max
@@ -106,19 +111,12 @@ Charts are updated automatically via Ajax calls, ensuring real-time data visuali
 - Total
 - 95th percentile
 
-### Tooltip
-
-Hover your mouse over an item such as a PIE slice or line graph and get a tooltip with values at different intervals.
-
-![](images/netflowvolume.png)
-
-*Figure: Showing Tooltip in a Graph Module*
 
 ### Retro Charts
 
 *Retro Charts* in Trisul retrieves graphical representation of past historical analysis data, that enables you to selectively retrieve and visualize historical network traffic patterns and trends within a specified temporal range.
 
-1) Click on any of the *ellipsis menu* and click *View historical* to view the retro chart of that particular module
+1) Click on the [*ellipsis menu*](/docs/ug/ui/charts#ellipsis-menu) from any chart and click *View historical* to view the retro chart of that particular module
 
 ![](images/retrochart2.png)
 
@@ -163,9 +161,10 @@ The time-based tabs include:
   **Weeks** Tab: Segments data into weekly intervals, facilitating analysis of week-over-week patterns and seasonality.  
   **Custom** Tab: Redirects users to the [Time Selector](/docs/ug/ui/elements#time-selector), allowing for flexible, user-defined time ranges and custom data segmentation.
 
-By selecting a Retro Tab, users can effortlessly switch between different time-based views of their data, gaining insights into various aspects of their temporal data distribution.
+By selecting a Retro Tab, users can effortlessly switch between different time-based views of their data, and visualize how their data changes and evolves over time.
 
-### PCAP Availability
+### PCAP Availability 
+<span class="badge badge--primary">PCAP Mode Only</span>
 
 The chart features a visual indicator to denote the availability of PCAP (Packet Capture) data during specific time periods. This indicator is displayed as a light yellow color overlay on the chart, highlighting the time ranges where PCAP data is available.
 

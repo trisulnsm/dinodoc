@@ -5,7 +5,7 @@ sidebar_position: 7
 # Other UI Elements
 
 This section contains a quick overview of the user interface elements.
-Besides the already explained user layout and admin layout elements, Trisul provides other essential interactive elements like Buttons, Forms, Search box, Tooltips and more. Lets dive in and explore where you can find all these user friendly elements in the Trisul dashboards and modules and how you can interact with them. 
+Besides the already explained [*User layout*](/docs/ug/ui/userlayout) and [*Chart UI elements*](/docs/ug/ui/charts), Trisul provides other essential interactive elements like Buttons, Forms, Search box, Tooltips and more. Lets dive in and explore where you can find all these user friendly elements in the Trisul dashboards and modules and how you can interact with them. 
 
 ## Hide/ Show Search Form
 
@@ -32,11 +32,16 @@ related flows or download a PCAP is mentioned.
 
 *Figure: Showing Packets and Flows Drilldown Buttons*
 
-### Using Search
+## Using Search Tool
 
-You can use the *Search* tool to find items of interest.
+The search box is located on the right side of the [Top Panel](/docs/ug/ui/userlayout#top-panel-details) as shown here.
 
-> You can :
+Enter some search text here and press *Enter*
+
+![](images/dashboards/searchbar.png)  
+*Figure: Search Box*  
+
+You can use the *Search* tool to find items of interest like:
 
 - Search by an IP address, Port number, etc.
 - Search by user labels like host names, alert signature names, etc.
@@ -45,16 +50,6 @@ You can use the *Search* tool to find items of interest.
 > If you wish to search for resources like HTTP URLs and DNS
 > names, you will be redirected to their search forms which are more
 > flexible. See [URL Resources](/docs/ug/resources/url) and [DNS Resources](/docs/ug/resources/dns)
-
-## The Search Box
-
-The search box is located below the side menu bar as shown here.
-
-Enter some search text here and press *Enter*
-
-![](images/dashboards/searchbar.png)
-
-*Figure: Search Box*
 
 ## Search Results
 
@@ -66,8 +61,7 @@ query.
 
 Click on the View button to explore further
 
-![](images/dashboards/searchresult.png) 
-
+![](images/dashboards/searchresult.png)  
 *Figure: Search Result Page*
 
 ## AutoComplete
@@ -75,23 +69,22 @@ Click on the View button to explore further
 All relevant form fields in Trisul are autocomplete capable. This
 functionality is triggered when you enter three or more characters.
 
-![](images/dashboards/autocomplete.png)
-
+![](images/dashboards/autocomplete.png)  
 *Figure: Showing AutoComplete Option of Long Term Analysis Form*
 
 
-### Key Dashboard
+## Key Dashboard
 
 You can click on any key items on the chart and it will take you to the [Key dashboard](/docs/ug/ui/key_dashboard) of that Key.
 
-![](images/keydashboard1.png)
-
+![](images/keydashboard1.png)  
 *Figure: Key Dashboard*
 
 
 ## Download PCAP button
+<span class="badge badge--primary">PCAP Mode Only</span>
 
-On tables featuring a “Download PCAP” button, clicking on the button
+On tables featuring a [*Download PCAP*](/docs/ug/caps/methods#download-pcap) button, clicking on the button
 will result in Trisul computing a “Packet Scan plan” and then
 downloading all of the requested entities into a single merged PCAP
 file.
@@ -126,7 +119,7 @@ This is one of the most commonly found UI elements across Trisul. Clicking on th
 You can export data, reports, or analytics in various formats like,  
 **PDF**: Downloads the data in Portable Document Format (PDF), suitable for printing or sharing.  
 **XLSX**: Downloads the data in Microsoft Excel format (XLSX), suitable for editing or analysis.  
-**CSV**: Downloads the data in Comma Separated Values format (CSV), suitable for importing into other applications or analysis.  
+**CSV**: Downloads the data in Comma Separated Values format (CSV), suitable for importing into other applications for analysis.  
 
 ## Toggle Labels
 
@@ -146,7 +139,7 @@ When enabled, the search result or downloaded file will include labels. When dis
 
 *Column Sorter* is a small up/down toggle element located typically on the column header of a table of dataset containing large volume of data. When you find the *Column Sorter* arrow(up/down) button on the column header of a table, it indicates each column in the table of data are sortable, that enables you to rearrange data in ascending or descending order by clicking it, for flexible data analysis and visualization.
 
-### Column Selector
+## Column Selector
 
 The *Cols* dropdown menu allows users to customize the columns displayed in the resulting table.
 

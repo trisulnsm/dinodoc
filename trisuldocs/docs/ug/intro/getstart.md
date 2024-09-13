@@ -9,7 +9,7 @@ Trisul is incredibly easy to get started on.
 
 
 :::success Included Evaluation License 
-The default install of Trisul Network Analytics includes a 3-Day Evaluation License built in.
+The default install of Trisul Network Analytics includes a 7-Day Evaluation License built in.
 Upon expiration of that license you may purchase a production license  at any time. You will 
 be prompted from within the application itself when you login.
 :::

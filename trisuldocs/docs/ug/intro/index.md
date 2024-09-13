@@ -5,7 +5,7 @@
 
 
 
-Trisul Network Analytics is a software suite that takes network packets or flow data, and them into insightful traffic metrics, flow analysis, alerts, and metadata.
+Trisul Network Analytics is a software suite that takes network packets or flow data, and extract insightful traffic metrics, flow analysis, alerts, and metadata.
 The applications of Trisul include deep network traffic management, network security monitoring, threat hunting, incident response, and audit.
 
 
