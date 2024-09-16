@@ -17,7 +17,7 @@ tools. For more details : see [trisulctlhub Reference](/docs/ref/trisul_hub) and
 
 Here are a few quick trisulctl\_ commands to get you start using the
 domain tools. You can read the sections below for a more thorough
-explanation.
+explanation.  
 
 ### Common Commands for Probe
 

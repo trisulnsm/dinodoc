@@ -28,7 +28,7 @@ match along with a highlighted context.
 
 To access *Payload Search*,
 
-:::note navigation
+:::info navigation
 
 :point_right: Go to Tools &rarr; Select Payload Search
 
@@ -66,9 +66,9 @@ Click **Search Everything**, you will be shown a list of flows that match. You c
 
 ### Content Inspection Width Configuration
 
-The *Content Inspection Width* parameter defines the limits for deep packet inspection (DPI) in terms of:
-Deep Packet Inspection Time Limit: The maximum duration for which DPI is performed on a packet stream.
-Deep Packet Inspection Size Limit: The maximum payload size (in KB,MB) that is inspected.
+The *Content Inspection Width* parameter defines the limits for deep packet inspection (DPI) in terms of:  
+Deep Packet Inspection Time Limit: The maximum duration for which DPI is performed on a packet stream.  
+Deep Packet Inspection Size Limit: The maximum payload size (in KB,MB) that is inspected.  
 
 You can find the *Content Inspection Width* at the bottom of the *Payload Search* form with an *Edit* button as in this figure.
 
@@ -102,9 +102,10 @@ The search result data includes the following details.
 | IP Z           | The destination IP address of the network packet that matched the search criteria          |
 | PORT Z         | The destination port number of the network packet that matched the search criteria         |
 | PROBE          | The name of the probe that captured the network traffic containing the match               |
-| MATCH          | A snippet of the payload that matched the search criteria, providing context for the match |                 
+| MATCH          | A snippet of the payload that matched the search criteria, providing context for the match |                   
 
-Each column in the search result table are sortable, enabling users to rearrange data in ascending or descending order by clicking the adjacent arrow(up/down) button, for flexible data analysis and visualization.
+Each column in the search result table are [*Column Sortable*](/docs/ug/ui/elements#column-sorter), enabling flexible data analysis and visualization.
+
 
 ### Column Button
 

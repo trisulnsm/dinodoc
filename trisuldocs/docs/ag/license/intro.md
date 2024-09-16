@@ -9,7 +9,7 @@ Trisul Network Analytics licenses are :
 
 License types are :
 
-1. Free 3-Day License : The free license gives you tremendous value as it gets you all of the real time analytics and the most recent 3 days for historical analysis
+1. 7-Day Trial License : The trial license gives you tremendous value as it gets you all of the real time analytics and the most recent 7 days for historical analysis
 2. Production License : depends on the number of active internal endpoints in your Home Network space
    1. Small Business : 500 simultaneously active Internal IPs
    2. Medium : 3000 simultaneously active Internal IPs
