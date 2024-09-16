@@ -36,7 +36,7 @@ A list of configured domains is shown with the following details
    *Local authentication* this is for normal users who will be able to
    login without LDAP
 2. Server / Port
-3. User name: : this is used to bind to the LDAP server
+3. User name: this is used to bind to the LDAP server
 4. Base DN : under which users are queried
 5. Filter : the username is taken from this attribute, usually the `mail`
 
@@ -92,7 +92,7 @@ Fill in the details as shown below.
 | Connection Login Name         | User name of the account used to connect to the LDAP server. All query operations will use this name.                                                                               |
 | Connection Password           | Password for the connection login name                                     |
 | Base DN                       | Base DN or Search DN refers to the structure of the LDAP server against which searches will be performed.                                                                                  |
-| Search Filter                 | The actual attribute name that is used to match the user. Examples : `email` or `uid` `dn` `cn`. If you specify `email` then the username would have to be the email ID eg *email=tim@company.com*|
+| Search Filter                 | The actual attribute name that is used to match the user. Examples : `email` or `uid` `dn` `cn`. If you specify `email` then the username would have to be the email ID eg `email=tim@company.com` |
 | Sync Users Filter             | When LDAP is used to automatically synchronize use from the LDAP server, query users with this filter and automatically add them to Trisul (only used if you want to automatically synchronize users from LDAP directory, if you want to add users manually leave this blank)                               |
 | Login with bind only          | If checked, the LDAP login process only uses the user name to bind rather than the default way of using the connection user name and password first and then bind the user                  |
 | Append to username            | The string specified in this field will automatically appended to the user name. A features to help the user avoid typing the full login names. For example : if you set this to *`unitedfederalbankname.com_ then the user who had to type  _mike`unitedfederalbankname.com* only has to type *mike* at the login screen                                                                                          |
