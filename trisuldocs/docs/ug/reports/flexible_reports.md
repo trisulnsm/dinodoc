@@ -128,7 +128,7 @@ you have created
 
 ## Traffic Chart Report
 
-A Traffic Chart Report in Trisul is a graphical representation of network traffic volume over a specified time period. It displays the amount of data transmitted (in bytes or packets) across the network, allowing you to visualize traffic patterns, trends, and anomalies. This kind of report is used to provide bandwidth report for several metrics in the form of colourful charts. 
+A Traffic Chart Report in Trisul is a graphical representation of network traffic volume over a specified time period. It displays the amount of data transmitted (in bytes or packets) across the network, allowing you to visualize traffic patterns, trends, and anomalies. This kind of report is used to provide bandwidth report for several metrics in the form of colorful charts. 
 
 To create a traffic chart report, Click *Traffic Chart* Report from the option button against the report name under all the custom reports. You will find the following dialog box to fill in.
 
@@ -197,11 +197,11 @@ you have created
 
 ## Toppers Traffic Chart Report
 
-A Topper's Traffic Chart Report in Trisul is a report that displays the top traffic generators or consumers on the network, based on criteria such as:
-Top Talkers: Devices or hosts generating the most network traffic
-Top Listeners: Devices or hosts receiving the most network traffic
-Top Protocols: Network protocols (e.g., HTTP, FTP, SSH) generating the most traffic
-Top Flows: Network flows (connections) generating the most traffic
+A Topper's Traffic Chart Report in Trisul is a report that displays the top traffic generators or consumers on the network, based on criteria such as:  
+Top Talkers: Devices or hosts generating the most network traffic  
+Top Listeners: Devices or hosts receiving the most network traffic  
+Top Protocols: Network protocols (e.g., HTTP, FTP, SSH) generating the most traffic  
+Top Flows: Network flows (connections) generating the most traffic  
 
 To create a Toppers traffic chart report, Click *Toppers Traffic Chart* Report from the option button against the newly created report name under all the custom reports. You will find the following dialog box to fill in.
 
@@ -272,7 +272,7 @@ you have created
 
 A Metric Table Report in Trisul is a tabular representation of network metrics, providing a detailed summary of network traffic and performance data. This report displays various network metrics in a table format, allowing for easy analysis and comparison of network activity.
 
-For instance, if you want a volume report for all metrics(total,recieved,transmit,etc) for a particular counter group for a particular key, we can use metrics table.
+For instance, if you want a volume report for all metrics(total,received,transmit,etc) for a particular counter group for a particular key, we can use metrics table.
 
 ![](images/metrics_type.png)
 
@@ -314,7 +314,7 @@ Here is the table with description for available fields to create Alert type rep
 | ----------- | ------------------------------- |
 | Title       | Title of the Report             |
 | Subtitle    | Sub-title for the report        |
-| Page type   | alertcount                      |
+| Page type   | Alertcount                      |
 | Alert group | Select the alert group you want |
 
 If you want to add more alert groups you can click on the ‘+’ symbol 

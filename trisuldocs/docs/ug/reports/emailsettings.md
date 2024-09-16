@@ -47,8 +47,8 @@ As you can see there are details of the newly configured mail address including 
 After you have configured the email settings, its a good idea to send a test email to see if everything works.
 You can click the Action button of the newly configured email address and click *Edit*.
 
-The following edit window will open up where you can find a *Test it!* window on the right hand side of the page.
-![](images/testemail.png)
+The following edit window will open up where you can find a *Test it!* window on the right hand side of the page.  
+![](images/testemail.png)  
 
 *Figure: Test Email*
 

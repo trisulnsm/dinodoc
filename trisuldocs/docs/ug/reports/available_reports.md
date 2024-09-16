@@ -11,8 +11,8 @@ Trisul Reports provide summaries of network traffic data, where users can gain i
 
 Trisul further enhanced the reporting framework that consists of two reporting systems for quick analysis of common network traffic aspects. 
 
-1) [Readymade reports](/docs/ug/reports/readymade) 
-2) [Custom Reports](/docs/ug/reports/flexible_reports)
+1) [Readymade Reports](/docs/ug/reports/readymade) 
+2) [Custom Reports](/docs/ug/reports/flexible_reports) 
 
 
 ## Report Time

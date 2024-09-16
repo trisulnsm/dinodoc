@@ -15,16 +15,17 @@ Using the [Trisul Remote Protocol API](/docs/trp) you can write Ruby scripts tha
 
 ## Report Time
 
-For each report type, you can easily select a number of predefined time windows.
+For each report type, you can easily select a number of predefined time windows using a [Time Selector](/docs/ug/ui/elements#time-selector)
 
-The Time Selector feature enables you to define a temporal scope for report generation, with a default setting of the most recent 15 minutes. Once a time window is selected, it remains fixed for generating all the reports on the page and their associated drill-downs. You can choose from a range of pre-defined time ranges, including:
+## Adding Logos
 
-- Last 1 hour
+1. Logos can be placed in the 3 corners of the PDF except the top-right
+2. You need to replace 3 images (32×32) in the /usr/local/share/webtrisul/public/images directory
+3. The images names are expected to named as follows
+4. logo_tlhs.png → This image is placed on the top-left of the PDF
+5. logo_blhs.png → This image is placed on the bottom-left of the PDF
+6. logo_brhs.png → This image is placed on the bottom-right of the PDF
 
-- Last 24 hours
+## Customizing Names
 
-- This month
-
-- Last month and more.
-
-Alternatively, you can specify a custom date range by selecting the *Custom Range* option, which allows for the selection of a specific period from the past.
+Refer to the [oem_settings](/docs/ug/webadmin/customize) for instructions.

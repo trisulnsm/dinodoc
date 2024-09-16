@@ -53,7 +53,7 @@ There are additional search criteria that allows you to narrow down your search 
 
 ## Search Result
 
-In the figure below, each request in the [*search results*](/docs/ug/resources/dns#search-results) has a corresponding response in the form of a HTTP URL.
+In the figure below, each request in the search results has a corresponding response in the form of a HTTP URL.
 
 ![](images/url_resources.png)  
 *Figure: URL Resources*

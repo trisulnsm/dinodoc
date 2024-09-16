@@ -62,7 +62,7 @@ Executive Reports in Trisul include the following pre-defined templates for quic
 
 ### Endpoints and Applications Report
 
-*Endpoints and Applications* Report type in Trisul provides insights into IP-level traffic analysis, Conversation analysis and Security alaerts. The *Endpoint* report includes total bandwidth used by the IP, Receive/Transmit bandwidth of IP, Top applications used, Top conversations with other hosts, Alert types, Source & Destination IP, and Latest Malware Alerts. 
+*Endpoints and Applications* Report type in Trisul provides insights into IP-level traffic analysis, Conversation analysis and Security alerts. The *Endpoint* report includes total bandwidth used by the IP, Receive/Transmit bandwidth of IP, Top applications used, Top conversations with other hosts, Alert types, Source & Destination IP, and Latest Malware Alerts. 
 
 And *Application* report type offers insights into port-level traffic analysis, Application usage and Traffic patterns including total bandwidth for the port number, In and Out traffic, Top hosts by total volume, Top applications, Top server hosts, Top client hosts, Top external hosts, Top tags, and Top flows.
 
@@ -82,7 +82,7 @@ You can fill in the following fields in *Endpoints and Applications* report by s
 
 ISP Peering Analytics in Trisul provides insights and data visualizations on traffic distribution, top traffic sources, BGP routing, and Peer AS traffic. This report includes AS summary bandwidth chart showing traffic breakup of total bandwidth usage, top AS Egress, top AS Ingress, BGP peer and origin AS report showing breakup of AS report into peer AS and origin AS using the BGP route database, top peer AS Egress, and top peer AS Ingress and more
 
-You can fill in the following fields in *ISP Peering Analytics* report by selecting a [time frame](/docs/ug/ui/elements#time-selector).
+You can fill in the following fields in *ISP Peering Analytics* report by [selecting a time frame](/docs/ug/ui/elements#time-selector).
 
 ![](images/isppeeringanalyticsreports.png)
 
@@ -157,7 +157,7 @@ You can fill in the following fields in *Direct* report by selecting a [time fra
 
 *Static IP* report in Trisul provides detailed information about static IP addresses on the network. This report includes Total bandwidth received and transmitted and Timeframes where usage overshot bandwidth cap.
 
-You can fill in the following fields in *Direct* report by selecting a [time frame](/docs/ug/ui/elements#time-selector) and providing a static IP.
+You can fill in the following fields in *Direct* report by [selecting a time frame](/docs/ug/ui/elements#time-selector) and providing a static IP.
 
 ![](images/staticipreports.png)
 

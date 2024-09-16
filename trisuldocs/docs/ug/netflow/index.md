@@ -38,9 +38,9 @@ Trisul’s default input mode is raw packet capture. But Trisul also has**compre
 
 ## Global vs Device View
 
-This may be confusing for those coming to Trisul from traditional netflow solutions. Most of the Trisul dashboards are**Global views**that represent the sum total of all the interfaces in your network. If you see metrics for*8.8.8.8*it represents theTOTALtraffic to*8.8.8.8*from all the routers in your network.
+This may be confusing for those coming to Trisul from traditional netflow solutions. Most of the Trisul dashboards are **Global views** that represent the sum total of all the interfaces in your network. If you see metrics for *8.8.8.8* it represents the TOTAL traffic to *8.8.8.8* from all the routers in your network.
 
-There is also comprehensive support for a**Device View**. You access that through the[Routers and Interfaces](/docs/ug/netflow/routers_and_interfaces)tool. The*Device View*allows you to select a router then an interface on that router and then see the breakup of traffic within that.
+There is also comprehensive support for a **Device View**. You access that through the [Routers and Interfaces](/docs/ug/netflow/routers_and_interfaces) tool. The *Device View* allows you to select a router then an interface on that router and then see the breakup of traffic within that.
 
 If you log on for the first time into a Netflow instance you may get a dashboard like below. The image below shows where to find the Router and Interfaces for getting to the Device Specific view.
 

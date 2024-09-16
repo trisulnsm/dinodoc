@@ -2,34 +2,7 @@
 sidebar_position: 5
 ---
 
-# PDF Reports
-
-This section describes the readymade reports available in Trisul.
-
-### Installing librsvg2
-
-Trisul requires the **librsvg2** library in order to generate charts for PDF reports. This is not included in the installation package as it 
-requires several megabytes of packages. You can however easily install 
-it yourself.
-
-```bash
-# on ubuntu
-sudo apt-get install librsvg2-bin
-# on centos
-yum install librsvg2-tools
-```
-
-If fonts on your charts are not displaying properly , you may also need to install the following package.
-
-Install the *ms-fonts* package found on [rpm.pbone.net](http://rpm.pbone.net/index.php3/stat/4/idpl/30428080/dir/centos_7/com/ms-fonts-1.1-2.4.noarch.rpm.html)
-
-```bash
-wget ftp://ftp.pbone.net/mirror/ftp5.gwdg.de/pub/opensuse/repositories/home:/Kenzy:/packages/CentOS_7/noarch/ms-fonts-1.1-2.4.noarch.rpm
-
-rpm -Uvh ms-fonts-1.1-2.4.noarch.rpm
-```
-
-### Accessing Reports
+# Accessing Reports
 
 Select *Reports* by clicking on the PDF Icon in the top menu section
 

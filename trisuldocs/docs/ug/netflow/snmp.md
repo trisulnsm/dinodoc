@@ -64,7 +64,7 @@ need to specify a *Key Attribute* for the router called
 
 - First configure SNMP v2 or v3 parameters for the device using the aforementioned [*Configuring SNMP*](/docs/ug/netflow/snmp#configuring-snmp) steps .
 - Then click on the *Options* button on the right side of the router name and select *Key Dashboard* from the drop down.
-- You can see the *Key Details* on the right side of the *Key Dashboard* as shown in the figure below. Click *Select *Assign user label / Edit attributes* option from *Set Label/Edit*.
+- You can see the *Key Details* on the right side of the *Key Dashboard* as shown in the figure below. Select *Assign user label / Edit attributes* option from *Set Label/Edit*.
 
 ![](images/snmp_edit_label.png)
 
