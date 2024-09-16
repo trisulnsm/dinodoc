@@ -28,7 +28,7 @@ The default mode of Trisul is Packet Capture based Network Security Monitoring. 
 After following the steps in [installation](doinstall). You should be able to login to the UI by opening 
 
 
-:::note navigation
+:::info navigation
 
 :point_right:  Open your browser and go to `http://ipaddress:3000`  default username = `admin` and pwd = `admin` 
 :::

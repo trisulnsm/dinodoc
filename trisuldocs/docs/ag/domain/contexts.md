@@ -4,8 +4,8 @@ A Trisul Context is a separate instance of Trisul with its own isolated database
 
 The primary use cases for contexts are :
 
-1. multi homing separate customer networks
-2. managing different parts of a large network
+1. Multi homing separate customer networks
+2. Managing different parts of a large network
 
 The difference between a Trisul context and a new Trisul instance is the
 shared webserver, user, and admin framework. You can create any number
@@ -101,7 +101,7 @@ Netflow Wizard, and then start it.
 TO start the `newcontext` processes
 
 - Click on the menu *Context: mycontext*
-- Admin Tasks -> Start/Stop Tasks
+- Admin Tasks &rarr; Start/Stop Tasks
 - Then start the hub and probe
 
 Now you have a brand new instance of Trisul with its own isolated
