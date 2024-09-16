@@ -16,7 +16,7 @@ Features are explained as numbered in the figure.
 
 ## Pagination
 
-The pagination feature bar is located at the upper left hand side of the page. Here, you can specify the number of submitted queries to be displayed per page.
+The pagination feature bar is located at the upper left hand side of the page. Here, you can select the number of submitted queries to be displayed per page from the dropdown.
 
 ## Query Summary
 Above the table of submitted queries, a summary of the overall query status is displayed, that provide a a quick overview of query status, enabling you to monitor progress.
