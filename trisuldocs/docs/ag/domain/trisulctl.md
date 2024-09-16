@@ -209,8 +209,8 @@ The commands
 
 The domain runs the command on all the relevant nodes and if any errors
 are seen, it is printed on screen. This has the same effect as if you
-login to Web Trisul as *admin* and then executed *Context -> Start/Stop
-Tasks -> Start Probe/Hubs*
+login to Web Trisul as *admin* and then executed *Context &rarr; Start/Stop
+Tasks &rarr; Start Probe/Hubs*
 
 #### Check Logs
 
@@ -260,7 +260,8 @@ them ask for confirmation
   configuration. This is used if you want to purge all data and start
   over
 - delete context —> delete the context itself. the data and the
-  configuration are removed. **Note** you cannot delete the default
+  configuration are removed.  
+ **Note** you cannot delete the default
   context so that is treated as a reset
 
 | Command                  | Description                                                                                                     |
