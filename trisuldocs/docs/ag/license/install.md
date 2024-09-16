@@ -36,7 +36,7 @@ A new license file is required for every machine because it is locked to a Machi
 
 This is the recommended method suitable for most deployments. You just have to upload the new license to the Hub and Probe nodes using the *License page*
 
-:::note navigation
+:::info navigation
 
 :point_right: Login as Admin → Select Context :default → Licensing
 
