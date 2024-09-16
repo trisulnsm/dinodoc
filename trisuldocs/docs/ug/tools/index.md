@@ -17,7 +17,8 @@ Moving forward this guide will explore the remaining undocumented tools within t
 
 <DocCardList />
 
-To access the complete toolset, navigate to the main menu in Trisul, where you will find the *Tools* option. Clicking on this option will reveal a dropdown menu listing all available tools as in the figure.    
+To access the complete toolset, navigate to the main menu in Trisul, where you will find the *Tools* option. Clicking on this option will reveal a dropdown menu listing all available tools as in the figure.  
+    
 ![](images/tools.png)    
 *Figure: Tools*
 

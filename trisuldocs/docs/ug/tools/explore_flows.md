@@ -34,10 +34,7 @@ Quick Search allows for quick filtering of network traffic data that includes on
 
 With quick search you can explore flows simply in two steps.  
 **Step 1**: Select a time frame from the [*Time Selector*](/docs/ug/ui/elements#time-selector) to narrow down the flow data to the relevant time interval.  
-**Step 2**: Just enter *Search query* in the form of search expression like *field=value,field=value,...* The supported fields include *srcip,destip,ip,net16,n2t24*. The complete list of supported fields can be obtained by clicking on the question mark icon against the *Search query* field.
-
-
-
+**Step 2**: Just enter *Search query* in the form of search expression like *field=value,field=value,...* The supported fields include *srcip,destip,ip,net16,net24*. The complete list of supported fields can be obtained by clicking on the question mark icon against the *Search query* field.
 
 
 Some common examples of search expressions are :

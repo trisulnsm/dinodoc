@@ -5,7 +5,7 @@ sidebar_position: 2
 # Aggregate Flows
 
 
-The Aggregate Flows tool enables you to query network flow data and displays summarized statistical information for each unique tuple. The output is presented in a tabular format, with separate tables for each parameter (tuples like source ip, source port, destination ip,etc) providing a comprehensive view of the aggregated data.
+The *Aggregate Flows* tool enables you to query network flow data and displays summarized statistical information for each unique tuple. The output is presented in a tabular format, with separate tables for each parameter (tuples like source ip, source port, destination ip,etc) providing a comprehensive view of the aggregated data.
 
 > Also see the Explore Flows and Export Flows which work with individual flows.
 
@@ -44,6 +44,7 @@ The search results are presented as a tabular display, with each tab representin
 
 - The [*Toggle Labels*](/docs/ug/ui/elements#toggle-labels) button enables the display of resolved names for the tuple parameters, providing an alternative view of the data. 
 - The [*Download*](/docs/ug/ui/elements#download-button) button allows for the export of the resulting data in a suitable format, facilitating further analysis and reporting.
+- Each field in the tuple tab is [*Column Sortable*](/docs/ug/ui/elements#column-sorter), enabling flexible data analysis and visualization.
 
 ### Data Displayed
 
@@ -73,5 +74,3 @@ These data sets provide a comprehensive view of network activity, facilitating i
 - **Volume**: The total amount of data (in kilobytes) transferred in the flows matching the tuple.
 - **Percent**: The percentage of total flows or volume represented by the tuple, enabling identification of dominant or anomalous patterns.
 - **Router**: The router device handling the flows for the specific tuple, providing context for network topology and traffic routing.
-
-Each field in the tuple tab is sortable, enabling users to rearrange data in ascending or descending order by clicking the adjacent arrow(up/down) button, for flexible data analysis and visualization.
