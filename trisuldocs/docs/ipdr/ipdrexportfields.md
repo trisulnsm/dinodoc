@@ -40,9 +40,9 @@ The fields come from three sources
 
 You can view new and previous IPDR queries in the IPDR Dashboard.
 
-:::note navigation
+:::info navigation
 
-Login as dotuser-> Goto IPDR Logs-> IPDR Dashboard
+:point_right: Login as dotuser&rarr; Goto IPDR Logs&rarr; IPDR Dashboard
 
 :::
 
