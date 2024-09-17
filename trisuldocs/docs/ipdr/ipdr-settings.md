@@ -7,8 +7,8 @@ The IPDR Settings page allows you to change two things.
 
 ### Access the form 
 
-:::tip[navigation]
-Login as admin and select *Context:default > Admin Tasks > IPDR Settings*
+:::info navigation
+:point_right: Login as `admin` and select Context:default &rarr; Admin Tasks &rarr; IPDR Settings
 :::
 
 ![](images/ipdr_settings.png)

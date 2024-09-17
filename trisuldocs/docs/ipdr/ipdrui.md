@@ -1,6 +1,6 @@
 # IPDR UI Elements
 
-This section provides an overview of the essential user interface elements that facilitate efficient query management in Trisul. Learn how to leverage features such as pagination, query summaries, resubmit options, and search functionality to locate specific queries, and easily download the reports.
+This section provides an overview of the essential user interface elements that facilitate efficient query management in Trisul. Lets get familiar with features such as pagination, query summaries, download options, resubmit button, and search functionality to locate specific queries, and easily download the reports.
 
 ![](images/ipdruielements.png)  
 *Figure: IPDR UI Elements*
