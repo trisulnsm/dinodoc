@@ -21,10 +21,10 @@ The pagination feature bar is located at the upper left hand side of the page. H
 ## Query Summary
 Above the table of submitted queries, a summary of the overall query status is displayed, that provide a a quick overview of query status, enabling you to monitor progress.
 
-Cancelled: Number of queries that have been cancelled.  
-Completed: Number of queries that have been successfully completed.  
-New: Number of newly submitted queries waiting to be processed.  
-Started: Number of queries currently being processed.  
+**Cancelled**: Number of queries that have been cancelled.  
+**Completed**: Number of queries that have been successfully completed.  
+**New**: Number of newly submitted queries waiting to be processed.  
+**Started**: Number of queries currently being processed.  
 
 This summary is dynamic and updates according to the page data. For each page, the summary will reflect the number of processed queries specific to that page.
 
@@ -41,12 +41,12 @@ This allows you to easily navigate through multiple pages of submitted queries a
 
 ## Download 
 
-This is one of the most commonly found UI elements across Trisul. Clicking on the Download button enables you to download the data for sharing, backup and archive.
+This is one of the most commonly found UI elements across Trisul. Clicking on the Download button enables you to download the data for sharing, backup and archive.  
 
-You can export data, reports, or analytics in various formats like,
-PDF: Downloads the data in Portable Document Format (PDF), suitable for printing or sharing.
-XLSX: Downloads the data in Microsoft Excel format (XLSX), suitable for editing or analysis.
-CSV: Downloads the data in Comma Separated Values format (CSV), suitable for importing into other applications for analysis.
+You can export data, reports, or analytics in various formats like,  
+**PDF**: Downloads the data in Portable Document Format (PDF), suitable for printing or sharing.  
+**XLSX**: Downloads the data in Microsoft Excel format (XLSX), suitable for editing or analysis.  
+**CSV**: Downloads the data in Comma Separated Values format (CSV), suitable for importing into other applications for analysis.  
 
 ## Resubmit
 
