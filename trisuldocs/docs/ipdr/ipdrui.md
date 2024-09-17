@@ -5,13 +5,13 @@ This section provides an overview of the essential user interface elements that 
 ![](images/ipdruielements.png)  
 *Figure: IPDR UI Elements*
 
-Features are explained as numbered in the figure.
-1) Pagination
-2) Query Summary
-3) Page Navigation
-4) Download Options
-5) Resubmit Button
-6) Search Bar
+Features are explained as numbered in the figure.  
+i) [Pagination](#pagination)  
+ii) [Query Summary](#query-summary)  
+iii) [Page Navigation](#page-navigation)  
+iv) [Download Options](#download)  
+v) [Resubmit Button](#resubmit)  
+vi) [Search Bar](#search-bar)  
 
 
 ## Pagination
