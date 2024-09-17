@@ -43,8 +43,8 @@ Now you can apply various [Retro Analysis Tools](/docs/ug/cg/retrotools) to inve
 
 ### I want to see details of a particular IP, but it isnt showing up anywhere for me to click ?
 
-1. [Use the search box](/docs/ug/ui/elements#the-search-box)
-2. Click on “View” to go to the key dashboard
+1. [Use the search box](/docs/ug/ui/elements#using-search-tool)
+2. Click on the *key* to go to the key dashboard
 3. Use any of the tools on the key dashboard
 
 ### Find out which flows caused a traffic pattern
