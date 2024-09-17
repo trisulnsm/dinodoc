@@ -31,12 +31,11 @@ This summary is dynamic and updates according to the page data. For each page, t
 ## Page Navigation
 Below the table of submitted queries, you can navigate to the desired page using the page navigation controls:
 
-Page numbers: If you have selected to display 10 queries per page and there are a total of 500 submitted queries, the page navigation will show 50 pages (1, 2, 3, ..., 50).
-
-Previous page: Click the single left arrow button to navigate to the previous page.
-Next page: Click the single right arrow button to navigate to the next page.
-First page: Click the double left arrow button to navigate to the first page.
-Last page: Click the double right arrow button to navigate to the last page.
+**Page numbers**: If you have selected to display 10 queries per page and there are a total of 500 submitted queries, the page navigation will show 50 pages (1, 2, 3, ..., 50).  
+**Previous page**: Click the single left arrow button to navigate to the previous page.  
+**Next page**: Click the single right arrow button to navigate to the next page.  
+**First page**: Click the double left arrow button to navigate to the first page.  
+**Last page**: Click the double right arrow button to navigate to the last page.  
 
 This allows you to easily navigate through multiple pages of submitted queries and get an overview of the query status for each page.
 
