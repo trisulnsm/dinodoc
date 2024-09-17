@@ -81,13 +81,14 @@ const sidebars = {
     				]
     		},
 
+    		"ipdr/ipdrui",
     		"ipdr/submit-queries",
     		"ipdr/ipdrdashboard",
     		"ipdr/ipdrstatistics",
     		"ipdr/ipdrexportfields",
     		"ipdr/staticip-mappings",
     		"ipdr/scripts",
-	        "ipdr/ipdrui"
+	        
 
      ],
   	},
