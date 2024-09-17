@@ -5,7 +5,7 @@ This page contains detailed configuration and tuning parameters. What goes on un
 ## Configuring Trisul for IPDR
 
 At ISP scale storing every single flow is a processor and disk intensive
-task. Hence this configuration cannot be mixed with the Netflow Traffic
+task. Hence this configuration cannot be mixed with the NetFlow Traffic
 and Security Analytics feature except for very small ISPs. This section
 contains configuration tips to optimize this feature.
 
@@ -28,7 +28,7 @@ Open the [trisulHubConfig.xml](/docs/ref/trisulhubconfig#advanced-db-parameters)
 ...
 ```
 
-## The trisul-ipdr query service
+## The trisul-ipdr Query Service
 
 The Trisul IPDR package comes with a powerful async query service called
 `trisul-ipdr` The features of this service are
@@ -58,7 +58,7 @@ systemctl start trisul-ipdr
 
 The system is designed to create a special login to the agent who will
 be performing the queries. This login has no other privileges other than
-to perform the query required for complaince. The powerful `trisul_ipdr`
+to perform the query required for compliance. The powerful `trisul_ipdr`
 service described above ensures the data is provided as a download or
 pushed directly to a Secure FTP (SFTP) server. Sometimes we have noticed
 agent requests resulting in several GB of output which cannot be downloaded over a browser. See [Configure IPDR Settings](ipdr-settings) on how to setup the SFTP server.
@@ -66,8 +66,7 @@ agent requests resulting in several GB of output which cannot be downloaded over
 The following diagram shows the workflow
 
 ![](images/ipdrflow.png)
-
-Fig 2. Agent login, submit, download, FTP workflow
+*Figure: Agent login, submit, download, FTP workflow*
 
 #### Agent login with special ID
 
