@@ -3,7 +3,7 @@
 
 Trisul IPDR or **Trisul Internet Protocol Data Record** is specifically developed to help Internet Service Providers to meet Regulatory Compliance requirements relating to Flow, NAT, and AAA logging. 
 
-## Using this guide
+## Using this Guide
 
 Trisul IPDR is built on the larger Trisul Network Analytics platform.
 

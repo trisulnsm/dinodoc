@@ -17,7 +17,7 @@ The steps for getting from zero to a working install of Trisul IPDR  are
 
 
 :::tip[only 3 packages]
-For IPDR mode, you only require `trisul-hub  trisul-probe webtrisul`
+For IPDR mode, you only require `trisul-hub`  `trisul-probe` `webtrisul`
 You do not require the `trisul-geo` and `trisul-badfellas` 
 :::
 
@@ -61,15 +61,15 @@ Next you need to select the network interface on which you will be receiving the
 
 
 :::info Navigation
-:point_right: Next go to Context:default &rarr;  Start/Stop Tasks &rarr; Stop the Probe and then start it again.	 
+:point_right: Go to Context:default &rarr;  Start/Stop Tasks &rarr; Stop the Probe and then start it again.	 
 :::
 
 
 ### 4. Request a Trial License 
 
-The built in license only works for 7-days.  We strongly recommend you contact us for an extended 15-day Trial via https://www.trisul.org/support/get-extended-license/ 
+The built in license only works for 7-days.  We strongly recommend you contact us for an extended 15-day Trial License via https://www.trisul.org/support/get-extended-license/ 
 
-## Configure network for IPDR
+## Configure Network for IPDR
 
 Now the IPDR Server is ready. Next you need to get the network to send data to it. 
 

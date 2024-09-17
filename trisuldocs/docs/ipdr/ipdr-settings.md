@@ -5,28 +5,25 @@ The IPDR Settings page allows you to change two things.
 - **FTP Settings** - optionally configure a secure FTP server to dump reports  
 - **Set Mode**- one click to configure the IPDR mode
 
-### Access the form 
+### Access the Form 
 
 :::info navigation
 :point_right: Login as `admin` and select Context:default &rarr; Admin Tasks &rarr; IPDR Settings
 :::
 
-![](images/ipdr_settings.png)
-
+![](images/ipdr_settings.png)  
 *Figure: How to access IPDR Settings* 
 
 ## FTP Settings 
 
-To change the FTP settings , press Edit.
+To change the FTP settings , click Edit.
 
-![ftp form](images/settings-access.png)
+![ftp form](images/settings-access.png)  
+*Figure: FTP Settings* 
 
-*Figure: Press Edit to access the FTP Settings* 
+Click **Edit** to access the form as shown below.
 
-Press **Edit** to access the form as shown below.
-
-![](images/ftpsettings.png)
-
+![](images/ftpsettings.png)  
 *Figure: FTP Settings fields* 
 
 | Field     | Default | Description |
@@ -34,14 +31,14 @@ Press **Edit** to access the form as shown below.
 | Server |    | The SFTP server IP address or host name  |
 | Port Number | 22 | The SFTP server port if not running on the default port 22  |
 | Username |   | SFTP user name|
-| Private Key  | /usr/local/etc/trisul-hub/ipdrpv.key  | SFTP user private key file path. Use the full file path including the directory name. We recommend you put the private key file in `/usr/local/etc/trisul-hub/ipdrpv.key` Ensure the file is readable by the user `trisul.trisul`  See the section [Configuring FTP](#configuring-the-ftp-server) below for instructions on how the private key is generated|
+| Private Key  | /usr/local/etc/trisul-hub/ipdrpv.key  | SFTP user private key file path. Use the full file path including the directory name. We recommend you put the private key file in <br/>`/usr/local/etc/trisul-hub/ipdrpv.key` <br/>Ensure the file is readable by the user `trisul.trisul`  See the section [Configuring FTP](#configuring-the-ftp-server) below for instructions on how the private key is generated|
 | Directory  |         | The remote directory where the results file are uploaded|
 | Download File Size | 100M    | Results file less than this number will be available for download on the [IPDR Dashboard](ipdrdashboard) page itself|
 | NAT Syslog Port   | 514     | Port number where NAT translation syslog as well as AAA logs will be sent|
 
 
 :::note restart ipdr service
-Upon changing these parameters. Restart the trisul_ipdrd service.
+Upon changing these parameters. Restart the trisul_ipdr service.
 
 ```bash
 systemctl restart trisul-ipdr
@@ -52,7 +49,7 @@ systemctl restart trisul-ipdr
 
 This section describes how to configure the FTP server in order to enable automatic dump of IPDR record files to the server.
 
-### Create key pair on Trisul IPDR Hub node
+### Create Key Pair on Trisul IPDR Hub Node
 
 On the Trisul-Hub server create a key pair like so into a file that is
 used for Trisul IPDR only. Use a file name `id_trisul_ipdr`

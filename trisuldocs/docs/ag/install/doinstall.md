@@ -1,6 +1,6 @@
 # Installing
 
-This page contains install information about Trisul Network Analytics.
+This page contains install information about **Trisul Network Analytics**.
 
 
 ## Installing All Packages
@@ -12,7 +12,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-  <TabItem value="jammy" label="Ubunty Jammy 22.04" default>
+  <TabItem value="jammy" label="Ubuntu Jammy 22.04" default>
     ```bash
     # login as root
     sudo -i

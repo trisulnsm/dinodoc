@@ -8,7 +8,7 @@ The Badfellas plugin checks your network traffic against millions of indicators 
 
 ![Badfellas malware tracker screenshot](./images/Badfellas.png)
 
-Blacklist Alerts
+*Figure: Blacklist Alerts*
 
 The following objects in your network traffic are scrutinized.
 
@@ -18,17 +18,17 @@ Matches IPs against blacklisted IPs
 
 **Domain**
 
-Matches blacklisted domain names, even if no response was received, or hidden inDNSrecords
+Matches blacklisted domain names, even if no response was received, or hidden in DNSrecords
 
 **HTTPHost**
 
-Checks if aHTTPhost is blacklisted. Priceless when flagging shared hosts like badun.blogspot.com
+Checks if a HTTPhost is blacklisted. Priceless when flagging shared hosts like badun.blogspot.com
 
 **SSLHost**
 
 The Server Name Indicator (SNI) is inspected  
 -URL:=  
-ChecksHTTPGETs/POSTs of your network against well known evil ones
+Checks HTTP GETs/POSTs of your network against well known evil ones
 
 **SSLCertificate**
 
@@ -36,24 +36,26 @@ Checks SHA1 fingerprint
 
 ## Feeds
 
-Feeds are sources of threat intelligence from which Trisul downloads updated threat indicators. Upon installion of badfellas plugin a “Feed” is automatically added to the Trisul-Hub node. The hub node then downloads updates as per rules and pushes them to the probes.
+Feeds are sources of threat intelligence from which Trisul downloads updated threat indicators. Upon installation of badfellas plugin a “Feed” is automatically added to the Trisul-Hub node. The hub node then downloads the updates as per rules and pushes them to the probes.
 
 The feed directory is located on the Trisul-Hub node at  
 
- BASHCopy`cd /usr/local/var/lib/trisul-config/domain0/allcontexts/feeds`
+```bash
+ cd /usr/local/var/lib/trisul-config/domain0/allcontexts/feeds
+```
 
-Inside this directory you can see`feed_xx`sub-directories representing plugins requesting feed updates. For example : GeoIP updates. The Badfellas feed is located in the subdirectory  
+Inside this directory you can see `feed_xx` sub-directories representing plugins requesting feed updates. For example : GeoIP updates. The Badfellas feed is located in the subdirectory  
 
 ```bash
 cd feed-2F3CCCA3-38D4-4773-97AB-3ED732F82533
 ```
 
 
-Inside the feed directory , there is a file called`rules.xml`This contains the feed configuration.
+Inside the feed directory , there is a file called `rules.xml` This contains the feed configuration.
 
 ### Removing a feed
 
-Locate the`rules.xml`file as described above. Then remove the feeds you want to disable. For example if you wish to disable theALIENVAULTfeed.
+Locate the `rules.xml` file as described above. Then remove the feeds you want to disable. For example if you wish to disable the ALIENVAULT feed.
 
 Remove the following lines
 
@@ -64,32 +66,32 @@ Remove the following lines
 </Source>
 ```
 
-The feed will skipped at the next download. See`Frequency`parameter in the rules.xml file.
+The feed will be skipped at the next download. See `Frequency` parameter in the rules.xml file.
 
 ## Included Blacklist Feeds
 
 The Badfellas package installs stub copies of the following blacklists. These feeds are updated to the latest versions at the next scheduled update time. Within 24 hrs.
 
-| Name                     | Type   | Source |
-| ------------------------ | -------------- | ------ |
-| DNSblackhole list       | [malwaredomains.lehigh.edu](http://sbc.io/hosts/hosts)List keeps track of domains known to propagate malware and spyware                             |        |
-| Malicious/scanner IPs    | [Dshield.org](https://www.dshield.org/)The well knownDSHIELDlist                                                                                   |        |
-| IP Blocklist             | [feodotracker.abuse.ch](https://feodotracker.abuse.ch/blocklist/)contains IP addresses (IPv4) used as C&C communication channel by the Feodo Trojan. |        |
-| Malware domain + urls    | [Malware Domain List](http://www.malwaredomainlist.com/)<br/>Domains hosting latest malware                                                           |        |
-| Anti phishing            | [Phish Tank](https://www.phishtank.com/)User submitted known phishing domains                                                                        |        |
-| Domains                  | Contains top domains list                                                                                                                             |        |
-| Domains                  | [Ransomware Domain Blocklist](https://ransomwaretracker.abuse.ch/blocklist/)show list of ransomware domain                                           |        |
-| IPs                      | [Ransomware Domain IPs](https://ransomwaretracker.abuse.ch/blocklist/)show list of ransomware IPs                                                    |        |
-| URLs                     | [Ransomware Domain URLs](https://ransomwaretracker.abuse.ch/blocklist/)show list of ransomware urls                                                  |        |
-| SSLBlacklist            | [SSLBlacklist](https://sslbl.abuse.ch/)contains list of badSSLcertificates                                                                        |        |
-| Domains                  | Contains top 1 million domains list                                                                                                                   |        |
-| TORnodes                | [TORnodes](https://www.dan.me.uk/torlist/?full)Checks if any of your network hosts are involved inTORproxy activitiy                              |        |
-| AlienVault IP Reputation | Flags IPs with poor reputation. This list includes scanners and other mischief                                                                        |        |
-| SSLBlacklist            | Hashes of maliciousSSLcertificates sourced from sslbl.abuse.ch    |        |
+| Name                     | Type   |
+| ------------------------ | -------------- |
+| DNS blackhole list       | [malwaredomains.lehigh.edu](http://sbc.io/hosts/hosts)<br/>List keeps track of domains known to propagate malware and spyware                             |   
+| Malicious/scanner IPs    | [Dshield.org](https://www.dshield.org/)<br/>The well known DSHIELD list                                                                                   |        
+| IP Blocklist             | [feodotracker.abuse.ch](https://feodotracker.abuse.ch/blocklist/)<br/>Contains IP addresses (IPv4) used as C&C communication channel by the Feodo Trojan. |        
+| Malware domain + URLs    | [Malware Domain List](http://www.malwaredomainlist.com/)<br/>Domains hosting latest malware                                                           |        |
+| Anti phishing            | [Phish Tank](https://www.phishtank.com/)<br/>User submitted known phishing domains                                                                        |       
+| Domains                  | Contains top domains list                                                                                                                             |       
+| Domains                  | [Ransomware Domain Blocklist](https://ransomwaretracker.abuse.ch/blocklist/)<br/>Show list of ransomware domain                                           |       
+| IPs                      | [Ransomware Domain IPs](https://ransomwaretracker.abuse.ch/blocklist/)<br/>Show list of ransomware IPs                                                    |       
+| URLs                     | [Ransomware Domain URLs](https://ransomwaretracker.abuse.ch/blocklist/)<br/>Show list of ransomware urls                                                  |       
+| SSL Blacklist            | [SSLBlacklist](https://sslbl.abuse.ch/)<br/>Contains list of bad SSL certificates                                                                        |       
+| Domains                  | Contains top 1 million domains list                                                                                                                   |       
+| TOR nodes                | [TORnodes](https://www.dan.me.uk/torlist/?full)<br/>Checks if any of your network hosts are involved inTORproxy activitiy                              |       
+| AlienVault IP Reputation | Flags IPs with poor reputation. This list includes scanners and other mischief                                                                        |       
+| SSL Blacklist            | Hashes of malicious SSL certificates sourced from sslbl.abuse.ch    |       
 
 ## Feed Updates
 
-The plugin will automatically download a fresh database at a set schedule. You can control when and how frequently this database is updated by modifying the`Frequency`parameter in the rules.xml file. The default setting is 1 update every day. All feeds are updated at the same frequency.
+The plugin will automatically download a fresh database at a set schedule. You can control when and how frequently this database is updated by modifying the `Frequency` parameter in the rules.xml file. The default setting is 1 update every day. All feeds are updated at the same frequency.
 
 ```bash
 <Run>
@@ -102,9 +104,9 @@ The plugin will automatically download a fresh database at a set schedule. You c
 
 To view the status of feed updates, whether the downloads were successful or not.
 
-:::note
+:::info navigation
 
-Login as admin, then select*Webadmin &rarr; Manage &rarr;  Plugin Data Updates*
+:point_right: Login as `admin`, then select Webadmin &rarr; Manage &rarr;  Plugin Data Updates
 
 :::
 
@@ -112,7 +114,7 @@ This shows the feed status.
 
 ## Installation
 
-This plugin is distributed as aRPM/DEBpackage.
+This plugin is distributed as a RPM/DEB package.
 
 ```bash
 # on centos
@@ -142,7 +144,7 @@ Processing File /tmp/temp_trisul_badfellas_staging/usr/local/share/BadFellas/mal
 
 ### Uninstallation
 
-Stop Trisul and uninstall theRPMorDEB
+Stop Trisul and uninstall the RPM/DEB
 
 ```bash
 # centos
@@ -163,7 +165,7 @@ Using external mechanism place your custom feed in a Tab Separated file with the
 
 #### Step 2 : Add your file as a source feed for Badfellas automatic updates
 
-Locate the feed`rules.xml`file[as described in feeds](#feeds)
+Locate the feed`rules.xml`file [as described in feeds](#feeds)
 
 Find the local feed section
 
@@ -181,9 +183,9 @@ Find the local feed section
 </Source>
 ```
 
-In the above snippet – theURL`file://.... badfellas-local.tsv`represents the source feed. Change it to your file orURLif you are hosting it on a website. The feed will be automatically refresh like the other sources.
+In the above snippet – the URL `file://.... badfellas-local.tsv` represents the source feed. Change it to your file or URL if you are hosting it on a website. The feed will be automatically refreshed like the other sources.
 
-#### Restart Trisul or wait for about 30 minutes for the feed to be picked up
+> **Restart Trisul or wait for about 30 minutes for the feed to be picked up**
 
 ## Configuration parameters
 
@@ -195,15 +197,15 @@ How frequently Trisul server reloads the threat intel information. This is separ
 
 **CheckICMP**
 
-ScanICMPtraffic like PINGs for connection attempts
+Scan ICMP traffic like PINGs for connection attempts
 
 **CheckDNS**
 
-ParseDNSrecords
+Parse DNS records
 
 **CheckHTTPHost**
 
-CheckHTTPHost header in addition toDNS
+Check HTTP Host header in addition to DNS
 
 **CheckTCPFlows**
 
@@ -215,7 +217,7 @@ Check all URLs seen
 
 **FatTailRank**
 
-In theURLTop-1million lists URLs below this as considered as Fat Tail
+In the URL Top-1 million lists URLs below this as considered as Fat Tail
 
 Locate the [rules.xml file](/docs/ag/install/badfellas#feeds)
 
@@ -232,4 +234,4 @@ Locate the [rules.xml file](/docs/ag/install/badfellas#feeds)
 
 ## Also read
 
-See the[Badfellas Malware alerts section](/docs/ug/alerts/mw)in the User Guide
+See the [Badfellas Malware alerts section](/docs/ug/alerts/mw) in the User Guide

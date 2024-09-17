@@ -38,7 +38,7 @@ NetFlow sizing is based on number of devices and interfaces.  Click a tab that i
   	<TabItem value="small" label="Small 500 Endpoints/20 Routers" default>
 :::info Trying it out
 
-If you just trying out Trisul start with the Small version below. 
+If you are just trying out Trisul, it is recommended to start with a small version as below. 
 :::
 
 
@@ -201,7 +201,7 @@ This section contains more detailed information about the workloads. Read this t
 
 The load profile of the Probe and Hub components.
 
-| Node type | Description | Load profile  | 
+| Node Type | Description | Load Profile  | 
 | -------- | ------- | -------- | 
 | Trisul Hub   | Database node  | Disk bound I/O, number of probes matter |
 | Trisul Probe | PCAP storage and streaming analytics | CPU bound|  
@@ -212,9 +212,9 @@ The load profile of the Probe and Hub components.
 The Trisul hub is a data storage and query node with a high bandwidth and low latency I/O to the Trisul Probes.
 Disk sizing is a key concern of the hub.
 
-| Mode | scaling metric                                           | additional resource needed |
+| Mode | Scaling Metric                                           | Additional Resource Needed |
 | ---- | -------------------------------------------------------- | -------------------------- |
-| Hub  | For every medium volume probe + every 5 concurrent users | 1CPU + 2GB      |
+| Hub  | For every medium volume probe + Every 5 concurrent users | 1CPU + 2GB      |
 
 
 
@@ -222,7 +222,7 @@ Disk sizing is a key concern of the hub.
 
 Some guidelines in table below for sizing the Trisul Probe node.
 
-| Mode        | scaling metric   | additional resource needed |
+| Mode        | Scaling Metric   | Additional Resource Needed |
 | ----------- | ----------------- | -------------------------- |
 | Raw Packets | For every 200Mbps | 1 3Ghz Core + 4GB DDR4     |
 
@@ -230,10 +230,10 @@ Some guidelines in table below for sizing the Trisul Probe node.
 
 The relevant scaling metric is NetFlow bandwidth, this represents the total bandwidth taken by NetFlow packets. The mapping typically is
 
-- **Estimating  NetFlow bandwidth** : Netflow traffic is 0.5-1% of total bandwidth. Therefore 1Gbps of total bandwidth would generate about  500Kbps-1Mbps of NetFlow data
+- **Estimating  NetFlow Bandwidth** : NetFlow traffic is 0.5-1% of total bandwidth. Therefore 1Gbps of total bandwidth would generate about  500Kbps-1Mbps of NetFlow data
 
 
-| Mode               | scaling metric                   | additional resource needed   |
+| Mode               | Scaling Metric                   | Additional Resource Needed   |
 | ------------------ | -------------------------------- | ---------------------------- |
 | Netflow | for every 10Mbps NETFLOW traffic | + 1 CPU Core + 2GB RAM     |
 

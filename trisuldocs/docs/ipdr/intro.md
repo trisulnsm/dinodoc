@@ -32,12 +32,12 @@ following information on a per flow basis.
 #### Parameters to be collected
 
 - Customer information obtained during customer acquisition.
-- user id
-- start time of flow
-- end time of flow
-- source ip address
+- User id
+- Start time of flow
+- End time of flow
+- Source ip address
 - NAT source IPv4 or IPv6 address (if NAT is used)
-- source port
+- Source port
 - NAT source port (if NAT is used)
 - Destination IPv4 of IPv6 address
 - Destination Port
@@ -46,13 +46,12 @@ The compliance requirement calls the above information IPDR and NAT
 Syslog. Ideally they should be combined into one simple comprehensive
 per-flow log. This is what Trisul IPDR provides.
 
-## Obtaining data telemetry
+## Obtaining Data Telemetry
 
 The Trisul IPDR solution can accept a variety of inputs to create and
 maintain the IPDR log for compliance. The following diagram explains the
 architecture.
 
 ![](images/obtainingdatatelemetry.png)
-
-Fig 1. Accepts Netflow, Sflow, IPFIX, NAT and Radius syslog
+*Figure: Accepts Netflow, Sflow, IPFIX, NAT and Radius syslog*
 
