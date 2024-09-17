@@ -70,7 +70,7 @@ id_trisul_ipdr.pub      # the public key  (to be send to the target FTP server)
 id_trisul_ipdr           # the private key (never to be shared, stored on Trisul-Hub)
 ```
 
-### Save the public key on the target server
+### Save the Public Key on the Target Server
 
 Now put the `id_trisul_ipdr.pub` on to the target server with the
 `Username` in the IPDR FTP Settings.
@@ -81,7 +81,7 @@ Now put the `id_trisul_ipdr.pub` on to the target server with the
 cat id_trisul_ipdr.pub >> .ssh/authorized_keys 
 ```
 
-### Test it out
+### Test it Out
 
 On the Trisul-Hub node check if the server works. You can use the ssh
 command to test.
@@ -95,17 +95,19 @@ ssh -i /usr/local/etc/trisul-hub/id_trisul_ipdr  dotuser@10.179.210.1
 ```
 -----
 
-## Set Mode : Manually set IPDR mode
+## Set Mode : Manually Set IPDR Mode
 
 If you have skipped the [Mode Chooser Wizard](install) at time of first login, you can switch Trisul to IPDR mode at anytime by following the steps on this page. 
 
-:::info Change the mode
-Press the **Enable IPDR Mode** to automatically set all the required parameters the right values.  
+:::info navigation
+:point_right: Login as `admin` and select Context:default &rarr; Admin Tasks &rarr; IPDR Settings
 :::
+
+Click the **Enable IPDR Mode** to automatically set all the required parameters to right values.  
 
 In the IPDR Configuration module you can see the status of the IPDR configurations including the database tuning parameters, hub, probe and WebTrisul. 
 
-Clicking on the Enable IPDR Mode sets the parameters and configures the Trisul Network Analytics general platform into Trisul IPDR. 
+Clicking on the Enable IPDR Mode sets the parameters and configures the **Trisul Network Analytics** general platform into **Trisul IPDR**. 
 
 The image below shows the parameters. 
 
