@@ -37,7 +37,7 @@ The Trisul IPDR package comes with a powerful async query service called
    and then download the results when done
 2. Results - the results will be in compliance format including the
    full IP details as well as the NAT (if applicable)
-3. Dashboard - dashboard shows running queries, completed queries,
+3. Dashboard - dashboard shows running queries, completed queries, and
    download results
 4. Cancel - allows cancel of long running queries, number of records
    are constantly updated
@@ -82,6 +82,6 @@ deployment.
 | Config file | Parameter | Set this to | Notes  |
 | -------- | ---- | ------- | ------------ |
 | [Netflow config](/docs/ref/netflow-config)  | AppMode                              | ipdr                             | Sets the Netflow processing to IPDR mode|
-| [Hub Config](/docs/ref/trisulhubconfig#advanced-db-parameters) | DBParamters \> FlowStream \> AppMode | lz4-ip-call-log-with-nat-pro-max | Sets the database schema and compression code to pro-max mode|
+| [Hub Config](/docs/ref/trisulhubconfig#advanced-db-parameters) | DBParameters \> FlowStream \> AppMode | lz4-ip-call-log-with-nat-pro-max | Sets the database schema and compression code to pro-max mode|
 | [Probe Config file](/docs/ref/trisulconfig#tuning)            | Tuning \> DisableFlowTupleFeedback   | true                             | Disables monitoring of flow tuples by IP and Application. If this is enabled, there will be connection metrics for every IP and App, could waste disk space for IPDR |
 | [Probe Config file](/docs/ref/trisulconfig#edges)             | Edges \> EnableFlowEdges             | false                            | Disable Edge graph generation for space savings                                                                                                                      |

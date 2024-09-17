@@ -4,7 +4,7 @@ How to add customer information, so that they are automatically filled into the 
 
 ## Compliance requirement
 
-The DoT compliance letter clearly mentions that the following details need to tbe provided in the output report.  These are called CAF fields. CAF stands for Customer Acquisition Form. 
+The DoT compliance letter clearly mentions that the following details need to be provided in the output report.  These are called CAF fields. CAF stands for Customer Acquisition Form. 
 
 ![caf_fields](images/letter-caf.png)
 
@@ -18,7 +18,7 @@ This feature is most useful for the static IP customers of the ISP. Because the 
 Adding customer details for static IP customers can be done in two methods
 
 - Automatically use a REST API – contact us offline for this
-- Enter each mapping or upload a CSV file contianing all static IP to customer mappings
+- Enter each mapping or upload a CSV file containing all static IP to customer mappings
 
 ## Manually add Static IP Mappings 
 

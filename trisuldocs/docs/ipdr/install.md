@@ -26,7 +26,7 @@ After downloading the packages, logon to the server as root
 ```bash
 
 # for ubuntu
-dpkg -i trisul-hub-xxx.deb trisul-probe-xxx.deb  wetrisul-xxx.deb
+dpkg -i trisul-hub-xxx.deb trisul-probe-xxx.deb  webtrisul-xxx.deb
 
 # for RHEL/CentOS/Oracle
 rpm -Uvh trisul-hub-xxx.rpm trisul-probe-xxx.rpm  webtrisul-xxx.rpm 

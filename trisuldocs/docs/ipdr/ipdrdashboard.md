@@ -4,10 +4,9 @@ Trisul IPDR Dashboard provides a visual representation of network activity data,
 
 To view IPDR Dashboard,
 
-:::note Navigation
+:::info Navigation
 
-Login as User name: `dotuser` and 
-
+:point_right: Login as User name: `dotuser` and  
 Password: `ipdr@@123`
 
 :::
@@ -46,7 +45,7 @@ Trisul IPDR Dashboard consists of two components
 
 2) Submitted queries for IPDR logs
 
-### IPDR Statitics
+### IPDR Statistics
 
 ![](images/ipdrstatistics.png)
 
@@ -58,15 +57,15 @@ This module displays the total number of flows captured by trisul for the last w
 
 ![](images/totalsessions.png)
 
-You can hover over the chart to view the statitics data of flows stored per day for the last seven days.
+You can hover over the chart to view the statistics data of flows stored per day for the last seven days.
 
 #### Total DB Size
 
-This module shows you the total Data Base size for the last seven days. Similar to total sessions module, in this each bar in the bar chart displays the disk usage per day for the last seven days by default.
+This module shows you the total Database size for the last seven days. Similar to total sessions module, in this each bar in the bar chart displays the disk usage per day for the last seven days by default.
 
 #### Flows Stored Per Minute
 
-In this module you can see the total number of flows (network connections) stored per minute by Trisul. The Sparkline in this module are real-time flows stored per minute for tha last one hour. 
+In this module you can see the total number of flows (network connections) stored per minute by Trisul. The Sparkline in this module are real-time flows stored per minute for the last one hour. 
 
 ![](images/flowsstoredperminute.png)
 
@@ -104,7 +103,7 @@ The header of the module contains the total number of status of queries **Starte
 
 **Size**: This is the file size of the generated report for the query.
 
-**Donwload**: You can download the report in .txt, excel, or in CSV formats.
+**Download**: You can download the report in .txt, excel, or in CSV formats.
 
 Once you have the query processing completed on the dashboard which will typically take less than 10 seconds. You can click the download button of the desirable format and the report will be downloaded!
 

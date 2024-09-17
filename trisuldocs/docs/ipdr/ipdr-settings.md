@@ -70,7 +70,7 @@ Now  you will have the key pair saved in the current directory
 
 ```bash
 id_trisul_ipdr.pub      # the public key  (to be send to the target FTP server)
-id_trisul_ipd           # the private key (never to be shared, stored on Trisul-Hub)
+id_trisul_ipdr           # the private key (never to be shared, stored on Trisul-Hub)
 ```
 
 ### Save the public key on the target server

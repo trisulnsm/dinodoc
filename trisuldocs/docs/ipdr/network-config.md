@@ -4,7 +4,7 @@ This section contains information about setting up the ISP network elements to p
 
 
 - Configuring packet capture
-- Co  nfiguring IPFIX/NetFlow 
+- Configuring IPFIX/NetFlow 
 - RADIUS / AAA
 - NAT mappings including CGNAT 
 
