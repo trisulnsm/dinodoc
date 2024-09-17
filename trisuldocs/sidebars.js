@@ -86,7 +86,8 @@ const sidebars = {
     		"ipdr/ipdrstatistics",
     		"ipdr/ipdrexportfields",
     		"ipdr/staticip-mappings",
-    		"ipdr/scripts"
+    		"ipdr/scripts",
+	        "ipdr/ipdrui"
 
      ],
   	},
