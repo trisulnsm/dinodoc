@@ -1,8 +1,8 @@
-# Static IP mappings
+# Static IP Mappings
 
 How to add customer information, so that they are automatically filled into the output EXCEL report.
 
-## Compliance requirement
+## Compliance Requirement
 
 The DoT compliance letter clearly mentions that the following details need to be provided in the output report.  These are called CAF fields. CAF stands for Customer Acquisition Form. 
 
@@ -20,10 +20,10 @@ Adding customer details for static IP customers can be done in two methods
 - Automatically use a REST API – contact us offline for this
 - Enter each mapping or upload a CSV file containing all static IP to customer mappings
 
-## Manually add Static IP Mappings 
+## Manually Add Static IP Mappings 
 
-:::note navigation
-Goto Context: default &rarr; Admin Tasks &rarr; IPDR Customers
+:::info navigation
+:point_right: Go to Context: default &rarr; Admin Tasks &rarr; IPDR Customers
 :::
 
 The column subnets shows the IP Addresses addressed to each customer along with other details.
@@ -40,7 +40,7 @@ Fill in the following details - these show up verbatim in the output report that
 * **Alt Phone Number** - optional 
 * **UserID** - UserID or subscriber ID 
 
-### Add IP Subnet to Customer mapping
+### Add IP Subnet to Customer Mapping
 
 This is how you add static IP mappings to customers added in previous step.
 
@@ -78,7 +78,7 @@ The right side options menu contains the following options
 * Delete - delete this mapping entirely
 
 
-## Bulk import from CSV format
+## Bulk Import from CSV Format
 
 You can also import an entire customer database at once via a CSV file. 
 

@@ -21,11 +21,11 @@ This is the example of the logged in screen that you will be taken to.
 
      ![](images/ipdrlogin2.png)
 
-   On the Left side of the screen you can find the IPDR menu where you can navigate to,
+   On the Left side of the screen you can find the IPDR menu where you can navigate to:
 
 1) [Query Logs](submit-queries)
 
-2) [IPDR Dashboard](ipdrdashboard)
+2) [IPDR Dashboard](/docs/ipdr/ipdrdashboard#ipdr-dashboard-1)
 
 3) [IPDR Statistics](ipdrstatistics)
 
@@ -33,7 +33,7 @@ This is the example of the logged in screen that you will be taken to.
 
 ### IPDR Dashboard
 
-IPDR dashboard consists of number of modules that displays IPDR statistics and the record details of submitted queries for IPDR logs. This is an example of Trisul IPDR dashboard.
+IPDR dashboard consists of overview of modules that displays IPDR statistics and the record details of submitted queries for IPDR logs that are explained below. This is an example of Trisul IPDR dashboard.
 
 ![](images/ipdrdashboard.png)
 
@@ -73,11 +73,11 @@ You can hover over on the sparkline to view the value of flows stored per minute
 
 #### Total Devices
 
-This module gives you the total number of unique devices (IP addresses) detected by Trisul since the last one hour. The sparkline in this module represents the number of devices for the past one hour. Similar to the flows store per minute module, here also you can hover over the sparkline to view the real-time total count of devices at any point of time for the past one hour.
+This module gives you the total number of unique devices (IP addresses) detected by Trisul since the last one hour. The sparkline in this module represents the number of devices for the past one hour. You can hover over the sparkline to view the real-time total count of devices at any point of time for the past one hour.
 
 ### Submitted Queries for IPDR Logs
 
-In this module you can see the result for the custom queries for IPDR logs submitted by the user. Trisul captures the specific IPDR data  based on user defined criteria. The parameters of the logs are exactly as per the regulatory requirements and sufficient for audit/compliance.
+In this module you can see the result for custom queries for IPDR logs submitted by the user. Trisul captures the specific IPDR data  based on user defined criteria. The parameters of the logs are exactly as per the regulatory requirements and sufficient for audit/compliance.
 
 This is a sample of Trisul IPDR log.
 
@@ -85,7 +85,7 @@ This is a sample of Trisul IPDR log.
 
 Let us explore the components of the IPDR log module in the following.
 
-The header of the module contains the total number of status of queries **Started/Completed/Cancelled** by the user.
+The header of the module contains the total number of status of queries [**Started/Completed/Cancelled**](/docs/ipdr/ipdrui#query-summary) by the user.
 
 **User Name**: This is the name of the user who initiated the query.
 
@@ -107,6 +107,6 @@ The header of the module contains the total number of status of queries **Starte
 
 Once you have the query processing completed on the dashboard which will typically take less than 10 seconds. You can click the download button of the desirable format and the report will be downloaded!
 
-##### Cancellation
+## Cancellation
 
-The user can cancel long running tasks by pressing the *Cancel* button against the query that has just started processing. The results that have been retrieved up until that point is immediately made available for download and/or FTP.
+The user can cancel long running tasks by clicking the *Cancel* button against the query that has just started processing. The results that have been retrieved up until that point is immediately made available for download and/or FTP.
