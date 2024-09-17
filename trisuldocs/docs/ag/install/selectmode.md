@@ -19,7 +19,7 @@ The default mode of Trisul is Packet Capture based Network Security Monitoring. 
 
 |Packet Mode|NetFlow|Compliance|ISP|
 |---|---|---|---|
-|![Packet Mode](/img/appnsm.png)|![NetFlow Mode](/img/appnetflow.png)|![IPDR Compliance](/img/appipdr.png) |![ISP](/img/appisp.png)|
+|![Packet Mode](images/nsm_prod.png)|![NetFlow Mode](images/netflow_prod.png)|![IPDR Compliance](images/ipdr_prod.png) |![ISP](images/isp_prod.png)|
 |**Packet** <br/>Packet Capture based Network Security Monitoring (the default)|**NetFlow Analyzer**<br/>Turn into a NetFlow Monitor|**IPDR Compliance**<br/>A ISP/Telco flow and NAT logging solution for regulatory compliance|**ISP Analytics**<br/> For ISPs looking for peering analytics, BGP Route Analytics, Prefixes and so on|
 
 

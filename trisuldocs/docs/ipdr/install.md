@@ -13,7 +13,7 @@ The steps for getting from zero to a working install of Trisul IPDR  are
 
 :clap: Congrats ! You are halfway there. Follow the steps outlined in the rest of this document.
 
-## Package install
+## Package Install
 
 
 :::tip[only 3 packages]
@@ -36,7 +36,7 @@ rpm -Uvh trisul-hub-xxx.rpm trisul-probe-xxx.rpm  webtrisul-xxx.rpm
 For more details refer to the  :memo: [Installation section in the Trisul User Guide](/docs/ag/install/doinstall) 
 
 
-## Mode wizard at first login
+## Mode Wizard at First Login
 
 :::info First Login
 After install go to Trisul IPDR webpage at  http://x.y.z.z:3000 and enter admin/admin - On first login you will be asked to switch to IPDR mode.
@@ -47,10 +47,10 @@ After install go to Trisul IPDR webpage at  http://x.y.z.z:3000 and enter admin/
 
 On the very first admin login you will be prompted to switch into the desired mode of Trisul Netflow Analytics. The selection box will look like this. Select the **IPDR Compliance** option and press Next. 
 
-![select IPDR mode](images/login-select-mode.png)
+![select IPDR mode](images/prodmode_ipdr.png)
 *Figure: Select IPDR Compliance Mode*
 
-### 2. Select the interface 
+### 2. Select the Interface 
 
 Next you need to select the network interface on which you will be receiving the NetFlow and/or SYSLOG traffic. 
 
@@ -60,14 +60,14 @@ Next you need to select the network interface on which you will be receiving the
 ### 3. Start the Trisul IPDR Servers
 
 
-:::note Navigation
-Next go to Context:default &rarr;  Start/Stop Tasks &rarr; Stop the Probe and then start it again.	 
+:::info Navigation
+:point_right: Next go to Context:default &rarr;  Start/Stop Tasks &rarr; Stop the Probe and then start it again.	 
 :::
 
 
 ### 4. Request a Trial License 
 
-The built in license only works for 3-days.  We strongly recommend you contact us for an extended 15-day Trial via https://www.trisul.org/support/get-extended-license/ 
+The built in license only works for 7-days.  We strongly recommend you contact us for an extended 15-day Trial via https://www.trisul.org/support/get-extended-license/ 
 
 ## Configure network for IPDR
 
