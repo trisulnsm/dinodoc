@@ -22,8 +22,7 @@ Login as admin to the Trisul UI
 :point_right:  Select Context → Admin Tasks → Start/Stop Tasks 
 :::
 
-![startstop menu](images/startstop1.png)
-
+![startstop menu](images/startstop1.png)  
 *Figure:  Selecting the Start Stop Menu*
 
 
@@ -54,7 +53,7 @@ Web Trisul provides the Web UI and is configured to start automatically.
 
 ### Start and Stop Webtrisul
 
-Use the normal Linux tools to start and stop Webtrisul. The service name is`webtrisuld`
+Use the normal Linux tools to start and stop Webtrisul. The service name is `webtrisuld`
 
 ```bash
 systemctl stop webtrisuld
