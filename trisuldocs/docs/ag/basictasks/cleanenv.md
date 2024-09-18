@@ -14,7 +14,7 @@ trisulctl_hub reset context default
 ```
 
 :::warning Stop running context first
-You are not allowed to *reset context* if the context is still running.
+You are not allowed to *reset context* if the context is still running.  
 If you get this error, use `stop context <contextname>` and then a
 `reset`.
 :::
@@ -68,5 +68,4 @@ if you are sure you do not want the context anymore.
 You are not allowed to delete the `default` context. Running
 `delete context default` will get rid of the configuration and data for
 the default context, but the context itself will be available.
-
-```
+:::
