@@ -261,13 +261,13 @@ them ask for confirmation
   over
 - delete context —> delete the context itself. the data and the
   configuration are removed.  
- **Note** you cannot delete the default
+ > **Note**: You cannot delete the default
   context so that is treated as a reset
 
 | Command                  | Description                                                                                                     |
 | ------------------------ | ---------------------------------------------------------------------------------- |
-| `reset context default`  | clear data but keep the                                                            |
-| `delete context default` | remove the entire context, data and config. You can create a new context with that name if you want.                                                                                               |
+| `reset context default`  | Clear data but keep the configuration                                                     |
+| `delete context default` | Remove the entire context, data and config. You can create a new context with that name if you want.                                                                                               |
 
 ------------------------------------------------------------------------
 
