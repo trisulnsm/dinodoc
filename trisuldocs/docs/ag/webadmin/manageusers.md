@@ -92,7 +92,7 @@ Click the **Delete** link next to the user
 
 ## Change Own Password
 
-- Click the (*Account button*](/docs/ug/ui/userlayout#account) to open the dropdown menu at the upper right hand side of the page.
+- Click the [*Account button*](/docs/ug/ui/userlayout#account) to open the dropdown menu at the upper right hand side of the page.
 
 - Click *My Account*
 
