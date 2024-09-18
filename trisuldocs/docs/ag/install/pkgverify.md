@@ -20,12 +20,12 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 <TabItem value="deb" label="Ubuntu">
-  You will be using a package called`dpkg-sig`to verify the DEBs. Make sure it is installed first.
+  You will be using a package called `dpkg-sig` to verify the DEBs. Make sure it is installed first.
 
   The steps are :
 
-  1. Import our public key into your key ring using`gpg --import pubkey.gpg`
-  2. Verify using`dpkg-sig --verify pkg.deb`
+  1. Import our public key into your key ring using `gpg --import pubkey.gpg`
+  2. Verify using `dpkg-sig --verify pkg.deb`
 
   A sample verify session would look like below
 
@@ -45,8 +45,8 @@ import TabItem from '@theme/TabItem';
   <TabItem value="rpm" label="CentOS/RHEL Uninstall" default>
   The steps are
 
-  1. Import our public key`rpm --import https://trisul.org/pubkey.gpg`
-  2. Verify using`rpm --checksig trisulpackage.rpm`
+  1. Import our public key `rpm --import https://trisul.org/pubkey.gpg`
+  2. Verify using `rpm --checksig trisulpackage.rpm`
 
   Look for the OK message.
 
