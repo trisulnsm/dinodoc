@@ -10,9 +10,9 @@ sidebar_position: 1
 
 Trisul can be accessed by pointing your browser to :  
 
-- via HTTP on port *3000*. [Instructions to change this to another port](/docs/howto) 
+- Via HTTP on port *3000*. [Instructions to change this to another port](/docs/howto) 
 
-- via HTTPS
+- Via HTTPS
 
 ## First Login
 
@@ -87,4 +87,4 @@ seconds)
 - All login activity including inactivity timeout is logged (See *Admin
   &rarr; Tasks &rarr; User Auth Log*)
 
-> You can allow specific users to also login from multiple locations at
+> You can allow specific users to also login from multiple locations at a time
