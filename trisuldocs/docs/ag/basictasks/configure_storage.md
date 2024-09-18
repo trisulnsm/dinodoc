@@ -17,6 +17,7 @@ One of the first things you need to do is to calculate how much disk you are goi
 :::
 
 ![per day storage](images/storage_per_day.png)
+*Figure: Storage Status Showing Per Day Disk Storage*
 
 
 
