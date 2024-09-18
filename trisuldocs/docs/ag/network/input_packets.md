@@ -10,31 +10,34 @@ Sections in this document
 
 ### Virtual Machine Configuration
 
-If you are installing Trisul on a Virtual Machine, you may need to put the Virtual Switch in promiscuous mode to capture the traffic on the Physical port span. See this link for instructions for[VMWare](https://kb.vmware.com/s/article/1004099)
+If you are installing Trisul on a Virtual Machine, you may need to put the Virtual Switch in promiscuous mode to capture the traffic on the Physical port span. See this link for instructions for [VMWare](https://kb.vmware.com/s/article/1004099)
 
 ## Configuring Port Mirror / SPAN Port
 
-The following diagram shows how you can configure aSPANport and feed packets into Trisul. See your switch vendor’s documentation on configurating a PortSPANsession. [[CiscoSPANdocumentation](https://www.cisco.com/c/en/us/support/docs/switches/catalyst-6500-series-switches/10570-41.html)]
+The following diagram shows how you can configure a SPAN port and feed packets into Trisul. See your switch vendor’s documentation on configurating a Port SPAN session. [[CiscoSPANdocumentation](https://www.cisco.com/c/en/us/support/docs/switches/catalyst-6500-series-switches/10570-41.html)]
 
-![](images/portmirror.png)
+![](images/portmirror.png)  
+*Figure: Port Mirroring*
 
-**SPANexample**ports`ge/0/0/1`and`ge/0/0/12`traffic mirrored to`ge/0/0/6`which is then connected to Trisul-Probe
+**SPAN example**: Ports `ge/0/0/1` and `ge/0/0/12` traffic mirrored to `ge/0/0/6` which is then connected to Trisul-Probe
 
 ## Using Network Taps
 
-SPANports quickly become unweildy as network speeds increase. Network taps are available as Copper and Optical modules that are the preferred choice for high speed networks.
+SPAN ports quickly become unwieldy as network speeds increase. Network taps are available as Copper and Optical modules that are the preferred choice for high speed networks.
 
-![](images/networktap.png)
+![](images/networktap.png)  
+*Figure: Network Taps*
 
-Network Tap used with 10G optical fiber. Each direction needs a tap and sent to two ports on Trisul-Probe
+Network Tap used with 10G optical fiber. Each direction needs a tap and sent to two ports on Trisul-Probe.
 
 ## Using Trisul as a Bridge
 
 For small office networks you can even use 2 Ports of the box running Trisul and create a bridge. This places Trisul as an inline device.
 
-![](images/bridge.png)
+![](images/bridge.png)  
+*Figure: Bridge*
 
-Bridge : Use the Trisul-Probe inline as a bridge. Useful for small deployments
+> **Bridge** : Use the Trisul-Probe inline as a bridge. Useful for small deployments
 
 ### Bridging Ethernet Connections
 
@@ -46,10 +49,10 @@ A bridge allows you to connect two or more network segments together allowing de
 
 Install the bridge-utils package.
 
-Copy`sudo apt-get install bridge-utils`
+Copy `sudo apt-get install bridge-utils`
 
 Automatically Create the Bridge at Start-up  
-Sample`/etc/network/interfaces file`
+Sample `/etc/network/interfaces file`
 
 ```bash
 Install the bridge-utils package.
@@ -86,8 +89,8 @@ Install the bridge-utils package.
 yum install  bridge-utils
 ```
 
-To create a network bridge, create a file in the`/etc/sysconfig/network-scripts/`directory called`ifcfg-br0`  
-sample`/etc/sysconfig/network-scripts/ifcfg-br0`
+To create a network bridge, create a file in the `/etc/sysconfig/network-scripts/` directory called `ifcfg-br0`  
+Sample `/etc/sysconfig/network-scripts/ifcfg-br0`
 
 ```bash
 DEVICE=br0
@@ -101,7 +104,8 @@ NM_CONTROLLED=no
 DELAY=0
 ```
 
-To complete the bridge another interface is created, or an existing interface is modified, and pointed to the bridge interface sample`/etc/sysconfig/network-scripts/ifcfg-eth0`
+To complete the bridge another interface is created, or an existing interface is modified, and pointed to the bridge interface  
+Sample `/etc/sysconfig/network-scripts/ifcfg-eth0`
 
 ```bash
 DEVICE=eth0
@@ -113,7 +117,7 @@ NM_CONTROLLED=no
 BRIDGE=br0
 ```
 
-sample`/etc/sysconfig/network-scripts/ifcfg-eth1`
+Sample `/etc/sysconfig/network-scripts/ifcfg-eth1`
 
 ```bash
 DEVICE=eth1
