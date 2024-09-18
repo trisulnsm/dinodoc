@@ -9,8 +9,8 @@ Trisul Network Analytics licenses are :
 
 License types are :
 
-1. 7-Day Trial License : The trial license gives you tremendous value as it gets you all of the real time analytics and the most recent 7 days for historical analysis
-2. Production License : depends on the number of active internal endpoints in your Home Network space
+1. **7-Day Trial License** : The trial license gives you tremendous value as it gets you all of the real time analytics and the most recent 7 days for historical analysis
+2. **Production License** : depends on the number of active internal endpoints in your Home Network space
    1. Small Business : 500 simultaneously active Internal IPs
    2. Medium : 3000 simultaneously active Internal IPs
    3. Unlimited : As many as your hardware can support
@@ -29,13 +29,17 @@ Once you have decided which license type suits you, you need to get the Trisul M
 
 :::
 
-*Getting the machine-id from the Admin UI*  
-![](images/machineid.png)
+![](images/machineid.png)  
+*Figure: Getting the machine-id from the Admin UI*  
 
 Click on the machine ID link against each node to get the machineID as shown below
 
-*Showing the Upload button used to install new license files*  
-![](images/machineid_value.png)
+![](images/license_upload.png)
+*Figure: Showing the Upload button used to install new license files*  
+
+![](images/machineid_value.png)  
+*Figure: Showing a sample of Machine ID*
+
 
 ### Alternate Method: Get Machine ID Using Command Line
 
@@ -50,7 +54,7 @@ sudo trisul --machineid
 That number 4087ACCD-4B0B-DE11-833A-00248CB93BDE is called the MachineID.
 
 
-## Finding out how many internal IPs I have
+## Finding Out How Many Internal IPs I Have
 
 The license size depends on the number of maximum number of simultnaneously active Internal IPs. To get this number
 
@@ -60,6 +64,7 @@ The license size depends on the number of maximum number of simultnaneously acti
 
 :::
 
-![](images/license.png)
+![](images/license.png)  
+*Figure: The chart shows the active internal hosts in the past 24 hours*
 
-The chart shows the active internal hosts in the past 24 hours. Click on “Long Term Trends” to see a longer time window
+ Click on “Long Term Trends” to see a longer time window
