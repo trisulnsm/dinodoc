@@ -9,8 +9,8 @@ import Highlight from '/src/components/Highlighter/Highlight';
 
 A Trisul distributed domain is identified by :
 
-1. a set of two network endpoints
-2. a certificate+key pair
+1. A set of two network endpoints
+2. A certificate+key pair
 
 When you first install Trisul it creates a *domain0* that uses Unix
 Sockets as endpoints. So by default, the Trisul-Hub and Trisul-Probe
@@ -152,27 +152,27 @@ The new domain files have been placed at :
 Next you need to install the domain certificate on all probes and hub
 nodes.
 
-- share the `/usr/local/share/trisul-hub/domain0.cert` offline with all
+- Share the `/usr/local/share/trisul-hub/domain0.cert` offline with all
   probe nodes
 
-- install new domain cert on hub0
+- Install new domain cert on hub0
 
 ```
 sudo trisulctl_hub install domain
 /usr/local/share/trisul-hub/domain0.cert
 ```
 
-say YES if it asks you if you want to “Update the existing domain0
+Say YES if it asks you if you want to “Update the existing domain0
 certificate”
 
-- install the new domain cert on each probe. The domain0.cert in this
+- Install the new domain cert on each probe. The domain0.cert in this
   example is placed in the *mycerts* directory
 
 ```
 sudo trisulctl_probe install domain /home/unpl/mycerts/domain0.cert
 ```
 
-- then restart domain on all nodes
+- Then restart domain on all nodes
 
 ```
 sudo trisulctl_probe restart domain  
@@ -180,7 +180,7 @@ sudo trisulctl_hub restart domain
 ```
 
 Use `trisulctl` commands `list nodes` and `info context` to check if all
-nodes have joined the new domain.All the distributed nodes must get
+nodes have joined the new domain. All the distributed nodes must get
 listed here.
 
 ### Run change_endpoints for Hub Context (For First Probe Only)
@@ -189,8 +189,7 @@ listed here.
 <span class="badge badge--info">ONLY FOR FIRST PROBE</span>
 
 By default , Trisul uses an IPC connection for each Hub node. If this is
-the first remote probe you are adding. You  
-need to switch the Hub to a TCP connection mode. Follow these steps.
+the first remote probe you are adding. You need to switch the Hub to a TCP connection mode. Follow these steps.
 
 ```language-bash
 /usr/local/share/trisul-hub/change_endpoints
