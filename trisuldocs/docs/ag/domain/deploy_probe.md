@@ -108,7 +108,8 @@ Now the probe can authenticate with the domain.
 <span class="badge badge--danger">RUN ON HUB</span>
 
 Authorize and add the new probe to the contexts you want from the hub
-side. Use the `trisulctl_hub set config` command
+side.   
+Use the `trisulctl_hub set config` command.
 
 To add the new probeWEST to the default context use :
 
@@ -146,8 +147,7 @@ See the [Probe to Context Layer mapping reference ](/docs/ref/trisulhubconfig#pr
 <span class="badge badge--danger">RUN ON HUB</span><span class="badge badge--info">ONLY FOR FIRST PROBE</span>
 
 By default , Trisul uses an IPC connection for each Hub node. If this is
-the first remote probe you are adding. You  
-need to switch the Hub to a TCP connection mode. Follow these steps.
+the first remote probe you are adding. You need to switch the Hub to a TCP connection mode. Follow these steps.
 
 ```language-bash
 /usr/local/share/trisul-hub/change_endpoints

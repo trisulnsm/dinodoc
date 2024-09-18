@@ -98,7 +98,7 @@ contexts. See the below image.
 You can then select the context, configure it for example using the
 Netflow Wizard, and then start it.
 
-TO start the `newcontext` processes
+To start the `newcontext` processes
 
 - Click on the menu *Context: mycontext*
 - Admin Tasks &rarr; Start/Stop Tasks
