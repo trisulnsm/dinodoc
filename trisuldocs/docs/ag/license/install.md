@@ -58,12 +58,12 @@ The following alternate method places the new License files directly in the corr
 2. Edit the `LicenseFile` parameter in [trisulProbeConfig.xml](/docs/ref/trisulconfig#app ) to point to the new file. 
 
 
-repeat the same for the Hub (even if on the same machine)
+Repeat the same for the Hub (even if on the same machine)
 
 ### Install License on Trisul Hub Node
 
 1. Put the new license file in`/usr/local/etc/trisul-hub`
-1. Change the name** of the new file to `LicenseKey.txt` *OR*
+1. Change the name of the new file to `LicenseKey.txt` *OR*
 2. Edit the `LicenseFile` parameter in [trisulHubConfig.xml](/docs/ref/trisulconfig#app ) to point to the new file. 
 
 ### Restart Trisul Hub and Probe Node
