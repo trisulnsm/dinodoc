@@ -68,13 +68,13 @@ example, you can just run a command like `start context default` using
 
 A short list of things you can do
 
-1. check status of Trisul Probes if they are running
-2. check database sizes on all nodes
-3. view log files from any node
-4. start and stop all nodes or only particular nodes
-5. install or delete new probes, hubs, or contexts
+1. Check status of Trisul Probes if they are running
+2. Check database sizes on all nodes
+3. View log files from any node
+4. Start and stop all nodes or only particular nodes
+5. Install or delete new probes, hubs, or contexts
 6. LUA Workbench : A development environment to test your scripts
-7. importpcap tools
+7. Import PCAP tools
 
 Many of these operations can also be performed using the web interface.
 However a familiarity with these tools is needed to manage a medium to
@@ -98,13 +98,13 @@ root@ubuntu1604:~# trisulctl_probe
 The trisulctl\_ tools then connect to the Trisul domain using the
 following process.
 
-1. check if there is a valid domain certificate file at
+1. Check if there is a valid domain certificate file at
    /usr/local/etc/trisul-probe/domain0/domain0.cert.
-2. read the domain-backend and domain-frontend connection end points
+2. Read the domain-backend and domain-frontend connection end points
    from the certificate
-3. use the certificate to establish a ZMQ CURVE authenticated
+3. Use the certificate to establish a ZMQ CURVE authenticated
    connection to the domain endpoints
-4. read and execute commands from CLI
+4. Read and execute commands from CLI
 
 In the following listing we type the `list nodes` command to query all
 the nodes in the domain. If you had 3 probes you can see their details
@@ -151,7 +151,7 @@ Reference](/docs/ref/trisbashrc) for a complete list of useful shortcuts.
 ## Start and Stop Domain
 
 On each node the domain processes need to be running at all times. The
-default trisul installation packages automatically add a *systemd*
+default Trisul installation packages automatically add a *systemd*
 script to start and stop the domains. You can also manually start and
 stop the domain as shown below.
 
@@ -181,7 +181,7 @@ commands
 ### Stop the Domain
 
 On `quit` the CLI tool exits but the domain processes still run in the
-backgruound. To stop it :
+background. To stop it :
 
 | Command       | Description |
 | ------------- | ----------- |

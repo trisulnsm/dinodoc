@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Domains
 
-A domain is the top level group to which probes and hubs are members.
+A Domain is the top level group to which probes and hubs are members.
 This section describes the concepts and operations on the domain.
 
 > The central concept to a Trisul Network Analytics domain is the [CURVE](http://curvezmq.org/) “certificate” key pair. The nodes that
@@ -14,7 +14,7 @@ This section describes the concepts and operations on the domain.
 
 ## Domain Certificate
 
-The domain is identified by a file called the “Domain Certificate” and
+The Domain is identified by a file called the “Domain Certificate” and
 an associated private key. The cert works as follows:
 
 1. contains the 2 Network Endpoints called “frontend” and “backend”
@@ -71,7 +71,7 @@ curve
 Now you need to install the new certificate on the hub and then
 redistribute it to all the other nodes.
 
-1. first check if `create domain` worked. There should be a
+1. First check if `create domain` worked. There should be a
    domain0.cert and domain0.cert_secret in /usr/local/share/trisul-hub.
    Replace domain0 with domainXX if you have named it differently
 2. Type `trisulctl_hub`

@@ -6,9 +6,9 @@ sidebar_position: 1
 
 The startup process involves.
 
-1. start the **domain**— The control plane for Trisul probes and hubs
-2. start the **context** — Probes and hubs
-3. start the **webserver** — The user interface
+1. Start the **domain**— The control plane for Trisul probes and hubs
+2. Start the **context** — Probes and hubs
+3. Start the **webserver** — The user interface
 
 ### Example to Start All Processes
 
@@ -147,7 +147,7 @@ To start a context from a CLI
 trisulctl_hub start context default
 ```
 
-the output could be something like  
+The output could be something like  
 
 ```language-bash
 trisul_hub(domain0)> start context default

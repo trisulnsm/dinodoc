@@ -13,15 +13,15 @@ import DocCardList from '@theme/DocCardList';
 
 The following diagram illustrates the components involved
 
-1. the **domain** *domain0*
-2. the **trisul-probe** nodes *probe0* *probeEAST* and *probeWEST*
-3. the **trisul-hub** node *hub0*
+1. The **domain** *domain0*
+2. The **trisul-probe** nodes *probe0* *probeEAST* and *probeWEST*
+3. The **trisul-hub** node *hub0*
 
 ![](images/dom.png)
 
 *Figure: Trisul domain components*
 
-The domain represents a top level management group within which you
+The Domain represents a top level management group within which you
 create a topology of *probe* nodes and *hub* nodes. All the nodes are
 logical entities and you can install them all on a single physical
 machine or distribute them on different machines.
@@ -42,13 +42,13 @@ The following logical concepts are key to understanding a Trisul domain.
 The topmost entity in Trisul called a **domain**. The default domain you
 are likely using is called `domain0`.
 
-A domain is a top level membership group which includes *probes* and *hubs*. Each *probe* and *hub* instance must belong to one and only one
+A Domain is a top level membership group which includes *probes* and *hubs*. Each *probe* and *hub* instance must belong to one and only one
 domain. You can also have multiple domains - each domain is disjoint
 from every other domain but the hardware can be shared.
 
 ## Contexts
 
-A context is a separate database that represents an instance of Trisul
+A Context is a separate database that represents an instance of Trisul
 monitoring a particular network or dataset. You start and stop contexts
 as a unit. You also view reports and perform analytics within a context.
 By default Trisul puts all data into a single context called `context0`.
@@ -83,15 +83,15 @@ Probes are the main processing component of Trisul. They run the main
 processing pipeline from the packet acquisition to streaming stats
 generation. The function of probes are
 
-1. high speed packet capture
-2. packet storage
-3. netflow packet capture
-4. run the analytics pipeline
-5. host all the LUA scripts written by users
-6. store packet **locally** after encryption
-7. send the analytics stream to a hub node (currently `hub0` )
+1. High speed packet capture
+2. Packet storage
+3. NetFlow packet capture
+4. Run the analytics pipeline
+5. Host all the LUA scripts written by users
+6. Store packet **locally** after encryption
+7. Send the analytics stream to a hub node (currently `hub0` )
 
-A probe can run in multiple contexts and multiple domains. There will be
+A Probe can run in multiple contexts and multiple domains. There will be
 different instances of the probes running isolated from each other.
 
 Probes are managed using the `trisulctl_probe` command line tool 
@@ -109,7 +109,8 @@ Hubs provides the database and querying functionality. Data from all the *Probes
 stays on the *Probe* are the raw packets.
 
 Hubs are managed using the `trisulctl_hub` command line tool
-:::note **Packages** The package “trisul-hub” provides the Hub function. The
+:::note **Packages** 
+The package “trisul-hub” provides the Hub function. The
 package “webtrisul” which resides on the same node provides the
 webserver.
 
@@ -125,7 +126,7 @@ and cryptography. See [CurveMQ](http://curvezmq.org/) for more.
 2. The command line tools trisulctl_probe and trisulctl_hub allow you
    to manage the whole setup easily
 
-A domain is the top level group to which probes and hubs are members.
+A Domain is the top level group to which probes and hubs are members.
 This section describes the concepts and operations on the domain.
 
 > The central concept to a Trisul Network Analytics domain is the
@@ -136,13 +137,13 @@ This section describes the concepts and operations on the domain.
 
 ## Domain Certificate
 
-The domain is identified by a file called the “Domain Certificate” and
+The Domain is identified by a file called the “Domain Certificate” and
 an associated private key. The cert works as follows:
 
-1. contains the 2 Network Endpoints called “frontend” and “backend”
+1. Contains the 2 Network Endpoints called “frontend” and “backend”
    that probes and hubs connect to
-2. contains the public key
-3. along with the domain certificate there is a *private key* file
+2. Contains the public key
+3. Along with the domain certificate there is a *private key* file
    called `domain0.cert_secret` that is only installed on the Hub node
    and not visible to other nodes
 
@@ -193,7 +194,7 @@ curve
 Now you need to install the new certificate on the hub and then
 redistribute it to all the other nodes.
 
-1. first check if `create domain` worked. There should be a
+1. First check if `create domain` worked. There should be a
    domain0.cert and domain0.cert_secret in /usr/local/share/trisul-hub.
    Replace domain0 with domainXX if you have named it differently
 2. Type `trisulctl_hub`
