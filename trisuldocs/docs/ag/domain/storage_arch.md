@@ -33,7 +33,7 @@ You have to edit the following parameters to suit your environment.
 
 See the [trisulConfig.xml](https://trisul.org/docs/ref/trisulconfig.html) documentation for more details.
 
-## Mapping disks to Slices
+## Mapping Disks to Slices
 
 The slice architecture allows you to configure hardware resources for peak performance. The concept behind the optimization is :
 
@@ -91,9 +91,9 @@ Raw packets represent all of your network communications over an extended time p
 
 Storing them in the clear :
 
-- makes Trisul an attractive target for attackers
-- makes disposal and reuse of disks risky
-- makes enterprise network admins nervous about such systems
+- Makes Trisul an attractive target for attackers
+- Makes disposal and reuse of disks risky
+- Makes enterprise network admins nervous about such systems
 
 Trisul encrypts all content by default using AES-128 in CTR mode. The disk subsystem never sees clear text packets.
 
@@ -101,12 +101,13 @@ To change the passphrase, see the *PassphraseFile* parameter in [trisulConfig.xm
 
 
 
-The raw packets are stored for each context in the following default directories. The*App > DBRoot*parameter in[trisulProbeConfig.xml](/docs/ref/trisulconfig)points to the base directory
+The raw packets are stored for each context in the following default directories. The*App > DBRoot*parameter in [trisulProbeConfig.xml](/docs/ref/trisulconfig) points to the base directory
 
 - /usr/local/var/lib/trisul-probe/domain0/probe0/context0/caps/
   - /oper – the operational directory where Trisul*writes*packets
   - /ref – the reference directory for recent data likely to be looked up
   - /archive – older data  
-    As data ages they ‘cool down’ and slide from oper to ref to archive. Therefore the ‘hottest’ data slices are under /oper.
+
+As data ages they ‘cool down’ and slide from oper to ref to archive. Therefore the ‘hottest’ data slices are under /oper.
 
 The reason we have three directories is that they can be mounted on three separate volumes if required for heavy workloads.

@@ -53,7 +53,7 @@ cd feed-2F3CCCA3-38D4-4773-97AB-3ED732F82533
 
 Inside the feed directory , there is a file called `rules.xml` This contains the feed configuration.
 
-### Removing a feed
+### Removing a Feed
 
 Locate the `rules.xml` file as described above. Then remove the feeds you want to disable. For example if you wish to disable the ALIENVAULT feed.
 
@@ -157,15 +157,15 @@ dpkg -r  trisul_badfellas
 
 Once installed, the plugin will be effective the next time you restart Trisul.
 
-## Adding custom indicators
+## Adding Custom Indicators
 
 #### Step 1 : Create Tab Separated Indicator file
 
-Using external mechanism place your custom feed in a Tab Separated file with the following format`<FEEDNAME><TAB><IP/DOMAIN/URL><TAB><DESCRIPTION>`
+Using external mechanism place your custom feed in a Tab Separated file with the following format `<FEEDNAME><TAB><IP/DOMAIN/URL><TAB><DESCRIPTION>`
 
-#### Step 2 : Add your file as a source feed for Badfellas automatic updates
+#### Step 2 : Add your File as a Source Feed for Badfellas Automatic Updates
 
-Locate the feed`rules.xml`file [as described in feeds](#feeds)
+Locate the feed `rules.xml` file [as described in feeds](#feeds)
 
 Find the local feed section
 
@@ -187,7 +187,7 @@ In the above snippet – the URL `file://.... badfellas-local.tsv` represents th
 
 > **Restart Trisul or wait for about 30 minutes for the feed to be picked up**
 
-## Configuration parameters
+## Configuration Parameters
 
 The rules.xml allows you to customize
 
@@ -232,6 +232,6 @@ Locate the [rules.xml file](/docs/ag/install/badfellas#feeds)
         <CheckURLs>TRUE</CheckURLs>
 ```
 
-## Also read
+## Also Read
 
 See the [Badfellas Malware alerts section](/docs/ug/alerts/mw) in the User Guide
