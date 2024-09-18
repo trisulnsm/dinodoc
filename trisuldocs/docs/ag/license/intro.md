@@ -34,9 +34,6 @@ Once you have decided which license type suits you, you need to get the Trisul M
 
 Click on the machine ID link against each node to get the machineID as shown below
 
-![](images/license_upload.png)
-*Figure: Showing the Upload button used to install new license files*  
-
 ![](images/machineid_value.png)  
 *Figure: Showing a sample of Machine ID*
 

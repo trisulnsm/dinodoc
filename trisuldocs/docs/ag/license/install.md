@@ -44,9 +44,8 @@ This is the recommended method suitable for most deployments. You just have to u
 
 On the Licensing page you can click on the Upload Button shown in the image below to select the new License file and upload it.
 
-*Showing the Upload button used to install new license files*  
 ![](images/license_upload.png)
-
+*Figure: Showing the Upload button used to install new license files*  
 
 ## Install New Licenses Using the Command Line
 
