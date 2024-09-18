@@ -22,7 +22,8 @@ import TabItem from '@theme/TabItem';
   ```
   Other ways to uninstall
 
-  1. If you have installed using the `trisul-full` meta package.  To remove everything  `apt-get remove 'trisul-full'`  
+  1. If you have installed using the `trisul-full` meta package.    
+  To remove everything  `apt-get remove 'trisul-full'`  
   2. Uninstall a single package  `apt-get remove trisul-probe` 
   3. Using dpkg manually `dpkg -r trisul-probe` 
   
