@@ -25,7 +25,7 @@ This will take you to the *Menu Manager* page with two customizations as shown i
 1) [Customize Menus](/docs/ag/webadmin/menus#customize-menus)
 2) [Copy Menus](/docs/ag/webadmin/menus#copy-menus)
 
-## Customize Menus
+### Customize Menus
 
 Trisul's *Customize Menus* feature enables administrators to tailor navigation menus for individual users based on their login context.
 
@@ -67,7 +67,7 @@ And the newly created menu will be reflecting on the index page of *Customize me
 5) Click on the small arrow on the upper right hand side of the header to **Expand and Collapse** the menus
 6) You can delete all the menus (including the parent menus) by clicking on the **Delete All** button the upper right hand side.
 
-## Copy Menus
+### Copy Menus
 
 *Copy Menus* allows administrators to duplicate existing menu configurations for efficient reuse across different users, contexts, or roles.
 

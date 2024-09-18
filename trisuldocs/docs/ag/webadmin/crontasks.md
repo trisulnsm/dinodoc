@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 9
 ---
 
 # Background Tasks
@@ -46,7 +46,7 @@ Trisul uses the regular unix `crontab` to schedule background tasks.
 
 > Login as root, then type : pre(language-bash). crontab -e
 
-## 1Background Tasks Log Files
+## Background Tasks Log Files
 
 Login as `admin` user to manage menus.
 
