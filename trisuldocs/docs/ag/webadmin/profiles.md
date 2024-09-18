@@ -40,7 +40,7 @@ A form with the following fields are displayed
 | Network Interface  | The linux network interface name - such as *eth0*, *eth1*, *wlan0*           |
 | BPF Filter         | A BPF (libpcap/tcpdump) filter expression (see [notes below](/docs/ag/webadmin/profiles#specifying-a-bpf-filter-for-afpacket-and-rxring) on how to generate this for rxring mode - the default) |
 | ERSPAN Interface   | Decapsulate all ERSPAN packets on this interface. If this option is disabled, ERSPAN is counted as a single IP+GRE tunnel.                                                                  |
-| Add Ethernet FCS   | Add 4 byte FCS to packet length. Use to option to reconcile with SNMP based counters.|
+| Add Ethernet FCS   | Add 4 byte FCS to packet length. Use this option to reconcile with SNMP based counters.|
 | Force Netflow Mode | Force this adapter into Netflow Mode - use this option if you want to use a mix of Netflow and Packet capture on a per-adapter basis.                                                          |
 | Description        | A short description of the profile                                           |
 
@@ -54,8 +54,7 @@ exception.
 
 #### RX Ring
 
-![](images/rxring_profiles.png)
-
+![](images/rxring_profiles.png)  
 *Figure: Configure RX Ring Mode*
 
 ***Number of blocks (2^N)*** 
@@ -63,8 +62,7 @@ Number of slots in the ring. Increase only if you need to
 
 #### Libpcap
 
-![](images/libpcap_profiles.png)
-
+![](images/libpcap_profiles.png)  
 *Figure: Configure Libpcap Mode*
 
 ***Promiscuous Mode***  
@@ -75,8 +73,7 @@ How many bytes of each packet to capture
 
 #### PF Ring
 
-![](images/pfring_profiles.png)
-
+![](images/pfring_profiles.png)  
 *Figure: Configure PF Ring Mode*
 
 ***PF Ring Cluster ID***  
@@ -84,8 +81,7 @@ Cluster ID to which this PF_RING socket is attached. (Numeric)
 
 #### AF Packet
 
-![](images/afpacketfanout_profiles.png)
-
+![](images/afpacketfanout_profiles.png)  
 *Figure: Configure AF Packet Mode*
 
 ***AF Packet FANOUT Group ID***  
@@ -94,8 +90,7 @@ AF Packet Fanout Group ID for flow based load balancing (Numeric \<
 
 #### Napatech
 
-![](images/napatech_profiles.png)
-
+![](images/napatech_profiles.png)  
 *Figure: Configure Napatech Mode*
 
 ***Stream ID***  
@@ -115,8 +110,7 @@ Full NTPL command.
 
 :::
 
-![](images/bgpfilter_profiles.png)
-
+![](images/bgpfilter_profiles.png)  
 *Figure: Configure New Capture Adapter*
 
 In the "BPF Filter" enter the expression such as `host 192.168.2.11 or host 10.29.1.1` or bytecode output of `tcpdump -ddd`
@@ -126,8 +120,7 @@ In the "BPF Filter" enter the expression such as `host 192.168.2.11 or host 10.2
 Click on “Create Adapter” on the top right to quickly create capture
 profiles for flow based load balancing.
 
-![](images/adaptercreationwizard_profiles.png)
-
+![](images/adaptercreationwizard_profiles.png)  
 *Figure: Showing Create Adapter Option in Adapter Creation Wizard*
 
 ### Quick Create Single Adapter
