@@ -188,7 +188,7 @@ Download each RPM file and use the usual RPM tool `rpm -Uvh`to install them `rpm
 
 ## Distributed Install
 
-The default installation and the free license allows you to put all componments on a single server. Once you wish to scale up, you can deploy a number of trisul-probe’s reporting to one of more trisul-hub nodes. The rules are :
+The default installation and the free license allows you to put all components on a single server. Once you wish to scale up, you can deploy a number of trisul-probe’s reporting to one or more trisul-hub nodes. The rules are :
 
 1. trisul-hub and webtrisul should be installed on one machine
 2. Multiple trisul-probes can be installed

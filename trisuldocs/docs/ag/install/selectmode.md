@@ -14,7 +14,7 @@ This *product*-izing process consists of customizing counters, flows, menus, das
 The default mode of Trisul is Packet Capture based Network Security Monitoring. We recommend you switch to the appropriate mode such as NetFlow Analyzer or IPDR or ISP using this step even though you can accomplish the same by manual configuration.
 :::
 
-## Four product modes
+## Four Product Modes
 
 
 |Packet Mode|NetFlow|Compliance|ISP|
