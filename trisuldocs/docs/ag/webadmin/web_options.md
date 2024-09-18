@@ -6,7 +6,7 @@ sidebar_position: 11
 
 This page describes the web application settings.
 
-### Customize
+## Customize
 
 To access application setting, Login as admin and,
 
