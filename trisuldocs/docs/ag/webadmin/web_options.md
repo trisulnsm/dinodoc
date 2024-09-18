@@ -110,6 +110,7 @@ configure a proxy server.
 | Show Percentile               | 0             | Show a 95th percentile line on charts. Enter 98 to show 98th percentile, 0 to disable                                            |
 | Enable Animation              | true          | Show animation while rendring chart    |
 | Real Time Data Display        | 1 Hour        | How many data points to be retined in the real time graph  |
+| Long Term Chart Day Limit     | 7             | Shows separate charts for each day for these many number of days. If the selected time range by the user exceeds this limit, the chart will be shown as a single chart of aggregated data for the selected time range                                                                  |
 
 ## Dashboard and Modules
 
