@@ -16,8 +16,7 @@ To access application setting, Login as admin and,
 
 :::
 
-![](images/webtrisul_options.png)
-
+![](images/weboptions.png)
 *Figure: App Settings in Web Admin*
 
 ## UI
@@ -45,12 +44,19 @@ To access application setting, Login as admin and,
 | Show Interfaces Per Router       | 100           | Per router show these many top interfaces in Netflow mode |
 | Include Dest Port(Conversations) | false         | Show port name or number like http and https in inteface drilldown page |
 
+## IPDR
+
+| Option                           | Default Value | Description                                          |
+| -------------------------------- | ------------- | ---------------------------------------------------- |
+| Query Logs Maxcount              | 100           | Show top n list in the submited query logs           |
+
+
 ## Proxy Server
 
 Web Trisul needs to reach out to the internet for two things.
 
-1. to download latest threat feeds for the BadFellas plugin
-2. to install Trisul Apps which are hosted on Github
+1. To download latest threat feeds for the BadFellas plugin
+2. To install Trisul Apps which are hosted on Github
 
 If your Trisul-Hub node does not have internet access you need to
 configure a proxy server.
@@ -128,7 +134,7 @@ configure a proxy server.
 | SNMP Version        | 1             | SNMP version v1 or v2c or v3. Select V3 to show SNMPv3 parameters |
 | SNMP Read Community | 0             | SNMP read community string                                        |
 
-## Advanced SNMP Settings
+### Advanced SNMP Settings
 
 | Option                   | Default value | Description                          |
 | ------------------------ | ------------- | ------------------------------------ |
