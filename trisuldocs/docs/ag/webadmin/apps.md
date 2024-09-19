@@ -112,7 +112,7 @@ Here is a list of all the available apps. We are constantly adding new Apps, to 
 | App                      | Description                                                                     |
 | ------------------------ | ------------------------------------------------------------------------------- |
 | DNS monitoring           | DNS Custom Metrics and dashboards                                               |
-| IPDR NetFlow Statistics  |
+| IPDR NetFlow Statistics  | Shows NetFlow volume, total bandwidth, total no.of revises, sending NetFlow/syslog, NetFlow records, top devices, list of alerts if any of the devices stopped to send NetFlow |
 | ISP Dashboard Pack       | Some useful dashboards for ISP Analytics. Dashboards include Prefix analysis, Int, Ext, Toppers                                                                                                 |
 |NetFlow Overview          | Netflow dashoard shows overview of number of routers, interfaces, current throughput, top routers and ports by bandwidth                                                                           |
 | Probe Performance        | This dashboard shows CPU usage, Memory usage, Packet drops, Disk Bandwidth for PCAPs, Read IOPs, Write IOPs, am flush performance, along with Total Bandwidth.                                     |
@@ -127,15 +127,15 @@ Here is a list of all the available apps. We are constantly adding new Apps, to 
 | Alienvault OTX              | Scan your traffic against AlienVault OTX intel needs the IOC-Harvestor app and Alien OTX Key.                                                                                               |
 | FireHOL checker             | FireHOL is a well curated set of IP that must be blocked. Shows Alerts if activity seen from FireHOL blacklist                                                                                  |
 | Flexible CIDR Tagger        | Adds CIDR tags to flows and allows you to search fast for entire subnet flows,based on IP2Location db Country, ASN, City, and Proxy metrics based on the IP2Location databases       |
-| Fortigate COnnector         |
-| Geo Based On IP2Location DB |
+| Fortigate Connector         | Connects to Fortigate/Fortianalyzer syslog                                   |
+| Geo Based On IP2Location DB | Country, ASN, City, and Proxy metrics based on the IP2Location databases     |
 | HSRP Analyzer               | this plugin is to check active/standby roters                                |
 | HTTP Proxy                  | Interprets the HTTP and CONNECT methods to give you total visibility in Proxy environments such as squid.                                                                                  |
-| IGMP Multicast              |
+| IGMP Multicast              | Extracts IGMP group members                                                  |
 | IOC Harvestor               | Harvests intel items into a single resource stream from different places in Trisul pipeline.                                                                                                    |
-| IP to MAC Mapper            |
-| NAT Mapper                  |
-| Nat SYSLOG                  |
+| IP to MAC Mapper            | Tracks IP to MAC address mappings with a new counter group IP-MAC-PAIR       |
+| NAT Mapper                  | Tags NAT/CGNAT IP and Port tags to flows                                     |
+| Nat SYSLOG                  | Flow storage from NAT and AAA syslog events                                  |
 | Passive DNS Extractor       | Builds a real time LevelDB database containing IP to Host Name lookup. A number of apps can be built on top of this mapping. Requires ldb installed on probes.                                  |
 | PingMON                     | Monitor thousands of endpoints for reachability and measure latency and packetloss. Email when nodes go down                                                                         |
 | Protocol Tree Metrics       | Break up of traffic by protocol, not just the final protocol but by IP/IPv6/TCP/UDP                                                                                                          |
@@ -146,8 +146,8 @@ Here is a list of all the available apps. We are constantly adding new Apps, to 
 | SSH Events                  | Detect SSH Tunnel activity which can indicate serious deep breach undetectable by firewalls and IDS                                                                                            |
 | Save Binaries               | extract files that are potentially malicious into a directory                |
 | Squid Proxy Metrics         | Extracts metrics from explict proxy servers which use CONNECT type tunnels. This is the most common type of proxy.                                                                            |
-| Stable Keys                 |
-| Subnet Flowcap              |
+| Stable Keys                 | Generates an alert when within a counter group a particular key stops being seen |
+| Subnet Flowcap              | Remove flow storage caps for selected subnets                                |
 | Suricata via EVE UnixSocket | Listen to alerts from Suricata in EVE format on a Unix DGRAM Socket          |
 | TCP Analyzer                | Identify hosts and apps experiencing TCP performance issues by tracking retransmissions,connection setup latency, and timeouts. Marks flows experiencing high retransmissions  flow TAG |
 | TLS Fingerprinter           | TLS Fingerprinting can be used to identify TLS/SSL client applications including Malware                                                                                                       |
