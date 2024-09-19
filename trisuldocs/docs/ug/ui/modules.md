@@ -26,7 +26,7 @@ To create a new module,
 
 *Figure: Add New Module Options*
 
-From the list of module types select one and fill out the fields.
+From the list of module types select one and fill out the fields according to the [module template](/docs/ug/ui/module_templates) you have selected.
 
 ### Add Modules to a New/Existing Dashboard
 
