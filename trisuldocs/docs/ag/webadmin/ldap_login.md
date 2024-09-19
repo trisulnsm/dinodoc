@@ -26,7 +26,7 @@ This page shows a list of LDAP domains configured in Trisul.
 
 :::info navigation
 
-:point_right: Login as admin and select *Web Admin &rarr; Manage &rarr; LDAP Domain*
+:point_right: Login as admin and select Web Admin &rarr; Manage &rarr; LDAP Domain
 
 :::
 
@@ -52,6 +52,7 @@ side of each row.
 | Check authentication | Check if Trisul is able to successfully bind with the LDAP server            |
 | Sync users           | **Synchronize Users** - contact the LDAP domain server and query for users with the *Sync Users Filter* parameter then add all the users to Trisul with the username taken from the *Search Filter*. At the end of the synchronize operation you should be able to see all the users added under *Manage &rarr; Users* |
 | Delete synced users  | Only delete the users automatically added by an earlier “Sync Users” operation. You can then go back and synchronize or manually add LDAP users                                               |
+| Search               | Searches for entries in a LDAP directory tree                                |
 
 ### Synchronize Users from LDAP
 
@@ -75,8 +76,7 @@ authentication will be done.
 
 :::info navigation
 
-:point_right: Login as admin and select *Web Admin &rarr; Manage &rarr; LDAP Domain and Click
-the Configure button*
+:point_right: Login as admin and select Web Admin &rarr; Manage &rarr; LDAP Domain and Click Add Domain
 
 :::
 
@@ -94,7 +94,7 @@ Fill in the details as shown below.
 | Base DN                       | Base DN or Search DN refers to the structure of the LDAP server against which searches will be performed.                                                                                  |
 | Search Filter                 | The actual attribute name that is used to match the user. Examples : `email` or `uid` `dn` `cn`. If you specify `email` then the username would have to be the email ID eg `email=tim@company.com` |
 | Sync Users Filter             | When LDAP is used to automatically synchronize use from the LDAP server, query users with this filter and automatically add them to Trisul (only used if you want to automatically synchronize users from LDAP directory, if you want to add users manually leave this blank)                               |
-| Login with bind only          | If checked, the LDAP login process only uses the user name to bind rather than the default way of using the connection user name and password first and then bind the user                  |
+| Login with user bind only          | If checked, the LDAP login process only uses the user name to bind rather than the default way of using the connection user name and password first and then bind the user                  |
 | Append to username            | The string specified in this field will automatically appended to the user name. A features to help the user avoid typing the full login names. For example : if you set this to *`unitedfederalbankname.com_ then the user who had to type  _mike`unitedfederalbankname.com* only has to type *mike* at the login screen                                                                                          |
 
 ## Create a LDAP Enabled User
@@ -103,7 +103,7 @@ Next you need to create a new LDAP user.
 
 :::info navigation
 
-:point_right: Login as admin and select *Web Admin &rarr; Manage &rarr; Users &rarr; New User*
+:point_right: Login as admin and select Web Admin &rarr; Manage &rarr; Users &rarr; New User
 
 :::
 
@@ -130,9 +130,9 @@ login.
 After you create a LDAP Domain, the login screen will show a checkbox
 called “LDAP authentication”.
 
-1. **for users with LDAP Only auth** — they have no choice but to enter
+1. **For users with LDAP Only auth** — they have no choice but to enter
    their LDAP password
-2. **for users with LDAP or Local auth** — if they do not check the
+2. **For users with LDAP or Local auth** — if they do not check the
    “LDAP authentication” checkbox they will use the local
    login/password.
 

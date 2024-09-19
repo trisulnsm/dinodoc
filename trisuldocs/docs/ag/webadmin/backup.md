@@ -19,9 +19,7 @@ recommended solution for full scale data backup is to setup a DR node.
 
 ## Directories
 
-:::note
-
-**Small deployment easy backup** 
+:::note **Small deployment easy backup** 
 
 For small deployments simply backup the `/usr/local` directory. Ensure to first check the directory size using `du -sh /usr/local`
 
@@ -44,13 +42,13 @@ backup tools.
 Using the `install_setup_backup.sh` tool.
 
 The trisul-hub package includes the install_setup_backup.sh (backup the
-Trisul setup) script which setups a CRON which automates these backups.
+Trisul setup) script which sets up a CRON which automates these backups.
 
 The supported backup methods are :
 
-1. using sftp / scp (the default)
-2. using FTP
-3. by copying to another directory, such as an external drive
+1. Using sftp / scp (the default)
+2. Using FTP
+3. By copying to another directory, such as an external drive
 
 ### Running install_setup_backup.sh
 
