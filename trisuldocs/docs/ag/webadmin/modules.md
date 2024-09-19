@@ -1,15 +1,17 @@
 # Modules
 
-*Modules* in Admin is a centralized repository of all available modules, that allows you to browse and search modules, manage and apply filters to refine module listings.
+## Overview
+
+*Modules* in Admin section is a centralized repository of all available modules, that allows you to browse and search modules, manage and apply filters to refine module listings.
 
 :::info navigation 
 :point_right: Go to Web Admin: Manage&rarr; UI: Modules
 :::
 
-This will take you to the page where list of all available modules in the UI is displayed as in the figure. The header contains the total number of module count highlighted in blue (In Figure: 255 Total)
+This will take you to the page where list of all available modules in the UI displayed as in the figure. The header contains the total number of module count highlighted in blue (In Figure: 255 Total)
 
 ![](images/modules.png)  
-*Figure: All modules*
+*Figure: All Modules*
 
 The module details displayed in the table are as follows.
 
