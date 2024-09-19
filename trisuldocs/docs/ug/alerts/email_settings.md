@@ -27,48 +27,10 @@ This will take you to the Email Alerts Wizard as shown in this example. And agai
 
 *Figure: Email Alerts Configuration Wizard*
 
-## Basic Steps to Enable Email Alerts
 
-The following steps are needed to forward email alerts.
+### Setup SMTP Server to send emails
 
-- ##### Setup SMTP Server to send emails
-  
-  In the Email Alerts Configuration Wizard, Click Email Account Settings. This will open the Email server account settings.
-  
-  ![](image/emailsettings1.png)
-  
-  *Figure: Email Account Settings Module*
-  
-  This is where you configure the email addresses that you want to be sent from and the recipient email addresses.
-  
-  In ths window, Click on Configure email server.  And you can configure an Email server using which Web Trisul will send outgoing mails by filling up the following fields.
-  
-  | Fields                        | Description                                                                   |
-  | ----------------------------- | ----------------------------------------------------------------------------- |
-  | Email Server                  | Hostname or IP of the SMTP server                                             |
-  | SMTP Port Number              | SMTP Port (Usually 25. For Gmail use 587)                                     |
-  | Authentication Protocol       | Click from the drop down list of authenticaton protocols                                                                                                       |
-  | From Email Address            | This is displayed as the sender's address on the recipient's inbox                                                                                                           |
-  | Password/API Key              | Email Password,API Key,or Provider password like pepipost,sendgrid                                                                                               |
-  | Disable SSL Cert verification | Disable certificate verification. Eg, if your email server uses self signed certificates                                                                                                    |
-  | SMTP Relay User (optional)    | Use this to send SMTP email via relays like sendgrid,mailchimp,pepipost etc. This is the user id given to you by the provider. Leave it blank if not required                                |
-
-Once provoding all the fields, Click Save and the email server configuration for outgoing mails is done.
-
-- ##### Ensure who receives the Alert Emails
-  
-  Again, from the Email server account settings, Click Configure automatic email alert recipients. Or you can also configure from Email Alerts Configuration Wizard and click Configure Email Alerts Recipients. This is where you specify where to send emails when alerts fire. 
-  
-  Provide the following fields to configure automatic email alert delivery to the recipients.
-  
-  | Fields                   | Descriptions                                                                      |
-  | ------------------------ | --------------------------------------------------------------------------------- |
-  | Send alerts via email To | Email address of receiver. You can only enter one address, use cc to add multiple |
-  | Cc                       | Add multiple recipient addresses seperated by comma(,)                            |
-  | Bcc                      | Add multiple recipient addresses seperated by comma(,)                            |
-  | Signature                | Enter a block of text that can be automatically appended to the end of your email |
-  
-  Once providing all the fields, Click Save and the configuration for automatic email alert delivery to the recipients is done.
+In the Email Alerts Configuration Wizard, Click Email Account Settings. This will open the Email server account settings and follow this: [Basic Steps to enable Email Alerts](/docs/ag/webadmin/emailsettings) 
 
 - ##### Start/Stop an Email Notification Service
   
