@@ -52,7 +52,7 @@ The supported backup methods are :
 
 ### Running install_setup_backup.sh
 
-> **For secure backups using ssh/scp** you need to setup automatic login
+> **For Secured Backups Using ssh/scp**: You need to setup automatic login
 > use `ssh-copy-id`
 
 The steps are :
@@ -63,7 +63,7 @@ The steps are :
    details
 4. You will be asked to enter a remote directory
 
-Once complete a crontab entry will be automatically created to backup at
+Once completed, a crontab entry will be automatically created to backup at
 4:00AM daily. You may adjust this later.
 
 ### Backup Trisul Configuration
@@ -71,7 +71,7 @@ Once complete a crontab entry will be automatically created to backup at
 `0 4 * * * /usr/local/share/trisul-hub/setup_backup.sh /usr/local/share/trisul-hub/setup_backup.conf`
 
 The backups are placed in the remote directory in a single tar.gz file
-with the HOSTNAME and TIMSTAMP of the backup
+with the HOSTNAME and TIMESTAMP of the backup
 
 ### Distributed Probe
 
