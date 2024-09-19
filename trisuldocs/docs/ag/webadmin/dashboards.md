@@ -17,8 +17,8 @@ The Dashboard details displayed in the table are as follows.
 
 | Column  | Description |
 |---------|-------------|
-| ID      | The unique identifier number of the module. |
-| Package | Name of the package that the module belongs to |
+| ID      | The unique identifier number of the dashboard. |
+| Package | Name of the package that the dashboard belongs to |
 | Owner   | User name of the user who created the selected dashboard |
 | Key     | 
 | Name    | Name of the Dashboard |
