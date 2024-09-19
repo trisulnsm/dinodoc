@@ -2,7 +2,7 @@
 sidebar_position: 17
 ---
 
-# View Logs
+# Web Server Logs
 
 For troubleshooting you can view various logs from the web interface
 itself.

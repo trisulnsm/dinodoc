@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# Menus
+# Menu Manager
 
 Trisul *Menus* are the navigation options that allow users to interact with the software and access various features and functions. These are the main menus and their submenus that you can find on the left hand side of the Trisul platform. Here are some examples: Dashboards, Retro, Tools, and more. These *menus* help you navigate to various features and perform analytic operations.
 

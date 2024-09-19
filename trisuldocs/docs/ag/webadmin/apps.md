@@ -2,7 +2,7 @@
 sidebar_position: 13
 ---
 
-# Trisul Apps
+# Apps
 
 Trisul Apps are plugins to enhance the capabilities of Trisul.
 

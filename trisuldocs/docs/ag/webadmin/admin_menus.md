@@ -2,42 +2,35 @@
 sidebar_position: 16
 ---
 
-# Admin Menus
+# Web Admin: Manage
 
-A Short description about the functions of all the menus in Admin. Each 
+This section contains a short description about the functions of all the menus in Admin. Each 
 Menu has a specific role towards functioning of Trisul as a platform.
+
+
 
 ## Manage
 
-It has all the functional level menus associated with the UI. Any changes to be done in UI can be configured or modified through several menus listed here.
+:::info navigation
+Go to Web Admin: Manage &rarr; (*List of all Admin Menus*)
+:::
 
-![](images/adminmenu.png)
+The *Web Admin: Manage* has all the functional level menus associated with the UI. Any changes to be done in UI can be configured or modified through several menus listed here.
 
-*Figure: Admin Panel*
+
+
+![](images/adminmenus.png)
+
+*Figure: Admin Menus*
 
 ### Users
 
-Provides a list of all active users or subscribers that can access 
-the UI. Every Individual can be given a separate login and that can be 
-done here.
+All users and user access to the system can be managed from here. The functionalities include:
+- Displays a comprehensive list of all active users/subscribers with UI access.
+- Enables assignment of unique roles and login permissions for individual users.
+- Supports creation, modification, and deletion of user accounts.
 
-To create a new User, Select **Create a new User** option
-
-- You are shown the form with following fileds
-
-| Field Name            | Description                                                                             |
-| --------------------- | ----------------------------------------------------------------------------------------|
-| User Name             | A username or if using LDAP, a login atrribute like mail/uid/username                   |
-| Authentication        | Local auth or a LDAP domain you have configured earlier                                 |
-| Password              | Password for local authentication. Minimum 6 characters                                 |
-| Full Name             | Optional: User full name                                                                |
-| Role                  | User role such as operator, admin etc.                                                  |
-| Allow multiple Login  | Allow multiple concurrent login sessions for this user                                  |
-| Default Dashboard     | Select a dashboard to send the user to after login                                      |
-| Default Home Page URL | User will be redirected to this page after successful login, overrides default dashboard|
-| Allowed Contexts      | User is only allowed to login to these contexts                                         |
-
-Select **Create User** option to create a new user.
+See [Manage Users](/docs/ag/webadmin/manageusers) 
 
 ### LDAP Domain
 

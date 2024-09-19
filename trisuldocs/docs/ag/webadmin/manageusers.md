@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Manage Users
+# Users
 
 Manage users and their access levels.
 

@@ -2,7 +2,7 @@
 sidebar_position: 14
 ---
 
-# LDAP Login
+# LDAP Domain
 
 The LDAP (Lightweight Directory Access Protocol) is a login option that
 authenticates users against an LDAP server.
