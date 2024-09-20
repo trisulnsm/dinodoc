@@ -21,5 +21,3 @@ You can click *Start* to start sending alerts as email notifications. Otherwise 
   
 The email notification service logtails the syslog and dispatches alerts. The service is careful not to flood < 5 minutes and can automatically create digests if alert volumes are too high.
 
-## SMS Notification Service
-
