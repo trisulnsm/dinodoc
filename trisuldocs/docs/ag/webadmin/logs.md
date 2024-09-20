@@ -4,7 +4,7 @@ sidebar_position: 17
 
 # Web Server Logs
 
-Trisul provides access to various logs through the web interface to facilitate troubleshooting. The following log types are available for viewing:
+Trisul provides access to various logs through the web interface to facilitate troubleshooting. The following log types are available for monitoring:
 
 | Log Type | Description |
 |----------|-------------|
@@ -88,7 +88,6 @@ The email logs contain the following details.
 ## SNMP Dump Logs
 
 You can simply click on the *SNMP Dump Logs* button to download the SNMP dumps as a text file. 
-
 
 ## Viewing Probe and Hub Logs
 
