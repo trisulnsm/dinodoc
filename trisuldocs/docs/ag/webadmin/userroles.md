@@ -40,6 +40,9 @@ Login as `admin` user to manage user roles.
 
 :::
 
+![](images/roles.png)
+*Figure: Role User Types and Permissions*
+
 For each role  
 
 - The **red** color operations are prevented 

@@ -87,8 +87,7 @@ The email logs contain the following details.
 
 ## SNMP Dump Logs
 
-You can simply click on the *SNMP Dump Logs* button to download the SNMP dumps as a text file.
-
+You can simply click on the *SNMP Dump Logs* button to download the SNMP dumps as a text file. 
 
 
 ## Viewing Probe and Hub Logs
