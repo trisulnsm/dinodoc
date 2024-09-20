@@ -310,6 +310,7 @@ const sidebars = {
 					label: "Web Admin",
 					link: {type: 'doc',  id:'ag/webadmin/index'},
 					items: [
+					        'ag/webadmin/admin_menus',
 					        'ag/webadmin/manageusers',
 							'ag/webadmin/ldap_login',
 							'ag/webadmin/userroles',
