@@ -2,38 +2,32 @@
 
 # DB Status
 
+## Overview
 
+**DB Status** shows up the Trisul Data Store Statistics. It provides detailed information on Session Flows, Resources, Alerts, FTS (Full Text Search) objects.
 
-### DB Status
+Trisul Database is generally divided into three segments based on the how many days Trisul has to store data.
 
-This menu shows up the Trisul Data Store Statistics. It provides
-detailed information on Session Flows, Resources, Alerts,
-FTS (Full Text Search) objects.
-
-Trisul Database is generally divided into three segments based on the
-how many days Trisul has to store data.
-
-- Oper is where the Latest data gets stored.
-- Reference is the next level where data is pushed based on the days
+- **Oper** is where the Latest data gets stored.
+- **Reference** is the next level where data is pushed based on the days
   specified for storage.
-- Archive is responsible for storing very old data.
+- **Archive** is responsible for storing very old data.
 
 You can view how much volume of data is being stored per day in each
 slice and you can calculate accordingly as to how much days data can be
 stored depending on the size of the disk.
 
-> To configure the DB storage retention policy refer to [Configuring disk
-> storage](/docs/ag/basictasks/configure_storage.md)
+> **To configure the DB storage retention policy refer to [Configuring disk storage](/docs/ag/basictasks/configure_storage.md)**
 
 You can also view the disk occupied by each counter-group in a SLICE
 every-day. This is helpful in tuning the system.
+:::info navigation
+:point_right: Go to Context: Default &rarr; Admin Tasks &rarr; DB Status
+:::
 
-In Trisul, the **DB Status** dashboard provides a comprehensive overview of the Trisul database, including various metrics and statistics. 
+On the *DB Status* dashboard, click on the little graph button against each object to view the DB Status trend for that particular object. You can also customize the number of days for which you want to view the trends by clicking on the graph button.
 
-> Click on the little graph button against each object to view the DB Status trend for that particulat object. You can also customize the number of days for which you want to view the trends.
-
-![](images/dbstatus1.png)
-
+![](images/dbstatus1.png)  
 *Figure: DB Status Dashboard showing total count of objects*
 
 The DB Status dashboard contains several sections, which can be broken down in to:
@@ -72,7 +66,7 @@ The DB Status dashboard contains several sections, which can be broken down in t
 
 ## Database Slices
 
-The Database Slices Dashboard is similar to the one in Storage Status which shows you the overview of the size of all the storage pools used and the total size of the database.
+The *Database Slices* Dashboard is similar to the one in Storage Status which shows you the overview of the size of all the storage pools used and the total size of the database.
 
 ![](images/dbstatus2.png)
 
@@ -94,4 +88,4 @@ It displays the following,
 | Ref         | Size of the packet storage on the reference part |
 | Archive     | Size of the packet storage on the archive part   |
 
-The PCAP [tabular data ](storage_status#storage-status-tabular-data)below similar to the Storage Status tabular data which shows the PCAP information in each storage pools: oper, ref, and archive.
+The PCAP tabular data below the probe slices is similar to the [Storage Status tabular data](storage_status#storage-status-tabular-data) which shows the PCAP information in each storage pools: oper, ref, and archive.
