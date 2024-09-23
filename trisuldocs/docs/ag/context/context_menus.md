@@ -4,10 +4,6 @@ sidebar_position: 18
 
 # Admin Tasks
 
-A Trisul context is a separate instance of Trisul with its own isolated
-database, configuration, and processes. To know more about contexts,
-Refer to [Working with Contexts](/docs/ag/domain/contexts)
-
 All the administrative functions are being done here right from
 starting/stopping Hub and Probe nodes to monitoring Netflow and BGP in
 Trisul.
