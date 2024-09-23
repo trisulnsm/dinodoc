@@ -14,12 +14,11 @@ From here, administrators can manage user access, configure system settings, mon
 Go to Web Admin: Manage &rarr; (*List of all Admin Menus*)
 :::
 
-The following sections provide detailed information and controls for each of these administrative functions as functional menus.
 
 ![](images/adminmenus.png)  
 *Figure: Admin Menus*
 
-You can find the 
+Explore the documentation to access detailed information and controls for administrative functions, organized into the following functional menus.
 
 | Menu | Description |
 |-------|------------|
