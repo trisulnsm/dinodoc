@@ -62,14 +62,21 @@ The dialog shows a list of interfaces found on the Trisul Probe node along with 
 
 Press the **Configure** button to finish.
 
-## Screen 3: Start Probe
+## Screen 3: View Status
 
-Now the system is configured to the desired mode. You need to start the Probe which starts processing packets.
-
-![start probe](images/start-probe.png)
+The hub and probe nodes are restarted with the selected mode.
 
 
+![status message](images/mode_status.png)
 
+
+:::success Complete
+Now you can start sending traffic, either NetFlow or packets to Trisul.
+Logout and login as user to start viewing reports
+:::
+
+
+:memo: Refer to Trisul User Guide [Introduction](/docs/ug/ui/) for user login. 
 
 
 

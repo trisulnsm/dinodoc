@@ -4,16 +4,14 @@ sidebar_position: 3
 
 # Using SNMP
 
-Trisul can use SNMP to complement Netflow. You can use it to discover
-Device names, interface names, interface speeds, plot real time SNMP
-traffic charts, etc.
+Trisul can use SNMP to complement Netflow. You can use it to discover cevice names, interface names, interface speeds, plot real time SNMP traffic charts, etc.
+
 
 ## Package
 
-To enable SNMP you need to install the following packages on the
-Trisul-Hub node.
+To enable SNMP you need to install the following packages on the Trisul-Hub node.
 
-```language-bash
+```bash
 # ubuntu
 apt install snmp
 
@@ -21,11 +19,15 @@ apt install snmp
 yum install net-snmp net-snmp-utils 
 ```
 
+If you have not installed the SNMP packages you will see the following message.
+
+![snmp not available](images/snmpnotinstall.png)
+
+*Figure: Warning showing that SNMP tools are not installed	*
+
 ## Configuring SNMP
 
-You need to first specify the authentication details for each SNMP
-device.  
-For that, Login as `user` and,
+You need to first specify the authentication details for each SNMP device.  
 
 :::info navigation
 
