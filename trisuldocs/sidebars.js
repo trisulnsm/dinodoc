@@ -363,7 +363,7 @@ const sidebars = {
 				{
 					type: "category",
 					label: "Admin Tasks",
-					link: {type: 'doc',  id:'ag/admintasks/context_menus'},
+					link: {type: 'doc',  id:'ag/admintasks/index'},
 					items: [
 					        'ag/admintasks/startstop',
 					        'ag/admintasks/manage_profiles',
