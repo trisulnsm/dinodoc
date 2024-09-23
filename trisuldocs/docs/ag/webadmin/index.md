@@ -1,5 +1,5 @@
 
-# Web Administration
+# Managing Trisul
 
 Various tasks related to the web interface.
 
