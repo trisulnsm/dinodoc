@@ -14,7 +14,7 @@ Go to Context: Default &rarr; Admin Tasks &rarr; (*List of all Admin Task Menus*
 Explore the documentation to access detailed information and controls for admin tasks, organized into the following functional menus.
 
 | Menu                   | Description                                                                                                                                                            |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ---------------------- | ------------------------------------------- |
 | Start/Stop Tasks       | Enables starting and stopping Hub and Probe nodes associated with each context directly through the Web Interface.                                                     |
 | Manage Profiles        | Provides a list of available profiles used by multiple probes to manage.                                                                                               |
 | Probe Health           | Shows the reachability, current traffic, and latency of Trisul Probes in this particulat context.                                                                      |
