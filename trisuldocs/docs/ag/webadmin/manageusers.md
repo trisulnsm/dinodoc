@@ -10,15 +10,15 @@ Manage users and their access levels.
 
 A brand new install of Trisul has two users pre-provisioned
 
-- admin - username `admin` and password `admin`
+- **admin** - username `admin` and password `admin`
 
-- user - username `user` and password `user`
-
-The admin login must be used to perform all tasks that involve system
+The `admin` login must be used to perform all tasks that involve system
 configuration change, starting and stopping Trisul processes, user and
 role management.
 
-The user login is for all other operations like viewing and scheduling
+- **user** - username `user` and password `user`
+
+The `user` login is for all other operations like viewing and scheduling
 reports, packet analysis, viewing alerts, and pretty much everything
 else a normal operator would do on a regular basis.
 
