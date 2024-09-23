@@ -1,5 +1,14 @@
 # Start and Stop Trisul
 
+
+
+### Start/Stop Tasks
+
+This Menu is generally used to start/stop Hub and Probe nodes associated
+with each context. Each context will have separate Hub and Probe nodes.
+You can directly start and stop the nodes from Web Interface through
+this menu.
+
 Describes how you can start and stop Trisul components. 
 
 

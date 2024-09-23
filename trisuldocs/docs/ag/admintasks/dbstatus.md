@@ -2,6 +2,32 @@
 
 # DB Status
 
+
+
+### DB Status
+
+This menu shows up the Trisul Data Store Statistics. It provides
+detailed information on Session Flows, Resources, Alerts,
+FTS (Full Text Search) objects.
+
+Trisul Database is generally divided into three segments based on the
+how many days Trisul has to store data.
+
+- Oper is where the Latest data gets stored.
+- Reference is the next level where data is pushed based on the days
+  specified for storage.
+- Archive is responsible for storing very old data.
+
+You can view how much volume of data is being stored per day in each
+slice and you can calculate accordingly as to how much days data can be
+stored depending on the size of the disk.
+
+> To configure the DB storage retention policy refer to [Configuring disk
+> storage](/docs/ag/basictasks/configure_storage.md)
+
+You can also view the disk occupied by each counter-group in a SLICE
+every-day. This is helpful in tuning the system.
+
 In Trisul, the **DB Status** dashboard provides a comprehensive overview of the Trisul database, including various metrics and statistics. 
 
 > Click on the little graph button against each object to view the DB Status trend for that particulat object. You can also customize the number of days for which you want to view the trends.
