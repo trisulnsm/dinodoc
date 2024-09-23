@@ -2,7 +2,7 @@
 
 # Storage Status
 
-Storage status is a dashboard for your Trisul storage, providing insights to help you optimize and maintain your storage infrastructure. You can check Trisul's health and availability of the storage subsystem, which includes disk space, storage devices, and file systems. It indicates whether the storage is:
+*Storage status* is a dashboard for your Trisul storage, providing insights to help you optimize and maintain your storage infrastructure. You can check Trisul's health and availability of the storage subsystem, which includes disk space, storage devices, and file systems. It indicates whether the storage is:
 
 - Online/Available
 
@@ -18,8 +18,7 @@ You can View database storage in depth, tag slices with labels and tags. To view
 
 :::
 
-![](images/storagestatus1.png)
-
+![](images/storagestatus1.png)  
 *Figure: Storage status dashboard showing disk space size information*
 
 The Storage status consists of the following information and their status details.
