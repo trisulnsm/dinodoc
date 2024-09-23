@@ -286,7 +286,6 @@ const sidebars = {
 					label: "Basic Admin Tasks",
 					link: {type: 'doc',  id:'ag/basictasks/index'},
 					items: [
-							'ag/basictasks/startstop',
 							'ag/basictasks/logfiles',
 							'ag/basictasks/configure_storage',
 							'ag/basictasks/reloc',
