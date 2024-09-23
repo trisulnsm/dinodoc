@@ -346,7 +346,7 @@ const sidebars = {
 
 				{
 					type: "category",
-					label: "Context",
+					label: "Context Menus",
 					link: {type: 'doc',  id:'ag/context/index'},
 					items: [
 					{
