@@ -21,6 +21,10 @@ To access application setting, Login as admin and,
 
 ## UI
 
+:::info navigation
+:point_right: Go to Web Admin: Manage &rarr; App Settings &rarr; UI
+:::
+
 | Option                            | Default Value | Description   |
 | --------------------------------- | ------------- | --------------|
 | Explore Flows Max Items           | 2000          | When retrieving flows stop when these many flows are reached. All flow based calculations will be done using these many flows. The next parameter *Explore Flows Show In Tables* specifies how many of these will show up in raw flow tables on the web UI. |
@@ -38,6 +42,10 @@ To access application setting, Login as admin and,
 
 ## NetFlow
 
+:::info navigation
+:point_right: Go to Web Admin: Manage &rarr; App Settings &rarr; NetFlow
+:::
+
 | Option                           | Default Value | Description                                          |
 | -------------------------------- | ------------- | ---------------------------------------------------- |
 | Show Routers count in drilldown  | 500           | Shows top routers and interfaces in drilldown        |
@@ -46,12 +54,20 @@ To access application setting, Login as admin and,
 
 ## IPDR
 
+:::info navigation
+:point_right: Go to Web Admin: Manage &rarr; App Settings &rarr; IPDR
+:::
+
 | Option                           | Default Value | Description                                          |
 | -------------------------------- | ------------- | ---------------------------------------------------- |
 | Query Logs Maxcount              | 100           | Show top n list in the submited query logs           |
 
 
 ## Proxy Server
+
+:::info navigation
+:point_right: Go to Web Admin: Manage &rarr; App Settings &rarr; Proxy Server
+:::
 
 Web Trisul needs to reach out to the internet for two things.
 
@@ -76,12 +92,20 @@ configure a proxy server.
 
 ## Packet Inspection
 
+:::info navigation
+:point_right: Go to Web Admin: Manage &rarr; App Settings &rarr; Packet Inspection
+:::
+
 | Option                            | Default Value | Description                                    |
 | --------------------------------- | ------------- | ---------------------------------------------- |
 | Deep Packet Inspection limit      | 21600 Secs    | Time limit for deep packet inspection          |
 | Deep packet inspection size limit | 100 M         | Maximum number of bytes to be retrieved as a result of the packet retrieval \ Pull packets operation |
 
 ## Web Server
+
+:::info navigation
+:point_right: Go to Web Admin: Manage &rarr; App Settings &rarr; Web Server
+:::
 
 | Option                 | Default Value | Description                                |
 | ---------------------- | ------------- | ------------------------------------------ |
@@ -90,6 +114,10 @@ configure a proxy server.
 | Web Server Security    | NONE          | Used by report jobs. Is web server using SSL?    |
 
 ## Schedule and Email Reports
+
+:::info navigation
+:point_right: Go to Web Admin: Manage &rarr; App Settings &rarr; Schedule Email Reports
+:::
 
 | Option                                                 | Default Value     | Description   |
 | ------------------------------------------------------ | ----------------- | ------------- |
@@ -102,12 +130,20 @@ configure a proxy server.
 
 ## Email Alerts
 
+:::info navigation
+:point_right: Go to Web Admin: Manage &rarr; App Settings &rarr; Email Alerts
+:::
+
 | Option                     | Default Value     | Description                          |
 | -------------------------- | ----------------- | ------------------------------------ |
 | Email Alert Business Days  | M,T,W,T,-,-,-     | When you want to receive email alerts  |
 | Email Alert Business Hours | 00:00:00-23:59:59 | Business hours time used to restrict default report generation time window for each day                                                                |
 
 ## Chart
+
+:::info navigation
+:point_right: Go to Web Admin: Manage &rarr; App Settings &rarr; Chart
+:::
 
 | Option                        | Default Value | Description                                   |
 | ----------------------------- | ------------- | --------------------------------------------- |
@@ -120,6 +156,10 @@ configure a proxy server.
 
 ## Dashboard and Modules
 
+:::info navigation
+:point_right: Go to Web Admin: Manage &rarr; App Settings &rarr; Dashboards & Modules
+:::
+
 | Option                            | Default Value | Description                                        |
 | --------------------------------- | ------------- | -------------------------------------------------- |
 | Default items in Top-N Dashboards | 10            | All Top-N starts show these many by default, with a “More” button to expand. |
@@ -127,7 +167,11 @@ configure a proxy server.
 | Show help tips for menu items     | Yes           | A tooltip is shown for menu items to help you learn about the various options. You can turn these off if you are already familiar with the UI                         |
 | Show country flags for IPs        | true          | Show country flags for IPs in dashbaord                                                                                                                               |
 
-## SNMP Settings
+## SNMP Settings 
+
+:::info navigation
+:point_right: Go to Web Admin: Manage &rarr; App Settings &rarr; SNMP Settings
+:::
 
 | Option              | Default Value | Description                                                       |
 | ------------------- | ------------- | ----------------------------------------------------------------- |
@@ -146,6 +190,10 @@ configure a proxy server.
 
 ## DR Settings
 
+:::info navigation
+:point_right: Go to Web Admin: Manage &rarr; App Settings &rarr; DR Settings
+:::
+
 ![](images/drsettings.png)  
 *Figure: DR Settings*
 
@@ -156,6 +204,10 @@ configure a proxy server.
 
 ## MyMRTG
 
+:::info navigation
+:point_right: Go to Web Admin: Manage &rarr; App Settings &rarr; MyMRTG
+:::
+
 | Option                | Default Value       | Description                                 |
 | --------------------- | ------------------- | ------------------------------------------- |
 | Refresh Page Interval | 60                  | MRTG customer page default refresh interval |
@@ -163,6 +215,10 @@ configure a proxy server.
 | Chart Subtitle        | ifname_ifalias      | Customize chart subtile for MRTG customer   |
 
 ## API Keys
+
+:::info navigation
+:point_right: Go to Web Admin: Manage &rarr; App Settings &rarr; API Keys
+:::
 
 | Option                      | Description                                                 |
 | --------------------------- | ----------------------------------------------------------- |
