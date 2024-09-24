@@ -47,7 +47,7 @@ A form with the following fields are displayed
 ### Provider Specific Options
 
 Trisul can capture packets in two “five modes”, *Linux RX Ring* ,
-*Libpcap* , *PF Ring* ,*AF Packet*,*Napatech* . You dont control the run
+*Libpcap* , *PF Ring* , *AF Packet*, *Napatech* . You dont control the run
 mode here, but at the command line or by changing the application
 settings. The capture profiles work for all run modes, with one
 exception.
