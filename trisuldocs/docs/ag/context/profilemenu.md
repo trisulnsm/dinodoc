@@ -69,47 +69,10 @@ Lets get familiar with the profile configuration menus as listed in the followin
 | Protocols | 
 | Plugins | See [Plugin Configuration](/docs/ref/plugin_configuration) |
 | Bulk PING Groups | See [Ping Monitor](/docs/isp/pingmonitor) |
-| SNMP Agents | 
+| SNMP Agents | See [SNMP Agent](/docs/ag/context/snmp_agent) |
 | Static IPs | 
 | Advanced |
 
 
 
-### Manage Keys
 
-
-### Session Groups
-
-Flows such as TCP/UDP connections are known as sessions. This menu shows
-information about Session groups like Name, Description, TimeOutSecs,
-Volume bytes Cut off, Active Tracking, Status
-
-
-### STatic IPs
-
-### Trisul Protocols
-
-Various protocols that are mapped on Trisul are listed here. For every
-protocol a new GUID will be assigned.
-
-> To add a new protocol,Select **Add New Protocol** option.
-
-| Field Name | Description                           |
-| ---------- | ------------------------------------- |
-| Enter Name | Name of Protocol                      |
-| Enter GUID | GUID for the Protocol(Auto-Generated) |
-
-
-
-### SNMP Agent
-
-This menu helps to resolve several Router IPs with their respective SNMP
-Read community. A multiple number of Router IPs can be added.
-
-> To add a new SNMP agent, Select **Add New SNMP Agent** option
-
-| Field Name          | Description                                                  |
-| ------------------- | ------------------------------------------------------------ |
-| IP Address          | IP address of snmp device. You can add multiple devices at once. Specify multiple IPs separated by comma |
-| SNMP Version        | SNMP version v1 or v2c or v3. Select V3 to show SNMPv3 parameters  |
-| SNMP Read Community | SNMP read community string                               |
