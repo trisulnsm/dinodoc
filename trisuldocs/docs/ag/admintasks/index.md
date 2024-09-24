@@ -20,9 +20,9 @@ Explore the documentation to access detailed information and controls for admin 
 | Probe Health           | Shows the reachability, current traffic, and latency of Trisul Probes in this particulat context.                                                                       |
 | DB Status              | Displays Trisul Data Base Statistics, showing storage volumes and usage across Oper, Reference, and Archive segments, facilitating storage planning and configuration. |
 | Storage Status         | Check availability of disk space, storage devices, and file systems. |
-| Licensing              | Displays Trisul's License Policy Details.           |
-| Schedule Email Reports | Schedule Automatic Reports from Trisul like PDF Reports, Alert based Reports etc. |
-| BGP Route Receiver     | Displays the status of the BGP Route Receiver, providing BGP status updates across all probes.                                                                        |
+| Licensing              | See [Licensing](/docs/ag/license/intro)           |
+| Schedule Email Reports | See [Schedule Email Reports](/docs/ug/reports/schedreports) |
+| BGP Route Receiver     | See [BGP Route Receiver](/docs/isp/bgp#i-bgp-route-receiver) |
 | NetFlow Template DB    | Provides NetFlow/IPFIX template database received by all probes. |
 | DR DC Status           | Check configuration of Diaster Recovery when the Primary Site crashes. |
 | User Resources         | Assign network devices, interfaces, IP addresses, IP subnets or any other network entity to Users.                                                                     |
