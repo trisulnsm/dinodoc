@@ -146,6 +146,9 @@ configure a proxy server.
 
 ## DR Settings
 
+![](images/drsettings.png)  
+*Figure: DR Settings*
+
 | Option      | Description                                      |
 | ----------- | ------------------------------------------------ |
 | DR Hub IP   | IP address of the DR Hub machine. Eg:192.168.3.1 |
