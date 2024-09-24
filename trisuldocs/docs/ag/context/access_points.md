@@ -4,28 +4,36 @@ sidebar_position: 8
 
 # Access Points
 
-Connect protocols to ports. Common use case is to specify Netflow ports
+Access points help connect protocols to ports. The common use case is to specify NetFlow ports for each protocol.
 
 ## Access Point List
 
-Login as `admin` user to manage access points.
+Login as `admin` user to view the access points list.
 
 :::info navigation
-
-:point_right: Select *Context : default &rarr; profile0 -&rarr; Access Points*
-
+:point_right: Go to Context: Default &rarr; profile0 &rarr; Access Points
 :::
+
+
+![](images/accesspoint.png)  
+*Figure: Access Point List*
+
+The access point list shows the following table of details.
+
+| Detail | Description |
+|--------|-------------|
+| Mapped Using | Shows on what basis the network traffic mapping is based on like protocol, port number, ethertype etc. |
+| Protocol Name | Name of the protocol. |
+| Number of Mappings | Shows the number of mappings in that port. |
+| Action | Click Edit to modify the port number and protocol. |
+
 
 ## Add a New Access Point
 
-Login as `admin` user to manage access points.
+Click the **Edit** button against any protocol in the protocol list and on the following screen, click the **Add** button to add new access point.
 
-:::info navigation
+![](images/accesspoint_edit.png)  
+*Figure: Create a New Mapping for the UDP*
 
-:point_right: Select *Context : default &rarr; profile0 -&rarr; Access Points*
+ Enter the port number and select the protocol from the dropdown. Click Save.
 
-:::
-
-1. Click the **Edit** button in the protocol list.
-2. Click the **Add** button to add new access point
-3. Enter the protocol number and select the protocol.
