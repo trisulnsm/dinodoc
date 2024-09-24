@@ -2,13 +2,13 @@
 sidebar_position: 1
 ---
 
-# Starting and Stopping Trisul
+# Domain Services 
 
-The startup process involves.
+There are three groups of services in Trisul 
 
-1. Start the **domain**— The control plane for Trisul probes and hubs
-2. Start the **context** — Probes and hubs
-3. Start the **webserver** — The user interface
+1. Service :  **domain**— The control plane for Trisul probes and hubs
+2. Service :  **context** — Probes and Hubs,  the actual analysis process
+3. Service :  **webserver** — The user interface
 
 ### Example to Start All Processes
 
