@@ -58,10 +58,13 @@ Add one by one a single network number in "Network Number" and subnet mask in "N
 ### Add in bulk  
 Simply copy paste a series of **comma separated** or **one-per-line** networks in CIDR format in "Network Number". When using the CIDR format you can leave the "Network Mask" field blank.
 
-## Deleting
+## Action Button 
 
 1. Click on the action button against any network number and delete any single home network by clicking the “Delete” option.
-2. You can click the “Delete non private networks” button on the top right to delete all the elements in bulk except the three built-in private ranges. Use this option if you want to add the home networks in bulk later.
+2. Click on the action button and click "Edit" to modify the network number and network mask. And click "Update".
+
+## Delete Non Private Networks
+You can click the “Delete non private networks” button on the top right to delete all the elements in bulk except the three built-in private ranges. Use this option if you want to add the home networks in bulk later.
 
 ## Viewing Traffic Direction
 
@@ -95,6 +98,6 @@ Trisul has the ability to use Flow Taggers to tag each flow with a direction hin
    the tool's search query.
 
 ![](images/explore_flows.png)  
-*Figure: search for directional flows using a custom flow tagger*
+*Figure: Search for directional flows using a custom flow tagger*
 
 Also see user guide sections: [Flow Taggers](/docs/ug/flow/tagger), [Explore Flows](/docs/ug/tools/explore_flows)
