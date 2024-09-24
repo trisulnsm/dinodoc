@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Packet Capture Settings
+# Capture Adapters
 
 A single instance of Trisul can listen on one or more network
 interfaces. This page describes how you can add or edit packet capture
@@ -156,16 +156,15 @@ for flow based load balancing.
 
 ## Enable or Disable the Profile
 
-- Click **Enable** or **Disable** in the Profile list
+![](images/capture_adapters.png)  
+*Figure: Enable/Disable all*
 
-- To disable all adapters, click on the “Disable All” button
+- Click **Enable All** or **Disable All** on the top right hand side to enable or disable all adapters.
 
-## Edit the Profile
+### Edit the Profile
 
-- Click **Edit** in the Profile list  
+Click the action button against any interface and a dropdown menu shows up **Enable**, **Edit**, and **Delete** options in the Profile list.    
 
-- Edit the fields as shown in “Add..”
-
-## Delete the Profile
-
-- Click **Delete** in the profile list.
+- **Enable**: Click enable to enable the selected interface.  
+- **Edit**: Click edit to modify the adapter configuration.  
+- **Delete**: Click delete to delete the selected interface.  
