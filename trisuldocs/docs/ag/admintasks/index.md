@@ -26,6 +26,6 @@ Explore the documentation to access detailed information and controls for admin 
 | NetFlow Template DB    | Provides NetFlow/IPFIX template database received by all probes. |
 | DR DC Status           | Check configuration of Diaster Recovery when the Primary Site crashes. |
 | User Resources         | Assign network devices, interfaces, IP addresses, IP subnets or any other network entity to Users.                                                                     |
-| IPDR Settings          |                                                                                                                                                                        |
-| ISP Users              |                                                                                                                                                                        |
-| IPDR Customers         |                                                                                                                                                                        |
+| IPDR Settings          |  See [IPDR Settings](/docs/ipdr/ipdr-settings)     |
+| ISP Users              |  See [ISP Users]                                   |
+| IPDR Customers         |  See [IPDR Customers]                              |
