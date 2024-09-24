@@ -21,7 +21,8 @@ To schedule a new report
 
 :::info navigation
 
-:point_right: Select Reports → Schedule
+:point_right: Login as `user` Go to Reports → Schedule or you can also   
+Login as `admin` Go to Context: Default &rarr; Admin Tasks &rarr; Schedule Email Reports
 
 :::
 

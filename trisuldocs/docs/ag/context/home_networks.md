@@ -27,49 +27,44 @@ reports and views. If you want to add a new subnet to your home network
 or edit an existing entry, follow these steps.
 
 :::info navigation
-
-:point_right: (login as admin) Select *Context : default &rarr; profile0 -&rarr; Home
-Networks*
-
+:point_right: (login as admin) Go to Context: Default &rarr; Profile0 &rarr; Home
+Networks
 :::
 
 You are shown the following screen
 
-![](images/homenetworks.png)
-
+![](images/homenetworks.png)  
 *Figure: Showing a list of configured Home Network subnets*
 
-- Click on **Add a network**  
+- Click on **Add** button on the upper right hand side.   
 
-- Enter an IP and a subnetmask (eg, 59.92.0.0 and 255.255.0.0) that
-  represents your home network  
+- Enter an IP and a subnet mask (eg, 59.92.0.0 and 255.255.0.0) that
+  represents your home network.  
 
-- Click **Create** button to add a new home network
+- Click **Create** button to add a new home network.
 
 ## Adding Home Networks in Bulk
 
 When you click on “Add” in the Home Networks screen you can see the Add
 form below
 
-![](images/create_homenetwork_form.png)
-
+![](images/create_homenetwork_form.png)  
 *Figure: The add subnetworks screen*
 
-Here you can
+Here you can:
+### Add one by one 
+Add one by one a single network number in "Network Number" and subnet mask in "Network Mask"
 
-1. **Add one by one** : a single network number in "Network Number" and subnet mask in "Network Mask"
-2. **Add in bulk** : Simply copy paste a series of **comma separated** or
-   **one-per-line** networks in CIDR format in "Network Number". When using the CIDR format you can leave the "Network Mask" field blank.
+### Add in bulk  
+Simply copy paste a series of **comma separated** or **one-per-line** networks in CIDR format in "Network Number". When using the CIDR format you can leave the "Network Mask" field blank.
 
-## Deleting
+## Action Button 
 
-1. Delete any single home network by pressing the “Delete” link next to
-   it.
-2. You can press the “Delete non private networks” to delete all the
-   elements in bulk except the three built-in private ranges. Use this
-   option if you want to add the home networks in bulk later.
+1. Click on the action button against any network number and delete any single home network by clicking the “Delete” option.
+2. Click on the action button and click "Edit" to modify the network number and network mask. And click "Update".
 
-
+## Delete Non Private Networks
+You can click the “Delete non private networks” button on the top right to delete all the elements in bulk except the three built-in private ranges. Use this option if you want to add the home networks in bulk later.
 
 ## Viewing Traffic Direction
 
@@ -80,19 +75,16 @@ following data.
 ### Metrics in the Aggregates Counter Group.
 
 :::info navigation
-
-:point_right: Select *Tools &rarr; Long Term Traffic*
-
+:point_right: Login as `user` and Go to Tools &rarr; Long Term Traffic
 :::
 
 1. Counter group = Aggregates
 2. Meter = Total
-3. Keys to the Item = DIR_INTOHOME,DIR_OUTOFHOME,DIR_TRANSIT,DIR_WITHINHOME
+3. Keys to the Item = DIR_INTOHOME, DIR_OUTOFHOME, DIR_TRANSIT, DIR_WITHINHOME
 
 The following chart gives you the traffic details in each direction.
 
-![](images/longterm_traffic.png)
-
+![](images/longterm_traffic.png)  
 *Figure: Directional chart determined by the Home Network settings*
 
 ### Flows
@@ -105,8 +97,7 @@ Trisul has the ability to use Flow Taggers to tag each flow with a direction hin
 3. For example to see all *Transit* flows , enter `tag=[dir]transit` in
    the tool's search query.
 
-![](images/explore_flows.png)
-
-*Figure: search for directional flows using a custom flow tagger*
+![](images/explore_flows.png)  
+*Figure: Search for directional flows using a custom flow tagger*
 
 Also see user guide sections: [Flow Taggers](/docs/ug/flow/tagger), [Explore Flows](/docs/ug/tools/explore_flows)

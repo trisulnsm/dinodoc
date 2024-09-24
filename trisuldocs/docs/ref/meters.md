@@ -5,6 +5,9 @@ Installing additional plugins will usually give you even more meters -
 which will be described in detail by the documentation accompanying each
 plugin.
 
+It provides the Detailed metrics of each counter group like Total, In,
+Out, BucketSize, TopperBucketsize, GUID, etc
+
 Goto Customize -\> Counters -\> View Meters
 
 <div class='well'>

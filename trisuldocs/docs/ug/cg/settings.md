@@ -23,20 +23,23 @@ You can also enable or disable any counter group.
 ## Editing Settings
 
 :::info navigation
-
-:point_right: Login as Admin &rarr;Context:default&rarr;profile0 &rarr;Basic
-Configurations &rarr;Select Counter Groups
-
+:point_right: Login as Admin &rarr;Context:default&rarr;profile0 &rarr; Counter Groups
 :::
 
-1. The entire list of counter groups is shown  
+![](images/cg_header.png)
+*Figure: Counter Group Settings- Header Part*
 
-2. Click on the name of a particular counter group ,which leads you to a
-   page with the fields below
-   
-   ![](images/editcountergroups.png)
-   
-   *Figure: Editing Counter Group Form*
+- The entire list of counter groups is shown as in the figure. On the left of the header shows the total number of counter groups available highlighted in blue color, the number of countergroups enabled highlighted in green color, and the disbaled counter groups count in yellow color. 
+- To the right, access the [column selector](/docs/ug/ui/elements#column-selector). 
+- Click on the **Advanced Options** button to navigate to bulk edit options.
+- Click **Import** if you would like to browse and import a JSON file and click Upload.
+- To filter a counter group, enter a counter group name in the **filter bar** on the right hand side corner of the header.
+
+![](images/countergroup_settings.png)   
+*Figure: List of Countergroups* 
+
+Click on the name of a particular counter group or edit option from clicking on the action button ,which leads you to a page with the fields below.
+
 
 | FieldName                           | Description                                                              |
 | ----------------------------------- | ------------------------------------------------------------------------ |
@@ -53,6 +56,8 @@ Configurations &rarr;Select Counter Groups
 | Cardinality Estimate Bits           | Estimated cardinality of keys in this group. 2^x; Enter 8 if estimate is about 256                                                                                                        |
 | Resolver Group                      | Select one of the countergroups from the dropdown list to resolve keys   |
 
+> Note that all the columns are [column sortable](/docs/ug/ui/elements#column-sorter). 
+
 Click Update to configure the counter group.
 
 ## Bulk Edits
@@ -63,8 +68,7 @@ To access these options:
 
 :::info navigation
 
-:point_right: Login as Admin &rarr;Select Context: default&rarr;profile0 &rarr;Basic
-Configurations &rarr;Counter Groups &rarr;Advanced Options
+:point_right: Login as Admin &rarr;Select Context: default&rarr;profile0 &rarr; Counter Groups &rarr;Advanced Options
 
 :::
 
@@ -84,18 +88,17 @@ Directions to edit counter group settings
 
 :::info navigation
 
-:point_right: Login as Admin &rarr;Select Context:default&rarr;profile0 &rarr;Basic
-Configurations &rarr;Counter Groups  
+:point_right: Login as Admin &rarr;Select Context:default&rarr;profile0 &rarr;Counter Groups  
 :::
 
-1. The entire list of counter groups is shown  
+The entire list of counter groups is shown  
 
-2. Click the option **Edit Topper Policies** for a particular counter
-   group , directs you to a page with the below fields
+Click on the action button against any counter group and select edit, enable and toppers to modify counter group settings, enable and modify topper policies respectively.
+
+Clicking on Topper option directs you to a page with the below fields to modify them.
    
-   ![](images/topperpolicies.png)
-   
-   *Figure: Editing Counter Group Topper Policies*
+![](images/topperpolicies.png)  
+*Figure: Editing Counter Group Topper Policies*
 
 | Counter Groups             |
 | -------------------------- |
