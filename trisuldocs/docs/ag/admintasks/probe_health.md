@@ -13,7 +13,7 @@ particulat context.
 
 
 - On the header section you can see the count for Total No.of Probes, No.of Unreachable Probes,
-No.of Probes Up/Down. The color of the probe represents:  
+No.of Probes Up/Down. The color of the probe represents the state, say,  
 **Green**: The probe is UP and running  
 **Yellow**: The probe is UNREACHABLE  
 **Red**: The probe is DOWN  

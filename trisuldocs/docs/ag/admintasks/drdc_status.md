@@ -1,7 +1,7 @@
 # DR DC Status
 
 
-Trisul supports Diaster Recovery when the Primary Site crashes.
+Trisul supports Disaster Recovery when the Primary Site crashes.
 
 The Primary Site is the Data Centre where Traffic is pushed. With the DR
 Setup, Trisul also creates a backup of all the traffic in the DR site
