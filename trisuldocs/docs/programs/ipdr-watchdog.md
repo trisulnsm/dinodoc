@@ -25,20 +25,11 @@ import TabItem from '@theme/TabItem';
    2. Send alert for all the non-running context to syslog
    3. Depends on hub_flusher_watchdog.sh script
 </TabItem>
-<TabItem value="INSTALL-CRON-HUB-WATCHDOG" >
-   1. Assign cronjob for a run-hub-flusher script with the help of given arguments
-   2. It runs for a regular interval of time and generate alert if necessary
-   3. Depends on run_hub_flusher.sh script
-   :::note
-   - Install cronjob 
-   - Configure cronjob with detfault editor
-   :::
-</TabItem>
 </Tabs>
 
 ### Two Modes
-   - Flow Mode ( IPDR Customer )
-   - GUUID Mode ( Analytics Customer )
+   - FLOW MODE ( IPDR Customer )
+   - COUNTER GROUP MODE ( Analytics Customer )
      - In this mode , the GUUID key need to be provied 
 
 ## How it works ?
@@ -65,25 +56,17 @@ import TabItem from '@theme/TabItem';
 
 ## Options
 
-| Option | Default value   | Info                                  | Example                                            |
-| ------ | ----------------| ------------------------------------- | -------------------------------------------------- |
-| -c     | context0        |    Defaule context                    | ./run_hub_watchdog.sh -c context0           |
-| -n     | 2               | No of engine present each trisul can have multiple engines based on the usage    | ./run_hub_watchdog.sh -n 4                                      |
-| -s     | Your system name | Name for your system                 | ./run_hub_watchdog.sh -s trisul-system               |
-| -k     | 0                | If the system runs successfully it send mail for every run | ./run_hub_watchdog.sh -k       |
-| -t     | 70               | The differnence between the log entry and current time should be less than or equal to t    | ./run_hub_watchdog.sh -t 90    |
-| -g     | No default value | Search for the particular guuid log entry   | ./run_hub_watchdog.sh -g"2314BB8E-2BCC-4B86-8AA2-677E5554C0FE" |
-| -f     | 0                | Runs in flow mode                    | ./run_hub_watchdog.sh -f     |
-| -j     | /10* * * * *     | Assign cronjob in crontab            | ./install_cron_hub_watchdog.sh -j /20* * * * *                 |
-| -i     | -                | Print verbose of the output terminal   | ./run_hub_watchdog.sh -i                                        |
-| -e     | -                | Ignores the particular context         | ./run_hub_watchdog.sh -c context0 -c context_demo               |
-| -r     | 0                | If the system is down then the script try to restart the hub and probe for first cycle and for next cycle if the system is down then it send mail | ./run_hub_watchdog.sh -r                                        |
-| -h     | -                | Prints the help command for smoth run   | ./run_hub_watchdog.sh -h                     |
-
-
-:::caution
-  -j option is only available for the install_cron_hub_watchdog.sh script
-:::
+| Option             | Default value   | Description                           | Usage                                                       |
+| -------------------| ----------------| ------------------------------------- | ------------------------------------------------------------|
+| -c CONTEXT-NAME    | context0        | Context name                          | -c all [prints the flusher for all context]  or -c rack245' |
+| -e CONTEXT-NAME    |     -           | Ignore context for checking           | -e netflow -e headoffice                                    |
+| -s HOST-NAME       | hostname        | Host name                             | -s Trisul-Server                                            |
+| -i INTERVAL        |     -           | Check flushed item count for last n minutes | -i 2                                                  |
+| -g COUNTER_GROUP   |     -           | Check this counter group in log       | -g `{2314BB8E-2BCC-4B86-8AA2-677E5554C0FE}`                 |
+| -f CHECK_FLOW_COUNT|     -           | Check flushed flow count              | -f                                                          |
+| -v VERBOSE         |     -           | Print inforamtion like fluhsed flows  | -v                                                          |
+| -m MATCH_ANY_ENIGINE|    -           | Check if any 1 engine is flushed      | -m                                                          |
+| -r RESTART         |     -           | Restart context if down               | -r                                                          |
 
 
 ## How to run this script
@@ -92,15 +75,12 @@ import TabItem from '@theme/TabItem';
    ```bash
    /usr/local/share/trisul-hub/run_hub_watchdog.sh -c context0 -f -i
    ```
-   :::note
-   By default the script run in flow mode unless by run this script as -g option
-   :::
    ### Example
    ![ipdr_watchdog](./images/ipdr_watchdog_flowmode.png)
    </TabItem>
-   <TabItem value="GUUID-MODE">
+   <TabItem value="COUNTER_GROUP-MODE">
    ```bash
-   /usr/local/share/trisul-hub/run_hub_watchdog.sh -c context0 -g {2314BB8E-2BCC-4B86-8AA2-677E5554C0FE} -i
+   /usr/local/share/trisul-hub/run_hub_watchdog.sh -c context0 -g {2314BB8E-2BCC-4B86-8AA2-677E5554C0FE} -v
    ```
    ![ipdr_watchdog](./images/ipdr_watchdog_guuidmode.png)
    </TabItem>
@@ -119,6 +99,4 @@ When you see the example the above script is executed with argument -i
 - In above example you can see that the flush value is 0. So that it generated the alert to syslog.
 - For both flow mode & GUUID mode the alert will be same
 
-
-  
 
