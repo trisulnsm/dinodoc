@@ -71,7 +71,7 @@ Lets get familiar with the profile configuration menus as listed in the followin
 | Bulk PING Groups | See [Ping Monitor](/docs/isp/pingmonitor) |
 | SNMP Agents | See [SNMP Agent](/docs/ag/context/snmp_agent) |
 | Static IPs | 
-| Advanced |
+| Advanced | See [Advanced](/docs/ag/context/advanced) | 
 
 
 
