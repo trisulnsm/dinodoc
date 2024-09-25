@@ -2,6 +2,10 @@
 
 *Advanced* menu allows you to enable certain tracking functions to provide advanced metrics for Static IPs.
 
+:::info Navigation
+:point_right: Go to Context: Default &rarr; Profile0 &rarr; Advanced
+:::
+
 ![](images/advanced.png)  
 *Figure: Advanced Options*
 
