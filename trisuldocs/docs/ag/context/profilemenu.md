@@ -23,7 +23,7 @@ Lets get familiar with the profile configuration menus as listed in the followin
 | Access Points | Controls how protocols are mapped to ports and other entities. See [Access points](/docs/ag/context/access_points) |
 | Counter Groups | See [Counter Group Settings](/docs/ug/cg/settings) |
 | View Meter List | See [Trisul Traffic Meters](/docs/ref/meters) |
-| Manage Keys | 
+| Manage Keys | See [Manage Keys](/docs/ag/context/managekeys) |
 | NetFlow Wizard | See [NetFlow Configuration Wizard](/docs/ug/netflow/netflow_wizard) |
 
 ### Custom Counters

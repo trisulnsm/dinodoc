@@ -9,7 +9,7 @@ groups, meters, and keys.
 
 ## Counters, Meters, and Keys
 
-***Counter Group***  
+### Counter Group
 
 CounterGroup is a collection of related counters that measure specific aspects of network traffic. Think of it like a notebook that holds multiple pages (counters) that track different things, like a student's grades in different subjects. 
 
@@ -19,7 +19,7 @@ CounterGroup is a collection of related counters that measure specific aspects o
 
 There are a number of [Built-in counter groups](/docs/ug/cg/intro#types) that ship with Trisul. You can also create your own [custom counter groups](custom). Trisul measures 12+ counter groups that contain multiple counters to track various aspects of network traffic.
 
-***A Meter***  
+### A Meter  
 
 A Meter is the measurement of a single counter that measures a specific aspect of network traffic, such as upload bytes, number of packets, or number of connections. Meter is like the actual grade (value) written on the math subject, like 85%.
 
@@ -27,7 +27,7 @@ Trisul collects info about Total Bytes, Packets, Receive, Transmit, Number of
 active connections, Alerts and 10 other items. Each of these is called a
 meter. So the *Host* counter group tracks 12 meters.
 
-***A Key***  
+### A Key  
 A Key is a unique identifier that labels a specific counter within a CounterGroup. Think of it like a header on a pageheader of a specific page (counter) in the notebook that tracks one particular subject, like Math.
 
 For example, within the Host counters group, the IP Address `10.10.255.7` is a key. A
