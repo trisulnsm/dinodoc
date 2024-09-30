@@ -97,3 +97,34 @@ Click the **Delete** link next to the user
 - Click *My Account*
 
 - Click **Change Password** button to change the password.
+
+## Reset password by admin
+
+The `admin` user can reset the password of any user.
+
+:::info navigation
+:point_right: Select Web Admin &rarr; Manage &rarr; Users &rarr; Select Edit against any user 
+:::
+
+Select "Reset Password" from the Admin Operations menu.
+
+
+## Generate API Token
+
+Trisul supports login as well as API access using a login token for any user you choose.
+
+:::info navigation
+:point_right: Select Web Admin &rarr; Manage &rarr; Users &rarr; Select Edit against any user 
+:::
+
+Select *Generate Login* Token from the *Admin Operations* menu on the top right.
+
+
+You will get a API Token like this, you need to copy and share it with the user. This will not be displayed again.
+
+
+![api token](images/apitoken.png)
+
+*Figure: API Token for user* 
+
+
