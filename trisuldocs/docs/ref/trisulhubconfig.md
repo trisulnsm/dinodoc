@@ -60,26 +60,26 @@ Commonly modified parameters are Setuid, TrisulMode, LicenseFile
 
 The two components in a Hub node are*flushers*and*query servers*. This section configures their log files with prefix*fs*and*qs*respectively.
 
-| Parameters           | Defaults                  | Description                                                                                                                                                                                                                                                                                                                        |
-| -------------------- | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Logdir               | /usr/local/var/log/trisul | Where the log files are stored.                                                                                                                                                                                                                                                                                                    |
-| Logfile              | ns-???.log                | Log file pattern. The default is ns-001.log, ns-002.log, etc.                                                                                                                                                                                                                                                                      |
-| LogRotateSize        | 5000000                   | Size of each log file is allowed to grow to this size before Trisul moves to the next file.                                                                                                                                                                                                                                        |
-| LogRotateCount       | 5                         | The number of files in the log ring.                                                                                                                                                                                                                                                                                               |
-| FlusherLogFile       | fs-???.log                | log file pattern.                                                                                                                                                                                                                                                                                                                  |
+| Parameters           | Defaults                  | Description      |
+| ---|---|---|
+| Logdir               | /usr/local/var/log/trisul | Where the log files are stored. |
+| Logfile              | ns-???.log                | Log file pattern. The default is ns-001.log, ns-002.log, etc.|
+| LogRotateSize        | 5000000                   | Size of each log file is allowed to grow to this size before Trisul moves to the next file.|
+| LogRotateCount       | 5                         | The number of files in the log ring.|
+| FlusherLogFile       | fs-???.log                | log file pattern.|
 | FlusherLogLevel      | DEBUG                     | All messages higher than this level are logged. The available log levels in order of severity (most severe one first is).<br/>**EMERG**<br/>**FATAL**<br/>**ALERT**<br/>**CRIT**<br/>**ERROR**<br/>**WARN**— this level after a few weeks of smooth running<br/>**NOTICE**<br/>**INFO**<br/>**DEBUG**— Recommended default level |
-| FlusherLogRotateSize | 5000000                   | Max size of each log file                                                                                                                                                                                                                                                                                                          |
-| FlusherogRotateCount | 5                         | Number of files in ring                                                                                                                                                                                                                                                                                                            |
-| TrpLogFile           | qs-???.log                | log file pattern.                                                                                                                                                                                                                                                                                                                  |
-| TrpLoglevel          | DEBUG                     | log level                                                                                                                                                                                                                                                                                                                          |
-| TrpLogRotateSize     | 5000000                   | Max size of each log file                                                                                                                                                                                                                                                                                                          |
-| TrpogRotateCount     | 5                         | Number of files in ring                                                                                                                                                                                                                                                                                                            |
-| IpdrdLogFile         | is-???                    | IPDRlog file pattern. These parameters are for theIPDRquery service                                                                                                                                                                                                                                                             |
-| IpdrdLoglevel        | DEBUG                     | IPDRservice logging level.                                                                                                                                                                                                                                                                                                        |
-| IpdrdLogRotateSize   | 5000000                   | Max size of each file in bytes                                                                                                                                                                                                                                                                                                     |
-| IpdrdLogRotateCount  | 5                         | Number of log files                                                                                                                                                                                                                                                                                                                |
+| FlusherLogRotateSize | 5000000                   | Max size of each log file|
+| FlusherogRotateCount | 5                         | Number of files in ring|
+| TrpLogFile           | qs-???.log                | log file pattern.|
+| TrpLoglevel          | DEBUG                     | log level|
+| TrpLogRotateSize     | 5000000                   | Max size of each log file|
+| TrpLogRotateCount     | 5                         | Number of files in ring|
+| IpdrdLogFile         | is-???                    | IPDRlog file pattern. These parameters are for the IPDR query service|
+| IpdrdLoglevel        | DEBUG                     | IPDRservice logging level.|
+| IpdrdLogRotateSize   | 5000000                   | Max size of each file in bytes|
+| IpdrdLogRotateCount  | 5                         | Number of log files|
 
-## statsEngine
+## StatsEngine
 
 Controls the database storage and retention policy for Trisul.
 

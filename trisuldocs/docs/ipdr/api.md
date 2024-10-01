@@ -10,12 +10,6 @@ This API allows you to manage IPDR customers by performing CRUD operations (Crea
 Typically our customers will plug this API into their CRM system. 
 
 
-:::info API TOKEN
-All requests require an API token and a username for authentication.
-
-:memo: See [Generate API Token in Manage Users in the Admin Guide](/docs/ag/webadmin/manageusers#generate-api-token)
-:::
-
 
 ## Base URL
 https://SERVER_IP
@@ -23,6 +17,16 @@ https://SERVER_IP
 
 
 ## Authentication
+
+
+
+:::warning  API TOKEN
+All requests require an API token and a username for authentication.
+
+:memo: See [Generate API Token in Manage Users in the Admin Guide](/docs/ag/webadmin/manageusers#generate-api-token)
+:::
+
+
 
 All requests must include the following parameters in the request body:
 - `api_token`: Your API token for authentication.
