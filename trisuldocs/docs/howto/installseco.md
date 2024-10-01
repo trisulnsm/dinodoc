@@ -202,7 +202,7 @@ Probe](/docs/ag/domain/deploy_probe)
 ### How to change network interfaces amd web server ports
 
 \* Listen on an interface other than eth0
-[Docs](/docs/ag/webadmin/profiles) 
+[Docs](/docs/ag/context/profiles) 
 \* Move Web server ports from 3000 and 3003
 [Docs](/docs/howto/change_web_port)  
 \* Enable SSL for the web interface [Docs](/docs/howto/sslforwebtr)
