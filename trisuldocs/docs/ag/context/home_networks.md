@@ -18,7 +18,7 @@ here.
 
 :::
 
-See [Home Network Concepts](/docs/ag/webadmin/homenetwork_concepts)
+See [Home Network Concepts](/docs/ag/context/homenetwork_concepts)
 
 ## Add a New Home Network
 

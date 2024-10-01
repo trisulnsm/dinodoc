@@ -21,7 +21,7 @@ One of the first things you need to do is to calculate how much disk you are goi
 
 
 
-Here we can see  we are using **6.2 MegaBytes** of disk per day using the [Storage Status](/docs/ag/webadmin/storage_status) tool
+Here we can see  we are using **6.2 MegaBytes** of disk per day using the [Storage Status](/docs/ag/admintasks/storage_status) tool
 
   
 

@@ -13,8 +13,8 @@ Trisul, by default provides a context named **'Context: Default'** as seen in th
 
 Each context has its own dedicated menu as in the following.
 
-1) [Admin Tasks](/docs/ag/context/context_menus)
+1) [Admin Tasks](/docs/ag/basictasks/)
 2) [Profile0](/docs/ag/context/profilemenu)
 3) [Licensing](/docs/ag/license/intro)
-4) [Manage Profiles](/docs/ag/context/manage_profiles)
+4) [Manage Profiles](/docs/ag/admintasks/manage_profiles)
 

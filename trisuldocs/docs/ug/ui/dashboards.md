@@ -18,7 +18,7 @@ as soon as you first log in. This page describes each of them.
 A live view of current host activity. Internal hosts are shown on the
 left side and the external hosts on the right side. Hosts are
 automatically classified as internal or external based on the [Home
-Networks](/docs/ag/webadmin/home_networks). Under the screenshot you can find a description of each module.
+Networks](/docs/ag/context/home_networks). Under the screenshot you can find a description of each module.
 
 ![](images/dashboards/current-hosts.png)
 

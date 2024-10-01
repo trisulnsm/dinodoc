@@ -83,4 +83,4 @@ To restart WebTrisul
 systemctl restart webtrisuld 
 ```
 
-For more details on starting and stopping see :memo: [Start and Stop](startstop)
+For more details on starting and stopping see :memo: [Start and Stop](/docs/ag/admintasks/startstop)

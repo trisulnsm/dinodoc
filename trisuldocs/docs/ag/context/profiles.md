@@ -38,7 +38,7 @@ A form with the following fields are displayed
 | ------------------ | ---------------------------------------------------------------------------- |
 | Name               | A unique name for this profile                                               |
 | Network Interface  | The linux network interface name - such as *eth0*, *eth1*, *wlan0*           |
-| BPF Filter         | A BPF (libpcap/tcpdump) filter expression (see [notes below](/docs/ag/webadmin/profiles#specifying-a-bpf-filter-for-afpacket-and-rxring) on how to generate this for rxring mode - the default) |
+| BPF Filter         | A BPF (libpcap/tcpdump) filter expression (see [notes below](/docs/ag/context/profiles#specifying-a-bpf-filter-for-afpacket-and-rxring) on how to generate this for rxring mode - the default) |
 | ERSPAN Interface   | Decapsulate all ERSPAN packets on this interface. If this option is disabled, ERSPAN is counted as a single IP+GRE tunnel.                                                                  |
 | Add Ethernet FCS   | Add 4 byte FCS to packet length. Use this option to reconcile with SNMP based counters.|
 | Force Netflow Mode | Force this adapter into Netflow Mode - use this option if you want to use a mix of Netflow and Packet capture on a per-adapter basis.                                                          |

@@ -28,4 +28,4 @@ For each report type, you can easily select a number of predefined time windows 
 
 ## Customizing Names
 
-Refer to the [oem_settings](/docs/ag/webadmin/customize) for instructions.
+Refer to the [oem_settings](/docs/ag/context/customize) for instructions.
