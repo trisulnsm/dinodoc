@@ -19,7 +19,7 @@ Specify outgoing email server credentials. see [Setup Email](/docs/ug/reports/em
 
 **Enable email alert delivery**
 
-Allow alert delivery via email see [Email alert delivery](/docs/ug/alerts/email_settings#basic-steps-to-enable-email-alerts)
+Allow alert delivery via email see [Email alert delivery](//docs/ag/webadmin/emailsettings)
 
 ## Edit Configuration Files
 

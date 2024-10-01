@@ -32,7 +32,7 @@ This will take you to the Email Alerts Wizard as shown in this example. And agai
 
 1) In the Email Alerts Configuration Wizard, Click Email Account Settings. This will open the Email server account settings and follow this: [Basic Steps to Enable Email Alerts](/docs/ag/webadmin/emailsettings) 
 
-2) In the Email Alerts Configuration Wizard, Click Start/Stop. This will take you to the administrative tasks page where you can start or stop email alerts notification service. Check here to do that: [Start or Stop Tasks](/docs/ag/webadmin/startorstop_tasks#startstop-an-email-notification-service)
+2) In the Email Alerts Configuration Wizard, Click Start/Stop. This will take you to the administrative tasks page where you can start or stop email alerts notification service. Check here to do that: [Start or Stop Tasks](/docs/ag/webadmin/startorstop_tasks#email-notification-service)
 
 
 ##### Ensure alerts are forwarded to syslog
