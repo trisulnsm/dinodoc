@@ -13,7 +13,7 @@ to tune the performance of the packet capture and analytics pipelines.
 ```
 
 The packet capture method parameter is one of `rxring` , `afp` -
-AF\_PACKET, `libpcap`, `ffpcap` - packet capture from file.
+AF_PACKET, `libpcap`, `ffpcap` - packet capture from file.
 
 An example run
 

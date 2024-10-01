@@ -41,15 +41,52 @@ The locations of these files are :
 | ----------- | ------------------------ | ----------------------------------------- | -- |
 | Web  | Web Trisul webserver log | `/usr/local/var/log/trisul-hub/webtrisul` | production.log – the main webserver log |
 
+----
+
 
 ## Audit logs 
 
 
-You can use this log to integrate with SIEM platforms. 
+### Purpose
 
-| Type        | What it is| Default location | Files   |
-| ----------- | ------------------------ | ---- | -- |
-| Audit  | Web server audit log | `/usr/local/share/webtrisul/logs` | audit.log  |
+Contains Web Server user activity logs. Logins, start/stops, changing of databases, modifying users and permissions and so on.
+You can use this log to integrate with SIEM platforms.  
+
+### Location 
+
+Filename `audit.log`
+
+````bash
+/usr/local/var/log/trisul-hub/webtrisul
+````
+
+Change to directory alias 
+````bash
+source /usr/local/share/trisul-hub/trisbashrc
+cd.wl 
+````
+
+### Sample
+
+
+The format is 
+
+```bash
+<TIMESTAMP> <SEVERITY> <IPADDRESS> <USERNAME> <CONTEXTNAME> - <MESSAGE>
+```
+
+Sample
+
+````bash
+25-09-2024 13:43:58 ERROR 100.74.2.2 admin default - Login failed
+25-09-2024 13:44:04 INFO 100.74.2.2 admin default - User successfully logged in
+25-09-2024 13:44:58 INFO 100.74.2.2 admin default - probe0 started successfully
+25-09-2024 13:45:10 INFO 100.74.2.2 admin default - Logout Successful : duration 1 m 6 s
+25-09-2024 13:45:18 ERROR 100.74.2.2 wh default - Failed login attempt with invalid user
+25-09-2024 13:45:27 ERROR 100.74.2.2 user default - Login failed
+````
+
+-----
 
 
 ## Domain process logs
