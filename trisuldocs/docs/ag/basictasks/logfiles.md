@@ -72,19 +72,24 @@ cd.wl
 The format is 
 
 ```bash
-<TIMESTAMP> <SEVERITY> <IPADDRESS> <USERNAME> <CONTEXTNAME> - <MESSAGE>
+<TIMESTAMP> <SEVERITY> <IPADDRESS1> <IPADDRESS2> <USERNAME> <CONTEXTNAME> - <MESSAGE>
 ```
 
 Sample
 
 ````bash
-25-09-2024 13:43:58 ERROR 100.74.2.2 admin default - Login failed
-25-09-2024 13:44:04 INFO 100.74.2.2 admin default - User successfully logged in
-25-09-2024 13:44:58 INFO 100.74.2.2 admin default - probe0 started successfully
-25-09-2024 13:45:10 INFO 100.74.2.2 admin default - Logout Successful : duration 1 m 6 s
-25-09-2024 13:45:18 ERROR 100.74.2.2 wh default - Failed login attempt with invalid user
-25-09-2024 13:45:27 ERROR 100.74.2.2 user default - Login failed
+19-09-2024 18:39:14 INFO 192.168.1.20 127.0.0.1 user default - User successfully logged in 
 ````
+
+| Name | Sample Value | Description |
+|------|--------------|-------------|
+| Time Stamp | 19-09-2024 18:39:14 | The timestamp of the logged event. |
+| Severity Level | INFO | Event severity classification (eg, INFO, WARNING, ERROR) |
+| HTTP Real IP | 192.168.1.20 | Original IP address of the client that retrieves the value from the HTTP header. |
+| Request IP | 	127.0.0.1 | IP address of the proxy server requested by the client. |
+| Username |user | Username who triggered the event. |
+| Context Name | default | Context in which the event occured. |
+| Log Message | User successfully logged in | A message on the log activity for more context. |
 
 -----
 
