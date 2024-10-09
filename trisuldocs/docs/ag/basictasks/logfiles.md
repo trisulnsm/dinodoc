@@ -89,7 +89,10 @@ Sample
 | Request IP | 	127.0.0.1 | IP address of the proxy server requested by the client. |
 | Username |user | Username who triggered the event. |
 | Context Name | default | Context in which the event occured. |
-| Log Message | User successfully logged in | A message on the log activity for more context. |
+| Log Message | User successfully logged in | A descriptive message on the logged activity. |
+
+> HTTP Real IP allows you to get the true client IP rather than the IP of the proxy.
+If the application is behind a proxy and the X-Forwarded-For header is present, Request IP will typically return the IP of the proxy server instead of the client.
 
 -----
 
