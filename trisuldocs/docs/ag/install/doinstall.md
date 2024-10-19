@@ -1,6 +1,6 @@
 # Installing
 
-This page contains install information about **Trisul Network Analytics**.
+The first step is to login and register at the [Trisul Getting Started](https://www.trisul.org/get-started/) page 
 
 
 ## Installing All Packages
@@ -181,6 +181,22 @@ then install the packages normally. The following example installs the Trisul co
 ### Installing the RPM Packages Manually
 
 Download each RPM file and use the usual RPM tool `rpm -Uvh`to install them `rpm -Uvh trisul-probe-7.0xyz.rpm`etc.
+
+
+## Installing behind a proxy server
+
+If you are installing using a proxy server , use the following steps. Substitute your proxy server’s IP in the commands
+
+
+```bash 
+# login as root
+sudo -i  
+export http_proxy=http://192.168.2.11:3128
+export https_proxy=http://192.168.2.11:3128
+
+#.. then continue the steps above
+```
+
 
 
 ----
