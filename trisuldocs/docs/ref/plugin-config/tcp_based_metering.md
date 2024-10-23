@@ -16,6 +16,9 @@ How TCP is metered.
 </TrisulPluginConfiguration>
 ```
 
-| Parameters         | Defaults | Description        |
-| ------------------ | -------- | ------------------ |
+### Policy 
+
+| Parameters         | Defaults              | Description        |
+| ------------------ | ----------------------| ------------------ |
+| Description        | TCP  Protocol Handler |        |
 | EnableAccessPoints | true     | Allows a dynamic mapping for port based higher level protocol. Disable for very high speed network on limited hardware. |

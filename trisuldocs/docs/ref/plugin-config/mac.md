@@ -19,9 +19,12 @@ Controls how MAC addresses are metered.
 </TrisulPluginConfiguration>
 
 ```
+### Policy
 
 | Parameters     | Defaults | Description                                |
 | -------------- | -------- | ------------------------------------------ |
+| Description    | Controls MAC  counting  |                             |
 | SampleRate     | 1        | Process only 1 in X packets                |
 | MeterMACPairs  | true     | Meter MAC pairs every single Source-\>Dest |
 | MeterBroadcast | true     | Meter broadcast addresess                  |
+| LookupOUI      | true     |                                            |

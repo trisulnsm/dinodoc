@@ -17,6 +17,9 @@ Controls how UDP protocol dissection is done.
 
 ```
 
+### Policy
+
 | Parameters         | Defaults | Description                             |
 | ------------------ | -------- | --------------------------------------- |
+| Description        | UDP Protocol Handler |                             |
 | EnableAccessPoints | true     | Allows a dynamic mapping for port based higher level protocol. Disable for very high speed network on limited hardware. |

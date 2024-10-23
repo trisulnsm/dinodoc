@@ -25,13 +25,14 @@ How HTTP Hosts are metered.
 
 ```
 
-
+### Policy
 | Parameters  | Defaults | Description                                                 |
 | ----------- | -------- | ----------------------------------------------------------- |
 | DomainDepth | 0        | See below, you can control how HTTP hostnames are processed |
 
 DomainDepth if you have a HTTP host like `lax25.sjv.y1.youtube.com`
 
+### Description
 |     |                      |
 | --- | -------------------- |
 | 0   | indicates fulldomain |

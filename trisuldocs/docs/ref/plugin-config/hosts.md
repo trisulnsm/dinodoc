@@ -19,10 +19,14 @@ Controls how hosts are metered. You need to tweak this only when working with ve
 </TrisulPluginConfiguration>
 ```
 
-| Parameters     | Defaults | Description                                                                              |
-| -------------- | -------- | ---------------------------------------------------------------------------------------- |
-| SampleRate     | 1        | packet sampling rate. Default, every packet.                                             |
-| ExternalIPOnly | false    | only meter external IPs. IPs that are not in your HOME\_NETWORK                          |
-| ShortUpdates   | false    | limited host updates - do not measure TotalBandwidth, IntoHomeNetwork, OutofHomeNetwork. |
+### Policy
+
+| Parameters              | Defaults | Description    |
+| ------------------------| -------- | -------------- |
+| description             |          |                |
+| SampleRate              | 1        | packet sampling rate. Default, every packet.  |
+| ExtraCountersSampleRate | 1        |                |
+| ExternalIPOnly          | false    | only meter external IPs. IPs that are not in your HOME\_NETWORK   |
+| ShortUpdates            | false    | limited host updates - do not measure TotalBandwidth, IntoHomeNetwork, OutofHomeNetwork.         |          |                |
 
 

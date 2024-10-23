@@ -12,22 +12,28 @@
         <SampleRate>1</SampleRate>
         <ShortUpdates>false</ShortUpdates>
         <AppPolicyItem>
-                <ServerPorts></ServerPorts>
-                                <Subnets></Subnets>
+            <ServerPorts></ServerPorts>
+            <Subnets></Subnets>
         </AppPolicyItem>
     </Policy>
 </TrisulPluginConfiguration>
 ~                                 
 ```
 
+### Policy
 
-| Parameters   | Defaults | Description                                     |
-| ------------ | -------- | ----------------------------------------------- |
-| SampleRate   | 1        | Only process every X packet.                                                          |
-| ShortUpdates | false    | Set to true to skip some metrics. If true - skips tracking home network based meters. |
-
+| Parameters    | Defaults | Description   |
+| ------------  | -------- | ----------------------------------------------- |
+| Description   | Server ports for specific hosts | |
+| SampleRate    | 1        | Only process every X packet.     |
+| ShortUpdates  | false    | Set to true to skip some metrics. If true - skips tracking home network based meters. |
 
 ### AppPolicyItem
+
+| Parameters    | Defaults | Description |
+| ------------  | -------- | ----------- |
+| ServerPorts   |          |             |
+| Subnets       |          |             |
 
 By default, the app ports are selected using the following formula. If
 TCP, the client port is the side with the initial SYN packet. Otherwise

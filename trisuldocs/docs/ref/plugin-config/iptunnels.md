@@ -18,8 +18,14 @@ Used for Mobility tunnels.
 </TrisulPluginConfiguration>
 ```
 
-
+### Policy
 | Parameters       | Defaults                          | Description             |
 | ---------------- | --------------------------------- | ----------------------- |
 | description      | Controls IP Tunneling Deployments |                         |
+| TunnelPolicy     |                                   |                         |
+
+
+### TunnelPolicy
+| Parameters       | Defaults                          | Description             |
+| ---------------- | --------------------------------- | ----------------------- |
 | Detunnel3GPPGTPU | false                             | Contact us for details. |

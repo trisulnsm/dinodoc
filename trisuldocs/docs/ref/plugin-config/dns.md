@@ -21,9 +21,11 @@ How DNS protocol is metered.
 </TrisulPluginConfiguration>
 
 ```
+### Policy
 
 | Parameters           | Defaults | Description                                                                       |
 | -------------------- | -------- | --------------------------------------------------------------------------------- |
+| Description          |Controls how DNS extraction works | |
 | SampleRate           | 1        | Once every X packets                                                              |
 | CreateFTSDocument    | true     | Do you want to create a Full Text Search Document.                                |
 | ExtractResources     | true     | Extract DNS Resources. Resources can be thought of as Logs                        |
