@@ -133,24 +133,24 @@ An optional feature for advanced users allows for extra archives for example to 
 
 This section controls how many backend flushers are used. The default number of flushers used by Trisul isTWO. This is an advanced tuning parameter. You can increase the number of flushers up to eight for large to very large deployments of Trisul.
 
-| Parameters     | Defaults | Description                                                                                           |
-| -------------- | -------- | ----------------------------------------------------------------------------------------------------- |
-| ServerImage    |          | Path to trisul_flushd                                                                                 |
-| PIDFile        |          | Where thePIDfor the running trisul_flushd process is stored                                         |
-| AutoStart      | true     | Automatically start flushd process                                                                    |
-| ControlChannel |          | InternalIPCchannel                                                                                  |
+| Parameters     | Defaults | Description        |
+| -------------- | -------- | ----------------------------------------- |
+| ServerImage    |          | Path to trisul_flushd                            |
+| PIDFile        |          | Where thePIDfor the running trisul_flushd process is stored        |
+| AutoStart      | true     | Automatically start flushd process        
+| ControlChannel |          | InternalIPCchannel      |
 | Flushers       |          | For each flusher instance specify the connection and DB instance number. Sequentially from 0..8 (MAX) |
 
 ## Server
 
 Controls theTRPServer Process used for database querying functionality. The process that provides the queryAPIis called trisul_trpd@
 
-| Parameters      | Defaults | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| --------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Parameters      | Defaults | Description          |
+| --------------- | -------- | -------------------- |
 | ZmqConnection   |          | The port running theTRPProtocol where you can connect and query the trisul database. By default, this is anIPCsocket`ipc:///usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/trp_0`. You can change this parameter to allow a remoteTCPconnection.Example: To allow queries usingTCPPort 12004<br/><br/><br/><br/>1. Change this parameter to`tcp://10.0.0.23:12004`where`10.0.0.23`is the IP address of theHUBnode<br/><br/>2. Then restart the context like so`trisulctl_hub restart context default@hub0`<br/><br/> |
-| PIDFile         |          | Where thePIDof the running trisul_trpd process is stored                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| PIDFile         |          | Where thePIDof the running trisul_trpd process is stored     |
 | NumServers      | 6        | Number of backend servers to start.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ParallelQueries | false    | Whether parallel queries must be turned on for all queries. The defautl is false, use this only when you have the database stored on different spindles.                                                                                                                                                                                                                                                                                                                                                                                     |
+| ParallelQueries | false    | Whether parallel queries must be turned on for all queries. The defautl is false, use this only when you have the database stored on different spindles.   |
 
 ## Probes
 
@@ -158,9 +158,9 @@ Add probes that are allowed to connect to this context.
 
 Each probe is a line with the following details.
 
-| Parameters | Defaults | Description                                                                                                                                                |
-| ---------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Layer      |          | Layer number allocated to the probe.                                                                                                                       |
+| Parameters | Defaults | Description                                             |
+| ---------- | -------- | ------------------------------------------------------- |
+| Layer      |          | Layer number allocated to the probe.                    |
 | ProbeID    |          | ProbeID eg,`probe0`this probe must be authenticated by aCURVEcertificate earlier for the domain this hub belongs to. See*trisulctl_hub install probe* |
 
 ## DBTasks
@@ -216,10 +216,10 @@ How IP Address resolution works
  </ResolveIP>
 ```
 
-| Parameters            | Defaults | Description                                                                                                                                                                |
-| --------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Parameters            | Defaults | Description                                             |
+| --------------------- | -------- | ------------------------------------------------------- |
 | Enable                | TRUE     | Most important / visible IPs are resolved usingDNSlookup                                                                                                                 |
-| Debug                 | TRUE     | Prints resolved IPs for debugging purposes in`t_resolveip.log`file                                                                                                       |
+| Debug                 | TRUE     | Prints resolved IPs for debugging purposes in`t_resolveip.log`file    |
 | Candidates            |          | Number of Top-K items per meter for Internal IPs vs External IPs. Internal IPs are those which fall into your Home Network                                                 |
 | AlwaysRefreshExternal | false    | Do a full refresh of External IPs. Normally, the resolver does not keep trying to resolve IPs that fail to resolve or those IPs which have already been recently resolved. |
 | AlwaysRefreshInternal | false    | Do a full refresh of Internal IPs. Use this option if you have an enterprise with dynamically changing IP → User names.                                                    |
@@ -239,6 +239,54 @@ A database packer algorithm to speed up database reads and to defragement files.
 | Parameters | Defaults | Description          |
 | ---------- | -------- | -------------------- |
 | Enable     | TRUE     | Archiving is enabled |
+
+### Rebucketizer
+
+When Rebucketizer is enabled, data is repartitioned into resolutions of optimal sizes to optimize data distribution across large number of data points. Upon repartitioning the average of the repartitioned data are taken for data points. This improves analysis performance and reducing data skew. So you get a rebalanced data by redistributing it into more evenly sized buckets.
+
+
+```xml
+<Rebucketizer>
+        <Enable> True </Enable>
+		<Resolutions>
+			<Resolution>
+				<ID>1</ID>
+				<BucketSize>300</BucketSize>
+				<TopperBucketSize>900</TopperBucketSize>
+				<ThresholdDays>1</ThresholdDays>
+			</Resolution>
+            <Resolution>
+				<ID>2</ID>
+				<BucketSize>1800</BucketSize>
+				<TopperBucketSize>900</TopperBucketSize>
+				<ThresholdDays>7</ThresholdDays>
+			</Resolution>
+            <Resolution>
+				<ID>3</ID>
+				<BucketSize>7200</BucketSize>
+				<TopperBucketSize>900</TopperBucketSize>
+				<ThresholdDays>28</ThresholdDays>
+			</Resolution>
+            <Resolution>
+				<ID>4</ID>
+				<BucketSize>86400</BucketSize>
+				<TopperBucketSize>900</TopperBucketSize>
+				<ThresholdDays>360</ThresholdDays>
+			</Resolution>
+		</Resolutions> 
+	</Rebucketizer> 
+```
+
+| Parameters | Defaults | Description          |
+| ---------- | -------- | -------------------- |
+| Enable     | TRUE     | Rebucketizer is enabled |
+| ID         | 1        | Unique identifier for each configuration or bucket |
+| BucketSize | 300      | The size of the bucket in seconds   |
+| TopperBucketSize | 900 | The size of the topper bucket in seconds  |
+| ThresholdDays | 1 | The threshold(in days) for moving data between buckets |
+
+So here by default, for ID=1, the bucket size for 1 day is partitioned into 5 minutes(300 seconds) interval and the topper bucket size for 1 day is partitioned into 15 minutes (900 seconds) interval and so on.
+
 
 ## IPDR
 
