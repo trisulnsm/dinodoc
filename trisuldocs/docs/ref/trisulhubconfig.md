@@ -242,7 +242,7 @@ A database packer algorithm to speed up database reads and to defragement files.
 
 ### Rebucketizer
 
-When Rebucketizer is enabled, data is repartitioned into resolutions of optimal sizes to optimize data distribution across large number of data points. Upon repartitioning the average of the repartitioned data are taken for data points. This improves analysis performance and reducing data skew. So you get a rebalanced data by redistributing it into more evenly sized buckets.
+When Rebucketizer is enabled, data is repartitioned into resolutions of optimal sizes to optimize data distribution across large number of data points. Upon repartitioning the average of the repartitioned data are taken for data points. This evenly sized buckets improves analysis performance and reducing data skew. 
 
 
 ```xml
