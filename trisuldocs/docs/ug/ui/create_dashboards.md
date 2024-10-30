@@ -31,7 +31,7 @@ Click on the toggle button on the upper right corner to switch between list view
 
 To create a dashboard,
 
-![](images/newdashboard.png)
+![](images/newdash.png)
 
 *Figure: All Dashboards*
 
