@@ -7,6 +7,8 @@ sidebar_position: 4
 
 With [Dashboards](/docs/ug/ui/dashmod_intro) you can, 
 
+- Toggle between views
+
 - Add / remove / reposition modules.  
 
 - Change module parameters.  
@@ -14,6 +16,16 @@ With [Dashboards](/docs/ug/ui/dashmod_intro) you can,
 - Create your own new dashboards.  
 
 - Share your dashboards.
+
+## Toggle between views
+
+Click on the toggle button on the upper right corner to switch between list view and tiles view of the dashboards.
+
+| List view | Tiles view |
+|-----------|------------|
+|![](images/listview.png) | ![](images/tilesview.png) |
+|Displays items in a vertical list format for easy scrolling and comparison. | Presents items as clickable tiles for a visually oriented browsing experience. |
+
 
 ## Add a Dashboard
 
