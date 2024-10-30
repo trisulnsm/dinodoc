@@ -2,7 +2,7 @@
 
 In List Contexts you can view the list of all the available contexts you have created and deleted using the CLI tools. The total number of available contexts will be diplayed on the header of the dashboard.
 
-![](images/contextslist.png)  
+![](/home/sathana/bldart/td0/dinodoc/trisuldocs/docs/ag/manage_contexts/images/contextslist.png)  
 *Figure: Showing list of all available contexts*
 
 The contexts list contains the following information as in the table.
