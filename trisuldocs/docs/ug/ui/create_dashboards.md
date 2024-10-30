@@ -101,7 +101,7 @@ Go to *All Dashboards*
 
 Click on *Add to menu* on the dashboard you would like to add to the menu.
 
-![](images/addtomenu.png)
+![](images/adddash.png)
 
 *Figure: Add a Dashboard to Menu*
 

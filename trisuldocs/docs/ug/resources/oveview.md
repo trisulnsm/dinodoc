@@ -62,3 +62,7 @@ search for hundreds of matching hashes at once.
 > feed of bad cert SHA-1 hashes.
 
 Enter a list of patterns one per line.
+
+#### Download
+
+Clicking on the download button on the search criteria form downloads only the contents the search result in text format.

@@ -55,7 +55,7 @@ in this case Verisign.
 :point_right: Click on Resources &rarr; SSL Certs
 :::
 
-![](images/searchcriteriaform.png)
+![](images/resources_scform.png)
 *Figure: Search Criteria Form for SSL Certificates*
 
 Open the Search Criteria box by clicking on [*Show Search Form*](/docs/ug/ui/elements#hide-show-search-form) and fill in the fields with the help of following field descriptions.
