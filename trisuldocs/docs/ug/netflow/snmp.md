@@ -23,7 +23,7 @@ If you have not installed the SNMP packages you will see the following message.
 
 ![snmp not available](images/snmpnotinstall.png)
 
-*Figure: Warning showing that SNMP tools are not installed	*
+*Figure: Warning showing that SNMP tools are not installed*
 
 ## Configuring SNMP
 
