@@ -110,7 +110,7 @@ configure a proxy server.
 | Option                 | Default Value | Description                                |
 | ---------------------- | ------------- | ------------------------------------------ |
 | Idle Timeout (minutes) | 60            | Time set to logged webtrisul when idle. See [Inactivity Security Timeout](/docs/ag/context/login#inactivity-security-timeout)     |
-| Web Server Port        | 3000          | The webserver port. This setting is used by some cron tasks (like report mailers). If you move the default nginx port make sure you reflect that change here. |
+| Web Server Port        | 3000          | The webserver port. This setting is used by WebSockets for real time features and some cron tasks (like report mailers). If you move the default nginx port make sure you reflect that change here. If you are using a Linux Container and doing port forward ensure this setting matches the port forward |
 | Web Server Security    | NONE          | Used by report jobs. Is web server using SSL?    |
 
 ## Schedule and Email Reports
