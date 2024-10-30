@@ -35,6 +35,31 @@ From here you can install, upgrade, or uninstall Trisul Apps.
 
 Currently the only repository enabled is https://github.com/trisulnsm/apps
 
+## Offline App Upload
+By default, Trisul fetches and displays apps from the online repository in the Apps Dashboard. When you try to access the apps offline github would be unreachable from the webtrisul server.
+
+ Alternatively, you can download apps from the repository as a TAR file and later upload them offline.
+
+To access the Trisul Apps Dashboard while offline and upload apps, Login as admin user 
+
+:::info navigation
+
+:point_right: Select Web Admin &rarr; Manage &rarr; Apps
+
+:::
+
+![](images/offline.png)  
+*Figure: Showing unreachability of apps in offline*
+
+Click Upload
+From the *upload apps* dialog box choose the file by browsing and select the TAR file containing the apps.
+Click Upload.
+
+![](images/upload.png)  
+*Figure: Showing Offline Upload*
+
+> Note: This offline upload feature allows for flexibility and convenience when internet connectivity is limited or unavailable.
+
 ## Types of Apps
 
 There are four types of Trisul Apps
