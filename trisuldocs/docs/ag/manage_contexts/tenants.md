@@ -2,6 +2,10 @@
 
 The Tenant Management page provides a comprehensive overview of all tenants, their network mappings, and key statistics.
 
+:::info navigation
+:point_right: Context Admin &rarr; Manage &rarr; Tenants
+:::
+
 
 ![](images/tenants.png)  
 *Figure: Showing list of tenants*

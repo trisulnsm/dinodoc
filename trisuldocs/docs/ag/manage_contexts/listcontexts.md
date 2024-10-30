@@ -2,6 +2,10 @@
 
 In List Contexts you can view the list of all the available contexts you have created and deleted using the CLI tools. The total number of available contexts will be diplayed on the header of the dashboard.
 
+:::info navigation
+:point_right: Context Admin &rarr; Manage &rarr; List Contexts
+:::
+
 ![](images/contextslist.png)  
 *Figure: Showing list of all available contexts*
 
