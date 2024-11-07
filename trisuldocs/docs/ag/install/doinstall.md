@@ -34,16 +34,7 @@ import TabItem from '@theme/TabItem';
     apt install trisul-full
     ```
   </TabItem>
-  <TabItem value="bionic" label="Ubuntu Bionic 18.04">
-    ```bash
-    # login as root
-    sudo -i
-    curl -o - https://trisul.org/pubkey.gpg | apt-key add -
-    add-apt-repository https://trisul.org/repos/apt/debian
-    apt update
-    apt install trisul-full
-    ```
-  </TabItem>
+
   <TabItem value="or9" label="RHEL/ Oracle 9">
     ```bash
     #Installing dependencies 
@@ -69,20 +60,6 @@ import TabItem from '@theme/TabItem';
     # adding trisul YUM repository
     cd /etc/yum.repos.d
     curl -LO https://trisul.org//trisulfull-rhel8.repo
-    # check if Trisul Full is available now
-    yum group list
-    # install
-    yum groupinstall "Trisul Full"
-    # open port 3000/3003 for web access 
-    firewall-cmd --zone=public --add-port=3000/tcp
-    firewall-cmd --zone=public --add-port=3003/tcp
-    ```
-  </TabItem>
-  <TabItem value="Cent7" label="RHEL/ CentOS7">
-    ```bash
-    # adding trisul YUM repository
-    cd /etc/yum.repos.d
-    curl -LO https://www.trisul.org/trisulfull.repo
     # check if Trisul Full is available now
     yum group list
     # install
