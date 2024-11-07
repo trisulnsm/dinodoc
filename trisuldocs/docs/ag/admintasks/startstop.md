@@ -46,8 +46,45 @@ Both the hub and probe need to be started, Importantly the HUB needs to be start
 Hence Start the HUB First, then the PROBE. During STOP follow the reverse, stop the probe first, then the hub. 
 :::
 
+### Hub Options
 
-### Start and Stop Via Command Line
+Click on the three lines button adjacent to the Start/Stop button to access Hub options menu.
+
+![](images/huboptions.png)  
+*Figure: Hub Options Menu*
+
+| Options | Description |
+|---------|-------------|
+| View Flusher Log | Displays the log file for the Flusher process, which is responsible for periodically removing outdated data from the Trisul database to maintain data retention policies. |
+| View TRP Log | Displays Trisul Remote Protocol logs queried from hub to Web Trisul. |
+| View Data Retention | Allows administrators to view the current data retention policies configured in Trisul |
+| View System Info | Provides detailed information about the Trisul Hub system, including Name, Kernel, IP Addresses, Version etc |
+| Change Customer Logo | Enables customization of the Trisul interface by uploading a custom logo, allowing organizations to brand the platform according to their requirements. |
+| Start IPDR Service | Activates the IPDR (Internet Protocol Detail Record) service, which collects and processes IPDR data from network devices for querying.
+
+
+
+### Probe Options
+
+Click on the three lines button adjacent to the Start/Stop button to access Hub options menu.
+
+![](images/probeoptions.png)  
+*Figure: Probe Options Menu*
+
+| Options | Description |
+|---------|-------------|
+| View RunStats Log | Displays the log file containing runtime statistics for the Trisul Probe, providing insights of uptime and downtime. |
+| View Probe Log | Shows the main log file for the Trisul Probe, capturing events, errors, and informational messages related to its operation. |
+| Get Interfaces List | Retrieves and displays a list of network interfaces configured on that probe. |
+| Clear All Stabbers | Resets or clears all "stabbers" in the Trisul probe. |
+| How to Start Snort? | Provides instructions on configuring and starting Snort with Trisul. |
+| How to Start Suricata? | Offers guidelines on integrating and starting Suricata with Trisul. |
+| How to Start Ping Server? | Provides instructions on starting the Ping monitor. |
+| Start Ping Server | Activates the Ping Monitor, enabling the Trisul Probe to respond to ICMP echo requests and provide network connectivity verification.
+| Stop Ping Server | Terminates the Ping Server process, disabling ICMP echo response functionality. |
+
+
+## Start and Stop Via Command Line
 
 The CLI tools [trisulctl_hub](/docs/ref/trisul_hub) allows you to start and stop easily from the root command line. 
 
