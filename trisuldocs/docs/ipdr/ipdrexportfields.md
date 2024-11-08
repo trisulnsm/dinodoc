@@ -1,4 +1,4 @@
-# Output Report 
+# Format of the output report
 
 This page describes the fields when you export flows using this IPDR *IP Data Record* feature.
 
@@ -79,12 +79,12 @@ This page contains details about the Excel and TXT Report format containing the 
 There are two places from where you can get the report files.
 
 
-### i) Download Directly from Web Browser
+### Download Directly from Web Browser
 
 For queries that result in a reasonable file size (default 100MB) the
 agent can directly download the results by pressing the [Download button](/docs/ipdr/ipdrui#download). See [IPDR Settings > Download File Size](ipdr-settings) to adjust this limit.
 
-### ii) Get it from a Secure FTP Server   
+### Get it from a Secure FTP Server   
 
 Regardless of the limit, if a Secure FTP (SFTP) server is configured the
 results file is copied to that server automatically. The advantage of

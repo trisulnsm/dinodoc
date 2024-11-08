@@ -1,4 +1,4 @@
-# Advanced Settings
+# Advanced 
 
 This page contains detailed configuration and tuning parameters. What goes on under the hood. 
 
