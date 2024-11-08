@@ -107,7 +107,7 @@ And this is a sample of IPDR reported in .txt format
 
 ![](images/ipdrreport_txtformat.png)
 
-With CSV format you can automate the report and easily exchange data different applications, systems or organizations.
+With CSV format you can automate the report and easily exchange data to different applications, systems or organizations.
 
 ![](images/ipdrreport_csv.png)
 
