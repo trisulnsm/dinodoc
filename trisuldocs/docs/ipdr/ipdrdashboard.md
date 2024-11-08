@@ -15,7 +15,7 @@ Once logged in and the [Trisul IPDR Query form](submit-queries) is submitted, Yo
 
 This is the example of the logged in screen that you will be taken to.
 
-   ![](images/ipdrloginpage.png)
+   ![](images/ipdrpagelogin.png)
 
 ### IPDR Menu
 
@@ -35,7 +35,7 @@ This is the example of the logged in screen that you will be taken to.
 
 IPDR dashboard consists of overview of modules that displays IPDR statistics and the record details of submitted queries for IPDR logs that are explained below. This is an example of Trisul IPDR dashboard.
 
-![](images/ipdrdashboard.png)
+![](images/ipdrpagelogin1.png)
 
 ## Dashboard Components
 
@@ -81,7 +81,7 @@ In this module you can see the result for custom queries for IPDR logs submitted
 
 This is a sample of Trisul IPDR log.
 
-![](images/ipdrlogs.png)
+![](images/ipdrpagelogin2.png)
 
 Let us explore the components of the IPDR log module in the following.
 
