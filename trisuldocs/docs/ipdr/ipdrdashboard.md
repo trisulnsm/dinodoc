@@ -1,4 +1,4 @@
-# IPDR Dashboard
+# View Dashboard
 
 Trisul IPDR Dashboard provides a visual representation of network activity data, providing real-time insights and analytics on internet usage patterns. It's a centralized platform that displays key metrics statistics and the output for submitted queries for IPDR logs. 
 
@@ -25,7 +25,7 @@ This is the example of the logged in screen that you will be taken to.
 
 1) [Query Logs](submit-queries)
 
-2) [IPDR Dashboard](/docs/ipdr/ipdrdashboard#ipdr-dashboard-1)
+2) IPDR Dashboard
 
 3) [IPDR Statistics](ipdrstatistics)
 

@@ -10,6 +10,9 @@ The steps for getting from zero to a working install of Trisul IPDR  are
   -  trisul-hub  
   -  trisul-probe 
   -  webtrisul
+- On first Admin login select the Trisul Network Analytics product mode as IPDR 
+
+
 
 :clap: Congrats ! You are halfway there. Follow the steps outlined in the rest of this document.
 
@@ -21,19 +24,19 @@ For IPDR mode, you only require `trisul-hub`  `trisul-probe` `webtrisul`
 You do not require the `trisul-geo` and `trisul-badfellas` 
 :::
 
-After downloading the packages, logon to the server as root
 
-```bash
+:memo: Follow the steps in  [Installation section in the Trisul User Guide](/docs/ag/install/doinstall) 
 
-# for ubuntu
-dpkg -i trisul-hub-xxx.deb trisul-probe-xxx.deb  webtrisul-xxx.deb
+For example : 
 
-# for RHEL/CentOS/Oracle
-rpm -Uvh trisul-hub-xxx.rpm trisul-probe-xxx.rpm  webtrisul-xxx.rpm 
+ ```bash
 
-```
+# RHEL 
+yum install trisul-hub trisul-probe webtrisul 
 
-For more details refer to the  :memo: [Installation section in the Trisul User Guide](/docs/ag/install/doinstall) 
+# Ubuntu
+apt install trisul-hub trisul-probe webtrisul 
+ ```
 
 
 ## Mode Wizard at First Login

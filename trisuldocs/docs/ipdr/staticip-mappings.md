@@ -1,6 +1,12 @@
-# Static IP Mappings
+# Customer Inventory Mappings
 
-How to add customer information, so that they are automatically filled into the output EXCEL report.
+How to add customer information, so that they are automatically filled into the output EXCEL report. 
+
+:::tip
+You can also add customer information for static IP and usernames using the [Trisul IPDR API](api) . 
+:::
+
+
 
 ## Compliance Requirement
 

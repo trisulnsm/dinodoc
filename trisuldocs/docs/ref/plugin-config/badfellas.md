@@ -27,7 +27,8 @@ Checks if a HTTPhost is blacklisted. Priceless when flagging shared hosts like b
 **SSLHost**
 
 The Server Name Indicator (SNI) is inspected  
--URL:=  
+
+**URL**
 Checks HTTP GETs/POSTs of your network against well known evil ones
 
 **SSLCertificate**
@@ -219,7 +220,7 @@ Check all URLs seen
 
 In the URL Top-1 million lists URLs below this as considered as Fat Tail
 
-Locate the [rules.xml file](/docs/ag/install/badfellas#feeds)
+Locate the [rules.xml file](/docs/ag/install/badfellas)
 
 ```xml
 <TrisulPluginConfiguration>
