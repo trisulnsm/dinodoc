@@ -23,11 +23,11 @@ This module displays the total volume of network traffic flowing through ISP's i
 
 ![](images/netflowvolumemodule.png)
 
-Click on the little graphical icon next to the title. That is the **historical chart** where you can view the NetFlow volume for the past. You can set any custom date in the time frame to view the past data of that particular time.
+1) Click on the little graphical icon next to the title. That is the **historical chart** where you can view the NetFlow volume for the past. You can set any custom date in the time frame to view the past data of that particular time.
 
-1) The **percentage** on the right side is the value by how much percentage has Netflow volume increased or decreased from the last minute.
+2) The **percentage** on the right side is the value by how much percentage has Netflow volume increased or decreased from the last minute.
 
-2) The graphical **chart** in this module represents the real-time Netflow volume data since one hour. And you can hover over the chart at any point of time to view the NetFlow Volume at that time.
+3) The graphical **chart** in this module represents the real-time Netflow volume data since one hour. And you can hover over the chart at any point of time to view the NetFlow Volume at that time.
 
 ## Total Bandwidth
 
