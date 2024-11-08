@@ -57,15 +57,8 @@ Next you need to select the network interface on which you will be receiving the
 ![select network interface](images/login-select-interface.png)
 *Figure: Select interface on which data will arrive*
 
-### 3. Start the Trisul IPDR Servers
 
-
-:::info Navigation
-:point_right: Go to Context:default &rarr;  Start/Stop Tasks &rarr; Stop the Probe and then start it again.	 
-:::
-
-
-### 4. Request a Trial License 
+### 3. Request a Trial License 
 
 The built in license only works for 7-days.  We strongly recommend you contact us for an extended 15-day Trial License via https://www.trisul.org/support/get-extended-license/ 
 
