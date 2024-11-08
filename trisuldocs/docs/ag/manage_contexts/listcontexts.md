@@ -20,7 +20,7 @@ The contexts list contains the following information as in the table.
 | Exists on disk | Indicates whether the context exists in the local disk or not |
 | Actions | Click on the edit button to edit the description and display name of the contexts |
 
->All the colums are [sortable](docs/ug/ui/elements#column-sorter)
+>All the colums are [sortable](/docs/ug/ui/elements#column-sorter)
 
 ## Download
 
