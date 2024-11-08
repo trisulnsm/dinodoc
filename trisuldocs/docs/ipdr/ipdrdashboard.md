@@ -6,8 +6,7 @@ To view IPDR Dashboard,
 
 :::info Navigation
 
-:point_right: Login as User name: `dotuser` and  
-Password: `ipdr@@123`
+:point_right: Login as User name: `dotuser` and password. 
 
 :::
 

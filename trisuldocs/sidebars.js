@@ -66,9 +66,16 @@ const sidebars = {
     			link: { type: 'doc', id:'ipdr/install'},
     			items: [
     				"ipdr/install",
-    				"ipdr/ipdr-settings",
-    				"ipdr/advanced"
-    				]
+    				"ipdr/specialuser",
+    				{
+							type: "category",
+							label:"Settings",
+							items : [
+		    				"ipdr/ipdr-settings",
+		    				"ipdr/advanced"
+							],
+						}
+					]
     		},
     		{
     			type: "category",

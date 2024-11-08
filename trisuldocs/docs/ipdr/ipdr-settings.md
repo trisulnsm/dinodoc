@@ -1,4 +1,4 @@
-# IPDR Settings
+# FTP Settings
 
 The IPDR Settings page allows you to change two things.
 
