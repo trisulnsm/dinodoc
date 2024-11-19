@@ -304,6 +304,7 @@ const sidebars = {
 									'ag/basictasks/reloc',
 									'ag/basictasks/cleanenv',
 									'ag/admintasks/dbstatus',
+									'ag/admintasks/system_health',
 									'ag/admintasks/storage_status',
 									]
 							},
