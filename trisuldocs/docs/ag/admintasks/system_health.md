@@ -19,6 +19,17 @@ Routers: Verifies the routers are operational and flushing data correctly.
 
 The module displays a simple "OK" status indicator for each component, providing a quick overview of the system's health.
 
+> To configure the disk usage alert percentage:
+
+:::note navigation
+
+:point_right: Login as admin, Go to Web Admin &rarr; Manage &rarr; App Settings &rarr; UI
+
+:::
+
+In the App settings form scroll down to the field "Disk Usage Alert Percentage" and enter a value. Click Save.
+
+
 2)Disk Usage
 
 This module provides an in-depth view of the system's disk usage, helping identify potential storage issues. It monitors three storage pools: Oper, Ref, and Archive
