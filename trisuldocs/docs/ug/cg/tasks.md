@@ -116,4 +116,4 @@ Select Tools &rarr;Long Term Traffic
 
 Login as admin, and  Select Context:default  &rarr;Profile0&rarr;Custom Counters &rarr;Keysets &rarr;Create a new Keyset Counter Group
 
-Click [Keyset Counter Group](/docs/ug/cg/custom#keyset-counter-groups) for more.
+Click [Keyset Counter Group](/docs/ag/context/keyset_countergroups) for more.

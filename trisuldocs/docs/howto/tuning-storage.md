@@ -119,4 +119,4 @@ Counter groups have the following parameters that can be tuned
   to a topper list are stored.
 - Top Count — By setting lower values you can control the storage.
 
-See [Counter Group Settings](/docs/ug/cg/settings#editing-settings)Ensure you replace the demo certificate and key with new ones specific for your organization as described below
+See [Counter Group Settings](/docs/ag/context/countergroup_settings)Ensure you replace the demo certificate and key with new ones specific for your organization as described below

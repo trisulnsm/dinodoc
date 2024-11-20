@@ -188,7 +188,7 @@ sending or receiving traffic from the subject interface. This is only available 
 
 ## ASN, NBAR, and Other Details
 
-These are available in the interface drilldowns if the proper trackers are created ahead of time when [Cross Key](/docs/ug/cg/custom#cross-key-counter-groups) is enabled for them.
+These are available in the interface drilldowns if the proper trackers are created ahead of time when [Cross Key](/docs/ag/context/crosskey_countergroups) is enabled for them.
 
 ![](images/asn_crosskey.png)
 

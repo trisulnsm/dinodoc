@@ -32,7 +32,7 @@ Lets get familiar with the profile configuration menus as listed in the followin
 |--------------------|-------------------|
 | Filtered | See [Filtered Countergroups](/docs/ag/context/filtered_countergroups) |
 | Keysets | See [Keyset Countergroups](/docs/ag/context/keyset_countergroups) |
-| Stat Based | See [Keyset Countergroups](/docs/ag/context/statbased_countergroups) |
+| Stat Based | See [Stat Based Countergroups](/docs/ag/context/statbased_countergroups) |
 | Rule Based | See [Rule Based Countergroups](/docs/ag/context/rulebased_countergroups) |
 | Crosskeys | See [Cross Key Countergroups](/docs/ag/context/crosskey_countergroups) |
 | Cardinality | See [Cardinality Counter](/docs/ag/context/cardinality_countergroups)
