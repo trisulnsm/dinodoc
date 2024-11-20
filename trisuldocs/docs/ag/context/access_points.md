@@ -1,6 +1,4 @@
----
-sidebar_position: 8
----
+
 
 # Access Points
 
