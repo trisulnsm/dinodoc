@@ -21,7 +21,7 @@ Lets get familiar with the profile configuration menus as listed in the followin
 | Capture Adapters | Describes how you can add or edit packet capture parameters for any profile. See [Capture Adapters](/docs/ag/context/profiles) |
 | Home Networks | Configuration of home networks to monitor a range of internal IPs within your organisation. See [Home Networks](/docs/ag/context/home_networks) |
 | Access Points | Controls how protocols are mapped to ports and other entities. See [Access points](/docs/ag/context/access_points) |
-| Counter Groups | See [Counter Group Settings](/docs/ug/cg/settings) |
+| Counter Groups | See [Counter Group Settings](/docs/ag/context/countergroup_settings) |
 | View Meter List | See [Trisul Traffic Meters](/docs/ref/meters) |
 | Manage Keys | See [Manage Keys](/docs/ag/context/managekeys) |
 | NetFlow Wizard | See [NetFlow Configuration Wizard](/docs/ug/netflow/netflow_wizard) |
@@ -30,12 +30,12 @@ Lets get familiar with the profile configuration menus as listed in the followin
 
 | Menu               | Description |
 |--------------------|-------------------|
-| Filtered | See [Filtered Countergroups](/docs/ug/cg/custom#filtered-counter-groups) |
-| Keysets | See [Keyset Countergroups](/docs/ug/cg/custom#keyset-counter-groups) |
-| Stat Based | See [Keyset Countergroups](/docs/ug/cg/custom#stat-based-counter-groups) |
-| Rule Based | See [Rule Based Countergroups](/docs/ug/cg/custom#rule-based-counter-groups) |
-| Crosskeys | See [Cross Key Countergroups](/docs/ug/cg/custom#cross-key-counter-groups) |
-| Cardinality | See [Cardinality Counter](/docs/ug/cg/custom#cardinality-counting)
+| Filtered | See [Filtered Countergroups](/docs/ag/context/filtered_countergroups) |
+| Keysets | See [Keyset Countergroups](/docs/ag/context/keyset_countergroups) |
+| Stat Based | See [Keyset Countergroups](/docs/ag/context/statbased_countergroups) |
+| Rule Based | See [Rule Based Countergroups](/docs/ag/context/rulebased_countergroups) |
+| Crosskeys | See [Cross Key Countergroups](/docs/ag/context/crosskey_countergroups) |
+| Cardinality | See [Cardinality Counter](/docs/ag/context/cardinality_countergroups)
 
 ### Flows
 
