@@ -2,7 +2,7 @@
 
 ### Where is the database/log stored, and can I use NFS storage to keep data safe?
 
-The database/log is stored in the /usr/local/var/lib/trisul-hub/domain0/hub0/context0/meters directory. You have subdirectories (called Pools) like oper/, ref/, and archive/ that can be mounted on different volumes, including NFS storage, allowing you to retain up to 2 years worth of data in a safe RAID storage. See [Configure Retention Policy | Trisul Network Analytics Docs](https://docs.trisul.org/docs/ag/basictasks/configure_storage/) 
+The database/log is stored in the `/usr/local/var/lib/trisul-hub/domain0/hub0/context0/meters` directory. You have subdirectories (called Pools) like *oper/, ref/, and archive/* that can be mounted on different volumes, including NFS storage, allowing you to retain up to 2 years worth of data in a safe RAID storage. See [Configure Retention Policy | Trisul Network Analytics Docs](https://docs.trisul.org/docs/ag/basictasks/configure_storage/) 
 
 
 ### Can I recover old data by mounting the NFS storage to a new installation in case of a server failure?
