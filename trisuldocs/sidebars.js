@@ -96,6 +96,7 @@ const sidebars = {
     		"ipdr/staticip-mappings",
     		"ipdr/scripts",
     		"ipdr/api",
+    		"ipdr/faq",
 
      ],
   	},

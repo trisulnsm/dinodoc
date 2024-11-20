@@ -24,9 +24,9 @@ The Bucketizer tool can be configured using the following parameters:
 
 **Configuration Parameters**
 
-**BucketSize**: The bucket size in seconds.
-**TopperBucketSize**: The Topper bucket size in seconds.
-**ThresholdDays**: The number of days to count in that bucket size before switching to a lower resolution.
+**BucketSize**: The bucket size in seconds.  
+**TopperBucketSize**: The Topper bucket size in seconds.  
+**ThresholdDays**: The number of days to count in that bucket size before switching to a lower resolution.  
 
 **Example Configuration**
 ```
