@@ -182,7 +182,7 @@ destination port, duration of flows, etc.
 A useful tool that represents traffic flows between interfaces. A chord
 diagram looks like the picture below. The interface being drilldown is
 represented a chord and the other interfaces are shown as smaller chords
-sending or receiving traffic from the subject interface. This is only available after enabling [Cross Key](/docs/ug/cg/custom#cross-key-counter-groups) ![](images/interface_matrix_light.png)
+sending or receiving traffic from the subject interface. This is only available after enabling [Cross Key](/docs/ag/context/crosskey_countergroups) ![](images/interface_matrix_light.png)
 
 *Figure: Interface Traffic Matrix*
 
