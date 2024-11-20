@@ -15,7 +15,7 @@ Trisul stores time series data at multiple resolutions, including:
 
 When querying large time windows, Trisul automatically switches to lower-resolution data.
 
-##Configuration
+## Configuration
 
 The Bucketizer tool can be configured using the following parameters:
 
