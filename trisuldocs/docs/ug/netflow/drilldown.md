@@ -74,7 +74,7 @@ Allows you to download the drilldown report as PDF or XLSX worksheets
 
 Below the title, the interface drilldown is displayed as tabs. Some of
 these tabs are dynamically created. If you have created a [Crosskey
-Counter Group](/docs/ug/cg/custom#cross-key-counter-groups) with Flow-Interfaces as the first group, then the second group will be shown as a Tab.
+Counter Group](/docs/ag/context/crosskey_countergroups) with Flow-Interfaces as the first group, then the second group will be shown as a Tab.
 
 | Panel | Name               | Description                                                                     |
 | ----- | ------------------ | --------------------------------------------------------------------------------|
