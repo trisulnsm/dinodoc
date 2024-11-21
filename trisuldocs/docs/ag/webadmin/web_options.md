@@ -39,6 +39,7 @@ To access application setting, Login as admin and,
 | Show others in topper list        | true          | Show others not shown item in the toppers list         |
 | Disk usage alert percentage       | 90            | shows disk usage alert for the specified percentage    |
 | Hide context selection            | false         | Keep in unchecked if you dont want to hide context selection in login page                                                                                                |
+| Show mode selection               |               | Check this checkbox to show product mode selector window to select a different mode |
 
 ## NetFlow
 
