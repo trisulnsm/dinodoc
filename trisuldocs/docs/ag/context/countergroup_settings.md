@@ -60,6 +60,8 @@ Click Update to configure the counter group.
 
 ## Bulk Edits
 
+**METHOD 1:**
+
 The following bulk edit options are available.
 
 To access these options:
@@ -79,6 +81,24 @@ To access these options:
 2. Common countergroup configurations for various scenarios 
 
 3. Disable all counter groups that do not apply in Netflow mode
+
+**METHOD 2:**  
+
+Click on the checkboxes of countergroups you want to edit in bulk and the following options appears as in the figure.  
+
+![](images/countergroups_bulkedit.png)    
+*Figure: Showing bulk edit options*    
+
+| Options | Descriptions |
+|---------|--------------|
+| Enable | Activate the selected counter groups, allowing them to function and collect data as configured. |
+| Disable | Deactivate the selected counter groups, temporarily halting their data collection and functionality. |
+| Edit | Opens a bulk editing interface "Edit Counter Group" on the left side as shown in the figure to modify settings of the selected counter groups simultaneously. (Options in "Edit Counter Groups" is the same as in the "Advanced Options" from METHOD 1) and click Update. |
+| Select All | Automatically check all counter groups in the list, allowing for bulk actions to be applied to every item. | 
+| Unselect All | Clear all checkboxes in the list, canceling any bulk actions and resetting the selection. |
+| Invert | Toggle the selection, checking unchecked counter groups and unchecking selected ones, useful for applying actions to the inverse of the current selection. |
+
+
 
 ## Editing Counter Group Topper Policies
 
