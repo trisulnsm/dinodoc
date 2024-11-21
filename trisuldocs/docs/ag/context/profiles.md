@@ -166,3 +166,19 @@ Click the action button against any interface and a dropdown menu shows up **Ena
 - **Enable**: Click enable to enable the selected interface.  
 - **Edit**: Click edit to modify the adapter configuration.  
 - **Delete**: Click delete to delete the selected interface.  
+
+### Bulk Edits
+
+Click on the checkboxes of the interfaces you want to edit in bulk and the following options appears as in the figure.  
+
+![](images/captureadapter_bulkedit.png)    
+*Figure: Showing bulk edit options*    
+
+| Options | Descriptions |
+|---------|--------------|
+| Enable | Activates the chosen interfaces, allowing them to function and interact with users or systems as intended. |
+| Disable | Deactivates the selected interfaces, temporarily halting their functionality and interaction with users or systems. |
+| Edit | Opens a bulk editing interface "Edit Capture Adapter" on the left side as shown in the figure to modify settings of the selected interfaces simultaneously. (Options in "Edit Capture Adapater" is the same fields as in the "Create Adapater") and click Update. |
+| Select All | Automatically checks all available interfaces, enabling you to apply bulk actions (enable, disable, edit) to every interface at once. | 
+| Unselect All | clears all previously selected checkboxes, resetting your selection and allowing you to start fresh. |
+| Invert | Toggles the selection status of all interfaces. Checked boxes will become unchecked, and unchecked boxes will become checked, providing a convenient way to quickly reverse your selections. |

@@ -33,7 +33,7 @@ To access application setting, Login as admin and,
 | Include NAT Flow Legs Correlation | Yes           | Correlate flows from multiple netwflow devices even if one of them does NAT                                                                      |
 | User Password Minimum length      | 6             | Minimum characters you can use in user password    |
 | Show Real-time alert counts       | Yes           | Show the alert count box which is usually found on the top right corner of each page                                                                                |
-| Real Time Alert Groups            |               | Select the group items for the alerts to be generated  |
+| Real Time Alert Groups            |               | SSelect the number of alerts to display in the Alerts bar from the dropdown menu. |
 | Enable Captcha                    | false         | Enable captcha validation in login page                |
 | Test Mode                         | false         | Disables some features while using test_project        |
 | Show others in topper list        | true          | Show others not shown item in the toppers list         |
