@@ -12,6 +12,7 @@ Name Resolution for *keys* can be done in three ways
 1) [From the Key Dashboard](/docs/ug/cg/resolve#from-the-key-dashboard)
 2) [From Top Keys](/docs/ug/cg/resolve#from-top-keys)
 3) [Resolve Names in Bulk using CSV file](/docs/ug/cg/resolve#resolve-keys-in-bulk-from-csv-file)
+4) [Set/Edit Label](/docs/ug/cg/resolve#setedit-label)
 
 ### From the Key Dashboard
 
@@ -70,6 +71,21 @@ List of counter groups will appear
 3. Select the column numbers that contain the key and label  
 
 4. Click Import CSV File
+
+### Set/Edit Label
+
+Click on the drilldown option against any key from any dashboard as in the figure. And click Set/Edit Label.
+
+![](images/setoreditlabel.png)  
+*Figure: Set or Edit Label*  
+
+Set the label name in the box prompted "Edit User Label".
+
+![](images/updatelabel.png)  
+*Figure: Update Label*  
+
+And click Update.
+
 
 ## Automatic Name Resolution
 

@@ -77,9 +77,9 @@ The format is
 
 Sample
 
-````bash
+```bash
 19-09-2024 18:39:14 INFO 192.168.1.20 127.0.0.1 user default - User successfully logged in 
-````
+```
 
 | Name | Sample Value | Description |
 |------|--------------|-------------|
