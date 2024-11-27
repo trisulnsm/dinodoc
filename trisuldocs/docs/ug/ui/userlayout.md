@@ -34,11 +34,15 @@ The top panel contains the following items
    
    Clicking on the logo takes you to the home page.
 
-3) #### Search Bar
+3) #### Customer Logo/ User Logo
+
+   To change the Customer Logo or User Logo see: [How to change Customer Logo or User Logo logging in as admin]
+
+4) #### Search Bar
    
    You can use the [Search bar tool](/docs/ug/ui/elements#using-search-tool) to find items of your interest.
 
-4) #### Alerts and Notifications
+5) #### Alerts and Notifications
 
 ![](images/alertsnnotifications.png)
 
@@ -46,11 +50,11 @@ The top panel contains the following items
     
     You can check for the alerts and notifications on External IDS, Threshold Crossing, Threshold Band Alerts, Blacklist Activity and Flow tracker here. Click the top right corner of color coded icons that represent alerts and notifications with alert count.
 
-5) #### License Detail
+6) #### License Detail
    
    You can check the validity of your License here.
 
-6) #### Probe Switch
+7) #### Probe Switch
    
    ![](images/probeswitch.png)
    
@@ -58,21 +62,21 @@ The top panel contains the following items
    
    You can switch between probes and check on the probe health by clicking on the probe switch. By default it is set to Probe0.
 
-7) #### Dark/Light Mode
+8) #### Dark/Light Mode
    
       You can switch between dark and light modes to change the appearance of the screen here.
 
-8) #### Host Name
+9) #### Host Name
    
    This shows the host's name. All time zones in Trisul are displayed in the host's time zone.
 
-9) #### Account
+10) #### Account
    
     ![](images/account.png)
    
    *Figure: Account Switch*
    
-    Clicking on the account button you can get the account history, change password, and signout from the current account. 
+    Clicking on the account button you can get the account history, change password, and signout from the current account. To change the user avatar see : [How to change the user avatar logging in as admin]
 
 ## Menus
 
