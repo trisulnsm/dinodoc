@@ -36,7 +36,7 @@ The top panel contains the following items
 
 3) #### Customer Logo/ User Logo
 
-   To change the Customer Logo or User Logo see: [How to change Customer Logo or User Logo logging in as admin]
+   To change the Customer Logo or User Logo see: [How to change Customer Logo or User Logo logging in as admin](/docs/ag/webadmin/manageusers#create-a-new-user)
 
 4) #### Search Bar
    
@@ -76,7 +76,7 @@ The top panel contains the following items
    
    *Figure: Account Switch*
    
-    Clicking on the account button you can get the account history, change password, and signout from the current account. To change the user avatar see : [How to change the user avatar logging in as admin]
+    Clicking on the account button you can get the account history, change password, and signout from the current account. To change the user avatar see : [How to change the user avatar logging in as admin](/docs/ag/webadmin/manageusers#create-a-new-user)
 
 ## Menus
 
