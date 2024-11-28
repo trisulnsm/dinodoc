@@ -304,7 +304,7 @@ Trisul environment. Allows you to read probe configuration for the context in wh
 | configfile        |  | `string` – path of config file        | Full path of the trisulProbeConfig.xml file used by the running Trisul instance|
 | get_config        | `string` – ‘xml path’. See description column | `string` – value of config parameter  | Read a configuration parameter from the [Trisul Probe configuration file](/docs/ref/trisulconfig). The XML Path supported is a very simple format “Node>Node>..Node”. So to read the config parameter *User* under *App* parent node the path is `App>User` |
 | domain_configfile |  | `string` – path of domain config file | Full path of the domain.xml configuration file used by the running instance. This config file is mainly used when your scripts want to connect and communicate to domain elements, such as TRP queries. |
-| get_domain_config | `string` – ‘xml path’. | `string` – config value  | Similar to `get_config` above but for the domain config file. Typical example `T.env.get_domain_config("Domain>LocalReq")` to find a local endpoint to connect to TRP  |
+| get_domain_config | `string` – ‘xml path’. | `string` – config value  | Similar to `get_config` above but for the domain config file. Typical example `T.env.get_domain_config("Domain >LocalReq")` to find a local endpoint to connect to TRP  |
 
 #### Usage
 
