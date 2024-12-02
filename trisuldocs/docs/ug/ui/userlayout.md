@@ -8,7 +8,7 @@ In this section you can easily get to know the visual arrangement or organizatio
 
 When you login as a "non admin" user you will see the following layout 
 
-![User Layout](images/userlayout.png)  
+![User Layout](images/userlayoutnew.png)  
 
 *Figure: User Layout*
 
@@ -22,7 +22,7 @@ Observe three sections
 
 The top panel contains the following items
 
-![Top panel](images/topbar.png)  
+![Top panel](images/toppanelnew.png)  
 
 *Figure: Top Panel of User Layout*
 
@@ -36,7 +36,7 @@ The top panel contains the following items
 
 3) #### Customer Logo/ User Logo
 
-   To change the Customer Logo or User Logo see: [How to change Customer Logo or User Logo logging in as admin](/docs/ag/webadmin/manageusers#create-a-new-user)
+   To change the Customer Logo or User Logo see: [How to change Customer Logo or User Logo logging in as admin](pathname:///docs/ag/webadmin/manageusers#ChangeUserLogo)
 
 4) #### Search Bar
    
@@ -50,11 +50,8 @@ The top panel contains the following items
     
     You can check for the alerts and notifications on External IDS, Threshold Crossing, Threshold Band Alerts, Blacklist Activity and Flow tracker here. Click the top right corner of color coded icons that represent alerts and notifications with alert count.
 
-6) #### License Detail
-   
-   You can check the validity of your License here.
 
-7) #### Probe Switch
+6) #### Probe Switch
    
    ![](images/probeswitch.png)
    
@@ -68,7 +65,7 @@ The top panel contains the following items
 
 9) #### Host Name
    
-   This shows the host's name. All time zones in Trisul are displayed in the host's time zone.
+   This shows the host's name. All time zones in Trisul are displayed in the host's time zone. To change the User Avatar see: [How to change User Avatar logging in as admin](pathname:///docs/ag/webadmin/manageusers#ChangeUserLogo)
 
 10) #### Account
    
@@ -76,7 +73,7 @@ The top panel contains the following items
    
    *Figure: Account Switch*
    
-    Clicking on the account button you can get the account history, change password, and signout from the current account. To change the user avatar see : [How to change the user avatar logging in as admin](/docs/ag/webadmin/manageusers#create-a-new-user)
+    Clicking on the account button you can get the account history, change password, and signout from the current account. To change the user avatar see : [How to change the user avatar logging in as admin](/docs/ag/webadmin/manageusers#ChangeUserAvatar)
 
 ## Menus
 

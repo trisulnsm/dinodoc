@@ -237,13 +237,13 @@ T.logerror( "This is an error message from my LUA script, same as above T.log() 
 
 Adds a log message to the main Trisul log file. Trisul automatically adds the lua script filename to the log message so you know where the message is actually coming from. Also see [Printing and Logging from LUA script](//docs/lua/basics#print-and-logging)
 
-| Name         | In                                                                                                                   | Out  | Description                                                                                                                                                                             |
-| ------------ | -------------------------------------------------------------------------------------------------------------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name         | In                           | Out  | Description        |
+| ------------ | ---------------------------- | ---- | ------------------ |
 | T.log        | [T.K.loglevel](/docs/lua/obj_globalt#table-tk) – optional loglevel<br/>`string` – log message | none | Log a message to the Trisul log file, usually located for the default setup in `/usr/local/var/log/trisul-probe/domain0/probe0/context0` . The default loglevel is `T.K.loglevel.DEBUG` |
-| T.logerror   | `string` – msg                                                                                                       | none | Useful shortcut to log a message with loglevel of ERROR. `T.logerror(msg)` is the same as `T.log(T.K.loglevel.ERROR,msg)`                                                               |
-| T.logwarning | `string` – msg                                                                                                       | none | Log a message with WARN category                                                                                                                                                        |
-| T.logdebug   | `string` – msg                                                                                                       | none | Log a message with DEBUG category                                                                                                                                                       |
-| T.loginfo    | `string` – msg                                                                                                       | none | Log a message with INFO category                                                                                                                                                        |
+| T.logerror   | `string` – msg        | none | Useful shortcut to log a message with loglevel of ERROR. `T.logerror(msg)` is the same as `T.log(T.K.loglevel.ERROR,msg)`               |
+| T.logwarning | `string` – msg        | none | Log a message with WARN category    |
+| T.logdebug   | `string` – msg        | none | Log a message with DEBUG category    |
+| T.loginfo    | `string` – msg        | none | Log a message with INFO category|
 
 #### Usage
 

@@ -49,8 +49,8 @@ Login as `admin` user to create a new user
 | Default Home Page    | If set, when user logs in he/she is taken to this page. Any page not just Dashboard can be set as the Default Home Page. The user can also set this themselves by pressing the Home :house: icon. |
 | Default Dashboard    | If set, When user logs in he/she is taken directly to this dashboard. If Default Home Page is also set, that has a higher priority and that is used instead. |
 | Allowed Context      | Restrict user to these selected contexts only|
-| Change User Logo | Click choose file and upload the logo image to set it as user logo |
-| Change User Avatar | Click choose file and upload the avatar to set it as user avatar |
+| <a id="ChangeUserLogo">Change User Logo</a>| Click choose file and upload the logo image to set it as user logo |
+| <a id="ChangeUserAvatar">Change User Avatar</a> | Click choose file and upload the avatar to set it as user avatar |
 
 > For LDAP Login User Name should be LDAP filter attribute value.  
 > For Example if you specified `Email` as filter attribute in LDAP domain
