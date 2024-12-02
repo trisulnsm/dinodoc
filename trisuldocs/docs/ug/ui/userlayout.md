@@ -73,7 +73,7 @@ The top panel contains the following items
    
    *Figure: Account Switch*
    
-    Clicking on the account button you can get the account history, change password, and signout from the current account. To change the user avatar see : [How to change the user avatar logging in as admin](/docs/ag/webadmin/manageusers#ChangeUserAvatar)
+    Clicking on the account button you can get the account history, change password, and signout from the current account. To change the user avatar see : [How to change the user avatar logging in as admin](pathname:///docs/ag/webadmin/manageusers#ChangeUserAvatar)
 
 ## Menus
 
