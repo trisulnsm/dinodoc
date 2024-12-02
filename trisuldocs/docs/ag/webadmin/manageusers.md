@@ -49,12 +49,55 @@ Login as `admin` user to create a new user
 | Default Home Page    | If set, when user logs in he/she is taken to this page. Any page not just Dashboard can be set as the Default Home Page. The user can also set this themselves by pressing the Home :house: icon. |
 | Default Dashboard    | If set, When user logs in he/she is taken directly to this dashboard. If Default Home Page is also set, that has a higher priority and that is used instead. |
 | Allowed Context      | Restrict user to these selected contexts only|
-| <a id="ChangeUserLogo">Change User Logo</a>| Click choose file and upload the logo image to set it as user logo |
+| <a id="ChangeUserLogo">Change User Logo</a>| Click choose file and upload the logo image to set it as user logo. You have [three design options](/docs/ag/webadmin/manageusers#changing-user-logo).|
 | <a id="ChangeUserAvatar">Change User Avatar</a> | Click choose file and upload the avatar to set it as user avatar |
 
 > For LDAP Login User Name should be LDAP filter attribute value.  
 > For Example if you specified `Email` as filter attribute in LDAP domain
 > configuration then you need to enter you email in User Name field.
+
+### Changing User Logo 
+
+:::info 
+
+:point_right: Select Web Admin &rarr; Manage &rarr; Users &rarr; Change User Logo
+
+:::
+
+Click choose file and upload the logo image to set it as user logo. 
+
+**Logo Setting Options**
+
+- **Setting 1** (Dual Logo)   
+ Display a customer logo alongside the Trisul Logo on the top panel as in the figure.
+
+![](images/trisul_customerlogo.png)  
+*Figure: Trisul Logo with Customer Logo*  
+
+- **Setting 2** (User Identification)  
+Place a user logo (admin/user) next to the Trisul Logo on the top panel as in the figure.
+
+![](images/trisul_userlogo.png)  
+*Figure: Trisul Logo with User Logo*  
+
+- **Setting 3** (Custom Branding)  
+Showcase a user logo alongside a customer logo, without displaying the Trisul Logoas in the figure.
+
+![](images/customer_userlogo.png)  
+*Figure: User Logo with Customer Logo*    
+
+### Changing Avatar Logo
+
+:::info 
+
+:point_right: Select Web Admin &rarr; Manage &rarr; Users &rarr; Change Avatar Logo
+
+:::
+
+Click choose file and upload the avatar to set it as user avatar. The figure shows the user avatar.
+
+![](images/avatar.png)  
+*Figure: Avatar Logo*   
 
 
 ## Edit Existing User

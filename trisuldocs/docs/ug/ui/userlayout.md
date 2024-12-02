@@ -8,7 +8,7 @@ In this section you can easily get to know the visual arrangement or organizatio
 
 When you login as a "non admin" user you will see the following layout 
 
-![User Layout](images/userlayoutnew.png)  
+![User Layout](images/user_layoutnew.png)  
 
 *Figure: User Layout*
 
@@ -46,12 +46,15 @@ The top panel contains the following items
 
 ![](images/alertsnnotifications.png)
 
-    *Figure: Alerts and Notifications in Top Panel*
+  *Figure: Alerts and Notifications in Top Panel*
     
-    You can check for the alerts and notifications on External IDS, Threshold Crossing, Threshold Band Alerts, Blacklist Activity and Flow tracker here. Click the top right corner of color coded icons that represent alerts and notifications with alert count.
+   You can check for the alerts and notifications on External IDS, Threshold Crossing, Threshold Band Alerts, Blacklist Activity and Flow tracker here. Click the top right corner of color coded icons that represent alerts and notifications with alert count.
 
+6) #### License Details
 
-6) #### Probe Switch
+   Verify the validity of your license details to ensure uninterrupted access to our services.
+
+7) #### Probe Switch
    
    ![](images/probeswitch.png)
    
