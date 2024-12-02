@@ -8,7 +8,7 @@ In this section you can easily get to know the visual arrangement or organizatio
 
 When you login as a "non admin" user you will see the following layout 
 
-![User Layout](images/user_layoutnew.png)  
+![User Layout](images/userlayoutnew.png)  
 
 *Figure: User Layout*
 
@@ -22,7 +22,7 @@ Observe three sections
 
 The top panel contains the following items
 
-![Top panel](images/toppanelnew.png)  
+![Top panel](images/user_layoutnew.png)  
 
 *Figure: Top Panel of User Layout*
 
