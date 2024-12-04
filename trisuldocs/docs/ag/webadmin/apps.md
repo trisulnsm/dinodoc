@@ -35,12 +35,12 @@ From here you can install, upgrade, or uninstall Trisul Apps.
 
 Currently the only repository enabled is https://github.com/trisulnsm/apps
 
-## Offline App Upload
+## Offline App Import
 By default, Trisul fetches and displays apps from the online repository in the Apps Dashboard. When you try to access the apps offline github would be unreachable from the webtrisul server.
 
- Alternatively, you can download apps from the repository as a TAR file and later upload them offline.
+ Alternatively, you can download apps from the repository as a TAR file and later import them offline.
 
-To access the Trisul Apps Dashboard while offline and upload apps, Login as admin user 
+To access the Trisul Apps Dashboard while offline and import apps, Login as admin user 
 
 :::info navigation
 
@@ -48,17 +48,17 @@ To access the Trisul Apps Dashboard while offline and upload apps, Login as admi
 
 :::
 
-![](images/offline.png)  
+![](images/importapps.png)  
 *Figure: Showing unreachability of apps in offline*
 
-Click Upload
-From the *upload apps* dialog box choose the file by browsing and select the TAR file containing the apps.
-Click Upload.
+Click Import
+From the *Import apps* dialog box choose the file by browsing and select the TAR file containing the apps.
+Click Import.
 
-![](images/upload.png)  
-*Figure: Showing Offline Upload*
+![](images/choosefile.png)  
+*Figure: Showing Offline Import*
 
-> Note: This offline upload feature allows for flexibility and convenience when internet connectivity is limited or unavailable.
+> Note: This offline import feature allows for flexibility and convenience when internet connectivity is limited or unavailable.
 
 ## Types of Apps
 
@@ -94,93 +94,3 @@ When the version number changes, the user will be given a hint that a “New ver
 ## List of Apps
 
 Here is a list of all the available apps. We are constantly adding new Apps, to view the latest list of apps go to [trisulnsm/apps](https://github.com/trisulnsm/apps)
-
-**JS Dashboard Apps**
-
-| App                                | Description                                                          |
-|:----------------------------------:| ---------------------------------------------------------------------|
-| Bandwidth Capacity Planning        | Breakup of Network In and Out traffic bandwidth with average rates   |
-| CIDR Explore Flows                 | View host,app,protocol topper for cidr tagger subnets                |
-| Country Analytics Drilldown        | View country mappings for routers and interfaces                     |
-| Customer AS Analytics              | View ASN traffic maps for customers |                                   
-| Daily Key Report                   | Shows daily usage report for a key                                   |
-| Edge vertex Monitor                | Show usage report for selected guid,meters and keys                  |
-| Geo IP Lookup                      | Shows the ip look up. Shows ASNumber , ASNumber path,Country etc.    |
-| ISP Country Analytics              | View country mappings for routers and interfaces                     |
-| ISP Location Analytics             | View ASN traffic maps for routers by location |
-| ISP OTT App Analytics              | View OTT Apps mappings for routers and interfaces                    |
-| ISP Overview                       | Top level dashboard for ISP.Shows ASN, Peers, Prefixes, and BGP KPI for ISP|
-| ISP Prefixes Analytics             | View external prefixes mappings for routers and interfaces           |
-| ISP Router Geo Map                 | View country locations for your router in vector map.                |
-| IXP Analytics                      | L2 IXP Traffic Analytics. Traffic Matrixat Internet Exchange Points Matrix, Per Member, traffic history of eacTX Flow for planning and billing                                          |
-| Interface Filter                   |
-| Interface Traffic Matrix           | View interface to interface traffic flows. A complete and long term accurate view of interface to interface transmit and receivefic flows within a router.                      |
-| Key Space Explorer                 | Search all active key space and get total usage.                     |
-| Multi Probe Charts                 | Draw a multi-probe chart. Shows chart data from all probes You can plot any counter group, key, and meter.                                                                              |
-| PCAP Totals                        | Shows duraion,total bandwidth,packets and flows Shows total No.of Resources(http,dns,ssl) and FTS. Shows total No.of alerts for all alerts group(IDS,Blacklist,Flow Tracking,Threshold crossing). Shows No.of keys in each counter group.                                                           |
-| Path Analytics                     | Shows the top used AS PATHS. Route Per Hop Analytics-Receive Usage of busiest route segments                                                                                       |
-| Peering Analytics                  | View ASN traffic maps for routers and interfaces                      |
-| Peering Analytics Drilldown        | View ASN mappings for routers and interfaces                          |
-| Prefix Analytics Drilldown         | View Prefix mappings for routers and interfaces                       |
-| Protocol Tree Viewer               | View metrics in a Protocol Tree                                       |
-| Rolling Cards                      | View counter group toppers in rolling cards |
-| SNMP vs Netflow                    | Compare netflow traffic with snmp traffic from interfaces        |
-| Sankey Crossdrill                  | Show sankey chart for crosskey filter counter group                   |
-| Search Keys                        | Search keys to check any usage activity in your network               |
-| Security Overview – Internal Hosts | Shows IDS and Badfellas alerts count for internal hosts               |
-| Super Search Host                  | Search all hosts by domain name and print total usage of each.        |
-| Usage Activity Heatmap             | Shows key activity usage in d3 heatmap visualization Day/Hour. Shows key usage activity hour by hour for recent 7 days. You can plotkey with any meter.                               |
-
-
-**Shared Dashboard Apps**
-
-| App                      | Description                                                                     |
-| ------------------------ | ------------------------------------------------------------------------------- |
-| DNS monitoring           | DNS Custom Metrics and dashboards                                               |
-| IPDR NetFlow Statistics  | Shows NetFlow volume, total bandwidth, total no.of revises, sending NetFlow/syslog, NetFlow records, top devices, list of alerts if any of the devices stopped to send NetFlow |
-| ISP Dashboard Pack       | Some useful dashboards for ISP Analytics. Dashboards include Prefix analysis, Int, Ext, Toppers                                                                                                 |
-|NetFlow Overview          | Netflow dashoard shows overview of number of routers, interfaces, current throughput, top routers and ports by bandwidth                                                                           |
-| Probe Performance        | This dashboard shows CPU usage, Memory usage, Packet drops, Disk Bandwidth for PCAPs, Read IOPs, Write IOPs, am flush performance, along with Total Bandwidth.                                     |
-| Save Binaries Monitoring | Monitor performance metrics of File Extraction. Files extracted per minute, throughput, skipped. Top file types with extraction rate  time, etc                                          |
-| Simple executive         | This dashboard shows top Inbound source,destinations top outbound source,destinations,Top Apps top sources,destinations                                                        |
-| TCP Analysis             | Dashboard for the TCP Analysis App. Shows Latency,Retransmisson for internal and external hosts Show hosts  high retransmisson rate and timout flows Shows poor quality flows  more than 5% retransmisson rate |
-
-**LUA Analytics Apps**
-
-| App                         | Description                                                                  |
-| --------------------------- | ---------------------------------------------------------------------------- |
-| Alienvault OTX              | Scan your traffic against AlienVault OTX intel needs the IOC-Harvestor app and Alien OTX Key.                                                                                               |
-| FireHOL checker             | FireHOL is a well curated set of IP that must be blocked. Shows Alerts if activity seen from FireHOL blacklist                                                                                  |
-| Flexible CIDR Tagger        | Adds CIDR tags to flows and allows you to search fast for entire subnet flows,based on IP2Location db Country, ASN, City, and Proxy metrics based on the IP2Location databases       |
-| Fortigate Connector         | Connects to Fortigate/Fortianalyzer syslog                                   |
-| Geo Based On IP2Location DB | Country, ASN, City, and Proxy metrics based on the IP2Location databases     |
-| HSRP Analyzer               | this plugin is to check active/standby roters                                |
-| HTTP Proxy                  | Interprets the HTTP and CONNECT methods to give you total visibility in Proxy environments such as squid.                                                                                  |
-| IGMP Multicast              | Extracts IGMP group members                                                  |
-| IOC Harvestor               | Harvests intel items into a single resource stream from different places in Trisul pipeline.                                                                                                    |
-| IP to MAC Mapper            | Tracks IP to MAC address mappings with a new counter group IP-MAC-PAIR       |
-| NAT Mapper                  | Tags NAT/CGNAT IP and Port tags to flows                                     |
-| Nat SYSLOG                  | Flow storage from NAT and AAA syslog events                                  |
-| Passive DNS Extractor       | Builds a real time LevelDB database containing IP to Host Name lookup. A number of apps can be built on top of this mapping. Requires ldb installed on probes.                                  |
-| PingMON                     | Monitor thousands of endpoints for reachability and measure latency and packetloss. Email when nodes go down                                                                         |
-| Protocol Tree Metrics       | Break up of traffic by protocol, not just the final protocol but by IP/IPv6/TCP/UDP                                                                                                          |
-| Prune Encrypted PCAP        | Dramatically reduces disk storage and throughput requirements by automatically pruning raw PCAP storage. You do this by excluding high volume trusted and encrypted traffic from (youtube, netflix, facebook, etc). NOTE: This requires the Passive DNS Creator plugin                   |
-| Prune TLS from PCAP storage | Dramatically reduce disk IOPs and storage by not storing SSL/TLS traffic on port 443. The app only prunes TLS traffic on 443 by inspecting the bytes at the start of the flow to ensure TLS handshake is present. This app also prunes Google QUIC protocol on UDP 443. Used by YouTube. |
-| SNI TLS Metrics             | The Server Name Indication TLS Extension allows multi homeing of HTTPS servers behind a single IP. This app uses the SNI hostname to measure traffic carried over TLS that would otherwise be opaque                                                                                                       |
-| SNMP Poller                 | Basic SNMP Poller to measure traffic on interfaces. Requires snmp package on probes                                                                                                       |
-| SSH Events                  | Detect SSH Tunnel activity which can indicate serious deep breach undetectable by firewalls and IDS                                                                                            |
-| Save Binaries               | extract files that are potentially malicious into a directory                |
-| Squid Proxy Metrics         | Extracts metrics from explict proxy servers which use CONNECT type tunnels. This is the most common type of proxy.                                                                            |
-| Stable Keys                 | Generates an alert when within a counter group a particular key stops being seen |
-| Subnet Flowcap              | Remove flow storage caps for selected subnets                                |
-| Suricata via EVE UnixSocket | Listen to alerts from Suricata in EVE format on a Unix DGRAM Socket          |
-| TCP Analyzer                | Identify hosts and apps experiencing TCP performance issues by tracking retransmissions,connection setup latency, and timeouts. Marks flows experiencing high retransmissions  flow TAG |
-| TLS Fingerprinter           | TLS Fingerprinting can be used to identify TLS/SSL client applications including Malware                                                                                                       |
-| TLS Metrics Pack            | Generates extra metrics and relationships in TLS traffic                      |
-| Umbrella Top-1M             | Uses the Cisco Umbrella Top-1M to mark and measure DNS hits outside of Cisco Umbrella Top-1Million domains                                                                                 |
-
-**Meta Apps**
-
-| App                         | Description                                                                  |
-| --------------------------- | ---------------------------------------------------------------------------- |
-| Meta App for SNMP           | Automatically install snmppoller and snmpvsnetflow app                       |

@@ -36,7 +36,7 @@ The top panel contains the following items
 
 3) #### Customer Logo/ User Logo
 
-   To change the Customer Logo or User Logo see: [How to change Customer Logo or User Logo logging in as admin](pathname:///docs/ag/webadmin/manageusers#ChangeUserLogo)
+   To change the Customer Logo or User Logo see: [How to change Customer Logo or User Logo logging in as admin](/docs/ag/webadmin/manageusers#changing-user-logo)
 
 4) #### Search Bar
    
@@ -68,7 +68,7 @@ The top panel contains the following items
 
 9) #### Host Name
    
-   This shows the host's name. All time zones in Trisul are displayed in the host's time zone. To change the User Avatar see: [How to change User Avatar logging in as admin](pathname:///docs/ag/webadmin/manageusers#ChangeUserLogo)
+   This shows the host's name. All time zones in Trisul are displayed in the host's time zone. To change the User Avatar see: [How to change User Avatar logging in as admin](/docs/ag/webadmin/manageusers#changing-avatar-logo)
 
 10) #### Account
    
