@@ -53,7 +53,7 @@ To access the Trisul Apps Dashboard while offline and import apps, Login as admi
 
 Click Import
 From the *Import apps* dialog box choose the file by browsing and select the TAR file containing the apps.
-Click Import.
+Click Upload.
 
 ![](images/choosefile.png)  
 *Figure: Showing Offline Import*
