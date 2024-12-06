@@ -22,7 +22,7 @@ To schedule a new report
 :::info navigation
 
 :point_right: Login as `user` Go to Reports → Schedule or you can also   
-Login as `admin` Go to Context: Default &rarr; Admin Tasks &rarr; Schedule Email Reports
+:point_right: Login as `admin` Go to Context: Default &rarr; Admin Tasks &rarr; Schedule Email Reports
 
 :::
 
@@ -30,7 +30,7 @@ Login as `admin` Go to Context: Default &rarr; Admin Tasks &rarr; Schedule Email
 2. Click **New report**
 3. Fill out these fields
 
-![](images/scheduleareport.png)
+![](images/schedareport.png)
 
 *Figure: Showing Schedule a New Email Report Configuration*
 
@@ -49,19 +49,47 @@ Here is the table with the description of all available fields to schedule a new
 | Specify a Subject            | Subject of the report                                                           |
 | Signature                    | Signature of the sender                                                         |
 | Report parameters (optional) | Optional parameters, if present must be in valid `JSON` format. This parameter is only required for these three reports Endpoint Activity, Application Activity, Router and Interfaces             |
+| Enabled                      | Keep this checkbox checked to generate reports on schedule and unchecked to temporarily disable scheduled reports                                                                            | 
 
 Once you schedule the report, all your scheduled reports will appear on the index page and you can toggle from there.
 
-![](images/schedulereports1.png)
+![](images/schedreports1.png)
 
 *Figure: Showing List of Currently Scheduled Reports in Index Page*
 
+The following is the list of options and their description of all scheduled reports you can see on the index page of scheduled reports.
+
+| Options | Descriptions |
+|---------|--------------|
+| Run at Time | The scheduled time at which the report will be generated and sent. |
+| Frequency | The frequency at which the report will be generated and sent, such as daily, weekly, or hourly. |
+| Type | The type of report being generated, such as network executive report, automatic email syslog alerts reports etc. |
+| Subject | The subject line of the email that will be sent with the report. |
+| Mail to | The email address(es) to which the report will be sent. |
+| Last Run | The date and time at which the report was last generated and sent. |
+| Status | The current status of the scheduled report, such as active or inactive. |
+| Action | The actions that can be taken on the scheduled report, such as "Edit", "Delete", or "Run Status". |
+
 With the action button of the scheduled reprots, you can,
 
-- **Edit** You can edit the parameters of the scheduled report.  
+- **Edit** You can edit the parameters of the scheduled report one report at a time.  
 - **Delete** You can delete the scheduled report.  
 - **Run Status** You can check if the report has been sent successfully to the destination mail address.  
 - **Generate Report** You can download the scheduled report manually.  
+
+
+### Bulk Edit
+
+To bulk edit scheduled reports select and click on the checkboxes on the left side against each scheduled report.
+
+![](images/bulkedit_schedreports.png)  
+*Figure: Bulk Edit Options*
+
+- **Delete** Permanently removes the selected scheduled reports. Use with caution, as deleted reports cannot be recovered.
+- **Edit** Allows you to modify the parameters of the selected scheduled reports.
+- **Select All** Selects all scheduled reports on the page, enabling bulk actions to be applied to all reports at once.
+- **Unselect All** Deselects all scheduled reports on the page, allowing you to start the selection process again.
+- **Invert** Toggles the selection of all scheduled reports on the page, selecting those that were previously unselected and vice versa.
 
 
 ## Report Parameters
