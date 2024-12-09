@@ -66,7 +66,7 @@ To access the Custom reports,
 
 Once you have created an empty report using *Create New Report* you can edit the same using the Option button against each report name. The context menu from the option button allows you to perform various functions on the report. 
 
-![](images/customreport_menu.png)
+![](images/customreport_newmenu.png)
 
 *Figure: Available Custom Report types*
 
@@ -88,9 +88,11 @@ With the option button, there are six different kinds of reports that you can cr
 - Volume Report
 - Traffic Chart Report
 - Toppers Table Report
+- Topper Traffic Chart Report
 - CrossKey Drilldown
 - Metrics Table Report
 - Alert Count Report
+- Conversations Report
 
 
 ## Volume Report
@@ -329,3 +331,37 @@ you have created
 ![](images/alert_type_report.png)
 
 *Figure: Sample pdf for alert count reports*
+
+## Conversations Report
+
+A Conversations Report in Trisul provides a detailed analysis of network conversations between internal and external hosts over a specified time period. This report offers insights into the communication patterns, protocols, and data exchange between hosts on the selected interface.
+
+To create a Conversations report, Click Conversations Report from the option button against the newly created report name under all the custom reports. You will find the following dialog box to fill in.
+
+![](images/conversationreport_form.png)  
+
+*Figure: Conversations Report*
+
+Here is the table with description for available fields to create Conversations reports.
+
+| Field Name | Description |
+|------------|-------------|
+| Title | The main heading of the report, providing a brief summary of the report's content. |
+| Subtitle | A secondary heading that provides additional context or information about the report. |
+| Page Type | The type of report page, such as a metrics table, alert count, conversations etc.|
+| Top Count | The number of top conversations to display in the report. |
+| Traffic Chart | Check this checkbox to enable the graphical representation of network traffic patterns, displaying metrics. |
+| Search Links| Enter the link name that allows you to quickly search for specific data or filters within the report. |
+| Name of the links | All the available links on the interface. (Note: Interface tracker has to be enabled to view the links) To enable Interface tracker see : [Interface Tracker](/docs/ug/netflow/interface_tracker/) |
+
+Click Save
+
+To view the report, select the option button near the newly 
+created report. Select *Generate report* option to generate the report 
+you have created
+
+![](images/conversationreport_sample.png)
+
+*Figure: Sample pdf for Conversations reports*
+
+To include *port* details in the report Enable "Include Dest Port(Conversations)" in [NetFlow](/docs/ag/webadmin/web_options#netflow)
