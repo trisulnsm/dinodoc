@@ -214,6 +214,7 @@ configure a proxy server.
 | Refresh Page Interval | 60                  | MRTG customer page default refresh interval |
 | Chart Title           | routerip_routername | Customize chart tile for MRTG customer      |
 | Chart Subtitle        | ifname_ifalias      | Customize chart subtile for MRTG customer   |
+| Show Yearly Button    | Checked             | When checkbox is checked it shows the button in the traffic grapher to generate chart for daily, weekly, monthly, and yearly.                           |
 
 ## API Keys
 
