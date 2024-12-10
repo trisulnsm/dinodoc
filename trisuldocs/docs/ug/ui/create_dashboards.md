@@ -121,7 +121,16 @@ There will be a list of all dashboards. Find the dashboard you would like to rem
 
 ## How to Edit a Dashboard
 
-To edit a Dashboard, from the list of dashboards go to the dashboard you would like to edit. And click on the [Dashboard toolbar](/docs/ug/ui/dashmod_intro#dashboard-toolbars), the three dots on the top right corner of the dashboard and click Customize.
+To edit a Dashboard, from the list of dashboards go to the dashboard you would like to edit. And click on the [Dashboard Menu](/docs/ug/ui/dashmod_intro#dashboard-menu-button) button, the three dots on the top right corner of the dashboard and click Customize.
+
+## How to Export a Dashboard
+
+You can also share the dashboard across different contexts by clicking **Export to App JSON**. 
+
+![](images/export_json.png)   
+*Figure: Export a Dashboard*  
+
+Click on the [Dashboard Menu](/docs/ug/ui/dashmod_intro#dashboard-menu-button) button, the three dots on the top right corner on any dashboard and from the dropdown menu click *Export to JSON*. This will let you download the dashboard in JSON format.
 
 ## How to Delete/Clone/Export a Dashboard
 
@@ -141,7 +150,6 @@ From the list of dashboards, click on the three dots on the right side against t
 
 From the same menu, click **Clone** in case you need to take a copy of the dashboard before deleting the dashboard.
 
-You can also share the dashboard across different contexts by clicking **Export to App JSON** on the same menu. This will download the Dashboard in JSON format to your device.
 
 ## How to Import a Dashboard
 

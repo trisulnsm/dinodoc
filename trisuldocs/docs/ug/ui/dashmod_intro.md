@@ -121,19 +121,19 @@ This will show a list of all available modules.
 
 To **view one particular module** from the list, check on the name of the dashboard that contains the module and navigate to that dashboard to select the module.
 
-## Toolbars
+## Menu Options
 
-### Dashboard Toolbars
+### Dashboard Menu Button
 
-You can control dashboard layout and contents by using the toolbars.
+You can control dashboard layout and contents by using the menu options.
 
-Dashboard toolbars can be accessed from the right side corner of each
+Dashboard menu can be accessed from the right side corner of each
 dashboard window. 
 
-![](images/toolbars/dashboard_icons.png)  
+![](images/dashboard_menu.png)  
 *Figure: Dashboard level toolbar*
 
-With Dashboard Toolbar you can
+With Dashboard menu button you can
 
 **Customize** Allows you to personalize the dashboard to your preferences, such as rearranging modules, adding or removing modules, and changing the layout.
 
