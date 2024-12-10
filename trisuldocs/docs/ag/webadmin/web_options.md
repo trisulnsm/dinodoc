@@ -187,6 +187,8 @@ configure a proxy server.
 | Auto Resolve SNMP        | true          | Daily automatically resolve ifname, ifalias, ifspeed, etc.|
 | Resolve ifSpeed          | true          | Sync ifSpeed from SNMP.Set false to keep overrided value  |
 | Resolve Router Name      | true          | Update label from snmp router name.Set false to keep overrided value |
+| Resolve Advanced SNMP    | true          | Resolves additional SNMP attributes via SNMP queries, including Resolve Type, VLAN, and Attributes. |
+| Resolve Velocloud vceLinkCapacityBpsGauge | Resolves vceLinkCapacityBpsGauges via SNMP queries, including Tx and Rx capacities. |
 | SNMP Command Prefix      |               | Append the text before the SNMP commmand |
 
 ## DR Settings
