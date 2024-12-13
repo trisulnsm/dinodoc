@@ -46,7 +46,7 @@ You can see the list of modules that you can add to the new dashboard here.
 
 Similarly, to add modules to an existing dashboard, [customize the dashboard](/docs/ug/ui/create_dashboards#how-to-edit-a-dashboard) and follow the same steps as adding a module to new dashboard.
 
-Alternatively you can also navigate from the list of [all dashboards](/docs/ug/ui/dashmod_intro#view-a-dashboardall-dashboards), click on the [dashboard toolbar](/docs/ug/ui/dashmod_intro#dashboard-toolbars) against the dashboard you would like to add the module to and click Customize. 
+Alternatively you can also navigate from the list of [all dashboards](/docs/ug/ui/dashmod_intro#view-a-dashboardall-dashboards), click on the [dashboard toolbar](/docs/ug/ui/create_dashboards#how-to-edit-a-dashboard) against the dashboard you would like to add the module to and click Customize. 
 
 The module positions can also be rearranged in the layout view field in [dashboard customization](/docs/ug/ui/create_dashboards#how-to-edit-a-dashboard) window. You can rearrange by simply clicking and dragging the modules to the desired place.
 
