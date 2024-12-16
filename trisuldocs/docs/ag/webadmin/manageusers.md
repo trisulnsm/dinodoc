@@ -49,42 +49,17 @@ Login as `admin` user to create a new user
 | Default Home Page    | If set, when user logs in he/she is taken to this page. Any page not just Dashboard can be set as the Default Home Page. The user can also set this themselves by pressing the Home :house: icon. |
 | Default Dashboard    | If set, When user logs in he/she is taken directly to this dashboard. If Default Home Page is also set, that has a higher priority and that is used instead. |
 | Allowed Context      | Restrict user to these selected contexts only|
-| Change User Logo| Click choose file and upload the logo image to set it as user logo. You have [three design options](/docs/ag/webadmin/manageusers#changing-user-logo).|
-| Change User Avatar | Click choose file and upload the avatar to set it as user avatar |
+| Change User Avatar | Click to choose file and upload the avatar to set it as user avatar. This shows in the top right of the page. |
 
-> For LDAP Login User Name should be LDAP filter attribute value.  
-> For Example if you specified `Email` as filter attribute in LDAP domain
-> configuration then you need to enter you email in User Name field.
 
-### Changing Tenant Logo 
+:::note For LDAP Users
 
-:::info 
-
-:point_right: Select Web Admin &rarr; Manage &rarr; Users &rarr; Change Tenant Logo
+For LDAP Login User Name should be LDAP filter attribute value.  
+For Example if you specified `Email` as filter attribute in LDAP domain
+configuration then you need to enter the users email attribute  in the  User Name field.
 
 :::
 
-Click choose file and upload the logo image to set it as Tenant logo. 
-
-**Logo Setting Options**
-
-- **Setting 1** (Dual Logo)   
- Display a customer logo alongside the Trisul Logo on the top panel as in the figure.
-
-![](images/trisul_customerlogo.png)  
-*Figure: Trisul Logo with Customer Logo*  
-
-- **Setting 2** (User Identification)  
-Place a Tenant logo (admin/user) next to the Trisul Logo on the top panel as in the figure.
-
-![](images/trisul_userlogo.png)  
-*Figure: Trisul Logo with Tenant Logo*  
-
-- **Setting 3** (Custom Branding)  
-Showcase a user logo alongside a customer logo, without displaying the Trisul Logoas in the figure.
-
-![](images/customer_userlogo.png)  
-*Figure: Tenant Logo with Customer Logo*    
 
 ### Changing Avatar Logo
 

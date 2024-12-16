@@ -36,7 +36,7 @@ The top panel contains the following items
 
 3) #### Customer Logo/ User Logo
 
-   To change the Customer Logo or User Logo see: [How to change Customer Logo or User Logo logging in as admin](/docs/ag/webadmin/manageusers#changing-user-logo)
+   To change the Customer Logo or User Logo see: [How to change Customer Logo or User Logo logging in as admin](/docs/ag/webadmin/manageusers#changing-avatar-logo)
 
 4) #### Search Bar
    
@@ -128,7 +128,7 @@ The Dash board contains the following elements
 | 1) Dashboard Name                                                    | This is the name of the dashboard.       |
 | 2)  Dashboard Description                                            | This gives you the description of the dashboard                                                                                                             |
 | 3) Data Time Period                                                  | The time shown on the top right corner of the dashboard is since the time data was available till now.                                                      |
-| 4) [Dashboard Toolbar](/docs/ug/ui/dashmod_intro#dashboard-toolbars) | By clicking on the three dots at the top right corner of the dashboard you can edit the dashboard including customizing it, toggle labels, set as default dashboard, expand all modules, collapse all modules, and download as PDF.                                         |
+| 4) [Dashboard Toolbar](/docs/ug/ui/dashmod_intro#dashboard-menu-button) | By clicking on the three dots at the top right corner of the dashboard you can edit the dashboard including customizing it, toggle labels, set as default dashboard, expand all modules, collapse all modules, and download as PDF.                                         |
 | 5) Time Window | This enables you to select from a number of time ranges like 5 mins, 15 mins, 1 hour and more custom ranges |
 | 6) Topper Count | A number of topper counts can be quickly selected to display the results in the modules in the dashboard that reflects the selected time.
 | 7) [Modules](/docs/ug/ui/modules)                                                           | Modules are represented in the forms of charts and tables.                                                                                                |
