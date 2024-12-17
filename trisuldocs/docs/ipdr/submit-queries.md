@@ -103,7 +103,7 @@ To specify a different output directory, use the **-o** option followed by the d
 
 ### Output File Structure
 
-The output subdirectory contains files named queryresults.<IP_address> and queryresults.<IP_address>.csv, where <IP_address> represents the IP address queried.
+The output subdirectory contains files named queryresults. `<IP_address>` and queryresults. `<IP_address>`.csv, where `<IP_address>` represents the IP address queried.
 These files contain the IPDR query results in both plain text and CSV formats.
 
 ```
