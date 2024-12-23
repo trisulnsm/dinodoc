@@ -218,6 +218,51 @@ configure a proxy server.
 | Chart Subtitle        | ifname_ifalias      | Customize chart subtile for MRTG customer   |
 | Show Yearly Button    | Checked             | When checkbox is checked it shows the button in the traffic grapher to generate chart for daily, weekly, monthly, and yearly.                           |
 
+### Customizing Chart Titles and Subtitles
+
+Chart titles and subtitles can be easily customized using a combination of formulas with the following variables:
+
+`routerip`: The IP address of the router  
+`routername`: The name of the router  
+`ifname`: The interface name  
+`ifalias`: The interface alias  
+
+Examples of Customization Options
+
+The following examples demonstrate how chart titles and subtitles can be customized:
+
+**Option 1**: Simple Combination
+
+Chart title: `routerip`  
+Chart subtitle: `routername`
+![](images/rouip_rouname.png)
+
+**Option 2**: Interface-Based
+
+Chart title: `ifname`  
+Chart subtitle: `ifalias`
+
+![](images/ifname_ifalias.png)
+
+
+**Option 3**: Detailed Combination
+
+Chart title: `routerip_routername`  
+Chart subtitle: `ifname_ifalias`
+
+**Option 4**: Comprehensive Details
+
+Chart title: `routerip_routername_ifname_ifalias`  
+Chart subtitle: Customizable using any of the above variables.
+
+**Option 5**: Other Combination
+
+Chart title: `routerip_ifalias`  
+Chart subtitle: `ifname_routername`
+![](images/routerip_routername.png)
+
+By using these variables and customization options, you can tailor your chart titles and subtitles to suit your specific needs.
+
 ## API Keys
 
 :::info navigation
