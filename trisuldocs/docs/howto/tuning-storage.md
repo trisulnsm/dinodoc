@@ -41,15 +41,17 @@ Each database slice further contains many storage subsections of the
 Trisul database, you can use the *Analyze Storage* option. This is used
 by Trisul Engineers to further fine tune the database.
 
-![](images/dbstatus3.png)
+![](images/options.png)
 
 ## Tuning the database
 
 The default install of Trisul Network Analytics stores data for 92 days,
 i.e. 3 months.
 
-You can tune the database to extend the storage to co er more number of
+You can tune the database to extend the storage to cover more number of
 days.
+
+![](images/piechart.png)
 
 ### Tuning the Flow / Sessions database
 
