@@ -58,7 +58,7 @@ in this case Verisign.
 ![](images/resources_scform.png)
 *Figure: Search Criteria Form for SSL Certificates*
 
-Open the Search Criteria box by clicking on [*Show Search Form*](/docs/ug/ui/elements#hide-show-search-form) and fill in the fields with the help of following field descriptions.
+Open the Search Criteria box by clicking on [*Show Search Form*](/docs/ug/ui/elements#hide-show-search-form) and fill in the fields with the help of following field descriptions. Click on the [*Download Button*](/docs/ug/resources/oveview#download) to download only the contents as a text file.
 | Fields               | Descriptions                                                                            |
 |----------------------|-----------------------------------------------------------------------------------------|
 | Time Frame           | Select a specific date and time range using the [Time Selector](/docs/ug/ui/elements#time-selector)to search for resources within that period                                                |

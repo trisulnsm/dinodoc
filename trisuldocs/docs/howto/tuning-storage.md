@@ -9,8 +9,10 @@ this can result in relatively high storage.
 
 To find out how much disk is being used per day.
 
-Login as Admin -\> Select Context \[default\] -\> Admin Tasks -\> DB
+:::info
+:point_right: Login as Admin &rarr; Select Context \[default\] &rarr;Admin Tasks &rarr; DB
 Status
+:::
 
 You will be shown the DB status page like this
 
