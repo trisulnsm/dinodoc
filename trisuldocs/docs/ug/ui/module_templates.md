@@ -19,7 +19,7 @@ template. Select one module template from the list and fill out the required par
 
 This is a list of all module templates supported by Trisul.
 
-![](images/moduletypes.png)
+![](images/moduletypesnew.png)
 
 *Figure: Module Templates from Dashboard Customization Option*
 
@@ -40,6 +40,7 @@ This is a list of all module templates supported by Trisul.
 | 13  | [Alert Count](/docs/ug/ui/module_templates#alert-count)                   |
 | 14  | [Existing Modules](/docs/ug/ui/module_templates#existing-modules)         |
 | 15  | [Custome URL Page](/docs/ug/ui/module_templates#custom-url-page)          |
+| 16  | [CrossKey Tree](/docs/ug/ui/module_templates#crosskey-tree)               |
 
 ## Module Parameters
 
@@ -325,7 +326,7 @@ The Alert List module displays a list of active alerts or notifications, providi
 
 | Parameter name   | Default value | Description                                        |
 | ---------------- | ------------- | -------------------------------------------------- |
-| Name             | -            | Enter a name for the module                         |
+| Name             | -             | Enter a name for the module                         |
 | Description      | -             | Provide a short description of the module          |
 | Top Count        | 10            | Enter the number of traffic data items to be displayed   |
 | Signature ID     | -             | Provide a Signature ID like DSHIELD   |
@@ -376,7 +377,26 @@ In the following example, the URL of the Trisul's flow map has been given as inp
 
 | Parameter name | Default value | Description                                                    |
 | -------------- | ------------- | -------------------------------------------------------------- |
-| Name           | -            | Enter a name for the module                                    |
+| Name           | -             | Enter a name for the module                                    |
 | Description    | -             | Provide a short description of the module                      |
 | URL            | -             | Enter the page URL you would like to display inside the module |
 | JSON           | -             | Enter additional arguments if necessary in JSON format         |
+
+## CrossKey Tree
+
+The Crosskey Tree module provides a drilldown view of two to three counter groups, offering a hierarchical representation of data. This module displays two module templates:
+
+  - **Two-Level View**: Displays two levels of counter group data. For example: NBAR ID &rarr; Router and Interfaces
+  - **Three-Level View**: Displays three levels of counter group data, providing a more detailed and nested representation. For example: NBAR ID &rarr; Router/Device &rarr; Links/Interfaces
+
+### Parameters
+
+| Parameter name     | Default value |	 Description                                                 |
+| ------------------ | ------------- | ------------------------------------------------------------------------ |
+| Name               | -             | Enter a name for the module                                              |
+| Description        | -             | Provide a short description of the module                                |
+| Counter Group      | -             | Shows the list of CrossKey Counter groups to select from                 |
+| Top Count          | 10            | Enter the number of traffic data items to be displayed                   |
+| Meter              | Upload Bytes  | Shows the list of Meters to select from                                  |
+| Key Filter         | -             | Enter keywords or phrases to include in the analysis                     |
+| Inverse Key Filter | -             | Enter keywords or phrases to exclude from the analysis                   |
