@@ -13,7 +13,7 @@ In the following path `/usr/local/share/webtrisul/config/initializers/latlong_ap
 |--------|-------------|
 | Host ID | The IP address of the host server, used to establish a connection to the API |
 | Port | The network port number used to access the API, specifying the communication endpoint. |
-| URL | The uniform resource locator (URL) of the API endpoint, providing the address for sending requests. |
+| URL | The URL path (a part of the URL) of the API endpoint, providing the address for sending requests. |
 | API Key | A secure authentication token, used to verify the identity of the requesting application and authorize access to the API. |
 
 
@@ -33,7 +33,7 @@ The IPDR Customer list page shows a list of customers with the following details
 | Subnets | Subnet associated with customer's account used for network configuration |
 | Action button | Allows users to perform actions on the customer's account edit, delete, and edit subnets. |
 
-Click on the action button against a particular customer <acronym></acronym>d click Add/Edit Subnets.
+Click on the action button against a particular customer and click *Add/Edit Subnets*.
 
 ![](images/ipsubnet_terminalid.png)
 *Figure showing the Subnet and the Terminal ID associated with the IP*
@@ -50,6 +50,8 @@ This page shows the list of assigned subnets to customer with the following deta
 
 To extract the geolocation of a particular IP address, the subnet associated with the IP is first identified from the report, and then the terminal ID for that subnet is noted for the specific time period mentioned in the report. The terminal ID for that time is then entered into the API to extract the latitude and longitude of that particular IP address.
 
-The report contains the followinng mandatory details like API Host ID, API Port, API URL, and API Auth key.
+**Sample report**:
+
+![](images/sample_report.png)
 
 
