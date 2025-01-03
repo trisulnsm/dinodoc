@@ -56,12 +56,11 @@ To manage subnets and terminal IDs, click on the *Add/Edit Subnets* option from 
 ![](images/ipsubnet_terminalid.png)
 *Figure: Showing IPDR Customers terminal IDs with subnets*
 
-Below that are the list of assigned subnets to customer containg details such as 
-Below that are the list of assigned subnets to customer containg details such as 
+Below that are the list of assigned subnets to customer containing details such as 
 
-| Columsn| Descriptions |
+| Column| Descriptions |
 |--------|--------------|
 | IP Subnet | Displays the IP subnet in CIDR notation. |
 | Valid from | Shows the data from which the subnet invalid. |
-| Valid to | Displays the date until which the subnet is valid. by default it is set to not set indicating perpetual validity. |
+| Valid to | Displays the date until which the subnet is valid. By default it is set to "not set" indicating perpetual validity. |
 | Terminal ID | Lists the unique identifier for the terminal device associated with the assigned subnet |
