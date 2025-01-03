@@ -64,3 +64,9 @@ Below that are the list of assigned subnets to customer containing details such 
 | Valid from | Shows the data from which the subnet invalid. |
 | Valid to | Displays the date until which the subnet is valid. By default it is set to "not set" indicating perpetual validity. |
 | Terminal ID | Lists the unique identifier for the terminal device associated with the assigned subnet |
+
+Click on the action button against a subnet for two options say
+1) Set Expiry
+2) Delete
+
+Click on *Set Expiry* to set "Valid to" date for the selected subnet. Click *Delete* to delete that particular subnet.
