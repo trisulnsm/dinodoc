@@ -33,7 +33,30 @@ And click *Create*.
 
 ## Importing Details of a New Customer
 
-To import IP to customer mappings for IPDR click on the *Import* button on the top right corner. Browse and select the CSV file containing IP to customer mapping one per line. Click *Upload CSV File*. 
+To import IP to customer mappings for IPDR, follow these steps:
+
+- Click the Import button located in the top right corner.
+- Browse and select the CSV file containing the IP to customer mappings, with one mapping per line.
+- Click Upload CSV File to initiate the upload process.
+
+### CSV File Format
+
+The CSV file should have a specific format, with each line containing nine columns. Each column represents a detail of the customer or subnet. The following default date settings apply when importing IP to customer mappings:
+
+- Valid From: If no date is specified for "Valid From," the system defaults to January 1, 1970 (Epoch timestamp: 0).
+- Valid To: If no date is specified for "Valid To," the system assumes the validity period is perpetual, with no end date.
+
+These default settings can be adjusted or overridden during the import process or after importing the data.
+Sample:
+
+![](images/csv_format.png)  
+*Figure: CSV Format showing nine columns*
+
+The default mapping of all the columns to customer and subnet details can be modified in the UI after importing the CSV file.
+
+![](images/csvformat.png)  
+*Figure: CSV Format*
+
 
 ## Delete All
 
