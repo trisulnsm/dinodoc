@@ -45,7 +45,7 @@ You can view new and previous IPDR queries in the IPDR Dashboard.
 
 :::info navigation
 
-:point_right: Login as `dotuser` &rarr; Goto IPDR Logs&rarr; IPDR Dashboard
+:point_right: Login as `dotuser` &rarr; Goto IPDR Logs &rarr; IPDR Dashboard
 
 :::
 
