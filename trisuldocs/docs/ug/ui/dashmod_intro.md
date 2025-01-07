@@ -154,7 +154,7 @@ The following operations can be performed using the toolbars:
 | Operation                | Description                                                    |
 | ------------------------ | -------------------------------------------------------------- |
 | Customize                | Edit dashboard parameters like name, description,modules etc.. |
-| Toggle labels            | Toogle reaable vs lable only on table list                     |
+| Toggle labels            | Toggle readable vs label only on table list                     |
 | Set as default dashboard | Set as home page                                               |
 | Expand all modules       | Click on the dashboard to enable all modules                   |
 | Collapse all modules     | Click on the dashboard to disable all modules                  |
