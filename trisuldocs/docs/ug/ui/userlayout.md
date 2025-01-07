@@ -66,17 +66,18 @@ The top panel contains the following items
    
       You can switch between dark and light modes to change the appearance of the screen here.
 
-9) #### Host Name
-   
-   This shows the host's name. All time zones in Trisul are displayed in the host's time zone. To change the User Avatar see: [How to change User Avatar logging in as admin](/docs/ag/webadmin/manageusers#changing-avatar-logo)
 
-10) #### Account
+9) #### Account
    
     ![](images/account.png)
    
    *Figure: Account Switch*
    
     Clicking on the account button you can get the account history, change password, and signout from the current account. To change the user avatar see : [How to change the user avatar logging in as admin](pathname:///docs/ag/webadmin/manageusers#ChangeUserAvatar)
+
+10) #### Host Name
+   
+   This shows the host's name. All time zones in Trisul are displayed in the host's time zone. 
 
 ## Menus
 
