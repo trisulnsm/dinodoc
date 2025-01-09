@@ -40,6 +40,7 @@ To access application setting, Login as admin and,
 | Disk usage alert percentage       | 90            | shows disk usage alert for the specified percentage    |
 | Hide context selection            | false         | Keep it checked if you dont want to hide context selection in login page                                                                                                |
 | Show mode selection               |               | Check this checkbox to show product mode selector window to select a different mode |
+| Set Custom Key Monitor Refresh Time | 60          | Set the frequency (in seconds) at which the key monitor updates its data, with 0 disabling refreshes                                                                 |
 
 ## NetFlow
 
