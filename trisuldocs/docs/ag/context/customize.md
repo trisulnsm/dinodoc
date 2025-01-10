@@ -144,3 +144,17 @@ and prefer to manually enter dates.
 | Fields             | Defaults |
 | ------------------ | -------- |
 | SHOW_CUSTOMER_LOGO | true     |
+
+### Show Flow Tabs on Interface Drilldown 
+
+
+| Fields                   | Defaults |
+| ------------------------ | -------- |
+| SHOW_RAW_FLOWS           | True     |
+| SHOW_CONVERSATION        | True     |
+| SHOW_TOPPER_TREND_CHARTS | True     |
+| SHOW_MATRIX              | True     |
+
+![](images/interfacedrilldown_oem.png)  
+*Figure: Showing Flows Tabs to be Displayed on Interface Drilldown*
+
