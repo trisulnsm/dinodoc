@@ -148,4 +148,15 @@ You will get a API Token like this, you need to copy and share it with the user.
 
 *Figure: API Token for user* 
 
+## Changing Super Admin Name
+
+:::info navigation
+:point_right: Select Web Admin &rarr; Manage &rarr; Users &rarr; Select Action button against admin user.
+:::
+
+![](images/superadminname.png)  
+*Figure: Changing Super Admin Name*
+
+To modify the admin name to "Super Admin", navigate to the Action button and select "Edit Super Admin Name" from the dropdown menu. This will prompt a dialog box, allowing you to edit the admin name. Enter the desired name, click "Update", and the changes will be reflected immediately, displaying the updated name in the top right corner of the admin user name section.
+
 
