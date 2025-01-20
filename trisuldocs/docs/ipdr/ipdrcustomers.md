@@ -13,7 +13,7 @@ This functionality enables efficient management and maintenance of IPDR customer
 :point_right: Go to Context:default &rarr; Admin Tasks &rarr; IPDR Customers
 :::
 
-![](images/ipdrcust1.png)
+![](images/ipdrimportexport.png)  
 *Figure: Showing IPDR Customers List*
 
 ## Adding Details of a New Customer
@@ -31,13 +31,41 @@ To add a new customer, click the *Add* button and complete the required fields:
 
 And click *Create*.
 
-## Importing Details of a New Customer
+
+## Importing New Customer Details
+
+When importing new customer details into the system, please note that it will override any existing customer information. To ensure that all customer details are retained, follow these steps:
+
+- **Export Existing Customer Details**: First, export the current list of customer details from the system. This will prevent any loss of existing data.
+- **Combine New and Existing Customer Details**: Add the new customer details to the exported list, ensuring that all information is accurate and up-to-date.
+- **Import Combined Customer Details**: Import the combined list of customer details into the system. This will update the system with the complete and accurate customer information.
+
+By following these steps, you can ensure a seamless integration of new customer details without overwriting existing data.
+
+### Importing
+
+:::info navigation 
+:point_right: Go to Context:default &rarr; Admin Tasks &rarr; IPDR Customers
+:::
 
 To import IP to customer mappings for IPDR, follow these steps:
 
 - Click the Import button located in the top right corner.
 - Browse and select the CSV file containing the IP to customer mappings, with one mapping per line.
-- Click Upload CSV File to initiate the upload process.
+- Click Upload CSV File to initiate the upload process. 
+
+### Exporting
+
+:::info navigation 
+:point_right: Go to Context:default &rarr; Admin Tasks &rarr; IPDR Customers
+:::
+
+To export the details of existing IPDR customers, follow these simple steps:
+
+- Navigate to the IPDR customer list page.
+- Click the Export button.
+
+The system will automatically export all IPDR customer details in CSV format.
 
 ### CSV File Format
 
