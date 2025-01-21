@@ -21,13 +21,32 @@ You would want to use custom key monitors if :
 
 - You want to generate custom reports of just these items
 
+## Set Refresh Time
+
+The custom key is refreshed automatically every minute, indicated by a rotating refresh icon next to the download button. As it keeps refreshing every minute the custom key fetches the new data updating with the latest data.
+
+![](images/ckeyrefresh.png)  
+*Figure: Custom key Refreshing*
+
+To adjust the refresh interval, navigate as follows,
+
+:::info navigation
+:point_right: Go to Web Admin &rarr; Manage &rarr; UI &rarr; App Settings
+:::
+
+![](images/setrefreshtime.png)   
+*Figure: Set Custom Key Refresh Time*
+
+Locate the *Set Custom Key Monitor Refresh Time* and enter the desired refresh interval time (in seconds). To disable the refresh button enter 0. This setting allows you to customize the frequency of custom key refreshes to suit your requirements.
+
+
 ## Create Custom Key Monitor
 
 Directions to create new custom key monitors
 
 :::info navigation
 
-:point_right: Select Customize &rarr; Show all&rarr; Custom Key Monitors
+:point_right: Select Customize &rarr; Show all &rarr; Custom Key Monitors
 
 :::
 
