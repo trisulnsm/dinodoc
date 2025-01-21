@@ -244,38 +244,9 @@ A database packer algorithm to speed up database reads and to defragement files.
 
 When Rebucketizer is enabled, data is repartitioned into resolutions of optimal sizes to optimize data distribution across large number of data points. Upon repartitioning the average of the repartitioned data are taken for data points. This evenly sized buckets improves analysis performance and reducing data skew. 
 
+![](images/rebucketizer.png)  
+*Figure: Showing Rebucketizer*
 
-```xml
-<Rebucketizer>
-        <Enable> True </Enable>
-		<Resolutions>
-			<Resolution>
-				<ID>1</ID>
-				<BucketSize>300</BucketSize>
-				<TopperBucketSize>900</TopperBucketSize>
-				<ThresholdDays>1</ThresholdDays>
-			</Resolution>
-            <Resolution>
-				<ID>2</ID>
-				<BucketSize>1800</BucketSize>
-				<TopperBucketSize>900</TopperBucketSize>
-				<ThresholdDays>7</ThresholdDays>
-			</Resolution>
-            <Resolution>
-				<ID>3</ID>
-				<BucketSize>7200</BucketSize>
-				<TopperBucketSize>900</TopperBucketSize>
-				<ThresholdDays>28</ThresholdDays>
-			</Resolution>
-            <Resolution>
-				<ID>4</ID>
-				<BucketSize>86400</BucketSize>
-				<TopperBucketSize>900</TopperBucketSize>
-				<ThresholdDays>360</ThresholdDays>
-			</Resolution>
-		</Resolutions> 
-	</Rebucketizer> 
-```
 
 | Parameters | Defaults | Description          |
 | ---------- | -------- | -------------------- |
@@ -284,6 +255,7 @@ When Rebucketizer is enabled, data is repartitioned into resolutions of optimal 
 | BucketSize | 300      | The size of the bucket in seconds   |
 | TopperBucketSize | 900 | The size of the topper bucket in seconds  |
 | ThresholdDays | 1 | The threshold(in days) for moving data between buckets |
+| TopperClipBelow | 0 | Removes Topper values below (set value- by default 0) mb |
 
 So here by default, for ID=1, the bucket size for 1 day is partitioned into 5 minutes(300 seconds) interval and the topper bucket size for 1 day is partitioned into 15 minutes (900 seconds) interval and so on.
 
