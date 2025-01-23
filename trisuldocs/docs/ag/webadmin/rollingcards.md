@@ -14,7 +14,7 @@ Login as admin and,
 :point_right: Go to Web Admin &rarr; Manage &rarr; Apps
 :::
 
-From the list of [Trisul apps](docs/ag/webadmin/apps), download *Rolling cards*.
+From the list of [Trisul apps](/docs/ag/webadmin/apps), download *Rolling cards*.
 
 ## Viewing Rolling Cards
 
