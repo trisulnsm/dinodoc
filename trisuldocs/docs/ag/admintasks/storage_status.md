@@ -114,3 +114,17 @@ Clicking on this tab shows you the table details,
 | SIZE        | Size of the slices stored for the day                               |
 | TAGS        | Slice tags if any                                                   |
 | OPTS        | Click on the option tool against each slice to view or download     |
+
+
+## Tape
+
+Tape serves as an offline storage solution for backing up data from the archive storage pool. The Meta Slice maintains a comprehensive repository of information for each storage pool, including oper, ref, archive, storage pool retention periods, and slice information for each storage pool.
+
+![](images/tape.png)  
+*Figure: Showing Tape Storage*
+
+**Tape Disabled**: When data is deleted from the archive storage pool, there will be no corresponding entry in the Meta Slice.
+
+**Tape Enabled**: If Tape storage is enabled, the Meta Slice marks the entry as "Tape" indicating Tape is enabled.
+
+This process ensures a secure and organized backup strategy for archive data.
