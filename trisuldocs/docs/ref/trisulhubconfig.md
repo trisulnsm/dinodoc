@@ -58,7 +58,7 @@ Commonly modified parameters are Setuid, TrisulMode, LicenseFile
 
 ## Logging
 
-The two components in a Hub node are*flushers*and*query servers*. This section configures their log files with prefix*fs*and*qs*respectively.
+Logs are arranged in a ring of files, with patterns like `fs`, `ns`, `is` etc.
 
 | Parameters           | Defaults                  | Description      |
 | ---|---|---|
@@ -73,7 +73,7 @@ The two components in a Hub node are*flushers*and*query servers*. This section c
 | TrpLogFile           | qs-???.log                | log file pattern.|
 | TrpLoglevel          | DEBUG                     | log level|
 | TrpLogRotateSize     | 5000000                   | Max size of each log file|
-| TrpLogRotateCount     | 5                         | Number of files in ring|
+| TrpLogRotateCount    | 5                         | Number of files in ring|
 | IpdrdLogFile         | is-???                    | IPDRlog file pattern. These parameters are for the IPDR query service|
 | IpdrdLoglevel        | DEBUG                     | IPDRservice logging level.|
 | IpdrdLogRotateSize   | 5000000                   | Max size of each file in bytes|
@@ -83,11 +83,11 @@ The two components in a Hub node are*flushers*and*query servers*. This section c
 
 Controls the database storage and retention policy for Trisul.
 
-| Parameters               | Defaults | Description                                                                                                                                                                                                          |
-| ------------------------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Parameters               | Defaults | Description |
+| ------------------------ | -------- | -------- |
 | FTSFlushBudget           | 5        | TrisulFTS(Full Text Resources) need to complete the Flush operation within these many seconds. Since Trisul is a Real time system, we have a total about about 60 seconds for the entire snapshot window to flush. |
-| JournalMode              | WAL      | Trisul Resources are stored in SQLITE3 leaf nodes.                                                                                                                                                                   |
-| OfflineAnalysisQueueSize | 2000000  | When importing PCAPs or other offline formats, this parameter controls the Hi Water mark of the items on the queue of the Hub. This helps to control memory usage on the Hub Node.                                   |
+| JournalMode              | WAL      | Trisul Resources are stored in SQLITE3 leaf nodes.|
+| OfflineAnalysisQueueSize | 2000000  | When importing PCAPs or other offline formats, this parameter controls the Hi Water mark of the items on the queue of the Hub. This helps to control memory usage on the Hub Node.|
 
 ### SlicePolicy
 
@@ -99,15 +99,15 @@ Controls data location and retention policy.
 
 ### Operational
 
-| Parameters   | Defaults | Description                                                                                                                                                                                                     |
-| ------------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Parameters   | Defaults | Description|
+| ------------ | -------- | ----------- |
 | SliceCount   | 32       | 32 slices are kept in the operational area. Combined with the default SliceWindow ofDAILY. This means 32 days worth of data in the oper area. Slices older than 32 days will slide over to the reference area. |
-| UsageRedMark |          | Generate an alert when the disk usage percent exceeds this value for admin purposes. Leave blank or zero to disable disk usage alerting. Default disabled.                                                      |
+| UsageRedMark |          | Generate an alert when the disk usage percent exceeds this value for admin purposes. Leave blank or zero to disable disk usage alerting. Default disabled.|
 
 ### Reference
 
 | Parameters   | Defaults | Description                                                                                                                                    |
-| ------------ | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| ------------ | -------- | -------------- |
 | SliceCount   | 32       | Controls how many slices are kept in the reference area. If you set this to 0, the slices will then move straight from operational to archive. |
 | UsageRedMark |          | Generate an alert when the disk usage percent exceeds this value for admin purposes. Leave blank or zero to disable disk usage alerting        |
 
@@ -116,7 +116,7 @@ Controls data location and retention policy.
 For long term storage mostly for compliance purposes.
 
 | Parameters   | Defaults | Description                                                                                                                             |
-| ------------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| ------------ | -------- | -------------- |
 | SliceCount   | 32       | Controls how many slices are kept in the archive area. If you set this to 0, slices move directly to /dev/null (ie are deleted).        |
 | UsageRedMark | 95       | Generate an alert when the disk usage percent exceeds this value for admin purposes. Leave blank or zero to disable disk usage alerting |
 
@@ -125,7 +125,7 @@ For long term storage mostly for compliance purposes.
 An optional feature for advanced users allows for extra archives for example to be mounted to slower storage. These are disabled by default. Change the name of the node from`ExtraArchives_Disabled`to`ExtraArchives`to activate this feature.
 
 | Parameters | Defaults | Description                                                                                       |
-| ---------- | -------- | ------------------------------------------------------------------------------------------------- |
+| ---------- | -------- | --------------- |
 | ID         | 1        | This ID is used to access the archive mount point. ID of 1 would lead to mount point`xarchive_1` |
 | SliceCount | 32       | Number of days data in this extra archive                                                         |
 
@@ -149,7 +149,7 @@ Controls theTRPServer Process used for database querying functionality. The proc
 | --------------- | -------- | -------------------- |
 | ZmqConnection   |          | The port running theTRPProtocol where you can connect and query the trisul database. By default, this is anIPCsocket`ipc:///usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/trp_0`. You can change this parameter to allow a remoteTCPconnection.Example: To allow queries usingTCPPort 12004<br/><br/><br/><br/>1. Change this parameter to`tcp://10.0.0.23:12004`where`10.0.0.23`is the IP address of theHUBnode<br/><br/>2. Then restart the context like so`trisulctl_hub restart context default@hub0`<br/><br/> |
 | PIDFile         |          | Where thePIDof the running trisul_trpd process is stored     |
-| NumServers      | 6        | Number of backend servers to start.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| NumServers      | 6        | Number of backend servers to start. |
 | ParallelQueries | false    | Whether parallel queries must be turned on for all queries. The defautl is false, use this only when you have the database stored on different spindles.   |
 
 ## Probes
@@ -216,13 +216,13 @@ How IP Address resolution works
  </ResolveIP>
 ```
 
-| Parameters            | Defaults | Description                                             |
-| --------------------- | -------- | ------------------------------------------------------- |
-| Enable                | TRUE     | Most important / visible IPs are resolved usingDNSlookup                                                                                                                 |
+| Parameters            | Defaults | Description  |
+| --------------------- | -------- | -------------- |
+| Enable                | TRUE     | Most important / visible IPs are resolved |
 | Debug                 | TRUE     | Prints resolved IPs for debugging purposes in`t_resolveip.log`file    |
-| Candidates            |          | Number of Top-K items per meter for Internal IPs vs External IPs. Internal IPs are those which fall into your Home Network                                                 |
+| Candidates            |          | Number of Top-K items per meter for Internal IPs vs External IPs. Internal IPs are those which fall into your Home |
 | AlwaysRefreshExternal | false    | Do a full refresh of External IPs. Normally, the resolver does not keep trying to resolve IPs that fail to resolve or those IPs which have already been recently resolved. |
-| AlwaysRefreshInternal | false    | Do a full refresh of Internal IPs. Use this option if you have an enterprise with dynamically changing IP → User names.                                                    |
+| AlwaysRefreshInternal | false    | Do a full refresh of Internal IPs. Use this option if you have an enterprise with dynamically changing IP → User names. |
 
 ### CleanPersist
 
@@ -242,7 +242,7 @@ A database packer algorithm to speed up database reads and to defragement files.
 
 ### Rebucketizer
 
-When Rebucketizer is enabled, data is repartitioned into resolutions of optimal sizes to optimize data distribution across large number of data points. Upon repartitioning the average of the repartitioned data are taken for data points. This evenly sized buckets improves analysis performance and reducing data skew. 
+When Rebucketizer is enabled, additional shadow timeseries resolutions are added to allow fast retrieval of very long timewindow data.  In this section, you should specify the resolutions you want added.  
 
 ![](images/rebucketizer.png)  
 *Figure: Showing Rebucketizer*
@@ -251,11 +251,11 @@ When Rebucketizer is enabled, data is repartitioned into resolutions of optimal 
 | Parameters | Defaults | Description          |
 | ---------- | -------- | -------------------- |
 | Enable     | TRUE     | Rebucketizer is enabled |
-| ID         | 1        | Unique identifier for each configuration or bucket |
+| ID         | 1        | Unique identifier for each configuration or bucket. The resolution is stored under `resol.1`  and `resol.2` etc|
 | BucketSize | 300      | The size of the bucket in seconds   |
 | TopperBucketSize | 900 | The size of the topper bucket in seconds  |
-| ThresholdDays | 1 | The threshold(in days) for moving data between buckets |
-| TopperClipBelow | 0 | Removes Topper values below (set value- by default 0) mb |
+| ThresholdDays | 10 | Use this resolution if the query time window is greater than this number of days |
+| TopperClipBelow | 0 | Remove items in topper table if metric value is below this number. The default is 0 , to not clip anything. |
 
 So here by default, for ID=1, the bucket size for 1 day is partitioned into 5 minutes(300 seconds) interval and the topper bucket size for 1 day is partitioned into 15 minutes (900 seconds) interval and so on.
 
@@ -274,7 +274,7 @@ These parameters are typically set automatically when you put Trisul in the IPDR
 | ---------- | -------- | -------------------- |
 | OutputDirectory | CONTEXTROOT/run | Directory where theIPDRrecord query result is dumped|
 | ControlDB       | CONTEXTROOT/config/IPDRCONTROL.SQDB | The control database location|
-| ReportFormat    | full | The format of theIPDRrecords. Available values are<br/><br/> `full` – The full record in columnar report format<br/> `fullcsv` – Full report in CSV format<br/> `trai` – Format for TRAI |
+| ReportFormat    | full | The format of theIPDRrecords. Available values are<br/><br/> `full` – The full record in columnar report format<br/> `fullcsv` – Full report in CSV format<br/> `trai` – Format for DoT |
 | AddCustomerInfo | true | Add the information from the IPDR Static IP customer mapping |
 | AAADumpFilePath | CONTEXTROOT/run/aaadumpfiles | The place where the RADIUS AAA server dumps the currently active sessions |
 | SubscriberOption | | Add Subscriber ID or other ISP specific tag , this is taken from the RADIUS AAA log files |
