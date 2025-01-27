@@ -1,4 +1,4 @@
-# How to take Trisul Data and Config Back Up
+# How to Take Trisul Data and Config Back Up
 
 To ensure business continuity, it is essential to regularly back up Trisul data and configuration. Here's a step-by-step guide:
 
@@ -33,5 +33,21 @@ cp -r <data path> <backup folder>
 
 ## Trisul Configuration Backup
 
+To ensure the preservation of your Trisul configuration, it is essential to backup the following files:
 
+**Trisul Hub Config File**: The output of ls /usr/local/etc/trisul-hub/  
+**Trisul Probe Config File**: The output of ls /usr/local/etc/trisul-probe/  
+**Trisul Probe Shared Files**: The output of ls /usr/local/share/trisul-probe/  
+**Trisul Hub Shared Files**: The output of ls /usr/local/share/trisul-hub/  
+**Trisul Config File (Verification)**: The output of ls /usr/local/var/lib/trisul-config  
 
+Please backup the outputs of these commands to ensure that your Trisul configuration is safely preserved.
+
+Please run the following commands to list the files in each directory:
+```Bash
+ls /usr/local/etc/trisul-hub/
+ls /usr/local/etc/trisul-probe/
+ls /usr/local/share/trisul-probe/
+ls /usr/local/share/trisul-hub/
+ls /usr/local/var/lib/trisul-config
+```
