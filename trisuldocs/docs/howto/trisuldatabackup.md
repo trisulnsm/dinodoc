@@ -2,22 +2,36 @@
 
 To ensure business continuity, it is essential to regularly back up Trisul data and configuration. Here's a step-by-step guide:
 
+## Trisul Data Backup
+
 Step 1: Load Trisul Environment Variables
-```bash
+```Bash
 source /usr/local/share/trisul-hub/trisbashrc
 ```
-This command loads the Trisul environment variables. 
+This command loads the Trisul environment variables.
 
-Step 2: Change to the Trisul Configuration Directory
-```bash
-cd /usr/local/etc/trisul
+Step 2: Navigate to the Trisul Data Directory
+```Bash
+cd.m
 ```
-Navigate to the Trisul configuration directory.
+This command changes the directory to the Trisul data path.
 
 Step 3: Verify the Current Working Directory
-```bash
+```Bash
 pwd
 ```
-Confirm that you are in the correct directory.
+This command prints the current working directory to verify that you are in the correct location.
+
+Step 4: Backup Trisul Data and Configuration
+
+```Bash
+cp -r <data path> <backup folder>
+```
+
+![](images/trisulbackup.png)    
+*Figure: Showing Example of Trisul Data Backup*
+
+## Trisul Configuration Backup
+
 
 
