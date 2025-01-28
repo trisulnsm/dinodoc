@@ -23,9 +23,10 @@ pwd
 This command prints the current working directory to verify that you are in the correct location.
 
 Step 4: Backup Trisul Data and Configuration
+For example: 
 
 ```Bash
-cp -r <data path> <backup folder>
+cp -r /usr/local/var/lib/trisul-hub/domain0/context0/meters <backup folder>
 ```
 
 ![](images/trisulbackup.png)    
@@ -35,11 +36,19 @@ cp -r <data path> <backup folder>
 
 To ensure the preservation of your Trisul configuration, it is essential to backup the following files:
 
-**Trisul Hub Config File**: The output of ls /usr/local/etc/trisul-hub/  
-**Trisul Probe Config File**: The output of ls /usr/local/etc/trisul-probe/  
-**Trisul Probe Shared Files**: The output of ls /usr/local/share/trisul-probe/  
-**Trisul Hub Shared Files**: The output of ls /usr/local/share/trisul-hub/  
-**Trisul Config File (Verification)**: The output of ls /usr/local/var/lib/trisul-config  
+| Config | Path | Description |
+|--------|------|-------------|
+| Trisul Hub Config | The output of ls /usr/local/etc/trisul-hub/ | Contains the hub config files |
+|        | The output of ls /usr/local/share/trisul-hub/ | Contains the hub data |
+
+| Config | Path | Description |
+|--------|------|-------------|
+| Trisul Probe Config | The output of ls /usr/local/etc/trisul-probe/ | Contains the probe config files |
+|        | The output of ls /usr/local/share/trisul-probe/  | Contains the probe data |
+
+| Config | Path | Description |
+|--------|------|-------------|
+| WebTrisul Config | The output of ls /usr/local/var/lib/trisul-config   | Contains the Libraries in the UI |
 
 Please backup the outputs of these commands to ensure that your Trisul configuration is safely preserved.
 
