@@ -52,11 +52,29 @@ To ensure the preservation of your Trisul configuration, it is essential to back
 
 Please backup the outputs of these commands to ensure that your Trisul configuration is safely preserved.
 
-Please run the following commands to list the files in each directory:
+## Restoring Trisul Data 
+
+Step 1: Load Trisul Environment Variables
 ```Bash
-ls /usr/local/etc/trisul-hub/
-ls /usr/local/etc/trisul-probe/
-ls /usr/local/share/trisul-probe/
-ls /usr/local/share/trisul-hub/
-ls /usr/local/var/lib/trisul-config
+source /usr/local/share/trisul-hub/trisbashrc
+```
+This command loads the Trisul environment variables.
+
+Step 2: Navigate to the Trisul Data Directory
+```Bash
+cd.m
+```
+This command changes the directory to the Trisul data path.
+
+Step 3: Verify the Current Working Directory
+```Bash
+pwd
+```
+This command prints the current working directory to verify that you are in the correct location.
+
+Step 4: Backup Trisul Data and Configuration
+For example: 
+
+```Bash
+cp -r <backup folder> /usr/local/var/lib/trisul-hub/domain0/context0/meters 
 ```

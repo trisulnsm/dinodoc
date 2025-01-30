@@ -35,18 +35,6 @@ backup tools.
 | /usr/local/etc   | config                                               |
 | /usr/local/bin   | executables                                          |
 
-## Daily Config Backup
-
-Using the `install_setup_backup.sh` tool.
-
-The trisul-hub package includes the install_setup_backup.sh (backup the
-Trisul setup) script which sets up a CRON which automates these backups.
-
-The supported backup methods are :
-
-1. Using sftp / scp (the default)
-2. Using FTP
-3. By copying to another directory, such as an external drive
 
 ### Running install_setup_backup.sh
 
@@ -82,3 +70,18 @@ repeat the above steps.
 
 To restore the backup. Locate the backup with the correct timestamp you
 wish to use and untar the backup file.
+
+## Daily Config Backup
+
+Using the `install_setup_backup.sh` tool.
+
+The trisul-hub package includes the install_setup_backup.sh (backup the
+Trisul setup) script which sets up a CRON which automates these backups.
+
+The supported backup methods are :
+
+1. Using sftp / scp (the default)
+2. Using FTP
+3. By copying to another directory, such as an external drive
+
+For Manual Back See: [How to take Trisul Data and Config backup](/docs/howto/trisuldatabackup)
