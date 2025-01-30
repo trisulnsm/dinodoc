@@ -38,8 +38,19 @@ Multiple fields are AND-ed.
 | Time Frame | Select from a list of time frames (Last 1 hour, this month etc) or click custom to specify a time period | The time range for which you want to retrieve IPDR data.|
 | Port | The TCP or UDP Port number   | The port number|
 | NAT IP | The private IP Address    | When NAT or CGNAT is used , enter the private IP you want to query in this field. Typically this would be in the 100.64.0.0/10, 10.0.0.0/8, or other private ranges|
-| User Name  | The AAA User name    | The AAA User name, this only works if you are using AAA real time syslog.|
+| User Name  | The AAA User name/ Static User Name   | The AAA User name, only works if you are using AAA real time syslog and can also be used as static user name|
 | Device IP  | Router IP Example: 10.2.2.1 or 2404:5440:3::a| The IP Address of the device generating the IPDR Data. Typically the router.|
+
+### User Name
+
+To add User ID from customer database to flows,
+
+Go to [Trisul Apps](/docs/ag/webadmin/apps) and download and install **IPDR Tagger** app to enable tagging of group of IPs to a user ID. 
+
+![](images/ipdrtagger.png)  
+*Figure: Showing IPDR Tagger App from Trisul Apps*
+
+Once enabled, you can query the user ID associated with a particular group of IPs. This allows for efficient querying of IP groups based on user ID.
 
 
 ### Usage Guidelines
