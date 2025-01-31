@@ -13,6 +13,7 @@ The global table named `T` can be accessed from anywhere. It defines some consta
 | T.context_name | The database context name. |
 | T.args | The `-args` command line option from [trisul](/docs/programs/trisulprogram)|
 | T.enginetype | A string `backend` or `frontend` – scripts may want to use this |
+| T.backend_engineid | The backend flusher connection, usually 0 or 1 | 
 | [T.host](/docs/lua/obj_globalt#table-thost)  | Host methods that can be called from LUA |
 | [T.K](/docs/lua/obj_globalt#table-tk)        | Constants |
 | [T.util](/docs/lua/obj_globalt#table-tutil) | Utility methods |
