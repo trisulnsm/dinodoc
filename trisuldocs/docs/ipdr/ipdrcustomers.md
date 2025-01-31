@@ -1,6 +1,5 @@
 # IPDR Customers
 
-IPDR Customers Management
 The IPDR Customers list provides a comprehensive repository of customer details. This feature allows authorized users to:
 
    Add: Create new customer entries with detailed information
@@ -120,4 +119,4 @@ Click on the action button against a subnet for two options say
 1) Set Expiry
 2) Delete
 
-Click on *Set Expiry* to set "Valid to" date for the selected subnet. Click *Delete* to delete that particular subnet.
+Click on *Set Expiry* to set "Valid to" date for the selected subnet that shows the flows until the set expiry date but not the customer details in the report. Click *Delete* to delete that particular subnet.
