@@ -56,7 +56,7 @@ And click Update.
 :point_right: Go to Context default &rarr; profile0 &rarr; Counter Groups
 :::
 
-Search in the drilldown options for **FlowIntf** and check the checkboxes of all the crosskeys as in the figure to configure the topper count and update the following,
+Search in the drilldown options for **FlowIntf_bx** and check the checkboxes of all the crosskeys as in the figure to configure the topper count and update the following,
 
 
 | Config | Value | Description |
@@ -67,11 +67,27 @@ Search in the drilldown options for **FlowIntf** and check the checkboxes of all
 
 And click Update.
 
-![](images/flowgens.png)  
-*Figure: Sample value of the Flowgens Countergroup (Routers)*
+![](images/crosskey.png)  
+*Figure: Sample value of the crosskey Countergroups*
 
 
 ## Step 3: Create Trackers
+
+To enable trackers for interfaces, follow these steps,
+
+:::info navigation
+:point_right: Go to Context default &rarr; profile0 &rarr; NetFlow Wizard &rarr; Interfaces
+:::
+
+1) Select a router from the drop down list to display the interfaces
+2) Click on the interface you would like to enable tracking or click on select all button above the list of all interfaces.
+3) Click Interface Tracking &rarr; Enable Interface Tracking which will open up the following screen as in the figure. Click *Flow Tracker Only* This will enable the flow trackers for all the selected interfaces.
+
+![](images/flowtracker_1.png)  
+*Figure: Flow Tracker*
+
+> **Note that probe has to be restarted once the trackers are created**
+
 
 ## Step 4: Enable Alerts
 
@@ -86,5 +102,53 @@ Enable the **Utilization Alerts** as the system generates alerts when interface 
 ![](images/utilizationalerts.png)  
 *Figure: Utilization Alerts*
 
+> **Note that probe has to be restarted once the alerts are created**
+
 
 ## Step 5: Configure SNMP
+
+### Option 1: Default SNMP Settings for NetFlow
+
+You can manually fill in the SNMP details by logging in as admin through Web Trisul Options,
+
+:::info navigation
+:point_right: Web Admin Manage &rarr; App Settings &rarr; SNMP Settings
+:::
+
+Here you can view the version, community string etc. Click Save.
+
+![](images/snmp_webtrisul.png)  
+*Figure: Resolve SNMP*
+
+### Option 2: Resolve SNMP for Multiple Routers
+
+To update SNMP settings for multiple routers follow these steps, Login as admin,
+
+:::info navigation
+:point_right: Go to Context default &rarr; profile0 &rarr; NetFlow Wizard &rarr; Routers
+:::
+
+Click the **Select All** button above the routers list and click **Resolve**
+
+![](images/snmp_multiplerouters.png)  
+*Figure: Resolve SNMP for multiple routers*
+
+
+
+### Option 3: Resolve SNMP for Single Router
+
+To update SNMP settings for single router, Login as user,
+
+:::info navigation
+:point_right: Go to NetFlow &rarr; Routers and Interfaces
+:::
+
+Click on the option button against the selected routers and click *SNMP Resolve Router and Interface Name* from the dropdown.
+
+![](images/snmp_singlerouter.png)  
+*Figure: Resolve SNMP for single router*
+
+
+
+
+
