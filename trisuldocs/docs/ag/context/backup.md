@@ -84,7 +84,7 @@ The supported backup methods are :
 2. Using FTP
 3. By copying to another directory, such as an external drive
 
-## How to Take Trisul Data and Config Back Up
+## How to Take Trisul Data and Config Back Up Manually
 
 To ensure business continuity, it is essential to regularly back up Trisul data and configuration. Here's a step-by-step guide:
 
