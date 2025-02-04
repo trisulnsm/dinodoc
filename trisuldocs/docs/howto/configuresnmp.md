@@ -78,6 +78,16 @@ Replace `xxx.xx.xx.xx` with the desired management IP address.
 
 >If the SNMP management IP is not explicitly set, the system will default to using the public IP address.
 
+### SNMP Interface Polling
+
+To install SNMP Poller and SNMP vs NetFlow apps, follow these steps,
+
+:::info navigation
+:point_right: Go to [Trisul Apps](/docs/ag/webadmin/apps#types-of-apps) &rarr; Install **Meta App for SNMP**
+:::
+
+This will install both the apps SNMP Poller and SNMP vs NetFlow apps to enable SNMP interface polling.
+
 ### Special Cases 
 
 - **Huawei**
