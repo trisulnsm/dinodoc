@@ -54,7 +54,17 @@ const FeatureList = [
       </>
     ),
   },
-
+  {
+    title: 'ISP Guide',
+    Svg: require('@site/static/img/undraw_developer_activity_re_39tg.svg').default,
+    linkto: '/docs/isp',
+    description: (
+      <>
+        The LUA API allows you to insert new streaming analytics processors into the pipeline. 
+        The TRP is a open API to query the Trisul database.
+      </>
+    ),
+  },
   {
     title: 'Trisul DevZone Wiki',
     Svg: require('@site/static/img/undraw_dog_c7i6.svg').default,
