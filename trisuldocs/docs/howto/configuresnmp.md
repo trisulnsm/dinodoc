@@ -11,7 +11,7 @@ The primary purpose of integrating SNMP (Simple Network Management Protocol) is 
 
 This integration enhances the overall network monitoring and analysis capabilities by combining the flow-based insights from NetFlow with the device-level information from SNMP.
 
-### Option 1: Global SNMP Configuration
+### Global SNMP Configuration
 
 You can manually fill in the SNMP details by logging in as admin through Web Trisul Options,
 
@@ -24,7 +24,7 @@ Here you can view the version, community string etc. Click Save.
 ![](images/snmp_webtrisul.png)  
 *Figure: Resolve SNMP*
 
-### Option 2: Resolve SNMP for Multiple Routers
+### Resolve SNMP for Multiple Routers
 
 To update SNMP settings for multiple routers follow these steps, Login as admin,
 
@@ -38,7 +38,7 @@ Click the **Select All** button above the routers list and click **Resolve**
 *Figure: Resolve SNMP for multiple routers*
 
 
-### Option 3: Resolve SNMP Per Device
+### Resolve SNMP Per Device
 
 To update SNMP settings for single router, Login as user,
 

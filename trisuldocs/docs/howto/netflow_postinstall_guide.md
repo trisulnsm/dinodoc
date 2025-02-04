@@ -107,46 +107,7 @@ Enable the **Utilization Alerts** as the system generates alerts when interface 
 
 ## Step 5: Configure SNMP
 
-### Option 1: Default SNMP Settings for NetFlow
-
-You can manually fill in the SNMP details by logging in as admin through Web Trisul Options,
-
-:::info navigation
-:point_right: Web Admin Manage &rarr; App Settings &rarr; SNMP Settings
-:::
-
-Here you can view the version, community string etc. Click Save.
-
-![](images/snmp_webtrisul.png)  
-*Figure: Resolve SNMP*
-
-### Option 2: Resolve SNMP for Multiple Routers
-
-To update SNMP settings for multiple routers follow these steps, Login as admin,
-
-:::info navigation
-:point_right: Go to Context default &rarr; profile0 &rarr; NetFlow Wizard &rarr; Routers
-:::
-
-Click the **Select All** button above the routers list and click **Resolve**
-
-![](images/snmp_multiplerouters.png)  
-*Figure: Resolve SNMP for multiple routers*
-
-
-
-### Option 3: Resolve SNMP for Single Router
-
-To update SNMP settings for single router, Login as user,
-
-:::info navigation
-:point_right: Go to NetFlow &rarr; Routers and Interfaces
-:::
-
-Click on the option button against the selected routers and click *SNMP Resolve Router and Interface Name* from the dropdown.
-
-![](images/snmp_singlerouter.png)  
-*Figure: Resolve SNMP for single router*
+See: [How to Configure SNMP](/docs/howto/configuresnmp)
 
 
 
