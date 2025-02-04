@@ -78,6 +78,7 @@ const config = {
           {to: '/docs/lua', label: 'API', position: 'left'},
           {to: '/docs/ref', label: 'Reference', position: 'left'},
           {to: '/docs/ipdr', label: 'IPDR', position: 'left'},
+          {to: '/docs/isp', label: 'ISP', position: 'left'},
           {
             href: 'https://github.com/trisulnsm/dinodoc',
             label: 'GitHub',
