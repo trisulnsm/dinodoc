@@ -86,7 +86,7 @@ To install SNMP Poller and SNMP vs NetFlow apps, follow these steps,
 :point_right: Go to [Trisul Apps](/docs/ag/webadmin/apps#types-of-apps) &rarr; Install **Meta App for SNMP**
 :::
 
-![](images/snmpapp.png)  
+![](images/snmpapps.png)  
 *Figure: Showing SNMP vs NetFlow Chart*  
 
 This will install both the apps SNMP Poller and SNMP vs NetFlow apps to enable SNMP interface polling.
