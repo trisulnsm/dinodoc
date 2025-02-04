@@ -60,8 +60,8 @@ const FeatureList = [
     linkto: '/docs/isp',
     description: (
       <>
-        The LUA API allows you to insert new streaming analytics processors into the pipeline. 
-        The TRP is a open API to query the Trisul database.
+        This ISP Guide provides a comprehensive overview of Trisul's 
+        ISP configuration features and functionalities for optimizing peering, routing, and network analytics.
       </>
     ),
   },
