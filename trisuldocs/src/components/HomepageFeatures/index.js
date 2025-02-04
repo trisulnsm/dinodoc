@@ -56,7 +56,7 @@ const FeatureList = [
   },
   {
     title: 'ISP Guide',
-    Svg: require('@site/static/img/undraw_developer_activity_re_39tg.svg').default,
+    Svg: require('@site/static/img/open-source.svg').default,
     linkto: '/docs/isp',
     description: (
       <>
