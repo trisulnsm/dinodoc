@@ -64,6 +64,20 @@ Click on the option button against one of the interfaces and select Live SNMP fr
 ![](images/livesnmp.png)  
 *Figure: Sample of Live SNMP of an interface*
 
+
+### Management IP
+
+To set SNMP management IP, follow these steps.
+
+:::info navigation
+:point_right: Go to [Key Dashboard](/docs/ug/ui/key_dashboard) &rarr; Set Label/Edit &rarr; Assign User Label/ Edit Attributes &rarr; Attributes
+:::
+
+In the attributes fields, add the following `snmp.management_ip= xxx.xx.xx.xx`
+Replace `xxx.xx.xx.xx` with the desired management IP address. 
+
+>If the SNMP management IP is not explicitly set, the system will default to using the public IP address.
+
 ### Special Cases 
 
 - **Huawei**
