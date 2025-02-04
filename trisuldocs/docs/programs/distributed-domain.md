@@ -5,11 +5,15 @@ import TabItem from '@theme/TabItem';
 # Distributed-Domain
 ## Prerequisite
 
-- Downloafd the trisul from official [website](https://www.trisul.org/get-started/) .
+- Download the trisul from official [website](https://www.trisul.org/get-started/) .
 
-- Install hub in Trisul-hub server.
+- Install Hub and Webtrisul in Trisul-hub server.
+
+- Install Probe in Trisul-Hub server.
 
 - Check if expect script is present , If not install the package.
+
+- 7-day Timetrial license are not supported.
 
   <Tabs className="unique-tabs">
     <TabItem value="UBUNTU"  default>
@@ -49,7 +53,6 @@ First , you need to change the Hub-server  to distributed domain . Follow the be
 
 Next , you need to add  trisul-probe to the trisul-hub . Follow this step to connect probe to hub
 
-### Trisul-probe server
 
 - Run the script - /usr/local/share/trisul-hub/add_probe.exp
 
