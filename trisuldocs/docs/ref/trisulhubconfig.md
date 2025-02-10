@@ -282,52 +282,60 @@ These parameters are typically set automatically when you put Trisul in the IPDR
 
 ## Advanced DB Parameters
 
-Database parameters to optimize. Generally these need to be only changed for very large deployments which are facing significant performance issues.
+Database parameters to optimize. Generally these need to be only changed for very large deployments which are facing significant performance issues. The following table lists some parameters that might be useful.
 
-The following table lists some parameters that might be useful.
+Under the node : `DBParameters > FlowStream`
 
-Under the node : DBParameters > FlowStream
 
-| Parameters                 | Defaults | Description          |
-| -------------------------- | -------- | ---------------------|
-| MicroSecondTimestamps      | TRUE     | Does the flow database need microsecond timestamps. Use case : Compliance for large flow stores. Disabling microsecond timestamps for start and end time can save about 8 bytes / per flow                                                                                                      |
-| ZFLOWBLOCK_COMPRESSOR_CODE | lz4      | The compressor type for the flow database. Available parameter values are<br/><br/><br/>- lz4<br/><br/>- lz4-fast16 : Advanced compression use only if necessary. Also supported lz4-fast5, and lz4-fast10<br/><br/>- lz4-ipv4-call-log-with-nat-pro : Use this for IPv4 onlyIPDRapplication withNATIP. Max compression<br/><br/>- lz4-ip-call-log-with-nat-pro-max : For both IPv4 and IPv6 withNATIP, Port, userid for full log<br/><br/> |
-| kFLOWS_PER_BLOCK           |          | The number of flows per block. Default 4096                          |
-| kBLOOM_AGG_SIZE            |          | The number of flow blocks per bloom filter.                          |
-| kBUMPX_AGG_SIZE            |          | The number of flow blocks per full bitmap filter index.              |
-| kHOST_BUMPX_BUCKETS        |          | The number of buckets for host-based bumpx filtering.                |
-| kHOST_A_BUMPX_BUCKETS      |			| The number of buckets for host-based bumpx filtering for source host |
-| kHOST_Z_BUMPX_BUCKETS      |			| The number of buckets for host-based bumpx filtering for destination host |	
-| kAPP_BUMPX_BUCKETS         |			| The number of buckets for application-based bumpx filtering          |
-| kAPP_A_BUMPX_BUCKETS       |			| The number of buckets for application-based bumpx filtering for source app |
-| kAPP_Z_BUMPX_BUCKETS       |			| The number of buckets for application-based bumpx filtering for destination app |
-| kPROTO_BUMPX_BUCKETS       |			| The number of buckets for protocol-based bumpx filtering |
-| kGEN1_BUMPX_BUCKETS        |			| The number of buckets for router-based bumpx filtering |	
-| kGEN2_BUMPX_BUCKETS        |			| The number of buckets for interface-based bumpx filtering for interface in |
-| kGEN3_BUMPX_BUCKETS        |			| The number of buckets for interface-based bumpx filtering for interface out |
-| kHOST24_BUMPX_BUCKETS      |			| The number of buckets for host-based bumpx filtering with subnet 24-bit prefixes |
-| kHOST16_BUMPX_BUCKETS      |			| The number of buckets for host-based bumpx filtering with subnet 16-bit prefixes |
-| kHOST_BLOOM_BITS           |			| The number of bits for host-based bloom filtering |
-| kHOST_A_BLOOM_BITS         |			| The number of bits for host-based bloom filtering for source host |
-| kHOST_Z_BLOOM_BITS         |			| The number of bits for host-based bloom filtering for destination host |
-| kHOST_BLOOM_HASHES         |			| The number of hash functions for host-based bloom filtering |
-| kHOST_A_BLOOM_HASHES       |			| The number of hash functions for host-based bloom filtering for source host |
-| kHOST_Z_BLOOM_HASHES       |			| The number of hash functions for host-based bloom filtering for destination host |
-| kAPP_BLOOM_BITS            |			| The number of bits for application-based bloom filtering |
-| kAPP_A_BLOOM_BITS          |			| The number of bits for application-based bloom filtering for source app |	
-| kAPP_Z_BLOOM_BITS          |			| The number of bits for application-based bloom filtering for destination app |	
-| kAPP_BLOOM_HASHES          |			| The number of hash functions for application-based bloom filtering |
-| kPROTO_BLOOM_BITS          |			| The number of bits for protocol-based bloom filtering |
-| kPROTO_BLOOM_HASHES        |			| The number of hash functions for protocol-based bloom flitering |	
-| kGEN1_BLOOM_BITS           |			| The number of bits for router-based bloom filtering |
-| kGEN1_BLOOM_HASHES         |			| The number of hash functions for router-based bloom filtering |
-| kGEN2_BLOOM_BITS           |			| The number of bits for interface-based bloom filtering for interface in |
-| kGEN2_BLOOM_HASHES		 |			| The number of hash functions for interface-based bloom filtering for interface in |
-| kGEN3_BLOOM_BITS           |			| The number of bits for interface-based bloom filtering for interface out |
-| kGEN3_BLOOM_HASHES         |			| The number of hash functions for interface-based bloom filtering for interface out |
-| kAUX_BLOOM_BITS            |			| The number of bits for tagger-based bloom filtering |
-| kAUX_BLOOM_HASHES          |			| The number of hash functions for tagger-based bloom filtering |
-| kHOST16_BLOOM_BITS         |			| The number of bits for host-based bloom filtering with subnet 16-bit prefixes |
-| kHOST16_BLOOM_HASHES       |			| The number of hash functions for host-based bloom filtering with subnet 24-bit prefixes |
-| kHOST24_BLOOM_BITS         |			| The number of bits for host-based bloom filtering with subnet 24-bit prefixes |
-| kHOST24_BLOOM_HASHES       |			| The number of hash functions for host-based bloom filtering with subnet 24-bit prefixes |
+:::tip Tuning Notes
+ * The tuning for FlowStream shown below consists essentially of tweaking the size of the underlying Bloom Filters and Bitmap Index datastructures for hosts, applications, tags etc.
+ * All values must be powers of two.  Enter 32768 instead of 32K
+ * To disable a particular index enter `0` for the corresponding value
+ * To use default just leave the value blank
+ * The hash used is Murmur-3 
+ * These values can be changed at any time, they are stored on a per-block basis
+:::
+
+| Parameter                  | Default  | Type | Description   |
+| -------------------------- | -------- | ---  | ---------------------|
+| MicroSecondTimestamps      | TRUE     | |Does the flow database need microsecond timestamps. Use case : Compliance for large flow stores. Disabling microsecond timestamps for start and end time can save about 8 bytes / per flow | 
+| ZFLOWBLOCK_COMPRESSOR_CODE | lz4      | |The compressor type for the flow database. Available parameter values are<br/>- `lz4`<br/><br/>- `lz4-ip-call-log-with-nat-pro-max` : For both IPv4 and IPv6 withNATIP, Port, userid for full log<br/><br/> |
+| kFLOWS_PER_BLOCK           | 4096     | |The number of flows per block. Default 4096                          |
+| kBLOOM_AGG_SIZE            | 100      |Bloom Filter |The number of flow blocks per bloom filter.                          |
+| kBUMPX_AGG_SIZE            | 500      |Bitmap Index |The number of flow blocks per full bitmap filter index.              |
+| kHOST_BUMPX_BUCKETS        | 128K     |Bitmap Index |buckets for IP (hosts)  |
+| kHOST_A_BUMPX_BUCKETS      | 128K     |Bitmap Index |buckets for source IP  |
+| kHOST_Z_BUMPX_BUCKETS      | 128K		|Bitmap Index |buckets for destination IP |	
+| kAPP_BUMPX_BUCKETS         | 4K	 	|Bitmap Index |buckets for port | 
+| kAPP_A_BUMPX_BUCKETS       | 4K	    |Bitmap Index |buckets for source port |
+| kAPP_Z_BUMPX_BUCKETS       | 4K    	|Bitmap Index |buckets for destination port |
+| kPROTO_BUMPX_BUCKETS       | 256		|Bitmap Index |buckets for IP protocols |
+| kGEN1_BUMPX_BUCKETS        | 1K		|Bitmap Index |buckets for routers |	
+| kGEN2_BUMPX_BUCKETS        | 1K		|Bitmap Index |buckets for ingress router interface  |
+| kGEN3_BUMPX_BUCKETS        | 1K		|Bitmap Index |buckets for egress router interface |
+| kHOST24_BUMPX_BUCKETS      | 64K		|Bitmap Index |buckets for 255.255.255.0 or /24 prefixes  |
+| kHOST16_BUMPX_BUCKETS      | 32K		|Bitmap Index |buckets for /16 prefixes |
+| kHOST_BLOOM_BITS           | 128K		|Bloom Filter |num bits for Host IP index |
+| kHOST_A_BLOOM_BITS         | 128K		|Bloom Filter |num bits for Source IP |
+| kHOST_Z_BLOOM_BITS         | 128K		|Bloom Filter |num bits for Destination IP  |
+| kHOST_BLOOM_HASHES         | 3		|Bloom Filter |num hashes for Host IP |
+| kHOST_A_BLOOM_HASHES       | 3		|Bloom Filter |num hashes for Source IP|
+| kHOST_Z_BLOOM_HASHES       | 3        |Bloom Filter |num hashes for Destination IP  |
+| kAPP_BLOOM_BITS            | 64K		|Bloom Filter |bits for port index|
+| kAPP_A_BLOOM_BITS          | 64K      |Bloom Filter |bits for source port |	
+| kAPP_Z_BLOOM_BITS          | 64K      |Bloom Filter |bits for destination port|	
+| kAPP_BLOOM_HASHES          | 1        |Bloom Filter |hashes for ports |
+| kPROTO_BLOOM_BITS          | 256      |Bloom Filter |bits for IP protocol-based index |
+| kPROTO_BLOOM_HASHES        | 1        |Bloom Filter |hashes for IP Protocol |	
+| kGEN1_BLOOM_BITS           | 4096     |Bloom Filter|bits for router indexing|
+| kGEN1_BLOOM_HASHES         | 1        |Bloom Filter|hashes for routers 
+| kGEN2_BLOOM_BITS           | 4096     |Bloom Filter|bits for ingres interface|
+| kGEN2_BLOOM_HASHES		 | 1        |Bloom Filter|hashes for ingress interface |
+| kGEN3_BLOOM_BITS           | 4096     |Bloom Filter|bits for egress interface |
+| kGEN3_BLOOM_HASHES         | 1        |Bloom Filter|hashes for egress inteface |
+| kAUX_BLOOM_BITS            | 32K      |Bloom Filter|bits for flow tags , each tag of a composite tag is indexed|
+| kAUX_BLOOM_HASHES          | 3        |Bloom Filter|hashes for flow tags|
+| kHOST16_BLOOM_BITS         | 32K      |Bloom Filter|bits for `/16` IP   |
+| kHOST16_BLOOM_HASHES       | 3        |Bloom Filter|hashes for `16` IP |
+| kHOST24_BLOOM_BITS         | 64K      |Bloom Filter|bits for `/24` IP |
+| kHOST24_BLOOM_HASHES       | 3        |Bloom Filter|hashes for `24` IP|
