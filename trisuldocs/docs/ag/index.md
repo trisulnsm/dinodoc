@@ -10,4 +10,12 @@ The Admin Guide contains information about :
 - Distributed Domains 
 - Disaster Recovery / High Availability
 - User Management
-- Configuration Files 
+
+:::tip Looking for Configuration Files ? 
+
+:memo: See [Reference Documentation](/docs/ref)
+
+:::
+
+
+
