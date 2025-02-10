@@ -6,7 +6,7 @@
 Several ISPs have deployed Trisul in their networks to gain deep
 insights into their peering and routing efficiencies. In addition to the
 normal metrics, device, and interface level drilldowns made available in
-Trisul Netflow Analytics.
+Trisul Network Analytics.
 
 import DocCardList from '@theme/DocCardList';
 
