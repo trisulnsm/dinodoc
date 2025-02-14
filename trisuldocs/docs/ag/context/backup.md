@@ -59,7 +59,7 @@ Once completed, a crontab entry will be automatically created to backup at
 The backups are placed in the remote directory in a single tar.gz file
 with the HOSTNAME and TIMESTAMP of the backup
 
-## Backup Trisul Data
+### Backup Trisul Data
 
 Using the `install_setup_backup.sh` tool.
 
