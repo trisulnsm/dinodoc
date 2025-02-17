@@ -66,8 +66,8 @@ import TabItem from '@theme/TabItem';
 | -i INTERVAL        |     -           | Check flushed item count for last n minutes | -i 2                                                  |
 | -g COUNTER_GROUP   |     -           | Check this counter group in log       | -g `{2314BB8E-2BCC-4B86-8AA2-677E5554C0FE}`                 |
 | -f CHECK_FLOW_COUNT|     -           | Check flushed flow count              | -f                                                          |
-| -v VERBOSE         |     -           | Print inforamtion like fluhsed flows  | -v                                                          |
-| -m MATCH_ANY_ENIGINE|    -           | Check if any 1 engine is flushed      | -m                                                          |
+| -v VERBOSE         |     -           | Print information like fluhsed flows  | -v                                                          |
+| -m MATCH_ANY_ENGINE|    -           | Check if any 1 engine is flushed      | -m                                                          |
 | -r RESTART         |     -           | Restart context if down               | -r                                                          |
 
 
