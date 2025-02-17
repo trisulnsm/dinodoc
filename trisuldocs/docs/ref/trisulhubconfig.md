@@ -44,8 +44,8 @@ Commonly modified parameters are Setuid, TrisulMode, LicenseFile
 
 :::
 
-| Parameters    | Defaults                                                                   | Description                                                                                                                                                                                   |
-| ------------- | -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Parameters    | Defaults                | Description                                                                                                                                                                                   |
+| ------------- | ---------------------- | ------------------------------------------------------------------ |
 | User          | trisul.trisul                                                              | Which user/group should trisul run as after dropping root privileges.                                                                                                                         |
 | TempFolder    | /tmp                                                                       |                                                                                                                                                                                               |
 | DBRoot        | /usr/local/var/lib/trisul-hub/ domain0/hub0/context0                       | The base directory under which Trisul stores all its data.                                                                                                                                    |
@@ -124,10 +124,22 @@ For long term storage mostly for compliance purposes.
 
 An optional feature for advanced users allows for extra archives for example to be mounted to slower storage. These are disabled by default. Change the name of the node from`ExtraArchives_Disabled`to`ExtraArchives`to activate this feature.
 
-| Parameters | Defaults | Description                                                                                       |
+| Parameters | Defaults | Description|
 | ---------- | -------- | --------------- |
 | ID         | 1        | This ID is used to access the archive mount point. ID of 1 would lead to mount point`xarchive_1` |
-| SliceCount | 32       | Number of days data in this extra archive                                                         |
+| SliceCount | 32       | Number of days data in this extra archive|
+
+
+### Advanced Archiving
+
+Controls archiving process
+
+|Parameter| Defaults | Description |
+| ---------- | -------- | --------------- |
+|DeleteIfTargetDirMissing| False | Used in HA-Master-Slave configuration with shared SAN mount point where the cold archive is stored   . In this architecture, both the HA-Master and HA-Slave store the hot and or warm data but the archive for cold data is mounted in only the current HA-Master.  Set this paramter to true on the HA-Slave node, so that if the archive SAN mount point is not available then the slice is deleted. This is correct behavior because the HA-Master which has the SAN mounted will use its normal archiving procedure to move data from hot to cold archive|
+|OfflineArchiveTag||Enables offline archives. The Trisul Archiver process does not delete entries from its database mapping slices to dates and storage pools. Instead it simply tags them with this label. Set this to `tape` if you want to enable Tape archives. This maps to a `tape` subdirectory in the meters area. |
+
+
 
 ## Flushers
 
