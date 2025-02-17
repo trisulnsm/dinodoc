@@ -157,7 +157,7 @@ pwd
 ```
 This command prints the current working directory to verify that you are in the correct location.
 
-Step 4: Restore Trisul Data 
+Step 4: Restore Trisul Data   
 For example: 
 
 ```Bash
