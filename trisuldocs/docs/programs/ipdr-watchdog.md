@@ -4,7 +4,7 @@
 
 ## Overview  
 
-This solution consists of three scripts designed to monitor the status of Trisul-Hub and Trisul-Probe in real-time. The scripts detect when the systems are down and send alerts to the syslog. Additionally, they can be configured to send email alerts.
+This solution consists of **three scripts** designed to monitor the status of Trisul-Hub and Trisul-Probe in real-time. The scripts detect when the systems are down and send alerts to the syslog. Additionally, they can be configured to send email alerts.
 
 ## Scripts
 
