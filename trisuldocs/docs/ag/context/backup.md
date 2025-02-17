@@ -134,13 +134,10 @@ If you have a distributed setup, copy the `install_setup_backup.sh`
 into the /usr/local/share/trisul-probe or trisul-hub directories and
 repeat the above steps.
 
-## Restore
+## Restoring Trisul Data
 
 To restore the backup. Locate the backup with the correct timestamp you
 wish to use and untar the backup file.
-
-
-### Restoring Trisul Data 
 
 Step 1: Load Trisul Environment Variables
 ```Bash
