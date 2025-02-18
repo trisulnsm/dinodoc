@@ -1,20 +1,9 @@
 # Scan Slices
 
-Scan each slice in storage pool by comparing with metaslice db & provide supplementary information.
+## Overview
 
-## How it works
-- Preliminary check
-  - Check the given context has a config file
-  - Check the METASLICE.DB is accessible by the current user
-  - Check the storage pool is accessible by the current user
-  - If above condition is not met it will stop
-- Gather information from METASLICE and SLICE directory
-  - Extract slice details for a single slice storage and checks this slice are present in the directory
-  - Same-way it check all slices in the directory is present in DB.
-  - Analyze each slice and extract required data
-- Process the information
-  - Based on the gathered data each slice is prented in terminal with table format
-  - At end of the script it shows the number of collected slice
+The Scan Slices feature performs a comprehensive analysis of the METASLICE.DB and SLICE directory (each slices in storage pool) to gather and process slice information. It conducts preliminary checks, extracts slice details, analyzes each slice, and presents the findings in a table format, ultimately providing a summary of the collected slices.
+
   
    
    ## Arguments
