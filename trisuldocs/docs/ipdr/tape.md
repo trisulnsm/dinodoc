@@ -99,7 +99,11 @@ Now you can run the IPDR Query with the date May 20, 2024 as described in [Submi
 ## Check Storage Status
 
 After restoration  you can check the Storage Status 
-TODO: Storage status with a check mark showing the slice is now available for query.
+
+![](images/storagestatus_available.png)  
+*Figure: Showing Storage*
+
+This shows the storage status with a check mark showing the slice is now available for query.
 
 
 

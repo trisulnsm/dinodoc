@@ -13,7 +13,7 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 <TabItem value="HUB-FLUSHER-WATCHDOG" default >
-   1. Monitors the status of Trisul-System by analyzing logs.
+   1. Monitors the status of Trisul-System by analyzing logs using the script `hub_flusher_watchdog.sh`.
    2. Sends alerts to syslog when the system is down.
    3. Sends alerts when the system is up after a certain interval.
    4. Accepts a maximum of one context at a time.
@@ -25,7 +25,7 @@ import TabItem from '@theme/TabItem';
 <TabItem value="RUN-HUB-FLUSHER" >
    1. Detects multiple context statuses of Trisul-System.
    2. Sends alerts for all non-running contexts to syslog.
-   3. Depends on the `hub_flusher_watchdog.sh` script.
+   3. Depends on the `run_hub_watchdog.sh` script.
 </TabItem>
 </Tabs>
 
