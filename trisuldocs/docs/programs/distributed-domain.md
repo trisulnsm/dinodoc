@@ -86,7 +86,7 @@ Run the following script on the Trisul Hub server:
   | Probe-ssh-username | demo-user     |
   | Probe-ssh-Password | demo-passwd   |
 
-- The script will connect the Trisul-probe to the Trisul-hub , If you have multiple Trisul-probe , after the installation of trisul-probe over , run the same script again and provide the next Trisul-probe details.
+This script connects a Trisul-Probe to a Trisul-Hub. To connect multiple Trisul-Probe instances, simply run the script again after installing each probe and provide the respective probe details. Repeat this process for each additional Trisul-Probe to establish connections with the Trisul-Hub.
 
 **Step 2: Provide Required Inputs**  
 The script will prompt for the following inputs:
