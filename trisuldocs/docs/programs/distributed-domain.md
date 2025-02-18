@@ -3,17 +3,25 @@ import TabItem from '@theme/TabItem';
 
 
 # Distributed-Domain
-## Prerequisite
+## Prerequisites
 
-- Download the trisul from official [website](https://www.trisul.org/get-started/) .
+**Step 1: Download Trisul**  
+Download the Trisul network monitoring platform from the [official website](https://www.trisul.org/get-started/).  
 
-- Install Hub and Webtrisul in Trisul-hub server.
+**Step 2: Install Trisul Components**  
+Install Hub and Webtrisul on the Trisul-hub server.  
+Install Probe on the Trisul-Hub server.   
 
-- Install Probe in Trisul-Hub server.
+**Step 3: Verify Expect Script**  
+Ensure that the `Expect` script is present on your system. If not, install the `Expect` package.   
 
-- Check if expect script is present , If not install the package.
+>**Important Licensing Note**  
+Please note that 7-day trial licenses are not supported for Distributed-Domain setup. Ensure you have a valid license before proceeding with the setup. 
 
-- 7-day Timetrial license are not supported.
+## Installing and Configuring Trisul Probe
+
+**Step 1: Install `Expect`**  
+Run the following command to install `Expect`: 
 
   <Tabs className="unique-tabs">
     <TabItem value="UBUNTU"  default>
@@ -28,43 +36,48 @@ import TabItem from '@theme/TabItem';
     </TabItem>
   </Tabs>
 
-- Install probe in Trisul-probe server , for multiple probe install probe on each server.
+**Step 2: Install Trisul Probe**  
+- Install the Trisul Probe on the Trisul-probe server.
+- For multiple probes, install the probe on each server.
 
-- Configure ssh on all Trisul-server
+**Step 3: Configure SSH**  
+Configure SSH on all Trisul servers.  
 
-First , you need to change the Hub-server  to distributed domain . Follow the below steps :
+## Enabling Distributed Domain on Trisul-Hub Server
 
+To enable Distributed Domain on the Trisul-Hub server, follow these steps:     
 
-### Trisul-Hub server
+**Step 1: Run the Distribution Script**  
 
-- Run the script   -    /usr/local/share/trisul-hub/hub_distributer.exp
+On the Trisul-Hub server, run the following script:  
+`/usr/local/share/trisul-hub/hub_distributer.exp`
 
-- It ask the following inputs Hub-Server IP , Description ,  starting port .
+**Step 2: Provide Required Inputs**
+The script will prompt for the following inputs:
+- Hub-Server IP
+- Description
+- Starting port
+
+Enter the required details to complete the Distributed Domain setup.
+
+![](./images/hub_distributor_inputs.png)
   
-  ![](./images/hub_distributor_inputs.png)
-  
-  | Paraneters         | Sample Inputs      |
+  | Parameters         | Sample Inputs      |
   | ------------------ | ------------------ |
   | Hub IP Address     | 192.168.1.6        |
   | Domain Description | Distributed domain |
   | Starting Port      | 12001              |
 
-- Installation starts and the server will now become distributed domain.
+The installation process will now commence, and the server will be converted into a Distributed Domain configuration.
 
-Next , you need to add  trisul-probe to the trisul-hub . Follow this step to connect probe to hub
+## Adding Trisul Probe to Trisul Hub
 
+**Step 1: Run the Probe Addition Script**  
+Run the following script on the Trisul Hub server:
 
-- Run the script - /usr/local/share/trisul-hub/add_probe.exp
-
-- It ask for following inputs Probe-Name , Probe-ssh-IP addr , Probe-ssh-username , Probe-ssh-Password.
+`/usr/local/share/trisul-hub/add_probe.exp`
   
-  :::note
-  
-  Probe name should start with probe string followed by name <br/> Ex : probeWEST
-  
-  :::
-  
-  ![](./images/add_probe_inputs.png)
+![](./images/add_probe_inputs.png)
   
   | Parameters         | Sample Inputs |
   | ------------------ | ------------- |
@@ -75,64 +88,44 @@ Next , you need to add  trisul-probe to the trisul-hub . Follow this step to con
 
 - The script will connect the Trisul-probe to the Trisul-hub , If you have multiple Trisul-probe , after the installation of trisul-probe over , run the same script again and provide the next Trisul-probe details.
 
-### Check the probe is connected
+**Step 2: Provide Required Inputs**  
+The script will prompt for the following inputs:
+- Probe Name (must start with "probe" followed by the name, e.g., "probeWEST")
+- Probe SSH IP Address
+- Probe SSH Username
+- Probe SSH Password
 
-- To check the probe is connected you can run this command :
-  
-  ```bash
-  /usr/local/bin/trisulctl_hub hello
-  ```
-  
-  You can see the list of probe connected here.
+**Step 3: Verify Probe Connection**    
+To verify that the probe is connected, run the following command:  
+`/usr/local/bin/trisulctl_hub hello`  
+This will display a list of connected probes.  
 
-- If you can't see the probe restart the hub and probe.
+## Troubleshooting
 
-- Run this below script on Trisul-hub server
-  
-  ```bash
-  /usr/local/bin/trisulctl_hub restart domain
-  ```
+If the probe is not listed, restart the Hub and Probe:    
 
-- Run this below script on Trisul-probe server
-  
-  ```bash
-  /usr/local/bin/trisulctl_probe restart domain
-  ```
+On the Trisul Hub server:  
+`/usr/local/bin/trisulctl_hub restart domain`  
 
-- Again run the first command it shows the connected probe . If the probe is not shown then the installation is not done correctly.
+On the Trisul Probe server:  
+`/usr/local/bin/trisulctl_probe restart domain`  
 
-### How it works
+Then, re-run the command to verify the probe connection.  
 
-- In hub and probe server , the inputs is checked before the installation.
+## How it Works
 
-- Then , it checks the license is valid , if you have an 3-day timetrial then the installation will stopped. Contact the trisul support for license.
+The installation process involves the following steps:  
 
-- In hub server , the domain and context will be stopped
-
-- Removes the default domain0 by removing the domain cert files.
-
-- Creates a new domain with the TCP socket by executing below commands 
-
-```bash
-/usr/local/bin/trisulctl_hub create domain
-```
-
-- After the domain is created , then it install the domain cert in hub by running following commands
-
-```bash
-trisulctl_hub install domain /usr/local/share/trisul-hub/domain0.cert 
-```
-
-And it change the endpoints by executing below command 
-
-```bash
- /usr/local/share/trisul-hub/change_endpoints 
-```
-
-- The Trisul-probe server commands is executed through SSH in Trisul-hub server itself
-
-- In probe server it removes the default probe0 if it exists and creates a new probe with given probe name
-
-- The probe cert is installed in Trisul-probe itself and another copy routed to Trisul-probe and installed in Trisul-hub also.
-
-- At last both Trisul-hub and Trisul probe is restarted 
+1) **Input validation**: The script checks the inputs provided before proceeding with the installation.    
+2) **License validation**: The script verifies that a valid license is present. If a 3-day trial license is detected, the installation will be stopped. Contact Trisul support for licensing assistance.    
+3) **Hub server configuration**:  
+- Stops the domain and context.  
+- Removes the default domain0 by deleting the domain certificate files.  
+- Creates a new domain with a TCP socket using the command `/usr/local/bin/trisulctl_hub create domain`.  
+- Installs the domain certificate in the Hub using the command `trisulctl_hub install domain /usr/local/share/trisul-hub/domain0.cert`.  
+- Changes the endpoints using the command `/usr/local/share/trisul-hub/change_endpoints`.  
+4) **Probe server configuration (executed through SSH from the Trisul Hub server)**:
+- Removes the default probe0 if it exists.
+- Creates a new probe with the given probe name.
+- Installs the probe certificate in the Probe and routes a copy to the Hub for installation.  
+5) **Restart**: Both the Trisul Hub and Probe are restarted to complete the installation.
