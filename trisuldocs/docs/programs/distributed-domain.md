@@ -9,8 +9,8 @@ import TabItem from '@theme/TabItem';
 Download the Trisul network monitoring platform from the [official website](https://www.trisul.org/get-started/).  
 
 **Step 2: Install Trisul Components**  
-Install Hub and Webtrisul on the Trisul-hub server.  
-Install Probe on the Trisul-Hub server.   
+- Install Hub and Webtrisul on the Trisul-hub server.  
+- Install Probe on the Trisul-Probe server.   
 
 **Step 3: Verify Expect Script**  
 Ensure that the `Expect` script is present on your system. If not, install the `Expect` package.   
@@ -111,21 +111,3 @@ On the Trisul Probe server:
 `/usr/local/bin/trisulctl_probe restart domain`  
 
 Then, re-run the command to verify the probe connection.  
-
-## How it Works
-
-The installation process involves the following steps:  
-
-1) **Input validation**: The script checks the inputs provided before proceeding with the installation.    
-2) **License validation**: The script verifies that a valid license is present. If a 3-day trial license is detected, the installation will be stopped. Contact Trisul support for licensing assistance.    
-3) **Hub server configuration**:  
-- Stops the domain and context.  
-- Removes the default domain0 by deleting the domain certificate files.  
-- Creates a new domain with a TCP socket using the command `/usr/local/bin/trisulctl_hub create domain`.  
-- Installs the domain certificate in the Hub using the command `trisulctl_hub install domain /usr/local/share/trisul-hub/domain0.cert`.  
-- Changes the endpoints using the command `/usr/local/share/trisul-hub/change_endpoints`.  
-4) **Probe server configuration (executed through SSH from the Trisul Hub server)**:
-- Removes the default probe0 if it exists.
-- Creates a new probe with the given probe name.
-- Installs the probe certificate in the Probe and routes a copy to the Hub for installation.  
-5) **Restart**: Both the Trisul Hub and Probe are restarted to complete the installation.
