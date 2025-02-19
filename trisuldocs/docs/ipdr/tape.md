@@ -84,12 +84,12 @@ For instance, to find all slices for February 10th, simply enter "10 Feb" in the
 ![](images/datesearchslice.jpeg)  
 *Figure: Showing sample of slices searched for a particular date*
 
->**Note: The search starts only if you enter a minimum of three characters. For example: "Feb". Search date can be with or without spaces say 10 Feb 2025 or 20feb2025**
+>**Note: The search starts only if you enter a minimum of three characters. For example: "Feb". Search date can be with or without spaces say 10 Feb 2025 or 10feb2025**
 
 
 ### Restore the 2 slices 
 
-Restore the two slices SLICE.7v6ecw and SLICE.7v6ecw to the mentioned `tape ` restore point 
+Restore the two slices SLICE.evlPsX and SLICE.r0Cbmx to the mentioned `tape ` restore point 
 
 It should look like this 
 
@@ -98,15 +98,15 @@ It should look like this
 
 noc@ipdr:/usr/local/var/lib/trisul-hub/domain0/hub0/context0/meters$ ls -l tape 
 total 4
-drwx------ 11 trisul trisul 4096 Feb 17 14:57 SLICE.7v6ecw
-drwx------ 11 trisul trisul 4096 Feb 17 14:57 SLICE.63hj7r
+drwx------ 11 trisul trisul 4096 Feb 10 23:59 SLICE.evlPsX
+drwx------ 11 trisul trisul 4096 Feb 10 23:59 SLICE.r0Cbmx
 
 ```
 
 
 ### Run the query 
 
-Now you can run the IPDR Query with the date May 20, 2024 as described in [Submit Queries](/docs/ipdr/submit-queries)
+Now you can run the IPDR Query with the date Feb 10, 2025 as described in [Submit Queries](/docs/ipdr/submit-queries)
 
 
 ## Check Storage Status
@@ -116,7 +116,7 @@ After restoration  you can check the Storage Status
 ![](images/storagestatus_available.png)  
 *Figure: Showing Storage*
 
-This shows the storage status with a check mark showing the slice is now available for query.
+This shows the storage status with a check mark showing the slice is now available for query. Now you can run the query.
 
 
 
