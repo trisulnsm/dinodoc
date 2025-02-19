@@ -65,14 +65,19 @@ drwxr-x--- 2 trisul trisul  4096 Feb 10 11:16 tmp
 
 When the customer wants to query for logs from a particular date say Feb 10, 2025.  The workflow is this,
 
-:::info navigation Login as `admin`
-:point_right: Go to Context:default0 &rarr; Admin Tasks &rarr; Storage status
+
+
+
+### Locate the slices for day 
+
+:::info navigation 
+:point_right: Login as `admin`, Go to Context:default0 &rarr; Admin Tasks &rarr; Storage status
 :::
 
 ![](images/slices.jpeg)  
 *Figure: Showing Slices on the selected storage pool*
 
-Once you have navigated to the Storage Status page and scrolled to the bottom to view the data slices for the selected storage pool. In the top-right corner of the slices section, you'll find the Search Slice tool. Enter the desired date in the search bar, and the system will display all data slices for that date, regardless of the storage pool they're stored in.
+Once you have navigated to the Storage Status page and scrolled to the bottom to view the data slices for the selected storage pool. In the top-right corner of the slices section, you'll find the *Search Slice* tool. Enter the desired date in the search bar, and the system will display all data slices for that date, regardless of the storage pool they're stored in.
 
 For instance, to find all slices for February 10th, simply enter "10 Feb" in the search bar. 
 
@@ -80,12 +85,6 @@ For instance, to find all slices for February 10th, simply enter "10 Feb" in the
 *Figure: Showing sample of slices searched for a particular date*
 
 >**Note: The search starts only if you enter a minimum of three characters. For example: "Feb". Search date can be with or without spaces say 10 Feb 2025 or 20feb2025**
-
-
-### Locate the slices for day 
-
-show storage status and search for date --- TODO  
-screenshot 
 
 
 ### Restore the 2 slices 
