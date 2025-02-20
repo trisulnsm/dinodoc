@@ -69,6 +69,8 @@ import TabItem from '@theme/TabItem';
 | -v VERBOSE         |     -           | Print information like flushed flows  | -v                                                          |
 | -m MATCH_ANY_ENGINE|    -           | Check if any 1 engine is flushed      | -m                                                          |
 | -r RESTART         |     -           | Restart context if down               | -r                                                          |
+| -a filepath        |     -          | Eg -a/home/trisul/filepath.text        | AAA file process interval |
+| -j interval        |      3600        | Eg - j 3600             | AAA file process interval |
 
 
 ## How to Run this Script
