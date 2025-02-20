@@ -46,9 +46,7 @@ Mount or softlink the restore point to  a directory called `tape` in the meters 
 
 In the following example the 4TB restore disk has been softlinked to the `tape` directory
 
-```bash
-
-
+```bash {8}
 noc@ipdr:/usr/local/var/lib/trisul-hub/domain0/hub0/context0/meters$ ls -l
 total 52
 drwxr-x--- 2 trisul trisul  4096 Feb 10 11:16 archive
