@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
    :bell:
    :::
 </TabItem>
-<TabItem value="RUN-HUB-FLUSHER" >
+<TabItem value="RUN-HUB-WATCHDOG" >
    1. Detects multiple context statuses of Trisul-System.
    2. Sends alerts for all non-running contexts to syslog.
    3. Depends on the `run_hub_watchdog.sh` script.
@@ -68,9 +68,17 @@ import TabItem from '@theme/TabItem';
 | -f CHECK_FLOW_COUNT|     -           | Check flushed flow count              | -f                                                          |
 | -v VERBOSE         |     -           | Print information like flushed flows  | -v                                                          |
 | -m MATCH_ANY_ENGINE|    -           | Check if any 1 engine is flushed      | -m                                                          |
+<<<<<<< HEAD
 | -r RESTART         |     -           | Restart context if down               | -r                                                          |
 | -a filepath        |     -          | Eg -a/home/trisul/filepath.text        | AAA file process interval |
 | -j interval        |      3600        | Eg - j 3600             | AAA file process interval |
+=======
+| -r RESTART         |     -           | Restart context if down             -r                                                          |
+
+
+
+
+>>>>>>> 32ef4ef (added ipdr_bulkquey script details)
 
 
 ## How to Run this Script
