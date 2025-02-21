@@ -1,8 +1,6 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Watch-dog
-
 ![IPDR-Watchdog](./images/watch_dog.png)
 
 # Run_Hub_Flusher
