@@ -1,4 +1,4 @@
-# IPDR Customers
+# Customer Inventory Mappings
 
 The IPDR Customers list provides a comprehensive repository of customer details. Basically tells how to add customer information, so that they are automatically filled into the output EXCEL report.This feature allows authorized users to:
 
