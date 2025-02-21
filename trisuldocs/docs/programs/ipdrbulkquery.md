@@ -55,5 +55,3 @@ Check results directory : /tmp/ipdrresults-1740052909
 *Figure: Reading the Output File*
 
 The results will be stored in the specified directory, with separate files for each IP address.
-
-
