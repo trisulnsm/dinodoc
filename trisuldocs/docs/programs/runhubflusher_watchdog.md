@@ -77,3 +77,13 @@ The script generates alerts to the syslog based on the flush value. If the flush
 #### Alert Format
 The alert format is the same for both Flow Mode and GUUID Mode. The script sends a standardized alert message to the syslog, indicating that the context is not running.
 >**Note: The alert message does not distinguish between Flow Mode and GUUID Mode. The same alert format is used for both modes.**
+
+## Cron Tab
+
+To schedule a script to run every half hour, add the following cron job to your crontab. This will allow the script to continuously run in the background, periodically checking for flows.
+
+**COUNTER GROUP**  
+`*/30 * * * *  /usr/local/share/trisul-hub/run_hub_watchdog.sh -c context0 -g {2314BB8E-2BCC-4B86-8AA2-677E5554C0FE}`
+
+**IPDR**   
+`*/30 * * * *  /usr/local/share/trisul-hub/run_hub_watchdog.sh -c context0`                     
