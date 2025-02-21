@@ -1,12 +1,14 @@
-# Customer Inventory Mappings
+# IPDR Customers
 
-How to add customer information, so that they are automatically filled into the output EXCEL report. 
+The IPDR Customers list provides a comprehensive repository of customer details. Basically tells how to add customer information, so that they are automatically filled into the output EXCEL report.This feature allows authorized users to:
 
-:::tip
+   **Add**: Create new customer entries with detailed information  
+   **Edit**: Update existing customer records as needed  
+   **Delete**: Remove customer entries from the list  
+
+   :::tip
 You can also add customer information for static IP and usernames using the [Trisul IPDR API](api) . 
 :::
-
-
 
 ## Compliance Requirement
 
@@ -15,7 +17,6 @@ The DoT compliance letter clearly mentions that the following details need to be
 ![caf_fields](images/letter-caf.png)
 
 *Figure: Compliance requirement to add customer info* 
-
 
 :::info  Static vs AAA customers
 This feature is most useful for the static IP customers of the ISP. Because the inventory is more stable than large scale ISP providing residiential services. For the latter, talk to us to use a REST API to get the fields
@@ -28,77 +29,122 @@ Adding customer details for static IP customers can be done in two methods
 
 ## Manually Add Static IP Mappings 
 
-:::info navigation
-:point_right: Go to Context: default &rarr; Admin Tasks &rarr; IPDR Customers
+:::info navigation 
+:point_right: Go to Context:default &rarr; Admin Tasks &rarr; IPDR Customers
 :::
 
 The column subnets shows the IP Addresses addressed to each customer along with other details.
 
-### Add Customer
+![](images/ipdrimportexport.png)  
+*Figure: Showing IPDR Customers List*
 
-Press the Add button to add a new Customer.
+### Adding Details of a New Customer
 
-Fill in the following details - these show up verbatim in the output report that you send to the authorities. 
-* **Name** - customer name
-* **Address** - address
-* **Email** - email ID of the customer
-* **Phone Number** - phone number
-* **Alt Phone Number** - optional 
-* **UserID** - UserID or subscriber ID 
+To add a new customer, click the *Add* button and complete the required fields:
 
-### Add IP Subnet to Customer Mapping
+| Field | Descriptions |
+|-------|--------------|
+| Name | Enter the customer's full name |
+| Address | Enter the customer's physical address |
+| Email | Enter the customer's primary email address |
+| Phone Number | Enter the customer's primary phone number |
+| Alternative Phone number | Enter the customer's alternative phone number |
+| User ID | Enter the Unique Identifier of the customer. (Example: NB4002) |
 
-This is how you add static IP mappings to customers added in previous step.
-
-Press the Add/Edit Subnet option
-
-
-Enter the following 
-
-* **IP** - the IP address or CIDR format eg `19.168.1.23` or `19.168.1.20/28` 
-- **Valid From** - the IP Assignment is valid from this date. Set this to 1-1-1970 if you want to use this for old data.
-
-![](images/addipmap.png)
-
-*Figure: Assigning IPs to a customer page* 
+And click *Create*.
 
 
-Press the **ADD** button to assign this IP. You will see the new IP added as below
+## Importing New Customer Details
 
-Once done simply press the browser **Back** button to go back to the customer list.
+When importing new customer details into the system, please note that it will override any existing customer information. To ensure that all customer details are retained, follow these steps:
+
+- **Export Existing Customer Details**: First, export the current list of customer details from the system. This will prevent any loss of existing data.
+- **Combine New and Existing Customer Details**: Add the new customer details to the exported list, ensuring that all information is accurate and up-to-date.
+- **Import Combined Customer Details**: Import the combined list of customer details into the system. This will update the system with the complete and accurate customer information.
+
+By following these steps, you can ensure a seamless integration of new customer details without overwriting existing data.
+
+### Importing
+
+:::info navigation 
+:point_right: Go to Context:default &rarr; Admin Tasks &rarr; IPDR Customers
+:::
+
+To import IP to customer mappings for IPDR, follow these steps:
+
+- Click the Import button located in the top right corner.
+- Browse and select the CSV file containing the IP to customer mappings, with one mapping per line.
+- Click Upload CSV File to initiate the upload process. 
+
+### Exporting
+
+:::info navigation 
+:point_right: Go to Context:default &rarr; Admin Tasks &rarr; IPDR Customers
+:::
+
+To export the details of existing IPDR customers, follow these simple steps:
+
+- Navigate to the IPDR customer list page.
+- Click the Export button.
+
+The system will automatically export all IPDR customer details in CSV format.
+
+### Bulk Import from CSV File Format
+
+The CSV file should have a specific format, with each line containing nine columns. Each column represents a detail of the customer or subnet. The following default date settings apply when importing IP to customer mappings:
+
+- Valid From: If no date is specified for "Valid From," the system defaults to January 1, 1970 (Epoch timestamp: 0).
+- Valid To: If no date is specified for "Valid To," the system assumes the validity period is perpetual, with no end date.
+
+These default settings can be adjusted or overridden during the import process or after importing the data.
+Sample:
+
+![](images/csv_format.png)  
+*Figure: CSV Format showing nine columns*
+
+The default mapping of all the columns to customer and subnet details can be modified in the UI after importing the CSV file.
+
+![](images/csvformat.png)  
+*Figure: CSV Format*
+
+
+## Delete All
+
+To delete all the details of the customers, click on the *Delete All* button on the top right corner. You cannot recover the details of the customers once deleted. 
+
+## Action Button
+
+Click on the action button against each customer to *edit*, *delete*, or *add/edit subnets*
+
+### Add/Edit Subnets
+
+To manage subnets and terminal IDs, click on the *Add/Edit Subnets* option from the action button dropdown. This will prompt you to enter the following details:
+
+| Field | Description |
+|-------|-------------|
+| IP Subnet | Enter the IP subnet address in CIDR notation 
+| Valid From | Select the date from which the subnet will be valid from. |
+| Terminal ID | Enter the unique identifier for the terminal device associated with the subnet. |
+
+![](images/ipsubnet_terminalid.png)
+*Figure: Showing IPDR Customers terminal IDs with subnets*
+
+Below that are the list of assigned subnets to customer containing details such as 
+
+| Column| Descriptions |
+|--------|--------------|
+| IP Subnet | Displays the IP subnet in CIDR notation. |
+| Valid from | Shows the data from which the subnet invalid. |
+| Valid to | Displays the date until which the subnet is valid. By default it is set to "not set" indicating perpetual validity. |
+| Terminal ID | Lists the unique identifier for the terminal device associated with the assigned subnet |
 
 
 :::info Validity timeframe of mappings - `ValidFrom` and `ValidTo` 
 The Static IP mapping captures the validity of the assignment via the *Valid From* and *Valid To* fields. While generating the IPDR Report , Trisul IPDR uses the *Valid From* and *Valid To* timestamps to fill out the customer details. Users should do a *Set Expiry* for decommissioned customers rather than *Delete* them. This allows historical mappings to be correctly filled out as per the compliance mandate. 
 :::
 
-### Delete and Set Expiry
+Click on the action button against a subnet for two options say
+1) Set Expiry
+2) Delete
 
-In the *List of assigned subnets to customers*  each of the assigned subnets is shown
-* IP Subnet 
-* Valid From - mapping valid From this time
-* Valid To - valid Upto this time 
-
-The right side options menu contains the following options 
-* Set Expiry - set the Expiry date to the current time
-* Delete - delete this mapping entirely
-
-
-## Bulk Import from CSV Format
-
-You can also import an entire customer database at once via a CSV file. 
-
-The CSV format is shown here, notice the header for fields. 
-
-![](images/ipdr-csv-format.png) 
-
-*Figure: CSV file sample* 
-
-A sample working CSV file can be downloaded from here [Sample_IPDR_Customer_Import.CSV](/data/SAMPLE_IPDR_CUSTOMER_SUBNET_MAPPINGS.csv) 
-
-You can edit the information as needed.
-
-- **Step 1** : Select the CSV file
-- **Step 2** : Select the column numbers, if you followed the sample file above you can skip this step and directly press IMPORT
-- **Step 3** : Confirm
-
+Click on *Set Expiry* to set "Valid to" date for the selected subnet that shows the flows until the set expiry date but not the customer details in the report. Click *Delete* to delete that particular subnet.
