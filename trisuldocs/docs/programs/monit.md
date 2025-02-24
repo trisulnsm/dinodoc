@@ -1,37 +1,36 @@
-INSTALL MONIT
+#  	INSTALL MONIT
 
-root@it2-test:/usr/local/share/trisul-hub# ./install_monit.sh -h
-Usage: ./install_monit.sh [ -n HUBNODE(default hub0) ] [ -p PROBENODE(default probe0) ] [ -d MONIT_IPDR ] [ -x CONTEXT(default context0) ] 
-Detail: -d monit ipdr process, -x exclude a context from being monited (can use it multiple times)
-Example: ./install_monit.sh -n hub0 -p probe0 -x netflow -x context0 -d 
-For Help: ./install_monit.sh -h
-
-
-If hub and probe and webtrisul stops in between unexpectedly . The data is not stored and customer also not know it is stoped .
-
-So we have a script called ./install_monit.sh 
-
-This script will start the hub , probe , webtrisul if it stops in between .
+root@it2-test:/usr/local/share/trisul-hub# ./install_monit.sh -h  
+**Usage**: ./install_monit.sh [ -n HUBNODE(default hub0) ] [ -p PROBENODE(default probe0) ] [ -d MONIT_IPDR ] [ -x CONTEXT(default context0) ]   
+**Detail**: -d monit ipdr process, -x exclude a context from being monited (can use it multiple times)  
+**Example**: ./install_monit.sh -n hub0 -p probe0 -x netflow -x context0 -d   
+**For Help**: ./install_monit.sh -h  
 
 
-for netflow customer it you have to run this script 
+## Overview
 
-./install_monit.sh -n hub0 -p probe0 -x netflow -x context0 
+The `install_monit.sh` script is designed to monitor and recover critical processes, including Hub, Probe, and WebTrisul, in the event of unexpected termination. This ensures continuous data collection and processing, minimizing downtime and data loss.
 
-for IPDR customer it you have to run this script 
+## Usage
 
-./install_monit.sh -n hub0 -p probe0 -x netflow -x context0 -d 
--d options only for ipdr
+### NetFlow Customers
 
+To configure process monitoring for NetFlow customers, run the script with the following arguments:
 
-how it works (for clarification )
+```bash
+./install_monit.sh -n hub0 -p probe0 -x netflow -x context0
+```
 
-Monit script will check for every minute for the process of (hub probe and webtrisul ) if it finds the process is not running then it will start the process
+### IPDR Customers
+For IPDR customers, add the -d option to the command:
 
-so when you run script will add the process list in  /etc/monit.rc 
+```bash
+./install_monit.sh -n hub0 -p probe0 -x netflow -x context0 -d
+```
+## How it Works
 
-for every miniute it will check the given process is running . If it process not running it will start the process
+- The script adds the specified processes (Hub, Probe, and WebTrisul) to the Monit configuration file (/etc/monit.rc).
+- Monit checks the status of these processes every minute.
+- If a process is found to be not running, Monit automatically restarts it.
 
-
-
-
+>**Important Notes: The script assumes that the Monit service is already installed and configured on the system. The -d option is specific to IPDR customers and should not be used for NetFlow customers.**
