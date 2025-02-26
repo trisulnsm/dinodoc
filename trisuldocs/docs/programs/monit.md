@@ -1,15 +1,12 @@
-#  	Install MONIT
-
-root@it2-test:/usr/local/share/trisul-hub# ./install_monit.sh -h  
-**Usage**: ./install_monit.sh [ -n HUBNODE(default hub0) ] [ -p PROBENODE(default probe0) ] [ -d MONIT_IPDR ] [ -x CONTEXT(default context0) ]   
-**Detail**: -d monit ipdr process, -x exclude a context from being monited (can use it multiple times)  
-**Example**: ./install_monit.sh -n hub0 -p probe0 -x netflow -x context0 -d   
-**For Help**: ./install_monit.sh -h  
-
+#  	Install Monit
 
 ## Overview
 
-The `install_monit.sh` script is designed to monitor and recover critical processes, including Hub, Probe, and WebTrisul, in the event of unexpected termination. This ensures continuous data collection and processing, minimizing downtime and data loss.
+The `install_monit.sh` script is designed to monitor and start critical processes, including Hub and Probein the event of unexpected termination. This ensures continuous data collection and processing, minimizing downtime and data loss.
+
+## Requirements
+
+- Ensure Monit is installed in your system
 
 ## Usage
 
@@ -29,8 +26,21 @@ For IPDR customers, add the -d option to the command:
 ```
 ## How it Works
 
-- The script adds the specified processes (Hub, Probe, and WebTrisul) to the Monit configuration file (/etc/monit.rc).
+- The script adds the specified processes (Hub and Probe to the Monit configuration file (/etc/monit.rc).
 - Monit checks the status of these processes every minute.
 - If a process is found to be not running, Monit automatically restarts it.
 
 >**Important Notes: The script assumes that the Monit service is already installed and configured on the system. The -d option is specific to IPDR customers and should not be used for NetFlow customers.**
+
+## Options
+
+| Option             | Default value   | Description                           | 
+| -------------------| ----------------| ------------------------------------- |
+| `-d`               |                 | Monit IPDR process                    |           
+| `-x-`              |                 | Exclude a context from from being monited |
+| `-n`               |hub0             | Hub node |
+| `-p`               |probe0           | Probe node|
+| `-h`               |                 | Shows Help |
+
+**Example**: `./install_monit.sh -n hub0 -p probe0 -x netflow -x context0 -d`   
+**For Help**: `./install_monit.sh -h`  
