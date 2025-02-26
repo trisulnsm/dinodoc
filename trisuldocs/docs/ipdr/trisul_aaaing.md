@@ -3,11 +3,7 @@
 
 The `trisul_aaaing` is the RADIUS AAA log ingestor utility. This is used to add user-id and other details to flow records. 
 
-The `trisul_aaaing` can be run manually but is typically run as a cron job. This monitors a directory for AAA CSV log dumps, extracts them, and imports the data into a database, enabling the correlation of AAA user IDs and broadband service IDs with IPDR logs.
-
-:::tip
-AAAING is typically run from a CRON, the RADIUS system must FTP logs files periodically to a specific directory. 
-::: 
+This tool monitors a directory for AAA CSV log dumps, extracts them, and imports the data into a database, enabling the correlation of AAA user IDs and broadband service IDs with IPDR logs.
 
 
 ## man page 
@@ -20,6 +16,8 @@ man trisul_aaaing
 
 ## Dumping the AAA logs 
 
+   ![](images/ipdr_sftp.png)
+
 This depends on the AAA vendor you are using. The process is.
 
 
@@ -31,7 +29,7 @@ This depends on the AAA vendor you are using. The process is.
 
 :::tip
 
-See a PYTHON example that shows how to export the radacct table from FREERADIUS
+See a Python example  [FreeRADIUS exporter sample](https://github.com/trisulnsm/trisul-scripts/tree/master/lua/hub_scripts/radius-aaa/exporter)
 
 :::  
 
