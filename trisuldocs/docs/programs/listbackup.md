@@ -3,13 +3,13 @@
 
 ## Overview
 
-This script assists customers in identifying the specific slice to backup for a particular day by retrieving its name from the Storage Pool. Since slices in the Storage Pool have randomly generated names, this script simplifies the process by querying the pool with the desired backup date as input and returning the corresponding slice name, enabling targeted backups.
+This script assists customers in identifying the specific slice to backup for a particular day or a date range by retrieving its name from the Storage Pool. Since slices in the Storage Pool have randomly generated names, this script simplifies the process by querying the pool with the desired backup date as input and returning the corresponding slice name, enabling targeted backups.
 
 
 ## How to use this script 
 
 **Purpose**  
-The list_backup_slices.sh script is designed to retrieve a list of slice names corresponding to a specified date range. This enables customers to selectively back up these identified slices.  
+The `list_backup_slices.sh` script is designed to retrieve a list of slice names corresponding to a specified date range. This enables customers to selectively back up these identified slices.  
 
 **Syntax**  
 
