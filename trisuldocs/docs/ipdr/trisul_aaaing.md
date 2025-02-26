@@ -18,13 +18,13 @@ man trisul_aaaing
 
    ![](images/ipdr_sftp.png)
 
-This depends on the AAA vendor you are using. The process is.
+The process is.
 
 
   - Create a directory on the Trisul IPDR Server where you want to receive AAA dump files. Say this is is `/opt/ipdr/cdrlogs`  This will be passed as the argument `-d /opt/ipdr/cdrlogs` to the trisul_aaaing process
   - Write a script on the RADIUS system to periodically export the active and closed flows say every 1 hour.  Typically each NAS will have its own file. 
-  - The filename MUST include the timestamp in some manner. Ex - the file name can be `radiusaaa0_CDRs2023-09-27_133000.csv` where the timestamp is `2023-09-27_133000` or it can be 'netxstream-nas1-1740587653.csv where the number `1740587653` is a unix epoch timestamp. 
-  - SFTP (Secure FTP) from the RADIUS server to the Trisul IPDR server every 1 hour (say)
+  - The filename MUST include the timestamp in some manner. Ex - the file name can be `radiusaaa0_CDRs2023-09-27_133000.csv` where the timestamp is `2023-09-27_133000` or it can be `netxstream-nas1-1740587653.csv` where the number `1740587653` is a unix epoch timestamp. 
+  - SFTP (Secure FTP) from the RADIUS server to the Trisul IPDR server say every 1 hour 
 
 
 :::tip
@@ -57,7 +57,7 @@ Wed Sep 27 16:59:59 IST 2023,3,HV-1697634786,bobdylanuserid,100.90.2.38,103.112.
 
 ### Other formats
 
-Trisul AAAING uses a powerful LUA parser to support any file format that is different to the default one shown above. 
+Trisul AAAING uses a powerful LUA parser framework to support any file format that is different to the default one shown above.  So you have to write a LUA parser for your specific format. 
 
 You have to use the `--lua-parser` option to use a LUA script. 
 
@@ -71,10 +71,10 @@ The GitHub repository trisulnsm has a number of sample LUA scripts you can downl
 
 
 
-Lets say the RADIUS CSV logs are dumped in a directory `/ipdrdata/cdrlogs` in the default elite format.
+Lets say the RADIUS CSV logs are dumped in a directory `/ipdrdata/cdrlogs` in the default *elite* format.
 
 
-The directory will look like this. Each of the csv files contains a RADIUS AAA record.
+The directory will look like this. Each of the csv files contains AAA records.
 
 ```
 Precision-3260:$ ls -l /ipdrdata/cdrlogs
@@ -105,7 +105,7 @@ trisul_aaaing -c /usr/local/etc/trisul-hub/domain0/hub0/context0/trisulHubConfig
 
 Lets say the RADIUS CSV logs are dumped in a directory `/ipdrdata/cdrlogs` in the a custom format say the Alepo vendor. 
 
-The directory will look like this. Each of the csv files contains a RADIUS AAA record.
+The directory will look like this. Each of the csv files contains AAA records.
 
 ```
 Precision-3260:$ ls -l /ipdrdata/cdrlogs
@@ -120,7 +120,7 @@ total 20
 
 Since they are not in default format you need a LUA parser. You can download the LUA parser [radiusparse_alepo.lua from GitHub](https://github.com/trisulnsm/trisul-scripts/blob/master/lua/hub_scripts/radius-aaa/radiusparse_alepo.lua) and save it to a directory say `/root`
 
-To ingest these files into the Trisul IPDR AAA database you can use the following command
+Now you can run with the `--lua-parser` option 
 
 
 ```bash
