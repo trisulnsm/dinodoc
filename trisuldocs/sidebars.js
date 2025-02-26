@@ -77,6 +77,15 @@ const sidebars = {
     				"ipdr/syslog"
     				]
     		},
+    		{
+    			type: "category",
+    			label: "Programs and Scripts",
+    			link: { type: 'doc', id:'ipdr/scripts'},
+    			items: [
+    				"ipdr/trisul_aaaing",
+    				"ipdr/ipdr_bulkquery",
+    				]
+    		},
 
     		"ipdr/ipdrui",
     		"ipdr/submit-queries",
@@ -84,9 +93,6 @@ const sidebars = {
     		"ipdr/ipdrstatistics",
     		"ipdr/ipdrexportfields",
     		"ipdr/staticip-mappings",
-    		"ipdr/scripts",
-    		"ipdr/trisul_aaaing",
-    		"ipdr/ipdr_bulkquery",
     		"ipdr/api",
     		"ipdr/latlong",
     		"ipdr/tape",
