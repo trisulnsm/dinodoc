@@ -60,15 +60,16 @@ There are other options you may want to add
 
 ## Options
 
-| Option             | Default value   | Description                           | 
+| Option             | Default value   | Description                          | 
+|---------------------|---------------|---------------------------------------|
 | -c --config-file=FILENAME | /usr/local/etc/trisul-hub/domain0/hub0/context0/trisulHubConfig.xml | Specify the Trisul hub configuration file for the desired context. If omitted, the default context will be used, which is the typical configuration for most installations. |
-| -F --in-format=ELITE |                              | The input log file must be in CSV format. Currently, only a limited set of vendor codes are supported. For additional vendor code support or customization, please contact Unleash Networks. |
-| -i --in-file= Filename |                             | Process a single, specified AAA Log file in CSV format. |
-| -d --in-directory=Directoryname |                   | Specify the directory containing the AAA Log CSV files to be processed. The tool will automatically skip files that have already been processed, based on their timestamp. |
-| --store-original |                                | Optionally store the original log lines in the database, which can be useful for reconciliation and auditing purposes. |
-| -s --store-hath-bb |                                 | Store an additional broadband subscriber ID extracted from the AAA log, which will be recorded as an extra column in the database, supplementing the existing user ID field. |
-| -m --move-out |                                      | Store raw logs in the database for reconciliation and investigation, with optional archiving and removal of processed files. |
-| --lua-parser |                                       | Utilize a LUA script to parse AAA CDR CSV files and extract custom attributes. A sample script, radiusparser.lua, is provided in /usr/local/share/trisul-hub/ for reference. |
-| --skip-index |                                       | Skip creating the IP_AAA_INDEX during file creation to significantly speed up IPDR RADIUS CDR processing. Note that the index can be manually added later if needed. |
+| -F --in-format=ELITE |  -                            | The input log file must be in CSV format. Currently, only a limited set of vendor codes are supported. For additional vendor code support or customization, please contact Unleash Networks. |
+| -i --in-file= Filename |    -       | Process a single, specified AAA Log file in CSV format. |
+| -d --in-directory=Directoryname |      -             | Specify the directory containing the AAA Log CSV files to be processed. The tool will automatically skip files that have already been processed, based on their timestamp. |
+| --store-original |               | Optionally store the original log lines in the database, which can be useful for reconciliation and auditing purposes. |
+| -s --store-hath-bb |       | Store an additional broadband subscriber ID extracted from the AAA log, which will be recorded as an extra column in the database, supplementing the existing user ID field. |
+| -m --move-out |           | Store raw logs in the database for reconciliation and investigation, with optional archiving and removal of processed files. |
+| --lua-parser |  /usr/local/share/trisul-hub/                                     | Utilize a LUA script to parse AAA CDR CSV files and extract custom attributes. A sample script, radiusparser.lua, is provided in /usr/local/share/trisul-hub/ for reference. |
+| --skip-index |        | Skip creating the IP_AAA_INDEX during file creation to significantly speed up IPDR RADIUS CDR processing. Note that the index can be manually added later if needed. |
 | --dry-run |                                          | Perform a simulated run that displays the processing order of CDR records without actually moving or modifying them. |
-| --staging-dir=Directoryname |                        | Specify a staging directory on a high-performance NVMe disk to facilitate bulk retroactive uploads of AAA records. This allows for efficient processing and subsequent transfer of records to slower archive disks. |
+| --staging-dir=Directoryname |      | Specify a staging directory on a high-performance NVMe disk to facilitate bulk retroactive uploads of AAA records. This allows for efficient processing and subsequent transfer of records to slower archive disks. |

@@ -85,6 +85,7 @@ const sidebars = {
     		"ipdr/ipdrexportfields",
     		"ipdr/staticip-mappings",
     		"ipdr/scripts",
+    		"ipdr/trisul_aaaing",
     		"ipdr/api",
     		"ipdr/latlong",
     		"ipdr/tape",
