@@ -1,4 +1,4 @@
-#  	INSTALL MONIT
+#  	Install MONIT
 
 root@it2-test:/usr/local/share/trisul-hub# ./install_monit.sh -h  
 **Usage**: ./install_monit.sh [ -n HUBNODE(default hub0) ] [ -p PROBENODE(default probe0) ] [ -d MONIT_IPDR ] [ -x CONTEXT(default context0) ]   

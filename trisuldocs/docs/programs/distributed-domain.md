@@ -2,7 +2,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 
-# Distributed-Domain
+# Distributed Domain
 ## Prerequisites
 
 **Step 1: Download Trisul**  

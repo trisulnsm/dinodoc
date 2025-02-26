@@ -1,4 +1,4 @@
-# RAT - the Trisul real time system monitor
+# RAT - The Trisul real time system monitor
 
 The *rat* executable is located in `/usr/local/bin/`.
 
@@ -31,3 +31,5 @@ The following screencast shows RAT in action
 <figure>![image](images/rat1.png)<figcaption>rat tool screenshot showing live Trisul performance</figcaption></figure>
 
 ![image](./images/rat2.png)
+
+

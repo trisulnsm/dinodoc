@@ -1,4 +1,6 @@
-# trisul_flowcap : Prune PCAP files by capping flow payloads
+# Trisul Flowcap   
+
+`trisul_flowcap`: Prune PCAP files by capping flow payloads
 
 Using this tool you can reduce size of Trisul PCAPs by capping how many
 bytes of each flow is stored. Almost all of the valuable intelligence is
