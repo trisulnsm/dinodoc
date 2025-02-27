@@ -83,7 +83,9 @@ const sidebars = {
     			link: { type: 'doc', id:'ipdr/scripts'},
     			items: [
     				"ipdr/trisul_aaaing",
+    				"ipdr/ipdruserquery",
     				"ipdr/ipdr_bulkquery",
+
     				]
     		},
 
