@@ -96,29 +96,6 @@ There are other options you may want to add
 
 
 
-
-
-## ipdr_userquery.sh 
-
-This script allows you to query the flow records by RADIUS AAA userid.  
-
-:::note Userid 
-
-The AAA userid can be stored by two means 
- - Real Time - example via SYSLOG records
- - Logs - from RADIUS LOG dumps processedby `trisul_aaaing`   
-
-For RealTime user id use the User ID field in the [Submit Query form](submit-queries)
-
-:::
-
-Example to query user `MarkJenny123` for a timeframe 
-
-```bash
-/usr/local/share/trisul-hub/ipdr_userquery.sh -f 25-12-2023 -t 26-12-2023 -u MarkJenny123 
-```
-
-
 ## ipdr_bulkquery.sh
 
 This script is included with the Trisul Hub IPDR package. The purpose of this script is to allow our IPDR Customers to enter hundreds of IPs at once. Without this it can be tedious to enter each IP separately into the IPDR Web Form.

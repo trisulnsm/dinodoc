@@ -2,7 +2,18 @@
 
 ## Overview
 
-The `ipdr_userquery.sh` script is used to retrieve user-specific data from the Trisul Hub. This script provides a convenient way to query user data based on various parameters.
+The `ipdr_userquery.sh` script is used to retrieve user-specific data from the Trisul Hub. This script provides a convenient way to query user data based on various parameters. This script allows you to query the flow records by RADIUS AAA userid.  
+
+:::note Userid 
+
+The AAA userid can be stored by two means 
+ - Real Time - example via SYSLOG records
+ - Logs - from RADIUS LOG dumps processedby `trisul_aaaing`   
+
+For RealTime user id use the User ID field in the [Submit Query form](submit-queries)
+
+:::
+
 
 ## Usage
 
