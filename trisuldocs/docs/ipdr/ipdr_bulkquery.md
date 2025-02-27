@@ -2,6 +2,7 @@
 
 
 The `ipdr_bulkquery.sh` script is designed to query multiple IP addresses in bulk, retrieving flow details for each IP. This script is particularly useful when dealing with a large number of IP addresses.
+
 This script is included with the Trisul Hub IPDR package. The purpose of this script is to allow our IPDR Customers to enter hundreds of IPs at once. Without this it can be tedious to enter each IP separately into the IPDR Web Form.
 
 
@@ -29,27 +30,6 @@ Say you placed the file `iplist1.txt` in the `/root` directory. You can run it l
 /usr/local/share/trisul-hub/ipdr_bulkquery.sh  \
        -f 1-8-2024-13:00 -t 1-8-2024-13:30 \
               -i /root/iplist1.txt
-```
-
-
-### Output
-
-The output will be placed by default into a subdirectory in `/tmp` (use the `-o` option to specify a different directory)
-
-The subdirectory will have the format `ipdrresults-1722851578` where the number part is a timestamp.
-
-Inside the subdirectory there will be files containing the IPDR query results. You can copy these files over.
-
-```bash
-root@ipdradmin:/usr/local/share/trisul-hub# ls -l /tmp/ipdrresults-1722851578
-total 40880
--rw-r--r-- 1 root root      230 Aug  5 15:22 queryresults.103.84.86.10
--rw-r--r-- 1 root root        0 Aug  5 15:22 queryresults.103.84.86.10.csv
--rw-r--r-- 1 root root      230 Aug  5 15:23 queryresults.7.7.7.7
--rw-r--r-- 1 root root        0 Aug  5 15:23 queryresults.7.7.7.7.csv
--rw-r--r-- 1 root root 26485607 Aug  5 15:23 queryresults.8.8.4.4
--rw-r--r-- 1 root root 15360273 Aug  5 15:23 queryresults.8.8.4.4.csv
-root@ipdradmin:/usr/local/share/trisul-hub#
 ```
 
 ## Usage
@@ -82,7 +62,24 @@ Note that you can also specify the time range by appending the time in the forma
 `./ipdr_bulkquery.sh -i ip_list.txt -f 25-12-2024-14:30 -t 26-12-2024-15:30`
 
 ### Output
-The script will create a directory in `/tmp` (e.g., `/tmp/ipdrresults-1740052909`) containing the query results for each IP address. For each IP, two files will be generated:  
+The output will be placed by default into a subdirectory in `/tmp` (use the `-o` option to specify a different directory)
+
+The subdirectory will have the format `ipdrresults-1722851578` where the number part is a timestamp.
+
+Inside the subdirectory there will be files containing the IPDR query results. You can copy these files over.
+
+```bash
+root@ipdradmin:/usr/local/share/trisul-hub# ls -l /tmp/ipdrresults-1722851578
+total 40880
+-rw-r--r-- 1 root root      230 Aug  5 15:22 queryresults.103.84.86.10
+-rw-r--r-- 1 root root        0 Aug  5 15:22 queryresults.103.84.86.10.csv
+-rw-r--r-- 1 root root      230 Aug  5 15:23 queryresults.7.7.7.7
+-rw-r--r-- 1 root root        0 Aug  5 15:23 queryresults.7.7.7.7.csv
+-rw-r--r-- 1 root root 26485607 Aug  5 15:23 queryresults.8.8.4.4
+-rw-r--r-- 1 root root 15360273 Aug  5 15:23 queryresults.8.8.4.4.csv
+root@ipdradmin:/usr/local/share/trisul-hub#
+```
+For each IP, two files will be generated:  
 `queryresults.<IP>.txt`  
 `queryresults.<IP>.csv`  
 These files contain the flow details for the corresponding IP address.
