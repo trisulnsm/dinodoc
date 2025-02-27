@@ -81,13 +81,13 @@ To execute the script, pass the IP address list file along with the desired date
 Note that you can also specify the time range by appending the time in the format HH:MM. For example:
 `./ipdr_bulkquery.sh -i ip_list.txt -f 25-12-2024-14:30 -t 26-12-2024-15:30`
 
-## Output
+### Output
 The script will create a directory in `/tmp` (e.g., `/tmp/ipdrresults-1740052909`) containing the query results for each IP address. For each IP, two files will be generated:  
 `queryresults.<IP>.txt`  
 `queryresults.<IP>.csv`  
 These files contain the flow details for the corresponding IP address.
 
-## Example Output
+### Example Output
 When you run the script, you will see output similar to the following:
 ```
 root@old-jammy:/usr/local/share/trisul-hub# ./ipdr_bulkquery.sh -f 25-12-2024 -t 26-12-2024 -i list_of_ip.txt
