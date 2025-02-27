@@ -69,7 +69,11 @@ By selecting the "Edit" option you can change some values of the context
 
 For MSP Users an optional logo can be associated with a Tenant (context), this logo will be shown as follows.
 
+:::info navigation
+:point_right: Login as `admin` Go to Context:default &rarr; Admin Tasks &rarr; [Start/Stop Tasks](/docs/ag/admintasks/startstop)
+:::
 
+Click on the action button against the hub and click *Change Customer Logo*
 
 Click choose file and upload the logo image to set it as Tenant logo. 
 
