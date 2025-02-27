@@ -6,11 +6,7 @@ The `ipdr_userquery.sh` script is used to retrieve user-specific data from the T
 
 :::note Userid 
 
-The AAA userid can be stored by two means 
- - Real Time - example via SYSLOG records
- - Logs - from RADIUS LOG dumps processedby `trisul_aaaing`   
-
-For RealTime user id use the User ID field in the [Submit Query form](submit-queries)
+The AAA userid can be stored in Logs from RADIUS LOG dumps processedby `trisul_aaaing`   
 
 :::
 
@@ -19,7 +15,7 @@ For RealTime user id use the User ID field in the [Submit Query form](submit-que
 
 `./ipdr_userquery.sh [ -d domain(default domain0) ] [ -n node(default hub0) ] [ -c CONTEXT(default context0) ]  [ -f From Date YYYY-MM-DD  ] [ -t To DATE Date DATE YYYY-MM-DD] [-u userid]`
 
-This script retrieves user details from a specified domain, hub, and context, within a defined date range, for a particular user.
+This script retrieves user IP from a specified domain, hub, and context, within a defined date range, for a particular user and queries that IP.
 
 ```Bash
 
@@ -69,15 +65,6 @@ The script will display a table with the following columns:
 
 |IP |                 LeaseStart |              LeaseEnd |                UserID |        SubscriberID |
 |---|----------------------------|-----------------------|-----------------------|---------------------|        
-|103.194.240.2/172.16.174.21812-02-2025-10:06 |  13-02-2025-01:39 |  |      ACS008172 | raghupathy |         
-|103.194.240.2/172.16.183.21912-02-2025-01:02 |  12-02-2025-01:13 |  |      ACS008172 | raghupathy |          
-|103.194.240.2/172.16.187.20613-02-2025-14:14 |  14-02-2025-00:24 |  |      ACS008172  | raghupathy |         
-|103.194.240.2/172.16.174.21813-02-2025-01:07 |  13-02-2025-01:39 |  |      ACS008172  | raghupathy |         
-|103.194.240.2/172.16.182.16414-02-2025-09:46 |  14-02-2025-17:43 |  |      ACS008172  | raghupathy |         
-|103.194.240.2/172.16.186.20714-02-2025-17:49 |  15-02-2025-00:26 |  |      ACS008172  | raghupathy |         
-|103.194.240.2/172.16.187.20613-02-2025-14:14 |  14-02-2025-01:38 |  |      ACS008172  | raghupathy |         
-|103.194.240.2/172.16.161.9315-02-2025-08:10  |  15-02-2025-19:21 |  |      ACS008172  | raghupathy |         
-|103.194.240.2/172.16.173.24515-02-2025-19:26 |  16-02-2025-00:28 |  |      ACS008172  | raghupathy |         
-|103.194.240.2/172.16.182.16414-02-2025-09:46 |  14-02-2025-17:43 |  |      ACS008172  | raghupathy |         
-|103.194.240.2/172.16.186.20714-02-2025-17:40 |  15-02-2025-01:39 |  |      ACS008172  | raghupathy |         
-|103.194.240.2/172.16.187.20614-02-2025-01:07 |  14-02-2025-01:38 |  |      ACS008172  | raghupathy |         
+|192.168.10.2/172.16.174.21812-02-2025-10:06 |  13-02-2025-01:39 |  |      1568172 | raghupathy |         
+|192.168.11.2/172.16.183.21912-02-2025-01:02 |  12-02-2025-01:13 |  |      1568172 | raghupathy |          
+|192.168.34.2/172.16.187.20613-02-2025-14:14 |  14-02-2025-00:24 |  |      1568172  | raghupathy |         
