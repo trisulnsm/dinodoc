@@ -5,14 +5,14 @@ This page describes the executables and scripts that allow you to use IPDR more 
 
 | Programs |  |
 | ------| ---|
-| trisul-ipdr | The `trisul-ipdr` service is responsible for executing requests |
-| tool_qstreamflow | The program that actually queries and builds the IPDR response |
-| trisul_aaaing | The RADIUS AAA log ingestor. Usually run in cron |
+| [trisul-ipdr](/docs/ipdr/scripts#trisul-ipdr-service) | The `trisul-ipdr` service is responsible for executing requests |
+| [tool_qstreamflow](/docs/ipdr/scripts#tool_qstreamflow) | The program that actually queries and builds the IPDR response |
+| [trisul_aaaing](/docs/ipdr/trisul_aaaing) | The RADIUS AAA log ingestor. Usually run in cron |
 
 | Scripts |  |
 | ------| ---|
-| ipdr-userquery.sh | Query by RADIUS userid |
-| ipdr-bulkquery.sh| Query all the IPs in a file for the same timeframe |
+| [ipdr-userquery.sh](/docs/ipdr/ipdruserquery) | Query by RADIUS userid |
+| [ipdr-bulkquery.sh](/docs/ipdr/ipdr_bulkquery)| Query all the IPs in a file for the same timeframe |
 
 
 ## trisul-ipdr service
