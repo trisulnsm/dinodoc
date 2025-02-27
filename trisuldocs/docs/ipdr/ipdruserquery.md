@@ -8,6 +8,8 @@ The `ipdr_userquery.sh` script is used to retrieve user-specific data from the T
 
 `./ipdr_userquery.sh [ -d domain(default domain0) ] [ -n node(default hub0) ] [ -c CONTEXT(default context0) ]  [ -f From Date YYYY-MM-DD  ] [ -t To DATE Date DATE YYYY-MM-DD] [-u userid]`
 
+This script retrieves user details from a specified domain, hub, and context, within a defined date range, for a particular user.
+
 ```Bash
 
 ./ipdr_userquery.sh [options]
