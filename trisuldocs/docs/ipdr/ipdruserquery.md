@@ -1,3 +1,7 @@
+
+when you need to search for a particular user you can use this script  it will list all below details 
+
+
 root@netflow-logs:/usr/local/share/trisul-hub# ./ipdr_userquery.sh -h
 ./ipdr_userquery.sh: illegal option -- h
 Usage: ./ipdr_userquery.sh [ -d domain(default domain0) ] [ -n node(default hub0) ] [ -c CONTEXT(default context0) ]  [ -f From Date YYYY-MM-DD  ] [ -t To DATE Date DATE YYYY-MM-DD] [-u userid]
@@ -9,7 +13,6 @@ root@netflow-logs:/usr/local/share/trisul-hub#
 root@netflow-logs:/usr/local/share/trisul-hub# ./ipdr_userquery.sh -f 2025-02-13 -t 2025-02-15 -u raghupathy
 ------------------------------------------------------------------------------------------------------------------
 
-when you need to search for a particular user you can use this script  it will list all below details 
 
 IP                  LeaseStart               LeaseEnd                 UserID                        SubscriberID        
 ------------------------------------------------------------------------------------------------------------------
