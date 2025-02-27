@@ -16,13 +16,15 @@ This script retrieves user details from a specified domain, hub, and context, wi
 ```
 
 ## Options
+| Options | Default value | Description |
+|---------|---------------|-------------|
+| `-d` | domain0 | Specify the domain |
+| `-n` | hub0 | Specify the hub node |
+| `-c` | context0 | Specify the context |
+| `-f` |         | Specify the start date (format: YYYY-MM-DD or YYYY-MM-DD-HH:MM)  |
+| `-t` |         | Specify the end date (format: YYYY-MM-DD or YYYY-MM-DD-HH:MM)  |
+| `-u` |         | Specify the user ID  |
 
-`-d` : Specify the domain (default: domain0)  
-`-n` : Specify the node (default: hub0)  
-`-c` : Specify the context (default: context0)  
-`-f` : Specify the start date (format: YYYY-MM-DD or YYYY-MM-DD-HH:MM)  
-`-t` : Specify the end date (format: YYYY-MM-DD or YYYY-MM-DD-HH:MM)  
-`-u` : Specify the user ID  
 
 ### Examples
 
