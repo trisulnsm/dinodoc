@@ -113,7 +113,7 @@ Here is the table with description for available fields to create Volume type re
 | Page type     | Volume                                           |
 | Counter group | Select the desired counter group                 |
 | Meter         | A parameter or data point within a counter group |
-| Key           | Enter the valid key-format                       |
+| Key           | Enter the valid key-format. Enter * to retrieve 500 items |
 | Label         | Description of the key item                      |
 
 If you want to add more keys you can click on the ‘+’ symbol at the bottom of the dialog box.
