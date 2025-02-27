@@ -6,7 +6,7 @@ The `ipdr_userquery.sh` script is used to retrieve user-specific data from the T
 
 :::note Userid 
 
-The AAA userid can be stored in Logs from RADIUS LOG dumps processedby `trisul_aaaing`   
+The AAA userid can be stored in Logs from RADIUS LOG dumps processed by `trisul_aaaing`   
 
 :::
 
@@ -67,4 +67,4 @@ The script will display a table with the following columns:
 |---|----------------------------|-----------------------|-----------------------|---------------------|        
 |192.168.10.2/172.16.174.21812-02-2025-10:06 |  13-02-2025-01:39 |  |      1568172 | raghupathy |         
 |192.168.11.2/172.16.183.21912-02-2025-01:02 |  12-02-2025-01:13 |  |      1568172 | raghupathy |          
-|192.168.34.2/172.16.187.20613-02-2025-14:14 |  14-02-2025-00:24 |  |      1568172  | raghupathy |         
+|192.168.34.2/172.16.187.20613-02-2025-14:14 |  14-02-2025-00:24 |  |      1568172 | raghupathy |         
