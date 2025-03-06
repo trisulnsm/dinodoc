@@ -125,8 +125,7 @@ Trisul *Netflow* reports provide detailed analysis for traffic bandwidth and use
 
 *Figure: Netflow Reports*
 
-You can fill in the following fields in *Commonly Used* report by selecting a [time frame](/docs/ug/ui/elements#time-selector) and providing the fields required. To select router interfaces from the left side of the *Interfaces utilization* window, use the single arrow for single selection and double arrow to select all.
-
+You can fill in the following fields in *Commonly Used* report by selecting a [time frame](/docs/ug/ui/elements#time-selector) and providing the fields required. T
 
 | Report name               | Description                                                                 |
 | ------------------------- | --------------------------------------------------------------------------- |
@@ -134,6 +133,43 @@ You can fill in the following fields in *Commonly Used* report by selecting a [t
 | Explore Router Interface  | Flow based report for a particular Interface                                |
 | Interface Usage Drilldown | Generates Report for traffic bandwidth and users for a particular Interface |
 | Routers and Interfaces    | Router and Interface activity                                               |
+
+#### Interface Utilization Reports
+
+The Interfaces Utilization report provides a comprehensive overview of the utilization of selected interfaces from routers.
+
+:::info navigation
+:point_right: Login as user and Go to Reports &rarr; Readymade &rarr; NetFlow &rarr; Interfaces Utilization
+:::
+
+- To select router interfaces from the left side of the *Interfaces utilization* window, use the single arrow for single selection and double arrow to select all. The selected interfaces appear on the right side. 
+- Click *Select Time* and select a time range to generate report for that particular time.
+- Click [*Schedule Report*](/docs/ug/reports/schedreports#schedule-a-new-report) to schedule this report.
+
+![](images/interfaces_utilization.png)  
+*Figure: Interface Utilization Report*
+
+##### **Interface Components and Details**
+
+The Interfaces Utilization report provides a comprehensive overview of network interface performance, including:
+
+| Detail | Description |
+|--------|-------------|
+| Router Name | The name of the router associated with the interface |
+| IfIndex | A unique identifier for the interface |
+| Name | The name of the interface |
+| Alias | An optional alias or description for the interface |
+| IfSpeed | The interface speed in Gbps |
+
+
+##### 1) **Traffic Chart**
+
+The Traffic Chart displays a graphical representation of the received and transmitted bandwidth for the selected interfaces, compared to the 95th percentile.  
+
+**Received Bandwidth**: The amount of data received by the interface over a specified time period.  
+**Transmitted Bandwidth**: The amount of data transmitted by the interface over a specified time period.  
+**95th Percentile**: A benchmark representing the maximum utilization level exceeded only 5% of the time.  
+
 
 
 ### Direct Reports
