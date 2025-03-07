@@ -11,6 +11,11 @@ The way the alerting pipeline works is the following.
 - Alerts are first sent to syslog
 - The email alert service watches syslog for alerts and dispatches them
 
+### Step 1 : Configure appropriate alerts
+### Step 2 : [Send to Syslog with Priority](/docs/ug/alerts/manage#forward-alerts-to-syslog)
+### Step 3 : [Configure Email Server](/docs/ag/webadmin/emailsettings#email-server-configuration)
+### Step 4 : [Start Email Notification Server](/docs/ag/webadmin/startorstop_tasks#email-notification-service)
+
 ## Using the Email Alerts Wizard
 
 Trisul has a new Email Alert Wizard that lets you configure everything from one place.

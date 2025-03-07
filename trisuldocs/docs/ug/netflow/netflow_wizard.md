@@ -146,12 +146,24 @@ Drilldown](/docs/ug/netflow/drilldown#information-shown) pages.
 | Track Mixed Bandwidth Per Interface | For each interface track mixed bandwidth(peerig vs internet)     |
 | Track Mixed Bandwidth for Subnets   | For each interface track mixed bandwidth(peerig vs internet)     |
 
-## Utilization Alert
+## Interface Utilization Alert
 
-Generate alerts when any interface utilization crosses these thresholds
+This alert system monitors interface utilization and triggers notifications when predefined thresholds are crossed.
+
+### Configuration of Thresholds
+
+The following thresholds are used to determine the alert level:
+
+![](images/interfaceutilization_alert.png)  
+*Figure: Showing Setting of Interface Utilization Alerts* 
 
 | Configurations requried | Description                                                |
 | ----------------------- | ---------------------------------------------------------- |
 | High                    | If interfaces crossed 90% it will give high level alerts   |
 | Medium                  | If interfaces crossed 80% it will give medium level alerts |
 | Low                     | If interfaces crossed 70% it will give low level alerts    |
+
+### Alert Triggering
+When an interface's utilization crosses the defined threshold, an alert will be triggered and sent to the designated recipients.
+
+For example: Suppose an interface's utilization is steadily increasing due to growing network traffic. When the utilization crosses the 80% threshold, a medium-level alert is triggered, notifying the network administrator to investigate and take corrective action. If the utilization continues to rise and crosses the 90% threshold, a high-level alert is triggered, indicating a critical situation that requires immediate attention.
