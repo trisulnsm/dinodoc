@@ -10,22 +10,21 @@ Trisul Network Analytics runs on off the shelf servers - either bare metal or VM
 
 ## Operating Systems
 
-Packages are available for the following operating systems. 
+**Trisul's four products are available on the following operating systems:**
 
 
 | OS               | Recommended | Notes |
 | ---------------- | ---|---|
 | Ubuntu 20.04/22.04 |  Ubuntu 22.04| |
-| RHEL 9/8/7       | RHEL 9.x| Can also use OracleLinux, AmazonLinux, RHEL, CentOS versions 9/8/7|
-
+| RHEL 9/8       | RHEL 9.x| Can also use OracleLinux, AmazonLinux, RHEL, CentOS versions 9/8/7|
 
 
 ## Modes 
 
-The two major modes of running Trisul are:
+Trisul products can run in two major modes, each with distinct resource requirements:
 
-- **_NetFlow Analyzer Mode_** - needs lower CPU, Memory and resources.
-- **_Packet Capture Mode_** - needs more CPU, Memory resources 
+- **_NetFlow Analyzer Mode_** (Trisul NetFlow Analyzer, Trisul ISP, Trisul IPDR)- needs lower CPU, Memory and resources. And, in the case of Trisul IPDR, additional storage.
+- **_Packet Capture Mode_** (Trisul NSM) - needs more CPU, Memory resources 
 
 See below for typical requirements. 
 
@@ -51,6 +50,7 @@ If you are just trying out Trisul, it is recommended to start with a small versi
 		| Disk | 1TB SAS, this can store upto 6 months data, proportionately add more based on retention|
 
 		*Table: Minimum System Requirements for Small Enterprise* 
+
 
 </TabItem>
 
@@ -111,6 +111,8 @@ Large enterprises with > 20,000 endpoints.
 
 </TabItem>
 </Tabs>
+
+>**NOTE: For Trisul ISP, only the system requirement of Large enterprises is applicable.**		
 
 
 
