@@ -3,6 +3,7 @@
 
 The Admin Guide contains information about :
 
+- System Requirements
 - Installation
 - Licensing
 - Basic Admin Tasks 
