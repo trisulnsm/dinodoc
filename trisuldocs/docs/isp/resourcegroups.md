@@ -7,10 +7,12 @@ Resource Groups are used to assign devices and other objects to users. To create
 
 You have now landed on the admin window.
 
-![](images/mrtg_resourcegrouphome.png)
-:::note navigation
-Go to Context:MRTG>Admin Tasks>User resources
+:::info navigation
+Go to Context:MRTG &rarr; Admin Tasks &rarr; User resources
 :::
+
+![](images/mrtg_resourcegrouphome.png)
+
 
 On the *User Resource Group* module Click *New Resource Group*
 
@@ -67,8 +69,8 @@ The Resource group keys window appears with the following fields.
 
 ![](images/mrtg_addnewresourcegroup.png)
 
-| Fields                              | Description                                                                                                               |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Fields                              | Description                    |
+| ----------------------------------- | ------------------------------ |
 | Description of these group of items | Enter a short description on what this collection represents                                                              |
 | Counter Group                       | Select SNMP-Interface from the list of counter groups                                                                     |
 | Keys                                | Click on the Plus icon to add the keys and click Select after adding the desirable keys to that particular resource group |
