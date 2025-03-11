@@ -229,15 +229,14 @@ const sidebars = {
 						"isp/requirements",
 						"isp/bgp",
 						"isp/isapps",
-						"isp/isp_analytics_dashboard"
-						"isp/resourcegroups"
+						"isp/isp_analytics_dashboard",
+						"isp/resourcegroups",
 						"isp/pingmonitor",
 						"isp/rtg",
 						"isp/ott_analytics",
 						"isp/api",
-				],		
-      ],						
-  },
+				],							
+     },
   ],
 
   // Admin Guide
