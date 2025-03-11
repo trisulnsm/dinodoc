@@ -246,6 +246,7 @@ const sidebars = {
 			label: 'Trisul Admininstrator Guide',
 			link: { type: 'doc', id:'ag/index'},
 			items: [
+			'ag/install/requirements',
 
 
 				/* Installation */
@@ -254,7 +255,7 @@ const sidebars = {
 					label: "Installation",
 					link: {type: 'doc',  id:'ag/install/index'},
 					items: [
-							'ag/install/requirements',
+							
 							{
 								type: "category",  
 								label: "Packages", 					
