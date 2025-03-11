@@ -29,7 +29,7 @@ Trisul products can run in two major modes, each with distinct resource requirem
 See below for typical requirements. 
 
 
-## NetFlow Analyzer Requirements
+## NetFlow Analyzer Mode Requirements
 
 NetFlow sizing is based on number of devices and interfaces.  Click a tab that is matches your network.
 
@@ -112,11 +112,11 @@ Large enterprises with > 20,000 endpoints.
 </TabItem>
 </Tabs>
 
->**NOTE: For Trisul ISP, only the system requirements of Large enterprises is applicable.**		
+>**NOTE: For Trisul ISP that runs on NetFlow Analyzer Mode, the system requirements slighly vary. See: [Trisul ISP System Requirements](/docs/isp/requirements)**		
 
 
 
-## Packet Capture Requirements
+## Packet Capture Mode Requirements
 
 Packet capture sizing is based on total packet bandwidth.  This is not the link speed but rather the actual utilization of the link. Click a tab that is matches your network.
 

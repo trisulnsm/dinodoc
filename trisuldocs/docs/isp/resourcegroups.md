@@ -1,4 +1,5 @@
-## How to create Resource groups?
+
+# How to create Resource groups?
 
 Resource Groups are used to assign devices and other objects to users. To create a resource group,
 
