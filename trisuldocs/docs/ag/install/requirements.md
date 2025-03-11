@@ -10,7 +10,7 @@ Trisul Network Analytics runs on off the shelf servers - either bare metal or VM
 
 ## Operating Systems
 
-**Trisul's four products are available on the following operating systems:**
+Trisul's products say Trisul NetFlow Analyzer, Trisul NSM, Trisul IPDR, Trisul NSM are available on the following operating systems:
 
 
 | OS               | Recommended | Notes |
@@ -112,7 +112,7 @@ Large enterprises with > 20,000 endpoints.
 </TabItem>
 </Tabs>
 
->**NOTE: For Trisul ISP, only the system requirement of Large enterprises is applicable.**		
+>**NOTE: For Trisul ISP, only the system requirements of Large enterprises is applicable.**		
 
 
 
@@ -237,5 +237,5 @@ The relevant scaling metric is NetFlow bandwidth, this represents the total band
 
 | Mode               | Scaling Metric                   | Additional Resource Needed   |
 | ------------------ | -------------------------------- | ---------------------------- |
-| Netflow | for every 10Mbps NETFLOW traffic | + 1 CPU Core + 2GB RAM     |
+| NetFlow | for every 10Mbps NETFLOW traffic | + 1 CPU Core + 2GB RAM     |
 
