@@ -1,5 +1,7 @@
 # Changelog
 
+This changelog outlines the key updates, improvements, and fixes made to Trisul across various releases. Browse through the release notes below to learn about the latest features, enhancements, and bug fixes.
+
 ## WEBTRISUL 7.0.2540 (October 18,2024)
 
 0105730: Download resource logs as text files.  
