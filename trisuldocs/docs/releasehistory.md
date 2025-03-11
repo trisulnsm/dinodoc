@@ -151,7 +151,7 @@ FLOWS: Link to Aggregates from Interface list
 NETFLOW: Huawei SNMP to Netflow interface name mapping
 NETFLOW: Router and interfaces pagination added to support thousands of interfaces
 SNMP: For verification purposes admin user can see the SNMPWALK output file
-BUG: PDF report was not working if interface name includes angle brackets like <pppoe-abcde-1234>
+BUG: PDF report was not working if interface name includes angle brackets like /<pppoe-abcde-1234/>
 BUG: Explore flows flow count is wrong when aggregated per ip, port, interface, tagger etc
 BUG: SNMP snmpv3 authNoPriv was not working, fixed it.
 KEYSET: Key must be unique only within a counter group, currently uniqueness enforced to all counter groups
