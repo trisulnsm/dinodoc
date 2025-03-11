@@ -421,7 +421,7 @@ const sidebars = {
 					]
 				} ,/* end HA*/
 
-				/* Concepts*/
+				/* Domain*/
 				{
 					type: "category",
 					label: "Concepts",

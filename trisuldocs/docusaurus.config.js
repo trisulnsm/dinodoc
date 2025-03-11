@@ -79,6 +79,7 @@ const config = {
           {to: '/docs/ref', label: 'Reference', position: 'left'},
           {to: '/docs/ipdr', label: 'IPDR', position: 'left'},
           {to: '/docs/isp', label: 'ISP', position: 'left'},
+          {to: '/docs/releasehistory', label: 'Changelog', position: 'left'},
           {
             href: 'https://github.com/trisulnsm/dinodoc',
             label: 'GitHub',
