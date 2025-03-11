@@ -33,7 +33,7 @@ You can begin your search in the *Long term traffic* form by populating the sear
 | Surface Type                                        | Select the type of chart to display. Tip : Choose `LINETABLE` if you want to see a box with `MAX/MIN/AVG` below chart                                                            |
 | [Time Frame](/docs/ug/ui/elements#time-selector)    | Define the time range for the chart                         |
 | Business Hour                                       | You can specify the business hours for accurate statistics  |
-| Expression                                          | Combines two or more metrics unsing arithmetic expressions. Click on the question mark icon near the field name for a quick hint                                                |
+| Expression                                          | Combines two or more metrics using arithmetic expressions. Click on the question mark icon near the field name for a quick hint                                                |
 
 Once filling all the fields, click *Analyze*.
 
