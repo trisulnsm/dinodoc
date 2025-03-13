@@ -200,13 +200,11 @@ IPDR sizing is based on the network's throughput capacity. To determine the appr
 
 		| Hardware  | System Requirements                                                                                                            
 		| ------- | ------------ |
-		| Type | VM preferred |
-		| CPU | 8 vCPU cores | 
-		| Memory |  16GB RAM |
-		| Network | 1GbE interface that can be used for both NetFlow and Management access |
-		| Disk | 1TB SAS, this can store upto 6 months data, proportionately add more based on retention|
-
-		*Table: Minimum System Requirements for Small Enterprise* 
+		| Type |  |
+		| CPU |  | 
+		| Memory |   |
+		| Network | |
+		| Disk | | 
 
 
 </TabItem>
@@ -216,14 +214,11 @@ IPDR sizing is based on the network's throughput capacity. To determine the appr
 
 		| Hardware  | System Requirements                                                                                                            
 		| ------- | ------------ |
-		| Type | VM preferred |
-		| CPU | 16 vCPU cores | 
-		| Memory |  16GB RAM |
-		| Network | 1GbE interface that can be used for both NetFlow and Management access |
-		| Disk | 4TB SAS/SATA, this can store upto 6 months data,  proportionately add more based on retention|
-		
-		*Table: Minimum System Requirements for 3000 IPs Enterprise* 
-
+		| Type |  |
+		| CPU |  | 
+		| Memory |   |
+		| Network |  |
+		| Disk | |
 
 </TabItem>
 
@@ -232,14 +227,11 @@ IPDR sizing is based on the network's throughput capacity. To determine the appr
 
 		| Hardware  | System Requirements                                                                                                            
 		| ------- | ------------ |
-		| Type | VM preferred |
-		| CPU | 24 vCPU cores | 
-		| Memory |  32GB RAM |
-		| Network | 1GbE interface that can be used for both NetFlow and Management access |
-		| Disk | 8TB SAS/SATA, this can store upto 6 months data, proportionately add more based on retention|
-
-		*Table: Large Enterprise or multi-hundred site SD-WAN* 
-
+		| Type |  |
+		| CPU | | 
+		| Memory |  |
+		| Network | |
+		| Disk | |
 </TabItem>
 </Tabs>
 
