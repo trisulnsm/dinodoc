@@ -2,66 +2,66 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem'; 
 
+
 # System Requirements
 
-Trisul Network Analytics runs on off the shelf servers - either bare metal or VM, under a Linux operating system. 
-
-
-## Operating Systems
-
-Trisul's products say Trisul NetFlow Analyzer, Trisul NSM, Trisul IPDR, Trisul NSM are available on the following operating systems:
-
-
-| OS               | Recommended | Notes |
-| ---------------- | ---|---|
-| Ubuntu 20.04/22.04 |  Ubuntu 22.04| |
-| RHEL 9/8       | RHEL 9.x| Can also use OracleLinux, AmazonLinux, RHEL, CentOS versions 9/8/7|
-
-
-## IPDR Requirements
-
-IPDR sizing is based on the network's throughput capacity. To determine the appropriate IPDR size for your network, select the tab that corresponds to your network's throughput rate.
+IPDR sizing is based on the ISP's peak throughput rate which is the sum of uplinks and peering peak bandwidth usage.  Select the appropriate size below.
 
 <Tabs>
-  	<TabItem value="small" label="SMALL LICENSE <10Gbps" default>
+  	<TabItem value="small" label="ISP Peak <10Gbps" default>
 
 
-		| Hardware  | System Requirements                                                                                                            
+		| Hardware  | Minimum Requirements |                   
 		| ------- | ------------ |
 		| Type | VM preferred |
 		| CPU | 8 vCPU cores | 
 		| Memory |  16GB RAM |
 		| Network | 1GbE interface that can be used for both NetFlow and Management access |
-		| Disk | |
+		| Disk | 8TB for 2 Years  |
+
+	</TabItem>
+
+	<TabItem value="medium" label="10-100 Gbps">
 
 
+		| Hardware  | System Requirements |
+		| ------- | ------------ |
+		| Type | Bare metal preferred |
+		| CPU | 16 vCPU codes | 
+		| Memory |  16GB RAM |
+		| Network | 1 GbE for receiving the packets via SPAN port and another for management access |
+		| Disk | 36TB for 2 years near the 100Gbps end, see [Disk Sizing](#disk-sizing-notes)  |
 
-</TabItem>
+	</TabItem>
 
-<TabItem value="medium" label="MEDIUM LICENSE 10-100 Gbps">
+	<TabItem value="large" label="100 to 200 Gbps">
 
-
-| Hardware  | System Requirements                                                                                                            
-| ------- | ------------ |
-| Type | Bare metal preferred |
-| CPU | 16 vCPU codes | 
-| Memory |  16GB RAM |
-| Mechanism | SPAN Port |
-| Network | 1 GbE for receiving the packets via SPAN port and another for management access |
-| Disk | |
-| OS | Oracle 22.04 Jammy or RHEL 9|
-
-</TabItem>
-
-<TabItem value="large" label="LARGE LICENSE >100 Gbps">
-
-
-		| Hardware  | System Requirements                                                                                                            
+		| Hardware  | System Requirements  |
 		| ------- | ------------ |
 		| Type | VM preferred |
 		| CPU | 24 vCPU cores | 
 		| Memory |  32GB RAM |
-		| Network | 1GbE interface that can be used for both NetFlow and Management access |
-		| Disk | |
-</TabItem>
+		| Network | 1GbE interface for NetFlow , and a separate 1GbE for management access |
+		| Disk | 36TB for 2 years near the 200Gbps end, see [Disk Sizing](#disk-sizing-notes)  |
+	</TabItem>
 </Tabs>
+
+### Disk sizing notes
+
+The disk sizing depends on a number of factors 
+
+   - Is the ISP a residential or a commerical ISP ? 
+   - If the ISP using CGNAT ?
+   - The traffic profile 
+   - If the ISP is using Trisul IPDR AAA integration 
+
+So we recommend all ISP start off with 8TB, estimate the peak storage per day using Storage Status tool, then order the appopriate storage. 
+
+## Operating Systems
+
+Trisul IPDR is available on the following Operating Systems 
+
+| OS               | Recommended | Notes |
+| ---------------- | ---|---|
+| Ubuntu 20.04/22.04/24.04 |  Ubuntu 22.04| |
+| RHEL 9/8       | RHEL 9.x| Can also use OracleLinux, RockyLinux, AmazonLinux, RHEL, CentOS versions 9/8|

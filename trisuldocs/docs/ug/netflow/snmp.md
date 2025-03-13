@@ -15,8 +15,9 @@ To enable SNMP you need to install the following packages on the Trisul-Hub node
 # ubuntu
 apt install snmp
 
-# centos/redhat
-yum install net-snmp net-snmp-utils 
+# centos/redhat/oracle  - may need to first install epel-release repo 
+dnf install epel-release 
+dnf install net-snmp-utils
 ```
 
 If you have not installed the SNMP packages you will see the following message.

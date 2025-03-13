@@ -4,6 +4,12 @@
 
 Trisul allows administrators to set up alerts based on network activity, that enables real-time monitoring and notification of potential issues or security threats.
 
+## Alerts Notification Options
+Trisul supports multiple notification channels for alert dispatch:  
+- **SYSLOG**: Alerts can be forwarded to SYSLOG servers for centralized logging and analysis.  
+- [**EMAIL**](/docs/ug/alerts/email_settings): Alerts can be sent to designated email addresses, enabling prompt notification and response.  
+- [**SMS**](/docs/ug/alerts/sms_settings): Alerts can be dispatched via SMS notifications, ensuring timely alerting and escalation.  
+- [**Microsoft Teams**](/docs/ug/alerts/msteams/) Send to MS Teams via Webhook 
 
 ## Alerts Viewing Options
 
@@ -19,14 +25,6 @@ Alerts can be analyzed in detail through the dedicated *Alerts* menu from the [*
 
 ![](image/alertsmenu.png)  
 *Figure: Alerts Menu*
-
-## Alerts Notification Options
-Trisul supports multiple notification channels for alert dispatch:  
-- **SYSLOG**: Alerts can be forwarded to SYSLOG servers for centralized logging and analysis.  
-- [**EMAIL**](/docs/ug/alerts/email_settings): Alerts can be sent to designated email addresses, enabling prompt notification and response.  
-- [**SMS**](/docs/ug/alerts/sms_settings): Alerts can be dispatched via SMS notifications, ensuring timely alerting and escalation.  
-
-> The Email and SMS services work by reading the SYSLOG alerts. Ensure SYSLOG forwarding is enabled for each alert type.
 
 ## Types of Alerts in Trisul
 
