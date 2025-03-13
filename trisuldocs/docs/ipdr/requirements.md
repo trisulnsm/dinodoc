@@ -4,6 +4,18 @@ import TabItem from '@theme/TabItem';
 
 # System Requirements
 
+Trisul Network Analytics runs on off the shelf servers - either bare metal or VM, under a Linux operating system. 
+
+## Operating Systems
+
+Trisul's products say Trisul NetFlow Analyzer, Trisul NSM, Trisul IPDR, Trisul NSM are available on the following operating systems:
+
+
+| OS               | Recommended | Notes |
+| ---------------- | ---|---|
+| Ubuntu 20.04/22.04 |  Ubuntu 22.04| |
+| RHEL 9/8       | RHEL 9.x| Can also use OracleLinux, AmazonLinux, RHEL, CentOS versions 9/8/7|
+
 
 ## IPDR Requirements
 
