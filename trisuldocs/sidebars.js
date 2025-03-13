@@ -55,6 +55,7 @@ const sidebars = {
     			label: "Get started",
     			link: { type: 'doc', id:'ipdr/install'},
     			items: [
+    			    "ipdr/requirements"
     				"ipdr/install",
     				"ipdr/specialuser",
     				{
