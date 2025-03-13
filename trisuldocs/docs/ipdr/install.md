@@ -4,7 +4,7 @@ Getting started with Trisul IPDR
 
 The steps for getting from zero to a working install of Trisul IPDR  are
 
-- Get a VM or a physical server ready for IPDR. See [System Requirements](/docs/ipdr/requirements#ipdr-requirements)
+- Get a VM or a physical server ready for IPDR. See [System Requirements](/docs/ipdr/requirements)
 - Sign up and Download the Trisul Network Analytics packages for your platform. :inbox_tray: [Get Started Page](https://trisul.org/get-started)
 - You need to install the three core packages only for IPDR. 
   -  trisul-hub  
