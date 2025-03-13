@@ -69,4 +69,4 @@ The built in license only works for 7-days.  We strongly recommend you contact u
 
 Now the IPDR Server is ready. Next you need to get the network to send data to it. 
 
-Configure to send NetFlow/IPFIX to the Trisul IPDR server. 
+Configure to send NetFlow/IPFIX to the Trisul IPDR server.
