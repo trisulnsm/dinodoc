@@ -188,9 +188,61 @@ This is a typical configuration for 40Gbps packet capture used in ISP settings. 
 
 </TabItem>
 
-
-
 </Tabs>
+
+## IPDR Requirements
+
+IPDR sizing is based on the network's throughput capacity. To determine the appropriate IPDR size for your network, select the tab that corresponds to your network's throughput rate.
+
+<Tabs>
+  	<TabItem value="small" label="<10Gbps" default>
+
+
+		| Hardware  | System Requirements                                                                                                            
+		| ------- | ------------ |
+		| Type | VM preferred |
+		| CPU | 8 vCPU cores | 
+		| Memory |  16GB RAM |
+		| Network | 1GbE interface that can be used for both NetFlow and Management access |
+		| Disk | 1TB SAS, this can store upto 6 months data, proportionately add more based on retention|
+
+		*Table: Minimum System Requirements for Small Enterprise* 
+
+
+</TabItem>
+
+<TabItem value="medium" label="10-100 Gbps">
+
+
+		| Hardware  | System Requirements                                                                                                            
+		| ------- | ------------ |
+		| Type | VM preferred |
+		| CPU | 16 vCPU cores | 
+		| Memory |  16GB RAM |
+		| Network | 1GbE interface that can be used for both NetFlow and Management access |
+		| Disk | 4TB SAS/SATA, this can store upto 6 months data,  proportionately add more based on retention|
+		
+		*Table: Minimum System Requirements for 3000 IPs Enterprise* 
+
+
+</TabItem>
+
+<TabItem value="large" label=">100 Gbps">
+
+
+		| Hardware  | System Requirements                                                                                                            
+		| ------- | ------------ |
+		| Type | VM preferred |
+		| CPU | 24 vCPU cores | 
+		| Memory |  32GB RAM |
+		| Network | 1GbE interface that can be used for both NetFlow and Management access |
+		| Disk | 8TB SAS/SATA, this can store upto 6 months data, proportionately add more based on retention|
+
+		*Table: Large Enterprise or multi-hundred site SD-WAN* 
+
+</TabItem>
+</Tabs>
+
 
 
 ------------------------------------------------------------------------
