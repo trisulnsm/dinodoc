@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="Wide and deep visibility, detection, and audit of network traffic">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
