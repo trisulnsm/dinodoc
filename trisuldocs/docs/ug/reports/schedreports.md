@@ -168,3 +168,24 @@ Click on **Background tasks log**
 :::
 
 You can see if any errors are observed there.
+
+## Executive Network Report
+
+
+The Executive Network Report provides a comprehensive overview of network activity and performance, including:
+
+|Content| Description |
+|--------|-------------|
+| Bandwidth Utilization| Total bandwidth received and transmitted |
+| Alerts | Notifications from threshold crossing alerts, , Flow tracker indicating analysis of network flows to identify trends and patterns, Badfellas for identification of suspicious or malicious hosts, and IDS indicating potential issues |
+| Bandwidth Utilization Chart| Visual representation of total bandwidth usage|
+| Top Internal Hosts | Most active internal hosts | 
+| Top External Hosts | Most active external hosts|
+| Top Applications | Most used applications |
+| Top Network Layers | Most used network layers |
+| Top HTTP URL Category | Most accessed URL categories |
+| Top Country | Countries with the most network activity |
+
+This report provides a concise and informative snapshot of network performance, security, and usage patterns.
+
+Download Sample Report here : [Executive Network Report](images/execnwreport.pdf)
