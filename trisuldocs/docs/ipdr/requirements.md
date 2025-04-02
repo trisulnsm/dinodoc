@@ -1,14 +1,9 @@
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem'; 
-
-
 # System Requirements
 
 IPDR sizing is based on the ISP's peak throughput rate which is the sum of uplinks and peering peak bandwidth usage.  Select the appropriate size below.
 
-<Tabs>
-  	<TabItem value="small" label="ISP Peak <10Gbps" default>
+### System Requirements for ISP Peak < 10Gbps
 
 
 		| Hardware  | Minimum Requirements |                   
@@ -19,9 +14,7 @@ IPDR sizing is based on the ISP's peak throughput rate which is the sum of uplin
 		| Network | 1GbE interface that can be used for both NetFlow and Management access |
 		| Disk | 8TB for 2 Years  |
 
-	</TabItem>
-
-	<TabItem value="medium" label="10-100 Gbps">
+### System Requirements for 10-100 Gbps
 
 
 		| Hardware  | System Requirements |
@@ -32,9 +25,8 @@ IPDR sizing is based on the ISP's peak throughput rate which is the sum of uplin
 		| Network | 1 GbE for receiving the packets via SPAN port and another for management access |
 		| Disk | 36TB for 2 years near the 100Gbps end, see [Disk Sizing](#disk-sizing-notes)  |
 
-	</TabItem>
+### System Requirements for 100 to 200 Gbps
 
-	<TabItem value="large" label="100 to 200 Gbps">
 
 		| Hardware  | System Requirements  |
 		| ------- | ------------ |
@@ -42,9 +34,8 @@ IPDR sizing is based on the ISP's peak throughput rate which is the sum of uplin
 		| CPU | 24 vCPU cores | 
 		| Memory |  32GB RAM |
 		| Network | 1GbE interface for NetFlow , and a separate 1GbE for management access |
-		| Disk | 36TB for 2 years near the 200Gbps end, see [Disk Sizing](#disk-sizing-notes)  |
-	</TabItem>
-</Tabs>
+		| Disk | 36TB for 2 years near the 200Gbps end, see [Disk Sizing](#disk-sizing-notes) |
+
 
 ### Disk sizing notes
 
