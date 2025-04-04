@@ -78,6 +78,23 @@ Logout and login as user to start viewing reports
 
 :memo: Refer to Trisul User Guide [Introduction](/docs/ug/ui/) for user login. 
 
+## Re-Enabling Product Mode Selector
+
+Incase you have opted to configure product mode manually or have selected NetFlow Analyzer Mode and would like to switch to  IPDR Compliance Mode you'll have to re-enable product selection mode. For that
+
+:::info navigation
+:point_right: Go to Web Admin &rarr; Manage &rarr; App Settings &rarr; UI
+:::
+
+![](images/reenable_productmode.png)  
+*Figure: Showing Re-enabling Product Mode Selector*
+
+- Check the "Show mode selection" checkbox and
+- Click the "Save" button
+
+Once you have completed these steps, you can select the desired mode from the Product Selection Mode.
+
+
 
 
 
