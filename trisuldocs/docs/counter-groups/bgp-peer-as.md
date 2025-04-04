@@ -2,13 +2,13 @@
 
 Peer AS
 
-## Counter groups
+## Counter Groups
 
-| GUID                                     | TYPE   | Bucke Size (secs) | Topper Bucket(Secs): |
-| ---------------------------------------- | ------ | ----------------- | -------------------- |
-| `{A643654F-2BA3-4832-4FF1-43EBDDE6E655}` | Native | 60                | 300                  |
+| GUID                                     | TYPE   | Bucket Size (secs) | Topper Bucket (Secs): |
+| ---------------------------------------- | ------ | ------------------ | --------------------- |
+| `{A643654F-2BA3-4832-4FF1-43EBDDE6E655}` | Native | 60                 | 300                   |
 
-## Meter list
+## Meter List
 
 | ID  | DESCRIPTION      | TOP COUNT | BOTTOM COUNT | TYPE            | UNITS |
 | --- | ---------------- | --------- | ------------ | --------------- | ----- |

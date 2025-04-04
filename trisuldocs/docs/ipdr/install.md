@@ -70,3 +70,7 @@ The built in license only works for 7-days.  We strongly recommend you contact u
 Now the IPDR Server is ready. Next you need to get the network to send data to it. 
 
 Configure to send NetFlow/IPFIX to the Trisul IPDR server.
+
+## Reenabling Product Mode Selector
+
+See : [How to re-enable product mode selector](/docs/ag/install/selectmode#re-enabling-product-mode-selector)
