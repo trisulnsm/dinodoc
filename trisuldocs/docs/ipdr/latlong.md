@@ -52,6 +52,6 @@ To extract the geolocation of a particular IP address, the subnet associated wit
 
 **Sample report**:
 
-![](images/sampl_report.png)
+![](images/sample_report.png)
 
 
