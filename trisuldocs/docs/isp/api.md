@@ -7,7 +7,7 @@ The Tenant Management page provides a comprehensive overview of all tenants, the
 A Trisul Context is a separate instance of Trisul, comprising its own isolated database, configuration settings, and processes. Each context operates independently, allowing for secure and efficient management of multiple tenants.  
 To create a new context, follow the provided link: [Creating a new context](https://docs.trisul.org/docs/ag/domain/contexts/#creating-a-new-context)
 
-A tenant is mapped to a single context, enabling the isolation of tenant data and configurations within the Trisul platform. Each tenant requires a unique context for mapping, and one context can be mapped to only one tenant. 
+A **tenant** is mapped to a single context, enabling the isolation of tenant data and configurations within the Trisul platform. Each tenant requires a unique context for mapping, and one context can be mapped to only one tenant. 
 
 For example, you can create a context named "unplcorp" and map it to the "unpl_corporate" tenant, ensuring that the tenant's data and configurations are isolated within the "unplcorp" context.
 

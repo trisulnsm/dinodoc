@@ -273,3 +273,76 @@ The Routers and Interface Activity Report provides a comprehensive overview of r
 
 Download Sample Report here : [Routers and Interfaces Report](images/routersandinterfacereport.pdf)
 
+## Traffic and Toppers (Internal Hosts)
+
+The Top Toppers and Traffic (Internal Hosts) Report provides a comprehensive overview of network activity and performance, including:
+
+|Content| Description |
+|--------|-------------|
+| Top Toppers and Traffic by Total | Total top toppers and traffic received and transmitted |
+| Newly Seen Top Toppers and Traffic by Total | Newly detected top toppers and traffic patterns |
+| Top Toppers and Traffic by Received | Top toppers and traffic received by the network |
+| Newly Seen Top Toppers and Traffic by Received | Newly seen top toppers and traffic patterns in received data |
+| Top Toppers and Traffic by Transmit | Top toppers and traffic transmitted from the network |
+| Newly Seen Top Toppers and Traffic by Transmit | Newly detected top toppers and traffic patterns in transmitted data|
+| Top Toppers and Traffic by Total Packets | Top toppers and traffic based on total packets |
+| Newly Seen Top Toppers and Traffic by Total Packets | Newly seen top toppers and traffic patterns in packet data |
+| Top Toppers and Traffic by Active Connections | Top toppers and traffic associated with active connections |
+| Newly Seen Top Toppers and Traffic by Active Connections | Newly detected top toppers and traffic patterns in active connections |
+| Top Toppers and Traffic by Attacker Alerts | Top toppers and traffic linked to attacker alerts |
+| Newly Seen Top Toppers and Traffic by Attacker Alerts | Newly seen top toppers and traffic patterns related to attacker alerts |
+| Top Toppers and Traffic by Homenet | Top toppers and traffic within the homenet |
+| Newly Seen Top Toppers and Traffic by Homenet | Newly detected top toppers and traffic patterns in the homenet |
+| Top Toppers and Traffic by External | Top toppers and traffic from external sources |
+| Newly Seen Top Toppers and Traffic by External | Newly seen top toppers and traffic patterns from external sources |
+| Top Toppers and Traffic by TCP SYN Sent | Top toppers and traffic associated with TCP SYN sent |
+| Newly Seen Top Toppers and Traffic by TCP SYN Sent | Newly detected top toppers and traffic patterns in TCP SYN sent |
+| Top Toppers and Traffic by TCP SYN Received | Top toppers and traffic linked to TCP SYN received |
+| Newly Seen Top Toppers and Traffic by TCP SYN Received | Newly seen top toppers and traffic patterns in TCP SYN received |
+| Top Toppers and Traffic by Blacklist Alerts | Top toppers and traffic associated with blacklist alerts|
+| Newly Seen Top Toppers and Traffic by Blacklist Alerts | Newly detected top toppers and traffic patterns in blacklist alerts |
+| Top Toppers and Traffic by Victim Alerts | Top toppers and traffic linked to victim alerts |
+| Newly Seen Top Toppers and Traffic by Victim Alerts | Newly seen top toppers and traffic patterns related to victim alerts |
+| Top Toppers and Traffic by New Connections | Top toppers and traffic associated with new connections |
+| Newly Seen Top Toppers and Traffic by New Connections | Newly detected top toppers and traffic patterns in new connections |
+| Top Toppers and Traffic by Incoming Interface | Top toppers and traffic entering through specific interfaces |
+| Newly Seen Top Toppers and Traffic by Incoming Interface | Newly seen top toppers and traffic patterns in incoming interfaces |
+| Top Toppers and Traffic by Outgoing Interface | Top toppers and traffic exiting through specific interfaces |
+| Newly Seen Top Toppers and Traffic by Outgoing Interface | Newly detected top toppers and traffic patterns in outgoing interfaces |
+| Top Toppers and Traffic by Flow Records | Top toppers and traffic associated with flow records |
+|	Newly Seen Top Toppers and Traffic by Flow Records | Newly seen top toppers and traffic patterns in flow records |
+| Top Toppers and Traffic by Unused Cardinality Counter | Top toppers and traffic linked to unused cardinality counters |
+| Newly Seen Top Toppers and Traffic by Unused Cardinality Counter | Newly detected top toppers and traffic patterns in unused cardinality counters |
+
+Download Sample Report here : [Traffic and Toppers (Internal Hosts)](images/toptoppersandtraffic.pdf)
+
+## Toppers and Traffic (Applications)
+
+The Toppers and Traffic Report provides a comprehensive overview of network activity and performance, including: 
+
+|Content| Description |
+|--------|-------------|
+| Top Toppers and Traffic by Total | Overall statistics on top toppers and traffic |
+| Newly Seen Top Toppers and Traffic by Total | Newly seen top toppers and traffic statistics |
+| Top Toppers and Traffic by Security Alerts | Statistics on top toppers and traffic related to security alerts |
+| Newly Seen Top Toppers and Traffic by Security Alerts | Newly seen top toppers and traffic statistics related to security alerts |
+| Top Toppers and Traffic by Into Homenet | Statistics on top toppers and traffic entering the Homenet |
+| Newly Seen Top Toppers and Traffic by Into Homenet | Newly seen top toppers and traffic statistics entering the Homenet |
+| Top Toppers and Traffic by Outof Homenet | Statistics on top toppers and traffic leaving the Homenet |
+| Newly Seen Top Toppers and Traffic by Outof Homenet | Newly seen top toppers and traffic statistics leaving the Homenet |
+| Top Toppers and Traffic by Connections | Statistics on top toppers and traffic by connection type |
+| Newly Seen Top Toppers and Traffic by Connections | Newly seen top toppers and traffic statistics by connection type |
+| Top Toppers and Traffic by Internal Homenet | Statistics on top toppers and traffic within the Homenet |
+| Newly Seen Top Toppers and Traffic by Internal Homenet | Newly seen top toppers and traffic statistics within the Homenet |
+| Top Toppers and Traffic by Transit Homenet | Statistics on top toppers and traffic transiting the Homenet |
+| Newly Seen Top Toppers and Traffic by Transit Homenet | Newly seen top toppers and traffic statistics transiting the Homenet |
+| Top Toppers and Traffic by Active Conns | Statistics on top toppers and traffic by active connections |
+| Newly Seen Top Toppers and Traffic by Active Conns | Newly seen top toppers and traffic statistics by active connections |
+| Top Toppers and Traffic by Into Interface | Statistics on top toppers and traffic entering through specific interfaces |
+| Newly Seen Top Toppers and Traffic by Into Interface | Newly seen top toppers and traffic statistics entering through specific interfaces |
+| Top Toppers and Traffic by Outof Interface | Statistics on top toppers and traffic leaving through specific interfaces |
+| Newly Seen Top Toppers and Traffic by Outof Interface | Newly seen top toppers and traffic statistics leaving through specific interfaces |
+| Top Toppers and Traffic by Unused Cardinality Counter | Statistics on top toppers and traffic related to unused cardinality counters |
+| Newly Seen Top Toppers and Traffic by Unused Cardinality Counter | Newly seen top toppers and traffic statistics related to unused cardinality counters |
+
+Download Sample Report here : [Traffic and Toppers (Applications)](images/toptoppersandtrafficapps.pdf)
