@@ -189,3 +189,87 @@ The Executive Network Report provides a comprehensive overview of network activi
 This report provides a concise and informative snapshot of network performance, security, and usage patterns.
 
 Download Sample Report here : [Executive Network Report](images/execnwreport.pdf)
+
+## Application Activity Report
+
+The Application Usage Report provides a comprehensive overview of application activity and performance, including,
+
+
+|Content| Description |
+|--------|-------------|
+| Top Hosts by Total Volume | Ranking of hosts with the highest total data transfer volume |
+| Top Applications | Identification of the most frequently used applications |
+| Top Server Hosts | List of server hosts with the highest levels of activity |
+| Top Client Hosts | Ranking of client hosts generating the most network traffic |
+| Top Internal Hosts | Identification of internal hosts with the highest levels of activity |
+| Top External Hosts | List of external hosts communicating with the network |
+| Top Tags | Categorization of network activity by relevant tags or keywords |
+| Top Flows | Analysis of the most prominent network flows, highlighting patterns and trends |
+
+Download Sample Report here : [Application Activity Report](images/applicationreport.pdf)
+
+## Subscriber Activity Report
+
+The Subscriber Activity Report provides a comprehensive overview of network activity and performance, including:
+
+|Content| Description |
+|--------|-------------|
+| Inbound and Outbound Traffic Chart | Visual representation of incoming and outgoing network traffic |
+| TCP Connection Activity | Analysis of TCP connections, highlighting potential issues such as large spikes indicating P2P or infected systems scanning |
+| Blacklisted Connection Trends | Aggregate view of malware, spamming, and botnet activity |
+| Top 50 Users by Total Traffic | Ranking of users by total uploaded and downloaded traffic |
+| Top 50 Users by Connections | Identification of users with the most TCP connections, often indicative of P2P app usage |
+| Top 50 Downloaders | List of users with the highest received traffic |
+| Top 50 Uploaders | List of users with the highest transmitted traffic |
+| Top 50 Potentially Infected | Identification of users hitting malware, virus, phishing, and spamming blacklists |
+| Top 50 Apps for Uploads | Applications responsible for the most upload traffic |
+| Top 50 Apps for Downloads | Applications responsible for the most download traffic |
+
+
+Download Sample Report here : [Application Activity Report](images/subscriberactivityreport.pdf)
+
+## Malware Report
+
+The Malware Report provides a comprehensive overview of malware activity and performance, including:
+
+|Content| Description |
+|--------|-------------|
+| Malware Alerts | Identification of potential malware threats |
+| Blacklist Matches | Categorization of blacklisted traffic, indicating type of malicious activity |
+| Connection Activity with Blacklist Hits | Analysis of connections with known malicious entities |
+| ICMP Activity | Monitoring of ICMP traffic, potentially indicating port scanning, PING flood, and other attacks |
+| Top 50 Blacklisted Internal Hosts | Ranking of internal hosts with the most blacklist hits, based on malware, virus, phishing, and spamming activity |
+| Top 50 Blacklisted External Hosts | Identification of external hosts with the most blacklist hits, based on malware, virus, phishing, and spamming activity |
+| Top Alerts Type | Categorization of most common alert types |
+| Latest Malware Alerts | List of most recent malware alerts |
+
+Download Sample Report here : [Malware Report](images/malwarealertsreport.pdf)
+
+## Interface Activity Report
+
+The Interface Activity Report provides a comprehensive overview of interface activity and performance, including:
+
+|Content| Description |
+|--------|-------------|
+| Top Hosts by Total Volume | 	Ranking of hosts with the highest total data transfer volume |
+| Top Applications | Idetification of most frequently used applications. |
+| Top Server Hosts | List of server hosts with the highest levels of activity |
+| Top Client hosts | Ranking of clients hosts generating the most network traffic | 
+| Top Internal Hosts | 	Identification of internal hosts with the highest level of activity |
+| Top External Hosts | List of external hosts communicating with the network |
+| Top Tags | Categorization of network activity by relevant tags or keywords |
+| Top Flows | Analysis of the most prominent network flows, highlighting patterns and trends |
+ 
+Download Sample Report here : [Interface Activity Report](images/interfacereport.pdf)
+
+## Routers and Interfaces Report
+
+The Routers and Interface Activity Report provides a comprehensive overview of router and interface activity, including:
+
+|Content| Description |
+|--------|-------------|
+| Router Activity Report Chart | Visual representation of top 20 routers by volume, highlighting network traffic patterns |
+| Interface Report Chart | Breakdown of top 2 interfaces for each of the top 20 routers, showing total traffic per interface |
+
+Download Sample Report here : [Routers and Interfaces Report](images/routersandinterfacereport.pdf)
+
