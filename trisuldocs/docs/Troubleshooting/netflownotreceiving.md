@@ -1,4 +1,4 @@
-# Troubleshooting NetFlow Data Ingestion Issues: A Step-by-Step Guide
+# NetFlow Not Receiving Issues
 
 When NetFlow is not being received, a methodical approach is crucial to identify and resolve the issue efficiently. Please wait at least 5 minutes after starting Trisul. If the data is still not showing follow these sequential steps to troubleshoot and ensure seamless NetFlow data ingestion.
 
