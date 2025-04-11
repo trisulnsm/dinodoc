@@ -243,7 +243,7 @@ The Malware Report provides a comprehensive overview of malware activity and per
 | Top Alerts Type | Categorization of most common alert types |
 | Latest Malware Alerts | List of most recent malware alerts |
 
-Download Sample Report here : [Malware Report](images/malwarealertsreport.pdf)
+Download Sample Report here : [Malware Report](images/Malwarealertsreport.pdf)
 
 ## Interface Activity Report
 
@@ -345,4 +345,4 @@ The Toppers and Traffic Report provides a comprehensive overview of network acti
 | Top Toppers and Traffic by Unused Cardinality Counter | Statistics on top toppers and traffic related to unused cardinality counters |
 | Newly Seen Top Toppers and Traffic by Unused Cardinality Counter | Newly seen top toppers and traffic statistics related to unused cardinality counters |
 
-Download Sample Report here : [Traffic and Toppers (Applications)](images/toptoppersandtrafficapps.pdf)
+Download Sample Report here : [Traffic and Toppers (Applications)](images/toppersandtrafficapps.pdf)
