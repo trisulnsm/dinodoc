@@ -22,7 +22,7 @@ IPDR sizing is based on the ISP's peak throughput rate which is the sum of uplin
 		| CPU | 16 vCPU cores | 
 		| Memory |  16GB RAM |
 		| Network | 1 GbE for receiving the packets via SPAN port and another for management access |
-		| Disk | 36TB for 2 years near the 100Gbps end, see [Disk Sizing](#disk-sizing-notes)  |
+		| Disk | 36TB for 2 years near the 100Gbps end, see [Disk Sizing](#disk-sizing-considerations)  |
 
 ### System Requirements for 100 to 200 Gbps
 
@@ -33,7 +33,7 @@ IPDR sizing is based on the ISP's peak throughput rate which is the sum of uplin
 		| CPU | 24 vCPU cores | 
 		| Memory |  32GB RAM |
 		| Network | 1GbE interface for NetFlow , and a separate 1GbE for management access |
-		| Disk | 36TB for 2 years near the 200Gbps end, see [Disk Sizing](#disk-sizing-notes) |
+		| Disk | 36TB for 2 years near the 200Gbps end, see [Disk Sizing](#disk-sizing-considerations) |
 
 
 ### System Requirements for > 200Gbps upto 5Tbps
