@@ -77,6 +77,7 @@ To manage IP addresses for a tenant, you must first create a tenant mapping. Thi
 | api_key | (Required) string | - |
 | username | (Required) string | - |
 | subdomain | (Required) string | - |
+| subdomain_description | (Required) string to provide additional context or details about the subdomain. | -  |
 | probe | (Optional) string | probe0 |
 
 Example:
