@@ -140,7 +140,7 @@ http://192.168.1.77:8013/api/tenants_ip_mapping/add_ips?username=apiuser&api_tok
 
 | Status | Response |
 |--------|----------|
-| 200    | ```{ "status": "success","message": "Successfully added ips for the tanent    unpl_corporate.Please restart the tenant"}``` |
+| 200    | ```{ "status": "success","message": "Successfully added ips for the tenant    unpl_corporate.Please restart the tenant"}``` |
 
 ### Removing IPs Addresses from a Tenant 
 
