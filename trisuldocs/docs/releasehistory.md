@@ -2,6 +2,44 @@
 
 This changelog outlines the key updates, improvements, and fixes made to Trisul across various releases. Browse through the release notes below to learn about the latest features, enhancements, and bug fixes.
 
+## WEBTRISUL 7.0.2551 (March 13,2025)
+
+0105786: WEB: Fixed help text in Web Trisul App Settings.  
+0105787: PKG: Fixed start scripts failure in RHEL9 caused by deprecated init scripts.  
+0105790: Added file to specify API details (host, port, key) for IPDR satellite compliance.  
+0105791: Added Latitude and Longitude in the IPDR report.  
+0105794: Enabled Terminal ID in IPDR Customers CSV import.  
+0105796: New Crosskey Tree module introduced.  
+0105806: Pop over description now showing in side menu.  
+0105807: Set refresh time for custom key monitor.  
+0105809: Resolved toppers table alignment overflow issue.  
+0105811: IPDR:Remove duplicate IPs warning if timestamps are different.  
+0105812 :IPDR:Allowing now user to specify expiry date for subnet.  
+0105814: Showing description now on long term traffic expression on pop over.  
+0105815: Removed flows tab from the Interface Drilldown as an option.  
+0105821: Interface drill down conversation now showing from trackers when NBAR/AppID/UserID present.  
+0105823: Removed Apps/Host from interface drilldown page when the user has enabled only flow tracker for that interface.  
+0105843: Custom key monitor dashboard now supports transmit/receive dropdown.  
+0105837: Interface Drilldown page crashed on Interface tracker enabled now working properly.  
+0105843: Custom key monitor dashboard now supports transmit/receive dropdown.  
+0105845: Added bulk edit for toppers counts and bottom counts.  
+0105858: WEB: VAPT Enhancements: XSS prevention and Probe validation.  
+0105861: System health page now showing when new disk is added.  
+0105863: Live SNMP Monitoring now works with management IP assignment.  
+0105867: Added "conns" metric to connections modules of current host and current apps dashboards.  
+0105871: Total, Max, min values on Current Apps Dashboard now working.  
+0105872: Resolved issue in cloning dashboards by assigning a new key.  
+0105873: Resolved: Routers and Interface's PDF and Excel Reports now include missing some metrics.  
+0105876: Enhanced usability with Key field addition in Long-Term Traffic and Monthly chart dashboards.  
+0105877: Download Option on Flow Tagger now available.  
+0105887: Fixed an issue in Interface Tracker where users could attempt to disable a non-existent Protocol Tracker for an interface.  
+0105891: Added ENABLE_HIGH_SECURITY in default OEM settings file for enhanced security of web app.  
+0105893: Updated Manage Storage search for date and slice names.  
+0105897: Export to Dashboard json now works with grouped modules.  
+0105898: Live/Realtime traffic chart now works for all counter groups.  
+0105899: Added option to remove Download XLSX.  
+0105901: PDF download option now working in current host dashboard.  
+
 ## WEBTRISUL 7.0.2540 (October 18,2024)
 
 0105730: Download resource logs as text files.  
