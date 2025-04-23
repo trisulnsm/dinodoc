@@ -12,7 +12,7 @@ This changelog outlines the key updates, improvements, and fixes made to Trisul 
 0105796: New Crosskey Tree module introduced.  
 0105806: Pop over description now showing in side menu.  
 0105807: Set refresh time for custom key monitor.  
-0105809: Resolved toppers table alignment overflow issue.  
+0105809: Resolved toppers table alignment overflow issue.  			
 0105811: IPDR:Remove duplicate IPs warning if timestamps are different.  
 0105812 :IPDR:Allowing now user to specify expiry date for subnet.  
 0105814: Showing description now on long term traffic expression on pop over.  
