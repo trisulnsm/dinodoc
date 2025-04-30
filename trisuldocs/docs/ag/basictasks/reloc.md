@@ -18,12 +18,12 @@ The default storage root location for database is  under :dvd:  `/usr/local/var`
 
 ## Relocate on Hub
 
-Use the `trisulctl_hub relocate context` command.
+Use the `/usr/local/bin/trisulctl_hub/trisulctl_hub relocate context` command.
 
 Say you want to relocate the database to :dvd: `/nsm/trisuldata`  run the following.
 
 ```bash
-$ trisulctl_hub 
+$ /usr/local/bin/trisulctl_hub/trisulctl_hub 
 
 
 trisul_hub(domain0)> relocate context  domain0 hub0 default
@@ -48,12 +48,12 @@ The `trisulctl_hub` tool will then run some checks and ask you for a confirmatio
 
 ## Relocate on Each Probe
 
-Use the `trisulctl_probe relocate context` command on each probe.
+Use the `/usr/local/bin/trisulctl_probe/trisulctl_probe relocate context` command on each probe.
 
 Say you want to relocate the PCAP files to `/nsm/trisuldata` ;  run the following.
 
 ```bash
-$ trisulctl_probe
+$ /usr/local/bin/trisulctl_probe/trisulctl_probe
 > relocate context domain0 probe0 default
 ..
 ..
@@ -70,7 +70,7 @@ After relocation you need to restart Trisul and also the Web Server.
 To restart Trisul 
 
 ```bash
-$ trisulctl_hub
+$ /usr/local/bin/trisulctl_hub/trisulctl_hub
 > restart context default 
 ..
 > quit
