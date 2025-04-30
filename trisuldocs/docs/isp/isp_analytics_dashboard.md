@@ -33,13 +33,13 @@ routers, interfaces and countries.
 Also it provides statistical information on the total volume of Upload
 and Download of AS Traffic in bytes.
 
-:::note navigation
+:::info navigation
 
-To access, Login as user & Select Dashboard -> Show All -> Enter ‘ISP Overview’ in Filter
+To access, Login as user & Select Dashboard &rarr; Show All &rarr; Enter ‘ISP Overview’ in Filter
 
 :::
 
-![](images/isp_overview.png)  
+![](images/ispoverview.png)  
 ISP Overview
 
 ## Peering Analytics
@@ -51,7 +51,8 @@ The traffic flows are further split by upstream vs downstream.
 
 With the help of this Dashboard, You can view ASN Mappings for Routers
 and Interfaces. The default shows the Flow-ASN which represents the
-actual routing table.
+actual routing table. Traffic charts provide history of Peer AS x Interface from
+Upstream/Downstream
 
 **Received from upstream:** How much data is received by the interface
 (IN) from these upstream AS  
@@ -76,9 +77,9 @@ The following table explains the data in the columns
 | Uniq Prefix       | Unique prefixes (need to configure cardinality counting feature for this) |
 | Options           | Drilldown options for this AS                                             |
 
-:::note navigation
+:::info navigation
 
-To access, Login as user & Select Dashboard -\> Show All -\> Enter
+To access, Login as user & Select Dashboard &rarr; Show All &rarr; Enter
 ‘Peering Analytics’ in Filter
 
 :::
@@ -89,7 +90,9 @@ To access, Login as user & Select Dashboard -\> Show All -\> Enter
 | Routers    | Select a desired router from the list of available routers  |
 | Interface  | Select an interface associated with the router selected     |
 
-![](images/peering_analytics.png)  
+![](images/peeringanalytics1.png)  
+![](images/peeringanalytics2.png)  
+![](images/peeringanalytics3.png)  
 Peering Analytics Charts
 
 Every Peer-AS associated to the router and interface in upstream and
@@ -106,29 +109,12 @@ peer AS with interfaces.
 
 Refer [Peering Analytics Drilldown](isp_analytics_dashboard#peering-analytics-drilldown)
 
-#### Traffic Chart
-
-Traffic charts provide history of Peer AS x Interface from
-Upstream/Downstream
-
-![](images/peering_trafficchart.png)  
-Peering Analytics - Traffic Chart
-
-#### Key Dashboard
-
-Key Dashboard provides a graphical interpreatation of traffic history of
-Peer AS x Interface with few other details like Key, user label,
-counter-group etc.
-
-![](images/peering_keydashboard.png)  
-Peering Analytics - Key Dashboard
-
 #### Top Prefixes
 
 It provides a list of top 99 prefixes that is associated with the Peer
 AS.
 
-![](images/peering_topprefixes.png)  
+![](images/topprefixes.png)  
 Peering Analytics - Top Prefixes
 
 #### Explore flows
@@ -147,14 +133,15 @@ gateways, next hops, and AS. You can also see external prefixes usage
 per gateway.
 
 Monitor top prefixes on a per interface basis. Helps with traffic
-engineering selecting which prefix to announce to which peer etc.
+engineering selecting which prefix to announce to which peer etc. Traffic chart provides a pictorial representation of the traffic history
+of External Prefix x Interface from Upstream/Downstream
 
 #### Data Columns
 
 The following table explains the data in the columns
 
-| Field         | Description                                                                                                                                                                                 |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Field         | Description                                                              |
+| ------------- | ------------------------------------------------------------------------ |
 | Routed Prefix | The prefix as routed will match the route in the RIB of the router                                                                                                                          |
 | BGP Prefix    | The prefix matched with the BGP route receiver database.This can be different                                                                                                               |
 | Peer-AS       | IF BGP prefix is found, the peer AS from the BGP route                                                                                                                                      |
@@ -164,9 +151,9 @@ The following table explains the data in the columns
 | Bandwidth     | Avg bandwidth / sec                                                                                                                                                                         |
 | Options       | Further options to drilldown into the prefix                                                                                                                                                |
 
-:::note navigation
+:::info navigation
 
-To access, Login as user & Select Dashboard -\> Show All -\> Enter
+To access, Login as user & Select Dashboard &rarr; Show All &rarr; Enter
 ‘Prefix Analytics’ in Filter
 
 :::
@@ -177,7 +164,7 @@ To access, Login as user & Select Dashboard -\> Show All -\> Enter
 | Routers    | Select a desired router from the list of available routers  |
 | Interface  | Select an interface associated with the router selected     |
 
-![](images/prefix_analytics.png)  
+![](images/prefixanalytics.png)  
 Prefix Analytics Charts
 
 Every Prefix associated with each interface in the upstreams and
@@ -186,22 +173,6 @@ downstreams can be deeply analysed using the *`options`* dropbox.
 ![](images/prefix_analytics_options.png)  
 options
 
-#### Traffic Chart
-
-Traffic chart provides a pictorial representation of the traffic history
-of External Prefix x Interface from Upstream/Downstream
-
-![](images/prefix_trafficchart.png)  
-Prefix Analytics - Traffic Chart
-
-#### Key Dashboard
-
-Key Dashboard provides a graphical interpreatation of traffic history of
-External Prefix x Interface with few other details like Key, user label,
-counter-group etc.
-
-![](images/prefix_keydashboard.png)  
-Prefix Analytics - Key Dashboard
 
 #### Drilldown
 
@@ -215,9 +186,9 @@ Refer [Prefix Analytics Drilldown](isp_analytics_dashboard#prefix-analytics-dril
 Peering Analytics drilldown provides deeper analysis of AS with
 interfaces.
 
-:::note navigation
+:::info navigation
 
-To access, Login as user & Select Dashboard -\> Show All -\> Enter
+To access, Login as user & Select Dashboard &rarr; Show All &rarr; Enter
 ‘Peering Analytics Drilldown’ in Filter
 
 :::
@@ -227,7 +198,9 @@ To access, Login as user & Select Dashboard -\> Show All -\> Enter
 | Time Frame | Select a desired date and time using the custom time option    |
 | AS Number  | Enter an AS Number you need to drilldown eg 9498(Bharti Artel) |
 
-![](images/peering_analytics_drilldown.png)  
+![](images/peeringanalyticsdrilldown.png) 
+![](images/peeringanalyticsdrilldown2.png) 
+![](images/peeringanalyticsdrilldown3.png) 
 Peering Analytics Drilldown
 
 ## Prefix Analytics Drilldown
@@ -238,9 +211,9 @@ interfaces.
 Track traffic flows for a single prefix in the entire network. Helps
 with traffic engineering and verification.
 
-:::note navigation
+:::info navigation
 
-To access, Login as user & Select Dashboard -\> Show All -\> Enter
+To access, Login as user & Select Dashboard &rarr; Show All &rarr; Enter
 ‘Prefix Analytics Drilldown’ in Filter
 
 :::
@@ -250,7 +223,7 @@ To access, Login as user & Select Dashboard -\> Show All -\> Enter
 | Time Frame | Select a desired date and time using the custom time option |
 | Prefix     | Enter a prefix you need to drilldown                        |
 
-![](images/prefix_analytics_drilldown.png)  
+![](images/prefixanalyticsdrilldown.png)  
 Prefix Analytics Drilldown
 
 ## ISP Country Analytics
@@ -266,17 +239,17 @@ efficient routing policy.
 
 The following table explains the data in the columns.
 
-| Field         | Description                                                                                                   |
-| ------------- | ------------------------------------------------------------------------------------------------------------- |
-| Key           | The Country Code                                                                                              |
-| Label         | The name of the country                                                                                       |
+| Field         | Description                                                   |
+| ------------- | ------------------------------------------------------------- |
+| Key           | The Country Code                                              |
+| Label         | The name of the country                                       |
 | Volume        | Traffic upload from this country – when seen in the Upload Tab and top download when seen in the Download Tab |
-| Avg Bandwidth | Traffic Bandwidth average for selected time period                                                            |
-| Options       | More options                                                                                                  |
+| Avg Bandwidth | Traffic Bandwidth average for selected time period            |
+| Options       | More options                                                  |
 
-:::note navigation
+:::info navigation
 
-To access, Login as user & Select Dashboard -\> Show All -\> Enter ‘ISP
+To access, Login as user & Select Dashboard &rarr; Show All &rarr; Enter ‘ISP
 Country Analytics’ in Filter
 
 :::
@@ -326,9 +299,9 @@ interface.
 The Geo Country Drilldown helps with providing the analysis of Interface
 toppers associated with every router.
 
-:::note navigation
+:::info navigation
 
-To access,select ISP Analytics Dashboard -\> Country Analytics Drilldown
+To access,select ISP Analytics Dashboard &rarr; Country Analytics Drilldown
 
 :::
 
@@ -370,9 +343,9 @@ and egress interface flow are collated. Keep that in mind while
 interpreting the chart. It is focused on interface -\> AS flows, hence
 the interface numbers are important.
 
-:::note navigation
+:::info navigation
 
-To access, Login as user & Select Dashboard -\> Show All -\> Enter ‘Path
+To access, Login as user & Select Dashboard &rarr; Show All &rarr; Enter ‘Path
 Analytics’ in Filter.
 
 :::
@@ -400,9 +373,9 @@ ISP-Peer” to “Flow-ASN” counter group. This will then track Internal IP
 to ASN flows. This dashboard helps you view the Sankey diagram for such
 counter groups.
 
-:::note navigation
+:::info navigation
 
-To access, Login as user & Select Dashboard -\> Show All -\> Enter
+To access, Login as user & Select Dashboard &rarr; Show All &rarr; Enter
 ‘Sankey Crossdrill’ in Filter
 
 :::
