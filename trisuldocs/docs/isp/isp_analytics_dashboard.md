@@ -223,8 +223,27 @@ To access, Login as user & Select Dashboard &rarr; Show All &rarr; Enter
 | Time Frame | Select a desired date and time using the custom time option |
 | Prefix     | Enter a prefix you need to drilldown                        |
 
-![](images/prefixanalyticsdrilldown.png)  
+you can see four tabs say,
+1) Receive from upstream
+2) Transmit to upstream
+3) Receive from downstream
+4) Transmit to downstream
+5) Prefixes and hosts
+
+The "receive from upstream" is the analytical insights of Top Interfaces Prefix Received
+![](images/prefixanalyticdrilldown.png)  
 Prefix Analytics Drilldown
+
+Similarly you can click on the concurrent tabs to view their analytical insights. 
+
+The "Prefixes and hosts" tab shows the top ASNumbers, top prefixes, top internal hosts, and top external hosts.  
+
+![](images/prefixesandhosts.png)  
+*Figure: Showing Prefixes and Hosts*
+
+You can click on the option button against each item to further drilldown to 
+1) [Key dashboard](/docs/ug/ui/key_dashboard) and
+2) [Traffic chart](/docs/ug/ui/module_templates#traffic-chart)
 
 ## ISP Country Analytics
 
