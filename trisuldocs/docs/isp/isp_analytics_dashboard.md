@@ -274,7 +274,7 @@ Country Analytics in Trisul provides a deep drilldown of each country to
 know the Transmit/Recieve from upstream/downstream of the particular
 country with several other interfaces.
 
-Refer [Country Analytics Drilldown](countryanalytics_dashboard#country-analytics-drilldown)
+Refer [Country Analytics Drilldown](/docs/isp/isp_analytics_dashboard#country-analytics-drilldown)
 
 ## Country Analytics Drilldown
 
