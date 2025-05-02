@@ -39,10 +39,6 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           sidebarCollapsed: true,
-<<<<<<< HEAD
-=======
-          //editUrl: 'https://github.com/trisulnsm/dinodoc/blob/main/trisuldocs',
->>>>>>> beb44c9 (removed edit option which are prsent in the each page at last)
         },
         theme: {
           customCss: './src/css/custom.css',
