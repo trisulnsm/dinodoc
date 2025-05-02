@@ -91,7 +91,7 @@ To access, Login as user & Select Dashboard &rarr; Show All &rarr; Enter
 | Interface  | Select an interface associated with the router selected     |
 
 ![](images/peeringanalytics1.png)  
-![](images/peeringanalytics2.png)  
+![](images/peeringanalytics4.png)  
 ![](images/peeringanalytics3.png)  
 Peering Analytics Charts
 
@@ -122,7 +122,7 @@ Peering Analytics - Top Prefixes
 Explore flows maps every flow that is associated with the Peer AS. To
 know more about explore flows, Refer [Explore Flows](/docs/ug/tools/explore_flows)
 
-![](images/peering_exploreflows.png)  
+![](images/exploreflows1.png)  
 Peering Analytics - Explore Flows
 
 ## Prefix Analytics
@@ -230,7 +230,8 @@ Prefix Analytics Drilldown
 
 Country analytics provides country mappings for routers and interfaces.
 Countries real time and historical traffic mapped to gateways, next
-hops, and AS. You can also see every country’s usage per gateway.
+hops, and AS. You can also see every country’s usage per gateway. Traffic chart provides history of Country x Interface from
+Upstream/Downstream.
 
 Traffic volumes to different countries. Helps plan gateway locations
 efficient routing policy.
@@ -260,28 +261,12 @@ Country Analytics’ in Filter
 | Routers    | Select a desired router from the list of available routers  |
 | Interface  | Select an interface associated with the router selected     |
 
-![](images/country_analytics.png)  
+![](images/countryanalytics.png)  
 Country Analytics Charts
 
 Every country associated to the router and interface in upstream and
 downstream can be deeply analysed using the *`options`* dropbox.
 
-#### Traffic Chart
-
-Traffic chart provides history of Country x Interface from
-Upstream/Downstream.
-
-![](images/country_trafficchart.png)  
-Country Analytics - Traffic Chart
-
-#### Key Dashboard
-
-Key Dashboard provides a graphical interpreatation of traffic history of
-country x Interface with few other details like Key, user label,
-counter-group etc.
-
-![](images/country_keydashboard.png)  
-Country Analytics - Key Dashboard
 
 #### Drilldown
 
@@ -289,7 +274,7 @@ Country Analytics in Trisul provides a deep drilldown of each country to
 know the Transmit/Recieve from upstream/downstream of the particular
 country with several other interfaces.
 
-Refer [Country Analytics Drilldown](isp_analytics_dashboard#country-analytics-drilldown)
+Refer [Country Analytics Drilldown](countryanalytics_dashboard#country-analytics-drilldown)
 
 ## Country Analytics Drilldown
 
@@ -310,7 +295,7 @@ To access,select ISP Analytics Dashboard &rarr; Country Analytics Drilldown
 | Time Frame | Select a desired date and time using the custom time option |
 | Prefix     | Enter a prefix you need to drilldown                        |
 
-![](images/country_analytics_drilldown.png)  
+![](images/countryanalyticsdrilldown.png)  
 Country Analytics Drilldown
 
 ## Path Analytics

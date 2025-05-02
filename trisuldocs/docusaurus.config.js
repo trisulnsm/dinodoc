@@ -39,7 +39,6 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           sidebarCollapsed: true,
-          editUrl: 'https://github.com/trisulnsm/dinodoc/blob/main/trisuldocs',
         },
         theme: {
           customCss: './src/css/custom.css',
