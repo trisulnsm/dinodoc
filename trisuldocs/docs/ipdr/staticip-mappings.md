@@ -107,6 +107,9 @@ Sample:
 ![](images/csv_format.png)  
 *Figure: CSV Format showing nine columns*
 
+Multiple IPs can be added using IPs in double quotes separated by commas.  
+For example: `"192.12.3.2","192.18.10.1","192.10.22.2"`
+
 The default mapping of all the columns to customer and subnet details can be modified in the UI after importing the CSV file.
 
 ![](images/csvformat.png)  
