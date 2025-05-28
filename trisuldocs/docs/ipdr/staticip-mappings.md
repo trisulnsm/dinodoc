@@ -35,7 +35,7 @@ Adding customer details for static IP customers can be done in two methods
 
 The column subnets shows the IP Addresses addressed to each customer along with other details.
 
-![](images/ipdrimportexport.png)  
+![](images/pagination-ipdr.png)  
 *Figure: Showing IPDR Customers List*
 
 ### Adding Details of a New Customer
@@ -75,6 +75,11 @@ To import IP to customer mappings for IPDR, follow these steps:
 - Click the Import button located in the top right corner.
 - Browse and select the CSV file containing the IP to customer mappings, with one mapping per line.
 - Click Upload CSV File to initiate the upload process. 
+
+Once the CSV file is uploaded, you can see a status summary displaying the total customers uploaded, the number successfully imported, the number of records skipped, and the number of IP addresses skipped.
+
+![](images/csvimport.png)
+*Figure: Showing Summary of Successful Import*
 
 ### Exporting
 
