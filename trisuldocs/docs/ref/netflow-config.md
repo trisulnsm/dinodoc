@@ -77,6 +77,11 @@ Boolean parameters are case-insensitive. True, true,TRUEmean the same thing
 | Home Prefixes File          |          | A Trisul routes database or a CSV file containing all prefixes to be treated as home or downstream prefixes. Typically this file is named 0.0.0.0_routes.sql3 setup during configuraiton for ISP deployment<br/>**Feature used in ISP environments** |
 | AutoloadPreviousTemplates   | FALSE    | When set to `true` Trisul will reload the most recently known netflow template database and immediately start processing instead of waiting for templates. Use this option in networks where template intervals are long |
 | PrintRecords                |          | Used in DDoS report mode to print raw netflow records automatically, Do not set this option manually |
+| TagFlowsWithHTTPHostname | FALSE | Some NetFlow like Cisco SD-WAN can add HTTP/S hostnames to the template. Turn this option on to tag flows with HTTP Hostnames | 
+| TemplateKeyPolicyV9 |  | Policy to handle v9 Templates, use this to handle vendor variations <ul><li>source-id</li><li>source-port</li><li>source-port-if-source-id-zero</li></ul>  | 
+| AddHalfNATEdge |  FALSE | Add an EDGE to map a NAT mapping. Use only if required in IPDR mode. Mostly you dont need this |
+| AllowRunningCounts |  FALSE | Use with some vendors like Checkpoint, who tend to use running counters when Live Flow Timeout is enabled. When this option is set the NetFlow plugin handles running byte and packet counts in flow records. *AllowRunningCounts* must be only used with *InflightTokens*=1 (single threaded)  See InflightTokens parameter in [Probe Config file > Tuning](/docs/ref/trisulconfig#tuning) |
+
 
 ## Sampling rates
 

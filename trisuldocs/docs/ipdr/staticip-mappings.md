@@ -1,15 +1,15 @@
 # Customer Inventory Mappings
 
-The IPDR Customers list provides a comprehensive repository of customer details. Basically tells how to add customer information, so that they are automatically filled into the output EXCEL report.This feature allows authorized users to:
+The IPDR Customers list provides a comprehensive repository of customer details. This document describes how to add customer information, so that they are automatically filled into the output EXCEL report.
 
-   **Add**: Create new customer entries with detailed information  
-   **Edit**: Update existing customer records as needed  
-   **Delete**: Remove customer entries from the list  
+This feature allows authorized users to:
 
-   :::tip
-You can also add customer information for static IP and usernames using the [Trisul IPDR API](api) . 
-:::
+There are three ways to maintain customer details
 
+   - Manually maintain static IP to customer mappings one by one
+   - Use the EXCEL upload feature to maintain customer mappings in bulk
+   - Use the [Trisul IPDR REST API](api) . to maintain the customer mappings
+   
 ## Compliance Requirement
 
 The DoT compliance letter clearly mentions that the following details need to be provided in the output report.  These are called CAF fields. CAF stands for Customer Acquisition Form. 
@@ -18,14 +18,6 @@ The DoT compliance letter clearly mentions that the following details need to be
 
 *Figure: Compliance requirement to add customer info* 
 
-:::info  Static vs AAA customers
-This feature is most useful for the static IP customers of the ISP. Because the inventory is more stable than large scale ISP providing residiential services. For the latter, talk to us to use a REST API to get the fields
-:::
-
-Adding customer details for static IP customers can be done in two methods
-
-- Automatically use a REST API – contact us offline for this
-- Enter each mapping or upload a CSV file containing all static IP to customer mappings
 
 ## Manually Add Static IP Mappings 
 
@@ -54,15 +46,48 @@ To add a new customer, click the *Add* button and complete the required fields:
 And click *Create*.
 
 
-## Importing New Customer Details
+## Importing using CSV
 
-When importing new customer details into the system, please note that it will override any existing customer information. To ensure that all customer details are retained, follow these steps:
+:::warning CSV overwrites
+When importing new customer details into the system by CV, please note that it will override any existing customer information. The CSV file will serve as the master inventory. 
+:::
+
+
+To ensure that all customer details are retained, follow these steps:
 
 - **Export Existing Customer Details**: First, export the current list of customer details from the system. This will prevent any loss of existing data.
 - **Combine New and Existing Customer Details**: Add the new customer details to the exported list, ensuring that all information is accurate and up-to-date.
 - **Import Combined Customer Details**: Import the combined list of customer details into the system. This will update the system with the complete and accurate customer information.
 
 By following these steps, you can ensure a seamless integration of new customer details without overwriting existing data.
+
+### CSV File Format
+
+A sample CSV format can be found here 
+
+```csv title="customermappings.csv"
+#IPSubnet,Name,Address,Email,Phone,Alt Phone,UserID,Valid From Date,Valid To Date,Circuit/TerminalID
+192.168.1.0/24,John Doe,"123 Main St, Springfield",john.doe@example.com,9812345678,9876543210,JD123,01-01-2024 09:00:00,01-01-2025 09:00:00,CT-001
+10.0.0.0/16,Jane Smith,"456 Elm St, Rivertown",jane.smith@example.com,9898765432,,JS456,,,CT-045
+172.16.5.0/28,Ali Khan,"789 Oak St, Lakeside",ali.khan@example.com,9822334455,9899223344,AK789,10-09-2023 10:15:00,10-09-2024 10:15:00,CT-078
+```
+
+Notes about the fields 
+
+| Field | Optional | Notes | 
+|-------|--------------|-----|
+| IPSubnet | Mandatory | You can enter a single IP `192.168.1.12` or a subnet in CIDR format `192.168.1.1/24` or a CSV in quoted format `"192.168.1.1,210.2.1.3"` or a mix of subnet and IP `"192.168.1.1,210.2.1.0/28"` |
+| Name | Mandatory | Customer name , if contains comma you must quote |
+| Other fields | Optional | | 
+| Valid From | Optional |  If no date is specified for "Valid From," the system defaults to January 1, 1970 (Epoch timestamp: 0)|
+| Valid To | Optional | If no date is specified for "Valid To," the system assumes the validity period is perpetual, with no end date. |
+| Terminal ID | Optional | You can enter a circuit ID or a MAC here for reference |
+
+
+The default mapping of all the columns to customer and subnet details can be modified in the UI after importing the CSV file.
+
+![](images/csvformat.png)  
+*Figure: CSV Format*
 
 ### Importing
 
@@ -93,25 +118,6 @@ To export the details of existing IPDR customers, follow these simple steps:
 - Click the Export button.
 
 The system will automatically export all IPDR customer details in CSV format.
-
-### Bulk Import from CSV File Format
-
-The CSV file should have a specific format, with each line containing nine columns. Each column represents a detail of the customer or subnet. The following default date settings apply when importing IP to customer mappings:
-
-- Valid From: If no date is specified for "Valid From," the system defaults to January 1, 1970 (Epoch timestamp: 0).
-- Valid To: If no date is specified for "Valid To," the system assumes the validity period is perpetual, with no end date.
-
-These default settings can be adjusted or overridden during the import process or after importing the data.
-Sample:
-
-![](images/csv_format.png)  
-*Figure: CSV Format showing nine columns*
-
-The default mapping of all the columns to customer and subnet details can be modified in the UI after importing the CSV file.
-
-![](images/csvformat.png)  
-*Figure: CSV Format*
-
 
 ## Delete All
 
