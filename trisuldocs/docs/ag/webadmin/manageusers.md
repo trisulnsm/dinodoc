@@ -127,7 +127,7 @@ The `admin` user can reset the password of any user.
 :point_right: Select Web Admin &rarr; Manage &rarr; Users &rarr; Select Edit against any user 
 :::
 
-Select "Reset Password" from the Admin Operations menu.
+Select "Reset Password" from the Admin Operations menu button on the top right corner.
 
 
 ## Generate API Token
@@ -159,4 +159,29 @@ You will get a API Token like this, you need to copy and share it with the user.
 
 To modify the admin name to "Super Admin", navigate to the Action button and select "Edit Super Admin Name" from the dropdown menu. This will prompt a dialog box, allowing you to edit the admin name. Enter the desired name, click "Update", and the changes will be reflected immediately, displaying the updated name in the top right corner of the admin user name section.
 
+Here is a clean, properly formatted version suitable for documentation:
 
+
+## Username Guidelines
+
+![](images/username_criteria.png)  
+*Figure: Showing Username in Webadmin*
+
+- There are no specific constraints for choosing a username.
+- You may use any username that is not already taken.
+
+## Password Guidelines
+
+![](images/password_criteria.png)  
+*Figure: Showing Password Minimum Length in Webadmin*
+
+- There are no restrictions on the characters you can use in your password.
+- Passwords are **not case-sensitive**.
+- You can include repeated characters, special characters, numbers, or any combination.
+- The only password constraint is the number of characters i.e.length which can be customized through the [**Settings**](/docs/ag/webadmin/manageusers#reset-password-by-admin).
+- You can reset your password at any time using [reset settings](/docs/ag/webadmin/manageusers#reset-password-by-admin)
+
+## Password Policy
+
+- For security reasons, we do **not** store previously entered passwords.
+- Passwords do **not** expire.
