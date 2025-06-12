@@ -176,12 +176,12 @@ Here is a clean, properly formatted version suitable for documentation:
 *Figure: Showing Password Minimum Length in Webadmin*
 
 - There are no restrictions on the characters you can use in your password.
-- Passwords are **not case-sensitive**.
+- Passwords are **case-sensitive**.
 - You can include repeated characters, special characters, numbers, or any combination.
-- The only password constraint is the number of characters i.e.length which can be customized through the [**Settings**](/docs/ag/webadmin/manageusers#reset-password-by-admin).
-- You can reset your password at any time using [reset settings](/docs/ag/webadmin/manageusers#reset-password-by-admin)
+- The only password constraint is the minimum number of characters i.e.length which can be customized through the [**Web Trisul server : App Settings**](/docs/ag/webadmin/web_options#ui) and specify the minimum number of characters by specifying in the "User Password Minimum length".
 
 ## Password Policy
 
 - For security reasons, we do **not** store previously entered passwords.
 - Passwords do **not** expire.
+- You can reset your password at any time using [**Reset Settings**](/docs/ag/webadmin/manageusers#reset-password-by-admin)
