@@ -79,4 +79,6 @@ You can configure the level of severity indicating the level of importance of ea
 ![](image/sendtosyslogemail.png)  
 *Figure: Send to Syslog/ Email*
 
-Select DISABLED if you would like to prevent sending alerts to SYSLOG.
+Select DISABLED if you would like to prevent sending alerts to SYSLOG and Select ALERTS which ll automatically start sending alerts.
+
+> Once you have clicked ALERTS it is mandatory to restart the probe using [Start/Stop Tasks](/docs/ag/admintasks/startstop)
