@@ -4,15 +4,15 @@ sidebar_position: 1
 
 # User Layout
 
-In this section you can easily get to know the visual arrangement or organization of elements on the website intended for user login. The Key features and functionality are explained in the later sections. So let's get familiar with the user layout design and navigation first for starters.
+This section introduces the visual layout and organization of elements within the Web Trisul interface for regular (non-admin) users. Before diving into specific features and functionalities—which are covered in later sections—it's helpful to first understand the basic design and navigation flow.
 
-When you login as a "non admin" user you will see the following layout 
+When you log in as a non-admin user, you’ll see the following layout:
 
 ![User Layout](images/userlayoutnew.png)  
 
 *Figure: User Layout*
 
-Observe three sections 
+Observe the three sections 
 
 - Top Panel
 - Menu Panel
@@ -46,9 +46,11 @@ The top panel contains the following items
 
 ![](images/alertsnnotifications.png)
 
-  *Figure: Alerts and Notifications in Top Panel*
+   *Figure: Alerts and Notifications in Top Panel*
     
-   You can check for the alerts and notifications on External IDS, Threshold Crossing, Threshold Band Alerts, Blacklist Activity and Flow tracker here. Click the top right corner of color coded icons that represent alerts and notifications with alert count.
+    You can view alerts and notifications related to **External IDS, Threshold Crossing, Threshold Band Alerts, Blacklist Activity, and Flow Tracker** in this section.
+
+    Simply click the **color-coded alert icons** located at the **top-right corner** of the interface. These icons display the number of active alerts and provide quick access to detailed information.
 
 6) #### License Details
 
@@ -73,15 +75,15 @@ The top panel contains the following items
    
    *Figure: Account Switch*
    
-    Clicking on the account button you can get the account history, change password, and signout from the current account. To change the user avatar see : [How to change the user avatar logging in as admin](pathname:///docs/ag/webadmin/manageusers#ChangeUserAvatar)
+    Clicking on the account button you can get the account history, change password, and sign out from the current account. To change the user avatar see : [How to change the user avatar logging in as admin](pathname:///docs/ag/webadmin/manageusers#ChangeUserAvatar)
 
 10) #### Host Name
    
-   This shows the host's name. All time zones in Trisul are displayed in the host's time zone. 
+    This shows the host's name. All time zones in Trisul are displayed in the host's time zone. 
 
 ## Menus
 
-   A fully customizable multi open collapsible menu system.
+    This is a fully customizable menu system where multiple sections can be expanded or collapsed independently. It helps you quickly access different parts of the interface without closing other open sections.
 
 ### Basic Operations
 
@@ -89,11 +91,9 @@ The top panel contains the following items
 
 *Figure: User Layout Menu*
 
-Clicking on menu item opens a page with all options.
-
-Expanding a menu item opens most popular items.
-
-Trisul remembers the expanded state of the menu per user.
+- Clicking on a menu item (such as **Dashboards, Retro, Tools**, etc.) opens the full page with all related options.
+- Alternatively, clicking the **arrow icon** next to the menu item expands a quick view showing the most frequently used options.
+- Trisul automatically remembers your expanded menu state, so your preferred layout is restored the next time you log in.
 
 1) #### Shortcut Menu
    
@@ -105,11 +105,13 @@ Trisul remembers the expanded state of the menu per user.
 
 2) #### Tenants
    
-   Trisul can handle multiple tenants and each tenant's data are isolated from others through logical separation. You can switch between different contexts from the list of tenants.
+    Trisul supports **multi-tenant environments**, meaning it can manage data for multiple independent users or organizations within the same system. Each tenant's data is **logically separated**, ensuring complete isolation and privacy.
+
+    You can easily **switch between tenants (called "contexts" in Trisul)** using the tenant selection list. This allows you to view and manage data specific to each tenant without any overlap.
 
 3) #### Menu Items
    
-   Click on each menu item and you can see the sub menus under each menu item expanded. Click Show all as not all sub menus would show up here.
+   Click on any menu item to see more options below it. At first, you'll only see the most commonly used ones. To view everything available under that menu, just click **“Show All**.”
 
 ## Dashboards
 
