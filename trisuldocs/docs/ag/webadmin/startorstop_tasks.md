@@ -35,4 +35,3 @@ Here you can Start or Stop the email notification service. In this module as sho
 You can click *Start* to start sending alerts as email notifications. Otherwise click *Stop* to stop the email notification service.
   
 The email notification service logtails the syslog and dispatches alerts. The service is careful not to flood < 5 minutes and can automatically create digests if alert volumes are too high.
-

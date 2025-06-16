@@ -3,7 +3,7 @@
 This User Guide is an operational guide that includes topics related to installing, administering, and using the web interface to navigate, view reports, set alerts, and monitoring your network.
 
 :::tip[System requirements, getting started ]
-If you new to Trisul, follow this documentation path [*System Requirements*](/docs/ag/install/requirements)  &rarr; [*Installation*](/docs/ag/install/doinstall) &rarr;  [*Basic Usage*](/docs/ag/basictasks/) . 
+If you are new to Trisul, follow this documentation path [*System Requirements*](/docs/ag/install/requirements)  &rarr; [*Installation*](/docs/ag/install/doinstall) &rarr;  [*Basic Usage*](/docs/ag/basictasks/) . 
 :::
 
 ## How to Use This Guide
@@ -14,7 +14,9 @@ Trisul Network Analytics is a common platform upon which the following applicati
 - Trisul IPDR
 - Trisul ISP Analytics 
 
-These applications use the same Admin and User components, this User Guide covers those common parts. For application specific documentation you may also want to read the 
+These applications use the same Admin and User components, this User Guide covers those common parts.   
+
+>For application specific documentations you may also want to read the 
 - [:memo: Trisul IPDR Guide](/docs/ipdr)
 - [:memo: Trisul ISP Analytics Guide](/docs/isp)
 

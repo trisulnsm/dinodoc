@@ -5,11 +5,11 @@
 
 
 
-Trisul Network Analytics is a software suite that takes network packets or flow data, and extract insightful traffic metrics, flow analysis, alerts, and metadata.
-The applications of Trisul include deep network traffic management, network security monitoring, threat hunting, incident response, and audit.
+Trisul Network Analytics is a software suite that takes network packets or flow data, and extract insightful traffic metrics, flow analysis, alerts, and metadata from them.
+The applications of Trisul include deep network traffic management, network security monitoring, threat hunting, incident detection, and audit.
 
 
-Users of Trisul view these analytics reports on a comprehensive dashboard based user interface accessed by a web browser.
+Users of Trisul view these analytics reports through an easy-to-use dashboard that opens in any web browser.
 
 
 ### Platforms
@@ -60,12 +60,12 @@ The following table contains a list of things you can do with Trisul. You can fi
 
 | Feature               | Description    |
 | --------------------- | ----------|
-| Platform              | Linux based with support for special hardware accelerators   |
-| Technology            | Streaming analytics with a custom backend storage and reporting included. No need to deploy and maintain a Elastic Search cluster or expensive log management products  |
-| Traffic Analysis      | More than just bandwidth or basic SNMP or Netflow monitoring. Over 150+ traffic metrics out of the box at all layers.   |
-| Flow Monitoring       | Supports Netflow technologies as ingest mechanism. If ingesting packets, Trisul builds flow records and stores them. The specially designed flow database can scale to billions of flows per day with instant query times.   |
-| Metadata collection   | A key element of NSM - Network Security Monitoring is the ability to log metadata. HTTP URLs, Domain details, SSL/TLS certificates, reconstructed binaries downloaded. |
-| Security Alerts       | Interfaces with IDS systems like Suricata to ingest alerts. The alerts are integrated into the other types of data.    |
-| Packet storage        | A sophisticated packet indexing and storage system is included. You can create custom policies down to the flow level to regulate the storage requirements.   |
-| Graph Analytics | Trisul EDGE is a new feature set that brings Graph Analytics. Graph analytics builds relationship networks between various network entities seen by Trisul. For example, you can click on a particular “Certificate Authority” to open up its neighbors and see which organizations and IPs have used certificates issued by them. |
+| Platform              | Built on Linux with support for specialized hardware accelerators for high-performance processing.   |
+| Technology            | Uses a custom-built backend with streaming analytics, storage, and reporting integrated—eliminating the need for external systems like Elasticsearch or high-cost log management platforms.  |
+| Traffic Analysis      | Goes beyond basic bandwidth, SNMP, or NetFlow monitoring. Offers over 150+ traffic metrics across all network layers—out-of-the-box.   |
+| Flow Monitoring       | Supports ingestion via NetFlow protocols. When processing raw packets, Trisul constructs and stores flow records in a purpose-built database that scales to billions of flows per day while maintaining instant query response times.   |
+| Metadata collection   | Essential for Network Security Monitoring (NSM), Trisul captures and logs rich metadata including HTTP URLs, domain names, SSL/TLS certificates, and even reconstructed binaries. |
+| Security Alerts       | Integrates with IDS systems like Suricata to ingest and correlate alerts seamlessly with other monitored data.    |
+| Packet storage        | Includes an advanced packet indexing and storage system. Allows users to define granular retention policies—even at the individual flow level—to manage storage efficiently.   |
+| Graph Analytics | Introduces Trisul EDGE, a feature set for graph-based network analysis. Graph analytics builds relationship networks between various network entities seen by Trisul. For example, you can click on a particular “Certificate Authority” to open up its neighbors and see which organizations and IPs have used certificates issued by them. |
 
