@@ -4,140 +4,167 @@ sidebar_position: 3
 
 # Terminology
 
-Various terminology used in this and other guides.
+This section explains key terms used across this and other Trisul guides. These definitions will help you better understand how Trisul analyzes, monitors, and presents network data.
 
 ## List of Terms
 
 ### Alerts
 
-A notice that something needs attention. Out of the box Trisul can
-generate the following types of alerts
+An Alert is a notification that something on the network requires attention. Trisul automatically generates different types of alerts, including:
 
-1. threshold crossing : simple traffic over/under threshold
-2. badfellas : when certain Intel events such as known malicious
-   indicators are seen
-3. flowtracker : certain types of flow activity are seen, such as large
-   or long lived uploads
-4. ids : alerts from Suricata integrated with other metrics in Trisul
-5. anomaly : using the machine learning Threshold Band feature
+1. Threshold Crossing – Triggered when traffic goes above or below a configured limit.
 
-in addition, you can create your own alert types and fire them using the
-LUA API.
+2. Badfellas – Alerts when known malicious indicators (like blacklisted IPs) are detected.
 
-Also see [Alerts](/docs/ug/alerts)
+3. Flowtracker – Alerts based on specific types of flow behavior, such as long-lived or high-volume connections.
+
+4. IDS – Suricata alerts integrated with Trisul’s analytics.
+
+5. Anomaly – Triggered using Trisul's machine learning-based Threshold Band feature.
+
+> You can also create custom alert types using the LUA API.
+
+See also [Alerts](/docs/ug/alerts)
 
 ### Counter Groups
 
-A type of network entity for which various metrics are tracked. Each
-individual instance within it is tracked by a unique Key. For example :
-The “Host” counter group contains meters such as Total Traffic,
-Concurrent connections, etc. Each host within the *Host* Counter group
-is identified by a IP Address.
+A Counter Group is a category of network entities (like hosts or interfaces) for which Trisul tracks various metrics. Each entity in a group is identified by a unique Key.
 
-Also see [Custom Counter
-Groups](/docs/ug/cg/custom)
+Example:
+The "Host" Counter Group tracks data per IP address — such as total bandwidth, number of connections, etc.
+
+See also: [Custom Counter Groups](/docs/ug/cg/custom)
 
 ### Flows
 
-A flow represents a single connection between a source and destination IP address. Basically the IP conversation. 
-Trisul tracks flows by processing network packets or by working off
-Netflow. The flows work for both IPv4 and IPv6 and contain the 5 Tuple
-besides other flow attributes like MPLS Labels, VRFs, Interface Index,
-flow tags, etc
+A Flow represents a network session — essentially a conversation between two IPs. Trisul builds flows either from raw packets or NetFlow data.
 
-Also see [Monitoring
-flows](/docs/ug/flow)
+Each flow includes:
+
+- The 5-tuple: source IP, destination IP, source port, destination port, protocol.
+
+- Extra details: MPLS labels, VRFs, interfaces, flow tags, and more.
+
+See also [Monitoring flows](/docs/ug/flow)
 
 ### Packets
 
-A packet is a single unit of data transmitted over a network.To aid the practice of NSM, Trisul stores raw packets for extended periods of time. Innovative options are available to control storage requirements. Packets are encrypted on disk for added security.
+A packet is a single unit of data transmitted over a network. Trisul stores raw packets to enable full-fidelity Network Security Monitoring (NSM). These packets are encrypted and can be retained long-term with storage optimization features.
 
-Also see [Packet storage
-basics](/docs/ug/caps/fullcontent) , [Controlling what is
-stored](/docs/ug/caps/packetstorage)
+See also: [Packet storage basics](/docs/ug/caps/fullcontent) , [Controlling what is stored](/docs/ug/caps/packetstorage)
 
 ### Resources
 
-HTTP URLs and DNS (currently) \| All URLS and domains are logged.
-Provides a useful handle for incident response.
+Trisul currently logs HTTP URLs and DNS domains, making it easier to trace what websites or services are being accessed — useful for both troubleshooting and incident response.
 
-Also see
-[Resources](/docs/ug/resources/url)
+See also: [Resources](/docs/ug/resources/url)
 
 ### Retro
 
-*Retro* is Trisul's retrospective analysis feature, allowing you to analyze historical network traffic data. With *Retro* you can,
+*Retro* stands for Retrospective Analysis — Trisul's way of letting you look back in time and analyze historical network traffic.
 
-- Investigate past security incidents, network issues, or performance problems.
+You can:
 
-- Analyze traffic patterns, identify trends, and gain insights from stored data.
+- Investigate past security or performance incidents.
+- Discover long-term patterns or trends.
 
 ### Interface Trackers
 
-*Interface Trackers* monitor network interfaces for traffic, providing real-time data.
+These monitor network interfaces in real-time, collecting metrics like packets, bytes, and flows.
 
-* Trackers collect metrics such as bytes, packets, and flows, giving you visibility into network activity.
-* Configure trackers to monitor specific interfaces, VLANs, or subnets.
+You can track:
+
+- Individual interfaces
+- VLANs
+- Subnets
 
 ### Real Time Stabbers
 
 *Real-Time Stabbers* are live traffic analysis tools, offering instant insights into specific network activity. The inspiration comes from the thermometer you **stab** into a piece of cake in the oven to check its temperature.
 
-* Stabbers provide real-time visibility into traffic flows, protocols, and applications.
-* Use Stabbers to detect anomalies, identify security threats, or troubleshoot network issues.
+Use Stabbers to:
+
+- Spot anomalies on the fly
+- Investigate protocols or specific applications
+- Quickly respond to performance issues or attacks
 
 ### Latency
 
 *Latency* measures the delay between sending and receiving data over the network.
 
-* Monitor latency to ensure network performance and identify potential bottlenecks.
-* Analyze latency metrics to optimize network configuration and improve user experience.
+Use Trisul to:
+
+- Monitor real-time latency
+- Identify bottlenecks
+- Optimize performance
 
 ### Tagger
 
-*Tagger* is a feature that assigns labels or tags to network traffic for filtering, reporting, or alerting purposes.
+Tagger is a flexible feature that lets you assign labels to traffic. This helps you categorize and filter traffic by user, department, app, or location.
 
-* Use Tagger to categorize traffic by application, user, department, or location.
-* Apply tags to create custom dashboards, reports, or alerts tailored to your needs.
+You can:
+
+- Create dashboards based on tags
+- Trigger alerts for specific tags
+- Use tags in reports
 
 ### Edges
 
-*Edges* represent the connections between devices or interfaces in the network topology.
+*Edges* represent the connections between devices or interfaces in the network topology. Trisul uses Edges to map out how traffic flows through your network.
 
-* Edges help visualize network relationships, making it easier to understand traffic flows.
-* Use Edges to identify critical network paths, dependencies, and potential single points of failure.
+They help you:
+
+- Visualize your network
+- Find single points of failure
+- Understand dependencies
 
 ### Geo
 
-*Geo* provides geolocation information for IP addresses, helping identify traffic sources.
+*Geo* provides geolocation information (Country, region,city) for IP addresses, helping identify traffic sources.
 
-* Geo enables you to track traffic by country, region, or city.
-* Use Geo to detect potential security threats, analyze traffic patterns, or optimize content delivery.
+Use it to:
+
+- Track traffic sources
+- Detect unusual geographic activity
+- Improve content delivery strategies
+
+
 
 ### Badfellas
 
 *Badfellas* is a threat intelligence feature that identifies known malicious IP addresses and domains.
 
-* Badfellas helps detect and alert on potential security threats in real-time.
-* Use Badfellas to block malicious traffic, reducing the risk of security breaches.
+Badfellas:
+
+- Identifies traffic from malicious IPs/domains
+- Triggers alerts in real-time
+- Helps you block threats proactively
 
 ### Cron Tasks
 
-*Cron Tasks* are scheduled jobs that automate tasks, such as report generation or data exports.
+Cron Tasks are scheduled jobs that automate recurring activities like report generation, data export, or backups.
 
-* Cron Tasks save time and increase efficiency by automating routine tasks.
-* Use Cron Tasks to schedule recurring reports, data backups, or maintenance tasks.
+They help you:
+
+- Save time
+- Run tasks at off-peak hours
+- Ensure consistency
 
 ### Name Resolution
 
 *Name Resolution* translates IP addresses to domain names for easier identification.
 
-* Name Resolution simplifies network analysis by providing human-readable domain names.
-* Use Name Resolution to identify traffic sources, detect security threats, or analyze traffic patterns.
+Use it to:
+
+- Simplify network analysis by providing human-readable domain names.
+- Make it easier to understand traffic patterns and spot unusual behavior.
 
 ### IPDR
 
-*IPDR* (Internet Protocol Detail Record) is a DoT mandated standard for collecting and storing network traffic data.
+A standardized format (used in DoT compliance) for logging detailed metadata about network activity.
 
-* IPDR provides a structured format for storing traffic metadata, enabling efficient analysis.
-* Use IPDR to collect, store, and analyze network traffic data for security, performance, and compliance purposes.
+With IPDR, you can:
+
+- Collect and store structured network data
+- Support audits and compliance
+- Analyze long-term trends or forensic data
