@@ -97,11 +97,11 @@ The top panel contains the following items
 
 1) #### Shortcut Menu
    
-   ![](images/shortcutbutton.png)
+   ![](images/shortcutmenu.png)
    
    *Figure: Shortcut Menu in User Layout Menu*
    
-   Clicking on the shortcut menu you can quickly navigate to the home, routers and interfaces, and explore flows from any page.
+   Clicking on the shortcut menu you can quickly navigate to the home, routers and interfaces,explore flows, and system health from any page.
 
 2) #### Tenants
    
@@ -131,8 +131,8 @@ The Dash board contains the following elements
 | 1) Dashboard Name                                                    | This is the name of the dashboard.       |
 | 2)  Dashboard Description                                            | This gives you the description of the dashboard                                                                                                             |
 | 3) Data Time Period                                                  | The time shown on the top right corner of the dashboard is since the time data was available till now.                                                      |
-| 4) [Dashboard Toolbar](/docs/ug/ui/dashmod_intro#dashboard-menu-button) | By clicking on the three dots at the top right corner of the dashboard you can edit the dashboard including customizing it, toggle labels, set as default dashboard, expand all modules, collapse all modules, and download as PDF.                                         |
-| 5) Time Window | This enables you to select from a number of time ranges like 5 mins, 15 mins, 1 hour and more custom ranges |
+| 4) [Dashboard Toolbar](/docs/ug/ui/dashmod_intro#dashboard-menu-button) | By clicking on the ellipsis icon at the top right corner of the dashboard you can edit the dashboard including **customizing it, toggle labels, set as default dashboard, expand all modules, collapse all modules, and download as PDF**.                                         |
+| 5) [Time Selector](/docs/ug/ui/elements#time-selector) | This enables you to select from a number of time ranges like 5 mins, 15 mins, 1 hour and more custom ranges |
 | 6) Topper Count | A number of topper counts can be quickly selected to display the results in the modules in the dashboard that reflects the selected time.
 | 7) [Modules](/docs/ug/ui/modules)                                                           | Modules are represented in the forms of charts and tables.                                                                                                |
 

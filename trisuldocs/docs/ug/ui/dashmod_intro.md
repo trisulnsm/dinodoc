@@ -4,7 +4,12 @@ sidebar_position: 3
 
 # Introduction to Dashboards and Modules
 
-A *Dashboard* is a visual representation of key performance indicators and metrics that are used to measure the performance of a network traffic. Using Dashboards you can easily monitor and analyze data in real- time. A Trisul *Dashboard* contains *modules* at various positions.
+A **Dashboard** is a visual tool that displays key performance indicators (KPIs) and metrics to help you monitor and understand network traffic performance. Dashboards provide real-time visibility into your network, allowing you to track activity as it happens.
+
+In Trisul, a dashboard is made up of multiple **modules** placed in different positions, each showing specific types of data.
+
+![](images/dashmod.png)  
+*Figure: Showing Dashboard and Modules*
 
 Dashboards are,
 
@@ -16,51 +21,48 @@ Dashboards are,
 
 **Customizable** You can play around with dashboards that can be personalized/customized to specific needs of different users
 
-## Key Rules About *Modules* and *Dashboards*
+## Key Rules For *Modules* and *Dashboards*
 
-1. A dashboard may contain several modules.  
+1. A **dashboard** may contain several **modules**.  
 
-2. A module may appear in any number of dashboards.  
+2. A **module** may appear in any number of **dashboards**.  
 
-3. A module may even appear multiple times in the same dashboard.  
+3. A **module** may even appear multiple times in the same **dashboard**.  
 
-4. A change in a module property will propagate to all the dashboards
+4. A change in a **module** property will propagate to all the **dashboards**
    which use the module.  
 
-5. If there are no modules in a particular position that position is not
+5. If there are no **modules** in a particular position that position is not
    rendered at all as trisul modules auto adjust for width.
 
-*Modules* are like widgets or tiles in a *dashboard* that are individual components displaying  specific information, metrics, or data visualizations. They are the building blocks of a *dashboard* and can be customized to show various types of content. 
+**Modules** are like widgets or tiles in a **dashboard** that are individual components displaying  specific information, metrics, or data visualizations. They are the building blocks of a **dashboard** and can be customized to show various types of content. 
 
 Modules in a dashboard can be of various types including,
 
-**Charts and Graphs** Display data visualizations, such as line charts, bar charts, or pie charts.
+- **Charts and Graphs** Display data visualizations, such as line charts, bar charts, or pie charts.
 
-**Tables and Lists** Show tabular data, such as lists and tables.
+- **Tables and Lists** Show tabular data, such as lists and tables.
 
-**KPIs** Display important metrics, such as numbers, percentages, or gauges.
+- **KPIs** Display important metrics, such as numbers, percentages, or gauges.
 
-**Maps and GeoSpatial**Show geographic data, such as maps and location-based information.
+- **Maps and GeoSpatial**Show geographic data, such as maps and location-based information.
 
-**Texts and Labels** Display static or dynamic text, such as titles, descriptions, or notifications.
+- **Texts and Labels** Display static or dynamic text, such as titles, descriptions, or notifications.
 
-**Gauges and Meters** Display progress or measurement indicators, as in speedometers or thermometers.
+- **Gauges and Meters** Display progress or measurement indicators, as in speedometers or thermometers.
 
-**Real-Time Traffic Feeds** Real-time traffic updates, including congestion, incidents, and threats.
+- **Real-Time Traffic Feeds** Real-time traffic updates, including congestion, incidents, and threats.
 
-**Custom Modules** Can be developed to meet specific needs, such as integrating with external services.
+- **Custom Modules** Can be developed to meet specific needs, such as integrating with external services.
 
 ## An Example - Current Hosts
 
-The first screen you will see when you login as user is the Current Hosts
-overview dashboard
+The first screen you will see when you login as user is the *Current Hosts* dashboard
 
 ![thumbnail_zoom](images/host_dashboard.png "thumbnail_zoom")  
-*Figure: Host Dashboard*
+*Figure: Current Host Dashboard*
 
-You can see that this dashboard is nothing but four modules laid out in
-two columns. Trisul has well defined column positions into which you can
-place modules. See [Module Positions](/docs/ug/ui/modules#add-modules-to-a-newexisting-dashboard)
+You can see that this dashboard is nothing but four modules laid out in two columns. Trisul has well defined column positions into which you can place modules. See Module Positions in ["Add Modules to a New/Existing Dashboard"](/docs/ug/ui/modules#add-modules-to-a-newexisting-dashboard)
 
 Lets take a closer look at the dashboard shown above.
 
@@ -121,41 +123,28 @@ This will show a list of all available modules.
 
 To **view one particular module** from the list, check on the name of the dashboard that contains the module and navigate to that dashboard to select the module.
 
-## Menu Options
+## Dashboard Customization
 
 ### Dashboard Menu Button
 
-You can control dashboard layout and contents by using the menu options.
+You can manage the layout and contents of a dashboard using the **menu options** available at the dashboard level. To access these options, click the **ellipsis icon** located at the top-right corner of the dashboard window.
 
-Dashboard menu can be accessed from the right side corner of each
-dashboard window. 
 
 ![](images/dashboard_menu.png)  
-*Figure: Dashboard level toolbar*
+*Figure: Dashboard level menu options*
 
-With Dashboard menu button you can
 
-**Customize** Allows you to personalize the dashboard to your preferences, such as rearranging modules, adding or removing modules, and changing the layout.
+### Dashboard Menu Options
 
-**Toggle Labels** Toggles the display of labels for each module on the dashboard, providing a more detailed information.
-
-**Set as Default Dashboard** Saves the current dashboard configuration as your default view, so every time you log in, this customized dashboard will be displayed.
-
-**Expand all Modules** Opens up all collapsed modules on the dashboard, allowing you to see all the information at once.
-
-**Collapse all modules** Collapses all expanded modules on the dashboard, providing a more compact view and reducing clutter.
-
-**Download as PDF** You can exports the current dashboard view as a PDF file, and save, or share the data for reports.
-
-#### Operations
-
-The following operations can be performed using the toolbars:
+The following operations can be performed using the dashboard menu options:
 
 | Operation                | Description                                                    |
 | ------------------------ | -------------------------------------------------------------- |
-| Customize                | Edit dashboard parameters like name, description,modules etc.. |
-| Toggle labels            | Toggle readable vs label only on table list                     |
-| Set as default dashboard | Set as home page                                               |
-| Expand all modules       | Click on the dashboard to enable all modules                   |
-| Collapse all modules     | Click on the dashboard to disable all modules                  |
-| Download as PDF          | Export data in PDF file                                        |
+| Customize                | Personalize the dashboard by rearranging modules, changing the layout, or editing dashboard parameters such as name and description. |
+| Toggle labels            | Show or hide the title and descriptive labels of each module. Hiding labels gives a cleaner look, while showing them provides more context and detail.                     |
+| Set as default dashboard | Save the current dashboard as your default home page. It will automatically load when you log in next time.                                               |
+| Expand all modules       | Expand all collapsed modules on the dashboard to display full details at once.                  |
+| Collapse all modules     | Collapse all expanded modules to create a compact, less cluttered view.                 |
+| Download as PDF          | Export the current dashboard view as a PDF file for reporting or sharing.                                   |
+| Export to JSON           | Export the dashboard configuration and data in JSON format, useful for backups or importing elsewhere. |
+
