@@ -159,6 +159,8 @@ for flow based load balancing.
 
 - Click **Enable All** or **Disable All** on the top right hand side to enable or disable all adapters.
 
+> When you click **Enable All** or **Disable All** adapters, the system will prompt you to restart the probe. Make sure to complete the restart to ensure the changes take effect.
+
 ### Edit the Profile
 
 Click the action button against any interface and a dropdown menu shows up **Enable**, **Edit**, and **Delete** options in the Profile list.    
