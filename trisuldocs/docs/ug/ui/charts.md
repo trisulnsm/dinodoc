@@ -66,7 +66,7 @@ These are the *Chart Interaction Control* icons that can be found in various mod
 *Figure: Chart Interaction Control Icons*
 
 Below you can find the *CHart Interaction Control* icons explained from right to left of the sample image.
-- **PDF**- Click on the PDF icon on the top righ corner of the module to download the chart data in PDF.
+- **PDF**- Click on the PDF icon on the top right corner of the module to download the chart data in PDF.
 
 - **Key Dashboard**- Click on the Key Dashboard icon to view and edit the Key details of this module
 

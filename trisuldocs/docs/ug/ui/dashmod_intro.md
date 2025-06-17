@@ -4,56 +4,65 @@ sidebar_position: 3
 
 # Introduction to Dashboards and Modules
 
+## What are Dashboards?
+
 A **Dashboard** is a visual tool that displays key performance indicators (KPIs) and metrics to help you monitor and understand network traffic performance. Dashboards provide real-time visibility into your network, allowing you to track activity as it happens.
 
 In Trisul, a dashboard is made up of multiple **modules** placed in different positions, each showing specific types of data.
 
+Dashboards are,
+
+- **Visual**- You can use charts, graphs, tables and other visual elements to display data
+- **Interactive**- You can interact with dashboards to drilldown into details, filter data, and explore different scenarios
+- **Real-Time**- Dashboards display up to date data reflecting the current status of the network
+- **Customizable**- You can play around with dashboards that can be personalized/customized to specific needs of different users
+
 ![](images/dashmod.png)  
 *Figure: Showing Dashboard and Modules*
 
-Dashboards are,
+## What Are Modules?
 
-**Visual** You can use charts, graphs, tables and other visual elements to display data
+**Modules** are the building blocks of a dashboard in Trisul. Think of them like **widgets or tiles**—each one shows a specific piece of information to help you monitor and understand your network.
 
-**Interactive** You can interact with dashboards to drilldown into details, filter data, and explore different scenarios
+Modules display metrics in different formats such as numbers, charts, tables, and more. You can add as many modules as you need to a dashboard, and each one can be customized to focus on a particular type of data or insight.
 
-**Real-Time** Dashboards display up to date data reflecting the current status of the network
+**Modules** help you:
 
-**Customizable** You can play around with dashboards that can be personalized/customized to specific needs of different users
+- Analyze network traffic
+- Understand traffic patterns
+- Detect anomalies
+- Identify security threats
+
+## Types of Modules
+Here are the common types of modules you can add to a dashboard:
+
+- **Charts and Graphs**  
+Visualize trends and comparisons using line charts, bar graphs, pie charts, etc.
+- **Tables and Lists**  
+Show detailed tabular data like IP addresses, hosts, or flow records.
+- **KPIs (Key Performance Indicators)**  
+Highlight important numbers, percentages, or thresholds.
+- **Maps and Geospatial Views**  
+Display location-based data, such as where traffic is coming from.
+- **Texts and Labels**  
+Add titles, descriptions, or notes to explain sections of your dashboard.
+- **Gauges and Meters**  
+Show live progress or usage indicators (like a speedometer or dial).
+- **Real-Time Traffic Feeds**  
+Stream live traffic updates, alerts, and anomaly indicators.
+- **Custom Modules**  
+Create your own modules or integrate with external tools to show specific data.
 
 ## Key Rules For *Modules* and *Dashboards*
 
 1. A **dashboard** may contain several **modules**.  
-
 2. A **module** may appear in any number of **dashboards**.  
-
 3. A **module** may even appear multiple times in the same **dashboard**.  
-
 4. A change in a **module** property will propagate to all the **dashboards**
    which use the module.  
-
 5. If there are no **modules** in a particular position that position is not
    rendered at all as trisul modules auto adjust for width.
 
-**Modules** are like widgets or tiles in a **dashboard** that are individual components displaying  specific information, metrics, or data visualizations. They are the building blocks of a **dashboard** and can be customized to show various types of content. 
-
-Modules in a dashboard can be of various types including,
-
-- **Charts and Graphs** Display data visualizations, such as line charts, bar charts, or pie charts.
-
-- **Tables and Lists** Show tabular data, such as lists and tables.
-
-- **KPIs** Display important metrics, such as numbers, percentages, or gauges.
-
-- **Maps and GeoSpatial**Show geographic data, such as maps and location-based information.
-
-- **Texts and Labels** Display static or dynamic text, such as titles, descriptions, or notifications.
-
-- **Gauges and Meters** Display progress or measurement indicators, as in speedometers or thermometers.
-
-- **Real-Time Traffic Feeds** Real-time traffic updates, including congestion, incidents, and threats.
-
-- **Custom Modules** Can be developed to meet specific needs, such as integrating with external services.
 
 ## An Example - Current Hosts
 
