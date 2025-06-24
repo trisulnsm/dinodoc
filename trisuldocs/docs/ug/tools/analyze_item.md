@@ -55,7 +55,9 @@ Upon submitting the *search criteria* form after clicking the *analyze* button, 
 ![](images/longtermtraffic_searchresult.png)
 *Figure: Long Term Traffic Search Result*
 
-A series of charts will be generated, with each chart representing a discrete daily dataset, resulting in a collection of individual charts, one for each day within the specified time frame(example, for 25 days), thereby providing a sequential visual representation of the data.
+A series of charts will be generated, with each chart representing a discrete daily dataset, resulting in a collection of **individual charts**, one for each day within the specified time frame(example, for 25 days), thereby providing a sequential visual representation of the data. If the specified time frame exceeds the Set Limit, you ll see an **aggregated long term chart** as a single chart for the set time period.
+
+> You can set the number of days for which you want to see the data as individual charts in [WebTrisul Options &rarr; Charts &rarr; Long Term Chart Day Limit](/docs/ag/webadmin/web_options#chart). 
 
 Using the [legend table](/docs/ug/ui/charts#legend-table) and [Chart Interaction Controls](//docs/ug/ui/charts#chart-interaction-controls), you can drill down into the intra-day data, facilitating a more detailed temporal analysis and exploration of the search result.
 
