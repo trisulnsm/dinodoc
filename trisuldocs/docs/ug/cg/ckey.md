@@ -23,6 +23,20 @@ You would want to use custom key monitors if :
 
 ## Set Refresh Time
 
+When you select a custom key, the following statistics are displayed
+
+| Field | Description |
+|-------|-------------|
+| Name |  The name or label of the custom key being analyzed. |
+| Meter | The specific aspect of traffic being measured — e.g., Total Bytes, Received Packets, Transmit Bytes, etc. |
+| Total | Cumulative value for the meter over the selected time window. |
+| Max | The highest recorded value in a single sampling interval during the selected period. |
+| Min | The lowest recorded value in a sampling interval. |
+| Avg | The average value across all intervals in the selected time range. |	
+| Latest | The most recent recorded value for this meter. |
+| 95th % | The 95th percentile value — highlights consistent usage while excluding short bursts or spikes. |
+| IFSpeed | Interface speed shown only if the counter group is a Flow Interface. |
+
 The custom key is refreshed automatically every minute, indicated by a rotating refresh icon next to the download button. As it keeps refreshing every minute the custom key fetches the new data updating with the latest data.
 
 ![](images/ckeyrefresh.png)  
