@@ -98,6 +98,15 @@ Some reports are generated for a particular entity such as a specific
  host or application. For these reports you need to tell Trisul about 
 the entity via the *Report parameters* field. Currently there are three types of such reports.
 
+### Parameters for Threshold Crossing Alerts
+
+Say you want to schedule a threshold crossing alert report for everytime an interface utilization crosses 75%,
+
+1. Specify all common fields for a scheduled report
+2. In addition enter report parameters as shown below
+
+`filter_interface_average_utilization : 75`
+
 ### Parameters for the Endpoint Activity Report
 
 The *Endpoint activity report* expects you to specify a host.
