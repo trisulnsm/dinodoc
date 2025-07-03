@@ -8,7 +8,7 @@ This tool is especially helpful for financial services and securities organizati
 
 :::info navigation
 
-Login as admin and,
+Login as admin and,  
 :point_right: Go to Web Admin &rarr; Manage &rarr; Apps
 :::
 
@@ -26,8 +26,8 @@ Login as user and,
 :::
 
 ## Using Multicast GraphX
- 
-![](images/multicast.png)
+
+![](images/multicast.png)  
 *Figure: Showing Multicast Graphx*
 
 - Select a time range to view historical multicast activity.
@@ -36,11 +36,11 @@ Login as user and,
 
 The graph displays:
 
-- A center node showing the Multicast IP and Port
+- A **center** node showing the Multicast IP and Port
 
-- A left bubble representing the number of sender IPs
+- A **left** bubble representing the number of sender IPs
 
-- A right bubble representing the number of receiver IPs
+- A **right** bubble representing the number of receiver IPs
 
 Click on either bubble to expand the list of senders or receivers.
 
