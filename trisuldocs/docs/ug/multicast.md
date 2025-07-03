@@ -20,8 +20,7 @@ From the list of Trisul apps, download Multicast GraphX.
 
 :::info navigation
 
-Login as user and,
-
+Login as user and,  
 :point_right: Go to Dashboard &rarr; Show All &rarr; Multicast GraphX
 :::
 
