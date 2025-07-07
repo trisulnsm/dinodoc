@@ -85,7 +85,7 @@ The page show a list of created custom key monitors with the following details:
 
 *Figure: Action Button Options*
 
-The following are the **Action Button Options** explained in detail. For your easement, click on an option on the table to quickly jump to that option without having to scroll through the page .
+The following are the **Action Button Options** explained in detail. For your convenience, click on an option on the table to quickly jump to that option without having to scroll through the page .
 
 | Action Button Options    |       |
 | ------------- |------------------|
