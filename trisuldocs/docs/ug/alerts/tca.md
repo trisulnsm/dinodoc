@@ -130,7 +130,7 @@ The subsequent Threshold crossing *Alert Group* Table presents the following det
 
 With Individual Alerts you can perform the following functions:
 1) [**View individual alerts**](/docs/ug/alerts/tca#view-individual-alerts)
-2) [**Filter Individual Alerts**](/docs/ug/alerts/tca#filter-individual-alerts) using the *Search Form* based on certain search criteria, filter indivial alerts based on certain search criteria 
+2) [**Filter Individual Alerts**](/docs/ug/alerts/tca#filter-individual-alerts) using the *Search Form* based on certain search criteria, filter individual alerts based on certain search criteria 
 3) [**In-Depth Analysis of Individual Alerts**](/docs/ug/alerts/tca#in-depth-analysis-of-individual-alerts) using the *Drilldown* button
 4) [**View Traffic Chart**](/docs/ug/alerts/tca#traffic-chart) with watermarks around the alert timestamp.
 

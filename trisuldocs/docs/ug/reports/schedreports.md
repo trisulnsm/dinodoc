@@ -48,7 +48,7 @@ Here is the table with the description of all available fields to schedule a new
 | Bcc                          | Recipients are invisible to all the other recipients of the message             |
 | Specify a Subject            | Subject of the report                                                           |
 | Signature                    | Signature of the sender                                                         |
-| Report parameters (optional) | Optional parameters, if present must be in valid `JSON` format. This parameter is only required for these three reports Endpoint Activity, Application Activity, Router and Interfaces             |
+| [Report parameters](/docs/ug/reports/schedreports#report-parameters) (optional) | Optional parameters, if present must be in valid `JSON` format. This parameter is only required for these three reports Endpoint Activity, Application Activity, Router and Interfaces             |
 | Enabled                      | Keep this checkbox checked to generate reports on schedule and unchecked to temporarily disable scheduled reports                                                                            | 
 
 Once you schedule the report, all your scheduled reports will appear on the index page and you can toggle from there.
@@ -94,18 +94,7 @@ To bulk edit scheduled reports select and click on the checkboxes on the left si
 
 ## Report Parameters
 
-Some reports are generated for a particular entity such as a specific
- host or application. For these reports you need to tell Trisul about 
-the entity via the *Report parameters* field. Currently there are three types of such reports.
-
-### Parameters for Threshold Crossing Alerts
-
-Say you want to schedule a threshold crossing alert report for everytime an interface utilization crosses 75%,
-
-1. Specify all common fields for a scheduled report
-2. In addition enter report parameters as shown below
-
-`filter_interface_average_utilization : 75`
+Some reports are generated for a particular entity such as a specific host or application. For these reports you need to tell Trisul about the entity via the *Report parameters* field. Currently there are three types of such reports.
 
 ### Parameters for the Endpoint Activity Report
 
@@ -124,8 +113,7 @@ The *Application activity* report expects you to specify an application or port.
 1. Specify all common fields for a scheduled report
 2. In addition enter report parameters as shown below
 
-Say you want to schedule an for the http app, use this format  
-`{"port1":"http"}` You can also enter a port number `{"port1":"Port-80"}`
+Say you want to schedule an for the http app, use this format `{"port1":"http"}` You can also enter a port number `{"port1":"Port-80"}`
 
 ### Parameters for the Interface Activity Report
 
