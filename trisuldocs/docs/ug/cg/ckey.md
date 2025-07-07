@@ -85,14 +85,7 @@ The page show a list of created custom key monitors with the following details:
 
 *Figure: Action Button Options*
 
-The following are the **Action Button Options** explained in detail. For your convenience, click on an option on the table to quickly jump to that option without having to scroll through the page .
-
-| Action Button Options    |       |
-| ------------- |------------------|
-| [**View Dashboard**](/docs/ug/cg/ckey#view-dashboard) | [**Generate Report**](/docs/ug/cg/ckey#generate-report) |
-| [**Add/Edit Keys**](/docs/ug/cg/ckey#add-or-edit-keys) |[**Schedule Report**](/docs/ug/cg/ckey#schedule-report) |
-| [**Edit**](/docs/ug/cg/ckey#edit) | [**Delete All Keys**](/docs/ug/cg/ckey#delete-all-keys) |
-| [**Add to Menu >>**](/docs/ug/cg/ckey#add-to-menu) | [**Delete**](/docs/ug/cg/ckey#delete) |
+The following are the **Action Button Options** explained in detail. For your convenience, click on an option on the right hand side of the documentation to quickly jump to that option without having to scroll through the page .
 
 
 ### View Dashboard
