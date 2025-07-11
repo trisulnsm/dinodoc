@@ -68,7 +68,7 @@ These are the *Chart Interaction Control* icons that can be found in various mod
 Below you can find the *Chart Interaction Control* icons explained from right to left of the sample image.
 - **PDF**- Click on the PDF icon on the top right corner of the module to download the chart data in PDF.
 
-- **Key Dashboard**- Click on the three dots icon and select between inbound and outbound to take you to the respective traffic chart in the key dashboard.
+- **Key Dashboard**- Click on the three dots icon and select a key from the menu to take you to the respective traffic chart in the key dashboard.
 
 - **Live SNMP**- To view the Live data i.e., until the latest one minute click Live SNMP icon and it gets refreshed every 10 seconds. This icon is not available on all modules rather on relevant ones.
 
@@ -88,7 +88,7 @@ Hover your mouse over an item such as a PIE slice or line graph and get a toolti
 
 *Legend tables* are interactive chart legends where you can click on a chart item in the legend area to toggle its visibility, showing or hiding the corresponding data series in the chart.
 
-| ![](images/legendtable.png) |
+| ![](images/legendtable_new.png) |
 | --------------------------- |
 
 *Figure: Showing Legend Table in a Module*
@@ -96,7 +96,7 @@ Hover your mouse over an item such as a PIE slice or line graph and get a toolti
 
 Example: In the above chart, both Inbound and Outbound items are initially enabled. Clicking on either item in the legend will hide or show its associated data as shown in the charts below.
 
-| ![](images/legend2.png) | ![](images/legend3.png) |
+| ![](images/legend2_new.png) | ![](images/legend3_new.png) |
 | ----------------------- | ----------------------- |
 | *Click on Inbound: Only Inbound data is showing* | *Click on Outbound: Only Outbound data is showing* |
 
@@ -109,7 +109,7 @@ Charts are updated automatically via Ajax calls, ensuring real-time data visuali
 - Min
 - Average
 - Total
-- 95th percentile
+- 0th percentile
 
 
 ### Retro Charts
@@ -149,7 +149,7 @@ So you can select a specific time period by dragging the slider handles to choos
 
 
 ### Retro Tabs
-The *Retro Tabs* feature provides a user interface element that enables users to segment and display temporal data in various time-based categories.
+The *Retro Tabs* feature from the Retro counter provides a user interface element that enables users to segment and display temporal data in various time-based categories.
 
 ![](images/retrotabs.png)
 *Figure: Retro Tabs*
@@ -174,7 +174,3 @@ The chart features a visual indicator to denote the availability of PCAP (Packet
 >**Interpretation**:  
 >Time periods with a light yellow overlay indicate that PCAP data is available for that specific interval.  
 >The absence of the light yellow overlay indicates that PCAP data is not available for that time period.
-
-
-
-

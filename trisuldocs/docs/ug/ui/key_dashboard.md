@@ -100,7 +100,7 @@ The information on the left includes,
 
 ### Set Label/ Edit
 
-   ![](images/setlabeloredit.png)
+   ![](images/setlabeloredit_new.png)
 
 *Figure: Set/Edit Label from Key Dashboard*
 
@@ -114,8 +114,6 @@ The information on the left includes,
 4) Clicking on **Resolve**, and this resolves the name for this key. Works for all IP addresses and AS Numbers.
 
 5) You can click **Resolve using nmblookup**, to resolve names using nmblookup. nmblookup, a part of samba suite resolves NetBIOS names (example, computer names) to IP addresses
-
-6) Click **Create Bandwidth Cap**, and set the amount of data you can upload or download. Exceeding this limit can result in a additional fee and can be viewed in the chart. Bandwidth is usually given in JSON format. For example, 5 Mbps should be given as `{"bw": 5000000}`.
 
 ### Drilldown Options
 
