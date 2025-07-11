@@ -65,10 +65,10 @@ These are the *Chart Interaction Control* icons that can be found in various mod
 
 *Figure: Chart Interaction Control Icons*
 
-Below you can find the *CHart Interaction Control* icons explained from right to left of the sample image.
+Below you can find the *Chart Interaction Control* icons explained from right to left of the sample image.
 - **PDF**- Click on the PDF icon on the top right corner of the module to download the chart data in PDF.
 
-- **Key Dashboard**- Click on the Key Dashboard icon to view and edit the Key details of this module
+- **Key Dashboard**- Click on the three dots icon and select between inbound and outbound to take you to the respective traffic chart in the key dashboard.
 
 - **Live SNMP**- To view the Live data i.e., until the latest one minute click Live SNMP icon and it gets refreshed every 10 seconds. This icon is not available on all modules rather on relevant ones.
 
