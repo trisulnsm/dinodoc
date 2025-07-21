@@ -63,7 +63,22 @@ To access application setting, Login as admin and,
 | Option                           | Default Value | Description                                          |
 | -------------------------------- | ------------- | ---------------------------------------------------- |
 | Query Logs Maxcount              | 100           | Show top n list in the submited query logs           |
+| IPDR Excel Report Type (Refer below)           | Standard      | Choose among the flexible formats: Standard, DoT Strict Format, Single Panel Format according to your requirements     |
 
+#### IPDR Excel Report Type
+
+Trisul offers multiple export formats to suit various operational and compliance workflows. You can easily switch between formats depending on your specific use case — whether for internal analysis, regulatory submission, or customer-facing reports.
+
+- **Standard Format**
+    The default, full-featured layout that includes all available flow fields. Ideal for in-depth investigations and general-purpose reporting.
+
+- **DoT Strict Format**
+    Structured specifically to meet Department of Telecommunications (DoT) requirements. This format aligns with LEA and regulatory audit expectations, ensuring strict column order and data compliance.
+
+- **Single Panel Customer Format**
+    A simplified and compact layout designed for customer-facing views or integration into billing or usage panels.
+
+Simply select the required format, and Trisul automatically formats the data accordingly—ready for viewing, export, or secure sharing.
 
 ## Proxy Server
 
