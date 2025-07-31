@@ -10,7 +10,7 @@ Trisul Network Analytics runs on off the shelf servers - either bare metal or VM
 
 ## Operating Systems
 
-Trisul's products say Trisul NetFlow Analyzer, Trisul NSM, Trisul IPDR, Trisul NSM are available on the following operating systems:
+Trisul's products say Trisul NetFlow Analyzer, Trisul NSM, and Trisul IPDR are available on the following operating systems:
 
 
 | OS               | Recommended | Notes |
