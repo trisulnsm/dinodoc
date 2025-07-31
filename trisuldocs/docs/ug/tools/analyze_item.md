@@ -18,7 +18,7 @@ To use long term traffic tool,
 
 The following *search criteria* window opens up with a [*Hide/ Show Search Form*](/docs/ug/ui/elements#hide-show-search-form) option.
 
-![](images/longtermtraffic.png)  
+![](images/longtermtraffic_new.png)  
 *Figure: Long Term Traffic*
 
 You can begin your search in the *Long term traffic* form by populating the search criteria fields with the help of the following fields and their descriptions.
