@@ -26,18 +26,22 @@ Networks](/docs/ag/context/home_networks). Under the screenshot you can find a d
 
 The Hosts dashboard consists of the following modules
 
-| Module Title                            | Description                                                    |
-| --------------------------------------- | -------------------------------------------------------------- |
-| Inbound Vs Outbound                     | Inbound vs outbound traffic relative to your home network                                                                               |
-| Active Flows                            | Number of active flows in the past T hours                                                                                              |
-| Latest Top Internal Hosts - Total       | The Top Internal Hosts by Total traffic in the latest 5 minutes                                                                         |
-| Latest Top External Hosts - Total       | Hosts outside home network (external hosts) with the most total traffic in the latest 5 minutes                                         |
-| Latest Top Internal Hosts - IN          | Top Internal Hosts by with most received traffic (downloaders) in the latest time interval (5 minutes by default)                       |
-| Latest Top External Hosts - IN          | Top External Hosts by with most received traffic (downloaders)in the latest time interval (5 minutes by default)                        |
-| Latest Top Internal Hosts - OUT         | Top Internal Hosts by most sent traffic (uploaders) in the latest topper interval (Default 5 minutes)                                   |
-| Latest Top External Hosts - OUT         | Top External hosts sending most traffic to your network in the latest topper interval (Default 5 minutes)                               |
-| Latest Top Internal Hosts - Connections | Top Internal hosts maintaining the most number of active TCP and UDP connections in the latest 5 minutes (default topper interval) |
-| Latest Top External Hosts - Connections | External hosts with most number of connections in the latest 5 minutes (the default topper interval)                                |
+| Module Title                            | Description                          |
+| --------------------------------------- | ------------------------------------- |
+| Inbound Vs Outbound                     | Inbound vs outbound traffic relative to your home network |
+| Active Flows                            | Number of concurrently active flows. See [Meta Session Group](/docs/counter-groups/meta-session-group#master-size) counter group docs| 
+| Latest Top Internal Hosts - Total       | The Top Internal Hosts by Total traffic bandwidth|
+| Latest Top External Hosts - Total       | Hosts outside home network (external hosts) by Total traffic|
+| Latest Top Internal Hosts - IN          | Top Internal Hosts by with most received traffic (downloaders) |
+| Latest Top External Hosts - IN          | Top External Hosts by with most received traffic (downloaders)|
+| Latest Top Internal Hosts - OUT         | Top Internal Hosts by most sent traffic (uploaders)|
+| Latest Top External Hosts - OUT         | Top External hosts sending most traffic to your network in the latest topper interval|
+| Latest Top Internal Hosts - Connections | Connection count for internal hosts |
+| Latest Top External Hosts - Connections | Connection count for external hosts |
+
+:memo: See [Counter Groups reference](/docs/counter-groups/hosts) for more details about these and other metrics
+
+
 
 ## Current Apps
 
