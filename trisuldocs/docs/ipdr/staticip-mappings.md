@@ -96,25 +96,46 @@ The system will automatically export all IPDR customer details in CSV format.
 
 ### Bulk Import from CSV File Format
 
-The CSV file should have a specific format, with each line containing nine columns. Each column represents a detail of the customer or subnet. The following default date settings apply when importing IP to customer mappings:
+:::info  Sample Template CSV and EXCEL files 
+You can download these sample files and use them as a template to add your own mappings 
 
-- Valid From: If no date is specified for "Valid From," the system defaults to January 1, 1970 (Epoch timestamp: 0).
-- Valid To: If no date is specified for "Valid To," the system assumes the validity period is perpetual, with no end date.
+ - [Download Sample CSV](/data/SAMPLE_IPDR_CUSTOMER_SUBNET_MAPPINGS.csv)
+ - [Download Sample EXCEL](/data/ipdrtemplate.xlsx)    &nbsp;&nbsp;&nbsp;&nbsp;  _Right click and Save Link As_
 
-These default settings can be adjusted or overridden during the import process or after importing the data.
-Sample:
+**EXCEL** If using XLSX format ensure you save as _CSV UTF-8 (Comma Separated) *.csv_ file.  The CSV format will be used for import. 
+:::
+
 
 ![](images/csv_format.png)  
-*Figure: CSV Format showing nine columns*
+*Figure: Sample CSV file 
 
-Multiple IPs can be added using IPs in double quotes separated by commas.  
-For example: `"192.12.3.2","192.18.10.1","192.10.22.2"`
+#### Description of fields in CSV file
+
+
+|Column Number | Field | Descriptions |
+|-------|--------------|--- |
+| 1 | IP Address  | The IP Address or Subnet. You can enter multiple IP or subnets in one line separated by a comma. Formats accepted are <ul><li>`192.168.10.23` </li> <li>`192.168.18.24/29`</li><li> `19.82.23.4,19.82.22.0/24` </li></ul> |
+| 2 | Name | Customer name |
+| 3 | Address | Customer address |
+| 4 | Email | Customer Email ID |
+| 5 | Phone | Phone number |
+| 6 | Alt Phone | Alternative phone number |
+| 7 | Customer ID | Circuit ID, Customer ID, Code, Username this uniquely identifies a customer |
+| 8 | Valid From | The date from which this IP allocation is valid.  Format is `DD-MM-YYYY HH:MM:SS` the `HH:MM:SS` part is optional. If left blank 01-01-1970 is used |
+| 9 | Valid To | The date until which this IP allocation is valid. Format is same as _Valid From_ If field is left blank, the allocation has no end date |
+| 10 | Terminal ID | You can put a MAC address or other terminal ID here to be used for internal purposes |
+
+
+
+#### Column order customization 
 
 The default mapping of all the columns to customer and subnet details can be modified in the UI after importing the CSV file.
 
 ![](images/csvformat.png)  
-*Figure: CSV Format*
+*Figure: CSV Column selection*
 
+
+-----
 
 ## Delete All
 
@@ -147,7 +168,7 @@ Below that are the list of assigned subnets to customer containing details such 
 | Terminal ID | Lists the unique identifier for the terminal device associated with the assigned subnet |
 
 
-:::info Validity timeframe of mappings - `ValidFrom` and `ValidTo` 
+:::info Dont delete customers, use Set Expiry
 The Static IP mapping captures the validity of the assignment via the *Valid From* and *Valid To* fields. While generating the IPDR Report , Trisul IPDR uses the *Valid From* and *Valid To* timestamps to fill out the customer details. Users should do a *Set Expiry* for decommissioned customers rather than *Delete* them. This allows historical mappings to be correctly filled out as per the compliance mandate. 
 :::
 
