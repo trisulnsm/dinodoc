@@ -10,13 +10,13 @@ Trisul Network Analytics runs on off the shelf servers - either bare metal or VM
 
 ## Operating Systems
 
-Trisul's products say Trisul NetFlow Analyzer, Trisul NSM, and Trisul IPDR are available on the following operating systems:
+Trisul Network Analytics packages are available on the following platforms.
 
 
-| OS               | Recommended | Notes |
-| ---------------- | ---|---|
-| Ubuntu 20.04/22.04 |  Ubuntu 22.04| |
-| RHEL 9/8       | RHEL 9.x| Can also use OracleLinux, AmazonLinux, RHEL, CentOS versions 9/8/7|
+| OS               | Recommended   | Notes |
+| ---------------- | ----------|---|
+| Ubuntu LTS 22.04/24.04 |  Ubuntu 24.04| |
+| RHEL 9/8         | RHEL 9.x| Can also use OracleLinux, AmazonLinux, RHEL, CentOS versions 9/8|
 
 
 ## Modes 

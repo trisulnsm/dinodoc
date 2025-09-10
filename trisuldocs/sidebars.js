@@ -247,9 +247,9 @@ const sidebars = {
 		label: 'Troubleshooting a Step by Step Guide',
 		link: { type: 'doc', id:'Troubleshooting/index'},
 			  items : [
-							"Troubleshooting/netflownotreceiving",
-						  "Troubleshooting/unabletologin",
-						  "Troubleshooting/contextnotgettingcreated",
+						"Troubleshooting/netflownotreceiving",
+						"Troubleshooting/unabletologin",
+						"Troubleshooting/contextnotgettingcreated",
 					],							
 		 },
 	  ],
