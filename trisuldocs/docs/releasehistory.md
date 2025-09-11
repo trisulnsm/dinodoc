@@ -2,36 +2,36 @@
 
 This changelog outlines the key updates, improvements, and fixes made to Trisul across various releases. Browse through the release notes below to learn about the latest features, enhancements, and bug fixes.
 
-## WEBTRISUL 7.0.2572 (September 5,2025)
-0105937: Added option to generate and display Authentication/API tokens.
-0105936: Manage users(add/edit/delete) with admin or super admin access.
-0105935: Added menu to explore flows & aggregate flows from interface drilldown
-0105958: Added drop down menu for peering and prefix analytics drilldown.
-0105976: IPDR customer import supports multiple IPS in one CSV row.
-0106000: Alerts now include country flags for blacklisted IPs.
-0105998: Automated TCA alerts for ICMP flood detection.
-0105999: Top Hosts & Apps in email alerts (HTML Format).
-0106008: Syslog now uses journalctl for Ubuntu 24 and RHEL9.
-0106011: PDF reports now match UI data for "Current Apps".
-0106013: Autocomplete enabled across real-time modules.
-0105927: Add MaxMind GEOIP key configuration via WebTrisul.
-0105978: Detects and skips duplicate entries in IPDR CSV imports.
-0105986: Added Send email report option in scheduled report page.
-0105991: New Sankey chart module in the dashboard.
-0106001: Email settings include "Ignore TLS" option.
-0106012: Real-time module error that caused file descriptor limits to be exceeded.
-0106017: Automatically use port from nginx configuration file.
-0106018: Enhanced Change webserver port and set SSL via nginx for https.
-0106020: Threshold Crossing Alert now show control box interface.
-0106022: Show ifspeed on Custom Key Monitor (Flow Interface Selection).
-0106023: Custom Key Monitor Report for High Utilization Interfaces (75%).
-0106024: Added summary table at top of reports.
-0106026: TCA alert emails now show utilization in bps for flow interface counter group.
-0106033: TCA Alert reports now downloadable.
-0106041: Custom Key Monitor supports regex for filtering keys.
-0106050: Multicast GraphX supports any three-level cross key mapping.
-0106063: IPDR mode now applicable to multiple probes.
-0106068: Enhanced Real-time single-value modules for multi-probe environments.
+## WEBTRISUL 7.0.2572 (September 5,2025)  
+0105937: Added option to generate and display Authentication/API tokens.  
+0105936: Manage users(add/edit/delete) with admin or super admin access.  
+0105935: Added menu to explore flows & aggregate flows from interface drilldown  
+0105958: Added drop down menu for peering and prefix analytics drilldown.  
+0105976: IPDR customer import supports multiple IPS in one CSV row.  
+0106000: Alerts now include country flags for blacklisted IPs.  
+0105998: Automated TCA alerts for ICMP flood detection.  
+0105999: Top Hosts & Apps in email alerts (HTML Format).  
+0106008: Syslog now uses journalctl for Ubuntu 24 and RHEL9.  
+0106011: PDF reports now match UI data for "Current Apps".  
+0106013: Autocomplete enabled across real-time modules.  
+0105927: Add MaxMind GEOIP key configuration via WebTrisul.  
+0105978: Detects and skips duplicate entries in IPDR CSV imports.  
+0105986: Added Send email report option in scheduled report page.  
+0105991: New Sankey chart module in the dashboard.  
+0106001: Email settings include "Ignore TLS" option.  
+0106012: Real-time module error that caused file descriptor limits to be exceeded.  
+0106017: Automatically use port from nginx configuration file.  
+0106018: Enhanced Change webserver port and set SSL via nginx for https.  
+0106020: Threshold Crossing Alert now show control box interface.  
+0106022: Show ifspeed on Custom Key Monitor (Flow Interface Selection).  
+0106023: Custom Key Monitor Report for High Utilization Interfaces (75%).  
+0106024: Added summary table at top of reports.  
+0106026: TCA alert emails now show utilization in bps for flow interface counter group.  
+0106033: TCA Alert reports now downloadable.  
+0106041: Custom Key Monitor supports regex for filtering keys.  
+0106050: Multicast GraphX supports any three-level cross key mapping.  
+0106063: IPDR mode now applicable to multiple probes.  
+0106068: Enhanced Real-time single-value modules for multi-probe environments.  
 
 
 ## WEBTRISUL 7.0.2551 (March 13,2025)
