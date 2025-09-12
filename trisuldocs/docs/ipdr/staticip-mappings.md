@@ -73,7 +73,7 @@ By following these steps, you can ensure a seamless integration of new customer 
 To import IP to customer mappings for IPDR, follow these steps:
 
 - Click the Import button located in the top right corner.
-- Browse and select the CSV file containing the IP to customer mappings, with one mapping per line.
+- Browse and select the CSV file containing the IP to customer mappings (Supports multiple IPs in one row)
 - Click Upload CSV File to initiate the upload process. 
 
 Once the CSV file is uploaded, you can see a status summary displaying the total customers uploaded, the number successfully imported, the number of records skipped, and the number of IP addresses skipped.
