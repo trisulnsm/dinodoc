@@ -79,7 +79,7 @@ When you install a Trisul App, it is automatically deployed to all Probe nodes.
 
 ## Creating your Own Apps
 
-You can clone the [trisulnsm/apps](https://github.com/trisulnsm/apps) repository to see how an app is assembled.
+You can clone the [trisulnsm/apps](https://github.com/trisulnsm/apps/tree/apps7/) repository to see how an app is assembled.
 
 Each apps lives inside a single directory
 
@@ -93,4 +93,4 @@ When the version number changes, the user will be given a hint that a “New ver
 
 ## List of Apps
 
-Here is a list of all the available apps. We are constantly adding new Apps, to view the latest list of apps go to [trisulnsm/apps](https://github.com/trisulnsm/apps)
+Here is a list of all the available apps. We are constantly adding new Apps, to view the latest list of apps go to [trisulnsm/apps](https://github.com/trisulnsm/apps/tree/apps7/)
