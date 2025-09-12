@@ -41,12 +41,12 @@ Retrieve the list of IPDR customers.
 #### Request Format
 
 ```bash
-curl -X HTTP_METHOD 'http://SERVER_IP:PORT/api/ipdrcustomers' -H 'Content-Type: application/json' -d '{"api_token": "API_TOKEN", "username":"USERNAME", KEY:VALUE, KEY:VALUE}'
+curl -X HTTP_METHOD 'http://SERVER_IP:PORT/api/ipdrcustomers' -H 'Content-Type: application/json' -d '{"api_token": "API_TOKEN", "contextname" : "default", username":"USERNAME", KEY:VALUE, KEY:VALUE}'
 ```
 
 #### Request Example
 ```bash
-curl -X GET 'http://192.168.1.77:8000/api/ipdrcustomers' -H 'Content-Type: application/json' -d '{"api_token": "GiXwBWWv5g2Fs6QeaTlx", "username":"user"}'
+curl -X GET 'http://192.168.1.77:8000/api/ipdrcustomers' -H 'Content-Type: application/json' -d '{"api_token": "GiXwBWWv5g2Fs6QeaTlx",  "contextname" : "default", "username":"user"}'
 ```
 
 #### Output Example
@@ -80,7 +80,7 @@ Create a new IPDR customer.
 
 #### Example
 ```bash
-curl -X POST 'http://192.168.1.77:8000/api/ipdrcustomers' -H 'Content-Type: application/json' -d '{ "api_token": "GiXwBWWv5g2Fs6QeaTlx", "username": "user", "Name": "Trisul", "Address": "Chennai", "Email": "demo@gmail.com", "PhoneNumber": "1234567890", "AltPhoneNumber": "9999999999", "UserID": "B68t19"}'
+curl -X POST 'http://192.168.1.77:8000/api/ipdrcustomers' -H 'Content-Type: application/json' -d '{ "api_token": "GiXwBWWv5g2Fs6QeaTlx",  "contextname" : "default", "username": "user", "Name": "Trisul", "Address": "Chennai", "Email": "demo@gmail.com", "PhoneNumber": "1234567890", "AltPhoneNumber": "9999999999", "UserID": "B68t19"}'
 ```
 
 
@@ -90,7 +90,7 @@ Update an existing IPDR customer.
 
 #### Example
 ```bash
-curl -X PUT 'http://192.168.1.77:8000/api/ipdrcustomers/B68t19' -H 'Content-Type: application/json' -d '{ "api_token": "GiXwBWWv5g2Fs6QeaTlx", "username":"user", "Name": "Trisul Network Analyzer", "Address": "India", "Email": "test@gmail.com", "PhoneNumber": "3333333333", "AltPhoneNumber": "5555555555", "UserID": "B68t19"}'
+curl -X PUT 'http://192.168.1.77:8000/api/ipdrcustomers/B68t19' -H 'Content-Type: application/json' -d '{ "api_token": "GiXwBWWv5g2Fs6QeaTlx", "contextname" : "default", "username":"user", "Name": "Trisul Network Analyzer", "Address": "India", "Email": "test@gmail.com", "PhoneNumber": "3333333333", "AltPhoneNumber": "5555555555", "UserID": "B68t19"}'
 ```
 
 
@@ -99,7 +99,7 @@ Partially update an existing IPDR customer.
 
 #### Example
 ```bash
-curl -X PATCH 'http://192.168.1.77:8000/api/ipdrcustomers/B68t19' -H 'Content-Type: application/json' -d '{"api_token": "GiXwBWWv5g2Fs6QeaTlx", "username":"user", "Address": "Partially Updated"}'
+curl -X PATCH 'http://192.168.1.77:8000/api/ipdrcustomers/B68t19' -H 'Content-Type: application/json' -d '{"api_token": "GiXwBWWv5g2Fs6QeaTlx", "contextname" : "default", "username":"user", "Address": "Partially Updated"}'
 ```
 
 The difference between the update and partial update is that in the update, you have to provide the values for all fields, even if you don't change them. In a partial update, you can pass only the values that you want to change in the record.
@@ -110,7 +110,7 @@ Delete an existing IPDR customer.
 
 #### Example
 ```bash
-curl -X DELETE 'http://192.168.1.77:8000/api/ipdrcustomers/B68t19' -H 'Content-Type: application/json' -d '{"api_token": "GiXwBWWv5g2Fs6QeaTlx", "username":"user"}'
+curl -X DELETE 'http://192.168.1.77:8000/api/ipdrcustomers/B68t19' -H 'Content-Type: application/json' -d '{"api_token": "GiXwBWWv5g2Fs6QeaTlx", "contextname" : "default", "username":"user"}'
 ```
 
 
