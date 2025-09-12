@@ -105,10 +105,6 @@ You can download these sample files and use them as a template to add your own m
 **EXCEL** If using XLSX format ensure you save as _CSV UTF-8 (Comma Separated) *.csv_ file.  The CSV format will be used for import. 
 :::
 
-
-![](images/csv_format.png)  
-*Figure: Sample CSV file*
-
 #### Description of fields in CSV file
 
 

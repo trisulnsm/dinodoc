@@ -19,7 +19,7 @@ template. Select one module template from the list and fill out the required par
 
 This is a list of all module templates supported by Trisul.
 
-![](images/moduletypesnew.png)
+![](images/crosskeysankeychart.png)
 
 *Figure: Module Templates from Dashboard Customization Option*
 
@@ -39,7 +39,9 @@ This is a list of all module templates supported by Trisul.
 | 12  | [Alert List](/docs/ug/ui/module_templates#alert-list)                     |
 | 13  | [Alert Count](/docs/ug/ui/module_templates#alert-count)                   |
 | 14  | [Existing Modules](/docs/ug/ui/module_templates#existing-modules)         |
-| 15  | [Custome URL Page](/docs/ug/ui/module_templates#custom-url-page)          |
+| 15  | [Custom URL Page](/docs/ug/ui/module_templates#custom-url-page)           |
+| 16  | [Crosskey Tree](/docs/ug/ui/module_templates#crosskey-tree)               |
+| 17  | [Crosskey Sankey](/docs/ug/ui/module_templates#crosskey-sankey)       
 
 ## Module Parameters
 
@@ -399,3 +401,32 @@ The Crosskey Tree module provides a drilldown view of two to three counter group
 | Meter              | Upload Bytes  | Shows the list of Meters to select from                                  |
 | Key Filter         | -             | Enter keywords or phrases to include in the analysis                     |
 | Inverse Key Filter | -             | Enter keywords or phrases to exclude from the analysis                   |
+
+## Crosskey Sankey
+
+The Crosskey Sankey module works the same way as crosskey module, except the relationships are shown in a Sankey diagram instead of a tree.  
+
+This means:   
+- It still supports two or three level counter group drilldowns.  
+- Instead of a hierarchical tree view, flows are visualized as bands whose width represents relative traffic or counts.  
+- This makes it easier to compare proportions and see how data flows from one level to the next.  
+
+Example:
+
+- Two-Level Sankey: NBAR ID → Routers
+- Three-Level Sankey: NBAR ID → Routers/Devices → Interfaces
+
+
+### Parameters
+
+| Parameter name     | Default value | Description                                                                     |
+| ------------------ | ------------- | ------------------------------------------------------------------------------- |
+| Name               | -             | A unique name for this Sankey module instance.                                  |
+| Description        | -             | Optional text describing the purpose or context of this module.                 |
+| Counter Group      | APP_HOST      | The counter group to use as the basis for the drilldown (e.g., Apps, Hosts).    |
+| Topcount           | 10            | The maximum number of keys to display at each level of the Sankey diagram.      |
+| Meter              | Total         | The measurement unit to use (e.g., Total, Bytes, Packets, Flows).               |
+| Key Filter         | -             | Include only keys matching this filter pattern                                  |
+| Inverse Key Filter | -             | Exclude keys matching this filter pattern.                                      |
+| Assign Equal Weight| Unchecked     | When enabled, all flows are shown with equal weight instead of proportional to traffic.     |
+
