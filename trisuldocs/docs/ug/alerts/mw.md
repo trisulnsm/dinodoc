@@ -95,7 +95,7 @@ Upon selecting a specific *Signature ID* or *Count* value, the system redirects 
 - A list of 1000 recent alerts associated with the chosen *Signature ID*, grouped by that specific signature.
 - A list of alerts corresponding to the selected *Count* value, showcasing the specific alerts that contribute to the aggregated count.
 
-![](image/blacklistalerts2.png)  
+![](image/blacklistalerts2_new.png)  
 *Figure: Recent 1000 Alerts*
 
 In this page you can find a summary of alert groupings, offering a categorical overview of alert distribution. By selecting a specific value within a grouping category, the system executes a drill-down query, redirecting you to a detailed list of alerts filtered by the chosen group, thereby facilitating in-depth analysis.
@@ -111,13 +111,18 @@ Below the summary section, a detailed alert table is displayed, presenting a com
 | Column            | Description                                                                                |
 |-------------------|--------------------------------------------------------------------------------------------|
 | ID                | Alert ID is the unique identifier for each alert                                           |
-| Priority          | The severity level assigned to each alert to identify the most critical alerts that require immediate attention                                                                                              |
+| Priority          | The severity level assigned to each alert to identify the most critical alerts that require immediate attention                                                                                                        |
+| Source IP         | Source IP with the country flag of the source IP                                           |
+| Source Port       | The port number used by the source IP (the device/application initiating the connection).                                                                                                     |
+| Destination IP    | Destination IP with the country flag of the destination IP                                 |
+| Destination Port  | The port number on the destination IP (the service/application being connected to)                                                                                                              |
 | Scan Check        | Indicates if the system has only scanned for malware or if its infected  by malware        |
-| Type              | The category of alert                                                                      |                                                                  
+| Type              | The category of alert                                                                      |                    
 | Description       | A short summary of alert including relevant details                                        |
 | Timestamp IST     | The date and time the alert was generated, displayed in Indain Standard Time (IST)         |
 | Probe             |  The specific probe that detected and reported the alert                                   |
-| Drilldown Options | Clicking on the drilldown button enables a number of drilldown options including alert details, flow details, packet headers, download PCAP etc.                                                        |
+| Drilldown Options | Clicking on the drilldown button enables a number of drilldown options including alert details, flow details, packet headers, download PCAP etc.                                                                                      |
+| Flow State        | PCAP can be downloaded if available or a barred sign indicates no PCAP is available        |
 
 Interactive functionalities of the table include : [*Column Sorter*](/docs/ug/ui/elements#column-sorter), [*Toggle Labels*](/docs/ug/ui/elements#toggle-labels), [*Download Button*](/docs/ug/ui/elements#download-button), [*Download PCAP*](/docs/ug/ui/elements#download-pcap-button), and the
 *Check Scan* button that initializes the scan status for all the generated alerts indicating if the system has only scanned for malware or if its infected by malware.

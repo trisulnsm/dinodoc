@@ -107,7 +107,7 @@ You can download these sample files and use them as a template to add your own m
 
 
 ![](images/csv_format.png)  
-*Figure: Sample CSV file 
+*Figure: Sample CSV file*
 
 #### Description of fields in CSV file
 
