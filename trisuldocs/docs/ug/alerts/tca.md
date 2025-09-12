@@ -195,7 +195,7 @@ When alerts are displayed you have the option to drilldown even further on the e
 
 Click on the *chart* button to show a traffic chart around the time the alert occurred showing the Low and High water marks for reference.  
 
-![](image/tca_trafficchart.png)
+![](image/tca_trafficchart.png)  
 *Figure: Traffic Chart of Target Interface with Watermarks*
 
 The chart plots the amount of network traffic over a specified time period, centered around the alert timestamp.
