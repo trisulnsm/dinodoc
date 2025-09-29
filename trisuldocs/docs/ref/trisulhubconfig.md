@@ -151,7 +151,45 @@ This section controls how many backend flushers are used. The default number of 
 | PIDFile        |          | Where thePIDfor the running trisul_flushd process is stored        |
 | AutoStart      | true     | Automatically start flushd process        
 | ControlChannel |          | InternalIPCchannel      |
-| Flushers       |          | For each flusher instance specify the connection and DB instance number. Sequentially from 0..8 (MAX) |
+| Flushers       |          | For each flusher instance specify the connection and DB instance number. Sequentially from 0..8 (MAX). See below |
+
+### Flusher
+
+Flushers are backend databases processes that store data snapshots coming from the Probes into a slice. The number of flushers must be a multiple of 2. Valid values are 1,2,4,8.   A typical flusher section would be
+
+```xml
+<Flushers>
+    <Flusher>
+        <Connection>tcp://192.168.10.12:12001</Connection>
+        <DBInstance>0</DBInstance>
+    </Flusher>
+    <Flusher>
+        <Connection>tcp://192.168.10.12:12002</Connection>
+        <DBInstance>1</DBInstance>
+    </Flusher>
+</Flushers>
+```
+
+- Connection : A network endpoint, the default single machine endpoint uses IPC, the form of socket is `ipc://` , there is an attribute `dedicated` that can be used to dedicate a flusher to a single probe and a single instance. See next section. 
+- DBInstance : 0, 1, 2, etc. 
+
+
+#### Dedicated to probe connection flusher
+
+In multi probe very high volume environments consider using the `dedicated="probe0"` probe flusher format.
+
+```xml
+<Flusher>
+    <Connection dedicated="probe0">tcp://192.168.1.2:12003</Connection>
+    <Connection dedicated="probe1">tcp://192.168.1.2:12023</Connection>
+    <Connection dedicated="probe2">tcp://192.168.1.2:12043</Connection>
+    <DBInstance>
+        0
+    </DBInstance>
+</Flusher>
+```
+
+The `<Conenection dedicated="probe0">` format sets up a dedicated endpoint for a probe and an instance. Without it, all probes would use the same endpoint and the messaging framework would demultiplex it.  A performance setting. 
 
 ## Server
 
@@ -291,6 +329,8 @@ These parameters are typically set automatically when you put Trisul in the IPDR
 | AAADumpFilePath | CONTEXTROOT/run/aaadumpfiles | The place where the RADIUS AAA server dumps the currently active sessions |
 | SubscriberOption | | Add Subscriber ID or other ISP specific tag , this is taken from the RADIUS AAA log files |
 | MaxRecords | 250,000 | When using the *Request Full Database Dump* this parameter controls the maximum number of records dumped.  | 
+| QueryThreadCount |1 | Number of worker query threads to use for IPDR queries, ideal value is the same  _numflushers*numprobes_  This maps to `--threads,-j` parameter in trisul_queryflowstream tool  |
+| MACInDeviceID | false| Put the MAC Address in the device ID field which normally contain the router iD |
 
 ## Advanced DB Parameters
 
@@ -311,7 +351,7 @@ Under the node : `DBParameters > FlowStream`
 | Parameter                  | Default  | Type | Description   |
 | -------------------------- | -------- | ---  | ---------------------|
 | MicroSecondTimestamps      | TRUE     | |Does the flow database need microsecond timestamps. Use case : Compliance for large flow stores. Disabling microsecond timestamps for start and end time can save about 8 bytes / per flow | 
-| ZFLOWBLOCK_COMPRESSOR_CODE | lz4      | |The compressor type for the flow database. Available parameter values are<br/>- `lz4`<br/><br/>- `lz4-ip-call-log-with-nat-pro-max` : For both IPv4 and IPv6 withNATIP, Port, userid for full log<br/><br/> |
+| ZFLOWBLOCK_COMPRESSOR_CODE | lz4      | |The compressor type for the flow database. Available parameter values are<ul> <li>`lz4`</li><li>`lz4-ip-call-log-with-nat-pro-max` : For both IPv4 and IPv6 withNATIP, Port, userid for full log</li><li>`lz4-ip-call-log-with-nat-pro-max-mac` : With MAC ID collection, use only when you are sure MAC ID represent end user terminals</li></ul> |
 | kFLOWS_PER_BLOCK           | 4096     | |The number of flows per block. Default 4096                          |
 | kBLOOM_AGG_SIZE            | 100      |Bloom Filter |The number of flow blocks per bloom filter.                          |
 | kBUMPX_AGG_SIZE            | 500      |Bitmap Index |The number of flow blocks per full bitmap filter index.              |

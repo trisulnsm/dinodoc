@@ -81,6 +81,7 @@ Boolean parameters are case-insensitive. True, true,TRUEmean the same thing
 | TemplateKeyPolicyV9 |  | Policy to handle v9 Templates, use this to handle vendor variations <ul><li>source-id</li><li>source-port</li><li>source-port-if-source-id-zero</li></ul>  | 
 | AddHalfNATEdge |  FALSE | Add an EDGE to map a NAT mapping. Use only if required in IPDR mode. Mostly you dont need this |
 | AllowRunningCounts |  FALSE | Use with some vendors like Checkpoint, who tend to use running counters when Live Flow Timeout is enabled. When this option is set the NetFlow plugin handles running byte and packet counts in flow records. *AllowRunningCounts* must be only used with *InflightTokens*=1 (single threaded)  See InflightTokens parameter in [Probe Config file > Tuning](/docs/ref/trisulconfig#tuning) |
+| CollectIPDRMAC | FALSE | In IPDR Mode, collect the source mac address if available. To use this the CompressorCode in the [hub config file](/docs/ref/trisulhubconfig#ipdr) must be set to `lz4-ip-call-log-with-nat-pro-max-mac` The MAC address will then replace the Device ID | 
 
 
 ## Sampling rates
