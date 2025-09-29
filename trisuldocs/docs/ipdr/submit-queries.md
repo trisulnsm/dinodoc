@@ -38,10 +38,10 @@ Multiple fields are AND-ed.
 | Time Frame | Select from a list of time frames (Last 1 hour, this month etc) or click custom to specify a time period | The time range for which you want to retrieve IPDR data.|
 | Port | The TCP or UDP Port number   | The port number|
 | NAT IP | The private IP Address    | When NAT or CGNAT is used , enter the private IP you want to query in this field. This would be in the 100.64.0.0/10, 10.0.0.0/8, or other private ranges|
-| User Name  | The AAA User name/ Static User Name   | The AAA User name, only works if you are using AAA real time syslog and can also be used as static user name|
+| User Name  | The AAA User name/ Static User Name   | The user name from syslogs, if you are using AAA real-time syslog or a configured static user name.|
 | Device IP  | Router IP Example: 10.2.2.1 or 2404:5440:3::a| The IP Address of the device generating the IPDR Data. Typically the router.|
 | Bulk IP Query File | (.txt file)                       | A .txt file containing multiple IP addresses or subnets for bulk IPDR queries.   |
-| AAA User Name      |                        |  The AAA Radius user name for authentication or tracking, used in IPDR queries.  |
+| AAA User Name      |                        |  The AAA RADIUS user name used for authentication or tracking in IPDR queries. |
 
 
 ### User Name
