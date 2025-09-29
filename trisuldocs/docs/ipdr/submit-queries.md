@@ -19,7 +19,7 @@ Trisul IPDR Query Form allows you to query on one or more of the following field
 
 Here is the snapshot of Trisul IPDR Query Form.
 
-![](images/ipdrqueryform_new.png)
+![](images/ipqueryform_new.png)
 
 *Figure: The IPDR Query form*
 
