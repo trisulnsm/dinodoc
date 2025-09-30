@@ -27,33 +27,21 @@ Here is the snapshot of Trisul IPDR Query Form.
 
 ### Form fields
 
-:::note 
+:::info 
 Multiple fields are AND-ed.
 :::
 
 
 | Fields | Input  | Description |
 | ------ | --- |---|
-| IP Address | Enter the IPv4 or IPv6 address. Example:  209.168.1.20 or 2404:5440:3::a | Enter one or more IPv4 or IPv6 addresses. Example: 209.168.1.20 or 2404:5440:3::a. For multiple IP queries, enter IPs or subnets separated by commas (,). Example: 209.168.1.20, 2404:5440:3::a, 192.168.1.0/24. Recommended limit: up to 20 IPs/subnets per query.|
+| IP Address | Enter the IPv4 or IPv6 address. | Enter one or more IPv4 or IPv6 addresses. Example: `209.168.1.20` or `2404:5440:3::a`. For multiple IP queries, enter IPs separated by commas (,). Example: `209.168.1.20,209.168.3.20,2404:5440:3::a`, Recommended limit: up to 20 IPs per query.|
 | Time Frame | Select from a list of time frames (Last 1 hour, this month etc) or click custom to specify a time period | The time range for which you want to retrieve IPDR data.|
 | Port | The TCP or UDP Port number   | The port number|
 | NAT IP | The private IP Address    | When NAT or CGNAT is used , enter the private IP you want to query in this field. This would be in the 100.64.0.0/10, 10.0.0.0/8, or other private ranges|
-| User Name  | The AAA User name/ Static User Name   | The user name from syslogs, if you are using AAA real-time syslog or a configured static user name.|
+| User Name  | The user name from syslogs or from static customer inventory| The user name from NAT syslogs or from the [customer static IP inventory](#user-name). If you want to query the  RADIUS/AAA user then fill in the AAA User Name field instead. See |
 | Device IP  | Router IP Example: 10.2.2.1 or 2404:5440:3::a| The IP Address of the device generating the IPDR Data. Typically the router.|
 | Bulk IP Query File | (.txt file)                       | A .txt file containing multiple IP addresses or subnets for bulk IPDR queries.   |
-| AAA User Name      |                        |  The AAA RADIUS user name used for authentication or tracking in IPDR queries. |
-
-
-### User Name
-
-To add User ID from customer database to flows,
-
-Go to [Trisul Apps](/docs/ag/webadmin/apps) and download and install **IPDR Tagger** app to enable tagging of group of IPs to a user ID. 
-
-![](images/ipdrtagger.png)  
-*Figure: Showing IPDR Tagger App from Trisul Apps*
-
-Once enabled, you can query the user ID associated with a particular group of IPs. This allows for efficient querying of IP groups based on user ID.
+| AAA User Name | RADIUS/AAA user name|  The AAA RADIUS user name that you would find in AAA logs. |
 
 
 ### Usage Guidelines
@@ -79,7 +67,21 @@ To request a full dump leave all the form fields blank and **press the split sub
 As a safety mechanism, the Full Database Dump is capped to 250,000 records.  This is controlled by the [IPDR > MaxRecords](/docs/ref/trisulhubconfig#ipdr) option in the Trisul Hub Configuration file. 
 
 
-### Enhanced Bulk Query Capability
+### User Name
+
+To add User ID from [customer inventory database](/docs/ipdr/staticip-mappings) to flows. 
+
+Go to [Trisul Apps](/docs/ag/webadmin/apps) and download and install **IPDR Tagger** app to enable tagging of group of IPs to a user ID. 
+
+![](images/ipdrtagger.png)  
+*Figure: Showing IPDR Tagger App from Trisul Apps*
+
+Once enabled, you can query the user ID associated with a particular group of IPs. This allows for efficient querying of IP groups based on user ID.
+
+
+
+
+### Command Line Bulk Query Capability
 
 The `ipdr_bulkquery.sh` script is a utility provided with the Trisul Hub IPDR package. It enables users to query thousands of IPs at once, eliminating the need for tedious individual IP entries into the IPDR Web Form.
 
