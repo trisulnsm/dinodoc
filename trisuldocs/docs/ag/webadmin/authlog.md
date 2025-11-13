@@ -41,7 +41,7 @@ The Auth Log displays the table of following details and functionalities.
 
 ### Download
 
-Click on the [*Donwload Button*](/docs/ug/ui/elements#download-button) to download the list of auth logs in PDF, XLSV, or CSV formats.
+Click on the [*Download Button*](/docs/ug/ui/elements#download-button) to download the list of auth logs in PDF, XLSV, or CSV formats.
 
 ### Users List
 
