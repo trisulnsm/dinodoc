@@ -32,7 +32,7 @@ The real time alert visualizer is a type of real time stabber. See the section o
 
 Let us examine each section of the console.
 
-![](image/ids_stabber.png)
+![](image/idsalerts.png)
 
 *Figure: Real Time Alerts Stabber Module*
 
