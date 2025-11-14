@@ -2,7 +2,7 @@
 
 Trisul is a dedicated platform for deep network analytics that supports many industries, environments, and operational workflows, so reading the full doc can feel dense or advanced especially for users who aren’t full-time network engineers. 
 
-This section is a collection of short, actionable how-to guides for common Trisul workflows. If you were wondering "Where do I find this?”, “How do I enable that?”, or “What should I check next?", want a quick answer, not a deep manual, you’re in the right place. These list of HowTos are your quick reference.
+This section is a collection of short, actionable how-to guides for common Trisul workflows. If you were wondering "Where do I find this?”, “How do I enable that?”, or “What should I check next?", want a quick answer, not a deep manual, you’re in the right place. These list of HowTos are your quick reference ✨
 
 ## List of howtos
 
