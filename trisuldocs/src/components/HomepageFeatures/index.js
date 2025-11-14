@@ -34,7 +34,7 @@ const FeatureList = [
     ),
   },
   {
-  title: 'Use Cases',
+  title: 'How Tos',
   linkto: '/docs/howto',
   Svg: require('@site/static/img/undraw_instant-analysis_vm8x.svg').default,
   description: <>Practical walkthroughs, workflows, and real-world usage scenarios.</>,
