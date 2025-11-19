@@ -19,7 +19,7 @@ Here are the quick links to easily navigate through workflows that help you chec
 
 1) [How to ensure if IPDR logging is up and running?](/docs/ipdr/scripts#trisul-ipdr-service)
 2) [How to get alerts on downtime and manually flush pending IPDR records when logging is delayed?](/docs/programs/runhubflusher_watchdog)
-3) [How to auto detect stalled IPDR flushing and restart it automatically?](/docs/programs/hubflusher_watchdog/)
+3) [How to auto detect stalled IPDR flushing and restart it automatically?](/docs/programs/hubflusher_watchdog)
 4) [How to monitor storage and system health?](/docs/ag/admintasks/system_health)
 5) [How to check daily IPDR data volume and confirm continuous logging?](/docs/ag/admintasks/storage_status)
 6) [How to monitor disk usage and system health for IPDR stability](/docs/ipdr/advanced)
