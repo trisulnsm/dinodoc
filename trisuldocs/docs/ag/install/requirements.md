@@ -4,8 +4,9 @@ import TabItem from '@theme/TabItem';
 
 # System Requirements
 
+Below are the recommended system requirements for Trisul deployments. Trisul runs on commodity servers, either bare metal or virtual machines. Below you’ll find recommended hardware and resource guidelines based on the two data-processing modes and varying deployment sizes. 
 
-Trisul Network Analytics runs on off the shelf servers - either bare metal or VM, under a Linux operating system. 
+Choose the processing mode and size that match your network’s scale, then proceed to Installation.
 
 
 ## Operating Systems
@@ -19,22 +20,22 @@ Trisul Network Analytics packages are available on the following platforms.
 | RHEL 9/8         | RHEL 9.x| Can also use OracleLinux, AmazonLinux, RHEL, CentOS versions 9/8|
 
 
-## Modes 
+## Processing Modes 
 
-Trisul products can run in two major modes, each with distinct resource requirements:
+Trisul’s four products fall into two technical categories based on how they process data.
 
-- **_NetFlow Analyzer Mode_** (Trisul NetFlow Analyzer, Trisul ISP, Trisul IPDR)- needs lower CPU, Memory and resources. And, in the case of Trisul IPDR, additional storage.
-- **_Packet Capture Mode_** (Trisul NSM) - needs more CPU, Memory resources 
+- **_Flow-Based Mode_** (For Trisul NetFlow Analyzer, Trisul ISP, Trisul IPDR)- needs lower CPU, Memory and resources. And, in the case of Trisul IPDR, additional storage.
+- **_Packet Capture Mode_** (For Trisul NSM) - needs more CPU, Memory resources 
 
 See below for typical requirements. 
 
 
-## NetFlow Analyzer Mode Requirements
+## Flow-Based Mode Requirements
 
-NetFlow sizing is based on number of devices and interfaces.  Click a tab that is matches your network.
+Flow-Based analytics sizing is based on number of devices and interfaces. Choose the sizing block that most closely matches your network’s scale.
 
 <Tabs>
-  	<TabItem value="small" label="Small 500 Endpoints/20 Routers" default>
+  	<TabItem value="small" label="Small (≈500 Endpoints/20 Routers) " default>
 :::info Trying it out
 
 If you are just trying out Trisul, it is recommended to start with a small version as below. 
@@ -54,7 +55,7 @@ If you are just trying out Trisul, it is recommended to start with a small versi
 
 </TabItem>
 
-<TabItem value="medium" label="Medium 3000 endpoints/50 Routers ">
+<TabItem value="medium" label="Medium (≈3000 endpoints/50 Routers) ">
 
 :::info Medium 3000
 For Medium enterprises with about 2000 employees
@@ -73,7 +74,7 @@ For Medium enterprises with about 2000 employees
 
 </TabItem>
 
-<TabItem value="large" label="Large 20K endpoints/500 Routers">
+<TabItem value="large" label="Large (≈20K endpoints/500 Routers) ">
 
 :::info Unlimited 
 Large enterprises with > 20,000 endpoints. 
@@ -93,7 +94,7 @@ Large enterprises with > 20,000 endpoints.
 
 
 
-<TabItem value="giant" label="SD-WAN 5000+ Branch ">
+<TabItem value="giant" label="SD-WAN (≈5000+ Branch) ">
 
 :::info SD-WAN
 	SD-WAN networks are characterized by very large number of branches and routers. This leads to a high NetFlow and SNMP load.
@@ -112,13 +113,13 @@ Large enterprises with > 20,000 endpoints.
 </TabItem>
 </Tabs>
 
->**NOTE: For Trisul ISP that runs on NetFlow Analyzer Mode, the system requirements slighly vary. See: [Trisul ISP System Requirements](/docs/isp/requirements)**		
+>**NOTE: For Trisul ISP that runs on Flow-Based Mode, the system requirements slighly vary. See: [Trisul ISP System Requirements](/docs/isp/requirements)**		
 
 
 
 ## Packet Capture Mode Requirements
 
-Packet capture sizing is based on total packet bandwidth.  This is not the link speed but rather the actual utilization of the link. Click a tab that is matches your network.
+Packet capture analytics sizing is based on total packet bandwidth.  This is not the link speed but rather the actual utilization of the link. Choose the sizing block that most closely matches your network’s traffic volume.
 
 
 
@@ -192,7 +193,7 @@ This is a typical configuration for 40Gbps packet capture used in ISP settings. 
 
 ## IPDR Requirements
 
-IPDR sizing is based on the network's throughput capacity. To determine the appropriate IPDR size for your network, select the tab that corresponds to your network's throughput rate.
+IPDR sizing is based on your network’s throughput. Select the tab that matches your expected throughput rate.
 
 <Tabs>
   	<TabItem value="small" label="SMALL LICENSE <10Gbps" default>
@@ -244,45 +245,49 @@ IPDR sizing is based on the network's throughput capacity. To determine the appr
 
 ## Advanced Scaling
 
-This section contains more detailed information about the workloads. Read this to understand incremental scaling needs.
+This section goes deeper into how Trisul handles heavier workloads. Read it when you need to plan for scaling beyond the standard sizing levels.
 
 ### Load Profile 
 
-The load profile of the Probe and Hub components.
+The table below gives a quick view of how the two main Trisul components use system resources. This helps you understand which parts of the system grow with traffic volume and which grow with the number of probes you deploy.
 
 | Node Type | Description | Load Profile  | 
 | -------- | ------- | -------- | 
-| Trisul Hub   | Database node  | Disk bound I/O, number of probes matter |
-| Trisul Probe | PCAP storage and streaming analytics | CPU bound|  
+| Trisul Hub   | Stores all analytics data and handles searches, reports, and long-term storage(Database node).  | Mostly disk I/O–intensive. Load increases as more probes send data. |
+| Trisul Probe | Collects network traffic (flows or packets) and processes it in real time (streaming analytics) before sending the results to the Hub| Mostly CPU-intensive. Load increases with traffic volume.|  
 
 
 ### Trisul Hub Scaling Rules 
 
-The Trisul hub is a data storage and query node with a high bandwidth and low latency I/O to the Trisul Probes.
-Disk sizing is a key concern of the hub.
+The Trisul Hub stores all analytics data and serves queries from users and probes. Because the Hub handles long-term data and high-frequency lookups, disk performance and capacity are the main factors that affect its scaling.
 
-| Mode | Scaling Metric                                           | Additional Resource Needed |
+| Mode | Scaling Metric When Hub Load Increases                   | Additional Resources Needed |
 | ---- | -------------------------------------------------------- | -------------------------- |
-| Hub  | For every medium volume probe + Every 5 concurrent users | 1CPU + 2GB      |
+| Hub  | For every medium volume probe + Every 5 concurrent users | +1CPU core and +2GB RAM      |
 
 
 
 ### Trisul Probe Scaling Rules 
 
-Some guidelines in table below for sizing the Trisul Probe node.
+The Trisul Probe handles live traffic capture and real-time analysis. As traffic volume increases, the Probe needs more CPU and memory to keep up. The table below gives a simple guideline for scaling a Probe based on packet capture load.
 
-| Mode        | Scaling Metric   | Additional Resource Needed |
+| Mode        | Scaling Metric When Probe Load Increases | Additional Resource Needed |
 | ----------- | ----------------- | -------------------------- |
-| Raw Packets | For every 200Mbps | 1 3Ghz Core + 4GB DDR4     |
+| Raw Packets | For every 200Mbps of traffic | +1 CPU core(3Ghz) and +4GB DDR4 (RAM)  |
 
-### Scaling NetFlow Mode
+### Scaling Flow-Based Mode
 
-The relevant scaling metric is NetFlow bandwidth, this represents the total bandwidth taken by NetFlow packets. The mapping typically is
+In Flow-Based Mode, the key scaling factor is the amount of flow data being sent to Trisul. Flow records (NetFlow, sFlow, IPFIX, etc.) usually represent a small fraction of actual link bandwidth.
 
-- **Estimating  NetFlow Bandwidth** : NetFlow traffic is 0.5-1% of total bandwidth. Therefore 1Gbps of total bandwidth would generate about  500Kbps-1Mbps of NetFlow data
+A simple way to estimate flow traffic is:
+
+- **Estimating Flow Traffic** : Flow data is typically 0.5–1% of your total network bandwidth.  
+For example, a 1 Gbps link usually produces 0.5–1 Mbps of flow data. 
+
+The table below gives a guideline for scaling Trisul in this mode:
 
 
-| Mode               | Scaling Metric                   | Additional Resource Needed   |
+| Mode               | Scaling Metric When Load Increases     | Additional Resources Needed   |
 | ------------------ | -------------------------------- | ---------------------------- |
-| NetFlow | for every 10Mbps NETFLOW traffic | + 1 CPU Core + 2GB RAM     |
+| Flow Mode | For every 10Mbps flow traffic | +1 CPU Core and +2GB RAM     |
 
