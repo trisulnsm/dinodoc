@@ -1,14 +1,14 @@
 # Howtos
 
-Trisul is a dedicated platform for deep network analytics that supports many industries, environments, and operational workflows, so reading the full doc can feel dense or advanced especially for users who aren’t full-time network engineers. 
+All four Trisul products run on the same core architecture, so the Admin and User Guides are unified for all the users. The documentation spans the full platform, and you may occasionally see features outside your specific product which is simply a reflection of Trisul’s integrated and advanced design.
 
-This section is a collection of short, actionable how-to guides for common Trisul workflows. If you were wondering "Where do I find this?”, “How do I enable that?”, or “What should I check next?", want a quick answer, not a deep manual, you’re in the right place. These list of HowTos are your quick reference ✨
+So this section is a collection of short, actionable how-to guides for common Trisul workflows. If you were wondering "Where do I find this?”, “How do I enable that?”, or “What should I check next?", want a quick answer, not a deep manual, you’re in the right place. These list of HowTos are your quick reference ✨
 
 ## List of howtos
 
 Click on topics from the left menu to view.
 
-## Popular
+## Frequently Searched HowTos
 
 ### [How to install on Security Onion](./installseco.md)
 
