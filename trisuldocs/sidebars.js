@@ -100,6 +100,7 @@ const sidebars = {
 			  "ipdr/api",
 			  "ipdr/latlong",
 			  "ipdr/tape",
+			  "ipdr/prod_checklist"
 			  "ipdr/faq",
   
 	   ],
