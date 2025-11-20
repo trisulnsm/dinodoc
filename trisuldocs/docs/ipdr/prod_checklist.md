@@ -1,4 +1,6 @@
-# IPDR Production Checklist and Setup Monitoring
+# IPDR Production Checklist
+
+## Run IPDR Production Checklist and Setup Monitoring
 
 Here are the quick links for essential checks before going live. These help you confirm IPDR logging and keep everything running smoothly.
 

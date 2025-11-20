@@ -12,5 +12,5 @@ Trisul IPDR is built on the larger Trisul Network Analytics platform.
 The Trisul IPDR Guide contains all the information required to install, configure, and use the Trisul IPDR Product. 
 
 - Read this along with the :memo: [Trisul User Guide](/docs/ug)
+- Before deploying IPDR in production, use this checklist to validate configuration, storage, retention, and system health :memo: [IPDR Production Checklist](/docs/ipdr/prod_checklist)
 :::
-
