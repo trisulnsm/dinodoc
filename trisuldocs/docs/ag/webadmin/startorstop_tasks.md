@@ -27,11 +27,16 @@ Due to security considerations, the option of restarting your web server is not 
 :::info navigation
 :point_right: Go to Web Admin &rarr; Manage &rarr; Start/Stop Tasks &rarr; Email Notification Service
 :::
+
+In this section, you can turn the email notification service on or off.
+This service is responsible for sending alert emails to the recipients you’ve configured.
   
-Here you can Start or Stop the email notification service. In this module as shown in this example, you can see if the email notification service is enabled or stopped. 
-- If email notification service is **stopped**: A short description in the module reads "Email notification service is currently stopped" with a *Start* button. 
-- If email notification service is **enabled**: The description reads "Email notification service is running with pid xxxxx" with a *Stop* button.
+- If the service is **stopped**  
+You’ll see a message saying "Email notification service is currently stopped" along with a *Start* button. 
+- If the service is **running**  
+You’ll see that it’s active (with the process ID) "Email notification service is running with pid xxxxx" with a *Stop* button.
   
-You can click *Start* to start sending alerts as email notifications. Otherwise click *Stop* to stop the email notification service.
+Click **Start** when you want Trisul to begin sending alert emails to your configured addresses.  
+Click **Stop** if you want to temporarily pause email delivery, for example, during maintenance or testing.
   
-The email notification service logtails the syslog and dispatches alerts. The service is careful not to flood < 5 minutes and can automatically create digests if alert volumes are too high.
+The service reads new alerts from syslog and emails them to your recipients. If too many alerts arrive at once, the service is careful not to flood < 5 minutes, it slows down the rate and groups them into a summary email so your inbox doesn’t get flooded.

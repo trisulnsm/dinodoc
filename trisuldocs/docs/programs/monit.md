@@ -2,7 +2,7 @@
 
 ## Overview
 
-The `install_monit.sh` script is designed to monitor and start critical processes, including Hub and Probein the event of unexpected termination. This ensures continuous data collection and processing, minimizing downtime and data loss.
+The `install_monit.sh` script is designed to monitor and start critical processes, including Hub and Probe in the event of unexpected termination. This ensures continuous data collection and processing, minimizing downtime and data loss.
 
 ## Requirements
 

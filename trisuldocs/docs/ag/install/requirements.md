@@ -113,7 +113,12 @@ Large enterprises with > 20,000 endpoints.
 </TabItem>
 </Tabs>
 
->**NOTE: For Trisul ISP that runs on Flow-Based Mode, the system requirements slighly vary. See: [Trisul ISP System Requirements](/docs/isp/requirements)**		
+:::tip For Trisul ISP 
+>Refer to product specific system requirements here: **[Trisul ISP System Requirements](/docs/isp/requirements).**
+:::
+:::tip For Trisul IPDR DoT Compliance Solution  
+>Refer to product specific system requirements here: **[Trisul IPDR System Requirements](/docs/ipdr/requirements)**	
+:::
 
 
 
@@ -190,57 +195,6 @@ This is a typical configuration for 40Gbps packet capture used in ISP settings. 
 </TabItem>
 
 </Tabs>
-
-## IPDR Requirements
-
-IPDR sizing is based on your network’s throughput. Select the tab that matches your expected throughput rate.
-
-<Tabs>
-  	<TabItem value="small" label="SMALL LICENSE <10Gbps" default>
-
-
-		| Hardware  | System Requirements                                                                                                            
-		| ------- | ------------ |
-		| Type | VM preferred |
-		| CPU | 8 vCPU cores | 
-		| Memory |  16GB RAM |
-		| Network | 1GbE interface that can be used for both NetFlow and Management access |
-		| Disk | |
-
-
-
-</TabItem>
-
-<TabItem value="medium" label="MEDIUM LICENSE 10-100 Gbps">
-
-
-| Hardware  | System Requirements                                                                                                            
-| ------- | ------------ |
-| Type | Bare metal preferred |
-| CPU | 16 vCPU codes | 
-| Memory |  16GB RAM |
-| Mechanism | SPAN Port |
-| Network | 1 GbE for receiving the packets via SPAN port and another for management access |
-| Disk | |
-| OS | Oracle 22.04 Jammy or RHEL 9|
-
-</TabItem>
-
-<TabItem value="large" label="LARGE LICENSE >100 Gbps">
-
-
-		| Hardware  | System Requirements                                                                                                            
-		| ------- | ------------ |
-		| Type | VM preferred |
-		| CPU | 24 vCPU cores | 
-		| Memory |  32GB RAM |
-		| Network | 1GbE interface that can be used for both NetFlow and Management access |
-		| Disk | |
-</TabItem>
-</Tabs>
-
-
-
 ------------------------------------------------------------------------
 
 ## Advanced Scaling
