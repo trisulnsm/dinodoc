@@ -112,4 +112,4 @@ Clicking on the *count* (yellow icon) with numbers on the *Fired Alerts* that in
 
 ## Sending Alerts by Email
 
-You can set up email alert delivery for flow trackers as described in the section [Alerts via Email](/docs/ug/alerts/email_settings)
+You can set up email alert delivery for flow trackers as described in the section [Alerts via Email](/docs/ug/alerts/email_wizard)

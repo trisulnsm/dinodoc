@@ -208,7 +208,7 @@ The chart plots the amount of network traffic over a specified time period, cent
 
 ## Real Time Email Alerts and Scheduling
 
-- You can configure email alert delivery for Threshold Crossing Alerts (TCA) using the [**Email Alerts Wizard**](/docs/ug/alerts/email_settings).  
+- You can configure email alert delivery for Threshold Crossing Alerts (TCA) using the [**Email Alerts Wizard**](/docs/ug/alerts/email_wizard).  
 - You can [**Schedule a TCA Report**](/docs/ug/reports/schedreports) which will automatically email you a list of Threshold Crossing Alerts (TCAs) that got fired/cleared on a hourly or daily basis. The Report email is a single consolidated email that contains the details of all the TCAs. You can find the summary table of all the TCAs on the top of the email, clicking on a particular TCA on the summary table would quickly navigate you to the specified TCA detail without having to scroll through the page. And no email is sent if no TCAs are generated.
 
 A commonly used Threshold Crossing Alert (TCA) is on Netflow mode: *routers and interfaces*. When a TCA is created on such an interface the following information is intelligently included in the alert email.

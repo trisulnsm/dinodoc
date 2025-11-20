@@ -53,7 +53,7 @@ Lets get familiar with the profile configuration menus as listed in the followin
 | Flow Tracker | See [Flow Tracker Alerts](/docs/ug/alerts/ft) |
 | Threshold Crossing | See [Threshold Crossing Alerts](/docs/ug/alerts/tca) |
 | Threshold Band | See [Threshold Band Anomaly Alerts](/docs/ug/alerts/tband) |
-| Setup Email | See [Email Alert Delivery](/docs/ug/alerts/email_settings) |
+| Setup Email | See [Email Alert Delivery](/docs/ug/alerts/email_wizard) |
 
 ### Resources
 

@@ -7,7 +7,7 @@ Trisul allows administrators to set up alerts based on network activity, that en
 ## Alerts Notification Options
 Trisul supports multiple notification channels for alert dispatch:  
 - **SYSLOG**: Alerts can be forwarded to SYSLOG servers for centralized logging and analysis.  
-- [**EMAIL**](/docs/ug/alerts/email_settings): Alerts can be sent to designated email addresses, enabling prompt notification and response.  
+- [**EMAIL**](/docs/ug/alerts/email_wizard): Alerts can be sent to designated email addresses, enabling prompt notification and response.  
 - [**SMS**](/docs/ug/alerts/sms_settings): Alerts can be dispatched via SMS notifications, ensuring timely alerting and escalation.  
 - [**Microsoft Teams**](/docs/ug/alerts/msteams/) Send to MS Teams via Webhook 
 
