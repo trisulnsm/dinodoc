@@ -30,12 +30,15 @@ Here we can see  we are using **6.2 MegaBytes** of disk per day using the [Stora
  
 The default retention policy is **96 days**. 
 
-:::tip Hub Config File
+:::info Hub Config File
 The retention period in number of days is specified in the [:memo: Trisul Hub Configuration](/docs/ref/trisulhubconfig) file. 
 :::
 
+:::tip For IPDR
+To ensure 2-year IPDR logging, set the Hub retention period to **730 days** and make sure the storage directory has enough capacity for two years of IPDR data.
+:::
 
-The Oper/Ref/Archive areas store 32 days each for a total of 96 days. 
+The Oper/Ref/Archive areas by default store 32 days each for a total of 96 days. 
 
 ```xml {7,13,19}
  <SlicePolicy>
@@ -61,8 +64,6 @@ The Oper/Ref/Archive areas store 32 days each for a total of 96 days.
                     <UsageRedMark/>
             </Archive>
 ```
-
-
 
 ### Increasing the Retention Period
 

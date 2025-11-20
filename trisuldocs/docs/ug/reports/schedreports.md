@@ -343,3 +343,18 @@ The Toppers and Traffic Report provides a comprehensive overview of network acti
 | Newly Seen Top Toppers and Traffic by Unused Cardinality Counter | Newly seen top toppers and traffic statistics related to unused cardinality counters |
 
 Download Sample Report here : [Traffic and Toppers (Applications)](images/toppersandtrafficapps.pdf)
+
+## System Health Report
+
+The System Health Report provides a comprehensive overview of the Trisul deployment’s operational status, resource usage, and component health. It includes the following key sections:
+
+|Content| Description |
+|--------|-------------|
+| Overall System Health Summary | Shows the global health status of the Trisul system, including the condition of disk, memory, hub, probe, flow flushing, routers, and IPDR services. |
+| Disk Usage Status | Detailed usage statistics for each configured storage area, including total size, used and available space, percentage utilization, mount paths, and configured vs. available counter counts. |
+| Memory Usage | Summary of total system memory and breakdown of memory consumption between Trisul processes and the underlying system. |
+| Process Running Status | Displays the operational status of core Trisul components such as Hub, Probe, and IPDR to confirm whether they are active and running as expected. |
+| Last Flushed Count | Reports the most recent flush activity for flows and routers, showing the timestamp and the number of items flushed. Useful for verifying that data processing is up-to-date. |
+| Available Time | Indicates the total duration of available monitoring history, showing the earliest retained timestamp up to the latest captured time. |
+
+Download Sample Report here : [System Health Report](images/syshealthreport.pdf)
