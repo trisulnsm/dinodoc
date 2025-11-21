@@ -1,6 +1,6 @@
-# Trisul Query FlowStream
+# Trisul Query Flow Stream
 
-## `tool_qstreamflow` Overview
+## Overview
 
 `tool_qstreamflow` is the command-line tool used by Trisul to query the flow database and generate IPDR/compliance reports in a streaming, low-memory manner.
 
