@@ -29,27 +29,27 @@ At minimum, you provide:
 
 ## Typical Usage Patterns
 
-Query a single IP
+**Query a single IP**
 ```bash
 tool_qstreamflow -f FROM_DATE -t TO_DATE -i <IP>
 ```
-Query multiple IPs
+**Query multiple IPs**
 ```bash
 tool_qstreamflow -f FROM_DATE -t TO_DATE --ip-list <IP1,IP2,IP3>
 ```
-Query using large IP lists (text file)
+**Query using large IP lists (text file)**
 ```bash
 tool_qstreamflow -f FROM_DATE -t TO_DATE --ip-file <file>
 ```
-Generate compliance output (TRAI format)
+**Generate compliance output (TRAI format)**
 ```bash
 tool_qstreamflow -f FROM_DATE -t TO_DATE --report-format trai -i <IP>
 ```
-Save results to a file
+**Save results to a file**
 ```bash
 tool_qstreamflow -f FROM_DATE -t TO_DATE -i <IP> -o <output_file>
 ```
-Enable subscriber/AAA lookup
+**Enable subscriber/AAA lookup**
 ```bash
 tool_qstreamflow -f FROM_DATE -t TO_DATE -i <IP> --subscriber-db <DBFILE> --lookup-userid
 ```
