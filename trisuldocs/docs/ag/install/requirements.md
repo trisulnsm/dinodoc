@@ -30,13 +30,13 @@ Trisul’s four products fall into two technical categories based on how they pr
 See below for typical requirements. 
 
 
-## Flow-Based Mode Requirements
+### Flow-Based Mode Requirements
 
 Flow-Based analytics sizing is based on number of devices and interfaces. Choose the sizing block that most closely matches your network’s scale.
 
 <Tabs>
   	<TabItem value="small" label="Small (≈500 Endpoints/20 Routers) " default>
-:::info Trying it out
+:::tip Trying it out
 
 If you are just trying out Trisul, it is recommended to start with a small version as below. 
 :::
@@ -57,7 +57,7 @@ If you are just trying out Trisul, it is recommended to start with a small versi
 
 <TabItem value="medium" label="Medium (≈3000 endpoints/50 Routers) ">
 
-:::info Medium 3000
+:::tip Medium 3000
 For Medium enterprises with about 2000 employees
 :::
 
@@ -76,7 +76,7 @@ For Medium enterprises with about 2000 employees
 
 <TabItem value="large" label="Large (≈20K endpoints/500 Routers) ">
 
-:::info Unlimited 
+:::tip Unlimited 
 Large enterprises with > 20,000 endpoints. 
 :::
 
@@ -96,7 +96,7 @@ Large enterprises with > 20,000 endpoints.
 
 <TabItem value="giant" label="SD-WAN (≈5000+ Branch) ">
 
-:::info SD-WAN
+:::tip SD-WAN
 	SD-WAN networks are characterized by very large number of branches and routers. This leads to a high NetFlow and SNMP load.
 :::
 
@@ -113,16 +113,16 @@ Large enterprises with > 20,000 endpoints.
 </TabItem>
 </Tabs>
 
-:::tip For Trisul ISP 
+:::info For Trisul ISP 
 >Refer to product specific system requirements here: **[Trisul ISP System Requirements](/docs/isp/requirements).**
 :::
-:::tip For Trisul IPDR DoT Compliance Solution  
+:::info For Trisul IPDR DoT Compliance Solution  
 >Refer to product specific system requirements here: **[Trisul IPDR System Requirements](/docs/ipdr/requirements)**	
 :::
 
 
 
-## Packet Capture Mode Requirements
+### Packet Capture Mode Requirements
 
 Packet capture analytics sizing is based on total packet bandwidth.  This is not the link speed but rather the actual utilization of the link. Choose the sizing block that most closely matches your network’s traffic volume.
 
@@ -244,4 +244,3 @@ The table below gives a guideline for scaling Trisul in this mode:
 | Mode               | Scaling Metric When Load Increases     | Additional Resources Needed   |
 | ------------------ | -------------------------------- | ---------------------------- |
 | Flow Mode | For every 10Mbps flow traffic | +1 CPU Core and +2GB RAM     |
-

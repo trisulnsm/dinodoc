@@ -34,3 +34,365 @@ img {
   box-shadow: var(--ifm-global-shadow-md) !important;
 
   }
+  
+/* ----------------------------------------
+   Reverse Highlight Tabs (no border on active)
+   ---------------------------------------- */
+
+/* Inactive tabs — lightly highlighted */
+.tabs__item {
+  padding: 6px 12px;
+  margin-right: 6px;
+  border-radius: 4px;
+  background-color: rgba(46, 133, 85, 0.10); /* light green tint */
+  color: var(--ifm-color-primary);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+/* ACTIVE TAB — clean, bold, no background, no border */
+.tabs__item--active {
+  background-color: transparent !important;
+  color: var(--ifm-color-primary) !important;
+  font-weight: 700;
+}
+
+/* Slight hover effect for inactive tabs */
+.tabs__item:not(.tabs__item--active):hover {
+  background-color: rgba(46, 133, 85, 0.18);
+}
+
+
+
+/* -------------------------------------------------------
+   Make :::tip use GREEN (Trisul primary color)
+   ------------------------------------------------------- */
+
+.alert--success {
+  --ifm-alert-background-color: rgba(46, 133, 85, 0.10); /* soft green */
+  --ifm-alert-border-color: var(--ifm-color-primary);
+  --ifm-alert-color: #000000; /* black text */
+  border-left: 4px solid var(--ifm-color-primary) !important;
+}
+
+/* TIP title (the word “Tip”) */
+.alert--success .alert__title {
+  color: var(--ifm-color-primary) !important; /* green title */
+  font-weight: 700;
+}
+
+
+/* -----------------------------------------
+   Simple numbering for H2 headings in page
+   ----------------------------------------- */
+
+.theme-doc-markdown {
+  counter-reset: h2;
+}
+
+.theme-doc-markdown h2::before {
+  counter-increment: h2;
+  content: counter(h2) ". ";
+  color: #000;         /* black numbers */
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+
+/* -----------------------------------------
+   Simple numbering for top-level TOC items
+   ----------------------------------------- */
+
+/* Turn off any default bullets/numbers */
+.table-of-contents,
+.table-of-contents ul {
+  list-style: none !important;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/* Reset counter at TOC root */
+.table-of-contents {
+  counter-reset: toc-h2;
+}
+
+/* Number only top-level TOC entries (H2) */
+.table-of-contents > li > .table-of-contents__link::before {
+  counter-increment: toc-h2;
+  content: counter(toc-h2) ". ";
+  color: #000;         /* black numbers */
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+
+/* ----------------------------------------------------
+   Right-side TOC (Table of Contents) styling
+   ---------------------------------------------------- */
+
+/* All TOC links (default state) */
+.table-of-contents__link {
+  display: block;
+  padding: 4px 0;
+  color: #000 !important;            /* black text for all */
+  font-weight: 400;                  /* regular by default */
+  text-decoration: none;
+  border-left: 2px solid transparent;/* for selected indicator */
+  transition: all 0.15s ease;
+}
+
+/* Headings (H2 entries) = bold */
+.table-of-contents > li > .table-of-contents__link {
+  font-weight: 700 !important;       /* bold headings */
+}
+
+/* Subheadings (H3+) stay regular
+   They are handled by default rule above */
+
+/* Selected TOC item (any level) */
+.table-of-contents__link--active {
+  color: var(--ifm-color-primary) !important;   /* green text */
+  font-weight: 700 !important;                  /* bold selected */
+  border-left: 3px solid var(--ifm-color-primary); /* green left border highlight */
+  padding-left: 8px;                               /* slight indent to align text */
+  text-decoration: underline;                      /* underline effect */
+}
+
+/* Make number on selected TOC item green too */
+.table-of-contents__link--active::before {
+  color: var(--ifm-color-primary) !important;
+  font-weight: 700 !important;
+}
+
+
+/* ----------------------------------------
+   Selected TOC item: green tinted highlight
+   ---------------------------------------- */
+.table-of-contents__link--active {
+  background-color: rgba(46, 133, 85, 0.12); /* soft green tint */
+  color: var(--ifm-color-primary) !important;
+  font-weight: 700 !important;
+  border-left: 3px solid var(--ifm-color-primary); /* green bar */
+  padding-left: 8px;
+  text-decoration: none !important; /* remove underline */
+  border-radius: 4px; /* clean rounded highlight */
+}
+
+/* Number on selected TOC item also green */
+.table-of-contents__link--active::before {
+  color: var(--ifm-color-primary) !important;
+  font-weight: 700 !important;
+}
+
+
+
+
+
+/* =========================================
+   TRISUL DOCS SIDEBAR – STRUCTURED WITH CLEAR
+   HIERARCHY Dark bar + solid active row + left chevron
+   ========================================= */
+
+/* Sidebar background column */
+.theme-doc-sidebar-container {
+  background-color: #064e3b; /* dark green; tune if needed */
+}
+
+/* Remove default bullets/margins */
+.theme-doc-sidebar-menu .menu__list,
+.theme-doc-sidebar-menu .menu__list .menu__list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+/* Base style for ALL sidebar links (all levels) */
+.theme-doc-sidebar-menu .menu__link {
+  display: block;
+  padding: 8px 14px;
+  margin: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #e5e7eb;                /* light gray text */
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease,
+    transform 0.15s ease,
+    padding-left 0.15s ease;
+}
+
+/* Top-level items slightly larger */
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__link {
+  font-size: 0.95rem;
+}
+
+/* Nested levels: indentation via padding */
+.theme-doc-sidebar-menu .menu__list .menu__list > .menu__list-item > .menu__link {
+  padding-left: 24px;
+  font-size: 0.9rem;
+}
+
+.theme-doc-sidebar-menu
+  .menu__list .menu__list .menu__list > .menu__list-item > .menu__link {
+  padding-left: 32px;
+  font-size: 0.85rem;
+}
+
+/* -----------------------------------------
+   VERTICAL LINES FOR CHILDREN (Kentik style)
+   ----------------------------------------- */
+
+.theme-doc-sidebar-menu .menu__list .menu__list {
+  border-left: 1px solid rgba(229, 231, 235, 0.2); /* soft vertical line */
+  margin-left: 18px;  /* clear indentation from root */
+  padding-left: 6px;
+}
+
+/* -----------------------------------------
+   LEFT CHEVRON FOR DROPDOWN HEADINGS
+   ----------------------------------------- */
+
+/* Hide Docusaurus default right-side caret button */
+.theme-doc-sidebar-menu .menu__caret {
+  display: none !important;
+}
+
+/* Items that have children */
+.theme-doc-sidebar-menu .menu__link--sublist {
+  font-weight: 600; /* a bit stronger */
+}
+
+/* Left chevron for items that have children – default: pointing RIGHT */
+.theme-doc-sidebar-menu .menu__link--sublist::before {
+  content: "▸";                           /* right-pointing chevron */
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 0.7rem;
+  opacity: 0.9;
+  transform: rotate(0deg);                /* base: pointing right */
+  transform-origin: center;
+  transition: transform 0.15s ease;
+}
+
+/* Rotate chevron DOWN only when that parent is active (clicked) */
+.theme-doc-sidebar-menu .menu__link--sublist.menu__link--active::before {
+  transform: rotate(90deg);
+}
+
+/* -----------------------------------------
+   HOVER – consistent for ALL levels
+   text "pops" a bit and light tint
+   ----------------------------------------- */
+
+.theme-doc-sidebar-menu .menu__list-item > .menu__link:not(.menu__link--active):hover {
+  background-color: rgba(16, 185, 129, 0.18);  /* soft green hover tint */
+  color: #ffffff;
+  transform: translateX(2px);                  /* tiny pop-out effect */
+}
+
+/* -----------------------------------------
+   ACTIVE ITEM – solid green row
+   ----------------------------------------- */
+
+.theme-doc-sidebar-menu .menu__link--active {
+  background-color: #10b981;   /* solid green bar */
+  color: #ffffff !important;   /* white text */
+  font-weight: 600;
+  padding-left: 18px;          /* slight extra indent */
+  transform: none;             /* no jump on the active one */
+}
+
+/* ======================================================
+   ONLY CHANGE: ROOT PARENT (FIRST TOP-LEVEL PARENT) AS TITLE
+   ====================================================== */
+
+/* Style ONLY the first top-level parent that has children as a title */
+.theme-doc-sidebar-menu
+  > .menu__list
+  > .menu__list-item:first-child
+  > .menu__link--sublist {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9ca3af;                 /* muted gray title */
+  font-weight: 700;
+  padding-top: 12px;
+  padding-bottom: 6px;
+  cursor: default;                /* label, not a button */
+}
+
+/* Remove chevron only for that first root parent */
+.theme-doc-sidebar-menu
+  > .menu__list
+  > .menu__list-item:first-child
+  > .menu__link--sublist::before {
+  content: none;
+  margin-right: 0;
+}
+
+/* No hover highlight for that title */
+.theme-doc-sidebar-menu
+  > .menu__list
+  > .menu__list-item:first-child
+  > .menu__link--sublist:hover {
+  background: transparent;
+  color: #9ca3af;
+  transform: none;
+}
+
+/* =========================================
+   ALL ROOT SECTION TITLES
+   White BG, green text, no chevron
+   ========================================= */
+
+/* Base style – force white bg + green text */
+.theme-doc-sidebar-menu
+  .menu__list-item.root-section-title
+  > .menu__list-item-collapsible
+  > .menu__link--sublist,
+.theme-doc-sidebar-menu
+  .menu__list-item.root-section-title
+  > .menu__link--sublist {
+  background-color: #ffffff !important;   /* white background */
+  color: #059669 !important;              /* green text */
+  font-weight: 700;
+}
+
+/* Remove chevron ONLY for these headings */
+.theme-doc-sidebar-menu
+  .menu__list-item.root-section-title
+  > .menu__list-item-collapsible
+  > .menu__link--sublist::before,
+.theme-doc-sidebar-menu
+  .menu__list-item.root-section-title
+  > .menu__link--sublist::before {
+  content: none !important;
+  margin-right: 0;
+}
+
+/* Keep them white/green even when active or hovered */
+.theme-doc-sidebar-menu
+  .menu__list-item.root-section-title
+  > .menu__list-item-collapsible
+  > .menu__link--sublist.menu__link--active,
+.theme-doc-sidebar-menu
+  .menu__list-item.root-section-title
+  > .menu__link--sublist.menu__link--active,
+.theme-doc-sidebar-menu
+  .menu__list-item.root-section-title
+  > .menu__list-item-collapsible
+  > .menu__link--sublist:hover,
+.theme-doc-sidebar-menu
+  .menu__list-item.root-section-title
+  > .menu__link--sublist:hover {
+  background-color: #ffffff !important;
+  color: #059669 !important;
+  padding-left: 14px;   /* avoid the extra active indent */
+  transform: none;
+}
+
+
+
+
