@@ -1,31 +1,34 @@
 # Core Packages 
 
+Before installation, take a moment to understand the Trisul packages. Each package handles a different part of the system, and this page gives you a clear idea of what each package does so you know exactly what you are installing.
 
 The Trisul Network Analytics system consists of 3 Core and 2 Optional Plugin packages.
 
 ## Core Packages
 
 :::warning required
-These three core packages are required.
+All three core packages are required for a complete setup, while plugin packages are optional.
 :::
 
 - :ticket: **trisul-probe**
-  - The probe package provides the network capture, and stream processing functionality. 
+  - Handles network capture and stream processing. This is the component that observes your network traffic and extracts analytics data from it.
 - :ticket: **trisul-hub**
-  - The hub package provides the database storing and querying functionality.
+  - Stores, indexes, and lets you query the data coming from probes. This is where all captured information is kept and searched.
 - :ticket: **webtrisul**
-  - The webserver package 
+  - Provides the web interface you log into. This is the dashboard where you view charts, reports, and analytics.
 
 ## Plugin Packages
 
-Optional packages to provide extra functionality.
+These are optional and extend Trisul’s capabilities:
 
 - :electric_plug: **trisul-badfellas** 
-  - Badfellas plugin – compares traffic with public threat intelligence indicators
+  - Badfellas plugin adds threat-intelligence checks by comparing your traffic against known malicious IPs and domains.
 - :electric_plug: **trisul-geo**
-  -  Geo plugin – adds country, ASN, city metering
+  -  Geo plugin adds geolocation data, showing the country, ASN, and city information for the IPs seen in your traffic.
 
 
 ## Meta Package
 
-Via our repository we also support Meta Package called `Trisul Full` which is nothing but an alias for all the five packages.
+A meta-package called **`Trisul Full`** is also available. This is a shortcut package that installs all of the above (core + plugins) in one step. 
+
+Now that you know what each package does, you’re ready to follow the install steps for your platform.

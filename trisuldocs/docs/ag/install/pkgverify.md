@@ -4,11 +4,9 @@ sidebar_position: 5
 
 # Verifying Packages
 
-Official Trisul package files (RPM and DEB) are signed with a GnuPG key available at https://trisul.org/pubkey.gpg
+This page explains how to check that the packages you downloaded for Trisul are genuine and untampered. Official Trisul package files, whether RPM or DEB are signed with a public key to confirm that the packages installing was indeed built by the official developers and has not been altered.
 
-This page describes how you can verify these package files to ensure 
-- These are created by Unleash Networks official build systems
-- They have not been tampered with
+The official Trisul package files (RPM and DEB) are signed with a GnuPG key available at https://trisul.org/pubkey.gpg. So by verifying the signature, you ensure authenticity.
 
 
 ## Verifying DEB for Ubuntu 24.04
@@ -31,12 +29,12 @@ gpg: Good signature from "Trisul Networks <support@trisul.org>" [unknown]
 
 ## Verifying a DEB for older Ubuntu versions
 
-You will be using a package called `dpkg-sig` to verify the DEBs. Make sure it is installed first.
+For older Ubuntu versions, verification is done using the `dpkg-sig` tool. Install it if it’s not already available.
 
-The steps are :
+Then:
 
-1. Import our public key into your key ring using `gpg --import pubkey.gpg`
-2. Verify using `dpkg-sig --verify pkg.deb`
+1. Import our public key using `gpg --import pubkey.gpg`
+2. Verify the DEB using `dpkg-sig --verify pkg.deb`
 
 A sample verify session would look like below
 
@@ -57,16 +55,14 @@ gpg: Good signature from "Unleash Networks Support (UNPL) <info@unleashnetworks.
 
 ## Verifying RPMs 
 
-We will use the `--checksig` option to verify
+If you are installing Trisul using RPM packages, you can verify their authenticity with the `--checksig` option.
 
-The steps are
+The steps are:
 
 1. Import our public key `rpm --import https://trisul.org/pubkey.gpg`
-2. Verify using `rpm --checksig trisulpackage.rpm`
+2. Verify the package using `rpm --checksig trisulpackage.rpm`
 
-Look for the OK message.
-
-A sample verify session would look like below
+When the verification is successful, it should look something like this,
 
 ```bash
 $ rpm --import https://trisul.org/pubkey.gpg
@@ -74,5 +70,6 @@ $ rpm --checksig webtrisul-7.0.2522-1.el8.x86_64.rpm
 webtrisul-7.0.2522-1.el8.x86_64.rpm: digests signatures OK
 ```
 
-The RPM verification was successful if you see the  **OK**
+3. The RPM verification was successful if you see the  **OK**
 
+Now that your packages are verified, go ahead and move to the installation section.

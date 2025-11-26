@@ -175,7 +175,7 @@ const sidebars = {
 				  {
 					  type: "category",
 					  label: "Tools",
-					  link: {type: 'doc',  id:'ug/tools/'},
+					  link: {type: 'doc',  id:'ug/tools/index'},
 					  items: [
 							  'ug/tools/explore_flows',
 							  'ug/tools/aggregate_flows',
@@ -192,7 +192,7 @@ const sidebars = {
 				  {
 					  type: "category",
 					  label: "Graph Analytics",
-					  link: {type: 'doc',  id:'ug/edges/'},
+					  link: {type: 'doc',  id:'ug/edges/index'},
 					  items: [
 							  'ug/edges/using',
 							  'ug/edges/multicast',
