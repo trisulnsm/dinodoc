@@ -66,7 +66,7 @@ const sidebars = {
 							  'ug/cg/stabber',
 							  'ug/cg/ssl',
 							  'ug/cg/deepmonitoring',
-							  'docs/ug/cg/tasks',
+							  'ug/cg/tasks',
 							  'ug/cg/custom'
 					]
 				  }, /* end Traffic Monitoring */
@@ -195,8 +195,8 @@ const sidebars = {
 					  link: {type: 'doc',  id:'ug/edges/'},
 					  items: [
 							  'ug/edges/using',
-							  'ug/multicast',
-							  'ug/sankey'
+							  'ug/edges/multicast',
+							  'ug/edges/sankey'
 					]
 				  }, /* end Graph Analytics */
 
