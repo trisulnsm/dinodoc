@@ -1,7 +1,3 @@
----
-sidebar_position: 03
----
-
 # Real Time Stabber
 
 You can view flows emanating from any IP or Port in **real time** using

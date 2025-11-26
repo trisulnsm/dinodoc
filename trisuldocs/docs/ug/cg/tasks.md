@@ -1,7 +1,3 @@
----
-sidebar_position: 12
----
-
 # Tasks
 
 ### How can I view real time traffic ?

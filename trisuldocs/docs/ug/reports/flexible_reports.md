@@ -1,7 +1,3 @@
----
-sidebar_position: 3
----
-
 # Custom Reports
 
 *Custom Reports* in Trisul are customizable reports created by users that can provide tailored views of network activity to suit their requirements. These are flexible reports where users can also gain insights into network activity that can extend to other reports that may not be covered by the pre-defined *Readymade Reports*. Users can incorporate custom data and filters to help you focus on specific network activity i.e. any metric for any counter group with a particular key.

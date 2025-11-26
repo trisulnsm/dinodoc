@@ -1,7 +1,3 @@
----
-sidebar_position: 06
----
-
 # Flow Legs and Duplication
 
 Trisul Network Analytics continuously receives flow telemetry either

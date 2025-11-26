@@ -1,7 +1,3 @@
----
-sidebar_position: 04
----
-
 # Settings
 
 This section describes options available to tweak flow handling.

@@ -1,7 +1,3 @@
----
-sidebar_position: 4
----
-
 # Setup E-Mail
 
 When you schedule a report, the email address to be "sent from" is configured in this *Email settings*. This section describes how you can setup an email account to send outgoing email reports and alerts.

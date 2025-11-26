@@ -1,7 +1,3 @@
----
-sidebar_position: 01
----
-
 # Traffic Metering Concepts
 
 This section attempts to briefly explain the basic concepts of counter

@@ -1,7 +1,3 @@
----
-sidebar_position: 6
----
-
 # NetFlow Configuration Wizard
 
 *NetFlow Configuration Wizard* pulls together various configuration options

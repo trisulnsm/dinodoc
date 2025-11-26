@@ -1,7 +1,3 @@
----
-sidebar_position: 07
----
-
 # Retro Analysis Tools
 
 You have selected a time interval you want to focus on - whats next ?

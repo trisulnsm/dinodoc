@@ -1,7 +1,3 @@
----
-sidebar_position: 04
----
-
 # FAQ
 
 ### Quickly see packet contents without pulling out the pcap

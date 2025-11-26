@@ -1,7 +1,3 @@
----
-sidebar_position: 9
----
-
 # Rule Builder
 
 The Rule Builder is a powerful tool designed to help you create, manage, and deploy custom rules for various applications, including flow taggers, custom metering,etc. With the Rule Builder, you can define specific  conditions to identify and act upon relevant data for streamlining your analysis.

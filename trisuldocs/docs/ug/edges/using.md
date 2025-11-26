@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # Working with Edges
 
 The entry point into exploring the streaming graph database of Trisul is to select two items

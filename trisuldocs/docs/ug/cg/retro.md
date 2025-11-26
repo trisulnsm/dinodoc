@@ -1,7 +1,3 @@
----
-sidebar_position: 06
----
-
 # Performing Retro Analysis
 
 Retro analysis is short for retrospective analysis. When applied to

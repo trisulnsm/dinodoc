@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # Manage Alert Groups
 
 An “**Alert Group**” represents a type of alert. Trisul is pre-configured with [7 alert types](/docs/ug/alerts/#types-of-alerts-in-trisul). Each *Alert Group* serves as the logical container for organizing and managing alerts based on their respective types. This section explains how admins can manage individual *alert groups* and configure them in the [*Admin panel*](/docs/ag/ui/adminlayout).

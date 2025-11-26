@@ -1,8 +1,3 @@
----
-
-sidebar_position: 5
----
-
 # Full Text Search
 <span class="badge badge--primary">PCAP Mode Only</span>  
 

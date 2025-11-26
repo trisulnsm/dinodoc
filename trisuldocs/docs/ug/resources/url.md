@@ -1,8 +1,3 @@
----
-
-sidebar_position: 3
----
-
 # URL Resources
 <span class="badge badge--primary">PCAP Mode Only</span>  
 ## Overview

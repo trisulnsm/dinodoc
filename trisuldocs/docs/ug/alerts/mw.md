@@ -1,7 +1,3 @@
----
-sidebar_position: 6
----
-
 # Malware and Blacklist Alerts
 
 **This feature requires the Trisul Badfellas plugin**  

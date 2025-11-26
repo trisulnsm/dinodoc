@@ -1,7 +1,3 @@
----
-sidebar_position: 5
----
-
 # Schedule Email Reports
 
 You can have Trisul automatically email reports periodically.

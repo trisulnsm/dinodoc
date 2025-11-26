@@ -1,7 +1,3 @@
----
-sidebar_position: 7
----
-
 # Payload Search
 <span class="badge badge--primary">PCAP Mode Only</span>  
 

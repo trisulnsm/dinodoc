@@ -1,7 +1,3 @@
----
-sidebar_position: 10
----
-
 # SSL/TLS Metering
 
 Three new counter groups give you great visibility into the SSL

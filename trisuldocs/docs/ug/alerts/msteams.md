@@ -1,7 +1,3 @@
----
-sidebar_position: 12
----
-
 # Microsoft Teams delivery
 
 Trisul can automatically send alerts to Microsoft Teams via an Incoming Webhook URL.  

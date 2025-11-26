@@ -1,7 +1,3 @@
----
-sidebar_position: 10
----
-
 # NetFlow Sources Dashboard
 
 ## Overview

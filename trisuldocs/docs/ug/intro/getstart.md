@@ -1,8 +1,3 @@
----
-sidebar_position: 2
----
-
-
 # How to Get Started
 
 Trisul is incredibly easy to get started on. 

@@ -1,7 +1,3 @@
----
-sidebar_position: 2
----
-
 # DNS Resources
 <span class="badge badge--primary">PCAP Mode Only</span>
 ## Overview

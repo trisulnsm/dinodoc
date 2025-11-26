@@ -1,7 +1,3 @@
----
-sidebar_position: 7
----
-
 # Monthly Summary
 
 Trisul will show you alerts grouped by Priority. You can click on the totals and get a further breakup grouped by type.

@@ -1,7 +1,3 @@
----
-sidebar_position: 5
----
-
 # Long Term Traffic
 
 The Long Term Traffic Tool in Trisul allows you to analyze and visualize network traffic patterns of a particular item over extended periods, typically weeks, months, or even years. This feature is also available on the [Module templates](/docs/ug/ui/module_templates#key-traffic) if you would like to monitor long term traffic of a particular item on a regular basis.

@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # Overview
 <span class="badge badge--primary">PCAP Mode Only</span>  
 

@@ -1,8 +1,3 @@
----
-sidebar_position: 2
-
----
-
 # Routers and Interfaces
 
 The primary tool you will need to work with **Device level** views of Netflow is the ***Routers and Interfaces*** tool. This tool offers network monitoring, enabling you to select a timeframe and view a list of routers with their traffic summaries. From there, you can select a router to view its associated interfaces, and then monitor interface activity or drill down further into hosts, applications, and flows on that interface. You can even pull up a [*Real Time stabber*](/docs/ug/cg/stabber) on any of the drilldowns, providing instant insights into network activity.

@@ -1,7 +1,3 @@
----
-sidebar_position: 5
----
-
 # Real Time Alert Stabber
 
 The real time alert stabber is designed to be the central place for viewing IDS alerts. The idea is to explore alert activity from various angles using animation and an interactive UI.

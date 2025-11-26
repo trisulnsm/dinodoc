@@ -1,7 +1,3 @@
----
-sidebar_position: 7
----
-
 # SSL Certificates FTS
 <span class="badge badge--primary">PCAP Mode Only</span>  
 

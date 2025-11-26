@@ -1,8 +1,3 @@
----
-
-sidebar_position: 6
----
-
 # HTTP Header FTS
 <span class="badge badge--primary">PCAP Mode Only</span>  
 

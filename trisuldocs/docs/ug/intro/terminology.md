@@ -1,7 +1,3 @@
----
-sidebar_position: 3
----
-
 # Terminology
 
 This section explains key terms used across this and other Trisul guides. These definitions will help you better understand how Trisul analyzes, monitors, and presents network data.

@@ -1,7 +1,3 @@
----
-sidebar_position: 7
----
-
 # Interface Drilldown
 
 Describes the *Interface drilldown* tool that appears when you select

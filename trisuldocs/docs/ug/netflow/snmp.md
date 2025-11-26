@@ -1,7 +1,3 @@
----
-sidebar_position: 3
----
-
 # Using SNMP
 
 Trisul can use SNMP to complement Netflow. You can use it to discover device names, interface names, interface speeds, plot real time SNMP traffic charts, etc.

@@ -1,7 +1,3 @@
----
-sidebar_position: 9
----
-
 # Netflow vs SNMP
 
 Trisul has a advanced feature that provides bandwidth mapping of the

@@ -1,7 +1,3 @@
----
-sidebar_position: 08
----
-
 # Common Tasks
 
 ## Query flows

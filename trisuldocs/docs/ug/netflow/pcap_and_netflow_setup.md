@@ -1,7 +1,3 @@
----
-sidebar_position: 5
----
-
 # Using Packets and Netflow Together
 
 Trisul can also consume a mix of Netflow and raw packets on the same or

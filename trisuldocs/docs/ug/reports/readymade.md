@@ -1,8 +1,3 @@
----
-sidebar_position: 2
-toc_min_heading_level: 2
-toc_max_heading_level: 5
----
 # Readymade Reports 
 
 *Readymade Reports* are built-in reports based on pre-defined templates for quick analysis of common network traffic aspects. It provides a starting point for further customization. Examples of pre-defined templates include top talkers, top listeners, inbound and outbound traffic volume.

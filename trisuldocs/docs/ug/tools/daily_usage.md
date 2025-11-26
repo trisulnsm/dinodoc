@@ -1,7 +1,3 @@
----
-sidebar_position: 6
----
-
 # Monthly Charts
 
 *Monthly charts* in Trisul are calendar-based data visualization where you can visualize daily aggregated network traffic data for specific meters and items on a calendar interface.  

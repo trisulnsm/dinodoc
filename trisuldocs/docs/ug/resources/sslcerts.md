@@ -1,8 +1,3 @@
----
-
-sidebar_position: 4
----
-
 # SSL Resources
 <span class="badge badge--primary">PCAP Mode Only</span>  
 

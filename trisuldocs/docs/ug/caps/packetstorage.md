@@ -1,7 +1,3 @@
----
-sidebar_position: 02
----
-
 # Controlling Packet Storage
 
 Not all organizations have the 

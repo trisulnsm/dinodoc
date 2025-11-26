@@ -1,7 +1,3 @@
----
-sidebar_position: 01
----
-
 # Packet Capture Basics
 
 The Trisul raw packet engine is designed towards these goals :
