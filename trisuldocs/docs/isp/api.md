@@ -20,6 +20,33 @@ By generating an API key, you not only enable tenant management for the selected
 
 ## Managing Tenants 
 
+### Creating Tenant Mapping 
+
+To manage IP addresses for a tenant, you must first create a tenant mapping. This mapping is essential for adding or removing IP addresses from a tenant.
+
+**Request**
+
+| Method | URL |
+|--------|-----|
+| GET    | api/tenants_ip_mapping/create_tenant_mapping |
+
+| Params | Values | Default |
+|--------|--------|---------|
+| api_key | (Required) string | - |
+| username | (Required) string | - |
+| subdomain | (Required) string | - |
+| subdomain_description | (Required) string to provide additional context or details about the subdomain. | -  |
+| probe | (Optional) string | probe0 |
+
+Example:
+http://192.168.1.77:8013/api/tenants_ip_mapping/create_tenant_mapping?auth_username=apiuser&api_token=hbQ0WN0pgY6CAGhnLetI&probe=probe0&subdomain=unpl_corporate
+
+**Response**
+
+| Status | Response |
+|--------|----------|
+| 200    | ```{"status": "Success","message": "Successfully created/updated tenant unpl_corporate for the probe probe0"}``` |
+
 ### Verifying Context Mapping
 
 Before managing a tenant, it is essential to verify that the context is mapped to the tenant. You can check the context-tenant mapping to ensure that it exists.
@@ -62,32 +89,33 @@ If the tenant mapping is found, a success response will be returned, confirming 
 |--------|----------|
 | 200    | ```{"status": "ERROR","message": "Tenant unpl_corporate mapping found for the probe probe0"}``` |
 
-### Creating Tenant Mapping 
+### Adding IP Addresses to a Tenant 
 
-To manage IP addresses for a tenant, you must first create a tenant mapping. This mapping is essential for adding or removing IP addresses from a tenant.
+You can add one or more IP addresses to a tenant by specifying them in a comma-separated list or using CIDR notation. This allows for flexible and efficient management of IP addresses associated with a tenant.
+
+>Important: After adding IP addresses to a tenant, you must restart the probe to ensure that the changes take effect.
 
 **Request**
 
 | Method | URL |
 |--------|-----|
-| GET    | api/tenants_ip_mapping/create_tenant_mapping |
+| GET    | api/tenants_ip_mapping/add_ips |
 
 | Params | Values | Default |
 |--------|--------|---------|
 | api_key | (Required) string | - |
-| username | (Required) string | - |
-| subdomain | (Required) string | - |
-| subdomain_description | (Required) string to provide additional context or details about the subdomain. | -  |
+| username |(Required) string | - |
+| subdomain | (Required) string | -|
 | probe | (Optional) string | probe0 |
+| IPs | (Required) string | - |
 
-Example:
-http://192.168.1.77:8013/api/tenants_ip_mapping/create_tenant_mapping?auth_username=apiuser&api_token=hbQ0WN0pgY6CAGhnLetI&probe=probe0&subdomain=unpl_corporate
-
-**Response**
+Example : 
+http://192.168.1.77:8013/api/tenants_ip_mapping/add_ips?username=apiuser&api_token=hbQ0WN0pgY6CAGhnLetI&probe=probe0&subdomain=unpl_corporate&ips=192.168.1.12,10.6.4.7,192.168.2.13/32
 
 | Status | Response |
 |--------|----------|
-| 200    | ```{"status": "Success","message": "Successfully created/updated tenant unpl_corporate for the probe probe0"}``` |
+| 200    | ```{ "status": "success","message": "Successfully added ips for the tenant    unpl_corporate.Please restart the tenant"}``` |
+
 
 ### Getting List of Added IPS for Tenant 
 
@@ -115,32 +143,6 @@ http://192.168.1.77:8013/api/tenants_ip_mapping/list_ips?username=apiuser&api_to
 |--------|----------|
 | 200    | ```{"count": 3,"list": ["192.168.1.10","10.6.4.5","192.168.2.10/32"]}``` |
 
-### Adding IP Addresses to a Tenant 
-
-You can add one or more IP addresses to a tenant by specifying them in a comma-separated list or using CIDR notation. This allows for flexible and efficient management of IP addresses associated with a tenant.
-
->Important: After adding IP addresses to a tenant, you must restart the probe to ensure that the changes take effect.
-
-**Request**
-
-| Method | URL |
-|--------|-----|
-| GET    | api/tenants_ip_mapping/add_ips |
-
-| Params | Values | Default |
-|--------|--------|---------|
-| api_key | (Required) string | - |
-| username |(Required) string | - |
-| subdomain | (Required) string | -|
-| probe | (Optional) string | probe0 |
-| IPs | (Required) string | - |
-
-Example : 
-http://192.168.1.77:8013/api/tenants_ip_mapping/add_ips?username=apiuser&api_token=hbQ0WN0pgY6CAGhnLetI&probe=probe0&subdomain=unpl_corporate&ips=192.168.1.12,10.6.4.7,192.168.2.13/32
-
-| Status | Response |
-|--------|----------|
-| 200    | ```{ "status": "success","message": "Successfully added ips for the tenant    unpl_corporate.Please restart the tenant"}``` |
 
 ### Removing IPs Addresses from a Tenant 
 

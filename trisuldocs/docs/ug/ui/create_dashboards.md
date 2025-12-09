@@ -67,7 +67,7 @@ Fill in the following fields to configure the advanced settings.
 | Fields         | Description                                                              |
 | -------------- | ------------------------------------------------------------------------ |
 | Owner          | Specifies which user or user group has edit and view privileges for the dashboard.|
-| Package        | A collection or group the dashboard belongs to, used for organizing dashboards. |
+| Package        | Choose Standard if your dashboard uses built-in features. Choose a Plugin Package if it comes from an added Trisul App. |
 | Undecorated    | If enabled, displays the dashboard only with data without titles, borders, or other UI elements.  |
 | Key            | A unique identifier used to reference the dashboard programmatically.    |
 

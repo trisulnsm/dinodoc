@@ -184,6 +184,17 @@ img {
 }
 
 
+/* Make all table cells in docs top-aligned */
+.markdown table td,
+.markdown table th {
+  vertical-align: top;
+}
+
+
+.product-mode-table img {
+  height: 110px;   /* adjust as needed */
+  object-fit: contain;
+}
 
 
 
@@ -392,6 +403,10 @@ img {
   padding-left: 14px;   /* avoid the extra active indent */
   transform: none;
 }
+
+
+
+
 
 
 

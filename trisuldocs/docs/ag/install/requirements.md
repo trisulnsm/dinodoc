@@ -27,6 +27,14 @@ Trisul’s four products fall into two technical categories based on how they pr
 - **_Flow-Based Mode_** (For Trisul NetFlow Analyzer, Trisul ISP, Trisul IPDR)- needs lower CPU, Memory and resources. And, in the case of Trisul IPDR, additional storage.
 - **_Packet Capture Mode_** (For Trisul NSM) - needs more CPU, Memory resources 
 
+:::warning Don’t confuse Processing Modes with Product Modes 
+
+
+**Processing Mode** refers to how Trisul processes your input data. For example, packet-based or flow-based processing.  
+**Product Mode** which you'll be seeing in the following sections, describes how you intend to use Trisul based on your use case such as Trisul NetFlow Analyzer, Trisul DoT Compliance Solution, Trisul NSM, and Trisul ISP Analytics.
+
+:::
+
 See below for typical requirements. 
 
 

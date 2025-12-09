@@ -1,3 +1,7 @@
+---
+sidebar: trpAPISidebar
+---
+
 # Trisul Remote Protocol
 
 Write reusable scripts to create your own reports in any format, automate hunting, and other security monitoring tasks

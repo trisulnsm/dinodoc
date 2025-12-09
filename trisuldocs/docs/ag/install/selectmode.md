@@ -16,11 +16,18 @@ The default mode of Trisul is Packet Capture based Network Security Monitoring. 
 
 ## Four Product Modes
 
+<div class="product-mode-table">
 
-|Packet Mode|NetFlow|Compliance|ISP|
-|---|---|---|---|
+|Trisul Network Security Monitoring | Trisul NetFlow Analyzer|Trisul DoT Compliance Solution |Trisul ISP Analytics|
+|:---|:---|:---|:---|
 |![Packet Mode](images/nsm_prod.png)|![NetFlow Mode](images/netflow_prod.png)|![IPDR Compliance](images/ipdr_prod.png) |![ISP](images/isp_prod.png)|
-|**Packet** <br/>Packet Capture based Network Security Monitoring (the default)|**NetFlow Analyzer**<br/>Turn into a NetFlow Monitor|**IPDR Compliance**<br/>A ISP/Telco flow and NAT logging solution for regulatory compliance|**ISP Analytics**<br/> For ISPs looking for peering analytics, BGP Route Analytics, Prefixes and so on|
+|[**Packet Based Mode**](/docs/ag/install/requirements#processing-modes) <br/><br/>Packet Capture based Network Security Monitoring (the default)|[**Flow Based Mode**](/docs/ag/install/requirements#processing-modes) <br/><br/>Turn into a NetFlow Monitor|[**Flow Based Mode**](/docs/ag/install/requirements#processing-modes) <br/><br/>A ISP/Telco flow and NAT logging solution for regulatory compliance|[**Flow Based Mode**](/docs/ag/install/requirements#processing-modes) <br/> <br/>Netflow + BGP-based peering, AS, prefix, route, geo traffic analytics| 
+|**Best for:** <br/><br/>Deep troubleshooting, security visibility, investigation, and forensics. | **Best for:** <br/><br/>Routers, firewalls, or devices that export NetFlow/IPFIX. | **Best for:** <br/><br/>ISPs that need DoT-compliant IPDR generation and long-term storage. | **Best for:**   <br/><br/>ISPs needing peering visibility, AS/prefix analytics, traffic engineering, route & geo traffic oversight | 
+|**What it does:** <br/><br/>Captures packets from a SPAN/port mirror, stores raw PCAPs, and generates rich metadata (flows, apps, hosts, files, alerts).| **What it does:** <br/><br/>Processes flow records to provide lightweight, scalable traffic analytics across large networks.| **What it does:** <br/><br/>Extracts subscriber activity records (IPDR) from live traffic in the required format for lawful retention. | **What it does:** <br/><br/>Combines NetFlow with optional BGP to provide AS and prefix-level traffic analytics, route/BGP visibility, Content provider & OTT analytics and geo-mapped traffic insights. | 
+|**Choose this if:** <br/><br/>You need raw packets, deep analysis, or security-focused visibility.| **Choose this if:** <br/><br/>You want high-level traffic visibility without deploying packet capture. |**Choose this if:** <br/><br/>Your requirement is IPDR logging, compliance reporting, or telecom-grade data retention. | **Choose this if:** <br/><br/>You run an ISP or large network and need BGP/peering + flow-level visibility, traffic-engineering insight, prefix/AS/geo level reporting, and peering optimization |
+
+</div>
+
 
 
 ## First Login
