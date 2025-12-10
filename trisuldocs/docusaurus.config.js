@@ -93,6 +93,10 @@ const config = {
           },
         ],
       },
+      tableOfContents: {
+      minHeadingLevel: 2, // Start TOC from H2
+      maxHeadingLevel: 4, // Include headings up to H4
+    },
       footer: {
         style: 'dark',
         copyright: `Copyright © ${new Date().getFullYear()} Trisul Network Analytics. Built with Docusaurus.`,

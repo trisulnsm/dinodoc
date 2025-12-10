@@ -81,50 +81,6 @@ img {
 }
 
 
-/* -----------------------------------------
-   Simple numbering for H2 headings in page
-   ----------------------------------------- */
-
-.theme-doc-markdown {
-  counter-reset: h2;
-}
-
-.theme-doc-markdown h2::before {
-  counter-increment: h2;
-  content: counter(h2) ". ";
-  color: #000;         /* black numbers */
-  font-weight: 700;
-  margin-right: 4px;
-}
-
-
-/* -----------------------------------------
-   Simple numbering for top-level TOC items
-   ----------------------------------------- */
-
-/* Turn off any default bullets/numbers */
-.table-of-contents,
-.table-of-contents ul {
-  list-style: none !important;
-  padding-left: 0;
-  margin-left: 0;
-}
-
-/* Reset counter at TOC root */
-.table-of-contents {
-  counter-reset: toc-h2;
-}
-
-/* Number only top-level TOC entries (H2) */
-.table-of-contents > li > .table-of-contents__link::before {
-  counter-increment: toc-h2;
-  content: counter(toc-h2) ". ";
-  color: #000;         /* black numbers */
-  font-weight: 700;
-  margin-right: 4px;
-}
-
-
 /* ----------------------------------------------------
    Right-side TOC (Table of Contents) styling
    ---------------------------------------------------- */
@@ -198,17 +154,16 @@ img {
 
 
 
-/* =========================================
-   TRISUL DOCS SIDEBAR – STRUCTURED WITH CLEAR
-   HIERARCHY Dark bar + solid active row + left chevron
-   ========================================= */
+/* ===========================
+   MINIMAL WORKING SIDEBAR
+   (WHITE CARET, SINGLE ARROW)
+   =========================== */
 
-/* Sidebar background column */
 .theme-doc-sidebar-container {
-  background-color: #064e3b; /* dark green; tune if needed */
+  background-color: #064e3b; /* dark green */
 }
 
-/* Remove default bullets/margins */
+/* Reset lists */
 .theme-doc-sidebar-menu .menu__list,
 .theme-doc-sidebar-menu .menu__list .menu__list {
   list-style: none;
@@ -216,27 +171,135 @@ img {
   padding-left: 0;
 }
 
-/* Base style for ALL sidebar links (all levels) */
+/* Base link style */
 .theme-doc-sidebar-menu .menu__link {
   display: block;
   padding: 8px 14px;
   margin: 0;
-  border-radius: 0;
   background: transparent;
-  color: #e5e7eb;                /* light gray text */
+  color: #e5e7eb;
   font-weight: 500;
   text-decoration: none;
   position: relative;
-  transition:
-    background-color 0.15s ease,
-    color 0.15s ease,
-    transform 0.15s ease,
-    padding-left 0.15s ease;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-/* Top-level items slightly larger */
-.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__link {
-  font-size: 0.95rem;
+/* Indentation for nested levels */
+.theme-doc-sidebar-menu .menu__list .menu__list > .menu__list-item > .menu__link {
+  padding-left: 24px;
+  font-size: 0.9rem;
+}
+
+/* ===========================
+   CATEGORY ROW + CARET LAYOUT
+   =========================== */
+
+/* Category row layout: text on left, caret on right */
+.theme-doc-sidebar-menu .menu__list-item-collapsible {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+/* Let the label take all available width */
+.theme-doc-sidebar-menu .menu__list-item-collapsible > .menu__link {
+  flex: 1 1 auto;
+}
+
+/* Caret button: click target on the right */
+.theme-doc-sidebar-menu .menu__list-item-collapsible > .menu__caret {
+  /* Make the Docusaurus sidebar caret (menu__caret) WHITE */
+  background-color: #ffffff !important;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4px;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  color: primary;
+  background: #transparent;
+  border-radius: 10;
+  cursor: pointer;
+}
+
+
+/* When collapsed: arrow points RIGHT */
+.theme-doc-sidebar-menu
+  .menu__list-item-collapsible.menu__list-item--collapsed
+  > .menu__caret::before {
+  transform: rotate(0deg);
+}
+
+/* When expanded (not collapsed): arrow points DOWN */
+.theme-doc-sidebar-menu
+  .menu__list-item-collapsible:not(.menu__list-item--collapsed)
+  > .menu__caret::before {
+  transform: rotate(90deg);
+}
+
+/* ===========================
+   HOVER + ACTIVE STATES
+   =========================== */
+
+/* Hover states */
+.theme-doc-sidebar-menu .menu__list-item > .menu__link:not(.menu__link--active):hover {
+  background-color: rgba(16, 185, 129, 0.18);
+  color: #ffffff;
+}
+
+/* Active item */
+.theme-doc-sidebar-menu .menu__link--active {
+  background-color: transparent;
+  color: #52f29f !important;
+  font-weight: 600;
+}
+
+/* ============================================
+   FORCE WHITE CARET (Docusaurus + Infima)
+   ============================================ */
+
+/* Override Infima caret icon with a white arrow SVG */
+:root {
+  --ifm-menu-link-sublist-icon: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>\
+<path d='M9 6l6 6-6 6' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>\
+</svg>");
+}
+
+/* Dark mode should also use the white caret */
+[data-theme='dark'] {
+  --ifm-menu-link-sublist-icon: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>\
+<path d='M9 6l6 6-6 6' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>\
+</svg>");
+}
+
+
+/* Clean caret button styling (no background, no extra garbage) */
+.theme-doc-sidebar-menu .menu__list-item-collapsible > .menu__caret {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  margin-right: 6px; /* space between caret and text */
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer;
+}
+/* Force base caret to point RIGHT when collapsed */
+.theme-doc-sidebar-menu .menu__list-item-collapsible > .menu__caret {
+  transform: rotate(270deg) !important; /* right arrow */
+  transition: transform 0.15s ease-in-out;
+}
+
+/* When expanded, rotate caret DOWN */
+.theme-doc-sidebar-menu .menu__list-item-collapsible > .menu__caret[aria-expanded="true"] {
+  transform: rotate(360deg) !important; /* down arrow */
 }
 
 /* Nested levels: indentation via padding */
@@ -260,154 +323,13 @@ img {
   margin-left: 18px;  /* clear indentation from root */
   padding-left: 6px;
 }
-
-/* -----------------------------------------
-   LEFT CHEVRON FOR DROPDOWN HEADINGS
-   ----------------------------------------- */
-
-/* Hide Docusaurus default right-side caret button */
-.theme-doc-sidebar-menu .menu__caret {
-  display: none !important;
-}
-
-/* Items that have children */
-.theme-doc-sidebar-menu .menu__link--sublist {
-  font-weight: 600; /* a bit stronger */
-}
-
-/* Left chevron for items that have children – default: pointing RIGHT */
-.theme-doc-sidebar-menu .menu__link--sublist::before {
-  content: "▸";                           /* right-pointing chevron */
-  display: inline-block;
-  margin-right: 6px;
-  font-size: 0.7rem;
-  opacity: 0.9;
-  transform: rotate(0deg);                /* base: pointing right */
-  transform-origin: center;
-  transition: transform 0.15s ease;
-}
-
-/* Rotate chevron DOWN only when that parent is active (clicked) */
-.theme-doc-sidebar-menu .menu__link--sublist.menu__link--active::before {
-  transform: rotate(90deg);
-}
-
-/* -----------------------------------------
-   HOVER – consistent for ALL levels
-   text "pops" a bit and light tint
-   ----------------------------------------- */
-
-.theme-doc-sidebar-menu .menu__list-item > .menu__link:not(.menu__link--active):hover {
-  background-color: rgba(16, 185, 129, 0.18);  /* soft green hover tint */
-  color: #ffffff;
-  transform: translateX(2px);                  /* tiny pop-out effect */
-}
-
-/* -----------------------------------------
-   ACTIVE ITEM – solid green row
-   ----------------------------------------- */
-
-.theme-doc-sidebar-menu .menu__link--active {
-  background-color: #10b981;   /* solid green bar */
-  color: #ffffff !important;   /* white text */
-  font-weight: 600;
-  padding-left: 18px;          /* slight extra indent */
-  transform: none;             /* no jump on the active one */
-}
-
-/* ======================================================
-   ONLY CHANGE: ROOT PARENT (FIRST TOP-LEVEL PARENT) AS TITLE
-   ====================================================== */
-
-/* Style ONLY the first top-level parent that has children as a title */
-.theme-doc-sidebar-menu
-  > .menu__list
-  > .menu__list-item:first-child
-  > .menu__link--sublist {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #9ca3af;                 /* muted gray title */
-  font-weight: 700;
-  padding-top: 12px;
-  padding-bottom: 6px;
-  cursor: default;                /* label, not a button */
-}
-
-/* Remove chevron only for that first root parent */
-.theme-doc-sidebar-menu
-  > .menu__list
-  > .menu__list-item:first-child
-  > .menu__link--sublist::before {
-  content: none;
-  margin-right: 0;
-}
-
-/* No hover highlight for that title */
-.theme-doc-sidebar-menu
-  > .menu__list
-  > .menu__list-item:first-child
-  > .menu__link--sublist:hover {
-  background: transparent;
-  color: #9ca3af;
-  transform: none;
-}
-
-/* =========================================
-   ALL ROOT SECTION TITLES
-   White BG, green text, no chevron
-   ========================================= */
-
-/* Base style – force white bg + green text */
-.theme-doc-sidebar-menu
-  .menu__list-item.root-section-title
-  > .menu__list-item-collapsible
-  > .menu__link--sublist,
-.theme-doc-sidebar-menu
-  .menu__list-item.root-section-title
-  > .menu__link--sublist {
-  background-color: #ffffff !important;   /* white background */
-  color: #059669 !important;              /* green text */
-  font-weight: 700;
-}
-
-/* Remove chevron ONLY for these headings */
-.theme-doc-sidebar-menu
-  .menu__list-item.root-section-title
-  > .menu__list-item-collapsible
-  > .menu__link--sublist::before,
-.theme-doc-sidebar-menu
-  .menu__list-item.root-section-title
-  > .menu__link--sublist::before {
-  content: none !important;
-  margin-right: 0;
-}
-
-/* Keep them white/green even when active or hovered */
-.theme-doc-sidebar-menu
-  .menu__list-item.root-section-title
-  > .menu__list-item-collapsible
-  > .menu__link--sublist.menu__link--active,
-.theme-doc-sidebar-menu
-  .menu__list-item.root-section-title
-  > .menu__link--sublist.menu__link--active,
-.theme-doc-sidebar-menu
-  .menu__list-item.root-section-title
-  > .menu__list-item-collapsible
-  > .menu__link--sublist:hover,
-.theme-doc-sidebar-menu
-  .menu__list-item.root-section-title
-  > .menu__link--sublist:hover {
-  background-color: #ffffff !important;
-  color: #059669 !important;
-  padding-left: 14px;   /* avoid the extra active indent */
-  transform: none;
+/* Sidebar background in DARK MODE */
+[data-theme='dark'] .theme-doc-sidebar-container {
+  background-color: #000000 !important; /* pure black */
 }
 
 
-
-
-
-
-
-
+/* Footer background override */
+footer.footer {
+  background-color: #064e3b !important;
+}

@@ -21,6 +21,8 @@ const sidebars = {
       label: 'Trisul User Guide',
       link: { type: 'doc', id: 'ug/index' },
       className: 'root-section-title',
+      collapsible: false,                 
+      collapsed: false,                  
       items: [
         /* Introduction */
         {
@@ -223,6 +225,8 @@ const sidebars = {
       label: 'Trisul IPDR User Guide',
       link: { type: 'doc', id: 'ipdr/index' },
       className: 'root-section-title',
+      collapsible: false,                      // cannot collapse
+      collapsed: false,                  
       items: [
         'ipdr/intro',
         {
@@ -285,6 +289,8 @@ luaAPISidebar: [
     label: 'LUA API',
     link: { type: 'doc', id: 'lua/index' },
     className: 'root-section-title',
+    collapsible: false,                      // cannot collapse
+    collapsed: false,                  
     items: [
       'lua/basics',
       'lua/faq',
@@ -382,6 +388,8 @@ trpAPISidebar: [
       label: 'Configuration Files Reference',
       link: { type: 'doc', id: 'ref/index' },
       className: 'root-section-title',
+      collapsible: false,                      // cannot collapse
+      collapsed: false,                  
       items: [
         'ref/guid',
         'ref/meters',
@@ -505,6 +513,8 @@ trpAPISidebar: [
       label: 'Trisul ISP  Guide',
       link: { type: 'doc', id: 'isp/index' },
       className: 'root-section-title',
+      collapsible: false,                      // cannot collapse
+      collapsed: false,                  
       items: [
         'isp/requirements',
         'isp/bgp',
@@ -526,6 +536,8 @@ trpAPISidebar: [
       label: 'Troubleshooting a Step by Step Guide',
       link: { type: 'doc', id: 'Troubleshooting/index' },
       className: 'root-section-title',
+      collapsible: false,                      // cannot collapse
+      collapsed: false,                  
       items: [
         'Troubleshooting/netflownotreceiving',
         'Troubleshooting/unabletologin',
@@ -541,6 +553,8 @@ trpAPISidebar: [
       label: 'Trisul Admininstrator Guide',
       link: { type: 'doc', id: 'ag/index' },
       className: 'root-section-title',
+      collapsible: false,                      // cannot collapse
+      collapsed: false,                  
       items: [
         'ag/install/requirements',
 
