@@ -330,7 +330,8 @@ These parameters are typically set automatically when you put Trisul in the IPDR
 | SubscriberOption | | Add Subscriber ID or other ISP specific tag , this is taken from the RADIUS AAA log files |
 | MaxRecords | 250,000 | When using the *Request Full Database Dump* this parameter controls the maximum number of records dumped.  | 
 | QueryThreadCount |1 | Number of worker query threads to use for IPDR queries, ideal value is the same  _numflushers*numprobes_  This maps to `--threads,-j` parameter in trisul_queryflowstream tool  |
-| MACInDeviceID | false| Put the MAC Address in the device ID field which normally contain the router iD |
+| MACInDeviceID | false| Put the MAC Address in the device ID field which normally contain the router IP |
+| BackupSlicesDBRoot || Set this to the root directory of the backup slices area. This is used for querying AAA RADIUS logs which may be kept in the `BackupSlicesDBRoot` area for a duration longer than the normal flowdatabase. 
 
 ## Advanced DB Parameters
 
