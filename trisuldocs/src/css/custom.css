@@ -85,21 +85,6 @@ img {
    Right-side TOC (Table of Contents) styling
    ---------------------------------------------------- */
 
-/* All TOC links (default state) */
-.table-of-contents__link {
-  display: block;
-  padding: 4px 0;
-  color: #000 !important;            /* black text for all */
-  font-weight: 400;                  /* regular by default */
-  text-decoration: none;
-  border-left: 2px solid transparent;/* for selected indicator */
-  transition: all 0.15s ease;
-}
-
-/* Headings (H2 entries) = bold */
-.table-of-contents > li > .table-of-contents__link {
-  font-weight: 700 !important;       /* bold headings */
-}
 
 /* Subheadings (H3+) stay regular
    They are handled by default rule above */
@@ -111,12 +96,6 @@ img {
   border-left: 3px solid var(--ifm-color-primary); /* green left border highlight */
   padding-left: 8px;                               /* slight indent to align text */
   text-decoration: underline;                      /* underline effect */
-}
-
-/* Make number on selected TOC item green too */
-.table-of-contents__link--active::before {
-  color: var(--ifm-color-primary) !important;
-  font-weight: 700 !important;
 }
 
 
@@ -131,12 +110,6 @@ img {
   padding-left: 8px;
   text-decoration: none !important; /* remove underline */
   border-radius: 4px; /* clean rounded highlight */
-}
-
-/* Number on selected TOC item also green */
-.table-of-contents__link--active::before {
-  color: var(--ifm-color-primary) !important;
-  font-weight: 700 !important;
 }
 
 
@@ -333,3 +306,23 @@ img {
 footer.footer {
   background-color: #064e3b !important;
 }
+
+
+/*TOC Label:"In this Page:" styling*/
+.global-toc-label {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+  margin-top: 6px;
+  margin-left: 15px;
+  text-transform: uppercase;
+  color: #000;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid #ccc; 
+  padding-bottom: 10px; 
+}
+
+@media (max-width: 768px) {
+  .global-toc-label { display: none; } /* optional */
+}
+

@@ -54,6 +54,10 @@ const config = {
       },
     ],
   ],
+  customFields: {
+  tocLabel: 'In this page:',
+},
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -95,7 +99,7 @@ const config = {
       },
       tableOfContents: {
       minHeadingLevel: 2, // Start TOC from H2
-      maxHeadingLevel: 4, // Include headings up to H4
+      maxHeadingLevel: 3, // Include headings up to H3
     },
       footer: {
         style: 'dark',
