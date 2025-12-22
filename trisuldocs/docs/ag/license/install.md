@@ -1,12 +1,13 @@
 # Installing a License File
 
-This section describes how you can install a new License File.
+This section helps you apply a new license to your Trisul system so it can run with the correct features and limits.
 
+## Understanding the License File
 
-## The License.xyz.txt File
+When a new license is issued, you’ll receive a file named in this format:  
+ `License.{emailid/username}.txt`
 
-A new license file issued by us is typically named `License.{emailid/username}.txt` it looks something like this
-
+The license would look something like this: 
 
 ```
 ----------------------------------------------------------------
@@ -34,7 +35,7 @@ A new license file is required for every machine because it is locked to a Machi
 
 ## Install Using Web Interface
 
-This is the recommended method suitable for most deployments. You just have to upload the new license to the Hub and Probe nodes using the *License page*
+For most deployments, the web interface is the simplest and safest way to install a license.
 
 :::info navigation
 
@@ -42,14 +43,14 @@ This is the recommended method suitable for most deployments. You just have to u
 
 :::
 
-On the Licensing page you can click on the Upload Button shown in the image below to select the new License file and upload it.
+On the Licensing page you can click on the **Upload** Button shown in the image below to select the new License file and upload it.
 
-![](images/license_upload.png)
+![](images/license_upload.png)  
 *Figure: Showing the Upload button used to install new license files*  
 
 ## Install New Licenses Using the Command Line
 
-The following alternate method places the new License files directly in the correct directories. You can use this method if the User Interface is not suitable for you. For example : when you want automatic deployment of license files.
+This alternative method installs the license file directly in the correct directories. It’s useful when the web interface isn’t accessible or when you’re setting up automated or scripted deployments.
 
 ### Install License on Trisul Probe Node
 
@@ -73,7 +74,6 @@ Please restart both hub and probe node to take effect
 :::
 
 
-
 ## View the License File in Effect
 
 :::info navigation
@@ -82,9 +82,8 @@ Please restart both hub and probe node to take effect
 
 :::
 
-The current license file is displayed as shown in the screenshot above.
+The active license details are displayed on this page, including the enabled mode and limits.
 
 ## Moving an Existing License to New Hardware
 
-If you move any Trisul node (Probe or Hub) to a new machine or VM, send us the new machineid and we will reissue the License.
-
+If you move any Trisul node (Probe or Hub) to a new machine or VM, send us the new machine id and we will reissue the License.

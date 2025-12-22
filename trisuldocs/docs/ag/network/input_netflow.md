@@ -1,11 +1,15 @@
 # Configure NetFlow 
 
-This section describes how you can setup Trisul to accept Netflow or Netflow “like” measurements IPFIX,JFLOW,SFLOW.
+This section helps you set up Trisul to ingest flow-based network measurements when packet capture is unavailable, impractical, or unnecessary. Trisul can accept NetFlow and NetFlow-like formats, including NetFlow v5, NetFlow v9, IPFIX, sFlow, and jFlow.
 
-Trisul supports Netflow v5 and Netflow v9, all versions of SFLOW, and IPFIX.
+## When to Use NetFlow
 
-## Introduction to NetFlow for Trisul
+NetFlow is ideal when:
 
-NetFlow is a very useful mechanism to acquire network data. In situations where direct packet monitoring is not feasible, you should use NetFlow. You can even configure Trisul to use both NetFlow and Raw Packets to ensure you have maximum coverage.
+- You can’t access raw packets due to infrastructure or policy constraints
+- Traffic volumes are too high for full packet capture
+- You want lightweight, scalable visibility across many devices
 
-Please view the [Configuring Trisul with Netflow](/docs/ug/netflow/) guide for more information.
+NetFlow doesn’t replace packet capture in all cases. For many deployments, the best results come from **using NetFlow alongside raw packets**, allowing Trisul to balance depth with coverage.
+
+Next Steps: For step-by-step configuration, see the [Configuring Trisul with Netflow](/docs/ug/netflow/) guide.

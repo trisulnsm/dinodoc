@@ -12,7 +12,7 @@ Default Location
 
 :::caution 
 
-Root privileges needed to edit
+Root privileges need to be edited
 
 :::
 

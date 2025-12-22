@@ -37,24 +37,28 @@ After following the steps in [installation](doinstall). You should be able to lo
 
 :::info navigation
 
-:point_right:  Open your browser and go to `http://ipaddress:3000`  default username = `admin` and pwd = `admin` 
+:point_right:  Open your browser and go to `http://ipaddress:3000`  
+default username = `admin` and  
+pwd = `admin` 
 :::
 
 
 ## Screen 1: Configure Product Mode
 
-The first screen you encounter will present the following options
+The first screen you encounter will present the 4 product modes as shown below. 
 
-Select the Mode.
+Using the guidance above, choose the product mode that best fits your intended use.
 
 ![select product mode](images/selectmode.png)
 
-Then you have three options  
+Once selected, choose how you’d like to proceed:
 
 
-* **No Thanks! I will configure manually** &rarr; Advanced users can manually configure Trisul for their use case.
-* **I will do this later on next login** &rarr;  Show this screen later the next time I login. I am just looking around now. 
-* **Next** &rarr; I have selected the product mode , lets move to the next step.
+* **No Thanks! I will configure manually** &rarr; Best suited for Advanced users who already know the way around Trisul.
+* **I will do this later on next login** &rarr;  Not ready to commit yet? You can explore the system now and come back to this setup the next time you log in.
+* **Next** &rarr; Continue with the guided setup using the product mode you selected.
+
+You can always revisit or adjust your choices later. Nothing here locks you in.
 
 
 
@@ -87,7 +91,9 @@ Logout and login as user to start viewing reports
 
 ## Re-Enabling Product Mode Selector
 
-Incase you have opted to configure product mode manually or have selected NetFlow Analyzer Mode and would like to switch to  IPDR Compliance Mode you'll have to re-enable product selection mode. For that
+If you skipped product selection during the initial setup (Screen 1: Configure Product Mode) or selected a mode and later decide to switch to another mode, you’ll need to re-enable the Product Mode selector.
+
+This restores the same Product Mode selection screen you saw during first-time onboarding.
 
 :::info navigation
 :point_right: Go to Web Admin &rarr; Manage &rarr; App Settings &rarr; UI
@@ -100,13 +106,3 @@ Incase you have opted to configure product mode manually or have selected NetFlo
 - Click the "Save" button
 
 Once you have completed these steps, you can select the desired mode from the Product Selection Mode.
-
-
-
-
-
-
-
-
-
-

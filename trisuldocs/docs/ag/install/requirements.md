@@ -1,8 +1,11 @@
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem'; 
+import AdminGuideTour from '@site/src/components/AdminGuideTour';
 
 # System Requirements
+
+<AdminGuideTour />
 
 Below are the recommended system requirements for Trisul deployments. Trisul runs on commodity servers, either bare metal or virtual machines. Below you’ll find recommended hardware and resource guidelines based on the two data-processing modes and varying deployment sizes. 
 

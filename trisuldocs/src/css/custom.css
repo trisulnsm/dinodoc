@@ -322,7 +322,120 @@ footer.footer {
   padding-bottom: 10px; 
 }
 
-@media (max-width: 768px) {
-  .global-toc-label { display: none; } /* optional */
+/* Scrim */
+.tour-scrim {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9998;
 }
+
+/* Bubble */
+.tour-bubble {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #2e8555;
+  color: #fff;
+  padding: 18px 20px;
+  border-radius: 10px;
+  z-index: 9999;
+  max-width: 300px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+/* Text */
+.tour-bubble p {
+  margin: 0 0 12px;
+}
+
+/* Button */
+.tour-bubble button {
+  background: #fff;
+  color: #2e8555;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Arrow base */
+.tour-bubble::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+/* Arrow directions */
+.tour-bubble[data-arrow="left"]::after {
+  top: 50%;
+  left: -10px;
+  transform: translateY(-50%);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #2e8555;
+}
+
+.tour-bubble[data-arrow="right"]::after {
+  top: 50%;
+  right: -10px;
+  transform: translateY(-50%);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #2e8555;
+}
+
+.tour-bubble[data-arrow="top"]::after {
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #2e8555;
+}
+
+.tour-bubble[data-arrow="bottom"]::after {
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #2e8555;
+}
+/* -----------------------------
+   Bubble positions per step
+   ----------------------------- */
+
+/* LEFT sidebar area */
+.tour-pos-left {
+  top: 50%;
+  left: 260px; /* adjust based on sidebar width */
+  transform: translateY(-50%);
+}
+
+/* RIGHT TOC area */
+.tour-pos-right {
+  top: 50%;
+  right: 260px; /* adjust based on TOC width */
+  left: auto;
+  transform: translateY(-50%);
+}
+
+/* TOP navbar area */
+.tour-pos-top {
+  top: 80px; /* below navbar */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* CENTER content */
+.tour-pos-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 

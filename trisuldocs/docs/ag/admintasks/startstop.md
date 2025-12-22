@@ -1,23 +1,32 @@
 # Start and Stop Trisul
 
+Once packet capture or NetFlow inputs are configured, Trisul needs its core components running to process the data.
+
+This page is where you bring the **Trisul Hub and Probe** online to begin processing that data, or stop them safely when required.
+
+Each context runs its own Hub and Probe pair. Starting or stopping them here affects only the selected context, allowing you to control processing without altering your input configuration.
+
+From here, you’ll typically:
+
+- Start the Hub and Probe for the first time after configuring inputs
+- Restart components during maintenance or configuration changes
+- Stop components cleanly before shutdowns or upgrades
 
 
 ### Start/Stop Tasks
 
-This Menu is generally used to start/stop Hub and Probe nodes associated
-with each context. Each context will have separate Hub and Probe nodes.
-You can directly start and stop the nodes from Web Interface through
-this menu.
+Trisul consists of multiple components that run as separate processes. This page allows you to start and stop these components for the selected context.
 
-Describes how you can start and stop Trisul components. 
+- **Trisul Hub**:  
+Processes the Database
 
+- **Trisul Probe**:  
+Processes the analytics
 
-The components 
+- **WebTrisul**:  
+Provides the web interface
 
-- Trisul Processes 
-  - **Trisul Hub** processes - the database
-  - **Trisul Probe** processes - the analytics 
-- WebTrisul - the webserver 
+Each context has its own **Hub and Probe** pair, which is why start and stop actions are handled at the context level.
 
 
 

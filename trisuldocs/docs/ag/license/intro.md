@@ -15,7 +15,7 @@ License types are :
    2. Medium : 3000 simultaneously active Internal IPs
    3. Unlimited : As many as your hardware can support
 
-For more information see the[LicensingFAQ](https://trisul.org/pricing)
+For more information see the [LicensingFAQ](https://trisul.org/pricing)
 
 ## Machine ID
 
@@ -53,15 +53,19 @@ That number 4087ACCD-4B0B-DE11-833A-00248CB93BDE is called the MachineID.
 
 ## Finding Out How Many Internal IPs I Have
 
-The license size depends on the number of maximum number of simultnaneously active Internal IPs. To get this number
+Before choosing a license size, you need to know how many internal IPs are active on your network at peak usage. Trisul tracks this automatically for you.
+
+To view this information:
 
 :::info navigation
 
-:point_right: Login as Admin → Select Context → Licensing
+:point_right: Login as Admin → Select Context:default → Licensing
 
 :::
 
 ![](images/license.png)  
 *Figure: The chart shows the active internal hosts in the past 24 hours*
 
- Click on “Long Term Trends” to see a longer time window
+Use this chart to identify the maximum number of simultaneously active internal IPs, which is the value used for license sizing.
+
+Click on “Long Term Trends” to see a longer time window
