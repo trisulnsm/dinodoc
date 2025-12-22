@@ -1,14 +1,27 @@
 # Configure Retention Policy
+Now that you understand how Trisul stores data on disk, the next step is to decide **how long that data should be kept**.
 
-Data retention policy refers to the number of days you want to keep historical data. 
+A retention policy defines the balance between **storage usage** and **historical visibility**. In Trisul, this is handled separately for packet capture data and for processed metrics.
 
-1. How much raw packet data in **GB** (probe nodes)  **default 10GB**
-2. How much metrics, flows, alerts in **Days** (hub nodes) **default 96 days**
+## What Retention Means in Trisul
+Retention is defined in two places, depending on the type of data:
+
+1) **Raw packet data (Probe nodes)**
+        Controlled by total disk space in **GB**
+        Default: **10 GB**
+
+2) **Metrics, flows, alerts, and records (Hub nodes)**
+        Controlled by retention duration in **days**
+        Default: **96 days**
+
+These settings are independent and should be sized based on how much traffic you observe and how far back you need to investigate.
 
 
 ## Check Current Per-Day Disk Usage 
 
-One of the first things you need to do is to calculate how much disk you are going to need to meet your data retention requirements.
+Before changing any retention values, it’s important to understand how much data Trisul generates per day in your environment.
+
+This helps you estimate disk requirements accurately instead of guessing.
 
 
 :::info Navigation
@@ -23,22 +36,24 @@ One of the first things you need to do is to calculate how much disk you are goi
 
 Here we can see  we are using **6.2 MegaBytes** of disk per day using the [Storage Status](/docs/ag/admintasks/storage_status) tool
 
-  
+## Retention Period on the Hub 
 
-## Retention Period Hub 
-
+The Hub controls how long processed data is retained.
  
-The default retention policy is **96 days**. 
+By default, Trisul retains **96 days** of data.
+
 
 :::info Hub Config File
 The retention period in number of days is specified in the [:memo: Trisul Hub Configuration](/docs/ref/trisulhubconfig) file. 
 :::
 
-:::tip For IPDR
-To ensure 2-year IPDR logging, set the Hub retention period to **730 days** and make sure the storage directory has enough capacity for two years of IPDR data.
-:::
+The default configuration stores:
 
-The Oper/Ref/Archive areas by default store 32 days each for a total of 96 days. 
+- 32 days in **Operational**
+- 32 days in **Reference**
+- 32 days in **Archive**
+
+For a total of **96 days**.
 
 ```xml {7,13,19}
  <SlicePolicy>
@@ -82,23 +97,29 @@ Say if you wanted to store 1 year of data, set the Archive Count to 301
 
 You can also adjust the Oper and Ref , refer to the [Storage Architecture](/docs/ag/domain/storage_arch) document for details.
 
-## Packet Capture Size Probe 
+:::tip For IPDR
+To ensure 2-year IPDR logging, set the Hub retention period to **730 days** and make sure the storage directory has enough capacity for two years of IPDR data.
+:::
 
-On the Probe node you can configure the total disk allocated to packet capture.  Trisul will then use a sliding mechanism to ensure the latest data is stored.
+## Packet Capture Retention on the Probe 
+
+On the Probe, retention is controlled by **total disk space**, not days. Trisul uses a **sliding window** mechanism, automatically overwriting older packet data as space fills up.
 
 
 The default maximum Packet Capture PCAP storage is **10GB**
 
 
 :::tip Max PCAP Storage 
-The packet capture storage limit is specifiied in the [:memo: Trisul Probe Configuration](/docs/ref/trisulconfig) file in two parameters
+The packet capture storage limits are defined in the [:memo: Trisul Probe Configuration](/docs/ref/trisulconfig) file in two parameters
 
 - `FileSizeMB` - size of each PCAP file 
 - `SliceCount` - How many such files 
 :::
 
 
-In the example below we have a `FileSizeMB` set to  `1000MB` or 1GB and number of such files in each pool `8 + 8 + 0 = 16GB` total. 
+In the example below we have a 
+- `FileSizeMB` set to  `1000MB` or 1GB and 
+- number of such files in each pool `8 + 8 + 0 = 16GB` of packet data. 
 
 ```xml {3,12,20,28}
               </FilePrefix>
@@ -144,20 +165,17 @@ In the example below we have a `FileSizeMB` set to  `1000MB` or 1GB and number o
 
 
 
-### Move Packets to a Different Volume
+### Moving Packet Storage to a Different Volume
+If packet capture data needs to live on a different disk or mount point, relocate it using: [`trisulctl_probe relocate context`](/docs/ag/basictasks/reloc). This is commonly done when packet capture volumes grow large.
 
-Follow the instructions for[`trisulctl_probe relocate context`](/docs/ag/basictasks/reloc)command to relocate the probe capture files to a different directory.
+### Increasing Packet Capture Storage
 
-### Increase the PCAP Storage
+If the default 10 GB is insufficient, increase storage by:  
 
-On the Probe nodes, PCAPs can rapidly fill a disk volume. By default Trisul Probe is configured to store 10GB of packet data, you can increase that to match your disk size.
+- Increasing `FileSizeMB`  
+- Increasing `SliceCount` (especially in Archive)  
 
-
-
-Simply change the Archive Slice Count from 0 to the desired number and/or increase the FileSizeMB parameter.
-
-
-To store 500GB of data in 100x5GB files do this 
+Example: Store **500 GB** using **100 files of 5 GB each**:  
 
 ```xml {3,10}
               </FilePrefix>
@@ -174,4 +192,3 @@ To store 500GB of data in 100x5GB files do this
                 ..
 
 ```
-
