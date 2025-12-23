@@ -2,90 +2,106 @@
 
 Once retention is configured, the next practical step is deciding **where Trisul stores its data**.  
 
-This page explains how to move existing Trisul data to a new disk or mount point without changing retention policies or input configuration.   Relocation is typically done when:
-- You’re moving to a larger or faster volume
-- Storage was initially placed on a temporary disk
-- You want to separate packet data and processed data onto different volumes
+This page explains how to **move existing Trisul data to a new storage volume** using Trisul’s control utilities. Relocation is typically performed when:
 
-## Probe and Hub 
+- You are moving to a larger or faster disk
+- Storage was initially placed on a temporary or default volume
+- You want to separate packet data and processed data across disks
 
-Using the `relocate context` command in `trisulctl_hub`  and `trisulctl_probe` you can move all data to a new volume. 
+Relocation changes **only the storage location**. It does not modify retention policies, input configuration, or analysis behavior.
+
+## Probe and Hub Relocation
+
+Trisul provides a `relocate context` command through its control utilities to move data safely to a new storage volume.
+
+- Use `trisulctl_hub` to relocate Hub-side data, such as metrics, flows, alerts, and databases
+- Use `trisulctl_probe` to relocate Probe-side data, such as packet capture (PCAP) files
+
+You may relocate data on the Hub, the Probe, or both, depending on your storage layout.
 
 :::info Default storage location
-
-You can choose to relocate one or both of the databases. 
-
-- Relocate on the hub for metrics, flows and other data
-- Relocate on the probe for PCAP data 
-
-The default storage root location for database is  under :dvd:  `/usr/local/var` 
+By default, Trisul stores all data under root location :dvd:  `/usr/local/var` 
 :::
 
-## Relocate on Hub
+## Relocate Data on Hub
 
-Use the `/usr/local/bin/trisulctl_hub/trisulctl_hub relocate context` command.
+Use the `relocate context` command in `trisulctl_hub` to move Hub-side data.
 
-Say you want to relocate the database to :dvd: `/nsm/trisuldata`  run the following.
+Example: relocating Hub data to `/nsm/trisuldata`
 
+**User action**
+> Start the Trisul Hub control utility by running:
 ```bash
-$ /usr/local/bin/trisulctl_hub/trisulctl_hub 
+$ /usr/local/bin/trisulctl_hub/trisulctl_hub
 
+```
+**System response**
+> Trisul will then display an interactive prompt similar to the following:
+```
+trisul_hub(domain0)> relocate context domain0 hub0 default
 
-trisul_hub(domain0)> relocate context  domain0 hub0 default
-** Relocate stopping context 
-   + config0              stopped  success.context0
-   + hub0                 stopped  Context is already stopped
-   + probe0               stopped  Context is already stopped
------------------------------------------------------------------------------
-** Relocate context : Move backend databases to another volume 
-** Current location details for context [context0@hub0/domain0]
+```
+During relocation, the tool will:
 
+- Stop the context if it is running
+- Display the current storage location and size
+- Prompt for the new destination directory  
+
+Later:
+> Trisul will show the current storage location and prompt for a new path:
+```
 Current DB Root is at              : /usr/local/var
 Current size                       : 5.67 MB
 -----------------------------------------------------------------------------
-Enter new location (enter to quit) :  /nsm/trisuldata
+Enter new location (enter to quit) : /nsm/trisuldata
 ```
+After validation and confirmation, the data is moved and internal paths are updated.  
+:point_right: A restart is required after relocation. See [After Relocation Restart](#after-relocation-restart) below.
 
-The `trisulctl_hub` tool will then run some checks and ask you for a confirmation.  Then the relocation will be complete. 
+## Relocate Data on Each Probe
 
-> :point_right: Restart after relocation is complete. See [here](#after-relocation-restart) for instructions
-
-
-## Relocate on Each Probe
-
-Use the `/usr/local/bin/trisulctl_probe/trisulctl_probe relocate context` command on each probe.
-
-Say you want to relocate the PCAP files to `/nsm/trisuldata` ;  run the following.
-
-```bash
+Probe relocation moves **packet capture (PCAP) data** and must be performed **on each probe individually**.  
+Example: relocating PCAP data to `/nsm/trisuldata`  
+**User action**  
+> Start the Trisul Probe control utility by running:
+```
 $ /usr/local/bin/trisulctl_probe/trisulctl_probe
+```
+**System response**
+> Trisul will then display an interactive prompt similar to the following:
+```
 > relocate context domain0 probe0 default
-..
 ..
 Enter new location (enter to quit) : /nsm/trisuldata
 ```
 
-> :point_right: Restart after relocation is complete. See [here](#after-relocation-restart) for instructions
+Repeat this step for every probe where packet capture data needs to be relocated.
+
+👉 A restart is required after relocation. See [After Relocation Restart](#after-relocation-restart) below for instructions.
 
 
-## After Relocation Restart 
+## After Relocation: Restart Required
 
-After relocation you need to restart Trisul and also the Web Server.
+Once relocation is complete, Trisul components and the web interface must be restarted for the changes to take effect.
 
-To restart Trisul 
+### Restart Trisul
 
-```bash
+**User action**
+> Start the Trisul Hub control utility:  
+```
 $ /usr/local/bin/trisulctl_hub/trisulctl_hub
-> restart context default 
-..
+```
+**System response**
+> Restart the context:
+```
+> restart context default
 > quit
 ```
-
-To restart WebTrisul
-
-
-```bash
-systemctl restart webtrisuld 
+### Restart WebTrisul
+**User action**
+> Restart the WebTrisul service:
+```
+systemctl restart webtrisuld
 ```
 
-For more details on starting and stopping see :memo: [Start and Stop](/docs/ag/admintasks/startstop)
+For more details on the component lifecycle control (starting and stopping) see :memo: [Start and Stop Trisul](/docs/ag/admintasks/startstop)
