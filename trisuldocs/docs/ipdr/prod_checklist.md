@@ -9,7 +9,7 @@ Here are the quick links for essential checks before going live. These help you 
 3) How to ensure overall System Health is verified:   
 [(a) Manual Check](/docs/ag/admintasks/system_health)  
 [(b) Get daily System Health Report delivered to your Email](/docs/ug/reports/schedreports)
-4) [How to ensure two-year IPDR log retention is properly setup?](/docs/ag/basictasks/configure_storage#retention-period-hub)
+4) [How to ensure two-year IPDR log retention is properly setup?](/docs/ag/basictasks/configure_storage#retention-period-on-the-hub)
 5) [How to ensure **Monit** is configured for essential service and process monitoring?](/docs/programs/monit)
 6) [How to ensure all Trisul core services are enabled and running?](/docs/ag/admintasks/startstop)
 7) [How to ensure the **Stable Keys** app is functioning correctly?](https://github.com/trisulnsm/apps/tree/apps7/analyzers/stablekeys)

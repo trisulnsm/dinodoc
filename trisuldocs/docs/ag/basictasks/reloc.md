@@ -56,7 +56,7 @@ Current size                       : 5.67 MB
 Enter new location (enter to quit) : /nsm/trisuldata
 ```
 After validation and confirmation, the data is moved and internal paths are updated.  
-:point_right: A restart is required after relocation. See [After Relocation Restart](#after-relocation-restart) below.
+:point_right: A restart is required after relocation. See [After Relocation Restart](#after-relocation-restart-required) below.
 
 ## Relocate Data on Each Probe
 
@@ -77,7 +77,7 @@ Enter new location (enter to quit) : /nsm/trisuldata
 
 Repeat this step for every probe where packet capture data needs to be relocated.
 
-👉 A restart is required after relocation. See [After Relocation Restart](#after-relocation-restart) below for instructions.
+👉 A restart is required after relocation. See [After Relocation Restart](#after-relocation-restart-required) below for instructions.
 
 
 ## After Relocation: Restart Required
