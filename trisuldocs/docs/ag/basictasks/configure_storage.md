@@ -6,13 +6,13 @@ A retention policy defines the balance between **storage usage** and **historica
 ## What Retention Means in Trisul
 Retention is defined in two places, depending on the type of data:
 
-1) **Raw packet data (Probe nodes)**
-        Controlled by total disk space in **GB**
-        Default: **10 GB**
+1) **Raw packet data (Probe nodes)**:  
+        - Controlled by total disk space in **GB**  
+        - Default: **10 GB**  
 
-2) **Metrics, flows, alerts, and records (Hub nodes)**
-        Controlled by retention duration in **days**
-        Default: **96 days**
+2) **Metrics, flows, alerts, and records (Hub nodes)**:  
+        - Controlled by retention duration in **days**  
+        - Default: **96 days**  
 
 These settings are independent and should be sized based on how much traffic you observe and how far back you need to investigate.
 

@@ -1,6 +1,11 @@
 # Relocate Trisul Database
 
-This document explains how you can move the Trisul Database to a new storage volume.
+Once retention is configured, the next practical step is deciding **where Trisul stores its data**.  
+
+This page explains how to move existing Trisul data to a new disk or mount point without changing retention policies or input configuration.   Relocation is typically done when:
+- You’re moving to a larger or faster volume
+- Storage was initially placed on a temporary disk
+- You want to separate packet data and processed data onto different volumes
 
 ## Probe and Hub 
 

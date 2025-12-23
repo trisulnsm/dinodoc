@@ -294,9 +294,76 @@ A database packer algorithm to speed up database reads and to defragement files.
 
 When Rebucketizer is enabled, additional shadow timeseries resolutions are added to allow fast retrieval of very long timewindow data.  In this section, you should specify the resolutions you want added.  
 
-![](images/rebucketizer.png)  
-*Figure: Showing Rebucketizer*
-
+```
+<Rebucketizer>
+          <Enable>
+                False
+          </Enable>
+          <Resolutions><Resolution>
+                      <ID>
+                                1
+                      </ID>
+                      <BucketSize>
+                                300
+                      </BucketSize>
+                      <TopperBucketSize>
+                                900
+                      </TopperBucketSize>
+                      <ThresholdDays>
+                                30
+                      </ThresholdDays>
+                      <TopperClipBelow>0</TopperClipBelow>
+                </Resolution>
+            <Resolution>
+                      <ID>
+                                2
+                      </ID>
+                      <BucketSize>
+                                1200
+                      </BucketSize>
+                      <TopperBucketSize>
+                                3600
+                      </TopperBucketSize>
+                      <ThresholdDays>
+                                30
+                      </ThresholdDays>
+                      <TopperClipBelow>0</TopperClipBelow>
+                </Resolution>
+            <Resolution>
+                      <ID>
+                                3
+                      </ID>
+                      <BucketSize>
+                                4800
+                      </BucketSize>
+                      <TopperBucketSize>
+                                14400
+                      </TopperBucketSize>
+                      <ThresholdDays>
+                                30
+                      </ThresholdDays>
+                      <TopperClipBelow>
+                                0
+                      </TopperClipBelow>
+                </Resolution>
+            <Resolution>
+                      <ID>
+                                4
+                      </ID>
+                      <BucketSize>
+                                28800
+                      </BucketSize>
+                      <TopperBucketSize>
+                                86400
+                      </TopperBucketSize>
+                      <ThresholdDays>
+                                30
+                      </ThresholdDays>
+                      <TopperClipBelow>0</TopperClipBelow>
+                </Resolution>
+            </Resolutions>
+</Rebucketizer>
+```
 
 | Parameters | Defaults | Description          |
 | ---------- | -------- | -------------------- |
