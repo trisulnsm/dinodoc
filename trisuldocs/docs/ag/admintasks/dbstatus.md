@@ -1,21 +1,23 @@
-
-
 # DB Status
 
 ## Overview
 
-**DB Status** shows up the Trisul Data Store Statistics. It provides detailed information on Session Flows, Resources, Alerts, FTS (Full Text Search) objects.
+At this stage, Trisul is already running and storing data.
+The **DB Status** page is used to understand **what is being stored, how much, and how it is distributed across the database**.
 
+It provides detailed information on Session Flows, Resources, Alerts, FTS (Full Text Search) objects.
+
+## Database Segments  
 Trisul Database is generally divided into three segments based on the how many days Trisul has to store data.
 
-- **Oper** is where the Latest data gets stored.
-- **Reference** is the next level where data is pushed based on the days
-  specified for storage.
-- **Archive** is responsible for storing very old data.
+- **Oper**:  
+Stores the most recent data.
+- **Reference**:  
+Stores data that has aged beyond the operational window, based on configured retention.
+- **Archive**:  
+Stores older historical data. 
 
-You can view how much volume of data is being stored per day in each
-slice and you can calculate accordingly as to how much days data can be
-stored depending on the size of the disk.
+You can view how much data is written per day into each segment and use this information to estimate how long data can be retained based on available disk capacity.
 
 > **To configure the DB storage retention policy refer to [Configuring disk storage](/docs/ag/basictasks/configure_storage.md)**
 
@@ -24,8 +26,8 @@ every-day. This is helpful in tuning the system.
 :::info navigation
 :point_right: Go to Context: Default &rarr; Admin Tasks &rarr; DB Status
 :::
-
-On the *DB Status* dashboard, click on the little graph button against each object to view the DB Status trend for that particular object. You can also customize the number of days for which you want to view the trends by clicking on the graph button.
+## DB Status Dashboard  
+On the **DB Status** dashboard, click on the little graph button against each object to view the DB Status trend for that particular object. You can also customize the number of days for which you want to view the trends by clicking on the graph button.
 
 ![](images/dbstatus1.png)  
 *Figure: DB Status Dashboard showing total count of objects*

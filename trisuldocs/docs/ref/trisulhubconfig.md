@@ -1,18 +1,28 @@
 # Trisul Hub Configuration File
 
-All configuration parameters for the Trisul Hub are stored in a single XML file called  **trisulHubConfig.xml**
+This page documents the **Trisul Hub configuration** file, which controls how the Hub stores data, manages retention, runs background database tasks, and exposes query services.  
 
-Default Location 
+At this point, Trisul is already installed and operational.
+You are here because you need to **inspect or adjust Hub-level behavior**, typically for storage planning, retention tuning, logging, or large-scale deployment optimization.
 
+## Overview
+
+All Hub configuration parameters are defined in a single XML file named `trisulHubConfig.xml`.
+
+**Configuration File Location**   
+The default location of the Hub configuration file is:
 ```
 /usr/local/etc/trisul-hub/domain0/hub0/context0/trisulHubConfig.xml
 ```
 
-> for context named **data1** the path would be …hub0/context_**data1**/trisulHubConfig.xml*
+For context named **data1** the path would be 
+```
+…hub0/context_**data1**/trisulHubConfig.xml*
+```
 
 :::caution 
 
-Root privileges need to be edited
+Root privileges are required to edit this file
 
 :::
 
@@ -22,9 +32,11 @@ Also see [trisulProbeConfig.xml](/docs/ref/trisulconfig)for editing Trisul Probe
 
 :::
 
-### Sections
+### Configuration Sections
 
-Click on a section to see the config parameters inside that section.
+The Hub configuration file is organized into logical sections. Each section controls a specific part of the Hub’s behavior.
+
+Click a section below to view the parameters defined within it.
 
 | Section     | What part of trisul does it configure                   |
 | ----------- | ------------------------------------------------------- |
@@ -36,11 +48,12 @@ Click on a section to see the config parameters inside that section.
 | [IPDR](#ipdr) | IP Flow Detail Record (IPDR) application parameters     |
 | DBTasks     | Setting for various database maintenance tasks          |
 
+
 ## App
 
 :::note
 
-Commonly modified parameters are Setuid, TrisulMode, LicenseFile
+Commonly modified parameters are `Setuid`, `TrisulMode`, `LicenseFile`
 
 :::
 

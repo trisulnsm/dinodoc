@@ -1,67 +1,90 @@
 # Cleaning the Database
 
-How to delete all of the traffic data but retain the configuration. 
+Once Trisul is running and ingesting traffic, you may occasionally need to **remove accumulated data while keeping the existing configuration intact**.
 
+This page explains how to:
 
-## Delete All Traffic Data 
+- Delete all collected traffic data while preserving configuration
+- Delete only packet capture (PCAP) data on probes
+- Completely remove a context, including configuration and data
 
-Use `reset context <contextname>` to delete all data. This method
-preserves all your configuration but only deletes the data. This command
-is available in both the `trisulctl_hub` and `trisulctl_probe` commandline tools.
+These operations are typically performed during maintenance, testing, or before reusing an environment.
 
-```bash
-trisulctl_hub reset context default
-```
+## Delete All Traffic Data (Keep Configuration)
 
-:::warning Stop running context first
-You are not allowed to *reset context* if the context is still running.  
-If you get this error, use `stop context <contextname>` and then a
-`reset`.
+Use the `reset context <contextname>` command to **delete all collected traffic data** for a context while retaining its configuration.
+
+:::warning NOTE
+Before resetting a context, it **must be stopped** using the `stop context <contextname>` command.
+Both commands are executed from the Trisul control utilities.
 :::
 
+### Step 1: Stop the Context
 
-```bash
+**User action**  
+> Start the Trisul Hub control utility:  
+```
 $ trisulctl_hub
-
+```
+**System response**  
+> Stop the running context:  
+```
 trisul_hub(domain0)> stop context default
 
-+ config0              stopped  success.default
-+ hub0                 stopped  Successfully stopped  context processes default@hub0
-+ probe0               stopped  Successfully stopped  context processes default@probe0
-  trisul_hub(domain0)> reset context default
-  The following data in context default will be deleted
-  Please review 
-  * Will erase data  on config0               disk space  91136                bytes   time interval 00h 00m 00s         
-  * Will erase data  on hub0                  disk space  13930496             bytes   time interval 01h 15m 37s         
-  * Will erase data  on probe0                disk space  40144896             bytes   time interval 01h 15m 10s         
-  Do you want to proceed ? Enter YES to continue : YES
-+ config0              reset   success Reset context. Keeping configuration default
-+ hub0                 reset   success Reset context successfully. Cleaned out data from : default
-+ probe0               reset   success Reset context successfully. Cleaned out data from : default
-  trisul_hub(domain0)> 
-
++ config0 stopped success.default
++ hub0    stopped Successfully stopped context processes default@hub0
++ probe0  stopped Successfully stopped context processes default@probe0
 ```
 
-- you can do a `info context` to confirm the data is deleted.
+### Step 2: Reset the Context Data
 
-## Delete Only PCAP Data 
+**User action**
+> Reset all data for the context:
+```
+trisul_hub(domain0)> reset context default
+```
+**System response**
+> Trisul will display a summary of the data that will be deleted and ask for confirmation:
+```
+The following data in context default will be deleted
+Please review
+* Will erase data on config0  disk space 91136 bytes   time interval 00h 00m 00s
+* Will erase data on hub0     disk space 13930496 bytes time interval 01h 15m 37s
+* Will erase data on probe0   disk space 40144896 bytes time interval 01h 15m 10s
 
-If you only want to delete the Probe data ; i.e the raw packet capture
-and other probe specific data. You can say <code>reset context myctx1@probe0</code> 
-This command will then only execute on probe0.
+Do you want to proceed ? Enter YES to continue : YES
+```
 
 
+After confirmation, Trisul deletes all stored traffic data while keeping the context configuration intact.
+```
++ config0 reset success Reset context. Keeping configuration default
++ hub0    reset success Reset context successfully. Cleaned out data from : default
++ probe0  reset success Reset context successfully. Cleaned out data from : default
+```
+### Verification
 
-```bash
-$ trisulctl_hub
+You can run `info context` to confirm that the data has been cleared and the configuration remains intact.
 
+## Delete Only PCAP Data (Probe Data Only)
+
+Use this option when you want to remove only Probe-side data, such as raw packet capture (PCAP) and other probe-specific files, without affecting Hub data or context configuration.
+
+To do this, target the probe explicitly by appending `@probe0` to the context name. The reset operation will then execute only on that probe.  
+**Command format**  
+```
+reset context <contextname>@probe0
+```
+**Example**
+```
+$ trisulctl_hub  
 trisul_hub(domain0)> reset context default@probe0
 ```
 
 ## Delete Complete Context 
 
-Delete context will get rid of the configuration and all data. Use this
-if you are sure you do not want the context anymore.
+Deleting a context removes **both configuration and all associated data**.
+Use this only if you are certain the context is no longer required.
 
 :::warning cant delete the default context 
 
