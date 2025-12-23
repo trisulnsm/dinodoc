@@ -1,28 +1,41 @@
 # Trisul Probe Configuration File
 
-All configuration parameters for each Trisul Probe is stored in a singleXMLmain configuration file called**trisulProbeConfig.xml**. This file is found on all Trisul-Probe nodes.
+All configuration parameters for each Trisul Probe is stored in a single XML main configuration file called `trisulProbeConfig.xml`. 
+
+This file exists on **every Trisul Probe node** and controls how packet data is captured, processed, and stored.
+
+At this point, Trisul is already installed and the probe is operational. You are here to review or adjust **probe-side behavior**, typically related to packet capture, retention, reassembly, IDS inputs, or performance tuning.
+
+### Configuration File Location  
+The default location of the Probe configuration file is:
 
 ```
-Location : /usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml
+/usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml
 ```
 
-*for context named data1 the path would be …probe0/context_data1/trisulProbeConfig.xml*
+For context named `data1` the path would be:  
+```
+…probe0/context_data1/trisulProbeConfig.xml
+```
 
 :::caution
 
-Root privileges needed to edit
+Root privileges are required to edit this file
 
 :::
 
 :::note
 
-Also see[trisulHubConfig.xml](/docs/ref/trisulhubconfig)for editing Hub node parameters 
+Also see [trisulHubConfig.xml](/docs/ref/trisulhubconfig) for editing Hub node parameters 
 
 :::
 
-## Sections
+## Configuration Sections
 
-Click on a section to see the config parameters inside that section.
+The Probe configuration file is organized into logical sections.
+Each section controls a specific part of the probe’s packet processing and analytics pipeline.
+
+Click on a section to view the parameters defined within it.
 
 | Section         | What part of trisul does it configure                   |
 | --------------- | ------------------------------------------------------- |
