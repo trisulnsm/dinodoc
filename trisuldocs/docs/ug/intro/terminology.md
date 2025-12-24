@@ -1,166 +1,853 @@
-# Terminology
 
-This section explains key terms used across this and other Trisul guides. These definitions will help you better understand how Trisul analyzes, monitors, and presents network data.
+# Trisul Terminologies
 
-## List of Terms
+Trisul Network Analytics uses a **rich and layered vocabulary** to describe how traffic is captured, analyzed, stored, and investigated. 
 
-### Alerts
+Detailed individual counter groups, trackers, and alert types are documented in the dedicated pages of respective topics.
+This page focuses on the shared terminology used across them.
 
-An Alert is a notification that something on the network requires attention. Trisul automatically generates different types of alerts, including:
+## How to Read This Page
 
-1. Threshold Crossing – Triggered when traffic goes above or below a configured limit.
+Trisul terminology is grouped by **conceptual layers**, starting from how the system runs, moving through traffic and analytics, and ending with how you interact with the data.
 
-2. Badfellas – Alerts when known malicious indicators (like blacklisted IPs) are detected.
-
-3. Flowtracker – Alerts based on specific types of flow behavior, such as long-lived or high-volume connections.
-
-4. IDS – Suricata alerts integrated with Trisul’s analytics.
-
-5. Anomaly – Triggered using Trisul's machine learning-based Threshold Band feature.
-
-> You can also create custom alert types using the LUA API.
-
-See also [Alerts](/docs/ug/alerts)
-
-### Counter Groups
-
-A Counter Group is a category of network entities (like hosts or interfaces) for which Trisul tracks various metrics. Each entity in a group is identified by a unique Key.
-
-Example:
-The "Host" Counter Group tracks data per IP address — such as total bandwidth, number of connections, etc.
-
-See also: [Custom Counter Groups](/docs/ug/cg/custom)
-
-### Flows
-
-A Flow represents a network session — essentially a conversation between two IPs. Trisul builds flows either from raw packets or NetFlow data.
-
-Each flow includes:
-
-- The 5-tuple: source IP, destination IP, source port, destination port, protocol.
-
-- Extra details: MPLS labels, VRFs, interfaces, flow tags, and more.
-
-See also [Monitoring flows](/docs/ug/flow)
-
-### Packets
-
-A packet is a single unit of data transmitted over a network. Trisul stores raw packets to enable full-fidelity Network Security Monitoring (NSM). These packets are encrypted and can be retained long-term with storage optimization features.
-
-See also: [Packet storage basics](/docs/ug/caps/fullcontent) , [Controlling what is stored](/docs/ug/caps/packetstorage)
-
-### Resources
-
-Trisul currently logs HTTP URLs and DNS domains, making it easier to trace what websites or services are being accessed — useful for both troubleshooting and incident response.
-
-See also: [Resources](/docs/ug/resources/url)
-
-### Retro
-
-*Retro* stands for Retrospective Analysis — Trisul's way of letting you look back in time and analyze historical network traffic.
-
-You can:
-
-- Investigate past security or performance incidents.
-- Discover long-term patterns or trends.
-
-### Interface Trackers
-
-These monitor network interfaces in real-time, collecting metrics like packets, bytes, and flows.
-
-You can track:
-
-- Individual interfaces
-- VLANs
-- Subnets
-
-### Real Time Stabbers
-
-*Real-Time Stabbers* are live traffic analysis tools, offering instant insights into specific network activity. The inspiration comes from the thermometer you **stab** into a piece of cake in the oven to check its temperature.
-
-Use Stabbers to:
-
-- Spot anomalies on the fly
-- Investigate protocols or specific applications
-- Quickly respond to performance issues or attacks
-
-### Latency
-
-*Latency* measures the delay between sending and receiving data over the network.
-
-Use Trisul to:
-
-- Monitor real-time latency
-- Identify bottlenecks
-- Optimize performance
-
-### Tagger
-
-Tagger is a flexible feature that lets you assign labels to traffic. This helps you categorize and filter traffic by user, department, app, or location.
-
-You can:
-
-- Create dashboards based on tags
-- Trigger alerts for specific tags
-- Use tags in reports
-
-### Edges
-
-*Edges* represent the connections between devices or interfaces in the network topology. Trisul uses Edges to map out how traffic flows through your network.
-
-They help you:
-
-- Visualize your network
-- Find single points of failure
-- Understand dependencies
-
-### Geo
-
-*Geo* provides geolocation information (Country, region,city) for IP addresses, helping identify traffic sources.
-
-Use it to:
-
-- Track traffic sources
-- Detect unusual geographic activity
-- Improve content delivery strategies
+You do not need to memorize these terms. The goal is to make them feel familiar when you encounter them elsewhere in the UI or documentation.
 
 
+## 1. Architecture & Runtime Terminology
+
+These terms describe **how Trisul is set up and how its parts work together**.
+
+### Node
+
+A node is any machine where a Trisul component is installed and running.
+
+A node can run the **Probe** component, the **Hub** component, or both, depending on how Trisul is deployed. Probe nodes primarily analyze traffic, while Hub nodes primarily store and serve the analyzed data. You'll encounter this term during installation or when planning distributed deployments.
+
+
+---
+
+### Probe
+
+A Probe is a Trisul node that performs streaming analytics on network traffic data.
+
+It receives packets or flow records, analyzes them in real time, and generates metrics, flows, and alerts. Whenever you see live traffic charts or real-time alerts in the UI, that information was first processed by a probe.
+
+---
+
+### Hub
+
+A Hub is a Trisul node that stores and serves data generated by probes.
+
+Probes send their analyzed results to the hub, which stores them and responds when you open dashboards, charts, or run searches. Probes focus on analysis; hubs focus on storage and queries.
+
+---
+
+### WebTrisul
+
+WebTrisul is the web-based interface you access in your browser.
+
+It is where you login, view dashboards, explore traffic, investigate alerts, search flows, and manage users. If you are interacting with Trisul visually, you are using WebTrisul.
+
+---
+
+### Domain
+
+A domain is the top-level administrative boundary in a Trisul deployment.
+
+All probes, hubs, and contexts belong to a domain. The domain establishes trust between Trisul components and defines the scope within which they can communicate and share data.
+
+In most deployments, the domain is created during installation and rarely needs user interaction afterward. Even single-machine deployments run inside a domain, although users may not notice it unless they are managing certificates or distributed setups.
+
+---
+
+### Context
+
+A context is a separate monitoring workspace inside Trisul.
+
+When you select a context in the UI, you are choosing which traffic data, dashboards, alerts, and configuration you are working with. Each context is isolated from others.
+
+Contexts are commonly used to monitor different networks, separate production and test environments, or isolate customers. Contexts can be started, stopped, reset, or deleted independently.
+
+---
+
+### Profile
+
+A profile is the **configuration used by a context** to decide how traffic is analyzed. It controls capture settings (interfaces, filters), measured counters, flow tracking, alerts, resources, and other analytics options.
+
+When you create or edit a context, you select a profile for it. That profile defines:
+
+- which counters are available,
+- which alerts are enabled,
+- how flows are tracked.
+
+If you want another context to behave the same way, you reuse or duplicate the same profile instead of configuring everything again.
+
+That’s it. A profile exists only to avoid repeating the same setup across contexts.
+
+---
+
+### GUID
+
+A GUID is a globally unique identifier used by Trisul to uniquely identify internal objects.
+
+GUIDs are used to distinguish things like counter groups, trackers, alerts, or configuration objects from one another, even if they have the same name. They are generated by Trisul and are primarily used internally, in configuration files, APIs, and references between components.
+
+Users typically encounter GUIDs when working with advanced configuration, exports, or troubleshooting, not during normal UI usage.
+
+---
+
+### Machine ID
+
+A Machine ID is a unique identifier assigned to a specific system where Trisul is installed.
+
+It is used to identify a node for licensing, deployment identity, and internal coordination. The Machine ID is tied to the system environment and is not meant to be edited or reused across machines.
+
+In practice, the Machine ID answers the question: “Which physical or virtual machine is this Trisul instance running on?”
+
+---
+
+## 2. Deployment & Mode-Specific Terminology
+
+These terms describe how Trisul is deployed and what type of traffic data it processes.
+
+### Packet Mode (NSM)
+
+Packet mode analyzes traffic using captured network packets.
+
+In this mode, Trisul works directly with packet data, allowing inspection at the protocol and payload level. Packet mode operates on raw traffic rather than summaries.
+
+---
+
+### Flow-Based Mode
+
+Flow mode is a processing mode where Trisul analyzes traffic (NetFlow/IPFIX) using flow records exported by network devices instead of captured packets.
+
+All visibility and analysis in this mode are limited to the fields present in the received flow records.
+
+---
+
+### Home Network
+
+The home network is the set of IP address ranges that Trisul considers internal.
+
+This definition is used to determine traffic direction. Based on the home network, Trisul classifies traffic as inbound, outbound, internal, or transit.
+
+---
+
+### Inbound / Outbound / Transit Traffic
+
+Traffic direction is determined relative to the home network:
+
+- Inbound traffic enters the home network
+- Outbound traffic leaves the home network
+- Transit traffic passes through without originating or terminating inside it
+
+This classification affects how traffic is grouped and reported.
+
+---
+
+## 3. Traffic & Flow Model Terminology
+
+These terms describe **what Trisul observes on the network**.
+
+### Packet
+
+A **packet** is a single unit of network data captured from the wire.
+
+Packet-level visibility is mainly used in Trisul Packet mode (NSM) and allows deep inspection and detailed forensic analysis.
+
+---
+
+### Flow
+
+A flow represents a network conversation between endpoints.
+
+Instead of storing every packet, Trisul summarizes traffic into flows using attributes such as source and destination addresses, ports, and protocol. This makes it practical to analyze large volumes of traffic over time.
+
+---
+
+### Flow Record
+
+A flow record is the stored form of a flow.
+
+It contains timestamps, counters, and attributes that describe the conversation. Flow records are what you search, filter, and analyze in flow investigation tools.
+
+---
+
+### Bi-directional Flow
+
+A bi-directional flow includes traffic in both directions between two endpoints and represents a complete conversation.  
+
+This is how Trisul typically shows flows when it can see both sides of the exchange. Bytes, packets, and duration reflect the complete back-and-forth, making it easier to understand who talked to whom and how much data was exchanged overall.
+
+For most users, this is the default and most intuitive view of network traffic.
+
+---
+
+### Uni-directional Flow
+
+A uni-directional flow represents traffic observed in only one direction.
+
+This occurs when the traffic source or capture point reports each direction separately, or when only one direction of the traffic is visible at the observation point. In such cases, Trisul records exactly what it sees.
+
+As a result, a single network conversation may appear as two separate flows, one for each direction. This is expected behavior and reflects how the traffic was observed, not a duplication or error in analysis.
+
+---
+
+### Observation Point
+
+An observation point is where traffic is seen.
+
+This could be a physical interface, a router, a firewall, or a flow exporter. Knowing the observation point helps you understand *where* in the network the data was collected.
+
+---
+
+## 4. Analytics & Counters Terminology
+
+These terms describe **how Trisul measures and summarizes traffic**.
+
+### Counter Group
+
+A counter group defines a **category of things that Trisul measures**.
+
+Each counter group groups together similar items, such as hosts, applications, interfaces, or autonomous systems. Counter groups exist so Trisul knows what kind of entities it is analyzing.
+
+Each counter group has its own set of measurements and its own dedicated documentation page.
+
+---
+
+### Key
+
+A key represents a single thing being measured within a counter group.
+
+You can think of a key as the **item Trisul is tracking** inside a counter group. For example:
+
+- an IP address is a key in the Hosts counter group
+- an application name is a key in the Applications counter group
+
+When you see toppers, charts, or tables, you are seeing keys ranked by their metrics.
+
+---
+
+### Meter
+
+A meter defines what Trisul measures for each key.
+
+Examples include bytes, packets, flows, or errors. A counter group typically has multiple meters, each measuring a different aspect of traffic.
+
+---
+
+### Metric
+
+A metric is the numeric value produced by a meter over time.
+
+Metrics are the actual numbers you see on charts, use in alerts, and export in reports.  
+**Example**:   
+Meter: Total Bytes  
+Metric: 1.2 GB at 10:05
+
+---
+
+### Topper / Top-N
+
+A topper shows you the highest-ranking keys for a given metric and time range.
+
+Instead of looking at all keys in a counter group, a topper immediately answers questions like:
+
+- Which hosts used the most bandwidth?
+- Which applications generated the most traffic?
+- Which ASNs dominated traffic during this period?
+
+Toppers are used to quickly identify heavy talkers, unusual spikes, or dominant contributors without scanning large tables or charts.
+
+---
+
+### Cardinality
+
+Cardinality tells you how many distinct keys were active in a counter group during a given time period.
+
+It answers questions like:
+
+- How many different hosts communicated on the network?
+- How many unique applications were seen?
+- How many ASNs contributed traffic?
+
+Cardinality is useful for understanding spread and diversity, not volume. A high traffic spike with low cardinality means few heavy contributors. A moderate traffic level with high cardinality means many different participants.
+
+---
+
+## 5. Time, Storage & Retention Terminology
+
+These terms explain **how data is stored and managed over time**.
+
+### Time Bucket
+
+A time bucket is the time window Trisul uses to group metric values together.
+
+Instead of storing every single event separately, Trisul collects metrics into fixed intervals, such as one minute or five minutes, and stores a single value for each interval. Every point you see on a chart corresponds to one time bucket.
+
+Time buckets exist so Trisul can efficiently store data and draw charts over long periods without losing structure.
+
+---
+
+### Resolution
+
+Resolution describes how much detail Trisul keeps for stored data.
+
+At higher resolution, Trisul stores data in smaller time buckets, so charts show finer detail when you zoom in. At lower resolution, data is stored in larger time buckets, so charts look smoother but less detailed.
+
+Resolution exists so Trisul can show detailed data for recent time ranges while still allowing long-term analysis without excessive storage use.
+
+---
+
+### Retention
+
+Retention defines how long stored data is kept before it is deleted or reduced.
+
+Different data types can have different retention periods. Recent data is usually kept longer at higher detail, while older data may be kept for a shorter time or at lower detail.
+
+Retention explains why you can see fine-grained data for recent periods but only summarized data when you look further back in time.
+
+---
+
+### Oper / Ref / Archive
+
+Oper, Ref, and Archive are the three **storage tiers** Trisul uses to store data as it ages.
+
+- When traffic data is first collected, it is stored in **Oper**. This tier is meant for recent data and is optimized for fast access and high detail, which is why recent charts and investigations feel more responsive.
+
+- As data becomes older, it moves into **Ref** storage. Data in Ref is still available for analysis, but it may be stored at reduced detail depending on your resolution and retention settings.
+
+- Data that is kept for long-term reference, compliance, or optional use is stored in **Archive**. Archive storage is intended for historical lookups rather than frequent, interactive analysis.
+
+These stages explain why recent data feels more detailed and responsive, while older data may appear summarized or eventually unavailable. Nothing moves between these stages automatically without being defined by your storage and retention settings.
+
+---
+
+### Slice
+
+A slice is the basic storage unit Trisul uses to store traffic data on disk.
+
+Instead of storing all data in one growing file, Trisul breaks data into slices of a fixed size. Each slice holds a portion of data for a period of time, which makes it easier for Trisul to move, retain, or delete data as it ages.
+
+You normally do not work with slices directly, but they matter because retention, performance, and data cleanup are all handled at the slice level.
+
+---
+
+### SlicePolicy
+
+SlicePolicy defines how Trisul manages slices over time.
+
+It controls:
+
+- how many slices are kept in Oper, Ref, and Archive storage,
+- when slices move from one storage tier to another, and
+- when slices are finally deleted.
+
+SlicePolicy is what turns your retention and storage intentions into actual behavior on disk. When users talk about “data aging”, “cleanup”, or “why old data disappeared”, SlicePolicy is the mechanism behind it.
+
+---
+
+## 6.  UI & Investigation Terminology
+
+These terms describe how Trisul presents data and how users navigate through it after data has been collected.
+
+### Dashboard
+
+A dashboard is a saved layout that displays selected charts, tables, and indicators.
+
+A dashboard defines what is shown and how it is arranged, but it does not change how data is collected or analyzed. Dashboards can be opened repeatedly to view the same set of analytics over different time ranges.
+
+---
+
+### Modules
+
+A module is a self-contained analysis block that appears inside a dashboard.
+
+Each module focuses on a specific type of analysis and presents related charts, tables, or views together. A dashboard is made up of one or more modules arranged in a layout.
+
+Modules define what analysis is shown in a dashboard, while the dashboard defines how those modules are arranged.
+
+---
+
+### Module Template
+
+A module template defines the structure and default configuration of a module.
+
+It specifies:
+
+- which views appear in the module,
+- how those views are arranged, and
+- the default parameters those views use, such as metrics, groupings, or scopes.
+
+A module template controls how a module is constructed and initialized. It does not affect how traffic is captured or processed, but it does influence what data a module shows by default when it is created.
+
+---
+
+### Key Dashboard
+
+A key dashboard is a dashboard automatically scoped to a single key.
+
+All modules inside the dashboard are filtered to that one entity, such as a specific host, application, or ASN. The scoping happens implicitly, without requiring manual filters on each module.
+
+---
+
+### Flow Tagger
+
+A flow tagger applies labels to flows based on configured rules.
+
+Tags are stored as attributes of the flow record. Once applied, tags can be used consistently across flow search, aggregation, alerts, and reports. Flow tagging does not modify the flow itself, only how it is classified and queried.
+
+---
+
+### Stabber
+
+A stabber is a view that continuously refreshes as new data arrives.
+
+Unlike historical views, Real-time stabbers operate in Live Mode and continuously refresh as new analytics results are produced. They reflect the current state of traffic, counters, or alerts at the time they are viewed.
+
+---
+
+### Drill-down
+
+Drill-down is the act of navigating from a higher-level view to a more detailed view of the same data.
+
+Each drill-down step applies additional specificity, such as moving from total traffic to a specific key, and then to the flows or metrics associated with that key.
+
+---
+
+### PCAP Drilldown
+
+A PCAP drilldown allows navigation from aggregated views or flows down to the underlying packet capture.
+
+This provides packet-level visibility starting from higher-level analytics. PCAP drilldown is only available when packet capture is enabled and retained.
+
+---
+
+### Pivot
+
+A pivot changes the dimension used to view the same underlying data.
+
+Instead of increasing detail, a pivot switches perspective. For example, the same traffic may be viewed by host, by application, or by ASN. Pivoting does not change the time range or dataset, only how it is grouped and presented.
+
+---
+
+### Live Mode
+
+Live mode shows analytics results as they are produced in real time.
+
+Data updates continuously as traffic is processed. The view reflects the current state of the network and does not query stored historical results.
+
+Live mode is read-only and shows what Trisul is detecting right now, not what was detected earlier or re-computed later.
+
+---
+
+### Historical Mode
+
+Historical mode displays old analytics results that were already computed and stored.
+
+It retrieves existing metrics, flows, and alerts for a selected past time range and does not run analytics logic again. The data shown remains static and does not update automatically.
+
+Historical mode is used to review what Trisul had already detected or measured at that point in time.
+
+---
+
+## 7. Analytics Execution
+
+These terms describe how and when analytics logic is applied to traffic data, not how data is visualized or stored.
+
+### Sliding Window
+
+A sliding window defines how Trisul continuously evaluates data over a moving time range.
+
+Instead of calculating metrics only at fixed points in time, Trisul repeatedly looks at the most recent window of data, such as “the last 5 minutes” or “the last hour”, and updates results as new data arrives and old data drops out of the window.
+
+Sliding windows are commonly used in real-time charts, alerts, and anomaly detection. They explain why values update smoothly over time instead of changing only at fixed intervals.
+
+In simple terms, a sliding window answers questions like:
+
+- “What has been happening recently?”
+- “Is this behavior increasing right now?”
+
+rather than “What happened in the previous fixed block of time?”
+
+---
+
+### Retro Analysis
+
+Retro analysis is the ability to re-run analytics on previously collected data using new or updated rules.
+
+In Retro analysis, Trisul applies detection logic, taggers, or analytics that were not active at the time the data was originally processed. The underlying stored data does not change, but new results such as alerts, tags, or derived views can be produced from it.
+
+Retro analysis exists so analytics can be applied after the fact, without needing to recapture traffic.
+
+---
+
+## 8.Detection, Alerts and Monitoring Terminology
+
+These terms describe **how Trisul flags important events**, evaluates traffic, and focuses monitoring on specific entities
+
+### Alert
+
+An alert is a recorded event generated when a configured detection condition in Trisul evaluates to true.
+
+Each alert is produced by a defined mechanism such as:
+
+- a threshold check,
+- an anomaly detector,
+- a flow tracker condition, or
+- an external IDS engine.
+
+An alert has a timestamp, a source, a severity, and associated context such as the metric, key, or flow that triggered it. Alerts are stored and can be searched, filtered, correlated, and reviewed later.
+
+In practical terms, alerts answer the question:
+“Which detection conditions were met, and when?”
+
+---
+
+### Threshold Crossing Alert
+
+A threshold crossing alert is generated when a metric crosses a configured threshold value.
+
+The threshold can be defined as an upper limit, a lower limit, or both. When the metric value moves from one side of the threshold to the other, Trisul records an alert at that point in time.
+
+Each threshold crossing alert is tied to:
+
+- a specific counter group,
+- a key,
+- a meter, and
+- the threshold definition that was evaluated.
+
+Threshold crossing alerts are deterministic. They are generated strictly based on the configured condition, without learning or baseline comparison.
+
+---
+
+### Anomaly Alert
+
+An anomaly alert is generated when a metric deviates from its learned baseline behavior.
+
+Trisul continuously models normal behavior for a metric over time. When the observed value falls outside the expected range defined by that model, an anomaly alert is recorded.
+
+Each anomaly alert is tied to:
+
+- a specific counter group,
+- a key,
+- a meter, and
+- the anomaly model that detected the deviation.
+
+Unlike threshold crossing alerts, anomaly alerts are not based on fixed limits. They are generated by comparing current values against learned historical patterns.
+
+---
+
+### Flow Tracker Alert
+
+A flow tracker alert is generated when a flow matches the conditions defined by a flow tracker.
+
+A flow tracker continuously evaluates flows against configured criteria such as size, duration, rate, or other flow attributes. When a flow satisfies those conditions, Trisul records a flow tracker alert for that specific flow.
+
+Each flow tracker alert is associated with:
+
+- the tracker definition,
+- the flow that matched it, and
+- the time at which the condition was met.
+
+Flow tracker alerts operate at the individual flow level and are evaluated independently of counter-based metrics.
+
+---
+
+### IDS Alert
+
+An IDS alert is an alert generated by an external intrusion detection system and ingested by Trisul.
+
+The detection logic, signatures, and rules that produce the alert belong entirely to the IDS engine. Trisul does not modify or re-evaluate the detection. It records the alert, stores it, and links it with related traffic, flows, and metrics for investigation and correlation.
+
+In other words, Trisul provides context and visibility for IDS alerts, but it is not the source of the detection.
+
+---
+
+### Alert Severity
+
+Alert severity is an classification value attached to an alert that defines its impact.
+
+Severity indicates the relative importance assigned to the alert at the time it was generated. It affects how alerts are displayed, filtered, and prioritized in the UI and workflows.
+
+Severity does not influence how or when an alert is generated. It is metadata used for organization and triage, not detection logic.
+
+---
+
+### Custom Key Monitors
+
+A custom key monitor tracks selected keys explicitly defined by the user.
+
+Instead of monitoring all keys in a counter group, Trisul focuses only on specified keys and applies dedicated monitoring or alerting logic.
+
+---
+
+## 9. Graph & Visualization Terminology
+
+These terms describe visual representations used in Trisul to explore relationships, flows, and patterns in traffic data.
+
+They focus on how data is visualized, not how it is collected, stored, or analyzed.
+
+### Edge
+
+An edge is a graphical element in Trisul used to represent relationships between entities.
+
+In Trisul traffic graphs, an edge appears between two entities because communication was observed between them during the selected time range, not because of a predefined relationship. The edge represents that traffic relationship, such as communication between a source and destination IP, ASN, or other keys.
+
+Each edge carries associated traffic metrics and can be selected to drill down into the traffic or flows that created the connection.
+
+---
+
+### Sankey Drilldown
+
+A Sankey drilldown is a graphical view in Trisul that shows how traffic flows between entities as connected paths.
+
+The width of each path represents the volume of traffic. Drilling down refines the view by breaking traffic into successive dimensions, such as moving from source to destination, then to application or interface, while preserving the flow relationships.
+
+Sankey drilldown is used to trace **how traffic is distributed across the network** rather than examining individual endpoints in isolation.
+
+---
+
+### Multigraph
+
+A multigraph is a graph view in Trisul where the same pair of entities can be connected by more than one edge at the same time.
+
+This happens when traffic between the same entities must be shown separately based on different attributes, such as direction, protocol, application, or interface. Instead of merging everything into one line, Trisul keeps these relationships distinct so each traffic dimension remains visible.
+
+A multigraph exists to prevent different kinds of traffic between the same entities from being hidden inside a single aggregated relationship.
+
+---
+
+### Parallel Coordinates
+
+Parallel coordinates is a visualization in Trisul used to compare entities or flows across multiple attributes at the same time.
+
+Each vertical axis represents a different metric or attribute, and each line represents a single entity or flow drawn across those axes. This makes it possible to see how values relate to each other across dimensions, rather than examining one metric in isolation.
+
+Parallel coordinates are used to reveal patterns, correlations, or outliers that are not obvious when metrics are viewed separately.
+
+---
+
+## 10. ISP / IPDR-Specific Terminology
+
+These terms appear primarily in **NetFlow, ISP, and Compliance deployments**.  
+They describe concepts that do not apply to generic enterprise monitoring and must be understood in this context.
+
+---
+
+
+### ASN Peering
+
+ASN peering refers to traffic exchanged between autonomous systems.
+
+In Trisul, ASN peering analysis groups traffic by source and destination ASNs to show how much traffic flows between networks. This focuses on network-to-network relationships rather than individual hosts or applications.
+
+---
+
+### Upstream / Downstream
+
+Upstream and downstream describe traffic direction relative to a service provider.
+
+- **Upstream** traffic flows toward providers or higher-level networks.  
+- **Downstream** traffic flows toward customers or lower-level networks.
+
+These terms are used instead of inbound and outbound in ISP environments.
+
+---
+
+### Transit Traffic
+
+Transit traffic is traffic that passes through the network without originating or terminating within it.
+
+In ISP deployments, transit traffic is important because it consumes network capacity without directly serving end subscribers.
+
+---
+
+### Subscriber IP
+
+A subscriber IP identifies an individual customer in an ISP or broadband network.
+
+Subscriber IPs are used to associate traffic, flows, and records with customers rather than with devices, interfaces, or network infrastructure.
+
+---
+
+### NAT Correlation
+
+NAT correlation maps translated IP addresses and ports back to the original subscriber identity.
+
+It allows traffic observed after network address translation to be correctly associated with the originating subscriber for analysis and compliance.
+
+---
+
+### Compliance Window
+
+A compliance window defines the time range for which compliance data must be retained and made available.
+
+It is independent of analytics retention and is governed by regulatory requirements rather than operational or analytical needs.
+
+---
+
+### DoT Strict Format
+
+DoT strict format refers to the mandatory structure and field definitions specified by the Department of Telecommunications for IPDR records.
+
+When DoT strict format is enabled, IPDR records are generated and stored exactly as prescribed by regulation, with fixed fields, ordering, and retention rules. This format is used for lawful interception and regulatory compliance and is independent of Trisul’s internal analytics representation.
+
+---
+
+## 11. Deployment, Reliability & Operations Terminology
+
+These terms describe how Trisul is installed, deployed, and operated, rather than how traffic is analyzed or visualized.
+
+### DC/DR
+
+DC (Data Center) refers to the primary Trisul deployment where traffic is processed and stored.
+
+DR (Disaster Recovery) refers to a secondary deployment maintained for continuity. A DR setup exists to preserve availability and data access in case the primary deployment becomes unavailable.
+
+---
+
+### Adapter
+
+An adapter is a component that enables Trisul to ingest data from an external source.
+
+Adapters handle protocol or format translation so external data can be accepted and processed by Trisul’s analytics pipeline.
+
+---
+
+### Access Point
+
+An access point is a named source of traffic or telemetry that you configure in Trisul so it knows where to get data.
+
+Instead of “where data enters the product” as a vague concept, an access point in Trisul is a configured input source such as:
+
+- a physical capture interface on a probe,
+- a tap or SPAN port definition,
+- a logical flow export source (NetFlow/IPFIX), or
+- another defined telemetry feed.
+
+Access points tell Trisul exactly what to listen to and how to associate captured data with a context.
+
+In the UI, you select or define an access point when you configure traffic capture or ingestion for a context. It is not a passive description of traffic movement; it is an explicit Trisul configuration object that binds sources of observability to analytics.
+
+### Package
+
+A package is an installable Trisul software bundle.
+
+Each package installs a specific set of components on a node, such as probe functionality, hub functionality, plugins, or supporting tools.
+
+---
+
+### Product Mode
+
+A product mode defines which Trisul solution is active in a deployment.
+
+It determines the type of data Trisul expects, the features that are enabled, and the structure of the results. Changing the product mode changes what Trisul is built to do in that deployment, not just how the UI looks.
+
+### Processing Mode
+
+A processing mode defines the type of input data Trisul processes.
+
+It determines whether Trisul analyzes packet data, flow data, or other telemetry, and therefore what level of visibility is available in that deployment. Examples include packet-based processing or flow-based processing.
+
+---
+
+
+## 12. Automation and Workflows Terminology
+
+### Cron Task
+
+A cron task is a scheduled administrative job that runs automatically.
+
+Cron tasks are used for recurring operations such as report generation, data export, backups, or maintenance. They define when an action runs, not what the action does.
+
+---
+
+### Task
+
+A task represents a defined workflow within Trisul.
+
+It groups related steps, such as detection, investigation, and reporting, into a repeatable sequence. Tasks describe the logical flow of actions, not their execution schedule.
+
+---
+
+## 13. Plugins and Enrichments Terminology
+
+These terms describe extensions that add additional context, intelligence, or detection to Trisul’s core analytics.
+
+### Plugin
+
+A plugin extends Trisul with additional functionality.
+
+Plugins add analytics, enrichment, or detection logic and operate within Trisul’s processing pipeline without modifying core components.
+
+---
 
 ### Badfellas
 
-*Badfellas* is a threat intelligence feature that identifies known malicious IP addresses and domains.
+Badfellas is a threat intelligence plugin.
 
-Badfellas:
+It marks traffic associated with known malicious indicators based on external intelligence sources.
 
-- Identifies traffic from malicious IPs/domains
-- Triggers alerts in real-time
-- Helps you block threats proactively
+---
 
-### Cron Tasks
+### Geo
 
-Cron Tasks are scheduled jobs that automate recurring activities like report generation, data export, or backups.
+The Geo plugin enriches traffic data with geographic attributes.
 
-They help you:
+It maps IP addresses to geographic locations for analysis and visualization.
 
-- Save time
-- Run tasks at off-peak hours
-- Ensure consistency
+---
 
-### Name Resolution
+### Resolve
 
-*Name Resolution* translates IP addresses to domain names for easier identification.
+The Resolve plugin performs name resolution.
 
-Use it to:
+It maps IP addresses to hostnames or domain names to improve readability in analysis and reports.
 
-- Simplify network analysis by providing human-readable domain names.
-- Make it easier to understand traffic patterns and spot unusual behavior.
+---
 
-### IPDR
+### SNMP Resolve
 
-A standardized format (used in DoT compliance) for logging detailed metadata about network activity.
+SNMP Resolve enriches data using SNMP information.
 
-With IPDR, you can:
+It maps identifiers such as interfaces or devices to meaningful names obtained through SNMP polling.
 
-- Collect and store structured network data
-- Support audits and compliance
-- Analyze long-term trends or forensic data
+---
+
+## 14. Users, Access & Auditing Terminology
+
+These terms describe who can access Trisul, what they are allowed to see or do, and how user activity is recorded.
+
+### User
+
+A user is an account that can authenticate to Trisul.
+
+Users access WebTrisul and perform actions based on assigned permissions.
+
+---
+
+### Role
+
+A role defines a set of permissions.
+
+Roles control which contexts, views, tools, and administrative actions a user is allowed to access.
+
+---
+
+### Webserver Logs
+
+Webserver logs record activity related to the Trisul web interface.
+
+They capture request and access information for troubleshooting and auditing.
+
+---
+
+### Auth Log
+
+The authentication log records authentication-related events.
+
+It tracks login attempts, successes, failures, and related security activity.
+
+---
