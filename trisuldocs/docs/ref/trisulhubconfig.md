@@ -17,7 +17,7 @@ The default location of the Hub configuration file is:
 
 For context named **data1** the path would be 
 ```
-…hub0/context_**data1**/trisulHubConfig.xml*
+…hub0/context_data1/trisulHubConfig.xml
 ```
 
 :::caution 
@@ -64,10 +64,10 @@ Commonly modified parameters are `Setuid`, `TrisulMode`, `LicenseFile`
 | DBRoot        | /usr/local/var/lib/trisul-hub/ domain0/hub0/context0                       | The base directory under which Trisul stores all its data.                                                                                                                                    |
 | TrafficDBRoot | /usr/local/var/lib/trisul/domain0 /hub0/context0/meters                    | The directory under which Trisul stores traffic and flow statistics.                                                                                                                          |
 | ConfigDB      | /usr/local/var/lib/trisul/ domain0/hub0/context0/ config/TRISULCONFIG.SQDB | Location of the configuration database.                                                                                                                                                       |
-| BinDirectory  | /usr/local/bin                                                             | Where trisul looks for executable binaries                                                                                                                                                    |
+| BinDirectory  | /usr/local/bin                                                             | Where Trisul looks for executable binaries                                                                                                                                                    |
 | DataDirectory | /usr/local/share/trisul-hub                                                | Data files                                                                                                                                                                                    |
 | LicenseFile   | /usr/local/etc/trisul-hub/LicenseKey.txt                                   | Location of the license file.                                                                                                                                                                 |
-| DebugMode     | false                                                                      | Debug mode is used when trying to develop LUA probe scripts. If `DebugMode == True` then all streaming metrics from all probes are just sunk to `/dev/null`. Hence this is used for probe testing |
+| DebugMode     | false                                                                      | Debug mode is used when trying to develop LUA probe scripts.<br/> If `DebugMode == True` then all streaming metrics from all probes are just sunk to `/dev/null`. Hence this is used for probe testing |
 
 ## Logging
 
@@ -408,12 +408,12 @@ These parameters are typically set automatically when you put Trisul in the IPDR
 | ---------- | -------- | -------------------- |
 | OutputDirectory | CONTEXTROOT/run | Directory where the IPDR record query result is dumped|
 | ControlDB       | CONTEXTROOT/config/IPDRCONTROL.SQDB | The control database location|
-| ReportFormat    | full | The format of the IPDR records. Available values are<br/><br/> `full` – The full record in columnar report format<br/> `fullcsv` – Full report in CSV format<br/> `trai` – Format for DoT |
+| ReportFormat    | full | The format of the IPDR records. Available values are: <br/> `full` – The full record in columnar report format<br/> `fullcsv` – Full report in CSV format<br/> `trai` – Format for DoT |
 | AddCustomerInfo | true | Add the information from the IPDR Static IP customer mapping |
 | AAADumpFilePath | CONTEXTROOT/run/aaadumpfiles | The place where the RADIUS AAA server dumps the currently active sessions |
 | SubscriberOption | | Add Subscriber ID or other ISP specific tag , this is taken from the RADIUS AAA log files |
 | MaxRecords | 250,000 | When using the *Request Full Database Dump* this parameter controls the maximum number of records dumped.  | 
-| QueryThreadCount |1 | Number of worker query threads to use for IPDR queries, ideal value is the same  _numflushers*numprobes_  This maps to `--threads,-j` parameter in trisul_queryflowstream tool  |
+| QueryThreadCount |1 | Number of worker query threads to use for IPDR queries, ideal value is the same  _numflushers*numprobes_ . This maps to `--threads,-j` parameter in trisul_queryflowstream tool  |
 | MACInDeviceID | false| Put the MAC Address in the device ID field which normally contain the router IP |
 | BackupSlicesDBRoot || Set this to the root directory of the backup slices area. This is used for querying AAA RADIUS logs which may be kept in the `BackupSlicesDBRoot` area for a duration longer than the normal flow database. 
 
