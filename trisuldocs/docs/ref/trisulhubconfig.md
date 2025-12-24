@@ -28,7 +28,7 @@ Root privileges are required to edit this file
 
 :::note
 
-Also see [trisulProbeConfig.xml](/docs/ref/trisulconfig)for editing Trisul Probe parameters
+Also see [trisulProbeConfig.xml](/docs/ref/trisulconfig) for editing Trisul Probe parameters
 
 :::
 
@@ -40,8 +40,8 @@ Click a section below to view the parameters defined within it.
 
 | Section     | What part of trisul does it configure                   |
 | ----------- | ------------------------------------------------------- |
-| App         | Core Hub process behavior and basic runtime setup                           |
-| Logging     | Log generation for Hub services, including rotation, size limits, and log levels                |
+| App         | Core Hub process behavior and basic runtime setup       |
+| Logging     | Log generation for Hub services, including rotation, size limits, and log levels    |
 | StatsEngine | Database cluster tuning                                 |
 | Server      | TRP server settings used for query handling                               |
 | Probes      | List of probes allowed to connect and mapping to layers |
@@ -57,16 +57,16 @@ Commonly modified parameters are `Setuid`, `TrisulMode`, `LicenseFile`
 
 :::
 
-| Parameters    | Defaults                | Description                                                                                                                                                                                   |
+| Parameters    | Defaults                | Description                    |
 | ------------- | ---------------------- | ------------------------------------------------------------------ |
-| User          | trisul.trisul                                                              | Which user/group should trisul run as after dropping root privileges.                                                                                                                         |
-| TempFolder    | /tmp                                                                       |                                                                                                                                                                                               |
-| DBRoot        | /usr/local/var/lib/trisul-hub/ domain0/hub0/context0                       | The base directory under which Trisul stores all its data.                                                                                                                                    |
-| TrafficDBRoot | /usr/local/var/lib/trisul/domain0 /hub0/context0/meters                    | The directory under which Trisul stores traffic and flow statistics.                                                                                                                          |
-| ConfigDB      | /usr/local/var/lib/trisul/ domain0/hub0/context0/ config/TRISULCONFIG.SQDB | Location of the configuration database.                                                                                                                                                       |
-| BinDirectory  | /usr/local/bin                                                             | Where Trisul looks for executable binaries                                                                                                                                                    |
-| DataDirectory | /usr/local/share/trisul-hub                                                | Data files                                                                                                                                                                                    |
-| LicenseFile   | /usr/local/etc/trisul-hub/LicenseKey.txt                                   | Location of the license file.                                                                                                                                                                 |
+| User          | trisul.trisul                                                              | Which user/group should trisul run as after dropping root privileges.  |
+| TempFolder    | /tmp                                                                       |      |
+| DBRoot        | /usr/local/var/lib/trisul-hub/ domain0/hub0/context0                       | The base directory under which Trisul stores all its data.   |
+| TrafficDBRoot | /usr/local/var/lib/trisul/domain0 /hub0/context0/meters                    | The directory under which Trisul stores traffic and flow statistics.  |
+| ConfigDB      | /usr/local/var/lib/trisul/ domain0/hub0/context0/ config/TRISULCONFIG.SQDB | Location of the configuration database.  |
+| BinDirectory  | /usr/local/bin                                                             | Where Trisul looks for executable binaries |
+| DataDirectory | /usr/local/share/trisul-hub                                                | Data files  |
+| LicenseFile   | /usr/local/etc/trisul-hub/LicenseKey.txt                                   | Location of the license file. |
 | DebugMode     | false                                                                      | Debug mode is used when trying to develop LUA probe scripts.<br/> If `DebugMode == True` then all streaming metrics from all probes are just sunk to `/dev/null`. Hence this is used for probe testing |
 
 ## Logging
@@ -107,7 +107,7 @@ Controls the database storage and retention policy for Trisul.
 Controls data location and retention policy.
 
 | Parameters  | Defaults | Description                                                                                                                                                             |
-| ----------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ----------- | -------- | ------------------------- |
 | SliceWindow | DAILY    | How much data is contained in a single slice. The available choices are :<br/>`HOURLY`: From 00 Min to 59 Min every hour<br/>`DAILY`: From 12:00 AM to 11:59 PM every day |
 
 ### Operational
