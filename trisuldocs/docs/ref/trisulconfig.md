@@ -201,7 +201,7 @@ If present, packets which match get only their headers stored. The headers inclu
 
 If present, packets which match get ignored (sent to `/dev/null`).
 
-## ## Calculating Slice Counts
+## Calculating Slice Counts
 
 `slicePolicy` specifies how many files you want to keep in each of the three areas. The size of each file is capped by the FileSizeKB parameter.
 
