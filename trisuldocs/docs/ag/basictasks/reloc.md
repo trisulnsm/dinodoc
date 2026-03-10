@@ -32,7 +32,7 @@ Example: relocating Hub data to `/nsm/trisuldata`
 **User action**
 > Start the Trisul Hub control utility by running:
 ```bash
-$ /usr/local/bin/trisulctl_hub/trisulctl_hub
+$ /usr/local/bin/trisulctl_hub
 
 ```
 **System response**
