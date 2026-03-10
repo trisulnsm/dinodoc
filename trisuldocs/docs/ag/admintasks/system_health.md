@@ -1,37 +1,56 @@
 # System Health
 
+## Overview
 
+The System Health page helps you verify that Trisul’s core components are running reliably and that data is being processed as expected.
 
-The System Health Dashboard provides a comprehensive overview of the system's health and performance. It consists of several modules that monitor and display the status and usage of various system components.
+You can come here when you want to confirm system stability, investigate missing or delayed data, or perform a routine health check after changes such as upgrades or restarts.
+
+If traffic analytics look unusual or incomplete, this page helps determine whether the issue is with the system itself rather than the network.
 
 ![](images/system_health.png)  
 *Figure: System Health Dashboard*  
 
-### 1) System Health Check
+## 1) System Health Check
 
-This module performs a comprehensive check on the system's core components, ensuring they are functioning correctly. It verifies the status of:
+This section provides a quick, high-level check of Trisul’s essential components. Each item reports a simple **OK** status so you can immediately see whether something fundamental is not functioning correctly.
 
-**Disk**: Checks the disk's health, ensuring it's operational and not faulty.  
-**Hub**: Confirms the Trisul Hub is running and connected.  
-**Probe**: Verifies the Trisul Probe is running and connected.  
-**Flows**: Checks the flow of data, ensuring it's being processed and flushed correctly.  
-**Memory**: Monitors memory usage, ensuring the system has sufficient resources.  
-**Routers**: Verifies the routers are operational and flushing data correctly.  
+It verifies the status of:
 
-The module displays a simple "OK" status indicator for each component, providing a quick overview of the system's health.
+- **Disk**  
+Confirms that disk storage is accessible and functioning normally.
 
-> To configure the disk usage alert percentage:
+- **Hub**  
+Verifies that the Trisul Hub is running and connected.
+
+- **Probe**  
+Confirms that the Trisul Probe is active and connected.
+
+- **Flows**  
+Ensures that network flows are being processed and flushed correctly.
+
+- **Memory**  
+Checks whether sufficient memory is available for stable operation.
+
+- **Routers**  
+Verifies that routers are operational and updating data correctly.
+
+If any of these checks fail, analytics and alerts may appear incomplete or unreliable.
+
+### Disk usage alert threshold
+
+You can configure when disk usage should trigger alerts so storage pressure is detected early. To do that.
 
 :::info navigation
 
-:point_right: Login as admin, Go to Web Admin &rarr; Manage &rarr; App Settings &rarr; UI
+:point_right: Login as `admin`, Go to Web Admin &rarr; Manage &rarr; App Settings &rarr; UI
 
 :::
 
-In the App settings form scroll down to the field "Disk Usage Alert Percentage" and enter a value. Click Save.
+In the App Settings form, set **Disk Usage Alert Percentage** and click **Save**.
 
 
-### 2) Disk Usage
+## 2) Disk Usage
 
 This module provides an in-depth view of the system's disk usage, helping identify potential storage issues. It monitors three storage pools: Oper, Ref, and Archive
 

@@ -65,7 +65,7 @@ Example: relocating PCAP data to `/nsm/trisuldata`
 **User action**  
 > Start the Trisul Probe control utility by running:
 ```
-$ /usr/local/bin/trisulctl_probe/trisulctl_probe
+$ /usr/local/bin/trisulctl_probe
 ```
 **System response**
 > Trisul will then display an interactive prompt similar to the following:
@@ -89,7 +89,7 @@ Once relocation is complete, Trisul components and the web interface must be res
 **User action**
 > Start the Trisul Hub control utility:  
 ```
-$ /usr/local/bin/trisulctl_hub/trisulctl_hub
+$ /usr/local/bin/trisulctl_hub
 ```
 **System response**
 > Restart the context:
