@@ -143,13 +143,33 @@ An optional feature for advanced users allows for extra archives. For example to
 | SliceCount | 32       | Number of days data in this extra archive|
 
 
+### Delete modes
+
+This mode controls how deleted slices are removed from disk. The default is to delete the oldest slices automatically.
+
+| Parameters | Defaults | Description |
+| ---------- | -------- | ----------- |
+| Type | AUTO | Slice deletion policy. `AUTO` deletes the slices `MANUAL` disables automatic deletion until you intervene. `TRASH` moves deleted slice data to a trash directory instead of immediate removal; when using `TRASH`, set `TrashLocation`. |
+| TrashLocation | *(empty)* | Directory where Trisul moves slices in `TRASH` mode. Required when `Type` is `TRASH`. Leave empty for `AUTO` / `MANUAL`. |
+| MaxTrashDiskPercentage | *(empty)* | Optional cap on trash disk usage (percentage). Leave empty to disable this limit. |
+
+```xml
+<!-- Type can be AUTO, MANUAL, or TRASH. If TRASH is used, TrashLocation must be set. -->
+<DeleteMode>
+    <Type>AUTO</Type>
+    <TrashLocation></TrashLocation>
+    <MaxTrashDiskPercentage></MaxTrashDiskPercentage>
+</DeleteMode>
+```
+
+
 ### Advanced Archiving
 
 Controls archiving process
 
 |Parameter| Defaults | Description |
 | ---------- | -------- | --------------- |
-|DeleteIfTargetDirMissing| False | - Used in `HA-Master-Slave` configuration with shared SAN mount point where the cold archive is stored   . In this architecture, both the `HA-Master` and `HA-Slave` store the hot and or warm data but the archive for cold data is mounted in only the current `HA-Master`. <br/>- Set this paramter to true on the `HA-Slave` node, so that if the archive SAN mount point is not available then the slice is deleted. This is correct behavior because the `HA-Master` which has the SAN mounted will use its normal archiving procedure to move data from hot to cold archive|
+|DeleteIfTargetDirMissing| False | - Used in `HA-Master-Slave` configuration with shared SAN mount point where the cold archive is stored   . In this architecture, both the `HA-Master` and `HA-Slave` store the hot and or warm data but the archive for cold data is mounted in only the current `HA-Master`. <br/>- Set this parameter to true on the `HA-Slave` node, so that if the archive SAN mount point is not available then the slice is deleted. This is correct behavior because the `HA-Master` which has the SAN mounted will use its normal archiving procedure to move data from hot to cold archive|
 |OfflineArchiveTag||- Enables offline archives.<br/>- The Trisul Archiver process does not delete entries from its database mapping slices to dates and storage pools. Instead it simply tags them with this label. Set this to `tape` if you want to enable Tape archives. This maps to a `tape` subdirectory in the meters area. |
 
 
