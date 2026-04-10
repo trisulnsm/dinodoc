@@ -193,7 +193,7 @@ Update all fields of an existing IPDR customer record. All customer fields must 
 
 | Method | URL |
 |--------|-----|
-| PUT | /api/ipdrcustomers/{UserID} |
+| PUT | `/api/ipdrcustomers/{UserID}` |
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
@@ -253,7 +253,7 @@ Update specific fields of an existing IPDR customer record. Only the fields you 
 
 | Method | URL |
 |--------|-----|
-| PATCH | /api/ipdrcustomers/{UserID} |
+| PATCH | `/api/ipdrcustomers/{UserID}` |
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
@@ -305,7 +305,7 @@ Delete an existing IPDR customer record from the system.
 
 | Method | URL |
 |--------|-----|
-| DELETE | /api/ipdrcustomers/{UserID} |
+| DELETE | `/api/ipdrcustomers/{UserID}` |
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
