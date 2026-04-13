@@ -7,7 +7,7 @@ The IPDR Customers list provides a comprehensive repository of customer details.
    **Delete**: Remove customer entries from the list  
 
    :::tip
-You can also add customer information for static IP and usernames using the [Trisul IPDR API](api) . 
+You can also add customer information for static IP and usernames using the [Trisul IPDR API](ipdr_customer_mappings) . 
 :::
 
 ## Compliance Requirement
