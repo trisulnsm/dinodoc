@@ -272,6 +272,7 @@ const sidebars = {
         'ipdr/ipdrstatistics',
         'ipdr/ipdrexportfields',
         'ipdr/staticip-mappings',
+        'ipdr/api-ipdr-query',
         'ipdr/ipdr_customers_api',
         'ipdr/ipdr_customer_mappings',
         'ipdr/latlong',
