@@ -1,4 +1,5 @@
 ---
+sidebar_position: 1
 title: IPDR Query API
 description: API reference for querying and managing IPDR (IP Detail Record) queries including creating, listing, checking status, fetching results, and cancelling queries.
 ---
@@ -7,7 +8,7 @@ description: API reference for querying and managing IPDR (IP Detail Record) que
 
 ## Overview
 
-The IPDR Query API allows you to create, manage, and retrieve results of IPDR (IP Detail Record) queries. IPDR records contain flow-level information such as source/destination IPs, ports, timestamps, NAT translations, and subscriber information. This API is used for compliance, lawful intercept, and network forensics workflows.
+The IPDR Query API allows you to create, manage, and retrieve results of IPDR (IP Detail Record) queries. IPDR records contain flow-level information such as source/destination IPs, ports, timestamps, NAT translations, and subscriber information. This API is used for compliance and network forensics workflows.
 
 **Base URL:** `http://<your-server>:3000/api/ipdr_query`
 
@@ -35,6 +36,8 @@ These error responses can be returned by any endpoint.
 
 ### Invalid API Token
 
+**HTTP Status: `401 Unauthorized`**
+
 ```json
 {
   "status": "ERROR",
@@ -43,6 +46,8 @@ These error responses can be returned by any endpoint.
 ```
 
 ### Context Not Found
+
+**HTTP Status: `404 Not Found`**
 
 ```json
 {
@@ -53,10 +58,25 @@ These error responses can be returned by any endpoint.
 
 ### Context Access Denied
 
+**HTTP Status: `403 Forbidden`**
+
 ```json
 {
-  "status": "Error",
-  "message": "You and not allowed to acess the context ipdr"
+  "status": "ERROR",
+  "message": "You are not allowed to access the context ipdr"
+}
+```
+
+### Internal Server Error
+
+**HTTP Status: `500 Internal Server Error`**
+
+Returned when an unexpected error occurs on the server.
+
+```json
+{
+  "status": "ERROR",
+  "message": "Internal server error"
 }
 ```
 
@@ -193,55 +213,67 @@ curl -X POST 'http://127.0.0.1:3000/api/ipdr_query/new' \
 
 #### Missing IP Address
 
+**HTTP Status: `400 Bad Request`**
+
 ```json
 {
-  "status": "Error",
+  "status": "ERROR",
   "message": "IP address is required"
 }
 ```
 
 #### Invalid IP Address
 
+**HTTP Status: `400 Bad Request`**
+
 ```json
 {
-  "status": "Error",
+  "status": "ERROR",
   "message": "Invalid IP address"
 }
 ```
 
 #### Missing From Time
 
+**HTTP Status: `400 Bad Request`**
+
 ```json
 {
-  "status": "Error",
+  "status": "ERROR",
   "message": "From time is required"
 }
 ```
 
 #### Invalid From Time Format
 
+**HTTP Status: `400 Bad Request`**
+
 ```json
 {
-  "status": "Error",
+  "status": "ERROR",
   "message": "Invalid from time. Please use the format DD-MM-YYYY HH:MM:SS"
 }
 ```
 
 #### Missing To Time
 
+**HTTP Status: `400 Bad Request`**
+
 ```json
 {
-  "status": "Error",
+  "status": "ERROR",
   "message": "To time is required"
 }
 ```
 
 #### Invalid To Time Format
 
+**HTTP Status: `400 Bad Request`**
+
 ```json
 {
-  "status": "Error",
-  "message": "Invalid  to  time. Please use the format DD-MM-YYYY HH:MM:SS"
+  "status": "ERROR",
+  "message": "Invalid to time. Please use the format DD-MM-YYYY HH:MM:SS"
 }
 ```
 
@@ -307,27 +339,33 @@ curl -X GET 'http://127.0.0.1:3000/api/ipdr_query/status' \
 
 #### Missing Query ID
 
+**HTTP Status: `400 Bad Request`**
+
 ```json
 {
-  "status": "Error",
+  "status": "ERROR",
   "message": "Query ID is required"
 }
 ```
 
 #### Query ID Not Found
 
+**HTTP Status: `404 Not Found`**
+
 ```json
 {
-  "status": "Error",
+  "status": "ERROR",
   "message": "Query ID not found"
 }
 ```
 
 #### Unauthorized Access
 
+**HTTP Status: `403 Forbidden`**
+
 ```json
 {
-  "status": "Error",
+  "status": "ERROR",
   "message": "You are not authorized to access this query"
 }
 ```
@@ -463,11 +501,13 @@ When no `headers` parameter is specified, all 13 columns are returned:
 
 #### Query Not Completed
 
+**HTTP Status: `409 Conflict`**
+
 Returned when the query is still in `NEW` or `INPROGRESS` state.
 
 ```json
 {
-  "status": "Error",
+  "status": "ERROR",
   "message": "Query is not completed",
   "CurrentStatus": "INPROGRESS",
   "QueryStatusMessage": "Processing records...",
@@ -479,60 +519,72 @@ Returned when the query is still in `NEW` or `INPROGRESS` state.
 
 #### Result File Not Found
 
+**HTTP Status: `404 Not Found`**
+
 Returned when the query completed but the output CSV file is missing.
 
 ```json
 {
-  "status": "Error",
+  "status": "ERROR",
   "message": "Result not found"
 }
 ```
 
 #### Invalid Headers Format
 
+**HTTP Status: `400 Bad Request`**
+
 Returned when `headers` is not an array.
 
 ```json
 {
-  "status": "Error",
+  "status": "ERROR",
   "message": "Headers should be an array"
 }
 ```
 
 #### Invalid Header Names
 
+**HTTP Status: `400 Bad Request`**
+
 Returned when one or more header names are not recognized.
 
 ```json
 {
-  "status": "Error",
+  "status": "ERROR",
   "message": "Invalid headers: InvalidColumn, AnotherBadColumn"
 }
 ```
 
 #### Missing Query ID
 
+**HTTP Status: `400 Bad Request`**
+
 ```json
 {
-  "status": "Error",
+  "status": "ERROR",
   "message": "Query ID is required"
 }
 ```
 
 #### Query ID Not Found
 
+**HTTP Status: `404 Not Found`**
+
 ```json
 {
-  "status": "Error",
+  "status": "ERROR",
   "message": "Query ID not found"
 }
 ```
 
 #### Unauthorized Access
 
+**HTTP Status: `403 Forbidden`**
+
 ```json
 {
-  "status": "Error",
+  "status": "ERROR",
   "message": "You are not authorized to access this query"
 }
 ```
@@ -597,11 +649,13 @@ curl -X PUT 'http://127.0.0.1:3000/api/ipdr_query/cancel' \
 
 #### Query Not in Cancellable State
 
+**HTTP Status: `409 Conflict`**
+
 Returned when the query has already completed or been cancelled.
 
 ```json
 {
-  "status": "Error",
+  "status": "ERROR",
   "message": "Query is not in NEW or INPROGRESS state",
   "ip": "192.168.1.100",
   "CurrentStatus": "COMPLETED",
@@ -613,27 +667,33 @@ Returned when the query has already completed or been cancelled.
 
 #### Missing Query ID
 
+**HTTP Status: `400 Bad Request`**
+
 ```json
 {
-  "status": "Error",
+  "status": "ERROR",
   "message": "Query ID is required"
 }
 ```
 
 #### Query ID Not Found
 
+**HTTP Status: `404 Not Found`**
+
 ```json
 {
-  "status": "Error",
+  "status": "ERROR",
   "message": "Query ID not found"
 }
 ```
 
 #### Unauthorized Access
 
+**HTTP Status: `403 Forbidden`**
+
 ```json
 {
-  "status": "Error",
+  "status": "ERROR",
   "message": "You are not authorized to access this query"
 }
 ```
@@ -699,3 +759,19 @@ curl -X GET 'http://127.0.0.1:3000/api/ipdr_query/result' \
 | `INPROGRESS` | Query is currently being processed             |
 | `COMPLETED`  | Query has finished and results are available   |
 | `CANCELED`   | Query was cancelled by the user                |
+
+---
+
+## HTTP Status Codes Reference
+
+The API uses standard HTTP status codes alongside the JSON `status` field:
+
+| HTTP Status Code         | When Used                                                                 |
+|--------------------------|--------------------------------------------------------------------------|
+| `200 OK`                 | Request succeeded (all success responses)                                |
+| `400 Bad Request`        | Missing or invalid parameters (IP, time, query_id, headers)              |
+| `401 Unauthorized`       | Invalid or missing API token                                             |
+| `403 Forbidden`          | User not authorized to access the context or query                       |
+| `404 Not Found`          | Context, query ID, or result file not found                              |
+| `409 Conflict`           | Query is not in the expected state (e.g., not completed, not cancellable) |
+| `500 Internal Server Error` | Unexpected server-side error                                          |
