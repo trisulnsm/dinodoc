@@ -1,0 +1,11 @@
+{
+  "label": "Reference Docs",
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "Reference Section"
+  },
+  "customProps": {
+    "description": "This section contains a description of config files and programs "
+  }
+}

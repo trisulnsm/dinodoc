@@ -1,9 +1,4 @@
 // @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
-
 import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
@@ -12,20 +7,15 @@ const config = {
   tagline: 'Wide and deep visibility, detection, and audit of network traffic',
   favicon: 'img/favicon.ico',
 
-  // Set the production URL of your site
   url: 'https://docs.trisul.org/',
-  // Set the /<baseUrl>/ pathname under which your site is served
   baseUrl: '',
 
-  // GitHub pages deployment config.
-  organizationName: 'trisulnsm', // Usually your GitHub org/user name.
-  projectName: 'dinodocs', // Usually your repo name.
+  organizationName: 'trisulnsm',
+  projectName: 'dinodocs',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang.
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -34,34 +24,42 @@ const config = {
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
           sidebarPath: './sidebars.js',
           sidebarCollapsed: true,
+          versions: {
+            current: {
+              label: 'Version8.0',
+            },
+            '7.0': {
+              label: 'Version7.0',
+            },
+          },
         },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
       }),
     ],
   ],
+
   plugins: [
     [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
+      require.resolve('@easyops-cn/docusaurus-search-local'),
       {
         hashed: true,
       },
     ],
   ],
+
   customFields: {
-  tocLabel: 'In this page:',
-},
+    tocLabel: 'In this page:',
+  },
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Open Graph and Twitter metadata for social sharing
       metadata: [
         { property: 'og:image', content: 'https://docs.trisul.org/img/latest-release.jpeg' },
         { property: 'og:type', content: 'website' },
@@ -69,10 +67,9 @@ const config = {
         { property: 'og:title', content: 'Trisul Network Analytics Docs' },
         { property: 'og:description', content: 'Wide and deep visibility, detection, and audit of network traffic' },
         { name: 'twitter:image', content: 'https://docs.trisul.org/img/latest-release.jpeg' },
-        { name: 'twitter:card', content: 'summary_large_image' }
+        { name: 'twitter:card', content: 'summary_large_image' },
       ],
 
-      // This sets the default social media preview image
       image: 'img/logo.png',
 
       navbar: {
@@ -82,6 +79,10 @@ const config = {
           src: 'img/logo.png',
         },
         items: [
+            {
+            type: 'docsVersionDropdown',
+            position: 'left',
+          },
           { to: '/docs/ag', label: 'Admin Guide', position: 'left' },
           { to: '/docs/ug', label: 'User Guide', position: 'left' },
           { to: '/docs/lua', label: 'API', position: 'left' },
@@ -90,6 +91,7 @@ const config = {
           { to: '/docs/isp', label: 'ISP', position: 'left' },
           { to: '/docs/releasehistory', label: 'Changelog', position: 'left' },
           { to: '/docs/Troubleshooting', label: 'Troubleshooting', position: 'left' },
+
           {
             href: 'https://github.com/trisulnsm/dinodoc',
             label: 'GitHub',
@@ -97,14 +99,17 @@ const config = {
           },
         ],
       },
+
       tableOfContents: {
-      minHeadingLevel: 2, // Start TOC from H2
-      maxHeadingLevel: 3, // Include headings up to H3
-    },
+        minHeadingLevel: 2,
+        maxHeadingLevel: 3,
+      },
+
       footer: {
         style: 'dark',
         copyright: `Copyright © ${new Date().getFullYear()} Trisul Network Analytics. Built with Docusaurus.`,
       },
+
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
@@ -114,4 +119,3 @@ const config = {
 };
 
 export default config;
-

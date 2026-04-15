@@ -1,0 +1,34 @@
+h1. Netflow Sources Dashboard
+
+The Netflow Sources dashboard provide you the following system level information on a Time Series chart.
+
+Per Router (flow exporter)
+
+# *Flow record Rate* -- number of flows per second per router being processed 
+# *Flow sources* -- bandwidth per router
+# *Flow volume* -- netflow bandwidth.  This is an important parameters. Shows the Netflow Record rate in Mbps
+
+Per Interface
+
+# *Total volume* -- bandwidth of Top 10 interfaces 
+
+
+h2. Using Netflow Sources
+
+p(autohint hand-o-right success). 
+Select  _Netflow -> Netflow sources_ to open the dashboard
+
+Things to try :
+# Expand timeframe using the "Time Window" drop down on the top
+# Click on any item inside the chart legend to drilldown into long term views 
+# Click on <i class='fa fa-line-chart'></i> to add any chart as a *Reference chart* to others. This allows you to compare different panels.
+
+
+<div class='panel panel-info panel-body text-center'>
+!images/netflow_sources.png!
+</div>
+
+
+
+
+

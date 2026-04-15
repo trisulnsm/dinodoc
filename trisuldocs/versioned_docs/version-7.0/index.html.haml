@@ -1,0 +1,124 @@
+-@activetab = {:docs => 'active' } 
+.container.docu.panel
+  .row
+    .col-md-12{:style=>"margin-top:-50px"}
+      %h2 
+        %i.fa.fa-book
+        Trisul Documentation 
+        %small.span.text-danger 
+          Links to various documentation resources
+
+
+  .row
+    .col-md-12
+      %a.btn.btn-primary{:href=>'search.html'}
+        Search Documentation 
+
+      %ul.categorized-view
+        %li
+          %h5
+            %a{:href => "/docs/ug/intro/index.html"}
+              User Guide
+          %a{:href=>"/docs/ug/basicusage/index.html"}
+            Basic Usage
+      
+          %a{:href=>"ug/cg/index.html"}
+            Traffic monitoring
+        
+          %a{:href=>"ug/flow/index.html"}
+            Flow analysis
+        
+          %a{:href=>"ug/alerts/index.html"}
+            Alerts
+        
+          %a{:href=>"ug/caps/index.html"}
+            Full packet captures
+       
+          %a{:href=>"ug/screencasts.html"}
+            Screencasts
+          %a{:href => "ug/intro/index.html"}
+            %em All docs..
+
+        %li 
+          %h5
+            %a{:href => "ref/index.html"}
+              Reference
+        
+          %a{:href=>"ref/trisulconfig.html"}
+            trisulProbeConfig.xml
+            %i.fa.fa-gear 
+
+          %a{:href=>"ref/trisulhubconfig.html"}
+            trisulHubConfig.xml
+            %i.fa.fa-gear 
+
+          %a{:href=>"ref/netflow-config.html"}
+            Netflow configuration 
+            %i.fa.fa-gear 
+       
+          %a{:href=>"ref/trisulprogram.html"}
+            trisul-probe executable 
+            %i.fa.fa-gear 
+       
+          %a{:href => "ref/index.html"}
+            %em All config files reference...
+            
+
+
+        %li 
+          %h5
+            %a{:href=>"trp/index.html"}
+              Developers API 
+        
+          %a{:href=>"trp/index.html"}
+            Trisul Remote Protocol Scripting
+        
+          %a{:href=>"lua/index.html"}
+            LUA Scripting
+
+          %a{:href=>"https://trisul.org/devzone"}
+            Developers Wiki *new* 
+
+        %li 
+          %h5
+            %a{:href=>"https://github.com/trisulnsm"}
+              %i.fa.fa-github 
+              Github 
+
+        
+          %a{:href=>"https://github.com/trisulnsm"}
+            trisulnsm @ github
+        
+          %a{:href=>"https://github.com/trisulnsm/trisul-scripts/tree/master/lua"}
+            LUA trisul samples and tutorials  
+
+          %a{:href=>"https://github.com/trisulnsm/trisul-scripts/tree/master/trp"}
+            TRP scripts 
+  .row
+    .col-lg-12
+      %h2 Howtos and knowledge base
+      %ul.categorized-view
+        %li
+          %h5
+            %a{:href=>"howto/index.html"}
+              Howtos
+
+          %a{:href=>"/docs/ug/netflow/netflow_setup.html"}
+            Configure Netflow
+
+          %a{:href=>"howto/setup_ids_alerts.html"}
+            Sending IDS alerts to Trisul
+
+          %a{:href=>"howto/installseco.html"}
+            Install on Security Onion
+
+          %a{:href=>"howto/10gcapture.html"}
+            Capture on 10G cards
+
+          %a{:href => "howto/index.html"}
+            %em All howtos..
+
+
+
+
+    

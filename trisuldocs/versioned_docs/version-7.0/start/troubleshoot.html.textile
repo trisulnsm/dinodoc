@@ -1,0 +1,85 @@
+h1. Troubleshooting 
+
+If you are unable to find your solution here please use any of the "support":/support/ options.
+
+h2. Unable to log on to web page 
+
+You should be using Firefox/Chrome/Safari/IE 10+  to logon to webtrisul at 
+
+pre. http://<hostname>:3000
+
+Username = @admin@ Password=@admin@
+
+h5. 1. Check if linux firewall allows port 3000 
+
+Allow port 3000 through your iptables
+
+pre. iptables -I INPUT -p tcp --dport 3000 -j ACCEPT
+
+p. Or try disabling iptables altogether and see if that helps.
+
+pre. service iptables stop
+
+
+h5. 2. Check if another daemon is running on port 3000 
+
+pre. netstat -pant | grep 3000
+
+If another process if using Port 3000, "Change Trisul Webserver Port":/docs/howto/index.html
+
+
+h5. 5. Bad Gateway error 
+
+Make sure your browser proxy settings are correct. 
+
+
+h2. Unable to install RPM 
+
+If you installed CentOS from CD-1 as a minimal server install, it may not have the libpcap library. 
+
+pre.. 
+[root@localhost lib]# rpm -Uvh  trisul-1.2.647-0.el5.x86_64.rpm
+error: Failed dependencies:
+libpcap.so.0.9.4()(64bit) is needed by trisul-1.2.647-0.el5.x86_64
+[root@localhost lib]# 
+
+p. To rectify this, install the libpcap package and retry.
+
+pre. yum install libpcap
+
+
+h2. Trisul startup trouble ?
+
+h5. 1. Check if the  trisul process is running
+
+pre. ps -C trisul 
+
+h5. 2. Check the main log file for any error messages
+
+pre. more /usr/local/var/log/trisul/ns-001.log
+	
+Look for messages with level of @ERROR@ or @FATAL@
+
+h5. 3. Does interface eth0 exist ? 
+
+By default trisul listens for network traffic on interface eth0. 
+Check if interface eth0 exists and is UP. 
+
+<pre>ifconfig eth0</pre>
+
+
+h5. 3. Check if the Webtrisul HTTP stack is running 
+
+Trisul uses the nginx and thin servers. Check if they are running.
+
+pre. ps -ef | grep thin ps -ef | grep nginx
+
+h5. 4. Check webserver logs 
+
+Check if the webserver encountered any errors starting up.
+
+pre.. 
+more /usr/local/share/webtrisul/log/nginx.error.log
+more /usr/local/share/webtrisul/log/thin.0.log
+
+
