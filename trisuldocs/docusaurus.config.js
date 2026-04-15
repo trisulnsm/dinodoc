@@ -30,10 +30,10 @@ const config = {
           sidebarCollapsed: true,
           versions: {
             current: {
-              label: 'Version8.0',
+              label: 'Version 8.0',
             },
             '7.0': {
-              label: 'Version7.0',
+              label: 'Version 7.0',
             },
           },
         },
@@ -79,18 +79,59 @@ const config = {
           src: 'img/logo.png',
         },
         items: [
-            {
+          {
             type: 'docsVersionDropdown',
             position: 'left',
           },
-          { to: '/docs/ag', label: 'Admin Guide', position: 'left' },
-          { to: '/docs/ug', label: 'User Guide', position: 'left' },
-          { to: '/docs/lua', label: 'API', position: 'left' },
-          { to: '/docs/ref', label: 'Reference', position: 'left' },
-          { to: '/docs/ipdr', label: 'IPDR', position: 'left' },
-          { to: '/docs/isp', label: 'ISP', position: 'left' },
-          { to: '/docs/releasehistory', label: 'Changelog', position: 'left' },
-          { to: '/docs/Troubleshooting', label: 'Troubleshooting', position: 'left' },
+
+          {
+            type: 'doc',
+            docId: 'ag/index',
+            label: 'Admin Guide',
+            position: 'left',
+          },
+          {
+            type: 'doc',
+            docId: 'ug/index',
+            label: 'User Guide',
+            position: 'left',
+          },
+          {
+            type: 'doc',
+            docId: 'lua/index',
+            label: 'API',
+            position: 'left',
+          },
+          {
+            type: 'doc',
+            docId: 'ref/index',
+            label: 'Reference',
+            position: 'left',
+          },
+          {
+            type: 'doc',
+            docId: 'ipdr/index',
+            label: 'IPDR',
+            position: 'left',
+          },
+          {
+            type: 'doc',
+            docId: 'isp/index',
+            label: 'ISP',
+            position: 'left',
+          },
+          {
+            type: 'doc',
+            docId: 'releasehistory',
+            label: 'Changelog',
+            position: 'left',
+          },
+          {
+            type: 'doc',
+            docId: 'Troubleshooting/index',
+            label: 'Troubleshooting',
+            position: 'left',
+          },
 
           {
             href: 'https://github.com/trisulnsm/dinodoc',
