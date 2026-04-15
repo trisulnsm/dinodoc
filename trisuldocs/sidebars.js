@@ -122,6 +122,7 @@ const sidebars = {
             'ug/alerts/ddos',
             'ug/alerts/msteams',
             'ug/alerts/email_wizard',
+            `ug/alerts/mitre`,
           ],
         }, /* end Alerts */
 

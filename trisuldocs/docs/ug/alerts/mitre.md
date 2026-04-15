@@ -63,7 +63,7 @@ If no alerts are present, the matrix will remain empty.
 
 :::info Navigation
 
-:point_right: Go to **MITRE ATT&CK** from the sidebar  
+:point_right: Go to **MITRE** from the main sidebar  
 :point_right: Click on **MITRE Matrix**
 
 :::
@@ -80,16 +80,22 @@ The matrix displays techniques organized according to the MITRE ATT&CK framework
 - The **number of alerts** mapped to that technique is flagged inside the cell.
 - Visualization updates based on selected filters.  
 
-![](images/mitrematrix.png)
+### Time and Alert Filters
+
+You can refine the matrix using:
+
+- **Time Frame** – Define the duration for analysis  
+- **Max Count** – Set the minimum number of alerts to display  
+
+Provide the time frame and the number of alerts to be displayed in that time frame and click **Search**
+
+![](static/img//mitrematrix.png)
 
 
 ## Understanding the MITRE ATT&CK Matrix Parameters
 
 | Parameter | Section | Description | How to Use |
 |----------|--------|-------------|------------|
-| **Time Frame** | Search Criteria | Defines the start and end time for which alerts are retrieved and analyzed. | Select a relevant time window based on the investigation. A shorter range helps focus on specific incidents, while a longer range provides broader visibility. |
-| **Max Count** | Search Criteria | Limits the number of alerts processed and displayed in the matrix. | Set a higher value to include more alerts (useful for deeper analysis), or a lower value for faster queries and quick checks. |
-| **Search** | Search Criteria | Applies the selected filters and refreshes the matrix view. | Click after setting Time Frame and Max Count to update the data. |
 | **Total Alerts** | Summary Metrics | Displays the total number of alerts retrieved based on applied filters. | Use this to understand overall alert volume in the selected timeframe. |
 | **Techniques Hit** | Summary Metrics | Indicates the number of unique MITRE techniques triggered. | Helps assess how widespread the activity is across different attack techniques. |
 | **Duration** | Summary Metrics | Shows the time span covered by the selected data. | Useful for understanding alert density and activity frequency. |
@@ -98,12 +104,6 @@ The matrix displays techniques organized according to the MITRE ATT&CK framework
 | **Alert Count per Technique** | MITRE Matrix | Number displayed within each technique cell indicating alert frequency. | Use this to identify high-activity techniques that may require immediate attention. |
 | **Technique Drilldown** | MITRE Matrix | Opens detailed view of alerts for a selected technique. | Click a technique → view alerts → use Action button to inspect full alert details and MITRE mappings. |
 
-### Time and Alert Filters
-
-You can refine the matrix using:
-
-- **Time Frame** – Define the duration for analysis  
-- **Max Count** – Set the minimum number of alerts to display  
 
 ---
 
@@ -111,10 +111,10 @@ You can refine the matrix using:
 
 ### Viewing Alerts by Technique
 
-- Click on any **Technique ID** in the matrix  
+- Click on any highlighted **Technique ID** in the matrix  
 - This opens a detailed view showing all alerts mapped to that technique within the selected time range  
 
-![](images/mitrealerts.png)
+![](static/img//mitrealerts.png)
 
 
 | Parameter | Section | Description | How to Use |
@@ -148,7 +148,7 @@ Each alert entry provides:
 
 Use the **Action** button to view detailed alert information.
 
-![](images/mitrealertsdetailed.png)
+![](static/img/mitrealertsdetailed.png)
 
 
 | Parameter | Section | Description | How to Use |
