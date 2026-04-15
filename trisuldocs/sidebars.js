@@ -577,6 +577,7 @@ trpAPISidebar: [
             'ag/install/pkgverify',
             'ag/install/doinstall',
             'ag/install/selectmode',
+            'ag/install/trisulaicli',
             'ag/install/doupgrade',
             'ag/install/douninstall',
             'ag/install/openports',
