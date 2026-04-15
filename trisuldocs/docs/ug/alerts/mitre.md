@@ -173,7 +173,7 @@ Use the **Action** button to view detailed alert information.
 | **Flows** | Deep Inspection | Shows related network flows. | Investigate traffic patterns related to the alert. |
 | **Pull Packets** | Raw Packets | Downloads packet-level data (PCAP). | Use for deep packet inspection and forensic analysis. |
 | **Suppress Rule** | Suppression | Provides rule syntax to suppress similar alerts. | Use to reduce noise from known or benign alerts. |
-| **Close** | Action | Closes the alert details view. | Return to the alert list. |
+
 
 ---
 
