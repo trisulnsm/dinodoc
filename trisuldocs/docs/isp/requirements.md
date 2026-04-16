@@ -17,9 +17,9 @@ Packages are available for the following operating systems.
 
 
 | OS               | Recommended | Notes |
-| ---------------- | ---|---|
-| Ubuntu 20.04/22.04 |  Ubuntu 22.04| |
-| RHEL 9/8/7       | RHEL 9.x| Can also use OracleLinux, AmazonLinux, RHEL, CentOS versions 9/8/7|
+| ---------------- | ---         |---|
+| Ubuntu 22.04/24.04 |  Ubuntu 24.04| |
+| RHEL 9/8         | RHEL 9.x    | Can also use OracleLinux, AmazonLinux, RHEL, CentOS versions 9/8|
 
 
 See below for typical requirements. 
@@ -33,14 +33,20 @@ NetFlow sizing is based on number of devices and interfaces.  Click a tab that i
 
 <TabItem value="poc" label="Proof of Concept" default>
 
-		| Hardware  | System Requirements                                                                                                            
-		| ------- | ------------ |
-		| Type | VM preferred |
-		| OS | RHEL9/OracleLinux9 (or Ubuntu 22) |
-		| CPU | 16 vCPU cores | 
-		| Memory |  16GB RAM |
-		| Network | 1GbE interface that can be used for both NetFlow and Management access |
-		| Disk | 1TB SAS, or NVme SSD  |
+
+:::info Proof of concept
+Use this to run a POC for a ISP with 4-5 gateway routers.  Increase the Memory if running more routers. 
+:::
+
+
+| Hardware  | System Requirements |
+| ------- | ------------ |
+| Type | VM preferred |
+| OS | RHEL9/OracleLinux9 (or Ubuntu 24.04) |
+| CPU | 16 vCPU cores | 
+| Memory |  32GB RAM |
+| Network | 1GbE interface that can be used for both NetFlow and Management access |
+| Disk | 1TB SAS, or NVme SSD  |
 
 
 </TabItem>
@@ -48,24 +54,24 @@ NetFlow sizing is based on number of devices and interfaces.  Click a tab that i
 
 <TabItem value="small" label="Small ISP < 10Gbps uplink" >
 
-		| Hardware  | System Requirements                                                                                                            
-		| ------- | ------------ |
-		| Type | VM preferred |
-		| CPU | 8 vCPU cores | 
-		| Memory |  16GB RAM |
-		| Network | 1GbE interface that can be used for both NetFlow and Management access |
-		| Disk | 1TB SAS, this can store upto 6 months data, proportionately add more based on retention|
+| Hardware  | System |
+| ------- | ------------ |
+| Type | VM preferred |
+| CPU | 8 vCPU cores | 
+| Memory |  16GB RAM |
+| Network | 1GbE interface that can be used for both NetFlow and Management access |
+| Disk | 1TB SAS, this can store upto 6 months data, proportionately add more based on retention|
 
 
 </TabItem>
 
 <TabItem value="giant" label="Large ISP 500Gbps">
 
-		| Hardware  | System Requirements                                                                                                            
+		| Hardware  | System Requirements |
 		| ------- | ------------ |
 		| Type | VM preferred |
-		| CPU | 32 vCPU cores | 
-		| Memory |  64GB RAM |
+		| CPU | 48 vCPU cores | 
+		| Memory |  128GB RAM |
 		| Network | 1GbE interface that can be used for both NetFlow and Management access |
 		| Disk | 16TB Storage for 3 months,  proportionately add more based on retention|
 
