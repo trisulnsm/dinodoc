@@ -28,6 +28,8 @@ All endpoints require the following common authentication and context fields:
 | `username`      | `string` | ✅ Yes   | —       | Username of the authenticated user                                       | `"user"`         |
 | `contextname`   | `string` | ❌ No    | `"default"` | Name of the Trisul context. If omitted, defaults to `"default"` (context0). Use `"context0"` as an alias for `"default"`. | `"ipdr"`         |
 
+> **Note on `request_id`:** Customers who prefer not to store our internal `query_id` can provide their own unique `request_id` when creating a query. This `request_id` can then be used in place of `query_id` for all subsequent operations (status, result, cancel). See [Request ID Workflow](#request-id-workflow) for details.
+
 ---
 
 ## Common Error Responses
@@ -175,6 +177,7 @@ Use this endpoint to initiate a new IPDR lookup. You provide the target IP addre
 | `ip`          | `string` | ✅ Yes   | —       | Target IP address to query (IPv4 or IPv6)                    | `"192.168.1.100"`         |
 | `from_time`   | `string` | ✅ Yes   | —       | Start of the query time window (`DD-MM-YYYY HH:MM:SS`)      | `"01-04-2026 00:00:00"`   |
 | `to_time`     | `string` | ✅ Yes   | —       | End of the query time window (`DD-MM-YYYY HH:MM:SS`)        | `"10-04-2026 23:59:59"`   |
+| `request_id`  | `string` | ❌ No    | —       | Customer-provided unique identifier. If provided, can be used instead of `query_id` for status/result/cancel. Must be unique. | `"REQ-20260401-001"`      |
 
 ### Sample Request
 
@@ -187,7 +190,8 @@ curl -X POST 'http://127.0.0.1:3000/api/ipdr_query/new' \
     "username": "user",
     "ip": "192.168.1.100",
     "from_time": "01-04-2026 00:00:00",
-    "to_time": "10-04-2026 23:59:59"
+    "to_time": "10-04-2026 23:59:59",
+    "request_id": "REQ-20260401-001"
   }'
 ```
 
@@ -197,17 +201,21 @@ curl -X POST 'http://127.0.0.1:3000/api/ipdr_query/new' \
 {
   "status": "SUCCESS",
   "message": "Query submitted successfully",
-  "query_id": 3
+  "query_id": 3,
+  "request_id": "REQ-20260401-001"
 }
 ```
+
+> **Note:** The `request_id` field is only returned when provided in the request.
 
 ### Response Fields
 
 | Field Name | Type      | Description                                        |
 |------------|-----------|----------------------------------------------------|
-| `status`   | `string`  | `"SUCCESS"` on successful submission                |
-| `message`  | `string`  | Confirmation message                                |
-| `query_id` | `integer` | Unique ID assigned to this query (use for status/result/cancel) |
+| `status`     | `string`  | `"SUCCESS"` on successful submission                |
+| `message`    | `string`  | Confirmation message                                |
+| `query_id`   | `integer` | Unique ID assigned to this query (use for status/result/cancel) |
+| `request_id` | `string`  | Customer-provided request ID (only present if provided in request) |
 
 ### Error Responses
 
@@ -277,6 +285,19 @@ curl -X POST 'http://127.0.0.1:3000/api/ipdr_query/new' \
 }
 ```
 
+#### Duplicate Request ID
+
+**HTTP Status: `409 Conflict`**
+
+Returned when the provided `request_id` already exists.
+
+```json
+{
+  "status": "ERROR",
+  "message": "Request ID 'REQ-20260401-001' already exists. It must be unique."
+}
+```
+
 ---
 
 ## 3. Query Status
@@ -296,7 +317,8 @@ Use this endpoint to poll the progress of an IPDR query. After submitting a quer
 | `api_token`   | `string`  | ✅ Yes   | —       | API authentication token                   | `"lg25Tly1g8QwB8mcDzqO"` |
 | `username`    | `string`  | ✅ Yes   | —       | Username of the authenticated user         | `"user"`         |
 | `contextname` | `string`  | ❌ No    | `"default"` | Name of the Trisul context. Defaults to `"default"` (context0) if omitted. | `"ipdr"`         |
-| `query_id`    | `integer` | ✅ Yes   | —       | The query ID returned by the `new` endpoint| `1`              |
+| `query_id`    | `integer` | ⚠️ Conditional | —  | The query ID returned by the `new` endpoint. Required if `request_id` is not provided. | `1`              |
+| `request_id`  | `string`  | ⚠️ Conditional | —  | Customer-provided request ID. Required if `query_id` is not provided. | `"REQ-20260401-001"` |
 
 ### Sample Request
 
@@ -307,9 +329,11 @@ curl -X GET 'http://127.0.0.1:3000/api/ipdr_query/status' \
     "api_token": "lg25Tly1g8QwB8mcDzqO",
     "contextname": "ipdr",
     "username": "user",
-    "query_id": 1
+    "request_id": "REQ-20260401-001"
   }'
 ```
+
+> **Tip:** You can also use `query_id` instead of `request_id` if you have the internal query ID.
 
 ### Success Response
 
@@ -389,7 +413,8 @@ Use this endpoint to fetch the actual IPDR data once a query has reached `COMPLE
 | `api_token`   | `string`   | ✅ Yes   | —             | API authentication token                                                                                        | `"lg25Tly1g8QwB8mcDzqO"`                     |
 | `username`    | `string`   | ✅ Yes   | —             | Username of the authenticated user                                                                              | `"user"`                                     |
 | `contextname` | `string`   | ❌ No    | `"default"`    | Name of the Trisul context. Defaults to `"default"` (context0) if omitted.                                      | `"ipdr"`                                     |
-| `query_id`    | `integer`  | ✅ Yes   | —             | The query ID returned by the `new` endpoint                                                                     | `1`                                          |
+| `query_id`    | `integer`  | ⚠️ Conditional | —  | The query ID returned by the `new` endpoint. Required if `request_id` is not provided. | `1`              |
+| `request_id`  | `string`   | ⚠️ Conditional | —  | Customer-provided request ID. Required if `query_id` is not provided. | `"REQ-20260401-001"` |
 | `headers`     | `string[]` | ❌ No    | All 13 columns| Array of column names to include in the result. If omitted, all columns are returned. See **Available Headers**. | `["SrcIP", "DestIP", "StartTime", "Duration"]`|
 
 ### Available Headers
@@ -556,14 +581,14 @@ Returned when one or more header names are not recognized.
 }
 ```
 
-#### Missing Query ID
+#### Missing Query ID / Request ID
 
 **HTTP Status: `400 Bad Request`**
 
 ```json
 {
   "status": "ERROR",
-  "message": "Query ID is required"
+  "message": "Query ID or Request ID is required"
 }
 ```
 
@@ -608,7 +633,8 @@ Use this endpoint to cancel a running or pending IPDR query. This is useful when
 | `api_token`   | `string`  | ✅ Yes   | —       | API authentication token                   | `"lg25Tly1g8QwB8mcDzqO"` |
 | `username`    | `string`  | ✅ Yes   | —       | Username of the authenticated user         | `"user"`         |
 | `contextname` | `string`  | ❌ No    | `"default"` | Name of the Trisul context. Defaults to `"default"` (context0) if omitted. | `"ipdr"`         |
-| `query_id`    | `integer` | ✅ Yes   | —       | The query ID returned by the `new` endpoint| `1`              |
+| `query_id`    | `integer` | ⚠️ Conditional | —  | The query ID returned by the `new` endpoint. Required if `request_id` is not provided. | `1`              |
+| `request_id`  | `string`  | ⚠️ Conditional | —  | Customer-provided request ID. Required if `query_id` is not provided. | `"REQ-20260401-001"` |
 
 ### Sample Request
 
@@ -665,14 +691,14 @@ Returned when the query has already completed or been cancelled.
 }
 ```
 
-#### Missing Query ID
+#### Missing Query ID / Request ID
 
 **HTTP Status: `400 Bad Request`**
 
 ```json
 {
   "status": "ERROR",
-  "message": "Query ID is required"
+  "message": "Query ID or Request ID is required"
 }
 ```
 
@@ -705,9 +731,9 @@ Returned when the query has already completed or been cancelled.
 The following sequence diagram shows a typical IPDR query lifecycle:
 
 ```
-1. POST /api/ipdr_query/new          → Submit a new query, receive query_id
-2. GET  /api/ipdr_query/status        → Poll until CurrentStatus is "COMPLETED"
-3. GET  /api/ipdr_query/result        → Fetch the results
+1. POST /api/ipdr_query/new          → Submit a new query with optional request_id, receive query_id
+2. GET  /api/ipdr_query/status        → Poll using query_id or request_id until CurrentStatus is "COMPLETED"
+3. GET  /api/ipdr_query/result        → Fetch the results using query_id or request_id
 ```
 
 **Example workflow:**
@@ -775,3 +801,53 @@ The API uses standard HTTP status codes alongside the JSON `status` field:
 | `404 Not Found`          | Context, query ID, or result file not found                              |
 | `409 Conflict`           | Query is not in the expected state (e.g., not completed, not cancellable) |
 | `500 Internal Server Error` | Unexpected server-side error                                          |
+
+---
+
+## Request ID Workflow
+
+Customers who prefer not to store our internal `query_id` can provide their own `request_id` when creating a query. This allows them to use their own identifier throughout the entire query lifecycle.
+
+### How it Works
+
+1. **Create query with `request_id`:** Include a unique `request_id` in the `POST /api/ipdr_query/new` request
+2. **Use `request_id` for subsequent calls:** Pass `request_id` instead of `query_id` in status, result, and cancel requests
+3. **Uniqueness enforced:** Each `request_id` must be unique. Attempting to reuse one returns `409 Conflict`
+
+### Example Workflow with `request_id`
+
+```bash
+# Step 1: Submit a new query with your own request_id
+curl -X POST 'http://127.0.0.1:3000/api/ipdr_query/new' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "api_token": "lg25Tly1g8QwB8mcDzqO",
+    "contextname": "ipdr",
+    "username": "user",
+    "ip": "192.168.1.100",
+    "from_time": "01-04-2026 00:00:00",
+    "to_time": "10-04-2026 23:59:59",
+    "request_id": "MY-TICKET-12345"
+  }'
+# Response: { "status": "SUCCESS", "query_id": 3, "request_id": "MY-TICKET-12345" }
+
+# Step 2: Check status using your request_id
+curl -X GET 'http://127.0.0.1:3000/api/ipdr_query/status' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "api_token": "lg25Tly1g8QwB8mcDzqO",
+    "contextname": "ipdr",
+    "username": "user",
+    "request_id": "MY-TICKET-12345"
+  }'
+
+# Step 3: Fetch results using your request_id
+curl -X GET 'http://127.0.0.1:3000/api/ipdr_query/result' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "api_token": "lg25Tly1g8QwB8mcDzqO",
+    "contextname": "ipdr",
+    "username": "user",
+    "request_id": "MY-TICKET-12345"
+  }'
+```
