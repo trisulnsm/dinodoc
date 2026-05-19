@@ -48,21 +48,88 @@ The dashboard includes:
 - TLS Root CAs
 - TLS Intermediate CAs
 
-The dashboard helps identify:
-- application usage patterns
-- encrypted traffic metadata
-- TLS certificate activity
-- application-level traffic distribution
+![](images/l7metrics.png)
 
-Supported visibility includes protocols such as:
-- HTTP
-- SSL/TLS
-- DNS
-- DHCP
-- SMB
-- SIP
+#### TLS Root CAs
 
-This dashboard uses Layer 7 metadata extracted through deep packet inspection and flow analysis.
+Displays the top TLS Root Certificate Authorities observed in encrypted traffic sessions.
+
+| Field | Description |
+|---|---|
+| TLS Root CA | Name of the Root Certificate Authority observed in TLS sessions |
+| Percentage | Percentage contribution of traffic or sessions associated with the Root CA |
+| Traffic / Count | Volume or number of sessions associated with the Root CA |
+| Expand Menu | Opens additional drilldown and traffic investigation options |
+
+#### TLS Inter CAs
+
+Displays the top Intermediate Certificate Authorities observed in TLS traffic.
+
+| Field | Description |
+|---|---|
+| TLS Inter CA | Name of the Intermediate Certificate Authority |
+| Percentage | Percentage contribution of sessions or traffic |
+| Traffic / Count | Traffic volume or session count associated with the Intermediate CA |
+| Expand Menu | Opens additional analysis and drilldown options |
+
+
+#### SNI
+
+Displays Server Name Indication (SNI) values extracted from TLS handshakes.
+
+SNI identifies the hostname requested by a client during encrypted HTTPS communication.
+
+| Field | Description |
+|---|---|
+| SNI Hostname | Requested hostname extracted from the TLS handshake |
+| Percentage | Percentage contribution of the hostname in observed traffic |
+| Traffic Volume | Bandwidth associated with the hostname |
+| Expand Menu | Opens additional drilldown and flow analysis options |
+
+#### Applications
+
+Displays the top Layer 7 applications and protocols identified from network traffic.
+
+| Field | Description |
+|---|---|
+| Application | Detected Layer 7 application or protocol |
+| Percentage | Percentage contribution of the application traffic |
+| Traffic Volume | Total bandwidth consumed by the application |
+| Expand Menu | Opens additional traffic analysis and drilldown options |
+
+
+#### Commonly Observed Applications
+
+The dashboard may display applications and protocols such as:
+
+| Application | Description |
+|---|---|
+| HTTP | Standard web traffic protocol |
+| HTTPS | Encrypted web traffic protocol |
+| ICMP | Network diagnostic and control traffic |
+| DNS / domain | Domain name resolution traffic |
+| SMB / CIFS | File sharing traffic |
+| SIP | Voice and signaling traffic |
+
+
+#### Drilldown Menu Options
+
+| Option | Description |
+|---|---|
+| Top users of app | Displays the top hosts, users, or IP addresses generating traffic for the selected application |
+| Aggregate Flows | Aggregates and summarizes flows associated with the selected application |
+| Retro analyze | Opens historical traffic analysis for the selected application over previous time intervals |
+| Real Time Stabber : Traffic chart | Displays real-time bandwidth and traffic activity for the selected application |
+| Real Time Stab : Flow activity | Displays real-time flow creation and flow activity metrics |
+| Real Time Stab : Toppers | Displays top traffic contributors and top active entities related to the selected application |
+| Set/Edit Label | Allows administrators to assign or modify labels associated with the selected application or entity |
+| Traffic Chart | Displays traffic trends and bandwidth usage over time |
+| Long Term Traffic report | Generates long-duration historical traffic reports for the selected application |
+| View Edge Graph | Displays communication relationships and traffic interactions using graphical edge visualization |
+| Download PCAP | Downloads packet capture data associated with the selected application traffic |
+| Query flows by tag | Searches flows associated with specific tags or classifications |
+| Aggregate flows by tag | Groups and summarizes tagged flows for analysis |
+| Statistics | Displays statistical information related to the selected application traffic |
 
 ---
 
@@ -79,6 +146,8 @@ The dashboard includes:
 - HTTP Content Types
 - HTTP Methods
 - HTTP Status Codes
+
+![](images/httptraffic.png)
 
 The dashboard can be used to monitor:
 - web application traffic
@@ -107,6 +176,8 @@ The dashboard includes:
 - Internal Hosts
 - External Hosts
 
+![](images/ipv4ipv6.png)
+
 This dashboard helps identify:
 - host activity
 - application usage
@@ -130,6 +201,8 @@ The dashboard includes:
 - GRE Flows
 - IPsec ESP/AH Traffic
 - Application-level IPsec visibility
+
+![](images/tunnels.png)
 
 The dashboard helps monitor:
 - encapsulated traffic
@@ -163,6 +236,8 @@ The dashboard includes:
 - TCP vs UDP Traffic
 - Ingress vs Egress Ratio
 
+![](images/ddos.png)
+
 The dashboard helps identify:
 - traffic spikes
 - reflection/amplification traffic
@@ -192,6 +267,8 @@ The dashboard includes:
 - Setup Latency
 - Flows Timed Out
 - High Retransmission Rate Flows
+
+![](images/tcpanalyzer.png)
 
 The dashboard helps identify:
 - latency issues
