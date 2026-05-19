@@ -24,12 +24,12 @@ The NBAD Dashboards application provides the core visualization and monitoring d
 
 This application includes dashboards such as:
 
-Layer 7 Metrics
-HTTP Traffic Analytics
-IPv4 / IPv6 Monitoring
-Tunnel Monitoring
-Real-Time Alerts
-Traffic Visibility Dashboards
+- Layer 7 Metrics
+- HTTP Traffic Analytics
+- IPv4 / IPv6 Monitoring
+- Tunnel Monitoring
+- Real-Time Alerts
+- Traffic Visibility Dashboards
 
 These dashboards provide visibility into application traffic, protocol activity, tunnels, alerts, and network behavior patterns.
 
