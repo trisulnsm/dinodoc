@@ -128,6 +128,28 @@ This will open [TLS counter group tabs](/docs/ug/cg/ssl#tls-counter-group-tabs) 
 *Figure: Meter 0 (Inter CA) = flows as intermediate CA, Meter 1 (Hits) = flows as
 root CA*
 
+#### TLS Root CAs
+
+Displays the top TLS Root Certificate Authorities observed in encrypted traffic sessions.
+
+| Field | Description |
+|---|---|
+| TLS Root CA | Name of the Root Certificate Authority observed in TLS sessions |
+| Percentage | Percentage contribution of traffic or sessions associated with the Root CA |
+| Traffic / Count | Volume or number of sessions associated with the Root CA |
+| Expand Menu | Opens additional drilldown and traffic investigation options |
+
+#### TLS Inter CAs
+
+Displays the top Intermediate Certificate Authorities observed in TLS traffic.
+
+| Field | Description |
+|---|---|
+| TLS Inter CA | Name of the Intermediate Certificate Authority |
+| Percentage | Percentage contribution of sessions or traffic |
+| Traffic / Count | Traffic volume or session count associated with the Intermediate CA |
+| Expand Menu | Opens additional analysis and drilldown options |
+
 ## Usage Tips
 
 1. [SSL Cert resources](/docs/ug/resources/sslcerts) allow you to search for hashes in bulk

@@ -16,7 +16,7 @@ The NBAD functionality in Trisul is provided through Trisul Apps and consists pr
 
 After installation:
 
-:point_right: Verify all required applications are enabled. Applications such as NFGEN, TCP Analyzer, DDoS Monitor, Stable Keys, and ShiftX can also be verified from the Apps section.
+:point_right: Verify all required applications are enabled. Applications such as NFGEN, TCP Analyzer, DDoS Monitor, and Stable Keys can also be verified from the Apps section.
 
 ## NBAD Dashboards
 
@@ -50,27 +50,7 @@ The dashboard includes:
 
 ![](images/l7metrics.png)
 
-#### TLS Root CAs
 
-Displays the top TLS Root Certificate Authorities observed in encrypted traffic sessions.
-
-| Field | Description |
-|---|---|
-| TLS Root CA | Name of the Root Certificate Authority observed in TLS sessions |
-| Percentage | Percentage contribution of traffic or sessions associated with the Root CA |
-| Traffic / Count | Volume or number of sessions associated with the Root CA |
-| Expand Menu | Opens additional drilldown and traffic investigation options |
-
-#### TLS Inter CAs
-
-Displays the top Intermediate Certificate Authorities observed in TLS traffic.
-
-| Field | Description |
-|---|---|
-| TLS Inter CA | Name of the Intermediate Certificate Authority |
-| Percentage | Percentage contribution of sessions or traffic |
-| Traffic / Count | Traffic volume or session count associated with the Intermediate CA |
-| Expand Menu | Opens additional analysis and drilldown options |
 
 
 #### SNI
@@ -218,7 +198,7 @@ Supported tunnel visibility includes:
 
 ---
 
-## 4.5 DDoS Metrics
+### DDoS Metrics
 
 :::info navigation
 :point_right: Go to NBAD &rarr; DDoS Mterics
@@ -250,7 +230,7 @@ This dashboard is intended for monitoring attack patterns and unusual traffic be
 
 ---
 
-## 4.6 TCP Analyzer
+### TCP Analyzer
 
 :::info navigation
 :point_right: Go to NBAD &rarr; TCP Analyzer
@@ -282,7 +262,7 @@ Metrics such as RTT, retransmission rate, and connection latency can be used for
 
 ---
 
-## 4.7 Common Flood - DNS/TCPSYN
+### Common Flood - DNS/TCPSYN
 :::info navigation
 :point_right: Go to NBAD &rarr; DNS/TCPSYN
 ::: 
