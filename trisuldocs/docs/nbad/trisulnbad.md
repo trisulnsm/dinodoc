@@ -2,7 +2,7 @@
 
 Trisul NBAD is Trisul Apps based Network Behavior Anomaly Detection solution developed to provide visibility into network traffic, application behavior, security events, and operational anomalies.
 
-The solution combines flow analytics, Layer 7 visibility, behavioral monitoring, traffic investigation, and alerting capabilities through a collection of Trisul Apps and dashboards.
+The solution combines flow analytics, Layer 7 visibility, behavioral monitoring, traffic investigation, and alerting capabilities through a collection of [**Trisul Apps**](https://github.com/trisulnsm/apps) and dashboards.
 
 ## Installation
 
@@ -43,15 +43,11 @@ These dashboards provide visibility into application traffic, protocol activity,
 The Layer 7 Metrics dashboard provides visibility into application-layer protocols and encrypted traffic metadata.
 
 The dashboard includes:
-- Top Applications
+- [Top Applications](/docs/next/ug/ui/dashboards#current-apps)
 - SNI visibility
-- TLS Root CAs
-- TLS Intermediate CAs
+- [TLS Root CAs and TLS Intermediate CAs](/docs/next/ug/cg/ssl#tls-certificate-authorities)
 
 ![](images/l7metrics.png)
-
-
-
 
 #### SNI
 
@@ -66,50 +62,8 @@ SNI identifies the hostname requested by a client during encrypted HTTPS communi
 | Traffic Volume | Bandwidth associated with the hostname |
 | Expand Menu | Opens additional drilldown and flow analysis options |
 
-#### Applications
-
-Displays the top Layer 7 applications and protocols identified from network traffic.
-
-| Field | Description |
-|---|---|
-| Application | Detected Layer 7 application or protocol |
-| Percentage | Percentage contribution of the application traffic |
-| Traffic Volume | Total bandwidth consumed by the application |
-| Expand Menu | Opens additional traffic analysis and drilldown options |
 
 
-#### Commonly Observed Applications
-
-The dashboard may display applications and protocols such as:
-
-| Application | Description |
-|---|---|
-| HTTP | Standard web traffic protocol |
-| HTTPS | Encrypted web traffic protocol |
-| ICMP | Network diagnostic and control traffic |
-| DNS / domain | Domain name resolution traffic |
-| SMB / CIFS | File sharing traffic |
-| SIP | Voice and signaling traffic |
-
-
-#### Drilldown Menu Options
-
-| Option | Description |
-|---|---|
-| Top users of app | Displays the top hosts, users, or IP addresses generating traffic for the selected application |
-| Aggregate Flows | Aggregates and summarizes flows associated with the selected application |
-| Retro analyze | Opens historical traffic analysis for the selected application over previous time intervals |
-| Real Time Stabber : Traffic chart | Displays real-time bandwidth and traffic activity for the selected application |
-| Real Time Stab : Flow activity | Displays real-time flow creation and flow activity metrics |
-| Real Time Stab : Toppers | Displays top traffic contributors and top active entities related to the selected application |
-| Set/Edit Label | Allows administrators to assign or modify labels associated with the selected application or entity |
-| Traffic Chart | Displays traffic trends and bandwidth usage over time |
-| Long Term Traffic report | Generates long-duration historical traffic reports for the selected application |
-| View Edge Graph | Displays communication relationships and traffic interactions using graphical edge visualization |
-| Download PCAP | Downloads packet capture data associated with the selected application traffic |
-| Query flows by tag | Searches flows associated with specific tags or classifications |
-| Aggregate flows by tag | Groups and summarizes tagged flows for analysis |
-| Statistics | Displays statistical information related to the selected application traffic |
 
 ---
 

@@ -150,6 +150,24 @@ Displays the top Intermediate Certificate Authorities observed in TLS traffic.
 | Traffic / Count | Traffic volume or session count associated with the Intermediate CA |
 | Expand Menu | Opens additional analysis and drilldown options |
 
+#### Drilldown Menu Options
+
+| Option | Description |
+|---|---|
+| Set/Edit Label | Assigns or modifies a label associated with the selected TLS CA entry |
+| Traffic Chart | Displays bandwidth and traffic trends associated with the selected TLS CA |
+| Long Term Traffic report | Generates long-duration historical traffic reports for the selected TLS CA activity |
+| View Edge Graph | Displays communication relationships and connection paths associated with the selected TLS CA |
+| Download PCAP | Downloads packet capture data related to the selected TLS traffic |
+| SSL Resources | Displays SSL/TLS resources and metadata associated with the selected TLS CA |
+| SSL Resources Full text search | Performs full-text search across SSL/TLS resource metadata |
+| Query flows by tag | Searches flows associated with tags linked to the selected TLS traffic |
+| Aggregate flows by tag | Aggregates and summarizes tagged TLS-related flows |
+| Statistics | Displays statistical information related to the selected TLS CA traffic |
+
+---
+
+
 ## Usage Tips
 
 1. [SSL Cert resources](/docs/ug/resources/sslcerts) allow you to search for hashes in bulk

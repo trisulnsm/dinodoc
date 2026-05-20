@@ -65,6 +65,26 @@ The modules in it are
 | Apps by volume incoming in past 1 Hr | Volume of data (GB) per App downloading data into your home network                                               |
 | Apps by volume outgoing in past 1 Hr | Volume of data (GB) per App uploading data out of your home network                                               |
 
+
+#### Drilldown Menu Options
+
+| Option | Description |
+|---|---|
+| Top users of app | Displays the top hosts, users, or IP addresses generating traffic for the selected application |
+| Aggregate Flows | Aggregates and summarizes flows associated with the selected application |
+| Retro analyze | Opens historical traffic analysis for the selected application over previous time intervals |
+| Real Time Stabber : Traffic chart | Displays real-time bandwidth and traffic activity for the selected application |
+| Real Time Stab : Flow activity | Displays real-time flow creation and flow activity metrics |
+| Real Time Stab : Toppers | Displays top traffic contributors and top active entities related to the selected application |
+| Set/Edit Label | Allows administrators to assign or modify labels associated with the selected application or entity |
+| Traffic Chart | Displays traffic trends and bandwidth usage over time |
+| Long Term Traffic report | Generates long-duration historical traffic reports for the selected application |
+| View Edge Graph | Displays communication relationships and traffic interactions using graphical edge visualization |
+| Download PCAP | Downloads packet capture data associated with the selected application traffic |
+| Query flows by tag | Searches flows associated with specific tags or classifications |
+| Aggregate flows by tag | Groups and summarizes tagged flows for analysis |
+| Statistics | Displays statistical information related to the selected application traffic |
+
 ------------------------------------------------------------------------
 
 ## Overview Dashboard
