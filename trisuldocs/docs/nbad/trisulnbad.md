@@ -508,8 +508,10 @@ Example Alert Group:
 |---|---|
 | Name | Name of the alert group used for identifying the alert category |
 | Description | Description of the alert group and associated detection behavior |
-| Send to Syslog/Email | Configures forwarding of alerts through Syslog or Email integration mechanisms |
-| Enabled | Selects the Syslog severity level used when forwarding alerts. Supported levels include EMERG, ALERT, CRIT, ERR, WARNING, NOTICE, INFO, DEBUG, or DISABLED |
+| Send to Syslog/Email | Selects the Syslog severity level used when forwarding alerts. |
+| Enabled | Click on the radio button to enable |
+
+Click **Update** to save the configurations.
 
 ---
 
