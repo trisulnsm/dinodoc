@@ -29,7 +29,8 @@ const config = {
           sidebarPath: './sidebars.js',
           sidebarCollapsed: true,
           versions: {
-            current: {
+            current: 
+            {
               label: 'Version 8.0',
             },
             '7.0': {
