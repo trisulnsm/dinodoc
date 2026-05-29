@@ -1,8 +1,10 @@
 # TCP Analyzer
 
-*Path: NBAD → TCP Analyzer*
+The TCP Analyzer dashboard provides deep visibility into TCP health metrics across your network. It identifies hosts with high retransmission rates, elevated setup latency, session timeouts, and poor-quality flows. All of which are indicators of network congestion, application issues, or degraded path quality.
 
-The TCP Analyzer dashboard provides deep visibility into TCP health metrics across your network. It identifies hosts with high retransmission rates, elevated setup latency, session timeouts, and poor-quality flows — all of which are indicators of network congestion, application issues, or degraded path quality.
+:::info navigation
+:point_right: Go to NBAD &rarr; TCP Analyzer
+:::
 
 ![TCP Analyzer Dashboard](./images/tcp.png)
 *Figure: TCP Analyzer: latency, retransmissions, timeouts, poor-quality flows for both internal and external hosts*

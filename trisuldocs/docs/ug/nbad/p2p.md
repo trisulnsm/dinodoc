@@ -1,10 +1,10 @@
 # P2P Analytics
 
+The P2P Analytics dashboard provides a breakdown of peer-to-peer traffic detected on your network. It correlates traffic-level data with IDS and blacklist alerts to give both a volume view and a security view of P2P activity.
+
 :::info navigation
 :point_right: Go to NBAD &rarr; P2P Analytics
 :::
-
-The P2P Analytics dashboard provides a breakdown of peer-to-peer traffic detected on your network. It correlates traffic-level data with IDS and blacklist alerts to give both a volume view and a security view of P2P activity.
 
 ![P2P Analytics Dashboard](./images/p2p.png)
 *Figure: P2P Analytics: alert counts, BitTorrent, Tor, Gnutella, eMule traffic charts, and live IDS/BL alerts*
