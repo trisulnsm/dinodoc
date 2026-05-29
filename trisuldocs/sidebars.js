@@ -766,6 +766,7 @@ const sidebars = {
                 'ag/admintasks/manage_profiles',
                 'ag/admintasks/probe_health',
                 'ag/admintasks/netflow_templatedb',
+                'ag/admintasks/auditlog',
                 'ag/admintasks/drdc_status',
                 'ag/admintasks/userresources',
 
