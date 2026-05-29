@@ -2,6 +2,11 @@
 
 NBAD is a suite of application-layer and behavioral dashboards built into Trisul Network Analytics. It goes beyond raw traffic volume by providing deep visibility into how your network is being used like surfacing encrypted tunnels, peer-to-peer abuse, TCP health, HTTP activity, and protocol breakdowns in a single unified menu. The solution combines flow analytics, Layer 7 visibility, behavioral monitoring, traffic investigation, and alerting capabilities through a collection of Trisul Apps and dashboards.
 
+## How to enable NBAD
+
+:::info navigation
+:point_right: Go to [Trisul Apps](https://github.com/trisulnsm/apps) and install NBAD Meta Apps
+:::
 ## NBAD Menu Overview
 
 The NBAD menu is accessible from the left navigation sidebar. It groups the following dashboards:
