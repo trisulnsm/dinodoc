@@ -131,16 +131,17 @@ const sidebars = {
               label: 'NBAD',
               link: { type: 'doc', id: 'ug/nbad/trisulnbad' },
               items: [
-                'ug/nbad/layer7metrics',
+                'ug/nbad/flowmap',
                 'ug/nbad/httptraffic',
-                'ug/nbad/ipv4ipv6',
+                'ug/nbad/layer7metrics',
                 'ug/nbad/tunnels',
+                'ug/nbad/ipv4ipv6',
                 'ug/nbad/p2p',
                 'ug/nbad/tcpanalyzer',
-                'ug/nbad/flowmap',
                 'ug/nbad/commontasks',
               ],
             }, /* end NBAD*/
+
             /* Packet Captures */
             {
               type: 'category',

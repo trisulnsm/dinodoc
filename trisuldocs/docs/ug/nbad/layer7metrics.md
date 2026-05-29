@@ -23,6 +23,8 @@ The Layer 7 Metrics dashboard provides a complete L7 breakdown of your network t
 | Top DNS Resources | Resource log | Displays recent DNS resource records grouped by Source IP and Destination IP. Includes columns for Time, Source IP/Port, Destination IP/Port, Resource ID, Probe, and Contents. PCAP download is available for each entry. |
 ---
 
+## Metric columns (counters)
+
 | Column | Description |
 |---|---|
 | Max (bps) | Peak bandwidth observed for the item within the selected time window. |
