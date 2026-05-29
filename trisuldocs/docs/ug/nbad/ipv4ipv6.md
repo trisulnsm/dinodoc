@@ -6,7 +6,7 @@ The IPv4 / IPv6 Dashboard provides a side-by-side view of host and application a
 :point_right: Go to NBAD &rarr; IPv4 / IPv6 Dashboard
 :::
 
-![IPv4 / IPv6 Dashboard](./images/ipv4ipv6.png)
+![IPv4 / IPv6 Dashboard](./images/ipv4-ipv6.png)
 *Figure: IPv4 / IPv6 Dashboard: top hosts, unique host counts, top apps, internal vs external breakdown*
 
 ## Summary tiles

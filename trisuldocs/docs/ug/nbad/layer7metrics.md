@@ -7,7 +7,7 @@ The Layer 7 Metrics dashboard provides a complete L7 breakdown of your network t
 :point_right: Go to NBAD &rarr; Layer7 Metrics
 :::
 
-![Layer 7 Metrics Dashboard](./images/layer7metrics.png)
+![Layer 7 Metrics Dashboard](./images/l7-metrics.png)
 *Figure: Layer 7 Metrics: applications, SNIs, TLS Root CAs, DNS traffic, and top DNS resources*
 
 ### Layer7 Modules
