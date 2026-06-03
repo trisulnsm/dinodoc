@@ -131,7 +131,9 @@ const sidebars = {
               label: 'NBAD',
               link: { type: 'doc', id: 'ug/nbad/trisulnbad' },
               items: [
-                'ug/nbad/flowmap',
+                'ug/nbad/enable-nbad',
+                'ug/nbad/nfgen',
+                'ug/nbad/flowmap',  
                 'ug/nbad/httptraffic',
                 'ug/nbad/layer7metrics',
                 'ug/nbad/tunnels',
