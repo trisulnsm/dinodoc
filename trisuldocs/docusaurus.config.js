@@ -29,8 +29,7 @@ const config = {
           sidebarPath: './sidebars.js',
           sidebarCollapsed: true,
           versions: {
-            current: 
-            {
+            current: {
               label: 'Version 8.0',
             },
             '7.0': {
@@ -84,7 +83,6 @@ const config = {
             type: 'docsVersionDropdown',
             position: 'left',
           },
-
           {
             type: 'doc',
             docId: 'ag/index',
@@ -122,6 +120,11 @@ const config = {
             position: 'left',
           },
           {
+            to: '/glossary',
+            label: 'Glossary',
+            position: 'left',
+          },
+          {
             type: 'doc',
             docId: 'releasehistory',
             label: 'Changelog',
@@ -133,7 +136,6 @@ const config = {
             label: 'Troubleshooting',
             position: 'left',
           },
-
           {
             href: 'https://github.com/trisulnsm/dinodoc',
             label: 'GitHub',
