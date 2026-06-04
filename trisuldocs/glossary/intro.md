@@ -54,8 +54,12 @@ slug: /glossary
       cursor: "pointer",
     }}
     onFocus={() => {
-      const searchButton = document.querySelector('.DocSearch-Button');
-      if (searchButton) searchButton.click();
+      const searchInput = document.querySelector('.navbar__search-input');
+      if (searchInput && searchInput.offsetParent !== null) {
+        searchInput.focus();
+      } else {
+        window.location.href = '/search';
+      }
     }}
     readOnly
   />
