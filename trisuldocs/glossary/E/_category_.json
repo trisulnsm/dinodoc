@@ -1,0 +1,10 @@
+{
+  "label": "E",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "slug": "/glossary/e",
+    "title": "Network Analytics Glossary - E",
+    "description": "Explore networking, traffic visibility, flow monitoring, and security terms starting with E including east-west traffic, encrypted traffic analysis, endpoint visibility, event correlation, and related concepts used in enterprise, ISP, and network security environments."
+  }
+}

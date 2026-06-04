@@ -52,6 +52,16 @@ const config = {
         hashed: true,
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'glossary',
+        path: 'glossary',
+        routeBasePath: '/',
+        sidebarPath: './sidebarsGlossary.js',
+        sidebarCollapsed: true,
+      },
+    ],
   ],
 
   customFields: {
@@ -129,6 +139,13 @@ const config = {
             type: 'doc',
             docId: 'Troubleshooting/index',
             label: 'Troubleshooting',
+            position: 'left',
+          },
+          {
+            type: 'doc',
+            docId: 'intro',
+            docsPluginId: 'glossary',
+            label: 'Glossary',
             position: 'left',
           },
           {
