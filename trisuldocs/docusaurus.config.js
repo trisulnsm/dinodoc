@@ -120,11 +120,6 @@ const config = {
             position: 'left',
           },
           {
-            to: '/glossary',
-            label: 'Glossary',
-            position: 'left',
-          },
-          {
             type: 'doc',
             docId: 'releasehistory',
             label: 'Changelog',
