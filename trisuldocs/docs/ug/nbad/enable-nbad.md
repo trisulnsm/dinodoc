@@ -45,7 +45,7 @@ Verify that required applications such as:
 - NFGEN – NetFlow Generator
 - TCP Analyzer
 - DDoS Monitor
-- Stable Keys
+- [Stable Keys](https://github.com/trisulnsm/apps/tree/apps7/analyzers/stablekeys)
 - ShiftX
 
 are installed and enabled.
@@ -58,5 +58,13 @@ After installation:
 - Verify traffic ingestion
 - Configure export settings if required
 - Enable required dashboards and alert groups
+- If NFGEN is installed, restart the Trisul probe to apply the NetFlow/IPFIX export configuration changes
+
+Restart the probe using:
+
+```
+sudo systemctl restart trisul-probe
+```
 
 Traffic visibility and dashboards can then be verified from the user interface.
+
