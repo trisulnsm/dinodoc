@@ -1,5 +1,4 @@
 ---
-
 id: intro
 title: Learn with Trisul
 hide_table_of_contents: true
@@ -7,6 +6,21 @@ sidebar_label: Trisul Glossary
 sidebar_position: 0
 slug: /glossary
 ---
+
+import React from 'react';
+import SearchBar from '@theme/SearchBar';
+
+export const SearchPlaceholderUpdater = () => {
+  React.useEffect(() => {
+    const input = document.querySelector('.glossary-search-wrapper input');
+    if (input) {
+      input.setAttribute('placeholder', 'Search networking terms...');
+    }
+  }, []);
+  return null;
+};
+
+
 
 <div
   style={{
@@ -39,30 +53,9 @@ slug: /glossary
   infrastructure terminology in simple, practical language.
 </p>
 
-<div style={{ width: "100%", maxWidth: "700px" }}>
-  <input
-    type="text"
-    placeholder="Search networking terms..."
-    className="glossary-search"
-    style={{
-      width: "100%",
-      padding: "18px 28px",
-      borderRadius: "999px",
-      border: "1px solid var(--ifm-color-emphasis-300)",
-      fontSize: "1.1rem",
-      boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
-      cursor: "pointer",
-    }}
-    onFocus={() => {
-      const searchInput = document.querySelector('.navbar__search-input');
-      if (searchInput && searchInput.offsetParent !== null) {
-        searchInput.focus();
-      } else {
-        window.location.href = '/search';
-      }
-    }}
-    readOnly
-  />
+<div className="glossary-search-wrapper">
+  <SearchBar />
+  <SearchPlaceholderUpdater />
 </div>
 
 <div
