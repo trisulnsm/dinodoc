@@ -6,7 +6,7 @@ The Trisul LUA API allows you to build your own powerful tooling on top of the T
 
 | Date |News  |
 |---|---|
-| 8-Jun-2026  | **New** — [attach a Lua script to multiple counters](/docs/lua/cg_monitor#multi-group-attachment). One script file can bind to many counter groups (or alert groups) via `counter_guid` arrays, `counter_name_match`, or `counter_name_regex` on [`cg_monitor`](/docs/lua/cg_monitor) / [`alert_monitor`](/docs/lua/alert_monitor). |
+| 8-Jun-2026  | **New** — [attach a Lua script to multiple counters](cg_monitor#multi-group-attachment). One script file can bind to many counter groups (or alert groups) via `counter_guid` arrays, `counter_name_match`, or `counter_name_regex` on [`cg_monitor`](cg_monitor) / [`alert_monitor`](alert_monitor). |
 | 27-Jul-2024  | New LUA type [`message_monitor` ](/docs/lua/message_monitor) to listen to NetFlow records among other things|
 | 6-Sep-2023  | Added `flow_counter` for [simple_counter](/docs/lua/simple_counter) to allow calling in NETFLOW_TAP mode|
 | 20-Nov-2022 | New attribute `resolver_guid` for new Counter Groups|

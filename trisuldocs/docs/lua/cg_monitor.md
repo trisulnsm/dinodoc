@@ -20,11 +20,11 @@ The table consists the following
 | counter_name_match | String or array of strings | Case-insensitive substring match on counter group title. One isolated Lua instance per matched group. |
 | counter_name_regex | String (RE2) | RE2 pattern matched against counter group title. One isolated instance per matched group. Can be combined with the fields above (union, deduplicated). |
 | [onbeginflush](/docs/lua/cg_monitor#function-onbeginflush) | [engine](/docs/lua/obj_engine) , timestamp | Before starting to flush all metrics to db |
-| [onflushfilter](/docs/lua/cg_monitor#function-onflushfilter) | [engine](/docs/lua/obj_engine), timestamp, key, arrayofmetrics | Before each key is flushed. Return true to save, false to skip. Optional second return value can override meters. |
+| [onflushfilter](#function-onflushfilter) | [engine](/docs/lua/obj_engine), timestamp, key, arrayofmetrics | Before each key is flushed. Return true to save, false to skip. Optional second return value can override meters. |
 | [onflush](/docs/lua/cg_monitor#function-onflush) | [engine](/docs/lua/obj_engine), timestamp, key, arrayofmetrics | Called for each key as they are being flushed |
 | [onendflush](/docs/lua/cg_monitor#function-onendflush) | [engine](/docs/lua/obj_engine) | After all keys have been flushed for this interval |
 | [onbegintopperflush](/docs/lua/cg_monitor#function-onbegintopperflush) | [engine](/docs/lua/obj_engine), timestamp, meter | Before flushing toppers for this meter. Return true to enable `ontopperflush` callbacks for this meter. |
-| [ontopperflushfilter](/docs/lua/cg_monitor#function-ontopperflushfilter) | [engine](/docs/lua/obj_engine), key, metric | Before each topper item is flushed. Return true to save, false to skip. |
+| [ontopperflushfilter](#function-ontopperflushfilter) | [engine](/docs/lua/obj_engine), key, metric | Before each topper item is flushed. Return true to save, false to skip. |
 | [ontopperflush](/docs/lua/cg_monitor#function-ontopperflush) | [engine](/docs/lua/obj_engine) , key, metric | Called for each topper item |
 | [onendtopperflush](/docs/lua/cg_monitor#function-onendtopperflush) | [engine](/docs/lua/obj_engine) , meter | After topper flush |
 | [onupdate](/docs/lua/cg_monitor#function-onupdate) | [engine](/docs/lua/obj_engine), timestamp, key, arrayofmetrics | As each update happens (1sec resolution) |

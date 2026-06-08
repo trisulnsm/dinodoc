@@ -266,7 +266,7 @@ T.logerror( "This is an error message from my LUA script, same as above T.log() 
 This section applies equally to `T.countergroups`, `T.resourcegroups`, `T.sessionggroups`, `T.ftsgroups` as well.
 :::
 
-The purpose for this table is to provide a searchable `name` to `guid` mapping table of all the alertgroups currently loaded in Trisul. The backend [alert_monitor](/docs/lua/alert_monitor) scripts require you to specify a GUID that identifies the entity you are attaching the script to. If you do not know the GUID of the alert group but you know the name, you can use this table — or use `alert_name_match` on the monitor block to attach the same script to all groups whose title matches (see [Multi-group attachment](/docs/lua/alert_monitor#multi-group-attachment)). See below.
+The purpose for this table is to provide a searchable `name` to `guid` mapping table of all the alertgroups currently loaded in Trisul. The backend [alert_monitor](/docs/lua/alert_monitor) scripts require you to specify a GUID that identifies the entity you are attaching the script to. If you do not know the GUID of the alert group but you know the name, you can use this table — or use `alert_name_match` on the monitor block to attach the same script to all groups whose title matches (see [Multi-group attachment](alert_monitor#multi-group-attachment)). See below.
 
 #### Example alert_monitor code
 
