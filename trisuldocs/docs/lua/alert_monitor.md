@@ -26,15 +26,68 @@ Any other type of custom alert you create using the [alert_group](/docs/lua/aler
 
 The table consists the following
 
-| field                                                                                | type                                                                                                                                   | description                                                                                                                                       |
-| ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| alert_guid                                                                           | String                                                                                                                                 | Type of alert. See [alert guids](/docs/ref/guid#alert-groups) for a list of built in GUIDs. View (Admin) Profile > Alert Groups for a full list. |
-| [onnewalert](/docs/lua/alert_monitor#function-onnewalert)           | function [engine](/docs/lua/obj_engine), [alert](/docs/lua/alert_monitor#object-alert) | A new alert was seen. Sent within 1 sec of seeing the alert                                                                                       |
-| [onbeginflush](/docs/lua/alert_monitor#function-onbeginflush) | function[engine](/docs/lua/obj_engine)                                                                        | Before starting to flush all metrics to db                                                                                                        |
-| [flushfilter](/docs/lua/alert_monitor#function-flushfilter)        | function [engine](/docs/lua/obj_engine), [alert](/docs/lua/alert_monitor#object-alert) | Return true if you want to save in DB, false to skip this                                                                                         |
-| [onflush](/docs/lua/alert_monitor#function-onflush)                 | function [engine](/docs/lua/obj_engine), [alert](/docs/lua/alert_monitor#object-alert)                                                             | Called for each alert as they are being flushed                                                                                                   |
-| [onendflush](/docs/lua/alert_monitor#function-onendflush)     | function[engine](/docs/lua/obj_engine)                                                                        | After all alert have been flushed for this interval                                                                                               |
-| [onmetronome](/docs/lua/alert_monitor#function-onmetronome)   | function(engine, timestamp, tick_count, tick_interval)                                                                                 | called every second ( Tick Interval)                                                                                                              |
+| field | type | description |
+| ----- | ---- | ----------- |
+| alert_guid | String, function returning string, or array of strings/functions | Alert group to attach to. A single value attaches one isolated Lua instance. An array creates one instance per GUID. |
+| alert_name_match | String or array of strings | Case-insensitive substring match on alert group title. One isolated instance per matched group. |
+| alert_name_regex | String (RE2) | RE2 pattern matched against alert group title. Can be combined with the fields above. |
+| [onnewalert](/docs/lua/alert_monitor#function-onnewalert) | function [engine](/docs/lua/obj_engine), [alert](/docs/lua/alert_monitor#object-alert) | A new alert was seen. Sent within 1 sec of seeing the alert |
+| [onbeginflush](/docs/lua/alert_monitor#function-onbeginflush) | function[engine](/docs/lua/obj_engine) | Before starting to flush all metrics to db |
+| [flushfilter](/docs/lua/alert_monitor#function-flushfilter) | function [engine](/docs/lua/obj_engine), [alert](/docs/lua/alert_monitor#object-alert) | Return true if you want to save in DB, false to skip this |
+| [onflush](/docs/lua/alert_monitor#function-onflush) | function [engine](/docs/lua/obj_engine), [alert](/docs/lua/alert_monitor#object-alert) | Called for each alert as they are being flushed |
+| [onendflush](/docs/lua/alert_monitor#function-onendflush) | function[engine](/docs/lua/obj_engine) | After all alert have been flushed for this interval |
+| [onmetronome](/docs/lua/alert_monitor#function-onmetronome) | function(engine, timestamp, tick_count, tick_interval) | called every second ( Tick Interval) |
+
+## Multi-group attachment
+
+One script file can install the same logic onto multiple alert groups. Trisul creates a **separate isolated Lua context** for each matched group.
+
+Before `onload()` on each instance, Trisul sets `T.monitor_group_name` and `T.monitor_group_guid`. See [Object Global table T](/docs/lua/obj_globalt).
+
+To attach by alert group name, use `alert_name_match` instead of looping `T.alertgroups` in an `alert_guid` function.
+
+If no alert groups match, the script is not loaded.
+
+### Example: monitor IDS and User alert groups
+
+```lua
+alert_monitor = {
+  alert_guid = {
+    "{9AFD8C08-07EB-47E0-BF05-28B4A7AE8DC9}",  -- IDS Alerts
+    "{B5F1DECB-51D5-4395-B71B-6FA730B772D9}",  -- User Alerts
+  },
+  flushfilter = function(engine, alert)
+    return alert:sigid() ~= "NOISE"
+  end,
+}
+```
+
+### Example: all alert groups whose name contains "User"
+
+```lua
+alert_monitor = {
+  alert_name_match = "User",
+  onload = function()
+    T.log("alert_monitor on " .. T.monitor_group_name)
+  end,
+  onnewalert = function(engine, alert)
+    -- handle alert for this group only
+  end,
+}
+```
+
+### Example: dynamic single GUID via T.alertgroups (one instance)
+
+```lua
+alert_monitor = {
+  alert_guid = function()
+    return T.alertgroups["Malware Domain"]
+  end,
+  onflush = function(engine, alert)
+    -- your logic
+  end,
+}
+```
 
 ## Objects Reference
 

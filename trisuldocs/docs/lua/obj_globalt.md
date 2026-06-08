@@ -22,6 +22,8 @@ The global table named `T` can be accessed from anywhere. It defines some consta
 | [T.ac](/docs/lua/obj_globalt#function-tac)   | A minimal but fast Aho-Corasick multi pattern matcher |
 | [T.log](/docs/lua/obj_globalt#function-tlog) | Function to log a message that goes into the main Trisul logging framework.|
 | T.countergroups  | A table of ( countergroup name, guid ) currently loaded. Only for backend scripts. For frontend scripts this field has a nil    |
+| T.monitor_group_name | Backend monitor scripts only. Set before `onload()` — the counter/alert group title this instance is bound to. |
+| T.monitor_group_guid | Backend monitor scripts only. Registry-format GUID string for the bound counter/alert group. |
 | T.resourcegroups | Backend scripts only : A table of ( resourcegroup name, guid ) currently loaded. |
 | T.ftsgroups  | Backend scripts only : A table of ( FTS (Full Text Search) name, guid ) currently loaded.|
 | T.sessiongroups | Backend scripts only : A table of ( session group name, guid ) currently loaded.|
@@ -264,7 +266,7 @@ T.logerror( "This is an error message from my LUA script, same as above T.log() 
 This section applies equally to `T.countergroups`, `T.resourcegroups`, `T.sessionggroups`, `T.ftsgroups` as well.
 :::
 
-The purpose for this table is to provide a searchable `name` to `guid` mapping table of all the alertgroups currently loaded in Trisul. The backend [alert_monitor](/docs/lua/alert_monitor) scripts require you to specify a GUID that identifies the entity you are attaching the script to. If you do not know the GUID of the alert group but you know the name, you can use this table. See below.
+The purpose for this table is to provide a searchable `name` to `guid` mapping table of all the alertgroups currently loaded in Trisul. The backend [alert_monitor](/docs/lua/alert_monitor) scripts require you to specify a GUID that identifies the entity you are attaching the script to. If you do not know the GUID of the alert group but you know the name, you can use this table — or use `alert_name_match` on the monitor block to attach the same script to all groups whose title matches (see [Multi-group attachment](/docs/lua/alert_monitor#multi-group-attachment)). See below.
 
 #### Example alert_monitor code
 
