@@ -304,6 +304,7 @@ const sidebars = {
               items:
                 [
                   'ipdr/requirements',
+                  'ipdr/ipdr-cloud',
                   'ipdr/specialuser',
                   {
                     type: 'category',
