@@ -22,3 +22,103 @@
   align-items: center;
   justify-content: center;
 }
+
+/* Ticker Styles */
+.tickerContainer {
+  background: #ecfdf5;
+  border-bottom: 1px solid #d1fae5;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  font-family: var(--ifm-font-family-base);
+  font-size: 0.9rem;
+  font-weight: 500;
+  position: relative;
+  width: 100%;
+}
+
+:global([data-theme='dark']) .tickerContainer {
+  background: rgba(16, 185, 129, 0.1);
+  border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.tickerWrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.tickerBadge {
+  background: #2e8555;
+  color: #fff;
+  padding: 2px 8px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+  margin-left: 16px;
+  margin-right: 16px;
+  z-index: 2;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tickerScroll {
+  flex-grow: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.tickerLink {
+  color: #065f46;
+  text-decoration: none !important;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+:global([data-theme='dark']) .tickerLink {
+  color: #a7f3d0;
+}
+
+.tickerLink:hover {
+  color: #047857;
+}
+
+:global([data-theme='dark']) .tickerLink:hover {
+  color: #34d399;
+}
+
+.tickerTrack {
+  display: flex;
+  white-space: nowrap;
+  animation: ticker-scroll 35s linear infinite;
+}
+
+.tickerScroll:hover .tickerTrack {
+  animation-play-state: paused;
+}
+
+.tickerText {
+  padding-right: 40px;
+  display: inline-block;
+}
+
+@keyframes ticker-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+

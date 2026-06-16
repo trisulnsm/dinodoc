@@ -33,8 +33,8 @@
 img {
   box-shadow: var(--ifm-global-shadow-md) !important;
 
-  }
-  
+}
+
 /* ----------------------------------------
    Reverse Highlight Tabs (no border on active)
    ---------------------------------------- */
@@ -44,7 +44,8 @@ img {
   padding: 6px 12px;
   margin-right: 6px;
   border-radius: 4px;
-  background-color: rgba(46, 133, 85, 0.10); /* light green tint */
+  background-color: rgba(46, 133, 85, 0.10);
+  /* light green tint */
   color: var(--ifm-color-primary);
   transition: background-color 0.15s ease, color 0.15s ease;
 }
@@ -68,15 +69,18 @@ img {
    ------------------------------------------------------- */
 
 .alert--success {
-  --ifm-alert-background-color: rgba(46, 133, 85, 0.10); /* soft green */
+  --ifm-alert-background-color: rgba(46, 133, 85, 0.10);
+  /* soft green */
   --ifm-alert-border-color: var(--ifm-color-primary);
-  --ifm-alert-color: #000000; /* black text */
+  --ifm-alert-color: #000000;
+  /* black text */
   border-left: 4px solid var(--ifm-color-primary) !important;
 }
 
 /* TIP title (the word “Tip”) */
 .alert--success .alert__title {
-  color: var(--ifm-color-primary) !important; /* green title */
+  color: var(--ifm-color-primary) !important;
+  /* green title */
   font-weight: 700;
 }
 
@@ -91,11 +95,16 @@ img {
 
 /* Selected TOC item (any level) */
 .table-of-contents__link--active {
-  color: var(--ifm-color-primary) !important;   /* green text */
-  font-weight: 700 !important;                  /* bold selected */
-  border-left: 3px solid var(--ifm-color-primary); /* green left border highlight */
-  padding-left: 8px;                               /* slight indent to align text */
-  text-decoration: underline;                      /* underline effect */
+  color: var(--ifm-color-primary) !important;
+  /* green text */
+  font-weight: 700 !important;
+  /* bold selected */
+  border-left: 3px solid var(--ifm-color-primary);
+  /* green left border highlight */
+  padding-left: 8px;
+  /* slight indent to align text */
+  text-decoration: underline;
+  /* underline effect */
 }
 
 
@@ -103,13 +112,17 @@ img {
    Selected TOC item: green tinted highlight
    ---------------------------------------- */
 .table-of-contents__link--active {
-  background-color: rgba(46, 133, 85, 0.12); /* soft green tint */
+  background-color: rgba(46, 133, 85, 0.12);
+  /* soft green tint */
   color: var(--ifm-color-primary) !important;
   font-weight: 700 !important;
-  border-left: 3px solid var(--ifm-color-primary); /* green bar */
+  border-left: 3px solid var(--ifm-color-primary);
+  /* green bar */
   padding-left: 8px;
-  text-decoration: none !important; /* remove underline */
-  border-radius: 4px; /* clean rounded highlight */
+  text-decoration: none !important;
+  /* remove underline */
+  border-radius: 4px;
+  /* clean rounded highlight */
 }
 
 
@@ -121,7 +134,8 @@ img {
 
 
 .product-mode-table img {
-  height: 110px;   /* adjust as needed */
+  height: 110px;
+  /* adjust as needed */
   object-fit: contain;
 }
 
@@ -133,7 +147,8 @@ img {
    =========================== */
 
 .theme-doc-sidebar-container {
-  background-color: #064e3b; /* dark green */
+  background-color: #064e3b;
+  /* dark green */
 }
 
 /* Reset lists */
@@ -158,7 +173,7 @@ img {
 }
 
 /* Indentation for nested levels */
-.theme-doc-sidebar-menu .menu__list .menu__list > .menu__list-item > .menu__link {
+.theme-doc-sidebar-menu .menu__list .menu__list>.menu__list-item>.menu__link {
   padding-left: 24px;
   font-size: 0.9rem;
 }
@@ -175,12 +190,12 @@ img {
 }
 
 /* Let the label take all available width */
-.theme-doc-sidebar-menu .menu__list-item-collapsible > .menu__link {
+.theme-doc-sidebar-menu .menu__list-item-collapsible>.menu__link {
   flex: 1 1 auto;
 }
 
 /* Caret button: click target on the right */
-.theme-doc-sidebar-menu .menu__list-item-collapsible > .menu__caret {
+.theme-doc-sidebar-menu .menu__list-item-collapsible>.menu__caret {
   /* Make the Docusaurus sidebar caret (menu__caret) WHITE */
   background-color: #ffffff !important;
   mask-size: 100% 100%;
@@ -193,23 +208,19 @@ img {
   height: 15px;
   padding: 0;
   color: var(--ifm-color-primary);
-  background:transparent;
+  background: transparent;
   border-radius: 10px;
   cursor: pointer;
 }
 
 
 /* When collapsed: arrow points RIGHT */
-.theme-doc-sidebar-menu
-  .menu__list-item-collapsible.menu__list-item--collapsed
-  > .menu__caret::before {
+.theme-doc-sidebar-menu .menu__list-item-collapsible.menu__list-item--collapsed>.menu__caret::before {
   transform: rotate(0deg);
 }
 
 /* When expanded (not collapsed): arrow points DOWN */
-.theme-doc-sidebar-menu
-  .menu__list-item-collapsible:not(.menu__list-item--collapsed)
-  > .menu__caret::before {
+.theme-doc-sidebar-menu .menu__list-item-collapsible:not(.menu__list-item--collapsed)>.menu__caret::before {
   transform: rotate(90deg);
 }
 
@@ -218,7 +229,7 @@ img {
    =========================== */
 
 /* Hover states */
-.theme-doc-sidebar-menu .menu__list-item > .menu__link:not(.menu__link--active):hover {
+.theme-doc-sidebar-menu .menu__list-item>.menu__link:not(.menu__link--active):hover {
   background-color: rgba(16, 185, 129, 0.18);
   color: #ffffff;
 }
@@ -252,37 +263,40 @@ img {
 
 
 /* Clean caret button styling (no background, no extra garbage) */
-.theme-doc-sidebar-menu .menu__list-item-collapsible > .menu__caret {
+.theme-doc-sidebar-menu .menu__list-item-collapsible>.menu__caret {
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
   width: 16px;
   height: 16px;
   padding: 0;
-  margin-right: 6px; /* space between caret and text */
+  margin-right: 6px;
+  /* space between caret and text */
   background: transparent !important;
   border: none !important;
   cursor: pointer;
 }
+
 /* Force base caret to point RIGHT when collapsed */
-.theme-doc-sidebar-menu .menu__list-item-collapsible > .menu__caret {
-  transform: rotate(270deg) !important; /* right arrow */
+.theme-doc-sidebar-menu .menu__list-item-collapsible>.menu__caret {
+  transform: rotate(270deg) !important;
+  /* right arrow */
   transition: transform 0.15s ease-in-out;
 }
 
 /* When expanded, rotate caret DOWN */
-.theme-doc-sidebar-menu .menu__list-item-collapsible > .menu__caret[aria-expanded="true"] {
-  transform: rotate(360deg) !important; /* down arrow */
+.theme-doc-sidebar-menu .menu__list-item-collapsible>.menu__caret[aria-expanded="true"] {
+  transform: rotate(360deg) !important;
+  /* down arrow */
 }
 
 /* Nested levels: indentation via padding */
-.theme-doc-sidebar-menu .menu__list .menu__list > .menu__list-item > .menu__link {
+.theme-doc-sidebar-menu .menu__list .menu__list>.menu__list-item>.menu__link {
   padding-left: 24px;
   font-size: 0.9rem;
 }
 
-.theme-doc-sidebar-menu
-  .menu__list .menu__list .menu__list > .menu__list-item > .menu__link {
+.theme-doc-sidebar-menu .menu__list .menu__list .menu__list>.menu__list-item>.menu__link {
   padding-left: 32px;
   font-size: 0.85rem;
 }
@@ -292,13 +306,17 @@ img {
    ----------------------------------------- */
 
 .theme-doc-sidebar-menu .menu__list .menu__list {
-  border-left: 1px solid rgba(229, 231, 235, 0.2); /* soft vertical line */
-  margin-left: 18px;  /* clear indentation from root */
+  border-left: 1px solid rgba(229, 231, 235, 0.2);
+  /* soft vertical line */
+  margin-left: 18px;
+  /* clear indentation from root */
   padding-left: 6px;
 }
+
 /* Sidebar background in DARK MODE */
 [data-theme='dark'] .theme-doc-sidebar-container {
-  background-color: #000000 !important; /* pure black */
+  background-color: #000000 !important;
+  /* pure black */
 }
 
 
@@ -318,8 +336,8 @@ footer.footer {
   text-transform: uppercase;
   color: #000;
   letter-spacing: 0.02em;
-  border-bottom: 1px solid #ccc; 
-  padding-bottom: 10px; 
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
 }
 
 /* Scrim */
@@ -342,7 +360,7 @@ footer.footer {
   border-radius: 10px;
   z-index: 9999;
   max-width: 300px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
 /* Text */
@@ -405,6 +423,7 @@ footer.footer {
   border-right: 10px solid transparent;
   border-top: 10px solid #2e8555;
 }
+
 /* -----------------------------
    Bubble positions per step
    ----------------------------- */
@@ -412,21 +431,24 @@ footer.footer {
 /* LEFT sidebar area */
 .tour-pos-left {
   top: 50%;
-  left: 260px; /* adjust based on sidebar width */
+  left: 260px;
+  /* adjust based on sidebar width */
   transform: translateY(-50%);
 }
 
 /* RIGHT TOC area */
 .tour-pos-right {
   top: 50%;
-  right: 260px; /* adjust based on TOC width */
+  right: 260px;
+  /* adjust based on TOC width */
   left: auto;
   transform: translateY(-50%);
 }
 
 /* TOP navbar area */
 .tour-pos-top {
-  top: 80px; /* below navbar */
+  top: 80px;
+  /* below navbar */
   left: 50%;
   transform: translateX(-50%);
 }
@@ -458,7 +480,7 @@ footer.footer {
   border-radius: 999px !important;
   border: 1px solid var(--ifm-color-emphasis-300) !important;
   font-size: 1.1rem !important;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
   background-color: var(--ifm-background-color) !important;
   height: auto !important;
   transition: all 0.2s ease !important;
@@ -469,7 +491,7 @@ footer.footer {
 .glossary-search-wrapper input.navbar__search-input:focus {
   outline: none !important;
   border-color: var(--ifm-color-primary) !important;
-  box-shadow: 0 4px 20px rgba(0,136,255,0.15) !important;
+  box-shadow: 0 4px 20px rgba(0, 136, 255, 0.15) !important;
 }
 
 /* Align and center dropdown autocomplete results menu */
@@ -485,4 +507,25 @@ footer.footer {
 /* Hide shortcut hints in the glossary search bar */
 .glossary-search-wrapper .searchHintContainer {
   display: none !important;
+}
+
+.ticker {
+  display: inline-block;
+  white-space: nowrap;
+  animation: ticker 15s linear infinite;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Docusaurus announcement bar container */
+div[class*='announcementBarContent'] {
+  overflow: hidden;
 }
