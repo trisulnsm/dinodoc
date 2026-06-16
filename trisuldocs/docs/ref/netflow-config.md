@@ -107,6 +107,31 @@ To create a default sampling rate for all routers which do not have an explicit 
 </SamplingRates>
 ```
 
+### Override netflow discovered rate
+
+By default, if a router exports its sampling rate on the network (via an *options template* / sampler fields), that **network discovered rate takes precedence** over the rate you set in this file. The manual `rate` is only used until the network value is seen.
+
+Set the `override_netflow` attribute to `true` to reverse this. When `override_netflow="true"`, the `rate` configured here always wins and any sampling rate discovered from netflow options data is ignored for that router. This is useful when a device reports an incorrect sampling rate.
+
+The attribute is case-insensitive and only the value `true` enables it. If the attribute is absent or empty, it defaults to `false` (network discovered rate wins).
+
+```html
+<SamplingRates>
+    <!-- network discovered rate wins (default) -->
+    <Rate router="180.179.9.2"   rate="128"  />
+
+    <!-- manual rate always wins, ignore rate sent by the device -->
+    <Rate router="180.180.9.2"   rate="1000"  override_netflow="true" />
+</SamplingRates>
+```
+
+| Attribute | Default | Description |
+| --------- | ------- | ----------- |
+| router | | IPv4 address of the exporting router/device. Use `0.0.0.0` to set a default for all routers |
+| rate | | The sampling rate, e.g. `128` means 1 in 128 packets are sampled |
+| ingress_egress_interfaces | | Optional comma separated list of interface ifIndex values that are sampled on both ingress and egress |
+| override_netflow | false | When `true`, the manually configured `rate` overrides any sampling rate discovered from netflow/IPFIX options templates. Default behaviour (`false` / empty / absent) is that the network discovered rate overrides this file |
+
 ## Advanced
 
 ### Static Templates
