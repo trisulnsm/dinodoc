@@ -59,6 +59,17 @@ const FeatureList = [
     ),
   },
   {
+    title: 'Glossary',
+    linkto: '/glossary',
+    Svg: require('@site/static/img/undraw_book_lover.svg').default,
+    description: (
+      <>
+        Explore key networking terms, concepts, and metrics used across
+        Trisul Network Analytics.
+      </>
+    ),
+  },
+  {
     title: 'For Developers - LUA Guide',
     linkto: '/docs/lua',
     Svg: require('@site/static/img/undraw_developer_activity_re_39tg.svg')
