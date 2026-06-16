@@ -132,6 +132,20 @@ The attribute is case-insensitive and only the value `true` enables it. If the a
 | ingress_egress_interfaces | | Optional comma separated list of interface ifIndex values that are sampled on both ingress and egress |
 | override_netflow | false | When `true`, the manually configured `rate` overrides any sampling rate discovered from netflow/IPFIX options templates. Default behaviour (`false` / empty / absent) is that the network discovered rate overrides this file |
 
+:::note Network-wide rate with per-router exceptions
+Combine the `0.0.0.0` default with `override_netflow="true"` to enforce a single network-wide sampling rate for every device, while still letting individually named routers specify their own rate. The `0.0.0.0` override applies to all routers that do not have their own `<Rate>` entry (and prevents a buggy device from creating a rogue rate from the network); any router listed with its own `<Rate>` line takes precedence and is governed by its own settings.
+
+```html
+<SamplingRates>
+    <!-- network-wide default, ignore rates reported by devices -->
+    <Rate router="0.0.0.0"       rate="1000" override_netflow="true" />
+
+    <!-- this router overrides the network-wide default with its own rate -->
+    <Rate router="180.179.9.2"   rate="128"  />
+</SamplingRates>
+```
+:::
+
 ## Advanced
 
 ### Static Templates
