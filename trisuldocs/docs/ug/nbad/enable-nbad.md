@@ -46,7 +46,7 @@ Verify that required applications such as:
 - TCP Analyzer
 - DDoS Monitor
 - [Stable Keys](https://github.com/trisulnsm/apps/tree/apps7/analyzers/stablekeys)
-- ShiftX
+- [ShiftX](https://github.com/trisulnsm/apps/tree/apps7/analyzers/shiftx)
 
 are installed and enabled.
 
