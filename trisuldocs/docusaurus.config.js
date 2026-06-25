@@ -96,45 +96,41 @@ const config = {
             position: 'left',
           },
           {
-            type: 'doc',
-            docId: 'ag/index',
-            label: 'Admin Guide',
+            type: 'dropdown',
+            label: 'Documentation',
             position: 'left',
-          },
-          {
-            type: 'doc',
-            docId: 'ug/index',
-            label: 'User Guide',
-            position: 'left',
+            items: [
+              {
+                type: 'doc',
+                docId: 'ag/index',
+                label: 'Admin Guide',
+              },
+              {
+                type: 'doc',
+                docId: 'ug/index',
+                label: 'User Guide',
+              },
+              {
+                type: 'doc',
+                docId: 'ipdr/index',
+                label: 'IPDR Guide',
+              },
+              {
+                type: 'doc',
+                docId: 'isp/index',
+                label: 'ISP Guide',
+              },
+              {
+                type: 'doc',
+                docId: 'ref/index',
+                label: 'Reference',
+              },
+            ],
           },
           {
             type: 'doc',
             docId: 'lua/index',
             label: 'API',
-            position: 'left',
-          },
-          {
-            type: 'doc',
-            docId: 'ref/index',
-            label: 'Reference',
-            position: 'left',
-          },
-          {
-            type: 'doc',
-            docId: 'ipdr/index',
-            label: 'IPDR',
-            position: 'left',
-          },
-          {
-            type: 'doc',
-            docId: 'isp/index',
-            label: 'ISP',
-            position: 'left',
-          },
-          {
-            type: 'doc',
-            docId: 'releasehistory',
-            label: 'Changelog',
             position: 'left',
           },
           {
