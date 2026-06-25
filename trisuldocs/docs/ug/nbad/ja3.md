@@ -81,4 +81,3 @@ When a generated JA3 hash matches an entry in the database, the associated clien
   https://github.com/trisulnsm/ja3prints
 
 * JA3 Fingerprinting Specification
-  https://github.com/salesforce/ja3
