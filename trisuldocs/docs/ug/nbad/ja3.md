@@ -3,7 +3,7 @@
 
 The **JA3 Fingerprints** application generates JA3 hashes from TLS ClientHello messages observed on the network. Each TLS ClientHello is converted into a JA3 fingerprint by extracting selected handshake fields and generating an MD5 hash of the resulting fingerprint string.
 
-The application also loads a fingerprint database (`tls-fingerprints.json`) to associate known JA3 hashes with human-readable client descriptions.
+The application also loads a fingerprint database to associate known JA3 hashes with human-readable client descriptions.
 
 ---
 
