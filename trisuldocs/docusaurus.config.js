@@ -125,6 +125,11 @@ const config = {
                 docId: 'ref/index',
                 label: 'Reference',
               },
+              {
+                type: 'doc',
+                docId: 'releasehistory',
+                label: 'Changelog',
+              },
             ],
           },
           {
