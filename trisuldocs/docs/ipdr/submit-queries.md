@@ -40,7 +40,7 @@ Multiple fields are AND-ed.
 | NAT IP | The private IP Address    | When NAT or CGNAT is used , enter the private IP you want to query in this field. This would be in the 100.64.0.0/10, 10.0.0.0/8, or other private ranges|
 | User Name  | The user name from syslogs or from static customer inventory| The user name from NAT syslogs or from the [customer static IP inventory](#user-name). If you want to query the  RADIUS/AAA user then fill in the AAA User Name field instead. See |
 | Device IP  | Router IP Example: 10.2.2.1 or 2404:5440:3::a| The IP Address of the device generating the IPDR Data. Typically the router.|
-| Bulk IP Query File | (.txt file)                       | A .txt file containing multiple IP addresses or subnets for bulk IPDR queries.   |
+| [Bulk IP Query File](/docs/next/ipdr/submit-queries#bulk-ip-query-file) | (.txt file)                       | A .txt file containing multiple IP addresses or subnets for bulk IPDR queries.   |
 | AAA User Name | RADIUS/AAA user name|  The AAA RADIUS user name that you would find in AAA logs. |
 
 
@@ -51,6 +51,51 @@ Multiple fields are AND-ed.
 - Click Submit 
 
 This will create a targeted query to retrieve specific IPDR data. The result statistics and IPDR logs can be viewed on the [IPDR Dashboard](ipdrdashboard) right away!
+
+#### Bulk IP Query File
+
+A Bulk IP Query File is a plain text (.txt) file containing multiple IP addresses or subnets that can be uploaded through the IPDR web interface. This allows multiple IP addresses to be queried in a single operation instead of performing individual searches.
+
+##### Supported Format
+- One IP address or subnet per line.
+- Plain text (.txt) format.
+- Blank lines should be avoided.
+
+**Example**
+
+ip_list.txt
+
+192.168.1.12  
+192.168.1.13  
+192.168.1.14  
+10.10.0.0/24  
+172.16.5.25  
+
+Upload this file using the Bulk IP Query option in the IPDR interface. The application reads each entry and returns the corresponding IPDR records.
+
+##### AAA User Name
+
+The AAA User Name is the subscriber or user identifier recorded by the AAA (Authentication, Authorization, and Accounting) server, typically a RADIUS server.
+
+When an IP address is queried, the application displays the AAA User Name associated with that IP address during the selected time period. This value corresponds to the user name recorded in the AAA/RADIUS authentication logs.
+
+##### Purpose
+
+The AAA User Name helps administrators:
+
+- Identify the subscriber assigned to an IP address.
+- Correlate IPDR records with AAA/RADIUS authentication logs.
+- Verify subscriber sessions during compliance audits or investigations.
+
+**Example**
+
+| IP Address   | AAA User Name    |
+|--------------|------------------|
+| 192.168.1.12 | john.doe         |
+| 192.168.1.13 | customer_1024    |
+| 192.168.1.14 | broadband_user45 |
+
+The displayed AAA User Name matches the corresponding entry in the AAA or RADIUS logs, enabling correlation between subscriber authentication records and IPDR data.
 
 
 ## Full database dump
@@ -90,10 +135,10 @@ The `ipdr_bulkquery.sh` script is a utility provided with the Trisul Hub IPDR pa
  - The ipdr_bulkquery.sh script is located in the `/usr/local/share/trisul-hub` directory.
  - Create a text file (e.g., iplist1.txt) containing the list of IPs to query, one per line.
  For example (One per line), 
-203.43.23.1
-22.23.44.55
-87.23.55.123
-78.178.21.139
+203.43.23.1  
+22.23.44.55  
+87.23.55.123  
+78.178.21.139  
 
 #### **Running the Script**
 
