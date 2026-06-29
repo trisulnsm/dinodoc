@@ -97,6 +97,15 @@ Say if you wanted to store 1 year of data, set the Archive Count to 301
 
 You can also adjust the Oper and Ref , refer to the [Storage Architecture](/docs/ag/domain/storage_arch) document for details.
 
+### Archiver type for large deployments
+
+The Hub archiver (`trisul_archiver`) controls how slices move between storage tiers on disk. The algorithm is selected with `DBTasks/Archiver/Type` in [Trisul Hub Configuration](/docs/ref/trisulhubconfig):
+
+- **`SLIDE`** (default) — suitable for most customers. Slices slide linearly through operational, reference, archive, and any optional `ExtraArchives` tiers.
+- **`RING`** — for very large deployments where the database grows above roughly **1 TB per day**. Slices rotate across multiple `ExtraRingArchives` volumes instead of sliding through a long chain, which reduces relocation overhead at extreme ingest rates.
+
+For typical retention tuning (oper/ref/archive slice counts), `SLIDE` is sufficient. Switch to `RING` only when linear sliding cannot keep up with daily ingest volume. See the [Archiver](/docs/ref/trisulhubconfig#archiver) and [Extra ring archives](/docs/ref/trisulhubconfig#extra-ring-archives-ring-archiver) sections in the Hub configuration reference for XML examples.
+
 :::tip For IPDR
 To ensure 2-year IPDR logging, set the Hub retention period to **730 days** and make sure the storage directory has enough capacity for two years of IPDR data.
 :::

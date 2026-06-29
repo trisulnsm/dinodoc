@@ -133,14 +133,59 @@ For long term storage mostly for compliance purposes.
 | SliceCount   | 32       | Controls how many slices are kept in the archive area. If you set this to 0, slices move directly to `/dev/null` (ie are deleted).        |
 | UsageRedMark | 95       | Generate an alert when the disk usage percent exceeds this value for admin purposes. Leave blank or zero to disable disk usage alerting |
 
-### Extra archives
+### Extra archives (SLIDE archiver)
 
-An optional feature for advanced users allows for extra archives. For example to be mounted to slower storage. These are disabled by default. Change the name of the node from `ExtraArchives_Disabled` to `ExtraArchives` to activate this feature.
+An optional feature for advanced users allows for additional archive tiers beyond the primary `archive` pool. For example, data can be moved to slower storage mounted at separate paths. These are disabled by default. Change the node name from `ExtraArchives_Disabled` to `ExtraArchives` to activate this feature.
+
+Extra archives are used only when `DBTasks/Archiver/Type` is `SLIDE` (the default). The archiver chains tiers in order: `oper` → `ref` → `archive` → `xarchive_0` → `xarchive_1` → … → trash. Each tier holds up to its configured `SliceCount` (in days, multiplied by the number of flusher instances).
 
 | Parameters | Defaults | Description|
 | ---------- | -------- | --------------- |
-| ID         | 1        | This ID is used to access the archive mount point. ID of 1 would lead to mount point `xarchive_1` |
-| SliceCount | 32       | Number of days data in this extra archive|
+| ID         | 0, 1, …  | Archive tier identifier. Data for ID `1` is stored under the mount point `xarchive_1` beneath `TrafficDBRoot`. |
+| SliceCount | 32       | Number of days of data to retain in this extra archive tier. |
+
+```xml
+<ExtraArchives>
+    <Archive>
+        <ID>0</ID>
+        <SliceCount>90</SliceCount>
+    </Archive>
+    <Archive>
+        <ID>1</ID>
+        <SliceCount>180</SliceCount>
+    </Archive>
+</ExtraArchives>
+```
+
+### Extra ring archives (RING archiver)
+
+For very large deployments, use `ExtraRingArchives` together with `DBTasks/Archiver/Type` set to `RING`. Instead of a linear chain of archive tiers, the archiver rotates slices across multiple archive volumes in a ring. Each volume is identified by `rarchive_N` (for example `rarchive_0`, `rarchive_1`) under `TrafficDBRoot`.
+
+When the current ring volume reaches its `SliceCount`, the archiver writes to the next volume in the ring. If that next volume is not empty but the current volume still holds the oldest slice, the archiver stays on the current volume until it can advance safely. Slices that exceed retention on the active ring volume are deleted (moved to trash).
+
+| Parameters | Defaults | Description|
+| ---------- | -------- | --------------- |
+| ID         | 0, 1, …  | Ring position identifier. Data is stored under `rarchive_N` where `N` is this ID. |
+| SliceCount | 32       | Number of days of data each ring volume can hold before the archiver rotates to the next volume. |
+
+```xml
+<ExtraRingArchives>
+    <Archive>
+        <ID>0</ID>
+        <SliceCount>90</SliceCount>
+    </Archive>
+    <Archive>
+        <ID>1</ID>
+        <SliceCount>90</SliceCount>
+    </Archive>
+    <Archive>
+        <ID>2</ID>
+        <SliceCount>90</SliceCount>
+    </Archive>
+</ExtraRingArchives>
+```
+
+If `ExtraRingArchives` is empty, the RING archiver behaves like a single `archive` tier and deletes overflow slices directly.
 
 
 ### Delete modes
@@ -256,11 +301,30 @@ Control the various database maintenance tasks. These tasks are scheduled intern
 
 ### Archiver
 
-Archiver is responsible for sliding old data.
+The `trisul_archiver` background task moves database slices through the retention tiers defined in `SlicePolicy`. It runs on a fixed schedule alongside other Hub database tasks (`trisul_cattrf`, `trisul_cachebuild`, `trisul_summslice`, and others). For each slice that has aged past its tier limit, the archiver relocates the slice directory on disk and updates `METASLICE.SQDB` with the new status. Slices are moved only when marked ready by a `s.archivable` flag file inside the slice directory.
 
 | Parameters | Defaults | Description           |
 | ---------- | -------- | --------------------- |
-| Enable     | TRUE     | Archiving is enabled. |
+| Enable     | TRUE     | Archiving is enabled. Disabling is not recommended in production. |
+| Type       | SLIDE    | Archiver algorithm. See below. |
+
+#### Archiver type: SLIDE vs RING
+
+| Type | When to use | Behavior |
+| ---- | ----------- | -------- |
+| `SLIDE` | Default. Suitable for most deployments. | Linear sliding window. Slices move sequentially through `oper` → `ref` → `archive`, then through any `ExtraArchives` tiers (`xarchive_N`), and finally to trash when retention expires. |
+| `RING` | Very large deployments where ingest exceeds roughly **1 TB per day**. | Ring rotation across `ExtraRingArchives` volumes (`rarchive_N`). When a volume is full, the archiver advances to the next volume in the ring, overwriting the oldest data on that volume. Avoids the cost of sliding very large slice directories through a long linear chain. |
+
+```xml
+<Archiver>
+    <Enable>TRUE</Enable>
+    <Type>SLIDE</Type>
+</Archiver>
+```
+
+To use RING archiving, set `Type` to `RING` and define one or more volumes under `SlicePolicy/ExtraRingArchives`. To use chained extra archive tiers on slower storage, keep `Type` as `SLIDE` and define `SlicePolicy/ExtraArchives` instead.
+
+Use `trisul_archiver -d -c /path/to/trisulHubConfig.xml` for a dry run that prints the control table and planned relocations without moving data.
 
 ### SummSlice
 

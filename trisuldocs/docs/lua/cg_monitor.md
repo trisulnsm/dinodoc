@@ -46,6 +46,20 @@ See also [Object Global table T](/docs/lua/obj_globalt).
 
 If no counter groups match the attachment spec, the script is not loaded.
 
+:::caution Always nil-check these fields
+`T.monitor_group_name` and `T.monitor_group_guid` are only populated for a **backend** monitor instance that is actually bound to a counter group. The same script's `onload()` / `onunload()` can also run in contexts that have **no** counter-group awareness — for example the capability probing phase, or when the file is loaded by the **frontend (pim) engine**. In those cases both fields are `nil`.
+
+Always guard against `nil` before using them, otherwise you will get a `attempt to concatenate field 'monitor_group_guid' (a nil value)` error:
+
+```lua
+onload = function()
+  if T.monitor_group_guid then
+    T.log("cg_monitor bound to " .. T.monitor_group_name .. " guid=" .. T.monitor_group_guid)
+  end
+end,
+```
+:::
+
 ### Example: attach to two explicit counter groups
 
 ```lua
@@ -55,7 +69,9 @@ cg_monitor = {
     "{2314BB8E-2BCC-4B86-8AA2-677E5554C0FE}",  -- FlowGens
   },
   onload = function()
-    T.log("cg_monitor bound to " .. T.monitor_group_name)
+    if T.monitor_group_name then
+      T.log("cg_monitor bound to " .. T.monitor_group_name)
+    end
   end,
   onflush = function(engine, ts, key, metrics)
     -- called only for keys in this instance's counter group

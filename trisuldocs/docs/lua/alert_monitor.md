@@ -44,6 +44,10 @@ One script file can install the same logic onto multiple alert groups. Trisul cr
 
 Before `onload()` on each instance, Trisul sets `T.monitor_group_name` and `T.monitor_group_guid`. See [Object Global table T](/docs/lua/obj_globalt).
 
+:::caution Always nil-check these fields
+These fields are only populated for a **backend** monitor instance bound to an alert group. The same `onload()` / `onunload()` can also run with no group awareness — during capability probing or in the **frontend (pim) engine** — where both are `nil`. Always check for `nil` before using them.
+:::
+
 To attach by alert group name, use `alert_name_match` instead of looping `T.alertgroups` in an `alert_guid` function.
 
 If no alert groups match, the script is not loaded.

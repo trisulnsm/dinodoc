@@ -22,8 +22,8 @@ The global table named `T` can be accessed from anywhere. It defines some consta
 | [T.ac](/docs/lua/obj_globalt#function-tac)   | A minimal but fast Aho-Corasick multi pattern matcher |
 | [T.log](/docs/lua/obj_globalt#function-tlog) | Function to log a message that goes into the main Trisul logging framework.|
 | T.countergroups  | A table of ( countergroup name, guid ) currently loaded. Only for backend scripts. For frontend scripts this field has a nil    |
-| T.monitor_group_name | Backend monitor scripts only. Set before `onload()` — the counter/alert group title this instance is bound to. |
-| T.monitor_group_guid | Backend monitor scripts only. Registry-format GUID string for the bound counter/alert group. |
+| T.monitor_group_name | Backend monitor scripts only. Set before `onload()` — the counter/alert group title this instance is bound to. `nil` during capability probing and in frontend (pim) scripts — always nil-check before use. |
+| T.monitor_group_guid | Backend monitor scripts only. Registry-format GUID string for the bound counter/alert group. `nil` during capability probing and in frontend (pim) scripts — always nil-check before use. |
 | T.resourcegroups | Backend scripts only : A table of ( resourcegroup name, guid ) currently loaded. |
 | T.ftsgroups  | Backend scripts only : A table of ( FTS (Full Text Search) name, guid ) currently loaded.|
 | T.sessiongroups | Backend scripts only : A table of ( session group name, guid ) currently loaded.|
