@@ -24,26 +24,16 @@ const config = {
   presets: [
     [
       'classic',
-      ({
+      {
         docs: {
           sidebarPath: './sidebars.js',
           sidebarCollapsed: true,
-          lastVersion: '7.0',
-          versions: {
-            current: {
-              label: 'Version 8.0',
-              path: 'next',
-            },
-            '7.0': {
-              label: 'Version 7.0',
-            },
-          },
         },
         blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
-      }),
+      },
     ],
   ],
 
@@ -70,111 +60,106 @@ const config = {
     tocLabel: 'In this page:',
   },
 
-  themeConfig:
-    ({
-      metadata: [
-        { property: 'og:image', content: 'https://docs.trisul.org/img/latest-release.jpeg' },
-        { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://docs.trisul.org/' },
-        { property: 'og:title', content: 'Trisul Network Analytics Docs' },
-        { property: 'og:description', content: 'Wide and deep visibility, detection, and audit of network traffic' },
-        { name: 'twitter:image', content: 'https://docs.trisul.org/img/latest-release.jpeg' },
-        { name: 'twitter:card', content: 'summary_large_image' },
-      ],
+  themeConfig: {
+    metadata: [
+      { property: 'og:image', content: 'https://docs.trisul.org/img/latest-release.jpeg' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://docs.trisul.org/' },
+      { property: 'og:title', content: 'Trisul Network Analytics Docs' },
+      { property: 'og:description', content: 'Wide and deep visibility, detection, and audit of network traffic' },
+      { name: 'twitter:image', content: 'https://docs.trisul.org/img/latest-release.jpeg' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+    ],
 
-      image: 'img/logo.png',
+    image: 'img/logo.png',
 
-      navbar: {
-        title: 'Trisul Docs',
-        logo: {
-          alt: 'Trisul Logo',
-          src: 'img/logo.png',
+    navbar: {
+      title: 'Trisul Docs',
+      logo: {
+        alt: 'Trisul Logo',
+        src: 'img/logo.png',
+      },
+      items: [
+        {
+          type: 'dropdown',
+          label: 'Documentation',
+          position: 'left',
+          items: [
+            {
+              type: 'doc',
+              docId: 'ag/index',
+              label: 'Admin Guide',
+            },
+            {
+              type: 'doc',
+              docId: 'ug/index',
+              label: 'User Guide',
+            },
+            {
+              type: 'doc',
+              docId: 'ipdr/index',
+              label: 'IPDR Guide',
+            },
+            {
+              type: 'doc',
+              docId: 'isp/index',
+              label: 'ISP Guide',
+            },
+            {
+              type: 'doc',
+              docId: 'ref/index',
+              label: 'Reference',
+            },
+            {
+              type: 'doc',
+              docId: 'releasehistory',
+              label: 'Changelog',
+            },
+          ],
         },
-        items: [
-          {
-            type: 'docsVersionDropdown',
-            position: 'left',
-          },
-          {
-            type: 'dropdown',
-            label: 'Documentation',
-            position: 'left',
-            items: [
-              {
-                type: 'doc',
-                docId: 'ag/index',
-                label: 'Admin Guide',
-              },
-              {
-                type: 'doc',
-                docId: 'ug/index',
-                label: 'User Guide',
-              },
-              {
-                type: 'doc',
-                docId: 'ipdr/index',
-                label: 'IPDR Guide',
-              },
-              {
-                type: 'doc',
-                docId: 'isp/index',
-                label: 'ISP Guide',
-              },
-              {
-                type: 'doc',
-                docId: 'ref/index',
-                label: 'Reference',
-              },
-              {
-                type: 'doc',
-                docId: 'releasehistory',
-                label: 'Changelog',
-              },
-            ],
-          },
-          {
-            type: 'doc',
-            docId: 'lua/index',
-            label: 'API',
-            position: 'left',
-          },
-          {
-            type: 'doc',
-            docId: 'Troubleshooting/index',
-            label: 'Troubleshooting',
-            position: 'left',
-          },
-          {
-            type: 'doc',
-            docId: 'intro',
-            docsPluginId: 'glossary',
-            label: 'Glossary',
-            position: 'left',
-          },
-          {
-            href: 'https://github.com/trisulnsm/dinodoc',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
+        {
+          type: 'doc',
+          docId: 'lua/index',
+          label: 'API',
+          position: 'left',
+        },
+        {
+          type: 'doc',
+          docId: 'Troubleshooting/index',
+          label: 'Troubleshooting',
+          position: 'left',
+        },
+        {
+          type: 'doc',
+          docId: 'intro',
+          docsPluginId: 'glossary',
+          label: 'Glossary',
+          position: 'left',
+        },
+        {
+          href: 'https://github.com/trisulnsm/dinodoc',
+          label: 'GitHub',
+          position: 'right',
+        },
+      ],
+    },
 
-      tableOfContents: {
-        minHeadingLevel: 2,
-        maxHeadingLevel: 3,
-      },
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 3,
+    },
 
-      footer: {
-        style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} Trisul Network Analytics. Built with Docusaurus.`,
-      },
+    footer: {
+      style: 'dark',
+      copyright: `Copyright © ${new Date().getFullYear()} Trisul Network Analytics. Built with Docusaurus.`,
+    },
 
-      prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-        additionalLanguages: ['ruby', 'lua', 'bash'],
-      },
-    }),
+    prism: {
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
+      additionalLanguages: ['ruby', 'lua', 'bash'],
+    },
+  },
 };
 
 export default config;
