@@ -40,7 +40,7 @@ Multiple fields are AND-ed.
 | NAT IP | The private IP Address    | When NAT or CGNAT is used , enter the private IP you want to query in this field. This would be in the 100.64.0.0/10, 10.0.0.0/8, or other private ranges|
 | User Name  | The user name from syslogs or from static customer inventory| The user name from NAT syslogs or from the [customer static IP inventory](#user-name). If you want to query the  RADIUS/AAA user then fill in the AAA User Name field instead. See |
 | Device IP  | Router IP Example: 10.2.2.1 or 2404:5440:3::a| The IP Address of the device generating the IPDR Data. Typically the router.|
-| [Bulk IP Query File](/docs/next/ipdr/submit-queries#bulk-ip-query-file) | (.txt file)                       | A .txt file containing multiple IP addresses or subnets for bulk IPDR queries.   |
+| [Bulk IP Query File](/docs/ipdr/submit-queries#bulk-ip-query-file) | (.txt file)                       | A .txt file containing multiple IP addresses or subnets for bulk IPDR queries.   |
 | AAA User Name | RADIUS/AAA user name|  The AAA RADIUS user name that you would find in AAA logs. |
 
 
