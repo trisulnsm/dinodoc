@@ -259,18 +259,6 @@ const sidebars = {
               ],
             }, /* end Graph Analytics */
 
-            /* RESTAPI */
-            {
-              type: 'category',
-              label: 'RESTAPI',
-              link: { type: 'doc', id: 'ug/restapi/index' },
-              items: [
-                'ug/restapi/Countergroup_info_API',
-                'ug/restapi/Countergroup_topper_API',
-                'ug/restapi/Timeslices_API',
-              ],
-            }, /* end REST API */
-
           ],
       },
       {
