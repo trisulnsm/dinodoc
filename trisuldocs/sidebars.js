@@ -258,15 +258,16 @@ const sidebars = {
                 'ug/edges/sankey',
               ],
             }, /* end Graph Analytics */
-            /* REST API */
+
+            /* RESTAPI */
             {
               type: 'category',
-              label: 'REST API',
-              link: { type: 'doc', id: 'ug/api/index' },
+              label: 'RESTAPI',
+              link: { type: 'doc', id: 'ug/restapi/index' },
               items: [
-                'ug/RESTAPI/Countergroup_info_API',
-                'ug/RESTAPI/Countergroup_topper_API',
-                'ug/RESTAPI/Timeslices_API',
+                'ug/restapi/Countergroup_info_API',
+                'ug/restapi/Countergroup_topper_API',
+                'ug/restapi/Timeslices_API',
               ],
             }, /* end REST API */
 
