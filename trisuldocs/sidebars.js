@@ -140,7 +140,7 @@ const sidebars = {
                 'ug/nbad/ipv4ipv6',
                 'ug/nbad/p2p',
                 'ug/nbad/ja3',
-                'ug/nbad/ja4',  
+                'ug/nbad/ja4',
                 'ug/nbad/tcpanalyzer',
                 'ug/nbad/commontasks',
               ],
@@ -258,6 +258,17 @@ const sidebars = {
                 'ug/edges/sankey',
               ],
             }, /* end Graph Analytics */
+            /* REST API */
+            {
+              type: 'category',
+              label: 'REST API',
+              link: { type: 'doc', id: 'ug/api/index' },
+              items: [
+                'ug/RESTAPI/Countergroup_info_API',
+                'ug/RESTAPI/Countergroup_topper_API',
+                'ug/RESTAPI/Timeslices_API',
+              ],
+            }, /* end REST API */
 
           ],
       },
