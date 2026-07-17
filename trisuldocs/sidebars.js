@@ -264,8 +264,8 @@ const sidebars = {
               label: 'REST API',
               link: { type: 'doc', id: 'ug/restapi/index' },
               items: [
-                'ug/restapi/countergroupinfo_api',
                 'ug/restapi/countergrouptopper_api',
+                'ug/restapi/countergroupinfo_api',
                 'ug/restapi/timeslices_api',
               ],
             }, /* end REST API */
