@@ -143,6 +143,7 @@ const sidebars = {
                 'ug/nbad/ja4',
                 'ug/nbad/tcpanalyzer',
                 'ug/nbad/commontasks',
+                'ug/nbad/falsepos',
               ],
             }, /* end NBAD*/
 
