@@ -1,4 +1,5 @@
-#Reducing False Positives
+# Reducing False Positives
+
 
 Trisul reduces false positives by continuously learning the normal behavior of your network over time. Its Machine Learning (ML) engine builds behavioral baselines from historical traffic patterns, user activity, application usage, and network metrics. As more data is collected, these baselines become increasingly accurate, allowing Trisul to distinguish between legitimate variations in network activity and genuine anomalies.
 
