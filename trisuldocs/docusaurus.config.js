@@ -42,6 +42,8 @@ const config = {
       require.resolve('@easyops-cn/docusaurus-search-local'),
       {
         hashed: true,
+        docsDir: ['docs', 'glossary', 'Playbook', 'Playbook/Network Investigation Playbook'],
+        docsRouteBasePath: ['docs', 'playbook'],
       },
     ],
     [
@@ -51,6 +53,16 @@ const config = {
         path: 'glossary',
         routeBasePath: '/',
         sidebarPath: './sidebarsGlossary.js',
+        sidebarCollapsed: true,
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'playbook',
+        path: 'Playbook',
+        routeBasePath: 'playbook',
+        sidebarPath: './sidebarsPlaybook.js',
         sidebarCollapsed: true,
       },
     ],
@@ -134,6 +146,13 @@ const config = {
           docId: 'intro',
           docsPluginId: 'glossary',
           label: 'Glossary',
+          position: 'left',
+        },
+        {
+          type: 'doc',
+          docId: 'Network Investigation Playbook/index',
+          docsPluginId: 'playbook',
+          label: 'Playbook',
           position: 'left',
         },
         {
