@@ -128,18 +128,92 @@ Documenting the findings establishes a baseline for future investigations and su
 
 The investigation methodology described above can be performed using a combination of network monitoring platforms, flow analyzers, packet captures, firewall logs, and other operational tools. While each data source provides valuable insight, manually correlating information across multiple systems can be time-consuming, particularly in large or distributed enterprise networks.
 
-Network analytics platforms such as **Trisul** simplify this process by consolidating network telemetry into a single investigative workflow. Instead of switching between multiple tools, engineers can examine communication patterns, application visibility, traffic statistics, and historical flow records from a unified interface, reducing the time required to move from observation to root cause.
+Network analytics platforms such as **Trisul** simplify this process by consolidating network telemetry into a unified investigative workflow. Instead of switching between multiple tools, engineers can examine host activity, communication patterns, application usage, packet-level details, and historical traffic from a single platform, reducing the time required to move from observation to root cause.
 
-For this investigation, [**Trisul Explore Flows**](/docs/ug/tools/explore_flows) enables engineers to:
+For this investigation, Trisul provides multiple analytical perspectives that complement one another throughout the investigation.
 
-- Search for and pivot around a specific IP address.
-- Identify communication peers and active conversations.
-- Analyze application and protocol usage.
-- Review traffic volume, flow counts, and other host-level metrics.
-- Compare activity across different time periods.
-- Drill down into individual flow records for detailed analysis.
+### Review Host Activity
 
-By providing an IP-centric investigative workspace, Trisul enables engineers to follow a structured investigation workflow without manually correlating data from multiple dashboards or monitoring systems.
+The [**Hosts Dashboard**](/docs/ug/hosts_dashboard) provides an overview of network activity for individual hosts, allowing engineers to quickly identify top bandwidth consumers, active hosts, connection statistics, and other key traffic indicators. This serves as an effective starting point for determining whether a host warrants further investigation.
+
+> **Screenshot Placeholder:** Hosts Dashboard showing Top Hosts, IP Usage by Connections, and Top Talkers
+
+---
+
+### Investigate Communication Patterns
+
+Using [**Explore Flows**](/docs/ug/tools/explore_flows), engineers can pivot directly to the selected IP address and examine:
+
+- Communication peers
+- Active conversations
+- Client and server relationships
+- Traffic direction
+- Flow statistics
+
+This helps establish how the host communicates with the rest of the network.
+
+![](./images/exploreflows.png)
+*Figure: Explore Flows - Conversations View*
+
+---
+
+### Analyze Application Usage
+
+The Applications view provides visibility into the protocols and services responsible for the observed traffic.
+
+This helps determine whether the network activity aligns with the expected role of the device or whether unexpected applications require further investigation.
+
+> **Screenshot Placeholder:** Explore Flows - Applications View
+
+---
+
+### Review Aggregate Flow Statistics
+
+[Aggregate flow statistics](/docs/ug/tools/aggregate_flows) summarize the host's network behavior by consolidating traffic into meaningful metrics such as:
+
+- Total flows
+- Packet counts
+- Bytes transferred
+- Bandwidth utilization
+- Traffic trends
+
+These summaries help engineers quickly identify unusual traffic patterns before drilling down into individual connections.
+
+> **Screenshot Placeholder:** Aggregate Flows View
+
+---
+
+### Examine Individual Connections
+
+When additional detail is required, engineers can review individual flow records associated with the selected host.
+
+Each connection provides information such as:
+
+- Source and destination IP addresses
+- Source and destination ports
+- Protocol
+- Session duration
+- Packet counts
+- Byte counts
+- Traffic direction
+
+This enables engineers to validate communication patterns and identify the specific conversations contributing to the observed activity.
+
+> **Screenshot Placeholder:** Individual Flow Records
+
+---
+
+### Validate with Packet Analysis
+
+Where packet capture is available, engineers can pivot from flow records to packet-level analysis for deeper inspection.
+
+Packet analysis enables validation of protocol behavior, troubleshooting of application issues, and investigation of suspicious communications that require payload-level visibility.
+
+> **Screenshot Placeholder:** Packet Analysis
+
+---
+
+By combining the Hosts Dashboard, Explore Flows, aggregate flow statistics, connection-level analysis, and packet inspection within a single investigative workflow, Trisul enables engineers to progress from high-level observations to detailed root cause analysis without manually correlating information from multiple monitoring systems.
 
 ## Investigation Findings
 
