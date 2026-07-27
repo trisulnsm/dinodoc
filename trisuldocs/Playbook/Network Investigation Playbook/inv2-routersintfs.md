@@ -2,11 +2,11 @@
 
 ## Investigation Overview
 
-Network interfaces provide the primary indication of traffic entering and leaving a network. A sudden increase in interface utilization can lead to application latency, packet loss, congestion, or degraded user experience.
+High interface utilization is often the first indication of network congestion, but high bandwidth alone rarely explains the root cause. A busy interface may simply reflect expected operational activity such as backups, software deployments, cloud synchronization, or database replication. In other cases, it may indicate application issues, bandwidth abuse, configuration changes, or emerging network problems.
 
-While identifying a congested interface is relatively straightforward, determining why it is congested requires a structured investigation. The increased utilization may result from legitimate business activity, scheduled data transfers, backup operations, software updates, misconfigurations, or unexpected network behavior.
+This investigation follows the same workflow experienced network engineers use when troubleshooting interface congestion. Starting from the affected interface, the investigation progressively narrows the scope to identify the hosts consuming bandwidth, the applications responsible, and the communication patterns generating the traffic until the underlying cause becomes clear.
 
-This investigation provides a systematic approach to identifying the source of excessive traffic and determining whether corrective action is required.
+Using Trisul, this entire workflow can be completed without switching between multiple monitoring tools.
 
 ---
 
@@ -15,162 +15,192 @@ This investigation provides a systematic approach to identifying the source of e
 Use this investigation when you need to:
 
 - Investigate unusually high utilization on a router or switch interface.
-- Identify the users or systems consuming bandwidth.
-- Determine which applications are responsible for interface congestion.
-- Investigate intermittent network slowdowns.
-- Validate whether increased traffic is expected.
+- Identify the hosts consuming interface bandwidth.
+- Determine which applications are responsible for increased utilization.
+- Validate whether the observed traffic is expected.
+- Determine whether operational action or capacity planning is required.
 
 ---
 
 ## Investigation Objectives
 
-By completing this investigation, you should be able to:
+By completing this investigation, you should be able to determine:
 
-- Identify the affected interface.
-- Measure the level of interface utilization.
-- Determine the top bandwidth consumers.
-- Identify the applications generating the traffic.
-- Decide whether the observed utilization is expected or requires remediation.
-
----
-
-## Investigation Steps
-
-### Step 1: Confirm the Interface Experiencing High Utilization
-
-Begin by identifying the interface that is experiencing increased traffic.
-
-Determine:
-
-- Which router or network device owns the interface.
-- Whether the increase affects inbound traffic, outbound traffic, or both.
-- Whether utilization is consistently high or occurs intermittently.
-- Whether the increase coincides with reported performance issues.
-
-Understanding the scope of the issue helps determine whether the investigation should focus on a single interface or a broader network segment.
+- Which interface is experiencing increased utilization.
+- Which hosts contribute most of the traffic.
+- Which applications generate the observed bandwidth.
+- Whether the utilization represents expected operational activity.
+- Whether further investigation or corrective action is required.
 
 ---
 
-### Step 2: Measure the Severity of the Utilization
+# Investigation Workflow
 
-Determine how heavily the interface is being utilized.
+## Step 1: Review Interface Utilization
 
-Consider:
+Every investigation begins by identifying the interface experiencing increased utilization and understanding the scope of the issue. Before investigating hosts or applications, determine whether the congestion is isolated to a single interface or affects a wider portion of the network.
 
-- Current utilization.
-- Peak utilization.
-- Average utilization over the investigation period.
-- Duration of sustained high utilization.
+Open [**Routers & Interfaces**](/docs/ug/netflow/routers_and_interfaces) to review interface utilization across monitored devices.
 
-A brief traffic spike may not require intervention, whereas sustained high utilization may indicate capacity constraints or abnormal network activity.
+Use this dashboard to answer questions such as:
 
----
+- Which interface is experiencing high utilization?
+- Is the increase inbound, outbound, or both?
+- Is the utilization sustained or only a temporary spike?
+- Are multiple interfaces showing similar behaviour?
 
-### Step 3: Identify the Top Bandwidth Consumers
+### Evidence to Collect
 
-Once the affected interface has been identified, determine which hosts are contributing most to the traffic.
+- Interfaces consistently operating near capacity.
+- Sustained utilization rather than short-lived spikes.
+- Interfaces showing unusual traffic compared to historical behaviour.
+- Multiple interfaces becoming congested simultaneously.
 
-Review:
+### Continue the Investigation
 
-- Top source IP addresses.
-- Top destination IP addresses.
-- Highest bandwidth consumers.
-- Largest conversations.
-
-At this stage, the objective is to identify the systems responsible for the majority of the traffic before investigating individual hosts.
+Once the affected interface has been identified, determine which systems are responsible for generating the observed traffic.
 
 ---
 
-### Step 4: Understand the Nature of the Traffic
+## Step 2: Review Top Bandwidth Consumers
 
-After identifying the primary consumers, determine what type of traffic is traversing the interface.
+After identifying the affected interface, determine which hosts contribute most of the observed utilization.
 
-Questions to consider include:
+Within the selected interface, review the [**Top Hosts**](/docs/ug/netflow/drilldown#hosts) and [**Top Conversations**](/docs/ug/netflow/drilldown#top-conversations-or-talkers) panels. Trisul automatically ranks the largest bandwidth consumers, allowing you to quickly identify the systems responsible for interface congestion.
 
-- Which applications generate the highest volume of traffic?
-- Is the traffic related to business applications?
-- Does the activity correspond to scheduled operations such as backups or software updates?
-- Are unexpected protocols contributing to the utilization?
+This step helps answer questions such as:
 
-Understanding the application mix provides important context before concluding that the traffic is abnormal.
+- Which hosts generate most of the bandwidth?
+- Is one system responsible for the majority of the utilization?
+- Is the traffic primarily internal or external?
+- Which conversations contribute most to the traffic?
 
----
+### Evidence to Collect
 
-### Step 5: Determine Whether the Utilization Is Expected
+- One or two hosts dominating interface utilization.
+- Large conversations explaining most of the bandwidth.
+- Unexpected systems generating significant traffic.
+- New communication partners not previously observed.
 
-Not all high utilization represents a problem.
+### Continue the Investigation
 
-Evaluate whether the observed traffic aligns with normal operational behavior.
-
-Consider:
-
-- Whether similar utilization has occurred previously.
-- Whether maintenance or scheduled transfers are taking place.
-- Whether the increase is isolated or recurring.
-- Whether the traffic is proportional to normal business activity.
-
-Understanding the operational context helps distinguish legitimate utilization from issues requiring corrective action.
+If one or more hosts contribute significantly to the observed utilization, investigate the applications responsible for generating the traffic.
 
 ---
 
-### Step 6: Determine the Appropriate Response
+## Step 3: Analyze Application Usage
 
-Based on the findings, determine the next course of action.
+Once the primary bandwidth consumers have been identified, determine why they are generating traffic. Understanding the applications responsible provides the operational context needed to distinguish expected activity from abnormal behaviour.
 
-Possible outcomes include:
+Open the [**Applications**](/docs/ug/netflow/drilldown#apps) view for the selected interface or host.
 
-- No action required because the utilization is expected.
-- Continue investigating the systems responsible for the traffic.
-- Investigate a specific IP address in greater detail.
-- Review historical traffic trends to identify recurring patterns.
-- Consider capacity planning if sustained utilization approaches interface limits.
+This view helps answer questions such as:
 
----
+- Which applications generate most of the traffic?
+- Does the application usage match the role of the host?
+- Are scheduled activities such as backups or software deployments responsible?
+- Are unexpected protocols consuming bandwidth?
 
-## Applying this Investigation Using a Network Analytics Platform
+### Evidence to Collect
 
-Investigating interface utilization typically requires correlating information from multiple monitoring systems, including SNMP data, flow records, router statistics, and application traffic. Performing this analysis manually can be time-consuming, particularly when multiple interfaces or high-volume environments are involved.
+- Expected business applications.
+- Backup or replication traffic.
+- Software deployment activity.
+- Unexpected or unauthorized applications.
+- Protocols consuming unusually high bandwidth.
 
-Network analytics platforms such as **Trisul** simplify this investigation by combining interface statistics with detailed flow analysis, allowing engineers to move from identifying a congested interface to understanding exactly which hosts and applications are responsible.
+### Continue the Investigation
 
-For this investigation, [**Trisul Routers & Interfaces**](/docs/ug/netflow/routers_and_interfaces) enables engineers to:
-
-- Monitor interface utilization across routers and network devices.
-- Identify interfaces experiencing high traffic.
-- Review historical utilization trends.
-- Drill down into the hosts generating the traffic.
-- Identify the applications contributing to interface utilization.
-- Continue the investigation using [**Explore Flows**](/docs/ug/tools/explore_flows) for detailed communication analysis.
+If application analysis does not fully explain the utilization, investigate the communication behaviour of the responsible hosts.
 
 ---
 
-## Investigation Findings
+## Step 4: Investigate Communication Patterns
 
-The following observations may help determine the appropriate next step.
+When a host requires further investigation, continue the analysis using [**Explore Flows**](/docs/ug/tools/explore_flows). This allows you to move beyond bandwidth statistics and understand who the host communicates with, what services it accesses, and whether those communication patterns are expected.
 
-| Observation | Possible Interpretation |
-|--------------|-------------------------|
-| Utilization remains consistently close to interface capacity | Capacity planning or traffic engineering may be required. |
-| A small number of hosts generate most of the traffic | Continue investigating those hosts individually. |
-| Traffic is primarily generated by scheduled backup or replication jobs | Expected operational activity. |
-| Unexpected applications dominate the interface | Validate whether the traffic is authorized. |
-| Utilization increases only during business hours | Likely reflects normal user activity. |
-| Utilization increases unexpectedly without an identifiable business reason | Continue investigating application and host behavior. |
+Use [**Explore Flows**](/docs/ug/tools/explore_flows) to review:
+
+- Communication peers.
+- Active conversations.
+- Client and server relationships.
+- Individual flow records.
+- Traffic direction.
+
+This step helps answer questions such as:
+
+- Which systems communicate with the selected host?
+- Which conversations generate most of the traffic?
+- Are communication patterns consistent with the host's role?
+- Are unexpected internal or external destinations involved?
+
+### Evidence to Collect
+
+- Large individual conversations.
+- Unexpected communication partners.
+- External destinations.
+- Client-server relationships.
+- Communication patterns inconsistent with the system's intended role.
+
+### Continue the Investigation
+
+Flow analysis is usually sufficient to identify the source of interface utilization. Where additional validation is required, continue with packet analysis.
 
 ---
 
-## Best Practices
+## Step 5: Validate with Packet Analysis
 
-- Confirm sustained utilization before assuming congestion.
-- Investigate the largest traffic contributors before examining smaller flows.
-- Evaluate application context alongside bandwidth usage.
-- Compare interface utilization with historical trends whenever possible.
-- Avoid making capacity decisions based on isolated traffic spikes.
+Packet-level analysis provides the final layer of validation for investigations that require deeper protocol visibility. This step is particularly useful when troubleshooting application behaviour or confirming findings identified during flow analysis.
+
+Where packet capture is available, pivot directly from the selected flow to [**Packet Analysis**](/docs/ug/tools/explore_flows#flow-options) by downloading the PCAP from the flows drilldown.
+
+Use packet analysis to answer questions such as:
+
+- Does packet-level analysis support the investigation findings?
+- Are applications behaving as expected?
+- Are protocol anomalies present?
+- Is there evidence of retransmissions or communication failures?
+
+### Evidence to Collect
+
+- Successful protocol exchanges.
+- Retransmissions or packet loss.
+- Protocol anomalies.
+- Packet-level evidence supporting the identified root cause.
+
+### Investigation Outcome
+
+At this stage, you should have sufficient evidence to determine the cause of the increased interface utilization and decide whether operational action, capacity planning, or further investigation is required.
 
 ---
 
-## Related Investigations
+# Investigation Completion
 
-- If one or more hosts are identified as significant bandwidth consumers, continue with [**Investigate the Network Activity of an IP Address**](./inv1-exploreflows.md).
-- If interface utilization appears abnormal only during specific periods, continue with [**Investigate Historical Network Activity**](./inv3-retro.md).
-- If the interface repeatedly exceeds operational limits, continue with [**Investigate Threshold Crossing Events**](./inv4-tca.md).
+This investigation can generally be considered complete when:
+
+- The affected interface has been identified.
+- The primary bandwidth consumers have been identified.
+- The applications responsible for the traffic have been determined.
+- Communication patterns have been validated.
+- Packet-level evidence has been reviewed where necessary.
+- The underlying cause of the increased utilization has been established.
+- Appropriate operational or engineering actions have been determined.
+
+---
+
+# Best Practices
+
+- Begin every investigation from the affected interface before analysing individual hosts.
+- Progressively narrow the investigation from interfaces to hosts, applications, communication patterns, and packet analysis.
+- Always correlate bandwidth utilization with application activity before drawing conclusions.
+- Compare current utilization with historical trends whenever possible.
+- Use packet analysis only when flow-level information is insufficient.
+- Document the evidence collected at each stage of the investigation.
+
+---
+
+# Related Investigations
+
+- [**Investigate the Network Activity of an IP Address**](/docs/ug/playbooks/investigations/inv1-exploreflows.md)
+- [**Investigate Historical Network Activity**](/docs/ug/playbooks/investigations/inv3-historical-network-activity.md)
+- [**Investigate Threshold Crossing Alerts**](/docs/ug/playbooks/investigations/inv4-threshold-crossing-alerts.md)

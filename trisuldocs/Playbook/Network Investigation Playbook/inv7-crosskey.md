@@ -2,11 +2,11 @@
 
 ## Investigation Overview
 
-Many network investigations cannot be answered by examining a single metric, device, or application in isolation. Operational questions often require correlating multiple dimensions of network data to understand how different parts of the network interact.
+Many network investigations cannot be answered by examining a single host, interface, application, or metric in isolation. Questions such as which applications consume the most bandwidth on a specific interface, which customers generate the highest traffic at a particular site, or how traffic is distributed across business units require multiple dimensions of network data to be analyzed together.
 
-For example, identifying the applications consuming bandwidth on a specific interface, determining which users are accessing a particular service from a given location, or understanding traffic distribution across multiple business units all require analyzing relationships between different network attributes.
+Rather than investigating individual network objects independently, multidimensional correlation enables engineers to understand how different parts of the network relate to one another. The objective is to identify meaningful relationships, uncover operational patterns, and answer complex questions that cannot be resolved through isolated analysis.
 
-This investigation provides a structured approach to correlating multiple dimensions of network activity to gain deeper operational insight.
+Using Trisul, engineers can correlate multiple network dimensions within a single investigation, allowing them to move between different perspectives without manually combining reports or switching between multiple tools.
 
 ---
 
@@ -34,150 +34,198 @@ By completing this investigation, you should be able to:
 
 ---
 
-## Investigation Steps
+## Investigation Workflow
 
 ### Step 1: Define the Investigation Question
 
-Begin by clearly identifying the question that needs to be answered.
+Every multidimensional investigation begins with a clearly defined operational question. Before selecting network data to analyze, determine exactly what relationship you are trying to understand.
 
-Examples include:
+Open [**Cross Key CounterGroups**](/docs/ag/context/crosskey_countergroups/) and identify the dimensions required for the investigation.
 
-- Which applications consume the most bandwidth on a particular interface?
-- Which departments generate the highest internet usage?
-- Which customers contribute the most traffic on a specific link?
-- Which sites access a critical business application?
+Use this view to answer questions such as:
 
-Clearly defining the question determines which network dimensions should be correlated.
+- What operational question needs to be answered?
+- Which network entities are involved?
+- Which dimensions should be correlated?
+- What outcome is expected from the investigation?
+
+#### Evidence to Collect
+
+- Investigation objective.
+- Network entities involved.
+- Selected dimensions for analysis.
+- Expected operational outcome.
+
+#### Continue the Investigation
+
+Once the investigation objective has been defined, identify the network dimensions required to answer the question.
 
 ---
 
-### Step 2: Identify the Relevant Network Dimensions
+### Step 2: Select the Network Dimensions
 
-Determine the attributes required to answer the investigation.
+The quality of the investigation depends on selecting the appropriate dimensions for correlation. Choose only the attributes that contribute to answering the operational question without introducing unnecessary complexity.
 
-Examples include:
+Configure the required dimensions within [**Cross Key CounterGroups**](/docs/ag/context/crosskey_countergroups#creating-a-cross-key-counter-group).
 
-- Source and destination hosts.
+Use this view to answer questions such as:
+
+- Which hosts should be included?
+- Which applications are relevant?
+- Which interfaces, sites, customers, or VLANs should be correlated?
+- Are additional geographic or routing dimensions required?
+
+#### Evidence to Collect
+
+- Selected hosts.
 - Applications.
 - Interfaces.
-- Routers.
-- VLANs.
-- Customers.
-- Sites.
-- Autonomous Systems (ASNs).
-- Geographic locations.
+- Customers, sites, VLANs, or ASNs.
+- Additional dimensions relevant to the investigation.
 
-Selecting the appropriate dimensions ensures the investigation remains focused on the operational objective.
+#### Continue the Investigation
+
+Once the required dimensions have been selected, analyze how they relate to one another.
 
 ---
 
-### Step 3: Correlate the Data
+### Step 3: Correlate Network Activity
 
-Analyze how the selected dimensions relate to one another.
+With the investigation dimensions established, begin analyzing how the selected network attributes interact. Rather than viewing each metric independently, examine the relationships between them to understand how traffic is distributed across the network.
 
-Look for:
+Use [**Cross Key CounterGroups**](/docs/ag/context/crosskey_countergroups) to correlate the selected dimensions.
 
-- Traffic distribution.
-- Shared communication patterns.
-- Concentrations of activity.
-- Unexpected relationships.
+Use this view to answer questions such as:
+
+- Which entities generate the most traffic?
+- Which applications dominate specific interfaces or sites?
+- Are certain users associated with particular services?
+- Which combinations contribute most to network utilization?
+
+#### Evidence to Collect
+
+- Traffic distribution across selected dimensions.
 - Dominant contributors.
+- Relationships between network entities.
+- Unexpected traffic concentrations.
+- Significant communication patterns.
 
-The objective is to understand how different aspects of the network interact rather than examining each independently.
+#### Continue the Investigation
+
+Once the relationships between the selected dimensions have been identified, evaluate whether they reveal meaningful operational patterns.
 
 ---
 
 ### Step 4: Identify Operational Patterns
 
-Review the correlated data to identify meaningful operational insights.
+Correlation often reveals operational patterns that are difficult to identify through individual dashboards. Review the correlated data to determine whether the observed relationships align with normal network operations or indicate opportunities for further investigation.
 
-Consider:
+Continue reviewing the correlated results.
 
-- Whether traffic distribution aligns with expected usage.
-- Whether particular applications dominate specific network segments.
-- Whether certain users or locations contribute disproportionately to network utilization.
-- Whether communication patterns reflect normal business operations.
+Use the investigation to answer questions such as:
 
-Correlation often reveals relationships that are difficult to identify through isolated metrics.
+- Does traffic distribution align with expected usage?
+- Do particular applications dominate specific sites or business units?
+- Are certain users or customers responsible for disproportionate resource consumption?
+- Are unexpected relationships present between network entities?
+
+#### Evidence to Collect
+
+- Expected traffic distribution.
+- Dominant applications.
+- Heavy resource consumers.
+- Unexpected relationships.
+- Recurring operational trends.
+
+#### Continue the Investigation
+
+After identifying operational patterns, determine whether the findings can be explained by normal business and network operations.
 
 ---
 
-### Step 5: Validate the Findings
+### Step 5: Validate the Operational Context
 
-Evaluate whether the observed relationships can be explained by known operational activities.
+Not every relationship discovered during correlation represents an operational concern. Many patterns simply reflect normal business processes, application architecture, or network design.
 
-Consider:
+Review the investigation findings alongside known operational activities and network architecture.
 
-- Business processes.
-- Network architecture.
-- Application design.
-- Scheduled operations.
+Use the investigation findings to answer questions such as:
+
+- Does the observed relationship match business operations?
+- Can application architecture explain the traffic pattern?
+- Were infrastructure changes recently introduced?
+- Do the findings align with expected network design?
+- Can the relationship be explained by planned operational activities?
+
+#### Evidence to Collect
+
+- Business processes supporting the findings.
+- Application architecture.
 - Infrastructure changes.
+- Network design considerations.
+- Evidence supporting expected or unexpected behavior.
 
-Context helps distinguish meaningful findings from expected operational behavior.
+#### Continue the Investigation
+
+Once the operational context has been established, determine the conclusions and any follow-up actions required.
 
 ---
 
-### Step 6: Document the Operational Insight
+### Step 6: Determine the Operational Insight
 
-Summarize the findings by documenting:
+By this stage, the investigation should have answered the original operational question and established the relationships between the selected network dimensions.
 
-- The original investigation question.
-- The correlated dimensions analyzed.
-- Significant relationships identified.
+Review the investigation findings as a whole to determine the operational insight gained.
+
+Use the investigation findings to answer questions such as:
+
+- Has the original investigation question been answered?
+- What relationships were discovered?
+- Do the findings require further investigation?
+- Should capacity planning or policy changes be considered?
+- Are additional investigations required?
+
+#### Evidence to Collect
+
+- Correlated relationships.
 - Operational conclusions.
-- Recommended follow-up actions, if required.
+- Significant observations.
+- Recommended follow-up actions.
+- Capacity planning or optimization opportunities.
 
-Documenting these insights supports future planning, optimization, and troubleshooting activities.
+#### Investigation Outcome
 
----
-
-## Applying this Investigation Using a Network Analytics Platform
-
-Answering complex operational questions often requires engineers to manually correlate information from multiple monitoring systems, reports, and dashboards. This process can be time-consuming and may overlook relationships that are only visible when different dimensions of network data are analyzed together.
-
-Network analytics platforms such as **Trisul** simplify this process by allowing multiple network dimensions to be correlated within a single analytical view, enabling engineers to explore relationships and answer complex operational questions more efficiently.
-
-For this investigation, [**Trisul Cross Key CounterGroups**](/docs/ag/context/crosskey_countergroups/) enables engineers to:
-
-- Correlate multiple network attributes in a single view.
-- Analyze traffic across combinations of hosts, applications, interfaces, locations, customers, VLANs, and other network dimensions.
-- Identify relationships that are not visible through single-dimensional analysis.
-- Pivot between different perspectives during an investigation.
-- Generate deeper operational insights without manually combining multiple reports.
-
-Instead of investigating isolated metrics, engineers can understand how different components of the network interact as a whole.
+At this stage, you should understand how the selected network dimensions relate to one another, identify meaningful operational patterns, answer the original investigation question, and determine whether additional investigation or operational action is required.
 
 ---
 
-## Investigation Findings
+## Investigation Completion
 
-The following observations may help determine the next stage of the investigation.
+This investigation can generally be considered complete when:
 
-| Observation | Possible Interpretation |
-|--------------|-------------------------|
-| A small number of applications dominate traffic across multiple sites | Review application optimization or bandwidth allocation. |
-| Specific users generate disproportionate traffic on selected interfaces | Continue investigating user or host activity. |
-| Certain business units consistently consume more network resources | Consider capacity planning or policy adjustments. |
-| Unexpected relationships appear between network entities | Validate whether the communication is authorized. |
-| Traffic distribution aligns with expected operational patterns | No immediate action may be required. |
-| Correlated analysis reveals recurring operational trends | Use the findings to support long-term planning and optimization. |
+- The original investigation question has been answered.
+- The required network dimensions have been correlated.
+- Significant relationships have been identified.
+- Operational patterns have been evaluated.
+- The operational context has been validated.
+- Appropriate operational or engineering actions have been determined.
 
 ---
 
 ## Best Practices
 
-- Begin with a clearly defined operational question before correlating data.
-- Select only the dimensions necessary to answer the investigation.
-- Interpret correlated data within the context of network architecture and business operations.
-- Use correlation to complement, not replace, individual host or interface investigations.
-- Document recurring patterns to improve future operational analysis.
+- Begin every investigation with a clearly defined operational question.
+- Select only the network dimensions necessary to answer the investigation.
+- Progressively correlate additional dimensions rather than analyzing everything at once.
+- Always interpret correlated data within the context of network architecture and business operations.
+- Use multidimensional correlation to complement, not replace, host, interface, or application investigations.
+- Document recurring relationships to support future operational analysis.
 
 ---
 
 ## Related Investigations
 
-- If the correlated analysis identifies a specific host requiring deeper investigation, continue with [**Investigate the Network Activity of an IP Address**](./inv1-exploreflows.md)
-- If the findings indicate interface congestion, continue with [**Investigate High Traffic on a Network Interface**](./inv2-routersintfs.md)
-- If understanding how the observed relationships evolved over time is important, continue with [**Investigate Historical Network Activity**](./inv3-retro.md)
-- If correlated analysis reveals deviations from normal operating behavior, continue with [**Investigate Network Behavior Anomalies**](./inv5-tba.md)
+- [**Investigate the Network Activity of an IP Address**](./inv1-exploreflows.md)
+- [**Investigate High Traffic on a Network Interface**](./inv2-routersintfs.md)
+- [**Investigate Historical Network Activity**](./inv3-retro.md)
+- [**Investigate Network Behavior Anomalies**](./inv5-tba.md)

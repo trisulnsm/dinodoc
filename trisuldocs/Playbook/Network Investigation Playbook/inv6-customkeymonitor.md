@@ -2,13 +2,11 @@
 
 ## Investigation Overview
 
-Not every device on the network requires the same level of attention. Core routers, firewalls, internet gateways, critical servers, and business applications often have a direct impact on network operations and service availability.
+Some network assets are more critical than others. Core routers, firewalls, WAN gateways, business-critical servers, and key applications support essential network operations, making changes in their behavior more significant than similar changes elsewhere in the network.
 
-Rather than continuously monitoring every network object, organizations typically identify critical assets whose performance and availability must be closely observed.
+Rather than attempting to monitor every device equally, network teams focus on assets whose performance, availability, and communication behavior have the greatest operational impact. The objective is to identify unexpected changes affecting these assets, determine what caused them, assess their operational impact, and decide whether further investigation is required.
 
-Monitoring these assets enables network teams to quickly identify abnormal behavior, investigate emerging issues, and respond before they affect users or business services.
-
-This investigation provides a structured approach to monitoring critical network assets and determining when changes in their operational behavior require investigation.
+Using Trisul, engineers can continuously monitor critical network assets and quickly investigate changes without manually reviewing multiple dashboards.
 
 ---
 
@@ -36,133 +34,184 @@ By completing this investigation, you should be able to:
 
 ---
 
-## Investigation Steps
+## Investigation Workflow
 
-### Step 1: Identify the Critical Asset
+### Step 1: Review the Critical Asset
 
-Begin by identifying the asset that requires investigation.
+Every investigation begins by identifying the monitored asset requiring attention. Before investigating traffic or applications, establish which critical network resource has changed and understand its role within the network.
 
-The monitored asset may be:
+Open [**Custom Key Monitor**](/docs/ug/cg/ckey) to review your monitored assets.
 
-- A core router.
-- A firewall.
-- A WAN gateway.
-- A critical application server.
-- A database server.
-- Any infrastructure component considered operationally important.
+Use this dashboard to answer questions such as:
 
-Understanding the role of the asset provides the necessary context for the investigation.
+- Which critical asset requires investigation?
+- What type of network object is being monitored?
+- Is the observed change ongoing or has it already returned to normal?
+- Are multiple monitored assets exhibiting similar behavior?
+
+#### Evidence to Collect
+
+- Monitored asset requiring investigation.
+- Type of monitored network object.
+- Current operational status.
+- Time the change was observed.
+- Other monitored assets showing similar behavior.
+
+#### Continue the Investigation
+
+Once the affected asset has been identified, determine what operational characteristic has changed.
 
 ---
 
 ### Step 2: Determine What Changed
 
-Identify the operational characteristic that triggered the investigation.
+Understanding that an asset has changed is only the beginning of the investigation. The next objective is identifying which operational characteristic deviated from expected behavior.
 
-Examples include:
+Review the monitored metrics for the selected asset.
 
-- Increased traffic volume.
-- Reduced traffic levels.
-- Unexpected communication activity.
+Use this view to answer questions such as:
+
+- Has traffic increased or decreased?
+- Has application usage changed?
+- Have communication patterns changed?
+- Have new communication partners appeared?
+- Is the observed behavior sustained or temporary?
+
+#### Evidence to Collect
+
+- Changes in traffic volume.
 - Changes in application usage.
 - New communication partners.
-- Significant changes in operational behavior.
+- Variations in communication behavior.
+- Sustained or temporary operational changes.
 
-The objective is to understand the nature of the observed change before determining its cause.
+#### Continue the Investigation
+
+Once the nature of the change has been established, determine whether the observed behavior is affecting network operations or business services.
 
 ---
 
 ### Step 3: Assess the Operational Impact
 
-Evaluate how the observed change affects the operation of the monitored asset.
+Changes affecting critical assets often have wider operational consequences. Before identifying the systems responsible, determine whether the observed behavior has affected network performance, application availability, or business services.
 
-Consider:
+Continue reviewing the monitored asset together with its associated traffic and operational metrics.
 
-- Whether business services are affected.
-- Whether users are experiencing degraded performance.
-- Whether the asset continues to perform its intended function.
-- Whether the change is isolated or part of a wider operational issue.
+Use the investigation to answer questions such as:
 
-Understanding the operational impact helps determine the urgency of the investigation.
+- Are business services affected?
+- Are users experiencing degraded performance?
+- Is the asset operating as expected?
+- Is the issue isolated or affecting multiple systems?
+
+#### Evidence to Collect
+
+- Service degradation.
+- User-reported issues.
+- Application availability.
+- Network performance changes.
+- Scope of the operational impact.
+
+#### Continue the Investigation
+
+Once the operational impact has been understood, identify the systems and applications responsible for the observed behavior.
 
 ---
 
 ### Step 4: Identify the Source of the Change
 
-Determine which systems or applications contributed to the observed behavior.
+The next objective is determining which systems, applications, or communication patterns contributed to the observed change. This helps establish the underlying cause rather than simply confirming that the monitored asset has changed.
 
-Review:
+Continue the investigation using [**Applications**](/docs/ug/netflow/drilldown#apps) and [**Explore Flows**](/docs/ug/tools/explore_flows).
 
-- Communication peers.
-- Traffic distribution.
-- Application usage.
-- Bandwidth consumption.
-- Recent communication changes.
+Use these investigation views to answer questions such as:
 
-The objective is to identify the underlying cause rather than simply observing that a change occurred.
+- Which hosts communicate with the monitored asset?
+- Which applications contributed to the observed behavior?
+- Have communication patterns changed?
+- Are new internal or external systems involved?
+- Which conversations account for most of the traffic?
+
+#### Evidence to Collect
+
+- High-volume conversations.
+- Applications generating the traffic.
+- New communication partners.
+- Client-server relationships.
+- Communication behavior inconsistent with the asset's normal role.
+
+#### Continue the Investigation
+
+After identifying the source of the change, determine whether the observed behavior aligns with normal operational activity.
 
 ---
 
 ### Step 5: Validate Against Normal Operations
 
-Determine whether the observed behavior aligns with expected operational activity.
+Not every operational change affecting a critical asset indicates a problem. Changes may be explained by planned maintenance, infrastructure upgrades, software deployments, backups, or changing business demand.
 
-Consider:
+Review the investigation findings alongside known operational activities to determine whether the observed behavior represents an expected operational change.
 
-- Scheduled maintenance.
-- Planned infrastructure changes.
-- Application deployments.
-- Business workload variations.
-- Previously observed operational patterns.
+Use the investigation findings to answer questions such as:
 
-Operational context helps distinguish expected changes from genuine issues.
+- Was maintenance being performed?
+- Were software updates or deployments in progress?
+- Were backup or replication jobs running?
+- Does the observed behavior align with normal business operations?
+- Can the change be explained by planned operational activities?
+
+#### Evidence to Collect
+
+- Scheduled maintenance activities.
+- Software deployment events.
+- Backup or replication traffic.
+- Business activities explaining the change.
+- Evidence supporting expected or unexpected behavior.
+
+#### Continue the Investigation
+
+Once the operational context has been established, determine the most appropriate response based on the investigation findings.
 
 ---
 
 ### Step 6: Determine the Appropriate Response
 
-Based on the findings, determine the next course of action.
+By this stage, the investigation should have established what changed, how the monitored asset was affected, which systems contributed to the observed behavior, and whether the activity is expected.
 
-Possible outcomes include:
+Review the investigation findings as a whole to determine the most appropriate operational response.
 
-- Continue monitoring because the activity is expected.
-- Investigate the systems contributing to the observed behavior.
-- Escalate the issue if critical services are affected.
-- Review historical activity to determine when the change began.
-- Update monitoring policies if operational requirements have changed.
+Use the investigation findings to answer questions such as:
 
----
+- Can the observed behavior be fully explained?
+- Does the investigation need to continue?
+- Should additional monitoring be introduced?
+- Is historical analysis required?
+- Should the issue be escalated for further investigation?
 
-## Applying this Investigation Using a Network Analytics Platform
+#### Evidence to Collect
 
-Monitoring critical assets manually often requires engineers to repeatedly examine dashboards, traffic statistics, and operational metrics across multiple systems. As the number of critical devices grows, maintaining consistent visibility becomes increasingly difficult.
+- Confirmed cause of the operational change.
+- Systems and applications responsible.
+- Operational justification for the observed behavior.
+- Recommended follow-up actions.
+- Escalation or monitoring requirements.
 
-Network analytics platforms such as **Trisul** simplify this process by allowing engineers to define and continuously monitor specific network assets, providing immediate visibility whenever their operational behavior changes.
+#### Investigation Outcome
 
-For this investigation, [**Trisul Custom Key Monitor**](/docs/ug/cg/ckey) enables engineers to:
-
-- Define business-critical network assets for continuous monitoring.
-- Monitor traffic and operational metrics for selected assets.
-- Observe changes in communication patterns and network activity.
-- Quickly identify deviations requiring investigation.
-- Drill down into detailed traffic associated with the monitored asset.
-
-Instead of searching across multiple dashboards, engineers can maintain continuous visibility into the infrastructure that matters most.
+At this stage, you should understand what changed, identify the systems responsible, determine whether the observed behavior is expected, assess its operational impact, and decide whether additional investigation or corrective action is required.
 
 ---
 
-## Investigation Findings
+## Investigation Completion
 
-The following observations may help determine the appropriate response.
+This investigation can generally be considered complete when:
 
-| Observation | Possible Interpretation |
-|--------------|-------------------------|
-| Traffic increases significantly on a monitored asset | Validate whether the increase is expected or investigate the contributing systems. |
-| Traffic decreases unexpectedly | Verify application availability or connectivity. |
-| New communication partners appear | Confirm whether the communication is authorized. |
-| Application usage changes significantly | Review recent deployments or configuration changes. |
-| Multiple monitored assets exhibit similar behavior | Investigate for a broader infrastructure issue. |
-| No operational impact is observed despite the change | Continue monitoring while documenting the behavior as a potential new baseline. |
+- The monitored asset has been identified.
+- The operational change has been characterized.
+- The impact on network operations has been assessed.
+- The systems and applications responsible have been identified.
+- The operational context has been validated.
+- Appropriate operational or engineering actions have been determined.
 
 ---
 
@@ -170,15 +219,16 @@ The following observations may help determine the appropriate response.
 
 - Monitor assets based on business criticality rather than quantity.
 - Periodically review the list of monitored assets as the network evolves.
-- Always evaluate observed changes within their operational context.
-- Use asset monitoring as an early warning mechanism rather than a replacement for investigation.
+- Progressively investigate from the monitored asset to the responsible hosts, applications, and communication patterns.
+- Always validate operational context before escalating an issue.
+- Use critical asset monitoring as an early warning mechanism rather than a replacement for investigation.
 - Document recurring operational patterns to improve future investigations.
 
 ---
 
 ## Related Investigations
 
-- If a monitored asset exhibits unusual communication behavior, continue with [**Investigate the Network Activity of an IP Address**](./inv1-exploreflows.md).
-- If the observed change involves increased bandwidth on a network interface, continue with [**Investigate High Traffic on a Network Interface**](./inv2-routersintfs.md).
-- If understanding when the change began requires reviewing earlier activity, continue with [**Investigate Historical Network Activity**](./inv3-retro.md).
-- If the observed behavior deviates from normal operating patterns, continue with [**Investigate Network Behavior Anomalies**](./inv5-tba.md).
+- [**Investigate the Network Activity of an IP Address**](./inv1-exploreflows.md)
+- [**Investigate High Traffic on a Network Interface**](./inv2-routersintfs.md)
+- [**Investigate Historical Network Activity**](./inv3-retro.md)
+- [**Investigate Network Behavior Anomalies**](./inv5-tba.md)

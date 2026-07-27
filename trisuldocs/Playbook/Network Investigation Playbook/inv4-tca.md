@@ -2,11 +2,11 @@
 
 ## Investigation Overview
 
-Not all network issues are discovered through user complaints or routine monitoring. In many cases, operational metrics such as bandwidth utilization, flow count, or connection rates exceed acceptable limits before users begin reporting performance issues.
+Sudden increases in bandwidth utilisation, connection rates, flow counts, or other network metrics are often the earliest indicators that something within the network has changed. These changes may be caused by legitimate operational activities such as backups, software deployments, or increased business demand, but they can also indicate application issues, misconfigurations, resource exhaustion, or emerging security events.
 
-Threshold-based monitoring enables network teams to detect these events early by generating alerts whenever predefined operational limits are crossed.
+The objective of this investigation is not simply to understand why a threshold was exceeded, but to determine what changed in the network. Starting from the triggered alert, the investigation progressively narrows the scope to identify the systems responsible, understand the traffic that caused the increase, evaluate its operational impact, and determine whether corrective action is required.
 
-This investigation provides a structured approach to determining why a threshold was exceeded, identifying the traffic responsible, and deciding whether corrective action is required.
+Using Trisul, this entire workflow can be completed from the triggered alert without switching between multiple monitoring tools.
 
 ---
 
@@ -14,11 +14,11 @@ This investigation provides a structured approach to determining why a threshold
 
 Use this investigation when you need to:
 
-- Investigate an alert indicating excessive bandwidth utilization.
+- Investigate an alert indicating excessive bandwidth utilisation.
 - Determine why a monitored metric exceeded its configured threshold.
 - Identify the hosts or applications responsible for the increase.
 - Validate whether the threshold crossing represents expected operational activity.
-- Prioritize operational response before users are affected.
+- Prioritise operational response before users are affected.
 
 ---
 
@@ -27,152 +27,206 @@ Use this investigation when you need to:
 By completing this investigation, you should be able to:
 
 - Determine which metric exceeded its threshold.
-- Identify when the threshold crossing occurred.
-- Understand the magnitude of the increase.
+- Understand the severity of the threshold crossing.
 - Identify the systems and applications responsible.
-- Determine whether the event requires further investigation or operational action.
+- Determine whether the observed activity is expected.
+- Assess the operational impact.
+- Decide whether further investigation or corrective action is required.
 
 ---
 
-## Investigation Steps
+## Investigation Workflow
 
-### Step 1: Identify the Threshold Crossing Event
+### Step 1: Review the Threshold Crossing Alert
 
-Begin by identifying the metric that exceeded its configured threshold.
+Every threshold investigation begins by understanding exactly what triggered the alert. Before investigating hosts or applications, establish which metric exceeded its configured threshold, when the event occurred, and which part of the network was affected.
 
-Determine:
+Open [**Threshold Crossing Alerts**](/docs/ug/alerts/tca) and select the triggered alert.
 
-- Which metric generated the alert.
-- Which network object was affected (interface, host, application, etc.).
-- When the threshold crossing occurred.
-- Whether the event is still active or has already subsided.
+Use the alert details to answer questions such as:
 
-Understanding what triggered the alert establishes the scope of the investigation.
+- Which metric exceeded its configured threshold?
+- Which interface, host, application, or monitored object generated the alert?
+- When did the threshold crossing occur?
+- Is the alert still active or has the metric already returned to normal?
+
+#### Evidence to Collect
+
+- Metric that triggered the alert.
+- Affected network object.
+- Configured threshold value.
+- Observed value.
+- Time the threshold crossing occurred.
+
+#### Continue the Investigation
+
+Once the alert has been understood, determine how significant the increase was before identifying the traffic responsible.
 
 ---
 
 ### Step 2: Measure the Magnitude of the Increase
 
-Determine how significantly the observed metric exceeded the configured threshold.
+Knowing that a threshold has been crossed is only part of the investigation. The next objective is understanding how far the observed metric exceeded its configured threshold and whether it represents a brief operational spike or sustained abnormal behaviour.
 
-Consider:
+Review the [historical trend](/docs/ug/alerts/tca#traffic-chart) for the affected metric.
 
-- The configured threshold value.
-- The observed value.
+Use the historical data to answer questions such as:
+
+- How much did the observed value exceed the configured threshold?
+- Was the increase gradual or sudden?
+- How long did the threshold remain exceeded?
+- Has similar behaviour occurred previously?
+
+#### Evidence to Collect
+
+- Peak observed value.
 - Duration of the threshold crossing.
-- Whether the increase occurred gradually or suddenly.
+- Historical trend.
+- Frequency of similar events.
+- Whether the metric returned to normal.
 
-This helps distinguish short-lived operational spikes from sustained abnormal activity.
+#### Continue the Investigation
+
+Once the severity of the threshold crossing has been established, identify the traffic responsible for generating the increase.
 
 ---
 
 ### Step 3: Identify the Source of the Increase
 
-Determine which systems or applications contributed to the threshold crossing.
+A threshold crossing is only the symptom of changing network behaviour. The next objective is identifying which systems, conversations, or applications generated the activity responsible for the alert.
 
-Review:
+Depending on the object that generated the threshold crossing, continue the investigation using [**Routers & Interfaces**](/docs/ug/netflow/routers_and_interfaces), [**Hosts**](/docs/ug/netflow/drilldown#hosts), or [**Explore Flows**](/docs/ug/tools/explore_flows).
+
+Use these investigation views to answer questions such as:
+
+- Which hosts generated the increase?
+- Which conversations contributed most to the traffic?
+- Which applications were responsible?
+- Did communication patterns change during the alert?
+
+#### Evidence to Collect
 
 - Top bandwidth consumers.
 - High-volume conversations.
 - Applications generating the traffic.
-- Changes in communication patterns.
+- Significant changes in communication patterns.
+- Network objects contributing most to the threshold crossing.
 
-The objective is to identify the source responsible for the increase rather than focusing solely on the alert itself.
+#### Continue the Investigation
+
+Once the source of the increase has been identified, determine whether the observed activity represents expected operational behaviour.
 
 ---
 
-### Step 4: Determine Whether the Activity Is Expected
+### Step 4: Validate the Operational Context
 
-A threshold crossing does not always indicate a network problem.
+A threshold crossing does not always indicate a network problem. Many alerts are triggered by legitimate operational activities such as scheduled backups, software deployments, maintenance windows, or increased business demand.
 
-Evaluate whether the observed activity can be explained by normal business operations.
+Continue reviewing the affected hosts, interfaces, and applications to determine whether the observed activity can be explained by normal network operations.
 
-Consider:
+Use the investigation findings to answer questions such as:
 
-- Scheduled backups or replication jobs.
-- Software updates.
-- Maintenance activities.
-- Planned data migrations.
-- Increased business demand.
+- Was a backup or replication job running?
+- Were software updates or deployments in progress?
+- Was maintenance scheduled during the same period?
+- Does the observed activity align with normal business operations?
 
-Operational context is essential before treating the event as an incident.
+#### Evidence to Collect
+
+- Scheduled maintenance activities.
+- Backup or replication traffic.
+- Software deployment activity.
+- Business events explaining the increase.
+- Evidence supporting expected or unexpected behaviour.
+
+#### Continue the Investigation
+
+If the activity cannot be fully explained, determine whether the threshold crossing had a measurable impact on network performance.
 
 ---
 
 ### Step 5: Assess the Operational Impact
 
-Determine whether the threshold crossing affected network performance or business services.
+After establishing the operational context, determine whether the threshold crossing affected network performance or business services. Not every threshold crossing requires immediate intervention, and understanding the operational impact helps prioritise the appropriate response.
 
-Consider:
+Continue investigating the affected network objects to determine whether the increase resulted in congestion, degraded application performance, or service disruption.
 
-- User-reported performance issues.
+Use the investigation to answer questions such as:
+
+- Did users report performance issues?
+- Was interface congestion observed?
+- Did latency or packet loss increase?
+- Were business applications affected?
+- Did services recover after the threshold crossing ended?
+
+#### Evidence to Collect
+
 - Interface congestion.
-- Increased latency.
-- Packet loss.
-- Service degradation.
+- Performance degradation.
+- User-reported issues.
+- Service interruptions.
+- Sustained resource utilisation.
 
-Not every threshold crossing requires immediate intervention. The operational impact should guide the response.
+#### Continue the Investigation
+
+Once the operational impact has been assessed, determine the most appropriate response based on the evidence collected.
 
 ---
 
 ### Step 6: Determine the Appropriate Response
 
-Based on the findings, determine the next course of action.
+By this stage, the investigation should have established what triggered the alert, how significant the increase was, which systems generated the traffic, and whether the activity was expected.
 
-Possible outcomes include:
+Review the investigation findings as a whole to determine the most appropriate operational response.
 
-- No action required because the activity is expected.
-- Continue investigating the systems responsible for the increase.
-- Adjust operational thresholds if they no longer reflect normal network behavior.
-- Initiate capacity planning if thresholds are crossed regularly.
-- Escalate the investigation if the activity cannot be explained.
+Use the investigation findings to answer questions such as:
 
----
+- Can the threshold crossing be fully explained?
+- Does the investigation need to continue?
+- Should the configured threshold be adjusted?
+- Is capacity planning required?
+- Should the event be escalated for further investigation?
 
-## Applying this Investigation Using a Network Analytics Platform
+#### Evidence to Collect
 
-Detecting that a threshold has been exceeded is only the beginning of the investigation. Engineers must then determine what caused the increase and whether it represents expected operational activity or an issue requiring attention.
+- Confirmed cause of the threshold crossing.
+- Systems responsible for the increase.
+- Operational justification for the observed activity.
+- Recommended follow-up actions.
+- Capacity planning or escalation requirements.
 
-Network analytics platforms such as **Trisul** simplify this process by generating threshold crossing alerts and providing immediate access to the traffic responsible for the event, reducing the time required to move from alert to root cause.
+#### Investigation Outcome
 
-For this investigation, [**Trisul Threshold Crossing Alerts**](/docs/ug/alerts/tca) enables engineers to:
-
-- Configure threshold-based monitoring for network metrics.
-- Generate alerts when configured limits are exceeded.
-- Review the affected metric and time of occurrence.
-- Drill down into the traffic responsible for the threshold crossing.
-- Continue the investigation using interface, host, or flow-level analysis.
-
+At this stage, you should understand why the threshold was crossed, identify the systems responsible, determine whether the activity was expected, assess its operational impact, and decide whether additional investigation or corrective action is required.
 
 ---
 
-## Investigation Findings
+## Investigation Completion
 
-The following observations may help determine the appropriate response.
+This investigation can generally be considered complete when:
 
-| Observation | Possible Interpretation |
-|--------------|-------------------------|
-| Threshold exceeded for only a few minutes | Temporary operational spike; continue monitoring. |
-| Threshold exceeded for an extended period | Sustained utilization requiring investigation or capacity planning. |
-| Traffic increase caused by scheduled business activity | Expected operational behavior. |
-| A small number of hosts generated most of the increase | Continue investigating those hosts. |
-| Unexpected applications caused the threshold crossing | Validate whether the activity is authorized. |
-| Threshold crossings occur repeatedly | Review threshold values and evaluate long-term network capacity. |
+- The triggered threshold has been identified.
+- The severity of the threshold crossing has been evaluated.
+- The systems and applications responsible have been identified.
+- The operational context has been validated.
+- The impact on network performance has been assessed.
+- Appropriate operational or engineering actions have been determined.
 
 ---
 
 ## Best Practices
 
-- Configure thresholds that reflect normal operational limits for your environment.
+- Treat threshold alerts as the starting point of an investigation rather than the conclusion.
 - Investigate sustained threshold crossings before isolated spikes.
-- Evaluate operational context before escalating an alert.
-- Use threshold alerts as the starting point for an investigation, not the conclusion.
-- Periodically review configured thresholds as network usage patterns evolve.
+- Always validate operational context before escalating an alert.
+- Correlate threshold crossings with the hosts, applications, and conversations responsible for the increase.
+- Review configured thresholds periodically as network usage evolves.
+- Use recurring threshold crossings as an input for long-term capacity planning.
 
 ---
 
 ## Related Investigations
 
-- If the threshold crossing is associated with a congested interface, continue with [**Investigate High Traffic on a Network Interface**](./inv2-routersintfs.md).
-- If a specific host is responsible for the increase, continue with [**Investigate the Network Activity of an IP Address**](./inv1-exploreflows.md).
-- If similar threshold crossings have occurred previously, continue with [**Investigate Historical Network Activity**](./inv3-retro.md).
+- [**Investigate High Traffic on a Network Interface**](/playbook/Network%20Investigation%20Playbook/inv2-routersintfs)
+- [**Investigate the Network Activity of an IP Address**](/playbook/Network%20Investigation%20Playbook/inv1-exploreflows)
+- [**Investigate Historical Network Activity**](/playbook/Network%20Investigation%20Playbook/inv3-retro)
