@@ -2,25 +2,23 @@
 
 ## Investigation Overview
 
-Data exfiltration is the unauthorized transfer of sensitive information from an organization's network. It may result from compromised user accounts, malware, insider threats, or unauthorized applications transmitting confidential data to external destinations.
+Sensitive information rarely leaves an organization's network without generating observable network activity. Large outbound transfers, repeated communication with unfamiliar external systems, unexpected uploads outside normal business hours, or unusual application behavior may all indicate an attempt to move data beyond organizational control.
 
-Unlike high-volume attacks, data exfiltration is often designed to remain unnoticed. Attackers may transfer data gradually, disguise traffic as legitimate application activity, or use encrypted channels to evade traditional security controls.
+Not every outbound transfer represents malicious activity. Backups, cloud synchronization, software updates, and legitimate business processes frequently generate similar traffic patterns. The objective of this investigation is to determine whether the observed communication represents normal business activity or potential data exfiltration, identify the systems involved, and establish the scope of the incident.
 
-This investigation provides a structured methodology for identifying suspicious outbound communications, validating whether sensitive data may have been transferred, and determining the scope of the potential compromise.
+Using Trisul Network Security Monitoring, analysts can progressively narrow the investigation from the initial indicator to the underlying communication without switching between multiple security tools.
 
 ---
 
-## Symptoms
+## When to Use This Investigation
 
-This investigation may be appropriate if you observe one or more of the following:
+Use this investigation when you need to:
 
-- Unusually large outbound data transfers.
-- Communication with unfamiliar external IP addresses or domains.
-- Unexpected outbound traffic outside normal business hours.
-- Excessive uploads from a workstation or server.
-- Alerts indicating potential data exfiltration.
-- Users reporting unusual application or network behavior.
-- Connections to unexpected countries or Autonomous Systems (ASNs).
+- Investigate unusually large outbound data transfers.
+- Validate communication with unfamiliar external destinations.
+- Determine whether outbound traffic represents legitimate business activity.
+- Investigate alerts indicating potential data exfiltration.
+- Assess the scope of a suspected data theft incident.
 
 ---
 
@@ -33,206 +31,208 @@ By completing this investigation, you should be able to:
 - Understand the applications and protocols involved.
 - Assess the volume and duration of the transfer.
 - Determine whether the activity is legitimate or suspicious.
-- Establish the scope of the potential data exposure.
+- Establish the scope of the potential compromise.
 
 ---
 
-## Investigation Methodology
+## Investigation Workflow
 
-### Step 1: Identify the Source Host
+### Step 1: Review Outbound Traffic
 
-Begin by identifying the internal host responsible for the outbound communication.
+Every data exfiltration investigation begins by identifying the systems generating unusual outbound network activity. Before analysing individual communications, determine which hosts are transmitting significant volumes of data outside the organization.
 
-Determine:
+Open **Top Outbound Traffic** to review outbound communications across the monitored network.
 
-- Which host initiated the transfer.
-- Whether the host normally communicates externally.
-- Whether multiple internal systems exhibit similar behavior.
-- Whether the activity coincides with any reported security events.
+Use this investigation to answer questions such as:
 
-Understanding the source system establishes the starting point for the investigation.
+- Which internal hosts generated the largest outbound transfers?
+- Which systems exhibit unusual outbound activity?
+- Did the communication occur during normal business hours?
+- Are multiple hosts exhibiting similar behavior?
+- Does the activity correspond to an alert or reported incident?
+
+#### Evidence to Preserve
+
+- Source host.
+- Outbound traffic volume.
+- Time of the communication.
+- Duration of the activity.
+- Additional hosts exhibiting similar behavior.
+
+#### Continue the Investigation
+
+Once the source host has been identified, determine where the data was transferred.
 
 ---
 
-### Step 2: Examine the Outbound Connections
+### Step 2: Investigate External Destinations
 
-Review the external destinations contacted by the host.
+Understanding where the data was sent is essential to determining whether the communication represents legitimate business activity or a potential security incident.
 
-Consider:
+Open **Destination Intelligence** for the selected host.
+
+Use this investigation to answer questions such as:
+
+- Which external IP addresses received the communication?
+- Which domains are associated with the destination?
+- Which Autonomous Systems (ASNs) own the infrastructure?
+- Which countries host the destination?
+- Does threat intelligence identify the destination as suspicious?
+
+#### Evidence to Preserve
 
 - Destination IP addresses.
-- Domain names.
-- Autonomous Systems (ASNs).
+- Domains.
+- ASN information.
 - Geographic locations.
-- Reputation of the destination.
+- Threat intelligence context.
 
-Connections to unfamiliar infrastructure do not necessarily indicate malicious activity, but they should be validated within the operational context.
+#### Continue the Investigation
 
----
-
-### Step 3: Analyze the Data Transfer
-
-Evaluate the characteristics of the outbound communication.
-
-Review:
-
-- Total bytes transferred.
-- Transfer duration.
-- Frequency of communication.
-- Connection timing.
-- Applications and protocols used.
-
-The objective is to determine whether the observed transfer aligns with the expected role of the system.
+Once the destination has been validated, determine what communication occurred between the source and destination.
 
 ---
 
-### Step 4: Compare Against Normal Behavior
+### Step 3: Analyze Network Flows
 
-Determine whether the observed activity differs from the host's normal communication patterns.
+After identifying the communicating systems, examine the network flows to understand how the transfer occurred. Flow analysis provides the context needed to determine whether the observed communication is consistent with the expected role of the host.
 
-Consider:
+Open **Flow Analysis** for the selected communication.
 
-- Historical outbound traffic volumes.
-- Typical external destinations.
-- Regular application usage.
-- Normal operating hours.
-- Previous communication history.
+Use this investigation to answer questions such as:
 
-Historical comparison helps distinguish legitimate business activity from suspicious behavior.
+- Which applications generated the communication?
+- Which protocols were used?
+- How much data was transferred?
+- How long did the communication last?
+- Were repeated sessions established?
 
----
-
-### Step 5: Validate with Supporting Evidence
-
-If additional investigation is required, review supporting evidence to better understand the communication.
-
-Depending on the available telemetry, this may include:
+#### Evidence to Preserve
 
 - Flow records.
+- Applications involved.
+- Protocols used.
+- Total bytes transferred.
+- Session duration and frequency.
+
+#### Continue the Investigation
+
+If the communication requires further validation, inspect the packet evidence supporting the network flows.
+
+---
+
+### Step 4: Validate with Packet Evidence
+
+Flow records describe the communication, but packet analysis provides the detailed evidence required to validate what occurred during the transfer.
+
+Where packet capture is available, pivot directly from the selected flow to **Packet Analysis**.
+
+Use this investigation to answer questions such as:
+
+- Does the packet capture support the flow analysis?
+- Is application behavior consistent with the reported protocol?
+- Is sensitive information visible within the communication?
+- Are protocol anomalies present?
+- Does the packet evidence indicate unauthorized activity?
+
+#### Evidence to Preserve
+
 - Packet captures.
-- DNS activity.
-- TLS metadata.
-- Security alerts.
-- Authentication logs.
+- Protocol exchanges.
+- File transfer evidence.
+- Packet timestamps.
+- Indicators supporting or disproving exfiltration.
 
-Correlating multiple sources of evidence improves confidence in the investigation findings.
+#### Continue the Investigation
 
----
-
-### Step 6: Determine the Scope of the Incident
-
-Based on the collected evidence, determine:
-
-- Whether sensitive data may have been transferred.
-- Whether additional hosts exhibit similar behavior.
-- Whether the communication is ongoing.
-- Whether containment or incident response actions should be initiated.
-
-Document the findings and preserve the evidence for further investigation if necessary.
+After validating the communication, determine whether similar activity has occurred previously.
 
 ---
 
-## Applying this Investigation Using a Network Security Monitoring Platform
+### Step 5: Review Historical Activity
 
-Investigating potential data exfiltration often requires correlating information from multiple security and network monitoring tools, including packet captures, flow records, DNS logs, firewall events, and endpoint telemetry. Performing this analysis manually can be time-consuming, particularly when reconstructing communications across large enterprise networks.
+Determining whether the observed communication is new or part of an established pattern provides valuable context for the investigation.
 
-Network Security Monitoring (NSM) platforms simplify this process by consolidating multiple sources of network evidence into a unified investigative workflow, allowing analysts to move quickly from an initial indicator to validated findings.
+Open **Historical Investigation (Retro)** for the affected host and destination.
 
-For this investigation, **Trisul Network Security Monitoring** enables analysts to:
+Use this investigation to answer questions such as:
 
-### Review Outbound Traffic Patterns
+- Has this host communicated with the destination previously?
+- Is the observed transfer consistent with historical behavior?
+- When did the communication first appear?
+- Has the volume increased over time?
+- Are additional hosts communicating with the same destination?
 
-Identify hosts generating significant outbound traffic and quickly locate unusual uploads or external communications.
+#### Evidence to Preserve
 
-> **Screenshot Placeholder:** Top Outbound Traffic / Hosts Dashboard
+- Historical communication patterns.
+- Previous occurrences.
+- Changes in transfer volume.
+- Additional affected hosts.
+- Timeline of the activity.
 
----
+#### Continue the Investigation
 
-### Analyze Network Flows
-
-Examine flow records to identify:
-
-- Source and destination hosts
-- Applications and protocols
-- Traffic volume
-- Session duration
-- Historical communication patterns
-
-> **Screenshot Placeholder:** Flow Analysis
+Once the historical context has been established, review the investigation findings to determine the scope of the incident.
 
 ---
 
-### Validate with Packet Evidence
+### Step 6: Summarize the Investigation
 
-Where packet capture is available, inspect the underlying network traffic to validate the communication and understand how the transfer occurred.
+By this stage, the investigation should have established the source of the communication, the external destination, the applications involved, supporting packet evidence, and the historical context surrounding the activity.
 
-> **Screenshot Placeholder:** Packet Analysis
+Open **Trisul AI** to review the investigation findings and summarize the collected evidence.
 
----
+Use this investigation to answer questions such as:
 
-### Investigate External Destinations
+- What evidence suggests potential data exfiltration?
+- Which observations require immediate attention?
+- Which systems are involved?
+- Is additional investigation recommended?
+- Should the incident be escalated?
 
-Review destination IP addresses together with:
+#### Evidence to Preserve
 
-- Domain names
-- Autonomous Systems (ASNs)
-- Geographic locations
-- Threat intelligence context
+- Investigation summary.
+- Hosts involved.
+- Destination infrastructure.
+- Flow and packet evidence.
+- Recommended follow-up actions.
 
-This helps determine whether communications involve expected business infrastructure or unfamiliar external services.
+#### Investigation Outcome
 
-> **Screenshot Placeholder:** Destination Intelligence
-
----
-
-### Correlate Historical Activity
-
-Compare the observed communication with historical traffic to determine whether the behavior represents a new event or an established communication pattern.
-
-> **Screenshot Placeholder:** Historical Investigation (Retro)
+At this stage, you should understand whether the observed outbound communication represents legitimate business activity or potential data exfiltration, identify the systems involved, establish the scope of the incident, and determine whether incident response or further investigation is required.
 
 ---
 
-### Accelerate Investigation with AI
+## Investigation Completion
 
-Where appropriate, AI-assisted investigation can summarize communication patterns, identify unusual observations, and help analysts prioritize areas requiring deeper investigation.
+This investigation can generally be considered complete when:
 
-> **Screenshot Placeholder:** AI Investigation
-
----
-
-By combining flow analytics, packet capture, historical traffic, destination intelligence, and AI-assisted investigation within a single platform, Trisul enables analysts to investigate potential data exfiltration without manually correlating evidence across multiple security tools.
-
----
-
-## Investigation Findings
-
-The following observations may help determine the next stage of the investigation.
-
-| Observation | Possible Interpretation |
-|------------|--------------------------|
-| Large outbound transfers to approved business services | Likely legitimate business activity. |
-| Communication with unfamiliar external infrastructure | Validate business purpose and destination reputation. |
-| Transfers occurring outside normal operating hours | Continue investigating user activity and application behavior. |
-| Repeated communications with the same external destination | Review the purpose and frequency of the connection. |
-| Multiple hosts communicating with the same unfamiliar destination | Investigate for broader compromise or coordinated activity. |
-| Historical analysis shows the behavior is new | Treat the activity as potentially suspicious until validated. |
+- The source host has been identified.
+- The external destination has been validated.
+- The communication has been analyzed using flow records.
+- Packet evidence has been reviewed where available.
+- Historical activity has been compared.
+- The scope of the potential incident has been established.
+- Appropriate incident response or engineering actions have been determined.
 
 ---
 
 ## Best Practices
 
-- Establish a baseline of normal outbound communication for critical systems.
-- Investigate destination reputation alongside traffic volume.
-- Correlate flows with packet evidence whenever available.
+- Investigate unusual outbound communications before assuming malicious activity.
+- Validate destination reputation together with business context.
+- Correlate flow records with packet evidence whenever available.
 - Compare current observations with historical communication patterns.
-- Preserve investigation evidence before containment or remediation activities begin.
+- Preserve investigation evidence before containment or remediation begins.
+- Document all findings to support incident response and post-incident analysis.
 
 ---
 
 ## Related Investigations
 
-- If outbound communications exhibit periodic or automated behavior, continue with **Investigate Command and Control (C2) Communications**.
-- If the transfer occurs over encrypted channels, continue with **Investigate Encrypted Traffic**.
-- If the destination matches known malicious infrastructure, continue with **Investigate Threat Intelligence Alerts**.
-- If additional historical analysis is required, continue with **Hunt Threats Across Historical Network Activity**.
+- **Investigate Command and Control (C2) Communications**
+- **Investigate Encrypted Traffic**
+- **Investigate Threat Intelligence Alerts**
+- **Hunt Threats Across Historical Network Activity**

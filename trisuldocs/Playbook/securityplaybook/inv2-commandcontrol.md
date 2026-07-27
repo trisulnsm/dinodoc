@@ -2,25 +2,23 @@
 
 ## Investigation Overview
 
-After compromising a system, attackers typically establish communication with an external Command and Control (C2) server to receive instructions, download additional payloads, exfiltrate data, or maintain persistent access.
+Compromised systems rarely operate in isolation. Once malware gains a foothold, it typically establishes communication with an external Command and Control (C2) server to receive instructions, download additional payloads, maintain persistence, or coordinate further malicious activity. These communications often occur long before any visible impact is observed on the network.
 
-Unlike large-scale attacks, C2 communications are often designed to blend into legitimate network traffic. Attackers may use standard protocols such as DNS, HTTP, HTTPS, or TLS, generate periodic beaconing traffic, or leverage encrypted channels to conceal their activities.
+Unlike large data transfers or denial-of-service attacks, C2 traffic is designed to blend into legitimate network activity. Attackers frequently use common protocols such as DNS, HTTP, HTTPS, and TLS, communicate at regular intervals, or disguise traffic as normal application behavior. The objective of this investigation is to determine whether suspicious outbound communications represent legitimate application traffic or potential command and control activity, identify the affected systems, and assess the scope of the compromise.
 
-This investigation provides a structured methodology for identifying suspicious outbound communications, validating potential command and control activity, and determining whether a host has been compromised.
+Using Trisul Network Security Monitoring, analysts can investigate suspicious communications from the initial indicator through network flows, DNS activity, TLS metadata, packet evidence, and historical analysis without switching between multiple security tools.
 
 ---
 
-## Symptoms
+## When to Use This Investigation
 
-This investigation may be appropriate if you observe one or more of the following:
+Use this investigation when you need to:
 
-- Periodic outbound connections to the same external destination.
-- Repeated DNS queries for unfamiliar domains.
-- Persistent HTTPS or TLS sessions to unknown hosts.
-- Connections using uncommon or suspicious JA3 fingerprints.
-- Communication with domains or IP addresses of unknown business purpose.
-- Alerts indicating potential malware or command and control activity.
-- Unexplained outbound traffic from user workstations or servers.
+- Investigate periodic outbound communications.
+- Validate repeated connections to unfamiliar external destinations.
+- Analyze suspicious DNS or TLS activity.
+- Investigate alerts indicating potential malware or command and control activity.
+- Determine whether a host has established persistent communication with external infrastructure.
 
 ---
 
@@ -36,204 +34,204 @@ By completing this investigation, you should be able to:
 
 ---
 
-## Investigation Methodology
+## Investigation Workflow
 
-### Step 1: Identify the Suspected Host
+### Step 1: Review Suspicious Communications
 
-Begin by identifying the internal host responsible for the suspicious communication.
+Every command and control investigation begins by identifying the host responsible for the suspicious outbound communication. Before examining destinations or protocols, establish which systems are generating recurring or unusual external connections.
 
-Determine:
+Open **Network Flows** to review outbound communications.
 
-- Which system initiated the connection.
-- Whether multiple hosts communicate with the same destination.
-- Whether the communication is still active.
-- Whether recent security alerts involve the same host.
+Use this investigation to answer questions such as:
 
-Establishing the affected host provides the starting point for the investigation.
+- Which internal host initiated the communication?
+- Which hosts communicate repeatedly with external systems?
+- Is the communication still active?
+- Are multiple hosts exhibiting similar behavior?
+- Does the communication correspond to a security alert?
+
+#### Evidence to Preserve
+
+- Source host.
+- Communication timeline.
+- Flow records.
+- Additional affected hosts.
+- Alert timestamps.
+
+#### Continue the Investigation
+
+Once the communicating host has been identified, determine where the communication is being directed.
 
 ---
 
-### Step 2: Examine the External Destination
+### Step 2: Investigate External Destinations
 
-Review the destination contacted by the host.
+Understanding the external infrastructure helps determine whether the communication is expected or potentially malicious.
 
-Consider:
+Open **Destination Intelligence** for the selected communication.
 
-- Destination IP address.
-- Domain name.
+Use this investigation to answer questions such as:
+
+- Which IP addresses are being contacted?
+- Which domains are associated with the destination?
+- Which Autonomous System (ASN) owns the infrastructure?
+- Which country hosts the destination?
+- Does threat intelligence identify the destination as suspicious?
+
+#### Evidence to Preserve
+
+- Destination IP addresses.
+- Domain names.
+- ASN information.
 - Geographic location.
-- Autonomous System (ASN).
-- Threat intelligence reputation.
+- Threat intelligence findings.
 
-Understanding where the communication is directed helps determine whether the destination is expected within the organization's environment.
+#### Continue the Investigation
+
+Once the destination has been validated, determine whether the communication exhibits beaconing or other persistent communication patterns.
 
 ---
 
 ### Step 3: Analyze Communication Patterns
 
-Review how the host communicates with the external destination.
+Command and control communications are often characterized by regular, automated connections rather than large data transfers. Reviewing communication frequency helps distinguish automated beaconing from normal user activity.
 
-Evaluate:
+Open **Flow Analysis** for the selected host and destination.
+
+Use this investigation to answer questions such as:
+
+- How frequently does the host communicate?
+- Are connections established at regular intervals?
+- How long do the sessions last?
+- How much data is exchanged during each session?
+- Does the communication persist over time?
+
+#### Evidence to Preserve
 
 - Communication frequency.
 - Session duration.
-- Time intervals between connections.
-- Data volume transferred.
-- Number of repeated connections.
+- Data transferred.
+- Connection intervals.
+- Flow timeline.
 
-Periodic communications occurring at regular intervals may indicate automated beaconing behavior.
+#### Continue the Investigation
+
+If the communication uses encrypted protocols, investigate the available TLS metadata.
 
 ---
 
 ### Step 4: Analyze Encrypted Sessions
 
-If the communication uses encrypted protocols, examine the available metadata.
+Many modern command and control frameworks rely on encrypted protocols to conceal their activity. Even without decrypting traffic, TLS metadata often provides valuable indicators that support the investigation.
 
-Review:
+Open **TLS Metadata** for the selected communication.
+
+Use this investigation to answer questions such as:
+
+- Which TLS version is being used?
+- What Server Name Indication (SNI) is presented?
+- Which JA3 and JA3S fingerprints are observed?
+- Does the certificate appear legitimate?
+- Does the encrypted session match known application behavior?
+
+#### Evidence to Preserve
 
 - TLS versions.
+- JA3 fingerprints.
+- JA3S fingerprints.
 - Server Name Indication (SNI).
-- Certificate information.
-- JA3 and JA3S fingerprints.
-- Flow characteristics.
+- Certificate metadata.
 
-Even without decrypting traffic, metadata can provide valuable indicators of suspicious communication.
+#### Continue the Investigation
+
+After reviewing the encrypted communication, validate the findings using additional network evidence.
 
 ---
 
 ### Step 5: Correlate Supporting Evidence
 
-Correlate the observed communication with additional network evidence.
+A command and control investigation becomes stronger when multiple sources of evidence support the same conclusion. Correlating DNS activity, packet captures, historical communications, and threat intelligence provides greater confidence than relying on a single indicator.
 
-Where available, review:
+Continue the investigation using **DNS Analysis**, **Packet Analysis**, and **Historical Investigation (Retro)**.
+
+Use this investigation to answer questions such as:
+
+- Do DNS queries support the observed communication?
+- Has the destination been contacted previously?
+- Does packet analysis confirm the protocol behavior?
+- Has the communication changed over time?
+- Are additional hosts communicating with the same destination?
+
+#### Evidence to Preserve
 
 - DNS activity.
-- Flow records.
 - Packet captures.
-- Threat intelligence.
-- Historical network activity.
-- Security alerts.
+- Historical communications.
+- Threat intelligence findings.
+- Additional affected hosts.
 
-Combining multiple sources of evidence helps validate whether the observed communication represents legitimate business activity or malicious behavior.
+#### Continue the Investigation
 
----
-
-### Step 6: Assess the Scope of the Compromise
-
-Based on the investigation, determine:
-
-- Whether the communication represents command and control activity.
-- Whether additional hosts communicate with the same infrastructure.
-- Whether persistence or lateral movement may have occurred.
-- Whether incident response procedures should be initiated.
-
-Document the findings and preserve relevant evidence for further analysis.
+Once the communication has been validated, determine whether the observed behavior represents command and control activity and assess the scope of the compromise.
 
 ---
 
-## Applying this Investigation Using a Network Security Monitoring Platform
+### Step 6: Summarize the Investigation
 
-Investigating command and control activity often requires analysts to correlate DNS records, flow data, encrypted session metadata, packet captures, and threat intelligence from multiple security tools. Performing this analysis manually can delay incident response and make subtle communication patterns difficult to identify.
+By this stage, the investigation should have established the communicating host, validated the external destination, analyzed communication frequency, reviewed encrypted session metadata, and correlated supporting evidence.
 
-Network Security Monitoring (NSM) platforms simplify this investigation by consolidating network metadata, behavioral indicators, and packet evidence into a unified investigative workflow.
+Open **Trisul AI** to review the investigation findings and summarize the collected evidence.
 
-For this investigation, **Trisul Network Security Monitoring** enables analysts to:
+Use this investigation to answer questions such as:
 
-### Identify Beaconing Activity
+- Does the evidence indicate command and control activity?
+- Which hosts are affected?
+- Is the communication ongoing?
+- Does the incident require immediate containment?
+- Should incident response procedures be initiated?
 
-Review recurring outbound communications to identify periodic connection patterns commonly associated with command and control infrastructure.
+#### Evidence to Preserve
 
-> **Screenshot Placeholder:** Beaconing or Flow Timeline
+- Investigation summary.
+- Affected hosts.
+- Destination infrastructure.
+- Flow and packet evidence.
+- Recommended response actions.
 
----
+#### Investigation Outcome
 
-### Analyze DNS Activity
-
-Review DNS queries associated with the host to identify suspicious or newly observed domains.
-
-> **Screenshot Placeholder:** DNS Activity
-
----
-
-### Examine TLS Metadata
-
-Analyze encrypted communications using:
-
-- JA3 client fingerprints
-- JA3S server fingerprints
-- TLS versions
-- Server Name Indication (SNI)
-- Certificate information
-
-This provides visibility into encrypted sessions without requiring TLS decryption.
-
-> **Screenshot Placeholder:** JA3 Client and Server Analysis
+At this stage, you should understand whether the observed communication represents legitimate application traffic or potential command and control activity, identify the affected systems, assess the scope of the compromise, and determine whether incident response or further investigation is required.
 
 ---
 
-### Correlate Network Flows
+## Investigation Completion
 
-Review flow records to determine:
+This investigation can generally be considered complete when:
 
-- Communication frequency
-- Session duration
-- Data volume
-- Historical communication patterns
-
-This helps determine whether communications exhibit automated or persistent behavior.
-
-> **Screenshot Placeholder:** Flow Analysis
-
----
-
-### Validate with Packet Evidence
-
-Where packet capture is available, inspect the underlying network traffic to validate protocol behavior and better understand the communication.
-
-> **Screenshot Placeholder:** Packet Analysis
-
----
-
-### Accelerate the Investigation
-
-AI-assisted investigation can summarize communication behavior, highlight unusual observations, and assist analysts in prioritizing systems requiring further investigation.
-
-> **Screenshot Placeholder:** AI Investigation
-
----
-
-By combining DNS analysis, TLS metadata, JA3 fingerprinting, flow analytics, packet capture, and AI-assisted investigation within a single platform, Trisul enables analysts to investigate command and control activity without manually correlating evidence across multiple security tools.
-
----
-
-## Investigation Findings
-
-The following observations may help determine the next stage of the investigation.
-
-| Observation | Possible Interpretation |
-|-------------|-------------------------|
-| Periodic outbound communication to the same destination | Possible command and control beaconing. |
-| Multiple hosts communicate with the same external infrastructure | Investigate for broader compromise. |
-| Unknown JA3 fingerprint communicating externally | Validate the application or client responsible. |
-| Communication matches approved cloud services | Likely legitimate application traffic. |
-| DNS queries for newly observed or low-reputation domains | Continue investigating destination reputation. |
-| Historical analysis shows communication began recently | Treat as a potentially significant security event until validated. |
+- The communicating host has been identified.
+- The external destination has been validated.
+- Communication patterns have been analyzed.
+- TLS metadata has been reviewed where applicable.
+- Supporting evidence has been correlated.
+- The scope of the potential compromise has been established.
+- Appropriate incident response or engineering actions have been determined.
 
 ---
 
 ## Best Practices
 
 - Investigate communication frequency in addition to traffic volume.
-- Analyze TLS metadata even when payloads are encrypted.
+- Review TLS metadata even when payloads are encrypted.
 - Correlate DNS activity with flow records and packet evidence.
-- Compare current communication patterns against historical behavior.
-- Validate destinations using threat intelligence before drawing conclusions.
+- Compare current communications against historical behavior.
+- Preserve investigation evidence before containment begins.
+- Document all findings to support incident response activities.
 
 ---
 
 ## Related Investigations
 
-- If suspicious outbound transfers are identified, continue with **Investigate Potential Data Exfiltration**.
-- If encrypted sessions require deeper analysis, continue with **Investigate Encrypted Traffic**.
-- If the destination matches known malicious infrastructure, continue with **Investigate Threat Intelligence Alerts**.
-- If additional historical evidence is required, continue with **Hunt Threats Across Historical Network Activity**.
+- [**Investigate Potential Data Exfiltration**](/playbook/securityplaybook/inv1-exfiltration)
+- [**Investigate Encrypted Traffic**](/playbook/securityplaybook/inv3-encryptedtraffic)
+- [**Investigate Threat Intelligence Alerts**](/playbook/securityplaybook/inv6-secalerts)
+- [**Hunt Threats Across Historical Network Activity**](/playbook/securityplaybook/inv7-historical)

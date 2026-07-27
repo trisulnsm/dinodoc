@@ -2,24 +2,23 @@
 
 ## Investigation Overview
 
-Security alerts are often the first indication of suspicious activity within an organization's network. These alerts may originate from intrusion detection systems (IDS), behavioral analytics, threat intelligence feeds, anomaly detection engines, or other security controls.
+Security alerts are often the first indication of suspicious activity within an organization's network. They may originate from intrusion detection systems (IDS), behavioral analytics, threat intelligence feeds, anomaly detection engines, or other security controls. While alerts highlight potentially significant events, they rarely provide sufficient context to determine whether malicious activity has actually occurred.
 
-While alerts provide valuable indicators, they rarely present the complete picture. A single alert may represent an isolated event, part of a larger attack sequence, or even legitimate network activity. Effective investigation requires analysts to validate the alert, understand its context, correlate supporting evidence, and determine the potential impact on the environment.
+An alert should be treated as the starting point of an investigation rather than a confirmed incident. The objective is to validate the alert, understand the surrounding network activity, correlate supporting evidence, and determine the appropriate response.
 
-This investigation provides a structured methodology for analyzing security alerts, determining their significance, and identifying the appropriate response.
+Using Trisul Network Security Monitoring, analysts can investigate security alerts by correlating network telemetry, packet evidence, behavioral analytics, historical activity, MITRE ATT&CK mapping, and AI-assisted investigation within a single workflow.
 
 ---
 
-## Symptoms
+## When to Use This Investigation
 
-This investigation may be appropriate if you observe one or more of the following:
+Use this investigation when you need to:
 
-- An IDS or IPS alert.
-- Behavioral or anomaly detection alerts.
-- Threat intelligence notifications.
-- Multiple correlated alerts involving the same host.
-- Alerts indicating suspicious network activity.
-- Security events requiring validation or prioritization.
+- Investigate IDS or IPS alerts.
+- Validate behavioral or anomaly detection alerts.
+- Investigate threat intelligence notifications.
+- Correlate multiple alerts involving the same host.
+- Determine whether a security alert represents a genuine incident.
 
 ---
 
@@ -36,195 +35,232 @@ By completing this investigation, you should be able to:
 
 ---
 
-## Investigation Methodology
+## Investigation Workflow
 
-### Step 1: Review the Alert
+### Step 1: Review the Security Alert
 
-Begin by understanding the alert itself.
+Every alert investigation begins by understanding why the alert was generated. Before examining network activity, review the alert details to establish the affected systems, detection logic, and severity.
 
-Determine:
+Open **Security Alerts**.
 
-- Alert type.
+Use this investigation to answer questions such as:
+
+- What generated the alert?
+- When did the alert occur?
+- Which detection rule triggered the alert?
+- Which hosts are involved?
+- What is the severity of the alert?
+
+#### Evidence to Preserve
+
+- Alert details.
 - Detection source.
-- Time of occurrence.
-- Severity.
-- Detection logic.
-- Affected assets.
+- Alert severity.
+- Alert timestamp.
+- Affected hosts.
 
-Understanding why the alert was generated provides the foundation for the investigation.
+#### Continue the Investigation
 
----
-
-### Step 2: Identify the Affected Assets
-
-Review the systems associated with the alert.
-
-Determine:
-
-- Source systems.
-- Destination systems.
-- Users involved.
-- Applications.
-- Critical infrastructure affected.
-
-This helps establish the operational importance of the event.
+Once the alert has been understood, determine the network activity associated with the event.
 
 ---
 
-### Step 3: Analyze the Network Activity
+### Step 2: Analyze Network Activity
 
-Review the network communications associated with the alert.
+Understanding the communications associated with the alert helps determine whether the observed behavior aligns with normal operations or indicates suspicious activity.
 
-Consider:
+Open **Flow Analysis** for the affected hosts.
 
-- Connection timeline.
-- Communication frequency.
-- Traffic volume.
-- Protocols.
-- Applications.
-- External destinations.
+Use this investigation to answer questions such as:
 
-The objective is to determine whether the observed behavior aligns with normal network operations.
+- Which hosts communicated?
+- Which applications generated the traffic?
+- Which protocols were used?
+- What was the communication timeline?
+- Which external destinations were contacted?
+
+#### Evidence to Preserve
+
+- Flow records.
+- Source and destination hosts.
+- Applications involved.
+- Protocols used.
+- Communication timeline.
+
+#### Continue the Investigation
+
+Once the network activity has been established, validate the alert using packet-level evidence.
+
+---
+
+### Step 3: Validate with Packet Evidence
+
+Packet analysis provides the detailed evidence needed to confirm whether the alert accurately represents the observed network activity.
+
+Open **Packet Analysis**.
+
+Use this investigation to answer questions such as:
+
+- Does packet analysis validate the alert?
+- Is suspicious protocol behavior visible?
+- Are indicators of exploitation present?
+- Does the packet evidence support the flow analysis?
+- Is additional investigation required?
+
+#### Evidence to Preserve
+
+- Packet captures.
+- Protocol exchanges.
+- Packet timestamps.
+- Indicators of compromise.
+- Supporting evidence.
+
+#### Continue the Investigation
+
+After validating the communication, correlate the findings using additional network evidence.
 
 ---
 
 ### Step 4: Correlate Supporting Evidence
 
-Gather additional evidence to validate the alert.
+A single alert rarely provides enough information to determine the scope of an incident. Correlating multiple sources of evidence improves confidence in the investigation.
 
-Where available, review:
+Continue the investigation using **DNS Analysis**, **TLS Metadata**, **Threat Intelligence**, and **Behavioral Analytics**.
 
-- Flow records.
-- Packet captures.
+Use this investigation to answer questions such as:
+
+- Do DNS queries support the observed communication?
+- Does TLS metadata reveal unusual encrypted sessions?
+- Does threat intelligence identify the destination as malicious?
+- Are behavioral anomalies associated with the affected hosts?
+- Are additional alerts related to the same activity?
+
+#### Evidence to Preserve
+
 - DNS activity.
 - TLS metadata.
-- Historical traffic.
-- Threat intelligence.
-- Related security alerts.
+- Threat intelligence findings.
+- Behavioral observations.
+- Related alerts.
 
-Correlating multiple sources of evidence helps determine whether the alert represents a genuine security incident.
+#### Continue the Investigation
+
+Once the supporting evidence has been correlated, determine how the alert fits within the overall attack sequence.
 
 ---
 
 ### Step 5: Understand the Attack Context
 
-Determine how the alert fits within the overall investigation.
+Individual alerts often represent only one stage of an attack. Mapping the investigation to the MITRE ATT&CK framework helps place the alert within the broader attack lifecycle.
 
-Consider:
+Open **MITRE ATT&CK Mapping**.
 
-- Possible attacker objectives.
-- Related techniques.
-- Earlier or subsequent activity.
-- Potential lateral movement.
-- Evidence of persistence.
-- Additional compromised systems.
+Use this investigation to answer questions such as:
 
-Understanding the broader context helps prioritize response activities.
+- Which MITRE ATT&CK tactic does the alert represent?
+- Which techniques are involved?
+- Does the activity indicate reconnaissance, execution, persistence, or exfiltration?
+- Are multiple attack stages visible?
+- Does the investigation indicate a broader compromise?
 
----
+#### Evidence to Preserve
 
-### Step 6: Determine the Response
+- MITRE ATT&CK tactics.
+- Techniques identified.
+- Attack progression.
+- Related activity.
+- Compromise indicators.
 
-Based on the collected evidence, determine:
+#### Continue the Investigation
 
-- Whether the alert is a true positive.
-- Whether the activity is ongoing.
-- Whether additional systems are affected.
-- Whether containment or incident response should be initiated.
-
-Document the investigation findings and preserve evidence for future analysis.
+Once the attack context has been established, review historical activity before determining the appropriate response.
 
 ---
 
-## Applying this Investigation Using a Network Security Monitoring Platform
+### Step 6: Review Historical Activity
 
-Investigating security alerts often requires analysts to correlate alerts with packets, flows, behavioral indicators, threat intelligence, and historical network activity. Switching between multiple security tools to gather this information can significantly increase investigation time and make it difficult to understand the complete attack sequence.
+Historical analysis determines whether the alert represents an isolated event or part of an ongoing pattern of activity.
 
-Network Security Monitoring (NSM) platforms simplify this process by combining alert context, network telemetry, behavioral analytics, and historical evidence into a unified investigative workflow.
+Open **Historical Investigation (Retro)**.
 
-For this investigation, **Trisul Network Security Monitoring** enables analysts to:
+Use this investigation to answer questions such as:
 
-### Review Alert Details
+- Has similar activity occurred previously?
+- When was the behavior first observed?
+- Have additional hosts generated similar alerts?
+- Has the activity increased over time?
+- Does the historical evidence indicate persistence?
 
-Examine the alert together with associated hosts, communication details, timestamps, and supporting metadata.
+#### Evidence to Preserve
 
-> **Screenshot Placeholder:** Security Alert Details
+- Historical alerts.
+- Previous communications.
+- Timeline.
+- Additional affected hosts.
+- Historical trends.
 
----
+#### Continue the Investigation
 
-### Correlate Network Evidence
-
-Review packet captures, network flows, DNS activity, and TLS metadata associated with the alert.
-
-This allows analysts to validate detections using multiple sources of network evidence.
-
-> **Screenshot Placeholder:** Correlated Investigation View
-
----
-
-### Visualize MITRE ATT&CK Context
-
-Map alerts to the **MITRE ATT&CK** framework to better understand:
-
-- Attacker tactics
-- Techniques
-- Attack progression
-- Behavioral relationships
-
-This helps analysts place individual alerts within the broader context of an attack lifecycle.
-
-> **Screenshot Placeholder:** MITRE ATT&CK Matrix
+Once the historical context has been established, summarize the investigation findings and determine the appropriate response.
 
 ---
 
-### Investigate Historical Activity
+### Step 7: Summarize the Investigation
 
-Review previous communications and historical alerts involving the affected systems to determine whether the observed behavior is new or part of an ongoing compromise.
+By this stage, the investigation should have validated the alert, analyzed the associated network activity, reviewed packet evidence, correlated supporting telemetry, understood the attack context, and compared the activity against historical observations.
 
-> **Screenshot Placeholder:** Historical Investigation
+Open **Trisul AI** to review the investigation findings and summarize the collected evidence.
+
+Use this investigation to answer questions such as:
+
+- Does the evidence validate the alert?
+- Is this a true positive or false positive?
+- Which systems are affected?
+- Does the activity require immediate containment?
+- Should the incident be escalated?
+
+#### Evidence to Preserve
+
+- Investigation summary.
+- Affected systems.
+- Supporting evidence.
+- Historical findings.
+- Recommended response actions.
+
+#### Investigation Outcome
+
+At this stage, you should understand whether the alert represents a genuine security incident, identify the affected systems, establish the scope of the activity, and determine the appropriate operational or incident response actions.
 
 ---
 
-### Accelerate Investigation with AI
+## Investigation Completion
 
-AI-assisted investigation can summarize related alerts, identify significant observations, and help analysts prioritize systems requiring immediate attention.
+This investigation can generally be considered complete when:
 
-> **Screenshot Placeholder:** AI Investigation
-
----
-
-By combining security alerts, network telemetry, MITRE ATT&CK mapping, historical analysis, and AI-assisted investigation within a single platform, Trisul enables analysts to validate alerts more efficiently and understand attacker behavior with greater context.
-
----
-
-## Investigation Findings
-
-The following observations may help determine the next stage of the investigation.
-
-| Observation | Possible Interpretation |
-|-------------|-------------------------|
-| Alert supported by packet and flow evidence | High-confidence security event requiring further investigation. |
-| Multiple correlated alerts involving the same host | Investigate for broader compromise or attack progression. |
-| Historical analysis reveals repeated activity | Review persistence and long-term attacker behavior. |
-| MITRE mapping indicates multiple attack techniques | Consider escalation due to increased attack complexity. |
-| Supporting evidence does not validate the alert | Review for possible false positive before taking action. |
-| Multiple hosts exhibit similar alert patterns | Investigate organization-wide impact. |
+- The security alert has been validated.
+- The associated network activity has been analyzed.
+- Packet evidence has been reviewed where available.
+- Supporting evidence has been correlated.
+- The attack context has been established using MITRE ATT&CK.
+- Historical activity has been reviewed.
+- Appropriate response actions have been identified.
 
 ---
 
 ## Best Practices
 
-- Treat every alert as an investigative starting point rather than a confirmed incident.
-- Correlate alerts with network evidence before determining severity.
-- Use historical context to understand attack progression.
-- Leverage MITRE ATT&CK to understand attacker objectives and techniques.
-- Preserve evidence before initiating containment or remediation activities.
+- Treat every alert as the starting point of an investigation rather than a confirmed incident.
+- Correlate alerts with flow records, packet evidence, and behavioral analytics.
+- Use MITRE ATT&CK mapping to understand attacker objectives and attack progression.
+- Compare current observations against historical activity before determining severity.
+- Preserve investigation evidence before containment or remediation begins.
+- Document findings to support incident response and post-incident analysis.
 
 ---
 
 ## Related Investigations
 
-- If communications involve suspicious destinations, continue with **Investigate Threat Intelligence Alerts**.
-- If encrypted sessions require further analysis, continue with **Investigate Encrypted Traffic**.
-- If outbound transfers suggest potential data loss, continue with **Investigate Potential Data Exfiltration**.
-- If broader historical analysis is required, continue with **Hunt Threats Across Historical Network Activity**.
+- [**Investigate Threat Intelligence Alerts**](/playbook/securityplaybook/inv5-threatalerts)
+- [**Investigate Encrypted Traffic**](/playbook/securityplaybook/inv3-encryptedtraffic)
+- [**Investigate Potential Data Exfiltration**](/playbook/securityplaybook/inv1-exfiltration)
+- [**Hunt Threats Across Historical Network Activity**](/playbook/securityplaybook/inv7-threathunting)
