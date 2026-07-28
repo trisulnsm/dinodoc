@@ -36,19 +36,24 @@ By completing this investigation, you should be able to:
 
 ## Investigation Workflow
 
-### Step 1: Review Suspicious Communications
+### Step 1: Identify Hosts with Suspicious Outbound Communications
 
-Every command and control investigation begins by identifying the host responsible for the suspicious outbound communication. Before examining destinations or protocols, establish which systems are generating recurring or unusual external connections.
+Command and control (C2) investigations begin by identifying hosts that are establishing outbound communications with external systems. Unlike data exfiltration investigations, the objective is not to identify large data transfers, but to locate hosts that repeatedly communicate with external destinations.
 
-Open **Network Flows** to review outbound communications.
+In **Trisul Retro**, navigate to:
 
-Use this investigation to answer questions such as:
+**Retro Counters → Retro Usage → Hosts → Transmit**
 
-- Which internal host initiated the communication?
-- Which hosts communicate repeatedly with external systems?
-- Is the communication still active?
-- Are multiple hosts exhibiting similar behavior?
-- Does the communication correspond to a security alert?
+The **Transmit** view ranks hosts by the volume of outbound traffic during the selected investigation period. Review the outbound hosts and identify systems that warrant further investigation.
+
+Look for hosts that:
+
+- Communicate frequently with external destinations.
+- Generate outbound traffic at unusual times.
+- Appear unexpectedly among the top transmitting hosts.
+- Exhibit communication patterns that are inconsistent with their expected role.
+
+These hosts can then be examined in greater detail by reviewing their conversations, network flows, and packet captures.
 
 #### Evidence to Preserve
 
@@ -66,17 +71,27 @@ Once the communicating host has been identified, determine where the communicati
 
 ### Step 2: Investigate External Destinations
 
-Understanding the external infrastructure helps determine whether the communication is expected or potentially malicious.
+After identifying a host with suspicious outbound communications, examine the external systems it is contacting. Understanding the destination infrastructure helps determine whether the communication is consistent with normal business activity or indicative of command and control (C2) communication.
 
-Open **Destination Intelligence** for the selected communication.
+From the **Transmit** view, click the **Actions** menu for the selected host and choose **Host Conversations**.
 
-Use this investigation to answer questions such as:
+The **Host Conversations** view displays all inbound and outbound communications for the selected host during the investigation period, allowing analysts to identify the external systems involved in the communication.
 
-- Which IP addresses are being contacted?
-- Which domains are associated with the destination?
-- Which Autonomous System (ASN) owns the infrastructure?
-- Which country hosts the destination?
-- Does threat intelligence identify the destination as suspicious?
+Review the conversations to determine:
+
+- Which external IP addresses are being contacted.
+- Whether the host repeatedly communicates with the same destination.
+- The volume and frequency of communication with each external system.
+- Whether the destinations are expected within the organization's environment.
+
+If available, review additional context such as:
+
+- Associated domain names.
+- Autonomous System Number (ASN).
+- Country or geographical location.
+- Threat intelligence reputation.
+
+This analysis helps determine whether the external communications are consistent with legitimate business activity or require deeper investigation.
 
 #### Evidence to Preserve
 

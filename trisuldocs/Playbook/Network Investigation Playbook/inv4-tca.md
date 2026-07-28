@@ -68,7 +68,7 @@ Once the alert has been understood, determine how significant the increase was b
 
 Knowing that a threshold has been crossed is only part of the investigation. The next objective is understanding how far the observed metric exceeded its configured threshold and whether it represents a brief operational spike or sustained abnormal behaviour.
 
-Review the [historical trend](/docs/ug/alerts/tca#traffic-chart) for the affected metric.
+Review the [**historical trend**](/docs/ug/alerts/tca#traffic-chart) for the affected metric.
 
 Use the historical data to answer questions such as:
 

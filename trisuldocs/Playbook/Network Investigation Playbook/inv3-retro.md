@@ -70,7 +70,9 @@ Once the investigation window has been established, compare the incident period 
 
 Historical analysis is most effective when current observations are compared with a known baseline. Understanding what "normal" looks like helps distinguish operational changes from genuine anomalies.
 
-Within [**Trisul Retro**](/docs/ug/cg/retro#running-an-analysis-tool), compare the selected period with previous time windows representing normal network activity.
+Using [**Trisul Retro**](/docs/ug/cg/retro#running-an-analysis-tool), move the investigation timeline to the period immediately before the incident and review the Hosts Dashboard, Applications, Conversations, and other relevant dashboards. Repeat the same review for the incident period and the time immediately afterwards.
+
+By examining the same metrics across different historical periods, engineers can determine whether changes in traffic patterns, application usage, or host communications are unique to the incident or consistent with normal network operations.
 
 This comparison helps answer questions such as:
 

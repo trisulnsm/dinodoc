@@ -40,7 +40,11 @@ By completing this investigation, you should be able to determine:
 
 Every investigation begins by identifying the interface experiencing increased utilization and understanding the scope of the issue. Before investigating hosts or applications, determine whether the congestion is isolated to a single interface or affects a wider portion of the network.
 
-Open [**Routers & Interfaces**](/docs/ug/netflow/routers_and_interfaces) to review interface utilization across monitored devices.
+Open [**Routers & Interfaces**](/docs/ug/netflow/routers_and_interfaces) to [**review interface utilization**](/docs/ug/netflow/routers_and_interfaces#interfaces-table) across monitored devices.
+
+![](./images/intfutil.png)
+
+*Figure: Interface Utilization*
 
 Use this dashboard to answer questions such as:
 
@@ -119,7 +123,7 @@ If application analysis does not fully explain the utilization, investigate the 
 
 When a host requires further investigation, continue the analysis using [**Explore Flows**](/docs/ug/tools/explore_flows). This allows you to move beyond bandwidth statistics and understand who the host communicates with, what services it accesses, and whether those communication patterns are expected.
 
-Use [**Explore Flows**](/docs/ug/tools/explore_flows) to review:
+Use **Interface ID**(Available in [Interface drilldown](/docs/ug/netflow/drilldown)) in the search query field in[**Explore Flows**](/docs/ug/tools/explore_flows) to review:
 
 - Communication peers.
 - Active conversations.
@@ -153,6 +157,10 @@ Flow analysis is usually sufficient to identify the source of interface utilizat
 Packet-level analysis provides the final layer of validation for investigations that require deeper protocol visibility. This step is particularly useful when troubleshooting application behaviour or confirming findings identified during flow analysis.
 
 Where packet capture is available, pivot directly from the selected flow to [**Packet Analysis**](/docs/ug/tools/explore_flows#flow-options) by downloading the PCAP from the flows drilldown.
+
+![](./images/downloadpcaps.png)  
+
+*Figure: View/Download PCAP*
 
 Use packet analysis to answer questions such as:
 

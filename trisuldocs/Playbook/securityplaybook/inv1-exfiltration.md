@@ -41,15 +41,26 @@ By completing this investigation, you should be able to:
 
 Every data exfiltration investigation begins by identifying the systems generating unusual outbound network activity. Before analysing individual communications, determine which hosts are transmitting significant volumes of data outside the organization.
 
-Open **Top Outbound Traffic** to review outbound communications across the monitored network.
+In [**Trisul Retro**](/docs/ug/cg/retro#selecting-a-time-window), navigate to:
 
-Use this investigation to answer questions such as:
+**Retro Counters → Retro Usage → Hosts → Transmit**
 
-- Which internal hosts generated the largest outbound transfers?
-- Which systems exhibit unusual outbound activity?
-- Did the communication occur during normal business hours?
-- Are multiple hosts exhibiting similar behavior?
-- Does the activity correspond to an alert or reported incident?
+![](./images/outboundtoppers.png)    
+
+*Figure: Outbound Toppers*
+
+The **Transmit** view lists hosts ranked by the volume of outbound traffic during the selected investigation period, making it easy to identify systems responsible for significant data transfers.
+
+Review the top transmitting hosts and note:
+
+- Systems generating unusually high outbound traffic.
+- Sudden increases in transmitted data.
+- Servers or workstations transmitting more data than expected.
+- Hosts requiring further investigation.
+
+The identified hosts can then be investigated in greater detail using flow analysis, packet inspection, and historical communication records.
+
+
 
 #### Evidence to Preserve
 
@@ -67,17 +78,24 @@ Once the source host has been identified, determine where the data was transferr
 
 ### Step 2: Investigate External Destinations
 
-Understanding where the data was sent is essential to determining whether the communication represents legitimate business activity or a potential security incident.
+Once a host with significant outbound traffic has been identified, the next step is to determine where the data is being sent and whether those destinations are expected within the organization's environment.
 
-Open **Destination Intelligence** for the selected host.
+From the **Transmit** view, click the **Actions** menu for the selected host and choose **Host Conversations**.
 
-Use this investigation to answer questions such as:
+The **Host Conversations** view displays all inbound and outbound communications for the selected host during the investigation period, allowing analysts to identify the external systems involved in the transfer.
 
-- Which external IP addresses received the communication?
-- Which domains are associated with the destination?
-- Which Autonomous Systems (ASNs) own the infrastructure?
-- Which countries host the destination?
-- Does threat intelligence identify the destination as suspicious?
+![](./images/destip.png)    
+
+*Figure: Host Conversations- Destination IP*
+
+Review the conversations to determine:
+
+- The external IP addresses communicating with the host.
+- The volume of data exchanged with each destination.
+- Whether the destinations are known or expected.
+- Whether any communications involve unfamiliar or suspicious external systems.
+
+This analysis helps establish whether the outbound traffic represents normal business communication or requires deeper investigation.
 
 #### Evidence to Preserve
 
@@ -95,17 +113,27 @@ Once the destination has been validated, determine what communication occurred b
 
 ### Step 3: Analyze Network Flows
 
-After identifying the communicating systems, examine the network flows to understand how the transfer occurred. Flow analysis provides the context needed to determine whether the observed communication is consistent with the expected role of the host.
+After identifying the communicating systems, examine the network flows to understand how the data transfer occurred. Flow analysis provides detailed information about the communication and helps determine whether the observed traffic is consistent with the expected role of the host.
 
-Open **Flow Analysis** for the selected communication.
+From the **Host Conversations** view, click the **Actions** menu for the selected conversation and choose **Flow Details**.
 
-Use this investigation to answer questions such as:
+The **Flow Details** view provides detailed information about the communication, including the source and destination addresses, ports, protocols, applications, timestamps, and the volume of data transferred.
 
-- Which applications generated the communication?
-- Which protocols were used?
-- How much data was transferred?
-- How long did the communication last?
-- Were repeated sessions established?
+![](./images/flowdetails.png)    
+
+*Figure: Flow Details*
+
+Review the flow details to determine:
+
+- Which applications or services were used for the communication.
+- The ports and protocols involved.
+- The duration and timing of the connection.
+- The amount of data transferred.
+- Whether the communication characteristics are consistent with normal host behaviour.
+
+Flow analysis helps determine whether the observed outbound communication represents legitimate business activity or warrants further investigation through packet analysis or additional historical review.
+
+
 
 #### Evidence to Preserve
 
@@ -123,17 +151,20 @@ If the communication requires further validation, inspect the packet evidence su
 
 ### Step 4: Validate with Packet Evidence
 
-Flow records describe the communication, but packet analysis provides the detailed evidence required to validate what occurred during the transfer.
+Flow records describe the communication, but packet analysis provides the detailed evidence required to validate what occurred during the transfer. Where packet capture is available, examining the packets allows analysts to inspect the actual network traffic associated with the communication.
 
-Where packet capture is available, pivot directly from the selected flow to **Packet Analysis**.
+From the **Flow Details** view, click the **Actions** menu for the selected flow and choose **Download PCAP**.
 
-Use this investigation to answer questions such as:
+The downloaded packet capture can be opened in a packet analysis tool such as **Wireshark** for detailed inspection of the communication.
 
-- Does the packet capture support the flow analysis?
-- Is application behavior consistent with the reported protocol?
-- Is sensitive information visible within the communication?
-- Are protocol anomalies present?
-- Does the packet evidence indicate unauthorized activity?
+Review the packet capture to determine:
+
+- Whether the observed traffic matches the expected application or protocol.
+- The sequence of requests and responses exchanged.
+- Whether files or large amounts of data were transferred.
+- Any protocol anomalies or suspicious payloads that may indicate unauthorized activity.
+
+Packet analysis provides the highest level of evidence for validating whether the communication represents legitimate business activity or a potential data exfiltration attempt.
 
 #### Evidence to Preserve
 
@@ -153,7 +184,7 @@ After validating the communication, determine whether similar activity has occur
 
 Determining whether the observed communication is new or part of an established pattern provides valuable context for the investigation.
 
-Open **Historical Investigation (Retro)** for the affected host and destination.
+Open [**Historical Investigation (Retro)**](/docs/ug/cg/retro/) for the affected host and destination.
 
 Use this investigation to answer questions such as:
 
@@ -232,7 +263,7 @@ This investigation can generally be considered complete when:
 
 ## Related Investigations
 
-- **Investigate Command and Control (C2) Communications**
-- **Investigate Encrypted Traffic**
-- **Investigate Threat Intelligence Alerts**
-- **Hunt Threats Across Historical Network Activity**
+- [**Investigate Command and Control (C2) Communications**](/docs/playbook/securityplaybook/inv2-commancontrol)
+- [**Investigate Encrypted Traffic**](/playbook/securityplaybook/inv3-encryptedtraffic)
+- [**Investigate Threat Intelligence Alerts**](/docs/playbook/securityplaybook/inv6-secalerts)
+- [**Hunt Threats Across Historical Network Activity**](/docs/playbook/securityplaybook/inv7-historical)
