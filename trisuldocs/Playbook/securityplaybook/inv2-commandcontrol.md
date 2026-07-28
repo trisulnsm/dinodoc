@@ -40,11 +40,15 @@ By completing this investigation, you should be able to:
 
 Command and control (C2) investigations begin by identifying hosts that are establishing outbound communications with external systems. Unlike data exfiltration investigations, the objective is not to identify large data transfers, but to locate hosts that repeatedly communicate with external destinations.
 
-In **Trisul Retro**, navigate to:
+In [**Trisul Retro**](/docs/ug/cg/retro#selecting-a-time-window), navigate to:
 
 **Retro Counters → Retro Usage → Hosts → Transmit**
 
 The **Transmit** view ranks hosts by the volume of outbound traffic during the selected investigation period. Review the outbound hosts and identify systems that warrant further investigation.
+
+![](./images/outboundtoppers.png)    
+
+*Figure: Outbound Toppers*
 
 Look for hosts that:
 
@@ -109,17 +113,25 @@ Once the destination has been validated, determine whether the communication exh
 
 ### Step 3: Analyze Communication Patterns
 
-Command and control communications are often characterized by regular, automated connections rather than large data transfers. Reviewing communication frequency helps distinguish automated beaconing from normal user activity.
+Command and control (C2) communications are typically characterized by regular, automated connections rather than large data transfers. Examining the communication patterns helps determine whether the observed traffic is consistent with periodic beaconing or normal user activity.
 
-Open **Flow Analysis** for the selected host and destination.
+From the **Host Conversations** view, click the **Actions** menu for the selected conversation and choose **Flow Details**.
 
-Use this investigation to answer questions such as:
+The **Flow Details** view provides detailed information about the communication, including timestamps, connection duration, protocols, applications, and the volume of data exchanged.
 
-- How frequently does the host communicate?
-- Are connections established at regular intervals?
-- How long do the sessions last?
-- How much data is exchanged during each session?
-- Does the communication persist over time?
+Review the flow details to determine:
+
+- Whether the host communicates with the destination at regular intervals.
+- The duration and frequency of the connections.
+- The amount of data transferred during each session.
+- The applications, ports, and protocols involved.
+- Whether the communication pattern is consistent over the investigation period.
+
+Periodic, low-volume communications that occur at regular intervals may indicate automated command and control activity and should be investigated further using packet analysis and historical network evidence.
+
+![](./images/flowdetails.png)    
+
+*Figure: Flow Details*
 
 #### Evidence to Preserve
 
@@ -139,7 +151,7 @@ If the communication uses encrypted protocols, investigate the available TLS met
 
 Many modern command and control frameworks rely on encrypted protocols to conceal their activity. Even without decrypting traffic, TLS metadata often provides valuable indicators that support the investigation.
 
-Open **TLS Metadata** for the selected communication.
+Open [**TLS Metadata**](/docs/ug/nbad/ja3) for the selected communication.
 
 Use this investigation to answer questions such as:
 
@@ -167,7 +179,7 @@ After reviewing the encrypted communication, validate the findings using additio
 
 A command and control investigation becomes stronger when multiple sources of evidence support the same conclusion. Correlating DNS activity, packet captures, historical communications, and threat intelligence provides greater confidence than relying on a single indicator.
 
-Continue the investigation using **DNS Analysis**, **Packet Analysis**, and **Historical Investigation (Retro)**.
+Continue the investigation using [**DNS Analysis**](/docs/next/ug/nbad/layer7metrics), [**Packet Analysis**](/docs/ug/cg/retrotools#pull-packets), and [**Historical Investigation (Retro)**](/docs/ug/cg/retro).
 
 Use this investigation to answer questions such as:
 
