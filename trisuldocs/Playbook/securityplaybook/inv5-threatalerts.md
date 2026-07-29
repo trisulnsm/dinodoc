@@ -34,23 +34,25 @@ By completing this investigation, you should be able to:
 
 ---
 
-# Investigation Workflow
+## Investigation Workflow
 
-## Step 1: Review Behavioral Anomalies
+### Step 1: Identify the Behavioral Anomaly
 
-Every anomaly investigation begins by understanding what changed. Before investigating individual hosts, identify the behavioral deviation that triggered the investigation.
+Network anomaly investigations begin by identifying the change in network behavior that triggered the investigation. Rather than immediately focusing on individual hosts, the objective is to understand what changed, when it occurred, and whether the observed behavior requires further investigation.
 
-Open **Behavioral Analytics**.
+Open [**Behavioral Analytics**](/docs/ug/nbad/trisulnbad), [**Threshold Band Alerts**](/docs/ug/alerts/tband), [**DDoS Metrics**](/docs/ug/alerts/ddos), or the dashboard that generated the alert.
 
-Use this investigation to answer questions such as:
+Review the available dashboards and alerts to determine:
 
-- Which metric deviated from its normal behavior?
-- When did the anomaly begin?
-- Is the anomaly still active?
-- Which behavioral dashboards show the largest deviation?
-- Does the anomaly correspond to an alert?
+- Which metric deviated from its normal behavior.
+- When the anomaly began.
+- Whether the anomaly is still active.
+- Which protocols, applications, or interfaces are affected.
+- Whether the anomaly generated a behavioral or threshold alert.
 
-### Evidence to Preserve
+The objective at this stage is to understand the nature of the anomaly before investigating the systems responsible.
+
+#### Evidence to Preserve
 
 - Triggering metric.
 - Alert information.
@@ -58,207 +60,192 @@ Use this investigation to answer questions such as:
 - Behavioral observations.
 - Initial findings.
 
-### Continue the Investigation
+#### Continue the Investigation
 
-Once the behavioral anomaly has been identified, determine whether it indicates abnormal connection or attack patterns.
+Once the anomaly has been identified, determine what type of abnormal network behavior is being observed.
 
 ---
 
-## Step 2: Review DDoS Metrics
+### Step 2: Characterize the Network Behavior
 
-Behavioral anomalies often originate from abnormal connection behavior rather than bandwidth alone. Reviewing DDoS metrics helps determine whether the anomaly represents flooding, scanning, protocol abuse, or excessive connection activity.
+Understanding the characteristics of the anomaly helps determine whether it represents expected operational activity or behavior requiring further investigation.
 
-Open **DDoS Metrics**.
+Use [**Behavioral Analytics**](/docs/ug/nbad/trisulnbad), [**DDoS Metrics**](/docs/ug/alerts/ddos), [**TCP Analyzer**](/docs/ug/nbad/tcpanalyzer), [**Layer 7 Metrics**](/docs/ug/nbad/layer7metrics), or other behavioral dashboards as appropriate.
 
-Use this investigation to answer questions such as:
+Review the available metrics to determine:
 
-- Are TCP SYN floods observed?
-- Are UDP or ICMP floods present?
-- Is there evidence of connection flooding?
-- Are protocol-specific metrics abnormal?
-- Does the behavior resemble denial-of-service or reconnaissance activity?
+- Whether the anomaly is driven by bandwidth utilization or connection rates.
+- Which protocols contribute to the abnormal behavior.
+- Whether TCP SYN, UDP, ICMP, DNS, or application traffic is responsible.
+- Whether the behavior resembles flooding, scanning, protocol misuse, or application abuse.
+- Whether the observed activity aligns with scheduled operational events.
 
-### Evidence to Preserve
+At this stage, focus on understanding the behavior itself rather than identifying the systems involved.
 
-- DDoS metrics.
-- Protocol statistics.
-- Connection rates.
-- Packet rates.
+#### Evidence to Preserve
+
 - Traffic characteristics.
+- Protocol distribution.
+- Connection rates.
+- Behavioral metrics.
+- Application metrics.
 
-### Continue the Investigation
+#### Continue the Investigation
 
-Once the nature of the anomaly has been understood, identify the systems responsible for generating the traffic.
+Once the behavior has been characterized, determine which systems are responsible for generating the abnormal traffic.
 
 ---
 
-## Step 3: Identify the Affected Systems
+### Step 3: Identify the Responsible Systems
 
-Determine which hosts, interfaces, or network segments are responsible for the abnormal behavior.
+After understanding the nature of the anomaly, identify the hosts, interfaces, and network conversations responsible for the observed behavior.
 
-Open **Flow Analysis**.
+In [**Trisul Retro**](/docs/ug/cg/retro), navigate to:
 
-Use this investigation to answer questions such as:
+**Retro Counters → Retro Usage → Hosts → Transmit**
 
-- Which hosts generated the abnormal traffic?
-- Which systems received the traffic?
-- Which interfaces are affected?
-- Is the activity isolated or widespread?
-- Are critical systems involved?
+Review the hosts contributing to the abnormal traffic during the investigation period.
 
-### Evidence to Preserve
+From the selected host, click the **Actions** menu and choose [**Host Conversations**](/docs/ug/tools/explore_flows#top-conversations).
+
+Review the conversations to determine:
+
+- Which hosts generated the abnormal traffic.
+- Which systems received the traffic.
+- Whether the communication is internal or external.
+- Which interfaces or network segments are affected.
+- Whether multiple hosts exhibit similar behavior.
+
+If additional detail is required, open **Flow Details** for the selected communication.
+
+The [**Flow Details**](/docs/ug/tools/explore_flows#top-matching-flows) view provides timestamps, protocols, applications, ports, session duration, and traffic volumes associated with the communication.
+
+#### Evidence to Preserve
 
 - Source hosts.
 - Destination hosts.
 - Interfaces.
-- Network segments.
 - Communication timeline.
-
-### Continue the Investigation
-
-After identifying the affected systems, analyze the traffic responsible for the anomaly.
-
----
-
-## Step 4: Analyze Network Flows
-
-Flow analysis provides the context needed to understand how the abnormal traffic is being generated and whether the observed behavior aligns with legitimate network activity.
-
-Open **Flow Analysis** for the affected hosts.
-
-Use this investigation to answer questions such as:
-
-- Which applications generated the traffic?
-- Which protocols are responsible?
-- How much traffic was exchanged?
-- How long did the sessions last?
-- Does the communication resemble scanning, flooding, or other abnormal behavior?
-
-### Evidence to Preserve
-
 - Flow records.
-- Applications involved.
-- Protocol distribution.
-- Traffic volume.
-- Session characteristics.
 
-### Continue the Investigation
+#### Continue the Investigation
 
-Where packet capture is available, validate the observed behavior using packet-level evidence.
+Once the responsible systems have been identified, determine whether the observed behavior represents an expected operational event or an abnormal condition.
 
 ---
 
-## Step 5: Validate with Packet Evidence
+### Step 4: Validate the Behavior
 
-Packet analysis provides detailed evidence that explains the behavior observed through dashboards and flow analytics.
+Behavioral anomalies should be validated using multiple sources of evidence before determining whether they represent operational events or security incidents.
 
-Open **Packet Analysis**.
-
-Use this investigation to answer questions such as:
-
-- Does packet analysis explain the behavioral anomaly?
-- Which protocols are responsible?
-- Is malformed or suspicious traffic present?
-- Are scanning or exploitation attempts visible?
-- Does the packet evidence support the flow analysis?
-
-### Evidence to Preserve
-
-- Packet captures.
-- Protocol behavior.
-- Packet timestamps.
-- Indicators of compromise.
-- Supporting evidence.
-
-### Continue the Investigation
-
-Once the anomaly has been validated, compare the activity against historical network behavior.
-
----
-
-## Step 6: Review Historical Activity
-
-Historical comparison helps determine whether the observed anomaly represents a new event or an established operational pattern.
-
-Open **Historical Investigation (Retro)**.
+Continue the investigation using [**Historical Investigation (Retro)**](/docs/ug/cg/retro), [**DNS Analysis**](/docs/ug/resources/dns), and [**Packet Analysis**](/docs/ug/resources/dns#option-button).
 
 Use this investigation to answer questions such as:
 
 - Has similar behavior occurred previously?
-- When was it first observed?
-- Is the current activity significantly different from historical traffic?
-- Does the behavior correspond to scheduled operational events?
-- Have additional hosts exhibited similar anomalies?
+- Does packet analysis explain the observed traffic?
+- Do DNS queries support the communication pattern?
+- Is the behavior associated with scheduled maintenance, software updates, or backup operations?
+- Are additional hosts exhibiting the same anomaly?
 
-### Evidence to Preserve
+Historical comparison helps determine whether the anomaly represents a newly observed event or an expected operational pattern.
+
+#### Evidence to Preserve
 
 - Historical traffic patterns.
+- DNS activity.
+- Packet captures.
 - Previous occurrences.
-- Timeline.
-- Additional affected systems.
-- Behavioral trends.
+- Supporting evidence.
 
-### Continue the Investigation
+#### Continue the Investigation
 
-Once the historical context has been established, summarize the investigation findings and determine the appropriate response.
+Once the behavior has been validated, determine the operational or security impact of the anomaly.
 
 ---
 
-## Step 7: Summarize the Investigation
+### Step 5: Assess the Operational or Security Impact
 
-By this stage, the investigation should have identified the behavioral anomaly, determined the affected systems, analyzed the traffic characteristics, validated packet evidence, and compared the activity against historical behavior.
+After validating the anomaly, determine whether the observed behavior requires operational remediation or incident response.
+
+Review the investigation findings to determine:
+
+- Whether the behavior is expected or anomalous.
+- Whether the anomaly affects a single system or multiple hosts.
+- Whether critical applications or services are impacted.
+- Whether the behavior indicates infrastructure issues, configuration changes, reconnaissance, denial-of-service activity, malware, or another security concern.
+- Whether immediate operational remediation or incident response is required.
+
+Understanding the impact enables engineering and security teams to prioritize the appropriate response.
+
+#### Evidence to Preserve
+
+- Affected systems.
+- Operational impact.
+- Security impact.
+- Scope of the activity.
+- Recommended response actions.
+
+#### Continue the Investigation
+
+Once the impact has been assessed, summarize the investigation findings and determine the appropriate response.
+
+---
+
+### Step 6: Summarize the Investigation
+
+By this stage, the investigation should have identified the behavioral anomaly, characterized the abnormal network behavior, determined the responsible systems, validated the findings using multiple evidence sources, and assessed the operational or security impact.
 
 Open **Trisul AI** to review the investigation findings and summarize the collected evidence.
 
 Use this investigation to answer questions such as:
 
-- What changed in the network behavior?
-- Which metrics deviated most significantly?
-- Which hosts contributed to the anomaly?
-- Does the evidence indicate malicious activity?
-- Should the incident be escalated or investigated further?
+- What caused the network anomaly?
+- Which systems are affected?
+- Does the evidence indicate an operational issue or a security incident?
+- Is immediate remediation required?
+- Should incident response procedures be initiated?
 
-### Evidence to Preserve
+#### Evidence to Preserve
 
 - Investigation summary.
 - Affected hosts.
-- Flow and packet evidence.
-- Historical comparison.
+- Supporting evidence.
+- Historical findings.
 - Recommended response actions.
 
-### Investigation Outcome
+#### Investigation Outcome
 
-At this stage, you should understand the cause of the behavioral anomaly, identify the affected systems, determine whether the activity represents an operational event or a potential security incident, and establish the appropriate response.
+At this stage, you should understand what caused the network anomaly, identify the affected systems, determine whether the activity represents an expected operational event or a security incident, assess the scope of the impact, and establish the appropriate operational or incident response actions.
 
 ---
 
-# Investigation Completion
+## Investigation Completion
 
 This investigation can generally be considered complete when:
 
-- The behavioral anomaly has been identified.
-- The affected systems have been determined.
-- DDoS and behavioral metrics have been analyzed.
-- Network flows have been reviewed.
-- Packet evidence has been validated where available.
-- Historical activity has been compared.
+- The behavioral anomaly has been identified and characterized.
+- The responsible systems have been identified.
+- Supporting evidence has been correlated.
+- Historical activity has been reviewed.
 - The operational or security impact has been assessed.
-- Appropriate response actions have been identified.
+- The scope of the activity has been established.
+- Appropriate operational or incident response actions have been identified.
 
 ---
 
-# Best Practices
+## Best Practices
 
-- Compare behavioral anomalies against historical baselines before drawing conclusions.
-- Investigate connection behavior alongside bandwidth utilization.
-- Correlate behavioral analytics with flow records and packet evidence.
-- Validate operational changes with infrastructure teams where appropriate.
-- Preserve investigation evidence before mitigation begins.
-- Document investigation findings to support future incident response activities.
+- Begin anomaly investigations by understanding what changed before identifying the affected systems.
+- Correlate behavioral analytics with flow records, DNS activity, and packet evidence before reaching conclusions.
+- Compare current behavior against historical network activity to distinguish operational events from security incidents.
+- Investigate connection behavior alongside bandwidth utilization and protocol distribution.
+- Preserve investigation evidence before remediation begins.
+- Document investigation findings to support future operational analysis and incident response.
 
 ---
 
-# Related Investigations
+## Related Investigations
 
 - [**Investigate Potential Data Exfiltration**](/playbook/securityplaybook/inv1-exfiltration)
 - [**Investigate Command and Control (C2) Communications**](/playbook/securityplaybook/inv2-commandcontrol)

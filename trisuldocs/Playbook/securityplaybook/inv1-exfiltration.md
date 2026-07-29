@@ -49,7 +49,7 @@ In [**Trisul Retro**](/docs/ug/cg/retro#selecting-a-time-window), navigate to:
 
 *Figure: Outbound Toppers*
 
-The **Transmit** view lists hosts ranked by the volume of outbound traffic during the selected investigation period, making it easy to identify systems responsible for significant data transfers.
+The [**Transmit**](/docs/ug/cg/retrotools#investigate-ip-activity) view lists hosts ranked by the volume of outbound traffic during the selected investigation period, making it easy to identify systems responsible for significant data transfers.
 
 Review the top transmitting hosts and note:
 
@@ -80,7 +80,7 @@ Once the source host has been identified, determine where the data was transferr
 
 Once a host with significant outbound traffic has been identified, the next step is to determine where the data is being sent and whether those destinations are expected within the organization's environment.
 
-From the **Transmit** view, click the **Actions** menu for the selected host and choose **Host Conversations**.
+From the [**Transmit**](/docs/ug/cg/retrotools#investigate-ip-activity) view, click the **Actions** menu for the selected host and choose **Host Conversations**.
 
 The **Host Conversations** view displays all inbound and outbound communications for the selected host during the investigation period, allowing analysts to identify the external systems involved in the transfer.
 
@@ -115,9 +115,9 @@ Once the destination has been validated, determine what communication occurred b
 
 After identifying the communicating systems, examine the network flows to understand how the data transfer occurred. Flow analysis provides detailed information about the communication and helps determine whether the observed traffic is consistent with the expected role of the host.
 
-From the **Host Conversations** view, click the **Actions** menu for the selected conversation and choose **Flow Details**.
+From the [**Host Conversations**](/docs/ug/tools/explore_flows#top-conversations) view, click the [**Actions**](/docs/ug/tools/explore_flows#flow-options) menu for the selected conversation and choose **Flow Details**.
 
-The **Flow Details** view provides detailed information about the communication, including the source and destination addresses, ports, protocols, applications, timestamps, and the volume of data transferred.
+The [**Flow Details**](/docs/ug/tools/explore_flows#top-matching-flows) view provides detailed information about the communication, including the source and destination addresses, ports, protocols, applications, timestamps, and the volume of data transferred.
 
 ![](./images/flowdetails.png)    
 
@@ -132,8 +132,6 @@ Review the flow details to determine:
 - Whether the communication characteristics are consistent with normal host behaviour.
 
 Flow analysis helps determine whether the observed outbound communication represents legitimate business activity or warrants further investigation through packet analysis or additional historical review.
-
-
 
 #### Evidence to Preserve
 
@@ -153,7 +151,7 @@ If the communication requires further validation, inspect the packet evidence su
 
 Flow records describe the communication, but packet analysis provides the detailed evidence required to validate what occurred during the transfer. Where packet capture is available, examining the packets allows analysts to inspect the actual network traffic associated with the communication.
 
-From the **Flow Details** view, click the **Actions** menu for the selected flow and choose **Download PCAP**.
+From the [**Flow Details**](/docs/ug/tools/explore_flows#top-matching-flows) view, click the [**Actions**](/docs/ug/tools/explore_flows#flow-options) menu for the selected flow and choose **Download PCAP**.
 
 The downloaded packet capture can be opened in a packet analysis tool such as **Wireshark** for detailed inspection of the communication.
 

@@ -39,17 +39,19 @@ By completing this investigation, you should be able to:
 
 ### Step 1: Define the Hunt
 
-Every historical investigation begins with a clear hunting objective. Before searching historical traffic, establish the indicator, hypothesis, or question that will guide the investigation.
+Historical threat hunting begins with a hypothesis rather than an alert. Before searching historical network activity, clearly define the objective of the hunt, the indicators being investigated, and the timeframe to be examined.
 
-Open **Historical Investigation (Retro)**.
+Open [**Historical Investigation (Retro)**](/docs/ug/cg/retro).
 
 Use this investigation to answer questions such as:
 
 - Which indicator of compromise (IOC) is being investigated?
+- Is the hunt based on new threat intelligence, a recently disclosed vulnerability, or an ongoing investigation?
 - What time period should be searched?
-- Is the hunt based on threat intelligence, a vulnerability, or an existing investigation?
-- Which hosts or network segments are within scope?
-- What evidence is expected if the hypothesis is correct?
+- Which hosts, network segments, or applications are within scope?
+- What evidence would validate the hunting hypothesis?
+
+A clearly defined hunting objective helps focus the investigation and reduces unnecessary analysis across historical telemetry.
 
 #### Evidence to Preserve
 
@@ -57,27 +59,29 @@ Use this investigation to answer questions such as:
 - Indicators of compromise.
 - Investigation timeframe.
 - Search scope.
-- Initial assumptions.
+- Initial hypothesis.
 
 #### Continue the Investigation
 
-Once the hunt has been defined, search historical network activity for matching communications.
+Once the hunt has been defined, search historical network activity for evidence supporting the hypothesis.
 
 ---
 
 ### Step 2: Search Historical Network Activity
 
-Historical searches determine whether the selected indicators have previously appeared within the monitored environment.
+Search historical telemetry to determine whether the selected indicators previously appeared within the monitored environment.
 
-Continue using **Historical Investigation (Retro)**.
+Continue using [**Historical Investigation (Retro)**](/docs/ug/cg/retro#selecting-a-time-window).
 
-Use this investigation to answer questions such as:
+Review the historical data to determine:
 
-- Has the indicator appeared previously?
-- Which hosts communicated with the identified infrastructure?
-- When was the communication first observed?
-- How frequently did the communication occur?
-- Which applications or protocols were involved?
+- Whether the indicator has been observed previously.
+- Which systems communicated with the identified infrastructure.
+- When the communication was first and last observed.
+- How frequently the communication occurred.
+- Which applications, protocols, or services were involved.
+
+This step determines whether historical evidence exists to support the hunting hypothesis.
 
 #### Evidence to Preserve
 
@@ -89,51 +93,25 @@ Use this investigation to answer questions such as:
 
 #### Continue the Investigation
 
-Once matching activity has been identified, determine which systems participated in the communication.
+Once historical matches have been identified, validate the communications using additional sources of evidence.
 
 ---
 
-### Step 3: Identify the Affected Systems
+### Step 3: Validate the Historical Activity
 
-Understanding which systems communicated with the identified indicators establishes the scope of the investigation.
+Historical matches should be validated using multiple sources of evidence before concluding that malicious activity occurred.
 
-Open **Flow Analysis** for the historical communications.
-
-Use this investigation to answer questions such as:
-
-- Which internal hosts communicated with the indicators?
-- Which external destinations were involved?
-- Were multiple hosts affected?
-- Which applications generated the communication?
-- Are critical systems involved?
-
-#### Evidence to Preserve
-
-- Source hosts.
-- Destination hosts.
-- Applications involved.
-- Communication timeline.
-- Affected assets.
-
-#### Continue the Investigation
-
-Once the affected systems have been identified, validate the communications using additional evidence.
-
----
-
-### Step 4: Correlate Historical Evidence
-
-Historical investigations become significantly stronger when multiple sources of evidence support the same conclusion.
-
-Continue the investigation using **Packet Analysis**, **DNS Analysis**, **TLS Metadata**, **Threat Intelligence**, and **Security Alerts**.
+Continue the investigation using [**Packet Analysis**](/docs/ug/cg/retrotools#pull-packets), [**DNS Analysis**](/docs/ug/resources/dns/), [**TLS Metadata**](/docs/ug/cg/ssl),and [**Security Alerts**](/docs/ug/alerts/mw).
 
 Use this investigation to answer questions such as:
 
 - Does packet evidence validate the communication?
-- Were suspicious DNS queries observed?
+- Were suspicious DNS queries associated with the activity?
 - Does TLS metadata support the investigation?
 - Does threat intelligence identify the infrastructure as malicious?
-- Were previous alerts associated with the same activity?
+- Were previous alerts associated with the same communication?
+
+Correlating multiple evidence sources helps distinguish genuine malicious activity from benign historical communications.
 
 #### Evidence to Preserve
 
@@ -145,23 +123,53 @@ Use this investigation to answer questions such as:
 
 #### Continue the Investigation
 
-Once the communications have been validated, reconstruct the sequence of events.
+Once the activity has been validated, determine the scope of the historical communications.
+
+---
+
+### Step 4: Assess the Scope of the Activity
+
+After validating the historical communications, determine how widely the identified activity affected the environment.
+
+Review the investigation findings to determine:
+
+- Which internal hosts communicated with the identified infrastructure.
+- Whether multiple systems were affected.
+- Which business services or applications were involved.
+- Whether the activity spread over time.
+- Whether additional indicators are associated with the same infrastructure.
+
+Understanding the scope helps determine whether the activity represents an isolated communication or a broader compromise.
+
+#### Evidence to Preserve
+
+- Affected hosts.
+- Destination infrastructure.
+- Applications involved.
+- Scope of the activity.
+- Related indicators.
+
+#### Continue the Investigation
+
+Once the scope has been established, reconstruct the sequence of historical events.
 
 ---
 
 ### Step 5: Reconstruct the Timeline
 
-Historical investigations provide valuable context by showing how suspicious activity evolved over time.
+Historical investigations provide valuable context by reconstructing how suspicious activity evolved over time.
 
-Continue using **Historical Investigation (Retro)**.
+Continue using [**Historical Investigation (Retro)**](/docs/ug/cg/retro).
 
 Use this investigation to answer questions such as:
 
 - When was the activity first observed?
 - When did it last occur?
-- Did the communication frequency change over time?
+- Did communication frequency change over time?
 - Were additional systems affected later?
 - Does the timeline indicate persistence or attacker progression?
+
+Reconstructing the timeline helps determine the duration of the activity and supports subsequent incident response or forensic investigations.
 
 #### Evidence to Preserve
 
@@ -173,22 +181,22 @@ Use this investigation to answer questions such as:
 
 #### Continue the Investigation
 
-Once the timeline has been established, determine the overall scope of the historical activity.
+Once the historical timeline has been established, summarize the investigation findings and determine the appropriate response.
 
 ---
 
 ### Step 6: Summarize the Investigation
 
-By this stage, the investigation should have validated the hunting hypothesis, identified the affected systems, correlated supporting evidence, and reconstructed the historical timeline.
+By this stage, the investigation should have validated the hunting hypothesis, confirmed the historical communications, assessed the scope of the activity, and reconstructed the historical timeline.
 
 Open **Trisul AI** to review the investigation findings and summarize the collected evidence.
 
 Use this investigation to answer questions such as:
 
-- Did historical evidence validate the hunting hypothesis?
+- Did the historical evidence validate the hunting hypothesis?
 - Which systems were affected?
 - When did the activity begin?
-- Does the activity indicate an ongoing compromise?
+- Does the evidence indicate an ongoing or previously unknown compromise?
 - Should incident response procedures be initiated?
 
 #### Evidence to Preserve
@@ -201,7 +209,7 @@ Use this investigation to answer questions such as:
 
 #### Investigation Outcome
 
-At this stage, you should understand whether historical network activity supports the hunting hypothesis, identify the affected systems, establish the duration and scope of the activity, and determine whether further investigation or incident response is required.
+At this stage, you should understand whether the historical evidence supports the hunting hypothesis, identify the affected systems, determine the duration and scope of the activity, and establish whether further investigation or incident response is required.
 
 ---
 
@@ -209,22 +217,21 @@ At this stage, you should understand whether historical network activity support
 
 This investigation can generally be considered complete when:
 
-- The hunting objective has been validated.
-- Historical communications have been identified.
-- The affected systems have been determined.
+- The hunting hypothesis has been evaluated.
+- Historical communications have been identified and validated.
 - Supporting evidence has been correlated.
-- The historical timeline has been reconstructed.
 - The scope of the activity has been established.
-- Appropriate response actions have been identified.
+- The historical timeline has been reconstructed.
+- Appropriate operational or incident response actions have been identified.
 
 ---
 
 ## Best Practices
 
 - Begin every hunt with a clearly defined hypothesis or indicator.
-- Search both historical flows and packet captures whenever available.
-- Correlate historical communications with DNS activity, TLS metadata, threat intelligence, and previous investigations.
-- Reconstruct the attack timeline before determining incident scope.
+- Validate historical findings using multiple sources of evidence before drawing conclusions.
+- Correlate historical communications with DNS activity, TLS metadata, threat intelligence, packet evidence, and previous alerts.
+- Reconstruct the attack timeline before determining the scope of the activity.
 - Preserve historical evidence to support future forensic investigations.
 - Document investigation findings to improve future threat hunting activities.
 
