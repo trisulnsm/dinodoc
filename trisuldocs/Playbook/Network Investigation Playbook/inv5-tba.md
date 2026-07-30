@@ -4,9 +4,9 @@
 
 Network behavior rarely remains identical from one day to the next, but significant deviations from established traffic patterns often indicate that something within the network has changed. An unexpected increase in application traffic, a sudden shift in communication patterns, unusual activity during normally quiet periods, or a sustained decrease in expected traffic may all point to application changes, infrastructure issues, misconfigurations, or emerging security events.
 
-Unlike threshold-based investigations, behavioral investigations focus on activity that appears unusual compared to the network's normal operating patterns, even when predefined utilization limits have not been exceeded. The objective is to determine what changed, identify the systems responsible for the deviation, and establish whether the observed behavior represents an expected operational variation or requires further investigation.
+Unlike threshold-based investigations, behavioral investigations focus on activity that appears unusual when compared to the network's learned baseline, even when predefined utilization limits have not been exceeded. Rather than immediately investigating individual hosts or interfaces, the objective is to understand how current behavior differs from normal operation, identify the entities responsible for the deviation, explain why the observed behavior is unusual, and determine whether the anomaly represents expected operational activity or requires further investigation.
 
-Using Trisul, engineers can investigate behavioral anomalies from the detected deviation and progressively narrow the scope until the underlying cause becomes clear.
+Using Trisul, engineers can investigate behavioral anomalies from the detected deviation and progressively explain the observed behavior before determining the most appropriate follow-up investigation.
 
 ---
 
@@ -26,19 +26,20 @@ Use this investigation when you need to:
 
 By completing this investigation, you should be able to:
 
-- Identify the metric that deviated from its normal behavior.
-- Understand how current activity differs from historical patterns.
-- Determine which systems or applications contributed to the deviation.
-- Assess whether the anomaly is expected or requires further investigation.
-- Decide on the appropriate operational response.
+- Identify the behavioral deviation detected by the learned baseline.
+- Understand how current behavior differs from normal network operation.
+- Identify the entities responsible for generating the deviation.
+- Determine why the observed behavior is unusual.
+- Determine whether the deviation represents expected operational activity.
+- Decide whether additional investigation is required.
 
 ---
 
-# Investigation Workflow
+## Investigation Workflow
 
-## Step 1: Review the Behavioral Anomaly
+### Step 1: Review the Behavioral Anomaly
 
-Every behavioral investigation begins by understanding what has deviated from normal network activity. Before investigating hosts or applications, establish which metric exhibited unusual behavior, when the deviation began, and whether the anomaly is still occurring.
+Every behavioral investigation begins by understanding what has deviated from normal network activity. Before investigating hosts, interfaces, or applications, establish which metric exhibited unusual behavior, when the deviation began, which monitored object is affected, and whether the anomaly is still occurring.
 
 Open [**Threshold Band Alerts**](/docs/ug/alerts/tband) to review the detected anomaly.
 
@@ -49,23 +50,23 @@ Use this dashboard to answer questions such as:
 - When did the deviation begin?
 - Is the anomaly still active or has activity returned to normal?
 
-### Evidence to Collect
+#### Evidence to Collect
 
 - Metric exhibiting anomalous behavior.
-- Affected network object.
+- Affected monitored object.
 - Time the deviation was detected.
 - Current status of the anomaly.
 - Severity of the deviation.
 
-### Continue the Investigation
+#### Next Step
 
-Once the anomaly has been identified, compare the observed activity against the learned baseline to understand how network behavior has changed.
+Once the anomaly has been identified, compare the observed activity against the learned baseline to understand how current behavior differs from normal operation.
 
 ---
 
-## Step 2: Compare Against the Learned Baseline
+### Step 2: Compare Against the Learned Baseline
 
-An anomaly only has meaning when compared to what is considered normal. The next objective is to understand how the current activity differs from historical network behavior and whether the deviation represents a significant operational change.
+An anomaly only has meaning when compared to what is considered normal. The next objective is to understand how the observed activity differs from the learned baseline before attempting to investigate the systems responsible for the deviation.
 
 Review the learned baseline and historical trends for the affected metric.
 
@@ -76,7 +77,7 @@ Use this view to answer questions such as:
 - Does the anomaly occur during an unusual time of day?
 - Has similar behavior occurred previously?
 
-### Evidence to Collect
+#### Evidence to Collect
 
 - Historical baseline for the affected metric.
 - Magnitude of the deviation.
@@ -84,146 +85,207 @@ Use this view to answer questions such as:
 - Previous occurrences of similar deviations.
 - Changes from expected daily or weekly patterns.
 
-### Continue the Investigation
+#### Next Step
 
-After understanding how the behavior differs from normal operation, identify the systems responsible for the observed deviation.
+Once the deviation has been compared against the learned baseline, identify the entities responsible for generating the observed behavior.
 
-## Step 3: Identify the Source of the Deviation
+---
 
-Once the deviation from normal behavior has been established, determine which systems, interfaces, or applications contributed to the observed anomaly. The objective at this stage is to identify what changed within the network rather than focusing solely on the metric that triggered the investigation.
+### Step 3: Investigate the Observed Behavior
 
-Depending on the object associated with the anomaly, continue the investigation using [**Routers & Interfaces**](/docs/ug/netflow/routers_and_interfaces), [**Hosts**](/docs/ug/netflow/drilldown#hosts), or [**Explore Flows**](/docs/ug/tools/explore_flows).
+After comparing the anomaly against the learned baseline, continue the investigation in **Explore Flows** using the monitored entity and investigation period associated with the behavioral deviation.
 
-Use these investigation views to answer questions such as:
+This allows you to investigate the detailed network activity responsible for the observed anomaly while remaining focused on the affected time period. Rather than assuming why the anomaly occurred, investigate the communication activity to identify the network entities contributing to the behavioral deviation.
 
-- Which hosts contributed to the observed deviation?
-- Which conversations account for the behavioral change?
-- Which applications generated the unusual activity?
-- Did communication patterns change compared to normal operation?
+This step helps answer questions such as:
 
-### Evidence to Collect
+- Which network entities contributed to the observed behavioral deviation?
+- Which hosts, interfaces, conversations, or other monitored objects exhibited unusual activity?
+- Which communication patterns changed during the anomaly?
+- Which observations appear most significant?
+- Which entities require deeper investigation?
 
-- Hosts contributing most to the anomaly.
+#### Evidence to Collect
+
+- Network entities contributing to the behavioral deviation.
+- Significant communication patterns.
 - High-volume conversations.
-- Applications responsible for the behavioral change.
-- Significant changes in communication patterns.
-- Network objects contributing to the deviation.
+- Network objects requiring further investigation.
+- Initial evidence explaining the anomaly.
 
-### Continue the Investigation
+#### Continue the Investigation
 
-Once the systems responsible have been identified, investigate how their application usage and communication behavior differs from normal operation.
-
----
-
-## Step 4: Analyze Application and Communication Behavior
-
-Identifying the systems responsible explains where the anomaly originated, but understanding what those systems are doing provides the operational context needed to determine whether the behavior is expected.
-
-Continue investigating the affected hosts using [**Applications**](/docs/ug/netflow/drilldown#apps) and [**Explore Flows**](/docs/ug/tools/explore_flows).
-
-Use these investigation views to answer questions such as:
-
-- Which applications contributed to the anomaly?
-- Do the observed applications match the role of the host?
-- Have new communication partners appeared?
-- Are communication patterns consistent with normal network behavior?
-- Is the traffic internal, external, or both?
-
-### Evidence to Collect
-
-- Expected business applications.
-- Unexpected or unauthorized applications.
-- New communication partners.
-- Changes in client-server relationships.
-- Communication behavior inconsistent with the system's intended role.
-
-### Continue the Investigation
-
-After understanding the traffic responsible for the anomaly, determine whether the observed behavior can be explained by normal operational activities.
+Once the contributing network entities have been identified, determine which applications explain the observed behavior.
 
 ---
 
-## Step 5: Validate the Operational Context
+### Step 4: Analyze Application Activity
 
-Not every behavioral anomaly indicates a network problem. Changes in network activity are often the result of legitimate operational events such as software deployments, maintenance windows, infrastructure upgrades, backups, or changing business demand.
+Remain within [**Explore Flows**](/docs/ug/tools/explore_flows) and review the [**Top Applications**](/docs/ug/tools/explore_flows#top-applications) for the investigation period.
 
-Review the investigation findings alongside known operational activities to determine whether the observed behavior represents an expected variation or an unexplained deviation.
+Application visibility helps determine whether the observed deviation resulted from expected operational activity, scheduled maintenance, backups, software deployments, changing business demand, or unexpected application behavior.
 
-Use the investigation findings to answer questions such as:
+![](./images/tbaapps.png)
 
-- Was maintenance being performed?
-- Were software updates or deployments in progress?
+*Figure: Application Analysis*
+
+This step helps answer questions such as:
+
+- Which applications contributed to the behavioral deviation?
+- Did application behavior differ from the learned baseline?
+- Were the observed applications expected?
+- Do the applications explain why the anomaly was detected?
+- Are unexpected services or protocols present?
+
+#### Evidence to Collect
+
+- Applications contributing to the behavioral deviation.
+- Significant application activity.
+- Expected operational traffic.
+- Unexpected applications or protocols.
+- Applications requiring further investigation.
+
+#### Continue the Investigation
+
+After identifying the applications involved, review the aggregate traffic profile to validate the investigation findings.
+
+---
+
+### Optional Validation: Review Aggregate Traffic
+
+Most behavioral investigations can be completed using Explore Flows. Where additional validation is required, [**Aggregate Flow Statistics**](/docs/ug/tools/aggregate_stats) provides a summarized view of the investigated traffic.
+
+Rather than introducing new evidence, Aggregate Flow Statistics groups the flow records by dimensions such as IP address, interface, application, port, router, and other network attributes. This helps confirm whether the observed behavioral deviation is concentrated within a particular network entity or distributed across multiple contributors.
+
+This step helps answer questions such as:
+
+- Do the aggregate statistics support the investigation findings?
+- Which network entities dominate the observed traffic?
+- Is the behavioral deviation concentrated within specific hosts, interfaces, or applications?
+- Does the aggregate traffic profile explain the detected anomaly?
+
+#### Evidence to Collect
+
+- Aggregate traffic distribution.
+- Dominant network entities.
+- Traffic concentrations.
+- Aggregate evidence supporting the investigation.
+
+#### Continue the Investigation
+
+If packet capture is available, continue with Packet Analysis to validate the observed network behavior.
+
+### Step 5: Validate with Packet Analysis
+
+Where packet capture is available, continue directly from [**Explore Flows**](/docs/ug/tools/explore_flows) by downloading the PCAP for the selected flow records.
+
+Packet-level analysis helps validate the conclusions drawn from the flow investigation and provides protocol-level evidence explaining the observed behavioral deviation.
+
+This step helps answer questions such as:
+
+- Does packet-level analysis support the investigation findings?
+- Are protocol anomalies visible?
+- Does the packet data explain the behavioral deviation?
+- Is additional evidence required before completing the investigation?
+
+#### Evidence to Collect
+
+- Packet-level evidence supporting the investigation.
+- Protocol anomalies.
+- Communication failures or retransmissions.
+- Evidence validating the observed behavior.
+
+#### Continue the Investigation
+
+Once the network activity has been validated, determine whether the observed behavior represents expected operational activity.
+
+---
+
+### Step 6: Determine Whether the Behavior Was Expected
+
+Not every behavioral anomaly indicates a network problem. Many deviations from the learned baseline are the result of legitimate operational activities such as scheduled maintenance, software deployments, infrastructure upgrades, backup or replication jobs, seasonal business demand, or planned configuration changes.
+
+Review the investigation findings alongside known operational activities to determine whether the observed behavior represents an expected variation in network activity or a genuinely unexpected anomaly requiring additional investigation.
+
+This step helps answer questions such as:
+
+- Can the observed behavior be explained by planned operational activity?
+- Were maintenance activities or software deployments in progress?
 - Were backup or replication jobs running?
-- Does the observed behavior align with known business activity?
-- Can the anomaly be explained by planned operational changes?
+- Have infrastructure or configuration changes recently occurred?
+- Does the observed behavior align with known business operations?
+- Does the anomaly remain unexplained?
 
-### Evidence to Collect
+#### Evidence to Collect
 
 - Scheduled maintenance activities.
 - Software deployment events.
-- Backup or replication traffic.
-- Business activities explaining the deviation.
+- Infrastructure or configuration changes.
+- Backup or replication activity.
+- Business events explaining the deviation.
 - Evidence supporting expected or unexpected behavior.
 
-### Continue the Investigation
+#### Continue the Investigation
 
-Once the operational context has been established, determine the most appropriate response based on the evidence collected.
-
----
-
-## Step 6: Determine the Appropriate Response
-
-By this stage, the investigation should have established how current behavior differs from the learned baseline, identified the systems responsible for the deviation, and determined whether the observed activity is expected.
-
-Review the investigation findings as a whole to determine the most appropriate operational response.
-
-Use the investigation findings to answer questions such as:
-
-- Can the observed behavior be fully explained?
-- Does the investigation need to continue?
-- Should the affected systems be monitored more closely?
-- Is historical analysis required to identify recurring patterns?
-- Should the anomaly be escalated for further investigation?
-
-### Evidence to Collect
-
-- Confirmed cause of the behavioral deviation.
-- Systems and applications responsible.
-- Operational justification for the observed behavior.
-- Recommended follow-up actions.
-- Escalation or monitoring requirements.
-
-### Investigation Outcome
-
-At this stage, you should understand how the observed behavior differs from the learned baseline, identify the systems responsible for the deviation, determine whether the activity is expected, and decide whether additional investigation or corrective action is required.
+Once it has been determined whether the behavior is expected, identify the most appropriate follow-up investigation or operational action.
 
 ---
 
-# Investigation Completion
+### Step 7: Determine the Appropriate Follow-up Investigation
+
+Review the investigation findings as a whole to determine whether the behavioral anomaly has been fully explained or whether additional investigation is required.
+
+The objective of this step is to decide whether continued monitoring, operational action, or a specialized investigation is necessary.
+
+This step helps answer questions such as:
+
+- Can the behavioral anomaly be fully explained?
+- Does the anomaly require continued monitoring?
+- Is no further action required?
+- Should the investigation continue with a Host Investigation?
+- Is an Interface Investigation required?
+- Would Historical Investigation provide additional context?
+- Is Packet Analysis required?
+- Does the anomaly require escalation to a Security Investigation?
+
+#### Evidence to Collect
+
+- Confirmed explanation for the behavioral deviation.
+- Responsible network entities.
+- Evidence supporting expected or unexpected behavior.
+- Recommended follow-up investigation.
+- Monitoring or escalation recommendations.
+
+#### Investigation Outcome
+
+At this stage, you should understand how the observed behavior differed from the learned baseline, which network entities contributed to the deviation, whether the behavior represented expected operational activity, and whether the investigation should conclude or continue using a specialized Host, Interface, Historical, or Security Investigation.
+
+## Investigation Completion
 
 This investigation can generally be considered complete when:
 
-- The anomalous metric has been identified.
-- The observed behavior has been compared against the learned baseline.
-- The systems and applications responsible have been identified.
-- Application usage and communication behavior have been validated.
-- The operational context has been established.
-- Appropriate operational or engineering actions have been determined.
+- The anomalous behavior has been identified.
+- The deviation has been compared against the learned baseline.
+- The entities responsible for the deviation have been identified.
+- The reason the observed behavior is unusual has been established.
+- The observed behavior has been determined to be expected or unexpected.
+- The appropriate follow-up investigation has been identified.
 
 ---
 
-# Best Practices
+## Best Practices
 
 - Treat behavioral anomalies as the beginning of an investigation rather than evidence of a problem.
-- Compare anomalous behavior against the learned baseline before drawing conclusions.
-- Progressively narrow the investigation from the detected anomaly to the responsible hosts, applications, and communication patterns.
-- Always validate operational context before escalating an anomaly.
-- Review learned baselines periodically as network usage evolves.
-- Document the evidence collected throughout the investigation.
+- Always compare observed behavior against the learned baseline before drawing conclusions.
+- Investigate why behavior differs from normal operation before investigating individual systems in detail.
+- Use application and communication analysis to explain the anomaly rather than simply describing current network activity.
+- Determine whether the observed behavior is expected before escalating the investigation.
+- Review learned baselines periodically as network behavior evolves.
+- Continue with specialised investigations when deeper analysis of a specific host, interface, application, or other monitored entity is required.
 
 ---
 
-# Related Investigations
+## Related Investigations
 
 - [**Investigate the Network Activity of an IP Address**](./inv1-exploreflows.md)
 - [**Investigate High Traffic on a Network Interface**](./inv2-routersintfs.md)

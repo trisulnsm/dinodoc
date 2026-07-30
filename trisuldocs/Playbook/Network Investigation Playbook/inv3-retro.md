@@ -4,7 +4,7 @@
 
 Not every network issue is discovered while it is happening. Performance degradation, security incidents, application outages, and unusual traffic patterns are often identified hours, days, or even weeks after the event has occurred.
 
-When investigating an incident retrospectively, the challenge is to reconstruct how the network behaved during the affected period. Rather than relying on fragmented logs or isolated observations, engineers need to understand how traffic evolved over time, which systems participated in the event, how applications behaved, and whether the observed activity differed from normal operations.
+Historical investigations are reconstruction exercises rather than real-time troubleshooting. Engineers begin by defining the investigation window in Trisul Retro, identify the abnormal activity that distinguishes the incident from normal network behaviour, and then pivot into Explore Flows to investigate the network entities responsible for the observed changes. The collected evidence is then correlated to reconstruct the sequence of events and determine whether a specialised follow-up investigation is required.
 
 Using Trisul Retro, engineers can revisit any point within the available retention period and investigate historical network activity using the same level of visibility available during live monitoring.
 
@@ -28,11 +28,11 @@ Use this investigation when you need to:
 By completing this investigation, you should be able to:
 
 - Reconstruct network activity for a specific period.
-- Identify the systems involved in the incident.
-- Understand changes in traffic patterns.
-- Identify unusual bandwidth consumption.
-- Establish a timeline of network events.
-- Determine whether additional investigation is required.
+- Establish a baseline for normal network behaviour.
+- Identify the significant changes that occurred during the incident.
+- Determine which systems contributed to those changes.
+- Reconstruct the sequence of network events.
+- Determine whether a specialised follow-up investigation is required.
 
 ---
 
@@ -46,7 +46,7 @@ Open [**Trisul Retro**](/docs/ug/cg/retro#selecting-a-time-window) and navigate 
 
 This allows you to reconstruct the network exactly as it appeared during that period.
 
-This view helps answer questions such as:
+This step helps answer questions such as:
 
 - When did the incident begin?
 - When did normal operation resume?
@@ -62,145 +62,171 @@ This view helps answer questions such as:
 
 #### Next Step
 
-Once the investigation window has been established, compare the incident period with normal network behaviour.
+Once the investigation window has been established, compare the incident period with a representative period of normal network operation.
 
 ---
 
-### Step 2: Compare Against Normal Behaviour
+### Step 2: Identify Abnormal Network Activity
 
-Historical analysis is most effective when current observations are compared with a known baseline. Understanding what "normal" looks like helps distinguish operational changes from genuine anomalies.
+After selecting the investigation window, review the historical activity using **Trisul Retro**. Zoom into the period where the incident occurred and identify the abnormal behaviour that distinguishes the incident from normal network operation.
 
-Using [**Trisul Retro**](/docs/ug/cg/retro#running-an-analysis-tool), move the investigation timeline to the period immediately before the incident and review the Hosts Dashboard, Applications, Conversations, and other relevant dashboards. Repeat the same review for the incident period and the time immediately afterwards.
+This step establishes the focus of the investigation before examining individual hosts, interfaces, applications, or conversations.
 
-By examining the same metrics across different historical periods, engineers can determine whether changes in traffic patterns, application usage, or host communications are unique to the incident or consistent with normal network operations.
+This step helps answer questions such as:
 
-This comparison helps answer questions such as:
-
-- Was bandwidth utilisation unusually high?
-- Were the same applications active during normal operation?
-- Were communication patterns significantly different?
-- Has similar activity occurred previously?
+- When did the abnormal activity begin?
+- What network behaviour changed during the selected period?
+- Was the change sudden or gradual?
+- Which metrics or visualisations indicate the incident?
+- Which part of the investigation requires deeper analysis?
 
 #### Evidence to Collect
 
-- Typical bandwidth utilisation.
-- Normal application usage.
-- Common communication patterns.
-- Historical traffic trends.
-- Significant deviations from baseline.
+- Time period containing the abnormal activity.
+- Observable deviations from normal behaviour.
+- Traffic spikes or drops.
+- Changes requiring further investigation.
 
-#### Next Step
+#### Continue the Investigation
 
-After establishing the baseline, examine how network activity changed during the incident.
+Once the abnormal activity has been identified, pivot into **Explore Flows** to investigate the network entities responsible for the observed changes.
 
 ---
 
-### Step 3: Analyze Network Activity
+### Step 3: Investigate the Observed Changes
 
-With the investigation window established, review how network activity evolved throughout the incident.
+After identifying the abnormal activity, continue the investigation in **Explore Flows** using the selected historical time window. This allows you to investigate the network activity responsible for the observed changes while remaining focused on the reconstructed incident.
 
-Use the historical dashboards in [**Trisul Retro**](/docs/ug/cg/retro#running-an-analysis-tool) to identify changes in bandwidth utilisation, application activity, and communication behaviour.
+This step helps answer questions such as:
 
-This view helps answer questions such as:
-
-- When did traffic begin changing?
-- Were there sudden spikes or gradual increases?
-- Which applications generated the traffic?
-- Were unusual protocols observed?
-- Did large data transfers occur?
+- Which network entities contributed to the observed changes?
+- Which hosts, interfaces, conversations, or applications appear most significant?
+- Which communication patterns changed during the incident?
+- Which observations require deeper investigation?
 
 #### Evidence to Collect
 
-- Traffic spikes.
-- Significant bandwidth changes.
-- Application usage during the incident.
-- Large data transfers.
-- Unusual communication activity.
+- Network entities contributing to the incident.
+- Significant changes in communication behaviour.
+- High-impact conversations.
+- Network objects requiring further investigation.
 
-#### Next Step
+#### Continue the Investigation
 
-Once the overall behaviour is understood, identify the systems responsible for the observed activity.
+Once the contributing network entities have been identified, determine which applications explain the observed historical activity.
 
 ---
 
-### Step 4: Identify the Systems Involved
+### Step 4: Analyze Historical Application Activity
 
-After understanding how network behaviour changed, determine which hosts contributed to the observed activity.
+Remain within **Explore Flows** and review the **Top Applications** for the selected historical time period.
 
-Review the historical [**Top Hosts**, **Top Conversations**, and **Top Applications**](/docs/ug/cg/retrotools#investigate-ip-activity) within the selected investigation period.
+Application visibility helps explain whether the observed changes were caused by expected operational activities, application failures, scheduled maintenance, bulk data transfers, or unexpected services.
 
-This helps answer questions such as:
+This step helps answer questions such as:
 
-- Which hosts generated the most traffic?
-- Which systems communicated most frequently?
-- Did any new communication pairs appear?
-- Which systems behaved differently from their normal operating patterns?
-
+- Which applications changed during the investigation period?
+- Which applications contributed to the observed network activity?
+- Did application behaviour differ from the established baseline?
+- Do the observed applications explain the incident?
 
 #### Evidence to Collect
 
-- High bandwidth hosts.
-- Frequently communicating systems.
-- Unexpected communication pairs.
-- Hosts exhibiting unusual behaviour.
+- Applications contributing to the incident.
+- Significant changes in application behaviour.
+- Expected and unexpected application activity.
+- Applications requiring further investigation.
 
-#### Next Step
+#### Continue the Investigation
 
-Once the participating systems have been identified, correlate the findings to understand how the incident developed.
+After identifying the applications involved, correlate the collected observations to reconstruct how the incident developed over time.
 
 ---
 
-### Step 5: Correlate the Investigation Findings
+### Optional Validation: Review Aggregate Traffic
 
-Network incidents are rarely explained by a single observation. Reviewing the findings together often reveals relationships that are not immediately obvious when examining bandwidth, hosts, or applications individually.
+Most historical investigations can be completed using Explore Flows. Where additional validation is required, **Aggregate Flow Statistics** provides a summarized view of the investigated historical traffic.
 
-Correlate the historical observations collected throughout the investigation.
+Rather than introducing new evidence, Aggregate Flow Statistics groups the historical flow records by dimensions such as IP address, interface, application, port, router, and other network attributes. This helps confirm whether the observed historical activity is consistent across different analytical perspectives.
 
-This helps answer questions such as:
+This step helps answer questions such as:
 
-- Did increased bandwidth coincide with application issues?
-- Did communication patterns change before users reported the problem?
-- Were multiple systems affected simultaneously?
-- Did traffic return to normal after the incident?
+- Do the aggregate statistics support the reconstructed incident?
+- Which network entities dominate the historical traffic?
+- Are the observed changes concentrated within specific applications, interfaces, or hosts?
+- Does the aggregate traffic profile reinforce the investigation findings?
 
 #### Evidence to Collect
 
-- Relationships between events.
-- Changes occurring before the incident.
-- Simultaneous changes across multiple systems.
-- Recovery patterns after the incident.
+- Aggregate historical traffic distribution.
+- Dominant network entities.
+- Historical traffic concentrations.
+- Aggregate evidence supporting the investigation.
 
-#### Next Step
+#### Continue the Investigation
 
-Summarise the findings into a chronological timeline to support future troubleshooting or post-incident reviews.
+If additional protocol-level validation is required, continue with Packet Analysis using the selected historical flow records.
 
 ---
 
-### Step 6: Build the Investigation Timeline
+### Step 5: Validate with Packet Analysis
 
-The final step is documenting the sequence of events that occurred during the investigation period.
+Where packet capture is available, continue directly from **Explore Flows** by downloading the PCAP for the selected historical flow records.
 
-Summarise the significant observations collected throughout the workflow to create a clear timeline of the incident.
+Packet-level analysis helps confirm protocol behaviour and validate conclusions drawn from the reconstructed historical activity.
 
-This timeline helps answer questions such as:
+This step helps answer questions such as:
 
-- What happened first?
-- Which systems were involved?
-- How did network behaviour change?
+- Does packet-level analysis support the reconstructed incident?
+- Are protocol anomalies visible?
+- Did application behaviour match the observed historical activity?
+- Is additional evidence required before completing the investigation?
+
+#### Evidence to Collect
+
+- Packet-level evidence supporting the investigation.
+- Protocol anomalies.
+- Communication failures or retransmissions.
+- Evidence confirming the reconstructed timeline.
+
+#### Continue the Investigation
+
+Correlate all collected evidence to reconstruct the incident timeline and determine whether a specialised follow-up investigation is required.
+
+---
+
+### Step 6: Build the Investigation Timeline and Determine Next Actions
+
+Summarise the investigation into a chronological reconstruction describing:
+
+- When the incident began.
+- What changed.
+- Which network entities were responsible.
+- How the incident evolved.
+- How the network recovered.
+- What evidence supports the conclusions.
+
+If the investigation identifies one or more network entities requiring deeper analysis, continue with the appropriate specialised investigation rather than repeating those investigative workflows within this document.
+
+This step helps answer questions such as:
+
+- What happened during the investigation period?
+- Which network entities contributed to the incident?
+- How did the incident evolve?
 - What evidence supports the conclusions?
-- What follow-up actions are recommended?
+- Which specialised investigation should be performed next?
 
 #### Evidence to Collect
 
-- Timeline of significant events.
-- Systems involved.
-- Changes in traffic behaviour.
-- Contributing factors.
-- Final investigation conclusions.
+- Chronological timeline of significant events.
+- Network entities contributing to the incident.
+- Supporting evidence for the reconstructed sequence.
+- Correlated observations.
+- Recommended follow-up investigations.
 
 #### Investigation Outcome
 
-At this stage, you should have reconstructed the sequence of network events, identified the systems involved, explained the observed behaviour, and determined whether additional operational or security investigation is required.
+At this stage, you should understand when the incident occurred, how network behaviour differed from the established baseline, which network entities were responsible for the observed changes, how the incident evolved over time, and whether further investigation should continue with the appropriate specialised investigation if deeper analysis of a specific host, interface, or application is required.
 
 ---
 
@@ -209,23 +235,23 @@ At this stage, you should have reconstructed the sequence of network events, ide
 This investigation can generally be considered complete when:
 
 - The investigation window has been clearly defined.
-- Historical activity has been compared with normal network behaviour.
-- Changes in traffic patterns have been identified.
-- The systems responsible for the observed activity have been determined.
-- Significant observations have been correlated.
-- A complete timeline of the incident has been established.
-- Appropriate operational or engineering actions have been determined.
+- A representative baseline has been established.
+- Significant deviations from normal network behaviour have been identified.
+- The systems responsible for the observed changes have been identified.
+- The sequence of events has been reconstructed.
+- A chronological timeline of the incident has been documented.
+- Appropriate follow-up investigations have been identified where deeper analysis is required.
 
 ---
 
 ## Best Practices
 
 - Clearly define the investigation period before reviewing historical data.
-- Always compare incident activity with a known baseline.
-- Analyse trends rather than isolated metrics.
-- Correlate observations across hosts, applications, and bandwidth utilisation.
-- Document findings chronologically to simplify future investigations.
-- Preserve historical evidence before making configuration or infrastructure changes.
+- Always establish a baseline before analysing the incident itself.
+- Focus on identifying significant changes before attempting to determine their cause.
+- Correlate traffic changes, communication patterns, application behaviour, user-reported symptoms, and recovery events to reconstruct the sequence of events.
+- Use specialised Host, Interface, or Application investigations when deeper analysis of a specific entity becomes necessary.
+- Preserve historical evidence to support post-incident reviews and future investigations.
 
 ---
 

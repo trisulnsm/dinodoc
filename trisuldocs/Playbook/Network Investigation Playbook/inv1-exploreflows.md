@@ -35,15 +35,19 @@ By completing this investigation, you should be able to determine:
 
 ---
 
-# Investigation Workflow
+## Investigation Workflow
 
-## Step 1: Review Host Activity
+### Step 1: Review Host Activity
 
-Every investigation begins by understanding the overall activity of the host. Before analysing conversations or individual flows, determine whether the host exhibits behaviour that appears consistent with its operational role.
+Every investigation begins by understanding the overall activity of the host. Rather than switching between multiple dashboards, begin the investigation directly within **Explore Flows** by entering the IP address to be investigated. This provides an immediate operational profile of the host and serves as the starting point for progressively investigating its communication behavior.
 
-Open the [**Hosts Dashboard**](/docs/ug/cg/retrotools#investigate-ip-activity) and locate the IP address being investigated.
+Open [**Explore Flows**](/docs/ug/tools/explore_flows) and enter the IP address being investigated.
 
-The dashboard provides an immediate overview of the host's activity, allowing you to understand its relative importance within the network before beginning deeper analysis.
+![](./images/exploreflows.png)
+
+*Figure: Explore Flows*
+
+The initial view provides an overview of the host's activity, allowing you to understand its relative importance within the network before beginning deeper analysis.
 
 This view helps answer questions such as:
 
@@ -52,11 +56,8 @@ This view helps answer questions such as:
 - Does its activity appear consistent with its role?
 - Does the host immediately stand out compared to other systems?
 
-![](./images/hostsactivity.png)
 
-*Figure: Hosts Dashboard*
-
-### Evidence to Collect
+#### Evidence to Collect
 
 - Overall bandwidth utilisation.
 - Relative activity compared to other hosts.
@@ -64,19 +65,19 @@ This view helps answer questions such as:
 - Traffic trends.
 - Any unusually high activity.
 
-### Next Step
+#### Next Step
 
 Once you understand the host's overall activity, investigate how it communicates with other systems across the network.
 
 ---
 
-## Step 2: Explore Communication Patterns
+### Step 2: Explore Communication Patterns
 
 Understanding who the host communicates with often explains far more than bandwidth alone. Most devices have predictable communication patterns based on their operational role. Unexpected communication partners frequently provide the first indication that additional investigation is required.
 
-Open [**Explore Flows**](/docs/ug/tools/explore_flows) for the selected IP address.
+Remain within [**Explore Flows**](/docs/ug/tools/explore_flows) and review the [**Conversations**](/docs/ug/tools/explore_flows#top-conversations) view for the selected IP address.
 
-The Conversations view provides a high-level communication profile without requiring you to inspect every individual flow.
+This view provides a high-level communication profile without requiring you to inspect every individual flow.
 
 This view helps answer questions such as:
 
@@ -86,11 +87,7 @@ This view helps answer questions such as:
 - Are unfamiliar communication partners present?
 - Do communication patterns align with the expected role of the device?
 
-![](./images/exploreflows.png)
-
-*Figure: Explore Flows - Conversations View*
-
-### Evidence to Collect
+#### Evidence to Collect
 
 - Frequent communication partners.
 - Internal and external destinations.
@@ -98,17 +95,51 @@ This view helps answer questions such as:
 - Unexpected communication peers.
 - Newly observed relationships.
 
-### Next Step
+#### Next Step
 
-Once communication relationships have been established, determine which applications are responsible for the observed traffic.
+Once communication relationships have been established, investigate the individual connections responsible for the observed behavior.
 
 ---
 
-## Step 3: Analyze Application Usage
+### Step 3: Examine Individual Connections
 
-Communication between hosts only tells part of the story. Understanding the applications generating the traffic provides the operational context needed to determine whether the observed behaviour is expected.
+After identifying the host's communication patterns, remain within [**Explore Flows**](/docs/ug/tools/explore_flows) and drill down from the [**Conversations**](/docs/ug/tools/explore_flows#top-conversations) view into the [**Individual Flow Records**](/docs/ug/tools/explore_flows#top-matching-flows). This is a natural continuation of the communication investigation and allows you to determine which specific sessions explain the observed behavior.
 
-Open the [**Applications**](/docs/ug/cg/retrotools#investigate-ip-activity) view for the selected host.
+This view helps answer questions such as:
+
+- Which individual sessions generated the observed traffic?
+- Which destination hosts exchanged the most data?
+- Which ports and protocols were used?
+- Are unusually long-lived or high-volume sessions present?
+- Are repeated sessions or unusual connections visible?
+
+![](./images/individualflows.png)
+
+*Figure: Individual Flow Records*
+
+#### Evidence to Collect
+
+- High-volume flow records.
+- Long-duration connections.
+- Frequently repeated sessions.
+- Unexpected ports or protocols.
+- Conversations requiring deeper validation.
+
+#### Next Step
+
+Once the communication investigation has been completed, determine which applications generated the observed traffic.
+
+---
+
+### Step 4: Analyze Application Usage
+
+Communication patterns identify who the host is communicating with, while application analysis explains why that communication exists.
+
+Remain within [**Explore Flows**](/docs/ug/tools/explore_flows) and select the [**Top Applications**](/docs/ug/tools/explore_flows#activity-details) topper under the activity details to open the Application Usage view for the selected host.
+
+![](./images/appusage-ef.png)    
+
+*Figure: Application Usage*
 
 Application visibility allows you to identify the services and protocols responsible for network activity, making it easier to distinguish legitimate business traffic from unexpected or unauthorised applications.
 
@@ -120,11 +151,7 @@ This view helps answer questions such as:
 - Are unexpected protocols consuming bandwidth?
 - Does application usage explain the reported issue?
 
-![](./images/appusage.png)
-
-*Figure: Application Usage*
-
-### Evidence to Collect
+#### Evidence to Collect
 
 - Top applications.
 - Protocol distribution.
@@ -132,89 +159,50 @@ This view helps answer questions such as:
 - Backup or replication traffic.
 - Unexpected services or protocols.
 
-### Next Step
+#### Next Step
 
-After identifying the applications responsible for the traffic, evaluate the host's overall traffic characteristics to determine whether its behaviour is operationally consistent.
+After identifying the applications responsible for the traffic, review the same investigation using alternative aggregate views to validate the host's overall traffic characteristics.
 
-## Step 4: Review Aggregate Traffic
+---
 
-After understanding who the host communicates with and which applications generate its traffic, the next objective is evaluating the host's overall traffic characteristics.
+### Optional Validation: Review Aggregate Traffic
 
-While individual conversations explain specific communications, aggregate traffic statistics provide a broader operational view of the host's behaviour. Reviewing these metrics helps determine whether the host's activity is consistent with its expected role or whether further investigation is required.
+Most investigations can be completed without reviewing Aggregate Flow Statistics. This view serves as an optional validation and summary activity when you want additional confirmation of the conclusions reached during the investigation or need supporting evidence for reporting.
 
-Open [**Aggregate Flow Statistics**](/docs/ug/tools/aggregate_flows) for the selected host.
-
-This view consolidates network activity into meaningful operational metrics, allowing you to assess the overall impact of the host without examining thousands of individual flow records.
+Rather than introducing new data, [**Aggregate Flow Statistics**](/docs/ug/tools/aggregate_flows) presents the same flow information from different perspectives, allowing you to view traffic by IP address, port, router, application, and other network dimensions.
 
 This view helps answer questions such as:
 
-- How much traffic has the host generated?
-- Has bandwidth utilisation changed significantly?
-- Is traffic evenly distributed or concentrated within a few conversations?
-- Are traffic patterns consistent throughout the investigation period?
-- Does the overall activity appear normal for this type of device?
+- Is the host's traffic concentrated around a few applications or distributed across many services?
+- Which IP addresses, ports, routers, or applications account for most of the traffic?
+- Does the aggregate traffic profile support the conclusions reached during the investigation?
+- Are there dominant traffic patterns that were not immediately apparent from individual flow records?
+- Does the host's overall traffic profile appear consistent with its operational role?
+
 
 ![](./images/aggregateflows.png)
 
 *Figure: Aggregate Flow Statistics*
 
-### Evidence to Collect
+#### Evidence to Collect
 
-- Total traffic volume.
-- Number of flows.
-- Packet and byte counts.
-- Bandwidth trends.
-- Significant changes in traffic behaviour.
+- Aggregate traffic distribution.
+- Dominant IP addresses, ports, routers, or applications.
+- Overall traffic profile.
+- Significant traffic concentrations.
+- Aggregate evidence supporting the investigation findings.
 
-### Next Step
+#### Next Step
 
-If the aggregate statistics indicate unusual behaviour, examine the individual connections responsible for generating the observed traffic.
-
----
-
-## Step 5: Examine Individual Connections
-
-Aggregate statistics identify unusual behaviour, but individual flow records reveal exactly which network sessions are responsible.
-
-When an investigation needs to move beyond high-level observations, reviewing individual connections allows you to isolate specific communications, identify the systems involved, and determine whether those sessions are expected.
-
-Open the [**Individual Flow Records**](/docs/ug/cg/retrotools#investigate-ip-activity) for the selected host.
-
-This view provides detailed information about every network conversation, allowing you to validate communication patterns and identify sessions requiring closer examination.
-
-This view helps answer questions such as:
-
-- Which individual sessions generated the observed traffic?
-- Which destination hosts exchanged the most data?
-- Which ports and protocols were used?
-- Are unusually long-lived or high-volume sessions present?
-- Do the individual flows support the conclusions reached so far?
-
-![](./images/individualflows.png)
-
-*Figure: Individual Flow Records*
-
-### Evidence to Collect
-
-- High-volume flow records.
-- Long-duration connections.
-- Frequently repeated sessions.
-- Unexpected ports or protocols.
-- Conversations requiring deeper validation.
-
-### Next Step
-
-If the flow records alone do not fully explain the observed behaviour, validate the investigation using packet analysis.
+Once the aggregate traffic characteristics have been reviewed, continue with packet-level analysis if protocol-level validation is required.
 
 ---
 
-## Step 6: Validate with Packet Analysis
+### Step 5: Validate with Packet Analysis
 
-Flow records provide an excellent summary of network activity, but some investigations require packet-level visibility to confirm protocol behaviour or troubleshoot application-specific issues.
+Flow records usually provide an excellent summary of network activity, but some investigations require packet-level visibility to confirm protocol behavior or troubleshoot application-specific issues.
 
-Where packet capture is available, Trisul allows you to pivot directly from a flow record to packet analysis, eliminating the need to manually correlate data between separate tools.
-
-Use [**Packet Analysis**](/docs/ug/cg/retrotools#pull-packets) to validate the findings of the investigation.
+From [**Explore Flows**](/docs/ug/tools/explore_flows), select the required host or flow record, click the [**Action button**](/docs/ug/tools/explore_flows#flow-options), and choose **Download PCAP** to validate the findings using packet-level analysis.
 
 This view helps answer questions such as:
 
@@ -228,7 +216,7 @@ This view helps answer questions such as:
 
 *Figure: Packet Analysis*
 
-### Evidence to Collect
+#### Evidence to Collect
 
 - Successful protocol exchanges.
 - Retransmissions or packet loss.
@@ -236,13 +224,13 @@ This view helps answer questions such as:
 - Application-level behaviour.
 - Packet-level evidence supporting the investigation.
 
-### Investigation Outcome
+#### Investigation Outcome
 
-At this stage, you should have sufficient evidence to understand the host's communication behaviour, determine whether the observed activity is expected, and decide whether operational action or further investigation is required.
+At this stage, you should have sufficient evidence to understand the host's communication behavior, determine whether the observed activity is expected, and decide whether operational action or further investigation is required.
 
 ---
 
-# Investigation Completion
+## Investigation Completion
 
 This investigation can generally be considered complete when:
 
@@ -257,7 +245,7 @@ This investigation can generally be considered complete when:
 
 ---
 
-# Best Practices
+## Best Practices
 
 - Begin every investigation by reviewing the host's overall activity before analysing individual conversations.
 - Progressively narrow the investigation from host activity to communication patterns, applications, aggregate statistics, individual flows, and packet analysis.
@@ -268,7 +256,7 @@ This investigation can generally be considered complete when:
 
 ---
 
-# Related Investigations
+## Related Investigations
 
 - [**Investigate High Traffic on a Network Interface**](/playbook/Network%20Investigation%20Playbook/inv2-routersintfs) – Continue investigating if excessive bandwidth is isolated to a specific router or switch interface.
 - [**Investigate Historical Network Activity**](/playbook/Network%20Investigation%20Playbook/inv3-retro) – Compare the host's current behaviour with historical traffic patterns.
