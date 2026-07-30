@@ -125,7 +125,7 @@ Remain within [**Explore Flows**](/docs/ug/tools/explore_flows) and review the [
 
 Application visibility helps determine whether the threshold crossing was caused by expected operational activity, scheduled maintenance, backups, software deployments, increased business demand, or unexpected application behaviour.
 
-![](./images/applications.png)
+![](./images/appusage-ef.png)
 
 *Figure: Top Applications*
 

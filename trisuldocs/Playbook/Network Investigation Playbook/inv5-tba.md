@@ -125,7 +125,7 @@ Remain within [**Explore Flows**](/docs/ug/tools/explore_flows) and review the [
 
 Application visibility helps determine whether the observed deviation resulted from expected operational activity, scheduled maintenance, backups, software deployments, changing business demand, or unexpected application behavior.
 
-![](./images/tbaapps.png)
+![](./images/appusage-ef.png)
 
 *Figure: Application Analysis*
 

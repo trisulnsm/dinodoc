@@ -126,7 +126,7 @@ Remain within [**Explore Flows**](/docs/ug/tools/explore_flows) and review the [
 
 Application visibility helps determine whether the observed change resulted from expected operational activity, software deployments, backup or replication jobs, changing business demand, infrastructure changes, or unexpected application behavior.
 
-![](./images/tbaapps1.png)
+![](./images/appusage-ef.png)
 
 *Figure: Application Analysis*
 
