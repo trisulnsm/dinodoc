@@ -12,23 +12,23 @@ If you've done one investigation in this playbook, you already know most of the 
 
 | Investigation | Start here when... |
 |---|---|
-| [Investigate the Network Activity of an IP Address](./inv1-exploreflows.md) | A user reported an issue, or you're validating a specific host. |
-| [Investigate High Traffic on a Network Interface](./inv2-routersintfs.md) | A router or switch interface is running hot. |
-| [Investigate Historical Network Activity](./inv3-retro.md) | The issue was discovered after it happened — you're reconstructing, not live-troubleshooting. |
+| [Investigate the Network Activity of an IP Address](/playbook/Network%20Investigation%20Playbook/inv1-exploreflows) | A user reported an issue, or you're validating a specific host. |
+| [Investigate High Traffic on a Network Interface](/playbook/Network%20Investigation%20Playbook/inv2-routersintfs) | A router or switch interface is running hot. |
+| [Investigate Historical Network Activity](/playbook/Network%20Investigation%20Playbook/inv3-retro) | The issue was discovered after it happened — you're reconstructing, not live-troubleshooting. |
 
 **Hub investigations** — you land here because a system flagged something (an alert, a baseline deviation, a monitored asset), and the investigation is designed to route you into one of the entry points above (or into each other) once the trigger is understood.
 
 | Investigation | Triggered by... |
 |---|---|
-| [Investigate Threshold Crossing Alerts](./inv4-tca.md) | A metric crossed a configured threshold. |
-| [Investigate Network Behavior Anomalies](./inv5-tba.md) | Traffic deviated from a learned baseline, even without crossing a hard threshold. |
-| [Monitor Critical Network Assets](./inv6-ckey.md) | A business-critical device or application changed behavior. |
+| [Investigate Threshold Crossing Alerts](/playbook/Network%20Investigation%20Playbook/inv4-tca) | A metric crossed a configured threshold. |
+| [Investigate Network Behavior Anomalies](/playbook/Network%20Investigation%20Playbook/inv5-tba) | Traffic deviated from a learned baseline, even without crossing a hard threshold. |
+| [Monitor Critical Network Assets](/playbook/Network%20Investigation%20Playbook/inv6-customkeymonitor) | A business-critical device or application changed behavior. |
 
 **Supporting investigation** — not a trigger-based entry point on its own; used *alongside* any of the above when a single host/interface/app view isn't enough to answer the question.
 
 | Investigation | Use when... |
 |---|---|
-| [Correlate Network Activity Across Multiple Dimensions](./inv7-crosskey.md) | The question spans more than one dimension — e.g. "which app dominates this interface for this customer" — and no single-entity investigation above can answer it alone. |
+| [Correlate Network Activity Across Multiple Dimensions](/playbook/Network%20Investigation%20Playbook/inv7-crosskey) | The question spans more than one dimension — e.g. "which app dominates this interface for this customer" — and no single-entity investigation above can answer it alone. |
 
 ---
 

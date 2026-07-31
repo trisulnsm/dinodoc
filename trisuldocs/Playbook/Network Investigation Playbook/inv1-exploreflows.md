@@ -263,7 +263,7 @@ This investigation can generally be considered complete when:
 
 ## Related Investigations
 
-- [**Investigate High Traffic on a Network Interface**](./inv2-routersintfs.md) – Continue investigating if excessive bandwidth is isolated to a specific router or switch interface.
-- [**Investigate Historical Network Activity**](./inv3-retro.md) – Compare the host's current behaviour with historical traffic patterns.
-- [**Investigate Threshold Crossing Alerts**](./inv4-tca.md) – Determine whether the host triggered bandwidth or activity thresholds that require further analysis.
-- [**Correlate Network Activity Across Multiple Dimensions**](./inv7-crosskey.md) – Analyse this host's traffic alongside application, interface, or site dimensions if a single-host view doesn't fully answer the question.
+- [**Investigate High Traffic on a Network Interface**](/playbook/Network%20Investigation%20Playbook/inv2-routersintfs) – Continue investigating if excessive bandwidth is isolated to a specific router or switch interface.
+- [**Investigate Historical Network Activity**](/playbook/Network%20Investigation%20Playbook/inv3-retro) – Compare the host's current behaviour with historical traffic patterns.
+- [**Investigate Threshold Crossing Alerts**](/playbook/Network%20Investigation%20Playbook/inv4-tca) – Determine whether the host triggered bandwidth or activity thresholds that require further analysis.
+- [**Correlate Network Activity Across Multiple Dimensions**](/playbook/Network%20Investigation%20Playbook/inv7-crosskey) – Analyse this host's traffic alongside application, interface, or site dimensions if a single-host view doesn't fully answer the question.

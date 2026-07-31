@@ -248,7 +248,7 @@ Use Trisul AI to generate a concise summary of the investigation, highlight the 
 
 ## Related Investigations
 
-- [**Investigate the Network Activity of an IP Address**](./inv1-exploreflows.md) – Continue investigating a specific host identified as a primary bandwidth consumer.
-- [**Investigate Historical Network Activity**](./inv3-retro.md) – Compare the interface's current utilization with historical traffic patterns.
-- [**Investigate Threshold Crossing Alerts**](./inv4-tca.md) – Determine whether the interface triggered a utilization threshold that requires further analysis.
-- [**Correlate Network Activity Across Multiple Dimensions**](./inv7-crosskey.md) – Analyse this interface's traffic alongside application, customer, or site dimensions if a single-interface view doesn't fully answer the question.
+- [**Investigate the Network Activity of an IP Address**](/playbook/Network%20Investigation%20Playbook/inv1-exploreflows) – Continue investigating a specific host identified as a primary bandwidth consumer.
+- [**Investigate Historical Network Activity**](/playbook/Network%20Investigation%20Playbook/inv3-retro) – Compare the interface's current utilization with historical traffic patterns.
+- [**Investigate Threshold Crossing Alerts**](/playbook/Network%20Investigation%20Playbook/inv4-tca) – Determine whether the interface triggered a utilization threshold that requires further analysis.
+- [**Correlate Network Activity Across Multiple Dimensions**](/playbook/Network%20Investigation%20Playbook/inv7-crosskey) – Analyse this interface's traffic alongside application, customer, or site dimensions if a single-interface view doesn't fully answer the question.

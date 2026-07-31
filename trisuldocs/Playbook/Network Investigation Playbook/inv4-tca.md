@@ -293,7 +293,7 @@ This investigation can generally be considered complete when:
 
 ## Related Investigations
 
-- [**Investigate High Traffic on a Network Interface**](./inv2-routersintfs.md) – Continue investigating if the threshold crossing is isolated to a specific interface.
-- [**Investigate the Network Activity of an IP Address**](./inv1-exploreflows.md) – Continue investigating if the threshold crossing is tied to a specific host.
-- [**Investigate Historical Network Activity**](./inv3-retro.md) – Determine whether similar threshold crossings have occurred in the past.
-- [**Correlate Network Activity Across Multiple Dimensions**](./inv7-crosskey.md) – Analyse the alert alongside application, interface, or site dimensions if a single-entity view doesn't fully explain it.
+- [**Investigate High Traffic on a Network Interface**](/playbook/Network%20Investigation%20Playbook/inv2-routersintfs) – Continue investigating if the threshold crossing is isolated to a specific interface.
+- [**Investigate the Network Activity of an IP Address**](/playbook/Network%20Investigation%20Playbook/inv1-exploreflows) – Continue investigating if the threshold crossing is tied to a specific host.
+- [**Investigate Historical Network Activity**](/playbook/Network%20Investigation%20Playbook/inv3-retro) – Determine whether similar threshold crossings have occurred in the past.
+- [**Correlate Network Activity Across Multiple Dimensions**](/playbook/Network%20Investigation%20Playbook/inv7-crosskey) – Analyse the alert alongside application, interface, or site dimensions if a single-entity view doesn't fully explain it.

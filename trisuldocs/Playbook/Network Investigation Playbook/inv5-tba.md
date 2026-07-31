@@ -295,9 +295,9 @@ This investigation can generally be considered complete when:
 
 ## Related Investigations
 
-- [**Investigate the Network Activity of an IP Address**](./inv1-exploreflows.md)
-- [**Investigate High Traffic on a Network Interface**](./inv2-routersintfs.md)
-- [**Investigate Historical Network Activity**](./inv3-retro.md)
-- [**Investigate Threshold Crossing Alerts**](./inv4-tca.md)
-- [**Monitor Critical Network Assets**](./inv6-ckey.md) – Check whether the anomalous entity is also a monitored critical asset.
-- [**Correlate Network Activity Across Multiple Dimensions**](./inv7-crosskey.md) – Determine whether the anomaly forms part of a broader multi-entity pattern.
+- [**Investigate the Network Activity of an IP Address**](/playbook/Network%20Investigation%20Playbook/inv1-exploreflows)
+- [**Investigate High Traffic on a Network Interface**](/playbook/Network%20Investigation%20Playbook/inv2-routersintfs)
+- [**Investigate Historical Network Activity**](/playbook/Network%20Investigation%20Playbook/inv3-retro)
+- [**Investigate Threshold Crossing Alerts**](/playbook/Network%20Investigation%20Playbook/inv4-tca)
+- [**Monitor Critical Network Assets**](/playbook/Network%20Investigation%20Playbook/inv6-customkeymonitor) – Check whether the anomalous entity is also a monitored critical asset.
+- [**Correlate Network Activity Across Multiple Dimensions**](/playbook/Network%20Investigation%20Playbook/inv7-crosskey) – Determine whether the anomaly forms part of a broader multi-entity pattern.

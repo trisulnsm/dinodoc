@@ -261,8 +261,8 @@ Use Trisul AI to generate a concise summary of the investigation, highlight the 
 
 ## Related Investigations
 
-- [**Investigate the Network Activity of an IP Address**](./inv1-exploreflows.md)
-- [**Investigate High Traffic on a Network Interface**](./inv2-routersintfs.md)
-- [**Investigate Historical Network Activity**](./inv3-retro.md)
-- [**Investigate Network Behavior Anomalies**](./inv5-tba.md)
-- [**Monitor Critical Network Assets**](./inv6-ckey.md) – Use multidimensional correlation to add context to a critical asset investigation.
+- [**Investigate the Network Activity of an IP Address**](/playbook/Network%20Investigation%20Playbook/inv1-exploreflows)
+- [**Investigate High Traffic on a Network Interface**](/playbook/Network%20Investigation%20Playbook/inv2-routersintfs)
+- [**Investigate Historical Network Activity**](/playbook/Network%20Investigation%20Playbook/inv3-retro)
+- [**Investigate Network Behavior Anomalies**](/playbook/Network%20Investigation%20Playbook/inv5-tba)
+- [**Monitor Critical Network Assets**](/playbook/Network%20Investigation%20Playbook/inv6-customkeymonitor) – Use multidimensional correlation to add context to a critical asset investigation.

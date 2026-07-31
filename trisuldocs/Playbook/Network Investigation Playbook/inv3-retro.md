@@ -263,7 +263,7 @@ This investigation can generally be considered complete when:
 
 ## Related Investigations
 
-- [**Investigate the Network Activity of an IP Address**](./inv1-exploreflows.md) – Continue investigating hosts identified during the historical analysis.
-- [**Investigate High Traffic on a Network Interface**](./inv2-routersintfs.md) – Investigate interfaces that experienced sustained congestion during the incident.
-- [**Investigate Threshold Crossing Alerts**](./inv4-tca.md) – Determine whether recurring traffic spikes correspond to threshold violations.
-- [**Correlate Network Activity Across Multiple Dimensions**](./inv7-crosskey.md) – Reconstruct how multiple entities (hosts, applications, interfaces) related to one another during the incident window.
+- [**Investigate the Network Activity of an IP Address**](/playbook/Network%20Investigation%20Playbook/inv1-exploreflows) – Continue investigating hosts identified during the historical analysis.
+- [**Investigate High Traffic on a Network Interface**](/playbook/Network%20Investigation%20Playbook/inv2-routersintfs) – Investigate interfaces that experienced sustained congestion during the incident.
+- [**Investigate Threshold Crossing Alerts**](/playbook/Network%20Investigation%20Playbook/inv4-tca) – Determine whether recurring traffic spikes correspond to threshold violations.
+- [**Correlate Network Activity Across Multiple Dimensions**](/playbook/Network%20Investigation%20Playbook/inv7-crosskey) – Reconstruct how multiple entities (hosts, applications, interfaces) related to one another during the incident window.
