@@ -14,7 +14,7 @@ Using Trisul Network Security Monitoring, analysts can investigate security aler
 
 Use this investigation when you need to:
 
-- Investigate IDS or IPS alerts.
+- Investigate IDS alerts.
 - Validate behavioral or anomaly detection alerts.
 - Investigate threat intelligence notifications.
 - Correlate multiple alerts involving the same host.
