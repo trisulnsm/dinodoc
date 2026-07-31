@@ -252,7 +252,7 @@ This investigation can generally be considered complete when:
 
 ## Related Investigations
 
-- [**Investigate Threat Intelligence Alerts**](/playbook/securityplaybook/inv5-threatalerts)
+- [**Investigate Suspicious Network Behavior**](/playbook/securityplaybook/inv5-threatalerts)
 - [**Investigate Encrypted Traffic**](/playbook/securityplaybook/inv3-encryptedtraffic)
 - [**Investigate Potential Data Exfiltration**](/playbook/securityplaybook/inv1-exfiltration)
-- [**Hunt Threats Across Historical Network Activity**](/playbook/securityplaybook/inv7-threathunting)
+- [**Hunt Threats Across Historical Network Activity**](/playbook/securityplaybook/inv7-historical)

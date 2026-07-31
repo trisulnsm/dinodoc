@@ -1,4 +1,4 @@
-# Investigate Network Behavior Anomalies
+# Investigate Suspicious Network Behavior
 
 ## Investigation Overview
 
