@@ -121,7 +121,7 @@ Once the contributing entities have been identified, analyse the applications re
 
 ### Step 4: Analyze Application Activity
 
-Remain within [**Explore Flows**](/docs/ug/tools/explore_flows) and review the [**Top Applications**](/docs/ug/tools/explore_flows#top-applications) for the investigation period.
+Remain within [**Explore Flows**](/docs/ug/tools/explore_flows) and review the [**Top Applications**](/docs/ug/tools/explore_flows#activity-details) for the investigation period.
 
 Application visibility helps determine whether the threshold crossing was caused by expected operational activity, scheduled maintenance, backups, software deployments, increased business demand, or unexpected application behaviour.
 
@@ -177,7 +177,7 @@ If packet capture is available, continue with Packet Analysis to validate the ob
 
 ### Step 5: Validate with Packet Analysis
 
-Where packet capture is available, continue directly from [**Explore Flows**](/docs/ug/tools/explore_flows#investigating-packets-in-explore-flows) by downloading the PCAP for the selected flow records.
+Where packet capture is available, continue directly from [**Explore Flows**](/docs/ug/tools/explore_flows#flow-options) by downloading the PCAP for the selected flow records.
 
 Packet-level analysis helps validate the conclusions drawn from the flow investigation and provides protocol-level evidence explaining the behaviour responsible for the threshold crossing.
 

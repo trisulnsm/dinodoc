@@ -121,7 +121,7 @@ Once the contributing network entities have been identified, determine which app
 
 ### Step 4: Analyze Application Activity
 
-Remain within [**Explore Flows**](/docs/ug/tools/explore_flows) and review the [**Top Applications**](/docs/ug/tools/explore_flows#top-applications) for the investigation period.
+Remain within [**Explore Flows**](/docs/ug/tools/explore_flows) and review the [**Top Applications**](/docs/ug/tools/explore_flows#activity-details) for the investigation period.
 
 Application visibility helps determine whether the observed deviation resulted from expected operational activity, scheduled maintenance, backups, software deployments, changing business demand, or unexpected application behavior.
 
