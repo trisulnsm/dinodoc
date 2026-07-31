@@ -31,7 +31,7 @@ By completing this investigation, you should be able to:
 - Understand the applications and protocols involved.
 - Assess the volume and duration of the transfer.
 - Determine whether the activity is legitimate or suspicious.
-- Establish the scope of the potential compromise.
+- Determine whether the observed outbound communication represents legitimate business activity or potential data exfiltration.
 
 ---
 
@@ -178,7 +178,7 @@ After validating the communication, determine whether similar activity has occur
 
 ---
 
-### Step 5: Review Historical Activity
+### Step 5: Determine Whether the Activity Is New or Recurring
 
 Determining whether the observed communication is new or part of an established pattern provides valuable context for the investigation.
 
@@ -206,31 +206,11 @@ Once the historical context has been established, review the investigation findi
 
 ---
 
-### Step 6: Summarize the Investigation
+### Step 6: Summarize the Investigation with Trisul AI
 
-By this stage, the investigation should have established the source of the communication, the external destination, the applications involved, supporting packet evidence, and the historical context surrounding the activity.
+Once the investigation is complete, open **Trisul AI** to review the investigation findings.
 
-Open **Trisul AI** to review the investigation findings and summarize the collected evidence.
-
-Use this investigation to answer questions such as:
-
-- What evidence suggests potential data exfiltration?
-- Which observations require immediate attention?
-- Which systems are involved?
-- Is additional investigation recommended?
-- Should the incident be escalated?
-
-#### Evidence to Preserve
-
-- Investigation summary.
-- Hosts involved.
-- Destination infrastructure.
-- Flow and packet evidence.
-- Recommended follow-up actions.
-
-#### Investigation Outcome
-
-At this stage, you should understand whether the observed outbound communication represents legitimate business activity or potential data exfiltration, identify the systems involved, establish the scope of the incident, and determine whether incident response or further investigation is required.
+Trisul AI can generate a concise summary of the investigation, highlight the key observations, and assist with documenting the findings for operational review, incident reporting, or future reference.
 
 ---
 
@@ -243,8 +223,7 @@ This investigation can generally be considered complete when:
 - The communication has been analyzed using flow records.
 - Packet evidence has been reviewed where available.
 - Historical activity has been compared.
-- The scope of the potential incident has been established.
-- Appropriate incident response or engineering actions have been determined.
+- Whether the observed communication has been determined to be legitimate or suspicious.
 
 ---
 
@@ -254,7 +233,7 @@ This investigation can generally be considered complete when:
 - Validate destination reputation together with business context.
 - Correlate flow records with packet evidence whenever available.
 - Compare current observations with historical communication patterns.
-- Preserve investigation evidence before containment or remediation begins.
+- Preserve investigation evidence before containment or remediation activities begin.
 - Document all findings to support incident response and post-incident analysis.
 
 ---

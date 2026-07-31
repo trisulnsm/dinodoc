@@ -63,36 +63,36 @@ Once the investigation question has been clearly defined, select only the networ
 
 ---
 
-### Step 2: Select the Network Dimensions
+### Step 2: Confirm the Required Cross Key Group Exists
 
-The quality of a multidimensional investigation depends on selecting the appropriate dimensions for correlation. Choose only the network dimensions that contribute directly to answering the investigation question rather than including every available attribute.
+A Cross Key Counter Group is a **pre-configured** counter group, it is not something you assemble ad hoc in the middle of an investigation. An admin sets one up in advance as a cross-product of two (or up to three) existing counter groups, for example Hosts × Applications or Internal Hosts × Applications × External Hosts. Cross Key Counter Groups support a maximum of three dimensions; combinations involving more than three dimensions are not supported. Once created, it meters that combination continuously, like any other counter group.
 
-Configure the required dimensions within [**Cross Key CounterGroups**](/docs/ag/context/crosskey_countergroups#creating-a-cross-key-counter-group).
+This means Step 2 is a **confirmation** step, not a configuration step: check whether a Cross Key group already exists for the dimensions your investigation question needs.
 
-Use this view to answer questions such as:
+- If a matching group already exists, proceed directly to Step 3.
+- If it doesn't, this investigation cannot answer the question using historical correlation data — you have two options: ask an admin to create the required [**Cross Key Counter Group**](/docs/ag/context/crosskey_countergroups#creating-a-cross-key-counter-group) (it will only start collecting data going forward, not retroactively), or fall back to answering the question manually using [**Explore Flows**](./inv1-exploreflows.md) for the specific entities involved, accepting the practical limits called out in that tool's docs for very large flow volumes.
 
-- Which hosts should be included?
-- Which applications are relevant?
-- Which interfaces, sites, customers, or VLANs should be correlated?
-- Are additional geographic or routing dimensions necessary to answer the investigation question?
+Use this step to answer questions such as:
+
+- Does a Cross Key group already exist for the dimension pair (or triplet) this investigation needs?
+- If not, is creating one worth the lead time, given the question is expected to recur?
+- Is there an existing Cross Key group that's a close-enough substitute to at least narrow the investigation?
 
 #### Evidence to Collect
 
-- Selected hosts.
-- Applications.
-- Interfaces.
-- Customers, sites, VLANs, or ASNs.
-- Additional dimensions required for the investigation.
+- Name and definition of the matching Cross Key group (if one exists).
+- Confirmation from an admin on whether a new group can be created and how long it will take to start collecting data.
+- Fallback plan if no group exists and one won't be created in time.
 
 #### Next Step
 
-Once the required dimensions have been selected, analyze how those dimensions relate to one another.
+Once a usable Cross Key group has been confirmed, analyze how those dimensions relate to one another.
 
 ---
 
 ### Step 3: Analyze the Relationships Between the Selected Dimensions
 
-After selecting the required network dimensions, build the multidimensional correlation using [**Cross Key CounterGroups**](/docs/ag/context/crosskey_countergroups).
+With the Cross Key Counter Group confirmed, visualize the correlated traffic using the **Sankey Crosskey** app — this is the tool Trisul provides specifically to render Cross Key group data as flow relationships between dimensions, rather than as a flat table.
 
 Rather than investigating a single host, interface, or application, this step examines how multiple network dimensions relate to one another to answer the original investigation question.
 
@@ -175,9 +175,9 @@ After identifying the applications involved, review the aggregate traffic profil
 
 ### Optional Validation: Review Aggregate Traffic
 
-Most multidimensional investigations can be completed using Cross Key CounterGroups and Explore Flows. Where additional validation is required, **Aggregate Flow Statistics** provides a summarized view of the investigated traffic.
+Most multidimensional investigations can be completed using Cross Key CounterGroups and Explore Flows. Where additional validation is required, **Aggregate Flows** provides a summarized view of the investigated traffic.
 
-Rather than introducing new evidence, Aggregate Flow Statistics groups the traffic by dimensions such as IP address, interface, application, customer, site, VLAN, or router. This helps validate whether the observed relationships are consistently reflected across the investigated network dimensions.
+Rather than introducing new evidence, Aggregate Flows groups the traffic by dimensions such as IP address, interface, application, customer, site, VLAN, or router. This helps validate whether the observed relationships are consistently reflected across the investigated network dimensions.
 
 This step helps answer questions such as:
 
@@ -236,6 +236,16 @@ This investigation can generally be considered complete when:
 
 ---
 
+### Summarize the Investigation with Trisul AI
+
+By this stage, the investigation should have answered the original investigation question and collected the evidence required to explain the observed relationships.
+
+Open **Trisul AI** and review the investigation findings.
+
+Use Trisul AI to generate a concise summary of the investigation, highlight the key observations, and assist with documenting the findings for operational review, incident reporting, or future reference.
+
+---
+
 ## Best Practices
 
 - Begin every investigation with a clearly defined question before selecting network dimensions.
@@ -255,3 +265,4 @@ This investigation can generally be considered complete when:
 - [**Investigate High Traffic on a Network Interface**](./inv2-routersintfs.md)
 - [**Investigate Historical Network Activity**](./inv3-retro.md)
 - [**Investigate Network Behavior Anomalies**](./inv5-tba.md)
+- [**Monitor Critical Network Assets**](./inv6-ckey.md) – Use multidimensional correlation to add context to a critical asset investigation.

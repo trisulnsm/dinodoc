@@ -1,4 +1,4 @@
-# Investigate Security Alerts
+# Investigate Security Detection Alerts
 
 ## Investigation Overview
 
@@ -6,7 +6,7 @@ Security alerts are often the first indication of suspicious activity within an 
 
 An alert should be treated as the starting point of an investigation rather than a confirmed incident. The objective is to validate the alert, understand the surrounding network activity, correlate supporting evidence, and determine the appropriate response.
 
-Using Trisul Network Security Monitoring, analysts can investigate security alerts by correlating network telemetry, packet evidence, behavioral analytics, historical activity, MITRE ATT&CK mapping, and AI-assisted investigation within a single workflow.
+Using Trisul Network Security Monitoring, analysts can investigate security alerts by correlating and analyzing network telemetry, packet evidence, behavioral analytics, and historical activity before mapping the findings to the MITRE ATT&CK framework.
 
 ---
 
@@ -79,7 +79,7 @@ Use this investigation to answer questions such as:
 - Do the timestamps align with the alert?
 - Are the reported protocols and ports accurate?
 - Does the observed network activity support the alert?
-- Does the evidence suggest a false positive?
+- Does the observed network activity support the alert, or does it indicate a likely false positive?
 
 This step establishes whether the alert represents genuine suspicious activity before expanding the investigation.
 
@@ -99,9 +99,9 @@ Once the alert has been validated, investigate the associated network activity i
 
 ### Step 3: Investigate the Associated Activity
 
-After confirming the alert, investigate the communications surrounding the event to understand what occurred and which systems participated.
+After validating that the alert reflects genuine network activity, expand the investigation to examine the surrounding communications and determine whether the alert represents an isolated event or part of a broader sequence of activity.
 
-Open [**Flow Analysis**](/docs/ug/tools/explore_flows#top-matching-flows) for the affected hosts.
+Continue the investigation using [**Host Conversations and Flow Details**](/docs/ug/tools/explore_flows#top-matching-flows) for the affected hosts.
 
 Review the network activity to determine:
 
@@ -137,7 +137,6 @@ Use this investigation to answer questions such as:
 
 - Do DNS queries support the observed communication?
 - Does TLS metadata reveal unusual encrypted sessions?
-- Does threat intelligence identify the destination as malicious?
 - Are behavioral anomalies associated with the affected hosts?
 - Are multiple alerts related to the same activity?
 
@@ -217,31 +216,11 @@ Once the historical context has been established, summarize the investigation fi
 
 ---
 
-### Step 7: Summarize the Investigation
+### Step 7: Summarize the Investigation with Trisul AI
 
-By this stage, the investigation should have reviewed and validated the alert, analyzed the associated network activity, correlated supporting evidence, assessed the scope and attack context, and compared the activity against historical observations.
+Once the investigation is complete, open **Trisul AI** to review the investigation findings.
 
-Open **Trisul AI** to review the investigation findings and summarize the collected evidence.
-
-Use this investigation to answer questions such as:
-
-- Does the evidence validate the alert?
-- Is this a true positive or false positive?
-- Which systems are affected?
-- Does the activity require immediate containment?
-- Should the incident be escalated?
-
-#### Evidence to Preserve
-
-- Investigation summary.
-- Affected systems.
-- Supporting evidence.
-- Historical findings.
-- Recommended response actions.
-
-#### Investigation Outcome
-
-At this stage, you should understand whether the alert represents a genuine security incident, identify the affected systems, determine the scope of the activity, place the event within the attack lifecycle, and establish the appropriate operational or incident response actions.
+Trisul AI can generate a concise summary of the investigation, highlight the key observations, explain how the collected evidence supports the findings, and assist with documenting the investigation for operational review, incident reporting, or future reference.
 
 ---
 

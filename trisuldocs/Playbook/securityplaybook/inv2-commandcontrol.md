@@ -139,11 +139,11 @@ These patterns often provide stronger indicators of command and control activity
 If the communication uses encrypted protocols, examine the available TLS metadata and correlate the findings with additional network evidence.
 ---
 
-### Step 4: Correlate Supporting Evidence
+### Step 4: Correlate Multiple Evidence Sources
 
 Command and control investigations should not rely on a single indicator. Correlating multiple sources of network evidence helps distinguish legitimate application traffic from malicious communications and provides greater confidence before initiating incident response.
 
-Continue the investigation using [**DNS Analysis**](/docs/ug/resources/dns/), [**Packet Analysis**](/docs/ug/resources/dns#option-button), and [**Historical Investigation (Retro)**](/docs/ug/cg/retro).
+Continue the investigation by correlating evidence from [**DNS Analysis**](/docs/ug/resources/dns/), [**Packet Analysis**](/docs/ug/resources/dns#option-button), and [**Historical Investigation (Retro)**](/docs/ug/cg/retro) to validate whether the observed communication is consistent across multiple sources.
 
 Use this investigation to answer questions such as:
 
@@ -173,7 +173,7 @@ Once the communication has been validated across multiple evidence sources, dete
 
 ### Step 5: Assess the Scope of the Activity
 
-After confirming suspicious communication patterns, determine whether the activity is isolated to a single host or indicative of a broader compromise.
+After confirming suspicious communication patterns, determine whether the activity is isolated to a single host or forms part of a broader compromise.
 
 Review the investigation findings to identify:
 
@@ -199,31 +199,11 @@ After establishing the scope of the activity, prepare a summary of the investiga
 
 ---
 
-### Step 6: Summarize the Investigation
+### Step 6: Summarize the Investigation with Trisul AI
 
-By this stage, the investigation should have identified the suspicious communication, determined the affected hosts, analysed the communication behaviour, validated the findings using multiple evidence sources, and assessed the scope of the activity.
+Once the investigation is complete, open **Trisul AI** to review the investigation findings.
 
-Open **Trisul AI** to review the investigation findings and summarize the collected evidence.
-
-Use this investigation to answer questions such as:
-
-- Does the evidence indicate command and control activity?
-- Which systems are affected?
-- Is the communication still active?
-- Does the activity require immediate containment?
-- Should incident response procedures be initiated?
-
-#### Evidence to Preserve
-
-- Investigation summary.
-- Affected hosts.
-- Destination infrastructure.
-- Flow, DNS, and packet evidence.
-- Recommended response actions.
-
-#### Investigation Outcome
-
-At this stage, you should understand whether the observed communication represents legitimate application traffic or potential command and control activity, identify the affected systems, determine the scope of the compromise, and establish the appropriate response.
+Trisul AI can generate a concise summary of the investigation, highlight the key observations, and assist with documenting the findings for operational review, incident reporting, or future reference.
 
 ---
 
@@ -237,6 +217,7 @@ This investigation can generally be considered complete when:
 - DNS, TLS, flow, packet, and historical evidence have been correlated.
 - The scope of the activity has been established.
 - Appropriate containment or engineering actions have been identified.
+- Whether the observed communication has been determined to be legitimate or potential command and control activity.
 
 ---
 

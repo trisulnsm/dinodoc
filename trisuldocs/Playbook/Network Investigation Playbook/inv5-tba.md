@@ -153,9 +153,9 @@ After identifying the applications involved, review the aggregate traffic profil
 
 ### Optional Validation: Review Aggregate Traffic
 
-Most behavioral investigations can be completed using Explore Flows. Where additional validation is required, [**Aggregate Flow Statistics**](/docs/ug/tools/aggregate_stats) provides a summarized view of the investigated traffic.
+Most behavioral investigations can be completed using Explore Flows. Where additional validation is required, [**Aggregate Flows**](/docs/ug/tools/aggregate_flows) provides a summarized view of the investigated traffic.
 
-Rather than introducing new evidence, Aggregate Flow Statistics groups the flow records by dimensions such as IP address, interface, application, port, router, and other network attributes. This helps confirm whether the observed behavioral deviation is concentrated within a particular network entity or distributed across multiple contributors.
+Rather than introducing new evidence, Aggregate Flows groups the flow records by dimensions such as IP address, interface, application, port, router, and other network attributes. This helps confirm whether the observed behavioral deviation is concentrated within a particular network entity or distributed across multiple contributors.
 
 This step helps answer questions such as:
 
@@ -246,7 +246,7 @@ This step helps answer questions such as:
 - Is an Interface Investigation required?
 - Would Historical Investigation provide additional context?
 - Is Packet Analysis required?
-- Does the anomaly require escalation to a Security Investigation?
+- Does the anomaly require escalation to a security investigation?
 
 #### Evidence to Collect
 
@@ -256,9 +256,17 @@ This step helps answer questions such as:
 - Recommended follow-up investigation.
 - Monitoring or escalation recommendations.
 
-#### Investigation Outcome
+--
 
-At this stage, you should understand how the observed behavior differed from the learned baseline, which network entities contributed to the deviation, whether the behavior represented expected operational activity, and whether the investigation should conclude or continue using a specialized Host, Interface, Historical, or Security Investigation.
+### Summarize the Investigation with Trisul AI
+
+By this stage, the investigation should have determined why the observed behavior differed from the learned baseline and collected the evidence required to explain the anomaly.
+
+Open **Trisul AI** and review the investigation findings.
+
+Use Trisul AI to generate a concise summary of the investigation, highlight the key observations, and assist with documenting the findings for operational review, incident reporting, or future reference.
+
+---
 
 ## Investigation Completion
 
@@ -290,4 +298,6 @@ This investigation can generally be considered complete when:
 - [**Investigate the Network Activity of an IP Address**](./inv1-exploreflows.md)
 - [**Investigate High Traffic on a Network Interface**](./inv2-routersintfs.md)
 - [**Investigate Historical Network Activity**](./inv3-retro.md)
-- [**Investigate Threshold Crossing Events**](./inv4-tca.md)
+- [**Investigate Threshold Crossing Alerts**](./inv4-tca.md)
+- [**Monitor Critical Network Assets**](./inv6-ckey.md) – Check whether the anomalous entity is also a monitored critical asset.
+- [**Correlate Network Activity Across Multiple Dimensions**](./inv7-crosskey.md) – Determine whether the anomaly forms part of a broader multi-entity pattern.

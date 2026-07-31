@@ -98,7 +98,7 @@ Once the behavior has been characterized, determine which systems are responsibl
 
 ## Step 3: Identify the Responsible Systems
 
-After understanding the nature of the anomaly, identify the hosts, interfaces, and network conversations responsible for the observed behavior.
+After understanding the nature of the anomaly, pivot to the affected hosts or interfaces using Trisul Retro or the relevant behavioral dashboard. Review the systems contributing to the abnormal traffic during the investigation period.
 
 In [**Trisul Retro**](/docs/ug/cg/retro), navigate to:
 
@@ -192,31 +192,11 @@ Once the impact has been assessed, summarize the investigation findings and dete
 
 ---
 
-### Step 6: Summarize the Investigation
+### Step 6: Summarize the Investigation with Trisul AI
 
-By this stage, the investigation should have identified the behavioural anomaly, characterized the abnormal network behaviour, determined the responsible systems, validated the findings using multiple evidence sources, and assessed the operational or security impact.
+Once the investigation is complete, open **Trisul AI** to review the investigation findings.
 
-Open **Trisul AI** to review the investigation findings and summarize the collected evidence.
-
-Use this investigation to answer questions such as:
-
-- What caused the network anomaly?
-- Which systems are affected?
-- Does the evidence indicate an operational issue or a security incident?
-- Is immediate remediation required?
-- Should incident response procedures be initiated?
-
-#### Evidence to Preserve
-
-- Investigation summary.
-- Affected hosts.
-- Supporting evidence.
-- Historical findings.
-- Recommended response actions.
-
-#### Investigation Outcome
-
-At this stage, you should understand what caused the network anomaly, identify the affected systems, determine whether the activity represents an expected operational event or a security incident, assess the scope of the impact, and establish the appropriate operational or incident response actions.
+Trisul AI can generate a concise summary of the investigation, highlight the key observations, explain how the collected evidence supports the findings, and assist with documenting the investigation for operational review, incident reporting, or future reference.
 
 ---
 

@@ -1,4 +1,4 @@
-# Investigate Network Traffic Anomalies
+# Investigate Network Behavior Anomalies
 
 ## Investigation Overview
 
@@ -98,15 +98,18 @@ Once the behavior has been characterized, determine which systems are responsibl
 
 ### Step 3: Identify the Responsible Systems
 
-After understanding the nature of the anomaly, identify the hosts, interfaces, and network conversations responsible for the observed behavior.
+After understanding the nature of the anomaly, identify the hosts, interfaces, or network segments responsible for the observed behavior.
 
-In [**Trisul Retro**](/docs/ug/cg/retro), navigate to:
+Using the affected metric or object identified during the previous steps, pivot to the relevant network entities in **Trisul Retro** or the associated behavioral dashboard. Review the systems contributing to the abnormal activity during the selected investigation period.
 
-**Retro Counters → Retro Usage → Hosts → Transmit**
+Depending on the nature of the anomaly, this may involve reviewing:
 
-Review the hosts contributing to the abnormal traffic during the investigation period.
+- Hosts generating or receiving abnormal traffic.
+- Interfaces experiencing unusual utilization.
+- Network conversations associated with the anomaly.
+- Systems contributing to abnormal connection rates or protocol activity.
 
-From the selected host, click the **Actions** menu and choose [**Host Conversations**](/docs/ug/tools/explore_flows#top-conversations).
+From the selected host or network entity, click the **Actions** menu and choose [**Host Conversations**](/docs/ug/tools/explore_flows#top-conversations) to investigate the associated communication.
 
 Review the conversations to determine:
 
@@ -116,21 +119,21 @@ Review the conversations to determine:
 - Which interfaces or network segments are affected.
 - Whether multiple hosts exhibit similar behavior.
 
-If additional detail is required, open **Flow Details** for the selected communication.
+If additional detail is required, open [**Flow Details**](/docs/ug/tools/explore_flows#top-matching-flows) for the selected communication.
 
-The [**Flow Details**](/docs/ug/tools/explore_flows#top-matching-flows) view provides timestamps, protocols, applications, ports, session duration, and traffic volumes associated with the communication.
+The **Flow Details** view provides timestamps, protocols, applications, ports, session duration, and traffic volumes associated with the communication.
 
 #### Evidence to Preserve
 
 - Source hosts.
 - Destination hosts.
-- Interfaces.
+- Interfaces or network segments involved.
 - Communication timeline.
 - Flow records.
 
 #### Continue the Investigation
 
-Once the responsible systems have been identified, determine whether the observed behavior represents an expected operational event or an abnormal condition.
+Once the responsible systems have been identified, validate whether the observed behavior represents an expected operational event or an abnormal condition.
 
 ---
 
@@ -143,7 +146,7 @@ Continue the investigation using [**Historical Investigation (Retro)**](/docs/ug
 Use this investigation to answer questions such as:
 
 - Has similar behavior occurred previously?
-- Does packet analysis explain the observed traffic?
+- Does packet analysis provide additional context for the observed traffic?
 - Do DNS queries support the communication pattern?
 - Is the behavior associated with scheduled maintenance, software updates, or backup operations?
 - Are additional hosts exhibiting the same anomaly?
@@ -192,31 +195,11 @@ Once the impact has been assessed, summarize the investigation findings and dete
 
 ---
 
-### Step 6: Summarize the Investigation
+### Step 6: Summarize the Investigation with Trisul AI
 
-By this stage, the investigation should have identified the behavioral anomaly, characterized the abnormal network behavior, determined the responsible systems, validated the findings using multiple evidence sources, and assessed the operational or security impact.
+Once the investigation is complete, open **Trisul AI** to review the investigation findings.
 
-Open **Trisul AI** to review the investigation findings and summarize the collected evidence.
-
-Use this investigation to answer questions such as:
-
-- What caused the network anomaly?
-- Which systems are affected?
-- Does the evidence indicate an operational issue or a security incident?
-- Is immediate remediation required?
-- Should incident response procedures be initiated?
-
-#### Evidence to Preserve
-
-- Investigation summary.
-- Affected hosts.
-- Supporting evidence.
-- Historical findings.
-- Recommended response actions.
-
-#### Investigation Outcome
-
-At this stage, you should understand what caused the network anomaly, identify the affected systems, determine whether the activity represents an expected operational event or a security incident, assess the scope of the impact, and establish the appropriate operational or incident response actions.
+Trisul AI can generate a concise summary of the investigation, highlight the key observations, explain how the collected evidence supports the findings, and assist with documenting the investigation for operational review, incident reporting, or future reference.
 
 ---
 

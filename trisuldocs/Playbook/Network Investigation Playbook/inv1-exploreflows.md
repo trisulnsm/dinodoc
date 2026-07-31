@@ -75,7 +75,7 @@ Once you understand the host's overall activity, investigate how it communicates
 
 Understanding who the host communicates with often explains far more than bandwidth alone. Most devices have predictable communication patterns based on their operational role. Unexpected communication partners frequently provide the first indication that additional investigation is required.
 
-Remain within [**Explore Flows**](/docs/ug/tools/explore_flows) and review the [**Conversations**](/docs/ug/tools/explore_flows#top-conversations) view for the selected IP address.
+Remain within [**Explore Flows**](/docs/ug/tools/explore_flows) and review the [**Top Conversations**](/docs/ug/tools/explore_flows#top-conversations) view for the selected IP address.
 
 This view provides a high-level communication profile without requiring you to inspect every individual flow.
 
@@ -103,7 +103,7 @@ Once communication relationships have been established, investigate the individu
 
 ### Step 3: Examine Individual Connections
 
-After identifying the host's communication patterns, remain within [**Explore Flows**](/docs/ug/tools/explore_flows) and drill down from the [**Conversations**](/docs/ug/tools/explore_flows#top-conversations) view into the [**Individual Flow Records**](/docs/ug/tools/explore_flows#top-matching-flows). This is a natural continuation of the communication investigation and allows you to determine which specific sessions explain the observed behavior.
+After identifying the host's communication patterns, remain within [**Explore Flows**](/docs/ug/tools/explore_flows) and drill down from the [**Top Conversations**](/docs/ug/tools/explore_flows#top-conversations) view into the [**Top Matching Flows**](/docs/ug/tools/explore_flows#top-matching-flows) view. This is a natural continuation of the communication investigation and allows you to determine which specific sessions explain the observed behavior.
 
 This view helps answer questions such as:
 
@@ -115,7 +115,7 @@ This view helps answer questions such as:
 
 ![](./images/individualflows.png)
 
-*Figure: Individual Flow Records*
+*Figure: Top Matching Flows*
 
 #### Evidence to Collect
 
@@ -167,9 +167,9 @@ After identifying the applications responsible for the traffic, review the same 
 
 ### Optional Validation: Review Aggregate Traffic
 
-Most investigations can be completed without reviewing Aggregate Flow Statistics. This view serves as an optional validation and summary activity when you want additional confirmation of the conclusions reached during the investigation or need supporting evidence for reporting.
+Most investigations can be completed without reviewing Aggregate Flows. This view serves as an optional validation and summary activity when you want additional confirmation of the conclusions reached during the investigation or need supporting evidence for reporting.
 
-Rather than introducing new data, [**Aggregate Flow Statistics**](/docs/ug/tools/aggregate_flows) presents the same flow information from different perspectives, allowing you to view traffic by IP address, port, router, application, and other network dimensions.
+Rather than introducing new data, [**Aggregate Flows**](/docs/ug/tools/aggregate_flows) presents the same flow information from different perspectives, allowing you to view traffic by IP address, port, router, application, and other network dimensions.
 
 This view helps answer questions such as:
 
@@ -182,7 +182,7 @@ This view helps answer questions such as:
 
 ![](./images/aggregateflows.png)
 
-*Figure: Aggregate Flow Statistics*
+*Figure: Aggregate Flows*
 
 #### Evidence to Collect
 
@@ -202,7 +202,7 @@ Once the aggregate traffic characteristics have been reviewed, continue with pac
 
 Flow records usually provide an excellent summary of network activity, but some investigations require packet-level visibility to confirm protocol behavior or troubleshoot application-specific issues.
 
-From [**Explore Flows**](/docs/ug/tools/explore_flows), select the required host or flow record, click the [**Action button**](/docs/ug/tools/explore_flows#flow-options), and choose **Download PCAP** to validate the findings using packet-level analysis.
+From [**Explore Flows**](/docs/ug/tools/explore_flows), select the required host or flow record, click the [**Options button**](/docs/ug/tools/explore_flows#flow-options) against that flow, and choose **Download PCAP** to validate the findings using packet-level analysis.
 
 This view helps answer questions such as:
 
@@ -224,11 +224,16 @@ This view helps answer questions such as:
 - Application-level behaviour.
 - Packet-level evidence supporting the investigation.
 
-#### Investigation Outcome
-
-At this stage, you should have sufficient evidence to understand the host's communication behavior, determine whether the observed activity is expected, and decide whether operational action or further investigation is required.
-
 ---
+
+### Summarize the Investigation with Trisul AI
+
+By this stage, the investigation should have established the host's communication behavior and collected the evidence required to answer the original investigation question.
+
+Open **Trisul AI** and review the investigation findings.
+
+Use Trisul AI to generate a concise summary of the investigation, highlight the key observations, and assist with documenting the findings for operational review, incident reporting, or future reference.
+
 
 ## Investigation Completion
 
@@ -258,6 +263,7 @@ This investigation can generally be considered complete when:
 
 ## Related Investigations
 
-- [**Investigate High Traffic on a Network Interface**](/playbook/Network%20Investigation%20Playbook/inv2-routersintfs) – Continue investigating if excessive bandwidth is isolated to a specific router or switch interface.
-- [**Investigate Historical Network Activity**](/playbook/Network%20Investigation%20Playbook/inv3-retro) – Compare the host's current behaviour with historical traffic patterns.
-- [**Investigate Threshold Crossing Alerts**](/playbook/Network%20Investigation%20Playbook/inv4-tca) – Determine whether the host triggered bandwidth or activity thresholds that require further analysis.
+- [**Investigate High Traffic on a Network Interface**](./inv2-routersintfs.md) – Continue investigating if excessive bandwidth is isolated to a specific router or switch interface.
+- [**Investigate Historical Network Activity**](./inv3-retro.md) – Compare the host's current behaviour with historical traffic patterns.
+- [**Investigate Threshold Crossing Alerts**](./inv4-tca.md) – Determine whether the host triggered bandwidth or activity thresholds that require further analysis.
+- [**Correlate Network Activity Across Multiple Dimensions**](./inv7-crosskey.md) – Analyse this host's traffic alongside application, interface, or site dimensions if a single-host view doesn't fully answer the question.

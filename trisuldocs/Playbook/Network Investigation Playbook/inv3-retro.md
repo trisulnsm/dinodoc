@@ -4,9 +4,9 @@
 
 Not every network issue is discovered while it is happening. Performance degradation, security incidents, application outages, and unusual traffic patterns are often identified hours, days, or even weeks after the event has occurred.
 
-Historical investigations are reconstruction exercises rather than real-time troubleshooting. Engineers begin by defining the investigation window in Trisul Retro, identify the abnormal activity that distinguishes the incident from normal network behaviour, and then pivot into Explore Flows to investigate the network entities responsible for the observed changes. The collected evidence is then correlated to reconstruct the sequence of events and determine whether a specialised follow-up investigation is required.
+Historical investigations are reconstruction exercises rather than real-time troubleshooting. Engineers begin by defining the investigation window using Retro Analysis, identify the abnormal activity that distinguishes the incident from normal network behaviour, and then pivot into Explore Flows to investigate the network entities responsible for the observed changes. The collected evidence is then correlated to reconstruct the sequence of events and determine whether a specialised follow-up investigation is required.
 
-Using Trisul Retro, engineers can revisit any point within the available retention period and investigate historical network activity using the same level of visibility available during live monitoring.
+Using Retro Analysis, engineers can revisit any point within the available retention period and investigate historical network activity using the same level of visibility available during live monitoring.
 
 ---
 
@@ -42,7 +42,7 @@ By completing this investigation, you should be able to:
 
 Every historical investigation begins by defining the time period you want to analyse. A clearly defined investigation window reduces unnecessary analysis and allows you to focus only on the network activity surrounding the incident.
 
-Open [**Trisul Retro**](/docs/ug/cg/retro#selecting-a-time-window) and navigate to the time period when the incident occurred.
+Open [**Retro Analysis**](/docs/ug/cg/retro#selecting-a-time-window) and navigate to the time period when the incident occurred.
 
 This allows you to reconstruct the network exactly as it appeared during that period.
 
@@ -68,7 +68,7 @@ Once the investigation window has been established, compare the incident period 
 
 ### Step 2: Identify Abnormal Network Activity
 
-After selecting the investigation window, review the historical activity using **Trisul Retro**. Zoom into the period where the incident occurred and identify the abnormal behaviour that distinguishes the incident from normal network operation.
+After selecting the investigation window, review the historical activity using **Retro Analysis**. Zoom into the period where the incident occurred and identify the abnormal behaviour that distinguishes the incident from normal network operation.
 
 This step establishes the focus of the investigation before examining individual hosts, interfaces, applications, or conversations.
 
@@ -145,9 +145,9 @@ After identifying the applications involved, correlate the collected observation
 
 ### Optional Validation: Review Aggregate Traffic
 
-Most historical investigations can be completed using Explore Flows. Where additional validation is required, **Aggregate Flow Statistics** provides a summarized view of the investigated historical traffic.
+Most historical investigations can be completed using Explore Flows. Where additional validation is required, **Aggregate Flows** provides a summarized view of the investigated historical traffic.
 
-Rather than introducing new evidence, Aggregate Flow Statistics groups the historical flow records by dimensions such as IP address, interface, application, port, router, and other network attributes. This helps confirm whether the observed historical activity is consistent across different analytical perspectives.
+Rather than introducing new evidence, Aggregate Flows groups the historical flow records by dimensions such as IP address, interface, application, port, router, and other network attributes. This helps confirm whether the observed historical activity is consistent across different analytical perspectives.
 
 This step helps answer questions such as:
 
@@ -224,9 +224,15 @@ This step helps answer questions such as:
 - Correlated observations.
 - Recommended follow-up investigations.
 
-#### Investigation Outcome
+---
 
-At this stage, you should understand when the incident occurred, how network behaviour differed from the established baseline, which network entities were responsible for the observed changes, how the incident evolved over time, and whether further investigation should continue with the appropriate specialised investigation if deeper analysis of a specific host, interface, or application is required.
+### Summarize the Investigation with Trisul AI
+
+By this stage, the investigation should have reconstructed the incident timeline and collected the evidence required to explain how the incident evolved.
+
+Open **Trisul AI** and review the investigation findings.
+
+Use Trisul AI to generate a concise summary of the investigation, highlight the key observations, and assist with documenting the findings for operational review, incident reporting, or future reference.
 
 ---
 
@@ -257,6 +263,7 @@ This investigation can generally be considered complete when:
 
 ## Related Investigations
 
-- [**Investigate the Network Activity of an IP Address**](/playbook/Network%20Investigation%20Playbook/inv1-exploreflows) – Continue investigating hosts identified during the historical analysis.
-- [**Investigate High Traffic on a Network Interface**](/playbook/Network%20Investigation%20Playbook/inv2-routersintfs) – Investigate interfaces that experienced sustained congestion during the incident.
-- [**Investigate Threshold Crossing Alerts**](/playbook/Network%20Investigation%20Playbook/inv4-tca) – Determine whether recurring traffic spikes correspond to threshold violations.
+- [**Investigate the Network Activity of an IP Address**](./inv1-exploreflows.md) – Continue investigating hosts identified during the historical analysis.
+- [**Investigate High Traffic on a Network Interface**](./inv2-routersintfs.md) – Investigate interfaces that experienced sustained congestion during the incident.
+- [**Investigate Threshold Crossing Alerts**](./inv4-tca.md) – Determine whether recurring traffic spikes correspond to threshold violations.
+- [**Correlate Network Activity Across Multiple Dimensions**](./inv7-crosskey.md) – Reconstruct how multiple entities (hosts, applications, interfaces) related to one another during the incident window.

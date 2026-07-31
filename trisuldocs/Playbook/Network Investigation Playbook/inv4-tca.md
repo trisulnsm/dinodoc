@@ -1,4 +1,4 @@
-# Investigate Threshold Crossing Events
+# Investigate Threshold Crossing Alerts
 
 ## Investigation Overview
 
@@ -153,9 +153,9 @@ After identifying the applications involved, review the aggregate traffic profil
 
 ### Optional Validation: Review Aggregate Traffic
 
-Most threshold investigations can be completed using Explore Flows. Where additional validation is required, [**Aggregate Flow Statistics**](/docs/ug/tools/aggregate_stats) provides a summarized view of the investigated traffic.
+Most threshold investigations can be completed using Explore Flows. Where additional validation is required, [**Aggregate Flows**](/docs/ug/tools/aggregate_flows) provides a summarized view of the investigated traffic.
 
-Rather than introducing new evidence, Aggregate Flow Statistics groups the flow records by dimensions such as IP address, interface, application, port, router, and other network attributes. This helps confirm whether the threshold crossing is concentrated within a particular network entity or distributed across multiple contributors.
+Rather than introducing new evidence, Aggregate Flows groups the flow records by dimensions such as IP address, interface, application, port, router, and other network attributes. This helps confirm whether the threshold crossing is concentrated within a particular network entity or distributed across multiple contributors.
 
 This step helps answer questions such as:
 
@@ -254,9 +254,17 @@ This step helps answer questions such as:
 - Recommended follow-up investigation.
 - Capacity planning or escalation recommendations.
 
-#### Investigation Outcome
+---
 
-At this stage, you should understand why the threshold crossing occurred, which network entities contributed to the observed behaviour, whether the activity was expected, what operational impact it had, and whether the investigation should conclude or continue using a specialised Host, Interface, Historical, or Security Investigation.
+### Summarize the Investigation with Trisul AI
+
+By this stage, the investigation should have established why the threshold crossing occurred and collected the evidence required to explain the alert.
+
+Open **Trisul AI** and review the investigation findings.
+
+Use Trisul AI to generate a concise summary of the investigation, highlight the key observations, and assist with documenting the findings for operational review, incident reporting, or future reference.
+
+---
 
 ## Investigation Completion
 
@@ -285,6 +293,7 @@ This investigation can generally be considered complete when:
 
 ## Related Investigations
 
-- [**Investigate High Traffic on a Network Interface**](/playbook/Network%20Investigation%20Playbook/inv2-routersintfs)
-- [**Investigate the Network Activity of an IP Address**](/playbook/Network%20Investigation%20Playbook/inv1-exploreflows)
-- [**Investigate Historical Network Activity**](/playbook/Network%20Investigation%20Playbook/inv3-retro)
+- [**Investigate High Traffic on a Network Interface**](./inv2-routersintfs.md) – Continue investigating if the threshold crossing is isolated to a specific interface.
+- [**Investigate the Network Activity of an IP Address**](./inv1-exploreflows.md) – Continue investigating if the threshold crossing is tied to a specific host.
+- [**Investigate Historical Network Activity**](./inv3-retro.md) – Determine whether similar threshold crossings have occurred in the past.
+- [**Correlate Network Activity Across Multiple Dimensions**](./inv7-crosskey.md) – Analyse the alert alongside application, interface, or site dimensions if a single-entity view doesn't fully explain it.

@@ -28,7 +28,7 @@ By completing this investigation, you should be able to:
 
 - Search historical network activity for indicators of compromise.
 - Identify systems communicating with suspicious infrastructure.
-- Determine when malicious activity first occurred.
+- Determine when the observed activity first occurred.
 - Assess the duration and scope of the activity.
 - Correlate historical evidence with current investigations.
 - Determine whether additional incident response activities are required.
@@ -69,7 +69,7 @@ Once the hunt has been defined, search historical network activity for evidence 
 
 ### Step 2: Search Historical Network Activity
 
-Search historical telemetry to determine whether the selected indicators previously appeared within the monitored environment.
+Search historical network telemetry to determine whether the selected indicators previously appeared within the monitored environment.
 
 Continue using [**Historical Investigation (Retro)**](/docs/ug/cg/retro#selecting-a-time-window).
 
@@ -101,14 +101,13 @@ Once historical matches have been identified, validate the communications using 
 
 Historical matches should be validated using multiple sources of evidence before concluding that malicious activity occurred.
 
-Continue the investigation using [**Packet Analysis**](/docs/ug/cg/retrotools#pull-packets), [**DNS Analysis**](/docs/ug/resources/dns/), [**TLS Metadata**](/docs/ug/cg/ssl),and [**Security Alerts**](/docs/ug/alerts/mw).
+Continue the investigation using [**DNS Analysis**](/docs/ug/resources/dns/), [**TLS Metadata**](/docs/ug/cg/ssl),and [**Security Alerts**](/docs/ug/alerts/mw) and  [**Packet Analysis**](/docs/ug/cg/retrotools#pull-packets) where packet capture is available.
 
 Use this investigation to answer questions such as:
 
 - Does packet evidence validate the communication?
 - Were suspicious DNS queries associated with the activity?
 - Does TLS metadata support the investigation?
-- Does threat intelligence identify the infrastructure as malicious?
 - Were previous alerts associated with the same communication?
 
 Correlating multiple evidence sources helps distinguish genuine malicious activity from benign historical communications.
@@ -123,7 +122,7 @@ Correlating multiple evidence sources helps distinguish genuine malicious activi
 
 #### Continue the Investigation
 
-Once the activity has been validated, determine the scope of the historical communications.
+Once the activity has been validated, determine the scope of the historical network activity .
 
 ---
 
@@ -185,31 +184,11 @@ Once the historical timeline has been established, summarize the investigation f
 
 ---
 
-### Step 6: Summarize the Investigation
+### Step 6: Summarize the Investigation with Trisul AI
 
-By this stage, the investigation should have validated the hunting hypothesis, confirmed the historical communications, assessed the scope of the activity, and reconstructed the historical timeline.
+Once the investigation is complete, open **Trisul AI** to review the investigation findings.
 
-Open **Trisul AI** to review the investigation findings and summarize the collected evidence.
-
-Use this investigation to answer questions such as:
-
-- Did the historical evidence validate the hunting hypothesis?
-- Which systems were affected?
-- When did the activity begin?
-- Does the evidence indicate an ongoing or previously unknown compromise?
-- Should incident response procedures be initiated?
-
-#### Evidence to Preserve
-
-- Investigation summary.
-- Historical timeline.
-- Affected systems.
-- Supporting evidence.
-- Recommended response actions.
-
-#### Investigation Outcome
-
-At this stage, you should understand whether the historical evidence supports the hunting hypothesis, identify the affected systems, determine the duration and scope of the activity, and establish whether further investigation or incident response is required.
+Trisul AI can generate a concise summary of the investigation, highlight the key observations, explain how the collected evidence supports the findings, and assist with documenting the investigation for operational review, incident reporting, or future reference.
 
 ---
 
@@ -218,7 +197,7 @@ At this stage, you should understand whether the historical evidence supports th
 This investigation can generally be considered complete when:
 
 - The hunting hypothesis has been evaluated.
-- Historical communications have been identified and validated.
+- Historical network activities have been identified and validated.
 - Supporting evidence has been correlated.
 - The scope of the activity has been established.
 - The historical timeline has been reconstructed.

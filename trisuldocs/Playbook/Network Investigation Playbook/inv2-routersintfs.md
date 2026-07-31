@@ -68,6 +68,8 @@ Once the affected interface has been identified, determine which systems are res
 
 ### Step 2: Investigate Interface Activity
 
+> **Prerequisite:** This step assumes accurate, long-term host and application visibility for the interface, which depends on [**Interface Tracking**](/docs/ug/netflow/interface_tracker) being enabled for the router in question. If Interface Tracking isn't enabled, the per-interface breakdown may be incomplete or unavailable — confirm this with your admin before concluding a host isn't a contributor.
+
 After identifying the affected interface, continue the investigation in [**Explore Flows**](/docs/ug/tools/explore_flows) using the **Interface ID** from the [**Interface Drilldown**](/docs/ug/netflow/drilldown). This provides an operational view of the traffic traversing the selected interface and identifies the hosts contributing to the observed utilization.
 
 This step helps answer questions such as:
@@ -156,7 +158,32 @@ This view helps answer questions such as:
 
 #### Continue the Investigation
 
-Flow analysis is usually sufficient to determine the cause of interface utilization. Where protocol-level validation or deeper troubleshooting is required, continue with Packet Analysis.
+Application analysis is usually sufficient to determine the cause of interface utilization. Where additional confirmation is useful — for example, when preparing a capacity planning report — review the aggregate traffic profile below before continuing to packet analysis.
+
+---
+
+### Optional Validation: Review Aggregate Traffic
+
+Most interface investigations can be completed without reviewing Aggregate Flows, since the interface-level traffic distribution is already visible from Steps 2–4. Use this view as an optional validation step when you want additional confirmation of the conclusions reached during the investigation, or need supporting evidence for a capacity planning report.
+
+[**Aggregate Flows**](/docs/ug/tools/aggregate_flows) presents the same flow information from different perspectives — grouped by IP address, application, port, or router — for the affected interface.
+
+This view helps answer questions such as:
+
+- Is the interface's traffic concentrated around a few hosts or applications, or distributed across many?
+- Which IP addresses, applications, or protocols account for most of the interface traffic?
+- Does the aggregate traffic profile support the conclusions reached during the investigation?
+- Are there dominant traffic patterns that were not immediately apparent from individual flow records?
+
+#### Evidence to Collect
+
+- Aggregate traffic distribution for the interface.
+- Dominant IP addresses, applications, or protocols.
+- Aggregate evidence supporting the investigation findings.
+
+#### Continue the Investigation
+
+Once the aggregate traffic characteristics have been reviewed (or skipped, if not needed), continue with packet-level analysis if protocol-level validation is required.
 
 ---
 
@@ -184,9 +211,15 @@ Use packet analysis to answer questions such as:
 - Protocol anomalies.
 - Packet-level evidence supporting the identified root cause.
 
-#### Investigation Outcome
+---
 
-At this stage, you should have sufficient evidence to determine the cause of the increased interface utilization and decide whether operational action, capacity planning, or further investigation is required.
+### Summarize the Investigation with Trisul AI
+
+By this stage, the investigation should have established the cause of the increased interface utilization and collected the evidence required to explain the observed behavior.
+
+Open **Trisul AI** and review the investigation findings.
+
+Use Trisul AI to generate a concise summary of the investigation, highlight the key observations, and assist with documenting the findings for operational review, incident reporting, or future reference.
 
 ---
 
@@ -215,6 +248,7 @@ At this stage, you should have sufficient evidence to determine the cause of the
 
 ## Related Investigations
 
-- [**Investigate the Network Activity of an IP Address**](/docs/ug/playbooks/investigations/inv1-exploreflows.md)
-- [**Investigate Historical Network Activity**](/docs/ug/playbooks/investigations/inv3-historical-network-activity.md)
-- [**Investigate Threshold Crossing Alerts**](/docs/ug/playbooks/investigations/inv4-threshold-crossing-alerts.md)
+- [**Investigate the Network Activity of an IP Address**](./inv1-exploreflows.md) – Continue investigating a specific host identified as a primary bandwidth consumer.
+- [**Investigate Historical Network Activity**](./inv3-retro.md) – Compare the interface's current utilization with historical traffic patterns.
+- [**Investigate Threshold Crossing Alerts**](./inv4-tca.md) – Determine whether the interface triggered a utilization threshold that requires further analysis.
+- [**Correlate Network Activity Across Multiple Dimensions**](./inv7-crosskey.md) – Analyse this interface's traffic alongside application, customer, or site dimensions if a single-interface view doesn't fully answer the question.

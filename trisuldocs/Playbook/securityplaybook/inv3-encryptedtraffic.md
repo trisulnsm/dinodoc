@@ -38,7 +38,7 @@ Review the available TLS sessions to identify communications that warrant furthe
 
 Look for sessions that:
 
-- Use unknown or unusual JA3 or JA3S fingerprints.
+- Use previously unseen or unusual JA3 or JA3S fingerprints.
 - Present unexpected Server Name Indication (SNI) values.
 - Use self-signed, expired, or otherwise suspicious certificates.
 - Negotiate deprecated TLS versions or unusual cipher suites.
@@ -70,7 +70,7 @@ Review the communication details to determine:
 
 - Which hosts generated the encrypted session.
 - Which external systems received the communication.
-- Whether multiple hosts share the same JA3 fingerprint.
+- Whether the same JA3 fingerprint is observed across multiple hosts and whether that distribution is expected.
 - Whether the destination is expected within the environment.
 - Whether similar encrypted sessions are occurring across multiple systems.
 
@@ -105,7 +105,7 @@ Review the conversations to determine:
 
 If additional detail is required, open [**Flow Details**](/docs/ug/tools/explore_flows#top-matching-flows) for the selected communication.
 
-The **Flow Details** view provides detailed information including timestamps, protocols, applications, ports, session duration, and the amount of data transferred.
+The **Flow Details** view provides detailed information including timestamps, protocols, applications, ports, session duration, connection frequency, and the amount of data transferred.
 
 Use this investigation to answer questions such as:
 
@@ -127,11 +127,11 @@ Use this investigation to answer questions such as:
 After reviewing the encrypted communication, validate the findings using additional network evidence.
 ---
 
-### Step 4: Correlate Supporting Evidence
+### Step 4: Correlate Additional Network Evidence
 
 TLS metadata provides valuable visibility into encrypted communications, but it should be correlated with additional evidence before determining whether the activity represents legitimate business traffic or a potential security threat.
 
-Continue the investigation using [**DNS Analysis**](/docs/ug/resources/dns), [**Packet Analysis**](/docs/ug/resources/dns#option-button), and **Historical Investigation (Retro)**.
+Continue the investigation using [**DNS Analysis**](/docs/ug/resources/dns), [**Packet Analysis**](/docs/ug/resources/dns#option-button), and **Historical Investigation (Retro)**. Packet captures can validate TLS negotiation, certificates, and protocol behaviour even when the payload remains encrypted.
 
 Use this investigation to answer questions such as:
 
@@ -155,14 +155,14 @@ Once the encrypted communication has been validated, determine the scope of the 
 
 ---
 
-### Step 5: Assess the Scope of the Activity
+### Step 5: Assess the Scope of the Observed Activity
 
 After validating the encrypted communication, determine whether the observed activity is limited to a single system or affects multiple hosts across the network.
 
 Review the investigation findings to identify:
 
 - Whether multiple hosts share the same JA3 fingerprint.
-- Whether the same certificate is used across different systems.
+- Whether the same server certificate is used across different systems.
 - Whether multiple destinations are associated with the activity.
 - Whether the communication remains active.
 - Which systems require further investigation or response.
@@ -183,31 +183,11 @@ Once the scope has been established, summarize the investigation findings and de
 
 ---
 
-### Step 6: Summarize the Investigation
+### Step 6: Summarize the Investigation with Trisul AI
 
-By this stage, the investigation should have identified the suspicious encrypted session, determined the communicating hosts, analysed the TLS metadata and network communication, validated the findings using multiple evidence sources, and assessed the scope of the activity.
+Once the investigation is complete, open **Trisul AI** to review the investigation findings.
 
-Open **Trisul AI** to review the investigation findings and summarize the collected evidence.
-
-Use this investigation to answer questions such as:
-
-- Does the encrypted communication appear legitimate?
-- Which systems are affected?
-- Does the TLS session require additional investigation?
-- Is the activity isolated or widespread?
-- Should incident response procedures be initiated?
-
-#### Evidence to Preserve
-
-- Investigation summary.
-- Affected hosts.
-- TLS metadata.
-- Flow and packet evidence.
-- Recommended response actions.
-
-#### Investigation Outcome
-
-At this stage, you should understand whether the encrypted communication represents legitimate application traffic or a potential security threat, identify the affected systems, determine the scope of the activity, and establish the appropriate operational or incident response actions.
+Trisul AI can generate a concise summary of the investigation, highlight the key observations, explain how the collected evidence supports the findings, and assist with documenting the investigation for operational review, incident reporting, or future reference.
 
 ---
 
@@ -219,7 +199,7 @@ This investigation can generally be considered complete when:
 - The communicating hosts have been identified.
 - TLS metadata and network communication have been analysed.
 - Supporting evidence has been correlated.
-- The legitimacy of the encrypted communication has been determined.
+- The encrypted communication has been determined to represent expected application behaviour or requires further investigation.
 - The scope of the activity has been established.
 - Appropriate operational or incident response actions have been identified.
 
