@@ -240,7 +240,7 @@ This investigation can generally be considered complete when:
 
 ## Related Investigations
 
-- [**Investigate Command and Control (C2) Communications**](/docs/playbook/securityplaybook/inv2-commancontrol)
+- [**Investigate Command and Control (C2) Communications**](/docs/playbook/securityplaybook/inv2-commandcontrol)
 - [**Investigate Encrypted Traffic**](/playbook/securityplaybook/inv3-encryptedtraffic)
 - [**Investigate Threat Intelligence Alerts**](/docs/playbook/securityplaybook/inv6-secalerts)
 - [**Hunt Threats Across Historical Network Activity**](/docs/playbook/securityplaybook/inv7-historical)

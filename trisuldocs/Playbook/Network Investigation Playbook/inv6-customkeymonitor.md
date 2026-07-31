@@ -325,9 +325,9 @@ This investigation can generally be considered complete when:
 
 ## Related Investigations
 
-- [**Investigate the Network Activity of an IP Address**](./inv1-exploreflows.md)
-- [**Investigate High Traffic on a Network Interface**](./inv2-routersintfs.md)
-- [**Investigate Historical Network Activity**](./inv3-retro.md)
-- [**Investigate Threshold Crossing Alerts**](./inv4-tca.md) – Check whether the critical asset's change corresponds to a triggered threshold alert.
-- [**Investigate Network Behavior Anomalies**](./inv5-tba.md)
-- [**Correlate Network Activity Across Multiple Dimensions**](./inv7-crosskey.md) – Analyse the critical asset alongside application, interface, or site dimensions for a fuller picture.
+- [**Investigate the Network Activity of an IP Address**](./inv1-exploreflows)
+- [**Investigate High Traffic on a Network Interface**](./inv2-routersintfs)
+- [**Investigate Historical Network Activity**](./inv3-retro)
+- [**Investigate Threshold Crossing Alerts**](./inv4-tca) – Check whether the critical asset's change corresponds to a triggered threshold alert.
+- [**Investigate Network Behavior Anomalies**](./inv5-tba)
+- [**Correlate Network Activity Across Multiple Dimensions**](./inv7-crosskey) – Analyse the critical asset alongside application, interface, or site dimensions for a fuller picture.

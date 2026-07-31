@@ -218,7 +218,7 @@ This investigation can generally be considered complete when:
 
 ## Related Investigations
 
-- [**Investigate Threat Intelligence Alerts**](/docs/playbook/securityplaybook/inv5-ti)
-- [**Investigate Encrypted Traffic**](/docs/playbook/securityplaybook/inv6-encrypted)
-- [**Investigate Command and Control (C2) Communications**](/docs/playbook/securityplaybook/inv4-c2)
-- [**Investigate Potential Data Exfiltration**](/docs/playbook/securityplaybook/inv8-exfil)
+- [**Investigate Network Behavior Anomalies**](/playbook/securityplaybook/inv5-threatalerts)
+- [**Investigate Encrypted Traffic**](/playbook/securityplaybook/inv3-encryptedtraffic)
+- [**Investigate Command and Control (C2) Communications**](/playbook/securityplaybook/inv2-commandcontrol)
+- [**Investigate Potential Data Exfiltration**](/playbook/securityplaybook/inv1-exfiltration)
