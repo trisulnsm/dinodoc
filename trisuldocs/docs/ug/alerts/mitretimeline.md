@@ -76,7 +76,7 @@ The **Chronological Stage Analysis** visualizes the progression of observed acti
 Each stage corresponds to a MITRE ATT&CK tactic. The badge displayed on each stage contains:
 
 - Total alerts mapped to that tactic.
-- Number of unique techniques represented by those alerts (shown in brackets).
+- Number of unique technique IDsrepresented by those alerts (shown in brackets).
 
 This provides a quick overview of how the attack progressed through different stages of the ATT&CK framework.
 
