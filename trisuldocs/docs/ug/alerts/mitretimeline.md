@@ -151,7 +151,7 @@ Two investigation options are available for every alert:
 
 ---
 
-## Quick View
+### Quick View
 
 Selecting **Quick View More** expands only the selected timeline entry and displays additional information without leaving the timeline.
 
@@ -174,7 +174,7 @@ The **Explore Session Flows** option opens [**Explore Flows**](/docs/ug/tools/ex
 
 ---
 
-## Full Details
+### Full Details
 
 Selecting **Full Details** opens a detailed investigation panel on the right side of the dashboard.
 
@@ -211,7 +211,3 @@ A typical investigation using the MITRE ATT&CK Timeline consists of the followin
 11. If required, use the generated suppression rule to exclude known or expected alerts.
 
 ---
-
-## Summary
-
-The MITRE ATT&CK Alert Timeline provides a chronological investigation interface for MITRE-mapped detections. By combining search filters, attack stage visualization, timeline-based alert analysis, detailed alert information, and direct integration with Explore Flows, analysts can efficiently investigate attack progression and continue network-level analysis from a single workflow.
