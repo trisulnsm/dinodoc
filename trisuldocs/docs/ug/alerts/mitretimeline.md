@@ -10,9 +10,7 @@ The Timeline combines search filters, summary metrics, attack stage visualizatio
 
 :::info Navigation
 
-:point_right: Go to **MITRE** from the main sidebar
-
-:point_right: Click on **MITRE Timeline**
+:point_right: Go to **MITRE** from the main sidebar and click **MITRE Timeline**
 
 :::
 
