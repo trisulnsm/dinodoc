@@ -125,6 +125,7 @@ Use this investigation to answer questions such as:
 #### Continue the Investigation
 
 After reviewing the encrypted communication, validate the findings using additional network evidence.
+
 ---
 
 ### Step 4: Correlate Additional Network Evidence

@@ -137,6 +137,7 @@ These patterns often provide stronger indicators of command and control activity
 #### Continue the Investigation
 
 If the communication uses encrypted protocols, examine the available TLS metadata and correlate the findings with additional network evidence.
+
 ---
 
 ### Step 4: Correlate Multiple Evidence Sources
