@@ -163,7 +163,7 @@ The expanded view includes:
 - Additional Intrusion Details
 - Diagnostic Action Toolkit
 
-The **Explore Session Flows** option opens **Explore Flows** with the selected source IP and destination IP already populated, allowing analysts to continue investigating the corresponding network communication.
+The **Explore Session Flows** option opens [**Explore Flows**](/docs/ug/tools/explore_flows) with the selected source IP and destination IP already populated, allowing analysts to continue investigating the corresponding network communication.
 
 ![](static/img/mitretimeline_quickview.png)
 
@@ -209,7 +209,7 @@ A typical investigation using the MITRE ATT&CK Timeline consists of the followin
 7. Expand an alert using **Quick View More**.
 8. Open **Full Details** for complete investigation information.
 9. Review the associated MITRE ATT&CK references.
-10. Continue traffic investigation using **Explore Flows**.
+10. Continue traffic investigation using [**Explore Flows**](/docs/ug/tools/explore_flows).
 11. If required, use the generated suppression rule to exclude known or expected alerts.
 
 ---
