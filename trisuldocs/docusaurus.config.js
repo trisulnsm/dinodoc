@@ -149,11 +149,23 @@ const config = {
           position: 'left',
         },
         {
-          type: 'doc',
-          docId: 'Network Investigation Playbook/index',
-          docsPluginId: 'playbook',
+          type: 'dropdown',
           label: 'Playbook',
           position: 'left',
+          items: [
+            {
+              type: 'doc',
+              docId: 'Network Investigation Playbook/index',
+              docsPluginId: 'playbook',
+              label: 'Network Investigation Playbook',
+            },
+            {
+              type: 'doc',
+              docId: 'securityplaybook/index',
+              docsPluginId: 'playbook',
+              label: 'Network Threat Investigation Playbook',
+            },
+          ],
         },
         {
           href: 'https://github.com/trisulnsm/dinodoc',

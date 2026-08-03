@@ -179,6 +179,7 @@ const sidebars = {
                 'ug/alerts/msteams',
                 'ug/alerts/email_wizard',
                 `ug/alerts/mitre`,
+                'ug/alerts/mitretimeline',
               ],
             }, /* end Alerts */
 
