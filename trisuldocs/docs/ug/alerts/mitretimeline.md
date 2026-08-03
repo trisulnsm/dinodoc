@@ -209,5 +209,3 @@ A typical investigation using the MITRE ATT&CK Timeline consists of the followin
 9. Review the associated MITRE ATT&CK references.
 10. Continue traffic investigation using [**Explore Flows**](/docs/ug/tools/explore_flows).
 11. If required, use the generated suppression rule to exclude known or expected alerts.
-
----
