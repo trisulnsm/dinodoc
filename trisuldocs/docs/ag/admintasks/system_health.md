@@ -8,6 +8,12 @@ You can come here when you want to confirm system stability, investigate missing
 
 If traffic analytics look unusual or incomplete, this page helps determine whether the issue is with the system itself rather than the network.
 
+:::info navigation
+
+:point_right: Login as user & Click on the three dots (...) on the top left corner &rarr; Select System Health
+
+:::
+
 ![](images/system_health.png)  
 *Figure: System Health Dashboard*  
 

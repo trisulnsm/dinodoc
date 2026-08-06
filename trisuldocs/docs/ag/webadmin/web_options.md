@@ -37,10 +37,29 @@ To access application setting, Login as admin and,
 | Enable Captcha                    | false         | Enable captcha validation in login page                |
 | Test Mode                         | false         | Disables some features while using test_project        |
 | Show others in topper list        | true          | Show others not shown item in the toppers list         |
+| Page Title                        |               | Enter the text to be displayed in the login page as title |
 | Disk usage alert percentage       | 90            | shows disk usage alert for the specified percentage    |
-| Hide context selection            | false         | Keep it checked if you dont want to hide context selection in login page                                                                                                |
+| Hide context selection            | false         | Keep it checked if you dont want to hide context selection in login page         |
 | Show mode selection               |               | Check this checkbox to show product mode selector window to select a different mode |
 | Set Custom Key Monitor Refresh Time | 60          | Set the frequency (in seconds) at which the key monitor updates its data, with 0 disabling refreshes                                                                 |
+
+## Password/Security
+
+The **Password/Security** settings allow administrators to configure password policies and account security controls for all WebTrisul users. These settings help enforce strong authentication requirements, reduce the risk of unauthorized access, and define account lockout behavior after repeated failed login attempts.
+
+:::info navigation
+:point_right: Go to Web Admin: Manage &rarr; App Settings &rarr; Password/Security
+:::
+
+| Setting | Description |
+|---------|-------------|
+| Enable Two-Factor Authentication| Enables Two-Factor Authentication (2FA) for all users. When enabled, users are required to configure a supported 2FA method during their first login. |
+| User Password Minimum Length | Specifies the minimum number of characters required for a valid user password. |
+| Maximum Failed Login Attempts | Specifies the maximum number of consecutive failed login attempts allowed before the user account is locked. |
+| Account Lock Duration (seconds) | Specifies how long, in seconds, a locked account remains inaccessible after exceeding the maximum failed login attempts. |
+| Password Expiry (days) | Specifies the number of days a password remains valid before users are required to change it. A value of `0` disables password expiration. |
+| Password History Count | Specifies the number of previously used passwords that cannot be reused when setting a new password. |
+| Save | Saves the configured password and security settings. |
 
 ## NetFlow
 
@@ -48,8 +67,8 @@ To access application setting, Login as admin and,
 :point_right: Go to Web Admin: Manage &rarr; App Settings &rarr; NetFlow
 :::
 
-| Option                           | Default Value | Description                                          |
-| -------------------------------- | ------------- | ---------------------------------------------------- |
+| Option                           | Default Value | Description     |
+| -------------------------------- | ------------- | ---------- |
 | Show Routers count in drilldown  | 500           | Shows top routers and interfaces in drilldown        |
 | Show Interfaces Per Router       | 100           | Per router show these many top interfaces in Netflow mode |
 | Include Dest Port(Conversations) | false         | Show port name or number like http and https in inteface drilldown page |
@@ -60,25 +79,13 @@ To access application setting, Login as admin and,
 :point_right: Go to Web Admin: Manage &rarr; App Settings &rarr; IPDR
 :::
 
-| Option                           | Default Value | Description                                          |
-| -------------------------------- | ------------- | ---------------------------------------------------- |
-| Query Logs Maxcount              | 100           | Show top n list in the submited query logs           |
-| IPDR Excel Report Type (Refer below)           | Standard      | Choose among the flexible formats: Standard, DoT Strict Format, Single Panel Format according to your requirements     |
-
-#### IPDR Excel Report Type
-
-Trisul offers multiple export formats to suit various operational and compliance workflows. You can easily switch between formats depending on your specific use case — whether for internal analysis, regulatory submission, or customer-facing reports.
-
-- **Standard Format**
-    The default, full-featured layout that includes all available flow fields. Ideal for in-depth investigations and general-purpose reporting.
-
-- **DoT Strict Format**
-    Structured specifically to meet Department of Telecommunications (DoT) requirements. This format aligns with LEA and regulatory audit expectations, ensuring strict column order and data compliance.
-
-- **Single Panel Customer Format**
-    A simplified and compact layout designed for customer-facing views or integration into billing or usage panels.
-
-Simply select the required format, and Trisul automatically formats the data accordingly—ready for viewing, export, or secure sharing.
+| Option | Default Value | Description |
+|--------|---------------|-------------|
+| Query Logs Maxcount | `100` | Specifies the maximum number of query log entries displayed in the submitted query logs. |
+| Show OEM Logo | `Enabled` | Displays the OEM logo in generated IPDR reports when enabled. |
+| Report Title|  | Specifies the title displayed at the top of generated IPDR reports. |
+| Excel Download Max Rows| `200000` | Specifies the maximum number of rows allowed for Excel downloads. If a report exceeds this limit, Excel download is unavailable and users are prompted to export the report in **CSV** or **TRAI Report** format instead. |
+| Footer Text |    | Specifies the custom footer text displayed at the bottom of generated IPDR reports. |
 
 ## Proxy Server
 
@@ -113,9 +120,9 @@ configure a proxy server.
 :point_right: Go to Web Admin: Manage &rarr; App Settings &rarr; Packet Inspection
 :::
 
-| Option                            | Default Value | Description                                    |
-| --------------------------------- | ------------- | ---------------------------------------------- |
-| Deep Packet Inspection limit      | 21600 Secs    | Time limit for deep packet inspection          |
+| Option                            | Default Value | Description |
+| --------------------------------- | ------------- | ----- |
+| Deep Packet Inspection time limit      | 21600 Secs    | Time limit for deep packet inspection          |
 | Deep packet inspection size limit | 100 M         | Maximum number of bytes to be retrieved as a result of the packet retrieval \ Pull packets operation |
 
 ## Web Server
@@ -141,8 +148,8 @@ configure a proxy server.
 | Business Hour                                          | 00:00:00-23:59:59 | Business hours time used to restrict default report generation time window for each day |
 | Default mail to send schedule report                   |                   | Automatic scheduled report will be send to this E-Mail                                  |
 | Automatically email scheduled reports                  | YES               | Global setting that controls if scheduled reports are mailed out                        |
-| Automatically email threshold crossing alert summaries | No                | Global setting that controls if TCA reports are mailed out                              |
-| Show generated in report page header                   | true              | show generated time in report page title                                                |
+| Automatically email TCA (threshold crossing alert) summaries | No                | Global setting that controls if TCA reports are mailed out                              |
+| Show generated time in report page header                   | true              | show generated time in report page title                                                |
 | Attachment Format                                      | PDF               | Schedule report email attached format                                                   |
 
 ## Email Alerts
@@ -162,10 +169,8 @@ configure a proxy server.
 :point_right: Go to Web Admin: Manage &rarr; App Settings &rarr; Chart
 :::
 
-| Option                        | Default Value | Description                                   |
-| ----------------------------- | ------------- | --------------------------------------------- |
-| Conversation Chart Ring items | 10            | Number of peers to be shown in the conversation ring. This chart appears in the ***Tools &rarr; Investigate IP Activity*** analysis |
-| Show data value tooltips      | false         | Show timeseries data point as a tooltip   |
+| Option                        | Default Value | Description       |
+| ----------------------------- | ------------- | ------------------ |
 | Show Percentile               | 0             | Show a 95th percentile line on charts. Enter 98 to show 98th percentile, 0 to disable                                            |
 | Enable Animation              | true          | Show animation while rendring chart    |
 | Real Time Data Display        | 1 Hour        | How many data points to be retined in the real time graph  |
@@ -194,6 +199,7 @@ configure a proxy server.
 | ------------------- | ------------- | ----------------------------------------------------------------- |
 | SNMP Version        | 1             | SNMP version v1 or v2c or v3. Select V3 to show SNMPv3 parameters |
 | SNMP Read Community | 0             | SNMP read community string                                        |
+| Management IP  | Optional: IP address to communicate with SNMP agents on managed devices |
 
 ### Advanced SNMP Settings
 
@@ -285,7 +291,34 @@ By using these variables and customization options, you can tailor your chart ti
 :point_right: Go to Web Admin: Manage &rarr; App Settings &rarr; API Keys
 :::
 
-| Option                      | Description                                                 |
-| --------------------------- | ----------------------------------------------------------- |
-| Google API Key              | Google map API key. You need this to view the Geo map       |
-| Microsoft Teams Webhook URL | Incoming MS Teams Webhook URL. This is used to automatically send alerts to a Team channel.                                                                                    |
+| Option | Description |
+|--------|-------------|
+| **Google API Key** | Google Maps API key used to enable Geo Map visualization within Trisul. |
+| **Microsoft Teams Webhook URL** | Incoming Microsoft Teams Webhook URL used to send alerts and notifications to a Microsoft Teams channel. |
+| **Zoho Cliq Webhook URL** | Incoming Zoho Cliq Webhook URL used to send alerts and notifications to a Zoho Cliq channel. |
+| **LLM Provider** | Selects the Large Language Model (LLM) provider used by the Trisul IPDR AI query assistant. |
+| **LLM Model** | Specifies the model or deployment name used by the selected LLM provider for Trisul IPDR AI queries, such as **gemini-2.5-flash**, **gpt-4o-mini**, or a custom deployment name. |
+| **API Key** | API key used to authenticate with the selected cloud-based LLM provider. This field is optional when using a local LLM that does not require authentication. |
+| **Custom Endpoint** | Base URL of an OpenAI-compatible endpoint used by Trisul IPDR AI when connecting to a locally hosted or self-hosted LLM, such as **Ollama** or **LM Studio**. |
+| **Save** | Saves the configured API integration settings. |
+
+# Trisul AI
+
+The **Trisul AI** settings page allows administrators to configure the endpoint used by the Trisul AI service. These settings define how the WebTrisul interface communicates with the Trisul AI backend, including the network endpoint and SSL configuration.
+
+:::info navigation
+:point_right: Go to **Web Admin → Manage → App Settings → Trisul AI**
+:::
+
+| Option | Description |
+|--------|-------------|
+| **AI SSL Mode** | Enables SSL/TLS for communication between WebTrisul and the Trisul AI endpoint. Enable this option if the AI service is configured to accept secure HTTPS connections. |
+| **AI Endpoint IP** | IP address or hostname of the Trisul AI endpoint that WebTrisul connects to for AI requests. |
+| **AI Endpoint Port** | TCP port on which the Trisul AI service is listening. |
+| **Save** | Saves the configured Trisul AI endpoint settings. |
+
+:::note
+
+Configure the **AI Endpoint IP** and **AI Endpoint Port** to match the Trisul AI service deployment. If **AI SSL Mode** is enabled, ensure that the endpoint is configured to accept secure SSL/TLS connections.
+
+:::

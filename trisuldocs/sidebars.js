@@ -821,6 +821,9 @@ const sidebars = {
                 'ag/webadmin/logs',
                 'ag/webadmin/apps',
                 'ag/webadmin/plugin_data_update',
+                'ag/webadmin/bgjobs',
+                'ag/webadmin/ipam',
+                'ag/webadmin/smsconfig',
               ],
             }, /* end Web Admin*/
 

@@ -27,7 +27,7 @@ every-day. This is helpful in tuning the system.
 :point_right: Go to Context: Default &rarr; Admin Tasks &rarr; DB Status
 :::
 ## DB Status Dashboard  
-On the **DB Status** dashboard, click on the little graph button against each object to view the DB Status trend for that particular object. You can also customize the number of days for which you want to view the trends by clicking on the graph button.
+On the **DB Status** dashboard, click on the little graph button against each object to view the DB Status trend for that particular object. You can also customize the number of days for which you want to view the traffic data trends by clicking on the graph button.
 
 ![](images/dbstatus1.png)  
 *Figure: DB Status Dashboard showing total count of objects*

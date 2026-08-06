@@ -57,6 +57,24 @@ The buttons are shown in the image below
 
 For most cases we prefer the XLSX report. If the number of flows are huge say greater than 250K then use the text report format.
 
+### IPDR Excel Report Type
+
+Trisul offers multiple export formats to suit various operational and compliance workflows. You can easily switch between formats depending on your specific use case — whether for internal analysis, regulatory submission, or customer-facing reports.
+
+- **Standard Format**
+
+    The default, full-featured layout that includes all available flow fields. Ideal for in-depth investigations and general-purpose reporting.
+
+- **DoT Strict Format**
+
+    Structured specifically to meet Department of Telecommunications (DoT) requirements. This format aligns with LEA and regulatory audit expectations, ensuring strict column order and data compliance.
+
+- **Single Panel Customer Format**
+
+    A simplified and compact layout designed for customer-facing views or integration into billing or usage panels.
+
+Simply select the required format, and Trisul automatically formats the data accordingly—ready for viewing, export, or secure sharing.
+
 The MS Excel fields looks like this below.
 
 ![](images/sampl_report.png)

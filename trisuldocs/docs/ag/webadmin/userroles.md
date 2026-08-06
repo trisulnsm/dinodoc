@@ -69,26 +69,4 @@ seconds)
 
 ## Authentication Audit Log
 
-All login activity is logged by the server
-
-> Login as `admin` user to view login activity.
-
-:::info navigation
-
-:point_right: Select *Webadmin* &rarr; Manage &rarr; Auth Log
-
-:::
-
-The following details are logged by the server  
-
-- Login time  
-
-- Login IP  
-
-- Login Status  
-
-- Reason for failure to login (eg, wrong password)  
-
-- Logout (with reason)  
-
-- Inactivity timeout log
+All login activity is logged by the server. Refer [Auth Log](/docs/ag/webadmin/authlog).

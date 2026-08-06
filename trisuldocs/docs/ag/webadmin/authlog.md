@@ -1,6 +1,6 @@
 # Auth Log
 
-The Auth log records and displays all login related activities including successful login, logout, inactivity, and timeout events to track and monitor user access activity.
+The Auth Log records and displays all user authentication activities, providing a complete audit trail of user access. It logs successful and failed login attempts, login time, login IP address, login status, failure reasons, logout events, and inactivity timeouts, helping administrators monitor user activity and troubleshoot authentication issues.
 
 :::info navigation
 :point_right: Go to Web Admin:Manage&rarr; Auth Log
@@ -8,7 +8,7 @@ The Auth log records and displays all login related activities including success
 
 ## Search Criteria
 
-Click on the [*Show Search Form*](/docs/ug/ui/elements#hide-show-search-form) to expand the *Search Criteria* Form for *Auth Log*. The *Search Criteria* form enables you to search for particular user/context at a selected time.
+Click on the [*Show Search Form*](/docs/ug/ui/elements#hide-show-search-form) to expand the *Search Criteria* Form for *Auth Log*. The *Search Criteria* form enables you to search for particular user/context and click **Search**.
 
 ![](images/authlog_searchform.png)
 *Figure: Auth Log Search Criteria*
@@ -17,7 +17,6 @@ Provide the form with the search options using the following details.
 
 | Option | Description |
 |-------|---------------|
-| Time Frame | Narrow down events by selecting a specific date and time range using the [*Time Selector*](/docs/ug/ui/elements#time-selector). |
 | User Name | Select a user name from the dropdown to search for events associated with a specific user . |
 | Context | Select a context from the dropdown to filter events by a particular context |
 

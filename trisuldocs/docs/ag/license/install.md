@@ -87,3 +87,16 @@ The active license details are displayed on this page, including the enabled mod
 ## Moving an Existing License to New Hardware
 
 If you move any Trisul node (Probe or Hub) to a new machine or VM, send us the new machine id and we will reissue the License.
+
+## Annual Maintenance Contract (AMC)
+
+![](images/amc.png)  
+*Figure: Showing the AMC details*  
+
+The **Annual Maintenance Contract (AMC)** section displays the support contract details associated with your production license. It shows the current AMC validity period, allowing administrators to verify whether the system is covered under an active maintenance and support agreement.
+
+:::info Note
+
+The AMC section is available only for production licenses. It is not displayed for trial licenses.
+:::
+

@@ -57,19 +57,21 @@ In *Storage Pools* you can view each of the storage pool's status information in
 
 *Figure: Storage status dashboard showing storage pools information*
 
-| Information         | Description                                                                         |
-| ------------------- | ----------------------------------------------------------------------------------- |
-| Pool Name           | Pool name like oper/ref/archive                                                     |
-| Device              | Name of your storage disk where the data gets stored                                |
-| Mounted on          | The location name where the disk is mounted                                         |
-| Disk Size           | The capacity of the storage device                                                  |
-| Disk Free           | Amount of available(free) storage space on the device                               |
-| DB Size             | Total size of the Trisul Database files                                             |
-| Slices              | The number of slices Trisul Database is divided into                                |
-| Offline AWS S3/Tape | Indicates whether Trisul is configured to use Amazon Web Services (AWS) S3 or Tape storage for archiving or backup purposes                                                                            |
-| From Date           | The time range from which the data started getting stored                           |
-| To Date             | The time range until which the data is stored                                       |
-| Days                | The total number of days the data has been stored in Trisul.                        |
+| Information         | Description                                                                     |
+| ------------------- | ------------------------------------------------------- |
+| Pool Name           | Pool name like oper/ref/archive        |
+| Pool Type           | Type of pool like disk/tape/aws       |
+| Device              | Name of your storage disk where the data gets stored    |
+| Mounted on          | The location name where the disk is mounted        |
+| Disk Size           | The capacity of the storage device           |
+| Disk Free           | Amount of available(free) storage space on the device      |
+| DB Size             | Total size of the Trisul Database files      |
+| Slices              | The number of slices Trisul Database is divided into      |
+| Offline AWS S3/Tape | Indicates whether Trisul is configured to use Amazon Web Services (AWS) S3 or Tape storage for archiving or backup purposes      |
+| From Date           | The time range from which the data started getting stored     |
+| To Date             | The time range until which the data is stored         |
+| Days                | The total number of days the data has been stored in Trisul.   |
+| Configured Days     | The number of days the data is configured to be stored in the storage pool      |
 
 ## Storage Status Tabular Data
 
