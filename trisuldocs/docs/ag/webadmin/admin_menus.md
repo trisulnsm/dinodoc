@@ -30,7 +30,7 @@ Explore the documentation to access detailed information and controls for admini
 | [Modules](/docs/ag/webadmin/modules) | View and manage list of available modules that are being actively used in the web interface. |
 | [Dashboards](/docs/ag/webadmin/dashboards) | View and manage list of all dashboards in the UI. |
 | [Menu Manager](/docs/ag/webadmin/menus) | Menu manager allows you to change the order of menu items, edit menu links, or clone and add new items. |
-| [Start/Stop Tasks](/docs/ag/startorstop_tasks) | Administrative Tasks can be started and stopped by a single click from this menu including web server and email alert notification service. |
+| [Start/Stop Tasks](/docs/ag/webadmin/startorstop_tasks) | Administrative Tasks can be started and stopped by a single click from this menu including web server and email alert notification service. |
 | [Web Server Logs](/docs/ag/webadmin/logs) | Monitor web server logs, email logs, background tasks logs, auth log, web socket logs for troubleshooting. |
 | [Apps](/docs/ag/webadmin/apps) | Explore all Trisul apps in the platform that can extend support for your analyses. |
 | [Plugin Data Updates](/docs/ag/webadmin/plugin_data_update) | Shows status of automatic feed updates for Badfellas, Geo, URL filter plugins. |
