@@ -240,6 +240,8 @@ The Trisul Probe handles live traffic capture and real-time analysis. As traffic
 | ----------- | ----------------- | -------------------------- |
 | Raw Packets | For every 200Mbps of traffic | +1 CPU core(3Ghz) and +4GB DDR4 (RAM)  |
 
+
+
 ### Scaling Flow-Based Mode
 
 In Flow-Based Mode, the key scaling factor is the amount of flow data being sent to Trisul. Flow records (NetFlow, sFlow, IPFIX, etc.) usually represent a small fraction of actual link bandwidth.
@@ -255,3 +257,6 @@ The table below gives a guideline for scaling Trisul in this mode:
 | Mode               | Scaling Metric When Load Increases     | Additional Resources Needed   |
 | ------------------ | -------------------------------- | ---------------------------- |
 | Flow Mode | For every 10Mbps flow traffic | +1 CPU Core and +2GB RAM     |
+
+
+---

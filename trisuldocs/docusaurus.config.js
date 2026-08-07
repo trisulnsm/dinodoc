@@ -129,11 +129,46 @@ const config = {
             },
           ],
         },
-<<<<<<< HEAD
+        {
+          type: 'doc',
+          docId: 'ag/index',
+          label: 'Admin Guide',
+          position: 'left',
+        },
+        {
+          type: 'doc',
+          docId: 'ug/index',
+          label: 'User Guide',
+          position: 'left',
+        },
         {
           type: 'doc',
           docId: 'lua/index',
           label: 'API',
+          position: 'left',
+        },
+        {
+          type: 'doc',
+          docId: 'ref/index',
+          label: 'Reference',
+          position: 'left',
+        },
+        {
+          type: 'doc',
+          docId: 'ipdr/index',
+          label: 'IPDR',
+          position: 'left',
+        },
+        {
+          type: 'doc',
+          docId: 'isp/index',
+          label: 'ISP',
+          position: 'left',
+        },
+        {
+          type: 'doc',
+          docId: 'releasehistory',
+          label: 'Changelog',
           position: 'left',
         },
         {
@@ -180,57 +215,6 @@ const config = {
       minHeadingLevel: 2,
       maxHeadingLevel: 3,
     },
-=======
-        items: [
-          {
-            type: 'doc',
-            docId: 'ag/index',
-            label: 'Admin Guide',
-            position: 'left',
-          },
-          {
-            type: 'doc',
-            docId: 'ug/index',
-            label: 'User Guide',
-            position: 'left',
-          },
-          {
-            type: 'doc',
-            docId: 'lua/index',
-            label: 'API',
-            position: 'left',
-          },
-          {
-            type: 'doc',
-            docId: 'ref/index',
-            label: 'Reference',
-            position: 'left',
-          },
-          {
-            type: 'doc',
-            docId: 'ipdr/index',
-            label: 'IPDR',
-            position: 'left',
-          },
-          {
-            type: 'doc',
-            docId: 'isp/index',
-            label: 'ISP',
-            position: 'left',
-          },
-          {
-            type: 'doc',
-            docId: 'releasehistory',
-            label: 'Changelog',
-            position: 'left',
-          },
-          {
-            type: 'doc',
-            docId: 'Troubleshooting/index',
-            label: 'Troubleshooting',
-            position: 'left',
-          },
->>>>>>> ec46dde (Update documentation and remove version 7.0 files)
 
     footer: {
       style: 'dark',
