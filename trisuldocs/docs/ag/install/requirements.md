@@ -150,7 +150,7 @@ Packet capture analytics sizing is based on total packet bandwidth.  This is not
 | Mechanism | SPAN Port |
 | Network | 1 GbE for receiving the packets via SPAN port and another for management access |
 | Disk | 1TB high speed SAS or NVMe  for PCAP and 1TB SAS/SATA for database|
-| OS | Oracle 22.04 Jammy or RHEL 9|
+| OS | Ubuntu 24.04 Noble or RHEL 9|
 
 </TabItem>
 
@@ -165,7 +165,7 @@ Packet capture analytics sizing is based on total packet bandwidth.  This is not
 | Mechanism | SPAN Port |
 | Network | 1 GbE for receiving the packets via SPAN port and another for management access |
 | Disk | 1TB high speed SAS or NVMe  for PCAP and 1TB SAS/SATA for database|
-| OS | Oracle 22.04 Jammy or RHEL 9|
+| OS | Ubuntu 24.04 Noble or RHEL 9|
 
 </TabItem>
 
@@ -180,7 +180,7 @@ Packet capture analytics sizing is based on total packet bandwidth.  This is not
 | Mechanism | Tap Device |
 | Network | 2x10 GbE for receiving the packets and another for management access |
 | Disk | 2TB high speed SAS or NVMe  for PCAP and 8TB SAS/SATA for database|
-| OS | Oracle 22.04 Jammy or RHEL 9|
+| OS | Ubuntu 24.04 Noble or RHEL 9|
 
 </TabItem>
 
@@ -199,7 +199,7 @@ This is a typical configuration for 40Gbps packet capture used in ISP settings. 
 | Mechanism | Tap Device + Tap Aggregator |
 | Network | 2x40GbE for Tap connector + Intel XL710/XL810 or FPGA Capture cards|
 | Disk | 4x2TB high speed SAS or NVMe  for PCAP and 20TB SAS/SATA for database|
-| OS | Oracle 22.04 Jammy or RHEL 9|
+| OS | Ubuntu 24.04 Noble or RHEL 9|
 
 *Table: ISP Configuration* 
 
