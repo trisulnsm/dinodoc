@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 export default function ScrollTopButton() {
   const [visible, setVisible] = useState(false);
+  const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -14,7 +15,9 @@ export default function ScrollTopButton() {
 
     window.addEventListener('scroll', toggleVisibility);
 
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    return () => {
+      window.removeEventListener('scroll', toggleVisibility);
+    };
   }, []);
 
   const scrollToTop = () => {
@@ -29,6 +32,8 @@ export default function ScrollTopButton() {
       <button
         onClick={scrollToTop}
         aria-label="Scroll to top"
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
         style={{
           position: 'fixed',
           bottom: '30px',
@@ -39,7 +44,7 @@ export default function ScrollTopButton() {
           backgroundColor: '#064e3b',
           color: 'white',
           border: 'none',
-          fontSize: '28px',
+          fontSize: '32px',
           fontWeight: 'bold',
           cursor: 'pointer',
           zIndex: 1000,
@@ -48,9 +53,17 @@ export default function ScrollTopButton() {
           justifyContent: 'center',
           boxShadow: '0 4px 10px rgba(0,0,0,0.3)',
           transition: 'all 0.3s ease',
+          transform: hovered ? 'translateY(-5px)' : 'translateY(0)',
         }}
       >
-        ↑
+        <span
+          style={{
+            transition: 'transform 0.3s ease',
+            transform: hovered ? 'translateY(-3px)' : 'translateY(0)',
+          }}
+        >
+          ⌃
+        </span>
       </button>
     )
   );
