@@ -145,7 +145,7 @@ Packet capture analytics sizing is based on total packet bandwidth.  This is not
 | Hardware  | System Requirements                                                                                                            
 | ------- | ------------ |
 | Type | Bare metal preferred |
-| CPU | 8 vCPU codes | 
+| CPU | 8 vCPU cores | 
 | Memory |  16GB RAM |
 | Mechanism | SPAN Port |
 | Network | 1 GbE for receiving the packets via SPAN port and another for management access |
@@ -160,7 +160,7 @@ Packet capture analytics sizing is based on total packet bandwidth.  This is not
 | Hardware  | System Requirements                                                                                                            
 | ------- | ------------ |
 | Type | Bare metal preferred |
-| CPU | 16 vCPU codes | 
+| CPU | 16 vCPU cores | 
 | Memory |  16GB RAM |
 | Mechanism | SPAN Port |
 | Network | 1 GbE for receiving the packets via SPAN port and another for management access |
@@ -175,7 +175,7 @@ Packet capture analytics sizing is based on total packet bandwidth.  This is not
 | Hardware  | System Requirements                                                                                                            
 | ------- | ------------ |
 | Type | Bare metal preferred |
-| CPU | 24 vCPU codes | 
+| CPU | 24 vCPU cores | 
 | Memory |  16GB RAM |
 | Mechanism | Tap Device |
 | Network | 2x10 GbE for receiving the packets and another for management access |
@@ -194,7 +194,7 @@ This is a typical configuration for 40Gbps packet capture used in ISP settings. 
 | Hardware  | System Requirements                                                                                                            
 | ------- | ------------ |
 | Type | Bare metal preferred |
-| CPU | 48 vCPU codes | 
+| CPU | 48 vCPU cores | 
 | Memory |  64GB RAM |
 | Mechanism | Tap Device + Tap Aggregator |
 | Network | 2x40GbE for Tap connector + Intel XL710/XL810 or FPGA Capture cards|
