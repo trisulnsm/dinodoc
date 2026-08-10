@@ -66,6 +66,17 @@ const config = {
         sidebarCollapsed: true,
       },
     ],
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            from: '/docs/ipdr/api',
+            to: '/docs/ipdr/ipdr_customers_api',
+          },
+        ],
+      },
+    ],
   ],
 
   customFields: {
