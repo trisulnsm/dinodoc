@@ -271,16 +271,6 @@ const sidebars = {
                 'ug/restapi/timeslices_api',
               ],
             }, /* end REST API */
-            /* Trisul Apps */
-            {
-              type: 'category',
-              label: 'Trisul Apps',
-              link: { type: 'doc', id: 'ug/apps/index' },
-              items: [
-                'ug/apps/stablekeys',
-              ],
-            }, /* end Trisul Apps */
-
 
           ],
       },

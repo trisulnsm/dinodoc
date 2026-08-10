@@ -131,44 +131,8 @@ const config = {
         },
         {
           type: 'doc',
-          docId: 'ag/index',
-          label: 'Admin Guide',
-          position: 'left',
-        },
-        {
-          type: 'doc',
-          docId: 'ug/index',
-          label: 'User Guide',
-          position: 'left',
-        },
-        {
-          type: 'doc',
           docId: 'lua/index',
           label: 'API',
-          position: 'left',
-        },
-        {
-          type: 'doc',
-          docId: 'ref/index',
-          label: 'Reference',
-          position: 'left',
-        },
-        {
-          type: 'doc',
-          docId: 'ipdr/index',
-          label: 'IPDR',
-          position: 'left',
-        },
-        {
-          type: 'doc',
-          docId: 'isp/index',
-          label: 'ISP',
-          position: 'left',
-        },
-        {
-          type: 'doc',
-          docId: 'releasehistory',
-          label: 'Changelog',
           position: 'left',
         },
         {
