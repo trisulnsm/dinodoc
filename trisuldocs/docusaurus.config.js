@@ -42,8 +42,8 @@ const config = {
       require.resolve('@easyops-cn/docusaurus-search-local'),
       {
         hashed: true,
-        docsDir: ['docs', 'glossary', 'Playbook', 'Playbook/Network Investigation Playbook'],
-        docsRouteBasePath: ['docs', 'playbook'],
+        docsDir: ['docs', 'glossary', 'Playbook', 'Playbook/Network Investigation Playbook', 'Playbook/cgconfigguide'],
+        docsRouteBasePath: ['docs', 'playbook', 'cgconfigguide'],
       },
     ],
     [
@@ -63,6 +63,16 @@ const config = {
         path: 'Playbook',
         routeBasePath: 'playbook',
         sidebarPath: './sidebarsPlaybook.js',
+        sidebarCollapsed: true,
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'cgconfigguide',
+        path: 'Playbook/cgconfigguide',
+        routeBasePath: 'cgconfigguide',
+        sidebarPath: './sidebarsCgconfigguide.js',
         sidebarCollapsed: true,
       },
     ],
@@ -175,6 +185,12 @@ const config = {
               docId: 'securityplaybook/index',
               docsPluginId: 'playbook',
               label: 'Network Threat Investigation Playbook',
+            },
+            {
+              type: 'doc',
+              docId: 'index',
+              docsPluginId: 'cgconfigguide',
+              label: 'CounterGroup Configuration Guide',
             },
           ],
         },
