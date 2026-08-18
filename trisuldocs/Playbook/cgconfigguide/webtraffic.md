@@ -95,7 +95,7 @@ means:
 
 :::info Navigation
 
-:point_right: Go to **Profile0** from the main sidebar, then navigate to **Custom Counters &rarr; Filtered**
+👉 Go to **Profile0** from the main sidebar, then navigate to **Custom Counters &rarr; Filtered**
 
 :::
 
@@ -115,7 +115,7 @@ means:
 
 The **Web Traffic** Counter Group is now created.
 
-[**Restart the Probe**](/cgconfigguide/#restart-the-probe) to enable the Counter Group.
+[**Restart the Probe**](/playbook/cgconfigguide/#restart-the-probe) to enable the Counter Group.
 
 ---
 
@@ -127,7 +127,7 @@ The Counter Group defines the traffic view. Next, create a dashboard to visualiz
 
 :::info Navigation
 
-:point_right: Go to **Dashboards** from the main sidebar and click **Show All**
+👉 Go to **Dashboards** from the main sidebar and click **Show All**
 
 :::
 

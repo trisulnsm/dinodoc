@@ -1,5 +1,6 @@
 // @ts-check
 import { themes as prismThemes } from 'prism-react-renderer';
+import path from 'path';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -42,8 +43,8 @@ const config = {
       require.resolve('@easyops-cn/docusaurus-search-local'),
       {
         hashed: true,
-        docsDir: ['docs', 'glossary', 'Playbook', 'Playbook/Network Investigation Playbook', 'Playbook/cgconfigguide'],
-        docsRouteBasePath: ['docs', 'playbook', 'cgconfigguide'],
+        docsDir: ['docs', 'glossary', 'Playbook'],
+        docsRouteBasePath: ['docs', 'playbook', 'playbook/cgconfigguide'],
       },
     ],
     [
@@ -61,6 +62,7 @@ const config = {
       {
         id: 'playbook',
         path: 'Playbook',
+        exclude: ['cgconfigguide/**'],
         routeBasePath: 'playbook',
         sidebarPath: './sidebarsPlaybook.js',
         sidebarCollapsed: true,
@@ -71,11 +73,42 @@ const config = {
       {
         id: 'cgconfigguide',
         path: 'Playbook/cgconfigguide',
-        routeBasePath: 'cgconfigguide',
+        routeBasePath: 'playbook/cgconfigguide',
         sidebarPath: './sidebarsCgconfigguide.js',
         sidebarCollapsed: true,
       },
     ],
+    function fixPlaybookOverlapPlugin(context) {
+      return {
+        name: 'fix-playbook-overlap-plugin',
+        configureWebpack(config) {
+          const cgPath = path.resolve(context.siteDir, 'Playbook/cgconfigguide');
+          const playbookPath = path.resolve(context.siteDir, 'Playbook');
+
+          config.module.rules.forEach((rule) => {
+            if (rule.include) {
+              const includes = Array.isArray(rule.include) ? rule.include : [rule.include];
+              const matchesPlaybook = includes.some(
+                (inc) => typeof inc === 'string' && path.resolve(inc) === playbookPath
+              );
+              const matchesCg = includes.some(
+                (inc) => typeof inc === 'string' && path.resolve(inc) === cgPath
+              );
+
+              if (matchesPlaybook && !matchesCg) {
+                if (!rule.exclude) {
+                  rule.exclude = [];
+                } else if (!Array.isArray(rule.exclude)) {
+                  rule.exclude = [rule.exclude];
+                }
+                rule.exclude.push(cgPath);
+              }
+            }
+          });
+          return {};
+        },
+      };
+    },
     [
       '@docusaurus/plugin-client-redirects',
       {

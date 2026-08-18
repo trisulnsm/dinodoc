@@ -14,7 +14,7 @@ Instead of starting with a Counter Group and trying to determine what it can be 
 
 A basic understanding of Trisul Counter Groups and custom Counter Groups is required before using the scenarios in this library.
 
-Counter Groups organize network metrics and their associated keys. Trisul provides a range of built-in Counter Groups, while custom Counter Groups allow you to create specialized traffic views based on your requirements. :contentReference[oaicite:0]{index=0}
+Counter Groups organize network metrics and their associated keys. Trisul provides a range of built-in Counter Groups, while custom Counter Groups allow you to create specialized traffic views based on your requirements.
 
 Custom Counter Groups can be created using different approaches, including:
 
@@ -24,7 +24,7 @@ Custom Counter Groups can be created using different approaches, including:
 - **Rule Based Counter Groups**
 - **Cross Key Counter Groups**
 
-Trisul also supports **Cardinality Counting** as an additional type of meter that can be added to Counter Groups. :contentReference[oaicite:1]{index=1}
+Trisul also supports **Cardinality Counting** as an additional type of meter that can be added to Counter Groups.
 
 Before selecting a Counter Group configuration for a scenario, familiarize yourself with:
 
@@ -106,7 +106,7 @@ After creating or modifying a Counter Group, restart the probe for the changes t
 
 :::info Navigation
 
-:point_right: Go to **Admin Tasks** from the main sidebar and click **Start/Stop Tasks**
+👉 Go to **Admin Tasks** from the main sidebar and click **Start/Stop Tasks**
 
 :::
 
