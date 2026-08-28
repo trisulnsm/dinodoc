@@ -66,18 +66,20 @@ Commonly modified parameters are `Setuid`, `TrisulMode`, `LicenseFile`
 | DBRoot               | /usr/local/var/lib/trisul-probe/domain0/probe0/context0                           | The base directory under which Trisul stores all its data.   |
 | UsageRedMark         |                                                                                   | Generate an alert when disk usage on this probe node cross this percent value. Leave blank or set to 0 to disable disk usage alerts     |
 | ConfigDB             | /usr/local/var/lib/trisul-probe/domain0/probe0/context0/ config/TRISULCONFIG.SQDB | Location of the configuration database.  |
-| PluginsLibDirectory  | /usr/local/lib/trisul/plugins                                                     | Where Trisul looks for dynamic (called so) plugins   |
-| PluginsConfDirectory | /usr/local/etc/trisul-probe/domain0/probe0/context0                               | Where Trisul looks for additional configuration files and server certificates (for TRP).     |
+| PluginsLibDirectory  | /usr/local/lib/trisul-probe/plugins                                                     | Where Trisul looks for dynamic (called so) plugins   |
+| PluginsConfDirectory | /usr/local/etc/trisul-probe/domain0/probe0/context0                              | Where Trisul looks for additional configuration files and server certificates (for TRP).     |
+| BinDirectory | /usr/local/bin |   |
+| DataDirectory |       |          |
 | PluginsDataDirectory | /usr/local/share/trisul/plugins                                                   | Where Trisul looks for plugin configuration data.      |
 | ProbeID              | SE-LINK                                                                           | A mnemonic to identify this instance of Trisul, this string is reported via TRP.              |
 | ProbeDesc            | Trisul Probe monitors the S-E link traffic only                                   | A short description of this instance of Trisul.     |
+| PidFile              | /usr/local/var/lib/trisul-probe/domain0/probe0/context0/run/trisul-probe.pid                                                     | File where Trisul stores the process id of the current running instance.      |
 | RunStateDirectory    | /usr/local/var/lib/trisul-probe/domain0/probe0/context0/run                       | Volatile data for current run stored here      |
 | PluginsDataDirectory | /usr/local/share/trisul-probe/plugins                                             | Plugins store data here; eg from downloaded feeds       |
-| PidFile              | /usr/local/var/run/trisul.pid                                                     | File where Trisul stores the process id of the current running instance.      |
-| TrisulMode           | TAP                                                                               | This determines whether you run Trisul in raw packets mode or Netflow mode. TAP Processes all raw packets from the selected network adapters. NETFLOW_TAP Processes Netflow packets |
+| TrisulMode           | NETFLOW_TAP                                                                              | This determines whether you run Trisul in raw packets mode or Netflow mode. TAP Processes all raw packets from the selected network adapters. NETFLOW_TAP Processes Netflow packets |
 | ValidTrisulModes     | TAP,NETFLOW_TAP                                                                   | Unused – just a hint for the previous parameter.        |
 | LicenseFile          | /usr/local/etc/trisul-probe/LicenseKey.txt                                        | Location of the license file.  |
-| ReportsDirectory     | ../reports                                                                        | The directory where DDoS reports are stored in Netflow mode                |
+| ReportsDirectory     | /usr/local/var/lib/trisul-probe/domain0/probe0/context0/reports                                                                       | The directory where DDoS reports are stored in Netflow mode                |
 
 ## Logging
 
