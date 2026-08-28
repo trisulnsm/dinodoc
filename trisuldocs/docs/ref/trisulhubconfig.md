@@ -51,21 +51,17 @@ Click a section below to view the parameters defined within it.
 
 ## App
 
-:::note
-
-Commonly modified parameters are `Setuid`, `TrisulMode`, `LicenseFile`
-
-:::
-
 | Parameters    | Defaults                | Description                    |
 | ------------- | ---------------------- | ------------------------------------------------------------------ |
 | User          | trisul.trisul                                                              | Which user/group should trisul run as after dropping root privileges.  |
 | TempFolder    | /tmp                                                                       |      |
 | DBRoot        | /usr/local/var/lib/trisul-hub/ domain0/hub0/context0                       | The base directory under which Trisul stores all its data.   |
-| TrafficDBRoot | /usr/local/var/lib/trisul/domain0 /hub0/context0/meters                    | The directory under which Trisul stores traffic and flow statistics.  |
-| ConfigDB      | /usr/local/var/lib/trisul/ domain0/hub0/context0/ config/TRISULCONFIG.SQDB | Location of the configuration database.  |
+| TrafficDBRoot | /usr/local/var/lib/trisul-hub/domain0/hub0/context0/meters                    | The directory under which Trisul stores traffic and flow statistics.  |
+| ConfigDB      | /usr/local/var/lib/trisul-hub/domain0/hub0/context0/config/TRISULCONFIG.SQDB | Location of the configuration database.  |
 | BinDirectory  | /usr/local/bin                                                             | Where Trisul looks for executable binaries |
 | DataDirectory | /usr/local/share/trisul-hub                                                | Data files  |
+| HubID         | FLUSHER HUB0                                                               |             |
+| HubDesc       | This hub0 flusher and trpd server                                          |             |
 | LicenseFile   | /usr/local/etc/trisul-hub/LicenseKey.txt                                   | Location of the license file. |
 | DebugMode     | false                                                                      | Debug mode is used when trying to develop LUA probe scripts.<br/> If `DebugMode == True` then all streaming metrics from all probes are just sunk to `/dev/null`. Hence this is used for probe testing |
 
@@ -75,14 +71,11 @@ Logs are arranged in a ring of files, with patterns like `fs`, `ns`, `is` etc.
 
 | Parameters           | Defaults                  | Description      |
 | ---|---|---|
-| Logdir               | /usr/local/var/log/trisul | Where the log files are stored. |
-| Logfile              | ns-???.log                | Log file pattern. The default is `ns-001.log`, `ns-002.log`, etc.|
-| LogRotateSize        | 5000000                   | Size of each log file is allowed to grow to this size before Trisul moves to the next file.|
-| LogRotateCount       | 5                         | The number of files in the log ring.|
+| Logdir               | /usr/local/var/log/trisul-hub/domain0/hub0/context0| Where the log files are stored. |
 | FlusherLogFile       | fs-???.log                | log file pattern.|
 | FlusherLogLevel      | DEBUG                     | All messages higher than this level are logged. The available log levels in order of severity (most severe one first is).<br/>**EMERG**<br/>**FATAL**<br/>**ALERT**<br/>**CRIT**<br/>**ERROR**<br/>**WARN**: this level after a few weeks of smooth running<br/>**NOTICE**<br/>**INFO**<br/>**DEBUG**: Recommended default level |
-| FlusherLogRotateSize | 5000000                   | Max size of each log file|
-| FlusherogRotateCount | 5                         | Number of files in ring|
+| FlusherLogRotateSize | 10000000                   | Max size of each log file|
+| FlusheLogRotateCount | 5                         | Number of files in ring|
 | TrpLogFile           | qs-???.log                | log file pattern.|
 | TrpLoglevel          | DEBUG                     | log level|
 | TrpLogRotateSize     | 5000000                   | Max size of each log file|
@@ -90,7 +83,7 @@ Logs are arranged in a ring of files, with patterns like `fs`, `ns`, `is` etc.
 | IpdrdLogFile         | is-???                    | IPDR log file pattern. These parameters are for the IPDR query service|
 | IpdrdLoglevel        | DEBUG                     | IPDR service logging level.|
 | IpdrdLogRotateSize   | 5000000                   | Max size of each file in bytes|
-| IpdrdLogRotateCount  | 5                         | Number of log files|
+| IpdrdLogRotateCount  | 2                         | Number of log files|
 
 ## StatsEngine
 
@@ -98,9 +91,15 @@ Controls the database storage and retention policy for Trisul.
 
 | Parameters               | Defaults | Description |
 | ------------------------ | -------- | -------- |
+| FlushBudget              | 30       |          |
 | FTSFlushBudget           | 5        | Trisul FTS(Full Text Resources) need to complete the Flush operation within these many seconds. Since Trisul is a Real time system, we have a total about about 60 seconds for the entire snapshot window to flush. |
+|SQLInsertThresholdMSecs | 60000 |                |
+| SQLBusyTimeoutMsecs    | 2 |                    |
+| SQLTRPBusyTimeoutMsecs | 8000  |                |
+| PidFile | /usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/flushd.pid | |
 | JournalMode              | WAL      | Trisul Resources are stored in SQLITE3 leaf nodes.|
 | OfflineAnalysisQueueSize | 2000000  | When importing PCAPs or other offline formats, this parameter controls the Hi Water mark of the items on the queue of the Hub. This helps to control memory usage on the Hub Node.|
+| ScanMalformedDBOnStart | TRUE  |                |
 
 ### SlicePolicy
 
@@ -131,7 +130,7 @@ For long term storage mostly for compliance purposes.
 | Parameters   | Defaults | Description                                                                                                                             |
 | ------------ | -------- | -------------- |
 | SliceCount   | 32       | Controls how many slices are kept in the archive area. If you set this to 0, slices move directly to `/dev/null` (ie are deleted).        |
-| UsageRedMark | 95       | Generate an alert when the disk usage percent exceeds this value for admin purposes. Leave blank or zero to disable disk usage alerting |
+| UsageRedMark |     | Generate an alert when the disk usage percent exceeds this value for admin purposes. Leave blank or zero to disable disk usage alerting |
 
 ### Extra archives (SLIDE archiver)
 
@@ -242,18 +241,25 @@ A typical flusher configuration looks like this:
 ```xml
 <Flushers>
     <Flusher>
-        <Connection>tcp://192.168.10.12:12001</Connection>
+        <Connection>ipc:///usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/flusher_0</Connection>
         <DBInstance>0</DBInstance>
     </Flusher>
     <Flusher>
-        <Connection>tcp://192.168.10.12:12002</Connection>
+        <Connection>ipc:///usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/flusher_1</Connection>
         <DBInstance>1</DBInstance>
     </Flusher>
 </Flushers>
 ```
-
 - Connection : A network endpoint, the default single machine endpoint uses IPC, the form of socket is `ipc://` , there is an attribute `dedicated` that can be used to dedicate a flusher to a single probe and a single instance. See next section. 
 - DBInstance : 0, 1, 2, etc. 
+
+```
+<ExtPublisherConnection>ipc:///usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/pub_0</ExtPublisherConnection>
+```
+
+```
+<IntPublisherConnection>ipc:///usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/pull_0</IntPublisherConnection>
+```
 
 
 #### Dedicated to probe connection flusher
@@ -273,16 +279,25 @@ In multi probe very high volume environments consider using the `dedicated="prob
 
 The `<Conenection dedicated="probe0">` format sets up a dedicated endpoint for a probe and an instance. Without it, all probes would use the same endpoint and the messaging framework would demultiplex it.  A performance setting. 
 
+
 ## Server
 
 Controls the TRP Server Process used for database querying functionality. The process that provides the query API is called `trisul_trpd@`
 
 | Parameters      | Defaults | Description          |
 | --------------- | -------- | -------------------- |
-| ZmqConnection   |          | The port running the TRP Protocol where you can connect and query the trisul database. By default, this is an IPC socket <br/>```ipc:///usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/trp_0```. You can change this parameter to allow a remote TCP connection. Example: To allow queries using TCP Port 12004<br/><br/>1. Change this parameter to `tcp://10.0.0.23:12004` where `10.0.0.23`is the IP address of the HUB node <br/><br/>2. Then restart the context like so `trisulctl_hub restart context default@hub0` <br/><br/> |
-| PIDFile         |          | Where thePIDof the running trisul_trpd process is stored     |
+| ZmqConnection   |  ipc:///usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/trp_0        | The port running the TRP Protocol where you can connect and query the trisul database. By default, this is an IPC socket <br/>```ipc:///usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/trp_0```. You can change this parameter to allow a remote TCP connection. Example: To allow queries using TCP Port 12004<br/><br/>1. Change this parameter to `tcp://10.0.0.23:12004` where `10.0.0.23`is the IP address of the HUB node <br/><br/>2. Then restart the context like so `trisulctl_hub restart context default@hub0` <br/><br/> |
+| PIDFile         | /usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/trp.pid         | Where the PID of the running trisul_trpd process is stored     |
 | NumServers      | 6        | Number of backend servers to start. |
 | ParallelQueries | false    | Whether parallel queries must be turned on for all queries. The default is false, use this only when you have the database stored on different spindles.   |
+
+### QueryFlowDB
+
+| Parameters      | Defaults | Description          |
+| --------------- | -------- | -------------------- |
+| UseMemoryDB |  false  |             |
+| VerboseLog  | false |               |
+| SkipBloomCheck | true |             |
 
 ## Probes
 
@@ -292,8 +307,8 @@ Each probe is a line with the following details.
 
 | Parameters | Defaults | Description                                             |
 | ---------- | -------- | ------------------------------------------------------- |
-| Layer      |          | Layer number allocated to the probe.                    |
-| ProbeID    |          | Probe ID eg, `probe0` this probe must be authenticated by a CURVE certificate earlier for the domain this hub belongs to. See *trisulctl_hub install probe* |
+| Layer      |     0     | Layer number allocated to the probe.                    |
+| ProbeID    |    probe0 | Probe ID eg, `probe0` this probe must be authenticated by a CURVE certificate earlier for the domain this hub belongs to. See *trisulctl_hub install probe* |
 
 ## DBTasks
 
@@ -490,14 +505,14 @@ These parameters are typically set automatically when you put Trisul in the IPDR
 
 | Parameters | Defaults | Description |
 | ---------- | -------- | -------------------- |
-| OutputDirectory | CONTEXTROOT/run | Directory where the IPDR record query result is dumped|
-| ControlDB       | CONTEXTROOT/config/IPDRCONTROL.SQDB | The control database location|
+| OutputDirectory | /usr/local/var/lib/trisul-hub/domain0/hub0/context0/run| Directory where the IPDR record query result is dumped|
+| ControlDB       |/usr/local/var/lib/trisul-hub/domain0/hub0/context0/config/IPDRCONTROL.SQDB | The control database location|
 | ReportFormat    | full | The format of the IPDR records. Available values are: <br/> `full` – The full record in columnar report format<br/> `fullcsv` – Full report in CSV format<br/> `trai` – Format for DoT |
 | AddCustomerInfo | true | Add the information from the IPDR Static IP customer mapping |
-| AAADumpFilePath | CONTEXTROOT/run/aaadumpfiles | The place where the RADIUS AAA server dumps the currently active sessions |
+| AAADumpFilePath | /usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/aaadumpfiles | The place where the RADIUS AAA server dumps the currently active sessions |
 | SubscriberOption | | Add Subscriber ID or other ISP specific tag , this is taken from the RADIUS AAA log files |
-| MaxRecords | 250,000 | When using the *Request Full Database Dump* this parameter controls the maximum number of records dumped.  | 
-| QueryThreadCount |1 | Number of worker query threads to use for IPDR queries, ideal value is the same  _numflushers*numprobes_ . This maps to `--threads,-j` parameter in trisul_queryflowstream tool  |
+| MaxRecords |  | When using the *Request Full Database Dump* this parameter controls the maximum number of records dumped.  | 
+| QueryThreadCount | | Number of worker query threads to use for IPDR queries, ideal value is the same  _numflushers*numprobes_ . This maps to `--threads,-j` parameter in trisul_queryflowstream tool  |
 | MACInDeviceID | false| Put the MAC Address in the device ID field which normally contain the router IP |
 | BackupSlicesDBRoot || Set this to the root directory of the backup slices area. This is used for querying AAA RADIUS logs which may be kept in the `BackupSlicesDBRoot` area for a duration longer than the normal flow database. 
 
@@ -520,43 +535,51 @@ Under the node : `DBParameters > FlowStream`
 | Parameter                  | Default  | Type | Description   |
 | -------------------------- | -------- | ---  | ---------------------|
 | MicroSecondTimestamps      | TRUE     | |Does the flow database need microsecond timestamps. Use case : Compliance for large flow stores. Disabling microsecond timestamps for start and end time can save about 8 bytes / per flow | 
-| ZFLOWBLOCK_COMPRESSOR_CODE | lz4      | |The compressor type for the flow database. Available parameter values are<ul> <li>`lz4`</li><li>`lz4-ip-call-log-with-nat-pro-max` : For both IPv4 and IPv6 withNATIP, Port, userid for full log</li><li>`lz4-ip-call-log-with-nat-pro-max-mac` : With MAC ID collection, use only when you are sure MAC ID represent end user terminals</li></ul> |
-| kFLOWS_PER_BLOCK           | 4096     | |The number of flows per block. Default 4096                          |
-| kBLOOM_AGG_SIZE            | 100      |Bloom Filter |The number of flow blocks per bloom filter.                          |
-| kBUMPX_AGG_SIZE            | 500      |Bitmap Index |The number of flow blocks per full bitmap filter index.              |
-| kHOST_BUMPX_BUCKETS        | 128K     |Bitmap Index |buckets for IP (hosts)  |
-| kHOST_A_BUMPX_BUCKETS      | 128K     |Bitmap Index |buckets for source IP  |
-| kHOST_Z_BUMPX_BUCKETS      | 128K		|Bitmap Index |buckets for destination IP |	
-| kAPP_BUMPX_BUCKETS         | 4K	 	|Bitmap Index |buckets for port | 
-| kAPP_A_BUMPX_BUCKETS       | 4K	    |Bitmap Index |buckets for source port |
-| kAPP_Z_BUMPX_BUCKETS       | 4K    	|Bitmap Index |buckets for destination port |
-| kPROTO_BUMPX_BUCKETS       | 256		|Bitmap Index |buckets for IP protocols |
-| kGEN1_BUMPX_BUCKETS        | 1K		|Bitmap Index |buckets for routers |	
-| kGEN2_BUMPX_BUCKETS        | 1K		|Bitmap Index |buckets for ingress router interface  |
-| kGEN3_BUMPX_BUCKETS        | 1K		|Bitmap Index |buckets for egress router interface |
-| kHOST24_BUMPX_BUCKETS      | 64K		|Bitmap Index |buckets for 255.255.255.0 or /24 prefixes  |
-| kHOST16_BUMPX_BUCKETS      | 32K		|Bitmap Index |buckets for /16 prefixes |
-| kHOST_BLOOM_BITS           | 128K		|Bloom Filter |num bits for Host IP index |
-| kHOST_A_BLOOM_BITS         | 128K		|Bloom Filter |num bits for Source IP |
-| kHOST_Z_BLOOM_BITS         | 128K		|Bloom Filter |num bits for Destination IP  |
-| kHOST_BLOOM_HASHES         | 3		|Bloom Filter |num hashes for Host IP |
-| kHOST_A_BLOOM_HASHES       | 3		|Bloom Filter |num hashes for Source IP|
-| kHOST_Z_BLOOM_HASHES       | 3        |Bloom Filter |num hashes for Destination IP  |
-| kAPP_BLOOM_BITS            | 64K		|Bloom Filter |bits for port index|
-| kAPP_A_BLOOM_BITS          | 64K      |Bloom Filter |bits for source port |	
-| kAPP_Z_BLOOM_BITS          | 64K      |Bloom Filter |bits for destination port|	
-| kAPP_BLOOM_HASHES          | 1        |Bloom Filter |hashes for ports |
-| kPROTO_BLOOM_BITS          | 256      |Bloom Filter |bits for IP protocol-based index |
-| kPROTO_BLOOM_HASHES        | 1        |Bloom Filter |hashes for IP Protocol |	
-| kGEN1_BLOOM_BITS           | 4096     |Bloom Filter|bits for router indexing|
-| kGEN1_BLOOM_HASHES         | 1        |Bloom Filter|hashes for routers 
-| kGEN2_BLOOM_BITS           | 4096     |Bloom Filter|bits for ingres interface|
-| kGEN2_BLOOM_HASHES		 | 1        |Bloom Filter|hashes for ingress interface |
-| kGEN3_BLOOM_BITS           | 4096     |Bloom Filter|bits for egress interface |
-| kGEN3_BLOOM_HASHES         | 1        |Bloom Filter|hashes for egress inteface |
-| kAUX_BLOOM_BITS            | 32K      |Bloom Filter|bits for flow tags , each tag of a composite tag is indexed|
-| kAUX_BLOOM_HASHES          | 3        |Bloom Filter|hashes for flow tags|
-| kHOST16_BLOOM_BITS         | 32K      |Bloom Filter|bits for `/16` IP   |
-| kHOST16_BLOOM_HASHES       | 3        |Bloom Filter|hashes for `16` IP |
-| kHOST24_BLOOM_BITS         | 64K      |Bloom Filter|bits for `/24` IP |
-| kHOST24_BLOOM_HASHES       | 3        |Bloom Filter|hashes for `24` IP|
+| CompressThreads |            |                      |
+| kFLOWS_PER_BLOCK           |      | |The number of flows per block. Default 4096                          |
+| kBLOOM_AGG_SIZE            |       |Bloom Filter |The number of flow blocks per bloom filter.                          |
+| kBUMPX_AGG_SIZE            |      |Bitmap Index |The number of flow blocks per full bitmap filter index.              |
+| ZFLOWBLOCK_COMPRESSOR_CODE |       | |The compressor type for the flow database. Available parameter values are<ul> <li>`lz4`</li><li>`lz4-ip-call-log-with-nat-pro-max` : For both IPv4 and IPv6 withNATIP, Port, userid for full log</li><li>`lz4-ip-call-log-with-nat-pro-max-mac` : With MAC ID collection, use only when you are sure MAC ID represent end user terminals</li></ul> |
+| kHOST_BUMPX_BUCKETS        |      |Bitmap Index |buckets for IP (hosts)  |
+| kHOST_A_BUMPX_BUCKETS      |      |Bitmap Index |buckets for source IP  |
+| kHOST_Z_BUMPX_BUCKETS      |      |Bitmap Index |buckets for destination IP |	
+| kAPP_BUMPX_BUCKETS         |      |Bitmap Index |buckets for port | 
+| kAPP_A_BUMPX_BUCKETS       |      |Bitmap Index |buckets for source port |
+| kAPP_Z_BUMPX_BUCKETS       |      |Bitmap Index |buckets for destination port |
+| kPROTO_BUMPX_BUCKETS       |      |Bitmap Index |buckets for IP protocols |
+| kGEN1_BUMPX_BUCKETS        |      |Bitmap Index |buckets for routers |	
+| kGEN2_BUMPX_BUCKETS        |      |Bitmap Index |buckets for ingress router interface  |
+| kGEN3_BUMPX_BUCKETS        |      |Bitmap Index |buckets for egress router interface |
+| kAUX0_BUMPX_BUCKETS        |      |Bitmap Index |buckets for aux0 |
+| kAUX1_BUMPX_BUCKETS        |      |Bitmap Index |buckets for aux1 |
+| kAUX2_BUMPX_BUCKETS        |      |Bitmap Index |buckets for aux2 |
+| kHOST24_BUMPX_BUCKETS      |      |Bitmap Index |buckets for 255.255.255.0 or /24 prefixes  |
+| kHOST16_BUMPX_BUCKETS      |      |Bitmap Index |buckets for /16 prefixes |
+| kHOST_BLOOM_BITS           |      |Bloom Filter |num bits for Host IP index |
+| kHOST_A_BLOOM_BITS         |      |Bloom Filter |num bits for Source IP |
+| kHOST_Z_BLOOM_BITS         |      |Bloom Filter |num bits for Destination IP  |
+| kHOST_BLOOM_HASHES         |      |Bloom Filter |num hashes for Host IP |
+| kHOST_A_BLOOM_HASHES       |      |Bloom Filter |num hashes for Source IP|
+| kHOST_Z_BLOOM_HASHES       |      |Bloom Filter |num hashes for Destination IP  |
+| kAPP_BLOOM_BITS            |      |Bloom Filter |bits for port index|
+| kAPP_A_BLOOM_BITS          |      |Bloom Filter |bits for source port |	
+| kAPP_Z_BLOOM_BITS          |      |Bloom Filter |bits for destination port|	
+| kAPP_BLOOM_HASHES          |      |Bloom Filter |hashes for ports |
+| kPROTO_BLOOM_BITS          |      |Bloom Filter |bits for IP protocol-based index |
+| kPROTO_BLOOM_HASHES        |      |Bloom Filter |hashes for IP Protocol |	
+| kGEN1_BLOOM_BITS           |      |Bloom Filter|bits for router indexing|
+| kGEN1_BLOOM_HASHES         |      |Bloom Filter|hashes for routers 
+| kGEN2_BLOOM_BITS           |      |Bloom Filter|bits for ingres interface|
+| kGEN2_BLOOM_HASHES		 |      |Bloom Filter|hashes for ingress interface |
+| kGEN3_BLOOM_BITS           |      |Bloom Filter|bits for egress interface |
+| kGEN3_BLOOM_HASHES         |      |Bloom Filter|hashes for egress inteface |
+| kAUX0_BLOOM_BITS            |      |Bloom Filter|bits for flow tags , each tag of a composite tag is indexed|
+| kAUX0_BLOOM_HASHES          |      |Bloom Filter|hashes for flow tags|
+| kAUX1_BLOOM_BITS            |      |Bloom Filter|bits for flow tags , each tag of a composite tag is indexed|
+| kAUX1_BLOOM_HASHES          |      |Bloom Filter|hashes for flow tags|
+| kAUX2_BLOOM_BITS            |      |Bloom Filter|bits for flow tags , each tag of a composite tag is indexed|
+| kAUX2_BLOOM_HASHES          |      |Bloom Filter|hashes for flow tags|
+| kHOST16_BLOOM_BITS         |      |Bloom Filter|bits for `/16` IP   |
+| kHOST16_BLOOM_HASHES       |      |Bloom Filter|hashes for `16` IP |
+| kHOST24_BLOOM_BITS         |      |Bloom Filter|bits for `/24` IP |
+| kHOST24_BLOOM_HASHES       |      |Bloom Filter|hashes for `24` IP|
