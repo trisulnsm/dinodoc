@@ -69,29 +69,40 @@ Commonly modified parameters are `Setuid`, `TrisulMode`, `LicenseFile`
 | PluginsLibDirectory  | /usr/local/lib/trisul-probe/plugins                                                     | Where Trisul looks for dynamic (called so) plugins   |
 | PluginsConfDirectory | /usr/local/etc/trisul-probe/domain0/probe0/context0                              | Where Trisul looks for additional configuration files and server certificates (for TRP).     |
 | BinDirectory | /usr/local/bin |   |
-| DataDirectory |       |          |
-| PluginsDataDirectory | /usr/local/share/trisul/plugins                                                   | Where Trisul looks for plugin configuration data.      |
+| DataDirectory | /usr/local/share/trisul-probe      |          |
 | ProbeID              | SE-LINK                                                                           | A mnemonic to identify this instance of Trisul, this string is reported via TRP.              |
 | ProbeDesc            | Trisul Probe monitors the S-E link traffic only                                   | A short description of this instance of Trisul.     |
 | PidFile              | /usr/local/var/lib/trisul-probe/domain0/probe0/context0/run/trisul-probe.pid                                                     | File where Trisul stores the process id of the current running instance.      |
 | RunStateDirectory    | /usr/local/var/lib/trisul-probe/domain0/probe0/context0/run                       | Volatile data for current run stored here      |
-| PluginsDataDirectory | /usr/local/share/trisul-probe/plugins                                             | Plugins store data here; eg from downloaded feeds       |
+| PluginsDataDirectory |/usr/local/share/trisul-probe/plugins                                                 | Where Trisul looks for plugin configuration data.      |
 | TrisulMode           | NETFLOW_TAP                                                                              | This determines whether you run Trisul in raw packets mode or Netflow mode. TAP Processes all raw packets from the selected network adapters. NETFLOW_TAP Processes Netflow packets |
 | ValidTrisulModes     | TAP,NETFLOW_TAP                                                                   | Unused – just a hint for the previous parameter.        |
 | LicenseFile          | /usr/local/etc/trisul-probe/LicenseKey.txt                                        | Location of the license file.  |
 | ReportsDirectory     | /usr/local/var/lib/trisul-probe/domain0/probe0/context0/reports                                                                       | The directory where DDoS reports are stored in Netflow mode                |
+
+## Domain
+
+| Parameters     | Defaults                  | Description     |
+| -------------- | ------------------------- | ----------------------- |
+| Hub | hub0 |                           |
+| Config | config0            |           |
+| Hub (HAPair) |             |            |
+| HealthCheckSeconds | 300 |              |
+| FlushTimeoutUsecs | 100000 |            |
+| FlushRetries | 40     |                 |
 
 ## Logging
 
 Configures logging and rotation of the probe process`trisul`
 
 | Parameters     | Defaults                  | Description     |
-| -------------- | ------------------------- | -------------------------------------------------------------------------------- |
-| Logdir         | /usr/local/var/log/trisul | Where the log files are stored.  |
+| -------------- | ------------------------- | ----------------------- |
+| Logdir         | /usr/local/var/log/trisul-probe/domain0/probe0/context0 | Where the log files are stored.  |
 | Logfile        | ns-???.log                | Log file pattern. The default is `ns-001.log`, `ns-002.log`, etc.   |
 | Loglevel       | DEBUG                     | All messages higher than this level are logged. The available log levels in order of severity (most severe one first is).<br/>**EMERG<br/>FATAL<br/>ALERT<br/>CRIT<br/>ERROR<br/>WARN<br/>NOTICE<br/>INFO<br/>DEBUG**: Recommended default level |
 | LogRotateSize  | 5000000                   | Size of each log file is allowed to grow to this size before Trisul moves to the next file. |
 | LogRotateCount | 5                         | The number of files in the log ring, oldest files will be rotated.     |
+|PacketTrailMB | 0  |                        |
 
 ## Ring
 
@@ -111,39 +122,17 @@ The Ring section allows you to control.
 
 | Parameters                | Defaults                                      | Description   |
 | ------------------------- | --------------------------------------------- | ----|
-| Enabled                   | True                                          | Setting this to False will disable all options below, full content will not be saved. |
-| BaseDir                   | /usr/local/var/lib/<br/>trisul/CONTEXT0/caps  | Parent directory under which full content files are saved. |
+| Enabled                   | False                                         | Setting this to False will disable all options below, full content will not be saved. |
+| BaseDir                   | /usr/local/var/lib/trisul-probe/domain0/probe0/context0/caps  | Parent directory under which full content files are saved. |
+| BaseDiskname              |               |                               |
 | Encryption                | AES-128-CTR                                   | The encryption cipher. Currently supported modes are AES-128-CTR and NONE. Specify NONE to disable encryption of raw packet storage.  |
-| PassphraseFile            | /usr/local/etc/<br/>trisul/certs/ringpass.txt | The encryption passphrase for the full content files.|
+| PassphraseFile            | /usr/local/etc/trisul-probe/domain0/probe0/context0/ringpass.txt| The encryption passphrase for the full content files.|
 | FilePrefix                | RCF_                                          | Content files are called RCF_001.triscap, RCF_001.triscap, etc.. This options allows you to change the RCF_ part.    |
-| FileSizeMB                | 100                                           | Size of each full content file in megabytes.<br/>Maximum allowed value = 8000 (8GB). If you specify a size greater than this limit, Trisul will ignore it and use 8GB as the value.  |
+| FileSizeMB                | 1000                                           | Size of each full content file in megabytes.<br/>Maximum allowed value = 8000 (8GB). If you specify a size greater than this limit, Trisul will ignore it and use 8GB as the value.  |
+| EnableDDosNetflowTapTrail |                                               | Set this to TRUE to enable the DDoS Ring mechanism. |
 | SyncSeconds               | 60                                            | Diagnostic use only.|
 | SysStatsUpdateSecs        | 2                                             | Diagnostic use only. |
-| EnableDDosNetflowTapTrail |                                               | Set this to TRUE to enable the DDoS Ring mechanism. |
 | DefaultMode               | FULL                                          | To cut down on full content data, Trisul allows you to apply a variety of policies. The supported modes are<br/>FULL Everything is saved This is the default mode<br/>FLOWCAP10M Only first 10MB of each TCP flow is saved.<br/>FLOWCAP1M Only first 1MB of each TCP flow is saved.<br/>FLOWCAP100K Only first 100KB of each TCP flow is saved.<br/>FLOWCAP10K Only first 10KB of each TCP flow is saved.<br/>HEADERS Only headers are saved, typically upto the TCP/UDP layer<br/>IGNORE Nothing is saved |
-| RuleChain                 |                                               | Each packet is evaluated against a rule chain, which is a list of rules. |
-
-## SlicePolicy
-
-Controls how much of raw packet data is stored. There are three areas `oper`,`ref`, and `archive`. The packet slices are always written in `oper` then slide into `ref`, `archive`, and then deleted as specified by the SlicePolicy below.
-
-**Oper**
-
-|            |     |                                                                                                     |
-| ---------- | --- | --------------------------------------------------------------------------------------------------- |
-| SliceCount | 32  | Number of operational slices. The size of each slices is fixed as specified by FileSizeKB parameter |
-
-**Reference**
-
-|            |     |                                                                                            |
-| ---------- | --- | ------------------------------------------------------------------------------------------ |
-| SliceCount | 32  | Number of reference slices. Setting this to zero will move slices straight to the archive. |
-
-**Archive**
-
-|            |     |                                                                                                     |
-| ---------- | --- | --------------------------------------------------------------------------------------------------- |
-| SLiceCount | 0   | Number of archive slices. If you set this to 0, slices move directly to `/dev/null` (ie are deleted). |
 
 ## Rule Chain
 
@@ -203,6 +192,33 @@ If present, packets which match get only their headers stored. The headers inclu
 
 If present, packets which match get ignored (sent to `/dev/null`).
 
+
+## SlicePolicy
+
+Controls how much of raw packet data is stored. There are three areas `oper`,`ref`, and `archive`. The packet slices are always written in `oper` then slide into `ref`, `archive`, and then deleted as specified by the SlicePolicy below.
+
+**Oper**
+
+|            |     |                                                                                                     |
+| ---------- | --- | --------------------------------------------------------------------------------------------------- |
+| SliceCount | 8  | Number of operational slices. The size of each slices is fixed as specified by FileSizeKB parameter |
+| UsageRedMark | 90 |                 |
+
+**Reference**
+
+|            |     |                                                                                            |
+| ---------- | --- | ------------------------------------------------------------------------------------------ |
+| SliceCount | 8  | Number of reference slices. Setting this to zero will move slices straight to the archive. |
+| UsageRedMark | 90 |                 |
+
+**Archive**
+
+|            |     |                                                                                                     |
+| ---------- | --- | --------------------------------------------------------------------------------------------------- |
+| SLiceCount | 0   | Number of archive slices. If you set this to 0, slices move directly to `/dev/null` (ie are deleted). |
+| UsageRedMark | 90 |                 |
+
+
 ## Calculating Slice Counts
 
 `slicePolicy` specifies how many files you want to keep in each of the three areas. The size of each file is capped by the FileSizeKB parameter.
@@ -225,9 +241,7 @@ Controls how Trisul handles IP fragmentation and TCPreassembly.
 
 | Parameters | Defaults    | Description   |
 | ---------- | ----------- | ------------------------------ |
-| Enabled    | MetricsOnly | Reassembles IP fragments. This is disabled by default due to the CPU and Mem load it can place on Trisul on busy links. The values are:<br/>- **True**<br/>    Full IP reassembly is enabled. Use this on light<br/>    links or if you suspect IP fragmentation on busy links<br/>- **MetricsOnly**<br/>   Do not perform reassembly but collect metrics <br/>   about fragmentation in the Aggregates counter<br/>   group under the key ipfrag. This is the default option<br/>- **False**<br/>   Completely disable IP Defragmentation. Simply<br/>   ignore IP fragments. Use this on busy links |
-| Hiwater    | 1000        | Hi water mark for number of simultaneous fragment chains to track.   |
-| LoWater    | 500         | Lo water mark for number of simultaneous fragment chains. If the number of fragments crosses the HiWater mark, Trisul gets rid of the LRU least-recently-used items and prunes it to the LoWater mark.  |
+| Enabled    | False | Reassembles IP fragments. This is disabled by default due to the CPU and Mem load it can place on Trisul on busy links. The values are:<br/>- **True**<br/>    Full IP reassembly is enabled. Use this on light<br/>    links or if you suspect IP fragmentation on busy links<br/>- **MetricsOnly**<br/>   Do not perform reassembly but collect metrics <br/>   about fragmentation in the Aggregates counter<br/>   group under the key ipfrag. This is the default option<br/>- **False**<br/>   Completely disable IP Defragmentation. Simply<br/>   ignore IP fragments. Use this on busy links |
 
 ## TCPFlowTrack
 
@@ -240,8 +254,8 @@ Flow tracking keeps track of how much data has been transmitted in either direct
 | Parameters | Defaults | Description     |
 | ---------- | -------- | ------------------------------------------------ |
 | Enabled    | TRUE     | True or False values.       |
-| HiWater    | 8000     | Hi water mark for number of simultaneous flows that can be tracked. If the number of simultaneous active flows exceeds the high water mark, Trisul will prune the **oldest** active flows until the number of flows goes one below the low water mark. |
-| LoWater    | 6000     | Lo water mark for TCP flow pruning. See explanation for HiWater.      |
+| HiWater    | 80000    | Hi water mark for number of simultaneous flows that can be tracked. If the number of simultaneous active flows exceeds the high water mark, Trisul will prune the **oldest** active flows until the number of flows goes one below the low water mark. |
+| LoWater    | 60000     | Lo water mark for TCP flow pruning. See explanation for HiWater.      |
 
 ## TCPReassembly
 
@@ -273,9 +287,9 @@ Since these applications depend on the TCPReassembly feature, they are resistant
 | EnableSSLCertLog          | True     | Logs all SSL certificate chains                                       |
 | EnableHTTPFTS             | True     | Full Text Search (FTS) enabled for all HTTP Headers seen              |
 | EnableSSLFTS              | True     | FTS enabled for all SSL Certificates seen                                         |
-| MaxHTTPFTSPerFlow         |          | Currently unused                                                           |
 | EnableFTPTrack            | True     | Tracks FTP data session by matching the corresponding control flows         |
 | EnableSSLRecordExtraction | False    | If you want access to the raw TLS Protocol PDUs. If set to “True” ; Trisul will generate “TLS:RECORD” callbacks you can hook on to in the Reassembly engine. Unless you are working deep with TLS you typically can leave this as False.     |
+| LogFullCertChain |    True               |                 |
 
 ## File Extraction
 
@@ -290,7 +304,7 @@ Need tempfs partition :  If you enable File Extraction you also need to create a
 | Parameters  | Defaults            | Description            |
 | ----------- | ------------------- | ------------------------------------------ |
 | Enabled     | False               | Feature is enabled or not  |
-| RamFsDir    | ProbeRoot/tmp/ramfs | The directory mounted on the TMPFS file system         |
+| RamFsDir    | /usr/local/var/lib/trisul-probe/domain0/probe0/context0/run/ramfs | The directory mounted on the TMPFS file system         |
 | AutoDelete  | True                | The tmpfs file system is automatically cleaned as the files are processed by the LUA script framework. Set this to False for debugging purpose only or if you take control of deleting the filesystem from your LUA scripts |
 | ChunkSizeMB | 5                   | For large files your LUA script will be handed chunks of this size. Tweak this based on how much RAM you can allocate to the tmpfs filesystem                |
 
@@ -301,11 +315,13 @@ Controls how security alerts from Snort/Barnyard are handled
 | Parameters                     | Defaults         | Description    |
 | ------------------------------ | ---------------- | ----------- |
 | Enabled                        | True             | Enables this feature   |
-| SnortUnixSocket                | /tmp/snort_alert | Trisul opens this unix socket and listens for alerts. The default socket name is `snort_alert` for Unified events from Snort, and `barnyard2_alert` for Unified2 events from Barnyard2. The directory name is passed to snort or barnyard2 via the `-l` parameter **Multiple sockets :** You can add any number of `<SnortUnixSocket>` elements to listen to multiple sockets at once. |
+| UnixSocket                | /usr/local/var/lib/trisul-probe/domain0/probe0/context0/run/snort_alert | Trisul opens this unix socket and listens for alerts. The default socket name is `snort_alert` for Unified events from Snort, and `barnyard2_alert` for Unified2 events from Barnyard2. <br/> The directory name is passed to snort or barnyard2 via the `-l` parameter <br/> **Multiple sockets :** You can add any number of `<SnortUnixSocket>` elements to listen to multiple sockets at once. |
+| SnortVersion | 2.9+ |               |
+| SnortConfigFile | /etc/snort/snort.conf |   |
 | GenerateDDosReport             |                  | Set this to TRUE to trigger Trisul Probe to generate a DDoS report on certain TCA firing |
-| DDosReportTopCount             | 100              | By default 100 top items are included in the DDoS report  |
-| DDosReportWindow>PastSeconds   | 120              | By default, include in the report 2 minutes prior to the DDoS attack trigger  |
-| DDosReportWindow>FutureSeconds | 60               | By default, include in the report 1 minutes after the DDoS attack trigger  |
+| DDosReportTopCount             |             | By default 100 top items are included in the DDoS report  |
+| DDosReportWindow>PastSeconds   |            | By default, include in the report 2 minutes prior to the DDoS attack trigger  |
+| DDosReportWindow>FutureSeconds |               | By default, include in the report 1 minutes after the DDoS attack trigger  |
 
 ## OfflineImport
 
@@ -314,11 +330,27 @@ Controls aspects ofPCAPfile import.
 | Parameters          | Defaults | Description   |
 | ------------------- | -------- | ---------- |
 | LoopCount           | 1        | Used for testing. Runs the same capture file/directory this many time past Trisul. Each run is appended time-wise to the end of the previous run. This is used internally by us to generate months of data from a few days of capture by repeating them over and over.      |
-| AppendMode          | TRUE     | Appends the run to the previous runs time-wise. The packet time stamps in the capture file are offset by the last time of the previous run.                         |
+| AppendMode          | FALSE    | Appends the run to the previous runs time-wise. The packet time stamps in the capture file are offset by the last time of the previous run.                         |
 | InterfileGapSecs    | 60       | When importing multiple files, this option puts a gap of this many seconds between each file. There is no purpose of this option other than to view a gap in the charts representing the capture files.     |
 | AutoSortByCaptime   | TRUE     | When TRUE, the candidate capture files are sorted by time order (earliest to latest), and then imported into Trisul. When FALSE, the files and subdirectories are processed in alphabetical order.     |
-| ResumeStalledImport | FALSE    | Dependency:AutoSortByCaptime must be TRUE<br/>Treats the import as a resumption of a previously stalled or aborted offline import. WhenTRUE, Trisul will first determine what timestamp was last flushed. Then it will skip all packets earlier than that timestamp and continue importing when newer timestamps are seen.<br/>This feature is used to resume a stopped import without reprocessing everything again.<br/>Use this feature with the following caution :<br/># Due to the discontinuous nature, some packets may be missed or double counted around the timestamp where the earlier import was aborted<br/># Flows may be duplicated around the time |
 | AddEthernetFCS      | FALSE    | If set to true, will add 12 bytes to every ethernet packet to account for FCS               |
+| SkipFirst | |  |
+
+## TimerJump
+
+| Parameters               | Defaults | Description                                      |
+| ------------------------ | -------- | ---------------------------------------------------------------------- |
+| MaxJumpForwardSecs | 50 |                  |
+| IgnoreJumpOnStartup | True |               |
+
+## Edges
+
+Controls the streaming graph analytics part of Trisul
+
+| Parameters      | Defaults | Description                      |
+| --------------- | -------- | -------------------------------- |
+| Enable        | false     | Enables/Disables this feature             |
+| EnableFlowEdges | false     | Do you want edge vertex data to be generated for every flow? For very large networks, consider disabling this option.		   |
 
 ## Tuning
 
@@ -330,24 +362,23 @@ Fine tune the packet processing pipeline for peak performance.
 | PcapQueueCapacity        | 5000     | Queue for disk packet storage   |
 | FeedbackQueueCapacity    | 1000000  | Queue size of backend to frontend (reverse/feedback) stream   |
 | PcapRAIDStripeSize       | 1048576  | Sequential writes of this size.                                               |
-| GrainSize                | 64       | Number of packets to process in a batch. You can increase this value if you have a CPU with a large L1/L2 cache. If the entire batch fits in cache memory – it can increase concurrency – and decrease drops.  |
+| GrainSize                | 256       | Number of packets to process in a batch. You can increase this value if you have a CPU with a large L1/L2 cache. If the entire batch fits in cache memory – it can increase concurrency – and decrease drops.  |
 | SpongeWindow             | 1        | A key internal data structure parameter to help with multicore.<br/>Number of seconds a single core must accumulate before synchronizing. In most cases, leave this alone.     |
 | InflightTokens           | 2        | Number of work items in parallel. Maps to number of hardware threads you want to give to trisul.    |
 | TCPReassFilters          | 2        | Number of TCPFilters – Trisul will hash and load share. Typically matches the number of InflightTokens  |
 | CoreAffinityNet          |          | CPUcores you want you pin the packet processing threads to. Use “1,2,4” to pin to CPUCores 1,2,4 |
 | CoreAffinityRAID         |          | CPUcores allowed to do disk writes for packet storage                                            |
 | CoreAffinityAnalysis     |          | Currently unused                                                                                 |
-| FBQDrainChunkSize        | -1       | Controls how fast an internal data structure called the Feedback Queue is drained                |
+| FBQDrainChunkSize        | 100      | Controls how fast an internal data structure called the Feedback Queue is drained                |
+| BatchBufferBytes | 65536 |                |
+| BroadcastChannel | inproc://trisul_broadcast |                                        |
 | FlowMemcapPolicy         | FLEXIBLE | Determines how Trisul copes under severe load. This can happen on a very busy network or under a DDoS attack against Trisul itself or elsewhere on the network. Trisul detects this condition when Hi Water marks are crossed for counters or flows.<br/>The available options are :<br/>`FLEXIBLE`: Trisul is not too rigid about the Hi Water mark, it allows usage to grow beyond the high water mark within the streaming window (1-minute)<br/>`FIXED`: When a Hi Water mark is hit, no*new*counters are flows are accepted. Existing ones are metered as usual. At the next flush interval, the counters or flows are pruned down to the low water mark and things proceed as usual |
 | StreamingWindowMSecs     | 60000    | The streaming window in milliseconds. The default value is 1 minute. Do not change this unless you have a very good reason          |
 | DisableFlowTupleFeedback | false    | Flow tuple feedback is a feature in Trisul that allows you to measure per-IP and per-APP connection metrics. This can be overkill for some environments like ISP’s who deal with millions of flows/sec. Disable this in those environemts. We also suggest disabling this option when the FeedbackQueue (FBQ) sees pressure leading to spiky IP and App flow connection metrics.         |
 | MaxTCARangeAlerts        | 100      | When using TCA range alerts (see [TCA](/docs/ug/alerts/tca#tca-configuration) generate only these many alerts. The reason we need a safety cap on this feature is an incorrect configuration with a TCA range can result in uncontrolled alerts (eg when any IP crosses 1Kbps). For safety we have chosen a cap or 100             |
+| EnableHalfNAT |   |                          |
+| HalfNATDebugTrace |          |               |
+| HalfNATMapActiveWindowSeconds |        |      |
+| HalfNATTCPTimeout  |          |        |
+| HalfNATUDPTimeout    |        |         |                 
 
-## Edges
-
-Controls the streaming graph analytics part of Trisul
-
-| Parameters      | Defaults | Description                      |
-| --------------- | -------- | -------------------------------- |
-| Enabled         | True     | Enables this feature             |
-| EnableFlowEdges | True     | Do you want edge vertex data to be generated for every flow? For very large networks, consider disabling this option.		   |
