@@ -26,6 +26,20 @@ This allows the final view to show:
 
 > **Country → Host → Application**
 
+---
+
+:::info Video Walkthrough
+
+See this scenario in action:
+
+**[How to create a three dimension crosskey counter group in Trisul](https://youtu.be/eIsgcZph7Yk?si=0t6RRgW8NIIwrO-2)**
+
+The video demonstrates how to create the Crosskey Counter Group, configure the dashboard, and view the resulting hierarchy.
+
+:::
+
+---
+
 ### Filtered or Crosskey?
 
 At this point, it is natural to wonder:

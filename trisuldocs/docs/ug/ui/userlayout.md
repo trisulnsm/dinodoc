@@ -2,25 +2,51 @@
 sidebar_position: 1
 ---
 
-# User Layout
+# User Interface for User Accounts
 
-This section introduces the visual layout and organization of elements within the Web Trisul interface for regular (non-admin) users. Before diving into specific features and functionalities—which are covered in later sections—it's helpful to first understand the basic design and navigation flow.
+The Trisul Web UI provides different features and navigation options based on the **Product Mode** configured for the deployment and the **privileges** assigned to the logged-in account.
 
-When you log in as a non-admin user, you’ll see the following layout:
+This page describes the common layout of the Trisul Web UI when logged in with a **User-privilege** account.
+
+>Note: The Administrator interface is different and provides additional options for system configuration and administration. See **[Administrator UI](/docs/ag/ui/adminlayout)** for details.
+
+The menus, dashboards, modules, and analysis features available to a User can also vary depending on the selected Product Mode and the permissions assigned to the account.
+
+For information about the different Trisul Product Modes and the capabilities provided by each mode, see [**Product Modes**](/docs/ag/install/selectmode).
+
+## What determines the User interface?
+
+Two factors determine what a User can see and access:
+
+- **Product Mode** determines which product-specific features are available.
+- **User Privileges** determine which of those features the account is allowed to access.
+
+```mermaid
+
+flowchart TD
+    A[Trisul Product Mode] --> B[Admin Privilege]
+    A --> C[User Privilege]
+
+    B --> D[Admin UI]
+    C --> E[User UI]
+```
+
+## User Web UI Layout
+
+The User Web UI is organized into three main areas:
+
+- **Top Panel**
+- **Menu Panel**
+- **Dashboard Panel**
 
 ![User Layout](images/userlayoutnew.png)  
 
 *Figure: User Layout*
 
-Observe the three sections 
-
-- Top Panel
-- Menu Panel
-- Dashboard Panel 
 
 ### Top Panel Details
 
-The top panel contains the following items
+The Top Panel contains commonly used controls available throughout the User interface.
 
 ![Top panel](images/user_layoutnew.png)  
 
@@ -36,11 +62,15 @@ The top panel contains the following items
 
 3) #### Customer Logo/ User Logo
 
+   The configured customer or user logo is displayed in the Trisul interface.
+
+   This is a visual customization and does not affect network analysis.
+
    To change the Customer Logo or User Logo see: [How to change Customer Logo or User Logo logging in as admin](/docs/ag/webadmin/manageusers#changing-avatar-logo)
 
 4) #### Search Bar
    
-   You can use the [Search bar tool](/docs/ug/ui/elements#using-search-tool) to find items of your interest.
+   Search allows you to find supported network objects and information available to your account. You can use the [Search bar tool](/docs/ug/ui/elements#using-search-tool) when you already know what you want to investigate, such as a host, application, IP address, or another supported object.
 
 5) #### Alerts and Notifications
 
@@ -50,7 +80,8 @@ The top panel contains the following items
     
     You can view alerts and notifications related to **External IDS, Threshold Crossing, Threshold Band Alerts, Blacklist Activity, and Flow Tracker** in this section.
 
-    Simply click the **color-coded alert icons** located at the **top-right corner** of the interface. These icons display the number of active alerts and provide quick access to detailed information.
+    Simply click the **color-coded alert icons** located at the **top-right corner** of the interface. Use Alerts to review events that require attention and investigate activity that has triggered an alert.
+
 
 6) #### License Details
 
@@ -62,7 +93,15 @@ The top panel contains the following items
    
    *Figure: Probe Switch in Top Panel*
    
-   You can switch between probes and check on the probe health by clicking on the probe switch. By default it is set to Probe0.
+   The Probe Switch allows you to select the Trisul Probe whose data you want to view.
+
+   A Trisul deployment can have multiple Probes, which can collect network data from different network locations or traffic sources. You can switch between probes and check on the probe health by clicking on the probe switch. By default it is set to Probe0.
+
+   For example, if one Probe collects traffic from a data center and another collects traffic from a branch network, select the appropriate Probe before investigating traffic from that location.
+
+   >Tip: If expected traffic is missing from a dashboard, check the selected Probe before troubleshooting the data source.
+
+   >Note: The Probes available to a User depend on the access assigned to that account.
 
 8) #### Dark/Light Mode
    
@@ -70,6 +109,10 @@ The top panel contains the following items
 
 
 9) #### Account
+
+   The Account area provides information and options associated with the currently logged-in User.
+
+   The available options depend on the privileges assigned to the account.
    
     ![](images/account.png)
    
@@ -79,21 +122,49 @@ The top panel contains the following items
 
 10) #### Host Name
    
-    This shows the host's name. All time zones in Trisul are displayed in the host's time zone. 
+    The Host Name identifies the system running the Trisul Web UI.
+
+    Trisul uses the configured time zone of the host when displaying time-related information.
+
+    When comparing Trisul timestamps with timestamps from routers, firewalls, servers, or other systems, make sure the systems use the expected time zone.
+
+    >Example: If Trisul shows an event at 14:00 while another system shows the same event at 08:30, check whether the systems are configured with different time zones.
 
 ## Menus
 
-    This is a fully customizable menu system where multiple sections can be expanded or collapsed independently. It helps you quickly access different parts of the interface without closing other open sections.
+    The Menu Panel is the primary navigation area of the User interface.
+
+    It provides access to the Trisul features available to the logged-in account.
+
+    The menus displayed here depend on the Product Mode and the permissions assigned to the User.
+
+    For details about the features provided by a particular Product Mode, refer to the relevant Product Mode documentation.
+
+### Expanding and Collapsing Menu Sections
+
+    Menu sections can be expanded or collapsed independently.
+
+    Click the arrow next to a menu section to expand or collapse it.
+
+    Use this to keep frequently used features visible while hiding sections you do not currently need.
+
+### Show All
+
+    Select Show All to display the available options under a menu section.
+
+    Use this when the feature you need is not visible in the currently expanded menu.
+
+### Menu State
+
+    Trisul can retain the expanded or collapsed state of menu sections.
+
+This allows you to keep the interface organized according to the features you use most often.
 
 ### Basic Operations
 
 ![](images/menus.png)
 
 *Figure: User Layout Menu*
-
-- Clicking on a menu item (such as **Dashboards, Retro, Tools**, etc.) opens the full page with all related options.
-- Alternatively, clicking the **arrow icon** next to the menu item expands a quick view showing the most frequently used options.
-- Trisul automatically remembers your expanded menu state, so your preferred layout is restored the next time you log in.
 
 1) #### Shortcut Menu
    
@@ -113,13 +184,13 @@ The top panel contains the following items
    
    Click on any menu item to see more options below it. At first, you'll only see the most commonly used ones. To view everything available under that menu, just click **“Show All**.”
 
-## Dashboards
+## Dashboard Panel
 
-Dashboards are used to present network analysis modules by placing them
-on specific locations on a web page. 
+    The Dashboard Panel displays dashboards containing one or more analysis modules.
 
-Dashboards are used to present network analysis modules by placing them
-on specific locations on a web page.
+    A dashboard provides a view of network analytics for a selected time period.
+
+    The dashboards and modules available to a User depend on the Product Mode and the permissions assigned to the account. For information about the dashboards and analytics available in a particular Product Mode, refer to the relevant product documentation.
 
 ![](images/userlayout1.png)
 *Figure: Dashboard in User Layout*
@@ -141,3 +212,74 @@ For more information see also:
 - [About the built in dashboards](dashboards).   
 
 - [Dashboards and modules](dashmod_intro).
+
+## Why Can't I See a Menu or Feature?
+
+The User interface is affected by both **Product Mode** and **User Privileges**.
+
+If another User can see a menu or feature that you cannot, the two accounts may have different permissions. The feature may also belong to a different Product Mode.
+
+Check the following:
+
+- **Product Mode** - Is the feature available in the Product Mode configured for the deployment?
+- **User Account** - Are you logged in with the expected account?
+- **Permissions** - Does your account have access to the feature?
+- **Probe or Context** - Is the required Probe or context available to your account?
+- **Menu** - Have you expanded the relevant menu or selected Show All?
+
+If the feature should be available but is still missing, contact the Trisul Administrator.
+
+For information about Product Modes, see Product Modes.
+
+## Common Problems
+
+### I cannot see the traffic I expected
+
+Check:
+
+- **Probe** - Are you viewing the correct Probe?
+- **Time Period** - Does the selected time range include the expected traffic?
+- **Dashboard** - Are you using the correct dashboard?
+- **Module** - Does the module display the metric you are looking for?
+- **Permissions** - Does your account have access to the required data?
+
+#### The dashboard shows no data
+
+Check:
+
+- Whether the selected Probe is receiving data.
+- Whether the selected time period contains traffic.
+- Whether you are using the correct dashboard and module.
+- Whether your account has access to the relevant data.
+
+#### The timestamps do not match another system
+
+Check the time zone configured on the Trisul host and compare it with the time zone used by the other system.
+
+When investigating an event across multiple systems, use a consistent time reference.
+
+#### I cannot find a menu option
+
+First:
+
+1. Expand the relevant menu section.
+2. Select Show All.
+3. Check whether the feature is available in the current Product Mode.
+4. Check whether your account has the required permission.
+
+If the option is still missing, contact the Trisul Administrator.
+
+## User Interface vs Administrator Interface
+
+User Interface describes the interface available to **User** privilege accounts.
+
+**Administrator** accounts have administrative options for configuring and managing the Trisul system, so the Administrator interface may contain menus and controls that are not visible to Users.
+
+The interface can also vary between Product Modes.
+
+When following a procedure in the Trisul documentation, check both:
+
+- Account privilege - User or Administrator
+- Product Mode - The Product Mode for which the procedure applies
+
+This ensures that the screenshots, menus, and options in the procedure match your Trisul environment.

@@ -4,87 +4,142 @@ sidebar_position: 3
 
 # Introduction to Dashboards and Modules
 
+Dashboards and modules are the primary way Trisul presents network data in the Web UI.
+
+A **dashboard** provides a workspace for viewing related network information, while **modules** are the individual components placed on a dashboard that present specific metrics or analysis.
+
+The relationship is:
+
+```mermaid
+flowchart TD
+    A[Dashboard] --> B[Module]
+    A --> C[Module]
+    A --> D[Module]
+```
+
+A dashboard can contain multiple modules, and a module can be used in multiple dashboards.
+
 ## What are Dashboards?
 
-A **Dashboard** is a visual tool that displays key performance indicators (KPIs) and metrics to help you monitor and understand network traffic performance. Dashboards provide real-time visibility into your network, allowing you to track activity as it happens.
+A **dashboard** is a collection of modules arranged to provide a particular view of network activity.
 
-In Trisul, a dashboard is made up of multiple **modules** placed in different positions, each showing specific types of data.
+For example, a dashboard might combine modules showing:
 
-Dashboards are,
+- Current traffic
+- Top hosts
+- Top applications
+- Active connections
 
-- **Visual**- You can use charts, graphs, tables and other visual elements to display data
-- **Interactive**- You can interact with dashboards to drilldown into details, filter data, and explore different scenarios
-- **Real-Time**- Dashboards display up to date data reflecting the current status of the network
-- **Customizable**- You can play around with dashboards that can be personalized/customized to specific needs of different users
+The dashboard provides the overall context, while each module presents a specific view of the underlying network data.
 
 ![](images/dashmod.png)  
 *Figure: Showing Dashboard and Modules*
 
-## What Are Modules?
+### Why use dashboards?
 
-**Modules** are the building blocks of a dashboard in Trisul. Think of them like **widgets or tiles**—each one shows a specific piece of information to help you monitor and understand your network.
+Dashboards are useful when you want to:
 
-Modules display metrics in different formats such as numbers, charts, tables, and more. You can add as many modules as you need to a dashboard, and each one can be customized to focus on a particular type of data or insight.
+- Monitor network activity from a single view.
+- Bring related metrics together.
+- Compare different aspects of network activity.
+- Quickly identify changes or unusual activity.
+- Drill down from a high-level view into more detailed analysis.
 
-**Modules** help you:
+Dashboards can be customized to suit different monitoring and investigation requirements.
 
-- Analyze network traffic
-- Understand traffic patterns
-- Detect anomalies
-- Identify security threats
+> **Note:** The dashboards available to you depend on the Trisul deployment, Product Mode, User privileges, and dashboard configuration.
 
-## Types of Modules
-Here are the common types of modules you can add to a dashboard:
+For information about the dashboards that Trisul provides by default, see **[Default Dashboards](/docs/ug/ui/dashboards)**.
 
-- **Charts and Graphs**  
-Visualize trends and comparisons using line charts, bar graphs, pie charts, etc.
-- **Tables and Lists**  
-Show detailed tabular data like IP addresses, hosts, or flow records.
-- **KPIs (Key Performance Indicators)**  
-Highlight important numbers, percentages, or thresholds.
-- **Maps and Geospatial Views**  
-Display location-based data, such as where traffic is coming from.
-- **Texts and Labels**  
-Add titles, descriptions, or notes to explain sections of your dashboard.
-- **Gauges and Meters**  
-Show live progress or usage indicators (like a speedometer or dial).
-- **Real-Time Traffic Feeds**  
-Stream live traffic updates, alerts, and anomaly indicators.
-- **Custom Modules**  
-Create your own modules or integrate with external tools to show specific data.
+For information about creating and customizing dashboards, see **[Dashboards](/docs/ug/ui/create_dashboards#add-a-dashboard)**.
 
-## Key Rules For *Modules* and *Dashboards*
+## What is a Module?
 
-1. A **dashboard** may contain several **modules**.  
-2. A **module** may appear in any number of **dashboards**.  
-3. A **module** may even appear multiple times in the same **dashboard**.  
-4. A change in a **module** property will propagate to all the **dashboards**
-   which use the module.  
-5. If there are no **modules** in a particular position that position is not
-   rendered at all as trisul modules auto adjust for width.
+A **module** is an individual component within a dashboard that presents a specific metric, chart, table, or other network analysis view.
+
+For example, a dashboard may contain:
+
+```text
+Dashboard
+│
+├── Top Hosts
+├── Top Applications
+├── Traffic
+└── Active Connections
+```
+
+Each module answers a particular network question.
+
+For example:
+
+- **Top Hosts** → Which hosts are generating the most traffic?
+- **Top Applications** → Which applications are consuming the most traffic?
+- **Traffic** → How has traffic changed over time?
+- **Active Connections** → Which connections are currently active?
+
+Trisul provides a library of prebuilt modules, and modules can also be created and customized using the available module templates.
+
+For information about creating and managing modules, see **[Modules](/docs/ug/ui/modules)**.
+
+## How Dashboards and Modules Work Together
+
+A dashboard provides the **context and layout** for its modules.
+
+A module provides the **individual analysis view**.
+
+This separation allows the same module to be used in different dashboards without having to recreate the module each time.
+
+For example, the same **Top Hosts** module could be included in:
+
+- A general network monitoring dashboard.
+- A security investigation dashboard.
+- A custom dashboard created for a specific operational requirement.
+
+### Module Reuse
+
+A module can be:
+
+- Used in multiple dashboards.
+- Added more than once to the same dashboard.
+- Positioned differently on different dashboards.
+
+This makes dashboards flexible without requiring every analysis view to be created from scratch.
+
+> **Important:** Changes to a module's properties can affect every dashboard that uses that module. Consider this when modifying a module that is shared across dashboards.
 
 
-## An Example - Current Hosts
+## Dashboard Layout
 
-The first screen you will see when you login as user is the *Current Hosts* dashboard
+Modules are placed into defined positions within a dashboard.
+
+The dashboard automatically adjusts its layout based on the modules present.
+
+If a particular position does not contain a module, Trisul does not render an empty space for that position. Other modules can adjust to use the available width.
+
+This allows dashboards to remain compact when modules are added, removed, or rearranged.
+
+For details about arranging modules and changing dashboard layouts, see **[Dashboards](/docs/ug/ui/create_dashboards)**.
+
+
+## Example: Current Hosts Dashboard
+
+The **Current Hosts** dashboard provides a view of current host activity.
+
+It combines multiple modules into a single dashboard so that related host and traffic information can be viewed together.
 
 ![thumbnail_zoom](images/host_dashboard.png "thumbnail_zoom")  
 *Figure: Current Host Dashboard*
 
-You can see that this dashboard is nothing but four modules laid out in two columns. Trisul has well defined column positions into which you can place modules. See Module Positions in ["Add Modules to a New/Existing Dashboard"](/docs/ug/ui/modules#add-modules-to-a-newexisting-dashboard)
+The dashboard contains modules that provide different views of current host and traffic activity.
 
-Lets take a closer look at the dashboard shown above.
+For the current list of default dashboards and the modules they contain, see **[Default Dashboards](/docs/ug/ui/dashboards)**.
 
-| Top 2 position column 1                   | Top 2 position column 2                        |
-| ----------------------------------------- | ---------------------------------------------- |
-| Module : In vs out traffic (past 6 hours) | Module : Active TCP connections (past 6 hours) |
-| Module : Top Internal Hosts (current)     | Module : Top External Hosts (current)          |
 
-## View a Dashboard/All Dashboards
+## Viewing Dashboards
 
-There are more than one way to navigate to view all dashboards
+You can access the dashboards available to your account from the **Dashboards** menu.
 
-**Method 1:**
+To view the available dashboards:
 
 :::info navigation
 
@@ -96,31 +151,39 @@ There are more than one way to navigate to view all dashboards
 
 *Figure: Showing All Dashboards*
 
-This shows the list of available dashboards.
+This opens the list of dashboards available to your account.
 
-**Method 2:**
+Select a dashboard to open it.
 
-:::info path
+You can also access dashboards through 
 
-:point_right: From the Menu, Go to Customize&rarr; Show all&rarr; Dashboards
+:::info navigation
+
+:point_right: **Customize → Show All → Dashboards**
 
 :::
+
+when you need to manage or customize them.
+
 
 ![](images/viewalldashboards1.png)
 
 *Figure: Showing All Dashboards*
 
-This also shows the list of available dashboards.
+> **Note:** The dashboards and options available to you depend on your User privileges and the configuration of the deployment.
 
-To **open a particular dashboard**, from the list of dashboards, click on the dashboard you would like to view.
+For dashboard creation, editing, layout management, and other dashboard operations, see **[Dashboards](/docs/ug/ui/create_dashboards)**.
 
-## View a Module/All Modules
 
-To view all modules,
+## Viewing Modules
 
-:::info path
+Modules are normally viewed as part of a dashboard.
 
-:point_right: From the Menu, Go to Customize&rarr; Show all&rarr; Modules
+To view the modules available in the system:
+
+:::info Navigation
+
+👉 From the Menu, go to **Customize → Show All → Modules**.
 
 :::
 
@@ -128,32 +191,57 @@ To view all modules,
 
 *Figure: Showing All Modules*
 
-This will show a list of all available modules.
+This displays the available modules.
 
-To **view one particular module** from the list, check on the name of the dashboard that contains the module and navigate to that dashboard to select the module.
+To understand how a particular module is used, open the dashboard containing that module.
 
-## Dashboard Customization
-
-### Dashboard Menu Button
-
-You can manage the layout and contents of a dashboard using the **menu options** available at the dashboard level. To access these options, click the **ellipsis icon** located at the top-right corner of the dashboard window.
+For creating, editing, cloning, deleting, and configuring modules, see **[Modules](/docs/ug/ui/modules)**.
 
 
-![](images/dashboard_menu.png)  
-*Figure: Dashboard level menu options*
+## Dashboard and Module Customization
+
+Dashboards and modules can be customized to match different monitoring and analysis requirements.
+
+At a high level:
+
+| Object | What you can customize |
+| --- | --- |
+| **Dashboard** | Layout, modules, name, description, visibility, and other dashboard properties |
+| **Module** | Module configuration, metrics, presentation, and other properties |
+
+The exact options available depend on the object being customized and the permissions of the logged-in account.
 
 
-### Dashboard Menu Options
+For detailed procedures:
 
-The following operations can be performed using the dashboard menu options:
+- See **[Dashboards](/docs/ug/ui/create_dashboards)** for dashboard creation and customization.
+- See **[Modules](/docs/ug/ui/modules)** for module creation and configuration.
 
-| Operation                | Description                                                    |
-| ------------------------ | -------------------------------------------------------------- |
-| Customize                | Personalize the dashboard by rearranging modules, changing the layout, or editing dashboard parameters such as name and description. |
-| Toggle labels            | Show or hide the title and descriptive labels of each module. Hiding labels gives a cleaner look, while showing them provides more context and detail.                     |
-| Set as default dashboard | Save the current dashboard as your default home page. It will automatically load when you log in next time.                                               |
-| Expand all modules       | Expand all collapsed modules on the dashboard to display full details at once.                  |
-| Collapse all modules     | Collapse all expanded modules to create a compact, less cluttered view.                 |
-| Download as PDF          | Export the current dashboard view as a PDF file for reporting or sharing.                                   |
-| Export to JSON           | Export the dashboard configuration and data in JSON format, useful for backups or importing elsewhere. |
+## Understanding the Dashboard Workflow
+
+A typical workflow is:
+
+```mermaid
+flowchart LR
+    A[Choose Dashboard] --> B[View Modules]
+    B --> C[Select Metric or Data]
+    C --> D[Drill Down]
+    D --> E[Detailed Analysis]
+```
+
+This represents the basic relationship between dashboards and the Trisul analysis workflow:
+
+**Dashboard → Module → Data → Drilldown → Analysis**
+
+The exact drilldown options depend on the module and the type of data it presents.
+
+## Related Documentation
+
+- **[User Layout](/docs/ug/ui/userlayout)** - Understand the main areas of the Trisul User UI.
+- **[Dashboards](/docs/ug/ui/create_dashboards)** - Create, customize, manage, and import dashboards.
+- **[Modules](/docs/ug/ui/modules)** - Create and manage dashboard modules.
+- **[Default Dashboards](/docs/ug/ui/dashboards)** - Explore the dashboards provided with Trisul.
+- **[Module Templates](/docs/ug/ui/module_templates)** - Understand the templates used to create modules.
+
+
 

@@ -15,11 +15,17 @@ const config = {
   projectName: 'dinodocs',
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
 
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
+  },
+  markdown: {
+    mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+
+    },
   },
 
   presets: [
@@ -125,7 +131,9 @@ const config = {
   customFields: {
     tocLabel: 'In this page:',
   },
-
+  themes: [
+    '@docusaurus/theme-mermaid',
+  ],
   themeConfig: {
     metadata: [
       { property: 'og:image', content: 'https://docs.trisul.org/img/latest-release.jpeg' },

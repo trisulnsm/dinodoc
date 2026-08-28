@@ -1,4 +1,4 @@
-# Monitoring Web Traffic Using Custom Counter Groups
+# Monitoring Web Traffic Using Filtered Counter Groups
 
 ## Scenario
 
