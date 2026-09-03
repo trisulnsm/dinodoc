@@ -216,7 +216,7 @@ The exact controls displayed depend on the modules included in the dashboard.
     • Change the displayed view. 
     The available interactions depend on the module.
 
-    For details about the chart interactions in a module, see [Charts]((/docs/ug/ui/charts#chart-interaction-controls)).
+    For details about the chart interactions in a module, see [Charts]((/docs/ug/ui/charts)).
    
 
 6) #### Legend and Data Table
