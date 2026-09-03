@@ -54,14 +54,14 @@ Click a section below to view the parameters defined within it.
 | Parameters    | Defaults                | Description                    |
 | ------------- | ---------------------- | ------------------------------------------------------------------ |
 | User          | trisul.trisul                                                              | Which user/group should trisul run as after dropping root privileges.  |
-| TempFolder    | /tmp                                                                       |      |
+| TempFolder    | /tmp                                                                       |   Temporary directory used by the Hub for intermediate files and temporary processing data.   | 
 | DBRoot        | /usr/local/var/lib/trisul-hub/ domain0/hub0/context0                       | The base directory under which Trisul stores all its data.   |
 | TrafficDBRoot | /usr/local/var/lib/trisul-hub/domain0/hub0/context0/meters                    | The directory under which Trisul stores traffic and flow statistics.  |
 | ConfigDB      | /usr/local/var/lib/trisul-hub/domain0/hub0/context0/config/TRISULCONFIG.SQDB | Location of the configuration database.  |
 | BinDirectory  | /usr/local/bin                                                             | Where Trisul looks for executable binaries |
 | DataDirectory | /usr/local/share/trisul-hub                                                | Data files  |
-| HubID         | FLUSHER HUB0                                                               |             |
-| HubDesc       | This hub0 flusher and trpd server                                          |             |
+| HubID         | FLUSHER HUB0                                                               |   Identifier used to identify this Hub instance.          |
+| HubDesc       | This hub0 flusher and trpd server                                          |  Human-readable description of the Hub instance and the services it provides.           |
 | LicenseFile   | /usr/local/etc/trisul-hub/LicenseKey.txt                                   | Location of the license file. |
 | DebugMode     | false                                                                      | Debug mode is used when trying to develop LUA probe scripts.<br/> If `DebugMode == True` then all streaming metrics from all probes are just sunk to `/dev/null`. Hence this is used for probe testing |
 
@@ -91,15 +91,15 @@ Controls the database storage and retention policy for Trisul.
 
 | Parameters               | Defaults | Description |
 | ------------------------ | -------- | -------- |
-| FlushBudget              | 30       |          |
+| FlushBudget              | 30       | Maximum time budget, in seconds, allocated for a flush cycle.          |
 | FTSFlushBudget           | 5        | Trisul FTS(Full Text Resources) need to complete the Flush operation within these many seconds. Since Trisul is a Real time system, we have a total about about 60 seconds for the entire snapshot window to flush. |
-|SQLInsertThresholdMSecs | 60000 |                |
-| SQLBusyTimeoutMsecs    | 2 |                    |
-| SQLTRPBusyTimeoutMsecs | 8000  |                |
-| PidFile | /usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/flushd.pid | |
+|SQLInsertThresholdMSecs | 60000 |  Time threshold, in milliseconds, used to control SQL insert processing during database operations.              |
+| SQLBusyTimeoutMsecs    | 2 |  Maximum time, in milliseconds, that SQLite waits when the database is busy before returning a busy condition.                  |
+| SQLTRPBusyTimeoutMsecs | 8000  |  Maximum time, in milliseconds, that SQLite waits when the database is busy for TRP query operations.              |
+| PidFile | /usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/flushd.pid | Location where the PID of the running trisul_flushd process is stored.|
 | JournalMode              | WAL      | Trisul Resources are stored in SQLITE3 leaf nodes.|
 | OfflineAnalysisQueueSize | 2000000  | When importing PCAPs or other offline formats, this parameter controls the Hi Water mark of the items on the queue of the Hub. This helps to control memory usage on the Hub Node.|
-| ScanMalformedDBOnStart | TRUE  |                |
+| ScanMalformedDBOnStart | TRUE  | Controls whether the Hub scans for malformed or inconsistent database files when starting.               |
 
 ### SlicePolicy
 
@@ -212,13 +212,13 @@ This mode controls how deleted slices are removed from disk. The default is to d
 
 |Parameter| Defaults | Description |
 | ---------- | -------- | --------------- |
-| Enabled |               |               |
-| AccountID |             |               |
-| VaultName |             |               |
-| Region    |             |               |
-| AccessID |               |              |
-| SecretKey |              |             |
-| Tier |           |                      |
+| Enabled |               | Enables or disables the AWS cloud archive configuration.              |
+| AccountID |             |  AWS account identifier associated with the cloud archive configuration.             |
+| VaultName |             |  Name of the AWS archive vault used for storing archived data.             |
+| Region    |             |  AWS region in which the archive vault is located.             |
+| AccessID |               |  AWS access identifier used to authenticate access to the cloud archive.            |
+| SecretKey |              |  AWS secret key used with the access identifier to authenticate access to the cloud archive.           |
+| Tier |           |  AWS storage tier to use for cloud archive data.                    |
 
 
 ### Advanced Archiving
@@ -298,8 +298,8 @@ Controls the TRP Server Process used for database querying functionality. The pr
 
 | Parameters      | Defaults | Description          |
 | --------------- | -------- | -------------------- |
-| ZmqConnection   |  ipc:///usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/trp_0        | The port running the TRP Protocol where you can connect and query the trisul database. By default, this is an IPC socket <br/>```ipc:///usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/trp_0```. You can change this parameter to allow a remote TCP connection. Example: To allow queries using TCP Port 12004<br/><br/>1. Change this parameter to `tcp://10.0.0.23:12004` where `10.0.0.23`is the IP address of the HUB node <br/><br/>2. Then restart the context like so `trisulctl_hub restart context default@hub0` <br/><br/> |
-| PIDFile         | /usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/trp.pid         | Where the PID of the running trisul_trpd process is stored     |
+| ZmqConnection   |  ipc:///usr/local/var/lib/trisul-hub/<br/>domain0/hub0/context0/run/trp_0        | The port running the TRP Protocol where you can connect and query the trisul database. By default, this is an IPC socket <br/>```ipc:///usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/trp_0```. You can change this parameter to allow a remote TCP connection. Example: To allow queries using TCP Port 12004<br/><br/>1. Change this parameter to `tcp://10.0.0.23:12004` where `10.0.0.23`is the IP address of the HUB node <br/><br/>2. Then restart the context like so `trisulctl_hub restart context default@hub0` <br/><br/> |
+| PIDFile         | /usr/local/var/lib/trisul-hub/<br/>domain0/hub0/context0/<br/>run/trp.pid         | Where the PID of the running trisul_trpd process is stored     |
 | NumServers      | 6        | Number of backend servers to start. |
 | ParallelQueries | false    | Whether parallel queries must be turned on for all queries. The default is false, use this only when you have the database stored on different spindles.   |
 
@@ -307,9 +307,9 @@ Controls the TRP Server Process used for database querying functionality. The pr
 
 | Parameters      | Defaults | Description          |
 | --------------- | -------- | -------------------- |
-| UseMemoryDB |  false  |             |
-| VerboseLog  | false |               |
-| SkipBloomCheck | true |             |
+| UseMemoryDB |  false  | Controls whether the QueryFlowDB service uses an in-memory database for query processing.            |
+| VerboseLog  | false |  Enables verbose logging for QueryFlowDB operations.             |
+| SkipBloomCheck | true |  Controls whether Bloom-filter checks are skipped during QueryFlowDB processing.           |
 
 ## Probes
 
@@ -517,8 +517,8 @@ These parameters are typically set automatically when you put Trisul in the IPDR
 
 | Parameters | Defaults | Description |
 | ---------- | -------- | -------------------- |
-| OutputDirectory | /usr/local/var/lib/trisul-hub/domain0/hub0/context0/run| Directory where the IPDR record query result is dumped|
-| ControlDB       |/usr/local/var/lib/trisul-hub/domain0/hub0/context0/config/IPDRCONTROL.SQDB | The control database location|
+| OutputDirectory | /usr/local/var/lib/<br/>trisul-hub/domain0/hub0/context0/run| Directory where the IPDR record query result is dumped|
+| ControlDB       |/usr/local/var/lib/trisul-hub/domain0/<br/>hub0/context0/config/IPDRCONTROL.SQDB | The control database location|
 | ReportFormat    | full | The format of the IPDR records. Available values are: <br/> `full` – The full record in columnar report format<br/> `fullcsv` – Full report in CSV format<br/> `trai` – Format for DoT |
 | AddCustomerInfo | true | Add the information from the IPDR Static IP customer mapping |
 | AAADumpFilePath | /usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/aaadumpfiles | The place where the RADIUS AAA server dumps the currently active sessions |
@@ -547,7 +547,7 @@ Under the node : `DBParameters > FlowStream`
 | Parameter                  | Default  | Type | Description   |
 | -------------------------- | -------- | ---  | ---------------------|
 | MicroSecondTimestamps      | TRUE     | |Does the flow database need microsecond timestamps. Use case : Compliance for large flow stores. Disabling microsecond timestamps for start and end time can save about 8 bytes / per flow | 
-| CompressThreads |            |                      |
+| CompressThreads |            |  Number of threads used for compressing flow database data.                    |
 | kFLOWS_PER_BLOCK           |      | |The number of flows per block. Default 4096                          |
 | kBLOOM_AGG_SIZE            |       |Bloom Filter |The number of flow blocks per bloom filter.                          |
 | kBUMPX_AGG_SIZE            |      |Bitmap Index |The number of flow blocks per full bitmap filter index.              |

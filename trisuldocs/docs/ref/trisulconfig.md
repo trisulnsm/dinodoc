@@ -62,14 +62,14 @@ Commonly modified parameters are `Setuid`, `TrisulMode`, `LicenseFile`
 | Parameters           | Defaults                                                   | Description     |
 | -------------------- | ----------------------------------------------------------------------- | ---------------------- |
 | user                 | trisul.trisul                                                                     | Which user/group should Trisul run as after dropping root privileges.   |
-| TempFolder           | /tmp                                                                              |   |
+| TempFolder           | /tmp                                                                              |  Temporary directory used by Trisul for intermediate and temporary files during processing. |
 | DBRoot               | /usr/local/var/lib/trisul-probe/domain0/probe0/context0                           | The base directory under which Trisul stores all its data.   |
 | UsageRedMark         |                                                                                   | Generate an alert when disk usage on this probe node cross this percent value. Leave blank or set to 0 to disable disk usage alerts     |
 | ConfigDB             | /usr/local/var/lib/trisul-probe/domain0/probe0/context0/ config/TRISULCONFIG.SQDB | Location of the configuration database.  |
 | PluginsLibDirectory  | /usr/local/lib/trisul-probe/plugins                                                     | Where Trisul looks for dynamic (called so) plugins   |
 | PluginsConfDirectory | /usr/local/etc/trisul-probe/domain0/probe0/context0                              | Where Trisul looks for additional configuration files and server certificates (for TRP).     |
-| BinDirectory | /usr/local/bin |   |
-| DataDirectory | /usr/local/share/trisul-probe      |          |
+| BinDirectory | /usr/local/bin | Directory where Trisul looks for executable binaries.  |
+| DataDirectory | /usr/local/share/trisul-probe      |  Directory where Trisul stores shared application data and supporting data files.        |
 | ProbeID              | SE-LINK                                                                           | A mnemonic to identify this instance of Trisul, this string is reported via TRP.              |
 | ProbeDesc            | Trisul Probe monitors the S-E link traffic only                                   | A short description of this instance of Trisul.     |
 | PidFile              | /usr/local/var/lib/trisul-probe/domain0/probe0/context0/run/trisul-probe.pid                                                     | File where Trisul stores the process id of the current running instance.      |
@@ -84,12 +84,12 @@ Commonly modified parameters are `Setuid`, `TrisulMode`, `LicenseFile`
 
 | Parameters     | Defaults                  | Description     |
 | -------------- | ------------------------- | ----------------------- |
-| Hub | hub0 |                           |
-| Config | config0            |           |
-| Hub (HAPair) |             |            |
-| HealthCheckSeconds | 300 |              |
-| FlushTimeoutUsecs | 100000 |            |
-| FlushRetries | 40     |                 |
+| Hub | hub0 | Specifies the Hub instance to which this Probe context connects.                          |
+| Config | config0            | Specifies the configuration instance used by this Probe context.          |
+| Hub (HAPair) |             | Specifies the Hub HA pair configuration used when the Probe is connected to a high-availability Hub pair.           |
+| HealthCheckSeconds | 300 |  Interval, in seconds, between Hub health checks.            |
+| FlushTimeoutUsecs | 100000 | Maximum time, in microseconds, that the Probe waits for a flush operation to complete.           |
+| FlushRetries | 40     | Number of times the Probe retries a failed or timed-out flush operation.                |
 
 ## Logging
 
@@ -102,7 +102,7 @@ Configures logging and rotation of the probe process`trisul`
 | Loglevel       | DEBUG                     | All messages higher than this level are logged. The available log levels in order of severity (most severe one first is).<br/>**EMERG<br/>FATAL<br/>ALERT<br/>CRIT<br/>ERROR<br/>WARN<br/>NOTICE<br/>INFO<br/>DEBUG**: Recommended default level |
 | LogRotateSize  | 5000000                   | Size of each log file is allowed to grow to this size before Trisul moves to the next file. |
 | LogRotateCount | 5                         | The number of files in the log ring, oldest files will be rotated.     |
-|PacketTrailMB | 0  |                        |
+|PacketTrailMB | 0  | Size limit, in megabytes, for the packet trail used for diagnostic packet tracing. Set to 0 to disable packet trail storage.                       |
 
 ## Ring
 
@@ -124,12 +124,12 @@ The Ring section allows you to control.
 | ------------------------- | --------------------------------------------- | ----|
 | Enabled                   | False                                         | Setting this to False will disable all options below, full content will not be saved. |
 | BaseDir                   | /usr/local/var/lib/trisul-probe/domain0/probe0/context0/caps  | Parent directory under which full content files are saved. |
-| BaseDiskname              |               |                               |
+| BaseDiskname              |               | Base disk or storage location used for full-content packet capture files.                              |
 | Encryption                | AES-128-CTR                                   | The encryption cipher. Currently supported modes are AES-128-CTR and NONE. Specify NONE to disable encryption of raw packet storage.  |
 | PassphraseFile            | /usr/local/etc/trisul-probe/domain0/probe0/context0/ringpass.txt| The encryption passphrase for the full content files.|
 | FilePrefix                | RCF_                                          | Content files are called RCF_001.triscap, RCF_001.triscap, etc.. This options allows you to change the RCF_ part.    |
 | FileSizeMB                | 1000                                           | Size of each full content file in megabytes.<br/>Maximum allowed value = 8000 (8GB). If you specify a size greater than this limit, Trisul will ignore it and use 8GB as the value.  |
-| EnableDDosNetflowTapTrail |                                               | Set this to TRUE to enable the DDoS Ring mechanism. |
+| EnableDDosNetflowTapTrail |                                               | Set this to TRUE to enable the DDoS Ring mechanism. Enables the DDoS NetFlow/TAP trail mechanism for storing packet or flow trail data associated with DDoS analysis. |
 | SyncSeconds               | 60                                            | Diagnostic use only.|
 | SysStatsUpdateSecs        | 2                                             | Diagnostic use only. |
 | DefaultMode               | FULL                                          | To cut down on full content data, Trisul allows you to apply a variety of policies. The supported modes are<br/>FULL Everything is saved This is the default mode<br/>FLOWCAP10M Only first 10MB of each TCP flow is saved.<br/>FLOWCAP1M Only first 1MB of each TCP flow is saved.<br/>FLOWCAP100K Only first 100KB of each TCP flow is saved.<br/>FLOWCAP10K Only first 10KB of each TCP flow is saved.<br/>HEADERS Only headers are saved, typically upto the TCP/UDP layer<br/>IGNORE Nothing is saved |
@@ -202,21 +202,21 @@ Controls how much of raw packet data is stored. There are three areas `oper`,`re
 |            |     |                                                                                                     |
 | ---------- | --- | --------------------------------------------------------------------------------------------------- |
 | SliceCount | 8  | Number of operational slices. The size of each slices is fixed as specified by FileSizeKB parameter |
-| UsageRedMark | 90 |                 |
+| UsageRedMark | 90 |  Generate an alert when disk usage exceeds this percentage. Leave blank or set to 0 to disable disk usage alerts.               |
 
 **Reference**
 
 |            |     |                                                                                            |
 | ---------- | --- | ------------------------------------------------------------------------------------------ |
 | SliceCount | 8  | Number of reference slices. Setting this to zero will move slices straight to the archive. |
-| UsageRedMark | 90 |                 |
+| UsageRedMark | 90 | Generate an alert when disk usage exceeds this percentage. Leave blank or set to 0 to disable disk usage alerts.                |
 
 **Archive**
 
 |            |     |                                                                                                     |
 | ---------- | --- | --------------------------------------------------------------------------------------------------- |
 | SLiceCount | 0   | Number of archive slices. If you set this to 0, slices move directly to `/dev/null` (ie are deleted). |
-| UsageRedMark | 90 |                 |
+| UsageRedMark | 90 |  Generate an alert when disk usage exceeds this percentage. Leave blank or set to 0 to disable disk usage alerts.               |
 
 
 ## Calculating Slice Counts
@@ -267,7 +267,7 @@ Controls TCPReassembly.
 | Parameters   | Defaults | Description                                 |
 | ------------ | -------- | -------------------------------------------- |
 | Enabled      | True     | True or False values     |
-| MaxBytes     | 0        |                               |
+| MaxBytes     | 0        | Maximum amount of TCP payload data, in bytes, that can be reassembled for a flow. Set to 0 to use the default behavior without an explicit byte limit.                              |
 | KickoffBytes | 5000     | Some meter within Trisul must express an interest in reassembled data for a given flow before this limit is reached. Otherwise reassembly is stopped at this point for this flow.                                                                     |
 | Ports        |          | - Specifies which TCP ports Trisul should explicitly reassemble traffic for.<br/> - By default, this field is left empty. In that case, Trisul uses protocol heuristics to identify applications and perform reassembly without relying on port numbers. <br/>- If you want to restrict reassembly to specific ports, provide a comma-separated list of port numbers (for example: 80, 443, 22, 21, 3000). Only traffic on these ports will then be reassembled. |
 | Direction    | INOUT    | Options:<br/>**IN**<br/>  Only the IN direction; direction of first SYN+ACK is reassembled<br/>**OUT**<br/>  Only the OUT direction; direction of initial SYN is reassembled<br/>**INOUT**<br/>  Both directions are reassembled         |
@@ -289,7 +289,7 @@ Since these applications depend on the TCPReassembly feature, they are resistant
 | EnableSSLFTS              | True     | FTS enabled for all SSL Certificates seen                                         |
 | EnableFTPTrack            | True     | Tracks FTP data session by matching the corresponding control flows         |
 | EnableSSLRecordExtraction | False    | If you want access to the raw TLS Protocol PDUs. If set to “True” ; Trisul will generate “TLS:RECORD” callbacks you can hook on to in the Reassembly engine. Unless you are working deep with TLS you typically can leave this as False.     |
-| LogFullCertChain |    True               |                 |
+| LogFullCertChain |    True               | Controls whether the complete SSL/TLS certificate chain is logged when SSL certificate logging is enabled.                |
 
 ## File Extraction
 
@@ -316,12 +316,12 @@ Controls how security alerts from Snort/Barnyard are handled
 | ------------------------------ | ---------------- | ----------- |
 | Enabled                        | True             | Enables this feature   |
 | UnixSocket                | /usr/local/var/lib/trisul-probe/domain0/probe0/context0/run/snort_alert | Trisul opens this unix socket and listens for alerts. The default socket name is `snort_alert` for Unified events from Snort, and `barnyard2_alert` for Unified2 events from Barnyard2. <br/> The directory name is passed to snort or barnyard2 via the `-l` parameter <br/> **Multiple sockets :** You can add any number of `<SnortUnixSocket>` elements to listen to multiple sockets at once. |
-| SnortVersion | 2.9+ |               |
-| SnortConfigFile | /etc/snort/snort.conf |   |
-| GenerateDDosReport             |                  | Set this to TRUE to trigger Trisul Probe to generate a DDoS report on certain TCA firing |
-| DDosReportTopCount             |             | By default 100 top items are included in the DDoS report  |
-| DDosReportWindow>PastSeconds   |            | By default, include in the report 2 minutes prior to the DDoS attack trigger  |
-| DDosReportWindow>FutureSeconds |               | By default, include in the report 1 minutes after the DDoS attack trigger  |
+| SnortVersion | 2.9+ | Specifies the Snort version whose alert format is expected by the Probe.              |
+| SnortConfigFile | /etc/snort/snort.conf | Path to the Snort configuration file used by the Snort installation generating alerts.  |
+| GenerateDDosReport             |                  | Set this to TRUE to trigger Trisul Probe to generate a DDoS report on certain TCA firing. Enables generation of a DDoS report when the configured TCA condition is triggered.|
+| DDosReportTopCount             |             | By default 100 top items are included in the DDoS report. Number of top items to include in the generated DDoS report.  |
+| DDosReportWindow>PastSeconds   |            | By default, include in the report 2 minutes prior to the DDoS attack trigger. Number of seconds before the DDoS trigger time to include in the generated report. |
+| DDosReportWindow>FutureSeconds |               | By default, include in the report 1 minutes after the DDoS attack trigger. Number of seconds after the DDoS trigger time to include in the generated report. |
 
 ## OfflineImport
 
@@ -334,14 +334,14 @@ Controls aspects ofPCAPfile import.
 | InterfileGapSecs    | 60       | When importing multiple files, this option puts a gap of this many seconds between each file. There is no purpose of this option other than to view a gap in the charts representing the capture files.     |
 | AutoSortByCaptime   | TRUE     | When TRUE, the candidate capture files are sorted by time order (earliest to latest), and then imported into Trisul. When FALSE, the files and subdirectories are processed in alphabetical order.     |
 | AddEthernetFCS      | FALSE    | If set to true, will add 12 bytes to every ethernet packet to account for FCS               |
-| SkipFirst | |  |
+| SkipFirst | | Number of packets or records to skip at the beginning of each imported capture file.  |
 
 ## TimerJump
 
 | Parameters               | Defaults | Description                                      |
 | ------------------------ | -------- | ---------------------------------------------------------------------- |
-| MaxJumpForwardSecs | 50 |                  |
-| IgnoreJumpOnStartup | True |               |
+| MaxJumpForwardSecs | 50 | Maximum forward jump in packet or capture time, in seconds, that Trisul accepts before applying timer-jump handling.                 |
+| IgnoreJumpOnStartup | True | Controls whether a time jump detected during startup is ignored.              |
 
 ## Edges
 
@@ -370,15 +370,15 @@ Fine tune the packet processing pipeline for peak performance.
 | CoreAffinityRAID         |          | CPUcores allowed to do disk writes for packet storage                                            |
 | CoreAffinityAnalysis     |          | Currently unused                                                                                 |
 | FBQDrainChunkSize        | 100      | Controls how fast an internal data structure called the Feedback Queue is drained                |
-| BatchBufferBytes | 65536 |                |
-| BroadcastChannel | inproc://trisul_broadcast |                                        |
+| BatchBufferBytes | 65536 | Size, in bytes, of the internal buffer used for batching packet-processing work.               |
+| BroadcastChannel | inproc://trisul_broadcast | Internal in-process messaging channel used by Trisul components to broadcast events or control messages.                                       |
 | FlowMemcapPolicy         | FLEXIBLE | Determines how Trisul copes under severe load. This can happen on a very busy network or under a DDoS attack against Trisul itself or elsewhere on the network. Trisul detects this condition when Hi Water marks are crossed for counters or flows.<br/>The available options are :<br/>`FLEXIBLE`: Trisul is not too rigid about the Hi Water mark, it allows usage to grow beyond the high water mark within the streaming window (1-minute)<br/>`FIXED`: When a Hi Water mark is hit, no*new*counters are flows are accepted. Existing ones are metered as usual. At the next flush interval, the counters or flows are pruned down to the low water mark and things proceed as usual |
 | StreamingWindowMSecs     | 60000    | The streaming window in milliseconds. The default value is 1 minute. Do not change this unless you have a very good reason          |
 | DisableFlowTupleFeedback | false    | Flow tuple feedback is a feature in Trisul that allows you to measure per-IP and per-APP connection metrics. This can be overkill for some environments like ISP’s who deal with millions of flows/sec. Disable this in those environemts. We also suggest disabling this option when the FeedbackQueue (FBQ) sees pressure leading to spiky IP and App flow connection metrics.         |
 | MaxTCARangeAlerts        | 100      | When using TCA range alerts (see [TCA](/docs/ug/alerts/tca#tca-configuration) generate only these many alerts. The reason we need a safety cap on this feature is an incorrect configuration with a TCA range can result in uncontrolled alerts (eg when any IP crosses 1Kbps). For safety we have chosen a cap or 100             |
-| EnableHalfNAT |   |                          |
-| HalfNATDebugTrace |          |               |
-| HalfNATMapActiveWindowSeconds |        |      |
-| HalfNATTCPTimeout  |          |        |
-| HalfNATUDPTimeout    |        |         |                 
+| EnableHalfNAT |   | Enables Half-NAT tracking and processing for environments where only part of the NAT translation information is available.                         |
+| HalfNATDebugTrace |          | Enables debug tracing for Half-NAT processing and mapping operations.              |
+| HalfNATMapActiveWindowSeconds |        | Duration, in seconds, for which an inactive Half-NAT mapping remains in the active mapping table.     |
+| HalfNATTCPTimeout  |          | Timeout, in seconds, after which an inactive Half-NAT TCP mapping is considered expired.       |
+| HalfNATUDPTimeout    |        | Timeout, in seconds, after which an inactive Half-NAT UDP mapping is considered expired.         |                 
 
