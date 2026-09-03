@@ -34,7 +34,7 @@ From the list of module types select one and fill out the fields according to th
 
 ### Add Modules to a New/Existing Dashboard
 
-To add modules to an empty dashboard, Create a [New Dashboard](/docs/ug/ui/create_dashboards#add-a-dashboard) by clicking **New** in the All dashboards page. 
+To add modules to an empty dashboard, Create a [New Dashboard](/docs/ug/ui/create_dashboards#add-modules-to-a-dashboard) by clicking **New** in the All dashboards page. 
 
 :::info path
 
@@ -77,7 +77,7 @@ Clicking on Customize will take you to customization options based on the type o
 
 ### How to Clone/Delete a Module from the Dashboard
 
-If you have observed a module that you would like to add as a new module, you can Clone a similar module to create new module. For that, Go to the list of [all modules](/docs/ug/ui/dashmod_intro#view-a-moduleall-modules),and from the list of available modules, Click on the three lines on the right side against the module. Now click Clone and edit the required fields.
+If you have observed a module that you would like to add as a new module, you can Clone a similar module to create new module. For that, Go to the list of [all modules](/docs/ug/ui/dashmod_intro#viewing-modules),and from the list of available modules, Click on the three lines on the right side against the module. Now click Clone and edit the required fields.
 
 ![](images/clonemodule.png)
 

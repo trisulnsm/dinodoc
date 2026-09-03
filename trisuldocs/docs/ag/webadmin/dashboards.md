@@ -35,7 +35,7 @@ The Dashboard details displayed in the table are as follows.
 
 ## Create a New Dashboard
 
-Click *Create a New Dashboard* Button from the header to create a new dashboard from scratch. Fill out the fields to [create a new dashboard](/docs/ug/ui/create_dashboards#add-a-dashboard).
+Click *Create a New Dashboard* Button from the header to create a new dashboard from scratch. Fill out the fields to [create a new dashboard](/docs/ug/ui/create_dashboards#create-a-dashboard).
 
 ## Filter Dashboards
 Enter a name of the dashboard on the *Filter Dashboards* Bar on the upper right hand side to narrow down the dashboards list using filtering.

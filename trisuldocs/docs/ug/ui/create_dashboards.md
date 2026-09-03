@@ -269,7 +269,7 @@ You can also share the dashboard across different contexts by clicking **Export 
 ![](images/export_json.png)   
 *Figure: Export a Dashboard*  
 
-Click on the [Dashboard Menu](/docs/ug/ui/dashmod_intro#dashboard-menu-button) button, the **ellipsis icon** on the top right corner on any dashboard and from the dropdown menu click **Export to JSON**. This will let you download the dashboard in JSON format.
+Click on the Dashboard Menu button, the **ellipsis icon** on the top right corner on any dashboard and from the dropdown menu click **Export to JSON**. This will let you download the dashboard in JSON format.
 
 ### How to Delete/Clone/Export a Dashboard
 

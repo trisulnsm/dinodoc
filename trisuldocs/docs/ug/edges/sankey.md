@@ -4,7 +4,7 @@ The Sankey Drill Down App, can be downloaded from [TRISUL Apps](/docs/ag/webadmi
 
 The specialized chart depicts the proportion of traffic allocated to different applications enable users to drill down into specific data points, facilitating in-depth analysis of traffic patterns.
 
-Once downloaded the Sankey shall be available on the [Show All](/docs/ug/ui/dashmod_intro#view-a-dashboardall-dashboards) dashbaords. Fill in the fields to configure the sankey settings.
+Once downloaded the Sankey shall be available on the [Show All](/docs/ug/ui/dashmod_intro) dashbaords. Fill in the fields to configure the sankey settings.
 
 ![](images/sankey.png)  
 *Figure: Sankey Crossdrill Search Criteria Form*

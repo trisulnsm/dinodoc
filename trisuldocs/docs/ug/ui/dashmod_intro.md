@@ -172,7 +172,7 @@ when you need to manage or customize them.
 
 > **Note:** The dashboards and options available to you depend on your User privileges and the configuration of the deployment.
 
-For dashboard creation, editing, layout management, and other dashboard operations, see **[Dashboards](/docs/ug/ui/create_dashboards)**.
+For dashboard creation, editing, layout management, and other dashboard operations, see **[Dashboards](/docs/ug/ui/create_dashboards#dashboard-menu-options)**.
 
 
 ## Viewing Modules
