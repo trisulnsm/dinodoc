@@ -260,7 +260,7 @@ Find the dashboard you would like to remove from the menu and Click **Delete**. 
 
 ### How to Edit a Dashboard
 
-To edit a Dashboard, from the list of dashboards go to the dashboard you would like to edit. And click on the [Dashboard Menu](/docs/ug/ui/dashmod_intro#dashboard-menu-button) button, the **ellipsis icon** on the top right corner of the dashboard and click **Customize**.
+To edit a Dashboard, from the list of dashboards go to the dashboard you would like to edit. And click on the [Dashboard Menu](/docs/ug/ui/create_dashboards#dashboard-menu-options) button, the **ellipsis icon** on the top right corner of the dashboard and click **Customize**.
 
 ### How to Export a Dashboard
 

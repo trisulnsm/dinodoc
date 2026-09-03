@@ -51,7 +51,7 @@ Dashboards can be customized to suit different monitoring and investigation requ
 
 For information about the dashboards that Trisul provides by default, see **[Default Dashboards](/docs/ug/ui/dashboards)**.
 
-For information about creating and customizing dashboards, see **[Dashboards](/docs/ug/ui/create_dashboards#add-a-dashboard)**.
+For information about creating and customizing dashboards, see **[Dashboards](/docs/ug/ui/create_dashboards#create-a-dashboard)**.
 
 ## What is a Module?
 
