@@ -6,8 +6,6 @@ sidebar_position: 01
 
 This document describes how you can setup a backup Trisul Network Analytics system as a DR (Disaster Recovery) node.
 
-Terminology : In some places , we use DR node to refer to the Backup node, and DC node to refer to the Primary node. DC stands for Data Center.
-
 :::note
 
 Terminology : In some places , we use DR node to refer to the Backup node, and DC node to refer to the Primary node. DC stands for Data Center.

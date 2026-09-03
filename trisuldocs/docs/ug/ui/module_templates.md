@@ -4,18 +4,71 @@ sidebar_position: 9
 
 # Module Templates
 
-Module templates in Trisul are the basic components of a module. These templates are pre-designed, reusable patterns or structures that define the functionality of a module.
+Module templates are predefined layouts that help you create modules for a dashboard.
 
-Module templates typically include parameters for key elements, such as,
+Instead of building a module from scratch, you select a template, configure its parameters, and Trisul creates the module for you.
 
-- Variables: parameters for data that will be used in the module. For example Name, Counter Groups, Meters, Keys.
+For example, if you want to display the top 10 AS Numbers by Upload Bytes, you can use the Toppers Traffic template and configure:
 
-- Functions: paramateres for reusable blocks of code that perform specific tasks. For example Aggregation, Max, Min, Avg.
+- Counter Group: ASNumber  
+- Meter: Upload Bytes  
+- Top Count: 10  
 
-- Conditionals: parameters for logical statements that control the flow of the module. For example Key Filter, Inverse Key filter.
+The template determines how the data is displayed, while the parameters determine which data is displayed and how it is presented.
 
-You can create your own module by creating an instance of a module
-template. Select one module template from the list and fill out the required parameters to create a module.
+## Understanding the terms used in module templates
+
+Before creating a module, it helps to understand three basic terms:
+
+### Counter Group
+
+A Counter Group defines the type of entities that you want to analyze.
+
+Examples include:
+
+- ASNumber  
+- Applications   
+- Hosts  
+- Interfaces  
+
+The available counter groups depend on the data available in your Trisul deployment.
+
+### Meter
+
+A Meter defines what is being measured for the selected counter group.
+
+Examples include:
+
+Upload Bytes
+Download Bytes
+Total
+Packets
+Flows
+
+For example:
+
+> Counter Group: ASNumber   
+Meter: Upload Bytes
+
+means that the module displays traffic measured in upload bytes for AS Numbers.
+
+### Key
+
+A Key identifies a specific item within a counter group.
+
+For example, if the counter group is ASNumber, an individual AS Number can be selected as a key.
+
+Some templates allow you to select multiple keys, filter keys, or create a separate module for each key.
+
+## Creating a module from a template
+
+To create a module:
+
+1. Open the Dashboard Customization option.  
+2. Select Module Templates.  
+3. Choose the template that best matches what you want to display.  
+4. Configure the template parameters.  
+5. Create the module.  
 
 This is a list of all module templates supported by Trisul.
 
@@ -46,19 +99,26 @@ This is a list of all module templates supported by Trisul.
 ## Module Parameters
 
 Every module has a set of parameters that controls what is displayed and
-how it is displayed. Module paramaters include name, description, key, meter, surface, countergroup etc. 
+how it is displayed. Common parameters include:
 
-Explore more on each modules and their parameters in the following.
+- Name: The name displayed for the module.  
+- Description: A short explanation of what the module is intended to show.  
+- Counter Group: The type of entity being analyzed.  
+- Meter: The measurement used for the analysis.  
+- Key: The specific item or identifier being analyzed.  
+- Surface: The type of chart or visualization used.  
+- Top Count: The number of top items to display.  
+- Filter: Limits the data displayed by matching specific keys.  
+
+Some templates also have advanced parameters for controlling the chart appearance, time selection, aggregation, and other display options.
 
 ## Key Traffic
 
-A "Key Traffic" module in Trisul is designed to monitor and analyze network traffic based on specific keys or identifiers. Here's a breakdown of what this module template would do:
+Use Key Traffic when you want to monitor the traffic associated with a specific key.
 
-- Identify and extract specific keys or identifiers from network traffic (for example, IP addresses, ports, protocols, etc.)
+For example, you can use it to display upload traffic for a particular AS Number, host, application, or other key available in the selected counter group.
 
-- Count and measure the traffic associated with each key.
-
-- Provide visualization and reporting on the top keys, traffic volumes, and trends.
+The module displays the selected traffic as a chart and can also display related statistics in a table.
 
 ![](images/keytraffic_modtemp.png)
 
@@ -68,37 +128,45 @@ A "Key Traffic" module in Trisul is designed to monitor and analyze network traf
 
 | Parameter name | Default value | Description     |
 | -------------- | ------------- | --------------- |
-| Name           | -            | Enter a name for the module                                                                                          |
-| Description    | -             | Provide a short description of the module                                                                            |
-| Surface        | MRTG          | Diplays the selected chart surface                                                                                   |
-| Show Table     | -             | Displays the meta data of the chart like Max,Min Average and Percentile for each items in table format               |
-| Expression     | -             | Customize module using [arithmetic expression](/docs/ug/ui/modules#creating-modules-with-arithmetic-expressions)     |
-| Counter Group  | ASNumber      | Shows the list of Counter groups to select from                                                                      |
-| Meter          | Upload Bytes  | Shows the list of Meters to select from                                                                              |
-| Key            | -             | Provide the unique identifier that categorizes data in a network or a system according to the selected counter group |
-| Label          | -             | Enter a descriptive tag name assigned to a data point, group or category                                             |
+| Name           | -            | Enter a name for the module. Choose a name that clearly identifies what the module displays.                                         |
+| Description    | -             | Enter a short description explaining the purpose of the module.                       |
+| Surface        | MRTG          | Select the chart type or visualization surface used to display the data.                   |
+| Show Table     | -             | Displays additional statistics such as maximum, minimum, average, and percentile values in a table.   |
+| Expression     | -             | Use an [arithmetic expression](/docs/ug/ui/modules#creating-modules-with-arithmetic-expressions) to customize the data shown by the module.    |
+| Counter Group  | ASNumber      | Select the counter group whose keys you want to analyze.                                    |
+| Meter          | Upload Bytes  | Select what should be measured for the selected counter group.                                    |
+| Key            | -             | Select or enter the key whose traffic you want to display.|
+| Label          | -             | Enter the label that should be displayed for the selected data.         |
 
 ### Advanced Parameters
 
 | Parameter name                 | Default value | Description                                                   |
 | ------------------------------ | ------------- | ------------------------------------------------------------- |
-| Legend Position                | Top           | Choose *Top* to display the [*legend table*] above the chart, *hide* to hide the legend table and *bottom* to display the legend table below the chart                          |
-| Chart Title                    | -             | Specify a custom title for the chart to provide some context                                                                                                          |
-| Height                         | 300           | Set a custom height for the chart to adjust its display size  |
-| Enable Range Slider            | -             | Toggle to enable or disable the [range slider](/docs/ug/ui/charts#range-slider), allowing users to select a specific time range                                             |
-| Mark PCAP Availability         | -             | Indicate the [availability of PCAP (Packet Capture) data](/docs/ug/ui/charts#pcap-availability), providing users with additional context                                         |
+| Legend Position                | Top           | Controls where the chart legend is displayed. Select Top, Bottom, or Hide.                        |
+| Chart Title                    | -             | Enter a custom title for the chart.                         |
+| Height                         | 300           | Set the height of the chart.  |
+| Enable Range Slider            | -             | Enables a [range slider](/docs/ug/ui/charts#range-slider), so users can select a specific portion of the displayed time range.                                            |
+| Mark PCAP Availability         | -             | Displays [availability of PCAP (Packet Capture) data](/docs/ug/ui/charts#pcap-availability), on the chart when packet capture data is available.                        |
 | Show Retro Tabs/ Time Selector | -             | Toggle to display or hide [retro tabs](/docs/ug/ui/charts#retro-tabs) and [time selector](/docs/ug/ui/elements#time-selector), allowing users to navigate through historical data                                                                                                  | 
-| Counter Group (Ref Model)      | Aggregates    | Select a counter group to view aggregated data for all counter groups, rather than focusing on a specific one                                                                   |
-| Meter (Ref Model)              | Total         | Choose a meter to display aggregated data of all meters rather than focusing on specific one meter                                                                              |
-| Key (Ref Model)                | -             | Select a key to view aggregated data for all keys, rather than focusing on a specific one                                                                                       |
-| Label (Ref Model)              | -             | Customize label text for the Ref Model                        | 
+| Counter Group (Ref Model)      | Aggregates    | Select the counter group used by the reference model to compare aggregated data.                         |
+| Meter (Ref Model)              | Total         |  Select the meter used by the reference model.                     |
+| Key (Ref Model)                | -             | Select the key used by the reference model.                                                           |
+| Label (Ref Model)              | -             | Enter a custom label for the reference model.                | 
 
 
 ## Toppers Traffic
 
-Toppers Traffic module is a customizable template that displays top traffic statistics, such as top hosts, top flows, and top applications, and more in a graphical visualization.
+Use Toppers Traffic when you want to find the keys generating the most traffic.
 
-This is a sample module showing the toppers traffic of top 10 ASNumbers in upload bytes in chart and table.
+Unlike Key Traffic, where you select a particular key, Toppers Traffic automatically identifies the top keys based on the selected Counter Group and Meter.
+
+For example, you can configure:
+
+- Counter Group: ASNumber
+- Meter: Upload Bytes
+- Top Count: 10
+
+The resulting module displays the 10 AS Numbers with the highest upload traffic.
 
 ![](images/topperstraffic_modtemp.png)
 
@@ -118,7 +186,11 @@ This is a sample module showing the toppers traffic of top 10 ASNumbers in uploa
 
 ## Toppers Trend
 
-A pre-configured template for visualizing network traffic changes over time like to identify unusual patterns or spikes in traffic etc.
+Use Toppers Trend when you want to see how the traffic of top keys changes over time.
+
+For example, you can use it to compare the traffic trends of the top 10 AS Numbers.
+
+This can help identify changes in traffic patterns, including increases, decreases, or unusual spikes.
 
 This sample module of Toppers Trend shows the Top 10 ASNumbers' trends in network traffic over time
 
@@ -132,17 +204,19 @@ This sample module of Toppers Trend shows the Top 10 ASNumbers' trends in networ
 | -------------- | ------------- | -------------------------- |
 | Name           | -            | Enter a name for the module |
 | Description    | -             | Provide a short description of the module  |
-| Surface        | MRTG          | Diplays the selected chart surface       |
-| Show Table     | -             | Displays the meta data of the chart like Max,Min Average and Percentile for each items in table format |
-| Counter Group  | ASNumber      | Shows the list of Counter groups to select from   |
-| Meter          | Upload Bytes  | Shows the list of Meters to select from     |
-| Top Count      | 10            | Enter the number of traffic data items to be displayed    |
+| Surface        | MRTG          | Select the chart surface used to display the trends.     |
+| Show Table     | -             | Displays statistics such as maximum, minimum, average, and percentile values in a table. |
+| Counter Group  | ASNumber      | Select the type of keys whose traffic trends you want to view.  |
+| Meter          | Upload Bytes  | Select the measurement used for the trend.   |
+| Top Count      | 10            | Specify how many top keys should be included in the trend chart.  |
 
 ## Current Toppers
 
-Current toppers module displays top traffic statistics in the latest five minutes in the table format, including top hosts, top flows, and top applications, and more.
+Use Current Toppers when you want to see which keys are currently generating the most traffic.
 
-The following sample of Current Toppers module shows which top 10 ASNumbers are toppers in the latest five minutes.
+The module displays current top traffic statistics in a table. The default view uses the latest five minutes of data.
+
+For example, you can configure the module to show the top 10 AS Numbers by Upload Bytes.
 
 ![](images/currenttoppers_modtemp.png)
 
@@ -162,9 +236,11 @@ The following sample of Current Toppers module shows which top 10 ASNumbers are 
 
 ## Retro Toppers
 
-A module that displays historical top traffic statistics, showing past top hosts, top flows, and top applications in the table format.
+Use Retro Toppers when you want to examine historical top traffic statistics.
 
-This example of retro toppers module shows the top ASNumbers of past. You can click More to load more past toppers.
+This is useful when you want to investigate which keys were generating the most traffic during an earlier period.
+
+The module displays historical toppers in a table. You can select More to load additional historical toppers.
 
 ![](images/retrotoppers_modtemp.png)
 
@@ -184,7 +260,11 @@ This example of retro toppers module shows the top ASNumbers of past. You can cl
 
 ## Single value
 
-This Single value module displays a single, key performance indicator (KPI) or metric in a single value. For example "Current Network Traffic: 1.2 GB/s", "Network Uptime: 99.9%", etc.
+Use Single Value when you want to display one important metric as a single number.
+
+For example, instead of displaying a complete chart, you can display a value such as total bandwidth.
+
+The module can also show a trend chart when Show Trends is enabled.
 
 This is an example of Single Value module which shows the total bandwidth of aggregates in a single value.
 
@@ -209,9 +289,11 @@ This is an example of Single Value module which shows the total bandwidth of agg
 
 ## Real Time Traffic
 
-Real Time Traffic module displays the real-time network traffic information providing a live view of bandwidth usage, applications generating most traffic, real-time alert signatures  etc. The data is refreshed every five minutes.
+Use Real Time Traffic when you want to display current network traffic using real-time data.
 
-This is an example of Real Time Traffic module of both Inbound vs Outbound differentiated by different colors as you can see.
+The module can display traffic for selected counter groups, meters, and keys. The data is refreshed every five minutes.
+
+For example, the module can display inbound and outbound traffic separately.
 
 ![](images/realtimetraffic_modtemp.png)
 
@@ -230,7 +312,11 @@ This is an example of Real Time Traffic module of both Inbound vs Outbound diffe
 
 ## Real Time Single
 
-Real Time Single module is the same as Single value module except the data displayed is in real time. Real time data is refreshed every five minutes.
+Real Time Single is similar to Single Value, but displays the value using real-time data.
+
+The data is refreshed every five minutes.
+
+Use this template when you want a dashboard to show a single current metric rather than a historical chart.
 
 ### Parameters
 
@@ -248,9 +334,12 @@ Real Time Single module is the same as Single value module except the data displ
 
 ## Real Time Toppers
 
-Real Time Toopers module is the same  as the Toppers traffic module except the Toppers traffic is displayed in real time. The real time data are refreshed every five minutes.
+Use Real Time Toppers when you want to see the current top traffic-generating keys.
 
-The following example is the Real Time Toppers module for Top 10 ASNumbers in Upload Bytes.
+It is similar to Toppers Traffic, but uses real-time data. The data is refreshed every five minutes.
+
+For example, you can display the top 10 AS Numbers by Upload Bytes.
+
 
 ![](images/realtimetoppers_modtemp.png)
 
@@ -268,9 +357,12 @@ The following example is the Real Time Toppers module for Top 10 ASNumbers in Up
 
 ## Favorite Key Traffic
 
-The Favorite Key Traffic Module is the same as [Key Traffic](/docs/ug/ui/module_templates#key-traffic) module except this can be customized where you can select and display the traffic data for your most important keys or frequently accessed traffic metrics in a single, convenient dashboard. 
+Use Favorite Key Traffic when you want to monitor specific keys that you frequently need to check.
 
-This is the favorite Key Traffic module showing a module for the key SYS:GROUP_TOTALS for the countergroup ASNumbers in upload bytes.
+It is similar to Key Traffic, but is intended for selecting and displaying multiple important or frequently accessed keys conveniently on a dashboard.
+
+For example, you can select specific keys from the ASNumber counter group and display their Upload Bytes traffic.
+
 
 ![](images/favoritekeytraffic_modtemp.png)
 
@@ -289,9 +381,14 @@ This is the favorite Key Traffic module showing a module for the key SYS:GROUP_T
 
 ## Traffic Chart
 
-Traffic chart module is the same as [Key traffic](/docs/ug/ui/module_templates#key-traffic) module except this module can be customized where you can select and display the traffic data for the selected keys ploted per meter in one module or in separate modules for each keys.
+Use Traffic Chart when you want to compare traffic for multiple selected keys.
 
-The following example shows 
+You can either:
+
+- Display each key in a separate module, or
+- Display multiple selected keys together in one module.
+
+For example, you can select the keys Total and Into Home Net and plot them for selected meters such as HTTP and HTTPS.
 
 1) Separate modules for each key Total and Into Home net
 
@@ -317,7 +414,9 @@ The following example shows
 
 ## Alert List
 
-The Alert List module displays a list of active alerts or notifications, providing a centralized view of network issues or events that require attention.
+Use Alert List when you want to display a list of alerts that require attention.
+
+The module provides a centralized view of alerts and can display additional information such as alert descriptions and affected endpoints.
 
 ![](images/alertlist_modtemp.png)
 
@@ -338,7 +437,9 @@ The Alert List module displays a list of active alerts or notifications, providi
 
 ## Alert Count
 
-The Alert Count Module displays the total number of active alerts, providing a quick overview of the current alert volume.
+Use Alert Count when you want a quick numerical summary of alerts rather than a complete alert list.
+
+For example, you can use it to place an alert count on a dashboard so that users can immediately see the current alert volume.
 
 ![](images/alertcount_modtemp.png)
 
@@ -358,7 +459,15 @@ The Alert Count Module displays the total number of active alerts, providing a q
 
 ## Existing Modules
 
-The existing modules module provides a centralized view of all existing modules in the system, allowing you to easily select from inside the dashboard and add them to the dashboard. Select the modules you would like to add and click Select. 
+Use Existing Modules when a module you need has already been created elsewhere in the system.
+
+Instead of creating the module again, select it from the list and add it to the dashboard.
+
+To add an existing module:
+
+1) Open Existing Modules.
+2) Select the module or modules you want to add.
+3) Click Select.
 
 ![](images/existingmodules_modtemp.png)
 
@@ -366,9 +475,11 @@ The existing modules module provides a centralized view of all existing modules 
 
 ## Custom URL Page
 
-The Custom URL Page Module allows you to create a custom module by providing a page URL. This displays specific data, metrics, or information of that page into your module.
+Use Custom URL Page when you want to display the contents of another page inside a dashboard module.
 
-In the following example, the URL of the Trisul's flow map has been given as input and information on that page has been added as a module.
+You provide the URL of the page, and the page is displayed within the module.
+
+For example, you can provide the URL of the Trisul Flow Map page to display the Flow Map directly in the dashboard.
 
 ![](images/urlpage_modtemp.png)
 
@@ -385,10 +496,29 @@ In the following example, the URL of the Trisul's flow map has been given as inp
 
 ## CrossKey Tree
 
-The Crosskey Tree module provides a drilldown view of two to three counter groups, offering a hierarchical representation of data. This module displays two module templates:
+Use Crosskey Tree when you want to explore the relationship between two or three counter groups.
 
-  - **Two-Level View**: Displays two levels of counter group data. For example: NBAR ID &rarr; Router and Interfaces
-  - **Three-Level View**: Displays three levels of counter group data, providing a more detailed and nested representation. For example: NBAR ID &rarr; Router/Device &rarr; Links/Interfaces
+Instead of looking at one counter group independently, Crosskey Tree lets you drill down from one level to the next.
+
+There are two views:
+
+- **Two-Level View**
+
+Displays two levels of counter group data.
+
+For example:
+
+NBAR ID → Router and Interfaces
+
+- **Three-Level View**
+
+Displays three levels of counter group data.
+
+For example:
+
+NBAR ID → Router/Device → Links/Interfaces
+
+This makes it possible to start with a high-level category and drill down into the related devices or interfaces.
 
 ### Parameters
 
@@ -404,17 +534,23 @@ The Crosskey Tree module provides a drilldown view of two to three counter group
 
 ## Crosskey Sankey
 
-The Crosskey Sankey module works the same way as crosskey module, except the relationships are shown in a Sankey diagram instead of a tree.  
+Crosskey Sankey provides a similar drilldown to Crosskey Tree, but displays the relationships as a Sankey diagram.
 
-This means:   
-- It still supports two or three level counter group drilldowns.  
-- Instead of a hierarchical tree view, flows are visualized as bands whose width represents relative traffic or counts.  
-- This makes it easier to compare proportions and see how data flows from one level to the next.  
+A Sankey diagram represents the relationship between levels using bands. The width of a band represents the relative traffic or count flowing between the levels.
 
-Example:
+This makes it easier to compare the relative size of different flows.
 
-- Two-Level Sankey: NBAR ID → Routers
-- Three-Level Sankey: NBAR ID → Routers/Devices → Interfaces
+For example:
+
+- **Two-Level Sankey**
+
+NBAR ID → Routers
+
+- **Three-Level Sankey**
+
+NBAR ID → Routers/Devices → Interfaces
+
+Use Crosskey Sankey when you want to understand how traffic is distributed from one level to another.
 
 
 ### Parameters
