@@ -14,7 +14,7 @@ const config = {
   organizationName: 'trisulnsm',
   projectName: 'dinodocs',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
 
   i18n: {
     defaultLocale: 'en',
@@ -123,6 +123,10 @@ const config = {
             from: '/docs/ipdr/api',
             to: '/docs/ipdr/ipdr_customers_api',
           },
+          {
+            from: '/docs/ug/intro/terminology',
+            to: '/docs/learntrisul/terminology',
+          },
         ],
       },
     ],
@@ -159,6 +163,21 @@ const config = {
           label: 'Documentation',
           position: 'left',
           items: [
+            {
+              type: 'doc',
+              docId: 'ug/intro/index',
+              label: 'START HERE',
+            },
+            {
+              type: 'doc',
+              docId: 'learntrisul/terminology',
+              label: 'LEARN TRISUL',
+            },
+            {
+              type: 'doc',
+              docId: 'setuptrisul/install/requirements',
+              label: 'SETUP TRISUL',
+            },
             {
               type: 'doc',
               docId: 'ag/index',

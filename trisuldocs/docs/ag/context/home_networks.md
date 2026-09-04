@@ -16,7 +16,7 @@ here.
 
 :::
 
-See [Home Network Concepts](/docs/ag/context/homenetwork_concepts)
+See [Home Network Concepts](/docs/learntrisul/homenetwork_concepts)
 
 ## Add a New Home Network
 

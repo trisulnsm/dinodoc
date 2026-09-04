@@ -4,7 +4,7 @@
 
 A Trisul context is a separate instance of Trisul with its own isolated
 database, configuration, and processes. To know more about contexts,
-Refer to [Working with Contexts](/docs/ag/domain/contexts)
+Refer to [Working with Contexts](/docs/learntrisul/concepts/contexts)
 
 Trisul, by default provides a context named **'Context: Default'** as seen in the figure. Additionally, any newly created contexts will also be listed in the admin menu below the default context. 
 
