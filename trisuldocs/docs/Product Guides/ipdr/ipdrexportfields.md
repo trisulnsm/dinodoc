@@ -49,7 +49,7 @@ You can view new and previous IPDR queries in the IPDR Dashboard.
 
 :::
 
-Completed queries allow you to download the results in [three document formats](/docs/ipdr/ipdrui#download).
+Completed queries allow you to download the results in [three document formats](/docs/Product Guides/ipdr/ipdrui#download).
 
 The buttons are shown in the image below
 
@@ -103,7 +103,7 @@ There are two places from where you can get the report files.
 ### Download Directly from Web Browser
 
 For queries that result in a reasonable file size (default 100MB) the
-agent can directly download the results by pressing the [Download button](/docs/ipdr/ipdrui#download). See [IPDR Settings > Download File Size](ipdr-settings) to adjust this limit.
+agent can directly download the results by pressing the [Download button](/docs/Product Guides/ipdr/ipdrui#download). See [IPDR Settings > Download File Size](ipdr-settings) to adjust this limit.
 
 ### Get it from a Secure FTP Server   
 

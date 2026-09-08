@@ -104,7 +104,7 @@ drwx------ 11 trisul trisul 4096 Feb 10 23:59 SLICE.r0Cbmx
 
 ### Run the query 
 
-Now you can run the IPDR Query with the date Feb 10, 2025 as described in [Submit Queries](/docs/ipdr/submit-queries)
+Now you can run the IPDR Query with the date Feb 10, 2025 as described in [Submit Queries](/docs/Product Guides/ipdr/submit-queries)
 
 
 ## Check Storage Status

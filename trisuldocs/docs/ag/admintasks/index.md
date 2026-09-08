@@ -22,10 +22,10 @@ Explore the documentation to access detailed information and controls for admin 
 | Storage Status         | Check availability of disk space, storage devices, and file systems. |
 | Licensing              | See [Licensing](/docs/ag/license/intro)           |
 | Schedule Email Reports | See [Schedule Email Reports](/docs/ug/reports/schedreports) |
-| BGP Route Receiver     | See [BGP Route Receiver](/docs/isp/bgp#i-bgp-route-receiver) |
+| BGP Route Receiver     | See [BGP Route Receiver](/docs/Product Guides/isp/bgp#i-bgp-route-receiver) |
 | NetFlow Template DB    | Provides NetFlow/IPFIX template database received by all probes. |
 | DR DC Status           | Check configuration of Diaster Recovery when the Primary Site crashes. |
 | User Resources         | Assign network devices, interfaces, IP addresses, IP subnets or any other network entity to Users.                                                                     |
-| IPDR Settings          |  See [IPDR Settings](/docs/ipdr/ipdr-settings)     |
+| IPDR Settings          |  See [IPDR Settings](/docs/Product Guides/ipdr/ipdr-settings)     |
 | ISP Users              |  See [ISP Users]                                   |
 | IPDR Customers         |  See [IPDR Customers]                              |

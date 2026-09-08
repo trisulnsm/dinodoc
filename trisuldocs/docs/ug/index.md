@@ -17,8 +17,8 @@ Trisul Network Analytics is a common platform upon which the following applicati
 These applications use the same Admin and User components, this User Guide covers those common parts.   
 
 >For application specific documentations you may also want to read the 
-- [:memo: Trisul IPDR Guide](/docs/ipdr)
-- [:memo: Trisul ISP Analytics Guide](/docs/isp)
+- [:memo: Trisul IPDR Guide](/docs/Product Guides/ipdr)
+- [:memo: Trisul ISP Analytics Guide](/docs/Product Guides/isp)
 
 
 ## Other User Documentation

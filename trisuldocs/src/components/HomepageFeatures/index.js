@@ -27,7 +27,7 @@ const FeatureList = [
   },
   {
     title: 'IPDR Guide',
-    linkto: '/docs/ipdr',
+    linkto: '/docs/Product Guides/ipdr',
     Svg: require('@site/static/img/undraw_secure_server_re_8wsq.svg').default,
     description: (
       <>
@@ -84,7 +84,7 @@ const FeatureList = [
   },
   {
     title: 'ISP Guide',
-    linkto: '/docs/isp',
+    linkto: '/docs/Product Guides/isp',
     Svg: require('@site/static/img/open-source.svg').default,
     description: (
       <>

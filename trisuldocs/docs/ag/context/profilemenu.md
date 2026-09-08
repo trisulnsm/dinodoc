@@ -68,7 +68,7 @@ Lets get familiar with the profile configuration menus as listed in the followin
 |--------------------|-------------------|
 | Protocols | 
 | Plugins | See [Plugin Configuration](/docs/ref/plugin_configuration) |
-| Bulk PING Groups | See [Ping Monitor](/docs/isp/pingmonitor) |
+| Bulk PING Groups | See [Ping Monitor](/docs/Product Guides/isp/pingmonitor) |
 | SNMP Agents | See [SNMP Agent](/docs/ag/context/snmp_agent) |
 | Static IPs | 
 | Advanced | See [Advanced](/docs/ag/context/advanced) | 

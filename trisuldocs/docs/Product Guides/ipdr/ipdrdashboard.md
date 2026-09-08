@@ -84,7 +84,7 @@ This is a sample of Trisul IPDR log.
 
 Let us explore the components of the IPDR log module in the following.
 
-The header of the module contains the total number of status of queries [**Started/Completed/Cancelled**](/docs/ipdr/ipdrui#query-summary) by the user.
+The header of the module contains the total number of status of queries [**Started/Completed/Cancelled**](/docs/Product Guides/ipdr/ipdrui#query-summary) by the user.
 
 **User Name**: This is the name of the user who initiated the query.
 

@@ -42,7 +42,7 @@ There are a number of interactive functionalities that are available for the cha
 3) [Tool Tip](/docs/ug/ui/charts#tooltip) 
 4) [Legend Table](/docs/ug/ui/charts#legend-table)
 
-### Ellipsis Menu
+### 1) Ellipsis Menu
 
 Ellipsis Menu is a three dots button at the upper right hand side of the Chart module. It serves as a convenient way to access additional customizations and functionalities without cluttering the Chart interface. Click on the Ellipsis menu to: 
 
@@ -51,11 +51,8 @@ Ellipsis Menu is a three dots button at the upper right hand side of the Chart m
 **Remove from Dashboard**: Delete the selected chart module from your current dashboard layout.  
 **Disable**: Temporarily deactivate the chart, preserving its settings for future reactivation.
 
-![](images/module_ui.png)
-*Figure: Ellipsis Menu of a Chart Module*
 
-
-### Chart Interaction Controls
+### 2) Chart Interaction Controls
 
 *Chart Interaction Controls* are small icons that appear atop search results or modules that contain the visual graphics like charts. These icons provide a visual interface to facilitate interactive functionalities, thereby allowing you to engage with the chart data and perform various operations to extract deeper insights.
 
@@ -76,7 +73,7 @@ Below you can find the *Chart Interaction Control* icons explained from right to
 
 - **Home**- Click on the home icon to reset zoom.
 
-### Tooltip
+### 3) Tooltip
 
 Hover your mouse over an item such as a PIE slice or line graph and get a tooltip with values at different intervals as shown in the figure.
 
@@ -84,7 +81,7 @@ Hover your mouse over an item such as a PIE slice or line graph and get a toolti
 
 *Figure: Showing Tooltip in a Graph Module*
 
-### Legend Table
+### 4) Legend Table
 
 *Legend tables* are interactive chart legends where you can click on a chart item in the legend area to toggle its visibility, showing or hiding the corresponding data series in the chart.
 

@@ -125,10 +125,10 @@ Large enterprises with > 20,000 endpoints.
 </Tabs>
 
 :::info For Trisul ISP 
->Refer to product specific system requirements here: **[Trisul ISP System Requirements](/docs/isp/requirements).**
+>Refer to product specific system requirements here: **[Trisul ISP System Requirements](/docs/Product Guides/isp/requirements).**
 :::
 :::info For Trisul IPDR DoT Compliance Solution  
->Refer to product specific system requirements here: **[Trisul IPDR System Requirements](/docs/ipdr/requirements)**	
+>Refer to product specific system requirements here: **[Trisul IPDR System Requirements](/docs/Product Guides/ipdr/requirements)**	
 :::
 
 

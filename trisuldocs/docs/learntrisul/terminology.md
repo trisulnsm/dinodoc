@@ -148,9 +148,11 @@ All visibility and analysis in this mode are limited to the fields present in th
 
 ### Home Network
 
-The home network is the set of IP address ranges that Trisul considers internal.
+In Trisul, **home network** means the network that you have configured as your own or monitored network.
 
-This definition is used to determine traffic direction. Based on the home network, Trisul classifies traffic as inbound, outbound, internal, or transit.
+The term **home network does not mean that Trisul is only used for a home or residential network**. It can refer to an organization's network, a data center network, a campus network, or any other network that you are monitoring.
+
+For example, if Trisul is monitoring a company's network, the company's computers, servers, phones, and other network devices belong to the **home network**.
 
 ---
 
@@ -163,6 +165,38 @@ Traffic direction is determined relative to the home network:
 - Transit traffic passes through without originating or terminating inside it
 
 This classification affects how traffic is grouped and reported.
+
+---
+
+### Internal hosts
+
+**Internal hosts** are the devices that belong to your home network.
+
+For example:
+
+- Employee computers
+- Laptops
+- Mobile phones
+- Servers
+- Printers
+- Network devices
+- Other devices connected to your network
+
+When this dashboard shows **Internal Hosts**, it is showing the devices inside the network you are monitoring.
+
+### External hosts
+
+**External hosts** are systems outside your home network.
+
+These may include:
+
+- Websites
+- Internet servers
+- Cloud services
+- Remote servers
+- Other systems communicating with your network
+
+For example, when a computer on your network accesses a website, your computer is an **internal host** and the web server it communicates with is an **external host**.
 
 ---
 
@@ -191,6 +225,16 @@ Instead of storing every packet, Trisul summarizes traffic into flows using attr
 A flow record is the stored form of a flow.
 
 It contains timestamps, counters, and attributes that describe the conversation. Flow records are what you search, filter, and analyze in flow investigation tools.
+
+---
+
+### Application
+
+An **application** identifies the type of network service associated with traffic.
+
+For example, **HTTP** and **HTTPS** are commonly associated with web traffic, **SSH** with remote access, and **DNS** with domain-name lookups.
+
+Trisul identifies applications in network traffic and groups the traffic by application, allowing you to see how much traffic each application generates and how frequently it is used.
 
 ---
 
@@ -247,7 +291,18 @@ You can think of a key as the **item Trisul is tracking** inside a counter group
 
 When you see toppers, charts, or tables, you are seeing keys ranked by their metrics.
 
----
+
+:::info Countergroup-key relationship
+
+- **Counter Group** is a group that tracks the same type of information. Each value tracked within the group is a **key**.
+
+  For example:
+  - **Apps** is a counter group that tracks application names. `https`, `http`, and `imap` are keys within the **Apps** counter group.
+  - **Hosts** is a counter group that tracks individual hosts. For example, `[IP_ADDRESS]` and `[IP_ADDRESS]` are keys within the **Hosts** counter group.
+  - **Country** is a counter group that tracks individual countries. For example, `United States`, `India`, and `China` are keys within the **Country** counter group.
+  - **ASN** is a counter group that tracks individual AS numbers. For example, `15169` and `3356` are keys within the **ASN** counter group.
+
+  :::
 
 ### Meter
 
@@ -296,9 +351,30 @@ Cardinality is useful for understanding spread and diversity, not volume. A high
 
 ---
 
+### Hi Water
+
+**Hi Water** is the upper threshold used to indicate that a monitored value has reached a specified high level.
+
+When a value reaches or exceeds the Hi Water level, the feature using the threshold can take the configured action or indicate that the high threshold has been crossed.
+
+The meaning of the Hi Water value depends on what is being monitored. It can be used with metrics such as traffic volume, bandwidth, number of active keys, and other measurements.
+
+---
+
+### Low Water
+
+**Low Water** is the lower threshold used to indicate that a monitored value has fallen to a specified low level.
+
+When a value reaches or falls below the Low Water level, the feature using the threshold can take the configured action or indicate that the low threshold has been crossed.
+
+The meaning of the Low Water value depends on what is being monitored. It can be used with metrics such as traffic volume, bandwidth, number of active keys, and other measurements.
+
+---
+
 ## 5. Time, Storage & Retention Terminology
 
 These terms explain **how data is stored and managed over time**.
+
 
 ### Time Bucket
 

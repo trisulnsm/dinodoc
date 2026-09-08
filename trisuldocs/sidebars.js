@@ -402,34 +402,34 @@ const sidebars = {
         link:
         {
           type: 'doc',
-          id: 'ipdr/index'
+          id: 'Product Guides/ipdr/index'
         },
         className: 'root-section-title',
         collapsible: false,                      // cannot collapse
         collapsed: false,
         items:
           [
-            'ipdr/intro',
+            'Product Guides/ipdr/intro',
             {
               type: 'category',
               label: 'Get started',
               link:
               {
                 type: 'doc',
-                id: 'ipdr/install'
+                id: 'Product Guides/ipdr/install'
               },
               items:
                 [
-                  'ipdr/requirements',
-                  'ipdr/ipdr-cloud',
-                  'ipdr/specialuser',
+                  'Product Guides/ipdr/requirements',
+                  'Product Guides/ipdr/ipdr-cloud',
+                  'Product Guides/ipdr/specialuser',
                   {
                     type: 'category',
                     label: 'Settings',
                     items:
                       [
-                        'ipdr/ipdr-settings',
-                        'ipdr/advanced',
+                        'Product Guides/ipdr/ipdr-settings',
+                        'Product Guides/ipdr/advanced',
                       ],
                   },
                 ],
@@ -440,13 +440,13 @@ const sidebars = {
               link:
               {
                 type: 'doc',
-                id: 'ipdr/network-config'
+                id: 'Product Guides/ipdr/network-config'
               },
               items:
                 [
-                  'ipdr/netflow',
-                  'ipdr/radius',
-                  'ipdr/syslog',
+                  'Product Guides/ipdr/netflow',
+                  'Product Guides/ipdr/radius',
+                  'Product Guides/ipdr/syslog',
                 ],
             },
             {
@@ -455,27 +455,27 @@ const sidebars = {
               link:
               {
                 type: 'doc',
-                id: 'ipdr/scripts'
+                id: 'Product Guides/ipdr/scripts'
               },
               items:
                 [
-                  'ipdr/trisul_aaaing',
-                  'ipdr/qstream',
+                  'Product Guides/ipdr/trisul_aaaing',
+                  'Product Guides/ipdr/qstream',
                 ],
             },
-            'ipdr/ipdrui',
-            'ipdr/submit-queries',
-            'ipdr/ipdrdashboard',
-            'ipdr/ipdrstatistics',
-            'ipdr/ipdrexportfields',
-            'ipdr/staticip-mappings',
-            'ipdr/api-ipdr-query',
-            'ipdr/ipdr_customers_api',
-            'ipdr/ipdr_customer_mappings',
-            'ipdr/latlong',
-            'ipdr/tape',
-            'ipdr/prod_checklist',
-            'ipdr/faq',
+            'Product Guides/ipdr/ipdrui',
+            'Product Guides/ipdr/submit-queries',
+            'Product Guides/ipdr/ipdrdashboard',
+            'Product Guides/ipdr/ipdrstatistics',
+            'Product Guides/ipdr/ipdrexportfields',
+            'Product Guides/ipdr/staticip-mappings',
+            'Product Guides/ipdr/api-ipdr-query',
+            'Product Guides/ipdr/ipdr_customers_api',
+            'Product Guides/ipdr/ipdr_customer_mappings',
+            'Product Guides/ipdr/latlong',
+            'Product Guides/ipdr/tape',
+            'Product Guides/ipdr/prod_checklist',
+            'Product Guides/ipdr/faq',
 
           ],
       },
@@ -755,23 +755,23 @@ const sidebars = {
         link:
         {
           type: 'doc',
-          id: 'isp/index'
+          id: 'Product Guides/isp/index'
         },
         className: 'root-section-title',
         collapsible: false,                      // cannot collapse
         collapsed: false,
         items:
           [
-            'isp/requirements',
-            'isp/bgp',
-            'isp/isapps',
-            'isp/isp_analytics_dashboard',
-            'isp/resourcegroups',
-            'isp/pingmonitor',
-            'isp/rtg',
-            'isp/ott_analytics',
-            'isp/api',
-            'isp/userapi',
+            'Product Guides/isp/requirements',
+            'Product Guides/isp/bgp',
+            'Product Guides/isp/isapps',
+            'Product Guides/isp/isp_analytics_dashboard',
+            'Product Guides/isp/resourcegroups',
+            'Product Guides/isp/pingmonitor',
+            'Product Guides/isp/rtg',
+            'Product Guides/isp/ott_analytics',
+            'Product Guides/isp/api',
+            'Product Guides/isp/userapi',
           ],
       },
     ],
@@ -947,6 +947,110 @@ const sidebars = {
       },
     ],
 
+
+  // NetFlow Analyzer Guide Sidebar
+  netflowSidebar: [
+    {
+      type: 'category',
+      label: 'Trisul NetFlow Analyzer Guide',
+      link: {
+        type: 'doc',
+        id: 'Product Guides/NETFLOW ANALYZER GUIDE/index',
+      },
+      className: 'root-section-title',
+      collapsible: false,
+      collapsed: false,
+      items: [
+        {
+          type: 'category',
+          label: 'Dashboards',
+          items: [
+            'Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/current-hosts',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/current-apps',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/alerts',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/security',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/sessions',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/overview',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/real-time-traffic',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/active-keys-monitor',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/system-performance',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/custom-key-monitors',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/show-all',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Retro',
+          items: [
+            'Product Guides/NETFLOW ANALYZER GUIDE/Retro/retro-counters',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Retro/retro-tools',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Retro/show-all',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Tools',
+          items: [
+            'Product Guides/NETFLOW ANALYZER GUIDE/Tools/explore-flows',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Tools/long-term-traffic',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Tools/export-ip-flows',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Tools/monthly-chart',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Tools/search-key-space',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Tools/real-time-stab-toppers',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Tools/flow-tracker',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Tools/flow-tagger',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Tools/export-flows',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Tools/aggregate-flows',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Tools/edge-graph',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Tools/show-all',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Netflow',
+          items: [
+            'Product Guides/NETFLOW ANALYZER GUIDE/Netflow/netflow-sources',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Netflow/explore-flows',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Netflow/routers-and-interfaces',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Netflow/show-all',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Alerts',
+          items: [
+            'Product Guides/NETFLOW ANALYZER GUIDE/Alerts/threshold-crossing-alerts',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Alerts/flow-tracking',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Alerts/blacklist',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Alerts/threshold-bands',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Alerts/dashboards',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Alerts/show-all',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Reports',
+          items: [
+            'Product Guides/NETFLOW ANALYZER GUIDE/Reports/readymade',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Reports/schedule',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Reports/email-settings',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Reports/show-all',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Customize',
+          items: [
+            'Product Guides/NETFLOW ANALYZER GUIDE/Customize/ui',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Customize/real-time',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Customize/dashboards',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Customize/web-traffic-http-https',
+            'Product Guides/NETFLOW ANALYZER GUIDE/Customize/show-all',
+          ],
+        },
+      ],
+    },
+  ],
 };
 
 export default sidebars;

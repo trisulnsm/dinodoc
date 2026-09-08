@@ -24,7 +24,7 @@ const config = {
     mermaid: true,
     hooks: {
       onBrokenMarkdownLinks: 'warn',
-
+      onBrokenMarkdownImages: 'warn',
     },
   },
 
@@ -121,11 +121,19 @@ const config = {
         redirects: [
           {
             from: '/docs/ipdr/api',
-            to: '/docs/ipdr/ipdr_customers_api',
+            to: '/docs/Product Guides/ipdr/ipdr_customers_api',
           },
           {
             from: '/docs/ug/intro/terminology',
             to: '/docs/learntrisul/terminology',
+          },
+          {
+            from: '/docs/ipdr',
+            to: '/docs/Product Guides/ipdr',
+          },
+          {
+            from: '/docs/isp',
+            to: '/docs/Product Guides/isp',
           },
         ],
       },
@@ -190,16 +198,6 @@ const config = {
             },
             {
               type: 'doc',
-              docId: 'ipdr/index',
-              label: 'IPDR Guide',
-            },
-            {
-              type: 'doc',
-              docId: 'isp/index',
-              label: 'ISP Guide',
-            },
-            {
-              type: 'doc',
               docId: 'ref/index',
               label: 'Reference',
             },
@@ -207,6 +205,28 @@ const config = {
               type: 'doc',
               docId: 'releasehistory',
               label: 'Changelog',
+            },
+          ],
+        },
+        {
+          type: 'dropdown',
+          label: 'Product Guides',
+          position: 'left',
+          items: [
+            {
+              type: 'doc',
+              docId: 'Product Guides/NETFLOW ANALYZER GUIDE/index',
+              label: 'NetFlow Guide',
+            },
+            {
+              type: 'doc',
+              docId: 'Product Guides/ipdr/index',
+              label: 'IPDR Guide',
+            },
+            {
+              type: 'doc',
+              docId: 'Product Guides/isp/index',
+              label: 'ISP Guide',
             },
           ],
         },
