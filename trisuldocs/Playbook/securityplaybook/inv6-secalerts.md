@@ -41,7 +41,7 @@ By completing this investigation, you should be able to:
 
 Security alert investigations begin by understanding why the alert was generated. An alert represents a potential security event, but it does not by itself confirm malicious activity. Before investigating network communications, review the alert to understand what triggered it, which systems are involved, and the severity of the event.
 
-Open [**Security Alerts**](/docs/ug/alerts/mw).
+Open [**Security Alerts**](/docs/documentation/ug/alerts/mw).
 
 Review the alert details to determine:
 
@@ -71,7 +71,7 @@ Once the alert has been reviewed, validate whether the network activity supports
 
 Before treating the alert as a security incident, verify that the underlying network activity matches the conditions that triggered the detection. Validation helps distinguish genuine threats from false positives or expected operational behavior.
 
-Review the communication associated with the alert using [**Host Conversations**](/docs/ug/tools/explore_flows#top-conversations), [**Flow Details**](/docs/ug/tools/explore_flows#top-matching-flows), and [**Packet Analysis**](/docs/ug/tools/explore_flows#flow-options) where available.
+Review the communication associated with the alert using [**Host Conversations**](/docs/documentation/ug/tools/explore_flows#top-conversations), [**Flow Details**](/docs/documentation/ug/tools/explore_flows#top-matching-flows), and [**Packet Analysis**](/docs/documentation/ug/tools/explore_flows#flow-options) where available.
 
 Use this investigation to answer questions such as:
 
@@ -101,7 +101,7 @@ Once the alert has been validated, investigate the associated network activity i
 
 After validating that the alert reflects genuine network activity, expand the investigation to examine the surrounding communications and determine whether the alert represents an isolated event or part of a broader sequence of activity.
 
-Continue the investigation using [**Host Conversations and Flow Details**](/docs/ug/tools/explore_flows#top-matching-flows) for the affected hosts.
+Continue the investigation using [**Host Conversations and Flow Details**](/docs/documentation/ug/tools/explore_flows#top-matching-flows) for the affected hosts.
 
 Review the network activity to determine:
 
@@ -131,7 +131,7 @@ After understanding the associated activity, correlate additional evidence to st
 
 A single alert rarely provides sufficient evidence to determine the nature or scope of an incident. Correlating additional network telemetry helps confirm findings and provides greater confidence in the investigation.
 
-Continue the investigation using [**DNS Analysis**](/docs/ug/resources/dns/), [**TLS Metadata**](/docs/ug/cg/ssl/), and [**Behavioral Analytics**](/docs/ug/nbad/trisulnbad).
+Continue the investigation using [**DNS Analysis**](/docs/documentation/ug/resources/dns/), [**TLS Metadata**](/docs/documentation/ug/cg/ssl/), and [**Behavioral Analytics**](/docs/documentation/ug/nbad/trisulnbad).
 
 Use this investigation to answer questions such as:
 
@@ -160,7 +160,7 @@ Once the supporting evidence has been correlated, assess the scope of the activi
 
 After correlating the available evidence, determine whether the alert represents an isolated event or part of a broader attack. Mapping the activity to the MITRE ATT&CK framework provides additional context regarding attacker objectives and progression.
 
-Open [**MITRE ATT&CK Mapping**](/docs/ug/alerts/mitre).
+Open [**MITRE ATT&CK Mapping**](/docs/documentation/ug/alerts/mitre).
 
 Review the investigation findings to determine:
 
@@ -190,7 +190,7 @@ Once the attack context has been established, determine whether similar activity
 
 Historical analysis determines whether the observed activity represents a one-time event or part of an ongoing pattern.
 
-Open [**Historical Investigation (Retro)**](/docs/ug/cg/retro).
+Open [**Historical Investigation (Retro)**](/docs/documentation/ug/cg/retro).
 
 Use this investigation to answer questions such as:
 

@@ -27,7 +27,7 @@ all our scripts.
 | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [flows_for_ip](./samples/flows_for_ip)    | Print top 100 flows for an IP or host during the past 6 hours.This script contains detailed line by line comments, so start here                                     |
 | [grep_flows](samples/grep_flows)     | Print a maximum of 100 flows which contain a payload matching a specified pattern                                                                                    |
-| [pcap_simple](samples/pcap_simple)   | Retrieve all SMTP and DNS packets over the last 1 hour. This sample demonstrates the use of a [Trisul Filter Format](/docs/ref/trisul_filter_format) expression |
+| [pcap_simple](samples/pcap_simple)   | Retrieve all SMTP and DNS packets over the last 1 hour. This sample demonstrates the use of a [Trisul Filter Format](/docs/documentation/ref/trisul_filter_format) expression |
 | [cginfo](samples/cginfo)             | Print information about all available counter groups                                                                                                                 |
 | [sessions](samples/tophttpflows)     | Print top 100 flows by volume seen in an arbitrary time interval                                                                                                     |
 | [alerts_query](samples/alerts_query) | Print 100 alerts in last 6 hours of Priority 1, 2, 3                                                                                                                 |
@@ -36,4 +36,4 @@ all our scripts.
 
 You will need to refer to the following material
 
-\# The [TRP Messages and Fields documentation](/docs/ref/trpproto)
+\# The [TRP Messages and Fields documentation](/docs/documentation/ref/trpproto)

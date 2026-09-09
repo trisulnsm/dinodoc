@@ -41,7 +41,7 @@ By completing this investigation, you should be able to determine:
 
 Every investigation begins by understanding the overall activity of the host. Rather than switching between multiple dashboards, begin the investigation directly within **Explore Flows** by entering the IP address to be investigated. This provides an immediate operational profile of the host and serves as the starting point for progressively investigating its communication behavior.
 
-Open [**Explore Flows**](/docs/ug/tools/explore_flows) and enter the IP address being investigated.
+Open [**Explore Flows**](/docs/documentation/ug/tools/explore_flows) and enter the IP address being investigated.
 
 ![](./images/exploreflows.png)
 
@@ -75,7 +75,7 @@ Once you understand the host's overall activity, investigate how it communicates
 
 Understanding who the host communicates with often explains far more than bandwidth alone. Most devices have predictable communication patterns based on their operational role. Unexpected communication partners frequently provide the first indication that additional investigation is required.
 
-Remain within [**Explore Flows**](/docs/ug/tools/explore_flows) and review the [**Top Conversations**](/docs/ug/tools/explore_flows#top-conversations) view for the selected IP address.
+Remain within [**Explore Flows**](/docs/documentation/ug/tools/explore_flows) and review the [**Top Conversations**](/docs/documentation/ug/tools/explore_flows#top-conversations) view for the selected IP address.
 
 This view provides a high-level communication profile without requiring you to inspect every individual flow.
 
@@ -103,7 +103,7 @@ Once communication relationships have been established, investigate the individu
 
 ### Step 3: Examine Individual Connections
 
-After identifying the host's communication patterns, remain within [**Explore Flows**](/docs/ug/tools/explore_flows) and drill down from the [**Top Conversations**](/docs/ug/tools/explore_flows#top-conversations) view into the [**Top Matching Flows**](/docs/ug/tools/explore_flows#top-matching-flows) view. This is a natural continuation of the communication investigation and allows you to determine which specific sessions explain the observed behavior.
+After identifying the host's communication patterns, remain within [**Explore Flows**](/docs/documentation/ug/tools/explore_flows) and drill down from the [**Top Conversations**](/docs/documentation/ug/tools/explore_flows#top-conversations) view into the [**Top Matching Flows**](/docs/documentation/ug/tools/explore_flows#top-matching-flows) view. This is a natural continuation of the communication investigation and allows you to determine which specific sessions explain the observed behavior.
 
 This view helps answer questions such as:
 
@@ -135,7 +135,7 @@ Once the communication investigation has been completed, determine which applica
 
 Communication patterns identify who the host is communicating with, while application analysis explains why that communication exists.
 
-Remain within [**Explore Flows**](/docs/ug/tools/explore_flows) and select the [**Top Applications**](/docs/ug/tools/explore_flows#activity-details) topper under the activity details to open the Application Usage view for the selected host.
+Remain within [**Explore Flows**](/docs/documentation/ug/tools/explore_flows) and select the [**Top Applications**](/docs/documentation/ug/tools/explore_flows#activity-details) topper under the activity details to open the Application Usage view for the selected host.
 
 ![](./images/appusage-ef.png)    
 
@@ -169,7 +169,7 @@ After identifying the applications responsible for the traffic, review the same 
 
 Most investigations can be completed without reviewing Aggregate Flows. This view serves as an optional validation and summary activity when you want additional confirmation of the conclusions reached during the investigation or need supporting evidence for reporting.
 
-Rather than introducing new data, [**Aggregate Flows**](/docs/ug/tools/aggregate_flows) presents the same flow information from different perspectives, allowing you to view traffic by IP address, port, router, application, and other network dimensions.
+Rather than introducing new data, [**Aggregate Flows**](/docs/documentation/ug/tools/aggregate_flows) presents the same flow information from different perspectives, allowing you to view traffic by IP address, port, router, application, and other network dimensions.
 
 This view helps answer questions such as:
 
@@ -202,7 +202,7 @@ Once the aggregate traffic characteristics have been reviewed, continue with pac
 
 Flow records usually provide an excellent summary of network activity, but some investigations require packet-level visibility to confirm protocol behavior or troubleshoot application-specific issues.
 
-From [**Explore Flows**](/docs/ug/tools/explore_flows), select the required host or flow record, click the [**Options button**](/docs/ug/tools/explore_flows#flow-options) against that flow, and choose **Download PCAP** to validate the findings using packet-level analysis.
+From [**Explore Flows**](/docs/documentation/ug/tools/explore_flows), select the required host or flow record, click the [**Options button**](/docs/documentation/ug/tools/explore_flows#flow-options) against that flow, and choose **Download PCAP** to validate the findings using packet-level analysis.
 
 This view helps answer questions such as:
 

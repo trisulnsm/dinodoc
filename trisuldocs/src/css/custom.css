@@ -241,6 +241,11 @@ img {
   font-weight: 600;
 }
 
+/* Suppress default Infima ::after sublist-caret to prevent unwanted line wrapping or blank spacing */
+.theme-doc-sidebar-menu .menu__link--sublist-caret::after {
+  display: none !important;
+}
+
 /* ============================================
    FORCE WHITE CARET (Docusaurus + Infima)
    ============================================ */
@@ -528,4 +533,14 @@ footer.footer {
 /* Docusaurus announcement bar container */
 div[class*='announcementBarContent'] {
   overflow: hidden;
+}
+
+/* Allow DocCard descriptions to wrap and display up to 4 lines */
+[class*='cardDescription_'] {
+  white-space: normal !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.45;
 }

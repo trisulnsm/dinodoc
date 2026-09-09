@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 This page specifies system requirements for Trisul ISP.
 
 :::note Also see
-The :memo: [System Requirements](/docs/ag/install/requirements) page in the Admin Guide for general guidelines.
+The :memo: [System Requirements](/docs/documentation/starthere/setuptrisul/install/requirements) page in the Admin Guide for general guidelines.
 :::
 
 ## Operating Systems

@@ -145,7 +145,7 @@ We want to tap packets at the IP layer, so we define the protocol_guid as
 
 protocol_guid
 
-            at which layer do we want to listen to packets. The guid `{0A2C724B-5B9F-4ba6-9C97-B05080558574}` in the example stands for IP. See [Well Known GUIDs](/docs/ref/guid#protocols)
+            at which layer do we want to listen to packets. The guid `{0A2C724B-5B9F-4ba6-9C97-B05080558574}` in the example stands for IP. See [Well Known GUIDs](/docs/documentation/ref/guid#protocols)
 
 ```lua
 simplecounter = {

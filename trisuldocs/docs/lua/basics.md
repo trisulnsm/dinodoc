@@ -107,7 +107,7 @@ To uninstall, just remove the the lua files from the directory.
 - **Backend scripts** ~~-~~ Supports live injection. Modified scripts are picked up automatically within 1 minute. If you remove the backing LUA file, scripts are automatically unloaded within 1 minute.
 - **Frontend scripts** ~~-~~ Does not support live injection. To load and unload scripts you need to restart Trisul Probe
 
-Using the `trisulctl_probe list lua` tool [see [trisulctl_probe](/docs/ref/trisul_probe)] you can check if your LUA script has been discovered. If your script is not listed ensure that it is present in the specified directory and has the right permissions.
+Using the `trisulctl_probe list lua` tool [see [trisulctl_probe](/docs/documentation/ref/trisul_probe)] you can check if your LUA script has been discovered. If your script is not listed ensure that it is present in the specified directory and has the right permissions.
 
 ```lua
 trisulctl_probe
@@ -139,7 +139,7 @@ In Trisul, both the frontend and backend pipelines are multi-threaded. This mean
 
 The best way is to use the `trisulctl_probe testbench` command to develop your scripts. See [Development Environment](/docs/lua/debugger)
 
-Alternately, you can manually convert the probe pipelines into single threaded by editing [trisulProbeConfig.xml](/docs/ref/trisulconfig)
+Alternately, you can manually convert the probe pipelines into single threaded by editing [trisulProbeConfig.xml](/docs/documentation/ref/trisulconfig)
 
 To convert Front End to single threaded
 
@@ -252,7 +252,7 @@ a Table which contains your script of a particular type, simplecounter, reassemb
 
 ## On GUIDs
 
-Trisul uses globally unique identifiers called GUIDs to identify each counter group, protocol, resource type, and many other things. Here is a list of [Common GUIDs](/docs/ref/guid). When you want to create a new *type* of entity you need to assign a new GUID to refer to that. You can login as *admin* into Trisul to see list of all counter guids, resource guids, Full Text (FTS) guids, etc.
+Trisul uses globally unique identifiers called GUIDs to identify each counter group, protocol, resource type, and many other things. Here is a list of [Common GUIDs](/docs/documentation/ref/guid). When you want to create a new *type* of entity you need to assign a new GUID to refer to that. You can login as *admin* into Trisul to see list of all counter guids, resource guids, Full Text (FTS) guids, etc.
 
 **Type** : A LUA string in this format `{889900CC-0063-11A5-8380-FEBDBABBDBEA}`
 

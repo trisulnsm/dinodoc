@@ -15,9 +15,9 @@ We divide this tutorial into steps, each step demonstrating an aspect ofTRP
 
 ## Step 1 : Find matching resources
 
-Retrieve the Resource IDs of all matching resources. A resource id is a tuple of (slice_id,resource_id) as defined[here](https://www.trisul.org/docs/ref/trpproto.html)
+Retrieve the Resource IDs of all matching resources. A resource id is a tuple of (slice_id,resource_id) as defined[here](https://www.trisul.org/docs/documentation/ref/trpproto.html)
 
-The message we will use is[ResourceGroupRequest](https://www.trisul.org/docs/ref/trpproto.html)
+The message we will use is[ResourceGroupRequest](https://www.trisul.org/docs/documentation/ref/trpproto.html)
 
 ### Code
 
@@ -81,7 +81,7 @@ We just printed the resource IDs returned as a string. Lets print out attributes
 
 ## Step 2 : Print details of each resource
 
-The previous step gave us five resource ids that matched our query. Now, we need to print out the attributes of each of those 5 resources. The message we need to use for that is[ResourceItemRequest](https://www.trisul.org/docs/ref/trpproto.html)
+The previous step gave us five resource ids that matched our query. Now, we need to print out the attributes of each of those 5 resources. The message we need to use for that is[ResourceItemRequest](https://www.trisul.org/docs/documentation/ref/trpproto.html)
 
 ### Code
 

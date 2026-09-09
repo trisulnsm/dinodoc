@@ -17,7 +17,7 @@ You have now landed on the subscriber user window.
 
 Once you have logged in, on the left you can see the resource groups and the keys assigned to that particular user. On the right side of the window, you can see the *time frame* module and bandwidth consumption chart module. The blue lines on the graph represents download data and green represents upload data. By default the time frame is set to last 15 mins so the chart on the screen is the bandwidth consumption for the last 15 mins. 
 
-> **Note** To disable the *View Yearly Chart* button see: [MyMRTG](/docs/ag/webadmin/web_options#mymrtg)
+> **Note** To disable the *View Yearly Chart* button see: [MyMRTG](/docs/documentation/ag/webadmin/web_options#mymrtg)
 
 ![](images/mymrtg_yearlychart.png)  
 

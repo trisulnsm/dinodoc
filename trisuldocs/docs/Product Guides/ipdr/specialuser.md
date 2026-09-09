@@ -18,5 +18,5 @@ You are strongly urged to immediately change the default password of the special
 ## Also see
 
 
-  - :memo:  See [Users](/docs/ag/webadmin/manageusers/) from the Trisul Admin Guide to understand administrators, users, and other concepts. 
+  - :memo:  See [Users](/docs/documentation/ag/webadmin/manageusers/) from the Trisul Admin Guide to understand administrators, users, and other concepts. 
 

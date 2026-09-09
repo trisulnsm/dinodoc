@@ -4,7 +4,7 @@
 
 Control packet storage policy on a per flow basis
 
-Trisul has a sophisticated packet storage engine which allows you to control what packets get stored. For most cases you can use the built in packet storage policy configuration outlined in [Controlling Packet Storage](/docs/ug/caps/packetstorage)
+Trisul has a sophisticated packet storage engine which allows you to control what packets get stored. For most cases you can use the built in packet storage policy configuration outlined in [Controlling Packet Storage](/docs/documentation/ug/caps/packetstorage)
 
 If you want even more fine grained control of the PCAP storage policy on a per flow level, you can write a LUA script as described in this section.
 

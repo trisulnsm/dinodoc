@@ -38,7 +38,7 @@ This ensures that customer information is displayed in reports regardless of the
 
 To access the IPDR Customer Management API, you require a unique API token. This token grants authentication and authorization for all API operations.
 
-To generate an API token, follow the provided link: [Generate API token](https://docs.trisul.org/docs/ag/webadmin/manageusers#generate-api-token)
+To generate an API token, follow the provided link: [Generate API token](https://docs.trisul.org/docs/documentation/ag/webadmin/manageusers#generate-api-token)
 
 ## Base URL
 

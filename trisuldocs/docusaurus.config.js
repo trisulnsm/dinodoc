@@ -125,7 +125,59 @@ const config = {
           },
           {
             from: '/docs/ug/intro/terminology',
-            to: '/docs/learntrisul/terminology',
+            to: '/docs/documentation/learntrisul/terminology',
+          },
+          {
+            from: '/docs/ug/intro',
+            to: '/docs/documentation/starthere/what_is_trisul',
+          },
+          {
+            from: '/docs/ug/intro/architecture',
+            to: '/docs/documentation/starthere/what_is_trisul/architecture',
+          },
+          {
+            from: '/docs/ug/intro/dataflow',
+            to: '/docs/documentation/starthere/what_is_trisul/dataflow',
+          },
+          {
+            from: '/docs/ug/intro/productmodes',
+            to: '/docs/documentation/starthere/what_is_trisul/productmodes',
+          },
+          {
+            from: '/docs/ug/intro/getstart',
+            to: '/docs/documentation/starthere/setuptrisul/getstart',
+          },
+          {
+            from: '/docs/starthere/getstart',
+            to: '/docs/documentation/starthere/setuptrisul/getstart',
+          },
+          {
+            from: '/docs/setuptrisul/install/requirements',
+            to: '/docs/documentation/starthere/setuptrisul/install/requirements',
+          },
+          {
+            from: '/docs/ag/install/requirements',
+            to: '/docs/documentation/starthere/setuptrisul/install/requirements',
+          },
+          {
+            from: '/docs/setuptrisul',
+            to: '/docs/documentation/starthere/setuptrisul/getstart',
+          },
+          {
+            from: '/docs/setuptrisul/install/doinstall',
+            to: '/docs/documentation/starthere/setuptrisul/install/doinstall',
+          },
+          {
+            from: '/docs/setuptrisul/install/selectmode',
+            to: '/docs/documentation/starthere/setuptrisul/install/selectmode',
+          },
+          {
+            from: '/docs/setuptrisul/network/input_packets',
+            to: '/docs/documentation/starthere/setuptrisul/network/input_packets',
+          },
+          {
+            from: '/docs/setuptrisul/network/input_netflow',
+            to: '/docs/documentation/starthere/setuptrisul/network/input_netflow',
           },
           {
             from: '/docs/ipdr',
@@ -147,6 +199,11 @@ const config = {
     '@docusaurus/theme-mermaid',
   ],
   themeConfig: {
+    docs: {
+      sidebar: {
+        autoCollapseCategories: true,
+      },
+    },
     metadata: [
       { property: 'og:image', content: 'https://docs.trisul.org/img/latest-release.jpeg' },
       { property: 'og:type', content: 'website' },
@@ -169,41 +226,42 @@ const config = {
         {
           type: 'dropdown',
           label: 'Documentation',
+          to: '/docs/documentation',
           position: 'left',
           items: [
             {
               type: 'doc',
-              docId: 'ug/intro/index',
-              label: 'START HERE',
+              docId: 'documentation/index',
+              label: 'Overview',
             },
             {
               type: 'doc',
-              docId: 'learntrisul/terminology',
-              label: 'LEARN TRISUL',
+              docId: 'documentation/starthere/what_is_trisul/index',
+              label: 'Start Here',
             },
             {
               type: 'doc',
-              docId: 'setuptrisul/install/requirements',
-              label: 'SETUP TRISUL',
-            },
-            {
-              type: 'doc',
-              docId: 'ag/index',
+              docId: 'documentation/ag/index',
               label: 'Admin Guide',
             },
             {
               type: 'doc',
-              docId: 'ug/index',
+              docId: 'documentation/ug/index',
               label: 'User Guide',
             },
             {
               type: 'doc',
-              docId: 'ref/index',
+              docId: 'documentation/learntrisul/terminology',
+              label: 'Learn Trisul',
+            },
+            {
+              type: 'doc',
+              docId: 'documentation/ref/index',
               label: 'Reference',
             },
             {
               type: 'doc',
-              docId: 'releasehistory',
+              docId: 'documentation/releasehistory',
               label: 'Changelog',
             },
           ],
@@ -211,8 +269,14 @@ const config = {
         {
           type: 'dropdown',
           label: 'Product Guides',
+          to: '/docs/Product Guides',
           position: 'left',
           items: [
+            {
+              type: 'doc',
+              docId: 'Product Guides/index',
+              label: 'Overview',
+            },
             {
               type: 'doc',
               docId: 'Product Guides/NETFLOW ANALYZER GUIDE/index',

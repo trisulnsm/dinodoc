@@ -8,7 +8,7 @@ For very large ISPs, storing logs in tape archives is a very good value proposit
 
 - Trisul IPDR stores data in slices
 - Each day maps to 2, 4, or 8 slices depending on the configuration
-- The [Storage Status](/docs/ag/admintasks/storage_status)  tool can be used to find out the slices for any day
+- The [Storage Status](/docs/documentation/ag/admintasks/storage_status)  tool can be used to find out the slices for any day
 - When the ISP gets a query for a particular day
 	- find the slices that map to the day
 	- restore them to a particular directory 
@@ -20,13 +20,13 @@ For very large ISPs, storing logs in tape archives is a very good value proposit
 
 # Storage pool architecture
 
-The [Manage Storage](/docs/ag/admintasks/storage_status#tape) section of the Admin Guide explains the Storage Pool concept as used by Trisul. Hot data is stored in the pool called Oper, then it moves to Ref, then to a series of Archives.  
+The [Manage Storage](/docs/documentation/ag/admintasks/storage_status#tape) section of the Admin Guide explains the Storage Pool concept as used by Trisul. Hot data is stored in the pool called Oper, then it moves to Ref, then to a series of Archives.  
 
 The **tape**  is a special type of storage pool at the end of the chain. 
 
 ## Enable the tape storage pool
 
-Edit the [Trisul Hub Configuration file](/docs/ref/trisulhubconfig#advanced-archiving) and set the `OfflineArchiveTag` to `tape` 
+Edit the [Trisul Hub Configuration file](/docs/documentation/ref/trisulhubconfig#advanced-archiving) and set the `OfflineArchiveTag` to `tape` 
 
 ```xml
 <OfflineArchiveTag>

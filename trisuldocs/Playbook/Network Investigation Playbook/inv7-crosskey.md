@@ -41,7 +41,7 @@ By completing this investigation, you should be able to:
 
 Every multidimensional investigation begins with a clearly defined investigative question. Before selecting network data to analyze, establish exactly which relationship needs to be understood, which network entities are involved, and what the investigation is expected to explain.
 
-Open [**Cross Key CounterGroups**](/docs/ag/context/crosskey_countergroups/) to identify the dimensions required for the investigation.
+Open [**Cross Key CounterGroups**](/docs/documentation/ag/context/crosskey_countergroups/) to identify the dimensions required for the investigation.
 
 Use this view to answer questions such as:
 
@@ -70,7 +70,7 @@ A Cross Key Counter Group is a **pre-configured** counter group, it is not somet
 This means Step 2 is a **confirmation** step, not a configuration step: check whether a Cross Key group already exists for the dimensions your investigation question needs.
 
 - If a matching group already exists, proceed directly to Step 3.
-- If it doesn't, this investigation cannot answer the question using historical correlation data — you have two options: ask an admin to create the required [**Cross Key Counter Group**](/docs/ag/context/crosskey_countergroups#creating-a-cross-key-counter-group) (it will only start collecting data going forward, not retroactively), or fall back to answering the question manually using [**Explore Flows**](./inv1-exploreflows.md) for the specific entities involved, accepting the practical limits called out in that tool's docs for very large flow volumes.
+- If it doesn't, this investigation cannot answer the question using historical correlation data — you have two options: ask an admin to create the required [**Cross Key Counter Group**](/docs/documentation/ag/context/crosskey_countergroups#creating-a-cross-key-counter-group) (it will only start collecting data going forward, not retroactively), or fall back to answering the question manually using [**Explore Flows**](./inv1-exploreflows.md) for the specific entities involved, accepting the practical limits called out in that tool's docs for very large flow volumes.
 
 Use this step to answer questions such as:
 
@@ -120,7 +120,7 @@ Once the significant relationships have been identified, investigate the contrib
 
 ### Step 4: Investigate the Correlated Activity
 
-After identifying significant multidimensional relationships, continue the investigation in [**Explore Flows**](/docs/ug/tools/explore_flows) using the network entities revealed by the correlation.
+After identifying significant multidimensional relationships, continue the investigation in [**Explore Flows**](/docs/documentation/ug/tools/explore_flows) using the network entities revealed by the correlation.
 
 This allows you to investigate the communication activity responsible for the observed relationships while remaining focused on the original investigation question.
 

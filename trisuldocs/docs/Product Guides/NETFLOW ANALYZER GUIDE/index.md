@@ -1,16 +1,37 @@
 # Trisul NetFlow Analyzer Guide
 
-Welcome to the **Trisul NetFlow Analyzer Guide**!
+Welcome to the **Trisul NetFlow Analyzer Guide**.
 
-The **Trisul NetFlow Analyzer** mode is purpose-built for flow-based network traffic monitoring, traffic accounting, capacity planning, and security observability using NetFlow (v5/v9), IPFIX, sFlow, and NetStream.
+**Trisul NetFlow Analyzer** is designed for monitoring and analyzing network traffic using flow data collected from routers, switches, and other network devices. It supports **NetFlow v5/v9, IPFIX, sFlow, and NetStream**.
 
-:::tip NetFlow Product Mode
-When Trisul is configured in NetFlow Analyzer mode, the Web UI presents a dedicated navigation menu optimized for flow-based monitoring across routers, switches, and network interfaces.
-:::
+With NetFlow Analyzer, you can use flow data to:
 
-## Menu Structure
+* See how much traffic is flowing through your network
+* Identify the hosts, applications, and interfaces generating traffic
+* Investigate traffic patterns over time
+* Monitor network capacity and utilization
+* Track unusual or suspicious traffic
+* Generate traffic and usage reports
+* Investigate historical traffic without having to capture packets again
 
-The NetFlow Analyzer interface is organized into seven primary menu categories:
+## Before you begin
+
+If you have not installed Trisul yet, start with the installation guide.
+
+During installation, select **NetFlow Analyzer** as the **Product Mode**. This configures Trisul for collecting and analyzing flow data from your network devices.
+
+**[Install Trisul and select NetFlow Analyzer mode](/docs/documentation/starthere/setuptrisul/getstart)**
+
+Once Trisul is installed and you have logged in to the Web UI, return to this guide to learn how to use the NetFlow Analyzer interface.
+
+The screens and menus described in this guide are available when Trisul is configured in NetFlow Analyzer mode. If you selected a different Product Mode during installation, your Web UI may have a different menu structure.
+
+
+## What you will find in this guide
+
+The NetFlow Analyzer Web UI is organized into seven main menu categories. Each category helps you perform a different type of network monitoring or analysis.
+
+
 
 ```mermaid
 graph TD
@@ -21,25 +42,9 @@ graph TD
     A --> F[Alerts]
     A --> G[Reports]
     A --> H[Customize]
+
 ```
 
-### 1. [Dashboards](./Dashboards/current-hosts)
-Real-time streaming, active hosts, current applications, alerts, security telemetry, sessions, and custom key monitors.
+import DocCardList from '@theme/DocCardList';
 
-### 2. [Retro](./Retro/retro-counters)
-Historical counter inspection and retrospective analytical tools across arbitrary past time ranges.
-
-### 3. [Tools](./Tools/explore-flows)
-In-depth flow exploration, long-term trends, IP flow exports, monthly usage charts, stab toppers, flow trackers, taggers, and edge connection graphs.
-
-### 4. [Netflow](./Netflow/netflow-sources)
-Dedicated NetFlow device telemetry, NetFlow sources and exporters, router and interface traffic mapping, and interface drilldowns.
-
-### 5. [Alerts](./Alerts/threshold-crossing-alerts)
-Threshold Crossing Alerts (TCAs), flow tracking alerts, blacklist threat intelligence matching, dynamic threshold bands, and alert dashboards.
-
-### 6. [Reports](./Reports/readymade)
-Readymade standard reports, automated recurring report scheduling, and email delivery settings.
-
-### 7. [Customize](./Customize/ui)
-Personalize the web user interface, real-time parameters, dashboard layouts, and web traffic HTTP/HTTPS classification rules.
+<DocCardList />

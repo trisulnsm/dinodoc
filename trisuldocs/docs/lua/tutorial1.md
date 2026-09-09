@@ -162,7 +162,7 @@ The key parts of the script are shown here
 
 Some useful tips for development.
 
-1. Switch to [single threaded mode](/docs/ref/trisulconfig#tuning)
+1. Switch to [single threaded mode](/docs/documentation/ref/trisulconfig#tuning)
 2. Use a PCAP file to develop your script instead of live traffic
 3. Run over the PCAPs with `-nodemon` mode to output LUA `print(..)` statements on the console
 

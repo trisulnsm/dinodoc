@@ -8,4 +8,4 @@ sidebar_position: 11
 
 Use them when the information you want to monitor is not already available in the existing Trisul dashboards.
 
-For detailed information about creating and configuring a Custom Key Monitor, see [**Custom Key Monitors**](/docs/ug/cg/ckey).
+For detailed information about creating and configuring a Custom Key Monitor, see [**Custom Key Monitors**](/docs/documentation/ug/cg/ckey).

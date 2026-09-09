@@ -109,14 +109,14 @@ To request a full dump leave all the form fields blank and **press the split sub
 
 *Figure: Request full database dump. A compliance tick mark* 
 
-As a safety mechanism, the Full Database Dump is capped to 250,000 records.  This is controlled by the [IPDR > MaxRecords](/docs/ref/trisulhubconfig#ipdr) option in the Trisul Hub Configuration file. 
+As a safety mechanism, the Full Database Dump is capped to 250,000 records.  This is controlled by the [IPDR > MaxRecords](/docs/documentation/ref/trisulhubconfig#ipdr) option in the Trisul Hub Configuration file. 
 
 
 ### User Name
 
 To add User ID from [customer inventory database](/docs/Product Guides/ipdr/staticip-mappings) to flows. 
 
-Go to [Trisul Apps](/docs/ag/webadmin/apps) and download and install **IPDR Tagger** app to enable tagging of group of IPs to a user ID. 
+Go to [Trisul Apps](/docs/documentation/ag/webadmin/apps) and download and install **IPDR Tagger** app to enable tagging of group of IPs to a user ID. 
 
 ![](images/ipdrtagger.png)  
 *Figure: Showing IPDR Tagger App from Trisul Apps*

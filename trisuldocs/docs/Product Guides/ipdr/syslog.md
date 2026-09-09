@@ -2,7 +2,7 @@
 
 Many devices allow export of NAT Mappings via SYSLOG.  This can be suitable for lower bandwidth ISPs.
 
-To use the NAT SYSLOG you have to install the  [ NAT Syslog Trisul Apps](/docs/ag/webadmin/apps/)
+To use the NAT SYSLOG you have to install the  [ NAT Syslog Trisul Apps](/docs/documentation/ag/webadmin/apps/)
 
 
 :::info navigation

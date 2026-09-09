@@ -120,7 +120,7 @@ Peering Analytics - Top Prefixes
 #### Explore flows
 
 Explore flows maps every flow that is associated with the Peer AS. To
-know more about explore flows, Refer [Explore Flows](/docs/ug/tools/explore_flows)
+know more about explore flows, Refer [Explore Flows](/docs/documentation/ug/tools/explore_flows)
 
 ![](images/exploreflows1.png)  
 Peering Analytics - Explore Flows
@@ -242,8 +242,8 @@ The "Prefixes and hosts" tab shows the top ASNumbers, top prefixes, top internal
 *Figure: Showing Prefixes and Hosts*
 
 You can click on the option button against each item to further drilldown to 
-1) [Key dashboard](/docs/ug/ui/key_dashboard) and
-2) [Traffic chart](/docs/ug/ui/module_templates#traffic-chart)
+1) [Key dashboard](/docs/documentation/ug/ui/key_dashboard) and
+2) [Traffic chart](/docs/documentation/ug/ui/module_templates#traffic-chart)
 
 ## ISP Country Analytics
 

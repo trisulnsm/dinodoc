@@ -73,7 +73,7 @@ Each IP mapping record is linked to a customer through the `ipdr_customer_id` fi
 
 To access the IPDR Customer IP Mapping API, you require a unique API token. This token grants authentication and authorization for all API operations.
 
-To generate an API token, follow the provided link: [Generate API token](https://docs.trisul.org/docs/ag/webadmin/manageusers#generate-api-token)
+To generate an API token, follow the provided link: [Generate API token](https://docs.trisul.org/docs/documentation/ag/webadmin/manageusers#generate-api-token)
 
 ## Base URL
 

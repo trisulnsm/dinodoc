@@ -214,7 +214,7 @@ None
 
 ### Usage
 
-The following example adds a Priority 1 alert to the general purpose [User Alerts](/docs/ref/guid#alert-groups) group.
+The following example adds a Priority 1 alert to the general purpose [User Alerts](/docs/documentation/ref/guid#alert-groups) group.
 
 ```lua
 engine:add_alert("{B5F1DECB-51D5-4395-B71B-6FA730B772D9}", -- GUID for 'User Alerts' group

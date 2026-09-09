@@ -42,7 +42,7 @@ By completing this investigation, you should be able to:
 
 Every historical investigation begins by defining the time period you want to analyse. A clearly defined investigation window reduces unnecessary analysis and allows you to focus only on the network activity surrounding the incident.
 
-Open [**Retro Analysis**](/docs/ug/cg/retro#selecting-a-time-window) and navigate to the time period when the incident occurred.
+Open [**Retro Analysis**](/docs/documentation/ug/cg/retro#selecting-a-time-window) and navigate to the time period when the incident occurred.
 
 This allows you to reconstruct the network exactly as it appeared during that period.
 

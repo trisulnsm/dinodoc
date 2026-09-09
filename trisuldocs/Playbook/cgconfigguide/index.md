@@ -38,10 +38,10 @@ Before selecting a Counter Group configuration for a scenario, familiarize yours
 
 Read the following documentation first:
 
-- [Counter Groups](https://docs.trisul.org/docs/counter-groups/)  
+- [Counter Groups](https://docs.trisul.org/docs/documentation/counter-groups/)  
   Learn how Counter Groups organize metrics, meters, and keys in Trisul.
 
-- [Custom Counter Groups](https://docs.trisul.org/docs/ag/context/custom_countergroup)  
+- [Custom Counter Groups](https://docs.trisul.org/docs/documentation/ag/context/custom_countergroup)  
   Learn about the different types of custom Counter Groups and when each type can be used.
 
 Once you understand these concepts, use the scenarios in this library as **practical configuration references**.

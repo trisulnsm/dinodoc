@@ -25,7 +25,7 @@ You do not require the `trisul-geo` and `trisul-badfellas`
 :::
 
 
-:memo: Follow the steps in  [Installation section in the Trisul User Guide](/docs/ag/install/doinstall) 
+:memo: Follow the steps in  [Installation section in the Trisul User Guide](/docs/documentation/ag/install/doinstall) 
 
 For example : 
 
@@ -73,4 +73,4 @@ Configure to send NetFlow/IPFIX to the Trisul IPDR server.
 
 ## Reenabling Product Mode Selector
 
-See : [How to re-enable product mode selector](/docs/ag/install/selectmode#re-enabling-product-mode-selector)
+See : [How to re-enable product mode selector](/docs/documentation/ag/install/selectmode#re-enabling-product-mode-selector)

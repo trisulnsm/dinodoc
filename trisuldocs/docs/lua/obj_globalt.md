@@ -11,7 +11,7 @@ The global table named `T` can be accessed from anywhere. It defines some consta
 | T.probeid | A string that identifies the probe within the domain running this script, such as `probe0`|
 | T.probeversion | The version of the *Trisul Probe* running this script, such as `7.0.2779` |
 | T.context_name | The database context name. |
-| T.args | The `-args` command line option from [trisul](/docs/programs/trisulprogram)|
+| T.args | The `-args` command line option from [trisul](/docs/documentation/programs/trisulprogram)|
 | T.enginetype | A string `backend` or `frontend` – scripts may want to use this |
 | T.backend_engineid | The backend flusher connection, usually 0 or 1 | 
 | [T.host](/docs/lua/obj_globalt#table-thost)  | Host methods that can be called from LUA |
@@ -305,7 +305,7 @@ Trisul environment. Allows you to read probe configuration for the context in wh
 | Name | In | Out | Description   |
 | --- | --- | --- | --------- |
 | configfile        |  | `string` – path of config file        | Full path of the trisulProbeConfig.xml file used by the running Trisul instance|
-| get_config        | `string` – ‘xml path’. See description column | `string` – value of config parameter  | Read a configuration parameter from the [Trisul Probe configuration file](/docs/ref/trisulconfig). The XML Path supported is a very simple format “Node>Node>..Node”. So to read the config parameter *User* under *App* parent node the path is `App>User` |
+| get_config        | `string` – ‘xml path’. See description column | `string` – value of config parameter  | Read a configuration parameter from the [Trisul Probe configuration file](/docs/documentation/ref/trisulconfig). The XML Path supported is a very simple format “Node>Node>..Node”. So to read the config parameter *User* under *App* parent node the path is `App>User` |
 | domain_configfile |  | `string` – path of domain config file | Full path of the domain.xml configuration file used by the running instance. This config file is mainly used when your scripts want to connect and communicate to domain elements, such as TRP queries. |
 | get_domain_config | `string` – ‘xml path’. | `string` – config value  | Similar to `get_config` above but for the domain config file. Typical example `T.env.get_domain_config("Domain >LocalReq")` to find a local endpoint to connect to TRP  |
 
