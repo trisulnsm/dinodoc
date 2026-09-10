@@ -20,4 +20,5 @@ Use it to check:
 
 The dashboard is particularly useful when you notice a performance problem and want to determine **when it started and which part of the system may be involved**.
 
-For a detailed explanation of each System Performance metric and when to use it, see **[System Performance](../ui/dashboards#system-performance)**.
+
+[**Click here &rarr; to view the detailed System Performance doc**](/docs/documentation/ug/ui/dashboards#system-performance)

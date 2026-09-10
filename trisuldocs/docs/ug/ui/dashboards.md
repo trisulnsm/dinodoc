@@ -355,26 +355,14 @@ Use the TCP Payload views to focus on TCP payload rather than the broader flow t
 
 The goal is not simply to find whichever flow appears at the top of a list. The Sessions dashboard gives you a starting point for understanding which systems are communicating, how much data they are transferring, which direction the traffic is moving, and whether the activity is expected.
 
-### Investigate further
-
-Use Sessions when you need to move from:
-
-"The network is busy."
-
-to:
-
-"These specific connections are responsible for the activity."
-
-
 
 ## Real Time Alerts
 
-A real time visualization of IDS alert activity. Note this is true
-realtime using WebSockets PUSH. The dashboard is described in detail in
-[IDS Alert Stabber](/docs/ug/alerts/ids_stabber)
+A real time visualization of IDS alert activity. Note this is true realtime using WebSockets PUSH. The dashboard is described in detail in [IDS Alert Stabber](/docs/ug/alerts/ids_stabber). The **Real Time Traffic** dashboard provides a live view of network activity on the selected Probe.
 
-Real Time Stabbers are a Trisul feature that allow the Trisul Probe
-network to directly push events on to the browser.
+Unlike dashboards that help you examine traffic over longer time periods, this dashboard is useful when you want to see **what is happening on the network right now**. It shows the current bandwidth rate and the internal hosts and applications contributing to that activity.
+
+Real Time Stabbers are a Trisul feature that allow the Trisul Probe network to directly push events on to the browser.
 
 | Module                                   | Description                                                      |
 | ---------------------------------------- | ---------------------------------------------------------------- |
@@ -387,11 +375,7 @@ network to directly push events on to the browser.
 
 The **Real Time Traffic** dashboard provides a live view of network activity on the selected Probe.
 
-Unlike dashboards that help you examine traffic over longer time periods, this dashboard is designed to answer a simple question:
-
-> **What is happening on the network right now?**
-
-It shows the current bandwidth rate and identifies the internal hosts and applications contributing to that activity.
+Unlike dashboards that help you examine traffic over longer time periods, this dashboard is useful when you want to see **what is happening on the network right now**. It shows the current bandwidth rate and the internal hosts and applications contributing to that activity.
 
 ![Real Time Traffic](image/rttraffic.png)
 
@@ -403,23 +387,24 @@ It shows the current bandwidth rate and identifies the internal hosts and applic
 
 The following table explains what each module shows, the question it helps answer, and when it is useful.
 
-| Module        |  What does it show?     | What question does it answer?      | When would I use it?         |
-| ---------------------------- | --------------------------------------------- | ------------------- | --------- |
-| **Real Time (In vs Out) Network Traffic Bandwidth Usage** | Shows the current bandwidth rate for traffic entering and leaving your **Home Network**, with **In** and **Out** shown separately. | **Is traffic currently coming into or going out of my network, and how much?** | Use it when you want to see changes in traffic direction as they happen. For example, a sudden increase in **In** bandwidth indicates that the network is currently receiving more data. |
-| **Real Time Total Bandwidth Usage**                       | Shows the total bandwidth rate currently being observed by Trisul.                                                                 | **How much network bandwidth is being used right now?**                        | Use it when you want a single view of the overall traffic rate and want to spot sudden increases or decreases in network activity.                                                       |
-| **Live View of Top Internal Hosts on Network**            | Shows the internal hosts currently generating the most network activity.                                                           | **Which devices are contributing most to the traffic right now?**              | Use it when you notice a change in bandwidth and want to identify the internal hosts responsible for the activity.                                                                       |
-| **Live View of Top Applications**                         | Shows the applications currently generating the most traffic and their bandwidth rates.                                            | **Which applications are using the most bandwidth right now?**                 | Use it when you want to identify which applications are responsible for the current network activity.                                                                                    |
+| Module           | What does it show?     | What question does it answer?   | When would I use it?    |
+| ----------------------------- | ---------------------- | -------------------------- | -------------- |
+| **In vs Out Network Traffic** | Shows the current bandwidth rate for traffic **coming into** and **leaving** your Home Network. **In** represents incoming traffic, while **Out** represents outgoing traffic. | **Is traffic currently coming into or going out of my network, and how is that changing?** | Use it when you want to see the **direction of traffic in real time**. A sudden increase in In or Out bandwidth can help you notice an unusual change as it happens.                                                       |
+| **Total Bandwidth Usage**     | Shows the **total bandwidth rate** currently being observed by Trisul, without separating it into In and Out traffic.                                                          | **How much network activity is happening right now?**                                      | Use it when you want a **quick overall view of current traffic activity** and want to spot sudden increases or decreases in bandwidth.                                                                                     |
+| **Top Internal Hosts**        | Shows the internal hosts that are currently generating the most network activity.                                                                                              | **Which hosts are contributing most to the traffic right now?**                            | Use it when you notice an unusual increase in traffic and want to identify **which internal hosts are responsible for it**. A host that suddenly moves into the top list can be a useful starting point for investigation. |
+| **Top Applications**          | Shows the applications currently generating the most traffic, along with their current bandwidth rates.                                                                        | **Which applications are using the most bandwidth right now?**                             | Use it when you want to understand **what type of application activity is driving the current traffic**. For example, if `http` is near the top, you can see how much bandwidth HTTP traffic is currently using.           |
 
-### Real Time Traffic at a glance
 
-If you already know what you want to find, use this table to choose the relevant module.
+| If you want to know...                         | Look at...        |
+| ------------------------------------ | ---------------- |
+| **Is traffic coming into or leaving my network?**                   | **In vs Out Network Traffic**                   |
+| **How is incoming or outgoing traffic changing right now?**         | **In vs Out Network Traffic**                   |
+| **How much total bandwidth is being used right now?**               | **Total Bandwidth Usage**                       |
+| **Has there been a sudden increase or decrease in traffic?**        | **Total Bandwidth Usage**                       |
+| **Which internal hosts are generating the most traffic right now?** | **Top Internal Hosts**                          |
+| **Which applications are using the most bandwidth right now?**      | **Top Applications**                            |
+| **What is causing the current network activity?**                   | **Top Internal Hosts** and **Top Applications** |
 
-| If you want to know...                                           | Look at...       |
-| ---------------------------------------------------------------- | -------------------------- |
-| How much traffic is coming into or leaving my network right now? | **Real Time (In vs Out) Network Traffic Bandwidth Usage** |
-| Is there a sudden change in the overall traffic rate?            | **Real Time Total Bandwidth Usage**                       |
-| Which internal hosts are generating the most traffic right now?  | **Live View of Top Internal Hosts on Network**            |
-| Which applications are using the most bandwidth right now?       | **Live View of Top Applications**                         |
 
 ### How to use the Real Time Traffic dashboard
 
@@ -494,6 +479,167 @@ The number itself is most useful when you look at **how it changes over time**. 
 The **New Keys** value provides another useful signal. It tells you how many new values appeared during the latest interval. A sudden increase in New Keys can indicate that many new hosts, applications, or other values have started appearing.
 
 The **Sparkline** makes these changes easy to spot at a glance.
+
+## Alerts
+
+The Alerts dashboard brings together different types of security and traffic-related alerts detected by Trisul.
+
+Instead of looking through individual alert records, this dashboard gives you a quick view of recent alert activity in one place. It helps you identify what triggered an alert, which hosts or flows were involved, and whether the alert is currently fired or cleared.
+
+Use the dashboard to answer questions such as:
+
+Are there any recent security or traffic alerts?
+What caused an alert to be triggered?
+Which host, flow, or application was involved?
+Are there active threshold or flow activity alerts?
+Are there IDS alerts from the intrusion detection system?
+Are there blacklist-related alerts?
+
+Figure: Alerts dashboard
+
+Note: The information displayed in the dashboard depends on the selected Time window and Topper count.
+
+Understanding the Alerts dashboard
+
+The dashboard contains several alert views. Each view focuses on a different type of activity:
+
+| Module          | What does it show?        | What question does it answer?      | When would I use it?     |
+| ------------------------ | --------------------- | ------------------------ | -------------------- |
+| **Threshold Crossing Alerts**            | Shows recent alerts generated when a monitored value crosses a configured threshold. Each entry includes information such as the alert status, priority, time, profile, Probe, target, and the observed value. | **Did a monitored value cross its configured threshold, and what was affected?**                                  | Use it when you want to identify activity that exceeded a defined limit, such as unusually high traffic. Check whether the alert is **Fired** or **Cleared** to understand its current state. |
+| **Flow Activity Alerts**                 | Shows recent alerts generated from flow activity that crossed a configured threshold. The entries show the amount of traffic, threshold, profile, Probe, and the flow endpoints involved.                      | **Which network flow generated significant activity, and how much traffic was involved?**                         | Use it when you want to find **specific flows responsible for high-volume activity**. Open the flow details to investigate the communicating endpoints further.                               |
+| **Intrusion Detection Alerts**           | Shows recent IDS alerts generated by the intrusion detection system. The dashboard can display alerts from an IDS such as Snort/Suricata.                                                                      | **Has the intrusion detection system detected any suspicious activity?**                                          | Use it when you want to check for **IDS-detected threats or suspicious network activity**. If no IDS alerts are present, the module indicates that no IDS alerts are currently available.     |
+| **Malware, Botnet, Phishing, Blacklist** | Shows recent blacklist-based alerts generated by the BadFellas plugin. Entries identify the alert type and the endpoints associated with the activity.                                                         | **Did network activity involve an endpoint associated with malware, botnet, phishing, or blacklist information?** | Use it when you want to check whether recent activity involves **known suspicious or blacklisted endpoints**.                                                                                 |
+
+### **Threshold Crossing Alerts**
+
+**What question does it answer?**
+
+"Did a monitored value cross its configured threshold?"
+
+This module shows the most recently fired or cleared threshold-based alerts.
+
+Each alert provides information that helps you understand what triggered the alert and what it was associated with. Depending on the alert, this can include:
+
+**Status**: Whether the alert is currently **Fired** or **Cleared**     
+**Priority**: The priority assigned to the alert                   
+**Time**: When the alert occurred                                 
+**Profile**: The alert profile that generated it                   
+**Probe**: The Probe where the activity was observed                 
+**Target**: The target associated with the alert                   
+Observed value: The value that crossed the configured threshold
+
+For example, the screenshot shows a US Traffic Alert with a HIGH priority and an observed traffic rate above its configured limits.
+
+What do Fired and Cleared mean?
+Fired means the condition that triggered the alert has been detected.
+Cleared means the condition is no longer active.
+
+This distinction helps you tell the difference between an alert that is currently active and one that was triggered earlier but has since returned to normal.
+
+When would I use it?
+
+Use this module when you want to quickly identify threshold-based conditions that have become significant and determine whether they are still active.
+
+### **Flow Activity Alerts**
+
+**What question does it answer?**
+
+"Which network flows have generated significant traffic activity?"
+
+This module lists recent alerts based on flow activity.
+
+Each entry shows information such as:
+
+- The amount of traffic involved  
+- The configured threshold  
+- The alert profile  
+- The Probe where it was detected  
+- The endpoints involved in the flow  
+
+The screenshot also provides Flow Details links for individual entries. These allow you to move from the alert to the underlying flow information.
+
+When would I use it?
+
+Use this module when you see an alert indicating unusually high flow activity and want to determine:
+
+Which endpoints were communicating
+How much traffic was involved
+Which specific flow triggered the alert
+
+This makes Flow Activity Alerts useful as a starting point for investigating large or unusual network transfers.
+
+### **Intrusion Detection Alerts**
+
+**What question does it answer?**
+
+"Has the intrusion detection system detected suspicious activity?"
+
+This module displays recent IDS alerts from the configured intrusion detection system, such as Snort or Suricata.
+
+The screenshot shows the module displaying "No IDS alerts in Trisul" when no IDS alerts are available.
+
+When would I use it?
+
+Use this module when you want a quick view of intrusion detection activity without leaving the Alerts dashboard.
+
+If an IDS alert is present, it can serve as the starting point for investigating the associated network activity.
+
+### **Malware, Botnet, Phishing, Blacklist**
+
+**What question does it answer?**
+
+"Is Trisul seeing activity involving an endpoint associated with known suspicious or blacklisted activity?"
+
+This module shows the latest blacklist-based alerts generated by the BadFellas plugin.
+
+The alerts identify information such as:
+
+- The type of alert, such as TOR-NODE or DSHIELD  
+- The time of the alert  
+- The Probe where it was observed  
+- The endpoints involved  
+
+The screenshot shows examples where an internal host is associated with an external endpoint, allowing you to see which systems were communicating when the alert was generated.
+
+When would I use it?
+
+Use this module when you want to quickly check for network activity involving known suspicious, malicious, or blacklisted endpoints.
+
+It is particularly useful when you need to move from a security alert to the specific endpoints involved in the communication.
+
+### Alerts at a Glance
+
+Use this table when you already know what you're looking for
+
+| If you want to know...                                                      | Look at...         |
+| ---------------- |
+| **Did a monitored value cross a configured threshold?**                     | **Threshold Crossing Alerts**            |
+| **Is a threshold alert still active?**                                      | **Threshold Crossing Alerts**            |
+| **Was a threshold alert triggered earlier but has now cleared?**            | **Threshold Crossing Alerts**            |
+| **Which flows generated significant activity?**                             | **Flow Activity Alerts**                 |
+| **Which endpoints were involved in a high-activity flow?**                  | **Flow Activity Alerts**                 |
+| **Has the IDS detected suspicious activity?**                               | **Intrusion Detection Alerts**           |
+| **Is there activity involving a known suspicious or blacklisted endpoint?** | **Malware, Botnet, Phishing, Blacklist** |
+| **Which endpoints were involved in a blacklist alert?**                     | **Malware, Botnet, Phishing, Blacklist** |
+
+### How to use the Alerts dashboard
+
+A simple way to work through the dashboard is:
+
+1) **Start with the alert type.**  
+Identify whether the activity is a threshold crossing, flow activity, IDS alert, or blacklist-related alert. 
+
+2) **Check the alert details.**  
+Look at the time, priority, Probe, profile, target, threshold, and observed value where available.
+
+3) **Check the alert status.**  
+For threshold alerts, determine whether the condition is Fired or Cleared.
+
+4) **Identify the systems involved.**  
+For flow and blacklist alerts, look at the endpoints associated with the activity.
+
+5) **Investigate the underlying activity.**  
+Use the available Flow Details or alert links to move from the alert to the network activity that generated it.
 
 
 ## System Performance

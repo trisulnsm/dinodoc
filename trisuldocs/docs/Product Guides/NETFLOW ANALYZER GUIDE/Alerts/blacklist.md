@@ -2,27 +2,12 @@
 sidebar_position: 3
 ---
 
-# Blacklist
-
-Threat intelligence correlation and alerts on connections to known malicious IPs and domains.
-
-## Overview
-
-In the Trisul NetFlow Analyzer Web UI, **Blacklist** is located under the **Alerts** menu.
-
 :::info Navigation
 :point_right: Go to **Alerts &rarr; Blacklist**
 :::
 
-## Key Features
+Malware and Blacklist Alerts helps you identify network activity associated with known malicious IPs, URLs, domains, and other blacklist-based threats. It uses the Trisul Badfellas plugin to detect and report this activity.
 
-- **Traffic Observability**: Provides deep flow-level metrics and visibility relevant to blacklist.
-- **Real-Time and Historical Analytics**: Seamlessly inspect current traffic streaming as well as historical trends.
-- **Drilldown Capabilities**: Pivot directly into related NetFlow views, flow queries, routers, and counter groups.
+Use it to find affected hosts, track infection trends, identify malware types, and investigate the flows or packets associated with a detected threat.
 
-## How to Use
-
-1. Navigate to **Alerts &rarr; Blacklist** from the left-hand navigation panel.
-2. Select your target **Probe** and **Context** from the top panel if running in a multi-probe or multi-tenant environment.
-3. Apply filters such as time range, router interface, IP address, or application to focus your analysis.
-4. Use the contextual actions to pivot into flow exploration, generate reports, or configure automated alerts.
+For detailed information on viewing, searching, grouping, filtering, and investigating Malware and Blacklist Alerts, see [Malware and Blacklist Alerts](/docs/documentation/ug/alerts/mw).

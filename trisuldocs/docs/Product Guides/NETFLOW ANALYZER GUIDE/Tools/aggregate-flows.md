@@ -4,25 +4,12 @@ sidebar_position: 10
 
 # Aggregate Flows
 
-Multi-dimensional flow aggregation across subnets, ports, routers, and protocols.
-
-## Overview
-
-In the Trisul NetFlow Analyzer Web UI, **Aggregate Flows** is located under the **Tools** menu.
-
 :::info Navigation
 :point_right: Go to **Tools &rarr; Aggregate Flows**
 :::
 
-## Key Features
+Aggregate Flows lets you search network flow data and summarize it by one or more fields, such as Source IP, Destination IP, Ports, Protocol, Router, Interface, or Application.
 
-- **Traffic Observability**: Provides deep flow-level metrics and visibility relevant to aggregate flows.
-- **Real-Time and Historical Analytics**: Seamlessly inspect current traffic streaming as well as historical trends.
-- **Drilldown Capabilities**: Pivot directly into related NetFlow views, flow queries, routers, and counter groups.
+Use it when you want to understand patterns and totals across many flows, rather than examine individual flows one by one. The results show aggregated flow counts, traffic volume, and percentages for each selected grouping.
 
-## How to Use
-
-1. Navigate to **Tools &rarr; Aggregate Flows** from the left-hand navigation panel.
-2. Select your target **Probe** and **Context** from the top panel if running in a multi-probe or multi-tenant environment.
-3. Apply filters such as time range, router interface, IP address, or application to focus your analysis.
-4. Use the contextual actions to pivot into flow exploration, generate reports, or configure automated alerts.
+For detailed instructions on searching, grouping, interpreting results, and exporting the data, see [Aggregate Flows](/docs/documentation/ug/tools/aggregate_flows).

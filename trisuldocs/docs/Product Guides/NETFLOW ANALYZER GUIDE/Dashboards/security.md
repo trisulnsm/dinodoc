@@ -1,28 +1,18 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 ---
 
 # Security
 
-Flow-based security monitoring, unusual behavior, and threat detection.
+:::info navigation
 
-## Overview
+:point_right: Select *Dashboards &rarr; Security* to view the Security Dashboard
 
-In the Trisul NetFlow Analyzer Web UI, **Security** is located under the **Dashboards** menu.
-
-:::info Navigation
-:point_right: Go to **Dashboards &rarr; Security**
 :::
 
-## Key Features
+The **Security dashboard** provides a consolidated view of security activity detected in your network. It helps you see what alerts are occurring, how frequently they occur, which hosts are generating or receiving suspicious activity, and whether unusual network traffic accompanies those events.
 
-- **Traffic Observability**: Provides deep flow-level metrics and visibility relevant to security.
-- **Real-Time and Historical Analytics**: Seamlessly inspect current traffic streaming as well as historical trends.
-- **Drilldown Capabilities**: Pivot directly into related NetFlow views, flow queries, routers, and counter groups.
+Use this dashboard as a starting point when investigating security activity, especially when Trisul is receiving alerts from an IDS such as Snort or Suricata.
 
-## How to Use
 
-1. Navigate to **Dashboards &rarr; Security** from the left-hand navigation panel.
-2. Select your target **Probe** and **Context** from the top panel if running in a multi-probe or multi-tenant environment.
-3. Apply filters such as time range, router interface, IP address, or application to focus your analysis.
-4. Use the contextual actions to pivot into flow exploration, generate reports, or configure automated alerts.
+[**Click here &rarr; to view the detailed Security doc**](/docs/documentation/ug/ui/dashboards#security)

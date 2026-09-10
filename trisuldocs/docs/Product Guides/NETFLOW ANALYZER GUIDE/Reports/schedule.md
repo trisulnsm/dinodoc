@@ -4,25 +4,12 @@ sidebar_position: 2
 
 # Schedule
 
-Automate recurring report generation on daily, weekly, or monthly schedules.
-
-## Overview
-
-In the Trisul NetFlow Analyzer Web UI, **Schedule** is located under the **Reports** menu.
-
 :::info Navigation
 :point_right: Go to **Reports &rarr; Schedule**
 :::
 
-## Key Features
+Schedule Email Reports lets you automatically generate and email supported Trisul reports on a hourly, daily, weekly, or monthly schedule.
 
-- **Traffic Observability**: Provides deep flow-level metrics and visibility relevant to schedule.
-- **Real-Time and Historical Analytics**: Seamlessly inspect current traffic streaming as well as historical trends.
-- **Drilldown Capabilities**: Pivot directly into related NetFlow views, flow queries, routers, and counter groups.
+Choose the report, time, frequency, recipients, and other required options, then let Trisul generate and send the report automatically.
 
-## How to Use
-
-1. Navigate to **Reports &rarr; Schedule** from the left-hand navigation panel.
-2. Select your target **Probe** and **Context** from the top panel if running in a multi-probe or multi-tenant environment.
-3. Apply filters such as time range, router interface, IP address, or application to focus your analysis.
-4. Use the contextual actions to pivot into flow exploration, generate reports, or configure automated alerts.
+For detailed instructions on scheduling, managing, and configuring email reports, see [Schedule Email Reports](/docs/documentation/ug/reports/schedreports).

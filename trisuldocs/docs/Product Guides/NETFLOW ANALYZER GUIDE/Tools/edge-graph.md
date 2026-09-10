@@ -4,25 +4,12 @@ sidebar_position: 11
 
 # Edge Graph
 
-Visual connection graphs illustrating host-to-host and node-to-node network communications.
-
-## Overview
-
-In the Trisul NetFlow Analyzer Web UI, **Edge Graph** is located under the **Tools** menu.
-
 :::info Navigation
 :point_right: Go to **Tools &rarr; Edge Graph**
 :::
 
-## Key Features
+Edge Graph lets you explore the relationships between network entities as a graph. Start with a root key and a time window, then explore the entities directly connected to it.
 
-- **Traffic Observability**: Provides deep flow-level metrics and visibility relevant to edge graph.
-- **Real-Time and Historical Analytics**: Seamlessly inspect current traffic streaming as well as historical trends.
-- **Drilldown Capabilities**: Pivot directly into related NetFlow views, flow queries, routers, and counter groups.
+You can view the relationships as a flow graph or treemap, filter the graph by entity type, and interact with individual nodes to expand their connections or investigate them further.
 
-## How to Use
-
-1. Navigate to **Tools &rarr; Edge Graph** from the left-hand navigation panel.
-2. Select your target **Probe** and **Context** from the top panel if running in a multi-probe or multi-tenant environment.
-3. Apply filters such as time range, router interface, IP address, or application to focus your analysis.
-4. Use the contextual actions to pivot into flow exploration, generate reports, or configure automated alerts.
+For detailed instructions on creating and exploring Edge Graphs, see [Working with Edges](/docs/documentation/ug/edges/using).

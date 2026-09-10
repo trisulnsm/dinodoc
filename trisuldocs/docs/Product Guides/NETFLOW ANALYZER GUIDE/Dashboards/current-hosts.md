@@ -4,6 +4,12 @@ sidebar_position: 1
 
 # Current Hosts
 
+:::info navigation
+
+:point_right: Select *Dashboards &rarr; Current Hosts* to view the Current Hosts Dashboard
+
+:::
+
 [**Current Hosts**](/docs/documentation/ug/ui/dashboards#current-hosts) is your quick view of **who is talking to whom on the network right now**.
 
 It separates **internal hosts** from **external hosts** and helps you quickly see:
@@ -17,6 +23,6 @@ Think of it as a **starting point for network investigation**. You spot somethin
 
 Want to understand what each module means and when to use it?
 
-[**See the detailed Current Hosts guide &rarr;**](/docs/documentation/ug/ui/dashboards#current-hosts)
+[**Click here &rarr; to view the detailed Current Hosts doc**](/docs/documentation/ug/ui/dashboards#current-hosts)
 
 ---

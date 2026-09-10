@@ -4,6 +4,12 @@ sidebar_position: 5
 
 # Sessions
 
+:::info navigation
+
+:point_right: Select *Dashboards &rarr; Sessions* to view the Sessions Dashboard
+
+:::
+
 **Sessions** helps you find the **individual network connections responsible for significant or unusual traffic**.
 
 While a traffic chart can show that your network is busy, Sessions helps answer the next question: **which connections are responsible for that activity?**
@@ -18,4 +24,5 @@ You can use it to quickly find:
 
 Use Sessions when you need to move from **seeing that something is happening** to **identifying the specific connections involved**.
 
-For a detailed explanation of the Sessions views and when to use each one, see **[Sessions](/docs/documentation/ug/ui/dashboards#sessions)**.
+
+[**Click here &rarr; to view the detailed Sessions doc**](/docs/documentation/ug/ui/dashboards#sessions)

@@ -4,25 +4,12 @@ sidebar_position: 1
 
 # Explore Flows
 
-Search, filter, and inspect detailed flow records using multi-attribute queries.
-
-## Overview
-
-In the Trisul NetFlow Analyzer Web UI, **Explore Flows** is located under the **Tools** menu.
-
 :::info Navigation
 :point_right: Go to **Tools &rarr; Explore Flows**
 :::
 
-## Key Features
+**Explore Flows** is Trisul's general-purpose tool for searching and investigating individual network flows. Use it to find specific traffic by IP address, port, protocol, interface, or other search criteria, and then examine the matching flows, conversations, applications, and network activity.
 
-- **Traffic Observability**: Provides deep flow-level metrics and visibility relevant to explore flows.
-- **Real-Time and Historical Analytics**: Seamlessly inspect current traffic streaming as well as historical trends.
-- **Drilldown Capabilities**: Pivot directly into related NetFlow views, flow queries, routers, and counter groups.
+It also provides tools for deeper flow investigation, including packet/PCAP access and per-hop analysis when the same flow is observed by multiple Probes.
 
-## How to Use
-
-1. Navigate to **Tools &rarr; Explore Flows** from the left-hand navigation panel.
-2. Select your target **Probe** and **Context** from the top panel if running in a multi-probe or multi-tenant environment.
-3. Apply filters such as time range, router interface, IP address, or application to focus your analysis.
-4. Use the contextual actions to pivot into flow exploration, generate reports, or configure automated alerts.
+For detailed instructions and all available search and investigation options, see **[Explore Flows](/docs/documentation/ug/tools/explore_flows)**.

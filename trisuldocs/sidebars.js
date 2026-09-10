@@ -990,7 +990,6 @@ const sidebars = {
             "Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/real-time-traffic",
             "Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/active-keys-monitor",
             "Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/system-performance",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/custom-key-monitors",
             "Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/show-all"
           ]
         },
@@ -1011,7 +1010,6 @@ const sidebars = {
           "items": [
             "Product Guides/NETFLOW ANALYZER GUIDE/Tools/explore-flows",
             "Product Guides/NETFLOW ANALYZER GUIDE/Tools/long-term-traffic",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Tools/export-ip-flows",
             "Product Guides/NETFLOW ANALYZER GUIDE/Tools/monthly-chart",
             "Product Guides/NETFLOW ANALYZER GUIDE/Tools/search-key-space",
             "Product Guides/NETFLOW ANALYZER GUIDE/Tools/real-time-stab-toppers",

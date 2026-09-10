@@ -4,6 +4,12 @@ sidebar_position: 2
 
 # Current Apps
 
+:::info navigation
+
+:point_right: Select *Dashboards &rarr; Current Apps* to view the Current Apps Dashboard
+
+:::
+
 [**Current Apps**](/docs/documentation/ug/ui/dashboards#current-apps) gives you a quick view of which applications are using your network and how much activity they generate.
 
 It helps you quickly identify:
@@ -15,6 +21,7 @@ It helps you quickly identify:
 
 Use it as a quick starting point to understand how your network traffic is being used by applications and spot activity that may need further investigation.
 
-For a detailed explanation of each module and when to use it, see [**Current Apps**](/docs/documentation/ug/ui/dashboards#current-apps).
+
+[**Click here &rarr; to view the detailed Current Apps doc**](/docs/documentation/ug/ui/dashboards#current-apps)
 
 ---

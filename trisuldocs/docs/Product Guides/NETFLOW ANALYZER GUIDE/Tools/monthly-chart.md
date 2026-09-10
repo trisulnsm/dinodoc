@@ -4,25 +4,12 @@ sidebar_position: 4
 
 # Monthly Chart
 
-Monthly traffic volume summaries, peak usage, and 95th percentile billing calculations.
-
-## Overview
-
-In the Trisul NetFlow Analyzer Web UI, **Monthly Chart** is located under the **Tools** menu.
-
 :::info Navigation
 :point_right: Go to **Tools &rarr; Monthly Chart**
 :::
 
-## Key Features
+**Monthly Charts** gives you a calendar-based view of daily network activity for a selected Counter Group, meter, and key. It helps you see how traffic or other metrics change from day to day across a month.
 
-- **Traffic Observability**: Provides deep flow-level metrics and visibility relevant to monthly chart.
-- **Real-Time and Historical Analytics**: Seamlessly inspect current traffic streaming as well as historical trends.
-- **Drilldown Capabilities**: Pivot directly into related NetFlow views, flow queries, routers, and counter groups.
+You can view metrics such as **bytes in, bytes out, connections, and alerts**, and click a particular day to drill down into its detailed activity.
 
-## How to Use
-
-1. Navigate to **Tools &rarr; Monthly Chart** from the left-hand navigation panel.
-2. Select your target **Probe** and **Context** from the top panel if running in a multi-probe or multi-tenant environment.
-3. Apply filters such as time range, router interface, IP address, or application to focus your analysis.
-4. Use the contextual actions to pivot into flow exploration, generate reports, or configure automated alerts.
+For the complete instructions, search options, and chart details, see **[Monthly Charts](/docs/ug/tools/daily_usage)**.

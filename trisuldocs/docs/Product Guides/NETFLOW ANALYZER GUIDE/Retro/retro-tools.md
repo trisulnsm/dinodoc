@@ -4,25 +4,16 @@ sidebar_position: 2
 
 # Retro Tools
 
-Retroactive analytical tools for historical incident reconstruction and capacity evaluation.
+**Retro Tools** lets you investigate historical network activity by selecting a past time period and analyzing what happened during that period.
 
-## Overview
-
-In the Trisul NetFlow Analyzer Web UI, **Retro Tools** is located under the **Retro** menu.
+Trisul provides several tools for investigating historical traffic, including Counter Groups, flows, hosts, applications, alerts, and packets. You can also use **Retro Q&A** for commonly performed investigations.
 
 :::info Navigation
-:point_right: Go to **Retro &rarr; Retro Tools**
+:point_right: Select *Retro &rarr; Retro Tools* to view the Retro Tools page
 :::
 
-## Key Features
+For details, see:
 
-- **Traffic Observability**: Provides deep flow-level metrics and visibility relevant to retro tools.
-- **Real-Time and Historical Analytics**: Seamlessly inspect current traffic streaming as well as historical trends.
-- **Drilldown Capabilities**: Pivot directly into related NetFlow views, flow queries, routers, and counter groups.
-
-## How to Use
-
-1. Navigate to **Retro &rarr; Retro Tools** from the left-hand navigation panel.
-2. Select your target **Probe** and **Context** from the top panel if running in a multi-probe or multi-tenant environment.
-3. Apply filters such as time range, router interface, IP address, or application to focus your analysis.
-4. Use the contextual actions to pivot into flow exploration, generate reports, or configure automated alerts.
+- **[Performing Retro Analysis](/docs/documentation/ug/cg/retro)** — Learn how to select a historical time period and start a retro analysis.
+- **[Retro Analysis Tools](/docs/documentation/ug/cg/retrotools)** — See the available tools for investigating historical network activity.
+- **[Retro Q&A](/docs/documentation/ug/cg/retrofaq)** — Use predefined questions to perform common retro investigations.

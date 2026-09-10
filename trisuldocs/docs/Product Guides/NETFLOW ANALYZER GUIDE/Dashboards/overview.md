@@ -1,8 +1,14 @@
 ---
-sidebar_position: 7
+sidebar_position: 6
 ---
 
 # Overview
+
+:::info navigation
+
+:point_right: Select *Dashboards &rarr; Overview* to view the Overview Dashboard
+
+:::
 
 The **Overview** dashboard gives you a quick picture of your network and the Trisul system in one place.
 
@@ -14,4 +20,5 @@ Use it when you want to quickly answer:
 
 If something stands out, such as a sudden traffic increase, a busy host or application, an alert, or packet drops, you can use the detailed dashboards to investigate further.
 
-For a detailed explanation of the Overview dashboard, its metrics, and when to use each module, see **[Overview](/docs/documentation/ug/ui/dashboards#overview-dashboard)**.
+
+[**Click here &rarr; to view the detailed Overview doc**](/docs/documentation/ug/ui/dashboards#overview-dashboard)
