@@ -1062,9 +1062,6 @@ const sidebars = {
           "description": "Use Customize to adjust how the NetFlow Analyzer Web UI behaves and looks. You can personalize dashboard layouts, real-time parameters, and HTTP/HTTPS traffic classification rules.",
           "items": [
             "Product Guides/NETFLOW ANALYZER GUIDE/Customize/ui",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Customize/real-time",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Customize/dashboards",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Customize/web-traffic-http-https",
             "Product Guides/NETFLOW ANALYZER GUIDE/Customize/show-all"
           ]
         }
