@@ -1,9 +1,9 @@
-# What is Trisul
+# How Trisul Works
 
 
 ![Trisul Logo](image/logo.png)
 
-
+## What is Trisul
 
 **Trisul Network Analytics** is a software suite that takes network packets or flow data, and extract insightful traffic metrics, flow analysis, alerts, and metadata from them.
 The applications of Trisul include deep network traffic management, network security monitoring, threat hunting, incident detection, and audit.

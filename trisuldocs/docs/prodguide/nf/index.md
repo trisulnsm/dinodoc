@@ -20,7 +20,7 @@ If you have not installed Trisul yet, start with the installation guide.
 
 During installation, select **NetFlow Analyzer** as the **Product Mode**. This configures Trisul for collecting and analyzing flow data from your network devices.
 
-**[Install Trisul and select NetFlow Analyzer mode](/docs/guide/starthere/setuptrisul/getstart)**
+**[Install Trisul and select NetFlow Analyzer mode](/docs/guide/starthere/quickstart)**
 
 Once Trisul is installed and you have logged in to the Web UI, return to this guide to learn how to use the NetFlow Analyzer interface.
 

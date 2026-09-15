@@ -162,11 +162,19 @@ const config = {
           },
           {
             from: '/docs/ug/intro/getstart',
-            to: '/docs/guide/starthere/setuptrisul/getstart',
+            to: '/docs/guide/starthere/quickstart',
           },
           {
             from: '/docs/starthere/getstart',
-            to: '/docs/guide/starthere/setuptrisul/getstart',
+            to: '/docs/guide/starthere/quickstart',
+          },
+          {
+            from: '/docs/guide/starthere/setuptrisul/getstart',
+            to: '/docs/guide/starthere/quickstart',
+          },
+          {
+            from: '/docs/guide/starthere/setuptrisul/quickstart',
+            to: '/docs/guide/starthere/quickstart',
           },
           {
             from: '/docs/setuptrisul/install/requirements',
@@ -178,7 +186,7 @@ const config = {
           },
           {
             from: '/docs/setuptrisul',
-            to: '/docs/guide/starthere/setuptrisul/getstart',
+            to: '/docs/guide/starthere/quickstart',
           },
           {
             from: '/docs/setuptrisul/install/doinstall',
@@ -312,10 +320,21 @@ const config = {
           ],
         },
         {
-          type: 'doc',
-          docId: 'lua/index',
+          type: 'dropdown',
           label: 'API',
           position: 'left',
+          items: [
+            {
+              type: 'doc',
+              docId: 'lua/index',
+              label: 'LUA API',
+            },
+            {
+              type: 'doc',
+              docId: 'trp/index',
+              label: 'TRP API',
+            },
+          ],
         },
         {
           type: 'doc',

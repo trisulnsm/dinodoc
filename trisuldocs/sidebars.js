@@ -30,14 +30,15 @@ const sidebars = {
           "label": "Start Here",
           "link": {
             "type": "doc",
-            "id": "guide/starthere/what_is_trisul/index"
+            "id": "guide/starthere/quickstart"
           },
           "collapsible": true,
           "collapsed": true,
           "items": [
+            "guide/starthere/quickstart",
             {
               "type": "category",
-              "label": "What is Trisul",
+              "label": "How Trisul Works",
               "link": {
                 "type": "doc",
                 "id": "guide/starthere/what_is_trisul/index"
@@ -55,12 +56,11 @@ const sidebars = {
               "label": "Setup Trisul",
               "link": {
                 "type": "doc",
-                "id": "guide/starthere/setuptrisul/getstart"
+                "id": "guide/starthere/setuptrisul/install/requirements"
               },
               "collapsible": true,
               "collapsed": true,
               "items": [
-                "guide/starthere/setuptrisul/getstart",
                 "guide/starthere/setuptrisul/install/requirements",
                 {
                   "type": "category",
