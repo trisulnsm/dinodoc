@@ -24,7 +24,7 @@ import { Icon } from '@iconify/react';
 
 <Icon icon="logos:chrome" height="25" /> [Programming model](/docs/trp/trpprogramodel) 
 
-<Icon icon="logos:chrome" height="25" /> [TrisulRP Ruby Gem RDOCs (External)](../ref/trpproto )
+<Icon icon="logos:chrome" height="25" /> [TrisulRP Ruby Gem RDOCs (External)](https://rubydoc.info/gems/trisulrp/frames)
 
 ## Other links
 
@@ -32,7 +32,7 @@ import { Icon } from '@iconify/react';
 
 <Icon icon="mdi:github" height="25" /> [The trisulrp ruby gem project on Github. Pulls welcome!](https://github.com/trisulnsm/trisulrp)
 
-<Icon icon="logos:chrome" height="25" /> [ The trp.proto file - if you want to write clients in any language supported by protocol buffers](/docs/documentation/ref/trpproto)
+<Icon icon="logos:chrome" height="25" /> [ The trp.proto file - if you want to write clients in any language supported by protocol buffers](/docs/guide/ref/trpproto)
 
 ## GITHUB CODE SAMPLES
 

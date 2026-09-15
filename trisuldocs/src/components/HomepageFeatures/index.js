@@ -6,7 +6,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Start Here',
-    linkto: '/docs/documentation/starthere/what_is_trisul',
+    linkto: '/docs/guide/starthere/what_is_trisul',
     Svg: require('@site/static/img/undraw_onboarding_re_6osc.svg').default,
     description: (
       <>
@@ -17,7 +17,7 @@ const FeatureList = [
   },
   {
     title: 'Admin Guide',
-    linkto: '/docs/documentation/ag',
+    linkto: '/docs/guide/ag',
     Svg: require('@site/static/img/undraw_secure_server_re_8wsq.svg').default,
     description: (
       <>
@@ -28,7 +28,7 @@ const FeatureList = [
   },
   {
     title: 'User Guide',
-    linkto: '/docs/documentation/ug',
+    linkto: '/docs/guide/ug',
     Svg: require('@site/static/img/undraw_react_re_g3ui.svg').default,
     description: (
       <>
@@ -39,7 +39,7 @@ const FeatureList = [
   },
   {
     title: 'Learn Trisul',
-    linkto: '/docs/documentation/learntrisul/terminology',
+    linkto: '/docs/guide/learntrisul/terminology',
     Svg: require('@site/static/img/undraw_book_lover.svg').default,
     description: (
       <>
@@ -50,7 +50,7 @@ const FeatureList = [
   },
   {
     title: 'Reference',
-    linkto: '/docs/documentation/ref',
+    linkto: '/docs/guide/ref',
     Svg: require('@site/static/img/undraw_set_preferences_kwia.svg').default,
     description: (
       <>
@@ -61,7 +61,7 @@ const FeatureList = [
   },
   {
     title: 'Product Guides',
-    linkto: '/docs/Product Guides',
+    linkto: '/docs/prodguide',
     Svg: require('@site/static/img/undraw_instant-analysis_vm8x.svg').default,
     description: (
       <>

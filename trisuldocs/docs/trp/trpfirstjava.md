@@ -4,7 +4,7 @@ How to write a Java TRP client program that :
 \* Sends a HelloRequest to Trisul and prints the HelloResponse
 
 Also see : [Programming model](/docs/trp/trpprogramodel) , [Messages and
-Fields](/docs/documentation/ref/trpproto)
+Fields](/docs/guide/ref/trpproto)
 
 ## Step 1 : Install Protocol Buffers
 

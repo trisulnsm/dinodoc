@@ -9,11 +9,11 @@ TRP is a message based request-response protocol. The protocol is built
 using [Google Protocol Buffers](//code.google.com/p/protobuf) which
 provides a language neutral, backward compatible, and compact format.
 You can write scripts in any language such as Ruby, Python, or Java by
-using the protocol definition file [trp.proto](/docs/documentation/ref/trpproto)
+using the protocol definition file [trp.proto](/docs/guide/ref/trpproto)
 and binding them to a language of your choice.
 
 div(success). All TRP messages are described in the [TRP Messages and
-Fields](/docs/documentation/ref/trpproto) page.
+Fields](/docs/guide/ref/trpproto) page.
 
 ## Request response
 
@@ -27,7 +27,7 @@ clients to access the data collected by Trisul.
 \* TRP is based on [Protocol Buffers](//code.google.com/p/protobuf/) a
 data interchange format introduced by Google.  
 \* The entire protocol is specified in a single file called
-[trp.proto](/docs/documentation/ref/trpproto)  
+[trp.proto](/docs/guide/ref/trpproto)  
 \* Allows clients to be written in **Ruby/Python/Java/C#/C** and any
 language supported by Google Protocol Buffers  
 \* Secure TLS with client authentication and Access Control Lists  

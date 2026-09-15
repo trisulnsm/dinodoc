@@ -5,7 +5,7 @@ Common questions about Trisul scripting
 1 . **Why are so many instances of my LUA script active  ?**
 
 Trisul spins up as many instances of your LUA script as required. However during main packet processing  
-the number of active LUA script instances is determined by the [InflightTokens](/docs/documentation/ref/trisulconfig#tuning) parameter in the config file
+the number of active LUA script instances is determined by the [InflightTokens](/docs/guide/ref/trisulconfig#tuning) parameter in the config file
 
 2 . **So there are 16 types of scripts, what should I use ?**
 
@@ -13,7 +13,7 @@ Use the Trisul [selector cheat sheet](/docs/lua/selector) to pick the script typ
 
 3 . **How to switch to single threaded mode ?**
 
-Trisul uses the InflightTokens parameter in [trisulConfig.xml](/docs/documentation/ref/trisulconfig#tuning) to determine the number of processing threads per stream. Set that to 1 from the default 2.
+Trisul uses the InflightTokens parameter in [trisulConfig.xml](/docs/guide/ref/trisulconfig#tuning) to determine the number of processing threads per stream. Set that to 1 from the default 2.
 
 4 . **Isnt LUA too slow for per-packet processing ?**
 
@@ -25,7 +25,7 @@ You can put all your Lua script types in the same *.lua file as long as they are
 
 6 .**I just want to count TCP Port 3000 Resets? Do I need a new counter group?**
 
-No, you need to use a counter group **ONLY** if you are trying to monitor distinct keys. If you just want to track a single item, just use the preexisting counter group called AGGREGATES [identified by GUID](/docs/documentation/ref/guid) `{393B5EBC-AB41-4387-8F31-8077DB917336}` and use a special key say `RST3000` there.
+No, you need to use a counter group **ONLY** if you are trying to monitor distinct keys. If you just want to track a single item, just use the preexisting counter group called AGGREGATES [identified by GUID](/docs/guide/ref/guid) `{393B5EBC-AB41-4387-8F31-8077DB917336}` and use a special key say `RST3000` there.
 
 7 . **How to write loggers in a multithreaded Lua environment ?**
 

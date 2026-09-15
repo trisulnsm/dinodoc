@@ -41,7 +41,7 @@ By completing this investigation, you should be able to:
 
 Every behavioral investigation begins by understanding what has deviated from normal network activity. Before investigating hosts, interfaces, or applications, establish which metric exhibited unusual behavior, when the deviation began, which monitored object is affected, and whether the anomaly is still occurring.
 
-Open [**Threshold Band Alerts**](/docs/documentation/ug/alerts/tband) to review the detected anomaly.
+Open [**Threshold Band Alerts**](/docs/guide/ug/alerts/tband) to review the detected anomaly.
 
 Use this dashboard to answer questions such as:
 
@@ -121,7 +121,7 @@ Once the contributing network entities have been identified, determine which app
 
 ### Step 4: Analyze Application Activity
 
-Remain within [**Explore Flows**](/docs/documentation/ug/tools/explore_flows) and review the [**Top Applications**](/docs/documentation/ug/tools/explore_flows#activity-details) for the investigation period.
+Remain within [**Explore Flows**](/docs/guide/ug/tools/explore_flows) and review the [**Top Applications**](/docs/guide/ug/tools/explore_flows#activity-details) for the investigation period.
 
 Application visibility helps determine whether the observed deviation resulted from expected operational activity, scheduled maintenance, backups, software deployments, changing business demand, or unexpected application behavior.
 
@@ -153,7 +153,7 @@ After identifying the applications involved, review the aggregate traffic profil
 
 ### Optional Validation: Review Aggregate Traffic
 
-Most behavioral investigations can be completed using Explore Flows. Where additional validation is required, [**Aggregate Flows**](/docs/documentation/ug/tools/aggregate_flows) provides a summarized view of the investigated traffic.
+Most behavioral investigations can be completed using Explore Flows. Where additional validation is required, [**Aggregate Flows**](/docs/guide/ug/tools/aggregate_flows) provides a summarized view of the investigated traffic.
 
 Rather than introducing new evidence, Aggregate Flows groups the flow records by dimensions such as IP address, interface, application, port, router, and other network attributes. This helps confirm whether the observed behavioral deviation is concentrated within a particular network entity or distributed across multiple contributors.
 
@@ -177,7 +177,7 @@ If packet capture is available, continue with Packet Analysis to validate the ob
 
 ### Step 5: Validate with Packet Analysis
 
-Where packet capture is available, continue directly from [**Explore Flows**](/docs/documentation/ug/tools/explore_flows) by downloading the PCAP for the selected flow records.
+Where packet capture is available, continue directly from [**Explore Flows**](/docs/guide/ug/tools/explore_flows) by downloading the PCAP for the selected flow records.
 
 Packet-level analysis helps validate the conclusions drawn from the flow investigation and provides protocol-level evidence explaining the observed behavioral deviation.
 

@@ -41,7 +41,7 @@ By completing this investigation, you should be able to:
 
 Every investigation begins by identifying the critical asset requiring attention. Before investigating traffic, applications, or communication patterns, establish which critical asset has changed, understand its operational role, and determine whether additional critical assets are exhibiting similar behavior.
 
-Open [**Custom Key Monitor**](/docs/documentation/ug/cg/ckey) to review your monitored critical assets.
+Open [**Custom Key Monitor**](/docs/guide/ug/cg/ckey) to review your monitored critical assets.
 
 Use this dashboard to answer questions such as:
 
@@ -94,7 +94,7 @@ Once the nature of the operational change has been established, identify the ent
 
 ## Step 3: Investigate the Observed Change
 
-After identifying what changed on the critical asset, continue the investigation in [**Explore Flows**](/docs/documentation/ug/tools/explore_flows) using the monitored asset and investigation period.
+After identifying what changed on the critical asset, continue the investigation in [**Explore Flows**](/docs/guide/ug/tools/explore_flows) using the monitored asset and investigation period.
 
 This allows you to investigate the detailed network activity associated with the critical asset while remaining focused on the observed operational change. Rather than assuming the cause, investigate the communication activity to identify the network entities contributing to the observed behavior.
 
@@ -122,7 +122,7 @@ Once the contributing network entities have been identified, determine which app
 
 ## Step 4: Analyze Application Activity
 
-Remain within [**Explore Flows**](/docs/documentation/ug/tools/explore_flows) and review the [**Top Applications**](/docs/documentation/ug/tools/explore_flows#activity-details) for the investigation period.
+Remain within [**Explore Flows**](/docs/guide/ug/tools/explore_flows) and review the [**Top Applications**](/docs/guide/ug/tools/explore_flows#activity-details) for the investigation period.
 
 Application visibility helps determine whether the observed change resulted from expected operational activity, software deployments, backup or replication jobs, changing business demand, infrastructure changes, or unexpected application behavior.
 
@@ -154,7 +154,7 @@ After identifying the applications involved, review the aggregate traffic profil
 
 ## Optional Validation: Review Aggregate Traffic
 
-Most Critical Asset investigations can be completed using Explore Flows. Where additional validation is required, [**Aggregate Flows**](/docs/documentation/ug/tools/aggregate_flows) provides a summarized view of the investigated traffic.
+Most Critical Asset investigations can be completed using Explore Flows. Where additional validation is required, [**Aggregate Flows**](/docs/guide/ug/tools/aggregate_flows) provides a summarized view of the investigated traffic.
 
 Rather than introducing new evidence, Aggregate Flows groups the flow records by dimensions such as IP address, interface, application, port, router, and other network attributes. This helps confirm whether the observed operational change is concentrated within the monitored asset or influenced by multiple network entities.
 

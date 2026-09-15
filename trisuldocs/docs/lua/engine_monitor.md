@@ -28,7 +28,7 @@ The Lua table `engine_monitor = {..}` can contain one or more of the following h
 
 ### Threading note
 
-The backend engine is multi-threaded, the number of threads matches the *StatsEngine>Flushers* in [trisulHubConfig.xml](/docs/documentation/ref/trisulhubconfig). You can use `engine.instanceid() == "0"` to run your script on one instance only.
+The backend engine is multi-threaded, the number of threads matches the *StatsEngine>Flushers* in [trisulHubConfig.xml](/docs/guide/ref/trisulhubconfig). You can use `engine.instanceid() == "0"` to run your script on one instance only.
 
 ## Functions Reference
 
@@ -48,7 +48,7 @@ onbeginflush  = function(engine, timestamp ) {
  }### When called
 ```
 
-This is called every 60 seconds by default. This is the size of the streaming analytics snapshot window. See “Tuning>StreamingWindowMSecs in trisulProbeConfig.xml”:/docs/documentation/ref/trisulconfig.html#tuning
+This is called every 60 seconds by default. This is the size of the streaming analytics snapshot window. See “Tuning>StreamingWindowMSecs in trisulProbeConfig.xml”:/docs/guide/ref/trisulconfig.html#tuning
 
 ### Parameters
 

@@ -35,7 +35,7 @@ The table alertgroup has a single section called control that assigns a GUID to 
 
 The control table assigns a unique GUID to the new alert group.
 
-| guid        | string | A [guid](/docs/documentation/ref/guid) that identifies the group. |
+| guid        | string | A [guid](/docs/guide/ref/guid) that identifies the group. |
 | ----------- | ------ | --------------------------------------------------- |
 | name        | string | Name of the alert group. Keep it short < 15 chars   |
 | description | string |                                                     |

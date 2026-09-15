@@ -4,7 +4,7 @@
 
 If you want to accept connections to your server from any IP, add this
 line to the ACLItem in the
-[trisulConfig.xml](/docs/documentation/ref/trisulconfig) file.
+[trisulConfig.xml](/docs/guide/ref/trisulconfig) file.
 
 ## Getting Protocol Buffers error
 

@@ -39,10 +39,10 @@ Internal hosts are shown separately from external hosts. Trisul determines wheth
 
 Before looking at the modules, it is useful to understand the terms used throughout this dashboard:
 
-- **[Home Network](/docs/learntrisul/terminology#home-network)** refers to the network that Trisul is monitoring as your own network.
-- **[Internal Hosts](/docs/learntrisul/terminology#internal-hosts)** are hosts that belong to your home network.
-- **[External Hosts](/docs/learntrisul/terminology#external-hosts)** are hosts outside your home network that communicate with it.
-- **[Inbound, Outbound, and Transit Traffic](/docs/learntrisul/terminology#inbound--outbound--transit-traffic)** describes the direction in which traffic moves in relation to your home network.
+- **[Home Network](/docs/guide/learntrisul/terminology#home-network)** refers to the network that Trisul is monitoring as your own network.
+- **[Internal Hosts](/docs/guide/learntrisul/terminology#internal-hosts)** are hosts that belong to your home network.
+- **[External Hosts](/docs/guide/learntrisul/terminology#external-hosts)** are hosts outside your home network that communicate with it.
+- **[Inbound, Outbound, and Transit Traffic](/docs/guide/learntrisul/terminology#inbound--outbound--transit-traffic)** describes the direction in which traffic moves in relation to your home network.
 
 :::
 
@@ -81,7 +81,7 @@ The Hosts dashboard consists of the following modules
 | Which external system does my network connect to most frequently?     | **Latest Top External Hosts - Connections** |
 
 
-:memo: See [Counter Groups reference](/docs/counter-groups/hosts) for more details about these and other metrics
+:memo: See [Counter Groups reference](/docs/guide/counter-groups/hosts) for more details about these and other metrics
 
 
 
@@ -105,15 +105,15 @@ This makes Current Apps useful for quickly understanding how network traffic is 
 
 Before looking at the modules, it is useful to understand the terms used throughout this dashboard:
 
-- **[Application](/docs/learntrisul/terminology#application)**
+- **[Application](/docs/guide/learntrisul/terminology#application)**
 
-- **[Home Network](/docs/learntrisul/terminology#home-network)**
+- **[Home Network](/docs/guide/learntrisul/terminology#home-network)**
 
-- **[Internal Hosts](/docs/learntrisul/terminology#internal-hosts)**
+- **[Internal Hosts](/docs/guide/learntrisul/terminology#internal-hosts)**
 
-- **[External Hosts](/docs/learntrisul/terminology#external-hosts)**
+- **[External Hosts](/docs/guide/learntrisul/terminology#external-hosts)**
 
-- **[Inbound, Outbound, and Transit Traffic](/docs/learntrisul/terminology#inbound--outbound--transit-traffic)**
+- **[Inbound, Outbound, and Transit Traffic](/docs/guide/learntrisul/terminology#inbound--outbound--transit-traffic)**
 
 :::
 
@@ -264,7 +264,7 @@ This makes Overview useful as a **starting point rather than a detailed investig
 ## Security
 
 A view of network activity from a security viewpoint. This dashboard is
-most useful when you have connected Trisul to an [IDS feed](/docs/howto/setup_ids_alerts).
+most useful when you have connected Trisul to an [IDS feed](/docs/guide/howto/setup_ids_alerts).
 
 | Module                             | Description                                        |
 | ---------------------------------- | -------------------------------------------------- |
@@ -358,7 +358,7 @@ The goal is not simply to find whichever flow appears at the top of a list. The 
 
 ## Real Time Alerts
 
-A real time visualization of IDS alert activity. Note this is true realtime using WebSockets PUSH. The dashboard is described in detail in [IDS Alert Stabber](/docs/ug/alerts/ids_stabber). The **Real Time Traffic** dashboard provides a live view of network activity on the selected Probe.
+A real time visualization of IDS alert activity. Note this is true realtime using WebSockets PUSH. The dashboard is described in detail in [IDS Alert Stabber](/docs/guide/ug/alerts/ids_stabber). The **Real Time Traffic** dashboard provides a live view of network activity on the selected Probe.
 
 Unlike dashboards that help you examine traffic over longer time periods, this dashboard is useful when you want to see **what is happening on the network right now**. It shows the current bandwidth rate and the internal hosts and applications contributing to that activity.
 
@@ -429,12 +429,12 @@ to:
 ### Real Time Stabbers
 
 You can watch any metric , Top-K, or Flows in real time using the [Real
-Time Stabbers (read more)](/docs/ug/cg/stabber)
+Time Stabbers (read more)](/docs/guide/ug/cg/stabber)
 
 ## Active Keys Monitor
 
 
-The **Active Keys Monitor** shows how many keys Trisul is currently tracking for each [**Counter Group**](/docs/documentation/learntrisul/terminology#counter-group).
+The **Active Keys Monitor** shows how many keys Trisul is currently tracking for each [**Counter Group**](/docs/guide/learntrisul/terminology#counter-group).
 
 This helps you monitor changes in the **number and variety of items Trisul is seeing**. An unusual increase in active or new keys can indicate that Trisul is seeing a much larger variety of network activity than usual.
 

@@ -8,12 +8,12 @@ The requirement is:
 
 > **Show me hosts associated with HTTP and HTTPS traffic.**
 
-A [**Filtered Counter Group**](/docs/documentation/ag/context/filtered_countergroups) can be used to create this custom view.
+A [**Filtered Counter Group**](/docs/guide/ag/context/filtered_countergroups) can be used to create this custom view.
 
 In this example, we will use:
 
-- **Parent Group:** [Hosts](/docs/documentation/counter-groups/hosts)
-- **Filter Group:** [Apps](/docs/documentation/counter-groups/apps)
+- **Parent Group:** [Hosts](/docs/guide/counter-groups/hosts)
+- **Filter Group:** [Apps](/docs/guide/counter-groups/apps)
 - **Key List:** `http, https`
 
 This configuration tells Trisul:

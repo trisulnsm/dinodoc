@@ -32,7 +32,7 @@ By completing this investigation, you should be able to: - Identify the systems 
 
 Encrypted traffic investigations begin by identifying TLS sessions that deviate from expected network behaviour. Rather than focusing on the hosts generating the traffic, the investigation starts by examining the metadata exposed during the TLS handshake.
 
-Open [**TLS Metadata**](/docs/documentation/ug/cg/ssl/).
+Open [**TLS Metadata**](/docs/guide/ug/cg/ssl/).
 
 Review the available TLS sessions to identify communications that warrant further investigation.
 
@@ -64,7 +64,7 @@ Once a suspicious encrypted session has been identified, determine which interna
 
 After identifying a suspicious TLS session, determine which hosts established the encrypted communication and where the traffic is being directed.
 
-From [**TLS Metadata**](/docs/documentation/ug/cg/ssl/), drill down into the associated communication to identify the internal source hosts.
+From [**TLS Metadata**](/docs/guide/ug/cg/ssl/), drill down into the associated communication to identify the internal source hosts.
 
 Review the communication details to determine:
 
@@ -94,7 +94,7 @@ Once the communicating hosts have been identified, examine the encrypted communi
 
 After identifying the communicating hosts, review the network conversations and flow details to understand how the encrypted session behaves.
 
-From the selected host, click the **Actions** menu and choose [**Host Conversations**](/docs/documentation/ug/tools/explore_flows#top-conversations).
+From the selected host, click the **Actions** menu and choose [**Host Conversations**](/docs/guide/ug/tools/explore_flows#top-conversations).
 
 Review the conversations to determine:
 
@@ -103,7 +103,7 @@ Review the conversations to determine:
 - Whether multiple encrypted sessions are established with the same destination.
 - Whether communication patterns appear consistent with the host's expected role.
 
-If additional detail is required, open [**Flow Details**](/docs/documentation/ug/tools/explore_flows#top-matching-flows) for the selected communication.
+If additional detail is required, open [**Flow Details**](/docs/guide/ug/tools/explore_flows#top-matching-flows) for the selected communication.
 
 The **Flow Details** view provides detailed information including timestamps, protocols, applications, ports, session duration, connection frequency, and the amount of data transferred.
 
@@ -132,7 +132,7 @@ After reviewing the encrypted communication, validate the findings using additio
 
 TLS metadata provides valuable visibility into encrypted communications, but it should be correlated with additional evidence before determining whether the activity represents legitimate business traffic or a potential security threat.
 
-Continue the investigation using [**DNS Analysis**](/docs/documentation/ug/resources/dns), [**Packet Analysis**](/docs/documentation/ug/resources/dns#option-button), and **Historical Investigation (Retro)**. Packet captures can validate TLS negotiation, certificates, and protocol behaviour even when the payload remains encrypted.
+Continue the investigation using [**DNS Analysis**](/docs/guide/ug/resources/dns), [**Packet Analysis**](/docs/guide/ug/resources/dns#option-button), and **Historical Investigation (Retro)**. Packet captures can validate TLS negotiation, certificates, and protocol behaviour even when the payload remains encrypted.
 
 Use this investigation to answer questions such as:
 

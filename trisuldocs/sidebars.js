@@ -19,7 +19,7 @@ const sidebars = {
       "label": "Documentation",
       "link": {
         "type": "doc",
-        "id": "documentation/index"
+        "id": "guide/index"
       },
       "className": "root-section-title",
       "collapsible": false,
@@ -30,7 +30,7 @@ const sidebars = {
           "label": "Start Here",
           "link": {
             "type": "doc",
-            "id": "documentation/starthere/what_is_trisul/index"
+            "id": "guide/starthere/what_is_trisul/index"
           },
           "collapsible": true,
           "collapsed": true,
@@ -40,14 +40,14 @@ const sidebars = {
               "label": "What is Trisul",
               "link": {
                 "type": "doc",
-                "id": "documentation/starthere/what_is_trisul/index"
+                "id": "guide/starthere/what_is_trisul/index"
               },
               "collapsible": true,
               "collapsed": false,
               "items": [
-                "documentation/starthere/what_is_trisul/architecture",
-                "documentation/starthere/what_is_trisul/dataflow",
-                "documentation/starthere/what_is_trisul/productmodes"
+                "guide/starthere/what_is_trisul/architecture",
+                "guide/starthere/what_is_trisul/dataflow",
+                "guide/starthere/what_is_trisul/productmodes"
               ]
             },
             {
@@ -55,19 +55,19 @@ const sidebars = {
               "label": "Setup Trisul",
               "link": {
                 "type": "doc",
-                "id": "documentation/starthere/setuptrisul/getstart"
+                "id": "guide/starthere/setuptrisul/getstart"
               },
               "collapsible": true,
               "collapsed": true,
               "items": [
-                "documentation/starthere/setuptrisul/getstart",
-                "documentation/starthere/setuptrisul/install/requirements",
+                "guide/starthere/setuptrisul/getstart",
+                "guide/starthere/setuptrisul/install/requirements",
                 {
                   "type": "category",
                   "label": "Installation",
                   "link": {
                     "type": "doc",
-                    "id": "documentation/starthere/setuptrisul/install/index"
+                    "id": "guide/starthere/setuptrisul/install/index"
                   },
                   "items": [
                     {
@@ -75,20 +75,20 @@ const sidebars = {
                       "label": "Packages",
                       "link": {
                         "type": "doc",
-                        "id": "documentation/starthere/setuptrisul/install/packages"
+                        "id": "guide/starthere/setuptrisul/install/packages"
                       },
                       "items": [
-                        "documentation/starthere/setuptrisul/install/badfellas",
-                        "documentation/starthere/setuptrisul/install/geoasn"
+                        "guide/starthere/setuptrisul/install/badfellas",
+                        "guide/starthere/setuptrisul/install/geoasn"
                       ]
                     },
-                    "documentation/starthere/setuptrisul/install/pkgverify",
-                    "documentation/starthere/setuptrisul/install/doinstall",
-                    "documentation/starthere/setuptrisul/install/selectmode",
-                    "documentation/starthere/setuptrisul/install/trisulaicli",
-                    "documentation/starthere/setuptrisul/install/doupgrade",
-                    "documentation/starthere/setuptrisul/install/douninstall",
-                    "documentation/starthere/setuptrisul/install/openports"
+                    "guide/starthere/setuptrisul/install/pkgverify",
+                    "guide/starthere/setuptrisul/install/doinstall",
+                    "guide/starthere/setuptrisul/install/selectmode",
+                    "guide/starthere/setuptrisul/install/trisulaicli",
+                    "guide/starthere/setuptrisul/install/doupgrade",
+                    "guide/starthere/setuptrisul/install/douninstall",
+                    "guide/starthere/setuptrisul/install/openports"
                   ]
                 },
                 {
@@ -96,11 +96,11 @@ const sidebars = {
                   "label": "Licensing",
                   "link": {
                     "type": "doc",
-                    "id": "documentation/starthere/setuptrisul/license/index"
+                    "id": "guide/starthere/setuptrisul/license/index"
                   },
                   "items": [
-                    "documentation/starthere/setuptrisul/license/intro",
-                    "documentation/starthere/setuptrisul/license/install"
+                    "guide/starthere/setuptrisul/license/intro",
+                    "guide/starthere/setuptrisul/license/install"
                   ]
                 },
                 {
@@ -108,11 +108,11 @@ const sidebars = {
                   "label": "Configure the Network",
                   "link": {
                     "type": "doc",
-                    "id": "documentation/starthere/setuptrisul/network/index"
+                    "id": "guide/starthere/setuptrisul/network/index"
                   },
                   "items": [
-                    "documentation/starthere/setuptrisul/network/input_packets",
-                    "documentation/starthere/setuptrisul/network/input_netflow"
+                    "guide/starthere/setuptrisul/network/input_packets",
+                    "guide/starthere/setuptrisul/network/input_netflow"
                   ]
                 },
                 {
@@ -120,10 +120,10 @@ const sidebars = {
                   "label": "First Login",
                   "link": {
                     "type": "doc",
-                    "id": "documentation/starthere/setuptrisul/login"
+                    "id": "guide/starthere/setuptrisul/login"
                   },
                   "items": [
-                    "documentation/starthere/setuptrisul/login"
+                    "guide/starthere/setuptrisul/login"
                   ]
                 }
               ]
@@ -136,7 +136,7 @@ const sidebars = {
           "label": "Admin Guide",
           "link": {
             "type": "doc",
-            "id": "documentation/ag/index"
+            "id": "guide/ag/index"
           },
           "collapsible": true,
           "collapsed": true,
@@ -146,33 +146,33 @@ const sidebars = {
               "label": "Admin Tasks",
               "link": {
                 "type": "doc",
-                "id": "documentation/ag/basictasks/index"
+                "id": "guide/ag/admintasks/index"
               },
               "items": [
-                "documentation/ag/admintasks/startstop",
-                "documentation/ag/basictasks/logfiles",
+                "guide/ag/admintasks/startstop",
+                "guide/ag/basictasks/logfiles",
                 {
                   "type": "category",
                   "label": "Managing Storage",
                   "link": {
                     "type": "doc",
-                    "id": "documentation/ag/admintasks/storage"
+                    "id": "guide/ag/admintasks/storage"
                   },
                   "items": [
-                    "documentation/ag/basictasks/configure_storage",
-                    "documentation/ag/basictasks/reloc",
-                    "documentation/ag/basictasks/cleanenv",
-                    "documentation/ag/admintasks/dbstatus",
-                    "documentation/ag/admintasks/system_health",
-                    "documentation/ag/admintasks/storage_status"
+                    "guide/ag/basictasks/configure_storage",
+                    "guide/ag/basictasks/reloc",
+                    "guide/ag/basictasks/cleanenv",
+                    "guide/ag/admintasks/dbstatus",
+                    "guide/ag/admintasks/system_health",
+                    "guide/ag/admintasks/storage_status"
                   ]
                 },
-                "documentation/ag/admintasks/manage_profiles",
-                "documentation/ag/admintasks/probe_health",
-                "documentation/ag/admintasks/netflow_templatedb",
-                "documentation/ag/admintasks/auditlog",
-                "documentation/ag/admintasks/drdc_status",
-                "documentation/ag/admintasks/userresources"
+                "guide/ag/admintasks/manage_profiles",
+                "guide/ag/admintasks/probe_health",
+                "guide/ag/admintasks/netflow_templatedb",
+                "guide/ag/admintasks/auditlog",
+                "guide/ag/admintasks/drdc_status",
+                "guide/ag/admintasks/userresources"
               ]
             },
             {
@@ -180,10 +180,10 @@ const sidebars = {
               "label": "Using the Admin UI",
               "link": {
                 "type": "doc",
-                "id": "documentation/ag/basictasks/index"
+                "id": "guide/ag/basictasks/index"
               },
               "items": [
-                "documentation/ag/ui/adminlayout"
+                "guide/ag/ui/adminlayout"
               ]
             },
             {
@@ -191,26 +191,26 @@ const sidebars = {
               "label": "Managing Trisul",
               "link": {
                 "type": "doc",
-                "id": "documentation/ag/webadmin/index"
+                "id": "guide/ag/webadmin/index"
               },
               "items": [
-                "documentation/ag/webadmin/admin_menus",
-                "documentation/ag/webadmin/manageusers",
-                "documentation/ag/webadmin/ldap_login",
-                "documentation/ag/webadmin/userroles",
-                "documentation/ag/webadmin/authlog",
-                "documentation/ag/webadmin/web_options",
-                "documentation/ag/webadmin/emailsettings",
-                "documentation/ag/webadmin/modules",
-                "documentation/ag/webadmin/dashboards",
-                "documentation/ag/webadmin/menus",
-                "documentation/ag/webadmin/startorstop_tasks",
-                "documentation/ag/webadmin/logs",
-                "documentation/ag/webadmin/apps",
-                "documentation/ag/webadmin/plugin_data_update",
-                "documentation/ag/webadmin/bgjobs",
-                "documentation/ag/webadmin/ipam",
-                "documentation/ag/webadmin/smsconfig"
+                "guide/ag/webadmin/admin_menus",
+                "guide/ag/webadmin/manageusers",
+                "guide/ag/webadmin/ldap_login",
+                "guide/ag/webadmin/userroles",
+                "guide/ag/webadmin/authlog",
+                "guide/ag/webadmin/web_options",
+                "guide/ag/webadmin/emailsettings",
+                "guide/ag/webadmin/modules",
+                "guide/ag/webadmin/dashboards",
+                "guide/ag/webadmin/menus",
+                "guide/ag/webadmin/startorstop_tasks",
+                "guide/ag/webadmin/logs",
+                "guide/ag/webadmin/apps",
+                "guide/ag/webadmin/plugin_data_update",
+                "guide/ag/webadmin/bgjobs",
+                "guide/ag/webadmin/ipam",
+                "guide/ag/webadmin/smsconfig"
               ]
             },
             {
@@ -218,37 +218,37 @@ const sidebars = {
               "label": "Configuring Trisul",
               "link": {
                 "type": "doc",
-                "id": "documentation/ag/context/index"
+                "id": "guide/ag/context/index"
               },
               "items": [
-                "documentation/ag/context/profiles",
-                "documentation/ag/context/home_networks",
-                "documentation/ag/context/access_points",
-                "documentation/ag/context/crontasks",
-                "documentation/ag/context/customize",
-                "documentation/ag/context/backup",
-                "documentation/ag/context/disk_usage_alerts",
-                "documentation/ag/context/advanced",
+                "guide/ag/context/profiles",
+                "guide/ag/context/home_networks",
+                "guide/ag/context/access_points",
+                "guide/ag/context/crontasks",
+                "guide/ag/context/customize",
+                "guide/ag/context/backup",
+                "guide/ag/context/disk_usage_alerts",
+                "guide/ag/context/advanced",
                 {
                   "type": "category",
                   "label": "Custom Countergroups",
                   "link": {
                     "type": "doc",
-                    "id": "documentation/ag/context/custom_countergroup"
+                    "id": "guide/ag/context/custom_countergroup"
                   },
                   "items": [
-                    "documentation/ag/context/filtered_countergroups",
-                    "documentation/ag/context/keyset_countergroups",
-                    "documentation/ag/context/statbased_countergroups",
-                    "documentation/ag/context/rulebased_countergroups",
-                    "documentation/ag/context/crosskey_countergroups",
-                    "documentation/ag/context/cardinality_countergroups"
+                    "guide/ag/context/filtered_countergroups",
+                    "guide/ag/context/keyset_countergroups",
+                    "guide/ag/context/statbased_countergroups",
+                    "guide/ag/context/rulebased_countergroups",
+                    "guide/ag/context/crosskey_countergroups",
+                    "guide/ag/context/cardinality_countergroups"
                   ]
                 },
-                "documentation/ag/context/countergroup_settings",
-                "documentation/ag/context/managekeys",
-                "documentation/ag/context/profilemenu",
-                "documentation/ag/context/snmp_agent"
+                "guide/ag/context/countergroup_settings",
+                "guide/ag/context/managekeys",
+                "guide/ag/context/profilemenu",
+                "guide/ag/context/snmp_agent"
               ]
             },
             {
@@ -256,12 +256,12 @@ const sidebars = {
               "label": "High Availability",
               "link": {
                 "type": "doc",
-                "id": "documentation/ag/ha/index"
+                "id": "guide/ag/ha/index"
               },
               "items": [
                 {
                   "type": "autogenerated",
-                  "dirName": "documentation/ag/ha"
+                  "dirName": "guide/ag/ha"
                 }
               ]
             },
@@ -270,12 +270,12 @@ const sidebars = {
               "label": "Manage Contexts",
               "link": {
                 "type": "doc",
-                "id": "documentation/ag/manage_contexts/listcontexts"
+                "id": "guide/ag/manage_contexts/listcontexts"
               },
               "items": [
                 {
                   "type": "autogenerated",
-                  "dirName": "documentation/ag/manage_contexts"
+                  "dirName": "guide/ag/manage_contexts"
                 }
               ]
             }
@@ -287,7 +287,7 @@ const sidebars = {
           "label": "User Guide",
           "link": {
             "type": "doc",
-            "id": "documentation/ug/index"
+            "id": "guide/ug/index"
           },
           "collapsible": true,
           "collapsed": true,
@@ -297,18 +297,18 @@ const sidebars = {
               "label": "Navigating the UI",
               "link": {
                 "type": "doc",
-                "id": "documentation/ug/ui/index"
+                "id": "guide/ug/ui/index"
               },
               "items": [
-                "documentation/ug/ui/userlayout",
-                "documentation/ug/ui/dashmod_intro",
-                "documentation/ug/ui/create_dashboards",
-                "documentation/ug/ui/modules",
-                "documentation/ug/ui/charts",
-                "documentation/ug/ui/elements",
-                "documentation/ug/ui/dashboards",
-                "documentation/ug/ui/module_templates",
-                "documentation/ug/ui/key_dashboard"
+                "guide/ug/ui/userlayout",
+                "guide/ug/ui/dashmod_intro",
+                "guide/ug/ui/create_dashboards",
+                "guide/ug/ui/modules",
+                "guide/ug/ui/charts",
+                "guide/ug/ui/elements",
+                "guide/ug/ui/dashboards",
+                "guide/ug/ui/module_templates",
+                "guide/ug/ui/key_dashboard"
               ]
             },
             {
@@ -316,21 +316,21 @@ const sidebars = {
               "label": "Traffic Monitoring",
               "link": {
                 "type": "doc",
-                "id": "documentation/ug/cg/index"
+                "id": "guide/ug/cg/index"
               },
               "items": [
-                "documentation/ug/cg/intro",
-                "documentation/ug/cg/settings",
-                "documentation/ug/cg/resolve",
-                "documentation/ug/cg/ckey",
-                "documentation/ug/cg/retro",
-                "documentation/ug/cg/retrotools",
-                "documentation/ug/cg/retrofaq",
-                "documentation/ug/cg/stabber",
-                "documentation/ug/cg/ssl",
-                "documentation/ug/cg/deepmonitoring",
-                "documentation/ug/cg/tasks",
-                "documentation/ug/cg/custom"
+                "guide/ug/cg/intro",
+                "guide/ug/cg/settings",
+                "guide/ug/cg/resolve",
+                "guide/ug/cg/ckey",
+                "guide/ug/cg/retro",
+                "guide/ug/cg/retrotools",
+                "guide/ug/cg/retrofaq",
+                "guide/ug/cg/stabber",
+                "guide/ug/cg/ssl",
+                "guide/ug/cg/deepmonitoring",
+                "guide/ug/cg/tasks",
+                "guide/ug/cg/custom"
               ]
             },
             {
@@ -338,16 +338,16 @@ const sidebars = {
               "label": "Flow Analysis",
               "link": {
                 "type": "doc",
-                "id": "documentation/ug/flow/index"
+                "id": "guide/ug/flow/index"
               },
               "items": [
-                "documentation/ug/flow/intro",
-                "documentation/ug/flow/tagger",
-                "documentation/ug/flow/stabber",
-                "documentation/ug/flow/tracker",
-                "documentation/ug/flow/tuning",
-                "documentation/ug/flow/deduplication",
-                "documentation/ug/flow/tasks"
+                "guide/ug/flow/intro",
+                "guide/ug/flow/tagger",
+                "guide/ug/flow/stabber",
+                "guide/ug/flow/tracker",
+                "guide/ug/flow/tuning",
+                "guide/ug/flow/deduplication",
+                "guide/ug/flow/tasks"
               ]
             },
             {
@@ -355,22 +355,22 @@ const sidebars = {
               "label": "NBAD",
               "link": {
                 "type": "doc",
-                "id": "documentation/ug/nbad/trisulnbad"
+                "id": "guide/ug/nbad/trisulnbad"
               },
               "items": [
-                "documentation/ug/nbad/enable-nbad",
-                "documentation/ug/nbad/nfgen",
-                "documentation/ug/nbad/flowmap",
-                "documentation/ug/nbad/httptraffic",
-                "documentation/ug/nbad/layer7metrics",
-                "documentation/ug/nbad/tunnels",
-                "documentation/ug/nbad/ipv4ipv6",
-                "documentation/ug/nbad/p2p",
-                "documentation/ug/nbad/ja3",
-                "documentation/ug/nbad/ja4",
-                "documentation/ug/nbad/tcpanalyzer",
-                "documentation/ug/nbad/commontasks",
-                "documentation/ug/nbad/falsepos"
+                "guide/ug/nbad/enable-nbad",
+                "guide/ug/nbad/nfgen",
+                "guide/ug/nbad/flowmap",
+                "guide/ug/nbad/httptraffic",
+                "guide/ug/nbad/layer7metrics",
+                "guide/ug/nbad/tunnels",
+                "guide/ug/nbad/ipv4ipv6",
+                "guide/ug/nbad/p2p",
+                "guide/ug/nbad/ja3",
+                "guide/ug/nbad/ja4",
+                "guide/ug/nbad/tcpanalyzer",
+                "guide/ug/nbad/commontasks",
+                "guide/ug/nbad/falsepos"
               ]
             },
             {
@@ -378,14 +378,14 @@ const sidebars = {
               "label": "Packet Captures",
               "link": {
                 "type": "doc",
-                "id": "documentation/ug/caps/index"
+                "id": "guide/ug/caps/index"
               },
               "items": [
-                "documentation/ug/caps/fullcontent",
-                "documentation/ug/caps/packetstorage",
-                "documentation/ug/caps/pcap_import",
-                "documentation/ug/caps/tasks",
-                "documentation/ug/caps/methods"
+                "guide/ug/caps/fullcontent",
+                "guide/ug/caps/packetstorage",
+                "guide/ug/caps/pcap_import",
+                "guide/ug/caps/tasks",
+                "guide/ug/caps/methods"
               ]
             },
             {
@@ -393,23 +393,23 @@ const sidebars = {
               "label": "Alerts",
               "link": {
                 "type": "doc",
-                "id": "documentation/ug/alerts/index"
+                "id": "guide/ug/alerts/index"
               },
               "items": [
-                "documentation/ug/alerts/manage",
-                "documentation/ug/alerts/tca",
-                "documentation/ug/alerts/ft",
-                "documentation/ug/alerts/ids_stabber",
-                "documentation/ug/alerts/mw",
-                "documentation/ug/alerts/monthly_summary",
-                "documentation/ug/alerts/sms_settings",
-                "documentation/ug/alerts/tband",
-                "documentation/ug/alerts/viewall",
-                "documentation/ug/alerts/ddos",
-                "documentation/ug/alerts/msteams",
-                "documentation/ug/alerts/email_wizard",
-                "documentation/ug/alerts/mitre",
-                "documentation/ug/alerts/mitretimeline"
+                "guide/ug/alerts/manage",
+                "guide/ug/alerts/tca",
+                "guide/ug/alerts/ft",
+                "guide/ug/alerts/ids_stabber",
+                "guide/ug/alerts/mw",
+                "guide/ug/alerts/monthly_summary",
+                "guide/ug/alerts/sms_settings",
+                "guide/ug/alerts/tband",
+                "guide/ug/alerts/viewall",
+                "guide/ug/alerts/ddos",
+                "guide/ug/alerts/msteams",
+                "guide/ug/alerts/email_wizard",
+                "guide/ug/alerts/mitre",
+                "guide/ug/alerts/mitretimeline"
               ]
             },
             {
@@ -417,16 +417,16 @@ const sidebars = {
               "label": "Resources",
               "link": {
                 "type": "doc",
-                "id": "documentation/ug/resources/index"
+                "id": "guide/ug/resources/index"
               },
               "items": [
-                "documentation/ug/resources/oveview",
-                "documentation/ug/resources/dns",
-                "documentation/ug/resources/url",
-                "documentation/ug/resources/sslcerts",
-                "documentation/ug/resources/fts",
-                "documentation/ug/resources/ftshttp",
-                "documentation/ug/resources/ftsssl"
+                "guide/ug/resources/oveview",
+                "guide/ug/resources/dns",
+                "guide/ug/resources/url",
+                "guide/ug/resources/sslcerts",
+                "guide/ug/resources/fts",
+                "guide/ug/resources/ftshttp",
+                "guide/ug/resources/ftsssl"
               ]
             },
             {
@@ -434,14 +434,14 @@ const sidebars = {
               "label": "Reports",
               "link": {
                 "type": "doc",
-                "id": "documentation/ug/reports/index"
+                "id": "guide/ug/reports/index"
               },
               "items": [
-                "documentation/ug/reports/available_reports",
-                "documentation/ug/reports/readymade",
-                "documentation/ug/reports/flexible_reports",
-                "documentation/ug/reports/emailsettings",
-                "documentation/ug/reports/schedreports"
+                "guide/ug/reports/available_reports",
+                "guide/ug/reports/readymade",
+                "guide/ug/reports/flexible_reports",
+                "guide/ug/reports/emailsettings",
+                "guide/ug/reports/schedreports"
               ]
             },
             {
@@ -449,19 +449,19 @@ const sidebars = {
               "label": "NetFlow Monitoring",
               "link": {
                 "type": "doc",
-                "id": "documentation/ug/netflow/index"
+                "id": "guide/ug/netflow/index"
               },
               "items": [
-                "documentation/ug/netflow/netflow_setup",
-                "documentation/ug/netflow/routers_and_interfaces",
-                "documentation/ug/netflow/snmp",
-                "documentation/ug/netflow/interface_tracker",
-                "documentation/ug/netflow/pcap_and_netflow_setup",
-                "documentation/ug/netflow/netflow_wizard",
-                "documentation/ug/netflow/drilldown",
-                "documentation/ug/netflow/l2qos",
-                "documentation/ug/netflow/netflow_vs_snmp",
-                "documentation/ug/netflow/sources"
+                "guide/ug/netflow/netflow_setup",
+                "guide/ug/netflow/routers_and_interfaces",
+                "guide/ug/netflow/snmp",
+                "guide/ug/netflow/interface_tracker",
+                "guide/ug/netflow/pcap_and_netflow_setup",
+                "guide/ug/netflow/netflow_wizard",
+                "guide/ug/netflow/drilldown",
+                "guide/ug/netflow/l2qos",
+                "guide/ug/netflow/netflow_vs_snmp",
+                "guide/ug/netflow/sources"
               ]
             },
             {
@@ -469,17 +469,17 @@ const sidebars = {
               "label": "Tools",
               "link": {
                 "type": "doc",
-                "id": "documentation/ug/tools/index"
+                "id": "guide/ug/tools/index"
               },
               "items": [
-                "documentation/ug/tools/explore_flows",
-                "documentation/ug/tools/aggregate_flows",
-                "documentation/ug/tools/analyze_item",
-                "documentation/ug/tools/daily_usage",
-                "documentation/ug/tools/payload_search",
-                "documentation/ug/tools/keyspace",
-                "documentation/ug/tools/rule_builder",
-                "documentation/ug/tools/trisul_bucketizer"
+                "guide/ug/tools/explore_flows",
+                "guide/ug/tools/aggregate_flows",
+                "guide/ug/tools/analyze_item",
+                "guide/ug/tools/daily_usage",
+                "guide/ug/tools/payload_search",
+                "guide/ug/tools/keyspace",
+                "guide/ug/tools/rule_builder",
+                "guide/ug/tools/trisul_bucketizer"
               ]
             },
             {
@@ -487,12 +487,12 @@ const sidebars = {
               "label": "Graph Analytics",
               "link": {
                 "type": "doc",
-                "id": "documentation/ug/edges/index"
+                "id": "guide/ug/edges/index"
               },
               "items": [
-                "documentation/ug/edges/using",
-                "documentation/ug/edges/multicast",
-                "documentation/ug/edges/sankey"
+                "guide/ug/edges/using",
+                "guide/ug/edges/multicast",
+                "guide/ug/edges/sankey"
               ]
             },
             {
@@ -500,12 +500,12 @@ const sidebars = {
               "label": "REST API",
               "link": {
                 "type": "doc",
-                "id": "documentation/ug/restapi/index"
+                "id": "guide/ug/restapi/index"
               },
               "items": [
-                "documentation/ug/restapi/countergrouptopper_api",
-                "documentation/ug/restapi/countergroupinfo_api",
-                "documentation/ug/restapi/timeslices_api"
+                "guide/ug/restapi/countergrouptopper_api",
+                "guide/ug/restapi/countergroupinfo_api",
+                "guide/ug/restapi/timeslices_api"
               ]
             },
             {
@@ -513,12 +513,12 @@ const sidebars = {
               "label": "HowTos",
               "link": {
                 "type": "doc",
-                "id": "documentation/howto/index"
+                "id": "guide/howto/index"
               },
               "items": [
                 {
                   "type": "autogenerated",
-                  "dirName": "documentation/howto"
+                  "dirName": "guide/howto"
                 }
               ]
             }
@@ -530,22 +530,22 @@ const sidebars = {
           "label": "Learn Trisul",
           "link": {
             "type": "doc",
-            "id": "documentation/learntrisul/terminology"
+            "id": "guide/learntrisul/terminology"
           },
           "collapsible": true,
           "collapsed": true,
           "items": [
-            "documentation/learntrisul/terminology",
-            "documentation/learntrisul/homenetwork_concepts",
+            "guide/learntrisul/terminology",
+            "guide/learntrisul/homenetwork_concepts",
             {
               "type": "category",
               "label": "Flow Concepts",
               "link": {
                 "type": "doc",
-                "id": "documentation/learntrisul/flow_concepts/index"
+                "id": "guide/learntrisul/flow_concepts/index"
               },
               "items": [
-                "documentation/learntrisul/flow_concepts/deduplication"
+                "guide/learntrisul/flow_concepts/deduplication"
               ]
             },
             {
@@ -553,12 +553,12 @@ const sidebars = {
               "label": "Trisul Domain Concepts",
               "link": {
                 "type": "doc",
-                "id": "documentation/learntrisul/concepts/index"
+                "id": "guide/learntrisul/concepts/index"
               },
               "items": [
                 {
                   "type": "autogenerated",
-                  "dirName": "documentation/learntrisul/concepts"
+                  "dirName": "guide/learntrisul/concepts"
                 }
               ]
             }
@@ -570,7 +570,7 @@ const sidebars = {
           "label": "Reference",
           "link": {
             "type": "doc",
-            "id": "documentation/ref/index"
+            "id": "guide/ref/index"
           },
           "collapsible": true,
           "collapsed": true,
@@ -580,44 +580,44 @@ const sidebars = {
               "label": "Configuration Files Reference",
               "link": {
                 "type": "doc",
-                "id": "documentation/ref/index"
+                "id": "guide/ref/index"
               },
               "className": "root-section-title",
               "collapsible": false,
               "collapsed": false,
               "items": [
-                "documentation/ref/guid",
-                "documentation/ref/meters",
-                "documentation/ref/netflow-config",
+                "guide/ref/guid",
+                "guide/ref/meters",
+                "guide/ref/netflow-config",
                 {
                   "type": "category",
                   "label": "Plugin Configuration",
                   "link": {
                     "type": "doc",
-                    "id": "documentation/ref/plugin_configuration"
+                    "id": "guide/ref/plugin_configuration"
                   },
                   "items": [
-                    "documentation/ref/plugin-config/badfellas",
-                    "documentation/ref/plugin-config/geoasn",
-                    "documentation/ref/plugin-config/app_ports",
-                    "documentation/ref/plugin-config/basedomain",
-                    "documentation/ref/plugin-config/dns",
-                    "documentation/ref/plugin-config/hosts",
-                    "documentation/ref/plugin-config/http_hosts",
-                    "documentation/ref/plugin-config/iptunnels",
-                    "documentation/ref/plugin-config/mac",
-                    "documentation/ref/plugin-config/tcp_based_metering",
-                    "documentation/ref/plugin-config/tcpflow",
-                    "documentation/ref/plugin-config/udp_protocol_disector"
+                    "guide/ref/plugin-config/badfellas",
+                    "guide/ref/plugin-config/geoasn",
+                    "guide/ref/plugin-config/app_ports",
+                    "guide/ref/plugin-config/basedomain",
+                    "guide/ref/plugin-config/dns",
+                    "guide/ref/plugin-config/hosts",
+                    "guide/ref/plugin-config/http_hosts",
+                    "guide/ref/plugin-config/iptunnels",
+                    "guide/ref/plugin-config/mac",
+                    "guide/ref/plugin-config/tcp_based_metering",
+                    "guide/ref/plugin-config/tcpflow",
+                    "guide/ref/plugin-config/udp_protocol_disector"
                   ]
                 },
-                "documentation/ref/trisbashrc",
-                "documentation/ref/trisul_filter_format",
-                "documentation/ref/trisul_hub",
-                "documentation/ref/trisul_probe",
-                "documentation/ref/trisulconfig",
-                "documentation/ref/trisulhubconfig",
-                "documentation/ref/trpproto"
+                "guide/ref/trisbashrc",
+                "guide/ref/trisul_filter_format",
+                "guide/ref/trisul_hub",
+                "guide/ref/trisul_probe",
+                "guide/ref/trisulconfig",
+                "guide/ref/trisulhubconfig",
+                "guide/ref/trpproto"
               ]
             },
             {
@@ -625,20 +625,20 @@ const sidebars = {
               "label": "Program Files Reference",
               "link": {
                 "type": "doc",
-                "id": "documentation/programs/index"
+                "id": "guide/programs/index"
               },
               "className": "root-section-title",
               "items": [
-                "documentation/programs/distributed-domain",
-                "documentation/programs/listbackup",
-                "documentation/programs/monit",
-                "documentation/programs/rat",
-                "documentation/programs/runhubflusher_watchdog",
-                "documentation/programs/scanslices",
-                "documentation/programs/trisul_flowcap",
-                "documentation/programs/trisul_reencrypt",
-                "documentation/programs/trisul_udpsink",
-                "documentation/programs/trisulprogram"
+                "guide/programs/distributed-domain",
+                "guide/programs/listbackup",
+                "guide/programs/monit",
+                "guide/programs/rat",
+                "guide/programs/runhubflusher_watchdog",
+                "guide/programs/scanslices",
+                "guide/programs/trisul_flowcap",
+                "guide/programs/trisul_reencrypt",
+                "guide/programs/trisul_udpsink",
+                "guide/programs/trisulprogram"
               ]
             },
             {
@@ -646,70 +646,70 @@ const sidebars = {
               "label": "Counter Groups Reference",
               "link": {
                 "type": "doc",
-                "id": "documentation/counter-groups/index"
+                "id": "guide/counter-groups/index"
               },
               "className": "root-section-title",
               "items": [
-                "documentation/counter-groups/aggregates",
-                "documentation/counter-groups/alert-classes",
-                "documentation/counter-groups/alert-priorities",
-                "documentation/counter-groups/alert-signatures",
-                "documentation/counter-groups/app-id",
-                "documentation/counter-groups/applicationgroup",
-                "documentation/counter-groups/apps",
-                "documentation/counter-groups/asnumber",
-                "documentation/counter-groups/base-domain",
-                "documentation/counter-groups/bgp-aspathbgp",
-                "documentation/counter-groups/bgp-orgin-as",
-                "documentation/counter-groups/bgp-peer-as",
-                "documentation/counter-groups/bgp-prefix-external",
-                "documentation/counter-groups/bgp-prefix-home",
-                "documentation/counter-groups/blacklist",
-                "documentation/counter-groups/city",
-                "documentation/counter-groups/country",
-                "documentation/counter-groups/dir-mac",
-                "documentation/counter-groups/flow-appid-nbar",
-                "documentation/counter-groups/flow-asn",
-                "documentation/counter-groups/flow-bgp-nexthop",
-                "documentation/counter-groups/flow-ip-nextHop",
-                "documentation/counter-groups/flow-link-asn",
-                "documentation/counter-groups/flow-prefix-home",
-                "documentation/counter-groups/flow-prefix-v6",
-                "documentation/counter-groups/flow-prefix",
-                "documentation/counter-groups/flow-tos",
-                "documentation/counter-groups/flow-vrf",
-                "documentation/counter-groups/flowgens",
-                "documentation/counter-groups/flowi-ntfs",
-                "documentation/counter-groups/hosts",
-                "documentation/counter-groups/hostsIPv6",
-                "documentation/counter-groups/http-content-types",
-                "documentation/counter-groups/http-hosts",
-                "documentation/counter-groups/http-methods",
-                "documentation/counter-groups/http-status-codes",
-                "documentation/counter-groups/http-url-category",
-                "documentation/counter-groups/icmp-types",
-                "documentation/counter-groups/link-layer-stats",
-                "documentation/counter-groups/long-fat-tail-hosts",
-                "documentation/counter-groups/mac",
-                "documentation/counter-groups/meta-counter-group",
-                "documentation/counter-groups/meta-session-group",
-                "documentation/counter-groups/mpls-stats",
-                "documentation/counter-groups/networklayerstats",
-                "documentation/counter-groups/organization",
-                "documentation/counter-groups/prefix",
-                "documentation/counter-groups/remote-office",
-                "documentation/counter-groups/snmp-interface",
-                "documentation/counter-groups/tls-ca",
-                "documentation/counter-groups/tls-ciphers",
-                "documentation/counter-groups/tls-orgs",
-                "documentation/counter-groups/user-id",
-                "documentation/counter-groups/vlanstats"
+                "guide/counter-groups/aggregates",
+                "guide/counter-groups/alert-classes",
+                "guide/counter-groups/alert-priorities",
+                "guide/counter-groups/alert-signatures",
+                "guide/counter-groups/app-id",
+                "guide/counter-groups/applicationgroup",
+                "guide/counter-groups/apps",
+                "guide/counter-groups/asnumber",
+                "guide/counter-groups/base-domain",
+                "guide/counter-groups/bgp-aspathbgp",
+                "guide/counter-groups/bgp-orgin-as",
+                "guide/counter-groups/bgp-peer-as",
+                "guide/counter-groups/bgp-prefix-external",
+                "guide/counter-groups/bgp-prefix-home",
+                "guide/counter-groups/blacklist",
+                "guide/counter-groups/city",
+                "guide/counter-groups/country",
+                "guide/counter-groups/dir-mac",
+                "guide/counter-groups/flow-appid-nbar",
+                "guide/counter-groups/flow-asn",
+                "guide/counter-groups/flow-bgp-nexthop",
+                "guide/counter-groups/flow-ip-nextHop",
+                "guide/counter-groups/flow-link-asn",
+                "guide/counter-groups/flow-prefix-home",
+                "guide/counter-groups/flow-prefix-v6",
+                "guide/counter-groups/flow-prefix",
+                "guide/counter-groups/flow-tos",
+                "guide/counter-groups/flow-vrf",
+                "guide/counter-groups/flowgens",
+                "guide/counter-groups/flowi-ntfs",
+                "guide/counter-groups/hosts",
+                "guide/counter-groups/hostsIPv6",
+                "guide/counter-groups/http-content-types",
+                "guide/counter-groups/http-hosts",
+                "guide/counter-groups/http-methods",
+                "guide/counter-groups/http-status-codes",
+                "guide/counter-groups/http-url-category",
+                "guide/counter-groups/icmp-types",
+                "guide/counter-groups/link-layer-stats",
+                "guide/counter-groups/long-fat-tail-hosts",
+                "guide/counter-groups/mac",
+                "guide/counter-groups/meta-counter-group",
+                "guide/counter-groups/meta-session-group",
+                "guide/counter-groups/mpls-stats",
+                "guide/counter-groups/networklayerstats",
+                "guide/counter-groups/organization",
+                "guide/counter-groups/prefix",
+                "guide/counter-groups/remote-office",
+                "guide/counter-groups/snmp-interface",
+                "guide/counter-groups/tls-ca",
+                "guide/counter-groups/tls-ciphers",
+                "guide/counter-groups/tls-orgs",
+                "guide/counter-groups/user-id",
+                "guide/counter-groups/vlanstats"
               ]
             }
           ],
           "description": "Technical specifications for configuration files, CLI utilities, and plugins."
         },
-        "documentation/releasehistory"
+        "guide/releasehistory"
       ]
     }
   ],
@@ -719,30 +719,30 @@ const sidebars = {
       "label": "Trisul IPDR User Guide",
       "link": {
         "type": "doc",
-        "id": "Product Guides/ipdr/index"
+        "id": "prodguide/ipdr/index"
       },
       "className": "root-section-title",
       "collapsible": false,
       "collapsed": false,
       "items": [
-        "Product Guides/ipdr/intro",
+        "prodguide/ipdr/intro",
         {
           "type": "category",
           "label": "Get started",
           "link": {
             "type": "doc",
-            "id": "Product Guides/ipdr/install"
+            "id": "prodguide/ipdr/install"
           },
           "items": [
-            "Product Guides/ipdr/requirements",
-            "Product Guides/ipdr/ipdr-cloud",
-            "Product Guides/ipdr/specialuser",
+            "prodguide/ipdr/requirements",
+            "prodguide/ipdr/ipdr-cloud",
+            "prodguide/ipdr/specialuser",
             {
               "type": "category",
               "label": "Settings",
               "items": [
-                "Product Guides/ipdr/ipdr-settings",
-                "Product Guides/ipdr/advanced"
+                "prodguide/ipdr/ipdr-settings",
+                "prodguide/ipdr/advanced"
               ]
             }
           ]
@@ -752,12 +752,12 @@ const sidebars = {
           "label": "Network Config",
           "link": {
             "type": "doc",
-            "id": "Product Guides/ipdr/network-config"
+            "id": "prodguide/ipdr/network-config"
           },
           "items": [
-            "Product Guides/ipdr/netflow",
-            "Product Guides/ipdr/radius",
-            "Product Guides/ipdr/syslog"
+            "prodguide/ipdr/netflow",
+            "prodguide/ipdr/radius",
+            "prodguide/ipdr/syslog"
           ]
         },
         {
@@ -765,26 +765,26 @@ const sidebars = {
           "label": "Programs and Scripts",
           "link": {
             "type": "doc",
-            "id": "Product Guides/ipdr/scripts"
+            "id": "prodguide/ipdr/scripts"
           },
           "items": [
-            "Product Guides/ipdr/trisul_aaaing",
-            "Product Guides/ipdr/qstream"
+            "prodguide/ipdr/trisul_aaaing",
+            "prodguide/ipdr/qstream"
           ]
         },
-        "Product Guides/ipdr/ipdrui",
-        "Product Guides/ipdr/submit-queries",
-        "Product Guides/ipdr/ipdrdashboard",
-        "Product Guides/ipdr/ipdrstatistics",
-        "Product Guides/ipdr/ipdrexportfields",
-        "Product Guides/ipdr/staticip-mappings",
-        "Product Guides/ipdr/api-ipdr-query",
-        "Product Guides/ipdr/ipdr_customers_api",
-        "Product Guides/ipdr/ipdr_customer_mappings",
-        "Product Guides/ipdr/latlong",
-        "Product Guides/ipdr/tape",
-        "Product Guides/ipdr/prod_checklist",
-        "Product Guides/ipdr/faq"
+        "prodguide/ipdr/ipdrui",
+        "prodguide/ipdr/submit-queries",
+        "prodguide/ipdr/ipdrdashboard",
+        "prodguide/ipdr/ipdrstatistics",
+        "prodguide/ipdr/ipdrexportfields",
+        "prodguide/ipdr/staticip-mappings",
+        "prodguide/ipdr/api-ipdr-query",
+        "prodguide/ipdr/ipdr_customers_api",
+        "prodguide/ipdr/ipdr_customer_mappings",
+        "prodguide/ipdr/latlong",
+        "prodguide/ipdr/tape",
+        "prodguide/ipdr/prod_checklist",
+        "prodguide/ipdr/faq"
       ]
     }
   ],
@@ -897,22 +897,22 @@ const sidebars = {
       "label": "Trisul ISP  Guide",
       "link": {
         "type": "doc",
-        "id": "Product Guides/isp/index"
+        "id": "prodguide/isp/index"
       },
       "className": "root-section-title",
       "collapsible": false,
       "collapsed": false,
       "items": [
-        "Product Guides/isp/requirements",
-        "Product Guides/isp/bgp",
-        "Product Guides/isp/isapps",
-        "Product Guides/isp/isp_analytics_dashboard",
-        "Product Guides/isp/resourcegroups",
-        "Product Guides/isp/pingmonitor",
-        "Product Guides/isp/rtg",
-        "Product Guides/isp/ott_analytics",
-        "Product Guides/isp/api",
-        "Product Guides/isp/userapi"
+        "prodguide/isp/requirements",
+        "prodguide/isp/bgp",
+        "prodguide/isp/isapps",
+        "prodguide/isp/isp_analytics_dashboard",
+        "prodguide/isp/resourcegroups",
+        "prodguide/isp/pingmonitor",
+        "prodguide/isp/rtg",
+        "prodguide/isp/ott_analytics",
+        "prodguide/isp/api",
+        "prodguide/isp/userapi"
       ]
     }
   ],
@@ -940,7 +940,7 @@ const sidebars = {
       "label": "Product Guides",
       "link": {
         "type": "doc",
-        "id": "Product Guides/index"
+        "id": "prodguide/index"
       },
       "className": "root-section-title",
       "collapsible": false,
@@ -948,17 +948,17 @@ const sidebars = {
       "items": [
         {
           "type": "ref",
-          "id": "Product Guides/NETFLOW ANALYZER GUIDE/index",
+          "id": "prodguide/nf/index",
           "label": "NetFlow Analyzer Guide"
         },
         {
           "type": "ref",
-          "id": "Product Guides/ipdr/index",
+          "id": "prodguide/ipdr/index",
           "label": "IPDR Guide"
         },
         {
           "type": "ref",
-          "id": "Product Guides/isp/index",
+          "id": "prodguide/isp/index",
           "label": "ISP Guide"
         }
       ]
@@ -970,7 +970,7 @@ const sidebars = {
       "label": "Trisul NetFlow Analyzer Guide",
       "link": {
         "type": "doc",
-        "id": "Product Guides/NETFLOW ANALYZER GUIDE/index"
+        "id": "prodguide/nf/index"
       },
       "className": "root-section-title",
       "collapsible": false,
@@ -981,16 +981,16 @@ const sidebars = {
           "label": "Dashboards",
           "description": "Use dashboards for a quick view of what is happening in your network. You can monitor current traffic, active hosts, applications, alerts, security information, sessions, and other frequently used network metrics.",
           "items": [
-            "Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/current-hosts",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/current-apps",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/alerts",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/security",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/sessions",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/overview",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/real-time-traffic",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/active-keys-monitor",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/system-performance",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Dashboards/show-all"
+            "prodguide/nf/Dashboards/current-hosts",
+            "prodguide/nf/Dashboards/current-apps",
+            "prodguide/nf/Dashboards/alerts",
+            "prodguide/nf/Dashboards/security",
+            "prodguide/nf/Dashboards/sessions",
+            "prodguide/nf/Dashboards/overview",
+            "prodguide/nf/Dashboards/real-time-traffic",
+            "prodguide/nf/Dashboards/active-keys-monitor",
+            "prodguide/nf/Dashboards/system-performance",
+            "prodguide/nf/Dashboards/show-all"
           ]
         },
         {
@@ -998,9 +998,9 @@ const sidebars = {
           "label": "Retro",
           "description": "Use Retro when you want to look back at network activity that has already happened. It lets you inspect historical counters and analyze traffic for a specific period in the past.",
           "items": [
-            "Product Guides/NETFLOW ANALYZER GUIDE/Retro/retro-counters",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Retro/retro-tools",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Retro/show-all"
+            "prodguide/nf/Retro/retro-counters",
+            "prodguide/nf/Retro/retro-tools",
+            "prodguide/nf/Retro/show-all"
           ]
         },
         {
@@ -1008,17 +1008,17 @@ const sidebars = {
           "label": "Tools",
           "description": "Use the Tools section when you need to investigate traffic in more detail. It includes flow exploration, historical trends, IP flow exports, usage charts, flow trackers, taggers, and edge connection graphs.",
           "items": [
-            "Product Guides/NETFLOW ANALYZER GUIDE/Tools/explore-flows",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Tools/long-term-traffic",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Tools/monthly-chart",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Tools/search-key-space",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Tools/real-time-stab-toppers",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Tools/flow-tracker",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Tools/flow-tagger",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Tools/export-flows",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Tools/aggregate-flows",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Tools/edge-graph",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Tools/show-all"
+            "prodguide/nf/Tools/explore-flows",
+            "prodguide/nf/Tools/long-term-traffic",
+            "prodguide/nf/Tools/monthly-chart",
+            "prodguide/nf/Tools/search-key-space",
+            "prodguide/nf/Tools/real-time-stab-toppers",
+            "prodguide/nf/Tools/flow-tracker",
+            "prodguide/nf/Tools/flow-tagger",
+            "prodguide/nf/Tools/export-flows",
+            "prodguide/nf/Tools/aggregate-flows",
+            "prodguide/nf/Tools/edge-graph",
+            "prodguide/nf/Tools/show-all"
           ]
         },
         {
@@ -1026,10 +1026,10 @@ const sidebars = {
           "label": "Netflow",
           "description": "Use the Netflow section to understand where your flow data is coming from and how traffic is distributed across your network devices and interfaces. You can view NetFlow sources, exporters, routers, interfaces, and interface-level traffic details.",
           "items": [
-            "Product Guides/NETFLOW ANALYZER GUIDE/Netflow/netflow-sources",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Netflow/explore-flows",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Netflow/routers-and-interfaces",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Netflow/show-all"
+            "prodguide/nf/Netflow/netflow-sources",
+            "prodguide/nf/Netflow/explore-flows",
+            "prodguide/nf/Netflow/routers-and-interfaces",
+            "prodguide/nf/Netflow/show-all"
           ]
         },
         {
@@ -1037,12 +1037,12 @@ const sidebars = {
           "label": "Alerts",
           "description": "Use Alerts to identify traffic conditions that require attention. You can configure Threshold Crossing Alerts (TCAs), flow tracking alerts, blacklist matching, dynamic threshold bands, and view alert activity.",
           "items": [
-            "Product Guides/NETFLOW ANALYZER GUIDE/Alerts/threshold-crossing-alerts",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Alerts/flow-tracking",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Alerts/blacklist",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Alerts/threshold-bands",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Alerts/dashboards",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Alerts/show-all"
+            "prodguide/nf/Alerts/threshold-crossing-alerts",
+            "prodguide/nf/Alerts/flow-tracking",
+            "prodguide/nf/Alerts/blacklist",
+            "prodguide/nf/Alerts/threshold-bands",
+            "prodguide/nf/Alerts/dashboards",
+            "prodguide/nf/Alerts/show-all"
           ]
         },
         {
@@ -1050,10 +1050,10 @@ const sidebars = {
           "label": "Reports",
           "description": "Use Reports when you need to turn network traffic data into reports that can be reviewed or shared. This section includes standard reports, scheduled recurring reports, and email delivery settings.",
           "items": [
-            "Product Guides/NETFLOW ANALYZER GUIDE/Reports/readymade",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Reports/schedule",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Reports/email-settings",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Reports/show-all"
+            "prodguide/nf/Reports/readymade",
+            "prodguide/nf/Reports/schedule",
+            "prodguide/nf/Reports/email-settings",
+            "prodguide/nf/Reports/show-all"
           ]
         },
         {
@@ -1061,8 +1061,8 @@ const sidebars = {
           "label": "Customize",
           "description": "Use Customize to adjust how the NetFlow Analyzer Web UI behaves and looks. You can personalize dashboard layouts, real-time parameters, and HTTP/HTTPS traffic classification rules.",
           "items": [
-            "Product Guides/NETFLOW ANALYZER GUIDE/Customize/ui",
-            "Product Guides/NETFLOW ANALYZER GUIDE/Customize/show-all"
+            "prodguide/nf/Customize/ui",
+            "prodguide/nf/Customize/show-all"
           ]
         }
       ]

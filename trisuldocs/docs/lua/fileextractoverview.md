@@ -26,7 +26,7 @@ The flow looks like this
 
 #### Location
 
-The default location of the ramfs filesystem is at `/usr/local/var/lib/trisul-probe/domain0/probe0/context0/run/ramfs` (see *[FileExtraction RamfsDir](/docs/documentation/ref/trisulconfig#file-extraction )* setting)
+The default location of the ramfs filesystem is at `/usr/local/var/lib/trisul-probe/domain0/probe0/context0/run/ramfs` (see *[FileExtraction RamfsDir](/docs/guide/ref/trisulconfig#file-extraction )* setting)
 
 #### Creating
 

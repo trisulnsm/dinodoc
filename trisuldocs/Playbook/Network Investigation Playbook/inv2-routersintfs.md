@@ -4,7 +4,7 @@
 
 High interface utilization is often the first indication of network congestion, but high bandwidth alone rarely explains the root cause. A busy interface may simply reflect expected operational activity such as backups, software deployments, cloud synchronization, or database replication. In other cases, it may indicate application issues, bandwidth abuse, configuration changes, or emerging network problems.
 
-This investigation follows the same workflow experienced network engineers use when troubleshooting interface congestion. Starting from the affected interface, the investigation pivots into [**Explore Flows**](/docs/documentation/ug/tools/explore_flows), where engineers progressively identify the hosts consuming bandwidth, investigate the conversations responsible for the observed utilization, determine the applications generating the traffic, and validate their findings when packet-level analysis is required.
+This investigation follows the same workflow experienced network engineers use when troubleshooting interface congestion. Starting from the affected interface, the investigation pivots into [**Explore Flows**](/docs/guide/ug/tools/explore_flows), where engineers progressively identify the hosts consuming bandwidth, investigate the conversations responsible for the observed utilization, determine the applications generating the traffic, and validate their findings when packet-level analysis is required.
 
 Using Trisul, this entire workflow can be completed without switching between multiple monitoring tools.
 
@@ -40,7 +40,7 @@ By completing this investigation, you should be able to determine:
 
 Every investigation begins by identifying the interface experiencing increased utilization and understanding the scope of the issue. Before investigating hosts or applications, determine whether the congestion is isolated to a single interface or affects a wider portion of the network.
 
-Open [**Routers & Interfaces**](/docs/documentation/ug/netflow/routers_and_interfaces) to [**review interface utilization**](/docs/documentation/ug/netflow/routers_and_interfaces#interfaces-table) across monitored devices.
+Open [**Routers & Interfaces**](/docs/guide/ug/netflow/routers_and_interfaces) to [**review interface utilization**](/docs/guide/ug/netflow/routers_and_interfaces#interfaces-table) across monitored devices.
 
 ![](./images/intfutil.png)
 
@@ -68,9 +68,9 @@ Once the affected interface has been identified, determine which systems are res
 
 ### Step 2: Investigate Interface Activity
 
-> **Prerequisite:** This step assumes accurate, long-term host and application visibility for the interface, which depends on [**Interface Tracking**](/docs/documentation/ug/netflow/interface_tracker) being enabled for the router in question. If Interface Tracking isn't enabled, the per-interface breakdown may be incomplete or unavailable — confirm this with your admin before concluding a host isn't a contributor.
+> **Prerequisite:** This step assumes accurate, long-term host and application visibility for the interface, which depends on [**Interface Tracking**](/docs/guide/ug/netflow/interface_tracker) being enabled for the router in question. If Interface Tracking isn't enabled, the per-interface breakdown may be incomplete or unavailable — confirm this with your admin before concluding a host isn't a contributor.
 
-After identifying the affected interface, continue the investigation in [**Explore Flows**](/docs/documentation/ug/tools/explore_flows) using the **Interface ID** from the [**Interface Drilldown**](/docs/documentation/ug/netflow/drilldown). This provides an operational view of the traffic traversing the selected interface and identifies the hosts contributing to the observed utilization.
+After identifying the affected interface, continue the investigation in [**Explore Flows**](/docs/guide/ug/tools/explore_flows) using the **Interface ID** from the [**Interface Drilldown**](/docs/guide/ug/netflow/drilldown). This provides an operational view of the traffic traversing the selected interface and identifies the hosts contributing to the observed utilization.
 
 This step helps answer questions such as:
 
@@ -96,9 +96,9 @@ After identifying the primary bandwidth consumers, determine who those hosts are
 
 After identifying the hosts responsible for the interface utilization, determine who those systems are communicating with. Before determining why the traffic is occurring, establish which conversations and network sessions are responsible for the observed bandwidth.
 
-Continue the investigation using [**Explore Flows**](/docs/documentation/ug/tools/explore_flows).
+Continue the investigation using [**Explore Flows**](/docs/guide/ug/tools/explore_flows).
 
-Use the **Interface ID** (available in the [**Interface Drilldown**](/docs/documentation/ug/netflow/drilldown)) in the Explore Flows search field to pivot directly from the affected interface into the corresponding communication records.
+Use the **Interface ID** (available in the [**Interface Drilldown**](/docs/guide/ug/netflow/drilldown)) in the Explore Flows search field to pivot directly from the affected interface into the corresponding communication records.
 
 Remain within Explore Flows while analysing:
 
@@ -132,7 +132,7 @@ Once the communication patterns have been established, determine which applicati
 
 After identifying the conversations responsible for the interface utilization, determine which applications generated the observed traffic.
 
-Open the [**Applications**](/docs/documentation/ug/tools/explore_flows#activity-details) view for the selected interface or host.
+Open the [**Applications**](/docs/guide/ug/tools/explore_flows#activity-details) view for the selected interface or host.
 
 ![](./images/appusage-ef.png)    
 
@@ -166,7 +166,7 @@ Application analysis is usually sufficient to determine the cause of interface u
 
 Most interface investigations can be completed without reviewing Aggregate Flows, since the interface-level traffic distribution is already visible from Steps 2–4. Use this view as an optional validation step when you want additional confirmation of the conclusions reached during the investigation, or need supporting evidence for a capacity planning report.
 
-[**Aggregate Flows**](/docs/documentation/ug/tools/aggregate_flows) presents the same flow information from different perspectives — grouped by IP address, application, port, or router — for the affected interface.
+[**Aggregate Flows**](/docs/guide/ug/tools/aggregate_flows) presents the same flow information from different perspectives — grouped by IP address, application, port, or router — for the affected interface.
 
 This view helps answer questions such as:
 
@@ -191,7 +191,7 @@ Once the aggregate traffic characteristics have been reviewed (or skipped, if no
 
 Packet-level analysis provides the final layer of validation for investigations that require deeper protocol visibility. This step is particularly useful when troubleshooting application behaviour or confirming findings identified during flow analysis.
 
-Where packet capture is available, pivot directly from the selected flow to [**Packet Analysis**](/docs/documentation/ug/tools/explore_flows#flow-options) by downloading the PCAP from the flows drilldown.
+Where packet capture is available, pivot directly from the selected flow to [**Packet Analysis**](/docs/guide/ug/tools/explore_flows#flow-options) by downloading the PCAP from the flows drilldown.
 
 ![](./images/downloadpcaps.png)  
 

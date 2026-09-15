@@ -4,7 +4,7 @@
 
 Flow tracking is a streaming algorithm that captures real time snapshots of **interesting** flows. You need to decide what flows are interesting – they could be elephant flows transferring large volume of data, or long lived flows, or video flows between 10AM and 5PM, etc.
 
-You can create flow trackers using the Trisul Web Interface – see [Flow Tracker](/docs/documentation/ug/flow/tracker) When you create Flow Trackers from the UI you are however only allowed to use fixed criteria like IP Addresses, Ports, Volume, or Duration. The LUA flow tracker described here gives you the ultimate control over the process. For example you can create a tracker that says : “Track all flows from 10.240.0.0/16 subnet but exclude ports < 1024 and 12001,12002,10004 and IP 45.19.22.123”. This kind of complex rule building allows you to be endlessly creative and sharply focused. The LUA based flow tracker also allows you to be stateful – you can be guided by an Intel feed, or DNS.
+You can create flow trackers using the Trisul Web Interface – see [Flow Tracker](/docs/guide/ug/flow/tracker) When you create Flow Trackers from the UI you are however only allowed to use fixed criteria like IP Addresses, Ports, Volume, or Duration. The LUA flow tracker described here gives you the ultimate control over the process. For example you can create a tracker that says : “Track all flows from 10.240.0.0/16 subnet but exclude ports < 1024 and 12001,12002,10004 and IP 45.19.22.123”. This kind of complex rule building allows you to be endlessly creative and sharply focused. The LUA based flow tracker also allows you to be stateful – you can be guided by an Intel feed, or DNS.
 
 ## Structure
 

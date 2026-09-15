@@ -118,74 +118,91 @@ const config = {
     [
       '@docusaurus/plugin-client-redirects',
       {
+        createRedirects(existingPath) {
+          if (existingPath.includes('/docs/guide')) {
+            return [existingPath.replace('/docs/guide', '/docs/documentation')];
+          }
+          if (existingPath.includes('/docs/prodguide/nf')) {
+            return [
+              encodeURI(existingPath.replace('/docs/prodguide/nf', '/docs/Product Guides/NETFLOW ANALYZER GUIDE')),
+              encodeURI(existingPath.replace('/docs/prodguide/nf', '/docs/prodguide/NETFLOW ANALYZER GUIDE')),
+            ];
+          }
+          if (existingPath.includes('/docs/prodguide')) {
+            return [
+              encodeURI(existingPath.replace('/docs/prodguide', '/docs/Product Guides')),
+            ];
+          }
+          return undefined;
+        },
         redirects: [
           {
             from: '/docs/ipdr/api',
-            to: '/docs/Product Guides/ipdr/ipdr_customers_api',
+            to: '/docs/prodguide/ipdr/ipdr_customers_api',
           },
           {
             from: '/docs/ug/intro/terminology',
-            to: '/docs/documentation/learntrisul/terminology',
+            to: '/docs/guide/learntrisul/terminology',
           },
           {
             from: '/docs/ug/intro',
-            to: '/docs/documentation/starthere/what_is_trisul',
+            to: '/docs/guide/starthere/what_is_trisul/',
           },
           {
             from: '/docs/ug/intro/architecture',
-            to: '/docs/documentation/starthere/what_is_trisul/architecture',
+            to: '/docs/guide/starthere/what_is_trisul/architecture',
           },
           {
             from: '/docs/ug/intro/dataflow',
-            to: '/docs/documentation/starthere/what_is_trisul/dataflow',
+            to: '/docs/guide/starthere/what_is_trisul/dataflow',
           },
           {
             from: '/docs/ug/intro/productmodes',
-            to: '/docs/documentation/starthere/what_is_trisul/productmodes',
+            to: '/docs/guide/starthere/what_is_trisul/productmodes',
           },
           {
             from: '/docs/ug/intro/getstart',
-            to: '/docs/documentation/starthere/setuptrisul/getstart',
+            to: '/docs/guide/starthere/setuptrisul/getstart',
           },
           {
             from: '/docs/starthere/getstart',
-            to: '/docs/documentation/starthere/setuptrisul/getstart',
+            to: '/docs/guide/starthere/setuptrisul/getstart',
           },
           {
             from: '/docs/setuptrisul/install/requirements',
-            to: '/docs/documentation/starthere/setuptrisul/install/requirements',
+            to: '/docs/guide/starthere/setuptrisul/install/requirements',
           },
           {
             from: '/docs/ag/install/requirements',
-            to: '/docs/documentation/starthere/setuptrisul/install/requirements',
+            to: '/docs/guide/starthere/setuptrisul/install/requirements',
           },
           {
             from: '/docs/setuptrisul',
-            to: '/docs/documentation/starthere/setuptrisul/getstart',
+            to: '/docs/guide/starthere/setuptrisul/getstart',
           },
           {
             from: '/docs/setuptrisul/install/doinstall',
-            to: '/docs/documentation/starthere/setuptrisul/install/doinstall',
+            to: '/docs/guide/starthere/setuptrisul/install/doinstall',
           },
           {
             from: '/docs/setuptrisul/install/selectmode',
-            to: '/docs/documentation/starthere/setuptrisul/install/selectmode',
+            to: '/docs/guide/starthere/setuptrisul/install/selectmode',
           },
           {
             from: '/docs/setuptrisul/network/input_packets',
-            to: '/docs/documentation/starthere/setuptrisul/network/input_packets',
+            to: '/docs/guide/starthere/setuptrisul/network/input_packets',
           },
           {
             from: '/docs/setuptrisul/network/input_netflow',
-            to: '/docs/documentation/starthere/setuptrisul/network/input_netflow',
+            to: '/docs/guide/starthere/setuptrisul/network/input_netflow',
           },
           {
             from: '/docs/ipdr',
-            to: '/docs/Product Guides/ipdr',
+            to: '/docs/prodguide/ipdr/',
           },
           {
             from: '/docs/isp',
-            to: '/docs/Product Guides/isp',
+            to: '/docs/prodguide/isp/',
           },
         ],
       },
@@ -226,42 +243,42 @@ const config = {
         {
           type: 'dropdown',
           label: 'Documentation',
-          to: '/docs/documentation',
+          to: '/docs/guide',
           position: 'left',
           items: [
             {
               type: 'doc',
-              docId: 'documentation/index',
+              docId: 'guide/index',
               label: 'Overview',
             },
             {
               type: 'doc',
-              docId: 'documentation/starthere/what_is_trisul/index',
+              docId: 'guide/starthere/what_is_trisul/index',
               label: 'Start Here',
             },
             {
               type: 'doc',
-              docId: 'documentation/ag/index',
+              docId: 'guide/ag/index',
               label: 'Admin Guide',
             },
             {
               type: 'doc',
-              docId: 'documentation/ug/index',
+              docId: 'guide/ug/index',
               label: 'User Guide',
             },
             {
               type: 'doc',
-              docId: 'documentation/learntrisul/terminology',
+              docId: 'guide/learntrisul/terminology',
               label: 'Learn Trisul',
             },
             {
               type: 'doc',
-              docId: 'documentation/ref/index',
+              docId: 'guide/ref/index',
               label: 'Reference',
             },
             {
               type: 'doc',
-              docId: 'documentation/releasehistory',
+              docId: 'guide/releasehistory',
               label: 'Changelog',
             },
           ],
@@ -269,27 +286,27 @@ const config = {
         {
           type: 'dropdown',
           label: 'Product Guides',
-          to: '/docs/Product Guides',
+          to: '/docs/prodguide',
           position: 'left',
           items: [
             {
               type: 'doc',
-              docId: 'Product Guides/index',
+              docId: 'prodguide/index',
               label: 'Overview',
             },
             {
               type: 'doc',
-              docId: 'Product Guides/NETFLOW ANALYZER GUIDE/index',
+              docId: 'prodguide/nf/index',
               label: 'NetFlow Guide',
             },
             {
               type: 'doc',
-              docId: 'Product Guides/ipdr/index',
+              docId: 'prodguide/ipdr/index',
               label: 'IPDR Guide',
             },
             {
               type: 'doc',
-              docId: 'Product Guides/isp/index',
+              docId: 'prodguide/isp/index',
               label: 'ISP Guide',
             },
           ],

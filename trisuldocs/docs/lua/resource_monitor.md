@@ -2,11 +2,11 @@
 
 BACKEND SCRIPT
 
-You can attach LUA scripts to any type of resource and get called when they stream in. Each of these resource groups are uniquely identified by a GUID. For a list of [Resource Group GUIDs](/docs/documentation/ref/guid#resource-groups)
+You can attach LUA scripts to any type of resource and get called when they stream in. Each of these resource groups are uniquely identified by a GUID. For a list of [Resource Group GUIDs](/docs/guide/ref/guid#resource-groups)
 
 ### Common Resource Groups GUIDs
 
-For quick reference these are the common Resource Group [GUIDs.](/docs/documentation/ref/guid#resource-groups) For a full list Login as Admin > profil0 > All Resource Groups
+For quick reference these are the common Resource Group [GUIDs.](/docs/guide/ref/guid#resource-groups) For a full list Login as Admin > profil0 > All Resource Groups
 
 | \{D1E27FF0-6D66-4E57-BB91-99F76BB2143E\} | DNS Resources    |
 | ---------------------------------------- | ---------------- |
@@ -24,7 +24,7 @@ The Lua table `resource_monitor = /{../}` can contain one or more of the followi
 
 | field                                                                                   | type                                                                                                                                          | description                                                                                                                                |
 | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| resource_guid                                                                           | String                                                                                                                                        | Type of resource. Example `/{5AEE3F0B-9304-44BE-BBD0-0467052CF468/}` for SSL Certs.See [Well known guids](/docs/documentation/ref/guid#resource-groups) |
+| resource_guid                                                                           | String                                                                                                                                        | Type of resource. Example `/{5AEE3F0B-9304-44BE-BBD0-0467052CF468/}` for SSL Certs.See [Well known guids](/docs/guide/ref/guid#resource-groups) |
 | [onnewresource](/docs/lua/resource_monitor#function-onnewresource)     | function([engine](/docs/lua/obj_engine), [resource](/docs/lua/resource_monitor#objects-reference)) | A new resource was seen. Sent within 1 sec of seeing the [resource](/docs/lua/resource_monitor#objects-reference)        |
 | [onbeginflush](/docs/lua/resource_monitor#function-onbeginflush) | function([engine](/docs/lua/obj_engine))                                                                             | Before starting to flush all metrics to db                                                                                                 |
 | [flushfilter](/docs/lua/resource_monitor#function-flushfilter)   | function([engine](/docs/lua/obj_engine), [resource](/docs/lua/resource_monitor#objects-reference)) | Return true if you want to save in DB, false to skip this                                                                                  |

@@ -41,7 +41,7 @@ By completing this investigation, you should be able to:
 
 Every threshold investigation begins by understanding exactly what triggered the alert. Before investigating hosts, interfaces, or applications, establish which metric exceeded its configured threshold, when the event occurred, and which monitored object generated the alert.
 
-Open [**Threshold Crossing Alerts**](/docs/documentation/ug/alerts/tca) and select the triggered alert.
+Open [**Threshold Crossing Alerts**](/docs/guide/ug/alerts/tca) and select the triggered alert.
 
 Use the alert details to answer questions such as:
 
@@ -68,7 +68,7 @@ Once the alert has been understood, determine how significant the threshold cros
 
 Knowing that a threshold has been crossed is only part of the investigation. The next objective is determining how far the observed metric exceeded its configured threshold and whether it represents a brief operational spike or sustained abnormal behaviour.
 
-Review the [**historical trend**](/docs/documentation/ug/alerts/tca#traffic-chart) for the affected metric.
+Review the [**historical trend**](/docs/guide/ug/alerts/tca#traffic-chart) for the affected metric.
 
 Use the historical data to answer questions such as:
 
@@ -95,7 +95,7 @@ Once the significance of the threshold crossing has been established, identify t
 
 #### Purpose
 
-Continue the investigation in [**Explore Flows**](/docs/documentation/ug/tools/explore_flows) using the monitored entity and time period identified by the threshold alert. Investigate the communication activity responsible for the threshold crossing without assuming the cause in advance.
+Continue the investigation in [**Explore Flows**](/docs/guide/ug/tools/explore_flows) using the monitored entity and time period identified by the threshold alert. Investigate the communication activity responsible for the threshold crossing without assuming the cause in advance.
 
 This step helps answer questions such as:
 
@@ -121,7 +121,7 @@ Once the contributing entities have been identified, analyse the applications re
 
 ### Step 4: Analyze Application Activity
 
-Remain within [**Explore Flows**](/docs/documentation/ug/tools/explore_flows) and review the [**Top Applications**](/docs/documentation/ug/tools/explore_flows#activity-details) for the investigation period.
+Remain within [**Explore Flows**](/docs/guide/ug/tools/explore_flows) and review the [**Top Applications**](/docs/guide/ug/tools/explore_flows#activity-details) for the investigation period.
 
 Application visibility helps determine whether the threshold crossing was caused by expected operational activity, scheduled maintenance, backups, software deployments, increased business demand, or unexpected application behaviour.
 
@@ -153,7 +153,7 @@ After identifying the applications involved, review the aggregate traffic profil
 
 ### Optional Validation: Review Aggregate Traffic
 
-Most threshold investigations can be completed using Explore Flows. Where additional validation is required, [**Aggregate Flows**](/docs/documentation/ug/tools/aggregate_flows) provides a summarized view of the investigated traffic.
+Most threshold investigations can be completed using Explore Flows. Where additional validation is required, [**Aggregate Flows**](/docs/guide/ug/tools/aggregate_flows) provides a summarized view of the investigated traffic.
 
 Rather than introducing new evidence, Aggregate Flows groups the flow records by dimensions such as IP address, interface, application, port, router, and other network attributes. This helps confirm whether the threshold crossing is concentrated within a particular network entity or distributed across multiple contributors.
 
@@ -177,7 +177,7 @@ If packet capture is available, continue with Packet Analysis to validate the ob
 
 ### Step 5: Validate with Packet Analysis
 
-Where packet capture is available, continue directly from [**Explore Flows**](/docs/documentation/ug/tools/explore_flows#flow-options) by downloading the PCAP for the selected flow records.
+Where packet capture is available, continue directly from [**Explore Flows**](/docs/guide/ug/tools/explore_flows#flow-options) by downloading the PCAP for the selected flow records.
 
 Packet-level analysis helps validate the conclusions drawn from the flow investigation and provides protocol-level evidence explaining the behaviour responsible for the threshold crossing.
 
