@@ -10,14 +10,8 @@ IDS Alert Classfication
 
 ## Meter List
 
-| ID  | DESCRIPTION                | TOP COUNT | BOTTOM COUNT | TYPE       | UNITS   |
-| --- | -------------------------- | --------- | ------------ | ---------- | ------- |
-| 0   | Total Alerts               | 20        | 0            | VT_COUNTER | Count   |
-| 1   | Unused Cardinality counter | 20        | 20           | VT_GAUGE   | Uniques |
-| 2   | Unused Cardinality counter | 20        | 20           | VT_GAUGE   | Uniques |
-
-### Total Alerts
-
-### Unused Cardinality counter
-
-### Unused Cardinality counter
+| ID  | DESCRIPTION                | TOP COUNT | BOTTOM COUNT | TYPE       | UNITS   | DESCRIPTION |
+| --- | -------------------------- | --------- | ------------ | ---------- | ------- |-------------|
+| 0   | Total Alerts               | 20        | 0            | VT_COUNTER | Count   | Total number of IDS alerts generated for this alert class per 5-minute (300s) interval |
+| 1   | Unused Cardinality counter | 20        | 20           | VT_GAUGE   | Uniques | Reserved cardinality gauge. Tracks unique source values (e.g., distinct source hosts/IPs) triggering alerts in this class; not currently populated |
+| 2   | Unused Cardinality counter | 20        | 20           | VT_GAUGE   | Uniques | Reserved cardinality gauge. Tracks unique destination values (e.g., distinct destination hosts/IPs) triggering alerts in this class; not currently populated |

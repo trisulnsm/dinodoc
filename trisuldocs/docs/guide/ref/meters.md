@@ -398,3 +398,60 @@ Meters hosts that are not in the global popularity lists.
 | ID  | Description   | Top Count | Type              | Units |
 | --- | ------------- | --------- | ----------------- | ----- |
 | 0   | Total Traffic | 20        | VT\_RATE\_COUNTER | bps   |
+
+
+---
+id: meters
+title: Trisul Traffic Meters — Counter Group Index
+sidebar_label: Trisul Traffic Meters
+---
+
+Every counter group Trisul ships with out of the box is documented on its own page — GUID, bucket sizes, special keys, and the full meter table (ID, description, top count, type, units). Use **Customize → Counters → View Meters** in the product to see live values for any of these.
+
+:::tip Looking for a specific meter?
+Use your browser's find-in-page (Ctrl/Cmd+F) on this index, or jump straight to the [Counter Groups Reference](/docs/guide/counter-groups/) sidebar.
+:::
+
+## All counter groups (54)
+
+| Group | Group | Group |
+|---|---|---|
+| [Aggregates](/docs/guide/counter-groups/aggregates) | [Alert Classes](/docs/guide/counter-groups/alert-classes) | [Alert Priorities](/docs/guide/counter-groups/alert-priorities) |
+| [Alert Signatures](/docs/guide/counter-groups/alert-signatures) | [App-ID](/docs/guide/counter-groups/app-id) | [Applicationgroup](/docs/guide/counter-groups/applicationgroup) |
+| [Apps](/docs/guide/counter-groups/apps) | [ASNumber](/docs/guide/counter-groups/asnumber) | [Base Domains](/docs/guide/counter-groups/base-domain) |
+| [BGP-ASPATH](/docs/guide/counter-groups/bgp-aspathbgp) | [BGP-Origin AS](/docs/guide/counter-groups/bgp-orgin-as) | [BGP-Peer AS](/docs/guide/counter-groups/bgp-peer-as) |
+| [BGP-Prefix External](/docs/guide/counter-groups/bgp-prefix-external) | [BGP-Prefix Home](/docs/guide/counter-groups/bgp-prefix-home) | [Blacklist](/docs/guide/counter-groups/blacklist) |
+| [City](/docs/guide/counter-groups/city) | [Country](/docs/guide/counter-groups/country) | [Dir Mac](/docs/guide/counter-groups/dir-mac) |
+| [Flow-APPID-NBAR](/docs/guide/counter-groups/flow-appid-nbar) | [Flow-ASN](/docs/guide/counter-groups/flow-asn) | [Flow-BGP-NextHop](/docs/guide/counter-groups/flow-bgp-nexthop) |
+| [Flow-IP-NextHop](/docs/guide/counter-groups/flow-ip-nextHop) | [Flow-Link-ASN](/docs/guide/counter-groups/flow-link-asn) | [Flow-Prefix-Home](/docs/guide/counter-groups/flow-prefix-home) |
+| [Flow-Prefix-v6](/docs/guide/counter-groups/flow-prefix-v6) | [Flow-Prefix](/docs/guide/counter-groups/flow-prefix) | [Flow-TOS](/docs/guide/counter-groups/flow-tos) |
+| [Flow-VRF](/docs/guide/counter-groups/flow-vrf) | [Flow Gens](/docs/guide/counter-groups/flowgens) | [FlowIntfs](/docs/guide/counter-groups/flowi-ntfs) |
+| [Hosts](/docs/guide/counter-groups/hosts) | [HostsIPv6](/docs/guide/counter-groups/hostsIPv6) | [HTTP Content Types](/docs/guide/counter-groups/http-content-types) |
+| [HTTP Hosts](/docs/guide/counter-groups/http-hosts) | [HTTP Methods](/docs/guide/counter-groups/http-methods) | [HTTP Status Codes](/docs/guide/counter-groups/http-status-codes) |
+| [HTTP URL Category](/docs/guide/counter-groups/http-url-category) | [ICMP Types](/docs/guide/counter-groups/icmp-types) | [LinkLayerStats](/docs/guide/counter-groups/link-layer-stats) |
+| [Long Fat Tail Hosts](/docs/guide/counter-groups/long-fat-tail-hosts) | [Mac](/docs/guide/counter-groups/mac) | [Meta Counter Group](/docs/guide/counter-groups/meta-counter-group) |
+| [Meta Session Group](/docs/guide/counter-groups/meta-session-group) | [MPLSStats](/docs/guide/counter-groups/mpls-stats) | [NetworkLayerStats](/docs/guide/counter-groups/networklayerstats) |
+| [Organization](/docs/guide/counter-groups/organization) | [Prefix](/docs/guide/counter-groups/prefix) | [Remote Office](/docs/guide/counter-groups/remote-office) |
+| [SNMP-Interface](/docs/guide/counter-groups/snmp-interface) | [TLS CAs](/docs/guide/counter-groups/tls-ca) | [TLS Ciphers](/docs/guide/counter-groups/tls-ciphers) |
+| [TLS Orgs](/docs/guide/counter-groups/tls-orgs) | [User ID](/docs/guide/counter-groups/user-id) | [VLANStats](/docs/guide/counter-groups/vlanstats) |
+
+<!--
+TODO(Santhana) before publishing:
+1. This file REPLACES the ~28-group prose+table content currently at
+   /docs/guide/ref/meters. That content is stale — it duplicates a subset
+   of the 54 canonical counter-groups/ pages and is missing 26 of them
+   (confirmed: e.g. "Long Fat Tail Hosts" appears at the END of the old
+   page's range but groups like TLS Ciphers, VLANStats, SNMP-Interface
+   etc. need to be checked against the old page before you delete it —
+   don't delete the old page until you've confirmed nothing on it is
+   MORE detailed or MORE current than the matching counter-groups/ page,
+   since it was clearly hand-maintained at some point and may contain
+   corrections that never made it into counter-groups/.
+2. Add a redirect from /docs/guide/ref/meters (old content) to this page
+   if the URL/slug stays the same, so bookmarks and search results don't
+   break.
+3. Once this index exists, this is the natural place to eventually add
+   real search/filter (a client-side filter box over this table) rather
+   than relying on browser find-in-page — flagging as a fast-follow, not
+   blocking this fix.
+-->
