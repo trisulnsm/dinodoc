@@ -180,7 +180,7 @@ const sidebars = {
               "label": "Using the Admin UI",
               "link": {
                 "type": "doc",
-                "id": "guide/ag/basictasks/index"
+                "id": "guide/ag/ui/adminlayout"
               },
               "items": [
                 "guide/ag/ui/adminlayout"
