@@ -1,16 +1,18 @@
-# Trisul Adminstrator Guide
+# Trisul Administrator Guide
 
-Welcome to the Trisul **Administrator Guide**! 
+Welcome to the Trisul **Administrator Guide**!
 
-If you’re setting up Trisul for the first time, this is exactly where you should start. All [**four Trisul products**](/docs/guide/starthere/setuptrisul/install/selectmode) run on the same core platform, so the setup and first-time guidance steps you’ll see here apply across every product. 
+This guide picks up once Trisul is installed, licensed, and you've logged in for the first time. If you haven't done that yet, start with [**Start Here → Setup Trisul**](/docs/guide/starthere/setuptrisul/install/requirements) for installation, licensing, and network configuration — then come back here. All [**four Trisul products**](/docs/guide/starthere/setuptrisul/install/selectmode) run on the same core platform, so the guidance below applies across every product.
 
 :::tip
-As you move through the **Admin Guide**, you’ll notice that it’s structured in a sequence that follows the recommended setup flow. Each section builds on the previous one, so it’s best to read and complete them in order to ensure your Trisul deployment is configured correctly before moving on to product-specific documentation.
+This guide is organized in the order you'll actually use it during setup. Work through the sections below in sequence the first time, then come back to any individual section for day-to-day administration afterward.
 :::
 
-:point_right: In this **Admin Guide** you will basically find information about :
+:point_right: Here's what's in the **Admin Guide**:
 
-- Basic Admin Tasks 
-- Advanced Admin Tasks 
-- Disaster Recovery / High Availability
-- User Management
+- **[Admin Tasks](/docs/guide/ag/admintasks/)** — the day-to-day operations console: start/stop Hub and Probe nodes, manage profiles, check probe health and storage status, licensing, NetFlow template DB, audit log, DR/DC status, and user resources.
+- **[Using the Admin UI](/docs/guide/ag/ui/adminlayout)** — a short tour of the admin interface layout, so you know your way around before diving into the sections below.
+- **[Managing Trisul](/docs/guide/ag/webadmin/)** — platform-wide web admin settings: users, roles, LDAP login, email, dashboards, menus, background jobs, IPAM, SMS, and more.
+- **[Configuring Trisul](/docs/guide/ag/context/)** — per-context configuration: home networks, access points, cron tasks, backups, custom counter groups, SNMP agent, and other context-level settings.
+- **[High Availability](/docs/guide/ag/ha/)** — HA and disaster-recovery setups for production deployments.
+- **[Manage Contexts](/docs/guide/ag/manage_contexts/listcontexts)** — create, list, and sync contexts (tenants) for multi-tenant / MSP deployments.

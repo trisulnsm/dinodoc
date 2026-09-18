@@ -29,7 +29,7 @@ The important keys in the network representing various types of aggregate metric
 | --- | -------------------------- | --------- | ------------ | --------------- | ------- | -------------|
 | 0   | Total                      | 0         | 0            | VT_RATE_COUNTER | Bps     | Total bandwidth observed by Trisul. In Bytes/sec you can multiply by 8 to get bits/sec. |
 | 1   | Packets                    | 0         | 0            | VT_RATE_COUNTER | pps     | Total packets observed by Trisul. In packets/sec. |
-| 2   | Active Sessions            | 0         | 0            | VT_COUNTER      | sess    | Active sessions. Also can use [Meta Session Group > Master Size ](/docs/guide/counter-groups/meta-session-group#master-size) |
+| 2   | Active Sessions            | 0         | 0            | VT_COUNTER      | sess    | Active sessions. Also can use [Meta Session Group > Master Size ](/docs/guide/counter-groups/meta-session-group#meter-list) |
 | 3   | Layer 2 Broadcast          | 0         | 0            | VT_RATE_COUNTER | Bps     | The L2 Broadcast bandwidth.  When the destination MAC is the broadcast MAC address  `FF:FF:FF:FF:FF:FF` |
 | 4   | Layer 2 Multicast          | 0         | 0            | VT_RATE_COUNTER | Bps     | The L2 multicast bandwidth. When the destination MAC is the multicast MAC address prefix `01:00:5E:xx:xx:xx` |
 | 5   | Layer 2 Unicast            | 0         | 0            | VT_RATE_COUNTER | Bps     | The L2 Unicast.  |
