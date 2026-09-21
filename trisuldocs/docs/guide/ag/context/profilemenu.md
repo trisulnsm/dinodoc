@@ -59,8 +59,8 @@ Lets get familiar with the profile configuration menus as listed in the followin
 
 | Menu | Description |
 |--------------------|-------------------|
-| All Resources | See [Resources](/docs/guide/ug/resources/) |
-| All FTS Groups |See [Full Text Search](/docs/guide/ug/resources/fts) |
+| All Resources | See [Resources](/docs/prodguide/nsm/Resources/) |
+| All FTS Groups |See [Full Text Search](/docs/prodguide/nsm/Resources/fts) |
 
 ### Others
 

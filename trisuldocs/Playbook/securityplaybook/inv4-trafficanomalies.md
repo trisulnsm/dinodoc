@@ -40,7 +40,7 @@ By completing this investigation, you should be able to:
 
 Network anomaly investigations begin by identifying the change in network behavior that triggered the investigation. Rather than immediately focusing on individual hosts, the objective is to understand what changed, when it occurred, and whether the observed behavior requires further investigation.
 
-Open [**Behavioral Analytics**](/docs/guide/ug/nbad/trisulnbad), [**Threshold Band Alerts**](/docs/guide/ug/alerts/tband), [**DDoS Metrics**](/docs/guide/ug/alerts/ddos), or the dashboard that generated the alert.
+Open [**Behavioral Analytics**](/docs/prodguide/nsm/NBAD/trisulnbad), [**Threshold Band Alerts**](/docs/guide/ug/alerts/tband), [**DDoS Metrics**](/docs/guide/ug/alerts/ddos), or the dashboard that generated the alert.
 
 Review the available dashboards and alerts to determine:
 
@@ -70,7 +70,7 @@ Once the anomaly has been identified, determine what type of abnormal network be
 
 Understanding the characteristics of the anomaly helps determine whether it represents expected operational activity or behavior requiring further investigation.
 
-Use [**Behavioral Analytics**](/docs/guide/ug/nbad/trisulnbad), [**DDoS Metrics**](/docs/guide/ug/alerts/ddos), [**TCP Analyzer**](/docs/guide/ug/nbad/tcpanalyzer), [**Layer 7 Metrics**](/docs/guide/ug/nbad/layer7metrics), or other behavioral dashboards as appropriate.
+Use [**Behavioral Analytics**](/docs/prodguide/nsm/NBAD/trisulnbad), [**DDoS Metrics**](/docs/guide/ug/alerts/ddos), [**TCP Analyzer**](/docs/prodguide/nsm/NBAD/tcpanalyzer), [**Layer 7 Metrics**](/docs/prodguide/nsm/NBAD/layer7metrics), or other behavioral dashboards as appropriate.
 
 Review the available metrics to determine:
 
@@ -138,7 +138,7 @@ Once the responsible systems have been identified, determine whether the observe
 
 Network anomalies should be validated using multiple sources of evidence before determining whether they represent operational events or security incidents.
 
-Continue the investigation using [**DNS Analysis**](/docs/guide/ug/resources/dns), [**Packet Analysis**](/docs/guide/ug/resources/dns#option-button), and [**Historical Investigation (Retro)**](/docs/guide/ug/cg/retro).
+Continue the investigation using [**DNS Analysis**](/docs/prodguide/nsm/Resources/dns), [**Packet Analysis**](/docs/prodguide/nsm/Resources/dns#option-button), and [**Historical Investigation (Retro)**](/docs/guide/ug/cg/retro).
 
 Use this investigation to answer questions such as:
 

@@ -212,6 +212,102 @@ const config = {
             from: '/docs/isp',
             to: '/docs/prodguide/isp/',
           },
+          {
+            from: '/docs/guide/ug/nbad/enable-nbad',
+            to: '/docs/prodguide/nsm/NBAD/enable-nbad',
+          },
+          {
+            from: '/docs/guide/ug/nbad/nfgen',
+            to: '/docs/prodguide/nsm/NBAD/nfgen',
+          },
+          {
+            from: '/docs/guide/ug/nbad/flowmap',
+            to: '/docs/prodguide/nsm/NBAD/flowmap',
+          },
+          {
+            from: '/docs/guide/ug/nbad/httptraffic',
+            to: '/docs/prodguide/nsm/NBAD/httptraffic',
+          },
+          {
+            from: '/docs/guide/ug/nbad/layer7metrics',
+            to: '/docs/prodguide/nsm/NBAD/layer7metrics',
+          },
+          {
+            from: '/docs/guide/ug/nbad/tunnels',
+            to: '/docs/prodguide/nsm/NBAD/tunnels',
+          },
+          {
+            from: '/docs/guide/ug/nbad/ipv4ipv6',
+            to: '/docs/prodguide/nsm/NBAD/ipv4ipv6',
+          },
+          {
+            from: '/docs/guide/ug/nbad/p2p',
+            to: '/docs/prodguide/nsm/NBAD/p2p',
+          },
+          {
+            from: '/docs/guide/ug/nbad/ja3',
+            to: '/docs/prodguide/nsm/NBAD/ja3',
+          },
+          {
+            from: '/docs/guide/ug/nbad/ja4',
+            to: '/docs/prodguide/nsm/NBAD/ja4',
+          },
+          {
+            from: '/docs/guide/ug/nbad/tcpanalyzer',
+            to: '/docs/prodguide/nsm/NBAD/tcpanalyzer',
+          },
+          {
+            from: '/docs/guide/ug/nbad/commontasks',
+            to: '/docs/prodguide/nsm/NBAD/commontasks',
+          },
+          {
+            from: '/docs/guide/ug/nbad/falsepos',
+            to: '/docs/prodguide/nsm/NBAD/falsepos',
+          },
+          {
+            from: '/docs/guide/ug/nbad/trisulnbad',
+            to: '/docs/prodguide/nsm/NBAD/trisulnbad',
+          },
+          {
+            from: '/docs/guide/ug/nbad',
+            to: '/docs/prodguide/nsm/NBAD/',
+          },
+          {
+            from: '/docs/guide/ug/resources/url',
+            to: '/docs/prodguide/nsm/Resources/url',
+          },
+          {
+            from: '/docs/guide/ug/resources/dns',
+            to: '/docs/prodguide/nsm/Resources/dns',
+          },
+          {
+            from: '/docs/guide/ug/resources/sslcerts',
+            to: '/docs/prodguide/nsm/Resources/sslcerts',
+          },
+          {
+            from: '/docs/guide/ug/resources/ftsssl',
+            to: '/docs/prodguide/nsm/Resources/ftsssl',
+          },
+          {
+            from: '/docs/guide/ug/resources/ftshttp',
+            to: '/docs/prodguide/nsm/Resources/ftshttp',
+          },
+          {
+            from: '/docs/guide/ug/resources/oveview',
+            to: '/docs/prodguide/nsm/Resources/oveview',
+          },
+          {
+            from: '/docs/guide/ug/resources/fts',
+            to: '/docs/prodguide/nsm/Resources/fts',
+          },
+          {
+            from: '/docs/guide/ug/resources',
+            to: '/docs/prodguide/nsm/Resources/',
+          },
+          {
+            from: '/docs/guide/ug/resources/index',
+            to: '/docs/prodguide/nsm/Resources/',
+          },
         ],
       },
     ],
@@ -301,6 +397,11 @@ const config = {
               type: 'doc',
               docId: 'prodguide/index',
               label: 'Overview',
+            },
+            {
+              type: 'doc',
+              docId: 'prodguide/nsm/index',
+              label: 'NSM Guide',
             },
             {
               type: 'doc',

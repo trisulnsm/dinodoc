@@ -352,29 +352,6 @@ const sidebars = {
             },
             {
               "type": "category",
-              "label": "NBAD",
-              "link": {
-                "type": "doc",
-                "id": "guide/ug/nbad/trisulnbad"
-              },
-              "items": [
-                "guide/ug/nbad/enable-nbad",
-                "guide/ug/nbad/nfgen",
-                "guide/ug/nbad/flowmap",
-                "guide/ug/nbad/httptraffic",
-                "guide/ug/nbad/layer7metrics",
-                "guide/ug/nbad/tunnels",
-                "guide/ug/nbad/ipv4ipv6",
-                "guide/ug/nbad/p2p",
-                "guide/ug/nbad/ja3",
-                "guide/ug/nbad/ja4",
-                "guide/ug/nbad/tcpanalyzer",
-                "guide/ug/nbad/commontasks",
-                "guide/ug/nbad/falsepos"
-              ]
-            },
-            {
-              "type": "category",
               "label": "Packet Captures",
               "link": {
                 "type": "doc",
@@ -410,23 +387,6 @@ const sidebars = {
                 "guide/ug/alerts/email_wizard",
                 "guide/ug/alerts/mitre",
                 "guide/ug/alerts/mitretimeline"
-              ]
-            },
-            {
-              "type": "category",
-              "label": "Resources",
-              "link": {
-                "type": "doc",
-                "id": "guide/ug/resources/index"
-              },
-              "items": [
-                "guide/ug/resources/oveview",
-                "guide/ug/resources/dns",
-                "guide/ug/resources/url",
-                "guide/ug/resources/sslcerts",
-                "guide/ug/resources/fts",
-                "guide/ug/resources/ftshttp",
-                "guide/ug/resources/ftsssl"
               ]
             },
             {
@@ -958,6 +918,11 @@ const sidebars = {
       "items": [
         {
           "type": "ref",
+          "id": "prodguide/nsm/index",
+          "label": "Network Security Monitoring Guide"
+        },
+        {
+          "type": "ref",
           "id": "prodguide/nf/index",
           "label": "NetFlow Analyzer Guide"
         },
@@ -1073,6 +1038,168 @@ const sidebars = {
           "items": [
             "prodguide/nf/Customize/ui",
             "prodguide/nf/Customize/show-all"
+          ]
+        }
+      ]
+    }
+  ],
+  "nsmSidebar": [
+    {
+      "type": "category",
+      "label": "Trisul Network Security Monitoring (NSM) Guide",
+      "link": {
+        "type": "doc",
+        "id": "prodguide/nsm/index"
+      },
+      "className": "root-section-title",
+      "collapsible": false,
+      "collapsed": false,
+      "items": [
+        {
+          "type": "category",
+          "label": "Dashboards",
+          "description": "Use dashboards for a quick view of what is happening in your network. You can monitor current traffic, active hosts, applications, alerts, security information, sessions, and other frequently used network metrics.",
+          "items": [
+            "prodguide/nsm/Dashboards/current-hosts",
+            "prodguide/nsm/Dashboards/current-apps",
+            "prodguide/nsm/Dashboards/alerts",
+            "prodguide/nsm/Dashboards/security",
+            "prodguide/nsm/Dashboards/sessions",
+            "prodguide/nsm/Dashboards/overview",
+            "prodguide/nsm/Dashboards/real-time-traffic",
+            "prodguide/nsm/Dashboards/active-keys-monitor",
+            "prodguide/nsm/Dashboards/realtime-alerts",
+            "prodguide/nsm/Dashboards/system-performance",
+            "prodguide/nsm/Dashboards/show-all"
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Retro",
+          "description": "Use Retro when you want to look back at network activity that has already happened. It lets you inspect historical counters and analyze traffic for a specific period in the past.",
+          "items": [
+            "prodguide/nsm/Retro/retro-counters",
+            "prodguide/nsm/Retro/retro-tools",
+            "prodguide/nsm/Retro/show-all"
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Tools",
+          "description": "Use the Tools section when you need to investigate traffic in more detail. It includes flow exploration, historical trends, IP flow exports, usage charts, flow trackers, taggers, and edge connection graphs.",
+          "items": [
+            "prodguide/nsm/Tools/explore-flows",
+            "prodguide/nsm/Tools/long-term-traffic",
+            "prodguide/nsm/Tools/monthly-chart",
+            "prodguide/nsm/Tools/search-key-space",
+            "prodguide/nsm/Tools/real-time-stab-toppers",
+            "prodguide/nsm/Tools/flow-tracker",
+            "prodguide/nsm/Tools/flow-tagger",
+            "prodguide/nsm/Tools/export-flows",
+            "prodguide/nsm/Tools/aggregate-flows",
+            "prodguide/nsm/Tools/edge-graph",
+            "prodguide/nsm/Tools/show-all"
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Security",
+          "description": "Use the Security section for access to monthly security summaries and unified alert views.",
+          "link": {
+            "type": "doc",
+            "id": "prodguide/nsm/Security/index"
+          },
+          "items": [
+            "prodguide/nsm/Security/monthly-summary",
+            "prodguide/nsm/Security/all-alerts",
+            "prodguide/nsm/Security/showall"
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Netflow",
+          "description": "Use the Netflow section to understand where your flow data is coming from and how traffic is distributed across your network devices and interfaces. You can view NetFlow sources, exporters, routers, interfaces, and interface-level traffic details.",
+          "items": [
+            "prodguide/nsm/Netflow/netflow-sources",
+            "prodguide/nsm/Netflow/explore-flows",
+            "prodguide/nsm/Netflow/routers-and-interfaces",
+            "prodguide/nsm/Netflow/show-all"
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Resources",
+          "description": "Use the Resources section for deep protocol analysis, DNS, URL, and certificate inspection.",
+          "link": {
+            "type": "doc",
+            "id": "prodguide/nsm/Resources/index"
+          },
+          "items": [
+            "prodguide/nsm/Resources/url",
+            "prodguide/nsm/Resources/dns",
+            "prodguide/nsm/Resources/sslcerts",
+            "prodguide/nsm/Resources/ftsssl",
+            "prodguide/nsm/Resources/ftshttp",
+            "prodguide/nsm/Resources/oveview"
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Alerts",
+          "description": "Use Alerts to identify traffic conditions that require attention. You can configure Threshold Crossing Alerts (TCAs), flow tracking alerts, blacklist matching, dynamic threshold bands, and view alert activity.",
+          "items": [
+            "prodguide/nsm/Alerts/threshold-crossing-alerts",
+            "prodguide/nsm/Alerts/flow-tracking",
+            "prodguide/nsm/Alerts/blacklist",
+            "prodguide/nsm/Alerts/threshold-bands",
+            "prodguide/nsm/Alerts/dashboards",
+            "prodguide/nsm/Alerts/show-all"
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Reports",
+          "description": "Use Reports when you need to turn network traffic data into reports that can be reviewed or shared. This section includes standard reports, scheduled recurring reports, and email delivery settings.",
+          "items": [
+            "prodguide/nsm/Reports/readymade",
+            "prodguide/nsm/Reports/schedule",
+            "prodguide/nsm/Reports/email-settings",
+            "prodguide/nsm/Reports/show-all"
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Customize",
+          "description": "Use Customize to adjust how the NSM Web UI behaves and looks. You can personalize dashboard layouts, real-time parameters, and HTTP/HTTPS traffic classification rules.",
+          "items": [
+            "prodguide/nsm/Customize/ui",
+            "prodguide/nsm/Customize/show-all"
+          ]
+        },
+        {
+          "type": "category",
+          "label": "NBAD",
+          "description": "Use Network Behavioral Anomaly Detection (NBAD) for tracking protocol anomalies, Layer 7 metrics, DDoS, and MITRE ATT&CK telemetry.",
+          "link": {
+            "type": "doc",
+            "id": "prodguide/nsm/NBAD/index"
+          },
+          "items": [
+            "prodguide/nsm/NBAD/layer7metrics",
+            "prodguide/nsm/NBAD/httptraffic",
+            "prodguide/nsm/NBAD/ipv4ipv6",
+            "prodguide/nsm/NBAD/tunnels",
+            "prodguide/nsm/NBAD/p2p",
+            "prodguide/nsm/NBAD/ja3",
+            "prodguide/nsm/NBAD/ja4",
+            "prodguide/nsm/NBAD/tcpanalyzer",
+            "prodguide/nsm/NBAD/flowmap",
+            "prodguide/nsm/NBAD/mitre-attck",
+            "prodguide/nsm/NBAD/ddos-monitor",
+            "prodguide/nsm/NBAD/enable-nbad",
+            "prodguide/nsm/NBAD/nfgen",
+            "prodguide/nsm/NBAD/commontasks",
+            "prodguide/nsm/NBAD/falsepos"
           ]
         }
       ]

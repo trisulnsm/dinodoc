@@ -61,8 +61,18 @@ The **Trisul IPDR Solution** is purpose-built for Internet Service Providers (IS
 
 ---
 
-## Other Solutions & Capabilities
+### 4. [Network Security Monitoring (NSM) Guide](/docs/prodguide/nsm/)
 
-:::info Network Security Monitoring (NSM)
-If you are looking for full packet capture (PCAP), IDS alert correlation (Suricata/Snort), protocol disassembly, and deep network security analysis, these capabilities are covered comprehensively in the [**Trisul User Guide**](/docs/guide/ug/).
-:::
+![Network Security Monitoring](/img/appnsm.png)
+
+The **Trisul Network Security Monitoring (NSM)** solution extends flow-based monitoring with behavioral anomaly detection (NBAD), security alerting, and forensic resources for detecting and investigating threats across the network.
+
+- **Capabilities Supported:** Flow telemetry, full packet capture (PCAP), IDS alert correlation (Suricata/Snort), and deep protocol extraction.
+- **Key Capabilities:**
+  - **Network Behavioral Analysis (NBAD):** Layer 7 metrics, protocol anomaly detection, encapsulated tunnels, P2P analytics, and TCP performance analysis.
+  - **Threat & Alert Correlation:** MITRE ATT&CK technique mapping, alert timelines, volumetric DDoS detection, and consolidated alert triage.
+  - **Deep Forensic Resources:** Indexed metadata and scoped full-text search across DNS queries, URLs, HTTP headers, and SSL/TLS certificates.
+  - **Retrospective & Real-Time Analytics:** Continuous flow telemetry and historical investigation without aggregation loss.
+
+:point_right: **[Explore the NSM Guide &rarr;](/docs/prodguide/nsm/)**
+

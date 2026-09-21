@@ -49,7 +49,7 @@ You can use the *Search* tool to find items of interest like:
 
 > If you wish to search for resources like HTTP URLs and DNS
 > names, you will be redirected to their search forms which are more
-> flexible. See [URL Resources](/docs/guide/ug/resources/url) and [DNS Resources](/docs/guide/ug/resources/dns)
+> flexible. See [URL Resources](/docs/prodguide/nsm/Resources/url) and [DNS Resources](/docs/prodguide/nsm/Resources/dns)
 
 ## Search Results
 

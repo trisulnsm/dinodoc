@@ -101,7 +101,7 @@ Once historical matches have been identified, validate the communications using 
 
 Historical matches should be validated using multiple sources of evidence before concluding that malicious activity occurred.
 
-Continue the investigation using [**DNS Analysis**](/docs/guide/ug/resources/dns/), [**TLS Metadata**](/docs/guide/ug/cg/ssl),and [**Security Alerts**](/docs/guide/ug/alerts/mw) and  [**Packet Analysis**](/docs/guide/ug/cg/retrotools#pull-packets) where packet capture is available.
+Continue the investigation using [**DNS Analysis**](/docs/prodguide/nsm/Resources/dns), [**TLS Metadata**](/docs/guide/ug/cg/ssl),and [**Security Alerts**](/docs/guide/ug/alerts/mw) and  [**Packet Analysis**](/docs/guide/ug/cg/retrotools#pull-packets) where packet capture is available.
 
 Use this investigation to answer questions such as:
 

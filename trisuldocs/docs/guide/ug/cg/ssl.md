@@ -170,5 +170,5 @@ Displays the top Intermediate Certificate Authorities observed in TLS traffic.
 
 ## Usage Tips
 
-1. [SSL Cert resources](/docs/guide/ug/resources/sslcerts) allow you to search for hashes in bulk
-2. [SSL Cert FTS](/docs/guide/ug/resources/ftsssl) allow you to search for arbitrary strings in certificates
+1. [SSL Cert resources](/docs/prodguide/nsm/Resources/sslcerts) allow you to search for hashes in bulk
+2. [SSL Cert FTS](/docs/prodguide/nsm/Resources/ftsssl) allow you to search for arbitrary strings in certificates

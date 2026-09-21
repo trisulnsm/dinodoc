@@ -132,7 +132,7 @@ After reviewing the encrypted communication, validate the findings using additio
 
 TLS metadata provides valuable visibility into encrypted communications, but it should be correlated with additional evidence before determining whether the activity represents legitimate business traffic or a potential security threat.
 
-Continue the investigation using [**DNS Analysis**](/docs/guide/ug/resources/dns), [**Packet Analysis**](/docs/guide/ug/resources/dns#option-button), and **Historical Investigation (Retro)**. Packet captures can validate TLS negotiation, certificates, and protocol behaviour even when the payload remains encrypted.
+Continue the investigation using [**DNS Analysis**](/docs/prodguide/nsm/Resources/dns), [**Packet Analysis**](/docs/prodguide/nsm/Resources/dns#option-button), and **Historical Investigation (Retro)**. Packet captures can validate TLS negotiation, certificates, and protocol behaviour even when the payload remains encrypted.
 
 Use this investigation to answer questions such as:
 

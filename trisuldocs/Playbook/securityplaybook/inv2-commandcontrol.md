@@ -42,7 +42,7 @@ Command and control investigations rarely begin with high bandwidth usage. Inste
 
 Begin by reviewing the indicator that initiated the investigation. This may originate from DNS activity, TLS metadata, threat intelligence, or a security alert identifying suspicious outbound communications.
 
-Open [**DNS Analysis**](/docs/guide/ug/resources/dns), [**TLS Metadata**](/docs/guide/ug/cg/ssl/), or the relevant security alert associated with the investigation.
+Open [**DNS Analysis**](/docs/prodguide/nsm/Resources/dns), [**TLS Metadata**](/docs/guide/ug/cg/ssl/), or the relevant security alert associated with the investigation.
 
 Review the available evidence to determine:
 
@@ -72,7 +72,7 @@ Once the suspicious communication has been identified, determine which internal 
 
 After identifying a suspicious destination or encrypted session, determine which internal hosts are communicating with it.
 
-From [**DNS Analysis**](/docs/guide/ug/resources/dns) or [**TLS Metadata**](/docs/guide/ug/cg/ssl/), drill down into the associated communication to identify the internal source hosts.
+From [**DNS Analysis**](/docs/prodguide/nsm/Resources/dns) or [**TLS Metadata**](/docs/guide/ug/cg/ssl/), drill down into the associated communication to identify the internal source hosts.
 
 Review the available communication details to determine:
 
@@ -144,7 +144,7 @@ If the communication uses encrypted protocols, examine the available TLS metadat
 
 Command and control investigations should not rely on a single indicator. Correlating multiple sources of network evidence helps distinguish legitimate application traffic from malicious communications and provides greater confidence before initiating incident response.
 
-Continue the investigation by correlating evidence from [**DNS Analysis**](/docs/guide/ug/resources/dns/), [**Packet Analysis**](/docs/guide/ug/resources/dns#option-button), and [**Historical Investigation (Retro)**](/docs/guide/ug/cg/retro) to validate whether the observed communication is consistent across multiple sources.
+Continue the investigation by correlating evidence from [**DNS Analysis**](/docs/prodguide/nsm/Resources/dns), [**Packet Analysis**](/docs/prodguide/nsm/Resources/dns#option-button), and [**Historical Investigation (Retro)**](/docs/guide/ug/cg/retro) to validate whether the observed communication is consistent across multiple sources.
 
 Use this investigation to answer questions such as:
 
