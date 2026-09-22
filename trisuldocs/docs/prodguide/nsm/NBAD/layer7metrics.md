@@ -2,6 +2,11 @@
 sidebar_position: 1
 ---
 
+
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Layer 7 Metrics
 
 

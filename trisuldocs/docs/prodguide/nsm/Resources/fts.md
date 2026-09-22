@@ -3,6 +3,11 @@ sidebar_position: 7
 sidebar_label: Full Text Search
 ---
 
+
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Full Text Search
 <span class="badge badge--primary">PCAP Mode Only</span>  
 

@@ -1,3 +1,7 @@
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Custom Key Monitors
 
 **Custom Key Monitors** allow you to monitor a set of key items in real time, irrespective of whether they show up in the toppers list or not. You can think of them as subset of a counter group that is “special” to you. For example, the IP (Hosts counter group) 192.168.14.16 is our internal build server, so we want to monitor it separately, generate reports for it separately, even though we may have thousands of other hosts.

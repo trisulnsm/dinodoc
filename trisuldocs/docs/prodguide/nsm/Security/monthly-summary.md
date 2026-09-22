@@ -10,4 +10,4 @@ sidebar_position: 1
 
 **Monthly Summary** rolls up a full month of alert activity into a single view, so you can see how many alerts fired, which classes were most active, and whether things are trending up or down — without digging through each individual alert. It's the fastest way to answer "how did this month look from a security standpoint?" before a report or a review meeting.
 
-[**Click here → to view the detailed Monthly Summary doc**](/docs/guide/ug/tools/daily_usage)
+[**Click here → to see alerts broken down by priority, with a click-through to alert type for daily traffic and malware tracking**](https://docs.trisul.org/docs/guide/ug/alerts/monthly_summary)

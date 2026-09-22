@@ -2,6 +2,11 @@
 sidebar_position: 8
 ---
 
+
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # TCP Analyzer
 
 The TCP Analyzer dashboard provides deep visibility into TCP health metrics across your network. It identifies hosts with high retransmission rates, elevated setup latency, session timeouts, and poor-quality flows. All of which are indicators of network congestion, application issues, or degraded path quality.

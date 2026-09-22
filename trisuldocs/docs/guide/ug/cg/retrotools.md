@@ -1,3 +1,7 @@
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Retro Analysis Tools
 
 You have selected a time interval you want to focus on - whats next ?

@@ -1,3 +1,7 @@
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Flow Tracker Alerts
 
 Having previously configured [*Flow Trackers*](/docs/guide/ug/flow/tracker) as described in our prior documentation, we will now proceed to outline the procedures for generating alerts based on these *Flow Trackers*. This section will focus on the creation and configuration of **Flow Tracker Alerts**, that enables the detection of specific flow activity and triggers notifications in response to pre configured threshold criteria.

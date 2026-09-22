@@ -1,3 +1,7 @@
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Flow Legs and Duplication
 
 Trisul Network Analytics continuously receives flow telemetry either

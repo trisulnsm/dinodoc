@@ -1,3 +1,7 @@
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Microsoft Teams delivery
 
 Trisul can automatically send alerts to Microsoft Teams via an Incoming Webhook URL.  

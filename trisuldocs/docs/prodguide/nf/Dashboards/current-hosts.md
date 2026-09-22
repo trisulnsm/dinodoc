@@ -23,6 +23,6 @@ Think of it as a **starting point for network investigation**. You spot somethin
 
 Want to understand what each module means and when to use it?
 
-[**Click here &rarr; to view the detailed Current Hosts doc**](/docs/guide/ug/ui/dashboards#current-hosts)
+[**Click here → to see what each panel on this dashboard measures and when to use it**](https://docs.trisul.org/docs/guide/ug/ui/dashboards#current-hosts)
 
 ---

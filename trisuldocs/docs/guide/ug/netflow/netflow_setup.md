@@ -1,3 +1,7 @@
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Configure NetFlow
 
 Trisul has the capability to use NetFlow like telemetry to gain deep

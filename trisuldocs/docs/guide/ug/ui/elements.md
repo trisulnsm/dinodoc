@@ -2,6 +2,11 @@
 sidebar_position: 7
 ---
 
+
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Other UI Elements
 
 This section contains a quick overview of the user interface elements.

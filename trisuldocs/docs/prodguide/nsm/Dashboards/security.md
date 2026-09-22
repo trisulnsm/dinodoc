@@ -15,4 +15,4 @@ The **Security dashboard** provides a consolidated view of security activity det
 Use this dashboard as a starting point when investigating security activity, especially when Trisul is receiving alerts from an IDS such as Snort or Suricata.
 
 
-[**Click here &rarr; to view the detailed Security doc**](/docs/guide/ug/ui/dashboards#security)
+[**Click here → to see recent attacker and victim IPs, top TCP originators, and alert trend charts correlated with bandwidth**](https://docs.trisul.org/docs/guide/ug/ui/dashboards#security)

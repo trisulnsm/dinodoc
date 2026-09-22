@@ -1,3 +1,7 @@
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Readymade Reports 
 
 *Readymade Reports* are built-in reports based on pre-defined templates for quick analysis of common network traffic aspects. It provides a starting point for further customization. Examples of pre-defined templates include top talkers, top listeners, inbound and outbound traffic volume.

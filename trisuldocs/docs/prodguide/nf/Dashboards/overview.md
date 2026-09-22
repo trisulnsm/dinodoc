@@ -21,4 +21,4 @@ Use it when you want to quickly answer:
 If something stands out, such as a sudden traffic increase, a busy host or application, an alert, or packet drops, you can use the detailed dashboards to investigate further.
 
 
-[**Click here &rarr; to view the detailed Overview doc**](/docs/guide/ug/ui/dashboards#overview-dashboard)
+[**Click here → to see current bandwidth, previous day volume comparisons, active flow counts, and alert totals**](https://docs.trisul.org/docs/guide/ug/ui/dashboards#overview-dashboard)

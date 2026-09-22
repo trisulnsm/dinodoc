@@ -1,3 +1,7 @@
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Performing Retro Analysis
 
 Retro analysis is short for retrospective analysis. When applied to

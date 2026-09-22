@@ -2,6 +2,11 @@
 sidebar_position: 6
 ---
 
+
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # JA3 Fingerprints
 
 The **JA3 Fingerprints** application generates JA3 hashes from TLS ClientHello messages observed on the network. Each TLS ClientHello is converted into a JA3 fingerprint by extracting selected handshake fields and generating an MD5 hash of the resulting fingerprint string.

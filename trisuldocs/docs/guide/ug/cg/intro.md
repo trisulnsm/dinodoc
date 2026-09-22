@@ -1,3 +1,7 @@
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Traffic Metering Concepts
 
 This section attempts to briefly explain the basic concepts of counter

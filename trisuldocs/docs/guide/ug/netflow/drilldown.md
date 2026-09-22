@@ -1,3 +1,7 @@
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Interface Drilldown
 
 Describes the *Interface drilldown* tool that appears when you select

@@ -1,3 +1,7 @@
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Multicast GraphX
 
 Multicast GraphX is an interactive visualization tool that helps you explore multicast traffic patterns in your network. It displays a clear and organized layout using D3.js, showing which IPs are sending and receiving multicast data.

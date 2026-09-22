@@ -1,3 +1,7 @@
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Payload Search
 <span class="badge badge--primary">PCAP Mode Only</span>  
 

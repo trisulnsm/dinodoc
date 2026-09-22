@@ -2,6 +2,11 @@
 sidebar_position: 3
 ---
 
+
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Introduction to Dashboards and Modules
 
 Dashboards and modules are the primary way Trisul presents network data in the Web UI.

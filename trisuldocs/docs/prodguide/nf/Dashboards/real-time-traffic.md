@@ -24,4 +24,4 @@ Use it when you want to quickly identify:
 * Which applications are currently using the most bandwidth
 
 
-[**Click here &rarr; to view the detailed Real Time Traffic doc**](/docs/guide/ug/ui/dashboards#real-time-traffic)
+[**Click here → to see live inbound versus outbound bandwidth rates and the top internal hosts and applications driving current traffic**](https://docs.trisul.org/docs/guide/ug/ui/dashboards#real-time-traffic)

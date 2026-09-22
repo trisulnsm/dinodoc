@@ -1,3 +1,7 @@
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # PCAP Drilldown Methods
 
 This document describes the different ways you can drilldown to raw 

@@ -2,6 +2,11 @@
 sidebar_position: 15
 ---
 
+
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Common Tasks
 
 ### View application bandwidth breakdown

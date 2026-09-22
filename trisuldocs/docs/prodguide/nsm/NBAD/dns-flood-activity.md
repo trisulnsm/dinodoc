@@ -3,6 +3,11 @@ sidebar_position: 12
 sidebar_label: DNS Flood Activity
 ---
 
+
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # DNS Flood Activity
 
 :::info

@@ -1,3 +1,7 @@
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Trisul Reporting Framework
 
 Trisul Reports provide summaries of network traffic data, where users can gain insights into various aspects of network activity. Trisul devised a centralized reporting system to facilitate users to easily access a wide range of network traffic reports in one place instead of navigating to various dashboards to view the each report. Based on the selected template data, Trisul generates reports with which users can,

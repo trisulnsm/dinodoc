@@ -1,3 +1,7 @@
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Time Slices API
 
 Retrieve backend time-slice metadata for a Trisul context, including available data windows, individual slice details, and storage pool information. This API is the REST/JSON equivalent of the TRP `TIMESLICES_REQUEST` command.

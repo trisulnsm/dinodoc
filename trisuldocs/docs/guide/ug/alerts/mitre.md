@@ -1,3 +1,7 @@
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # MITRE ATT&CK Framework Integration
 
 The MITRE ATT&CK® integration in Trisul Network Analytics enables mapping of network detections to the MITRE ATT&CK framework. This provides structured visibility into observed adversarial techniques, helping analysts correlate alerts with known tactics and techniques.

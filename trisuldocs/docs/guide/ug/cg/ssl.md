@@ -1,3 +1,7 @@
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # SSL/TLS Metering
 
 Three new counter groups give you great visibility into the SSL

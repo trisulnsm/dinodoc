@@ -2,6 +2,11 @@
 sidebar_position: 5
 ---
 
+
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Modules
 
 In the ["Introduction to Dashboards and Modules"](/docs/guide/ug/ui/dashmod_intro) section, we’ve already covered what modules are, types of modules, and how to view one.

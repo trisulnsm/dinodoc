@@ -1,3 +1,7 @@
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Name Resolution
 
 You can assign a user friendly name for any type of item.

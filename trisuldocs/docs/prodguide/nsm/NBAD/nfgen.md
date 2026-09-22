@@ -2,6 +2,11 @@
 sidebar_position: 14
 ---
 
+
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # NFGen Flow Conversion
 
 NBAD includes an NFGen engine that can convert supported flow formats into NetFlow for export. This enables interoperability between devices using different flow technologies and downstream systems that expect NetFlow records.

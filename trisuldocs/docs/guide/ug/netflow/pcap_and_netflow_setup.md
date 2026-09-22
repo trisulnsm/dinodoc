@@ -1,3 +1,7 @@
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Using Packets and Netflow Together
 
 Trisul can also consume a mix of Netflow and raw packets on the same or

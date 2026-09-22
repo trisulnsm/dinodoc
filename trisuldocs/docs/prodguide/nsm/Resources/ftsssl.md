@@ -3,6 +3,11 @@ sidebar_position: 4
 sidebar_label: SSL Certs FTS
 ---
 
+
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # SSL Certificates FTS
 <span class="badge badge--primary">PCAP Mode Only</span>  
 

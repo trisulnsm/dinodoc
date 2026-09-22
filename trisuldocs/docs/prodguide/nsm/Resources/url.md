@@ -3,6 +3,11 @@ sidebar_position: 1
 sidebar_label: URL Resources
 ---
 
+
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # URL Resources
 <span class="badge badge--primary">PCAP Mode Only</span>  
 ## Overview

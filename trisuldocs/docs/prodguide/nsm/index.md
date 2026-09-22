@@ -6,7 +6,7 @@ displayed_sidebar: nsmSidebar
 
 Welcome to the **Trisul Network Security Monitoring (NSM) Guide**.
 
-**Trisul NSM** is designed for comprehensive network security monitoring, traffic analysis, threat detection, and packet-level visibility. It combines flow monitoring, full packet capture (PCAP), IDS alert correlation (Suricata/Snort), network behavioral analysis (NBAD), and protocol extraction in a unified platform.
+**Trisul NSM** is designed for comprehensive network security monitoring, traffic analysis, threat detection, and packet-level visibility. It combines [flow monitoring](https://docs.trisul.org/docs/guide/learntrisul/terminology#flow), [full packet capture (PCAP)](https://docs.trisul.org/docs/guide/learntrisul/terminology#pcap-packet-capture), [IDS alert correlation (Suricata/Snort)](https://docs.trisul.org/docs/guide/learntrisul/terminology#ids-alert), [network behavioral analysis (NBAD)](https://docs.trisul.org/glossary/nbad), and protocol extraction in a unified platform.
 
 With Trisul NSM, you can:
 
@@ -47,6 +47,10 @@ graph TD
     A --> J[Customize]
     A --> K[NBAD]
 ```
+
+:::tip New here?
+Start with **Dashboards** for a live view of your network, then check **Security** to see IDS alerts, then **NBAD** for behavior-based detections. These are the two menus that set NSM apart from NetFlow Analyzer. The rest of the menus below are for deeper investigation once you know what you are looking for.
+:::
 
 import DocCardList from '@theme/DocCardList';
 

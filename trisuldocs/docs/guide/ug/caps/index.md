@@ -1,3 +1,7 @@
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Full Packet Capture
 
 As Trisul meters network traffic, it continuously saves raw packets for 

@@ -45,6 +45,10 @@ graph TD
 
 ```
 
+:::tip New here?
+Start with **Dashboards** for a live view of your network, then check **Alerts** to see what has already been flagged. Use **Retro** once you need to look further back in time. The other menus below are for deeper investigation once you know what you are looking for.
+:::
+
 import DocCardList from '@theme/DocCardList';
 
 <DocCardList />

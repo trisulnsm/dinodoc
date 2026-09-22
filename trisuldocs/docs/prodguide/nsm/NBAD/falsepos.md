@@ -3,6 +3,11 @@ title: Reducing False Positives — Suppressing Noisy Suricata Signatures
 sidebar_position: 16
 ---
 
+
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Reducing False Positive Alerts
 
 Trisul interfaces with IDS over Unix sockets / EVE JSON, so any signature that

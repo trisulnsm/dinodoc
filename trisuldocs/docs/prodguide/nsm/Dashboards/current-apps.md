@@ -22,6 +22,6 @@ It helps you quickly identify:
 Use it as a quick starting point to understand how your network traffic is being used by applications and spot activity that may need further investigation.
 
 
-[**Click here &rarr; to view the detailed Current Apps doc**](/docs/guide/ug/ui/dashboards#current-apps)
+[**Click here → to see applications ranked by bandwidth volume or connection count, with drilldowns to top users and raw PCAP**](https://docs.trisul.org/docs/guide/ug/ui/dashboards#current-apps)
 
 ---

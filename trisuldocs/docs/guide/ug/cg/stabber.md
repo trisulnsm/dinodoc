@@ -1,3 +1,7 @@
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Real Time Stabbers
 
 Real time stabbers allow you to monitor various types of network

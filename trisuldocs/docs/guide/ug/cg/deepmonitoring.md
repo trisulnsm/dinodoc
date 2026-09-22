@@ -1,3 +1,7 @@
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Deep Monitoring of IP assets
 
 A common use case is to enable enhanced monitoring of specific assets.

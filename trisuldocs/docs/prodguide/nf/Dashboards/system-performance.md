@@ -21,4 +21,4 @@ Use it to check:
 The dashboard is particularly useful when you notice a performance problem and want to determine **when it started and which part of the system may be involved**.
 
 
-[**Click here &rarr; to view the detailed System Performance doc**](/docs/guide/ug/ui/dashboards#system-performance)
+[**Click here → to monitor CPU and memory usage, packet drop percentages, global flush times, and PCAP disk write bandwidth**](https://docs.trisul.org/docs/guide/ug/ui/dashboards#system-performance)

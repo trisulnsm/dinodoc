@@ -12,7 +12,7 @@ sidebar_position: 1
 
 [**Current Hosts**](/docs/guide/ug/ui/dashboards#current-hosts) is your quick view of **who is talking to whom on the network right now**.
 
-It separates **internal hosts** from **external hosts** and helps you quickly see:
+It separates [**internal hosts**](https://docs.trisul.org/docs/guide/learntrisul/terminology#internal-hosts) from [**external hosts**](https://docs.trisul.org/docs/guide/learntrisul/terminology#external-hosts) and helps you quickly see:
 
 * **Traffic:** what is coming into and going out of your network
 * **Top hosts:** which internal devices and external systems are using the most traffic
@@ -23,6 +23,6 @@ Think of it as a **starting point for network investigation**. You spot somethin
 
 Want to understand what each module means and when to use it?
 
-[**Click here &rarr; to view the detailed Current Hosts doc**](/docs/guide/ug/ui/dashboards#current-hosts)
+[**Click here → to see what each panel on this dashboard measures and when to use it**](https://docs.trisul.org/docs/guide/ug/ui/dashboards#current-hosts)
 
 ---

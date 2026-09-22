@@ -3,6 +3,11 @@ sidebar_position: 6
 sidebar_label: Show all
 ---
 
+
+import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+<Primer />
+
 # Overview
 <span class="badge badge--primary">PCAP Mode Only</span>  
 

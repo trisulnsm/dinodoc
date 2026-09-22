@@ -17,4 +17,5 @@ This is useful for quickly understanding whether IDS activity is occurring, what
 The view is powered by Trisul's real-time event delivery using WebSockets PUSH, allowing alert events to be sent directly from the Trisul Probe to the browser.
 
 
-[**Click here &rarr; to view the detailed Real Time Alert Stabber**](/docs/guide/ug/alerts/ids_stabber)
+[**Click here → to see live alerts pushed in real time, with an interactive bubble chart and pivoting by signature, priority, or IP**](https://docs.trisul.org/docs/guide/ug/alerts/ids_stabber)
+
