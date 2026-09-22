@@ -1,7 +1,3 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
-<Primer />
-
 # Introduction to Web Trisul
 
 **Web Trisul** is the web-based interface for interacting with Trisul Network Analytics. It allows you to visualize data, perform searches, monitor traffic, export reports, and carry out various analysis tasks.

@@ -2,12 +2,11 @@
 sidebar_position: 9
 ---
 
-
 import Primer from '@site/docs/guide/ug/_primer.mdx';
 
-<Primer />
-
 # Flow Map
+
+<Primer />
 
 The Flow Map dashboard visualizes live network session flows on a geographic world map. It provides an at-a-glance view of where your network traffic is going geographically, and which countries are the largest sources and destinations of traffic.
 

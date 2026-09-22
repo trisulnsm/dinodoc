@@ -3,12 +3,12 @@ sidebar_position: 6
 sidebar_label: Show all
 ---
 
-
 import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+# Overview
 
 <Primer />
 
-# Overview
 <span class="badge badge--primary">PCAP Mode Only</span>  
 
 Resources are objects linked to intrusion or forensic indicators. They

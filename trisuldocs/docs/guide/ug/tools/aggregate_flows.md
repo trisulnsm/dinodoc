@@ -1,9 +1,8 @@
 import Primer from '@site/docs/guide/ug/_primer.mdx';
 
-<Primer />
-
 # Aggregate Flows
 
+<Primer />
 
 The *Aggregate Flows* tool enables you to query network flow data and displays summarized statistical information for each unique tuple. The output is presented in a tabular format, with separate tables for each parameter (tuples like source ip, source port, destination ip,etc) providing a comprehensive view of the aggregated data.
 

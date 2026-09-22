@@ -1,8 +1,8 @@
 import Primer from '@site/docs/guide/ug/_primer.mdx';
 
-<Primer />
-
 # Controlling Packet Storage
+
+<Primer />
 
 Not all organizations have the 
 luxury of storing every single packet that crosses their perimeter. 

@@ -1,9 +1,8 @@
 import Primer from '@site/docs/guide/ug/_primer.mdx';
 
-<Primer />
-
 # Flow concepts
 
+<Primer />
 
  *Flow Analysis* is a network monitoring technique that examines the flow of traffic between devices, networks, or applications. It involves collecting and analyzing metadata about network flows, such as:
 

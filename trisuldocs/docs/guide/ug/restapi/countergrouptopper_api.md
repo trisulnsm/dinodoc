@@ -1,8 +1,8 @@
 import Primer from '@site/docs/guide/ug/_primer.mdx';
 
-<Primer />
-
 # Counter Group Topper API
+
+<Primer />
 
 Retrieve the top-K keys (toppers) for a Trisul counter group, ranked by a selected meter. This API is the REST/JSON equivalent of the TRP `COUNTER_GROUP_TOPPER_REQUEST` command and is commonly used to build top-N dashboards (for example, top hosts by bytes, top ASNs by connections).
 

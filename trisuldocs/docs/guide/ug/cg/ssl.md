@@ -1,8 +1,8 @@
 import Primer from '@site/docs/guide/ug/_primer.mdx';
 
-<Primer />
-
 # SSL/TLS Metering
+
+<Primer />
 
 Three new counter groups give you great visibility into the SSL
 encrypted traffic in your network.

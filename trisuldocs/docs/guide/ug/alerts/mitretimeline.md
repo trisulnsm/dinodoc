@@ -1,8 +1,8 @@
 import Primer from '@site/docs/guide/ug/_primer.mdx';
 
-<Primer />
-
 # MITRE ATT&CK Alert Timeline
+
+<Primer />
 
 The **MITRE ATT&CK Alert Timeline** provides a chronological view of intrusion detections mapped to the MITRE ATT&CK framework. It enables analysts to reconstruct the progression of observed attack activity over a selected time period, correlate alerts across MITRE tactics and techniques, and investigate individual detections without leaving the timeline.
 

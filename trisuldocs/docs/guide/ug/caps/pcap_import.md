@@ -1,8 +1,8 @@
 import Primer from '@site/docs/guide/ug/_primer.mdx';
 
-<Primer />
-
 # Import PCAP Dumps
+
+<Primer />
 
 Trisul is capable of importing giant packet capture (PCAP) dumpfiles.
 

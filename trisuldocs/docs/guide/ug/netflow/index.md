@@ -1,8 +1,8 @@
 import Primer from '@site/docs/guide/ug/_primer.mdx';
 
-<Primer />
-
 # Trisul with Netflow
+
+<Primer />
 
 This section explains how you can setup Trisul in Netflow mode. In this mode, Trisul uses Netflow and other flow telemetry to drive its analytics engine instead of raw packets. This section describes how to configure Netflow mode, to analyze from a *Device perspective*, and how to use advanced features such as “Interface Tracking”.
 

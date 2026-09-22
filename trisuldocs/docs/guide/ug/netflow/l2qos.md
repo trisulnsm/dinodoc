@@ -1,8 +1,8 @@
 import Primer from '@site/docs/guide/ug/_primer.mdx';
 
-<Primer />
-
 # Layer 2 and QoS
+
+<Primer />
 
 This section outlines some of the Layer 2 and QoS related features
 available in Trisul Network Analytics.

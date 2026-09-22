@@ -1,7 +1,3 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
-<Primer />
-
 # Netflow vs SNMP
 
 Trisul has a advanced feature that provides bandwidth mapping of the

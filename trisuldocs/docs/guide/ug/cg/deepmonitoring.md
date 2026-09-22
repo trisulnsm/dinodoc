@@ -1,8 +1,8 @@
 import Primer from '@site/docs/guide/ug/_primer.mdx';
 
-<Primer />
-
 # Deep Monitoring of IP assets
+
+<Primer />
 
 A common use case is to enable enhanced monitoring of specific assets.
 These assets are identified by IPv4/IPv6 addresses.

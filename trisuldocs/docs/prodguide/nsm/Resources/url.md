@@ -3,12 +3,12 @@ sidebar_position: 1
 sidebar_label: URL Resources
 ---
 
-
 import Primer from '@site/docs/guide/ug/_primer.mdx';
+
+# URL Resources
 
 <Primer />
 
-# URL Resources
 <span class="badge badge--primary">PCAP Mode Only</span>  
 ## Overview
 Trisul's HTTP URL logging and reporting feature allows you to generate detailed reports on HTTP URLs seen by reassembling HTTP packets. With the reassembled packets, Trisul can log the website's URL, timestamps, and other details.  

@@ -1,7 +1,3 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
-<Primer />
-
 # Summary of All Alerts
 
 Trisul provides two convenient ways to view a summary of all alerts:

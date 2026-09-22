@@ -1,8 +1,8 @@
 import Primer from '@site/docs/guide/ug/_primer.mdx';
 
-<Primer />
-
 # Real Time Stabbers
+
+<Primer />
 
 Real time stabbers allow you to monitor various types of network
 activity within a 5 second delay.

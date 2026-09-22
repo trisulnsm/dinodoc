@@ -1,8 +1,8 @@
 import Primer from '@site/docs/guide/ug/_primer.mdx';
 
-<Primer />
-
 # Retro Analysis Tools
+
+<Primer />
 
 You have selected a time interval you want to focus on - whats next ?
 Now you need to select an analysis tool to apply to the time interval.

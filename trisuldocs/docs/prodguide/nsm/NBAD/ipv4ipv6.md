@@ -2,11 +2,6 @@
 sidebar_position: 3
 ---
 
-
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
-<Primer />
-
 # IPv4 / IPv6 Dashboard
 
 The IPv4 / IPv6 Dashboard provides a side-by-side view of host and application activity across both protocol families. It is useful for understanding IPv6 adoption in your network, identifying IPv6-only hosts, and comparing traffic patterns between the two address families.

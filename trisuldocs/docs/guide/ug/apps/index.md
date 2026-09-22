@@ -1,7 +1,3 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
-<Primer />
-
 # Trisul Apps
 
 Trisul Apps extend the capabilities of Trisul Network Analytics with additional analytics, monitoring, visualization, and investigation features.

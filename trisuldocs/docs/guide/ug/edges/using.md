@@ -1,8 +1,8 @@
 import Primer from '@site/docs/guide/ug/_primer.mdx';
 
-<Primer />
-
 # Working with Edges
+
+<Primer />
 
 The entry point into exploring the streaming graph database of Trisul is to select two items
 

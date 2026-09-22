@@ -2,12 +2,11 @@
 sidebar_position: 13
 ---
 
-
 import Primer from '@site/docs/guide/ug/_primer.mdx';
 
-<Primer />
-
 # Enabling NBAD
+
+<Primer />
 
 ## Overview
 

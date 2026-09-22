@@ -1,8 +1,8 @@
 import Primer from '@site/docs/guide/ug/_primer.mdx';
 
-<Primer />
-
 # Counter Group Info API
+
+<Primer />
 
 Retrieve metadata about enabled counter groups in a Trisul context, including group names, GUIDs, bucket sizes, and optionally detailed meter definitions. This API is the REST/JSON equivalent of the TRP `COUNTER_GROUP_INFO_REQUEST` command.
 

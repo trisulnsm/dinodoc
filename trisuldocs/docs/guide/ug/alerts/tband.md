@@ -1,8 +1,8 @@
 import Primer from '@site/docs/guide/ug/_primer.mdx';
 
-<Primer />
-
 # Threshold Band Anomaly Alerts
+
+<Primer />
 
 ## Overview
 

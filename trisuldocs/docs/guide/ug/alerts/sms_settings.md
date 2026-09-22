@@ -1,7 +1,3 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
-<Primer />
-
 # SMS Alert Delivery
 
 If you have access to an SMS Message Gateway you can dispatch alerts via SMS to your Mobile phone.

@@ -2,12 +2,11 @@
 sidebar_position: 4
 ---
 
-
 import Primer from '@site/docs/guide/ug/_primer.mdx';
 
-<Primer />
-
 # Tunnels
+
+<Primer />
 
 The Tunnels dashboard detects and measures traffic carried inside tunneling protocols. Tunnels are commonly used for legitimate purposes (VPNs, cloud connectivity, MPLS backbones) but can also be used to encapsulate unauthorized traffic or bypass security controls.
 

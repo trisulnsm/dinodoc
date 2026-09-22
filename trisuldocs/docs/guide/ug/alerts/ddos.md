@@ -1,8 +1,8 @@
 import Primer from '@site/docs/guide/ug/_primer.mdx';
 
-<Primer />
-
 # Detecting Volumetric Attacks
+
+<Primer />
 
 Using the TCA [Threshold Crossing Alerts](/docs/guide/ug/alerts/tca) and the TB [Threshold Band Alerts](/docs/guide/ug/alerts/tband) it is easy to configure Trisul Network Analytics to detect volumetric attacks such as DDoS Distributed Denial of Service.
 

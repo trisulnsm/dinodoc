@@ -2,12 +2,11 @@
 sidebar_position: 15
 ---
 
-
 import Primer from '@site/docs/guide/ug/_primer.mdx';
 
-<Primer />
-
 # Common Tasks
+
+<Primer />
 
 ### View application bandwidth breakdown
 Navigate to **NBAD → Layer 7 Metrics**. The Applications panel shows top apps ranked by total bandwidth. Click any application to open a counter group drilldown with full historical charts.

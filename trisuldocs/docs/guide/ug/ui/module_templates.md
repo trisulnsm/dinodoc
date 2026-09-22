@@ -2,12 +2,11 @@
 sidebar_position: 9
 ---
 
-
 import Primer from '@site/docs/guide/ug/_primer.mdx';
 
-<Primer />
-
 # Module Templates
+
+<Primer />
 
 Module templates are predefined layouts that help you create modules for a dashboard.
 

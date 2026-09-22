@@ -1,8 +1,8 @@
 import Primer from '@site/docs/guide/ug/_primer.mdx';
 
-<Primer />
-
 # Manage Alert Groups
+
+<Primer />
 
 An “**Alert Group**” represents a type of alert. Trisul is pre-configured with [7 alert types](/docs/guide/ug/alerts/#types-of-alerts-in-trisul). Each *Alert Group* serves as the logical container for organizing and managing alerts based on their respective types. This section explains how admins can manage individual *alert groups* and configure them in the [*Admin panel*](/docs/guide/ag/ui/adminlayout).
 

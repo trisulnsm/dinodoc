@@ -1,8 +1,8 @@
 import Primer from '@site/docs/guide/ug/_primer.mdx';
 
-<Primer />
-
 # Search Key Space
+
+<Primer />
 
 The *Search Key Space* tool allows you to search for activity for a range of keys lying within a certain lexicographic key space. The most useful application of this is to search for all activity within arbitrary IP network blocks.
 

@@ -4,9 +4,9 @@ sidebar_position: 8
 
 import Primer from '@site/docs/guide/ug/_primer.mdx';
 
-<Primer />
-
 # Default Dashboards
+
+<Primer />
 
 Trisul ships with a bunch of default dashboards which you will be seeing as soon as you first log in. This page describes each of them.
 

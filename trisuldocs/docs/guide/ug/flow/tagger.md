@@ -1,8 +1,8 @@
 import Primer from '@site/docs/guide/ug/_primer.mdx';
 
-<Primer />
-
 # Flow Taggers
+
+<Primer />
 
 Flow Taggers assign one or more text labels to flows in real time. Flow taggers help identify network flows based on predefined criteria i.e. these labels are created by rules you specify (example, IP addresses, ports, protocols). You can then search for flows
 containing these text tags.
