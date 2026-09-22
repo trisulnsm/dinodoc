@@ -918,23 +918,23 @@ const sidebars = {
       "items": [
         {
           "type": "ref",
-          "id": "prodguide/nsm/index",
-          "label": "Network Security Monitoring Guide"
-        },
-        {
-          "type": "ref",
           "id": "prodguide/nf/index",
           "label": "NetFlow Analyzer Guide"
         },
         {
           "type": "ref",
           "id": "prodguide/ipdr/index",
-          "label": "IPDR Guide"
+          "label": "IPDR Solution Guide"
         },
         {
           "type": "ref",
           "id": "prodguide/isp/index",
-          "label": "ISP Guide"
+          "label": "ISP Analytics Guide"
+        },
+        {
+          "type": "ref",
+          "id": "prodguide/nsm/index",
+          "label": "Network Security Monitoring Guide"
         }
       ]
     }
@@ -1152,7 +1152,6 @@ const sidebars = {
             "prodguide/nsm/Alerts/flow-tracking",
             "prodguide/nsm/Alerts/blacklist",
             "prodguide/nsm/Alerts/threshold-bands",
-            "prodguide/nsm/Alerts/dashboards",
             "prodguide/nsm/Alerts/show-all"
           ]
         },

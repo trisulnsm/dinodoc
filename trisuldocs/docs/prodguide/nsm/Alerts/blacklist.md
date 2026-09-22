@@ -2,6 +2,8 @@
 sidebar_position: 3
 ---
 
+# Blacklist Alerts
+
 :::info Navigation
 :point_right: Go to **Alerts &rarr; Blacklist**
 :::

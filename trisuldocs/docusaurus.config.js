@@ -400,23 +400,23 @@ const config = {
             },
             {
               type: 'doc',
-              docId: 'prodguide/nsm/index',
-              label: 'NSM Guide',
-            },
-            {
-              type: 'doc',
               docId: 'prodguide/nf/index',
-              label: 'NetFlow Guide',
+              label: 'NetFlow Analyzer Guide',
             },
             {
               type: 'doc',
               docId: 'prodguide/ipdr/index',
-              label: 'IPDR Guide',
+              label: 'IPDR Solution Guide',
             },
             {
               type: 'doc',
               docId: 'prodguide/isp/index',
-              label: 'ISP Guide',
+              label: 'ISP Analytics Guide',
+            },
+            {
+              type: 'doc',
+              docId: 'prodguide/nsm/index',
+              label: 'NSM Guide',
             },
           ],
         },

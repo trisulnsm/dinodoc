@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Threshold Bands
+# Threshold Band Anamoly Alerts
 
 :::info Navigation
 :point_right: Go to **Alerts &rarr; Threshold Bands**
