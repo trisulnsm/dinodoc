@@ -1112,7 +1112,7 @@ const sidebars = {
           "items": [
             "prodguide/nsm/Security/monthly-summary",
             "prodguide/nsm/Security/all-alerts",
-            "prodguide/nsm/Security/showall"
+            "prodguide/nsm/Security/security-tools"
           ]
         },
         {
@@ -1196,6 +1196,7 @@ const sidebars = {
             "prodguide/nsm/NBAD/flowmap",
             "prodguide/nsm/NBAD/mitre-attck",
             "prodguide/nsm/NBAD/ddos-monitor",
+            "prodguide/nsm/NBAD/dns-flood-activity",
             "prodguide/nsm/NBAD/enable-nbad",
             "prodguide/nsm/NBAD/nfgen",
             "prodguide/nsm/NBAD/commontasks",

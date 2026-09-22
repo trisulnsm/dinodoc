@@ -19,13 +19,4 @@ The **NBAD** section provides behavioral anomaly monitoring, protocol metrics, f
 * [**Flow Map**](flowmap) — Live global geographic traffic mapping.
 * [**MITRE ATT&CK**](mitre-attck) — Adversary technique mapping and alert timeline.
 * [**DDoS Monitor**](ddos-monitor) — Volumetric spike and flood detection.
-
-:::info[🚧 Content Pending: DNS Flood Activity]
-<!--
-CONTENT PENDING:
-- NBAD → DNS Flood Activity: No matching page found in UG; may turn out to be part
-  of the DDoS/"Detecting Volumetric Attacks" page (/docs/guide/ug/alerts/ddos) rather than its own topic.
-  Needs confirmation from content owner before writing stub.
--->
-Documentation for **DNS Flood Activity** is pending confirmation of the matching User Guide target.
-:::
+* [**DNS Flood Activity**](dns-flood-activity) — DNS and TCP SYN flood pattern tracking.

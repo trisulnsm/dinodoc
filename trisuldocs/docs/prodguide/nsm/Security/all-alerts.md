@@ -1,7 +1,5 @@
 ---
-id: viewall
-title: Summary of All Alerts
-sidebar_label: All Alerts
+sidebar_position: 2
 ---
 
 # All Alerts
@@ -84,9 +82,3 @@ Each row has its own action menu (**⋮ ▾**) for drilling into that specific a
 :::warning
 Downloading PCAP for a large result set can produce a very large file — narrow the search criteria first if you only need packets for a specific IP, signature, or time range.
 :::
-
-## Related Pages
-
-- [Monthly Summary](/docs/guide/ug/alerts/monthly_summary) — the same alert activity rolled up by month instead of listed individually.
-
----

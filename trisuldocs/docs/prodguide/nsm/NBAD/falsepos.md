@@ -1,6 +1,6 @@
 ---
 title: Reducing False Positives — Suppressing Noisy Suricata Signatures
-sidebar_position: 15
+sidebar_position: 16
 ---
 
 # Reducing False Positive Alerts

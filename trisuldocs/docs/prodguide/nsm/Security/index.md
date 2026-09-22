@@ -12,4 +12,4 @@ The **Security** section provides monthly security summaries and unified views o
 
 * [**Monthly Summary**](monthly-summary) — Rollup of monthly alert activity and security trends.
 * [**All Alerts**](all-alerts) — Consolidated, sortable list of all alerts across every alert type.
-* [**Show all**](showall) — Consolidated view of all alerts across the system.
+* [**Show all**](security-tools) — Catalog of tools available under the Security menu.
