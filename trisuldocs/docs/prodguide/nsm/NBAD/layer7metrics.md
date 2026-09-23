@@ -2,11 +2,7 @@
 sidebar_position: 1
 ---
 
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Layer 7 Metrics
-
-<Primer />
 
 The Layer 7 Metrics dashboard provides a complete L7 breakdown of your network traffic. It is the starting point for understanding application usage, encrypted traffic patterns, and DNS behaviour.
 

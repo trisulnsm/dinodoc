@@ -2,11 +2,7 @@
 sidebar_position: 7
 ---
 
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Other UI Elements
-
-<Primer />
 
 This section contains a quick overview of the user interface elements.
 Besides the already explained [*User layout*](/docs/guide/ug/ui/userlayout) and [*Chart UI elements*](/docs/guide/ug/ui/charts), Trisul provides other essential interactive elements like Buttons, Forms, Search box, Tooltips and more. Lets dive in and explore where you can find all these user friendly elements in the Trisul dashboards and modules and how you can interact with them. 

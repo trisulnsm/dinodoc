@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Packet Capture Basics
-
-<Primer />
 
 The Trisul raw packet engine is designed towards these goals :
 

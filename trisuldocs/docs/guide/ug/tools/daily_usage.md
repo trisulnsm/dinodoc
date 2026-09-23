@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Monthly Charts
-
-<Primer />
 
 *Monthly charts* in Trisul are calendar-based data visualization where you can visualize daily aggregated network traffic data for specific meters and items on a calendar interface.  
 You can get a monthly overview of key metrics, such as:

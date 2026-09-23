@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Malware and Blacklist Alerts
-
-<Primer />
 
 **This feature requires the Trisul Badfellas plugin**  
 See [Trisul Badfellas](/docs/guide/ref/plugin-config/badfellas)

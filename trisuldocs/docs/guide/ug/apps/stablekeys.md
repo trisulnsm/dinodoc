@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Stable Keys
-
-<Primer />
 
 **Stable Keys** observes the keys reported by a Trisul counter group at regular stream intervals and checks whether keys that were present in the previous interval continue to appear in the current interval. When an expected key disappears for the configured number of intervals, Stable Keys generates an alert.
 

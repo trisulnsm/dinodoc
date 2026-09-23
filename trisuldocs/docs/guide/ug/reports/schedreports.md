@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Schedule Email Reports
-
-<Primer />
 
 You can have Trisul automatically email reports periodically.
 

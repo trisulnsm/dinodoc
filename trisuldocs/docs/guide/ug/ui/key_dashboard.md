@@ -2,11 +2,7 @@
 sidebar_position: 10
 ---
 
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Key Dashboard
-
-<Primer />
 
 The Key Dashboard is like a hub that allows you to dive deeper into a specific Key's data and explore related analysis paths. It's a powerful tool for investigating and understanding network traffic in Trisul. Clicking on any key in a dashboard will take you to the Key Dashboard of that particular key.
 

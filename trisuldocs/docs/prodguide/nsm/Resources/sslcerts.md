@@ -3,11 +3,7 @@ sidebar_position: 3
 sidebar_label: SSL Resources
 ---
 
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # SSL Resources
-
-<Primer />
 
 <span class="badge badge--primary">PCAP Mode Only</span>  
 

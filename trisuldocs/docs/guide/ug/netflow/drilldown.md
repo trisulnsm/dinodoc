@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Interface Drilldown
-
-<Primer />
 
 Describes the *Interface drilldown* tool that appears when you select
 “Drilldown” against any interface in the Interfaces table of the [*Routers and Interfaces

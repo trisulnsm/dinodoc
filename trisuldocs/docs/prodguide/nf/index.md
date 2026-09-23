@@ -2,7 +2,7 @@
 
 Welcome to the **Trisul NetFlow Analyzer Guide**.
 
-**Trisul NetFlow Analyzer** is designed for monitoring and analyzing network traffic using flow data collected from routers, switches, and other network devices. It supports **NetFlow v5/v9, IPFIX, sFlow, and NetStream**.
+**Trisul NetFlow Analyzer** is designed for monitoring and analyzing network traffic using [flow](https://docs.trisul.org/docs/guide/learntrisul/terminology#flow) data collected from routers, switches, and other network devices. It supports **NetFlow v5/v9, IPFIX, sFlow, and NetStream**.
 
 With NetFlow Analyzer, you can use flow data to:
 

@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # FAQ
-
-<Primer />
 
 ### Quickly see packet contents without pulling out the pcap
 

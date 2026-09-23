@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Flow Trackers
-
-<Primer />
 
 A flow tracker is used to capture and save snapshots of top flows
 matching a range of criteria.

@@ -3,11 +3,7 @@ sidebar_position: 2
 sidebar_label: DNS Resources
 ---
 
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # DNS Resources
-
-<Primer />
 
 <span class="badge badge--primary">PCAP Mode Only</span>
 ## Overview

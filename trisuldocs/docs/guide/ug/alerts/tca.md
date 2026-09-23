@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Threshold Crossing Alerts (TCAs)
-
-<Primer />
 
 ## Overview
 

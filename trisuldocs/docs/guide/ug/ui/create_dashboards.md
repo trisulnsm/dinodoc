@@ -3,11 +3,7 @@ sidebar_position: 4
 
 ---
 
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Dashboards
-
-<Primer />
 
 Dashboards provide a way to organize and monitor network data by bringing related **modules** into a single view.
 

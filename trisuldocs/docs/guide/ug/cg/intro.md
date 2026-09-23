@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Traffic Metering Concepts
-
-<Primer />
 
 This section attempts to briefly explain the basic concepts of counter
 groups, meters, and keys.

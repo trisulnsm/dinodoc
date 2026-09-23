@@ -2,11 +2,7 @@
 sidebar_position: 6
 ---
 
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Chart and Chart Interactions
-
-<Primer />
 
 Trisul supports a number of intuitive chart surfaces that render the statistical data in a rich interactive way. And you can drilldown on the chart using [*Chart Interaction Controls*](/docs/guide/ug/ui/charts#chart-interaction-controls) and [*Legend Table*](/docs/guide/ug/ui/charts#legend-table). Many modules allow you to select a chart surface and enable you to view the data at that particular point of time.
 

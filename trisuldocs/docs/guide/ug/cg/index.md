@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Traffic Monitoring with Trisul
-
-<Primer />
 
 Traffic monitoring is the central task of Trisul. Out of the box, Trisul
  measures over 120 parameters about 16 different "things" such as 

@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Flow Analysis
-
-<Primer />
 
 Flow based analytics is a central aspect of the Trisul Network Analytics platform.  [Traffic metrics](/docs/guide/ug/cg) is another part. 
 

@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # ShiftX
-
-<Primer />
 
 [**ShiftX**](https://github.com/trisulnsm/apps/tree/apps7/analyzers/shiftx) identifies significant changes in network behavior by comparing current network activity with recent historical patterns.
 

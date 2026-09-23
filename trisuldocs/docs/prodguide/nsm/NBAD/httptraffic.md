@@ -2,11 +2,7 @@
 sidebar_position: 2
 ---
 
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # HTTP Traffic
-
-<Primer />
 
 The HTTP Traffic dashboard provides full visibility into unencrypted HTTP activity on your network. It breaks down traffic by host, method, status code, content type, and URL and surfaces the raw HTTP resource log for forensic investigation.
 

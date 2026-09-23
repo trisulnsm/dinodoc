@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Explore Flows
-
-<Primer />
 
 *Explore Flows* is a powerful, fast, and general-purpose search tool designed for in-depth inspection and analysis of network traffic flows. This comprehensive feature enables users to scrutinize individual network flows, examine packet-level and netflow data, and identify potential security threats or performance issues.  
 

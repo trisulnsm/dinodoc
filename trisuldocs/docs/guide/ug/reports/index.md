@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Reports
-
-<Primer />
 
 Trisul comes with dozens of pre-defined reports for your use. You can
  either view them on the browser or send them via email periodically.

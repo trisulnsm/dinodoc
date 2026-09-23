@@ -2,11 +2,7 @@
 sidebar_position: 1
 ---
 
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # User Interface for User Accounts
-
-<Primer />
 
 The Trisul Web UI provides different features and navigation options based on the **Product Mode** configured for the deployment and the **privileges** assigned to the logged-in account.
 

@@ -2,11 +2,7 @@
 sidebar_position: 7
 ---
 
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # JA4 Fingerprints
-
-<Primer />
 
 The **JA4 Fingerprints** application generates JA4 fingerprints from TLS ClientHello messages observed on the network. JA4 is a modern TLS fingerprinting method that provides stable client fingerprints for encrypted TLS traffic.
 

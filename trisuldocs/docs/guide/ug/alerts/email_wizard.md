@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Email Alert Delivery
-
-<Primer />
 
 ## Overview  
 

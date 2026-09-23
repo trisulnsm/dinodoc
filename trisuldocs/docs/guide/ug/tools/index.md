@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Analysis Tools Reference
-
-<Primer />
 
 import DocCardList from '@theme/DocCardList';
 

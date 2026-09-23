@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Settings
-
-<Primer />
 
 This section describes options available to tweak flow handling.
 

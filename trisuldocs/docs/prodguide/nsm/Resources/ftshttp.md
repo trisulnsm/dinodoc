@@ -3,11 +3,7 @@ sidebar_position: 5
 sidebar_label: HTTP Header FTS
 ---
 
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # HTTP Header FTS
-
-<Primer />
 
 <span class="badge badge--primary">PCAP Mode Only</span>  
 

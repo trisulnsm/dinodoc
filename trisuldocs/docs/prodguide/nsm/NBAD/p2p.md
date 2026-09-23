@@ -2,11 +2,7 @@
 sidebar_position: 5
 ---
 
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # P2P Analytics
-
-<Primer />
 
 The P2P Analytics dashboard provides a breakdown of peer-to-peer traffic detected on your network. It correlates traffic-level data with IDS and blacklist alerts to give both a volume view and a security view of P2P activity.
 

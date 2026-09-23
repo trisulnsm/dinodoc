@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Configure NetFlow
-
-<Primer />
 
 Trisul has the capability to use NetFlow like telemetry to gain deep
 visibility into your traffic performance, monitor traffic flows, and

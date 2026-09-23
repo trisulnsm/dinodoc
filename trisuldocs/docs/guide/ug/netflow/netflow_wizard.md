@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # NetFlow Configuration Wizard
-
-<Primer />
 
 *NetFlow Configuration Wizard* pulls together various configuration options
 into one place.

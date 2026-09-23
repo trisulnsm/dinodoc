@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # REST API
-
-<Primer />
 
 The Trisul REST API provides a simple HTTP/JSON interface for accessing network analytics data, metadata, and historical statistics from Trisul. These endpoints expose the same backend functionality available through the Trisul Remote Protocol (TRP), making it easy to integrate Trisul with dashboards, automation workflows, reporting tools, and third-party applications.
 

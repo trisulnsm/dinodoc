@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Sankey Drilldown
-
-<Primer />
 
 The Sankey Drill Down App, can be downloaded from [TRISUL Apps](/docs/guide/ag/webadmin/apps). This visualization tool illustrates the split of traffic for various applications, originating from specific routers and interfaces by providing a graphical representation of traffic distribution.
 

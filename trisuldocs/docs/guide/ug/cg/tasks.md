@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Tasks
-
-<Primer />
 
 ### How can I view real time traffic ?
 

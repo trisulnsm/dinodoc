@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # PCAP Drilldown Methods
-
-<Primer />
 
 This document describes the different ways you can drilldown to raw 
 packet captures from the Trisul user interface. If you are interested in

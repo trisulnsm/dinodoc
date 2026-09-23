@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Interface Tracking
-
-<Primer />
 
 ## Overview
 

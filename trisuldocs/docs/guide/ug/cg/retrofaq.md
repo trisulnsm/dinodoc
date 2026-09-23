@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Retro Q & A
-
-<Primer />
 
 Retro FAQs are complex network analysis like analysing network traffic, flows, and alerts rendered in plain English as a question for easy access.
 

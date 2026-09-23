@@ -1,8 +1,4 @@
-import Primer from '@site/docs/guide/ug/_primer.mdx';
-
 # Performing Retro Analysis
-
-<Primer />
 
 Retro analysis is short for retrospective analysis. When applied to
 network monitoring, it means re-examining past data sets looking to get
