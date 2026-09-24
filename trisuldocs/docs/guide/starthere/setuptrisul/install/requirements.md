@@ -9,7 +9,7 @@ import AdminGuideTour from '@site/src/components/AdminGuideTour';
 
 Below are the recommended system requirements for Trisul deployments. Trisul runs on commodity servers, either bare metal or virtual machines. Below you’ll find recommended hardware and resource guidelines based on the two data-processing modes and varying deployment sizes. 
 
-Choose the processing mode and size that match your network’s scale, then proceed to Installation.
+Choose the processing mode and size that match your network’s scale, then proceed to [Installing](/docs/guide/starthere/setuptrisul/install/doinstall).
 
 
 ## Operating Systems
@@ -119,7 +119,7 @@ Large enterprises with > 20,000 endpoints.
 		| Network | 1GbE interface that can be used for both NetFlow and Management access |
 		| Disk | 8TB Storage for 3 months,  proportionately add more based on retention|
 
-		*Table: Large Enterprise or multi-hundred site SD-WAN* 
+		*Table: SD-WAN (≈5000+ branches)*
 
 </TabItem>
 </Tabs>
@@ -155,7 +155,7 @@ Packet capture analytics sizing is based on total packet bandwidth.  This is not
 </TabItem>
 
 
-<TabItem value="med" label="1Gbps" default>
+<TabItem value="med" label="1Gbps">
 
 | Hardware  | System Requirements                                                                                                            
 | ------- | ------------ |
@@ -170,7 +170,7 @@ Packet capture analytics sizing is based on total packet bandwidth.  This is not
 </TabItem>
 
 
-<TabItem value="large10" label="10Gbps" default>
+<TabItem value="large10" label="10Gbps">
 
 | Hardware  | System Requirements                                                                                                            
 | ------- | ------------ |
@@ -184,7 +184,7 @@ Packet capture analytics sizing is based on total packet bandwidth.  This is not
 
 </TabItem>
 
-<TabItem value="large40" label="40Gbps" default>
+<TabItem value="large40" label="40Gbps">
 
 :::danger Large configuration
 This is a typical configuration for 40Gbps packet capture used in ISP settings. Please contact us to discuss the details.  We like to aggregate using TAP/AGG architecture and feed into dedicated FPGA cards for best performance. 

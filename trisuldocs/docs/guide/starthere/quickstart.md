@@ -5,7 +5,7 @@ sidebar_label: Quickstart
 
 # How to Get Started
 
-Trisul is incredibly easy to get started on. Plan for about **20-30 minutes** from a blank VM to your first dashboard.
+Plan for about **20-30 minutes** from a blank VM to your first dashboard.
 
 
 :::success Included Evaluation License 
@@ -18,7 +18,7 @@ Here is how you get started with links to relevant pages.
 
 ### Step 1: Get a Linux VM or a Bare Metal machine ready 
 
-Ubuntu and RHEL/CentOS are supported. If you're not sure your hardware is enough, especially for packet-capture (NSM) mode, which is more resource-hungry than flow-based modes. Check **[System Requirements](/docs/guide/starthere/setuptrisul/install/requirements)** first; it breaks sizing down by deployment scale and by mode.
+Ubuntu and RHEL/CentOS are supported. Packet-capture (NSM) mode needs more resources than the flow-based modes. If you're not sure your hardware is enough, check **[System Requirements](/docs/guide/starthere/setuptrisul/install/requirements)** first. It breaks sizing down by deployment scale and by mode.
 
 
 ### Step 2: Sign up and download Trisul
@@ -27,7 +27,7 @@ Visit the **[Trisul Get Started page](https://www.trisul.org/download/)** and si
 
 ### Step 3: Install
 
-Follow **[Installing Trisul](/docs/guide/starthere/setuptrisul/install/doinstall)**. This covers package install and verification; if you're upgrading an existing instance instead, see [Upgrading Trisul](/docs/guide/starthere/setuptrisul/install/doupgrade)
+Follow **[Installing Trisul](/docs/guide/starthere/setuptrisul/install/doinstall)**. To check package signatures before you install, see [Verifying Packages](/docs/guide/starthere/setuptrisul/install/pkgverify). If you're upgrading an existing instance instead, see [Upgrading Trisul](/docs/guide/starthere/setuptrisul/install/doupgrade).
 
 
 ### Step 4: Tell Trisul what to monitor, and pick your mode
@@ -53,6 +53,6 @@ Point your browser at `http://<your-server-ip>:3000` and log in. See [Logging In
 **Congratulations! You're running Trisul.** From here:
  
 - New to the terminology (NetFlow, PCAP, ASN, and so on)? The **[Glossary](/glossary)** has it.
-- Ready to go deeper on your specific mode? Jump to the [NetFlow Analyzer](/docs/prodguide/nf/), [IPDR](/docs/prodguide/ipdr/), or [ISP Analytics](/docs/prodguide/isp/) guide, or the [User Guide](/docs/guide/ug/) for NSM.
+- Ready to go deeper on your specific mode? Jump to the [NSM](/docs/prodguide/nsm/), [NetFlow Analyzer](/docs/prodguide/nf/), [IPDR](/docs/prodguide/ipdr/), or [ISP Analytics](/docs/prodguide/isp/) guide. The [User Guide](/docs/guide/ug/) covers what all modes share.
 - Setting this up for a team, not just yourself? See [Licensing](/docs/guide/starthere/setuptrisul/license/) and [User Management](/docs/guide/ag/) next.
  

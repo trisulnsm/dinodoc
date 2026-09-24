@@ -18,7 +18,7 @@ import DocCardList from '@theme/DocCardList';
 
 Looking for specialized product solutions or developer APIs?
 
-- **[Product Guides](/docs/prodguide):** Dedicated guides for [NetFlow Analyzer](/docs/prodguide/nf/), [IPDR Compliance](/docs/prodguide/ipdr/), and [ISP Analytics](/docs/prodguide/isp/).
+- **[Product Guides](/docs/prodguide):** Dedicated guides for [Network Security Monitoring (NSM)](/docs/prodguide/nsm/), [NetFlow Analyzer](/docs/prodguide/nf/), [IPDR Compliance](/docs/prodguide/ipdr/), and [ISP Analytics](/docs/prodguide/isp/).
 - **[LUA API Guide](/docs/lua):** Build custom streaming real-time network traffic processors and metrics using Trisul's embedded Lua engine.
 - **[TRP Query API Guide](/docs/trp):** Programmatically query Trisul's high-speed analytics database via the Trisul Remote Protocol (TRP).
 - **[Troubleshooting Guide](/docs/Troubleshooting):** Step-by-step diagnostic workflows for common setup and operational issues.

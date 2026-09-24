@@ -18,6 +18,6 @@ At a high level:
 
 - [**Context**](/docs/guide/learntrisul/terminology#context) provides the logical environment in which traffic data is organized and stored.
 
-- [**Web Trisul**](/docs/guide/learntrisul/terminology#webtrisul) provides the user interface for accessing and analyzing the data managed by the Hub.
+- [**WebTrisul**](/docs/guide/learntrisul/terminology#webtrisul) provides the user interface for accessing and analyzing the data managed by the Hub.
 
-> **Note:** This is a high-level view intended to help you understand the main components and how they relate to each other. It is not a complete representation of the Trisul architecture. For a detailed view, see the [**Domain architecture**](/docs/guide/learntrisul/concepts/) documentation.
+> **Note:** This is a high-level view intended to help you understand the main components and how they relate to each other. It is not a complete representation of the Trisul architecture. For a detailed view, see the [**Distributed Domain Concepts**](/docs/guide/learntrisul/concepts/) documentation.

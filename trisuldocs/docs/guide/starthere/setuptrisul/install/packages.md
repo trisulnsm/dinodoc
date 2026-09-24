@@ -1,4 +1,4 @@
-# Core Packages 
+# Packages
 
 Before installation, take a moment to understand the Trisul packages. Each package handles a different part of the system, and this page gives you a clear idea of what each package does so you know exactly what you are installing.
 
@@ -22,13 +22,13 @@ All three core packages are required for a complete setup, while plugin packages
 These are optional and extend Trisul’s capabilities:
 
 - :electric_plug: **trisul-badfellas** 
-  - Badfellas plugin adds threat-intelligence checks by comparing your traffic against known malicious IPs and domains.
+  - BadFellas plugin adds threat-intelligence checks by comparing your traffic against known malicious IPs and domains.
 - :electric_plug: **trisul-geo**
   -  Geo plugin adds geolocation data, showing the country, ASN, and city information for the IPs seen in your traffic.
 
 
 ## Meta Package
 
-A meta-package called **`Trisul Full`** is also available. This is a shortcut package that installs all of the above (core + plugins) in one step. 
+A meta-package called `trisul-full` is also available (on RHEL-based systems, it's the yum group `Trisul Full`). This is a shortcut package that installs all of the above (core + plugins) in one step. 
 
-Now that you know what each package does, you’re ready to follow the install steps for your platform.
+Now that you know what each package does, follow the install steps for your platform in [Installing](/docs/guide/starthere/setuptrisul/install/doinstall).

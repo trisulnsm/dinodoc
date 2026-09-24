@@ -39,7 +39,7 @@ For most deployments, the web interface is the simplest and safest way to instal
 
 :::info navigation
 
-:point_right: Login as Admin → Select Context :default → Licensing
+:point_right: Login as Admin → **Context : default** → **Licensing**
 
 :::
 
@@ -54,23 +54,21 @@ This alternative method installs the license file directly in the correct direct
 
 ### Install License on Trisul Probe Node
 
-1. Put the new license file in `/usr/local/etc/trisul-probe` 
-1. Change the name  of the new file to `LicenseKey.txt`  *OR*
-2. Edit the `LicenseFile` parameter in [trisulProbeConfig.xml](/docs/guide/ref/trisulconfig#app ) to point to the new file. 
+1. Put the new license file in `/usr/local/etc/trisul-probe`.
+2. Either rename the new file to `LicenseKey.txt`, or edit the `LicenseFile` parameter in [trisulProbeConfig.xml](/docs/guide/ref/trisulconfig#app) to point to the new file.
 
 
 Repeat the same for the Hub (even if on the same machine)
 
 ### Install License on Trisul Hub Node
 
-1. Put the new license file in`/usr/local/etc/trisul-hub`
-1. Change the name of the new file to `LicenseKey.txt` *OR*
-2. Edit the `LicenseFile` parameter in [trisulHubConfig.xml](/docs/guide/ref/trisulconfig#app ) to point to the new file. 
+1. Put the new license file in `/usr/local/etc/trisul-hub`.
+2. Either rename the new file to `LicenseKey.txt`, or edit the `LicenseFile` parameter in [trisulHubConfig.xml](/docs/guide/ref/trisulconfig#app) to point to the new file.
 
 ### Restart Trisul Hub and Probe Node
 
 :::info
-Please restart both hub and probe node to take effect
+Restart both the hub and probe nodes for the new license to take effect. See [Start and Stop Trisul](/docs/guide/ag/admintasks/startstop).
 :::
 
 
@@ -78,7 +76,7 @@ Please restart both hub and probe node to take effect
 
 :::info navigation
 
-:point_right: Login as Admin → Select Context → Licensing
+:point_right: Login as Admin → **Context : default** → **Licensing**
 
 :::
 

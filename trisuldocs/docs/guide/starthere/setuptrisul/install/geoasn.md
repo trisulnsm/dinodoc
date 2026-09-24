@@ -1,6 +1,6 @@
 # Plugin Geo
 
-The Geo plugin provides based on IP Address Prefix
+Based on the IP address prefix, the Geo plugin provides:
 
 - Country lookup
 - ASN Lookup

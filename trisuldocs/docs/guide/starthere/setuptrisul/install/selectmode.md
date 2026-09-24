@@ -32,7 +32,7 @@ Not Sure Which Product Mode to Choose? Refer to [**Product Modes**](/docs/guide/
 
 ## First Login
 
-After following the steps in [installation](doinstall). You should be able to login to the UI by opening 
+After following the steps in [Installing](/docs/guide/starthere/setuptrisul/install/doinstall), You should be able to login to the UI by opening 
 
 
 :::info navigation
@@ -68,7 +68,7 @@ Upon selecting "Next" in screen 1
 
 ![select interface](images/selectinterface.png)
 
-The dialog shows a list of interfaces found on the Trisul Probe node along with their IP Addresses. Select one or more of the interfaces on which you will be receiving Packets (via SPAN port) or NetFlow 
+The dialog shows a list of interfaces found on the Trisul Probe node along with their IP Addresses. Select one or more interfaces that will receive NetFlow, Packet Capture (via SPAN port) or Syslog traffic. To go back to Screen 1, click **Previous**.
 
 
 Press the **Configure** button to finish.
@@ -83,11 +83,11 @@ The hub and probe nodes are restarted with the selected mode.
 
 :::success Complete
 Now you can start sending traffic, either NetFlow or packets to Trisul.
-Logout and login as user to start viewing reports
+Log out and log in as the viewer user to start viewing reports. See [Logging In](/docs/guide/starthere/setuptrisul/login) for the default credentials.
 :::
 
 
-:memo: Refer to Trisul User Guide [Introduction](/docs/guide/ug/ui/) for user login. 
+:memo: To learn the user interface, see the User Guide [Introduction](/docs/guide/ug/ui/).
 
 ## Re-Enabling Product Mode Selector
 
@@ -102,7 +102,7 @@ This restores the same Product Mode selection screen you saw during first-time o
 ![](images/reenable_productmode.png)  
 *Figure: Showing Re-enabling Product Mode Selector*
 
-- Check the "Show mode selection" checkbox and
-- Click the "Save" button
+- Select the **Show mode selection** checkbox.
+- Click **Save**.
 
-Once you have completed these steps, you can select the desired mode from the Product Selection Mode.
+Once you have completed these steps, you can select the desired mode in the **How do you plan to use Trisul ?** dialog.

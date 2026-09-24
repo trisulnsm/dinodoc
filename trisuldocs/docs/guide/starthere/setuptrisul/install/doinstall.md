@@ -16,7 +16,7 @@ The first step is to login and register at the Trisul [**Getting Started**](http
 ## Installing All Packages
 
 
-Select the instructions as per the platform of your choice to install the **`Trisul-Full`** meta package consisting of all packages. 
+Select the instructions as per the platform of your choice to install the `trisul-full` meta package (yum group `Trisul Full` on RHEL-based systems), which contains all packages. 
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -69,7 +69,7 @@ import TabItem from '@theme/TabItem';
     ```bash
     # adding trisul YUM repository
     cd /etc/yum.repos.d
-    curl -LO https://trisul.org//trisulfull-rhel8.repo
+    curl -LO https://trisul.org/trisulfull-rhel8.repo
     # check if Trisul Full is available now
     yum group list
     # install
@@ -84,7 +84,7 @@ import TabItem from '@theme/TabItem';
 
 :::tip Congrats ! next step
 
-:point_right: After installation, you should login as admin and select the ["Product Mode"](selectmode)
+:point_right: After installation, you should login as admin and select the [Product Mode](/docs/guide/starthere/setuptrisul/install/selectmode)
 :::
 
 
@@ -112,14 +112,14 @@ If you want to install individual packages, you follow the same commands as abov
   </TabItem>
 
 
-  <TabItem value="redhat" label="Redhat Based" default>
+  <TabItem value="redhat" label="Redhat Based">
     ```bash
     yum install trisul-hub trisul-probe webtrisul
     ```
 
     To install plugins
     ```bash
-    yum install trisul-badfellastrisul-geo
+    yum install trisul-badfellas trisul-geo
     ```
 
   </TabItem>
@@ -130,9 +130,9 @@ If you want to install individual packages, you follow the same commands as abov
 
 ### Via the DEB Files 
 
-If you want to install the packages manually, you can use the DEB files. The DEB packages can be found on the Downloads page.
+If you want to install the packages manually, you can use the DEB files. The DEB packages can be found on the [Downloads page](https://www.trisul.org/download/).
 
-Download each DEB package and install and install each file with: `dpkg -i trisul-probe-7.0_xxx.deb` etc.
+Download each DEB package and install each file with: `dpkg -i trisul-probe-7.0_xxx.deb` etc.
 
 
 ----
@@ -164,11 +164,11 @@ curl -LO https://www.trisul.org/trisulfull-rhel8.repo
 curl -LO https://www.trisul.org/trisulfull.repo
 ```
 
-Then move into the repo directory and download the repo file:
+Then move into the repo directory and download the repo file for your distribution from the list above. For example, on RHEL 9:
 
 ```bash
 cd /etc/yum.repos.d
-curl -LO https://www.trisul.org/trisulfull.repo
+curl -LO https://www.trisul.org/trisulfull-rhel9.repo
 
 
 # check if Trisul Full is available now
@@ -177,7 +177,11 @@ yum group list
 
 Once the group appears, you can install Trisul packages normally using yum.  
 
-The following example installs the Trisul core packages
+The following example installs the Trisul core packages:
+
+```bash
+yum install trisul-hub trisul-probe webtrisul
+```
 
 ### Installing the RPM Packages Manually
 

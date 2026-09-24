@@ -1,6 +1,6 @@
 # Plugin BadFellas
 
-The badfellas plugin provides threat monitoring functionality.
+The BadFellas plugin provides threat monitoring functionality.
 
 This is found in the `trisul-badfellas` package.
 

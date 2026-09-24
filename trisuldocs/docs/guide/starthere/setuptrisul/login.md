@@ -2,15 +2,13 @@
 
 # Logging In
 
-> You need to use a **SVG capable browser** like Firefox,
-> Chrome, Opera, Safari to work with Trisul.  
-> For best results use **Firefox or Chrome**
+> For best results, use a current version of **Firefox** or **Chrome**.
 
 Trisul can be accessed by pointing your browser to :  
 
-- Via HTTP on port *3000*. [Instructions to change this to another port](/docs/guide/howto) 
+- Via HTTP on port *3000*. To use another port, see [Change the Trisul webserver port](/docs/guide/howto/change_web_port).
 
-- Via HTTPS
+- Via HTTPS. See [Using HTTPS](/docs/guide/howto/sslforwebtr).
 
 ## First Login
 

@@ -1,11 +1,15 @@
 # Configure Packet Capture
 
+:::info Applies to
+Network Security Monitoring (NSM) mode, which uses packet capture.
+:::
+
 Before Trisul can analyze traffic, it needs access to raw network packets. This page helps you choose the right packet acquisition method based on your network size, speed, and deployment model.
 
 ### Choose the Right Method:
 Use the option that best matches your environment:
 
-- **Port Mirror (SPAN)**– rBest for most enterprise networks with links below 500 Mbps.
+- **Port Mirror (SPAN)**– Best for most enterprise networks with links below 500 Mbps.
 - **Network Taps**– Recommended for high-speed links above 500 Mbps, where SPAN ports become unreliable or lossy.
 - **Bridges**– Suitable only for small offices or appliance-style deployments, where Trisul can be placed inline.
 

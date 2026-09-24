@@ -9,13 +9,13 @@ Trisul Network Analytics licenses are :
 
 License types are :
 
-1. **7-Day Trial License** : The trial license gives you tremendous value as it gets you all of the real time analytics and the most recent 7 days for historical analysis
-2. **Production License** : depends on the number of active internal endpoints in your Home Network space
+1. **7-Day Trial License** : The trial license includes all real-time analytics and the most recent 7 days of historical analysis.
+2. **Production License** : depends on the number of active internal endpoints in your [Home Network](/docs/guide/learntrisul/homenetwork_concepts) space
    1. Small Business : 500 simultaneously active Internal IPs
    2. Medium : 3000 simultaneously active Internal IPs
    3. Unlimited : As many as your hardware can support
 
-For more information see the [LicensingFAQ](https://trisul.org/pricing)
+For more information, see the [Trisul pricing page](https://trisul.org/pricing).
 
 ## Machine ID
 
@@ -25,14 +25,14 @@ Once you have decided which license type suits you, you need to get the Trisul M
 
 :::info navigation
 
-:point_right: Login as Admin → Select Context :default → Licensing
+:point_right: Login as Admin → **Context : default** → **Licensing**
 
 :::
 
 ![](images/machineid.png)  
 *Figure: Getting the machine-id from the Admin UI*  
 
-Click on the machine ID link against each node to get the machineID as shown below
+Click **Show Machine ID** against each node to get the Machine ID, as shown below.
 
 ![](images/machineid_value.png)  
 *Figure: Showing a sample of Machine ID*
@@ -40,7 +40,7 @@ Click on the machine ID link against each node to get the machineID as shown bel
 
 ### Alternate Method: Get Machine ID Using Command Line
 
-Using this alternate method to get the machine ID. Type the following command as send us its output.
+Run the following command and send us its output.
 
  ```BASH
 sudo trisul --machineid
@@ -59,7 +59,7 @@ To view this information:
 
 :::info navigation
 
-:point_right: Login as Admin → Select Context:default → Licensing
+:point_right: Login as Admin → **Context : default** → **Licensing**
 
 :::
 
@@ -68,4 +68,4 @@ To view this information:
 
 Use this chart to identify the maximum number of simultaneously active internal IPs, which is the value used for license sizing.
 
-Click on “Long Term Trends” to see a longer time window
+Click **Long term trends** to see a longer time window.

@@ -27,15 +27,12 @@ import TabItem from '@theme/TabItem';
   sudo apt-get install trisul-hub
   ```
   </TabItem>
-  <TabItem value="rpm" label="CentOS/RHEL Uninstall">
+  <TabItem value="rpm" label="CentOS/RHEL">
   ```bash
   yum group remove 'Trisul Full'
-  yum group install 'Trisul Full'`
+  yum group install 'Trisul Full'
   ```
-  If you are getting an error with using the Group commands, try upgrading individual packages. You can even put them all on a single line
-  ``` bash
-  yum  remove trisul-hub trisul-probe webtrisul yum  install trisul-hub trisul-probe webtrisul
-  ```
+  If you get an error with the group commands, upgrade the individual packages:
   ```bash
   yum  remove trisul-hub trisul-probe webtrisul
   yum  install trisul-hub trisul-probe webtrisul

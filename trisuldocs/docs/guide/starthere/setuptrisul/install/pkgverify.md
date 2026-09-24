@@ -12,7 +12,7 @@ The official Trisul package files (RPM and DEB) are signed with a GnuPG key avai
 ## Verifying DEB for Ubuntu 24.04
 
 
-To verify a `deb` package you can download the corresponding `.asc` which contains the signature used to verity.
+To verify a `deb` package you can download the corresponding `.asc` which contains the signature used to verify it.
 
 ```bash
 
@@ -70,6 +70,6 @@ $ rpm --checksig webtrisul-7.0.2522-1.el8.x86_64.rpm
 webtrisul-7.0.2522-1.el8.x86_64.rpm: digests signatures OK
 ```
 
-3. The RPM verification was successful if you see the  **OK**
+The RPM verification succeeded if the output ends with **OK**.
 
-Now that your packages are verified, go ahead and move to the installation section.
+Now that your packages are verified, continue with [Installing](/docs/guide/starthere/setuptrisul/install/doinstall).

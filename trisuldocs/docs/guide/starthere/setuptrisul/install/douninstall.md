@@ -35,7 +35,7 @@ import TabItem from '@theme/TabItem';
   ```
   Other ways to uninstall.
 
-  1. If you installed using the meta package 'Trisul-Full - use `yum group remove 'Trisul Full'` to remove it all
+  1. If you installed using the `Trisul Full` group, use `yum group remove 'Trisul Full'` to remove it all.
   2. Uninstall each package   `yum remove trisul-probe`
   3. Use RPM to uninstall each package `rpm -e trisul-probe`
   </TabItem>
