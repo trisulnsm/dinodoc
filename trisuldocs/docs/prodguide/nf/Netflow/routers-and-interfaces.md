@@ -5,7 +5,7 @@ sidebar_position: 3
 # Routers and Interfaces
 
 :::info Navigation
-:point_right: Go to **Netflow &rarr; Routers And Interfaces**
+:point_right: Go to **NetFlow &rarr; Routers And Interfaces**
 :::
 
 The Routers and Interfaces tool gives you a device-level view of your NetFlow data. It lets you see which routers are active, how much traffic they carry, which interfaces are active, and how those interfaces are being used.

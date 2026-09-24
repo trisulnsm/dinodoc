@@ -38,7 +38,7 @@ graph TD
     A[NetFlow Analyzer Guide] --> B[Dashboards]
     A --> C[Retro]
     A --> D[Tools]
-    A --> E[Netflow]
+    A --> E[NetFlow]
     A --> F[Alerts]
     A --> G[Reports]
     A --> H[Customize]

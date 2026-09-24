@@ -2,10 +2,10 @@
 sidebar_position: 1
 ---
 
-# Netflow Sources
+# NetFlow Sources
 
 :::info Navigation
-:point_right: Go to **Netflow &rarr; Netflow Sources**
+:point_right: Go to **NetFlow &rarr; NetFlow Sources**
 :::
 
 The NetFlow Sources dashboard shows where Trisul is receiving NetFlow data from and how much data each source is sending. It helps you monitor flow exporters (routers), interfaces, and the overall volume and rate of NetFlow data being processed.

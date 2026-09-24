@@ -6,12 +6,12 @@ sidebar_position: 4
 
 
 :::info Navigation
-:point_right: Go to **Netflow &rarr; Show all**
+:point_right: Go to **NetFlow &rarr; Show all**
 :::
 
 ![](images/nfshowall.png)  
 
-*Figure: Netflow Show all*
+*Figure: NetFlow Show all*
 
 This page is the central All Tools launcher, where you can find every analysis tool available in the platform, grouped by workflow type. You can also use Add to menu to pin any tool to your custom navigation.
 
