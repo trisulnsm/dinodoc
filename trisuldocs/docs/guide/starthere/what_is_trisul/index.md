@@ -9,7 +9,7 @@
 The applications of Trisul include deep network traffic management, network security monitoring, threat hunting, incident detection, and audit.
 
 
-Users of Trisul view these analytics reports through an easy-to-use dashboard that opens in any web browser.
+Users of Trisul view these analytics reports through a dashboard that opens in any web browser.
 
 
 ### Platforms
@@ -28,7 +28,7 @@ Using specialized configuration and extensions we've tailored the Trisul platfor
 ![Products](image/platform-products.png)
 
 :::tip[Doc Note]
-:memo:  This Trisul Network Analytics User Guide covers the common parts of these four products. The unique workflows associated with each of these four products can be found in their respective guides.
+:memo:  The Trisul documentation covers the parts common to all four products. Each product's own workflows are in its [product guide](/docs/prodguide).
 :::
 
 
@@ -41,7 +41,7 @@ Trisul will help the following organizations
 - **NSM teams**: Network security monitoring teams can monitor all the entities and metadata in a practical manner using Trisul. Down to
   the packet level.
 - **ISP**: ISPs use Trisul for compliance and large scale Netflow based
-  visibility. We are in some of the largest ISPs in the world.
+  visibility.
 - **Analysts**: Analysts can analyze large PCAP dumps using Trisul to
   investigate deeply
 - **MSP/SOC**: Managed Security services use Trisul for consulting to
@@ -55,13 +55,13 @@ Trisul will help the following organizations
 
 ## Quick Features List
 
-The following table contains a list of things you can do with Trisul. You can find them on the main menu. 
+The following table lists what you can do with Trisul.
 
 | Feature               | Description    |
 | --------------------- | ----------|
 | Platform              | Built on Linux with support for specialized hardware accelerators for high-performance processing.   |
 | Technology            | Uses a custom-built backend with streaming analytics, storage, and reporting integrated—eliminating the need for external systems like Elasticsearch or high-cost log management platforms.  |
-| Traffic Analysis      | Goes beyond basic bandwidth, SNMP, or NetFlow monitoring. Offers over 150+ traffic metrics across all network layers—out-of-the-box.   |
+| Traffic Analysis      | Goes beyond basic bandwidth, SNMP, or NetFlow monitoring. Offers more than 150 traffic metrics across all network layers out of the box.   |
 | Flow Monitoring       | Supports ingestion via NetFlow protocols. When processing raw packets, Trisul constructs and stores flow records in a purpose-built database that scales to billions of flows per day while maintaining instant query response times.   |
 | Metadata collection   | Essential for Network Security Monitoring (NSM), Trisul captures and logs rich metadata including HTTP URLs, domain names, SSL/TLS certificates, and even reconstructed binaries. |
 | Security Alerts       | Integrates with IDS systems like Suricata to ingest and correlate alerts seamlessly with other monitored data.    |
