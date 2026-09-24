@@ -41,8 +41,6 @@ flowchart LR
 
     C --> E[Probe]
     D --> E
-
-    E[Trisul]
 ```
 
 - **Flow-Based Mode** - Trisul receives flow records such as **NetFlow, IPFIX, or sFlow** from network devices and processes those records for analysis.
