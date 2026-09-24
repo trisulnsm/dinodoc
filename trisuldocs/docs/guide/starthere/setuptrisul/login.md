@@ -2,7 +2,7 @@
 
 # Logging In
 
-> For best results, use a current version of Firefox or Chrome.
+> For best results, use a current version of **Firefox** or **Chrome**.
 
 Trisul can be accessed by pointing your browser to :  
 
