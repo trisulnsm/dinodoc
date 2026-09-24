@@ -1,7 +1,7 @@
 # Configure Packet Capture
 
-:::info
-Applies to Network Security Monitoring (NSM) mode, which uses packet capture.
+:::info Applies to
+Network Security Monitoring (NSM) mode, which uses packet capture.
 :::
 
 Before Trisul can analyze traffic, it needs access to raw network packets. This page helps you choose the right packet acquisition method based on your network size, speed, and deployment model.
