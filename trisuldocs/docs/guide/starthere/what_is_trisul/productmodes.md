@@ -24,4 +24,4 @@ See [**Processing Modes**](/docs/guide/starthere/what_is_trisul/dataflow#input-p
 
 > **Note:** Product Mode provides a preconfigured starting point for the selected use case. It does not prevent you from further configuring Trisul for your specific requirements.
 
-To learn how to select a Product Mode during installation, see [**Selecting a Product Mode**](/docs/guide/starthere/setuptrisul/install/selectmode).
+To learn how to select a Product Mode during installation, see [**Selecting the Product Mode**](/docs/guide/starthere/setuptrisul/install/selectmode).
