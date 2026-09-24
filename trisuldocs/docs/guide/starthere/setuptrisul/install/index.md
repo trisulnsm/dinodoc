@@ -27,5 +27,5 @@ You can run both the `Hub` and `Probe` on the same machine (the simplest way to 
 
 Lets first understand how you can install all components on a single box and then slowly expand to explore distributed installation.
 
-This section covers how to get a *single box* installation of Trisul up and running. For distributed installation see [**Distributed monitoring**](/docs/guide/learntrisul/concepts/)  
+This section covers how to get a *single box* installation of Trisul up and running. For distributed installation see [**Distributed Domain Concepts**](/docs/guide/learntrisul/concepts/)  
 
