@@ -2,7 +2,9 @@
 
 # Logging In
 
-> For best results, use a current version of **Firefox** or **Chrome**.
+:::tip
+For best results, use a current version of **Firefox** or **Chrome**.
+:::
 
 Trisul can be accessed by pointing your browser to :  
 
@@ -25,7 +27,7 @@ password = `admin`
 user name = `user`  
 password = `user`
 
-Once logged in please change the password.
+After you log in, change the default password. See [Change Own Password](/docs/guide/ag/webadmin/manageusers#change-own-password).
 
 ## Contexts
 
@@ -46,7 +48,7 @@ You can logout by clicking the **logout** at the top left.
 
 Due to the sensitive nature of the data presented by Trisul, there is an
 inactivity timeout associated with each user. If no user interaction is
-seen by Webtrisul server for a certain period of time, the user is
+seen by the WebTrisul server for a certain period of time, the user is
 automatically logged out. They will then have to present their
 login/password again to re-enter the system.
 
@@ -54,7 +56,7 @@ You can increase inactivity timeout
 
 :::info navigation
 
-:point_right: To access, Login as **Admin**. Select Manage &rarr; App settings &rarr; Web
+:point_right: To access, Login as **Admin**. Select Manage &rarr; App Settings &rarr; Web
 Server &rarr; Idle Timeout
 
 :::
@@ -65,13 +67,12 @@ seconds)
 ## Login Rules
 
 - If you login from a second location, Trisul will kick the first
-  session out. (like yahoo/gmail/etc)  
+  session out.
 
 - The superadmin (ie the user with username `admin` ) can login from
   any number of places.  
 
-- All other users can have only one active session. For example : if a
-  user logs in from home and forgets to logout and comes to work. When he logs in from his work machine, his home session is automatically logged out. 
+- All other users can have only one active session. For example, if you log in at home, forget to log out, and then log in at work, your home session is logged out automatically.
 
 - The admin user can ***Force Logout*** any user with a **stuck**
   session. 
@@ -82,5 +83,6 @@ seconds)
 
 - All login activity including inactivity timeout is logged (See *Admin
   &rarr; Tasks &rarr; User Auth Log*)
+<!-- TODO(verify): menu path to User Auth Log -->
 
 > You can allow specific users to also login from multiple locations at a time

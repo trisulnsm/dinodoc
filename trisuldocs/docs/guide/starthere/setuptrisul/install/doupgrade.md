@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Upgrading Trisul
 
-An upgrade is simply an uninstall followed by a new install.
+An upgrade is an uninstall followed by a new install.
 
 Upgrading Trisul preserves all installation, application settings, and traffic data.
 

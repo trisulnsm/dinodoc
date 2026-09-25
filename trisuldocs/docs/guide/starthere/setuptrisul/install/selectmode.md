@@ -5,22 +5,24 @@ After installing on the server you need to select the product mode as the first 
 :::
 Trisul Network Analytics is a general platform which can be reconfigured to very specific use cases.  
 
-This *product*-izing process consists of customizing counters, flows, menus, dashboards and so on. For ease of use you can simply select the configuration set up front after installation.
+This *product*-izing process consists of customizing counters, flows, menus, dashboards and so on. You can select the whole configuration up front, after installation.
 
 ![product](images/platform-products.png)
 
 
-:::tip Productize it
-The default mode of Trisul is Packet Capture based Network Security Monitoring. We recommend you switch to the appropriate mode such as NetFlow Analyzer or IPDR or ISP using this step even though you can accomplish the same by manual configuration.
+:::tip Pick a mode
+If you skip this step, Trisul runs in Trisul NSM mode (packet capture). If you plan to use Trisul NetFlow Analyzer, Trisul IPDR DoT Compliance Solution or Trisul ISP Analytics, select that mode here. You can configure Trisul manually instead, but the mode selector sets up the counters, flows, menus and dashboards for you.
 :::
 
 ## Four Product Modes
 
+<!-- TODO(verify): card labels copied from images/selectmode.png; confirm against the current build -->
 <div class="product-mode-table">
 
-| Trisul Network Security Monitoring | Trisul NetFlow Analyzer | Trisul DoT Compliance Solution | Trisul ISP Analytics |
+| Trisul NSM | Trisul NetFlow Analyzer | Trisul IPDR DoT Compliance Solution | Trisul ISP Analytics |
 |:---|:---|:---|:---|
 | ![Packet Mode](images/nsm_prod.png) | ![NetFlow Mode](images/netflow_prod.png) | ![IPDR Compliance](images/ipdr_prod.png) | ![ISP](images/isp_prod.png) |
+| Card in the selector: **Security Monitoring** | Card in the selector: **NetFlow Analyzer** | Card in the selector: **IPDR Compliance** | Card in the selector: **ISP Analytics Suite** |
 | **Choose this for:** packet-based network security monitoring, deep traffic visibility, troubleshooting, investigation, and forensics. | **Choose this for:** flow-based network traffic monitoring using NetFlow, IPFIX, or sFlow. | **Choose this for:** IPDR and NAT logging, subscriber activity records, and regulatory compliance requirements. | **Choose this for:** ISP traffic analytics using NetFlow and BGP, including peering, AS, prefix, routing, and geographic analysis. |
 
 
@@ -83,7 +85,7 @@ The hub and probe nodes are restarted with the selected mode.
 
 :::success Complete
 Now you can start sending traffic, either NetFlow or packets to Trisul.
-Log out and log in as the viewer user to start viewing reports. See [Logging In](/docs/guide/starthere/setuptrisul/login) for the default credentials.
+Log out and log in as `user`, the view-only account, to start viewing reports. See [Logging In](/docs/guide/starthere/setuptrisul/login) for the default credentials.
 :::
 
 

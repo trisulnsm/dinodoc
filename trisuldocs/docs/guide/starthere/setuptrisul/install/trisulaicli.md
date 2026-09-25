@@ -1,6 +1,6 @@
 # Trisul AI CLI
 
-## **What this does**
+## What this does
 Trisul AI CLI is a conversational interface for **Trisul Network Analytics**.
 
 It lets you ask questions about your network in plain English and get answers directly in the terminal.
@@ -8,7 +8,7 @@ It lets you ask questions about your network in plain English and get answers di
 This is an optional feature available at no extra cost.
 You can install it after completing [Trisul package installation](/docs/guide/starthere/setuptrisul/install/doinstall) and [selecting the product mode](/docs/guide/starthere/setuptrisul/install/selectmode).
 
-## **Before you begin**
+## Before you begin
 Make sure the following are available:
 
 - Python 3.8 or later
@@ -16,7 +16,7 @@ Make sure the following are available:
 - API key for the configured LLM
 - Access to the Trisul context (local or remote)
 
-## **Install**
+## Install
 ### 1) Install system packages
 ```
 sudo apt update
@@ -37,7 +37,7 @@ pip install trisul_ai_cli
 trisul_ai_cli
 ```
 
-## **Connect to Trisul**
+## Connect to Trisul
 ### 1) Default (local)
 Uses:
 ```
@@ -52,13 +52,15 @@ tcp://<ip>:<port>
 ```
 All queries are executed on the selected endpoint.
 
-## **Run queries**  
+## Run queries
 Enter queries directly.  
 Examples:
  
-"*top hosts last 1 hour"  
-"top applications by traffic"  
-"https traffic today*"    
+~~~
+top hosts last 1 hour
+top applications by traffic
+https traffic today
+~~~
 
 Output is returned as a table or summary.
 
@@ -81,7 +83,7 @@ Written to:
 ```
 trisul_ai_cli.log
 ```
-## **If something does not work**
+## If something does not work
 
 ### No response
 

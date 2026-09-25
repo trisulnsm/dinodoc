@@ -69,3 +69,5 @@ To view this information:
 Use this chart to identify the maximum number of simultaneously active internal IPs, which is the value used for license sizing.
 
 Click **Long term trends** to see a longer time window.
+
+**Next:** when you receive your license file, see [Installing a License File](/docs/guide/starthere/setuptrisul/license/install).

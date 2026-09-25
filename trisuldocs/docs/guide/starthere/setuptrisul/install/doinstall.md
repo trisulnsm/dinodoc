@@ -8,7 +8,7 @@ Use this page when:
 :point_right: You want to ensure everything (core + optional tools) installs cleanly.  
 :point_right: You need instructions tailored to your Linux distribution (Ubuntu / Debian, RHEL/Oracle / CentOS, etc.).  
 
-Following the steps here ensures you get a working Trisul setup quickly, with all required components configured properly.
+Follow the steps on this page to install all required components.
 
 The first step is to login and register at the Trisul [**Getting Started**](https://www.trisul.org/get-started/) setup portal. 
 

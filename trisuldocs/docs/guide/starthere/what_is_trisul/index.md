@@ -5,7 +5,7 @@
 
 ## What is Trisul
 
-**Trisul Network Analytics** is a software suite that takes network packets or flow data, and extract insightful traffic metrics, flow analysis, alerts, and metadata from them.
+**Trisul Network Analytics** is a software suite that takes network packets or flow data and extracts traffic metrics, flow analysis, alerts, and metadata from them.
 The applications of Trisul include deep network traffic management, network security monitoring, threat hunting, incident detection, and audit.
 
 
@@ -25,7 +25,16 @@ It has native support for advanced high speed packet capture and load balancing 
 
 Using specialized configuration and extensions we've tailored the Trisul platform into products that fit specific use cases. 
 
-![Products](image/platform-products.png)
+![The four Trisul product modes](image/platform-products.png)
+
+The four product modes are:
+
+- **Trisul NetFlow Analyzer**: traffic analytics from flow records exported by routers and switches.
+- **Trisul NSM**: network security monitoring from raw packets (SPAN or TAP), plus IDS alerts.
+- **Trisul IPDR DoT Compliance Solution**: IPDR logging for ISPs that must meet India DoT rules.
+- **Trisul ISP Analytics**: AS, prefix and peering analytics for carriers and ISPs.
+
+To compare them, see [Product Modes](/docs/guide/starthere/what_is_trisul/productmodes).
 
 :::tip[Doc Note]
 :memo:  The Trisul documentation covers the parts common to all four products. Each product's own workflows are in its [product guide](/docs/prodguide).
@@ -34,7 +43,7 @@ Using specialized configuration and extensions we've tailored the Trisul platfor
 
 ## Who Benefits From Trisul
 
-Trisul will help the following organizations
+Typical users of Trisul:
 
 - **Enterprises**: Both traffic monitoring and security teams in
   enterprises will benefit from the deep visibility provided by Trisul.

@@ -44,6 +44,6 @@ import TabItem from '@theme/TabItem';
 ## Resetting the Database Clean
 
 
-Uninstalling does not change the data or the configuration. If you wish to purge the data.  Do so before uninstall.
+Uninstalling does not change the data or the configuration. To purge the data, do it before you uninstall.
 
 See [Cleaning the Database](/docs/guide/ag/basictasks/cleanenv)

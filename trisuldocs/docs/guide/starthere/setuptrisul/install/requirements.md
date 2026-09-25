@@ -1,11 +1,8 @@
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem'; 
-import AdminGuideTour from '@site/src/components/AdminGuideTour';
 
 # System Requirements
-
-<AdminGuideTour />
 
 Below are the recommended system requirements for Trisul deployments. Trisul runs on commodity servers, either bare metal or virtual machines. Below you’ll find recommended hardware and resource guidelines based on the two data-processing modes and varying deployment sizes. 
 
@@ -27,14 +24,14 @@ Trisul Network Analytics packages are available on the following platforms.
 
 Trisul’s four products fall into two technical categories based on how they process data. See [**Input Processing Modes**](/docs/guide/starthere/what_is_trisul/dataflow#input-processing-modes).
 
-- **_Flow-Based Mode_** (For Trisul NetFlow Analyzer, Trisul ISP, Trisul IPDR)- needs lower CPU, Memory and resources. And, in the case of Trisul IPDR, additional storage.
+- **_Flow-Based Mode_** (for Trisul NetFlow Analyzer, Trisul ISP Analytics, Trisul IPDR DoT Compliance Solution) - needs less CPU and memory. Trisul IPDR DoT Compliance Solution also needs additional storage.
 - **_Packet Capture Mode_** (For Trisul NSM) - needs more CPU, Memory resources 
 
 :::warning Don’t confuse Processing Modes with Product Modes 
 
 
 **Processing Mode** refers to how Trisul processes your input data. For example, packet-based or flow-based processing.  
-**Product Mode** which you'll be seeing in the following sections, describes how you intend to use Trisul based on your use case such as Trisul NetFlow Analyzer, Trisul DoT Compliance Solution, Trisul NSM, and Trisul ISP Analytics.
+**Product Mode** describes how you intend to use Trisul, based on your use case: Trisul NetFlow Analyzer, Trisul IPDR DoT Compliance Solution, Trisul NSM, or Trisul ISP Analytics.
 
 :::
 
@@ -124,11 +121,11 @@ Large enterprises with > 20,000 endpoints.
 </TabItem>
 </Tabs>
 
-:::info For Trisul ISP 
->Refer to product specific system requirements here: **[Trisul ISP System Requirements](/docs/prodguide/isp/requirements).**
+:::info For Trisul ISP Analytics
+See the product-specific requirements: **[Trisul ISP Analytics System Requirements](/docs/prodguide/isp/requirements)**.
 :::
-:::info For Trisul IPDR DoT Compliance Solution  
->Refer to product specific system requirements here: **[Trisul IPDR System Requirements](/docs/prodguide/ipdr/requirements)**	
+:::info For Trisul IPDR DoT Compliance Solution
+See the product-specific requirements: **[Trisul IPDR System Requirements](/docs/prodguide/ipdr/requirements)**.
 :::
 
 

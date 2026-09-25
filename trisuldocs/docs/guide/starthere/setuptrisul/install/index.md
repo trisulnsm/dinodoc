@@ -20,12 +20,12 @@ You can also add more probes as your network grows, without disrupting your exis
 
 - `trisul-probe`: Captures live network traffic and performs local analytics. Each probe sits close to the network segment it is monitoring and sends the data to the Hub.
 
-- `trisul-hub`: Receives data from one or more probes, stores it, and provides dashboards, reports, search, and analytics. This is where you log in to see dashboards and charts.
+- `trisul-hub`: Receives data from one or more probes, stores it, and serves it for dashboards, reports, search, and analytics. The web interface package, `webtrisul`, runs on the same machine as the Hub, so this is the machine you log in to.
 
 
 You can run both the `Hub` and `Probe` on the same machine (the simplest way to get started), or run them on separate machines if your network is larger.
 
-Lets first understand how you can install all components on a single box and then slowly expand to explore distributed installation.
+Let's first see how to install all components on a single box, then look at distributed installation.
 
 This section covers how to get a *single box* installation of Trisul up and running. For distributed installation see [**Distributed Domain Concepts**](/docs/guide/learntrisul/concepts/)  
 

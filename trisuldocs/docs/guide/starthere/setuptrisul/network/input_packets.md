@@ -1,12 +1,12 @@
 # Configure Packet Capture
 
 :::info Applies to
-Network Security Monitoring (NSM) mode, which uses packet capture.
+Trisul NSM, which uses packet capture processing.
 :::
 
 Before Trisul can analyze traffic, it needs access to raw network packets. This page helps you choose the right packet acquisition method based on your network size, speed, and deployment model.
 
-### Choose the Right Method:
+## Choose the Right Method
 Use the option that best matches your environment:
 
 - **Port Mirror (SPAN)**– Best for most enterprise networks with links below 500 Mbps.
@@ -17,7 +17,7 @@ Use the option that best matches your environment:
 
 If Trisul is running inside a virtual machine, ensure the virtual switch is in promiscuous mode. Without this, mirrored traffic from the physical interface may not reach the probe.  
 
-Refer to the official documentation for  [[VMWare](https://kb.vmware.com/s/article/1004099)] environments for setup instructions.
+For VMware, see the [VMware knowledge base article](https://kb.vmware.com/s/article/1004099) for setup instructions.
 
 
 ## Configuring Port Mirror / SPAN Port
@@ -33,7 +33,9 @@ Typical use case:
 Example:  
 Traffic from ports `ge/0/0/1` and `ge/0/0/12` is mirrored to `ge/0/0/6`, which connects to the Trisul Probe.
 
-> Refer to your switch vendor’s documentation for configuring SPAN sessions. [[CiscoSPANdocumentation](https://www.cisco.com/c/en/us/support/docs/switches/catalyst-6500-series-switches/10570-41.html)]
+:::note
+To configure SPAN sessions, see your switch vendor's documentation, for example the [Cisco SPAN documentation](https://www.cisco.com/c/en/us/support/docs/switches/catalyst-6500-series-switches/10570-41.html).
+:::
 
 The following diagram shows how you can configure a SPAN port and feed packets into Trisul. 
 
@@ -55,7 +57,9 @@ When to use taps:
 *Figure: Network Taps*
 
 
-> Note: For full-duplex links, each direction is tapped separately and connected to two probe interfaces.
+:::note
+For full-duplex links, each direction is tapped separately and connected to two probe interfaces.
+:::
 
 
 ## Using Trisul as a Bridge
@@ -71,7 +75,9 @@ Use this only when:
 - Inline deployment is acceptable
 - You are running a small office or appliance setup
 
->Bridge mode places Trisul directly in the traffic path. Not recommended for high-availability or high-speed networks.
+:::note
+Bridge mode places Trisul directly in the traffic path. It is not recommended for high-availability or high-speed networks.
+:::
 
 ### Bridging Ethernet Connections
 
@@ -83,12 +89,12 @@ A bridge allows you to connect two or more network segments together allowing de
 
 Install the bridge-utils package.
 
-Copy:  `sudo apt-get install bridge-utils`  
+`sudo apt-get install bridge-utils`  
 Automatically Create the Bridge at Start-up.  
 Sample: `/etc/network/interfaces file`
 
 ```bash
- BASH#eth0
+#eth0
 auto eth0
 iface eth0 inet manual
 up ifconfig eth0 up
@@ -107,7 +113,7 @@ bridge_ports eth0 eth1
 
 Restart networking:
 
-```xml
+```bash
 sudo /etc/init.d/networking restart
 ```
 
@@ -160,6 +166,8 @@ BRIDGE=br0
 
 Restart networking
 
-`/etc/init.d/netwok restart`
+`/etc/init.d/network restart`
 
 With packet capture configured, the Trisul Probe can now observe live network traffic and start analysis.
+
+**Next:** select the capture interface in the product-mode wizard. See [Screen 2: Select Interface](/docs/guide/starthere/setuptrisul/install/selectmode#screen-2-select-interface).

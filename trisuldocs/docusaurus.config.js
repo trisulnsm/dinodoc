@@ -357,7 +357,7 @@ const config = {
             },
             {
               type: 'doc',
-              docId: 'guide/starthere/what_is_trisul/index',
+              docId: 'guide/starthere/quickstart',
               label: 'Start Here',
             },
             {

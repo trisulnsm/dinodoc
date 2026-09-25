@@ -1,6 +1,6 @@
 # Trisul Basic Architecture
 
-Trisul consists of three main components: **Probe, Domain, and Hub**. Together, they form the core architecture for processing, organizing, and storing network data.
+Trisul's core components are the **Probe**, which processes traffic, and the **Hub**, which stores the results. They communicate inside a **Domain**. The list below also covers three related terms: Profile, Context and WebTrisul.
 
 ![basic](image/basic.png)
 
@@ -10,7 +10,7 @@ At a high level:
 
 - [**Probe**](/docs/guide/learntrisul/terminology#probe) is the **streaming analytics engine** that processes network traffic.
 
-- [**Domain**](/docs/guide/learntrisul/terminology#domain) is the **top-level organizational layer** that manages Contexts.
+- [**Domain**](/docs/guide/learntrisul/terminology#domain) is the **trusted group of Probes and Hubs** that can communicate securely. The Domain Certificate authenticates each node and provides its network endpoints.
 
 - [**Hub**](/docs/guide/learntrisul/terminology#hub) is the **database and data management layer** that stores the processed data.
 
@@ -20,4 +20,6 @@ At a high level:
 
 - [**WebTrisul**](/docs/guide/learntrisul/terminology#webtrisul) provides the user interface for accessing and analyzing the data managed by the Hub.
 
-> **Note:** This is a high-level view intended to help you understand the main components and how they relate to each other. It is not a complete representation of the Trisul architecture. For a detailed view, see the [**Distributed Domain Concepts**](/docs/guide/learntrisul/concepts/) documentation.
+:::note
+This is a high-level view of the main components and how they relate to each other. It is not a complete representation of the Trisul architecture. For a detailed view, see [**Distributed Domain Concepts**](/docs/guide/learntrisul/concepts/).
+:::

@@ -1,7 +1,7 @@
 # Configure NetFlow 
 
 :::info Applies to
-NetFlow Analyzer, IPDR (DoT Compliance) and ISP Analytics modes, which use flow-based processing.
+Trisul NetFlow Analyzer, Trisul IPDR DoT Compliance Solution and Trisul ISP Analytics, which use flow-based processing.
 :::
 
 This section helps you set up Trisul to ingest flow-based network measurements when packet capture is unavailable, impractical, or unnecessary. Trisul can accept NetFlow and NetFlow-like formats, including NetFlow v5, NetFlow v9, IPFIX, sFlow, and jFlow.

@@ -5,8 +5,8 @@ Trisul needs telemetry and data from the network in order to work. This section 
 
 
 
-- Configure Packet Capture
-- Configure NetFlow 
+- [Configure Packet Capture](/docs/guide/starthere/setuptrisul/network/input_packets)
+- [Configure NetFlow](/docs/guide/starthere/setuptrisul/network/input_netflow)
 - Configure SNMP
 - Configure BGP 
 - Configure SYSLOG 

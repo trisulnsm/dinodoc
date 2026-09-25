@@ -13,17 +13,19 @@ The sections below explain the different input modes and the main stages involve
 
 1. The network traffic is received in the form of packets and netflow in the probe. Once the input reaches the **Probe**, Trisul performs streaming analytics on the incoming data.
 
-2. The Probe processes and analyses the metadata and sends it to the domain.
+<!-- TODO(verify): data-flow wording pending product-team sign-off -->
+2. The Probe processes and analyses the metadata and sends it to the Hub.
 
-3. The **Domain** organizes the monitoring environment into **Contexts** (tenants) and determines the Context associated with the data. 
+3. The **Domain** is the trusted group of Probes and Hubs that can communicate securely. The Probe and the Hub exchange data inside the Domain.
 
-4. The **Hub** then stores the data based on the context.
+4. The **Hub** stores the data per **Context**. A Context is an isolated instance (tenant) with its own database.
 
-5. The stored data is then available through **Web Trisul**, where users can view and analyze it through dashboards, reports, queries, alerts, and investigation tools.
+5. The stored data is then available through **WebTrisul**, where users can view and analyze it through dashboards, reports, queries, alerts, and investigation tools.
 
 In both input processing modes, the data follows the same overall path:
 
-**Network Input → Probe → Domain → Context → Hub → Web Trisul**
+<!-- TODO(verify): path string pending product-team sign-off -->
+**Network Input → Probe → Domain → Context → Hub → WebTrisul**
 
 The difference is in the **type of network input** received by the Probe:
 
@@ -48,4 +50,6 @@ flowchart LR
 
 Processing Mode therefore describes **how network data enters Trisul and how the Probe processes that input**.
 
-> **Note:** Processing Mode is different from **Product Mode**, which describes how Trisul is intended to be used for certain use cases. 
+:::note
+Processing Mode is different from **Product Mode**, which describes how Trisul is intended to be used for certain use cases. See [Product Modes](/docs/guide/starthere/what_is_trisul/productmodes).
+:::
