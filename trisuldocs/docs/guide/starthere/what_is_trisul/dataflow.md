@@ -10,10 +10,10 @@ The sections below explain the different input modes and the main stages involve
 
 ## What Happens to the Data
 
+<!-- TODO(verify): data-flow wording pending product-team sign-off -->
 
 1. The network traffic is received in the form of packets and netflow in the probe. Once the input reaches the **Probe**, Trisul performs streaming analytics on the incoming data.
 
-<!-- TODO(verify): data-flow wording pending product-team sign-off -->
 2. The Probe processes and analyses the metadata and sends it to the Hub.
 
 3. The **Domain** is the trusted group of Probes and Hubs that can communicate securely. The Probe and the Hub exchange data inside the Domain.

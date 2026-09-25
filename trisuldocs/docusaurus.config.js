@@ -406,7 +406,7 @@ const config = {
             {
               type: 'doc',
               docId: 'prodguide/ipdr/index',
-              label: 'IPDR Solution Guide',
+              label: 'IPDR DoT Compliance Guide',
             },
             {
               type: 'doc',
