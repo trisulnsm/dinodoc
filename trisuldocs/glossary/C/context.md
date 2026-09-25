@@ -1,6 +1,6 @@
 ---
 title: What is a Trisul context?
-description: A Trisul context is an isolated analytics domain within a Trisul deployment, with its own database, configuration, and processing state while sharing common administration and web management infrastructure.
+description: A Trisul context is an isolated analytics workspace within a Trisul deployment, with its own database, configuration, and processing state while sharing common administration and web management infrastructure.
 sidebar_label: Context
 sidebar_position: 29
 slug: /glossary/context
@@ -48,7 +48,7 @@ export const jsonLd = {
       "name": "What is the difference between a context and a node?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A node is a physical or virtual system running Trisul services, while a context is an isolated analytics domain operating within a Trisul deployment."
+        "text": "A node is a physical or virtual system running Trisul services, while a context is an isolated analytics workspace operating within a Trisul deployment."
       }
     },
     {
@@ -64,7 +64,7 @@ export const jsonLd = {
 
 # What is a Trisul context?
 
-A **Trisul context** is an isolated analytics domain inside a Trisul deployment. Each context has its own database, configuration, and processing state, but shares the same administration and web management infrastructure as other contexts. This lets one Trisul deployment host multiple separate operational environments without full‑deployment duplication.
+A **Trisul context** is an isolated analytics workspace inside a Trisul deployment. Each context has its own database, configuration, and processing state, but shares the same administration and web management infrastructure as other contexts. This lets one Trisul deployment host multiple separate operational environments without full‑deployment duplication.
 
 Contexts are commonly used to separate customers, business units, regions, security domains, or operational environments, while still enabling centralized management and administration.
 
@@ -83,7 +83,7 @@ Contexts are useful when you need to keep analytics and traffic data separated, 
 ## Context vs node
 | Dimension       | Context                                      | Node                                       |
 |-----------------|----------------------------------------------|--------------------------------------------|
-| Purpose         | Isolated analytics domain                    | System running Trisul services             |
+| Purpose         | Isolated analytics workspace                    | System running Trisul services             |
 | Operational scope | Separate analytics and processing state     | Hosts services and may run multiple contexts |
 | Data handling   | Isolated analytics data and history          | Infrastructure layer, no data isolation    |
 | Configuration   | Context‑specific config and settings         | Platform‑level config and service settings |
@@ -98,7 +98,7 @@ Contexts provide operational isolation and multi‑tenant flexibility. They let 
 ---
 
 ## In Trisul
-Trisul supports multi‑context deployments for analytics isolation and multi‑tenant operations. Each context has its own analytics domain, traffic processing, and configuration, but all are managed through the same hub and web administration interface. You create and manage contexts using `trisulctl_hub` and related tooling, and route traffic to the appropriate context based on organization, customer, or region.
+Trisul supports multi‑context deployments for analytics isolation and multi‑tenant operations. Each context has its own analytics workspace, traffic processing, and configuration, but all are managed through the same hub and web administration interface. You create and manage contexts using `trisulctl_hub` and related tooling, and route traffic to the appropriate context based on organization, customer, or region.
 
 ---
 
@@ -128,7 +128,7 @@ Contexts are created and managed from the hub node using Trisul administrative t
 
 ### What is the difference between a context and a node?
 
-A node is a physical or virtual system running Trisul services, while a context is an isolated analytics domain operating within a Trisul deployment.
+A node is a physical or virtual system running Trisul services, while a context is an isolated analytics workspace operating within a Trisul deployment.
 
 ### How are contexts used in multi-tenant deployments?
 

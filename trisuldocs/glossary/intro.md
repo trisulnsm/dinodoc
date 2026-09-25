@@ -1,6 +1,6 @@
 ---
 id: intro
-title: Learn with Trisul
+title: Trisul Glossary
 hide_table_of_contents: true
 sidebar_label: Trisul Glossary
 sidebar_position: 0
@@ -76,3 +76,7 @@ export const SearchPlaceholderUpdater = () => {
 </div>
 
 </div>
+
+**Browse by letter:** [A](/glossary/a) · [B](/glossary/b) · [C](/glossary/c) · [D](/glossary/d) · [E](/glossary/e) · [F](/glossary/f) · [G](/glossary/g) · [H](/glossary/h) · [I](/glossary/i) · [J](/glossary/j) · [K](/glossary/k) · [L](/glossary/l) · [M](/glossary/m) · [N](/glossary/n) · [O](/glossary/o) · [P](/glossary/p) · [Q](/glossary/q) · [R](/glossary/r) · [S](/glossary/s) · [T](/glossary/t) · [U](/glossary/u) · [V](/glossary/v) · [W](/glossary/w) · [X](/glossary/x)
+
+Looking for the terms Trisul uses in its own docs and UI? See [Trisul Terminology](/docs/guide/learntrisul/terminology).

@@ -1,17 +1,16 @@
 ---
 title: What is Badfellas in Trisul?
-description: Badfellas is a Trisul internal feature that manages Host Monitor allow-lists and deny-lists for long-tail hosts, automatically updating which hosts are monitored as top talkers or excluded from monitoring.
+description: Badfellas is the Trisul threat-intelligence plugin. It checks network traffic against indicators of compromise from threat-intelligence feeds and flags traffic that matches a known malicious IP address, domain, URL, or other indicator.
 sidebar_label: Badfellas
 sidebar_position: 14
 slug: /glossary/badfellas
 keywords:
   - badfellas
   - trisul badfellas
-  - host monitor allow-list
-  - host monitor deny-list
-  - long tail hosts
-  - top talkers monitoring
-  - host exclusions
+  - threat intelligence plugin
+  - indicators of compromise
+  - IOC feeds
+  - custom intel feeds
 ---
 
 export const jsonLd = {
@@ -23,31 +22,23 @@ export const jsonLd = {
       "name": "What does Badfellas do in Trisul?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Badfellas manages Host Monitor allow-lists and deny-lists for long-tail hosts monitoring in Trisul 3.6 and later. It automatically updates the lists of hosts that are monitored as top talkers and hosts that are excluded from monitoring. The list updates once per day by default, but can be configured to update once per week."
+        "text": "Badfellas is the Trisul threat-intelligence plugin. It checks network traffic against indicators of compromise from threat-intelligence feeds and flags traffic that matches a known malicious indicator."
       }
     },
     {
       "@type": "Question",
-      "name": "Why is it called Badfellas?",
+      "name": "Which indicators does Badfellas check?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The name is Trisul's internal colloquialism for hosts that are problematic or suspicious. 'Badfellas' refers to hosts that appear in the long tail of traffic but are not top talkers—hosts that may be worth monitoring even if they don't show up in the standard top-N rankings."
+        "text": "Indicators include IPv4 and IPv6 addresses, domain names, URLs, file hashes, and information in SSL certificates."
       }
     },
     {
       "@type": "Question",
-      "name": "How often does Badfellas update the lists?",
+      "name": "Can I add my own threat-intelligence feeds?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Badfellas updates the allow-list and deny-list automatically once per day by default. The update frequency can be changed to once per week by following instructions in the Trisul documentation for configuring Badfellas refresh intervals."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is long-tail hosts monitoring?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Long-tail hosts monitoring tracks hosts that are not top talkers but may still be worth monitoring for security or operational reasons. These hosts are in the 'long tail' of traffic volume—small individual amounts but potentially significant when aggregated or when patterns change."
+        "text": "Yes. You put your feed in a TAB-separated file on the Hub node and point the Badfellas plugin at it. Badfellas distributes the feed to the Probe nodes."
       }
     }
   ]
@@ -55,59 +46,48 @@ export const jsonLd = {
 
 # What is Badfellas in Trisul?
 
-Badfellas is a Trisul internal feature that manages Host Monitor allow‑lists and deny‑lists for long‑tail hosts. It automatically updates which hosts are monitored as top talkers and which hosts are excluded from monitoring. The feature was introduced in Trisul 3.6 as part of the Long‑Tail Hosts monitoring capability.
+**Badfellas** is the Trisul threat-intelligence plugin. It checks your network traffic against indicators of compromise (IOCs) from threat-intelligence feeds. When traffic matches a known malicious indicator, Trisul flags it.
 
 ---
 
 ## How it works
-Badfellas updates the allow‑list and deny‑list automatically based on traffic patterns and host behavior. The Host Monitor uses these lists to decide which hosts to track as top talkers and which hosts to exclude from detailed monitoring. The lists are refreshed once per day by default, but this interval can be configured to once per week through the Trisul configuration system.
 
----
-
-## In network operations
-- **NOC:** Configure the Badfellas refresh frequency based on how often host rankings and traffic patterns change in the network.  
-- **SOC:** Use Badfellas allow‑lists to ensure suspicious or high‑risk hosts remain in monitoring even if they drop out of standard top‑N rankings.  
-- **ISP:** Use Badfellas deny‑lists to exclude known‑benign hosts (for example, upstream caches or content‑delivery nodes) from monitoring to reduce data volume and noise.
-
----
-
-## Long-tail hosts vs top talkers
-| Dimension        | Top talkers                                 | Long‑tail hosts                                              |
-|------------------|---------------------------------------------|--------------------------------------------------------------|
-| Traffic volume   | High; frequently appear in volume rankings  | Low per‑host; many small contributors                        |
-| Monitoring focus | Always tracked by default                   | Tracked or prioritized via allow‑lists and custom rules      |
-| Risk profile     | Obvious bandwidth consumers                 | May hide suspicious or changing patterns below the surface   |
+- Badfellas ships in the `trisul-badfellas` package.
+- It comes with more than a dozen selected intel feeds.
+- Indicators include IPv4 and IPv6 addresses, domain names, URLs, file hashes, and information in SSL certificates.
+- You can add your own feeds. Put each feed in a TAB-separated file on the Hub node, and Badfellas distributes it to the Probe nodes.
 
 ---
 
 ## In Trisul
-Badfellas is built into Trisul 3.6 and later as part of the Long‑Tail Hosts monitoring feature. It manages Host Monitor allow‑lists and deny‑lists with automatic daily updates by default, and operators can adjust the refresh interval to weekly if needed. This integration helps operators balance visibility and resource usage when monitoring large numbers of hosts across the network.
+
+In dashboards, activity that matches a threat-intelligence indicator counts toward the **Blacklist** value. See [Blacklist](/docs/guide/learntrisul/terminology#blacklist).
+
+<!-- TODO(verify): confirm Badfellas matches are what the Blacklist value counts (Audit 02 Q22). -->
+
+- To configure the plugin, see the [BadFellas plugin reference](/docs/guide/ref/plugin-config/badfellas).
+- To add your own feeds, see [Add custom intel feeds into Badfellas](/docs/guide/howto/custom_feed_badfellas).
 
 ---
 
 ## Related terms
-- [Badfellas](/glossary/badfellas)
-- Long‑tail hosts monitoring
-- [Host Monitor](/glossary/host-monitor)
-- [Top‑K analytics](/glossary/top-k-analytics)
-- Flow monitoring
-- Host exclusions
+
+- [Threat intelligence](/glossary/threat-intelligence)
+- [Indicator of compromise](/glossary/indicator-of-compromise)
+- [Threat detection](/glossary/threat-detection)
 
 ---
 
 ## Frequently asked questions
+
 ### What does Badfellas do in Trisul?
 
-Badfellas manages Host Monitor allow‑lists and deny‑lists for long‑tail hosts monitoring in Trisul 3.6 and later. It automatically updates the lists of hosts that are monitored as top talkers and hosts that are excluded from monitoring. The list updates once per day by default, but can be configured to update once per week.
+Badfellas is the Trisul threat-intelligence plugin. It checks network traffic against indicators of compromise from threat-intelligence feeds and flags traffic that matches a known malicious indicator.
 
-### Why is it called Badfellas?
+### Which indicators does Badfellas check?
 
-The name is Trisul’s internal colloquialism for hosts that are problematic or suspicious. “Badfellas” refers to hosts that appear in the long tail of traffic but are not top talkers—hosts that may be worth monitoring even if they do not show up in the standard top‑N rankings.
+Indicators include IPv4 and IPv6 addresses, domain names, URLs, file hashes, and information in SSL certificates.
 
-### How often does Badfellas update the lists?
+### Can I add my own threat-intelligence feeds?
 
-Badfellas updates the allow‑list and deny‑list automatically once per day by default. The update frequency can be changed to once per week by following instructions in the Trisul documentation for configuring Badfellas refresh intervals.
-
-### What is long-tail hosts monitoring?
-
-Long‑tail hosts monitoring tracks hosts that are not top talkers but may still be worth monitoring for security or operational reasons. These hosts are in the “long tail” of traffic volume—each contributes a small amount individually, but their behavior can become significant when aggregated or when traffic patterns change.
+Yes. You put your feed in a TAB-separated file on the Hub node and point the Badfellas plugin at it. Badfellas distributes the feed to the Probe nodes.

@@ -82,7 +82,7 @@ Anomaly detection typically uses supervised learning with labeled data, unsuperv
 ---
 
 ## In Trisul
-Trisul provides anomaly detection through flow monitoring with baseline trending, Interface Tracking for per‑interface baselines, and Top‑K analytics for identifying top talkers against baseline expectations. Trigger‑based alerting can send notifications when traffic deviates from configured thresholds or learned baseline patterns, allowing operators to detect sudden changes in behavior quickly. [docs:https://docs.trisul.org/docs/ug/flow/]
+Trisul provides anomaly detection through flow monitoring with baseline trending, Interface Tracking for per‑interface baselines, and Top‑K analytics for identifying top talkers against baseline expectations. Trigger‑based alerting can send notifications when traffic deviates from configured thresholds or learned baseline patterns, allowing operators to detect sudden changes in behavior quickly. See [Flow Analysis](/docs/guide/ug/flow/).
 
 ---
 

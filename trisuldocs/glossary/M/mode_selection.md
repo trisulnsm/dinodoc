@@ -29,7 +29,7 @@ export const jsonLd = {
       "name": "What modes are available in Trisul?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Trisul provides Packet Mode, NetFlow Mode, ISP Analytics, and IPDR Compliance modes. Each mode is optimized for different operational requirements such as packet analysis, scalable flow visibility, carrier analytics, or compliance-focused deployments."
+        "text": "Trisul has four product modes: Trisul NetFlow Analyzer, Trisul NSM, Trisul IPDR DoT Compliance Solution, and Trisul ISP Analytics. Each mode suits a different requirement: flow visibility, security monitoring, regulatory compliance, or carrier analytics."
       }
     },
     {
@@ -66,11 +66,15 @@ Selecting the wrong mode can create operational blind spots, unnecessary process
 ## How mode selection works
 Trisul includes a Product Mode Selector that allows operators to configure the platform for different monitoring and analytics objectives.
 
-The available modes are:
-- Packet Mode
-- NetFlow Mode
-- ISP Analytics
-- IPDR Compliance
+The available product modes are:
+- **Trisul NetFlow Analyzer** (selector card: **NetFlow Analyzer**)
+- **Trisul NSM** (selector card: **Security Monitoring**)
+- **Trisul IPDR DoT Compliance Solution** (selector card: **IPDR Compliance**)
+- **Trisul ISP Analytics** (selector card: **ISP Analytics Suite**)
+
+The product mode is separate from the processing mode, which is either packet capture or flow-based (NetFlow).
+
+<!-- TODO(verify): selector card labels taken from the selectmode.png screenshot (Audit 01 F-01-20); confirm against the current build. -->
 
 Each mode enables different telemetry workflows optimized for specific operational goals.
 
@@ -138,7 +142,7 @@ Operators can later re-enable the Product Mode Selector through the Web Admin in
 
 Additional configuration details are documented in the Trisul documentation:
 
-[Trisul Web Admin Documentation](https://docs.trisul.org/docs/ag/webadmin/web_options/)
+[Selecting the Product Mode](/docs/guide/starthere/setuptrisul/install/selectmode)
 
 ---
 
@@ -159,7 +163,7 @@ Mode selection determines how Trisul prioritizes telemetry collection, analytics
 
 ### What modes are available in Trisul?
 
-Trisul provides Packet Mode, NetFlow Mode, ISP Analytics, and IPDR Compliance modes. Each mode is optimized for different operational requirements such as packet analysis, scalable flow visibility, carrier analytics, or compliance-focused deployments.
+Trisul has four product modes: Trisul NetFlow Analyzer, Trisul NSM, Trisul IPDR DoT Compliance Solution, and Trisul ISP Analytics. Each mode suits a different requirement: flow visibility, security monitoring, regulatory compliance, or carrier analytics.
 
 ### Can the selected mode be changed later?
 

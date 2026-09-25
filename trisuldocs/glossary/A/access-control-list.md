@@ -82,7 +82,7 @@ ACL entries are processed in sequence by their sequence number. Each entry conta
 ---
 
 ## In Trisul
-Trisul flow monitoring can analyze traffic that matches ACL rules by examining flow records for source IP, destination IP, port, and protocol. ACL logging on the network device can count packets that match each rule, but Trisul’s flow analytics allow you to query and inspect traffic by those same fields without requiring packet capture. This helps operators validate ACL behavior, investigate blocked or allowed flows, and understand how ACL rules affect real‑world traffic patterns. [docs:https://docs.trisul.org/docs/ug/flow/]
+Trisul flow monitoring can analyze traffic that matches ACL rules by examining flow records for source IP, destination IP, port, and protocol. ACL logging on the network device can count packets that match each rule, but Trisul’s flow analytics allow you to query and inspect traffic by those same fields without requiring packet capture. This helps operators validate ACL behavior, investigate blocked or allowed flows, and understand how ACL rules affect real‑world traffic patterns. See [Flow Analysis](/docs/guide/ug/flow/).
 
 ---
 
