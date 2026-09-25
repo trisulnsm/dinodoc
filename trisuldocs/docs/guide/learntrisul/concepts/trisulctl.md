@@ -5,13 +5,13 @@ sidebar_position: 1
 # Domain Management Tools
 
 Trisul includes two command line tools for managing domain nodes. These
-form the centre piece of Trisul 7.0 distributed environment.
+are the main tools for managing a distributed Trisul 7.0 deployment.
 
 1. **trisulctl_hub** — used to manage a domain from a admin perspective
 2. **trisulctl_probe** — manage a domain from a probe
 
 This section explains the various operations you can perform with these
-tools. For more details : see [trisulctlhub Reference](/docs/guide/ref/trisul_hub) and [trisulctl_probe Reference](/docs/guide/ref/trisul_probe)
+tools. For more details : see [trisulctl_hub Reference](/docs/guide/ref/trisul_hub) and [trisulctl_probe Reference](/docs/guide/ref/trisul_probe)
 
 ## Frequently Used Commands
 
@@ -50,7 +50,7 @@ node.
     start domain                                      // start domain process (only once )
     list nodes                                        // show nodes active in domain 
     info context                                      // show all contexts on all nodes 
-    start context default                             // stop context named "default"
+    start context default                             // start context named "default"
     reset context default                             // delete data on context "default" and start over
     install probe /tmp/probeEAST.cert                 // install a new probe cert 
     create context newcontext1                        // create a new context called 'newcontext1'
@@ -91,7 +91,7 @@ are available.
 
 To invoke the tools
 
-```language-bash
+```bash
 root@ubuntu1604:~# trisulctl_probe 
 ```
 
@@ -110,7 +110,7 @@ In the following listing we type the `list nodes` command to query all
 the nodes in the domain. If you had 3 probes you can see their details
 here.
 
-```language-bash
+```bash
 root@ubuntu1604:~# trisulctl_probe 
 Connecting to domain0
 Trisul Network Analytics version 6.0.2762
@@ -132,7 +132,7 @@ root@ubuntu1604:~#
 
 ## CLI Features
 
-The trisulctl_probe/hub tools have a powerful CLI. Some features are
+The trisulctl_probe/hub tools have these CLI features:
 
 1. Single line commands can be entered on one line directly ; eg
    `trisulctl_probe start domain` instead of dropping into the CLI and
@@ -143,10 +143,7 @@ The trisulctl_probe/hub tools have a powerful CLI. Some features are
 
 ### Useful trisbashrc Bash Aliases
 
-There is a very nifty set of bash aliases called `trisbashrc` on the
-`/usr/local/share/trisul-probe` and `trisul-hub` directories. To add
-these macros to your shell environment. See [trisbashrc
-Reference](/docs/guide/ref/trisbashrc) for a complete list of useful shortcuts.
+The `trisbashrc` file in `/usr/local/share/trisul-probe` and `/usr/local/share/trisul-hub` defines bash aliases for common tasks. To load them, `source` the file for your node. For the syntax and the full list of shortcuts, see the [trisbashrc Reference](/docs/guide/ref/trisbashrc).
 
 ## Start and Stop Domain
 
@@ -157,7 +154,7 @@ stop the domain as shown below.
 
 ### Start Domain
 
-The command to start a domain are.
+The domain commands are:
 
 | Command          | Description                                                                  |
 | ---------------- | ---------------------------------------------------------------------------- |
@@ -192,7 +189,7 @@ background. To stop it :
 ## Start and Stop Contexts
 
 A context is a separate instance of Trisul. The default installation of
-Trisul installs a context named `default` or `context0`
+Trisul installs one context, `context0`. CLI commands also accept `default` as its name.
 
 ### Start Context
 
@@ -209,12 +206,12 @@ The commands
 
 The domain runs the command on all the relevant nodes and if any errors
 are seen, it is printed on screen. This has the same effect as if you
-login to Web Trisul as *admin* and then executed *Context &rarr; Start/Stop
+login to WebTrisul as *admin* and then executed *Context &rarr; Start/Stop
 Tasks &rarr; Start Probe/Hubs*
 
 #### Check Logs
 
-You can check or tailf any log on any node by using the `log` command.
+You can view or follow any log on any node with the `log` command.
 Type `help log` for examples.
 
 ### Stop Context
@@ -229,8 +226,7 @@ The commands
 
 ### Info Context
 
-You can check if you have successfully joined a domain using a couple of
-commands
+Use these commands to view context information:
 
 | Command                | Description                                       |
 | ---------------------- | ------------------------------------------------- |
@@ -240,7 +236,7 @@ commands
 An example output of `info context default` is shown below, you can see
 the two probeXX nodes and other details.
 
-```language-bash
+```bash
 trisul_probe:trisulorg-ubuntu-1gb-sfo2-01(domain0)> info context default
 node           context_name   version      init    state    size_disk   data_window         #runs   profile        runmode
 -----------------------------------------------------------------------------------------------------------------------------------
@@ -267,7 +263,7 @@ them ask for confirmation
 | Command                  | Description                                                                                                     |
 | ------------------------ | ---------------------------------------------------------------------------------- |
 | `reset context default`  | Clear data but keep the configuration                                                     |
-| `delete context default` | Remove the entire context, data and config. You can create a new context with that name if you want.                                                                                               |
+| `delete context mycontext` | Remove the entire context, data and config. You can create a new context with that name if you want. |
 
 ------------------------------------------------------------------------
 

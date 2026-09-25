@@ -3,8 +3,6 @@ sidebar_position: 2
 
 ---
 
-import Highlight from '/src/components/Highlighter/Highlight';
-
 # Change Domain Settings
 
 A Trisul distributed domain is identified by :
@@ -16,6 +14,10 @@ When you first install Trisul it creates a *domain0* that uses Unix
 Sockets as endpoints. So by default, the Trisul-Hub and Trisul-Probe
 will run on the same physical box. This page describes how you can
 generate a new Domain Certificate to modify these settings.
+
+:::info Applies to
+Distributed deployments, where the Probe and the Hub run on separate machines.
+:::
 
 ## IPC vs TCP Domain
 
@@ -37,7 +39,7 @@ Domain information is encoded in the Domain Certificate File that can be
 found at  
 `/usr/local/etc/trisul-hub/domain0/domain0.cert`
 
-```language-bash
+```bash
 $ cat /usr/local/etc/trisul-hub/domain0/domain0.cert
 
 #   ****  Generated on 2016-07-27 20:52:08 by CZMQ  ****
@@ -78,7 +80,7 @@ firewall use `systemctl stop firewalld`.
 This stops all Trisul processes on all nodes and then stops the domain0
 processes.
 
-```language-bash
+```bash
 $ sudo trisulctl_hub
 
 stop context all
@@ -90,7 +92,7 @@ quit
 
 Remove the old certs from the *share* directory.
 
-```language-bash
+```bash
 sudo rm /usr/local/share/trisul-hub/domain0.cert
 sudo rm /usr/local/share/trisul-hub/domain0.cert_secret
 ```
@@ -111,7 +113,7 @@ You enter the following information
 
 A run would look like this
 
-```language-bash
+```bash
 unpl@ubuntu:~$ sudo trisulctl_hub 
 
 trisul_hub:ubuntu(domain0)> create domain
@@ -157,9 +159,8 @@ nodes.
 
 - Install new domain cert on hub0
 
-```
-sudo trisulctl_hub install domain
-/usr/local/share/trisul-hub/domain0.cert
+```bash
+sudo trisulctl_hub install domain /usr/local/share/trisul-hub/domain0.cert
 ```
 
 Say YES if it asks you if you want to “Update the existing domain0
@@ -191,7 +192,7 @@ listed here.
 By default , Trisul uses an IPC connection for each Hub node. If this is
 the first remote probe you are adding. You need to switch the Hub to a TCP connection mode. Follow these steps.
 
-```language-bash
+```bash
 /usr/local/share/trisul-hub/change_endpoints
 
 .. enter domain [default = domain0]

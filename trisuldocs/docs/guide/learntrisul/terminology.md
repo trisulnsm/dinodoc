@@ -1,10 +1,14 @@
-# Trisul Terminologies
+# Trisul Terminology
 
-Trisul Network Analytics uses a **rich and layered vocabulary** to describe how traffic is captured, analyzed, stored, and investigated.
+Trisul Network Analytics uses a set of terms to describe how traffic is captured, analyzed, stored, and investigated.
 
 Detailed individual counter groups, trackers, and alert types are documented in the dedicated pages of respective topics.
 
 This page focuses on the shared terminology used across them.
+
+:::tip Looking for a general networking term?
+The [Glossary](/glossary) defines networking, security, and ISP terms. This page covers the terms Trisul uses.
+:::
 
 ## How to Read This Page
 
@@ -69,6 +73,8 @@ For example, a deployment may contain several Probes and Hubs that communicate w
 
 In most deployments, the domain is created during installation and does not require regular user interaction. You are more likely to encounter the term when working with certificates, distributed deployments, or advanced administration.
 
+See also: [Domains](/docs/guide/learntrisul/concepts/domains).
+
 ---
 
 ### Context
@@ -86,6 +92,8 @@ For example, you could have:
 - separate contexts for different customers
 
 Each context can be started, stopped, reset, or deleted independently.
+
+See also: [Working With Contexts](/docs/guide/learntrisul/concepts/contexts).
 
 :::info Context and Profile analogy
 
@@ -135,6 +143,8 @@ GUIDs are used to distinguish things like counter groups, trackers, alerts, or c
 
 Trisul generates GUIDs automatically. You will mainly encounter them when working with configuration files, APIs, exports, or troubleshooting.
 
+See also: [GUID reference](/docs/guide/ref/guid).
+
 ---
 
 ### Machine ID
@@ -175,9 +185,11 @@ IOP is useful when looking at storage performance because a system that performs
 
 These terms describe how Trisul is deployed and what type of traffic data it processes.
 
-### Packet Mode (NSM)
+### Packet Capture Mode {#packet-mode-nsm}
 
 Packet mode analyzes traffic using captured network packets.
+
+Packet capture mode is a processing mode, not a product mode. See [Processing Mode](#processing-mode).
 
 In this mode, Trisul works directly with packet data, allowing inspection at the protocol and payload level.
 
@@ -204,6 +216,10 @@ The term **home network does not mean that Trisul is only used for a home or res
 For example, if Trisul is monitoring a company's network, the company's computers, servers, phones, and other network devices belong to the **home network**.
 
 This definition is important because Trisul uses the home network to determine whether traffic is **inbound, outbound, or transit**.
+
+By default, Trisul treats the RFC 1918 private ranges `10.0.0.0/8`, `172.16.0.0/12`, and `192.168.0.0/16` as the home network.
+
+See also: [Home Network Concepts](/docs/guide/learntrisul/homenetwork_concepts). To add or edit home networks, see [Home Networks](/docs/guide/ag/context/home_networks).
 
 ---
 
@@ -281,7 +297,7 @@ These terms describe **what Trisul observes on the network**.
 
 A **packet** is a single unit of network data captured from the wire.
 
-Packet-level visibility is mainly used in Trisul Packet mode (NSM) and allows detailed inspection and forensic analysis.
+Packet-level visibility is mainly used in packet capture mode and allows detailed inspection and forensic analysis.
 
 ---
 
@@ -442,7 +458,7 @@ You can think of a key as the **item Trisul is tracking** inside a counter group
 For example:
 
 - an IP address is a key in the Hosts counter group
-- an application name is a key in the Applications counter group
+- an application name is a key in the Apps counter group
 
 When you see toppers, charts, or tables, you are often seeing keys ranked by their metrics.
 
@@ -454,7 +470,7 @@ When you see toppers, charts, or tables, you are often seeing keys ranked by the
 
   - **Apps** is a counter group that tracks application names. `https`, `http`, and `imap` are keys within the **Apps** counter group.
 
-  - **Hosts** is a counter group that tracks individual hosts. For example, `[IP_ADDRESS]` and `[IP_ADDRESS]` are keys within the **Hosts** counter group.
+  - **Hosts** is a counter group that tracks individual hosts. For example, `192.168.1.10` and `10.0.0.5` are keys within the **Hosts** counter group.
 
   - **Country** is a counter group that tracks individual countries. For example, `United States`, `India`, and `China` are keys within the **Country** counter group.
 
@@ -1233,26 +1249,25 @@ A DR deployment is used so that Trisul services and data can continue to be avai
 
 ### Adapter
 
-An adapter is a component that allows Trisul to **receive and work with data from an external source**.
+A capture adapter is a **network interface that a Probe listens on to capture packets**.
 
-For example, an adapter can handle the communication or format conversion needed for an external data source to provide information to Trisul.
+Each profile has its own list of capture adapters. You enable the interfaces you want Trisul to monitor, for example `eth1`.
 
-In simple terms, an adapter helps Trisul understand and accept data coming from another system.
+See also: [Capture Adapters](/docs/guide/ag/context/profiles).
+
+<!-- TODO(verify): Adapter definition aligned to ag/context/profiles.md; confirm with product team (Audit 02 Q1). -->
 
 ---
 
 ### Access Point
 
-An access point is a **configured source from which Trisul receives traffic or telemetry**.
+An access point **maps a protocol to a port or other identifier**, so Trisul knows how to decode the traffic it receives.
 
-Depending on the deployment, an access point can represent a source such as:
+For example, you can map UDP port 5556 to the NetFlow protocol. Trisul then decodes packets sent to that port as NetFlow records.
 
-- a physical capture interface on a Probe
-- a TAP or SPAN port
-- a NetFlow/IPFIX source
-- another configured telemetry feed
+See also: [Access Points](/docs/guide/ag/context/access_points).
 
-Access points tell Trisul **where the traffic or other network information it needs to analyze is coming from**.
+<!-- TODO(verify): Access Point definition aligned to ag/context/access_points.md; confirm with product team (Audit 02 Q1). -->
 
 ---
 
@@ -1270,7 +1285,9 @@ A product mode defines **which Trisul solution and capabilities are active in a 
 
 It determines the type of data Trisul expects, the features that are available, and the way results are organized.
 
-Changing the product mode therefore changes what Trisul is intended to do in that deployment, not simply how the UI looks.
+Changing the product mode therefore changes what Trisul is intended to do in that deployment, not only how the UI looks.
+
+See also: [Product Modes](/docs/guide/starthere/what_is_trisul/productmodes).
 
 ---
 
@@ -1298,6 +1315,8 @@ Cron tasks can be used for recurring operations such as:
 - maintenance
 
 A cron task determines **when an operation runs**, rather than what the operation itself does.
+
+See also: [Cron Tasks](/docs/guide/ag/context/crontasks).
 
 ---
 
@@ -1384,6 +1403,8 @@ Roles can determine access to contexts, views, tools, and administrative functio
 
 A user can be assigned a role so that permissions do not have to be configured individually for every action.
 
+See also: [Roles](/docs/guide/ag/webadmin/userroles).
+
 ---
 
 ### Webserver Logs
@@ -1399,3 +1420,5 @@ They can contain information about requests and access to WebTrisul and are usef
 The authentication log records **login and authentication-related events**.
 
 It can include information about login attempts, successful logins, failed logins, and other authentication activity.
+
+See also: [Auth Log](/docs/guide/ag/webadmin/authlog).

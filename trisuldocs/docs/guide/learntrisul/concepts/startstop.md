@@ -15,7 +15,7 @@ There are three groups of services in Trisul
 The following example shows how to get the default Trisul context up and
 running from scratch.
 
-```language-bash
+```bash
 # start the domain processes on hub
 trisulctl_hub start domain
 
@@ -54,13 +54,13 @@ functionalities
 
 To start the domain
 
-```language-bash
+```bash
 trisulctl_hub start domain 
 ```
 
 or use the interactive CLI mode
 
-```language-bash
+```bash
 ubuntu@ip-172-31-15-106:~$ sudo trisulctl_hub
 Connecting to domain0 
 Trisul Network Analytics version 6.0.2697
@@ -91,7 +91,7 @@ The domain processes on the probe node control the following nodes
 
 To start the domain
 
-```language-bash
+```bash
 trisulctl_probe start domain 
 ```
 
@@ -103,20 +103,20 @@ or when you want a clean shutdown.
 
 To stop the domain , log on to each probe node and enter
 
-```language-bash
+```bash
 trisulctl_probe stop domain 
 ```
 
 and then log on to each hub node and enter
 
-```language-bash
+```bash
 trisulctl_hub  stop domain 
 ```
 
 ## Start and Stop Contexts
 
 A [context is an independent instance](/docs/guide/learntrisul/concepts/contexts) of Trisul. Initially you
-only have a single context named `default` you may create additional
+only have a single context, `context0`. CLI commands also accept `default` as its name. You may create additional
 contexts to create a multi-tenant setup. You can start/stop contexts on
 each probe or hub independently.
 
@@ -127,14 +127,14 @@ command on *trisulctl_hub* or *trisulctl_probe* tool.
 
 To view all contexts
 
-```language-bash
+```bash
 trisulctl_hub
 info context
 ```
 
 To view specific context
 
-```language-bash
+```bash
 trisulctl_hub (or trisulctl_probe)
 info context default
 ```
@@ -143,13 +143,13 @@ info context default
 
 To start a context from a CLI
 
-```language-bash
+```bash
 trisulctl_hub start context default
 ```
 
 The output could be something like  
 
-```language-bash
+```bash
 trisul_hub(domain0)> start context default
    + config0              started success.default
    + hub0                 started Successfully started context processes default@hub0
@@ -194,49 +194,49 @@ trisulctl_hub tool, it will be executed on all domain nodes.
 
 To stop context *default*
 
-```language-bash
+```bash
 trisulctl_hub stop context default
 ```
 
 To stop context *default* only on *probeEAST*
 
-```language-bash
+```bash
 trisulctl_hub 
 stop context default@probeEAST
 ```
 
 You can also use `stop context all` to stop/start all contexts
 
-## Start and Stop Webtrisul
+## Start and Stop WebTrisul
 
-The web interface can simply be managed by the usual *systemctl* tool.
+You manage the web interface with *systemctl*.
 
 The service names for the webinterface are
 
 1. `webtrisuld` - for normal HTTP based access
 2. `webtrisulssld` - for HTTPS (SSL) access
 
-### Starting Webtrisul
+### Starting WebTrisul
 
-```language-bash
+```bash
 sudo systemctl start webtrisuld
 ```
 
-### Stopping Webtrisul
+### Stopping WebTrisul
 
-```language-bash
+```bash
 sudo systemctl stop webtrisuld
 ```
 
 To check errors with systemctl use `journalctl -u webtrisuld`
 
-### Starting Webtrisul SSL Server
+### Starting WebTrisul SSL Server
 
 The service name for the SSL webserver is *webtrisulssld*
 
 See : [How to switch to SSL Web Server](/docs/guide/howto/sslforwebtr)
 
-```language-bash
+```bash
 sudo systemctl start webtrisulssld
 ```
 
@@ -257,7 +257,7 @@ The following service is NOT automatically started
 
 To start the Trisul probe as well , do the following
 
-```language-bash
+```bash
 sudo systemctl enable   trisul-probe0-context0 
 ```
 
@@ -267,7 +267,7 @@ To start the SSL web server, you have to disable the HTTP service. See
 below.  
 If you enable both , neither of them may start properly.
 
-```language-bash
+```bash
 sudo systemctl disable  webtrisuld
 
 sudo systemctl enable   webtrisulssld

@@ -16,13 +16,13 @@ them.
 
 #### Other Links
 
-[CLI tools for domain management](trisulctl) describes the `trisulctl_probe` and `trisulctl_hub` tools. Either tool can be used to manage contexts. In a distributed Trisul domain with multiple hubs and probes, ensure that all nodes are up before creating a context.
+[CLI tools for domain management](/docs/guide/learntrisul/concepts/trisulctl) describes the `trisulctl_probe` and `trisulctl_hub` tools. Either tool can be used to manage contexts. In a distributed Trisul domain with multiple hubs and probes, ensure that all nodes are up before creating a context.
 
 ## Creating a New Context
 
 ### Use the CLI Tool Command to Create Context
 
-`trisulctl_hub` and `trisulclt_probe` are CLI tools included with
+`trisulctl_hub` and `trisulctl_probe` are CLI tools included with
 Trisul. These are used to create and delete contexts. This command will
 automatically create all required databases and configurations on all
 the probe and hub nodes.
@@ -36,7 +36,7 @@ display well on the user interface.
 Login to the Trisul server and execute the following to create a new
 context named `mycontext`
 
-```language-bash
+```bash
 $ # as root
 $ trisulctl_hub
 ..
@@ -48,7 +48,7 @@ You will see some messages indicating the request was successful.
 You can verify the context was successfully created using the
 `info context` command
 
-```language-bash
+```bash
 $ # as root
 $ trisulctl_hub
 ..
@@ -98,7 +98,7 @@ contexts. See the below image.
 You can then select the context, configure it for example using the
 Netflow Wizard, and then start it.
 
-To start the `newcontext` processes
+To start the `mycontext` processes
 
 - Click on the menu *Context: mycontext*
 - Admin Tasks &rarr; Start/Stop Tasks
@@ -121,9 +121,9 @@ For more : [Web Admin Manage Users](/docs/guide/ag/webadmin/manageusers)
 
 ### View Reports from a Context
 
-While logging in simply select the context you wish to view.
+When you log in, select the context you want to view.
 
-If you are already logged in you can simply switch the context from the
+If you are already logged in, you can switch the context from the
 menu on the top left itself.
 
 ![](images/switchcontexts.png)
@@ -138,6 +138,5 @@ Using the CLI tool you have options of :
 2. Only delete the data but keep the configuration (use CLI
    `reset context` )
 
-Needless to say, deleting context will permanently remove all data from
-the backend database for that context only. Ensure this is what you want
-to do.
+Deleting a context permanently removes all data from
+the backend database for that context only. Ensure this is what you want to do.

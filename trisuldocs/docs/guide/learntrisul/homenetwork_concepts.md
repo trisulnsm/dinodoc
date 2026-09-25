@@ -23,9 +23,17 @@ Both Source IP and Dest IP are in your home network
 
 Both Source IP and Dest IP are not in your home network.
 
-> Note For ISPs, the AS numbers constituting the Home Network are all the AS whose routes are announced by the home AS. See [Home Networks for ISP](#home-networks-in-isp-solution) section
+To add or edit your home networks, see [Home Networks](/docs/guide/ag/context/home_networks).
+
+:::note ISP deployments
+For ISPs, the AS numbers that make up the home network are all the AS whose routes the home AS announces. See [Home Networks in ISP Solution](#home-networks-in-isp-solution).
+:::
 
 ## Home Networks in ISP Solution
+
+:::info Applies to
+ISP deployments that use Home AS numbers, such as Trisul ISP Analytics.
+:::
 
 The following rule is used when deploying Trisul in ISP configuration.
 First the Home AS Number is configured into the NetFlow and Geo
@@ -42,13 +50,13 @@ The following definition:
 
 Trisul Network Analytics automatically collects route information from
 public and private BGP peering in places like Amsterdam, Singapore, and
-Chicago. From these places Trisul uses our powerful BGP analytics tool
+Chicago. From these places Trisul uses its BGP analytics tool
 [jacktheribber](https://github.com/trisulnsm/jacktheribber) to compute a list of AS advertised as downstream a Trisul customer. This information is automatically fed into the processing.
 
 ![](images/bgphn1.png)  
 *Figure: Computing home network AS using BGP*
 
-Lets walk through the above example.
+Let's walk through the above example.
 
 1. Our AS number is 100
 2. AS 100 peers with downstream 200,300,400

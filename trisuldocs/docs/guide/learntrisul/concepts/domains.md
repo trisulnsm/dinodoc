@@ -49,7 +49,7 @@ Check if the certificate is created successfully in `/usr/local/share/trisul-hub
 
 It should look something like this
 
-```language-bash
+```bash
 root@trisulorg-ubuntu-1gb-sfo2-01:/usr/local/etc/trisul-probe/domain0# cat domain0.cert 
 #   ****  Generated on 2016-07-27 20:52:08 by CZMQ  ****
 #   ZeroMQ CURVE Public Certificate
@@ -102,7 +102,7 @@ nodes.
 Probe certificate. The only details in the probe certificate are its
 name and description.
 
-```language-bash
+```bash
 root@trisulorg-ubuntu-1gb-sfo2-01:/usr/local/etc/trisul-probe/domain0# cat probeTRISUL.cert
 #   ****  Generated on 2017-02-01 17:59:25 by CZMQ  ****
 #   ZeroMQ CURVE Public Certificate

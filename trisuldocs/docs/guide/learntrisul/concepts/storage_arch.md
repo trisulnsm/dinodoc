@@ -1,7 +1,11 @@
-# Storage Architecture 
+# Storage Architecture
+
+:::info Applies to
+Packet capture mode. This page covers raw packet storage on the Probe.
+:::
 
 
-Optimizing disk storage is a key part of Trisul. This section describes.
+Optimizing disk storage is a key part of Trisul. This section describes:
 
 
 - The concept of *Sliding Slices* 
@@ -11,7 +15,7 @@ Optimizing disk storage is a key part of Trisul. This section describes.
 
 ## Sliding Slices
 
-Trisul uses an innovative sliding mechanism to store raw packets.
+Trisul uses a sliding mechanism to store raw packets.
 
 Raw packets are stored in three directories.
 
@@ -31,7 +35,7 @@ You have to edit the following parameters to suit your environment.
 1. Size of each slice (file storing raw packets)
 2. Number of slices (files) in *oper*, *ref*, and *archive* areas
 
-See the [trisulConfig.xml](https://trisul.org/docs/guide/ref/trisulconfig.html) documentation for more details.
+For the parameters, see [SlicePolicy](/docs/guide/ref/trisulconfig#slicepolicy) in the Trisul Probe configuration reference.
 
 ## Mapping Disks to Slices
 
@@ -83,7 +87,7 @@ Rule chain :
 
 > if nothing matches
 
-For detailed syntax for specifying the rule chain, see the Ring section in [trisulConfig.xml](https://trisul.org/docs/guide/ref/trisulconfig.html#ring)
+For detailed syntax for specifying the rule chain, see the Ring section in [trisulConfig.xml](/docs/guide/ref/trisulconfig#ring)
 
 ## Encrypted Content
 
@@ -97,14 +101,14 @@ Storing them in the clear :
 
 Trisul encrypts all content by default using AES-128 in CTR mode. The disk subsystem never sees clear text packets.
 
-To change the passphrase, see the *PassphraseFile* parameter in [trisulConfig.xml](https://trisul.org/docs/guide/ref/trisulconfig.html#ring)
+To change the passphrase, see the *PassphraseFile* parameter in [trisulConfig.xml](/docs/guide/ref/trisulconfig#ring)
 
 
 
-The raw packets are stored for each context in the following default directories. The*App > DBRoot*parameter in [trisulProbeConfig.xml](/docs/guide/ref/trisulconfig) points to the base directory
+The raw packets are stored for each context in the following default directories. The *App > DBRoot* parameter in [trisulProbeConfig.xml](/docs/guide/ref/trisulconfig) points to the base directory
 
 - /usr/local/var/lib/trisul-probe/domain0/probe0/context0/caps/
-  - /oper – the operational directory where Trisul*writes*packets
+  - /oper – the operational directory where Trisul *writes* packets
   - /ref – the reference directory for recent data likely to be looked up
   - /archive – older data  
 

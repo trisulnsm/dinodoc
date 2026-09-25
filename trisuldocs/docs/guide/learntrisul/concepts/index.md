@@ -61,20 +61,20 @@ The rules
 3. a context database is stored on a single hub - currently only on `hub0`
 4. you select a context while logging in to the web interface
 
-:::note **Contexts**: A context is a separate database
-
+:::note Contexts
+A context is a separate database.
 :::
 
 ## Profiles
 
-Profiles are just configuraton for probes inside of a context. Typically
+Profiles are the configuration for probes inside a context. Typically
 you would want each probe in a context to use the same profile. A
 profile includes counter groups, thresholds, flow
 trackers, and the other things that you would find when you login as
 Admin.
 
-:::note **Profiles**: are just configuration for probes
-
+:::note Profiles
+Profiles are the configuration for probes.
 :::
 
 ## Probes
@@ -94,13 +94,14 @@ generation. The function of probes are
 A Probe can run in multiple contexts and multiple domains. There will be
 different instances of the probes running isolated from each other.
 
-Probes are managed using the `trisulctl_probe` command line tool 
-:::note **Probes**: transform packets into analytics streams.
+Probes are managed using the `trisulctl_probe` command line tool.
 
+:::note Probes
+Probes transform packets into analytics streams.
 :::
 
-:::note **Packages**: The “trisul-probe” package provides the Probe function
-
+:::note Packages
+The `trisul-probe` package provides the Probe function.
 :::
 
 ## Hubs
@@ -108,12 +109,10 @@ Probes are managed using the `trisulctl_probe` command line tool
 Hubs provides the database and querying functionality. Data from all the *Probes* stream into to a *Hub* and are stored here. The only data that
 stays on the *Probe* are the raw packets.
 
-Hubs are managed using the `trisulctl_hub` command line tool
-:::note **Packages** 
-The package “trisul-hub” provides the Hub function. The
-package “webtrisul” which resides on the same node provides the
-webserver.
+Hubs are managed using the `trisulctl_hub` command line tool.
 
+:::note Packages
+The `trisul-hub` package provides the Hub function. The `webtrisul` package, on the same node, provides the web server.
 :::
 
 ## Security
@@ -172,7 +171,7 @@ Check if the certificate is created successfully in `/usr/local/share/trisul-hub
 
 It should look something like this
 
-```language-bash
+```bash
 root@trisulorg-ubuntu-1gb-sfo2-01:/usr/local/etc/trisul-probe/domain0# cat domain0.cert 
 #   ****  Generated on 2016-07-27 20:52:08 by CZMQ  ****
 #   ZeroMQ CURVE Public Certificate
@@ -226,7 +225,7 @@ nodes.
 Probe certificate. The only details in the probe certificate are its
 name and description.
 
-```language-bash
+```bash
 root@trisulorg-ubuntu-1gb-sfo2-01:/usr/local/etc/trisul-probe/domain0# cat probeTRISUL.cert
 #   ****  Generated on 2017-02-01 17:59:25 by CZMQ  ****
 #   ZeroMQ CURVE Public Certificate
