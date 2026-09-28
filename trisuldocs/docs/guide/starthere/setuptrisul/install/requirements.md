@@ -17,7 +17,7 @@ Trisul Network Analytics packages are available on the following platforms.
 | OS               | Recommended   | Notes |
 | ---------------- | ----------|---|
 | Ubuntu LTS 22.04/24.04 |  Ubuntu 24.04| |
-| RHEL 9/8         | RHEL 9.x| Can also use OracleLinux, AmazonLinux, RHEL, CentOS versions 9/8|
+| RHEL 9/8         | RHEL 9.x| Can also use Oracle Linux or CentOS versions 9/8|
 
 
 ## Processing Modes 
@@ -231,7 +231,7 @@ The Trisul Hub stores all analytics data and serves queries from users and probe
 
 ### Trisul Probe Scaling Rules 
 
-The Trisul Probe handles live traffic capture and real-time analysis. As traffic volume increases, the Probe needs more CPU and memory to keep up. The table below gives a simple guideline for scaling a Probe based on packet capture load.
+The Trisul Probe handles live traffic capture and real-time analysis. As traffic volume increases, the Probe needs more CPU and memory to keep up. Up to 10 Gbps, size the Probe from the [Packet Capture Mode Requirements](/docs/guide/starthere/setuptrisul/install/requirements#packet-capture-mode-requirements) tables. Above 10 Gbps, use the scaling rule below.
 
 | Mode        | Scaling Metric When Probe Load Increases | Additional Resource Needed |
 | ----------- | ----------------- | -------------------------- |

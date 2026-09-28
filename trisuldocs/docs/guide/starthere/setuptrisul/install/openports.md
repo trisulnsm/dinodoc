@@ -9,7 +9,7 @@ The following ports are required to be open for the default install of Trisul
 
 ## Firewall  Open Ports 3000 
 
-By default Webtrisul uses port 3000 – you need to either disable the host firewall or open these two ports. 
+By default, WebTrisul uses port 3000. Open this port in the host firewall, or disable the firewall.
 
 
 Some examples

@@ -56,10 +56,10 @@ Typical users of Trisul:
 - **MSP/SOC**: Managed Security services use Trisul for consulting to
   build a complete baseline from traffic, flow, security angles. They
   can also use Trisul to build a Security Operations Centre using the
-  Multi Homing capabilities.
+  multi-tenant [Contexts](/docs/guide/learntrisul/concepts/contexts).
 - **Developers/Enthusiasts**: Advanced users can use the Trisul APIs to
-  build their own tools on top of the Trisul platform. We feature an
-  open and well documented API using plain Lua and Ruby.
+  build their own tools on top of the Trisul platform. They can use
+  the [Lua](/docs/lua), [TRP](/docs/trp) and REST APIs.
 
 
 ## Quick Features List

@@ -13,7 +13,7 @@ Make sure the following are available:
 
 - Python 3.8 or later
 - A running Trisul instance
-- API key for the configured LLM
+- An API key for an OpenAI-compatible LLM (commercial or local)
 - Access to the Trisul context (local or remote)
 
 ## Install
@@ -46,7 +46,7 @@ context0
 No additional setup required.
 
 ### 2) Remote
-Specify endpoint:
+Specify the endpoint. The default port is `8200`:
 ```
 tcp://<ip>:<port>
 ```

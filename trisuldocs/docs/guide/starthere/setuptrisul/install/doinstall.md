@@ -22,7 +22,18 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-  <TabItem value="jammy" label="Ubuntu Jammy 22.04" default>
+  <TabItem value="noble" label="Ubuntu Noble 24.04" default>
+    ```bash
+    # login as root
+    sudo -i
+    apt install ca-certificates software-properties-common curl gnupg2 -y 
+    curl -sS https://trisul.org/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/trisul.gpg > /dev/null 2>&1
+    echo "deb [signed-by=/usr/share/keyrings/trisul.gpg] https://trisul.org/repos/apt/debian noble main" | sudo tee /etc/apt/sources.list.d/trisul.list
+    apt update 
+    apt install trisul-full
+    ```
+  </TabItem>
+  <TabItem value="jammy" label="Ubuntu Jammy 22.04">
     ```bash
     # login as root
     sudo -i
@@ -30,17 +41,6 @@ import TabItem from '@theme/TabItem';
     curl -sS https://trisul.org/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/trisul.gpg > /dev/null 2>&1
     echo "deb [signed-by=/usr/share/keyrings/trisul.gpg] https://trisul.org/repos/apt/debian jammy main" | sudo tee /etc/apt/sources.list.d/trisul.list
     apt update 
-    apt install trisul-full
-    ```
-  </TabItem>
-  <TabItem value="focal" label="Ubuntu Focal 20.04">
-    ```bash
-    # login as root
-    sudo -i
-    apt install ca-certificates software-properties-common curl gnupg2 -y 
-    curl -o - https://trisul.org/pubkey.gpg | apt-key add -
-    add-apt-repository https://trisul.org/repos/apt/debian
-    apt update
     apt install trisul-full
     ```
   </TabItem>
@@ -159,10 +159,6 @@ curl -LO https://www.trisul.org/trisulfull-rhel9.repo
 ```
 curl -LO https://www.trisul.org/trisulfull-rhel8.repo
 ```
-- **RHEL7/CentOS7** 
-```
-curl -LO https://www.trisul.org/trisulfull.repo
-```
 
 Then move into the repo directory and download the repo file for your distribution from the list above. For example, on RHEL 9:
 
@@ -215,7 +211,7 @@ export https_proxy=http://192.168.2.11:3128
 
 ## Distributed Install
 
-By default, Trisul (and the free license) lets you run all components on a single server. That setup is enough for most initial deployments. You can return to this section later if you decide to scale up.
+By default, Trisul (and the 7-day trial license) lets you run all components on a single server. That setup is enough for most initial deployments. You can return to this section later if you decide to scale up.
 
 When you’re ready to expand, Trisul supports a distributed layout where multiple trisul-probe instances report to one or more trisul-hub nodes.
 

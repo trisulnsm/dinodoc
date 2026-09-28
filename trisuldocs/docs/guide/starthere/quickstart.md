@@ -38,7 +38,7 @@ Trisul does four jobs on one platform, and this is the step where they diverge. 
 |---|---|---|---|
 | Monitor security threats from raw traffic | Packets, via SPAN port | [Configure Packet Capture](/docs/guide/starthere/setuptrisul/network/input_packets) | Trisul NSM |
 | Analyze traffic from routers/firewalls/switches | NetFlow / IPFIX / sFlow | [Configure NetFlow](/docs/guide/starthere/setuptrisul/network/input_netflow) | Trisul NetFlow Analyzer |
-| Generate compliance records | NetFlow (regulatory format) | [Configure NetFlow](/docs/guide/starthere/setuptrisul/network/input_netflow) | Trisul IPDR DoT Compliance Solution |
+| Generate compliance records | NetFlow / IPFIX | [Configure NetFlow](/docs/guide/starthere/setuptrisul/network/input_netflow) | Trisul IPDR DoT Compliance Solution |
 | Run carrier-scale NetFlow + BGP analytics | NetFlow + BGP peering | [Configure NetFlow](/docs/guide/starthere/setuptrisul/network/input_netflow) | Trisul ISP Analytics |
  
 You'll choose the mode itself on first login - see [Selecting the Product Mode](/docs/guide/starthere/setuptrisul/install/selectmode). Nothing here is permanent; you can change modes later from **Web Admin → Manage → App Settings → UI**.

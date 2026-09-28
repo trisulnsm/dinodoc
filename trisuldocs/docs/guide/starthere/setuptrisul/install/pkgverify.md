@@ -12,7 +12,7 @@ The official Trisul package files (RPM and DEB) are signed with a GnuPG key avai
 ## Verifying DEB for Ubuntu 24.04
 
 
-To verify a `deb` package you can download the corresponding `.asc` which contains the signature used to verify it.
+To verify a `deb` package, use its `.asc` signature file. The `.asc` files are included in the Trisul `.tar.gz` package.
 
 ```bash
 
@@ -27,9 +27,9 @@ If all is well you will get a message like this.
 gpg: Good signature from "Trisul Networks <support@trisul.org>" [unknown]
 ```
 
-## Verifying a DEB for older Ubuntu versions
+## Verifying a DEB with dpkg-sig {#verifying-a-deb-for-older-ubuntu-versions}
 
-For older Ubuntu versions, verification is done using the `dpkg-sig` tool. Install it if it’s not already available.
+You can also verify a DEB with the `dpkg-sig` tool, on any supported Ubuntu version. Install it if it’s not already available.
 
 Then:
 
