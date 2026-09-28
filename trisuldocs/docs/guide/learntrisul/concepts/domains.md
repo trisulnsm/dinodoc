@@ -33,6 +33,10 @@ as shown below with the new network ports.
 
 ### Creating a New Domain Certificate
 
+:::note Supported procedure
+To switch domain0 from IPC to TCP, follow [Switching to a Distributed Domain](/docs/guide/learntrisul/concepts/change_domain#switching-to-a-distributed-domain). It includes removing the old certificate files, which is required.
+:::
+
 It is recommended that you create and use a fresh domain0.cert file
 after playing with Trisul for a while. This is because the Trisul
 packages all include the same file so you can get started.
@@ -42,8 +46,7 @@ packages all include the same file so you can get started.
 1. Type `trisulctl_hub`
 2. Enter command `create domain`
 3. Enter a domain name : must start with “domain” - eg “domainEAST”
-4. Enter 2 network endpoints : for example tcp://192.168.2.80:7000 and
-   7001 for ports 7000 and 7001
+4. Enter 2 network endpoints. There is no default port. We recommend port 12000 for the frontend and 12001 for the backend, for example `tcp://192.168.2.80:12000` and `tcp://192.168.2.80:12001`.
 
 Check if the certificate is created successfully in `/usr/local/share/trisul-hub/domain0.cert`
 
@@ -59,8 +62,8 @@ root@trisulorg-ubuntu-1gb-sfo2-01:/usr/local/etc/trisul-probe/domain0# cat domai
 
 metadata
     domain-id = "domain0"
-    domain-backend = "tcp://10.10.234.90:12000"
-    domain-frontend = "tcp://10.10.234.90:12001"
+    domain-backend = "tcp://10.10.234.90:12001"
+    domain-frontend = "tcp://10.10.234.90:12000"
     domain-description = "Default Trisul Demo Domain"
 curve
     public-key = "?$*:Ze]{UxMgkRM[K[{FmmEc@wq:P4p)+#qT0c5d"

@@ -108,8 +108,10 @@ You enter the following information
 | ------------------- | ------------------------------------------------------------------------------------------ |
 | Domain ID           | use `domain0` - we’re trying to create a new cert                                          |
 | Domain Description  | a text description of the domain, goes in the cert file                                    |
-| Socket 1 (frontend) | A TCP socket ; eg tcp://192.168.2.76:12001. This is in ZeroMQ format. You should enter the IP of the Hub node                                                                                                 |
-| Socket 2 (backend)  | A TCP socket ; eg 12002. Use a local IP                                                    |
+| Socket 1 (frontend) | A TCP socket in ZeroMQ format, for example `tcp://192.168.2.76:12000`. Enter the IP of the Hub node. |
+| Socket 2 (backend)  | A TCP socket in ZeroMQ format, for example `tcp://192.168.2.76:12001`. Use a local IP. |
+
+There is no default port. We recommend port 12000 for the frontend and 12001 for the backend.
 
 A run would look like this
 

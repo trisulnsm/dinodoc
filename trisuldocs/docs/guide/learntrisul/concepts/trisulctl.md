@@ -206,8 +206,7 @@ The commands
 
 The domain runs the command on all the relevant nodes and if any errors
 are seen, it is printed on screen. This has the same effect as if you
-login to WebTrisul as *admin* and then executed *Context &rarr; Start/Stop
-Tasks &rarr; Start Probe/Hubs*
+login to WebTrisul as *admin* and then went to **Context: default &rarr; Admin Tasks &rarr; Start/Stop Tasks**.
 
 #### Check Logs
 

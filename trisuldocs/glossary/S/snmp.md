@@ -141,10 +141,6 @@ Trisul supports SNMP-related visibility through interface monitoring, flow telem
 
 Using SNMP telemetry, NetFlow, IPFIX, packet-analysis workflows, and historical traffic analysis, operators can analyze interface utilization together with traffic behavior, correlate bandwidth usage with hosts, applications, and network conditions, investigate congestion, packet drops, interface instability, and infrastructure anomalies, support WAN monitoring and capacity-planning workflows, and perform historical investigations associated with device and interface behavior across enterprise, ISP, telecom, WAN, and infrastructure-monitoring environments.
 
-Additional interface-analysis and traffic-investigation workflows are documented in the Trisul documentation:
-
-https://docs.trisul.org/docs/ug/interface/
-
 ---
 
 ## Related terms

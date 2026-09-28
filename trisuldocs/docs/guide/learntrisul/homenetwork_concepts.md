@@ -23,6 +23,8 @@ Both Source IP and Dest IP are in your home network
 
 Both Source IP and Dest IP are not in your home network.
 
+The UI uses both sets of direction labels: **Incoming** or **Inbound**, and **Outgoing** or **Outbound**.
+
 To add or edit your home networks, see [Home Networks](/docs/guide/ag/context/home_networks).
 
 :::note ISP deployments
@@ -32,7 +34,7 @@ For ISPs, the AS numbers that make up the home network are all the AS whose rout
 ## Home Networks in ISP Solution
 
 :::info Applies to
-ISP deployments that use Home AS numbers, such as Trisul ISP Analytics.
+Trisul ISP Analytics. The BGP route collection described in this section runs in ISP Analytics mode.
 :::
 
 The following rule is used when deploying Trisul in ISP configuration.
@@ -97,5 +99,5 @@ Some points to be noted.
 
 In ISP setting, Trisul includes a built in BGP route receiver. This is
 added as a I-BGP peer to the customer router or a BGP Route Reflector.
-For more see “Configuring BGP”. This information is combined with
+For more, see [Configuring BGP](/docs/prodguide/isp/bgp). This information is combined with
 downstream peering information to obtain a list of Home AS.

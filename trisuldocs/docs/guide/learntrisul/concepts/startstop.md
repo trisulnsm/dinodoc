@@ -175,12 +175,9 @@ Similarly you can use the `stop context` command.
 You can also do the same thing from the Web UI.
 
 - Login as admin
-- On the left menu - select the context you wish to work with. If you
-  want to work with the *default* context - select *Context: default*
-- Select *Start/Stop Tasks*
+- Go to **Context: default → Admin Tasks → Start/Stop Tasks**. For another context, select that context instead of *Context: default*.
 
-You can then just click on the Start and Stop buttons against the hub
-and probe nodes.
+Click **Start** or **Stop** against the hub and probe nodes.
 
 ### Stop Context Using CLI
 

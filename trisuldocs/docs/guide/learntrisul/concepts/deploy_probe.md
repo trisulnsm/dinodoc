@@ -28,9 +28,15 @@ probe node using the CLI tool `trisulctl_probe` or
 
 <span class="badge badge--info">RUN ON PROBE</span>
 
-On the new machine, install the `trisul-probe` package.
+On Ubuntu, install the `trisul-probe` package:
 ```bash
 sudo apt-get install trisul-probe
+```
+
+On RHEL or Oracle Linux, install the packages with yum:
+
+```bash
+sudo yum install trisul-hub trisul-probe webtrisul
 ```
 
 ### 2. Obtain and Install Domain Certificate
@@ -73,7 +79,7 @@ install probe /usr/local/share/trisul-probe/probeWEST.cert
 <span class="badge badge--info">RUN ON PROBE</span>
 
 Since the new probe you are about to deploy will send data to a Trisul
-context called ‘default’ you need to install that context on the new
+context called `default` (another name for `context0`) you need to install that context on the new
 probe. Do the following
 
 ```bash
@@ -196,4 +202,4 @@ Confirm stop local domain processes and uninstall probe [probeWEST] ? Enter YES 
 ..
 ```
 
-This deletes the probe and all the data under it.
+This removes the probe from the node. It doesn't delete any data.

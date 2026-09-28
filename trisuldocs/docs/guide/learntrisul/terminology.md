@@ -123,7 +123,7 @@ A profile is the **configuration used by a context** to decide how traffic is an
 
 It controls capture settings such as interfaces and filters, the counters that are measured, flow tracking, alerts, resources, and other analytics options.
 
-When you create or edit a context, you select a profile for it. That profile defines:
+You assign a profile to a context from the CLI. That profile defines:
 
 - which counters are available
 - which alerts are enabled
@@ -248,12 +248,15 @@ Traffic direction is determined relative to the home network:
 - **Inbound traffic** enters the home network.
 - **Outbound traffic** leaves the home network.
 - **Transit traffic** passes through the network without originating or terminating inside it.
+- **Internal traffic** stays inside the home network. Both the source and the destination are home-network addresses.
 
 For example, if a computer inside your network downloads data from an Internet server, the traffic entering your network is **inbound**.
 
 If a computer inside your network sends data to an Internet server, the traffic leaving your network is **outbound**.
 
 This classification is used throughout Trisul to group and report traffic by direction.
+
+The UI uses both sets of direction labels: **Inbound** or **Incoming**, and **Outbound** or **Outgoing**.
 
 ---
 
@@ -721,17 +724,15 @@ Retention settings therefore determine how far back you can go when looking at h
 
 ### Oper / Ref / Archive
 
-Oper, Ref, and Archive are the three **storage tiers** Trisul uses to store data as it ages.
+Oper, Ref, and Archive are the three **storage tiers** Trisul uses to store flow data as it ages.
 
-- When traffic data is first collected, it is stored in **Oper**. This tier is meant for recent data and is optimized for fast access and high detail.
+- New flow data is stored in **Oper**. This tier holds recent data and is optimized for fast access and high detail.
 
-- As data becomes older, it moves into **Ref** storage. Data in Ref is still available for analysis, but it may be stored at reduced detail depending on your resolution and retention settings.
+- As Oper fills, the oldest data moves into **Ref** automatically. Data in Ref is stored at reduced detail.
 
-- Data that is kept for long-term reference, compliance, or optional use is stored in **Archive**. Archive storage is intended for historical lookups rather than frequent interactive analysis.
+- As Ref fills, the oldest data moves into **Archive**. Archive storage is intended for historical lookups rather than frequent interactive analysis.
 
-These stages explain why recent data can be more detailed and responsive, while older data may appear summarized or eventually become unavailable.
-
-Nothing moves between these stages automatically without being defined by your storage and retention settings.
+This is why recent data is more detailed and responsive, while older data appears summarized or eventually becomes unavailable.
 
 ---
 
@@ -925,11 +926,11 @@ Sliding windows are commonly used in real-time charts, alerts, and anomaly detec
 
 ### Retro Analysis
 
-Retro analysis allows Trisul to **apply analytics to traffic data that was collected earlier**.
+Retro analysis is **analysis of a past time window**.
 
-For example, you may introduce a new detection rule after traffic has already been collected. Retro analysis can apply that rule to the previously collected data.
+You pick a time range that has already passed, and Trisul analyzes the data it stored for that window.
 
-This means you can analyze existing data using new or updated analytics without having to capture the traffic again.
+See also: [Retro analysis in the User Guide](/docs/guide/ug/cg/retro).
 
 ---
 
@@ -1158,7 +1159,7 @@ This makes it easier to spot patterns, relationships, and unusual values that ma
 
 ## 10. ISP / IPDR-Specific Terminology
 
-These terms appear primarily in **NetFlow, ISP, and Compliance deployments**.
+These terms appear in **Trisul ISP Analytics** and **Trisul IPDR DoT Compliance Solution** deployments. They don't apply to Trisul NetFlow Analyzer.
 
 They describe concepts that do not apply to generic enterprise monitoring and must be understood in this context.
 
@@ -1181,7 +1182,7 @@ Upstream and downstream describe **traffic direction from the point of view of a
 - **Upstream** traffic flows toward providers or higher-level networks.
 - **Downstream** traffic flows toward customers or lower-level networks.
 
-These terms are commonly used in ISP environments instead of simply describing traffic as inbound or outbound.
+These terms are commonly used in ISP environments instead of describing traffic as inbound or outbound.
 
 ---
 
@@ -1255,8 +1256,6 @@ Each profile has its own list of capture adapters. You enable the interfaces you
 
 See also: [Capture Adapters](/docs/guide/ag/context/profiles).
 
-<!-- TODO(verify): Adapter definition aligned to ag/context/profiles.md; confirm with product team (Audit 02 Q1). -->
-
 ---
 
 ### Access Point
@@ -1266,8 +1265,6 @@ An access point **maps a protocol to a port or other identifier**, so Trisul kno
 For example, you can map UDP port 5556 to the NetFlow protocol. Trisul then decodes packets sent to that port as NetFlow records.
 
 See also: [Access Points](/docs/guide/ag/context/access_points).
-
-<!-- TODO(verify): Access Point definition aligned to ag/context/access_points.md; confirm with product team (Audit 02 Q1). -->
 
 ---
 

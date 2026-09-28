@@ -69,8 +69,7 @@ A sample rule chain is shown below. We want to :
 
 1. Cap av-pushes to first 10M
 2. Cap lotusnote traffic to first 1M
-3. Do not store traffic to offsite-backup
-4. Store full content for everything else
+3. Store full content for everything else
 
 Rule chain :
 
@@ -82,7 +81,7 @@ Rule chain :
 |                                  | FLOWCAP100K |
 |                                  | FLOWCAP10K  |
 |                                  | HEADERS     |
-| host offsite-backup.mydomain.com | NONE        |
+|                                  | IGNORE      |
 | default                          | FULL        |
 
 > if nothing matches

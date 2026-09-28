@@ -124,10 +124,6 @@ Trisul supports SPAN-based traffic analysis through packet analysis, flow teleme
 
 Using SPAN-fed packet streams, packet analysis, NetFlow, IPFIX, and traffic-analysis capabilities, operators can inspect packet-level traffic behavior, investigate latency, retransmissions, protocol anomalies, packet loss, and suspicious communication activity, correlate traffic behavior with hosts, applications, interfaces, and network conditions, troubleshoot VoIP and application-performance issues, and perform historical investigations associated with mirrored traffic across enterprise, ISP, telecom, cloud, data-center, and security-monitoring environments.
 
-Additional packet-analysis and traffic-investigation workflows are documented in the Trisul documentation:
-
-https://docs.trisul.org/docs/ug/probes/
-
 ---
 
 ## Related terms
