@@ -3,7 +3,7 @@
 Having previously configured [*Flow Trackers*](/docs/guide/ug/flow/tracker) as described in our prior documentation, we will now proceed to outline the procedures for generating alerts based on these *Flow Trackers*. This section will focus on the creation and configuration of **Flow Tracker Alerts**, that enables the detection of specific flow activity and triggers notifications in response to pre configured threshold criteria.
 
 ## Overview
-Trisul provides a powerful way to generate an alert when certain types of flow activity occurs.
+Trisul can generate an alert when certain types of flow activity occur.
 Once configured, *Flow Tracker Alerts* can be triggered in near real-time (latency of 1-5 seconds) prompting notifications via:
 - [Web Interface Alert Tracker](/docs/guide/ug/ui/userlayout#alerts-and-notifications) (located in the top-right corner)
 - Email notifications
@@ -25,7 +25,7 @@ To Configure *Flow Tracking Alerts*, Login as `user`,
 :point_right: Select Alerts&rarr; Flow Tracking&rarr; Configure
 :::
 
-Or you can create *Flow Tracker Tracker Alerts* per probe.
+Or you can create *Flow Tracker Alerts* per probe.
 
 For that, Login as `admin` user to create *Flow Tracker Alerts*.
 
@@ -89,7 +89,7 @@ Clicking on the *count* (yellow icon) with numbers on the *Fired Alerts* that in
 
 | Column     | Description                                                                                        |
 |------------|----------------------------------------------------------------------------------------------------|
-| Count      | The number of counts the alert has been triggered for that particular Flow> Clicking on the count takes you to further analyze the alert in more detail                                                             |
+| Count      | The number of counts the alert has been triggered for that particular flow. Clicking on the count takes you to further analyze the alert in more detail                                                             |
 | Priority   | The level of severity assigned to the alert                                                        |
 | IP         | The Source IP where the flow got originated                                                        |
 | Port       | The Source Port from where the Flow got emanated                                                   |

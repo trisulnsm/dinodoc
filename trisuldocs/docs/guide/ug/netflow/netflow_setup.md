@@ -1,8 +1,12 @@
 # Configure NetFlow
 
+:::note Applies to
+NetFlow mode.
+:::
+
 Trisul has the capability to use NetFlow like telemetry to gain deep
 visibility into your traffic performance, monitor traffic flows, and
-scan for security threats. Trisul features **comprehensive support** for
+scan for security threats. Trisul supports
 NetFlow v5/v9/JFlow/IPFIX/and SFlow metering. This document describes
 *step-by-step* on how you can setup Trisul to process NetFlow and
 *NetFlow-like* metering.
@@ -36,7 +40,9 @@ To view or change these, Login as `admin` and,
 This is an optional step. Use `tcpdump` to check whether NetFlow records
 are indeed coming in on the Trisul interface using tcpdump.
 
-    `sudo tcpdump  -i eth0 -nnn "udp port 2055"`
+~~~bash
+sudo tcpdump -i eth0 -nnn "udp port 2055"
+~~~
 
 You should be seeing some data within a minute or so. If not, check on
 other interfaces *eth1, eth2*. We recommend you ensure NetFlow is
@@ -49,7 +55,7 @@ Use the UI to change the mode from the default “Packet capture” to
 To do that, Login as `admin` and,
 
 :::info navigation
-:point_right: Go to *Context: Default &rarr; Start/Stop Tasks*
+:point_right: Go to *Context: Default &rarr; Admin Tasks &rarr; Start/Stop Tasks*
 :::
 
 - For probe0 on the “Packets or NetFlow” column, change the drop down
@@ -80,10 +86,11 @@ Login as `admin` and,
 :::
 
 - Start the probe
-- Logout and log back in a “user” to see the dashboards.
+- Log out and log back in as a “user” to see the dashboards.
 
-Congratulations!! Now wait for about 10 minutes for NetFlow data to
-start showing up.
+Wait for about 10 minutes for NetFlow data to start showing up.
+
+To check that NetFlow data is arriving, open the [NetFlow Sources Dashboard](/docs/guide/ug/netflow/sources). If no data shows up, see the [NetFlow troubleshooting page](/docs/Troubleshooting/netflownotreceiving).
 
 ## NetFlow Wizard
 
@@ -110,11 +117,11 @@ Login as `admin` and,
 :::
 
 You can see the template database on each probe. This is updated every
-10 minutes or when a new template is received.
+10 minutes or when a new template is received. For details, see [NetFlow Template DB](/docs/guide/ag/admintasks/netflow_templatedb).
 
 ### Advanced Configuration
 
 You can tweak the [NetFlow configuration file](/docs/guide/ref/netflow-config) for more advanced settings.
 
-Typically, you dont need to do this because the defaults have been
+Typically, you don't need to do this because the defaults have been
 carefully selected for you.

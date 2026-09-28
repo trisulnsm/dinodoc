@@ -32,7 +32,7 @@ As you can see there are a number of report types as tabs and a checkbox. From h
 
 > You can configure the business hours by logging in as admin and navigating to, Web Admin&rarr; Manage&rarr; App Settings&rarr; Schedule Email Reports
 
-Lets explore each of the report types in detail for better understanding. 
+The sections below describe each report type.
 
 
 ### Executive Reports
@@ -107,7 +107,7 @@ You can fill in the following fields in *Commonly Used* report by selecting a [t
 | Report Name      | Description                                          |
 | ---------------- | ---------------------------------------------------- |
 | Key usage report | Track usage of key activity from any counter groups. |
-| Hosts            | Get report of top hosts on your networ               |
+| Hosts            | Get report of top hosts on your network.             |
 | Apps             | Get report of top applications on your network.      |
 | Internal Hosts   | Get report of top internal hosts on your network.    |
 | External Hosts   | Get report of top external hosts on your network.    |
@@ -122,7 +122,7 @@ Trisul *Netflow* reports provide detailed analysis for traffic bandwidth and use
 
 *Figure: Netflow Reports*
 
-You can fill in the following fields in *Commonly Used* report by selecting a [time frame](/docs/guide/ug/ui/elements#time-selector) and providing the fields required. T
+You can fill in the following fields in the *Netflow* report by selecting a [time frame](/docs/guide/ug/ui/elements#time-selector) and providing the fields required.
 
 | Report name               | Description                                                                 |
 | ------------------------- | --------------------------------------------------------------------------- |
@@ -133,7 +133,7 @@ You can fill in the following fields in *Commonly Used* report by selecting a [t
 
 #### 1) Interface Utilization Report
 
-The Interfaces Utilization report provides a comprehensive overview of the utilization of selected interfaces from routers. To access,
+The Interfaces Utilization report gives an overview of the utilization of selected interfaces from routers. To access,
 
 :::info navigation
 :point_right: Login as user and Go to Reports &rarr; Readymade &rarr; NetFlow &rarr; Interfaces Utilization
@@ -149,7 +149,7 @@ The Interfaces Utilization report provides a comprehensive overview of the utili
 ![](images/interfaces_utilization.png)  
 *Figure: Interface Utilization Report*
 
-The Interfaces Utilization report provides a comprehensive overview of network interface performance, including:
+The Interfaces Utilization report gives an overview of network interface performance, including:
 
 | Detail | Description |
 |--------|-------------|
@@ -190,7 +190,7 @@ Explore Router Interface is distinct from the Interfaces Utilization report in t
 
 #### 3) Interface Usage Drilldown Report
 
-The Interface Usage Report provides a comprehensive analysis of network traffic and usage patterns for a selected interface over a specified time interval. The report offers a detailed breakdown of interface usage, traffic patterns, and top contributors by ASN, host, and application. To access,
+The Interface Usage Report analyzes network traffic and usage patterns for a selected interface over a specified time interval. The report offers a detailed breakdown of interface usage, traffic patterns, and top contributors by ASN, host, and application. To access,
 
 :::info navigation
 :point_right: Login as user and Go to Reports &rarr; Readymade &rarr; NetFlow &rarr; Interface Usage Drilldown
@@ -212,7 +212,7 @@ The Interface Usage Report provides a comprehensive analysis of network traffic 
 
 #### 4) Routers and Interfaces Report
 
-The Router and Interfaces Report provides a comprehensive overview of all routers and their associated interfaces, offering insights into router activity, bandwidth usage, and interface performance. To access,
+The Router and Interfaces Report gives an overview of all routers and their associated interfaces, offering insights into router activity, bandwidth usage, and interface performance. To access,
 
 :::info navigation
 :point_right: Login as user and Go to Reports &rarr; Readymade &rarr; NetFlow &rarr; Routers and Interfaces
@@ -249,7 +249,7 @@ You can fill in the following fields in *Direct* report by selecting a [time fra
 
 *Static IP* report in Trisul provides detailed information about static IP addresses on the network. This report includes Total bandwidth received and transmitted and Timeframes where usage overshot bandwidth cap.
 
-You can fill in the following fields in *Direct* report by [selecting a time frame](/docs/guide/ug/ui/elements#time-selector) and providing a static IP.
+You can fill in the following fields in the *Static IP* report by [selecting a time frame](/docs/guide/ug/ui/elements#time-selector) and providing a static IP.
 
 ![](images/staticipreports.png)
 
@@ -257,5 +257,4 @@ You can fill in the following fields in *Direct* report by [selecting a time fra
 
 | Report Name                                            | Description                                      |
 | ------------------------------------------------------ | ------------------------------------------------ |
-| [time frame](/docs/guide/ug/ui/elements#time-selector)       | Select a time frame to narrow down the data to a relevant interval                                                                                           |
 | Static IP Report                                       | Enter a static IP                                |

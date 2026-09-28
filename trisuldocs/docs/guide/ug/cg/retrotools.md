@@ -5,7 +5,7 @@ Now you need to select an analysis tool to apply to the time interval.
 
 To view retro analysis tools,
 :::info navigation
-:point_right: Go to Retro&rarr;Retro analysis tools
+:point_right: Go to Retro&rarr;Retro tools
 :::
 
 You can find the list of retro tools below the time selector as shown in this example.
@@ -49,7 +49,7 @@ This is an example of the Network FAQ module.
 
 *Figure: Network FAQ*
 
-Refer [Retro Q&A](/docs/guide/ug/cg/retrofaq) for more details.
+Refer to [Network FAQ](/docs/guide/ug/cg/retrofaq) for more details.
 
 ## Counter Group Toppers
 
@@ -190,8 +190,11 @@ Some of the built in trackers are :
 | Transferred Out | Flows which transferred maximum data **out** of your Home Network (Uploading)          |
 | Transferred In  | Flows which transferred maximum data **into** your Home Network (Downloading)          |
 | Local Traffic   | Top flows internal to your Home network                                                |
-| Suspicious      | Flows that fired a blacklist-based event, either by IP, requesting a domain name, or by requesting a URL                                                                                           |
 | FilterFailed    | Flows that don’t use any of the well known ports                                       |
+| Badfellas Marked | Suspicious or malicious traffic                                                       |
+| Low Volume      | Connections with minimal data transfer                                                 |
+| Payload Xfer Out | Highest volume of TCP payload data transferred **out of** your network. Does not include TCP handshake packets |
+| Payload Xfer In | Highest volume of TCP payload data transferred **into** your home network. Does not include TCP handshake packets |
 
 ## Explore Flows
 

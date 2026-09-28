@@ -1,5 +1,9 @@
 # MITRE ATT&CK Alert Timeline
 
+:::note Applies to
+Trisul NSM mode with Suricata alerts that carry MITRE ATT&CK mappings. See the [prerequisites](/docs/guide/ug/alerts/mitre#prerequisites) on the MITRE ATT&CK Framework Integration page.
+:::
+
 The **MITRE ATT&CK Alert Timeline** provides a chronological view of intrusion detections mapped to the MITRE ATT&CK framework. It enables analysts to reconstruct the progression of observed attack activity over a selected time period, correlate alerts across MITRE tactics and techniques, and investigate individual detections without leaving the timeline.
 
 The Timeline combines search filters, summary metrics, attack stage visualization, timeline-based alerts, and detailed investigation panels into a single workflow.
@@ -76,7 +80,7 @@ The **Chronological Stage Analysis** visualizes the progression of observed acti
 Each stage corresponds to a MITRE ATT&CK tactic. The badge displayed on each stage contains:
 
 - Total alerts mapped to that tactic.
-- Number of unique technique IDsrepresented by those alerts (shown in brackets).
+- Number of unique technique IDs represented by those alerts (shown in brackets).
 
 This provides a quick overview of how the attack progressed through different stages of the ATT&CK framework.
 

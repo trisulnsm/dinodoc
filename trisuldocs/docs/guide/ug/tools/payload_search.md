@@ -1,8 +1,10 @@
 # Payload Search
 
-<span class="badge badge--primary">PCAP Mode Only</span>  
+:::note Applies to
+Packet capture mode.
+:::
 
-The *Payload Search* Tool is a feature in Trisul that enables searching of network traffic for specific patterns, leveraging full packet capture capabilities. This section provides a comprehensive guide to using the *Payload Search* Tool, including its search capabilities and functionality.
+The *Payload Search* tool searches captured network traffic for specific patterns. It needs full packet capture.
 
 The search capabilities of the *Payload Search* tool includes searching for,
 
@@ -13,7 +15,7 @@ The search capabilities of the *Payload Search* tool includes searching for,
 
 ### How This Works
 
-> Make sure you have full packet capture and flow tracking enabled in the [trisulConfig.xml](/docs/guide/ref/trisulconfig) file
+> Make sure you have full packet capture and flow tracking enabled in the [trisulProbeConfig.xml](/docs/guide/ref/trisulconfig) file
 
 Trisul will reassemble and check all TCP streams in both directions for
 a match. If HTTP compression and chunked encoding are used, they are
@@ -59,7 +61,7 @@ You can use the *payload search* form to search for a pattern or a file with the
 | Search MD5s   | Enter a list of content MD5 hashes. One MD5 per line, (whitespaces are ignored) |
 | Select File   | Upload a file and search for matches                                            |
 
-Click **Search Everything**, you will be shown a list of flows that match. You can also click on the small down arrow icon on the *Search Everything* button which allows you to search the firt 1 MB of each flow.
+Click **Search Everything**, you will be shown a list of flows that match. You can also click on the small down arrow icon on the *Search Everything* button which allows you to search the first 1 MB of each flow.
 
 ### Content Inspection Width Configuration
 
@@ -72,7 +74,7 @@ You can find the *Content Inspection Width* at the bottom of the *Payload Search
 ![](images/dpicontentwidth.png)  
 *Figure: Content Inspection Width*
 
-You can click *Edit* button at the bottom of the *Payload Search* form. This will take you  to the *Web Trisul* page for configuration.
+You can click *Edit* button at the bottom of the *Payload Search* form. This will take you  to the *WebTrisul* page for configuration.
 
 
 ![](images/contentinspectionwidth.png)
@@ -101,7 +103,7 @@ The search result data includes the following details.
 | PROBE          | The name of the probe that captured the network traffic containing the match               |
 | MATCH          | A snippet of the payload that matched the search criteria, providing context for the match |                   
 
-Each column in the search result table are [*Column Sortable*](/docs/guide/ug/ui/elements#column-sorter), enabling flexible data analysis and visualization.
+Each column in the search result table is [*Column Sortable*](/docs/guide/ug/ui/elements#column-sorter), enabling flexible data analysis and visualization.
 
 
 ### Column Button
@@ -123,13 +125,13 @@ The drilldown options include the following details.
 
 | Option                   | Description                                                                         |
 |--------------------------|-------------------------------------------------------------------------------------|
-| Flow Details             | Displays comprehensive metadata about the network flow, including endpoints, flow stats, timing, and netflow.
+| Flow Details             | Displays metadata about the network flow, including endpoints, flow stats, timing, and netflow.
 | Packet Headers           | Shows the raw packet headers for the selected flow in strings, hexdump and Tshark   |
 | Download PCAP            | Allows you to download the PCAP for the selected flow
-| In this Conversation     | Displays all flows involving conversation of the original matching flow, providing context on other network activity related to this IP address.                                                    |
-| Involving SOurce IP      | Displays all flows involving the source IP address of the original matching flow, providing context on other network activity related to this IP address.                                          |
+| In this Conversation     | Displays all flows in the same conversation as the original matching flow.                                                    |
+| Involving Source IP      | Displays all flows involving the source IP address of the original matching flow, providing context on other network activity related to this IP address.                                          |
 | Involving Destination IP | Displays all flows involving the destination IP address of the original matching flow, providing context on other network activity related to this IP address.                                    |
 
 ## API Access
 
-Using the [Trisul Remote Protocol](/docs/trp/) you can even automate the whole process.
+You can automate payload searches with the [Trisul Remote Protocol](/docs/trp/).

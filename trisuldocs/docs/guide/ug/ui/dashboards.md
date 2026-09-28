@@ -4,7 +4,7 @@ sidebar_position: 8
 
 # Default Dashboards
 
-Trisul ships with a bunch of default dashboards which you will be seeing as soon as you first log in. This page describes each of them.
+Trisul ships with the default dashboards described on this page. In Trisul NSM and Trisul NetFlow Analyzer, all of them are available, except **Security**, which is available only in Trisul NSM.
 
 ## **Current Hosts**
 
@@ -276,6 +276,10 @@ This makes Overview useful as a **starting point rather than a detailed investig
 
 ## **Security**
 
+:::note Applies to
+Trisul NSM only.
+:::
+
 :::info navigation
 
 :point_right: Select *Dashboards &rarr; Security* to view the Security Dashboard
@@ -427,6 +431,8 @@ The Sessions dashboard provides different views of network flows so that you can
 | **Top TCP flows Downloading data based on TCP Payloads** | Ranks TCP flows by the amount of **actual TCP payload data** transferred from external destinations into your network. | **Which TCP connections are transferring the most actual data into my network?** | Use it when you specifically want to identify the TCP connections responsible for the largest inbound payload transfers. |
 
 Flows tracked include TCP/UDP/GRE/IPSEC/ and all flows at IP Layer.
+
+All Sessions modules use the time window selected in the [Time Selector](/docs/guide/ug/ui/elements#time-selector), even when the module name mentions 1 hour.
 
 ### What is a TCP Payload?
 

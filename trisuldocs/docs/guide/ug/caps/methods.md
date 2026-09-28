@@ -11,7 +11,7 @@ investigation points. The key thing to look for are the following two
 menu items
 
 1. “Download PCAP”
-2. “Quick PCAP view”
+2. “Show Headers”
 
 ![](images/pcapmenu2.png)
 
@@ -30,9 +30,9 @@ When you click on the Download PCAP button at the top of the table
   the table. It does this by computing a packet query plan first and then 
   pulling and merging all the packets into a single PCAP file. This is a major productivity time saver.
 
-## Quick PCAP View
+## Show Headers {#quick-pcap-view}
 
-The Quick PCAP menu item was created to 
+The Show Headers menu item was created to 
 make working with raw packets quicker. When you select this menu 
 items, only the 1st 100K of the requested packet output is selected and 
 shown in three panes.
@@ -45,7 +45,7 @@ See image below
 
 ![](images/quickpcap.png)
 
-*Figure:  Showing Quick PCAP Summary*
+*Figure: Show Headers Output*
 
 Once you are satisfied you can download the PCAP file and save it for further analysis or problem report.
 
@@ -73,7 +73,7 @@ To open the Pull Packets tool:
 
 :::info navigation
 
-:point_right: Goto Retro → Retro Tools → Select Timeframe → Pull Packets
+:point_right: Go to Retro → Retro tools → Select Timeframe → Pull Packets
 
 :::
 

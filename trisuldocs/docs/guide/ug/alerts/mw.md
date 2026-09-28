@@ -3,7 +3,7 @@
 **This feature requires the Trisul Badfellas plugin**  
 See [Trisul Badfellas](/docs/guide/ref/plugin-config/badfellas)
 
-The Trisul Badfellas plugin adds comprehensive threat detection 
+The Trisul Badfellas plugin adds threat detection 
 capabilities to Trisul based on multiple blacklists which are included 
 with the plugin
 
@@ -22,7 +22,7 @@ You can get useful reports like
 2. Infection trends over time
 3. Breakup of malware types (ZeUS, Gumblar, GhostNet, etc)
 4. Retrieve suspected malware flows
-5. Pull suspected malware packets into Wireshark or Unsniff
+5. Pull suspected malware packets into Wireshark
 6. Script using TRP
 
 ## Viewing Blacklist Alerts
@@ -48,8 +48,8 @@ A number of alerts generated for different signature IDs are listed in the table
 | Probe            | The probe that captured the traffic of the associated alert                                  |
 | Drilldown Button | Click on the Drilldown button to view the [edge graph](/docs/guide/ug/edges/) of the Signature ID, and to delete that alert                                                                                          |
 
-- By clicking on the *Signature ID* and the count value you will be able to view a list of recent 1000 alerts grouped by for that particular Signature ID.
-- By clicking on the *Priority value* on the column, you will be able to view a list of recent 1000 alerts grouped by for that particular   
+- Click the *Signature ID* or the count value to view the most recent 1000 alerts for that Signature ID.
+- By clicking on the *Priority value* on the column, you will be able to view a list of the recent 1000 alerts for that priority.
 - Interactive functionalities of the table include : [*Column Sorter*](/docs/guide/ug/ui/elements#column-sorter), [*Download Button*](/docs/guide/ug/ui/elements#download-button), [*Show/Hide Search Form*](/docs/guide/ug/ui/elements#hide-show-search-form)
 
 ### Show Search Form
@@ -97,12 +97,13 @@ Upon selecting a specific *Signature ID* or *Count* value, the system redirects 
 In this page you can find a summary of alert groupings, offering a categorical overview of alert distribution. By selecting a specific value within a grouping category, the system executes a drill-down query, redirecting you to a detailed list of alerts filtered by the chosen group, thereby facilitating in-depth analysis.
 
 The grouping categories on the summary include:
-      - Grouped by Source IP
-      - Grouped by Destination IP
-      - Grouped by Signatures
-      - Grouped by Description
 
-Below the summary section, a detailed alert table is displayed, presenting a comprehensive list of recent 1000 alerts associated with the Signature ID or Count value you initially selected. The data on the table includes the following details.
+- Grouped by Source IP
+- Grouped by Destination IP
+- Grouped by Signatures
+- Grouped by Description
+
+Below the summary section, a detailed alert table is displayed, presenting a list of the recent 1000 alerts associated with the Signature ID or Count value you initially selected. The data on the table includes the following details.
 
 | Column            | Description                                                                                |
 |-------------------|--------------------------------------------------------------------------------------------|
@@ -112,16 +113,16 @@ Below the summary section, a detailed alert table is displayed, presenting a com
 | Source Port       | The port number used by the source IP (the device/application initiating the connection).                                                                                                     |
 | Destination IP    | Destination IP with the country flag of the destination IP                                 |
 | Destination Port  | The port number on the destination IP (the service/application being connected to)                                                                                                              |
-| Scan Check        | Indicates if the system has only scanned for malware or if its infected  by malware        |
+| Scan Check        | Indicates if the system has only scanned for malware or if it is infected by malware        |
 | Type              | The category of alert                                                                      |                    
 | Description       | A short summary of alert including relevant details                                        |
-| Timestamp IST     | The date and time the alert was generated, displayed in Indain Standard Time (IST)         |
+| Timestamp IST     | The date and time the alert was generated, displayed in Indian Standard Time (IST)         |
 | Probe             |  The specific probe that detected and reported the alert                                   |
 | Drilldown Options | Clicking on the drilldown button enables a number of drilldown options including alert details, flow details, packet headers, download PCAP etc.                                                                                      |
 | Flow State        | PCAP can be downloaded if available or a barred sign indicates no PCAP is available        |
 
 Interactive functionalities of the table include : [*Column Sorter*](/docs/guide/ug/ui/elements#column-sorter), [*Toggle Labels*](/docs/guide/ug/ui/elements#toggle-labels), [*Download Button*](/docs/guide/ug/ui/elements#download-button), [*Download PCAP*](/docs/guide/ug/ui/elements#download-pcap-button), and the
-*Check Scan* button that initializes the scan status for all the generated alerts indicating if the system has only scanned for malware or if its infected by malware.
+*Check Scan* button that initializes the scan status for all the generated alerts indicating if the system has only scanned for malware or if it is infected by malware.
 
 ### Drilldown Options
 
@@ -134,14 +135,14 @@ The drilldown options available for each alert are described below.
 
 | Option                   | Description                                                                       |
 |--------------------------|-----------------------------------------------------------------------------------|
-| Alert Details            | Displays comprehensive details about the alert, including Timestamp, Severity, Signature, Description,and Relevant metadata                                                                   |
+| Alert Details            | Displays details about the alert, including Timestamp, Severity, Signature, Description,and Relevant metadata                                                                   |
 | Flow Details             | Shows the network flow associated with the alert, including Source IP address, Destination IP address, Ports, Protocols, and Network communication details                                    |
 | View Edges               | Displays the edge graph of the selected signature ID of the alert                 |
 | Packet Headers           | Provides the raw packet headers associated with the alert                         |
 | Download PCAP            | Enables download of the packet capture (PCAP) file associated with the alert      |
 | In this Conversation     | Displays all flow activity in the same conversation or session                    |
-| Involving Source IP      | Displays all flow activity nvolving the source IP address associated with the original alert                                                                                                 |
-| Involving Destination IP | Displays all flow activity nvolving the destination IP address associated with the original alert                                                                                                 |
+| Involving Source IP      | Displays all flow activity involving the source IP address associated with the original alert                                                                                                 |
+| Involving Destination IP | Displays all flow activity involving the destination IP address associated with the original alert                                                                                                 |
 
 ## Evasions
 

@@ -1,6 +1,6 @@
 # Trisul Edges – Streaming Graph Analytics
 
-*Trisul Edge* brings the power of graph analytics to the Trisul platform. It lets you discover relationships between various metric items. This section introduces the *Trisul Edge* feature and then describes how to use the Trisul User Interface to explore these relationships
+*Trisul Edge* adds graph analytics to Trisul. It lets you discover relationships between metric items. This section introduces the *Trisul Edge* feature and then describes how to use the Trisul User Interface to explore these relationships
 
 import DocCardList from '@theme/DocCardList';
 
@@ -8,14 +8,14 @@ import DocCardList from '@theme/DocCardList';
 
 ## Introducing Trisul Edges
 
-Trisul is a real time streaming analytics platform. This means we use streaming algorithms to process data in a *one pass* manner rather than the traditional way of storing data in Lucene (Elastic Search) or aRDBMS(say PostGres) and processing searches and queries on demand. A Trisul Probe can capture hundreds of metrics from network traffic but until today it did not capture how the *metrics were related to each other* beyond the flow connection. We could tell that metrics for Protocol, Ports, IP Addresses were related to a flow, but we could not tell that aTLSCipher Suite used was related to an IP Address, aTLSOrganization, or a Country. In previous releases , we used something called a “*Flow Tagger*” that used the *network flow* as an anchor entity which you could enrich with tags.
+Trisul is a real-time streaming analytics platform. It processes data in a single pass with streaming algorithms, instead of storing data in a search engine such as Elasticsearch or a relational database such as PostgreSQL and querying it on demand. A Trisul Probe captures hundreds of metrics from network traffic. Without Edges, Trisul can relate metrics such as protocol, port and IP address only through the flow they belong to. It can't tell, for example, that a TLS cipher suite was used by a particular IP address, TLS organization or country. The [Flow Tagger](/docs/guide/ug/flow/tagger) enriches each flow with tags, but it still uses the flow as the anchor.
 
 ![](./images/edge-intro.png)
 *Figure: Edge Graph Showing Flow Taggers*
 
-With Trisul Edges, we bring advanced graph database features into Trisul itself. Each entity in Trisul metrics also generates information about related entities. In Graph Database architecture, the central concept is to store “connections” and “graphs of connections” as sets of **edges** and **vertices**.
+Trisul Edges brings graph database features into Trisul. Each entity in Trisul metrics also generates information about related entities. In Graph Database architecture, the central concept is to store “connections” and “graphs of connections” as sets of **edges** and **vertices**.
 
-When you enable Trisul Edges, as Trisul processes packets, it generates a new type of stream called an Edge stream. Then we apply various streaming algorithms on this edge stream to make it manageable and practical to use. For instance, we dont want to store an unbounded graph for very high cardinality relationships.
+When you enable Trisul Edges, Trisul generates a new type of stream, called an Edge stream, as it processes packets. Streaming algorithms keep this stream to a manageable size. For example, Trisul doesn't store an unbounded graph for high-cardinality relationships.
 
 ## Vertices and Edges
 
@@ -33,9 +33,9 @@ In Trisul you start traversing graphs from a “root vertex”. In the image sho
 
 ## Limits
 
-Trisul uses a memory cap on the number of allowed neighbors per vertex. This is to prevent an explosion of edges for vertices with very large cardinality such as http protocol. Imagine how many IPs would be neighbors of the HTTP protocol.
+Trisul uses a memory cap on the number of allowed neighbors per vertex. This prevents an explosion of edges for high-cardinality vertices such as the HTTP protocol. Imagine how many IPs would be neighbors of the HTTP protocol.
 
 The limits currently in effect are :
 
 1. Max vertices – unlimited
-2. Max neighbors per vertex – 1KB / hour. Roughly 100 uniques per hour. We will revisit this converative limit based on user feedback in the field.
+2. Max neighbors per vertex – 1KB / hour. Roughly 100 uniques per hour. We will revisit this conservative limit based on user feedback in the field.

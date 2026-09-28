@@ -18,13 +18,13 @@ This will take you to the *Email Server Account Settings* page where you can con
 *Figure: Email Account Settings Module*
   
   
-In ths window, Click on *Configure email server*.  And you can configure an Email server by filling up the following fields using which Web Trisul will send outgoing mails.
+In this window, click *Configure email server* and fill in the following fields. WebTrisul uses this server to send outgoing mail.
   
   | Fields                        | Description                                                                   |
   | ----------------------------- | ----------------------------------------------------------------------------- |
   | Email Server                  | Hostname or IP of the SMTP server                                             |
   | SMTP Port Number              | SMTP Port (Usually 25. For Gmail use 587)                                     |
-  | Authentication Protocol       | Click from the drop down list of authenticaton protocols                                                                                                       |
+  | Authentication Protocol       | Click from the drop down list of authentication protocols                                                                                                       |
   | From Email Address            | This is displayed as the sender's address on the recipient's inbox                                                                                                           |
   | Password/API Key              | Email Password,API Key,or Provider password like pepipost,sendgrid                                                                                               |
   | Disable SSL Cert verification | Disable certificate verification. Eg, if your email server uses self signed certificates                                                                                                    |
@@ -40,7 +40,7 @@ As you can see there are details of the newly configured mail address including 
 
 ## Send a Test Email
 
-After you have configured the email settings, its a good idea to send a test email to see if everything works.
+After you have configured the email settings, send a test email to check that everything works.
 You can click the Action button of the newly configured email address and click *Edit*.
 
 The following edit window will open up where you can find a *Test it!* window on the right hand side of the page.  
@@ -52,7 +52,7 @@ Enter an email address on the “Target Email ID” and click Send a Test Email.
 
 ## Configure Target Email Address
 
-Once you have configured and tested the email address for the reports to be "sent from" now lets see how to configure the target email address to automatically email the scheduled reports.
+Once you have configured and tested the "sent from" address, configure the target email address that receives the scheduled reports.
 
 To open *Schedule Email Reports* page, Login as `admin` and
 
@@ -82,7 +82,7 @@ Once providing all the details, Click *Save*. You have now configured the defaul
 
 ## Pepipost Integration
 
-Web Trisul supports Email sending with SMTP Relay provided by Pepipost.com. Here is how you use it.
+WebTrisul supports Email sending with SMTP Relay provided by Pepipost.com. Here is how you use it.
 
 #### Get Pepipost Credentials
 
@@ -105,7 +105,7 @@ Enter the email settings as shown
 | Authentication Protocol      | Login SMTP Auth (default)                                  |
 | From Email Address           | something@yourdomain.com. This domain integration must be completed in Pepipost first                                                                                       |
 | Email Password               | **Pepipost SMTP Password (noted down from previous step)** |
-| Disable SSL Cert Verfication | Unchecked                                                  |
+| Disable SSL Cert Verification | Unchecked                                                  |
 | SMTP Relay User (optional)   | **Your Pepipost Username (noted from previous step)**      |
 
 Then try sending a Test Mail.

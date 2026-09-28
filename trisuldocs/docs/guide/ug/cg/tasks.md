@@ -8,7 +8,7 @@ Select Dashboards &rarr;Real Time Traffic
 
 Select Dashboards &rarr;Current Hosts
 
-### How can I view the top hosts by usage to within 3 seconds ?
+### How can I view the top hosts by usage in real time? {#how-can-i-view-the-top-hosts-by-usage-to-within-3-seconds-}
 
 For real time traffic stats you need to use the Stabber feature.
 
@@ -20,7 +20,7 @@ Select Dashboards &rarr;Real Time Traffic
    
    This will show you the real time toppers for the counter group of the key for the selected meter.
 
-### How can I view the top MAC by TRANSMIT to within 3 seconds ?
+### How can I view the top MAC by TRANSMIT in real time? {#how-can-i-view-the-top-mac-by-transmit-to-within-3-seconds-}
 
 You need to use the *Real Time Stab Toppers* tool.
 

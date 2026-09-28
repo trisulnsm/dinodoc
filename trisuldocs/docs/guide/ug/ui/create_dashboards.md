@@ -253,7 +253,7 @@ If a dashboard is no longer required in the main navigation, you can remove it f
 
 :::info navigation
 
-:point_right: Go to Customize&rarr; UI&rarr; Menu Manager
+:point_right: Go to Dashboards&rarr; Show all&rarr; Manage
 :::
 
 There will be a list of all dashboards. 
@@ -262,7 +262,7 @@ There will be a list of all dashboards.
 
 *Figure: Remove a Dashboard from the Menu*
 
-Find the dashboard you would like to remove from the menu and Click **Delete**. This will only remove the dashboard from the menu and your dashboard itself will not be deleted.
+Find the dashboard you want to remove from the menu and use its menu option to remove it from the menu. This removes the dashboard from the menu only; the dashboard itself is not deleted. <!-- TODO(verify): exact option label under Dashboards → Show all → Manage -->
 
 ### How to Edit a Dashboard
 

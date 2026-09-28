@@ -17,7 +17,7 @@ If you can see the IP in any dashboard
 
 If you know the IP address
 
-1. Click on Tools &rarr;Investigate IP
+1. Click on Tools &rarr;Investigate IP Activity
 2. Select a time frame
 3. Enter the IP you want to search for
 
@@ -32,7 +32,7 @@ If you know the IP address
 
 1. Type the host or the port in the search box
 2. Click on the search results to go to the Key Dashboard
-3. On the top right, select “Flow Stabber”
+3. In the **Key Details** module, select **Real Time Stabber: Flow Activity**
 
 ## Jump from alerts to flows that caused them
 

@@ -1,5 +1,9 @@
 # NetFlow Configuration Wizard
 
+:::note Applies to
+NetFlow mode.
+:::
+
 *NetFlow Configuration Wizard* pulls together various configuration options
 into one place.
 
@@ -40,14 +44,14 @@ Notice that the *NetFlow Configuration Wizard* has 6 Tabs.
 
 Here you can configure the most common items related to NetFlow.
 
-The current setting is shown just below the form items.
+The current setting is shown below the form items.
 
 | Configurations required             | Description                                                              |
 | ----------------------------------- | ------------------------------------------------------------------------ |
 | Network Interface to listen on      | If you are receiving NetFlow on an interface other than `eth` - click on *Set Adapter* and enter the new interface name.                                                                   |
 | Specify IP ranges in Home Network for calculating External and Internal traffic | Enter IP ranges other than the default Private IP space that constitute your home network. This is used for calculating various metrics.                                                 |
 | Select NetFlow/SFlow ports          | Enter the UDP ports that are mapped to NetFlow. If you want to enter a new port click on *Set NetFlow Ports* then enter a Port Number and select “NetFlow” from the drop down list.         |
-| Select counter groups typically used in NetFlow environments    |   - In NetFlow mode many packet based counter groups such as HTTP Hosts, DNS Counters, SSL/TLS certificate metrics are not available.   - Select *Choose Counters* then scroll to the bottom for *Advanced Options* then select - *Typical enterprise NetFlow counter configuration*                                 |
+| Select counter groups typically used in NetFlow environments    | In NetFlow mode many packet-based counter groups such as HTTP Hosts, DNS Counters and SSL/TLS certificate metrics are not available.<br/>Select *Choose Counters*, scroll to *Advanced Options* at the bottom, then select *Typical enterprise NetFlow counter configuration*. |
 | Switch Trisul Probes to NetFlow_TAP | The Probe nodes have to be in `NetFlow_TAP` mode. Click the button and ensure that the *Packets or NetFlow* parameter is changed to `NetFlow_TAP` from `TAP`                            |
 | Edges                               | Enables the database containing the streaming graph of relationship between different entities                                                                                       |
 | Ring                                | Enable to capture raw packets                                            |
@@ -58,7 +62,7 @@ After Trisul has collected NetFlow for a while, it automatically
 builds a map of Routers and their attached Interfaces. This page allows
 you to perform the following tasks on the discovered routers.
 
-> **NOTE**: Skip this step if you have just started collecting NetFlow. You
+> **NOTE**: Skip this step if you started collecting NetFlow recently. You
 > can come back here after Trisul has been running for a few hours in
 > NetFlow mode.
 
@@ -77,14 +81,14 @@ discovered interfaces.
 
 > **NOTE**  
 > This step needs to have discovered NetFlow entities. Skip this step if
-> you have just started collecting NetFlow a few minutes ago. You can come back here after Trisul has been running for a 15-20 minutes.
+> you started collecting NetFlow a few minutes ago. Come back here after Trisul has been running for 15-20 minutes.
 
 Select interfaces by clicking on the checkboxes and then :
 
 | Configurations Required                   | Description                                                           |
 | ----------------------------------------- | --------------------------------------------------------------------- |
 | Enable Interface Tracking for **Top 100** | Enables the Interface Tracking feature for the busiest 100 interfaces |
-| Enable Interface Tracking                 | Enables Interface Tracking on the selected intefaces                  |
+| Enable Interface Tracking                 | Enables Interface Tracking on the selected interfaces                  |
 | Disable Interface Tracking                | Disables the feature                                                  |
 | Create TCA                                | Create TCA for selected interfaces                                    |
 | Delete TCA                                | Delete TCA for selected interfaces                                    |
@@ -103,8 +107,7 @@ conditions.
 | Alerts go to syslog        | Select which alert types go to SYSLOG. Trisul sends out Emails only for those alerts that are sent to SYSLOG. To send an alert type to SYSLOG, click on the button and select any SYSLOG alert level in the next screen.                                                                                      |
 | Syslog readable         | Checks if syslog files on the hub node are readable                                |
 
-Once you go through the items in this wizard you will have a robust
-NetFlow based monitoring system.
+When you finish the items in this wizard, your NetFlow-based monitoring is set up.
 
 ## Trackers
 
@@ -139,8 +142,8 @@ Drilldown](/docs/guide/ug/netflow/drilldown#information-shown) pages.
 | Track ASN for Subnets               | Allows ISP to define IP subnets and assign them to customers, then track AS wise usage of those subnets. |
 | Track ASN for Locations             | Allows ISP to define Locations as a group of routers then track AS wise traffic for the entire location  |
 | Mixed Bandwidth                     | Allows ISP to define peering vs internet traffic                 |
-| Track Mixed Bandwidth Per Interface | For each interface track mixed bandwidth(peerig vs internet)     |
-| Track Mixed Bandwidth for Subnets   | For each interface track mixed bandwidth(peerig vs internet)     |
+| Track Mixed Bandwidth Per Interface | For each interface track mixed bandwidth (peering vs internet)     |
+| Track Mixed Bandwidth for Subnets   | For each interface track mixed bandwidth (peering vs internet)     |
 
 ## Interface Utilization Alert
 
@@ -153,7 +156,7 @@ The following thresholds are used to determine the alert level:
 ![](images/interfaceutilization_alert.png)  
 *Figure: Showing Setting of Interface Utilization Alerts* 
 
-| Configurations requried | Description                                                |
+| Configurations required | Description                                                |
 | ----------------------- | ---------------------------------------------------------- |
 | High                    | If interfaces crossed 90% it will give high level alerts   |
 | Medium                  | If interfaces crossed 80% it will give medium level alerts |

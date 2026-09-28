@@ -1,11 +1,11 @@
 # Detecting Volumetric Attacks
 
-Using the TCA [Threshold Crossing Alerts](/docs/guide/ug/alerts/tca) and the TB [Threshold Band Alerts](/docs/guide/ug/alerts/tband) it is easy to configure Trisul Network Analytics to detect volumetric attacks such as DDoS Distributed Denial of Service.
+Using the TCA [Threshold Crossing Alerts](/docs/guide/ug/alerts/tca) and the TB [Threshold Band Alerts](/docs/guide/ug/alerts/tband) you can configure Trisul Network Analytics to detect volumetric attacks such as DDoS Distributed Denial of Service.
 
 Configuring DDoS detection in Trisul gives you the following features
 
-1. With Packet Mode detection in as little as 10 seconds
-2. With Netflow Mode detection in 1-2 minutes
+1. In packet capture mode, detection in as little as 10 seconds
+2. In NetFlow mode, detection in 1-2 minutes
 3. Detect hosts sending or receiving exponential growth traffic
 4. Ability to run a script in response to an alert
 5. Sending Alert by Email immediately
@@ -13,7 +13,7 @@ Configuring DDoS detection in Trisul gives you the following features
 ## DDoS Attack Types
 
 DDoS attacks typically utilize a number of hosts to send large 
-payloads to a target host. Trisul allows you to simply track all IP 
+payloads to a target host. Trisul lets you track all IP 
 Addresses in real time and alert when any of them exceed threshold for 
 the following criteria.
 
@@ -70,7 +70,7 @@ The following shows a DDoS tracker for ANY host attacked with 10Gbps load with a
 
 ## Alerts Dispatch and Response
 
-DDos Alerts are dispatched like normal TCA alerts. They are seen on screen or can be delivered instantly via E-Mail
+DDoS alerts are dispatched like normal TCA alerts. They are seen on screen or can be delivered instantly via E-Mail
 
 ### Automated Actions
 

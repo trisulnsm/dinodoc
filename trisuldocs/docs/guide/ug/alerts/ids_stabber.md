@@ -1,5 +1,9 @@
 # Real Time Alert Stabber
 
+:::note Applies to
+This page applies when Trisul receives alerts from an IDS such as Snort or Suricata (Trisul NSM).
+:::
+
 The real time alert stabber is designed to be the central place for viewing IDS alerts. The idea is to explore alert activity from various angles using animation and an interactive UI.
 
 1. Alerts activity over a period of time – say the past day
@@ -39,9 +43,9 @@ Consider the numbered orange circles in the screenshot above.
 | Part # | Data                     | Description of UI module                                                   |
 | ------ | ------------------------ | -------------------------------------------------------------------------- |
 | 1      | Alerts by priority       | Red = Priority 1, Blue = 2, Black = 3 (low). These numbers update dynamically, you can also click on them to view alerts of each category                                          |
-| 2      | Alert types bubble chart | Shows each alert type seen in time interval as a bubble chart. This type of layout can pack a lot of information into a small space. Hover your mouse over any bubble to access further options. Hover over bubble to highlight alerts of that type on timeline Hide a particular type Hide all bigger bubbles so you can take a closer look at tiny ones As alerts come in the bubbles fill up and automatically adjust themselves to fit in space.                                                                                      |
-| 3      | Timeline                 | Shows alert distribution over time. The Y-Axis scale is multilinear, the advantage of this scale is that single alerts (the quiet ones) get as much of your attention as the big ones. Within a range, the size of circles are proportional to their occurances. By default, the timeline shows alerts over 1 day in 1 hr intervals. Hover over a alert & click to view alerts of that type in that interval New alerts sprint across the screen                                                                                         |
-| 4      | Raw alerts               | A dynamically updating table showing the most recent 100 alerts.Table optimized for real time use, shows elapsed time, inspired by twitter’s timeline Clicking on any item takes you to that alert, from where you have other drilldown options                                                          |
+| 2      | Alert types bubble chart | Shows each alert type seen in the time interval as a bubble chart. This layout packs a lot of information into a small space. Hover over a bubble to access further options: highlight alerts of that type on the timeline, hide that type, or hide all bigger bubbles so you can look at the tiny ones. As alerts come in, the bubbles fill up and adjust to fit the space.                                                                                      |
+| 3      | Timeline                 | Shows alert distribution over time. The Y-axis scale is multilinear, so single alerts (the quiet ones) get as much of your attention as the big ones. Within a range, the size of a circle is proportional to its occurrences. By default, the timeline shows alerts over 1 day in 1-hour intervals. Hover over an alert and click to view alerts of that type in that interval. New alerts move across the screen as they arrive.                                                                                         |
+| 4      | Raw alerts               | A dynamically updating table showing the most recent 100 alerts. The table is optimized for real-time use and shows elapsed time. Click any item to open that alert, where you have other drilldown options.                                                          |
 | 5      | Aggregated alerts        | Alerts by group. Most recently active groups migrate to the top of the table. Click on an alert group to view all individual alerts in that group                                              |
 | 6      | The tool bar             | Controls various aspects of the visualization (see below)                  |
 

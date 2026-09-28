@@ -1,6 +1,6 @@
 # Rule Builder
 
-The Rule Builder is a powerful tool designed to help you create, manage, and deploy custom rules for various applications, including flow taggers, custom metering,etc. With the Rule Builder, you can define specific  conditions to identify and act upon relevant data for streamlining your analysis.
+The Rule Builder helps you create rules in Trisul filter format for features such as flow taggers and custom metering. You define the conditions, and the Rule Builder generates the rule string.
 
 ## Trisul Rule Format
 

@@ -21,9 +21,9 @@ Use this API to discover what historical data is available before querying toppe
 
 ## Authentication
 
-All requests must include a valid API token and username. The token is the user's `auto_login_token` configured in Webtrisul.
+All requests must include a valid API token and username. The token is the user's `auto_login_token` configured in WebTrisul.
 
-To generate an API token, follow the provided link: [Generate API token](https://docs.trisul.org/docs/guide/ag/webadmin/manageusers/#generate-api-token)
+To generate an API token, see [Generate API Token](/docs/guide/ag/webadmin/manageusers#generate-api-token).
 
 
 | Parameter   | Required | Description                        |
@@ -41,7 +41,7 @@ To generate an API token, follow the provided link: [Generate API token](https:/
 
 | Parameter | Type   | Description                                                                       |
 | --------- | ------ | --------------------------------------------------------------------------------- |
-| `context` | string | Webtrisul context name (e.g. `default`, `netflow`) |
+| `context` | string | WebTrisul context name (e.g. `default`, `netflow`) |
 
 
 ### Optional

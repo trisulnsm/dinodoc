@@ -1,5 +1,9 @@
 # Using SNMP
 
+:::note Applies to
+NetFlow mode.
+:::
+
 Trisul can use SNMP to complement Netflow. You can use it to discover device names, interface names, interface speeds, plot real time SNMP traffic charts, etc.
 
 
@@ -84,13 +88,13 @@ From the list of [Interface drilldown options](/docs/guide/ug/netflow/routers_an
 
 | Settings           | Description                                                                                |
 | ------------------ | ------------------------------------------------------------------------------------------ |
-| Live SNMP          | This brings up a live 5 second updated view of SNMP In/Out traffic chart for that interface.                                                                                       |
+| Live SNMP          | This brings up a live view of the SNMP In/Out traffic chart for that interface, updated every 10 seconds.                                                                                       |
 | SNMP Key Dashboard | If you have the *Trisul SNMP APP* installed, Trisul automatically polls all interfaces and maintains historical charts. This takes you to the key dashboard for historical charts. |
 
 
 ### Live SNMP
 
-The *Live SNMP* option in the interface is a very useful debugging tool that provides real time monitoring of SNMP traffic data for a specific interface. It shows a 10-sec updated chart of network traffic on the interface obtained via SNMP.
+The *Live SNMP* option in the interface is a debugging tool that provides real time monitoring of SNMP traffic data for a specific interface. It shows a 10-sec updated chart of network traffic on the interface obtained via SNMP.
 
 ![](images/live_snmp.png)
 
@@ -100,7 +104,7 @@ The *Live SNMP* option in the interface is a very useful debugging tool that pro
 
 There are scenarios where you might want to configure SNMP globally. 
 
-**Scenario 1**: When you want to start monitoring devices but no devices are listed in the *routers and interfaces* section, where you want to resolve device names. In tha case, if no per-device settings are found, you can use the following setting to configure SNMP globally. 
+**Scenario 1**: When you want to start monitoring devices but no devices are listed in the *routers and interfaces* section, where you want to resolve device names. In that case, if no per-device settings are found, you can use the following setting to configure SNMP globally. 
 
 **Scenario 2**: If there are more number of devices with same SNMP settings, you can use the following settings to configure SNMP in a single shot.
 
@@ -129,7 +133,7 @@ Click *Advanced Settings* for further configurations.
 
 | Field | Description |
 |-------------------------------|--------------------------------------------------------------------------------|
-| Use Huawei SNMP Port Map | Enable this if youre using Huawei devices which uses custom SNMP port mapping       |
+| Use Huawei SNMP Port Map | Enable this if you're using Huawei devices which uses custom SNMP port mapping       |
 | Auto Resolve SNMP | Automatically resolve SNMP for interfaces                                                  |
 | Resolve ifSpeed | Resolve the interface speed (ifSpeed) using SNMP                                             |
 | Resolve Router Name | Resolve the router name using SNMP                                                       |

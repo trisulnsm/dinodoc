@@ -6,14 +6,14 @@ import DocCardList from '@theme/DocCardList';
 
 Trisul offers a suite of tools, which are specialized utilities designed to analyze, process, and act upon network data, including packets, flows, and logs. These tools serve various purposes, such as extracting insights, detecting issues, and taking actions.
 
-The following tools have already been comprehensively documented, providing detailed information on their functionalities and configurations. Click on any tool to explore them. 
+These tools are on the **Tools** menu but are documented in other sections:
 
 - [:memo: Flow Tracker](/docs/guide/ug/flow/tracker)
 - [:memo: Flow Tagger](/docs/guide/ug/flow/tagger)
 - [:memo: Real Time Stab Toppers](/docs/guide/ug/cg/stabber#real-time-stabber-toppers)
 - [:memo: Edge Graph](/docs/guide/ug/edges/)  
 
-Moving forward this guide will explore the remaining undocumented tools within the Trisul platform. 
+The rest of this section covers the other tools on the **Tools** menu. 
 
 <DocCardList />
 

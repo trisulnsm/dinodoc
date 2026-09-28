@@ -50,7 +50,6 @@ Jump to common network analysis tasks
 - Use the Payload Search Tool if you are looking for pattern
 - For recurring tasks – use the programmatic interface [Trisul Remote Protocol](/docs/trp/)
 - Familiarize yourself with Wireshark
-- Use Unsniff Network Analyzer for reconstructing activity
 
 ### Automation
 

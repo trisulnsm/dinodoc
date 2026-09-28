@@ -142,7 +142,7 @@ The details that you can analyze on the individual alerts result are as follows:
 |-------------------|---------------------------------------------------------------------------------------|
 | Type              | The type of alert triggered                                                           |
 | Priority          | The severity level of the alert                                                       |
-| Time IST          | The timestamp of hwne the alert was triggered in Indian STandard Time (IST)           |
+| Time IST          | The timestamp when the alert was triggered, in Indian Standard Time (IST)              |
 | Message           | A brief description of the alert                                                      | 
 | Current Value     | By how much the threshold limit has exceeded or reduced                               |
 | Configuration     | The threshold limits of the target *key*                                              |
@@ -181,7 +181,7 @@ When alerts are displayed you have the option to drilldown even further on the e
 | View Edge Graph            | Display the target interface's connections and relationships within the network topology, helping you understand its role and dependencies.                                                      |
 | Download PCAP              | Capture packets from the target interface for in-depth analysis of traffic.       |
 | Query Flows by Tag         | Filter traffic on the target interface by specific tags                           |
-| Aggregate Flows by Tag     | Aggregated statistical information for each unique combination of tags, providing a comprehensive view of network traffic patterns.                                                                  |
+| Aggregate Flows by Tag     | Aggregated statistical information for each unique combination of tags, giving an overview of network traffic patterns.                                                                  |
 | Statistics                 | Display detailed statistics about the target interface, including utilization and  throughput details                                                                                               |
 
 ![](image/tcadrilldown.png)  
@@ -207,7 +207,7 @@ The chart plots the amount of network traffic over a specified time period, cent
 - You can configure email alert delivery for Threshold Crossing Alerts (TCA) using the [**Email Alerts Wizard**](/docs/guide/ug/alerts/email_wizard).  
 - You can [**Schedule a TCA Report**](/docs/guide/ug/reports/schedreports) which will automatically email you a list of Threshold Crossing Alerts (TCAs) that got fired/cleared on a hourly or daily basis. The Report email is a single consolidated email that contains the details of all the TCAs. You can find the summary table of all the TCAs on the top of the email, clicking on a particular TCA on the summary table would quickly navigate you to the specified TCA detail without having to scroll through the page. And no email is sent if no TCAs are generated.
 
-A commonly used Threshold Crossing Alert (TCA) is on Netflow mode: *routers and interfaces*. When a TCA is created on such an interface the following information is intelligently included in the alert email.
+In NetFlow mode, a commonly used Threshold Crossing Alert (TCA) is one on *routers and interfaces*. When a TCA is created on such an interface, the alert email also includes the following information.
 
 1. Top applications on that interface which alerted
 2. Top hosts

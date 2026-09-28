@@ -1,6 +1,10 @@
-# Netflow vs SNMP
+# NetFlow vs SNMP
 
-Trisul has a advanced feature that provides bandwidth mapping of the
+:::note Applies to
+NetFlow mode.
+:::
+
+Trisul has an advanced feature that provides bandwidth mapping of the
 SNMP vs Netflow Traffic from every router and interface.
 
 ## Installing the SNMP vs Netflow App

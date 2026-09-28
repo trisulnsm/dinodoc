@@ -1,8 +1,8 @@
 # Aggregate Flows
 
-The *Aggregate Flows* tool enables you to query network flow data and displays summarized statistical information for each unique tuple. The output is presented in a tabular format, with separate tables for each parameter (tuples like source ip, source port, destination ip,etc) providing a comprehensive view of the aggregated data.
+The *Aggregate Flows* tool enables you to query network flow data and displays summarized statistical information for each unique tuple. The output shows one table for each parameter (tuple fields such as source IP, source port and destination IP).
 
-> Also see the Explore Flows and Export Flows which work with individual flows.
+> Also see [Explore Flows](/docs/guide/ug/tools/explore_flows) and [Export IP Flows](/docs/prodguide/nf/Tools/export-flows), which work with individual flows.
 
 ## How to Use
 
@@ -43,7 +43,7 @@ The search results are presented as a tabular display, with each tab representin
 
 ### Data Displayed
 
-Each tabs on the resulting tabular data are individual search results that are "grouped by" corresponding to the specific parameters selected by you in the *search criteria* form. 
+Each tab in the results is an individual search result that are "grouped by" corresponding to the specific parameters selected by you in the *search criteria* form. 
 
 | Tabs                      | Data                                                                                 |
 |---------------------------|--------------------------------------------------------------------------------------|
@@ -62,7 +62,7 @@ Each tabs on the resulting tabular data are individual search results that are "
 | Conversation              | A unique identifier for the conversation or session between the source and destination devices.                                                                                               |
 | NBAR                      | The application service associated with the network flow.                            |
 
-These data sets provide a comprehensive view of network activity, facilitating in-depth analysis and insights for each tuple with the following details.
+Each tab shows the following details for every tuple value.
 - **Item**: The specific value of the tuple field being analyzed (e.g., source IP address, destination port number, etc.).
 - **Label**: A human-readable label or description associated with the item, if available (e.g., hostname, application name, etc.).
 - **Flows**: The aggregate count of network flows matching the tuple.

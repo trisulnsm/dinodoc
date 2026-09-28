@@ -726,13 +726,13 @@ Retention settings therefore determine how far back you can go when looking at h
 
 Oper, Ref, and Archive are the three **storage tiers** Trisul uses to store flow data as it ages.
 
-- New flow data is stored in **Oper**. This tier holds recent data and is optimized for fast access and high detail.
+- New flow data is stored in **Oper**. This tier holds recent data and is optimized for fast access.
 
-- As Oper fills, the oldest data moves into **Ref** automatically. Data in Ref is stored at reduced detail.
+- As Oper fills, the oldest data moves into **Ref** automatically.
 
 - As Ref fills, the oldest data moves into **Archive**. Archive storage is intended for historical lookups rather than frequent interactive analysis.
 
-This is why recent data is more detailed and responsive, while older data appears summarized or eventually becomes unavailable.
+Trisul does not summarize or roll up data in any tier, including Ref and Archive. Older data keeps its full detail until it ages out of Archive.
 
 ---
 

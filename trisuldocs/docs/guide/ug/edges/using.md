@@ -17,7 +17,7 @@ New installations of Trisul will already have *Edges* enabled. If you are upgrad
 
 ## View Edge Graph
 
-- To generate an Edge Graph, navigate to the [*Key Dashboard*](/docs/guide/ug/ui/key_dashboard) by selecting a key from the dashboard. Within the Key Dashboard, locate the [*Key Details*](/docs/guide/ug/ui/key_dashboard#key-details) section. From there, initiate the Edge Graph display by clicking on the "*Drilldown*" button and selecting "*View Edge Graph*". This is one covenient way to view an edge graph from anywhere like dashboards with *keys*.
+- To generate an Edge Graph, navigate to the [*Key Dashboard*](/docs/guide/ug/ui/key_dashboard) by selecting a key from the dashboard. Within the Key Dashboard, locate the [*Key Details*](/docs/guide/ug/ui/key_dashboard#key-details) section. From there, initiate the Edge Graph display by clicking on the "*Drilldown*" button and selecting "*View Edge Graph*". This is one convenient way to view an edge graph from anywhere like dashboards with *keys*.
 
 ![](./images/edgegraph_keydashboard.png)
 
@@ -48,7 +48,7 @@ Click *Show Graph* to view the edge graph for the search criteria defined by you
 
 ### Graph Explorer
 
-The Graph Explorer is an intuitive, point-and-click interface designed for navigating and examining the graph network.
+The Graph Explorer is a point-and-click interface for navigating the graph network.
 
 ![](images/graphexplorer.png)  
 *Figure: Edge Graph Explorer*
@@ -62,7 +62,8 @@ The *Edge Graph* explorer options include:
 | Treemap view               | Renders the graph network as a treemap, using nested rectangles to represent the hierarchical structure of the nodes and edges. This is a cleaner option in some cases                            |
 | Label View                 | Toggles the display of labels for nodes and edges, providing additional context and information about the graph entities.                                                                            |
 | Only Show Vertices of Type | Filters the graph network to display only nodes of a selected type, allowing for focused analysis on specific entities or groups.                                                                 |
-| Show All                   | Resets the graph network to its default view, displaying all nodes and edges without any filters or restrictions.                                                                                     |                                                                                                                    
+| Show All                   | Resets the graph network to its default view, displaying all nodes and edges without any filters or restrictions.                                                                                     |
+
 :::tip
 To declutter a messy force graph, select a highly connected node, drag it to an empty area, and gently "shake" it to settle the graph into a better layout. 
 :::
@@ -70,7 +71,7 @@ To declutter a messy force graph, select a highly connected node, drag it to an 
 Upon initial generation, the Graph Explorer presents the following features:
 
 ### Initial View
-- Displays immediate adjacent nodes for easy reference
+- Displays the nodes adjacent to the root vertex
 - Vertices are grouped and color-coded for visual distinction
 
 ### Tree Map View
@@ -85,7 +86,7 @@ This visualization:
 - Shows a clear and organized structure, with relative nodes branching out from a central root
 - Highlights the relationships between nodes and their connection to the root vertex
 
-Suitable for a clean and intuitive visualization of the graph network
+Use it for an uncluttered view of the graph network.
 
 
 ### Interactive Features  

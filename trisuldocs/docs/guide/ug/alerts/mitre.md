@@ -19,8 +19,8 @@ Trisul integrates with Suricata-generated alerts and maps them to MITRE ATT&CK t
 
 Before using the MITRE ATT&CK feature, ensure the following:
 
-### 1. Switch to NSM Mode
-Use the [**Product Mode Selector**](/docs/guide/starthere/setuptrisul/install/selectmode) to enable **NSM (Network Security Monitoring)** mode.
+### 1. Switch to Trisul NSM Mode {#1-switch-to-nsm-mode}
+Use the [**Product Mode Selector**](/docs/guide/starthere/setuptrisul/install/selectmode) to select **Trisul NSM** mode.
 
 ### 2. Install Suricata App
 Follow the official setup guide:  

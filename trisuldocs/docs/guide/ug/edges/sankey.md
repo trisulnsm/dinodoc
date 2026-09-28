@@ -1,10 +1,10 @@
 # Sankey Drilldown
 
-The Sankey Drill Down App, can be downloaded from [TRISUL Apps](/docs/guide/ag/webadmin/apps). This visualization tool illustrates the split of traffic for various applications, originating from specific routers and interfaces by providing a graphical representation of traffic distribution.
+The Sankey Drill Down App can be downloaded from [Trisul Apps](/docs/guide/ag/webadmin/apps). This visualization tool illustrates the split of traffic for various applications, originating from specific routers and interfaces by providing a graphical representation of traffic distribution.
 
-The specialized chart depicts the proportion of traffic allocated to different applications enable users to drill down into specific data points, facilitating in-depth analysis of traffic patterns.
+The chart shows the share of traffic for each application and lets you drill down into specific data points.
 
-Once downloaded the Sankey shall be available on the [Show All](/docs/guide/ug/ui/dashmod_intro) dashbaords. Fill in the fields to configure the sankey settings.
+Once downloaded the Sankey shall be available on the [Show All](/docs/guide/ug/ui/dashmod_intro) dashboards. Fill in the fields to configure the sankey settings.
 
 ![](images/sankey.png)  
 *Figure: Sankey Crossdrill Search Criteria Form*
@@ -47,9 +47,9 @@ Each interface or link represents a specific path that traffic takes as it exits
 ![](images/ck_without_filter.png)  
 *Figure: Sankey Crossdrill without Filter*
 
-The Sankey Cross Drilldown Chart in a tabular format provides a more detailed and comprehensive view of the traffic flow across different network components. The table includes the following columns:
+The Sankey Cross Drilldown Chart in a tabular format provides a more detailed view of the traffic flow across different network components. The table includes the following columns:
 
-| Options | Description |
+| Column | Description |
 |-------|--------------|
 | Flow-APP ID- NBAR | Displays the application ID and name, as identified by Network-Based Application Recognition (NBAR). This column provides insight into the specific applications generating traffic. |
 | FlowGens | Represents the flow generators, which are the sources of traffic. This column helps identify the origins of traffic flows. | 

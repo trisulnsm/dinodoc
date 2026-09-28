@@ -1,5 +1,9 @@
 # NetFlow Sources Dashboard
 
+:::note Applies to
+NetFlow mode.
+:::
+
 ## Overview
 
 This dashboard provides an overview of Netflow data sources, including routers and interfaces. It offers insights into the volume and rate of Netflow data being processed. You can view the system level information on a Time Series chart. 

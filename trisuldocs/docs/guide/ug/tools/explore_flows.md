@@ -1,6 +1,6 @@
 # Explore Flows
 
-*Explore Flows* is a powerful, fast, and general-purpose search tool designed for in-depth inspection and analysis of network traffic flows. This comprehensive feature enables users to scrutinize individual network flows, examine packet-level and netflow data, and identify potential security threats or performance issues.  
+*Explore Flows* is a general-purpose search tool for inspecting network flows. Use it to examine individual flows, look at packet-level and NetFlow data, and track down security threats or performance issues.
 
 ## How to Search for Flows
 Search Criteria in Trisul allows you to specify filters and conditions to narrow down network traffic data and focus on specific aspects of interest.
@@ -27,9 +27,9 @@ Quick Search allows for quick filtering of network traffic data that includes on
 ![](images/quicksearch.png)  
 *Figure: Quick Search*
 
-With quick search you can explore flows simply in two steps.  
+Quick search takes two steps.  
 **Step 1**: Select a time frame from the [*Time Selector*](/docs/guide/ug/ui/elements#time-selector) to narrow down the flow data to the relevant time interval.  
-**Step 2**: Just enter *Search query* in the form of search expression like *field=value,field=value,...* The supported fields include *srcip,destip,ip,net16,net24*. The complete list of supported fields can be obtained by clicking on the question mark icon against the *Search query* field.
+**Step 2**: Enter a *Search query* in the form of a search expression like *field=value,field=value,...* The supported fields include *srcip,destip,ip,net16,net24*. The complete list of supported fields can be obtained by clicking on the question mark icon against the *Search query* field.
 
 
 Some common examples of search expressions are :
@@ -45,8 +45,8 @@ Some common examples of search expressions are :
 | `net16=208.219,port=smtp`                              | All smtp flows in the /16 subnet                       |
 | `ippair=192.168.1.8,59.92.15.145 (pipe separated IPs)` | All flows between the two IP pairs                     |
 | `router=10.0.17.180`                                   | All router flows                                       |
-| `ifin=1872`                                            | All the ingress flows in an Netflow Interface          |
-| `ifout=1872`                                           | All the egress flows in a Netflow Interface.Combine with `router=` or specify router along with the interface in interface key format such as `ifout=10.0.17.180_1872` to see egress flows.                                                                                                 |
+| `ifin=1872`                                            | All the ingress flows on a NetFlow interface          |
+| `ifout=1872`                                           | All the egress flows on a NetFlow interface. Combine with `router=` or specify router along with the interface in interface key format such as `ifout=10.0.17.180_1872` to see egress flows.                                                                                                 |
 | `interface=1872`                               	     | All flows in an Interface                              |
 
 ### Advanced Search : Use a Form
@@ -76,7 +76,7 @@ Click on the *advanced search options* in the *advanced search* to get more sear
 | Source IP Address      | Enter the source IP eg 192.168.1.2                                   |
 | Destination IP Address | Enter the Destination IP eg 209.216.249.58                           |
 | Routers                | Select a router from the list of available routers                   |
-| Interface              | Select an interface from the list of availbale interfaces            |	
+| Interface              | Select an interface from the list of available interfaces            |	
 | Display Flow Count     | Displays only specified number of flows eg 500                       |
 | Source Port            | Enter the value of the source port                                   |
 | Destination Port       | Enter the value of Destination port                                  |
@@ -93,7 +93,7 @@ The Search results for Flows are presented in terms of,
 3) [**Top Conversations**](/docs/guide/ug/tools/explore_flows#top-conversations): A table showing top conversations
 4) [**Top 100 Matching Flows**](/docs/guide/ug/tools/explore_flows#top-matching-flows): A table of raw flows
 
-> Only the first matching *Max Flows (default 10K)* are retrieved. Please narrow down your query to within this limit. Also see the [Export Flows](/docs/guide/ug/tools/explore_flows#export-as-report) and [Aggregate Flows](/docs/guide/ug/tools/aggregate_flows) tools which work with larger matches and provide different functionality.
+> Only the first matching *Max Flows (default 10K)* are retrieved. Please narrow down your query to within this limit. Also see the [Export IP Flows](/docs/prodguide/nf/Tools/export-flows) and [Aggregate Flows](/docs/guide/ug/tools/aggregate_flows) tools, which work with larger matches.
 
 
 
@@ -135,7 +135,7 @@ Available controls include,
 | Weight Flows         | Top Left                 | Collapses the flow details                                   |
 | Options              | Top Left                 | Select the data items to display on the Parallel Co-ords     |
 | Lock/Release         | Below each vertical axis | Click on release under a vertical axis to ignore the corresponding tuple                                                                                              |
-| Colorize             | Below each vertical axis | Flows are colorized by source ip. You can change it to get a dramatically different view by looking at different angles                                                       |
+| Colorize             | Below each vertical axis | Flows are colorized by source ip. Change it to view the flows from a different angle                                                       |
 
 #### Export as Report
 
@@ -228,7 +228,7 @@ You can drill down further in the following manner by clicking on the *Options* 
 | New search for Src IP            | Get all flows from and to the Source IP             |
 | New search for Dest IP           | Get all flows from and to the Dest IP               |
 | Add filter Src IP                | Filters flows only from source IP                   |
-| Add filter Dest IP               | Filters flows only from destination Ip              |
+| Add filter Dest IP               | Filters flows only from destination IP              |
 | Add filter Src Port              | Filters flows only from source port                 |
 | Add filter Dest port(http,https) | Filters flows only from destination port            |
 

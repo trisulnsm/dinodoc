@@ -5,9 +5,6 @@ The *Search Key Space* tool allows you to search for activity for a range of key
 > This tool is most used to search for activity within multiple IP blocks
 > of known malicious traffic.
 
-For example, Imagine you're a detective trying to catch the bad guys on the internet. You know they're hiding in certain areas (like specific IP addresses), but you don't know exactly where. The *Search Key Space* tool is like a superpower that helps you search for clues (activity) in those areas.  
-
-
 ## Using the Key Space Search Tool
 
 To access Trisul's *Search Key Space* tool,
@@ -72,7 +69,7 @@ The search result displays the matching keys in selected space with the followin
 You can further perform a number of functions and analysis from the search result including,
 
 - [**Download**](/docs/guide/ug/ui/elements#download-button)  
-You can the download the result in three easy formats by clicking on the *Download* button at the upper right hand side.
+You can download the result in three formats by clicking the *Download* button at the upper right.
 - [**Toggle Labels**](/docs/guide/ug/ui/elements#toggle-labels)  
 Enable the *Toggle Labels* button on the upper right hand side if you would like to display the labels on the search result or in the downloaded file.
 
@@ -89,5 +86,5 @@ Displays a graphical representation of traffic volume and trends associated with
 **[Explore Flows](/docs/guide/ug/tools/explore_flows)**   
 Presents a detailed view of network flows related to the key, offering insights into communication patterns, protocols, and endpoints. (Available for host and port keys only)  
 **[Key Details](/docs/guide/ug/ui/key_dashboard)**   
-Shows comprehensive metadata and attributes associated with the key, including its properties, behavior, and context.
+Shows metadata and attributes associated with the key, including its properties, behavior, and context.
 

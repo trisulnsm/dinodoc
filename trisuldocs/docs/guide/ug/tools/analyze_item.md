@@ -41,7 +41,7 @@ The *Handy Shortcuts* option, located on the upper right side of the top bar, pr
 *Figure: Handy Shortcuts*
 
 
-Instead of filling in all the fields for the search criteria, you can also simply choose from one of the options from the *handy shortcuts* and click *Analyze*.   
+Instead of filling in all the search criteria fields, you can choose one of the options from the *Handy Shortcuts* and click *Analyze*.
 
 ## Search Result
 
@@ -51,7 +51,7 @@ Upon submitting the *search criteria* form after clicking the *analyze* button, 
 ![](images/longtermtraffic_searchresult.png)
 *Figure: Long Term Traffic Search Result*
 
-A series of charts will be generated, with each chart representing a discrete daily dataset, resulting in a collection of **individual charts**, one for each day within the specified time frame(example, for 25 days), thereby providing a sequential visual representation of the data. If the specified time frame exceeds the Set Limit, you ll see an **aggregated long term chart** as a single chart for the set time period.
+A series of charts will be generated, with each chart representing a discrete daily dataset, resulting in a collection of **individual charts**, one for each day within the specified time frame(example, for 25 days), thereby providing a sequential visual representation of the data. If the specified time frame exceeds the Set Limit, you'll see an **aggregated long term chart** as a single chart for the set time period.
 
 > You can set the number of days for which you want to see the data as individual charts in [WebTrisul Options &rarr; Charts &rarr; Long Term Chart Day Limit](/docs/guide/ag/webadmin/web_options#chart). 
 

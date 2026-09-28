@@ -66,7 +66,7 @@ The following is the list of options and their description of all scheduled repo
 | Status | The current status of the scheduled report, such as active or inactive. |
 | Action | The actions that can be taken on the scheduled report, such as "Edit", "Delete", or "Run Status". |
 
-With the action button of the scheduled reprots, you can,
+With the action button of the scheduled reports, you can:
 
 - **Edit** You can edit the parameters of the scheduled report one report at a time.  
 - **Delete** You can delete the scheduled report.  
@@ -109,16 +109,16 @@ The *Application activity* report expects you to specify an application or port.
 1. Specify all common fields for a scheduled report
 2. In addition enter report parameters as shown below
 
-Say you want to schedule an for the http app, use this format `{"port1":"http"}` You can also enter a port number `{"port1":"Port-80"}`
+Say you want to schedule a report for the http app, use this format `{"port1":"http"}` You can also enter a port number `{"port1":"Port-80"}`
 
 ### Parameters for the Interface Activity Report
 
-Netflow only You can generate a report for any netflow interface.
+**NetFlow mode only.** You can generate a report for any NetFlow interface.
 
 1. Specify all common fields for a scheduled report
 2. In addition enter report parameters as shown below
 
-Say you want to schedule an report for interface with ifIndex 22 on router 192.168.1.1, use the following format  
+Say you want to schedule a report for the interface with ifIndex 22 on router 192.168.1.1, use the following format  
 `{"interface":"192.168.1.1_22"}`
 
 ## Enable Email Dispatching
@@ -165,12 +165,12 @@ You can see if any errors are observed there.
 ## Executive Network Report
 
 
-The Executive Network Report provides a comprehensive overview of network activity and performance, including:
+The Executive Network Report gives an overview of network activity and performance, including:
 
 |Content| Description |
 |--------|-------------|
 | Bandwidth Utilization| Total bandwidth received and transmitted |
-| Alerts | Notifications from threshold crossing alerts, , Flow tracker indicating analysis of network flows to identify trends and patterns, Badfellas for identification of suspicious or malicious hosts, and IDS indicating potential issues |
+| Alerts | Notifications from threshold crossing alerts, Flow tracker indicating analysis of network flows to identify trends and patterns, Badfellas for identification of suspicious or malicious hosts, and IDS indicating potential issues |
 | Bandwidth Utilization Chart| Visual representation of total bandwidth usage|
 | Top Internal Hosts | Most active internal hosts | 
 | Top External Hosts | Most active external hosts|
@@ -185,7 +185,7 @@ Download Sample Report here : [Executive Network Report](images/execnwreport.pdf
 
 ## Application Activity Report
 
-The Application Usage Report provides a comprehensive overview of application activity and performance, including,
+The Application Usage Report gives an overview of application activity and performance, including,
 
 
 |Content| Description |
@@ -203,7 +203,7 @@ Download Sample Report here : [Application Activity Report](images/applicationre
 
 ## Subscriber Activity Report
 
-The Subscriber Activity Report provides a comprehensive overview of network activity and performance, including:
+The Subscriber Activity Report gives an overview of network activity and performance, including:
 
 |Content| Description |
 |--------|-------------|
@@ -219,11 +219,11 @@ The Subscriber Activity Report provides a comprehensive overview of network acti
 | Top 50 Apps for Downloads | Applications responsible for the most download traffic |
 
 
-Download Sample Report here : [Application Activity Report](images/subscriberactivityreport.pdf)
+Download Sample Report here : [Subscriber Activity Report](images/subscriberactivityreport.pdf)
 
 ## Malware Report
 
-The Malware Report provides a comprehensive overview of malware activity and performance, including:
+The Malware Report gives an overview of malware activity and performance, including:
 
 |Content| Description |
 |--------|-------------|
@@ -240,12 +240,12 @@ Download Sample Report here : [Malware Report](images/Malwarealertsreport.pdf)
 
 ## Interface Activity Report
 
-The Interface Activity Report provides a comprehensive overview of interface activity and performance, including:
+The Interface Activity Report gives an overview of interface activity and performance, including:
 
 |Content| Description |
 |--------|-------------|
 | Top Hosts by Total Volume | 	Ranking of hosts with the highest total data transfer volume |
-| Top Applications | Idetification of most frequently used applications. |
+| Top Applications | Identification of most frequently used applications. |
 | Top Server Hosts | List of server hosts with the highest levels of activity |
 | Top Client hosts | Ranking of clients hosts generating the most network traffic | 
 | Top Internal Hosts | 	Identification of internal hosts with the highest level of activity |
@@ -257,7 +257,7 @@ Download Sample Report here : [Interface Activity Report](images/interfacereport
 
 ## Routers and Interfaces Report
 
-The Routers and Interface Activity Report provides a comprehensive overview of router and interface activity, including:
+The Routers and Interface Activity Report gives an overview of router and interface activity, including:
 
 |Content| Description |
 |--------|-------------|
@@ -268,7 +268,7 @@ Download Sample Report here : [Routers and Interfaces Report](images/routersandi
 
 ## Traffic and Toppers (Internal Hosts)
 
-The Top Toppers and Traffic (Internal Hosts) Report provides a comprehensive overview of network activity and performance, including:
+The Top Toppers and Traffic (Internal Hosts) Report gives an overview of network activity and performance, including:
 
 |Content| Description |
 |--------|-------------|
@@ -311,7 +311,7 @@ Download Sample Report here : [Traffic and Toppers (Internal Hosts)](images/topt
 
 ## Toppers and Traffic (Applications)
 
-The Toppers and Traffic Report provides a comprehensive overview of network activity and performance, including: 
+The Toppers and Traffic Report gives an overview of network activity and performance, including: 
 
 |Content| Description |
 |--------|-------------|
@@ -342,7 +342,7 @@ Download Sample Report here : [Traffic and Toppers (Applications)](images/topper
 
 ## System Health Report
 
-The System Health Report provides a comprehensive overview of the Trisul deployment’s operational status, resource usage, and component health. It includes the following key sections:
+The System Health Report gives an overview of the Trisul deployment’s operational status, resource usage, and component health. It includes the following key sections:
 
 |Content| Description |
 |--------|-------------|

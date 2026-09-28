@@ -15,7 +15,7 @@ The Custom Reports Page comes with four main components,
 ### Create New Report Button
 Using *Create New Report* button you can create a new custom report in two ways.
 1) You can import a report by clicking on the small arrow on the right side of the Create New Report button which will drop down with an option **Import from JSON**. Click on that and choose a file to import and click Import. 
-2) Click on the **Create New Report** button itself and a dialog box apperas with the following fields. 
+2) Click on the **Create New Report** button itself and a dialog box appears with the following fields. 
 
 ![](images/flexi_report.png)
 
@@ -70,7 +70,7 @@ The following functions can be performed on the selected report name.
 
 | Options                                       | Description                                                    |
 | --------------------------------------------- | ---------------------------------------------------------------|
-| Generate Report                               | Generates the report for the selected Report name for the specified time range from the *Time Slector*                              |
+| Generate Report                               | Generates the report for the selected Report name for the specified time range from the *Time Selector*                              |
 | [Schedule](/docs/guide/ug/reports/schedreports)     | Schedule the selected report on hourly,daily,monthly or yearly basis.                                                                                                           |
 | Edit as Raw JSON                              | Edit Report as Raw JSON                                        |
 | Export as JSON                                | Export the selected report in JSON format                      |
@@ -79,7 +79,7 @@ The following functions can be performed on the selected report name.
 | Revoke Report                                 | Revoke the assigned report from the users                      |
 
 
-With the option button, there are six different kinds of reports that you can create separately or altogether under one report name.
+With the option button, there are eight different kinds of reports that you can create separately or altogether under one report name.
 
 - Volume Report
 - Traffic Chart Report
@@ -180,8 +180,8 @@ Here is the table with description for available fields to create Toppers type r
 | Inverse Key Filter | Inverse toppers in re2 regex format                   |
 | Page type          | toppers                                               |
 | Counter group      | Select the desired counter group                      |
-| Meters             | Select the meters such as total,transmit,recieved,etc |
-| Max Count          | Specify the nunber of toppers to be shown             |
+| Meters             | Select the meters such as total, transmit, received, etc. |
+| Max Count          | Specify the number of toppers to be shown             |
 
 Select save option.
 
@@ -218,8 +218,8 @@ Here is the table with description for available fields to create Toppers traffi
 | Page surface       | Type of bandwidth chart                               |
 | Page type          | toppers traffic                                       |
 | Counter group      | Select the desired counter group                      |
-| Meters             | Select the meters such as total,transmit,recieved,etc |
-| Max Count          | Specify the nunber of toppers to be shown             |
+| Meters             | Select the meters such as total, transmit, received, etc. |
+| Max Count          | Specify the number of toppers to be shown             |
 
 Select save option.
 
@@ -241,7 +241,7 @@ To create a CrossKey Drilldown report, Click *CrossKey Drilldown* Report from th
 
 *Figure: Search form for CrossKey Drilldown report*
 
-Here is the table with description for available fields to create Toppers traffic chart reports.
+Here is the table with description for available fields to create CrossKey Drilldown reports.
 
 | Field Name         | Description                                           |
 | ------------------ | ----------------------------------------------------- |
@@ -253,8 +253,8 @@ Here is the table with description for available fields to create Toppers traffi
 | Traffic Chart      | toppers traffic                                       |
 | Page type          | CrossKey Drilldown                                    |
 | Counter group      | Select the desired counter group                      |
-| Meters             | Select the meters such as total,transmit,recieved,etc |
-| Max Count          | Specify the nunber of toppers to be shown             |
+| Meters             | Select the meters such as total, transmit, received, etc. |
+| Max Count          | Specify the number of toppers to be shown             |
 
 Select save option.
 
@@ -284,7 +284,7 @@ Here is the table with description for available fields to create Metric type re
 | Subtitle      | Sub-title for the report                               |
 | Page type     | metricstable                                           |
 | Counter group | Select the desired counter group                       |
-| Meters        | Select the meters such as total,transmit,recieved,etc  |
+| Meters        | Select the meters such as total, transmit, received, etc.  |
 | Key           | Enter the valid key-format for the metric to be mapped |
 
 If you want to add more keys you can click on the ‘+’ symbol at the bottom of the dialog box.

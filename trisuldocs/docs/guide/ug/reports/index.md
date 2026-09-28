@@ -15,16 +15,15 @@ Using the [Trisul Remote Protocol API](/docs/trp) you can write Ruby scripts tha
 
 ## Report Time
 
-For each report type, you can easily select a number of predefined time windows using a [Time Selector](/docs/guide/ug/ui/elements#time-selector)
+For each report type, you can select a number of predefined time windows using a [Time Selector](/docs/guide/ug/ui/elements#time-selector)
 
 ## Adding Logos
 
-1. Logos can be placed in the 3 corners of the PDF except the top-right
-2. You need to replace 3 images (32×32) in the /usr/local/share/webtrisul/public/images directory
-3. The images names are expected to named as follows
-4. logo_tlhs.png → This image is placed on the top-left of the PDF
-5. logo_blhs.png → This image is placed on the bottom-left of the PDF
-6. logo_brhs.png → This image is placed on the bottom-right of the PDF
+1. Logos can be placed in 3 corners of the PDF (all except the top-right).
+2. Replace these 3 images (32×32) in the `/usr/local/share/webtrisul/public/images` directory:
+   - `logo_tlhs.png`: placed on the top-left of the PDF
+   - `logo_blhs.png`: placed on the bottom-left of the PDF
+   - `logo_brhs.png`: placed on the bottom-right of the PDF
 
 ## Customizing Names
 

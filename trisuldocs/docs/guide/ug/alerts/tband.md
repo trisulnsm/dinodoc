@@ -10,7 +10,7 @@ Trisul employs a refined analytical technique to look at long term history of an
 
 1. **Sampling Interval**: Threshold bands are computed for every 5-minute interval providing high-resolution anomaly detection.
 2. **Temporal Baseline Configuration**: Computation is [*Day of week based*](/docs/guide/ug/alerts/tband#day-of-week-based) ensuring weekends are tracked separately for recognizing distinct usage patterns
-3. **Anomaly Filtering**: The Algorithm handles holidays and spikey days to adjust for irregular usage patterns, identifying and excluding outliers.
+3. **Anomaly Filtering**: The Algorithm handles holidays and spiky days to adjust for irregular usage patterns, identifying and excluding outliers.
 
 
 ## Threshold Band Computation Methods
@@ -25,7 +25,7 @@ This method takes into account the natural variations that occur from week to we
   2) Establish dynamic thresholds based on these daily patterns.
   3) Excludes outliers
 
-> This method is available in Licensed version of Trisul since it requires atleast 3 weeks of training data
+> This method is available in Licensed version of Trisul since it requires at least 3 weeks of training data
 
 ### Simple
 
@@ -52,7 +52,7 @@ Method 1
 
 This will take you to the TBA Form but the fields of the form will be already pre-filled for you.
 
-Method 1
+Method 2
 
 :::info navigation
 :point_right: Go to Alerts&rarr; Threshold Bands&rarr; Configure&rarr; Create New Threshold Band
@@ -87,7 +87,7 @@ The TBA configuration form comprises settings of three sections: Basic Configura
 | Margin Lower (%)                   | Set the lower margin (percentage) for the threshold range to determine how far below the baseline the metric can deviate before triggering an alert                                         |
 | Sustained For                      | Specify the duration (in minutes) that the metric must remain outside the threshold range to trigger an alert                                                                              |
 
-> Advanced Settings enables you to fine tune the band computation algorithm. So, it is reccomended you first create a band using the default settings, then based on alert volume. You can come back here and tweak the advanced settings below
+> Advanced Settings let you fine-tune the band computation algorithm. Create a band with the default settings first. Then, based on the alert volume, come back here and tweak the advanced settings.
 
 #### Alert Settings
 
@@ -136,7 +136,7 @@ The *View Training Data* generates a graphical representation of the threshold b
 ![](image/viewtrainingdata_chart.png)  
 *Figure: View Alerts Chart*
 
-- The chart displays pre-computed threshold bands represented by dotted lines with actual data points represented by colored lines for clear identification. Alerts are indicated by a label. You can either ignore the alert if it is just over the band or you can take immediate action if the metric changes dramatically.
+- The chart displays pre-computed threshold bands represented by dotted lines with actual data points represented by colored lines for clear identification. Alerts are indicated by a label. You can either ignore the alert if it is slightly over the band or you can take immediate action if the metric changes dramatically.
 - Additionally, the chart supports [interactive drill-down capabilities](/docs/guide/ug/ui/charts#chart-interaction-controls), allowing users to zoom in on specific segments, enabling high-resolution visualization of sudden drops and spikes in the data.  
 - Click on the *Retro Dashboard* button to further analyze using *Retro Counters* and *Retro Tools*.  
 - By clicking on the *Key Dashboard* button, you can navigate to the [*Key Dashboard*](/docs/guide/ug/ui/key_dashboard) of the *key* associated with the Threshold Band Anomaly alerting.
@@ -144,7 +144,7 @@ The *View Training Data* generates a graphical representation of the threshold b
 #### Option Button
 
 ![](image/optionbutton_viewtrainingdata.png)  
-*Figure: Options for View Training Data*
+*Figure: Option Button Menu*
 - **View Alerts**: Displays a list of alerts generated for the selected counter, that allows you to investigate and troubleshoot issues.
 - **Edit**: Enables you to modify the counter's TBA configuration settings, from the TBA Configuration Form.
 - **Delete**: Removes the counter from the Threshold Band Alerting list, stopping any further monitoring or alerting.

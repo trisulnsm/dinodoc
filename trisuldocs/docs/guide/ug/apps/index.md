@@ -24,7 +24,8 @@ Some apps may require additional configuration or dependencies after installatio
 
 The following apps are currently documented in this section:
 
-* [Stable Keys](./stablekeys) - Monitors the continuity of network keys and alerts when previously observed keys stop reporting.
+* [ShiftX](/docs/guide/ug/apps/shiftx) - Detects changes in network behavior by comparing current activity with recent historical patterns.
+* [Stable Keys](/docs/guide/ug/apps/stablekeys) - Monitors the continuity of network keys and alerts when previously observed keys stop reporting.
 
 ## Using Trisul Apps
 

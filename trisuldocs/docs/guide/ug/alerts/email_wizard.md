@@ -6,7 +6,7 @@ This page shows you how to set up email alerts so you get notified the moment so
 >For that the workflow goes like this:   
 **Select the alerts you want → Forward those alerts to syslog → Let the Email Alert Service read those alerts → Alerts are emailed using your SMTP settings**
 
-But the process is simpler than it sounds,to make this easy, Trisul bundles all the four required configurations into one unified interface- the **Email Alerts Wizard**.
+The process is simpler than it sounds. Trisul bundles all four required configurations into one interface: the **Email Alerts Wizard**.
 
 As you go through the **Email Alerts Wizard**, you can see a green status label right next to each action button to verify if the configuration is completed.
 
@@ -56,7 +56,7 @@ Tip: You can disable all the alert groups by clicking **Disable all** on the top
 These components can be edited or disabled by clicking on the option toolbar against each alert group. Once providing all the fields, click **Update** to save the configuration.
 
 
-Now you can see all the four status label has turned green. Voila! This confirms that your end-to-end email alert delivery is fully enabled .
+All four status labels now show green. This confirms that end-to-end email alert delivery is enabled.
 
 ## Advanced Customization of Email Subjects and Bodies
 

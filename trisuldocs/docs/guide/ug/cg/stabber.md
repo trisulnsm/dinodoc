@@ -1,7 +1,7 @@
 # Real Time Stabbers
 
 Real time stabbers allow you to monitor various types of network
-activity within a 5 second delay.
+activity, with updates every second.
 
 > A **Real Time Stabber** is a tool that allows you to get instant
 > visibility into selected network traffic. The inspiration comes from
@@ -32,8 +32,7 @@ Real time animated view of all alert activity in your network.
 1. **Websockets** This feature requires a Websockets capable browser.
 2. **LocalStorage** Real time stabbers make extensive use of HTML5
    local storage.
-3. **Firewall** Websockets feed arrive on TCP port 3003, open this on
-   your firewall.
+3. **Firewall** Real time stabbers use the same port as the web interface (TCP 3000). No extra firewall port is needed.
 
 > You need a websockets capable browser like Firefox or Chrome
 
@@ -96,7 +95,7 @@ The Real Time Stabber options are described below. Real Time Stabbers options in
 
 ### Real Time Stabber: Traffic Chart
 
-Use Real Time Stabber: Traffic Chart to continuously monitor traffic (bandwidth) used by a particular key item with a 5-second delay.
+Use Real Time Stabber: Traffic Chart to continuously monitor traffic (bandwidth) used by a particular key item, updated every second.
 
 Click and drag to zoom a particular time interval with mouse. Use the [Chart Interaction Controls](/docs/guide/ug/ui/charts#chart-interaction-controls) and [Legend table](/docs/guide/ug/ui/charts#legend-table) for further inspection.
 
@@ -117,7 +116,7 @@ real time.
 
 ### Real Time Stabber: Toppers
 
-With Real Time Stabber: Toppers, you can view the top users of any counter group with a 5-second delay.
+With Real Time Stabber: Toppers, you can view the top users of any counter group, updated every second.
 
 The image below shows a counter group stabber viewing top `Internal Hosts` based on the meter `Total`.
 

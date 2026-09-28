@@ -60,7 +60,7 @@ Example : View in real time top Internal Hosts, or view Total Bps for Port 443
 
 Select a time interval and drill down over 100 ways.
 
-[Retro FAQ](/docs/guide/ug/cg/retrofaq)
+[Network FAQ](/docs/guide/ug/cg/retrofaq)
 
 Select a time interval and click on pre-defined analysis in Q&A style
 

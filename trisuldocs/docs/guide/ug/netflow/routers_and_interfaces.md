@@ -1,5 +1,9 @@
 # Routers and Interfaces
 
+:::note Applies to
+NetFlow mode.
+:::
+
 The primary tool you will need to work with **Device level** views of Netflow is the ***Routers and Interfaces*** tool. This tool offers network monitoring, enabling you to select a timeframe and view a list of routers with their traffic summaries. From there, you can select a router to view its associated interfaces, and then monitor interface activity or drill down further into hosts, applications, and flows on that interface. You can even pull up a [*Real Time stabber*](/docs/guide/ug/cg/stabber) on any of the drilldowns, providing instant insights into network activity.
 
 ## Using the Router Interface Tool
@@ -25,7 +29,7 @@ The router and Interface Tool consists of three main sections,
 
 ### Router Interface Display Configuration
 
-The [*Time Selector*](/docs/guide/ug/ui/elements#time-selector) section contains the*Show all Router Interfaces* check box. This checkbox on the *Time Selector* controls the display of router interfaces in the table. When enabled, all routers and their associated interfaces are displayed in a consolidated manner. When disabled, the table only displays the router list, allowing you to select specific interfaces for each router.
+The [*Time Selector*](/docs/guide/ug/ui/elements#time-selector) section contains the *Show all Router Interfaces* check box. This checkbox on the *Time Selector* controls the display of router interfaces in the table. When enabled, all routers and their associated interfaces are displayed in a consolidated manner. When disabled, the table only displays the router list, allowing you to select specific interfaces for each router.
 
 ### Router Table
 
@@ -64,7 +68,7 @@ The *Magic Map* feature provides a graphical representation of the top interface
 
 ![](images/magicmap1.png)
 
-*Figure: Magic Map Visulaization*
+*Figure: Magic Map Visualization*
 
 **Key Functionality of Magic Map**
 
@@ -119,7 +123,7 @@ Display a real-time or near-real-time graphical representation of traffic data f
 
 Configure and manage Simple Network Management Protocol (SNMP) settings for each router, enabling to edit SNMP agent parameters
 
-**SNMP resolve router and inteface name**
+**SNMP resolve router and interface name**
 
 Utilize SNMP to automatically resolve and display the router and interface names, simplifying network device identification and management.
 
@@ -141,7 +145,7 @@ Similar to *Router Table* interactive components, the *Interfaces Table* also pr
 - [Filter Interfaces](/docs/guide/ug/netflow/routers_and_interfaces#filtering-routers)
 - The page size indicator, located in the upper right corner of the interface table, enables users to define the number of datasets displayed per page.
 
-Upon selecting a router from the router table, the Interface Table will display comprehensive details about all interfaces active on the selected router during the specified time window. This includes the following interface details.
+Upon selecting a router from the router table, the Interface Table will display details about all interfaces active on the selected router during the specified time window. This includes the following interface details.
 
 | Column Name  | Description                                                                           |
 | ------------ | ------------------------------------------------------------------------------------- |
@@ -174,7 +178,7 @@ following by Clicking on the three lines drop down option on the right side agai
 | Interface Utilization   | Real Time Interface Utilization Chart | Provides real time Interface utilization from Netflow                                                                                                                                                                                                  |
 | [Key Dashboard](/docs/guide/ug/ui/key_dashboard)           | Interface key dashboard               | To see interface metrics, assign name, jump to flows, and traffic analysis at interface level                                                                                                                                                          |
 | [Long term traffic chart](/docs/guide/ug/tools/analyze_item) | Long term charts                      | Default 7 day view of interface IN/OUT traffic - 1 chart per day                                                                                                                                                                                       |
-| Interface Tracker       | Enable                                | Enables [Interface Tracker](interface_tracker) Enabling this on important interfaces where you wish to get long term reports of hosts and application usage. You can get the bandwidth of every host,application by total,into and out of an interface |
+| Interface Tracker       | Enable                                | Enables [Interface Tracker](/docs/guide/ug/netflow/interface_tracker). Enable this on important interfaces where you wish to get long term reports of hosts and application usage. You can get the bandwidth of every host,application by total,into and out of an interface |
 | Interface Tracker       | Disable                               | Disable an interface tracker. Without an interface tracker, you will get only an overview of hosts,apps by total.                                                                                                                                      |
 | Real Time               | Real Time Utilization                 | Real time bandwidth chart of interface usage                                                                                                                                                                                                           |
 | Real Time               | Real Time Source Dest IP              | Real time view of Source and Dest Hosts active                                                                                                                                                                                                         |

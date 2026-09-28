@@ -73,7 +73,7 @@ full capture based analysis tools like :
 
 Once you have selected a time window of interest, you have two options.
 
-***Use the Retro FAQ***  
+***Use the Network FAQ***  
 A Q&A style set of tagged questions in plain English.
 
 Example : Click on *Which internal hosts had maximum number of
@@ -82,13 +82,13 @@ connections ?* or *What are my top hosts and applications ?*
 ***Use Tools***   
 A set of tools to help you control and drilldown into the time interval
 
-### Retro FAQ
+### Network FAQ {#retro-faq}
 
 Allows you to analyze your network traffic, flows, and alerts by asking
 questions in plain English. You can build you own FAQ questions as you
 continue to work with Trisul.
 
-[See the Retro FAQ section for more on this](/docs/guide/ug/cg/retrofaq)
+[See the Network FAQ page for more on this](/docs/guide/ug/cg/retrofaq)
 
 ### Retro Tools
 

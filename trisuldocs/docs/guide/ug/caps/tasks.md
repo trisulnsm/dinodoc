@@ -7,8 +7,7 @@ Packet capture mode only. These features are not available in NetFlow mode.
 ### Quickly see packet contents without pulling out the pcap
 
 In a majority of situations, you can identify what a particular flow is 
-about by examining the initial packets of the flow. Previously you had 
-to click on “Pull Packets” next to a flow to pull out a PCAP into an application like Unsniff or Wireshark. Now you can click on “Show Headers” along side each flow.
+about by examining the initial packets of the flow. Click **Show Headers** next to a flow to see a text and hex dump of those packets. To get the full PCAP, click **Pull Packets** and open it in an application like Wireshark.
 
 ![](images/pcapmenu.png)
 
@@ -20,7 +19,7 @@ leaving Trisul. If you want the entire flow, you can always click on
 
 ### Disable full packet capture
 
-Set the [Ring – Enabled](/docs/guide/ref/trisulconfig#ring) parameter to `False` and restart Trisul. Packet logging will be disabled.
+Set the [Ring – Enabled](/docs/guide/ref/trisulconfig#ring) parameter to `False`, then restart the probe: stop and start it under **Context: default → Admin Tasks → Start/Stop Tasks**, or run `trisulctl_probe restart context <context_name>@<probe_name>`. Packet logging will be disabled.
 
 ### Allocate a fixed 100GB disk space for full packet captures
 

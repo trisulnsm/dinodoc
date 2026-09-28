@@ -64,8 +64,8 @@ Some templates allow you to select multiple keys, filter keys, or create a separ
 
 To create a module:
 
-1. Open the Dashboard Customization option.  
-2. Select Module Templates.  
+1. Open the dashboard you want to customize and go to its **Module Layout**.
+2. Click the **Plus** icon.
 3. Choose the template that best matches what you want to display.  
 4. Configure the template parameters.  
 5. Create the module.  
@@ -291,7 +291,7 @@ This is an example of Single Value module which shows the total bandwidth of agg
 
 Use Real Time Traffic when you want to display current network traffic using real-time data.
 
-The module can display traffic for selected counter groups, meters, and keys. The data is refreshed every five minutes.
+The module can display traffic for selected counter groups, meters, and keys. The data is refreshed every second.
 
 For example, the module can display inbound and outbound traffic separately.
 
@@ -314,7 +314,7 @@ For example, the module can display inbound and outbound traffic separately.
 
 Real Time Single is similar to Single Value, but displays the value using real-time data.
 
-The data is refreshed every five minutes.
+The data is refreshed every second.
 
 Use this template when you want a dashboard to show a single current metric rather than a historical chart.
 
@@ -336,7 +336,7 @@ Use this template when you want a dashboard to show a single current metric rath
 
 Use Real Time Toppers when you want to see the current top traffic-generating keys.
 
-It is similar to Toppers Traffic, but uses real-time data. The data is refreshed every five minutes.
+It is similar to Toppers Traffic, but uses real-time data. The data is refreshed every second.
 
 For example, you can display the top 10 AS Numbers by Upload Bytes.
 

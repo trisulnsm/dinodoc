@@ -1,5 +1,9 @@
 # Interface Tracking
 
+:::note Applies to
+NetFlow mode.
+:::
+
 ## Overview
 
 
@@ -25,14 +29,14 @@ You can create this report in three ways
 1. **From Raw flows** — Filter all the flows for that interface then
    aggregate the Hosts and snapshot them into a time series.
 2. **From Top-N flows** — Another option used by many competing netflow
-   tools is to just consider the Top-N flows
+   tools is to only consider the Top-N flows
 3. **From Top-N Conversations** — A third option is to use rolled up
    top flows rolled up into conversations - ie dropping the port
    information.
 
 None of these work satisfactorily in practice, particularly over high
 traffic links, such as those seen in ISP, Large Enterprises, or Data
-Centers. You only end up accouting for 10-15% of the traffic.
+Centers. You only end up accounting for 10-15% of the traffic.
 
 Since Trisul is a *Streaming analytics* platform, we introduce a feature
 called **“Interface Tracking”** which when enabled,
@@ -43,7 +47,7 @@ called **“Interface Tracking”** which when enabled,
 - These streams create their own metrics independent of Netflow
 
 The end result is that with *Interface Tracking* enabled we get 100%
-accuracy in long term drilldowns. We have deployed this on very large
+accuracy in long term drilldowns. We have deployed this on large
 data center interfaces to perfect results.
 
 ### The Cost of Interface Tracking
@@ -73,7 +77,7 @@ Login as `admin` and,
 
 :::info navigation
 
-:point_right: Go to Context: Default &rarr; profile0 &rarr; [Netflow Wizard](netflow_wizard)  
+:point_right: Go to Context: Default &rarr; profile0 &rarr; [NetFlow Wizard](/docs/guide/ug/netflow/netflow_wizard)  
 :::
 
 Then in the Interfaces tab click on the "Interface tracking" drop down button and select "Enable interfaces for top 100"
@@ -86,11 +90,11 @@ You can also choose the interfaces on a particular router and enable interface t
 In the same Interfaces tab,  
 :::info navigation
 
- :point_right: Click on the "Select a router to display Interfaces" dropdown button and choose a particular router which displays the number of interfaces on that router. 
+:point_right: Click on the "Select a router to display Interfaces" dropdown button and choose a particular router which displays the number of interfaces on that router. 
 
- :::
+:::
 
- From the number of interfaces displayed, click on the check boxes of the interfaces that you want to enable interface tracking and Select “Enable Interface Tracking” from the "Interface Tracking" dropdown menu on the [Router Interfaces](routers_and_interfaces) tool
+From the number of interfaces displayed, click on the check boxes of the interfaces that you want to enable interface tracking and Select “Enable Interface Tracking” from the "Interface Tracking" dropdown menu on the [Router Interfaces](/docs/guide/ug/netflow/routers_and_interfaces) tool
 
 ## Disable Interface Tracking
 

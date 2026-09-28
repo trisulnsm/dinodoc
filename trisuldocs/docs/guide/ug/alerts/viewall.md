@@ -30,7 +30,7 @@ This allows users to:
 
 ## The Show All Alerts
 
-The *Show All* option, which offers a comprehensive overview of alert activity for the current day, thereby providing users to access and assess alert information. 
+The *Show All* option gives an overview of alert activity for the current day. 
 
 :::info navigation
 :point_right: Go to Alerts&rarr; Show all

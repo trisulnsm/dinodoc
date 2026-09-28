@@ -1,5 +1,9 @@
 # Interface Drilldown
 
+:::note Applies to
+NetFlow mode.
+:::
+
 Describes the *Interface drilldown* tool that appears when you select
 “Drilldown” against any interface in the Interfaces table of the [*Routers and Interfaces
 Tool*](/docs/guide/ug/netflow/routers_and_interfaces#interfaces-table). The options in Interface Drilldown tool looks slightly different on each interface depending on if [*Interface Tracking*](/docs/guide/ug/netflow/interface_tracker) is enabled on the interface or not.
@@ -80,18 +84,18 @@ Counter Group](/docs/guide/ag/context/crosskey_countergroups) with Flow-Interfac
 | 4     | Hosts              | Top hosts into and out of the interface. If *Interface Tracker* is enabled you will see more accurate numbers and also a traffic chart. If *Track Hosts* is enabled you will see more details as well.|
 | 5     | Apps               | Top applications into and out of the interface. More detail and chart available if *interface tracking* is enabled or if *Track Apps* is enabled                                                   |
 | 6     | Flow Hosts         | Computes the hosts using this interface by querying raw flow information        |
-| 7     | Flow Apps          | Computes the hosts using this interface by querying raw flow information        |
+| 7     | Flow Apps          | Computes the applications using this interface by querying raw flow information |
 | 8     | Conversations      | Top IP source destination and destination port.                                 |
 | 9     | Raw Flows          | Top Raw flows                                                                   |
 | 10    | Matrix             | A chord diagram showing **interface to interface** traffic flows in transmit and receive directions. This is useful for ISPs, needs the *Track interfaces per Interface*                        |
 | 11    | ASN, NBAR, QoS etc | These appear dynamically depending on whether these features are enabled or not |
 | 12    | MixedBandwidth     | ISP specific use case shows the same data as ASN but groups them into cache traffic vs internet traffic                                                                                            |
 
-Also see : [Netflow Wizard Trackers](netflow_wizard#trackers)
+Also see: [NetFlow Wizard Trackers](/docs/guide/ug/netflow/netflow_wizard#trackers)
 
 ## Traffic Chart
 
-Traffic chart shows the transmited and received traffic on the interface
+Traffic chart shows the transmitted and received traffic on the interface
 for the selected time window. The legends on the bottom show the LATEST
 values.
 

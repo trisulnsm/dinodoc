@@ -8,7 +8,7 @@ In [Introduction to Dashboards and Modules](/docs/guide/ug/ui/dashmod_intro), yo
 
 Trisul has an extensive module library including prebuilt modules that has out of the box functionality that you can leverage without needing to develop custom components.
 
-You can also create your own modules using pre existing [module templates](/docs/guide/ug/ui/module_templates). Trisul has 40 different types of modules.
+You can also create your own modules using pre existing [module templates](/docs/guide/ug/ui/module_templates). Trisul has 17 module templates.
 
 ## What You Can Do with Modules {#what-you-can-do-with-dashboards}
 
@@ -22,7 +22,7 @@ To create a new module,
 
 :::info path
 
-:point_right: Select Customize&rarr; UI&rarr; Modules&rarr; Add New Module
+:point_right: In the dashboard's Module Layout&rarr; Click on the Plus icon
 
 :::
 
@@ -91,7 +91,7 @@ You can also create modules with the help of arithmetic
 expressions. You can combine different metrics together and show in a 
 module.
 
-Metrics are numbered 1, 2, 3 and so on. Supported operators are `+`, `-`, `*`, `%`, `/` and `()`.
+Metrics are numbered 1, 2, 3 and so on. Supported operators are `+`, `-`, `*`, `%`, `/` and `()`. The `%` operator means "as a percentage of".
 
 For eg. Add two Metrics, You have to enter arithmetic expression as 
 (1+2),(3-4) or Metric 1 as a percentage of 2 and 3 as 1%(2+3)

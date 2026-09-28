@@ -1,6 +1,6 @@
-# Retro Q & A
+# Network FAQ
 
-Retro FAQs are complex network analysis like analysing network traffic, flows, and alerts rendered in plain English as a question for easy access.
+Network FAQs are complex network analysis like analysing network traffic, flows, and alerts rendered in plain English as a question for easy access.
 
 > Network analysis presented in a “Stack Overflow” style
 > **tagged Q & A** format.
@@ -9,7 +9,7 @@ If you deal with networks on a daily basis you are bound to perform a
 particular analysis repeatedly. You can certainly use one of the [Retro
 Tools](/docs/guide/ug/cg/retrotools) to accomplish your task but for certain cases that can get repetitive and tiring.
 
-Retro FAQs are like handy answers (dashboards) for your repetitive questions (analysis) where you run the analysis in one click from the list of already saved questions.
+Network FAQs are like handy answers (dashboards) for your repetitive questions (analysis) where you run the analysis in one click from the list of already saved questions.
 
 For example, you may start by selecting a time interval and want to find
 out the following as a matter of routine.
@@ -24,7 +24,7 @@ out the following as a matter of routine.
 
 - What were the most voluminous flows ?
 
-Typically you would select an appropriate Retro Tool, type in the information you wish to seek and submit for each analysis. But with Retro Q & A this whole process becomes painless. With Retro FAQ you can ,
+Typically you would select an appropriate Retro Tool, type in the information you wish to seek and submit for each analysis. But with Network FAQ this whole process becomes painless. With Network FAQ you can ,
 
 - Any time based analysis can be converted into a Question  
 
@@ -39,7 +39,7 @@ Typically you would select an appropriate Retro Tool, type in the information yo
 
 :::info navigation
 
-:point_right: To access select Retro &rarr; Retro FAQ
+:point_right: To access select Retro &rarr; Retro tools &rarr; Network FAQ
 
 :::
 
@@ -47,7 +47,7 @@ You will then be presented with a UI similar to this one shown below.
 
 ![](images/retrofaq.png)
 
-*Figure: Retro FAQ*
+*Figure: Network FAQ*
 
 Here is how you use the UI.
 
@@ -78,7 +78,7 @@ works.
 
 ![](images/addtofav.png)
 
-*Figure: Add to Favorites Option to Add Module to Retro FAQ*
+*Figure: Add to Favorites Option to Add Module to Network FAQ*
 
 Enter a question name and optionally a set of tags using the #
 symbol
@@ -97,7 +97,7 @@ You can edit, retag, or delete existing questions if you wish.
 
 :::info navigation
 
-:point_right: To access, select Customize &rarr;Retro Favorites
+:point_right: To access, select Customize &rarr; Favorite Network FAQ
 
 :::
 

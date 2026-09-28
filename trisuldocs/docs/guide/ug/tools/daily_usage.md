@@ -5,7 +5,7 @@ You can get a monthly overview of key metrics, such as:
 - Total Bytes In
 - Total Bytes Out
 - Total Connections
-- Total Alerts for a particular host, facilitating a concise and intuitive examination of daily totals within a monthly context.
+- Total Alerts for a particular host
 
 ## How to Use
 
@@ -42,7 +42,7 @@ The *Handy Shortcuts* option, located on the upper right side of the top bar, pr
 ![](images/handyshortcuts.png)  
 *Figure: Handy Shortcuts*
 
-Instead of filling in all the fields for the search criteria, you can also simply choose from one of the options from the *handy shortcuts* and click *Analyze*.   
+Instead of filling in all the search criteria fields, you can choose one of the options from the *Handy Shortcuts* and click *Analyze*.
 
 ## Search Result
 
@@ -60,7 +60,7 @@ The generated monthly chart displays aggregated data for each day of the month, 
 Users can click on individual data points (of a particular day) within the monthly chart to access a detailed, day-specific chart, showcasing the trends and patterns of the selected metric for that particular day. 
 
 ![](images/monthlycharts1.png)
-*Figure: Monthly Chart - Trend visualization of a selected data (of one particlar day) from the calendar*
+*Figure: Monthly Chart - Trend visualization of a selected data (of one particular day) from the calendar*
 
 The trend for the selected time frame is depicted in a graphical format, as illustrated in the figure above, showcasing the fluctuations in the data over the one day period.
 

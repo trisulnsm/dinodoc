@@ -25,7 +25,13 @@ The examples below show how.
 
 ## Examples
 
-> You need to restart Trisul if you want any of these changes to take effect.
+:::note Restart the probe
+These changes take effect after you restart the probe. In the web interface, stop and start only the probe under **Context: default → Admin Tasks → Start/Stop Tasks**. A **pending restart** message next to the Start/Stop button shows that a restart is still needed. From the command line, run:
+
+~~~
+trisulctl_probe restart context <context_name>@<probe_name>
+~~~
+:::
 
 ### Dynamic Rules
 

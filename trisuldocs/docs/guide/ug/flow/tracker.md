@@ -24,7 +24,7 @@ This section outlines the number of things you can do with *Flow Trackers*.
 
 To **View** *Flow Trackers*
 :::info Navigation
-:point_right: Go to Tools&rarr;Flow Trackers
+:point_right: Go to Tools&rarr;Flow Tracker
 :::
 
 ![](images/viewflowtrackers.png)    
@@ -66,7 +66,7 @@ The following sample flow trackers are available.
 | Low Volume  	  | Connections with minimal data transfer|
 | Payload Xfer Out| Highest volume of TCP Payload data transferred **out of** your network. Does not include TCP handshake packets|
 | Payload Xfer In | Highest volume of TCP Payload data transferred **into** your home network. Does not include TCP handshake packets|
-| Non HTTP/S | Sample tracker shows you how to match flows that don't match certain tuples | 
+| FilterFailed    | Flows that don’t use any of the well known ports |
 
 
 ### Options 
@@ -151,7 +151,7 @@ A filter string that allows you to specify what subset of flows you want to cons
 
 | Tracker Type            | Config String                                                                          |
 | ----------------------- | ---------------------------------------------------------------------------------------|
-| For type “Based on Total Bytes”  | `lower,100,500` track flows between 100 and 500 bytes, prefer the lower side. <br/>`higher,500,2000` track flows between 500 and 2000 bytes, prefer the higher side                                    |
+| For type “Based on Total Bytes”  | `lower,100,500` track flows between 100 and 500 bytes, prefer the lower side. <br/>`upper,500,2000` track flows between 500 and 2000 bytes, prefer the upper side                                    |
 | All other tracker types | A filter string (See below)                                                            |
 
 #### Filter String Format

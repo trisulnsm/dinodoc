@@ -1,11 +1,15 @@
 # Layer 2 and QoS
 
+:::note Applies to
+NetFlow mode.
+:::
+
 This section outlines some of the Layer 2 and QoS related features
 available in Trisul Network Analytics.
 
 ## Layer 2 Metrics
 
-Netflow is considered to be a Layer 3 IP level technologies. However, it
+NetFlow is considered to be a Layer 3 IP level technology. However, it
 is possible to configure IPFIX to export MAC address information along
 with IP flow records.
 
@@ -14,7 +18,7 @@ with IP flow records.
 In Cisco Flexible Netflow the following commands can be added to collect
 source and destination MAC addresses.
 
-```language-bash
+```text
  match datalink mac source address input
  match datalink mac destination address input
 ```
@@ -45,7 +49,7 @@ The following counter groups show L2 data
 
 | Counter Group | L2 Data                         |
 | ------------- | ------------------------------- |
-| VLANStats     | 802.11 VLAN IDs traffic metrics |
+| VLANStats     | 802.1Q VLAN IDs traffic metrics |
 
 ## Tos DiffServ
 
@@ -68,7 +72,7 @@ The following counter groups show ToS data
 | Counter Group | ToS Data                                   |
 | ------------- | ------------------------------------------ |
 | IP ToS        | The full 8-bit ToS field                   |
-| IP Precedence | Meters the traffic per ipProecedence       |
+| IP Precedence | Meters the traffic per ipPrecedence        |
 | IP DSCP       | Meters the traffic per DiffServ code point |
 
 The following image shows where the ToS counters can be found (see the
@@ -79,7 +83,7 @@ highlighted section)
 
 ### IP ToS
 
-In this mode, Trisul simply meters the full 8 bit ToS field. The
+In this mode, Trisul meters the full 8 bit ToS field. The
 customer can then map ToS raw values with their own meanings.
 
 ### IP Precedence

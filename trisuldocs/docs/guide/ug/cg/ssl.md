@@ -1,18 +1,22 @@
 # SSL/TLS Metering
 
+:::note Applies to
+Packet capture mode only.
+:::
+
 Three counter groups give you visibility into the SSL
 encrypted traffic in your network.
 
-1. **TLS Orgs** - Organizations that issue TLS Certificates that verify the identity of entities (websites, servers, etc.) and issue digital certificates that establish secure connections over the internet. Examples: GlobalSign, DigiCert, etc. Trisul captures these traffic by servers from subject part of the certificate that contains the organization name.
+1. **TLS Orgs** - Organizations that issue TLS certificates, which verify the identity of entities (websites, servers, etc.) and establish secure connections over the internet. Examples: GlobalSign, DigiCert, etc. Trisul meters this traffic by the issuing organization.
 2. **TLS Ciphers** - A set of algorithms used to secure data transmitted over the internet. Example: encryption algorithm like AES, DES, authentication algorithms like SHA, MD5, and key exchange algorithms like RSA, ECDH. Trisul captures these traffic by encryption and key exchange algorithms.
-3. **TLS CAs** - Similar to TLS Orgs these traffic are captured by Trisul by certificate authority. Example: EV SSL, OV SSL, etc.
+3. **TLS CAs** - Similar to TLS Orgs, Trisul meters this traffic by certificate authority. Examples: DigiCert, Let's Encrypt, Sectigo.
 
 > Trisul detects usage of SSL/TLS using port independent heuristics.  
 > Trisul handles SSL/TLS session resume.
 
 ## TLS Orgs
 
-TLS Orgs allows for metering of traffic based on the entity specified in the Subject Common Name (a field in the certificate that contains the domain name or organization name) of the X.509 certificate (a digital certificate used to verify the identity of a website or organization). This counter group tells you how much of your SSL traffic is Google, Twitter, Dropbox, etc. This visibility would otherwise be difficult to obtain.
+TLS Orgs meters traffic by the organization that issued the X.509 certificate (the digital certificate used to verify the identity of a website or organization). This counter group tells you how much of your SSL traffic uses certificates from each issuing organization. This visibility would otherwise be difficult to obtain.
 
 :::info navigation
 

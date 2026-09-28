@@ -2,7 +2,7 @@
 
 Multicast GraphX is an interactive visualization tool that helps you explore multicast traffic patterns in your network. It displays a clear and organized layout using D3.js, showing which IPs are sending and receiving multicast data.
 
-This tool is especially helpful for financial services and securities organizations, where multicast is widely used for distributing market data and similar real-time feeds across the network.
+Multicast is common in networks that distribute market data and other real-time feeds, such as those of financial services and securities organizations.
 
 ## Downloading Multicast GraphX
 
@@ -21,7 +21,7 @@ From the list of Trisul apps, download Multicast GraphX.
 :::info navigation
 
 Login as user and,  
-:point_right: Go to Dashboard &rarr; Show All &rarr; Multicast GraphX
+:point_right: Go to Dashboards &rarr; Show all &rarr; Multicast GraphX
 :::
 
 ## Using Multicast GraphX
@@ -59,4 +59,4 @@ For each multicast group, you can also view:
 
 ## Enhanced View for ASN Groups
 
-If the selected Counter Group is ASN, the interface additionally displays logos of popular Autonomous Systems such as Microsoft and Google—making it easy to visually identify top ASNs.
+If the selected Counter Group is ASN, the interface also shows logos of well-known Autonomous Systems, such as Microsoft and Google, so you can identify top ASNs at a glance.

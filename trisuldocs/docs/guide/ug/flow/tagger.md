@@ -28,7 +28,13 @@ provide.
 
 ## Configuring
 
-You need to restart Trisul for configuration changes to take effect
+:::note Restart the probe
+Configuration changes take effect after you restart the probe. In the web interface, stop and start only the probe under **Context: default → Admin Tasks → Start/Stop Tasks**. A **pending restart** message next to the Start/Stop button shows that a restart is still needed. From the command line, run:
+
+~~~
+trisulctl_probe restart context <context_name>@<probe_name>
+~~~
+:::
 
 To create a flow tagger, Login as admin,
 
@@ -66,7 +72,7 @@ Fill out the details as shown
 
 If you are familiar with the [Trisul Filter Format](/docs/guide/ref/trisul_filter_format) you may enter the string
 directly here. For example : Flows to China and India can be marked by
-the expression `{00990011-44BD-4C55-891A-77823D5916B}=CN,IN` This means
+the expression `{00990011-44BD-4C55-891A-77823D59161B}=CN,IN` This means
 the keys CN and IN in the counter group Country (identified by the GUID)
 
 #### The Rule Builder
@@ -130,7 +136,7 @@ attached to the tag.
 
 You can view the flow tags in a couple of ways.
 
-1. Use the [Flow taggers](/docs/guide/ug/flow/tagger) tool to see
+1. Use **Tools → Flow Tagger** to see
    a list of top flows for each tag you have set up.
 2. Search for flows by tagname using the [Explore
    flows](/docs/guide/ug/tools/explore_flows) tool.

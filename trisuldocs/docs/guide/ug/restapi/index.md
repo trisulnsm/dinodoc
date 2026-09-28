@@ -1,6 +1,6 @@
 # REST API
 
-The Trisul REST API provides a simple HTTP/JSON interface for accessing network analytics data, metadata, and historical statistics from Trisul. These endpoints expose the same backend functionality available through the Trisul Remote Protocol (TRP), making it easy to integrate Trisul with dashboards, automation workflows, reporting tools, and third-party applications.
+The Trisul REST API is an HTTP/JSON interface to network analytics data, metadata and historical statistics in Trisul. The endpoints expose the same backend functions as the [Trisul Remote Protocol (TRP)](/docs/trp/), so you can connect Trisul to dashboards, automation workflows, reporting tools and third-party applications.
 
 The APIs support authenticated access to network statistics, counter groups, historical time windows, and top-N analytics without requiring direct interaction with the Trisul backend.
 
