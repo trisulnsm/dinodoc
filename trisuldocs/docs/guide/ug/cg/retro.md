@@ -34,7 +34,7 @@ observing a traffic chart.
 
 To select a time window  
 
-1. Simply click and drag your mouse  over the chart to select specific time range on the Time selector
+1. Click and drag your mouse over the chart to select specific time range on the Time selector
 
 2. Details of the current time selection is shown in the green band 
 
@@ -66,7 +66,7 @@ full capture based analysis tools like :
 
 1. PCAP export
 
-> This feature is not applicable to Netflow mode or when full
+> This feature is not applicable to NetFlow mode or when full
 > content storage is disabled.
 
 ## Running an Analysis Tool
@@ -74,7 +74,7 @@ full capture based analysis tools like :
 Once you have selected a time window of interest, you have two options.
 
 ***Use the Retro FAQ***  
-An innovative Q&A style set of tagged questions in plain English.
+A Q&A style set of tagged questions in plain English.
 
 Example : Click on *Which internal hosts had maximum number of
 connections ?* or *What are my top hosts and applications ?*
@@ -88,11 +88,11 @@ Allows you to analyze your network traffic, flows, and alerts by asking
 questions in plain English. You can build you own FAQ questions as you
 continue to work with Trisul.
 
-[See the Retro FAQ section for more on this](retrofaq)
+[See the Retro FAQ section for more on this](/docs/guide/ug/cg/retrofaq)
 
 ### Retro Tools
 
 Individual analysis tools you can use to drilldown into the selected
 time interval in dozens of ways.
 
-[See the Retro Tools section for more](retrotools)
+[See the Retro Tools section for more](/docs/guide/ug/cg/retrotools)

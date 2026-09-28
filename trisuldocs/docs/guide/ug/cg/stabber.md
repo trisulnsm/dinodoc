@@ -59,9 +59,9 @@ There are three ways to access real time stabbers.
 
 ### 2. From any Key Dashboard
 
-Lets say you are investigating an arbitrary item using the [Key Dashboard](/docs/guide/ug/ui/key_dashboard)
+Say you are investigating an arbitrary item using the [Key Dashboard](/docs/guide/ug/ui/key_dashboard)
 
-Click on any key item from a dashboard that takes you into the key dashboard of that key. In the Key Details module click on the Real Time Stabbers from the menu as sshown in this example.
+Click on any key item from a dashboard that takes you into the key dashboard of that key. In the Key Details module click on the Real Time Stabbers from the menu as shown in this example.
 
 ![](images/rtstabbers1.png)
 
@@ -82,7 +82,7 @@ Click on any key item from a dashboard that takes you into the key dashboard of 
 
 ## Key Traffic Stabber
 
-Now lets explore each of the Real Time Stabber options in detail. Real Time Stabbers options include,
+The Real Time Stabber options are described below. Real Time Stabbers options include,
 
 1) Real Time Stabber: Traffic Chart
 

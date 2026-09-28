@@ -1,4 +1,8 @@
-# FAQ
+# Packet Capture FAQ
+
+:::note Applies to
+Packet capture mode only. These features are not available in NetFlow mode.
+:::
 
 ### Quickly see packet contents without pulling out the pcap
 
@@ -22,10 +26,10 @@ Set the [Ring – Enabled](/docs/guide/ref/trisulconfig#ring) parameter to `Fals
 
 To store 100×1GB files in the Operational area.
 
-1. Locate the [Ring – Slice Policy – Operational – SliceCount](/docs/guide/ref/trisulconfig#ring) paramter
+1. Locate the [Ring – Slice Policy – Operational – SliceCount](/docs/guide/ref/trisulconfig#ring) parameter
 2. Set the SliceCount to 100
 
-### I dont want to store SYSLOG packets because I send them to splunk
+### I don't want to store SYSLOG packets because I send them to Splunk {#i-dont-want-to-store-syslog-packets-because-i-send-them-to-splunk}
 
 You have to use Rules to exclude the SYSLOG protocols from getting stored. Check out the [controlling storage example](/docs/guide/ug/caps/packetstorage#examples)
 

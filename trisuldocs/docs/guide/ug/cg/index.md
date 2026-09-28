@@ -30,7 +30,7 @@ The default mode. Trisul does all its analytics by directly capturing packets fr
 
 ##### NetFlow
 
-Can also accept [Netflow](/docs/guide/ug/netflow/netflow_setup) v5, v9, SFLOW, and IPFIX instead of packets. This is a powerful 
+Can also accept [Netflow](/docs/guide/ug/netflow/netflow_setup) v5, v9, SFLOW, and IPFIX instead of packets. This is a 
 low-cost way to gain total visibility into your internal network traffic
  without a TAP and Probe rollout with packet capture techniques.
 
@@ -38,11 +38,11 @@ low-cost way to gain total visibility into your internal network traffic
 
 Jump to common network analysis tasks
 
-- Find out which flows caused a traffic pattern
-- View flow activity of a particular host or port in real time
-- Jump from alerts to flows that caused them
-- Set up **flow trackers** to analyze specific activity
-- Investigate past activity
+- [Find out which flows caused a traffic pattern](/docs/guide/ug/cg/tasks#find-out-which-flows-caused-a-traffic-pattern)
+- [View flow activity of a particular host or port in real time](/docs/guide/ug/cg/tasks#view-flow-activity-of-a-particular-host-or-port-in-real-time)
+- [Jump from alerts to flows that caused them](/docs/guide/ug/flow/tasks#jump-from-alerts-to-flows-that-caused-them)
+- Set up [**flow trackers**](/docs/guide/ug/flow/tracker) to analyze specific activity
+- [Investigate past activity](/docs/guide/ug/cg/tasks#investigate-past-activity)
 - Enable metering which depend on flows not packets
 - Optimize full content storage (eg, store only first 1M of each flow)
 
@@ -50,7 +50,7 @@ Jump to common network analysis tasks
 
 ### Related Features
 
-[Real Time Stabbbers](/docs/guide/ug/cg/stabber)
+[Real Time Stabbers](/docs/guide/ug/cg/stabber)
 
 Chart usage of any item or view toppers in any counter group in real time.
 

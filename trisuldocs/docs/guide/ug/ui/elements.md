@@ -5,7 +5,7 @@ sidebar_position: 7
 # Other UI Elements
 
 This section contains a quick overview of the user interface elements.
-Besides the already explained [*User layout*](/docs/guide/ug/ui/userlayout) and [*Chart UI elements*](/docs/guide/ug/ui/charts), Trisul provides other essential interactive elements like Buttons, Forms, Search box, Tooltips and more. Lets dive in and explore where you can find all these user friendly elements in the Trisul dashboards and modules and how you can interact with them. 
+Besides the already explained [*User layout*](/docs/guide/ug/ui/userlayout) and [*Chart UI elements*](/docs/guide/ug/ui/charts), Trisul provides other essential interactive elements like Buttons, Forms, Search box, Tooltips and more. This page shows where to find these elements and how to use them. 
 
 ## Hide/ Show Search Form
 
@@ -15,13 +15,12 @@ In the sample form below, you can notice the *Hide* button on the top right corn
 
 ![](images/dashboards/hidesearchform.png)
 
+*Figure: Analysis Form Showing Hide Button*
+
 - **Collapse Form**  
 Click to minimize the form, hiding its contents and allowing you to focus on analysis results. This is ideal for when you want to view more data or focus on other aspects of the app.
 - **Expand Form**  
 Click to restore the form to its full height, revealing its contents and enabling you to refine your analysis parameters. This is useful when you need to adjust settings or tweak your analysis.
-
-
-*Figure: Analysis Form Showing Hide Button*
 
 ## Packets and Flows Drilldown Buttons
 
@@ -82,7 +81,7 @@ You can click on any key items on the chart and it will take you to the [Key das
 
 
 ## Download PCAP button
-<span class="badge badge--primary">PCAP Mode Only</span>
+<span class="badge badge--primary">Packet capture mode only</span>
 
 On tables featuring a [*Download PCAP*](/docs/guide/ug/caps/methods#download-pcap) button, clicking on the button
 will result in Trisul computing a “Packet Scan plan” and then
@@ -93,7 +92,7 @@ file.
 The Time Selector feature enables you to define a temporal scope for functionalities like report generation, query search, flow trackers, alerts etc with a default setting of the most recent 15 minutes. Once a time window is selected, it remains fixed for functioning all the features on the page and their associated drill-downs. 
 
 ![](images/timeselector.png)  
-*Feature: Time Selector*
+*Figure: Time Selector*
 
 You can choose from a range of pre-defined time ranges, including:
 

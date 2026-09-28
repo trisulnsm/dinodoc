@@ -71,8 +71,8 @@ the keys CN and IN in the counter group Country (identified by the GUID)
 
 #### The Rule Builder
 
-This is the easier way to construct the *Tagger Tag* expression. See
-[Rule Builder](/docs/guide/ug/tools/rule_builder) or you can also simply click *Add rule* in the Tagger rule to open the Interactive Rule builder and fill up the following fields.
+This is the easier way to construct the *Tagger Rule* expression. See
+[Rule Builder](/docs/guide/ug/tools/rule_builder) or click *Add rule* in the Tagger rule to open the Interactive Rule builder and fill up the following fields.
 
 ![](images/flowtagger3.png)
 

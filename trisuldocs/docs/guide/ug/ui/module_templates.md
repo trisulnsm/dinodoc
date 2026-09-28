@@ -39,11 +39,11 @@ A Meter defines what is being measured for the selected counter group.
 
 Examples include:
 
-Upload Bytes
-Download Bytes
-Total
-Packets
-Flows
+- Upload Bytes
+- Download Bytes
+- Total
+- Packets
+- Flows
 
 For example:
 
@@ -80,7 +80,7 @@ This is a list of all module templates supported by Trisul.
 | --- | ------------------------------------------------------------------------- |
 | 1   | [Key Traffic](/docs/guide/ug/ui/module_templates#key-traffic)                   |
 | 2   | [Toppers Traffic](/docs/guide/ug/ui/module_templates#toppers-traffic)           |
-| 3   | [Toppers Trend](/docs/guide/ug/ui/module_templates#toppers-traffic)             |
+| 3   | [Toppers Trend](/docs/guide/ug/ui/module_templates#toppers-trend)               |
 | 4   | [Current Toppers](/docs/guide/ug/ui/module_templates#current-toppers)           |
 | 5   | [Retro Toppers](/docs/guide/ug/ui/module_templates#retro-toppers)               |
 | 6   | [Single Value](/docs/guide/ug/ui/module_templates#single-value)                 |
@@ -178,7 +178,7 @@ The resulting module displays the 10 AS Numbers with the highest upload traffic.
 | -------------- | ------------- | -------------------------------- |
 | Name           | -            | Enter a name for the module        |
 | Description    | -             | Provide a short description of the module |
-| Surface        | MRTG          | Diplays the selected chart surface  |
+| Surface        | MRTG          | Displays the selected chart surface  |
 | Show Table     | -             | Displays the meta data of the chart like Max,Min Average and Percentile for each items in table format |
 | Counter Group  | ASNumber      | Shows the list of Counter groups to select from |
 | Meter          | Upload Bytes  | Shows the list of Meters to select from   |
@@ -308,7 +308,7 @@ For example, the module can display inbound and outbound traffic separately.
 | Keys                 | TOTALBW       | Provide the unique identifier that categorizes data in a network or a system according to the selected counter group |
 | One module per key   | Enabled       | Each key metric is displayed in its own separate module.          |
 | One module per meter | -             | When enabled,Each meter is displayed in its own separate module.  |
-| Surface              | LINE          | Diplays the selected chart surface                                |
+| Surface              | LINE          | Displays the selected chart surface                                |
 
 ## Real Time Single
 
@@ -377,7 +377,7 @@ For example, you can select specific keys from the ASNumber counter group and di
 | Keys                 | TOTALBW       | Provide the unique identifier that categorizes data in a network or a system according to the selected counter group |
 | One module per key   | Enabled       | Each key metric is displayed in its own separate module.          |
 | One module per meter | -             | When enabled,Each meter is displayed in its own separate module.  |
-| Surface              | LINE          | Diplays the selected chart surface                                |
+| Surface              | LINE          | Displays the selected chart surface                                |
 
 ## Traffic Chart
 
@@ -430,7 +430,7 @@ The module provides a centralized view of alerts and can display additional info
 | Description      | -             | Provide a short description of the module          |
 | Top Count        | 10            | Enter the number of traffic data items to be displayed   |
 | Signature ID     | -             | Provide a Signature ID like DSHIELD   |
-| Filter           | -             | Filter by signatre ID or IP addresses  |
+| Filter           | -             | Filter by signature ID or IP addresses  |
 | Show Description | Checked       | Displays a description of each alert providing a context about the issue |
 | Show Endpoints   | Checked       | Displays detailed information about the endpoints (devices, systems, or applications) related to each alert. |
 | Alert Group      | External IDS  | Select from the list of alert groups that you would like to display   |
@@ -452,7 +452,7 @@ For example, you can use it to place an alert count on a dashboard so that users
 | Name             | -            | Enter a name for the module                                               |
 | Description      | -             | Provide a short description of the module                                |
 | Signature ID     | -             | Provide a Signature ID like DSHIELD                                      |
-| Filter           | -             | Filter by signatre ID or IP addresses                                    |
+| Filter           | -             | Filter by signature ID or IP addresses                                    |
 | BG Color         | Blue          | Select a desirable BG Color                                              |
 | Show Description | Checked       | Displays a description of each alert providing a context about the issue |
 | Alert Group      | External IDS  | Select from the list of alert groups that you would like to display      |

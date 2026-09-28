@@ -1,4 +1,4 @@
-# Settings
+# Flow Handling Settings
 
 This section describes options available to tweak flow handling.
 

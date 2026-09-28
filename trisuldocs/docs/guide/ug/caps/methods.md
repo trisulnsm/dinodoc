@@ -1,8 +1,12 @@
 # PCAP Drilldown Methods
 
+:::note Applies to
+Packet capture mode only. These features are not available in NetFlow mode.
+:::
+
 This document describes the different ways you can drilldown to raw 
 packet captures from the Trisul user interface. If you are interested in
- programatically retreiving PCAPs refer to the [Trisul Remote Protocol guide](/docs/trp/) Trisul allows you to directly drilldown into packets from a number of 
+ programmatically retrieving PCAPs refer to the [Trisul Remote Protocol guide](/docs/trp/) Trisul allows you to directly drilldown into packets from a number of 
 investigation points. The key thing to look for are the following two 
 menu items
 
@@ -29,7 +33,7 @@ When you click on the Download PCAP button at the top of the table
 ## Quick PCAP View
 
 The Quick PCAP menu item was created to 
-make working with raw packets dead easy. When you select this menu 
+make working with raw packets quicker. When you select this menu 
 items, only the 1st 100K of the requested packet output is selected and 
 shown in three panes.
 
@@ -49,14 +53,14 @@ Once you are satisfied you can download the PCAP file and save it for further an
 
  You can download PCAPs from the following other Trisul data types. In
 
-- **flows** : Explore Flows results allow you to download PCAP for ANY flow. Not just TCP/UDP.
+- **flows** : Explore Flows results allow you to download PCAP for ANY flow. Not only TCP/UDP.
 - **alerts** : Intrusion Detection alerts allow you get PCAPs for all alerts of a type, or from an IP or any other query.
 - **resources** : Directly jump to Packets from DNS, HTTP URLs, TLS Certificates analysis
 - **full text search** : FTS documents like TLS traffic, HTTP Headers, File extraction. Click on any document and then “Download PCAP”
 
 ## PCAPs for Particular Keys
 
-For any counter item you can get the PCAPs by accessing the key dashboard and then clicking on “Download PCAP” option. This is truly unique feature of Trisul because you get PCAPs for all types of counter not just TCP/IP flows. Examples
+For any counter item you can get the PCAPs by accessing the key dashboard and then clicking on “Download PCAP” option. This works for every type of counter, not only TCP/IP flows. Examples
 
 1. Key dashboard for **Counter Group : Country, Key: CN** : clicking on Download PCAP will get you packets from country=China.
 2. Key dashboard for **Counter Group : MAC, Key: 06:b4:83:e3:e3:30** : packets for a MAC address
@@ -65,7 +69,7 @@ For any counter item you can get the PCAPs by accessing the key dashboard and th
 
 If you want to download PCAPs for any timeframe in the past for any criteria, you need to use the Retro Tools > PCAP download tool.
 
-To create a flow tagger
+To open the Pull Packets tool:
 
 :::info navigation
 
@@ -88,8 +92,9 @@ You have three options here
 To make the feature usable and resistant to massive download requests
  Trisul uses two configuration parameters to protect the feature.
 
-| Content inspection time limit | 6 hours | caps the maximum inspection interval. protects you from initiating a search for weeks    |
-| ----------------------------- | ------- | ---------------------------------- |
-| Content download limit        | 100MB   | maximum download needs to be < 100MB|
+| Setting | Default | Description |
+| --- | --- | --- |
+| Deep Packet Inspection time limit | 6 hours (21600 seconds) | Caps the maximum inspection interval, so you can't start a search over weeks of data. |
+| Deep packet inspection size limit | 100 MB | Caps the size of a download. |
 
 both these parameters can be edited from [App Settings](/docs/guide/ag/webadmin/web_options)

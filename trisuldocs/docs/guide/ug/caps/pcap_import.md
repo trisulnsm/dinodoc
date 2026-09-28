@@ -1,8 +1,12 @@
 # Import PCAP Dumps
 
+:::note Applies to
+Packet capture mode only. These features are not available in NetFlow mode.
+:::
+
 Trisul is capable of importing giant packet capture (PCAP) dumpfiles.
 
-The key capabilties of Trisul’ PCAP import feature are:
+The key capabilities of the Trisul PCAP import feature are:
 
 1. **File or directory including nested** — Process a single huge PCAP file or PCAP files placed in a directory tree
 2. **Automatic time ordering** — Files in a directory are automatically processed in correct time order, irrespective of file names.
@@ -35,8 +39,7 @@ Say you have placed your PCAP files in `/home/tim/MyPcap01` and you want to impo
 1. Give full pathname for the PCAP file/directory  
 
 2. Use sudo if you are not running as `trisul`
-   
-   :::
+:::
 
 This will prompt you to either create a new context named *mypcap01* or to stop an existing context *mypcap01* and reset all of its data. You need to type `YES` to confirm and proceed to the next step.
 
@@ -44,7 +47,7 @@ This will prompt you to either create a new context named *mypcap01* or to stop 
   
   After trisul starts the import process you are returned back to the 
   
-  shell. This does not mean the import is complete, it is just running in 
+  shell. This does not mean the import is complete; it is running in 
   the background. You can check the progress by tailing the log file as 
   shown below
   
@@ -56,13 +59,13 @@ or you can tail the log file directly. The trisbashrc file contains useful alias
 
 ```bash
 sudo -i 
-Source /usr/local/share/trisul-probe/trisbashrc mypcap01 
+source /usr/local/share/trisul-probe/trisbashrc mypcap01
 tailf.ns
 ```
 
 - ##### Login and View Reports
   
-  Next login to Web Trisul at http://your-host:3000 and on the login screen select *mypcap01* context. You should have the all the charts and analytics you are looking for.
+  Next, log in to WebTrisul at http://your-host:3000 and on the login screen select *mypcap01* context. You should have the all the charts and analytics you are looking for.
 
 ## Tweak and Re-run
 
@@ -74,4 +77,4 @@ After running the first pass over the PCAP dump you might want to do the followi
    “Hosts connecting to 28.88.28.11”
 3. Write your own LUA analytics
 
-After you have changed the configuration you can just re-run the importpcap tool (Steps 1-3).
+After you change the configuration, re-run the importpcap tool (the steps under Import Pcap).

@@ -1,5 +1,9 @@
 # Packet Capture Basics
 
+:::note Applies to
+Packet capture mode only. These features are not available in NetFlow mode.
+:::
+
 The Trisul raw packet engine is designed towards these goals :
 
 1. **Scaling** — The amount of data is only limited by the disk resources at your disposal

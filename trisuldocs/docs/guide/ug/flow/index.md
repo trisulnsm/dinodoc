@@ -15,9 +15,9 @@ Read this section in conjunction with the following other documents
 
 ### Other flow related docs 
 
-> :memo:  [Trisul NetFlow Analyzer](/docs/guide/ug/netflow) explains the flow based NetFlow analysis tools and concepts
+> :memo:  [NetFlow Monitoring](/docs/guide/ug/netflow) explains the NetFlow analysis tools and concepts
 
-> :memo:  [Trisul IPDR](/docs/prodguide/ipdr) Massive flow storage and retrieval system intended for use in ISP Compliance scenario
+> :memo:  [Trisul IPDR DoT Compliance Solution](/docs/prodguide/ipdr) Massive flow storage and retrieval system intended for use in ISP Compliance scenario
 
 > :memo:  [Tools](/docs/guide/ug/tools) Check out [Explore Flows](/docs/guide/ug/tools/explore_flows) ,the chief flow exploration and query tool and [Aggregate Flows](/docs/guide/ug/tools/aggregate_flows) which provides metrics based on flow analysis
 

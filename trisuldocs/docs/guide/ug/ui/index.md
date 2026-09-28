@@ -1,8 +1,8 @@
-# Introduction to Web Trisul
+# Introduction to WebTrisul
 
-**Web Trisul** is the web-based interface for interacting with Trisul Network Analytics. It allows you to visualize data, perform searches, monitor traffic, export reports, and carry out various analysis tasks.
+**WebTrisul** is the web-based interface for interacting with Trisul Network Analytics. It allows you to visualize data, perform searches, monitor traffic, export reports, and carry out various analysis tasks.
 
-This section provides an introduction to the application. Once you're familiar with how to navigate the interface, use the analysis tools, and handle basic administrative functions, you'll find it easy to perform most tasks intuitively.
+This section introduces the web interface: the page layout, dashboards and modules, charts, and common UI elements.
 
 import DocCardList from '@theme/DocCardList';
 

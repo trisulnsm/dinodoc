@@ -5,7 +5,7 @@
 If you know the IP address
 
 1. Click on Tools &rarr;Explore flows
-2. Just type in your query “ip=192.168.2.81” in the box
+2. Type your query “ip=192.168.2.81” in the box
 
 For more details read the section on [Explore Flows](/docs/guide/ug/tools/explore_flows)
 
@@ -36,7 +36,7 @@ If you know the IP address
 
 ## Jump from alerts to flows that caused them
 
-1. From any table that shows invididual alerts click on the “Flows”
+1. From any table that shows individual alerts click on the “Flows”
    icon
 
 This will show the flow that caused the alert as well as nearby flows.

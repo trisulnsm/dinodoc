@@ -100,7 +100,7 @@ When creating a dashboard, you can configure properties that determine how the d
 
 Once you have filled all the fields, Click Create.
 
-You have now succesfully created a new dashboard!
+You have created a new dashboard.
 
 #### Advanced Options
 
@@ -120,7 +120,7 @@ Fill in the following fields to configure the advanced settings.
 
 Once you have filled all the fields, Click Create/Create and Preview.
 
-You have now succesfully created a new dashboard with advanced configurations!
+You have created a new dashboard with advanced settings.
 
 ### Add Modules to a Dashboard
 
@@ -133,10 +133,10 @@ When configuring a dashboard, you can select the modules that should appear on i
 
 Select the required module from the available module templates.
 
->Important: Adding a module to a dashboard does not create a new module. The dashboard uses an existing module definition. For information about creating and configuring modules, see Modules.
+>Important: Adding a module to a dashboard does not create a new module. The dashboard uses an existing module definition. For information about creating and configuring modules, see [Modules](/docs/guide/ug/ui/modules).
 
 Once modules are added, they can be arranged within the dashboard layout.
-For information about the relationship between dashboards and modules, see Introduction to Dashboards and Modules.
+For information about the relationship between dashboards and modules, see [Introduction to Dashboards and Modules](/docs/guide/ug/ui/dashmod_intro).
 
 ### Arrange Modules
 
@@ -144,10 +144,11 @@ Modules are placed into defined positions within the dashboard.
 The dashboard layout determines where each module is displayed and how much space it occupies.  
 
 When arranging modules, consider the purpose of the dashboard:  
-    • Place high-priority metrics where they can be seen immediately.   
-    • Group related modules together.   
-    • Use wider positions for modules that require more horizontal space.   
-    • Avoid placing too many unrelated modules in the same dashboard.   
+
+- Place high-priority metrics where they can be seen immediately.
+- Group related modules together.
+- Use wider positions for modules that require more horizontal space.
+- Avoid placing too many unrelated modules in the same dashboard.
 
 Trisul automatically adjusts the dashboard layout when positions are empty.
 For example, if a position does not contain a module, Trisul does not render an empty placeholder for that position. Other modules can adjust to use the available space.
@@ -157,11 +158,12 @@ For example, if a position does not contain a module, Trisul does not render an 
 After creating or opening a dashboard, the dashboard displays the configured modules and their associated network data.  
 
 A typical dashboard can contain:  
-    • Charts showing traffic trends.   
-    • Tables showing hosts, applications, or other network entities.   
-    • Current or real-time network statistics.   
-    • Controls for changing the time range or view.   
-    • Module-level controls for further analysis.   
+
+- Charts showing traffic trends.
+- Tables showing hosts, applications, or other network entities.
+- Current or real-time network statistics.
+- Controls for changing the time range or view.
+- Module-level controls for further analysis.
     
 The exact controls displayed depend on the modules included in the dashboard.  
 
@@ -198,22 +200,26 @@ The exact controls displayed depend on the modules included in the dashboard.
    
     Individual modules may provide controls for interacting with or analyzing their data.
     Depending on the module, these controls can include options to:
-    • Change the displayed view. 
-    • Expand or collapse the module. 
-    • Drill down into the underlying data. 
-    • Export or download displayed information. 
-    • Access additional module-specific actions. 
+
+    - Change the displayed view.
+    - Expand or collapse the module.
+    - Drill down into the underlying data.
+    - Export or download displayed information.
+    - Access additional module-specific actions.
+
     The available controls depend on the module type.
-    For details about individual module capabilities, see Modules.
+    For details about individual module capabilities, see [Modules](/docs/guide/ug/ui/modules).
 
 5) #### Chart Interaction
 
     Charts can provide interactive controls for examining the displayed data.
     Depending on the chart, you may be able to:
-    • Select or highlight data. 
-    • Zoom into a time range. 
-    • Examine individual data points. 
-    • Change the displayed view. 
+
+    - Select or highlight data.
+    - Zoom into a time range.
+    - Examine individual data points.
+    - Change the displayed view.
+
     The available interactions depend on the module.
 
     For details about the chart interactions in a module, see [Charts](/docs/guide/ug/ui/charts).
@@ -233,13 +239,13 @@ A dashboard can be added to the main menu so that users can access it directly f
 
 :::
 
-Click the **Add to Menu** button on the dashboard you want to make easily accessible from the main menu.
+Click the **Add to Menu** button on the dashboard you want to add to the main menu.
 
 ![](images/adddash.png)
 
 *Figure: Add a Dashboard to Menu*
 
-That’s it! The dashboard is now part of the main menu, and you can quickly access it anytime with just one click.
+The dashboard now appears in the main menu.
 
 ### How to Remove a Dashboard From the Menu
 

@@ -12,7 +12,7 @@ This page describes the common layout of the Trisul Web UI when logged in with a
 
 The menus, dashboards, modules, and analysis features available to a User can also vary depending on the selected Product Mode and the permissions assigned to the account.
 
-For information about the different Trisul Product Modes and the capabilities provided by each mode, see [**Product Modes**](/docs/guide/starthere/setuptrisul/install/selectmode).
+For information about the different Trisul Product Modes and the capabilities provided by each mode, see [**Product Modes**](/docs/guide/starthere/what_is_trisul/productmodes).
 
 ## What determines the User interface?
 
@@ -74,13 +74,13 @@ The Top Panel contains commonly used controls available throughout the User inte
 
 5) #### Alerts and Notifications
 
-![](images/alertsnnotifications.png)
+   ![](images/alertsnnotifications.png)
 
    *Figure: Alerts and Notifications in Top Panel*
-    
-    You can view alerts and notifications related to **External IDS, Threshold Crossing, Threshold Band Alerts, Blacklist Activity, and Flow Tracker** in this section.
 
-    Simply click the **color-coded alert icons** located at the **top-right corner** of the interface. Use Alerts to review events that require attention and investigate activity that has triggered an alert.
+   You can view alerts and notifications related to **External IDS, Threshold Crossing, Threshold Band Alerts, Blacklist Activity, and Flow Tracker** in this section.
+
+   Click the **color-coded alert icons** located at the **top-right corner** of the interface. Use Alerts to review events that require attention and investigate activity that has triggered an alert.
 
 
 6) #### License Details
@@ -118,7 +118,7 @@ The Top Panel contains commonly used controls available throughout the User inte
    
    *Figure: Account Switch*
    
-    Clicking on the account button you can get the account history, change password, and sign out from the current account. To change the user avatar see : [How to change the user avatar logging in as admin](pathname:///docs/guide/ag/webadmin/manageusers#ChangeUserAvatar)
+    Clicking on the account button you can get the account history, change password, and sign out from the current account. To change the user avatar see : [How to change the user avatar logging in as admin](/docs/guide/ag/webadmin/manageusers#changing-avatar-logo)
 
 10) #### Host Name
    
@@ -132,31 +132,31 @@ The Top Panel contains commonly used controls available throughout the User inte
 
 ## Menus
 
-    The Menu Panel is the primary navigation area of the User interface.
+The Menu Panel is the primary navigation area of the User interface.
 
-    It provides access to the Trisul features available to the logged-in account.
+It provides access to the Trisul features available to the logged-in account.
 
-    The menus displayed here depend on the Product Mode and the permissions assigned to the User.
+The menus displayed here depend on the Product Mode and the permissions assigned to the User.
 
-    For details about the features provided by a particular Product Mode, refer to the relevant Product Mode documentation.
+For details about the features provided by a particular Product Mode, refer to the relevant Product Mode documentation.
 
 ### Expanding and Collapsing Menu Sections
 
-    Menu sections can be expanded or collapsed independently.
+Menu sections can be expanded or collapsed independently.
 
-    Click the arrow next to a menu section to expand or collapse it.
+Click the arrow next to a menu section to expand or collapse it.
 
-    Use this to keep frequently used features visible while hiding sections you do not currently need.
+Use this to keep frequently used features visible while hiding sections you do not currently need.
 
 ### Show All
 
-    Select Show All to display the available options under a menu section.
+Select Show All to display the available options under a menu section.
 
-    Use this when the feature you need is not visible in the currently expanded menu.
+Use this when the feature you need is not visible in the currently expanded menu.
 
 ### Menu State
 
-    Trisul can retain the expanded or collapsed state of menu sections.
+Trisul can retain the expanded or collapsed state of menu sections.
 
 This allows you to keep the interface organized according to the features you use most often.
 
@@ -178,19 +178,19 @@ This allows you to keep the interface organized according to the features you us
    
     Trisul supports **multi-tenant environments**, meaning it can manage data for multiple independent users or organizations within the same system. Each tenant's data is **logically separated**, ensuring complete isolation and privacy.
 
-    You can easily **switch between tenants (called "contexts" in Trisul)** using the tenant selection list. This allows you to view and manage data specific to each tenant without any overlap.
+    You can **switch between tenants (called "contexts" in Trisul)** using the tenant selection list. This allows you to view and manage data specific to each tenant without any overlap.
 
 3) #### Menu Items
    
-   Click on any menu item to see more options below it. At first, you'll only see the most commonly used ones. To view everything available under that menu, just click **“Show All**.”
+   Click on any menu item to see more options below it. At first, you'll only see the most commonly used ones. To view everything available under that menu, click **Show All**.
 
 ## Dashboard Panel
 
-    The Dashboard Panel displays dashboards containing one or more analysis modules.
+The Dashboard Panel displays dashboards containing one or more analysis modules.
 
-    A dashboard provides a view of network analytics for a selected time period.
+A dashboard provides a view of network analytics for a selected time period.
 
-    The dashboards and modules available to a User depend on the Product Mode and the permissions assigned to the account. For information about the dashboards and analytics available in a particular Product Mode, refer to the relevant product documentation.
+The dashboards and modules available to a User depend on the Product Mode and the permissions assigned to the account. For information about the dashboards and analytics available in a particular Product Mode, refer to the relevant product documentation.
 
 ![](images/userlayout1.png)
 *Figure: Dashboard in User Layout*
@@ -209,9 +209,9 @@ The Dash board contains the following elements
 
 For more information see also:  
 
-- [About the built in dashboards](dashboards).   
+- [About the built in dashboards](/docs/guide/ug/ui/dashboards).   
 
-- [Dashboards and modules](dashmod_intro).
+- [Dashboards and modules](/docs/guide/ug/ui/dashmod_intro).
 
 ## Why Can't I See a Menu or Feature?
 
@@ -229,7 +229,7 @@ Check the following:
 
 If the feature should be available but is still missing, contact the Trisul Administrator.
 
-For information about Product Modes, see Product Modes.
+For information about product modes, see [Product Modes](/docs/guide/starthere/what_is_trisul/productmodes).
 
 ## Common Problems
 

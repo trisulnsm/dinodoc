@@ -316,10 +316,10 @@ This dashboard is particularly useful when Trisul is connected to an IDS feed su
 | **TCP Activity**                       | Shows TCP activity over the recent time period, including **TCP SYN, TCP SYN/ACK, TCP reset, and blacklist-related activity**.                                                                                                                            | **Is there unusual TCP connection activity or a sudden increase in connection attempts or responses?**          | Use this when investigating connection spikes, scanning-like behavior, or other unusual TCP activity that may accompany security events.                                                   |
 | **ARP Flood Activity**                 | Shows ARP activity over time. The graph makes increases and spikes in ARP traffic visible.                                                                                                                                                                | **Has ARP traffic increased unusually during the selected period?**                                             | Use this when investigating abnormal ARP activity or a possible ARP flood.                                                                                                                 |
 | **ICMP Flood Activity**                | Shows ICMP activity over time. A sustained high level or sudden spike is visible in the graph.                                                                                                                                                            | **Is there an unusual increase in ICMP traffic?**                                                               | Use this when investigating possible ICMP flooding or other abnormal ICMP activity.                                                                                                        |
-| **Recently Fired Alert Types**         | Lists the alert types seen during the **most recent interval**, along with their percentage and count. For example, the screenshot shows the most recent alert type accounting for **98% of the alerts with 281 occurrences**.                            | **What alert types are firing right now, and which one is dominating the recent activity?**                     | Use this when you want a quick picture of the most recent alert activity rather than the entire selected time window.                                                                      |
+| **Recently Fired Alert Types**         | Lists the alert types seen during the **most recent interval**, along with their percentage and count.                            | **What alert types are firing right now, and which one is dominating the recent activity?**                     | Use this when you want a quick picture of the most recent alert activity rather than the entire selected time window.                                                                      |
 | **Recently Fired Alert Classes**       | Groups the most recent alerts by their IDS **classification**, showing the percentage and count for each class.                                                                                                                                           | **What categories of security activity are being detected most recently?**                                      | Use this when you want to understand the nature of the recent alerts at a broader classification level.                                                                                    |
-| **Recent Attackers**                   | Lists the top hosts from which IDS alerts have originated during the recent interval. The screenshot shows the attacker IP/host, percentage of recent alerts, and alert count.                                                                            | **Which hosts are generating the most recent attack alerts?**                                                   | Use this to identify the sources associated with recent security activity and decide which source hosts need further investigation.                                                        |
-| **Recent Victim Hosts**                | Lists the hosts that recent IDS alerts indicate were targeted. The screenshot shows the targeted host, percentage of alerts, and alert count.                                                                                                             | **Which hosts are being targeted by the detected activity?**                                                    | Use this to identify potentially targeted systems. A host appearing here means the IDS detected attacks directed at it. It does **not** by itself mean that the host was compromised.      |
+| **Recent Attackers**                   | Lists the top hosts from which IDS alerts have originated during the recent interval. Each row shows the attacker IP or host, its percentage of recent alerts, and the alert count.                                                                            | **Which hosts are generating the most recent attack alerts?**                                                   | Use this to identify the sources associated with recent security activity and decide which source hosts need further investigation.                                                        |
+| **Recent Victim Hosts**                | Lists the hosts that recent IDS alerts indicate were targeted. Each row shows the targeted host, its percentage of alerts, and the alert count.                                                                                                             | **Which hosts are being targeted by the detected activity?**                                                    | Use this to identify potentially targeted systems. A host appearing here means the IDS detected attacks directed at it. It does **not** by itself mean that the host was compromised.      |
 | **TCP Originators**                    | Shows the top hosts that originate TCP connections. The module provides **Max, Min, Avg, Total, and Percentile** views and a distribution chart of the top TCP originators.                                                                               | **Which hosts are initiating the most TCP connections?**                                                        | Use this when investigating hosts that are generating unusually high TCP connection activity or when you want to understand which systems are initiating connections across the network.   |
 | **TCP Targets**                        | Shows the top hosts that receive TCP connections. Like TCP Originators, it provides **Max, Min, Avg, Total, and Percentile** views and a distribution chart.                                                                                              | **Which hosts are receiving the most TCP connections?**                                                         | Use this when investigating systems that are receiving unusually high connection activity or appear to be common targets of TCP connections.                                               |
 
@@ -413,8 +413,6 @@ Before looking at the modules, it is useful to understand the terms used through
 
 :::
 
-> **Note**: The information displayed in the dashboard depends on the selected Time Window and Topper Count.
-
 ### Sessions modules
 
 The Sessions dashboard provides different views of network flows so that you can investigate traffic based on data volume, direction, connection duration, or actual TCP payload.
@@ -423,7 +421,7 @@ The Sessions dashboard provides different views of network flows so that you can
 |---|---|---|---|
 | **Top IP Flows in 1 hour** | Ranks the top IP flows by the amount of data transferred during the selected period. | **Which individual connections are transferring the most data?** | Use it when you know that a lot of traffic is being generated but need to identify the specific connections responsible for it. |
 | **Top IP Flows out of your network in the past 1 Hr** | Ranks IP flows that are sending the largest amounts of data from your home network to external destinations. | **Which connections are sending the most data out of my network?** | Use it when you notice high outbound traffic and want to identify the internal systems and external destinations involved. |
-| **Top Long Lived flows in past 1 Hr** | Shows the IP flows that have remained active for the longest duration during the selected period. | **Which connections have stayed active for the longest time?** | Use it when you are interested in long-running connections rather than simply the amount of data transferred. A long-lived connection may transfer relatively little data but can still be important to investigate. |
+| **Top Long Lived flows in past 1 Hr** | Shows the IP flows that have remained active for the longest duration during the selected period. | **Which connections have stayed active for the longest time?** | Use it when you are interested in long-running connections rather than only the amount of data transferred. A long-lived connection may transfer relatively little data but can still be important to investigate. |
 | **Top flows into your network in the past 1 Hr** | Ranks IP flows that are bringing the largest amounts of data from external destinations into your home network. | **Which connections are bringing the most data into my network?** | Use it when you notice unusually high inbound traffic and want to identify the external systems and internal hosts involved. |
 | **Top TCP Flows Uploading data based on TCP Payloads** | Ranks TCP flows by the amount of **actual TCP payload data** transferred from your network to external destinations. | **Which TCP connections are transferring the most actual data out of my network?** | Use it when you specifically want to focus on the application data carried by TCP rather than the total traffic associated with the connection. |
 | **Top TCP flows Downloading data based on TCP Payloads** | Ranks TCP flows by the amount of **actual TCP payload data** transferred from external destinations into your network. | **Which TCP connections are transferring the most actual data into my network?** | Use it when you specifically want to identify the TCP connections responsible for the largest inbound payload transfers. |
@@ -474,7 +472,7 @@ Use Top Long Lived flows to find long-running connections.
 5) **You specifically want to examine actual data transferred through TCP.**  
 Use the TCP Payload views to focus on TCP payload rather than the broader flow traffic.
 
-The goal is not simply to find whichever flow appears at the top of a list. The Sessions dashboard gives you a starting point for understanding which systems are communicating, how much data they are transferring, which direction the traffic is moving, and whether the activity is expected.
+The goal is not only to find whichever flow appears at the top of a list. The Sessions dashboard gives you a starting point for understanding which systems are communicating, how much data they are transferring, which direction the traffic is moving, and whether the activity is expected.
 
 ---
 
@@ -486,11 +484,11 @@ The goal is not simply to find whichever flow appears at the top of a list. The 
 
 :::
 
-A real time visualization of IDS alert activity. Note this is true realtime using WebSockets PUSH. The dashboard is described in detail in [IDS Alert Stabber](/docs/guide/ug/alerts/ids_stabber). The **Real Time Traffic** dashboard provides a live view of network activity on the selected Probe.
+A real time visualization of IDS alert activity. Alerts are pushed to the browser over WebSockets as they arrive. For details, see [IDS Alert Stabber](/docs/guide/ug/alerts/ids_stabber).
 
-Unlike dashboards that help you examine traffic over longer time periods, this dashboard is useful when you want to see **what is happening on the network right now**. It shows the current bandwidth rate and the internal hosts and applications contributing to that activity.
-
-### Understanding the terms used in this dashboard
+:::note Applies to
+This dashboard shows data only when Trisul receives alerts from an IDS such as Snort or Suricata.
+:::
 
 ### Understanding the terms used in this dashboard
 
@@ -511,8 +509,6 @@ Before looking at the modules, it is useful to understand the terms used through
 - **[Real Time Stabber](/docs/guide/learntrisul/terminology#stabber)** is a Trisul feature that allows events to be pushed directly from the Trisul Probe to the browser in real time.
 
 :::
-
-Real Time Stabbers are a Trisul feature that allow the Trisul Probe network to directly push events on to the browser.
 
 | Module                                   | Description                                                      |
 | ---------------------------------------- | ---------------------------------------------------------------- |
@@ -692,12 +688,12 @@ Instead of looking through individual alert records, this dashboard gives you a 
 
 Use the dashboard to answer questions such as:
 
-Are there any recent security or traffic alerts?
-What caused an alert to be triggered?
-Which host, flow, or application was involved?
-Are there active threshold or flow activity alerts?
-Are there IDS alerts from the intrusion detection system?
-Are there blacklist-related alerts?
+- Are there any recent security or traffic alerts?
+- What caused an alert to be triggered?
+- Which host, flow, or application was involved?
+- Are there active threshold or flow activity alerts?
+- Are there IDS alerts from the intrusion detection system?
+- Are there blacklist-related alerts?
 
 ### Understanding the terms used in this dashboard
 
@@ -745,17 +741,16 @@ Each alert provides information that helps you understand what triggered the ale
 **Profile**: The alert profile that generated it                   
 **Probe**: The Probe where the activity was observed                 
 **Target**: The target associated with the alert                   
-Observed value: The value that crossed the configured threshold
+**Observed value**: The value that crossed the configured threshold
 
-For example, the screenshot shows a US Traffic Alert with a HIGH priority and an observed traffic rate above its configured limits.
-
-What do Fired and Cleared mean?
+**What do Fired and Cleared mean?**
 Fired means the condition that triggered the alert has been detected.
+
 Cleared means the condition is no longer active.
 
 This distinction helps you tell the difference between an alert that is currently active and one that was triggered earlier but has since returned to normal.
 
-When would I use it?
+**When would I use it?**
 
 Use this module when you want to quickly identify threshold-based conditions that have become significant and determine whether they are still active.
 
@@ -775,15 +770,15 @@ Each entry shows information such as:
 - The Probe where it was detected  
 - The endpoints involved in the flow  
 
-The screenshot also provides Flow Details links for individual entries. These allow you to move from the alert to the underlying flow information.
+Entries can include **Flow Details** links, which take you from the alert to the underlying flow information.
 
-When would I use it?
+**When would I use it?**
 
 Use this module when you see an alert indicating unusually high flow activity and want to determine:
 
-Which endpoints were communicating
-How much traffic was involved
-Which specific flow triggered the alert
+- Which endpoints were communicating
+- How much traffic was involved
+- Which specific flow triggered the alert
 
 This makes Flow Activity Alerts useful as a starting point for investigating large or unusual network transfers.
 
@@ -795,9 +790,9 @@ This makes Flow Activity Alerts useful as a starting point for investigating lar
 
 This module displays recent IDS alerts from the configured intrusion detection system, such as Snort or Suricata.
 
-The screenshot shows the module displaying "No IDS alerts in Trisul" when no IDS alerts are available.
+When no IDS alerts are available, the module shows "No IDS alerts in Trisul".
 
-When would I use it?
+**When would I use it?**
 
 Use this module when you want a quick view of intrusion detection activity without leaving the Alerts dashboard.
 
@@ -818,7 +813,7 @@ The alerts identify information such as:
 - The Probe where it was observed  
 - The endpoints involved  
 
-When would I use it?
+**When would I use it?**
 
 Use this module when you want to quickly check for network activity involving known suspicious, malicious, or blacklisted endpoints.
 

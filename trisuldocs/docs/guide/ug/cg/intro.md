@@ -7,24 +7,24 @@ groups, meters, and keys.
 
 ### Counter Group
 
-CounterGroup is a collection of related counters that measure specific aspects of network traffic. Think of it like a notebook that holds multiple pages (counters) that track different things, like a student's grades in different subjects. 
+A **counter group** is a category of things Trisul measures, such as Hosts, Applications, MACs, Subnets or VLANs. Think of each counter group as a notebook:
 
-- **CounterGroup** (notebook) = "Network Traffic Monitoring""
+- **Counter group** (the notebook) = for example, Hosts
+- **Key** (a page in the notebook) = one item in the group, for example the host 10.10.255.7
+- **Meter** (a line on the page) = one measurement for that item, for example transmit bytes
 
-- **Counters** (pages) = individual metrics such as: Hosts, MACs, Applications, Subnets, VLANs.
-
-There are a number of [Built-in counter groups](/docs/guide/ug/cg/intro#types) that ship with Trisul. You can also create your own [custom counter groups](custom). Trisul measures 12+ counter groups that contain multiple counters to track various aspects of network traffic.
+There are a number of [Built-in counter groups](/docs/guide/ug/cg/intro#types) that ship with Trisul. You can also create your own [custom counter groups](/docs/guide/ag/context/custom_countergroup). Trisul measures 12+ counter groups that contain multiple counters to track various aspects of network traffic.
 
 ### A Meter  
 
-A Meter is the measurement of a single counter that measures a specific aspect of network traffic, such as upload bytes, number of packets, or number of connections. Meter is like the actual grade (value) written on the math subject, like 85%.
+A Meter is the measurement of a single counter that measures a specific aspect of network traffic, such as upload bytes, number of packets, or number of connections. In the notebook analogy, a meter is one line on a page, such as the transmit bytes for one host.
 
 Trisul collects info about Total Bytes, Packets, Receive, Transmit, Number of 
 active connections, Alerts and 10 other items. Each of these is called a
-meter. So the *Host* counter group tracks 12 meters.
+meter. The Hosts counter group tracks 13 meters (stat IDs 0–12, listed below).
 
 ### A Key  
-A Key is a unique identifier that labels a specific counter within a CounterGroup. Think of it like a header on a pageheader of a specific page (counter) in the notebook that tracks one particular subject, like Math.
+A Key is a unique identifier for one item within a counter group. In the notebook analogy, it is one page.
 
 For example, within the Host counters group, the IP Address `10.10.255.7` is a key. A
 counter group can have millions of keys.
@@ -51,8 +51,8 @@ The entities of interest are
 | Entity        | Description                 | Example as in diagram                                           |
 | ------------- | --------------------------- | --------------------------------------------------------------- |
 | Counter Group | The Hosts counter group     | `{4CD742B1-xxx}` identifies the *host* counter group.           |
-| Key           | The individual host within the counter group, also known as a Key | C0.A8.01.02 identifies the host with IP 192.168.1.8                                                                                        |
-| Meter         | The statistic               | 2 identifies Transmit Bytes in Bytes/Sec. The hosts counter group tracks about 12 different meters                                                                                |
+| Key           | The individual host within the counter group, also known as a Key | C0.A8.01.02 identifies the host with IP 192.168.1.2                                                                                        |
+| Meter         | The statistic               | 2 identifies Transmit Bytes in Bytes/Sec. The Hosts counter group tracks 13 meters                                                                                |
 
 ## Statistics Tracked for Each Group
 
@@ -78,7 +78,7 @@ For each Key (counter group item), Trisul tracks and stores :
 | 2       | Transmit                                                  | Bps     | 10              |
 | 3       | Packets                                                   | pps     | 0               |
 | 4       | Active TCP Conns                                          | conns   | 0               |
-| 5       | Attacker alerts \_ alerts originating from this host\_    | count   | 10              |
+| 5       | Attacker alerts *alerts originating from this host*    | count   | 10              |
 | 6       | Homenet *Total traffic for hosts is in home network*      | Bps     | 20              |
 | 7       | External *Total traffic for hosts is not in home network* | Bps     | 20              |
 | 8       | TCP SYN sent                                              | packets | 10              |
@@ -145,5 +145,5 @@ Trisul software.
 You can build upon the primitive counter groups to create advanced
 custom counters for your business needs. 
 
-> Combine Hosts and Applications to create a counter group that just
+> Combine Hosts and Applications to create a counter group that only
 > counts *Hosts talking HTTP protocol*.

@@ -1,23 +1,25 @@
 # Welcome to the Trisul User Guide
 
-This User Guide is an operational guide that includes topics related to installing, administering, and using the web interface to navigate, view reports, set alerts, and monitoring your network.
+This User Guide covers day-to-day use of the web interface: navigating dashboards, monitoring traffic, analyzing flows and packet captures, setting alerts, and running reports. To install Trisul, start with the [Quickstart](/docs/guide/starthere/quickstart). For server administration, see the [Admin Guide](/docs/guide/ag/).
 
 :::tip[System requirements, getting started ]
-If you are new to Trisul, follow this documentation path [*System Requirements*](/docs/guide/starthere/setuptrisul/install/requirements)  &rarr; [*Installation*](/docs/guide/starthere/setuptrisul/install/doinstall) &rarr;  [*Basic Usage*](/docs/guide/ag/basictasks/) . 
+If you are new to Trisul, follow this documentation path [*System Requirements*](/docs/guide/starthere/setuptrisul/install/requirements)  &rarr; [*Installation*](/docs/guide/starthere/setuptrisul/install/doinstall) &rarr;  [*Basic Tasks*](/docs/guide/ag/basictasks/) . 
 :::
 
 ## How to Use This Guide
 
 Trisul Network Analytics is a common platform upon which the following applications are built.
 - Trisul NetFlow Analyzer
-- Trisul Network Security Monitoring 
-- Trisul IPDR
+- Trisul NSM
+- Trisul IPDR DoT Compliance Solution
 - Trisul ISP Analytics 
 
 These applications use the same Admin and User components, this User Guide covers those common parts.   
 
 >For application specific documentations you may also want to read the 
-- [:memo: Trisul IPDR Guide](/docs/prodguide/ipdr)
+- [:memo: Trisul NetFlow Analyzer Guide](/docs/prodguide/nf)
+- [:memo: Trisul NSM Guide](/docs/prodguide/nsm)
+- [:memo: Trisul IPDR DoT Compliance Solution Guide](/docs/prodguide/ipdr)
 - [:memo: Trisul ISP Analytics Guide](/docs/prodguide/isp)
 
 

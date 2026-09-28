@@ -37,7 +37,7 @@ Select *Retro* from menu
 
 Now you can apply various [Retro Analysis Tools](/docs/guide/ug/cg/retrotools) to investigate
 
-### I want to see details of a particular IP, but it isnt showing up anywhere for me to click ?
+### I want to see details of a particular IP, but it isn't showing up anywhere for me to click? {#i-want-to-see-details-of-a-particular-ip-but-it-isnt-showing-up-anywhere-for-me-to-click-}
 
 1. [Use the search box](/docs/guide/ug/ui/elements#using-search-tool)
 2. Click on the *key* to go to the key dashboard

@@ -38,7 +38,7 @@ Once you have landed on the *Flow Trackers* page as shown in the sample, you can
 
 ## Manage Flow Trackers
 
-To **Manage***Flow Trackers*,
+To **Manage** *Flow Trackers*,
 
 :::info navigation
 :point_right: Go to Tools&rarr;Flow Tracker&rarr;Manage Flow Trackers
@@ -66,7 +66,7 @@ The following sample flow trackers are available.
 | Low Volume  	  | Connections with minimal data transfer|
 | Payload Xfer Out| Highest volume of TCP Payload data transferred **out of** your network. Does not include TCP handshake packets|
 | Payload Xfer In | Highest volume of TCP Payload data transferred **into** your home network. Does not include TCP handshake packets|
-| Non HTTP/S | Sample tracker shows you how to match flows that dont match certain tuples | 
+| Non HTTP/S | Sample tracker shows you how to match flows that don't match certain tuples | 
 
 
 ### Options 
@@ -95,7 +95,7 @@ Deleting a flow tracker will not delete from the historical database flows that 
 
 ## Create Flow Trackers
 
-Creating a flow tracker consists of specifiying a **Criteria** for selecting flows.
+Creating a flow tracker consists of specifying a **Criteria** for selecting flows.
 
 
 To **Create** a new *Flow Tracker*,
@@ -202,7 +202,7 @@ How many Top-K flow matches should be tracked in one streaming window.  Default 
 ## Advanced Topics
 
 :::tip Advanced LUA API
-If you want to specify a complex criteria that isnt covered by the standard flow trackers, you can write small LUA scripts using the [LUA Flow Tracker API](/docs/lua/flow_tracker)
+If you want to specify a complex criteria that isn't covered by the standard flow trackers, you can write small LUA scripts using the [LUA Flow Tracker API](/docs/lua/flow_tracker)
 :::
 
 

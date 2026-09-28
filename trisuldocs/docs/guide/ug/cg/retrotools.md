@@ -33,7 +33,7 @@ You have to pick one of the following tools shown.
 
 ## Network FAQ
 
-Network FAQ is a tool that allows you to save and easily access frequently performed network analyses. You can access the dashboards in a click to monitor, understand your network traffic, hosts, and alerts.
+Network FAQ is a tool that allows you to save and access frequently performed network analyses. You can access the dashboards in a click to monitor, understand your network traffic, hosts, and alerts.
 
 To view Network FAQ,
 
@@ -157,13 +157,13 @@ The available selections in the drop down list *View IDS Alerts By* are:
 > From any of the alert analysis you have drilldown options to flows and
 > raw packets
 
-| View IDS ALerts by | Description                                 |
+| View IDS Alerts by | Description                                 |
 | ------------------ | ------------------------------------------- |
 | Alert types        | Show aggregated alerts grouped by signature |
 | Top attackers      | Top source IPs which originated the alerts  |
 | Top victims        | Top destinations IPs                        |
 | By Priority        | Alerts grouped by priority                  |
-| By Classificiation | Alerts grouped by classification            |
+| By Classification  | Alerts grouped by classification            |
 | All alerts         | Individual alerts received                  |
 
 ## Flow Trackers
@@ -190,7 +190,7 @@ Some of the built in trackers are :
 | Transferred Out | Flows which transferred maximum data **out** of your Home Network (Uploading)          |
 | Transferred In  | Flows which transferred maximum data **into** your Home Network (Downloading)          |
 | Local Traffic   | Top flows internal to your Home network                                                |
-| Suspicious      | Flows that fired a blacklist based even, either by IP, requesting a domain name, or by requesting a URL                                                                                           |
+| Suspicious      | Flows that fired a blacklist-based event, either by IP, requesting a domain name, or by requesting a URL                                                                                           |
 | FilterFailed    | Flows that don’t use any of the well known ports                                       |
 
 ## Explore Flows
@@ -223,7 +223,7 @@ To view Traffic charts,
 
 :::
 
-For example : You can just type **smtp** in the box and view all
+For example: type **smtp** in the box and view all
 statistics for the requested application in charts and tables. You can
 then save them as PDF if you wish.
 
@@ -232,7 +232,7 @@ then save them as PDF if you wish.
 *Figure: Show Traffic Chart Retro Tool*
 
 ## Pull Packets
-<span class="badge badge--primary">PCAP Mode Only</span>
+<span class="badge badge--primary">Packet capture mode only</span>
 
 Pull up a sample of raw packets for the selected time interval and
 additional criteria.
@@ -250,17 +250,18 @@ To view Pull Packets,
 
 There are some caps on this feature to prevent accidental misuse.
 
-1. By default only 5MB of raw data is retrieved
-2. By default only 1800s (30minutes) of interval can be analyzed
+1. By default, at most 100 MB of raw data is retrieved.
+2. By default, at most 21600 seconds (6 hours) of interval can be analyzed.
 
-If you wish to change these settings, go to [App Settings](/docs/guide/ag/webadmin/web_options) and change the *Deep
-Packet Inspection Limit* and *Deep Packet Inspection Content Limit*.
+<!-- TODO(verify): defaults taken from ag/webadmin/web_options.md "Packet Inspection" -->
+
+To change these limits, go to [App Settings](/docs/guide/ag/webadmin/web_options) → **Packet Inspection** and change **Deep Packet Inspection time limit** and **Deep packet inspection size limit**.
 Please be aware that in busy network analyzing packets can take time to
 complete.
 
 **Using the tool**
 
-You have two ways to use this tool to pull up raw packets.
+You have three ways to use this tool to pull up raw packets.
 
 1. **Packets for an item** &rarr;Select a counter group and key.  
    Counter group = `Country` and key = `JA` will get packets from

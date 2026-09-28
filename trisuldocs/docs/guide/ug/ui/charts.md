@@ -69,7 +69,7 @@ Below you can find the *Chart Interaction Control* icons explained from right to
 
 - **Live SNMP**- To view the Live data i.e., until the latest one minute click Live SNMP icon and it gets refreshed every 10 seconds. This icon is not available on all modules rather on relevant ones.
 
-- **Menu**- Click on the three lines icon and select from the list of download options SVG, PNG and CSV to donwload in that particular format
+- **Menu**- Click on the three lines icon and select from the list of download options SVG, PNG and CSV to download in that particular format
 
 - **Home**- Click on the home icon to reset zoom.
 
@@ -161,7 +161,7 @@ The time-based tabs include:
 By selecting a Retro Tab, users can effortlessly switch between different time-based views of their data, and visualize how their data changes and evolves over time.
 
 ### PCAP Availability 
-<span class="badge badge--primary">PCAP Mode Only</span>
+<span class="badge badge--primary">Packet capture mode only</span>
 
 The chart features a visual indicator to denote the availability of PCAP (Packet Capture) data during specific time periods. This indicator is displayed as a light yellow color overlay on the chart, highlighting the time ranges where PCAP data is available.
 

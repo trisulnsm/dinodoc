@@ -4,7 +4,7 @@ sidebar_position: 10
 
 # Key Dashboard
 
-The Key Dashboard is like a hub that allows you to dive deeper into a specific Key's data and explore related analysis paths. It's a powerful tool for investigating and understanding network traffic in Trisul. Clicking on any key in a dashboard will take you to the Key Dashboard of that particular key.
+The Key Dashboard is like a hub that allows you to dive deeper into a specific Key's data and explore related analysis paths. Clicking on any key in a dashboard will take you to the Key Dashboard of that particular key.
 
 A quick recap of the hierarchy and terminology first:
 
@@ -39,9 +39,9 @@ Note that you can also click on PIE and BUBBLE chart items.
 
 Type in a search item and click on search results
 
-The search method is very useful if you want to see details of something
+Use search when you want to see details of something
 that is not visible on any of the screens shown by Trisul. For example :
-You want to search for a host `mail.trisul.org` but it isnt showing up
+You want to search for a host `mail.trisul.org` but it isn't showing up
 on any lists for you to click on.
 
 ### Using the Key Dashboard
@@ -62,7 +62,7 @@ description of each of these modules. They are mostly self explanatory.
 | 5)Daily Report                                          | Click on a calendar day to get a PDF report with detailed usage |
 | TCA Details                                             | Shows recent threshold crossing alerts, if any  |
 
-1) ## Traffic History
+## Traffic History
 
 With Traffic History module you can view the amount of data total, transmitted or received over a specific period for that particular Key. The most recent one hour traffic history can be drilled down in more detail over different time points.
 
@@ -70,9 +70,9 @@ With Traffic History module you can view the amount of data total, transmitted o
 
 *Figure: Traffic History Module in Key Dashboard*
 
-2) ## Key Details
+## Key Details
 
-Lets pay special attention to the **Key Details** module. This is the
+Pay special attention to the **Key Details** module. This is the
 jumping point where you have access to various drilldown tools related
 to the key.
 
@@ -88,7 +88,7 @@ This module is split into two panels.
 
 The information on the left includes,
 
-1) Represents: Represensts the IP address
+1) Represents: The IP address
 
 2) Counter Group: Information on which counter group of the key
 
@@ -140,26 +140,26 @@ The most common ones are described below.
 #In /22 → Find active 22 subnet keys in past traffic  
 #In /16 → Find active 16 subnet keys in past traffic
 
-3) ## A La Carte Statistics
+## A La Carte Statistics
 
 ![](images/alacartestatistics.png)
 
 *Figure: A La Carte Statistics in Key Dashboard*
 
-With A La Carte Statistics you can select specific statistical metrics, select a time frame, and a chart surface you prefer and click Draw chat. This displays a personalized view on your dashboard. 
+With A La Carte Statistics you can select specific statistical metrics, select a time frame, and a chart surface you prefer and click **Draw Chart**. <!-- TODO(verify): exact button label --> This displays a personalized view on your dashboard. 
 
-4) ## Flow Activity
-   
-   ![](images/flowactivity.png)
-   
-   *Figure: Recent Flow Activity in Key Dashboard*
-   
-   With Flow Activity you can gain insights into network traffic details like Protocol, Source IP, Source Port, Destination IP, Destination Port, Volume, Start time, Duration, Probe, Tags, Packet Capture available for that item and Flow State. Each Flow can be further filtered using the three lines option button against each flow.
+## Flow Activity
 
-5) ### Daily Report
-   
-   ![](images/dailyreport.png)
-   
-   *Figure: Daily Report Module in Key Dashboard*
-   
-   You can click on any date on the daily report module and get the traffic report for that date in PDF format.
+![](images/flowactivity.png)
+
+*Figure: Recent Flow Activity in Key Dashboard*
+
+With Flow Activity you can gain insights into network traffic details like Protocol, Source IP, Source Port, Destination IP, Destination Port, Volume, Start time, Duration, Probe, Tags, Packet Capture available for that item and Flow State. Each Flow can be further filtered using the three lines option button against each flow.
+
+## Daily Report
+
+![](images/dailyreport.png)
+
+*Figure: Daily Report Module in Key Dashboard*
+
+You can click on any date on the daily report module and get the traffic report for that date in PDF format.

@@ -4,7 +4,7 @@ You can assign a user friendly name for any type of item.
 
 ## Manually Assign a Name
 
-Name Resolution for *keys* can be done in three ways
+You can assign names to *keys* in four ways:
 1) [From the Key Dashboard](/docs/guide/ug/cg/resolve#from-the-key-dashboard)
 2) [From Top Keys](/docs/guide/ug/cg/resolve#from-top-keys)
 3) [Resolve Names in Bulk using CSV file](/docs/guide/ug/cg/resolve#resolve-keys-in-bulk-from-csv-file)
@@ -86,15 +86,15 @@ And click Update.
 ## Automatic Name Resolution
 
 Trisul comes with a sophisticated way to resolve keys automatically in
-the background. This works magically by only resolving those keys which
+the background. It resolves only those keys which
 are likely to be “interesting”. The process is designed to place as
 little load on your DNS servers as possible.
 
-> Automatic name resolution is disabled by default
+> Automatic name resolution is enabled by default. <!-- TODO(verify): default taken from ref/trisulhubconfig.md ResolveIP Enable=TRUE -->
 
-### How to Enable Automatic Name Resolution
+### Turn Automatic Name Resolution On or Off {#how-to-enable-automatic-name-resolution}
 
-By default in hub config the "resolve ip"" is set to true which automatically resolves IP addresses. You can disable by configuring it in the [hubconfig](/docs/guide/ref/trisulhubconfig#resolveip).
+Automatic resolution is controlled by the `Enable` parameter in the [ResolveIP section of the hub configuration file](/docs/guide/ref/trisulhubconfig#resolveip). To turn it off, set `Enable` to `FALSE`.
 
 ## Export Labels to CSV file
 

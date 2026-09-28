@@ -2,14 +2,14 @@
 
 Retro FAQs are complex network analysis like analysing network traffic, flows, and alerts rendered in plain English as a question for easy access.
 
-> Powerful network analysis presented in a “Stack Overflow” style
+> Network analysis presented in a “Stack Overflow” style
 > **tagged Q & A** format.
 
 If you deal with networks on a daily basis you are bound to perform a
 particular analysis repeatedly. You can certainly use one of the [Retro
-Tools](retrotools) to accomplish your task but for certain cases that can get repetitive and tiring.
+Tools](/docs/guide/ug/cg/retrotools) to accomplish your task but for certain cases that can get repetitive and tiring.
 
-Retro FAQs are like handy answers (dashboards) for your repetitive questions (analysis) where you can just do the analysis in one click from the list of already saved questions.
+Retro FAQs are like handy answers (dashboards) for your repetitive questions (analysis) where you run the analysis in one click from the list of already saved questions.
 
 For example, you may start by selecting a time interval and want to find
 out the following as a matter of routine.
@@ -30,7 +30,7 @@ Typically you would select an appropriate Retro Tool, type in the information yo
 
 - You can tag related questions together by using #tag  
 
-- Simply select a time interval and click on a question  
+- Select a time interval and click a question  
 
 - Dynamically adjusting Q & A list will bubble up frequently accessed
   questions to the top
@@ -55,7 +55,7 @@ Here is how you use the UI.
 Drag and select a time interval of interest to zoom or pan the detailed view. You can also custom select time range using [*Time Selector*](/docs/guide/ug/ui/elements#time-selector).
 
 ***Network FAQ***  
-Simply click on a question to run the corresponding analysis for the
+Click a question to run the corresponding analysis for the
 interval selected.
 
 Click on *more* if you want to load extra questions. Note that
@@ -101,7 +101,7 @@ You can edit, retag, or delete existing questions if you wish.
 
 :::
 
-This will show a list of already available retro questions that can be managed easily.
+This will show a list of already available retro questions that you can manage.
 
 ![](images/faqlist.png)
 

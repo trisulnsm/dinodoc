@@ -10,7 +10,7 @@ You would want to use custom key monitors if :
 
 - You want near real time views  
 
-- You want to generate custom reports of just these items
+- You want to generate custom reports of only these items
 
 So, this feature is especially useful in high-scale environments where you may have thousands of entities (like IPs, interfaces, or applications) but only a handful need close, focused attention.
 
@@ -20,7 +20,7 @@ Custom key monitors can be configured in two ways:
 
 | Method |	Description |
 |--------|--------------|
-| Regex-based |	Ideal for **dynamic keys** that follow a naming pattern. Simply provide a regular expression, and **all keys matching the pattern** will be included automatically. |
+| Regex-based |	Ideal for **dynamic keys** that follow a naming pattern. Provide a regular expression, and **all keys matching the pattern** will be included automatically. |
 | Static keys |	Best for **known, fixed keys**. You manually select and add each key you want to monitor. Only those keys will be included in the monitor list. |
 
 Use **regex-based** monitors when your key names follow a convention or when new keys are expected to appear frequently. Use **static** key monitors when you have a specific, stable list of key items you want to keep under watch.
@@ -81,7 +81,7 @@ The page show a list of created custom key monitors with the following details:
 
 *Figure: Action Button Options*
 
-The following are the **Action Button Options** explained in detail. For your convenience, click on an option on the right hand side of the documentation to quickly jump to that option without having to scroll through the page .
+The following are the **Action Button Options** explained in detail.
 
 
 ### View Dashboard
@@ -132,7 +132,7 @@ Clicking on the **Add/Edit Keys** from the action button options allows you to m
 
 *Figure: Create Custom Key Monitor Form* 
 
-This shows a page with the field **Keys** (as in the sample form above) to add or edit keys, user can type in the application keys which are to be traced (For Example: p-0050, p–0016) and click **Add Keys** button and add as many keys as you want.
+This shows a page with the field **Keys** (as in the sample form above) to add or edit keys, user can type in the application keys which are to be traced (For Example: p-0050, p-0016) and click **Add Keys** button and add as many keys as you want.
 
 Click on the **Plus button** to filter keys using the search tool.
 

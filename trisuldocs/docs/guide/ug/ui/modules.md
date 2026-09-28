@@ -4,13 +4,13 @@ sidebar_position: 5
 
 # Modules
 
-In the ["Introduction to Dashboards and Modules"](/docs/guide/ug/ui/dashmod_intro) section, we’ve already covered what modules are, types of modules, and how to view one.
+In [Introduction to Dashboards and Modules](/docs/guide/ug/ui/dashmod_intro), you learned what modules are and how to view them.
 
 Trisul has an extensive module library including prebuilt modules that has out of the box functionality that you can leverage without needing to develop custom components.
 
 You can also create your own modules using pre existing [module templates](/docs/guide/ug/ui/module_templates). Trisul has 40 different types of modules.
 
-## What You Can Do with Dashboards
+## What You Can Do with Modules {#what-you-can-do-with-dashboards}
 
 This section shows you all the ways you can use and customize modules in Trisul. You’ll learn how to **create modules, add a module to the new/existing dashboard, edit/delete/clone a module from the dashboard, and you can also create modules with arithmetic expressions**.
 
@@ -50,9 +50,9 @@ You can see the list of modules that you can add to the new dashboard here.
 
 Similarly, to add modules to an **existing** dashboard, customize the dashboard using ["How to edit a dashboard"](/docs/guide/ug/ui/create_dashboards#how-to-edit-a-dashboard) section and follow the same steps as adding a module to **new** dashboard.
 
-Alternatively you can also navigate from the list of **all dashboards** using [method 2](/docs/guide/ug/ui/create_dashboards#view-dashboards), click on the **hamburger icon** against the dashboard you would like to add the module to and click **Customize**. 
+Alternatively, open the list of all dashboards (see [View Dashboards](/docs/guide/ug/ui/create_dashboards#view-dashboards)), click the **hamburger icon** against the dashboard you want to add the module to, and click **Customize**. 
 
-The **module positions** can also be rearranged in the layout view field in [dashboard customization](/docs/guide/ug/ui/create_dashboards#how-to-edit-a-dashboard) window. You can rearrange by simply **clicking and dragging** the modules to the desired place.
+The **module positions** can also be rearranged in the layout view field in [dashboard customization](/docs/guide/ug/ui/create_dashboards#how-to-edit-a-dashboard) window. Rearrange them by **clicking and dragging** the modules to the desired place.
 
 ## How to Edit a Module
 
@@ -91,7 +91,7 @@ You can also create modules with the help of arithmetic
 expressions. You can combine different metrics together and show in a 
 module.
 
-Generally Models are numbered as 1,2,3,etc. Supported operators are `+,_,*,%,/,()`
+Metrics are numbered 1, 2, 3 and so on. Supported operators are `+`, `-`, `*`, `%`, `/` and `()`.
 
 For eg. Add two Metrics, You have to enter arithmetic expression as 
 (1+2),(3-4) or Metric 1 as a percentage of 2 and 3 as 1%(2+3)
