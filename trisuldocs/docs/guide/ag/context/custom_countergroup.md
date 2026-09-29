@@ -17,14 +17,14 @@ HTTPS traffic. The parent group is “Hosts” and the filter is “Apps
 **Meter groups of keys rather than individual keys from a host group**
 
 Example : A new counter group called *My apps* which extends the *Apps*
-counter group. Then specificy groups of ports {4569,5060,3000-4000} as
+counter group. Then specify groups of ports {4569,5060,3000-4000} as
 VoIP, as Web,  as Email. These groups are called
 keysets. Similarly you can count groups of IPs as Web Servers,
 Workstations, VOIP Phones by specifying those groups from the Hosts
 counter group.
 
 [Stat Based Counter Group](/docs/guide/ag/context/statbased_countergroups)  
-**Count only keys that whose values match a mathematical value**
+**Count only keys whose values meet a numeric condition**
 
 Example : A new counter group called *Scanners*, which extends the
 *Hosts* counter group but only when the meter *Security Alerts* is more

@@ -11,7 +11,7 @@ Run these commands as root or sudo
 
 Open the `/usr/local/share/webtrisul/build/nginx.conf` file as shown
 
-```bash {2,2}
+```nginx {2}
   server {
     listen 3000;
     server_name localhost;
@@ -25,7 +25,7 @@ Change the 3000 to your new port
 
 
 :::note navigation
-:point_right:  Login as admin and go to Webadmin: Manage &rarr; App Settings &rarr; Web Server
+:point_right: Log in as `admin` and go to Web Admin &rarr; Manage &rarr; App Settings &rarr; Web Server
 :::
 
 
@@ -33,12 +33,12 @@ Set the Web Server Port to  your new port.
 
 
 
-## Step 3: Restart Webtrisul
+## Step 3: Restart WebTrisul
 
 ```bash 
 systemctl restart webtrisuld
 ```
 
 :::tip also see 
-[How to use SSL/HTTPS for the Web Server](sslforwebtr)
+[How to use SSL/HTTPS for the Web Server](/docs/guide/howto/sslforwebtr)
 :::

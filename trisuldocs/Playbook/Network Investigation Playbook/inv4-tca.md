@@ -1,5 +1,9 @@
 # Investigate Threshold Crossing Alerts
 
+:::note Applies to
+All modes. Step 5 (packet analysis) needs packet capture.
+:::
+
 ## Investigation Overview
 
 Sudden increases in bandwidth utilisation, connection rates, flow counts, or other network metrics are often the earliest indicators that something within the network has changed. These changes may be caused by legitimate operational activities such as backups, software deployments, or increased business demand, but they can also indicate application issues, misconfigurations, resource exhaustion, or emerging security events.
@@ -42,6 +46,10 @@ By completing this investigation, you should be able to:
 Every threshold investigation begins by understanding exactly what triggered the alert. Before investigating hosts, interfaces, or applications, establish which metric exceeded its configured threshold, when the event occurred, and which monitored object generated the alert.
 
 Open [**Threshold Crossing Alerts**](/docs/guide/ug/alerts/tca) and select the triggered alert.
+
+:::note Prerequisite
+This investigation needs at least one configured TCA. See [Create a new TCA](/docs/guide/ug/alerts/tca#create-a-new-tca).
+:::
 
 Use the alert details to answer questions such as:
 
@@ -92,8 +100,6 @@ Once the significance of the threshold crossing has been established, identify t
 ---
 
 ### Step 3: Investigate the Observed Activity
-
-#### Purpose
 
 Continue the investigation in [**Explore Flows**](/docs/guide/ug/tools/explore_flows) using the monitored entity and time period identified by the threshold alert. Investigate the communication activity responsible for the threshold crossing without assuming the cause in advance.
 
@@ -174,6 +180,8 @@ This step helps answer questions such as:
 #### Continue the Investigation
 
 If packet capture is available, continue with Packet Analysis to validate the observed network behaviour.
+
+---
 
 ### Step 5: Validate with Packet Analysis
 

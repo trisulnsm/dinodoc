@@ -15,14 +15,14 @@ The basic method is the following
 3. You can add any number of these feeds
 
 **Advanced** : If you want to have maximum control of the Intel
-framework processing, you can use the [LUA API](/docs/lua) alongside the
+framework processing, you can use the [Lua API](/docs/lua) alongside the
 “IOC Intel Harvestor App”. See [Trisul
 APPS](/docs/guide/ag/webadmin/apps)
 
 ## Pre process your feed into a TAB separated file on the HUB node.
 
 Create a TAB separated file with the following format. Put it in a
-directory that is readable by the Web Trisul user, which is by default
+directory that is readable by the WebTrisul user, which is by default
 `trisul.trisul`. A good place to put this file is the /tmp directory.
 
 `FEED_NAME<TAB>INDICATOR<TAB>Description`
@@ -42,11 +42,11 @@ include
 A sample TSV file named `/tmp/myfeed1.tsv` would look like the
 following.
 
-```language-csv
-# FeedName,indicator,description
+```text
+# FeedName<TAB>Indicator<TAB>Description
 
 MYBADLIST<TAB>masterkey.com.ua<TAB>Malicious host possibly hosting Palevo 
-MYBADLIST<TAB>ms4all.twoplayers.net<TAB>Malicious host possibly hosting Palev
+MYBADLIST<TAB>ms4all.twoplayers.net<TAB>Malicious host possibly hosting Palevo
 MYBADLIST<TAB>94.100.215.170<TAB>Possible scanning 
 MYBADLIST<TAB>http://friends-webcam-fun2.blogspot.com/wechat.php<TAB>Phishing host 
 ```
@@ -66,14 +66,14 @@ and then the Badfellas feed.
 
 The Badfellas feed configuration file is at
 `/usr/local/var/lib/trisul-config/domain0/allcontexts/feeds/feed-2F3CCCA3-38D4-4773-97AB-3ED732F82533/rules.xml`
-The GUID part is scary, but that is the GUID of the Badfellas plugin.
+The GUID in the path is the GUID of the Badfellas plugin.
 
 ### Sections of the Badfellas configuration file
 
 Open the badfellas feed config file
 
 ```bash
-vi /usr/local/var/lib/trisul-config/domain0/allcontexts/feeds/feed-2F3CCCA3-38D4-4773-97AB-3ED732F82533/rules.xml`
+vi /usr/local/var/lib/trisul-config/domain0/allcontexts/feeds/feed-2F3CCCA3-38D4-4773-97AB-3ED732F82533/rules.xml
 ```
 
 Notice the feed config file `rules.xml` consists of *Update* sections.
@@ -103,13 +103,13 @@ connect it to Badfellas in the following way.
 
 <!-- end list -->
 
-```language-xml
+```xml
   ..  locate the Update section at the bottom of the config file 
   .. 
     <Update>
       <Sources>
         <Source>
-         <URL>file:///tmp/myfeed_1.tsv</URL>     <--- add this line only>
+         <URL>file:///tmp/myfeed_1.tsv</URL>     <!-- add this line only -->
           <Target>badfellas-local-0.tsv</Target>
         </Source>
 
@@ -124,20 +124,19 @@ connect it to Badfellas in the following way.
         <RunAt>0200</RunAt>
         <Frequency>3600</Frequency>
       </Run>
-    </Update
+    </Update>
 ```
 
-That is it. Now your feed is integrated into Trisul. The lists will be
+Your feed is now integrated into Trisul. The lists will be
 downloaded and processed automatically every 3600 seconds as per the
 *Run\>Frequency* settings.
 
 ## Downloading from a custom URL
 
 In the previous example, we downloaded the TSV feed from a `file:///`
-local file. You can even download from another server via HTTP. Just
-replace the URL section with something like
+local file. You can even download from another server via HTTP. Replace the URL section with something like
 `<URL>http://mycompany.com/intelfeeds/myfeed_1.tsv</URL>`
 
-### Wait for a while for this to take effect or restart Trisul.
+### When the Change Takes Effect {#wait-for-a-while-for-this-to-take-effect-or-restart-trisul}
 
-Normally Trisul rolls over to a new feed it detects within 30 minutes.
+Normally Trisul rolls over to a new feed it detects within 30 minutes. To apply it sooner, restart Trisul.

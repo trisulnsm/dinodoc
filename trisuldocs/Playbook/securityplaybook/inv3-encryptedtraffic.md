@@ -1,30 +1,38 @@
-# Investigate Encrypted Traffic 
+# Investigate Encrypted Traffic
 
-## Investigation Overview 
+:::note Applies to
+Trisul NSM in packet capture mode. **SSL/TLS Metering** and **DNS Resources** need packet capture. JA3 needs the **JA3 Fingerprints** app.
+:::
 
-Encrypted communication is now the default for most network applications. While encryption protects data in transit, it also limits the visibility available through traditional packet inspection, making it more difficult to determine whether encrypted sessions represent legitimate business activity or malicious behavior. Fortunately, encrypted communications still expose valuable metadata that can reveal how systems communicate without decrypting the payload. TLS versions, Server Name Indication (SNI), certificates, JA3 fingerprints, flow characteristics, and communication patterns provide analysts with the evidence needed to identify suspicious encrypted sessions. Using Trisul Network Security Monitoring, analysts can investigate encrypted communications through TLS metadata, flow analytics, packet evidence, and historical analysis to determine whether the observed activity is expected or requires further investigation.
+## Investigation Overview
+
+Encrypted communication is now the default for most network applications. While encryption protects data in transit, it also limits the visibility available through traditional packet inspection, making it more difficult to determine whether encrypted sessions represent legitimate business activity or malicious behavior. Encrypted communications still expose valuable metadata that can reveal how systems communicate without decrypting the payload. TLS versions, Server Name Indication (SNI), certificates, JA3 fingerprints, flow characteristics, and communication patterns provide analysts with the evidence needed to identify suspicious encrypted sessions. Using Trisul NSM, analysts can investigate encrypted communications through TLS metadata, flow analytics, packet evidence, and historical analysis to determine whether the observed activity is expected or requires further investigation.
 
 ---
 
-## When to Use This Investigation 
+## When to Use This Investigation
 
-Use this investigation when you need to: 
-- Investigate unknown or unexpected encrypted communications. 
-- Validate outbound TLS sessions to unfamiliar destinations. 
-- Analyze unusual JA3 or JA3S fingerprints. 
-- Investigate suspicious certificates or Server Name Indication (SNI) values. 
-- Determine whether encrypted communications represent legitimate business activity or a potential security threat. 
+Use this investigation when you need to:
+- Investigate unknown or unexpected encrypted communications.
+- Validate outbound TLS sessions to unfamiliar destinations.
+- Analyze unusual JA3 or JA3S fingerprints.
+- Investigate suspicious certificates or Server Name Indication (SNI) values.
+- Determine whether encrypted communications represent legitimate business activity or a potential security threat.
 
---- 
+---
 
-## Investigation Objectives 
+## Investigation Objectives
 
-By completing this investigation, you should be able to: - Identify the systems generating encrypted traffic. 
-- Determine the external services involved. 
-- Analyze TLS metadata without decrypting traffic. 
-- Identify suspicious certificates or JA3 fingerprints. 
-- Assess whether encrypted communications align with expected network behavior. 
+By completing this investigation, you should be able to:
+
+- Identify the systems generating encrypted traffic.
+- Determine the external services involved.
+- Analyze TLS metadata without decrypting traffic.
+- Identify suspicious certificates or JA3 fingerprints.
+- Assess whether encrypted communications align with expected network behavior.
 - Determine whether additional investigation is required.
+
+---
 
 ## Investigation Workflow
 
@@ -32,7 +40,7 @@ By completing this investigation, you should be able to: - Identify the systems 
 
 Encrypted traffic investigations begin by identifying TLS sessions that deviate from expected network behaviour. Rather than focusing on the hosts generating the traffic, the investigation starts by examining the metadata exposed during the TLS handshake.
 
-Open [**TLS Metadata**](/docs/guide/ug/cg/ssl/).
+Open [**SSL/TLS Metering**](/docs/guide/ug/cg/ssl) and [**JA3 Fingerprints**](/docs/prodguide/nsm/NBAD/ja3).
 
 Review the available TLS sessions to identify communications that warrant further investigation.
 
@@ -64,7 +72,7 @@ Once a suspicious encrypted session has been identified, determine which interna
 
 After identifying a suspicious TLS session, determine which hosts established the encrypted communication and where the traffic is being directed.
 
-From [**TLS Metadata**](/docs/guide/ug/cg/ssl/), drill down into the associated communication to identify the internal source hosts.
+From [**SSL/TLS Metering**](/docs/guide/ug/cg/ssl), drill down into the associated communication to identify the internal source hosts.
 
 Review the communication details to determine:
 
@@ -132,7 +140,7 @@ After reviewing the encrypted communication, validate the findings using additio
 
 TLS metadata provides valuable visibility into encrypted communications, but it should be correlated with additional evidence before determining whether the activity represents legitimate business traffic or a potential security threat.
 
-Continue the investigation using [**DNS Analysis**](/docs/prodguide/nsm/Resources/dns), [**Packet Analysis**](/docs/prodguide/nsm/Resources/dns#option-button), and **Historical Investigation (Retro)**. Packet captures can validate TLS negotiation, certificates, and protocol behaviour even when the payload remains encrypted.
+Continue the investigation using [**DNS Resources**](/docs/prodguide/nsm/Resources/dns), [**Packet Analysis**](/docs/guide/ug/tools/explore_flows#flow-options), and [**Retro Analysis**](/docs/guide/ug/cg/retro). Packet captures can validate TLS negotiation, certificates, and protocol behaviour even when the payload remains encrypted.
 
 Use this investigation to answer questions such as:
 

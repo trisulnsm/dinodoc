@@ -32,7 +32,7 @@ Then you need to change the Trisul NGINX file as shown below to point to your ne
 Edit this file `/usr/local/share/webtrisul/build/nginxssl.conf`
 
 
-```bash {4,5}
+```nginx {4,5}
 server {
     listen 443;
     ssl                  on;
@@ -47,7 +47,7 @@ server {
 
 
 :::note navigation
-:point_right:  Login as admin and go to Webadmin: Manage &rarr; App Settings &rarr; Web Server
+:point_right: Log in as `admin` and go to Web Admin &rarr; Manage &rarr; App Settings &rarr; Web Server
 :::
 
 

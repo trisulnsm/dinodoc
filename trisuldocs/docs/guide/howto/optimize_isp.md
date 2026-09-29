@@ -1,9 +1,8 @@
-# Optimize for a ISP deployment
+# Optimize for an ISP deployment
 
-Netflow data especially at a service provider can be voluminous. Trisul
+NetFlow data, especially at a service provider, can be voluminous. Trisul
 by default tracks the usage of each IP (internal or external in 30
-second resolution). This could result in an exponential growth of the
-hosts traffic tracking storage.
+second resolution). This can make the hosts traffic storage grow quickly.
 
 We recommend the following policy.
 
@@ -14,9 +13,9 @@ We recommend the following policy.
 
 ## Specify ISP Home Network
 
-Login as Admin -\> Select Context and profile -\> Home Networks
+:point_right: Log in as `admin` and go to Context: default &rarr; profile0 &rarr; Home Networks
 
-Step 1: Click on **Add a network**  
+Step 1: Click on **Add**  
 Step 2: Enter the IP and Subnet mask of the home network  
 Step 3: Repeat for all the IP ranges belonging to the ISP
 
@@ -25,11 +24,11 @@ Step 3: Repeat for all the IP ranges belonging to the ISP
 Next cap the default “Hosts” counter group to only store traffic
 statistics for the top 1000 items.
 
-Login as Admin -\> Select Context and profile -\> Counter Groups
+:point_right: Log in as `admin` and go to Context: default &rarr; profile0 &rarr; Counter Groups
 
 Step 1: You are shown with a counter group list  
 Step 2: Click on Counter Group Name in Counter group list and check the
-**TopperTrafficOnly** and Save  
+**Topper Traffic Only** and Save  
 Step 3: In counter group list click on Hosts “Toppers” link  
 Step 4: Change the topper count from 50 to 1000 for the `Total meter` (item
 0)  

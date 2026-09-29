@@ -1,7 +1,6 @@
 # Keyset Counter Groups
 
-A new counter group that aggregates sets of keys from a host counter
-group. This can be used to group IP addresses , port numbers, network
+A new counter group that aggregates sets of keys from a parent counter group. This can be used to group IP addresses , port numbers, network
 interfaces and then count the aggregate. Some examples are shown below
 
 | New Keyset Counter Group | Host/Parent Group | Key sets                                                     |
@@ -13,8 +12,7 @@ interfaces and then count the aggregate. Some examples are shown below
 
 :::info navigation
 
-:point_right: Login as Admin &rarr; Select Context:default&rarr; profile0 &rarr; Custom Counters
-&rarr; Keysets
+:point_right: Log in as `admin` and go to Context: default &rarr; profile0 &rarr; Custom Counters &rarr; Keysets
 
 :::
 
@@ -40,8 +38,7 @@ Directions to Create new keyset counter groups
 
 :::info navigation
 
-:point_right: Login as Admin &rarr; Select Context :default &rarr; profile0 &rarr;  Custom Counters
-&rarr; Keysets
+:point_right: Log in as `admin` and go to Context: default &rarr; profile0 &rarr; Custom Counters &rarr; Keysets
 
 :::
 

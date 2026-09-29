@@ -21,20 +21,30 @@ To resolve the issue, first, ensure that the user account exists in the system. 
 ### Step 2: Validate Password Entry
 
 Next, verify that the password entered by the user is correct. Ensure that:
-    1. The password is entered correctly, paying attention to case sensitivity and special characters.
-    2. The user has not forgotten their password or is using an outdated password.
+1. The password is entered correctly, paying attention to case sensitivity and special characters.
+2. The user has not forgotten their password or is using an outdated password.
 
 ### Step 3: Confirm Context Assignments
 
-Finally, check if the user has been assigned the necessary contexts to access the system. To do this:
+Next, check if the user has been assigned the necessary contexts to access the system. To do this:
 1. Log in as an administrator.
 
 :::info navigation
 :point_right: Go to Web Admin &rarr; Manage &rarr; Users
 :::
 
-3. Locate the user account.
-4. Click the Action button next to the username and select Edit.
-5. In the user edit page, verify that the Allowed Contexts are correctly assigned to the user.
+2. Locate the user account.
+3. Click the Action button next to the username and select Edit.
+4. In the user edit page, verify that the Allowed Contexts are correctly assigned to the user.
+
+### Step 4: Check the Auth Log
+
+The Auth Log records every login attempt, including failed ones and the reason for each failure.
+
+:::info navigation
+:point_right: Go to Web Admin &rarr; Manage &rarr; Auth Log
+:::
+
+Search for the username and read the **Message** column for the failed attempt. See [Auth Log](/docs/guide/ag/webadmin/authlog).
 
 By following these steps, you should be able to identify and resolve the issue preventing the user from logging in to the system.

@@ -6,7 +6,7 @@ Not all security threats are detected when they first occur. New indicators of c
 
 Unlike alert-driven investigations, historical threat hunting begins with a hypothesis rather than a detection. Analysts search historical network telemetry, validate indicators against past communications, reconstruct attack timelines, and determine whether suspicious activity previously existed within the environment.
 
-Using Trisul Network Security Monitoring, analysts can search historical flows, packet captures, communication metadata, and threat intelligence to identify previously undetected activity and understand the scope of a potential compromise.
+Using Trisul NSM, analysts can search historical flows, packet captures, communication metadata, and threat intelligence to identify previously undetected activity and understand the scope of a potential compromise.
 
 ---
 
@@ -41,7 +41,7 @@ By completing this investigation, you should be able to:
 
 Historical threat hunting begins with a hypothesis rather than an alert. Before searching historical network activity, clearly define the objective of the hunt, the indicators being investigated, and the timeframe to be examined.
 
-Open [**Historical Investigation (Retro)**](/docs/guide/ug/cg/retro).
+Open [**Retro Analysis**](/docs/guide/ug/cg/retro).
 
 Use this investigation to answer questions such as:
 
@@ -71,7 +71,7 @@ Once the hunt has been defined, search historical network activity for evidence 
 
 Search historical network telemetry to determine whether the selected indicators previously appeared within the monitored environment.
 
-Continue using [**Historical Investigation (Retro)**](/docs/guide/ug/cg/retro#selecting-a-time-window).
+Continue using [**Retro Analysis**](/docs/guide/ug/cg/retro#selecting-a-time-window).
 
 Review the historical data to determine:
 
@@ -101,7 +101,7 @@ Once historical matches have been identified, validate the communications using 
 
 Historical matches should be validated using multiple sources of evidence before concluding that malicious activity occurred.
 
-Continue the investigation using [**DNS Analysis**](/docs/prodguide/nsm/Resources/dns), [**TLS Metadata**](/docs/guide/ug/cg/ssl),and [**Security Alerts**](/docs/guide/ug/alerts/mw) and  [**Packet Analysis**](/docs/guide/ug/cg/retrotools#pull-packets) where packet capture is available.
+Continue the investigation using [**DNS Resources**](/docs/prodguide/nsm/Resources/dns), [**SSL/TLS Metering**](/docs/guide/ug/cg/ssl), [**Security Alerts Retro**](/docs/guide/ug/cg/retrotools#security-alerts-retro), [**Malware and Blacklist Alerts**](/docs/guide/ug/alerts/mw), and [**Pull Packets**](/docs/guide/ug/cg/retrotools#pull-packets) where packet capture is available.
 
 Use this investigation to answer questions such as:
 
@@ -122,7 +122,7 @@ Correlating multiple evidence sources helps distinguish genuine malicious activi
 
 #### Continue the Investigation
 
-Once the activity has been validated, determine the scope of the historical network activity .
+Once the activity has been validated, determine the scope of the historical network activity.
 
 ---
 
@@ -158,7 +158,7 @@ Once the scope has been established, reconstruct the sequence of historical even
 
 Historical investigations provide valuable context by reconstructing how suspicious activity evolved over time.
 
-Continue using [**Historical Investigation (Retro)**](/docs/guide/ug/cg/retro).
+Continue using [**Retro Analysis**](/docs/guide/ug/cg/retro).
 
 Use this investigation to answer questions such as:
 

@@ -1,5 +1,9 @@
 # Investigate Historical Network Activity
 
+:::note Applies to
+All modes. Step 5 (packet analysis) needs packet capture.
+:::
+
 ## Investigation Overview
 
 Not every network issue is discovered while it is happening. Performance degradation, security incidents, application outages, and unusual traffic patterns are often identified hours, days, or even weeks after the event has occurred.
@@ -68,7 +72,7 @@ Once the investigation window has been established, compare the incident period 
 
 ### Step 2: Identify Abnormal Network Activity
 
-After selecting the investigation window, review the historical activity using **Retro Analysis**. Zoom into the period where the incident occurred and identify the abnormal behaviour that distinguishes the incident from normal network operation.
+After selecting the investigation window, review the historical activity using [**Retro Analysis**](/docs/guide/ug/cg/retro). Zoom into the period where the incident occurred and identify the abnormal behaviour that distinguishes the incident from normal network operation. Compare it with the same window on a normal day, for example the same hours one week earlier, to establish a baseline.
 
 This step establishes the focus of the investigation before examining individual hosts, interfaces, applications, or conversations.
 
@@ -95,7 +99,7 @@ Once the abnormal activity has been identified, pivot into **Explore Flows** to 
 
 ### Step 3: Investigate the Observed Changes
 
-After identifying the abnormal activity, continue the investigation in **Explore Flows** using the selected historical time window. This allows you to investigate the network activity responsible for the observed changes while remaining focused on the reconstructed incident.
+After identifying the abnormal activity, go to **Retro → Retro tools → Explore Flows** and continue the investigation in [**Explore Flows**](/docs/guide/ug/cg/retrotools#explore-flows) using the selected historical time window. This allows you to investigate the network activity responsible for the observed changes while remaining focused on the reconstructed incident.
 
 This step helps answer questions such as:
 
@@ -119,7 +123,7 @@ Once the contributing network entities have been identified, determine which app
 
 ### Step 4: Analyze Historical Application Activity
 
-Remain within **Explore Flows** and review the **Top Applications** for the selected historical time period.
+Remain within **Explore Flows** and review the [**Top Applications**](/docs/guide/ug/tools/explore_flows#activity-details) for the selected historical time period.
 
 Application visibility helps explain whether the observed changes were caused by expected operational activities, application failures, scheduled maintenance, bulk data transfers, or unexpected services.
 
@@ -145,7 +149,7 @@ After identifying the applications involved, correlate the collected observation
 
 ### Optional Validation: Review Aggregate Traffic
 
-Most historical investigations can be completed using Explore Flows. Where additional validation is required, **Aggregate Flows** provides a summarized view of the investigated historical traffic.
+Most historical investigations can be completed using Explore Flows. Where additional validation is required, [**Aggregate Flows**](/docs/guide/ug/tools/aggregate_flows) provides a summarized view of the investigated historical traffic.
 
 Rather than introducing new evidence, Aggregate Flows groups the historical flow records by dimensions such as IP address, interface, application, port, router, and other network attributes. This helps confirm whether the observed historical activity is consistent across different analytical perspectives.
 
@@ -171,7 +175,7 @@ If additional protocol-level validation is required, continue with Packet Analys
 
 ### Step 5: Validate with Packet Analysis
 
-Where packet capture is available, continue directly from **Explore Flows** by downloading the PCAP for the selected historical flow records.
+Where packet capture is available, continue directly from [**Explore Flows**](/docs/guide/ug/tools/explore_flows#flow-options) by downloading the PCAP for the selected historical flow records.
 
 Packet-level analysis helps confirm protocol behaviour and validate conclusions drawn from the reconstructed historical activity.
 

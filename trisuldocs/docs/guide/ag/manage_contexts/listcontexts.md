@@ -2,6 +2,8 @@
 
 Here you can view and edit some attributes of a Trisul Context.
 
+You create and delete contexts with the CLI tools. See [Use the CLI Tool Command to Create Context](/docs/guide/learntrisul/concepts/contexts#use-the-cli-tool-command-to-create-context).
+
 :::tip
 A Trisul Context is also known as a Tenant when used in a Managed Service Provider scenario. 
 :::
@@ -34,11 +36,11 @@ Use the buttons on the top to perform these actions
 
 ### Download
 
-Click on the download button to download the list of all texts in three formats PDF, XLSX, CSV.
+Click on the download button to download the list of all contexts in PDF, XLSX or CSV format.
 
 ### Sync
 
-Clicking on the Sync button syncs the contexts created and deleted in CLI tools and refelects in the webtrisul UI.
+Clicking on the Sync button syncs the contexts created and deleted with the CLI tools, so they show in the WebTrisul UI.
 
 ### Prune Unused and deleted contexts
 
@@ -92,7 +94,7 @@ Place a Tenant logo (admin/user) next to the Trisul Logo on the top panel as in 
 *Figure: Trisul Logo with Tenant Logo*  
 
 - **Setting 3** (Custom Branding)  
-Showcase a user logo alongside a customer logo, without displaying the Trisul Logoas in the figure.
+Showcase a user logo alongside a customer logo, without displaying the Trisul Logo, as in the figure.
 
 ![](images/customer_userlogo.png)  
 *Figure: Tenant Logo with Customer Logo*    

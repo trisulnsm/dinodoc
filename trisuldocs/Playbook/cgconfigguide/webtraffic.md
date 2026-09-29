@@ -95,7 +95,7 @@ means:
 
 :::info Navigation
 
-👉 Go to **Profile0** from the main sidebar, then navigate to **Custom Counters &rarr; Filtered**
+:point_right: Go to **Profile0** from the main sidebar, then navigate to **Custom Counters &rarr; Filtered**
 
 :::
 
@@ -121,13 +121,13 @@ The **Web Traffic** Counter Group is now created.
 
 ## 2. Create a Dashboard for the Web Traffic Counter Group
 
-The Counter Group defines the traffic view. Next, create a dashboard to visualize the resulting data.
+The Counter Group defines the traffic view. Next, create a dashboard to visualize the resulting data. For all dashboard options, see [Dashboards](/docs/guide/ug/ui/create_dashboards).
 
 ### Navigation
 
 :::info Navigation
 
-👉 Go to **Dashboards** from the main sidebar and click **Show All**
+:point_right: Go to **Dashboards** from the main sidebar and click **Show All**
 
 :::
 

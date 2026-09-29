@@ -1,5 +1,9 @@
 # Setup Trisul for 10Gbps
 
+:::note Applies to
+Packet capture mode.
+:::
+
 Describes how you can setup Trisul for capturing and writing to disk at
 10Gbps and higher speeds.
 
@@ -23,13 +27,13 @@ single port.
 On an mid range processor, the optimum we’ve measured is about 2-3Gbps
 using 2 hardware threads.
 
-Fortunately there are ways to open up multiple input streams or ports.
+There are ways to open up multiple input streams or ports.
 This is mostly done by flow aware load balancing techniques.
 
 ## Ports and streams
 
 As we’ve seen, at very high packet rates there is too much contention at
-the single input port. The trick is to split the incoming traffic into
+the single input port. The solution is to split the incoming traffic into
 multiple streams and have Trisul use them. Often this requires hardware
 support. The architecture looks like this.
 
@@ -43,7 +47,7 @@ do this for some common input methods.
 
 How to create 4 pipelines with PF\_RING.
 
-1. Go to Customize \> Capture Adapter
+1. Go to Context: default &rarr; profile0 &rarr; Capture Adapters
 2. Disable all existing adapters
 3. Create eth0 then scroll down to the PF\_RING tab set the cluster id
    to 99 (or any number)
@@ -60,7 +64,7 @@ Start trisul with pfring mode.
 
 ### Napatech cluster
 
-1. Go to Customize \> Capture Adapter
+1. Go to Context: default &rarr; profile0 &rarr; Capture Adapters
 2. Disable all existing adapters
 3. Create eth0, then go to the Napatech tab and set the stream id to 0
 4. Only for stream 0; set the hashing mode and config commands, see
@@ -77,14 +81,14 @@ Start trisul with napa mode.
 2. Set the Trisul Run Mode to *fullblown\_napa*
 3. Restart Trisul. This will startup 4 pipelines.
 
-### Myricom, DAG,
+### Myricom, DAG
 
-We havent tested Myricom as yet, but this should work with their libpcap
+We haven't tested Myricom yet, but this should work with their libpcap
 compatible driver.
 
 Create 4 streams using the tools provided by the vendor.
 
-1. Go to Customize \> Capture Adapter
+1. Go to Context: default &rarr; profile0 &rarr; Capture Adapters
 2. Disable all existing adapters
 3. Create eth0
 4. Create eth0
@@ -102,7 +106,7 @@ Start trisul with libpcap mode.
 
 You need a fast disk array to accomplish 10Gbps.
 
-Some tips to acheive 10Gbps.
+Some tips to achieve 10Gbps.
 
 - Use really large file sizes  
   Change the Ring \> FileSizeMB parameter to 60G
@@ -112,9 +116,7 @@ Some tips to acheive 10Gbps.
 - Use iostat to measure iops  
   The key stat is number of blocks written per second
 
-Trisul is already optimized for 10Gbps write to disk, but the free 3-day
-License is unlikely to give you the throughput required because you cant
-change the above parameters. For an eval license contact us using the
+Trisul is already optimized for 10Gbps write to disk, but the 7-day trial license is unlikely to give you the throughput required, because you can't change the above parameters. For an eval license contact us using the
 Support page.
 
 ## CPU Pinning
@@ -126,7 +128,7 @@ section of the config file
 As an example. Assume we use 4 pipelines x 2 threads for processing and
 we want to say with CPUs 0,1,2,3 and 11,12,13,14 use the following.
 
-```html
+```xml
     ..
 <CoreAffinityNet>0,1,2,3,11,12,13,14</CoreAffinityNet>
 <CoreAffinityRAID></CoreAffinityRAID>
@@ -140,7 +142,7 @@ Disk writing can be pinned to its own CPU by specifying the
 
 The same example, now pinning the disk writer (RAID) thread to CPU 5
 
-```html
+```xml
     ..
 <CoreAffinityNet>0,1,2,3,11,12,13,14</CoreAffinityNet>
 <CoreAffinityRAID>5</CoreAffinityRAID>
@@ -150,7 +152,7 @@ The same example, now pinning the disk writer (RAID) thread to CPU 5
 ## Additional tuning
 
 1. Disable counter groups you are not interested in
-2. Disable the full content store if you dont need it
+2. Disable the full content store if you don't need it
 3. Disable TCP reassembly if you are only interested in basic metering.
    Go to the config file and [set all the
    reassembly](/docs/guide/ref/trisulconfig#reassembly) options to FALSE

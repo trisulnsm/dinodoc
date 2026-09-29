@@ -1,5 +1,9 @@
 # NetFlow Post Installation Optimization Guide for Large Enterprises
 
+:::note Applies to
+Trisul NetFlow Analyzer.
+:::
+
 By default, selecting NetFlow Analyzer in the Product Mode Selector enables all required configurations. However, for large enterprises with numerous routers and interfaces, additional optimization is necessary to ensure seamless performance. 
 
 Follow this step-by-step guide to enable and optimize configurations for large deployments:
@@ -13,7 +17,7 @@ Select NetFlow Analyzer in the Product Mode Selector to enable default configura
 - Set the toppers to display the required number of routers as needed.
 
 :::info navigation
-:point_right: Go to Context default &rarr; profile0 &rarr; Counter Groups
+:point_right: Go to Context: default &rarr; profile0 &rarr; Counter Groups
 :::
 
 Drilldown to **Flowgens** and check the checkbox to configure the topper count and update the following,
@@ -33,7 +37,7 @@ And click Update.
 - Set the toppers to display the required number of interfaces as needed
 
 :::info navigation
-:point_right: Go to Context default &rarr; profile0 &rarr; Counter Groups
+:point_right: Go to Context: default &rarr; profile0 &rarr; Counter Groups
 :::
 
 Drilldown to **Flowintfs** and check the checkbox to configure the topper count and update the following,
@@ -53,7 +57,7 @@ And click Update.
 - Set the toppers to display the required number of hosts,apps and interfaces (crosskey) as needed.
 
 :::info navigation
-:point_right: Go to Context default &rarr; profile0 &rarr; Counter Groups
+:point_right: Go to Context: default &rarr; profile0 &rarr; Counter Groups
 :::
 
 Search in the drilldown options for **FlowIntf_bx** and check the checkboxes of all the crosskeys as in the figure to configure the topper count and update the following,
@@ -76,7 +80,7 @@ And click Update.
 To enable trackers for interfaces, follow these steps,
 
 :::info navigation
-:point_right: Go to Context default &rarr; profile0 &rarr; NetFlow Wizard &rarr; Interfaces
+:point_right: Go to Context: default &rarr; profile0 &rarr; NetFlow Wizard &rarr; Interfaces
 :::
 
 1) Select a router from the drop down list to display the interfaces
@@ -94,7 +98,7 @@ To enable trackers for interfaces, follow these steps,
 Enable the **Utilization Alerts** as the system generates alerts when interface utilization exceeds the specified thresholds.
 
 :::info navigation
-:point_right: Go to Context default &rarr; profile0 &rarr; NetFlow Wizard &rarr; Utilization Alert
+:point_right: Go to Context: default &rarr; profile0 &rarr; NetFlow Wizard &rarr; Utilization Alert
 :::
 
 - Set the threshold values according to utilization for High, Medium, and Low. Click Create.

@@ -21,13 +21,13 @@ You can also enable or disable any counter group.
 ## Editing Settings
 
 :::info navigation
-:point_right: Login as Admin &rarr;Context:default&rarr;profile0 &rarr; Counter Groups
+:point_right: Log in as `admin` and go to Context: default &rarr; profile0 &rarr; Counter Groups
 :::
 
 ![](images/cg_header.png)
 *Figure: Counter Group Settings- Header Part*
 
-- The entire list of counter groups is shown as in the figure. On the left of the header shows the total number of counter groups available highlighted in blue color, the number of countergroups enabled highlighted in green color, and the disbaled counter groups count in yellow color. 
+- The entire list of counter groups is shown as in the figure. On the left of the header shows the total number of counter groups available highlighted in blue color, the number of countergroups enabled highlighted in green color, and the disabled counter groups count in yellow color. 
 - To the right, access the [column selector](/docs/guide/ug/ui/elements#column-selector). 
 - Click on the **Advanced Options** button to navigate to bulk edit options.
 - Click **Import** if you would like to browse and import a JSON file and click Upload.
@@ -68,7 +68,7 @@ To access these options:
 
 :::info navigation
 
-:point_right: Login as Admin &rarr;Select Context: default&rarr;profile0 &rarr; Counter Groups &rarr;Advanced Options
+:point_right: Log in as `admin` and go to Context: default &rarr; profile0 &rarr; Counter Groups &rarr; Advanced Options
 
 :::
 
@@ -102,11 +102,11 @@ Click on the checkboxes of countergroups you want to edit in bulk and the follow
 
 ## Editing Counter Group Topper Policies
 
-Directions to edit counter group settings
+To edit topper policies:
 
 :::info navigation
 
-:point_right: Login as Admin &rarr;Select Context:default&rarr;profile0 &rarr;Counter Groups  
+:point_right: Log in as `admin` and go to Context: default &rarr; profile0 &rarr; Counter Groups  
 :::
 
 The entire list of counter groups is shown  

@@ -1,12 +1,16 @@
 # Investigate Security Detection Alerts
 
+:::note Applies to
+Trisul NSM, with IDS alerts from Snort or Suricata. Step 5 (MITRE ATT&CK) needs Suricata with MITRE rules. See [MITRE ATT&CK prerequisites](/docs/guide/ug/alerts/mitre#prerequisites).
+:::
+
 ## Investigation Overview
 
 Security alerts are often the first indication of suspicious activity within an organization's network. They may originate from intrusion detection systems (IDS), behavioral analytics, threat intelligence feeds, anomaly detection engines, or other security controls. While alerts highlight potentially significant events, they rarely provide sufficient context to determine whether malicious activity has actually occurred.
 
 An alert should be treated as the starting point of an investigation rather than a confirmed incident. The objective is to validate the alert, understand the surrounding network activity, correlate supporting evidence, and determine the appropriate response.
 
-Using Trisul Network Security Monitoring, analysts can investigate security alerts by correlating and analyzing network telemetry, packet evidence, behavioral analytics, and historical activity before mapping the findings to the MITRE ATT&CK framework.
+Using Trisul NSM, analysts can investigate security alerts by correlating and analyzing network telemetry, packet evidence, behavioral analytics, and historical activity before mapping the findings to the MITRE ATT&CK framework.
 
 ---
 
@@ -41,7 +45,7 @@ By completing this investigation, you should be able to:
 
 Security alert investigations begin by understanding why the alert was generated. An alert represents a potential security event, but it does not by itself confirm malicious activity. Before investigating network communications, review the alert to understand what triggered it, which systems are involved, and the severity of the event.
 
-Open [**Security Alerts**](/docs/guide/ug/alerts/mw).
+Go to **Dashboards → Real Time Alerts** to open the [**Real Time Alert Stabber**](/docs/guide/ug/alerts/ids_stabber), the central view for IDS alerts. For blacklist alerts, open [**Malware and Blacklist Alerts**](/docs/guide/ug/alerts/mw).
 
 Review the alert details to determine:
 
@@ -78,7 +82,6 @@ Use this investigation to answer questions such as:
 - Did the reported communication actually occur?
 - Do the timestamps align with the alert?
 - Are the reported protocols and ports accurate?
-- Does the observed network activity support the alert?
 - Does the observed network activity support the alert, or does it indicate a likely false positive?
 
 This step establishes whether the alert represents genuine suspicious activity before expanding the investigation.
@@ -131,7 +134,7 @@ After understanding the associated activity, correlate additional evidence to st
 
 A single alert rarely provides sufficient evidence to determine the nature or scope of an incident. Correlating additional network telemetry helps confirm findings and provides greater confidence in the investigation.
 
-Continue the investigation using [**DNS Analysis**](/docs/prodguide/nsm/Resources/dns), [**TLS Metadata**](/docs/guide/ug/cg/ssl/), and [**Behavioral Analytics**](/docs/prodguide/nsm/NBAD/trisulnbad).
+Continue the investigation using [**DNS Resources**](/docs/prodguide/nsm/Resources/dns), [**SSL/TLS Metering**](/docs/guide/ug/cg/ssl), and [**NBAD**](/docs/prodguide/nsm/NBAD/trisulnbad).
 
 Use this investigation to answer questions such as:
 
@@ -190,7 +193,7 @@ Once the attack context has been established, determine whether similar activity
 
 Historical analysis determines whether the observed activity represents a one-time event or part of an ongoing pattern.
 
-Open [**Historical Investigation (Retro)**](/docs/guide/ug/cg/retro).
+Open [**Retro Analysis**](/docs/guide/ug/cg/retro).
 
 Use this investigation to answer questions such as:
 

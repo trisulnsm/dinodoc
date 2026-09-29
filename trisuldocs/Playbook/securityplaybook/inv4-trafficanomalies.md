@@ -6,7 +6,7 @@ Unexpected changes in network behaviour often provide the earliest indication of
 
 Not every anomaly represents malicious activity. Scheduled maintenance, software updates, backup operations, or legitimate increases in user activity can produce similar patterns. The objective of this investigation is to determine what changed, identify the systems responsible, and establish whether the observed behaviour requires operational attention or incident response.
 
-Using Trisul Network Security Monitoring, analysts can investigate behavioural anomalies through real-time dashboards, DDoS metrics, flow analytics, packet evidence, historical comparisons, and AI-assisted investigation.
+Using Trisul NSM, analysts can investigate behavioural anomalies through real-time dashboards, DDoS metrics, flow analytics, packet evidence, historical comparisons, and AI-assisted investigation.
 
 ---
 
@@ -34,13 +34,13 @@ By completing this investigation, you should be able to:
 
 ---
 
-# Investigation Workflow
+## Investigation Workflow
 
-## Step 1: Identify the Behavioral Anomaly
+### Step 1: Identify the Behavioral Anomaly
 
 Network anomaly investigations begin by identifying the change in network behavior that triggered the investigation. Rather than immediately focusing on individual hosts, the objective is to understand what changed, when it occurred, and whether the observed behavior requires further investigation.
 
-Open [**Behavioral Analytics**](/docs/prodguide/nsm/NBAD/trisulnbad), [**Threshold Band Alerts**](/docs/guide/ug/alerts/tband), [**DDoS Metrics**](/docs/guide/ug/alerts/ddos), or the dashboard that generated the alert.
+Open [**NBAD**](/docs/prodguide/nsm/NBAD/trisulnbad), [**Threshold Band Anomaly Alerts**](/docs/guide/ug/alerts/tband), [**DDoS Metrics**](/docs/guide/ug/alerts/ddos), or the dashboard that generated the alert.
 
 Review the available dashboards and alerts to determine:
 
@@ -52,7 +52,7 @@ Review the available dashboards and alerts to determine:
 
 The objective at this stage is to understand the nature of the anomaly before investigating the systems responsible.
 
-### Evidence to Preserve
+#### Evidence to Preserve
 
 - Triggering metric.
 - Alert information.
@@ -60,17 +60,17 @@ The objective at this stage is to understand the nature of the anomaly before in
 - Behavioral observations.
 - Initial findings.
 
-### Continue the Investigation
+#### Continue the Investigation
 
 Once the anomaly has been identified, determine what type of abnormal network behavior is being observed.
 
 ---
 
-## Step 2: Characterize the Network Behavior
+### Step 2: Characterize the Network Behavior
 
 Understanding the characteristics of the anomaly helps determine whether it represents expected operational activity or behavior requiring further investigation.
 
-Use [**Behavioral Analytics**](/docs/prodguide/nsm/NBAD/trisulnbad), [**DDoS Metrics**](/docs/guide/ug/alerts/ddos), [**TCP Analyzer**](/docs/prodguide/nsm/NBAD/tcpanalyzer), [**Layer 7 Metrics**](/docs/prodguide/nsm/NBAD/layer7metrics), or other behavioral dashboards as appropriate.
+Use [**NBAD**](/docs/prodguide/nsm/NBAD/trisulnbad), [**DDoS Metrics**](/docs/guide/ug/alerts/ddos), [**TCP Analyzer**](/docs/prodguide/nsm/NBAD/tcpanalyzer), [**Layer 7 Metrics**](/docs/prodguide/nsm/NBAD/layer7metrics), or other behavioral dashboards as appropriate.
 
 Review the available metrics to determine:
 
@@ -82,7 +82,7 @@ Review the available metrics to determine:
 
 At this stage, focus on understanding the behavior itself rather than identifying the systems involved.
 
-### Evidence to Preserve
+#### Evidence to Preserve
 
 - Traffic characteristics.
 - Protocol distribution.
@@ -90,13 +90,13 @@ At this stage, focus on understanding the behavior itself rather than identifyin
 - Behavioral metrics.
 - Application metrics.
 
-### Continue the Investigation
+#### Continue the Investigation
 
 Once the behavior has been characterized, determine which systems are responsible for generating the abnormal traffic.
 
 ---
 
-## Step 3: Identify the Responsible Systems
+### Step 3: Identify the Responsible Systems
 
 After understanding the nature of the anomaly, pivot to the affected hosts or interfaces using Trisul Retro or the relevant behavioral dashboard. Review the systems contributing to the abnormal traffic during the investigation period.
 
@@ -120,7 +120,7 @@ If additional detail is required, open [**Flow Details**](/docs/guide/ug/tools/e
 
 The **Flow Details** view provides timestamps, protocols, applications, ports, session duration, and traffic volumes associated with the communication.
 
-### Evidence to Preserve
+#### Evidence to Preserve
 
 - Source hosts.
 - Destination hosts.
@@ -128,7 +128,7 @@ The **Flow Details** view provides timestamps, protocols, applications, ports, s
 - Communication timeline.
 - Flow records.
 
-### Continue the Investigation
+#### Continue the Investigation
 
 Once the responsible systems have been identified, determine whether the observed behavior represents an expected operational event or an abnormal condition.
 
@@ -138,7 +138,7 @@ Once the responsible systems have been identified, determine whether the observe
 
 Network anomalies should be validated using multiple sources of evidence before determining whether they represent operational events or security incidents.
 
-Continue the investigation using [**DNS Analysis**](/docs/prodguide/nsm/Resources/dns), [**Packet Analysis**](/docs/prodguide/nsm/Resources/dns#option-button), and [**Historical Investigation (Retro)**](/docs/guide/ug/cg/retro).
+Continue the investigation using [**DNS Resources**](/docs/prodguide/nsm/Resources/dns), [**Packet Analysis**](/docs/guide/ug/tools/explore_flows#flow-options), and [**Retro Analysis**](/docs/guide/ug/cg/retro).
 
 Use this investigation to answer questions such as:
 

@@ -12,36 +12,36 @@ Terminology : In some places , we use DR node to refer to the Backup node, and D
 
 :::
 
-## Prerequisities
+## Prerequisites
 
-If you are configuring Disaster Recovery for a pre-existing Trisul install, ensure you copy the data over manually using scp first. By default, the sync intially only copies the latest 7 days during intialization.
+If you are configuring Disaster Recovery for a pre-existing Trisul install, ensure you copy the data over manually using scp first. By default, the sync initially only copies the latest 7 days during initialization.
 
 ### Per Context DR
 
-The Primary-Backup configuration needs to be configured on a per-context basis. The instructions on this page applies to the*default*context. Multi tenant customers with multiple contexts need to configure for each context separately.
+The Primary-Backup configuration needs to be configured on a per-context basis. The instructions on this page applies to the *default* context. Multi tenant customers with multiple contexts need to configure for each context separately.
 
 ### Service Names
 
 The systemd service names are
 
-trisul-hub-replicator
+**`trisul-hub-replicator`**
 
-Run on thePRIMARY(DC) node. Sets up the incremental replication processes from the primary. For contexts other than the default context this service is called`trisul-hub-replicator-contextname`
+Run on the PRIMARY (DC) node. Sets up the incremental replication processes from the primary. For contexts other than the default context this service is called `trisul-hub-replicator-contextname`
 
-trisul-hub-primary-health-check
+**`trisul-hub-primary-health-check`**
 
-Runs on theBACKUP(DR) node. Checks thePINGreachability ofPRIMARYnodes. For contexts other than the default context this service is called`trisul-hub-primary-health-check-contextname`
+Runs on the BACKUP (DR) node. Checks the PING reachability of PRIMARY nodes. For contexts other than the default context this service is called `trisul-hub-primary-health-check-contextname`
 
 ## Configuring DR on Primary and Backup Sites
 
 ### Create Home Directories for the Trisul User
 
-On both the Primary and Backup sites , Trisul processes run under the username`trisul.trisul`. This will be used by the replication process to synchonize the data.
+On both the Primary and Backup sites , Trisul processes run under the username `trisul.trisul`. This will be used by the replication process to synchronize the data.
 
 Repeat the following process on both the primary and backup site.
 
 Edit /etc/passwd  
-Assign a shell to the`trisul`user as shown below
+Assign a shell to the `trisul` user as shown below
 
 `trisul:x:999:999:Trisul Daemon User:/home/trisul:/bin/bash`
 
@@ -58,17 +58,17 @@ Retype new UNIX password:
 passwd: password updated successfully
 ```
 
-### Create a SSH Key Pair for Automatic SSH
+### Create a SSH Key Pair for Automatic SSH
 
 :::note
 
-Do these for bothPRIMARY-BACKUPandBACKUP-PRIMARYdirections.
+Do these for both PRIMARY-BACKUP and BACKUP-PRIMARY directions.
 
 :::
 
 #### Use ssh-keygen
 
-Login as the trisul user and use`ssh-keygen`to create a key pair. PressENTERto skip the passphrase.
+Login as the trisul user and use `ssh-keygen` to create a key pair. Press ENTER to skip the passphrase.
 
 ```bash
 su trisul
@@ -83,7 +83,7 @@ skip the passphrase
 
 #### Use ssh-copy-id to Setup Login
 
-Use`ssh-copy-id`to create an automatic login for the`trisul`user. THis will be used by rsync to transfer data to the backupsite.
+Use `ssh-copy-id` to create an automatic login for the `trisul` user. This will be used by rsync to transfer data to the backupsite.
 
 On Primary :
 
@@ -101,7 +101,7 @@ At this point , both sides should be able to login to each other without a passw
 
 ## Configure the Primary Site Replication
 
-On the primary site run the`install-replication-primary.sh`script to create the replication service.
+On the primary site run the `install-replication-primary.sh` script to create the replication service.
 
 ```bash
 root@Ubuntu:/usr/local/share/trisul-hub# ./install-replication-primary.sh 
@@ -132,13 +132,13 @@ rtt min/avg/max/mdev = 0.197/0.197/0.197/0.000 ms
   * Customize in config file /usr/local/etc/trisul-hub/domain0/hub0/context0/DCDRReplicationSettings.conf
 ```
 
-#### Further customization forPRI-BAKreplication
+#### Further Customization of PRIMARY Replication
 
-Further customization can be done by editing the`DCDRReplicationSettings.conf`file shown above.
+Further customization can be done by editing the `DCDRReplicationSettings.conf` file shown above.
 
 ## Configure the Backup Node Health Check
 
-The backup node service performs a health check on pre-defined IP addresses in the primary site. IfALLthe IPs are unrechable for a predefinied period of time [default 7 minutes], the service declares thePRIMARYsite to be down. Then starts the Trisul Probe Processes on the backup site and the service stops.
+The backup node service performs a health check on pre-defined IP addresses in the primary site. If ALL the IPs are unreachable for a predefined period of time [default 7 minutes], the service declares the PRIMARY site to be down. Then starts the Trisul Probe Processes on the backup site and the service stops.
 
 Use install-replication-backup.sh to configure the backup node.
 
@@ -164,22 +164,22 @@ Enter IP of paired  PRIMARY hub       : 192.168.2.140
   * Customize in config file /usr/local/etc/trisul-hub/domain0/hub0/context0/DRDCHealthCheck.conf
 ```
 
-#### Further customization forPRI-BAKreplication
+#### Further Customization of the BACKUP Health Check
 
-Further customization can be done by editing the`DRDCHealthCheck.conf`file shown above.
+Further customization can be done by editing the `DRDCHealthCheck.conf` file shown above.
 
 ## Start Services on Primary and Backup Nodes
 
-On thePRIMARYnode, the trisul-hub-replicator service pushes the incremental changes continuously to the backup site.
+On the PRIMARY node, the trisul-hub-replicator service pushes the incremental changes continuously to the backup site.
 
 
-**On thePRIMARYnode**
+**On the PRIMARY node**
 
 ```bash
 systemctl start trisul-hub-replicator
 ```
 
-**On theBACKUPnode**
+**On the BACKUP node**
 
 ```bash
 systemctl start trisul-hub-primary-health-check
@@ -197,15 +197,10 @@ on backup
 
 The Failover process is automatic.
 
-When thePRIMARYsite fails, the predefined IP addresess become unreachable from the backup site. The trisul-hub-primary-health-check service on the backup site starts the Trisul processes on the backup site and stops.
+When the PRIMARY site fails, the predefined IP addresses become unreachable from the backup site. The trisul-hub-primary-health-check service on the backup site starts the Trisul processes on the backup site and stops.
 
-Packet Mode
-
-arrange the packets to be sent to the backup system
-
-Netflow mode
-
-the Netflow streams have to be sent to the backup probe addresses. This can be accomplished by a load balancer or other methods.
+- **Packet capture mode:** Arrange for the packets to be sent to the backup system.
+- **NetFlow mode:** Send the NetFlow streams to the backup probe addresses, for example with a load balancer.
 
 ## Restoration
 
@@ -213,28 +208,28 @@ The restoration process needs manual intervention. First ensure that the conditi
 
 The process is :
 
-- ### onPRIMARY: Bring up thePRIMARYsystem
-  
-  Boot the backup system and ensure it is working. Login to the system and make ensure :
-  
-  - able toPINGthe backup node
-  - able toSSHinto the backup node
+### On PRIMARY: Bring Up the PRIMARY System
 
-- ### onPRIMARY: Stop any running Trisul Processes
-  
-  Ensure all processes are stopped on the primary system
+Boot the primary system and make sure it is working. Log in to it and check that it is:
+
+- able to PING the backup node
+- able to SSH into the backup node
+
+### On PRIMARY: Stop Any Running Trisul Processes
+
+Ensure all processes are stopped on the primary system
 
 ```bash
 trisulctl_hub stop context all
 ```
 
-### onBACKUP: Copy the data to thePRIMARY
+### On BACKUP: Copy the Data to the PRIMARY
 
 Now we need to copy the data from the running backup system onto the primary. This will include all the data that was collected during the downtime of the primary.
 
 :::info
 
-This step can take some time as the delta is copied from theBACKUPback to thePRIMARYnode. We recommend you use a`screen`session to run this.
+This step can take some time as the delta is copied from the BACKUP back to the PRIMARY node. We recommend you use a `screen` session to run this.
 
 :::
 
@@ -265,9 +260,7 @@ Wed Sep 23 07:07:27 EDT 2020
 root@ubuntuDR:/usr/local/share/trisul-hub# 
 ```
 
-Now you are ready to
-
-### onBACKUP: Stop the probes
+### On BACKUP: Stop the Probes
 
 You can manually stop the probes on the backup node. You should not stop the hub nodes however. Run the following command to stop the default context on probe0.
 
@@ -275,26 +268,28 @@ You can manually stop the probes on the backup node. You should not stop the hub
 trisulctl_hub stop context default@probe0
 ```
 
-### onBACKUP: Switch back toBACKUPmode
+### On BACKUP: Switch Back to BACKUP Mode
 
-Run this to go back toBACKUPmode.
+Run this to go back to BACKUP mode.
 
 ```bash
 systemctl start trisul-hub-primary-health-check
 ```
 
-### onPRIMARY: Start the processes
+### On PRIMARY: Start the Processes
 
 On the primary node start up the processes
 
+Start the Hub control utility, then start the context at its prompt:
+
 ```bash
-trisulctl_hub 
-start context default
+$ trisulctl_hub
+trisul_hub(domain0)> start context default
 ```
 
-### onPRIMARY: switch back toPRIMARYmode
+### On PRIMARY: Switch Back to PRIMARY Mode
 
-This step will put the system back intoPRIMARYBACKUPconfiguration.
+This step will put the system back into PRIMARY-BACKUP configuration.
 
 ```bash
 systemctl start trisul-hub-replicator
@@ -302,11 +297,11 @@ systemctl start trisul-hub-replicator
 
 This completes the process.
 
-To view the status of the Replicator and Health Check processes, login as Administrator to either the primary or backup node. To view the status of the*default*context, do :
+To view the status of the Replicator and Health Check processes, login as Administrator to either the primary or backup node. To view the status of the *default* context, do :
 
 :::note
 
-Select Context: default > Admin Tasks > DC DR Status
+Select Context: default &rarr; Admin Tasks &rarr; DC DR Status
 
 :::
 
@@ -316,9 +311,10 @@ Select Context: default > Admin Tasks > DC DR Status
 
 The following information is shown:
 
-| Mode                | Whether the current node is configured as aPRIMARY(DC) or aBACKUP(DR node |
+| Field               | Description                                                                   |
 | ------------------- | ----------------------------------------------------------------------------- |
-| Replication status  | Whether the replication process is*running*,*enabled*on boot               |
+| Mode                | Whether the current node is configured as a PRIMARY (DC) or a BACKUP (DR) node |
+| Replication status  | Whether the replication process is *running*, *enabled* on boot               |
 | Replication log     | Last few lines of the replication log, you can check the timestamps           |
 | Health check status | On the Backup (DR) node, whether the health check processes are active        |
 | Health check log    | Last few lines of the health check process log                                |

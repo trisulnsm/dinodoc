@@ -55,7 +55,7 @@ probe: The probe name (defaults to probe0)
 **Example Request**
 
 ```
-http://192.168.1.77:8013/api/tenants_ip_mapping/create_tenant_mapping?auth_username=apiuser&api_token=hbQ0WN0pgY6CAGhnLetI&probe=probe0&subdomain=unpl_corporate
+http://192.168.1.77:8013/api/tenants_ip_mapping/create_tenant_mapping?auth_username=apiuser&api_token=YOUR_API_TOKEN&probe=probe0&subdomain=unpl_corporate
 ```
 ### Step 2: Check API Response
 Verify the API response indicates a successful creation or update of the tenant mapping.

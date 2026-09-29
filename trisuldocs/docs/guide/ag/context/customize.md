@@ -9,13 +9,11 @@ If you are an OEM you can rebrand and customize the look of the product.
 
 2. Design new themes
 
-## oemsettings.rb
+## oem_settings.rb {#oemsettingsrb}
 
-The OEM settings file is located in `usr/local/share/webtrisul/config/initializers/oem_settings.rb` This is
-the only file you need to change.
+The OEM settings file is `/usr/local/share/webtrisul/config/initializers/oem_settings.rb`. This is the only file you need to change.
 
-> You must restart the web server for changes made to the
-> ***oem_settings.rb*** file to take effect
+> You must restart the web server for changes made to ***oem_settings.rb*** to take effect. See [Start and Stop WebTrisul](/docs/guide/ag/admintasks/startstop#start-and-stop-webtrisul).
 
 ## Fields
 
@@ -48,7 +46,7 @@ You may modify these fields to suit your environment.
 
 ### About the Product
 
-| Fields             | Defaults                              | Desciption                                    |
+| Fields             | Defaults                              | Description                                    |
 | ------------------ | ------------------------------------- | --------------------------------------------- |
 | PRODUCT_NAME       | Trisul                                | The product name to be displayed in the login and in the page header.                                                                                          |
 | PRODUCT_NAME_FULL  | Trisul Network Metering and Forensics | Carries the detailed product name which will appear in the bottom of the login screen                                                                            |
@@ -76,7 +74,7 @@ You may modify these fields to suit your environment.
 
 | Fields   | Defaults | Description                                                                           |
 | -------- | -------- | ------------------------------------------------------------------------------------- |
-| LINK_PDF | cg       | Controls whether the Commonly used reports bring up a PDF directly or shows a HTML report with a Generate PDFlink.<br/>If set to `cg` – User views a HTML page depicting the usage activity of the counter group<br/>If set to `cg_pdf` – User gets a PDF report directly ( one click link )                              |
+| LINK_PDF | cg       | Controls whether the Commonly used reports bring up a PDF directly or shows a HTML report with a Generate PDF link.<br/>If set to `cg` – User views a HTML page depicting the usage activity of the counter group<br/>If set to `cg_pdf` – User gets a PDF report directly ( one click link )                              |
 |IP_REPORT_CHART_TYPE | LINETABLE | available chart types “LINE” ,“AREA”,“SQUARELINE”,“STACKEDAREA”,“LINETABLE”|
 
 ### Retro Analysis Time Selector
@@ -133,7 +131,7 @@ and prefer to manually enter dates.
 | ------------------------------- | -------- |
 | ROUTER_INTERFACE_TRACK_PROTOCOL | true     |
 
-### Webtrisul Wants to Connect  to Which Hub
+### Which Hub WebTrisul Connects To {#webtrisul-wants-to-connect--to-which-hub}
 
 | Fields              | Defaults |
 | ------------------- | -------- |

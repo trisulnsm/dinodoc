@@ -1,12 +1,16 @@
 # Investigate the Network Activity of an IP Address
 
+:::note Applies to
+All modes. Step 5 (packet analysis) needs packet capture.
+:::
+
 ## Investigation Overview
 
 Investigating the network activity of an IP address is one of the most common tasks performed by network and security teams. Whether responding to a user-reported issue, validating the behaviour of a newly deployed server, investigating suspicious activity, or troubleshooting excessive bandwidth usage, understanding how a host communicates across the network provides the foundation for every investigation.
 
 Rather than immediately examining individual flows or packet captures, experienced engineers begin by building context. They first review the host's overall activity, identify its communication patterns, understand the applications generating traffic, and progressively narrow the investigation until the underlying behaviour becomes clear.
 
-Using Trisul, this entire workflow can be completed from a single investigative interface, allowing engineers to move seamlessly from high-level host activity to detailed flow and packet analysis.
+Using Trisul, this entire workflow can be completed from a single investigative interface, allowing engineers to move from high-level host activity to detailed flow and packet analysis.
 
 ---
 
@@ -200,9 +204,9 @@ Once the aggregate traffic characteristics have been reviewed, continue with pac
 
 ### Step 5: Validate with Packet Analysis
 
-Flow records usually provide an excellent summary of network activity, but some investigations require packet-level visibility to confirm protocol behavior or troubleshoot application-specific issues.
+Flow records summarize network activity, but some investigations require packet-level visibility to confirm protocol behavior or troubleshoot application-specific issues.
 
-From [**Explore Flows**](/docs/guide/ug/tools/explore_flows), select the required host or flow record, click the [**Options button**](/docs/guide/ug/tools/explore_flows#flow-options) against that flow, and choose **Download PCAP** to validate the findings using packet-level analysis.
+Where packet capture is available, go to [**Explore Flows**](/docs/guide/ug/tools/explore_flows), select the required host or flow record, click the [**Options button**](/docs/guide/ug/tools/explore_flows#flow-options) against that flow, and choose **Download PCAP** to validate the findings using packet-level analysis.
 
 This view helps answer questions such as:
 
@@ -242,7 +246,7 @@ This investigation can generally be considered complete when:
 - The host's overall activity has been reviewed.
 - Communication partners have been identified and validated.
 - The applications responsible for the traffic have been determined.
-- Aggregate traffic characteristics have been evaluated.
+- Aggregate traffic characteristics have been evaluated, if you ran the optional validation.
 - Individual flow records have been examined where necessary.
 - Packet-level analysis has been performed where required.
 - The underlying cause of the observed behaviour has been established.
@@ -253,7 +257,7 @@ This investigation can generally be considered complete when:
 ## Best Practices
 
 - Begin every investigation by reviewing the host's overall activity before analysing individual conversations.
-- Progressively narrow the investigation from host activity to communication patterns, applications, aggregate statistics, individual flows, and packet analysis.
+- Progressively narrow the investigation from host activity to communication patterns, individual flows, applications, optional aggregate statistics, and packet analysis.
 - Always correlate communication patterns with application usage before drawing conclusions.
 - Compare current behaviour with historical activity whenever possible.
 - Use packet analysis only when flow-level information is insufficient.

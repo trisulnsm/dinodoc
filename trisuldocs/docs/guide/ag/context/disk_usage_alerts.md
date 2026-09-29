@@ -16,7 +16,7 @@ Specify outgoing email server credentials. see [Setup Email](/docs/guide/ug/repo
 
 **Enable email alert delivery**
 
-Allow alert delivery via email see [Email alert delivery](//docs/guide/ag/webadmin/emailsettings)
+Allow alert delivery via email see [Email alert delivery](/docs/guide/ag/webadmin/emailsettings)
 
 ## Edit Configuration Files
 
@@ -33,7 +33,7 @@ Represents the percent usage threshold of disk. Here it is shown to be
 
 Similarly set threshold values for all three storage areas, oper/ref/archive. You can set them all to the same value if they are mounted on the same storage volume.
 
-```language-xml
+```xml
    <SlicePolicy>
         <SliceWindow>DAILY</SliceWindow>
 
@@ -50,16 +50,16 @@ Edit the [trisulProbeConfig.xml](/docs/guide/ref/trisulconfig) file and set the 
 ***UsageRedMark***
 the disk percent threshold value for the probe node
 
-```language-xml
+```xml
     <UsageRedMark>90</UsageRedMark>
 ```
 
 ## Viewing Alerts
 
-When disk usage crosses the thresholds set an “User Alert” will be
+When disk usage crosses the thresholds set a “User Alert” will be
 generated.
 
-> Select Alerts &rarr; All Alerts -&rarr; User Alerts
+> Select Alerts &rarr; All Alerts &rarr; User Alerts
 
 These alerts are also delivered instantly via E-mail.
 

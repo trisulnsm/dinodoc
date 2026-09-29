@@ -10,8 +10,7 @@ this can result in relatively high storage.
 To find out how much disk is being used per day.
 
 :::info
-:point_right: Login as Admin &rarr; Select Context \[default\] &rarr;Admin Tasks &rarr; DB
-Status
+:point_right: Log in as `admin` and go to Context: default &rarr; Admin Tasks &rarr; DB Status
 :::
 
 You will be shown the DB status page like this
@@ -47,8 +46,7 @@ by Trisul Engineers to further fine tune the database.
 
 ## Tuning the database
 
-The default install of Trisul Network Analytics stores data for 92 days,
-i.e. 3 months.
+The default install of Trisul Network Analytics stores data for 96 days: 32 days each in Oper, Ref and Archive. See [Configure Retention Policy](/docs/guide/ag/basictasks/configure_storage).
 
 You can tune the database to extend the storage to cover more number of
 days.
@@ -59,7 +57,7 @@ days.
 
 The biggest component of Trisul Network Analytics database storage is
 typically the Flow or Session database. A flow represents a single unit
-of datatransfer. This is a record that captures
+of data transfer. This is a record that captures
 Protocol-SourceIP-SourcePort-DestIP-DestPort bytes packets timestamp
 etc. Trisul stores **every single** flow that passes through the network
 even if it only transferred 10 bytes or 10 Gigabytes. This is required
@@ -67,17 +65,17 @@ because Trisul is used by many customers for audit, incident response,
 post breach investigations, and compliance. This application requires
 every single flow because malware may only use small flows.
 
-Customers whose primary use cases are *Visiblility* and *Detection*
-features of Trisul can dramatically reduce the size of the flow database
+Customers whose primary use cases are *Visibility* and *Detection*
+features of Trisul can greatly reduce the size of the flow database
 by using “Volume Cutoff Bytes”. See [User Guide: Flow
 Tuning](/docs/guide/ug/flow/tuning#optimize-flow-handling)
 
 #### Set Volume Cutoff Bytes to 1MB
 
 The flow database has a property that it uses a fixed amount of storage
-regardless of the datatransfer. Traffic research indicates that 80% of
+regardless of the data transfer. Traffic research indicates that 80% of
 flows transfer less than 10% of total traffic. Hence if you set the
-‘Volume Cutoff Bytes’ to 1MB it will dramatically reduce the storage
+‘Volume Cutoff Bytes’ to 1MB it reduces the storage
 by roughly 80%. You can adjust this value for further optimization
 gains.
 
@@ -100,13 +98,13 @@ security, incident response, and compliance.
 1. During incident response you will not be able to find small flows
    that transferred less than the 1MB flow cutoff.
 
-In general , we recommend customers whose primary use case is visibilty
+In general , we recommend customers whose primary use case is visibility
 and network monitoring to set a “Volume Cutoff Bytes” of 1MB for maximum
 optimization of disk.
 
 ## Optimize Edges
 
-Edge Analytics are an advanced Trisul feature used primary for security
+Edge Analytics are an advanced Trisul feature used primarily for security
 investigations. “Edges” can also use up quite a bit of disk.
 
 - You can disable Edges by opening the Trisul Config file and disable
@@ -123,4 +121,4 @@ Counter groups have the following parameters that can be tuned
   to a topper list are stored.
 - Top Count — By setting lower values you can control the storage.
 
-See [Counter Group Settings](/docs/guide/ag/context/countergroup_settings)Ensure you replace the demo certificate and key with new ones specific for your organization as described below
+See [Counter Group Settings](/docs/guide/ag/context/countergroup_settings).

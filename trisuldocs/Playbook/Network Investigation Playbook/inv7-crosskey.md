@@ -1,5 +1,9 @@
 # Correlate Network Activity Across Multiple Dimensions
 
+:::note Applies to
+All modes. Step 6 (packet analysis) needs packet capture.
+:::
+
 ## Investigation Overview
 
 Many network investigations cannot be answered by examining a single host, interface, application, or metric in isolation. Questions such as which applications consume the most bandwidth on a specific interface, which customers generate the highest traffic at a particular site, or how traffic is distributed across business units require multiple dimensions of network data to be analyzed together.
@@ -41,7 +45,7 @@ By completing this investigation, you should be able to:
 
 Every multidimensional investigation begins with a clearly defined investigative question. Before selecting network data to analyze, establish exactly which relationship needs to be understood, which network entities are involved, and what the investigation is expected to explain.
 
-Open [**Cross Key CounterGroups**](/docs/guide/ag/context/crosskey_countergroups/) to identify the dimensions required for the investigation.
+Go to **Retro → Retro Tools → Select counter group** and review the existing [**Cross Key Counter Groups**](/docs/guide/ag/context/crosskey_countergroups#viewing) to identify the dimensions required for the investigation.
 
 Use this view to answer questions such as:
 
@@ -70,7 +74,7 @@ A Cross Key Counter Group is a **pre-configured** counter group, it is not somet
 This means Step 2 is a **confirmation** step, not a configuration step: check whether a Cross Key group already exists for the dimensions your investigation question needs.
 
 - If a matching group already exists, proceed directly to Step 3.
-- If it doesn't, this investigation cannot answer the question using historical correlation data — you have two options: ask an admin to create the required [**Cross Key Counter Group**](/docs/guide/ag/context/crosskey_countergroups#creating-a-cross-key-counter-group) (it will only start collecting data going forward, not retroactively), or fall back to answering the question manually using [**Explore Flows**](./inv1-exploreflows.md) for the specific entities involved, accepting the practical limits called out in that tool's docs for very large flow volumes.
+- If it doesn't, this investigation cannot answer the question using historical correlation data — you have two options: ask an admin to create the required [**Cross Key Counter Group**](/docs/guide/ag/context/crosskey_countergroups#creating-a-cross-key-counter-group) (it will only start collecting data going forward, not retroactively), or fall back to answering the question manually using [**Explore Flows**](/docs/guide/ug/tools/explore_flows) for the specific entities involved, accepting the practical limits called out in that tool's docs for very large flow volumes.
 
 Use this step to answer questions such as:
 
@@ -114,7 +118,7 @@ This step helps answer questions such as:
 
 #### Continue the Investigation
 
-Once the significant relationships have been identified, investigate the contributing network activity in [**Explore Flows**](./inv1-exploreflows.md).
+Once the significant relationships have been identified, investigate the contributing network activity in [**Explore Flows**](/docs/guide/ug/tools/explore_flows).
 
 ---
 
@@ -197,6 +201,8 @@ This step helps answer questions such as:
 
 If packet capture is available, continue with Packet Analysis to validate the observed network behavior.
 
+---
+
 ### Step 6: Validate with Packet Analysis
 
 Where packet capture is available, continue directly from **Explore Flows** by downloading the PCAP for the selected flow records.
@@ -219,7 +225,17 @@ This step helps answer questions such as:
 
 #### Continue the Investigation
 
-Once the relationships have been validated, determine whether they represent expected operational behavior.
+Once the relationships have been validated, decide whether they are expected and whether a follow-up investigation is needed. Then summarize the investigation.
+
+---
+
+### Summarize the Investigation with Trisul AI
+
+By this stage, the investigation should have answered the original investigation question and collected the evidence required to explain the observed relationships.
+
+Open **Trisul AI** and review the investigation findings.
+
+Use Trisul AI to generate a concise summary of the investigation, highlight the key observations, and assist with documenting the findings for operational review, incident reporting, or future reference.
 
 ---
 
@@ -233,16 +249,6 @@ This investigation can generally be considered complete when:
 - The relationships have been interpreted.
 - The observed relationships have been determined to be expected or unexpected.
 - The appropriate follow-up investigation has been identified.
-
----
-
-### Summarize the Investigation with Trisul AI
-
-By this stage, the investigation should have answered the original investigation question and collected the evidence required to explain the observed relationships.
-
-Open **Trisul AI** and review the investigation findings.
-
-Use Trisul AI to generate a concise summary of the investigation, highlight the key observations, and assist with documenting the findings for operational review, incident reporting, or future reference.
 
 ---
 

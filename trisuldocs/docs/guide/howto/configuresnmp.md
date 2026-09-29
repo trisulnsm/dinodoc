@@ -1,5 +1,9 @@
 # How to Configure SNMP
 
+:::note Applies to
+NetFlow input.
+:::
+
 ## Purpose of SNMP Integration
 
 The primary purpose of integrating SNMP (Simple Network Management Protocol) is to complement NetFlow data by providing additional contextual information, including:
@@ -13,13 +17,15 @@ This integration enhances the overall network monitoring and analysis capabiliti
 
 ### Global SNMP Configuration
 
-You can manually fill in the SNMP details by logging in as admin through Web Trisul Options,
+To fill in the SNMP details manually, log in as `admin` and open App Settings:
 
 :::info navigation
-:point_right: Web Admin Manage &rarr; App Settings &rarr; SNMP Settings
+:point_right: Web Admin &rarr; Manage &rarr; App Settings &rarr; SNMP Settings
 :::
 
 Here you can view the version, community string etc. Click Save.
+
+To set SNMP details for individual routers, use **Context: default &rarr; profile0 &rarr; SNMP Agents**. See [SNMP Agent](/docs/guide/ag/context/snmp_agent).
 
 ![](images/snmp_webtrisul.png)  
 *Figure: Resolve SNMP*
@@ -29,7 +35,7 @@ Here you can view the version, community string etc. Click Save.
 To update SNMP settings for multiple routers follow these steps, Login as admin,
 
 :::info navigation
-:point_right: Go to Context default &rarr; profile0 &rarr; NetFlow Wizard &rarr; Routers
+:point_right: Go to Context: default &rarr; profile0 &rarr; NetFlow Wizard &rarr; Routers
 :::
 
 Click the **Select All** button above the routers list and click **Resolve**
@@ -96,12 +102,12 @@ This will install both the apps SNMP Poller and SNMP vs NetFlow apps to enable S
 - **Huawei**
 
 :::info navigation
-:point_right: Web Admin Manage &rarr; App Settings &rarr; SNMP Settings
+:point_right: Web Admin &rarr; Manage &rarr; App Settings &rarr; SNMP Settings
 :::
 
 1) Click Advanced SNMP Settings
 
-2) Check the checkbox **Use Huawei SNMP Port Map** to utilize Huawei's proprietary SNMP mapping to associate Netstream ifIndex with SNMP ifIndex
+2) Check the checkbox **Use Huawei SNMP Port Map** to utilize Huawei's proprietary SNMP mapping to associate NetStream ifIndex with SNMP ifIndex
 
 ![](images/huaweiportmap.png)  
 *Figure: Huawei Portmap Settings*

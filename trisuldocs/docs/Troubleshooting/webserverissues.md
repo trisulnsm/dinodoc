@@ -1,6 +1,6 @@
 # Web Server issues
 
-Related to web server
+This page covers web server problems and how to fix them.
 
 
 ## Getting a Timeout Error for long requests
@@ -13,7 +13,7 @@ These files are located in `/usr/local/share/webtrisul/build` directory
 
 Change the proxy_read_timeout to 900 for 15 minutes timeout
 
-```  nginx.conf
+```nginx title="nginx.conf"
     
     proxy_read_timeout 900;
     proxy_next_upstream  error;
@@ -24,7 +24,7 @@ and the backend
 
 Change the timeout to 900 for 15 minutes timeout
 
-``` thin-config.yml
+```yaml title="thin-config.yml"
 ---
 chdir: /usr/local/share/webtrisul
 environment: production
@@ -34,3 +34,7 @@ pid: tmp/pids/thin.pid
 
 
 ```
+
+The file ships with `timeout: 300`. Change it to `timeout: 900`.
+
+Then restart WebTrisul so both changes take effect. See [Start and Stop WebTrisul](/docs/guide/ag/admintasks/startstop#start-and-stop-webtrisul).

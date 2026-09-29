@@ -42,11 +42,9 @@ Trisul uses the regular unix `crontab` to schedule background tasks.
 
 ##### To Modify Crontab List
 
-> Login as root, then type : pre(language-bash). crontab -e
+> Log in as root, then run `crontab -e`.
 
 ## Background Tasks Log Files
-
-Login as `admin` user to manage menus.
 
 All the Trisul background tasks send its output to the log file located
 at  ***/usr/local/share/webtrisul/logs/back_tasks.log***
@@ -55,6 +53,6 @@ You can also access these logs from the web interface
 
 :::info navigation
 
-:point_right: Select Webadmin &rarr; Manage &rarr; Web Server Logs &rarr;Background Tasks Log
+:point_right: Select Web Admin &rarr; Manage &rarr; Web Server Logs &rarr; Background Tasks Log
 
 :::

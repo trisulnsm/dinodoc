@@ -18,15 +18,7 @@ billions of flows. To solve this we setup a Cross Key Counter group of
 
 *Figure: CrossKey Counter Group Showing Two Groups Host Flows*
 
-> We use the Sankey Crosskey Trisul APP to visualize the flows. 
-
-To install Sankey Crossdrill,
-
-:::info navigation
-
-:point_right: Go to Admin &rarr; Web Admin &rarr; Manage &rarr; Apps 
-
-:::
+> We use the Sankey Crosskey Trisul APP to visualize the flows. To install it (listed as Sankey Crossdrill), go to **Web Admin &rarr; Manage &rarr; Apps**. See [Apps](/docs/guide/ag/webadmin/apps) and [Sankey Drilldown](/docs/guide/ug/edges/sankey).
 
 Using the normal Retro Counters tool you can see the composite keys
 
@@ -43,20 +35,11 @@ group with *Internal Hosts X Applications X External Hosts*
 
 *Figure: CrossKey Counter Group Showing Three Groups Hosts App Flows*
 
-> We use the Sankey Crosskey Trisul APP to visualize the flows. 
-
-:::info navigation
-
-:point_right: Go to Admin &rarr; Web Admin &rarr; Manage &rarr; Apps
-
-:::
-
 ### Creating a Cross Key Counter Group
 
 :::info navigation
 
-:point_right: Login as Admin &rarr; Select Context:default&rarr; profile0 &rarr; Custom Counters
-&rarr; Crosskeys
+:point_right: Log in as `admin` and go to Context: default &rarr; profile0 &rarr; Custom Counters &rarr; Crosskeys
 
 :::
 
@@ -95,14 +78,6 @@ group.
 The cross key counter group is intended for visualizing relationships as
 Flows. You can use the *Sankey Crosskey* Trisul APP to visualize the
 cross key counter group.
-
-> We use the Sankey Crosskey Trisul APP to visualize the flows. 
-
-:::info navigation 
-
-:point_right: Go to Admin &rarr; Web Admin &rarr; Manage &rarr; Apps 
-
-:::
 
 ![](images/sankeyapps.png)
 

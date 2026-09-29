@@ -1,6 +1,6 @@
 # Filtered Counter Groups
 
-A cross-product counter group.
+A subset of an existing counter group, selected by a filter.
 
 Meter a subset of a group that matches a set of keys from another group.
 
@@ -22,8 +22,7 @@ Some examples :
 
 :::info navigation
 
-:point_right: Login as Admin &rarr; Select Context and profile0 &rarr; Under Custom Counters
-&rarr;Filtered
+:point_right: Log in as `admin` and go to Context: default &rarr; profile0 &rarr; Custom Counters &rarr; Filtered
 
 :::
 
@@ -34,7 +33,7 @@ Some examples :
 | Field Name         | Description                                                                              |
 | ------------------ | ---------------------------------------------------------------------------------------- |
 | Counter Group Name | Counter Group name                                                                       |
-| Description        | Descriptiom about the counter group                                                      |
+| Description        | Description about the counter group                                                      |
 | Parent Group       | Choose parent counter group from the drop down list                                      |
 | Filter Group       | Choose filter counter group from the drop down list                                      |
 | Key List           | Comma separated list of keys/ranges: `Port-80, 192.168.1.2, Port-5000~Port-8000, 192.168.1.1~192.168.1.255`                                                                                      |
@@ -42,5 +41,5 @@ Some examples :
 
 ### Custom Group
 
-For more advanced custom counters you can use the [LUA API](/docs/lua/tutorial1)
+For more advanced custom counters you can use the [Lua API](/docs/lua/tutorial1)
 to measure any subset of metrics

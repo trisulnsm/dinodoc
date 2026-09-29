@@ -1,8 +1,12 @@
 # Network Investigation Playbook
 
-This playbook contains seven investigations for network and security teams using Trisul. Each one starts from a different trigger like, a user report, an alert, a monitored asset, but they all converge on the same core workflow: **Explore Flows → Applications → (optional) Aggregate Stats → Packet Analysis.**
+This playbook contains seven investigations for network and security teams using Trisul. Each one starts from a different trigger (a user report, an alert, a monitored asset), but they all converge on the same core workflow: **Explore Flows → Applications → (optional) Aggregate Stats → Packet Analysis.**
 
 If you've done one investigation in this playbook, you already know most of the moves for the rest of them.
+
+:::note Applies to
+All modes. Steps that use **Routers and Interfaces** need NetFlow mode. Packet-analysis steps need packet capture.
+:::
 
 ---
 
@@ -16,7 +20,7 @@ If you've done one investigation in this playbook, you already know most of the 
 | [Investigate High Traffic on a Network Interface](/playbook/Network%20Investigation%20Playbook/inv2-routersintfs) | A router or switch interface is running hot. |
 | [Investigate Historical Network Activity](/playbook/Network%20Investigation%20Playbook/inv3-retro) | The issue was discovered after it happened — you're reconstructing, not live-troubleshooting. |
 
-**Hub investigations** — you land here because a system flagged something (an alert, a baseline deviation, a monitored asset), and the investigation is designed to route you into one of the entry points above (or into each other) once the trigger is understood.
+**Alert-driven investigations** — you land here because a system flagged something (an alert, a baseline deviation, a monitored asset), and the investigation is designed to route you into one of the entry points above (or into each other) once the trigger is understood.
 
 | Investigation | Triggered by... |
 |---|---|

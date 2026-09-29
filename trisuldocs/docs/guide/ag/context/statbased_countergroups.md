@@ -19,7 +19,7 @@ Examples :
 
 :::info navigation
 
-:point_right: Login as Admin &rarr; Select Context:default&rarr; profile0 &rarr; Custom Counters&rarr; Stat Based
+:point_right: Log in as `admin` and go to Context: default &rarr; profile0 &rarr; Custom Counters &rarr; Stat Based
 
 :::
 

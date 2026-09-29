@@ -10,13 +10,15 @@ The requirement is:
 
 > **Show me how many unique applications each host is communicating with.**
 
-A **Cardinality Counter** can be used to count unique values associated with keys in an existing Counter Group.
+A [**Cardinality Counter**](/docs/guide/ag/context/cardinality_countergroups) can be used to count unique values associated with keys in an existing Counter Group.
 
 In this example, we will add a **Unique Apps** cardinality meter to the **Hosts** Counter Group.
 
 This configuration allows Trisul to track, for each host, the number of distinct applications observed during the selected time period.
 
-> **Note:** Cardinality is not a separate Counter Group. You can add up to two cardinality meters to an existing Counter Group. :contentReference[oaicite:1]{index=1}
+> **Note:** Cardinality is not a separate Counter Group. You can add up to two cardinality meters to an existing Counter Group.
+
+<!-- TODO(verify): the AG Cardinality Counting page says Unique Apps per Host and Unique Hosts per Host ship enabled, with a maximum of 2 per counter group. Confirm this scenario still applies. -->
 
 ---
 
@@ -24,7 +26,7 @@ This configuration allows Trisul to track, for each host, the number of distinct
 
 See this scenario in action:
 
-[**How to Monitor Unique Applications for Hosts Using Cardinality Counters | Trisul**](https://youtu.be/K27xQk7z_WY?si=Gwl8xBnkV-stjdhn)
+[**How to Monitor Unique Applications for Hosts Using Cardinality Counters | Trisul**](https://youtu.be/K27xQk7z_WY)
 
 The video demonstrates how to create the Cardinality Counter, configure it to track unique applications for hosts, and view the resulting cardinality data.
 
@@ -92,7 +94,7 @@ means:
 
 :::info Navigation
 
-👉 Go to **Profile0** from the main sidebar, then navigate to **Custom Counters → Cardinality**
+:point_right: Go to **Profile0** from the main sidebar, then navigate to **Custom Counters → Cardinality**
 
 :::
 
@@ -104,7 +106,7 @@ means:
 
 The **Unique Apps** cardinality counter is now configured for the Hosts Counter Group.
 
-> **Note:** Trisul supports a maximum of two cardinality counters per Counter Group. :contentReference[oaicite:2]{index=2}
+> **Note:** Trisul supports a maximum of two cardinality counters per Counter Group.
 
 [**Restart the Probe**](/playbook/cgconfigguide/#restart-the-probe) to enable the configuration.
 
@@ -144,7 +146,7 @@ The Cardinality Counter can be used as a metric when building a dashboard view o
 
 :::info Navigation
 
-👉 Go to **Dashboards** from the main sidebar and click **Show All**
+:point_right: Go to **Dashboards** from the main sidebar and click **Show All**
 
 :::
 
@@ -175,7 +177,7 @@ For example:
 
 > **Unique Apps answers:** How many different applications did the host communicate with?
 
-Cardinality therefore provides visibility into the **spread or diversity of network activity**, rather than simply its volume. :contentReference[oaicite:3]{index=3}
+Cardinality therefore provides visibility into the **spread or diversity of network activity**, rather than only its volume.
 
 ---
 

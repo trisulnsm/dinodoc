@@ -1,6 +1,6 @@
 # Manage Contexts - Tenants
 
-The Tenant Management page provides a comprehensive overview of all tenants, their network mappings, and key statistics.
+The Tenant Management page shows all tenants, their network mappings and key statistics.
 
 :::info navigation
 :point_right: Context Admin &rarr; Manage &rarr; Tenants

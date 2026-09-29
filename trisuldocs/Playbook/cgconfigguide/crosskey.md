@@ -4,7 +4,7 @@
 
 The network team wants to understand the relationship between **countries, hosts, and applications** in the network.
 
-A **Crosskey Counter Group** can combine multiple dimensions to create a composite view of their relationships.
+A [**Crosskey Counter Group**](/docs/guide/ag/context/crosskey_countergroups) can combine multiple dimensions to create a composite view of their relationships.
 
 Crosskey Counter Groups can combine up to **three dimensions**:
 
@@ -32,7 +32,7 @@ This allows the final view to show:
 
 See this scenario in action:
 
-**[How to create a three dimension crosskey counter group in Trisul](https://youtu.be/eIsgcZph7Yk?si=0t6RRgW8NIIwrO-2)**
+**[How to create a three dimension crosskey counter group in Trisul](https://youtu.be/eIsgcZph7Yk)**
 
 The video demonstrates how to create the Crosskey Counter Group, configure the dashboard, and view the resulting hierarchy.
 
@@ -121,7 +121,7 @@ The dimensions can be selected based on the relationship you want to analyze.
 
 ---
 
-# 1. Create the Two-Dimension Crosskey Counter Group
+## 1. Create the Two-Dimension Crosskey Counter Group
 
 Before creating the three-dimension Crosskey Counter Group, first create the two-dimension relationship.
 
@@ -139,7 +139,7 @@ This creates:
 
 **Country × Hosts**
 
-In simple terms:
+In other words:
 
 > **Show me the Hosts associated with each Country.**
 
@@ -168,7 +168,7 @@ The **CountryxHosts** Crosskey Counter Group is now created.
 
 ---
 
-# 2. Create the Three-Dimension Crosskey Counter Group
+## 2. Create the Three-Dimension Crosskey Counter Group
 
 Now that the **CountryxHosts** relationship has been created, extend it with a third dimension: **Apps**.
 
@@ -219,9 +219,9 @@ The **CountryxHostsxApps** Crosskey Counter Group is now created.
 
 ---
 
-# 3. Create a Dashboard for the Crosskey Counter Group
+## 3. Create a Dashboard for the Crosskey Counter Group
 
-The Crosskey Counter Group defines the relationship. Next, create a dashboard to visualize it.
+The Crosskey Counter Group defines the relationship. Next, create a dashboard to visualize it. For all dashboard options, see [Dashboards](/docs/guide/ug/ui/create_dashboards).
 
 ### Navigation
 
@@ -237,7 +237,7 @@ The Crosskey Counter Group defines the relationship. Next, create a dashboard to
    | Field | Value |
    | --- | --- |
    | **Name** | Dashboard for Crosskey CountryxHostsxApps |
-   | **Description** | Add some modules to this dashboard |
+   | **Description** | Country, host and application traffic |
    | **Counter Group** | CountryxHostsxApps |
    | **Top Count** | 10 |
    | **Meter** | Upload Bytes |
@@ -257,7 +257,7 @@ Click **Save**.
 
 ---
 
-# 4. View the Country → Host → Application Hierarchy
+## 4. View the Country → Host → Application Hierarchy
 
 Once traffic data becomes available, open the dashboard.
 
@@ -277,7 +277,7 @@ This allows you to move progressively from a broad view to a more specific traff
 
 ---
 
-# 5. Analyze the Country × Host × Application Traffic
+## 5. Analyze the Country × Host × Application Traffic
 
 The **Current Toppers** module provides the traffic information for the composite Crosskey entries.
 

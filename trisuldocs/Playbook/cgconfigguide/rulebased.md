@@ -10,7 +10,7 @@ The requirement is:
 
 > **Show me traffic for applications that match a defined rule and hosts that match another defined rule.**
 
-A **Rule Based Counter Group** can be used to create custom traffic views by defining rules that determine which keys are included in the Counter Group.
+A [**Rule Based Counter Group**](/docs/guide/ag/context/rulebased_countergroups) can be used to create custom traffic views by defining rules that determine which keys are included in the Counter Group.
 
 In this example, we will create two Rule Based Counter Groups:
 
@@ -25,14 +25,12 @@ The rules determine which applications or hosts are included in the respective C
 
 See this scenario in action:
 
-[**How to Monitor Applications and Hosts Using Rule Based Counter Groups | Trisul**](https://youtu.be/50HH9w6WqtQ?si=fH3hFz7PDErkS3tD)
+[**How to Monitor Applications and Hosts Using Rule Based Counter Groups | Trisul**](https://youtu.be/50HH9w6WqtQ)
 
 The video demonstrates how to create the Rule Based Counter Groups, configure the rules, create a dashboard, and view the resulting applications and hosts.
 :::
 
 ---
-
-## What You Will Build
 
 ## What You Will Build
 
@@ -93,7 +91,7 @@ means:
 
 :::info Navigation
 
-👉 Go to **Profile0** from the main sidebar, then navigate to **Custom Counters → Rule Based**
+:point_right: Go to **Profile0** from the main sidebar, then navigate to **Custom Counters → Rule Based**
 
 :::
 
@@ -132,7 +130,7 @@ means:
 
 :::info Navigation
 
-👉 Go to **Profile0** from the main sidebar, then navigate to **Custom Counters → Rule Based**
+:point_right: Go to **Profile0** from the main sidebar, then navigate to **Custom Counters → Rule Based**
 
 :::
 
@@ -147,13 +145,13 @@ The host Rule Based Counter Group is now created.
 
 ## 3. Create a Dashboard for the Rule Based Counter Groups
 
-The Counter Groups define which applications and hosts should be included. Next, create a dashboard to visualize the resulting data.
+The Counter Groups define which applications and hosts should be included. Next, create a dashboard to visualize the resulting data. For all dashboard options, see [Dashboards](/docs/guide/ug/ui/create_dashboards).
 
 ### Navigation
 
 :::info Navigation
 
-👉 Go to **Dashboards** from the main sidebar and click **Show All**
+:point_right: Go to **Dashboards** from the main sidebar and click **Show All**
 
 :::
 

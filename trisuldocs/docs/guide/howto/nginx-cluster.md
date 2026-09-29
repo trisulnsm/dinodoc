@@ -1,6 +1,6 @@
 # Customizing the web server stack
 
-The default install of Webtrisul comes with 5 instances of *thin*
+The default install of WebTrisul comes with 5 instances of *thin*
 servers with a *nginx* reverse proxy. This should be sufficient for many
 sites, but you can increase the number of servers if  
 
@@ -13,7 +13,7 @@ The configuration files are stored in `/usr/local/share/webtrisul/build`
 
 Make the following changes in these files
 
-|                  |                                                                                                           |
+| File | Change |
 | ---------------- | --------------------------------------------------------------------------------------------------------- |
 | nginx.conf       | Add names of additional servers sequentially in the upstream thin\_cluster section. Counting starts at 0. |
 | thin-nginxd.conf | Update the NO\_OF\_SERVERS to what you want                                                               |

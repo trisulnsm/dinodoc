@@ -1,12 +1,16 @@
 # Investigate Command and Control (C2) Communications
 
+:::note Applies to
+Trisul NSM in packet capture mode. **DNS Resources** and **SSL/TLS Metering** need packet capture.
+:::
+
 ## Investigation Overview
 
 Compromised systems rarely operate in isolation. Once malware gains a foothold, it typically establishes communication with an external Command and Control (C2) server to receive instructions, download additional payloads, maintain persistence, or coordinate further malicious activity. These communications often occur long before any visible impact is observed on the network.
 
 Unlike large data transfers or denial-of-service attacks, C2 traffic is designed to blend into legitimate network activity. Attackers frequently use common protocols such as DNS, HTTP, HTTPS, and TLS, communicate at regular intervals, or disguise traffic as normal application behavior. The objective of this investigation is to determine whether suspicious outbound communications represent legitimate application traffic or potential command and control activity, identify the affected systems, and assess the scope of the compromise.
 
-Using Trisul Network Security Monitoring, analysts can investigate suspicious communications from the initial indicator through network flows, DNS activity, TLS metadata, packet evidence, and historical analysis without switching between multiple security tools.
+Using Trisul NSM, analysts can investigate suspicious communications from the initial indicator through network flows, DNS activity, TLS metadata, packet evidence, and historical analysis without switching between multiple security tools.
 
 ---
 
@@ -42,7 +46,7 @@ Command and control investigations rarely begin with high bandwidth usage. Inste
 
 Begin by reviewing the indicator that initiated the investigation. This may originate from DNS activity, TLS metadata, threat intelligence, or a security alert identifying suspicious outbound communications.
 
-Open [**DNS Analysis**](/docs/prodguide/nsm/Resources/dns), [**TLS Metadata**](/docs/guide/ug/cg/ssl/), or the relevant security alert associated with the investigation.
+Open [**DNS Resources**](/docs/prodguide/nsm/Resources/dns), [**SSL/TLS Metering**](/docs/guide/ug/cg/ssl), [**JA3 Fingerprints**](/docs/prodguide/nsm/NBAD/ja3), or the relevant security alert associated with the investigation.
 
 Review the available evidence to determine:
 
@@ -72,7 +76,7 @@ Once the suspicious communication has been identified, determine which internal 
 
 After identifying a suspicious destination or encrypted session, determine which internal hosts are communicating with it.
 
-From [**DNS Analysis**](/docs/prodguide/nsm/Resources/dns) or [**TLS Metadata**](/docs/guide/ug/cg/ssl/), drill down into the associated communication to identify the internal source hosts.
+From [**DNS Resources**](/docs/prodguide/nsm/Resources/dns) or [**SSL/TLS Metering**](/docs/guide/ug/cg/ssl), drill down into the associated communication to identify the internal source hosts.
 
 Review the available communication details to determine:
 
@@ -144,7 +148,7 @@ If the communication uses encrypted protocols, examine the available TLS metadat
 
 Command and control investigations should not rely on a single indicator. Correlating multiple sources of network evidence helps distinguish legitimate application traffic from malicious communications and provides greater confidence before initiating incident response.
 
-Continue the investigation by correlating evidence from [**DNS Analysis**](/docs/prodguide/nsm/Resources/dns), [**Packet Analysis**](/docs/prodguide/nsm/Resources/dns#option-button), and [**Historical Investigation (Retro)**](/docs/guide/ug/cg/retro) to validate whether the observed communication is consistent across multiple sources.
+Continue the investigation by correlating evidence from [**DNS Resources**](/docs/prodguide/nsm/Resources/dns), [**Packet Analysis**](/docs/guide/ug/tools/explore_flows#flow-options), and [**Retro Analysis**](/docs/guide/ug/cg/retro) to validate whether the observed communication is consistent across multiple sources.
 
 Use this investigation to answer questions such as:
 
@@ -218,7 +222,7 @@ This investigation can generally be considered complete when:
 - DNS, TLS, flow, packet, and historical evidence have been correlated.
 - The scope of the activity has been established.
 - Appropriate containment or engineering actions have been identified.
-- Whether the observed communication has been determined to be legitimate or potential command and control activity.
+- The observed communication has been determined to be legitimate or potential command and control activity.
 
 ---
 

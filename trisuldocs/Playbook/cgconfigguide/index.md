@@ -4,7 +4,7 @@
 
 Counter Groups are the primary way metrics are organized in Trisul Network Analytics. Trisul also allows you to create custom Counter Groups when the predefined groups do not provide the specific traffic view you need.
 
-The **Counter Group Scenario Library** provides practical examples to help you choose the right Counter Group configuration for a particular monitoring requirement.
+This guide provides practical examples to help you choose the right Counter Group configuration for a particular monitoring requirement.
 
 Instead of starting with a Counter Group and trying to determine what it can be used for, start with **what you want to monitor** and use the scenarios in this library to find a suitable configuration.
 
@@ -38,10 +38,10 @@ Before selecting a Counter Group configuration for a scenario, familiarize yours
 
 Read the following documentation first:
 
-- [Counter Groups](https://docs.trisul.org/docs/guide/counter-groups/)  
+- [Counter Groups](/docs/guide/counter-groups)  
   Learn how Counter Groups organize metrics, meters, and keys in Trisul.
 
-- [Custom Counter Groups](https://docs.trisul.org/docs/guide/ag/context/custom_countergroup)  
+- [Custom Counter Groups](/docs/guide/ag/context/custom_countergroup)  
   Learn about the different types of custom Counter Groups and when each type can be used.
 
 Once you understand these concepts, use the scenarios in this library as **practical configuration references**.
@@ -73,52 +73,33 @@ This makes the library a **reference for mapping monitoring requirements to Coun
 
 ## What You'll Find in Each Scenario
 
-Each scenario focuses on a specific monitoring requirement and provides:
+Each scenario follows the same structure:
 
-### Scenario
+- **Scenario:** the monitoring requirement.
+- **What You Will Build:** the counter group and dashboard you end up with.
+- **When This Is Useful:** other requirements the same approach fits.
+- **Numbered steps:** create the counter group, restart the Probe, build a dashboard, and view the result.
+- **What This Demonstrates** and **Key Takeaway:** the configuration pattern in one line.
 
-A practical requirement describing what you want to monitor.
+---
 
-### Counter Group Type
+## Restart the Probe {#restart-the-probe}
 
-The type of custom Counter Group recommended for the scenario, such as a Filtered, Keyset, Stat Based, Rule Based, or Cross Key Counter Group.
-
-### Counter Group Configuration
-
-The recommended configuration, which may include:
-
-- **Parent Group**
-- **Filter Group**
-- **Key List**
-- Other relevant Counter Group settings
-
-### Why This Configuration?
-
-A simple explanation of why the selected Counter Group type, groups, and keys are appropriate for the scenario.
-
-### How to Use the Counter Group
-
-Steps for creating the Counter Group and using it to view the required traffic.
-
-#### Restart the probe
-
-After creating or modifying a Counter Group, restart the probe for the changes to take effect. This step applies to all Counter Group scenarios in this library.
+After you create or change a Counter Group, restart the Probe for the change to take effect. This step applies to every scenario in this guide.
 
 :::info Navigation
 
-👉 Go to **Admin Tasks** from the main sidebar and click **Start/Stop Tasks**
+:point_right: Go to **Admin Tasks** from the main sidebar and click **Start/Stop Tasks**
 
 :::
 
+<!-- TODO(verify): does Start/Stop Tasks show a restart-pending state for the Probe? -->
+
 The probe will indicate that a restart is pending.
 
-Restart the probe and wait for it to come back online.
+Restart the Probe and wait for it to come back online. See [Start and Stop Trisul](/docs/guide/ag/admintasks/startstop).
 
-Once the probe has restarted, the newly created Counter Group can begin collecting data.
-
-### Result
-
-An explanation of what the resulting Counter Group allows you to see or monitor.
+Once the Probe has restarted, the new Counter Group starts collecting data.
 
 ---
 
@@ -173,9 +154,16 @@ Find the scenario that most closely matches your requirement and use its Counter
 
 ---
 
-## Scenario Library
+## Scenarios {#scenario-library}
 
-The scenarios in this library cover different monitoring requirements and show how Counter Groups can be configured to create the required traffic view.
+| Scenario | Counter group type | Reference |
+| --- | --- | --- |
+| [Monitoring Web Traffic Using Filtered Counter Groups](/playbook/cgconfigguide/webtraffic) | Filtered | [Filtered Counter Groups](/docs/guide/ag/context/filtered_countergroups) |
+| [Grouping Hosts by Teams Using Keyset Counter Groups](/playbook/cgconfigguide/keyset) | Keyset | [Keyset Counter Groups](/docs/guide/ag/context/keyset_countergroups) |
+| [Monitoring Applications and Hosts by Traffic Threshold Using Stat Based Counter Groups](/playbook/cgconfigguide/statbased) | Stat Based | [Stat Based Counter Groups](/docs/guide/ag/context/statbased_countergroups) |
+| [Monitoring Applications and Hosts Using Rule Based Counter Groups](/playbook/cgconfigguide/rulebased) | Rule Based | [Rule Based Counter Groups](/docs/guide/ag/context/rulebased_countergroups) |
+| [Viewing Country, Host, and Application Relationships Using Crosskey Counter Groups](/playbook/cgconfigguide/crosskey) | Cross Key | [Cross Key Counter Groups](/docs/guide/ag/context/crosskey_countergroups) |
+| [Monitoring Unique Applications for Hosts Using Cardinality Counters](/playbook/cgconfigguide/cardinality) | Cardinality meter | [Cardinality Counting](/docs/guide/ag/context/cardinality_countergroups) |
 
 New scenarios can be added as additional Counter Group requirements are identified.
 

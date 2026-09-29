@@ -11,7 +11,7 @@ Some terms :
 - Subscriber 
   A customer of the ISP/MSP
 - Service  
-  Indentifed by static IPs or router sub interfaces
+  Identified by static IPs or router sub interfaces
 
 ## What is included ?
 
@@ -35,46 +35,44 @@ few options you can choose from depending on your service topology.
 
 1. **Customer premises managed switch (dynamic IP)**
    
-   1. Have the customer switch export Netflow or Sflow to your datacenter
+   1. Have the customer switch export NetFlow or sFlow to your datacenter
       where Trisul is running
 
 2. **Customer premises unmanaged switch / modem (dynamic IP)**
    
-   1. Enable Netflow or Sflow at your edge routers
+   1. Enable NetFlow or sFlow at your edge routers
    
    2. Enable port spanning at your uplinks where all subscriber traffic
-      can be visible. You may need to procure a optical tap if link speeds are
+      can be visible. You may need to procure an optical tap if link speeds are
       upwards of a few Gbps
 
 3. **Customer has static IPs**
    
-   1. This is the easiest, since you can map IPs to subscribers. Just
-      enable flow at core routers or use port spanning at the uplink
+   1. This is the simplest case, because you can map IPs to subscribers. Enable flow at core routers or use port spanning at the uplink
 
 ## Create the subscriber user
 
 To create a user (subscriber) and map him to a set of services:
 
-<span class="command hint">Select admin -\> Users</span>  
+:point_right: Log in as `admin` and go to Web Admin &rarr; Manage &rarr; Users  
 
 - Click on **Create a new user**
 
 This will bring you to the screen shown below. Specify all the fields as
-described in the [Manage Users](/docs/guide/ag/webadmin/userroles)
-section of the User Guide. Pay specific attention to the following
+described in the [Users](/docs/guide/ag/webadmin/manageusers) page of the Admin Guide. Pay specific attention to the following
 fields
 
 ![](images/subscriber.png)
 
-|            |               |                                                                                                                                                                                                                |
+| Field | Value | Description |
 | ---------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Role       |               | Select *Subscriber*. This will open up the next two boxes where you can enter the services                                                                                                                     |
 | Static IPs | If applicable | Enter the static IPs assigned to the user, comma separated                                                                                                                                                     |
-| Interfaces | If applicable | If using Netflow, enter the netflow interface details. The format is *Router\_IP\_IfIndex* The router IP is the address of the flow exporting router and IfIndex is the SNMP index of the subscriber interface |
+| Interfaces | If applicable | If using NetFlow, enter the NetFlow interface details. The format is *Router\_IP\_IfIndex* The router IP is the address of the flow exporting router and IfIndex is the SNMP index of the subscriber interface |
 
-div(info). If this subscriber has both static IPs and netflow interfaces
-turned on, only specify the interface. The IP will be automatically
-considered for reporting.
+:::info
+If this subscriber has both static IPs and NetFlow interfaces turned on, only specify the interface. The IP is automatically considered for reporting.
+:::
 
 Then complete the task.  
 
@@ -97,14 +95,14 @@ The user is immediately taken to the report page containing :
 - Data for the current day (midnight till now)
 
 The user can select a different service or a different day using the
-easy to use drop down lists.
+drop-down lists.
 
 ### Showing subscriber interface flow level data
 
 The following screenshot provides an idea of what the user sees. The
 report includes the following.
 
-|                                                |
+| Report contents |
 | ---------------------------------------------- |
 | In/Out traffic on the subscriber interface     |
 | Top Hosts & Top Applications (upto top 1000)   |
@@ -140,10 +138,10 @@ It is possible to create users from a text file or provisioning
 database. Please contact Unleash Networks for a quick script to do this
 task.
 
-#### What is better Netflow or raw packets ?
+#### What is better NetFlow or raw packets ?
 
-Netflow will scale much better than raw packets and will provide
-comprehensive reporting. If you plan to offer advanced reports that
+NetFlow will scale much better than raw packets and will provide
+detailed reporting. If you plan to offer advanced reports that
 include security analysis, then feeding Trisul raw packets is better.
 
 #### Can you provide reports on IPSEC/VPN tunnel service ?
@@ -151,9 +149,9 @@ include security analysis, then feeding Trisul raw packets is better.
 Subscriber can login and view their service details, except that Trisul
 will not provide internal host/app data.
 
-#### I dont offer static IP, rather offer DSL/Cable. How can I setup subscribers without an IP ?
+#### I don't offer static IP, rather offer DSL/Cable. How can I setup subscribers without an IP ?
 
-Export netflow from the DSLAM router where each service shows up as a
+Export NetFlow from the DSLAM router where each service shows up as a
 logical interface.
 
 #### Can I offer more advanced reports with drilldowns ?

@@ -7,9 +7,9 @@ To sync tenants, login as admin
 :point_right: Go to Context admin &rarr; Manage &rarr; ExternalDB
 :::
 
-The external DB displays the list of all customers, their host, post id, username and password and the database name. 
+The external DB displays the list of all customers, their host, port, username and password and the database name. 
 
 ![](images/synccontexts.png)  
-*Figure: Sync Contacts of Tenants*
+*Figure: Sync Contexts of Tenants*
 
 Click on the action button against the customer name and select Sync Contexts from the dropdown. This will check all the database of the tenants for changes of subnets. If new addition of removal is found it will replace the current database with the new one and syncs.

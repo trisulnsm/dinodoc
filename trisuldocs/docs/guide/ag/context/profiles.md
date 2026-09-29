@@ -10,14 +10,11 @@ parameters for any profile.
 
 :::info navigation
 
-:point_right: Login as admin and Select Context : default &rarr; profile0 &rarr; Capture
-Adapters
+:point_right: Log in as `admin` and select Context: default &rarr; profile0 &rarr; Capture Adapters
 
 :::
 
-By default, only **eth0** is enabled. There are some other disabled
-entries for debugging purposes. If you want to listen on, say eth1 you
-can create a new profile and enable that one.
+By default, only **eth0** is enabled. Some other entries are disabled and are kept for debugging. To listen on another interface, such as eth1, create a new adapter and enable it.
 
 ## Create a New Capture Profile
 
@@ -25,7 +22,7 @@ Say you want to create a new network adapter for profile0 in context0.
 
 :::info navigation
 
-:point_right: Select Context : default &rarr; profile0 &rarr; Capture Adapters 
+:point_right: Select Context: default &rarr; profile0 &rarr; Capture Adapters 
 Click **Create Adapter**
 
 :::
@@ -34,7 +31,7 @@ A form with the following fields are displayed
 
 | Field              | Description                                                                  |
 | ------------------ | ---------------------------------------------------------------------------- |
-| Name               | A unique name for this profile                                               |
+| Name               | A unique name for this adapter                                               |
 | Network Interface  | The linux network interface name - such as *eth0*, *eth1*, *wlan0*           |
 | BPF Filter         | A BPF (libpcap/tcpdump) filter expression (see [notes below](/docs/guide/ag/context/profiles#specifying-a-bpf-filter-for-afpacket-and-rxring) on how to generate this for rxring mode - the default) |
 | ERSPAN Interface   | Decapsulate all ERSPAN packets on this interface. If this option is disabled, ERSPAN is counted as a single IP+GRE tunnel.                                                                  |
@@ -44,10 +41,7 @@ A form with the following fields are displayed
 
 ### Provider Specific Options
 
-Trisul can capture packets in two “five modes”, *Linux RX Ring* ,
-*Libpcap* , *PF Ring* , *AF Packet*, *Napatech* . You dont control the run
-mode here, but at the command line or by changing the application
-settings. The capture profiles work for all run modes, with one
+Trisul can capture packets in five modes: *Linux RX Ring*, *Libpcap*, *PF Ring*, *AF Packet* and *Napatech*. You don't set the run mode here, but at the command line or by changing the application settings. The capture profiles work for all run modes, with one
 exception.
 
 #### RX Ring
@@ -104,7 +98,7 @@ Full NTPL command.
 
 :::info navigation
 
-:point_right: Select the active Interface and Click Create Adapter
+:point_right: Go to Context: default &rarr; profile0 &rarr; Capture Adapters and click **Create Adapter**
 
 :::
 
@@ -132,7 +126,7 @@ interface name
 
 ### Quick Create PF Ring
 
-Select *Quick create RF Ring* to create a PF Ring capture profile with
+Select *Quick create PF Ring* to create a PF Ring capture profile with
 multiple streams for flow based load balancing
 
 | Field Name        | Description                                                   |
@@ -152,7 +146,7 @@ for flow based load balancing.
 | Number of streams | Number of AF FANOUT streams for flow based load balancing (eg, 2,4,etc) |
 | Fanout Group ID   | AF Packet Fanout Group ID for flow based load balancing (Example 999)   |
 
-## Enable or Disable the Profile
+## Enable or Disable Adapters {#enable-or-disable-the-profile}
 
 ![](images/capture_adapters.png)  
 *Figure: Enable/Disable all*
@@ -161,7 +155,7 @@ for flow based load balancing.
 
 > When you click **Enable All** or **Disable All** adapters, the system will prompt you to restart the probe. Make sure to complete the restart to ensure the changes take effect.
 
-### Edit the Profile
+### Edit an Adapter {#edit-the-profile}
 
 Click the action button against any interface and a dropdown menu shows up **Enable**, **Edit**, and **Delete** options in the Profile list.    
 
@@ -180,7 +174,7 @@ Click on the checkboxes of the interfaces you want to edit in bulk and the follo
 |---------|--------------|
 | Enable | Activates the chosen interfaces, allowing them to function and interact with users or systems as intended. |
 | Disable | Deactivates the selected interfaces, temporarily halting their functionality and interaction with users or systems. |
-| Edit | Opens a bulk editing interface "Edit Capture Adapter" on the left side as shown in the figure to modify settings of the selected interfaces simultaneously. (Options in "Edit Capture Adapater" is the same fields as in the "Create Adapater") and click Update. |
+| Edit | Opens a bulk editing interface "Edit Capture Adapter" on the left side as shown in the figure to modify settings of the selected interfaces simultaneously. ("Edit Capture Adapter" has the same fields as "Create Adapter") and click Update. |
 | Select All | Automatically checks all available interfaces, enabling you to apply bulk actions (enable, disable, edit) to every interface at once. | 
 | Unselect All | clears all previously selected checkboxes, resetting your selection and allowing you to start fresh. |
 | Invert | Toggles the selection status of all interfaces. Checked boxes will become unchecked, and unchecked boxes will become checked, providing a convenient way to quickly reverse your selections. |

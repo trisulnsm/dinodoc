@@ -2,14 +2,11 @@
 
 Trisul is most effective monitoring perimeters of trust boundaries. In
 an enterprise scenario, this usually means monitoring on either side of
-a corporate firewall. This works beautifully because you can log all
-kinds of network & security data exchanged across your boundary by just
-monitoring a few external ports.
+a corporate firewall. This works well because you can log all kinds of network and security data exchanged across your boundary by monitoring a few external ports.
 
 ## The proxy problem
 
-There is a however a big problem in the real world, the humble web
-proxy. Proxy servers like Squid, Bluecoat, F5, Cisco, etc make it easy
+There is, however, a big problem in the real world: the web proxy. Proxy servers like Squid, Bluecoat, F5, Cisco, etc make it easy
 to apply web controls but they also obscure the real internal IP
 address. Traffic upstream of these proxies contain the IP address of the
 proxy device and not of the actual endpoint. This means you can no
@@ -38,7 +35,7 @@ already enabled by default.
 
 The definition of the X-Forwarded-For header is :
 
-<div class="info">
+:::info
 
 **X-Forwarded-For: client1, proxy1, proxy2**
 
@@ -50,20 +47,20 @@ proxy3 (proxy3 appears as remote address of the request).
 
 [From Wikipedia](http://en.wikipedia.org/wiki/X-Forwarded-For)
 
-</div>
+:::
 
 ## Configure XFF tracking in Trisul
 
 To enable XFF tracking in Trisul you need to edit a parameter in the
-trisulConfig.xml file as specified below.
+trisulProbeConfig.xml file as specified below.
 
-%(hint command)Set the `EnableXFFDeproxy` option to TRUE in the
+Set the `EnableXFFDeproxy` option to TRUE in the
 [Reassembly section of the Trisul Config
 file](/docs/guide/ref/trisulconfig#reassembly)
 
 The XFF feature require a few supporting features to be enabled as well.
 
-Make sure these are enabled in the trisulConfig.xml file as well.
+Make sure these are enabled in the trisulProbeConfig.xml file as well.
 
 - Enable the `TCPFlowTrack` option  
 
@@ -74,8 +71,9 @@ Make sure these are enabled in the trisulConfig.xml file as well.
 The above features are needed because Trisul needs to reassemble the
 HTTP headers accurately to reliably process the XFF headers.
 
-<span class="notice">Note</span> You need to restart Trisul for this to
-take effect.
+:::note
+You need to restart Trisul for this to take effect.
+:::
 
 ## Trisul reports
 

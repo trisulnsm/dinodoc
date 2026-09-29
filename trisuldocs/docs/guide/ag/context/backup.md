@@ -12,26 +12,24 @@ config, context configuration, and such.
 This includes the metrics, flows, alerts, packets
 
 For a large data platform like Trisul , configuration backup is of main
-importance. The databases tend to be of very large Terabyte sizes. The
+importance. The databases can grow to several terabytes. The
 recommended solution for full scale data backup is to setup a DR node.
 
 ## Directories
 
-:::note **Small deployment easy backup** 
+:::note **Backing up a small deployment** 
 
-For small deployments simply backup the `/usr/local` directory. Ensure to first check the directory size using `du -sh /usr/local`
+For small deployments, back up the `/usr/local` directory. Ensure to first check the directory size using `du -sh /usr/local`
 
 :::
 
-The following directories need to be backed up. If your Trisul installation
-is small you can simply backup these directories using normal Linux
-backup tools.
+The following directories need to be backed up. If your Trisul installation is small, back up these directories with normal Linux backup tools.
 
 | Directories      | Description                                          |
 | ---------------- | ---------------------------------------------------- |
 | /usr/local/share | data                                                 |
 | /usr/local/lib   | libraries                                            |
-| /usr/local/var   | data and log files. this directory can be very large |
+| /usr/local/var   | data and log files. This directory can be large |
 | /usr/local/etc   | config                                               |
 | /usr/local/bin   | executables                                          |
 
@@ -63,7 +61,7 @@ Step 4: Backup Trisul Data and Configuration
 For example: 
 
 ```Bash
-cp -r /usr/local/var/lib/trisul-hub/domain0/context0/meters <backup folder>
+cp -r /usr/local/var/lib/trisul-hub/domain0/hub0/context0/meters <backup folder>
 ```
 
 ![](images/trisulbackup.png)    
@@ -149,5 +147,5 @@ Step 4: Restore Trisul Data
 For example: 
 
 ```Bash
-cp -r <backup folder> /usr/local/var/lib/trisul-hub/domain0/context0/meters 
+cp -r <backup folder> /usr/local/var/lib/trisul-hub/domain0/hub0/context0/meters 
 ```

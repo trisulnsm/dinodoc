@@ -5,10 +5,10 @@
 ## View Keys
 
 :::info navigation
-:point_right: Go to Context: Default &rarr; Profile0 &rarr; Manage Keys
+:point_right: Go to Context: default &rarr; Profile0 &rarr; Manage Keys
 :::
 
-In here you can see the list of keys on the platform and manage them. 
+Here you can see the keys in each counter group and manage them. 
 
 ![](images/managekeys.png)  
 *Figure: List of Keys*
@@ -27,7 +27,7 @@ The header of the table shows the total number of keys on the platform highlight
 
 ### Options 
 
-Click on the Option button against each key to perform various actions on the key. The actions include the following.
+Click the Option button against a counter group to act on its keys. The actions include the following.
 
 | Options | Description |
 |---------|-------------|

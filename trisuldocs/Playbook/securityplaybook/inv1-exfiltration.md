@@ -6,7 +6,7 @@ Sensitive information rarely leaves an organization's network without generating
 
 Not every outbound transfer represents malicious activity. Backups, cloud synchronization, software updates, and legitimate business processes frequently generate similar traffic patterns. The objective of this investigation is to determine whether the observed communication represents normal business activity or potential data exfiltration, identify the systems involved, and establish the scope of the incident.
 
-Using Trisul Network Security Monitoring, analysts can progressively narrow the investigation from the initial indicator to the underlying communication without switching between multiple security tools.
+Using Trisul NSM, analysts can progressively narrow the investigation from the initial indicator to the underlying communication without switching between multiple security tools.
 
 ---
 
@@ -30,7 +30,6 @@ By completing this investigation, you should be able to:
 - Determine the destination of the transferred data.
 - Understand the applications and protocols involved.
 - Assess the volume and duration of the transfer.
-- Determine whether the activity is legitimate or suspicious.
 - Determine whether the observed outbound communication represents legitimate business activity or potential data exfiltration.
 
 ---
@@ -182,7 +181,7 @@ After validating the communication, determine whether similar activity has occur
 
 Determining whether the observed communication is new or part of an established pattern provides valuable context for the investigation.
 
-Open [**Historical Investigation (Retro)**](/docs/guide/ug/cg/retro/) for the affected host and destination.
+Open [**Retro Analysis**](/docs/guide/ug/cg/retro) for the affected host and destination.
 
 Use this investigation to answer questions such as:
 
@@ -223,7 +222,7 @@ This investigation can generally be considered complete when:
 - The communication has been analyzed using flow records.
 - Packet evidence has been reviewed where available.
 - Historical activity has been compared.
-- Whether the observed communication has been determined to be legitimate or suspicious.
+- The observed communication has been determined to be legitimate or suspicious.
 
 ---
 

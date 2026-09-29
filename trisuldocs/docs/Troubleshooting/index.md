@@ -1,13 +1,15 @@
 # Troubleshooting
 
-In this section, we'll provide you with comprehensive troubleshooting guides to help you identify and resolve common issues. You'll find step-by-step instructions to troubleshoot problems related to:
+These guides help you find and fix common problems, step by step:
 
-   - NetFlow data ingestion, including configuration, packet receipt, and template validation
-   - User login functionality, including user existence, password validation, and context assignments
+- [NetFlow data not arriving](/docs/Troubleshooting/netflownotreceiving)
+- [A user can't log in](/docs/Troubleshooting/unabletologin)
+- [A context isn't getting created](/docs/Troubleshooting/contextnotgettingcreated)
+- [Web server timeouts on long requests](/docs/Troubleshooting/webserverissues)
 
 Check [Youtube Troubleshooting Guides](https://youtu.be/MfMdHVJXrws?si=BiVIaK4ieCNCRPiO) for additional help.
 
-By following these guides, you'll be able to efficiently troubleshoot and resolve issues, ensuring optimal system performance and user experience. Browse through the topics below to find the solution to your specific problem.
+Pick the topic below that matches your problem.
 
 import DocCardList from '@theme/DocCardList';
 

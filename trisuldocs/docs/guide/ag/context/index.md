@@ -6,14 +6,14 @@ A Trisul context is a separate instance of Trisul with its own isolated
 database, configuration, and processes. To know more about contexts,
 Refer to [Working with Contexts](/docs/guide/learntrisul/concepts/contexts)
 
-Trisul, by default provides a context named **'Context: Default'** as seen in the figure. Additionally, any newly created contexts will also be listed in the admin menu below the default context. 
+By default, Trisul provides a context named **default**, shown in the menu as **Context: default**. Additionally, any newly created contexts will also be listed in the admin menu below the default context. 
 
 ![](images/contextmenu.png)  
 *Figure: Context: Menus*
 
 Each context has its own dedicated menu as in the following.
 
-1) [Admin Tasks](/docs/guide/ag/basictasks/)
+1) [Admin Tasks](/docs/guide/ag/admintasks/)
 2) [Profile0](/docs/guide/ag/context/profilemenu)
 3) [Licensing](/docs/guide/starthere/setuptrisul/license/intro)
 4) [Manage Profiles](/docs/guide/ag/admintasks/manage_profiles)

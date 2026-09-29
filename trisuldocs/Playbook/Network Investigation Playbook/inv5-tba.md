@@ -1,5 +1,9 @@
 # Investigate Network Behavior Anomalies
 
+:::note Applies to
+All modes. Step 5 (packet analysis) needs packet capture.
+:::
+
 ## Investigation Overview
 
 Network behavior rarely remains identical from one day to the next, but significant deviations from established traffic patterns often indicate that something within the network has changed. An unexpected increase in application traffic, a sudden shift in communication patterns, unusual activity during normally quiet periods, or a sustained decrease in expected traffic may all point to application changes, infrastructure issues, misconfigurations, or emerging security events.
@@ -41,7 +45,13 @@ By completing this investigation, you should be able to:
 
 Every behavioral investigation begins by understanding what has deviated from normal network activity. Before investigating hosts, interfaces, or applications, establish which metric exhibited unusual behavior, when the deviation began, which monitored object is affected, and whether the anomaly is still occurring.
 
-Open [**Threshold Band Alerts**](/docs/guide/ug/alerts/tband) to review the detected anomaly.
+Open [**Threshold Band Anomaly Alerts**](/docs/guide/ug/alerts/tband) to review the detected anomaly.
+
+:::note Prerequisite
+This investigation needs a configured TBA with enough training data. See [Create a New TBA](/docs/guide/ug/alerts/tband#create-a-new-tba).
+:::
+
+<!-- TODO(verify): minimum training period for a TBA (tband.md says 3 weeks, and also that the default of 1 sample works without weeks of data) -->
 
 Use this dashboard to answer questions such as:
 
@@ -68,7 +78,7 @@ Once the anomaly has been identified, compare the observed activity against the 
 
 An anomaly only has meaning when compared to what is considered normal. The next objective is to understand how the observed activity differs from the learned baseline before attempting to investigate the systems responsible for the deviation.
 
-Review the learned baseline and historical trends for the affected metric.
+Review the learned baseline and historical trends for the affected metric. Go to **Alerts → Threshold Bands** and click **View Training Data** (see [View Training Data](/docs/guide/ug/alerts/tband#view-training-data)).
 
 Use this view to answer questions such as:
 
@@ -175,6 +185,8 @@ This step helps answer questions such as:
 
 If packet capture is available, continue with Packet Analysis to validate the observed network behavior.
 
+---
+
 ### Step 5: Validate with Packet Analysis
 
 Where packet capture is available, continue directly from [**Explore Flows**](/docs/guide/ug/tools/explore_flows) by downloading the PCAP for the selected flow records.
@@ -242,9 +254,9 @@ This step helps answer questions such as:
 - Can the behavioral anomaly be fully explained?
 - Does the anomaly require continued monitoring?
 - Is no further action required?
-- Should the investigation continue with a Host Investigation?
-- Is an Interface Investigation required?
-- Would Historical Investigation provide additional context?
+- Should the investigation continue with [Investigate the Network Activity of an IP Address](/playbook/Network%20Investigation%20Playbook/inv1-exploreflows)?
+- Is [Investigate High Traffic on a Network Interface](/playbook/Network%20Investigation%20Playbook/inv2-routersintfs) required?
+- Would [Investigate Historical Network Activity](/playbook/Network%20Investigation%20Playbook/inv3-retro) provide additional context?
 - Is Packet Analysis required?
 - Does the anomaly require escalation to a security investigation?
 
@@ -256,7 +268,7 @@ This step helps answer questions such as:
 - Recommended follow-up investigation.
 - Monitoring or escalation recommendations.
 
---
+---
 
 ### Summarize the Investigation with Trisul AI
 
@@ -286,7 +298,7 @@ This investigation can generally be considered complete when:
 - Treat behavioral anomalies as the beginning of an investigation rather than evidence of a problem.
 - Always compare observed behavior against the learned baseline before drawing conclusions.
 - Investigate why behavior differs from normal operation before investigating individual systems in detail.
-- Use application and communication analysis to explain the anomaly rather than simply describing current network activity.
+- Use application and communication analysis to explain the anomaly rather than only describing current network activity.
 - Determine whether the observed behavior is expected before escalating the investigation.
 - Review learned baselines periodically as network behavior evolves.
 - Continue with specialised investigations when deeper analysis of a specific host, interface, application, or other monitored entity is required.

@@ -4,14 +4,14 @@
 
 Access points help connect protocols to ports. The common use case is to specify NetFlow ports for each protocol.
 
-They Control how protocols are mapped to ports and other entities. Access points map protocols to ports. For example if you want to decode UDP port 5556 as Netflow you can edit UDP then map Port 5556 to the Netflow protocol.
+Access points map protocols to ports and other entities. For example, to decode UDP port 5556 as NetFlow, edit UDP and map port 5556 to the NetFlow protocol.
 
 ## Access Point List
 
 Login as `admin` user to view the access points list.
 
 :::info navigation
-:point_right: Go to Context: Default &rarr; profile0 &rarr; Access Points
+:point_right: Go to Context: default &rarr; profile0 &rarr; Access Points
 :::
 
 

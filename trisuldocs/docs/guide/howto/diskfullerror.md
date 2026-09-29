@@ -6,13 +6,13 @@ If the Trisul disk fills up 100% you may not be able to access the web interface
 
 - ##### Step 1: Mount new partition
   
-  Create a new partition with enough space and mount the new partition, say on`/mnt/trisul_extra`[Trisul Hub Configuration File - Trisul Documentation](/docs/guide/ref/trisulhubconfig)
+  Create a new partition with enough space and mount it, for example on `/mnt/trisul_extra`.
   
   We will be moving some packet capture and metrics to this new area to free up some space.
 
 - ##### Step 2: Move the Probe archive to the new volume
   
-  The idea here is to move the packet capture`archive`directory to the new volume and create a soft link to point to it in the old location.
+  The idea here is to move the packet capture `archive` directory to the new volume and create a soft link to point to it in the old location.
   
   ```bash
   cd /usr/local/var/lib/trisul-probe/domain0/probe0/context0/caps/
@@ -20,11 +20,11 @@ If the Trisul disk fills up 100% you may not be able to access the web interface
       ln -sf /mnt/trisul_extra/probe_archive archive
   ```
 
-- ##### Step 3:Check if enough disk is freed up and repeat
+- ##### Step 3: Check if enough disk is freed up and repeat
   
-  Use the`df`command to check if now enough disk is available. If it is not available repeat Step 2 for the`/ref`directory and then if required for the`/oper`directory.
+  Use the `df` command to check if now enough disk is available. If it is not available repeat Step 2 for the `/ref` directory and then if required for the `/oper` directory.
   
-  :::note **[Check disk space]**
+  :::note Check disk space
   
   At this step, if disk usage drop to about 70-80% you can stop here and skip Step 4. You should be able to restart the Web Server and then the other Trisul components.
   
@@ -40,7 +40,7 @@ If the Trisul disk fills up 100% you may not be able to access the web interface
       ln -sf /mnt/trisul_extra/hub_archive archive
   ```
 
-Usually at this point you should have enough disk space freed up. Now you need to tune the SlicePolicy on both the Hub and Probe Config files so they dont fill up again.
+Usually at this point you should have enough disk space freed up. Now you need to tune the SlicePolicy on both the Hub and Probe Config files so they don't fill up again.
 
 ##### References
 
@@ -52,9 +52,9 @@ Usually at this point you should have enough disk space freed up. Now you need t
 Here are some best practices for large deployments.
 
 1. Run Trisul for 3-4 days to get an idea of data growth per day. Use that information to size the disks.
-2. PreferXFSfilesystem over EXT4 due to the large number of inodes supported
-3. Consider usingLVMso you can easily expand a filled up volume by adding new disk capacity
-4. PreferRAID-0 for the ProbePCAPSfor higher write performance
-5. PreferRAID-5 for the Hub for resilience
-6. For large enterprises, mount the`/archive`on yourNASif you have one
-7. Try to use[PCAPpruning rules](/docs/guide/ug/caps/packetstorage)eg, dont store Netflix,YouTube videos packets
+2. Prefer the XFS filesystem over EXT4, because it supports a large number of inodes.
+3. Consider using LVM, so you can expand a full volume by adding disk capacity.
+4. Prefer RAID-0 for the Probe PCAPs, for higher write performance.
+5. Prefer RAID-5 for the Hub, for resilience.
+6. For large enterprises, mount `/archive` on your NAS if you have one.
+7. Use [PCAP pruning rules](/docs/guide/ug/caps/packetstorage). For example, don't store Netflix or YouTube video packets.

@@ -11,7 +11,7 @@ It works like this :
 
 3. The first rule that matches determines the meter key  
 
-4. If no rule matches the key falls through to the parent counter group
+4. If no rule matches, the key falls through to the parent counter group
 
 ### An Example : Corporate Applications
 
@@ -24,14 +24,14 @@ Here are your requirements.
 | ----------------------------------- | -------------------------------------------------------- |
 | Ports 80 on IPs 10.10.17.20, 21, 22 | HR-Attendance                                            |
 | Ports 3000-9000 on IP 10.10.18.35   | Trisul-NSM                                               |
-| Ports 8000 on IPs 10.10.18.25 - 45  | Security-Cam                                             |
+| Ports 8000 on IPs 10.10.18.25 - 45  | Security-Cams                                            |
 | All traffic to IP 10.10.19.3        | Exchange-Email                                           |
 | All others                          | Use the default application (eg 80 = HTTP, SSH = 22 etc) |
 
 You would specify the rules as follows
 
 Counter Group Name : **ACME APPS**  
-Parent Group : **Applications** (guid = {})
+Parent Group : **Applications** (guid = \{C51B48D4-7876-479E-B0D9-BD9EFF03CE2E\})
 
 | No     | Rule in Trisul Filter Format  | New Key     |
 | ------ | ----------- | --------- |
@@ -46,8 +46,7 @@ Parent Group : **Applications** (guid = {})
 Directions to create a new Rule Based Counter Group  
 :::info navigation
 
-:point_right: Login as Admin &rarr; Select Context and profile &rarr; Under Custom Counters
-&rarr; Rule Based
+:point_right: Log in as `admin` and go to Context: default &rarr; profile0 &rarr; Custom Counters &rarr; Rule Based
 
 :::
 
@@ -58,7 +57,7 @@ This leads you to a page , whose fields are explained below
 | FieldName                     | Description                                |
 | ----------------------------- | ------------------------------------------ |
 | Rule Based Counter Group Name | Name of the counter group                  |
-| Description                   | Words about the goals of the counter group |
+| Description                   | A short description of what the counter group measures |
 | Parent Group                  | The parent counter group                   |
 
 After creation , the user is redirected to a page which lists the

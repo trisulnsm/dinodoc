@@ -14,8 +14,7 @@ Place the checked build in */usr/local/bin*
 ## Core file
 
 Trisul is a setuid program. It starts up as root, but after completing
-privileged work, drops down to the user specified in the `<SetUID>`
-parameter in trisulConfig.xml. The default user is *trisul.trisul*.
+privileged work, drops down to the user specified in the `Setuid` parameter in trisulProbeConfig.xml. The default user is *trisul.trisul*.
 
 ### Enable core dumping of setuid programs
 
@@ -33,27 +32,23 @@ Set the value of */proc/sys/fs/suid\_dumpable* to *2*
 ### Where is the core file ?
 
 By default The core file will be placed in */tmp* and will be called
- `core.xxxx` where //xxxx// is the PID of the trisul process that
+ `core.xxxx` where *xxxx* is the PID of the trisul process that
 crashed. You can change this filename by modifying the
 `/etc/sysctl.conf` file.
 
-Add the following lines to `/etc/sysctl.conf`
+Add the following line to `/etc/sysctl.conf`. The core file will then be called, for example, `core.trisul.2239`.
 
 ```
-pre..
+kernel.core_pattern=/tmp/core.%e.%p
+```
 
-1.  core file will be called core.trisul.2239  
-    kernel.core\_pattern=/tmp/core.%e.%p
+Reload the config:
 
-Reload config
-
-pre..  
-\[root@localhost \~\]\# sysctl -p  
-net.ipv4.ip\_forward = 0  
-…  
-…  
-kernel.core\_pattern = /tmp/core.%e.%p  
-\[root@localhost \~\]\#
+```
+[root@localhost ~]# sysctl -p
+net.ipv4.ip_forward = 0
+…
+kernel.core_pattern = /tmp/core.%e.%p
 ```
 
 ### When it crashes
@@ -65,9 +60,8 @@ You must do this as root, because the saved core file is only readable
 by root.
 
 ```
-pre..  
-gdb /usr/local/bin/trisul\_checked /tmp/core.trisul.3297  
-(gdb) bt  
+gdb /usr/local/bin/trisul_checked /tmp/core.trisul.3297
+(gdb) bt
 .. prints the stack…
 ```
 

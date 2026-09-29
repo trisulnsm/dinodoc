@@ -1,8 +1,12 @@
 # Investigate High Traffic on a Network Interface
 
+:::note Applies to
+NetFlow mode. **Routers and Interfaces**, **Interface Drilldown** and **Interface Tracking** are NetFlow features. Step 5 (packet analysis) applies only where packet capture is also available.
+:::
+
 ## Investigation Overview
 
-High interface utilization is often the first indication of network congestion, but high bandwidth alone rarely explains the root cause. A busy interface may simply reflect expected operational activity such as backups, software deployments, cloud synchronization, or database replication. In other cases, it may indicate application issues, bandwidth abuse, configuration changes, or emerging network problems.
+High interface utilization is often the first indication of network congestion, but high bandwidth alone rarely explains the root cause. A busy interface may reflect expected operational activity such as backups, software deployments, cloud synchronization, or database replication. In other cases, it may indicate application issues, bandwidth abuse, configuration changes, or emerging network problems.
 
 This investigation follows the same workflow experienced network engineers use when troubleshooting interface congestion. Starting from the affected interface, the investigation pivots into [**Explore Flows**](/docs/guide/ug/tools/explore_flows), where engineers progressively identify the hosts consuming bandwidth, investigate the conversations responsible for the observed utilization, determine the applications generating the traffic, and validate their findings when packet-level analysis is required.
 
@@ -40,7 +44,7 @@ By completing this investigation, you should be able to determine:
 
 Every investigation begins by identifying the interface experiencing increased utilization and understanding the scope of the issue. Before investigating hosts or applications, determine whether the congestion is isolated to a single interface or affects a wider portion of the network.
 
-Open [**Routers & Interfaces**](/docs/guide/ug/netflow/routers_and_interfaces) to [**review interface utilization**](/docs/guide/ug/netflow/routers_and_interfaces#interfaces-table) across monitored devices.
+Open [**Routers and Interfaces**](/docs/guide/ug/netflow/routers_and_interfaces) to [**review interface utilization**](/docs/guide/ug/netflow/routers_and_interfaces#interfaces-table) across monitored devices.
 
 ![](./images/intfutil.png)
 
@@ -98,7 +102,7 @@ After identifying the hosts responsible for the interface utilization, determine
 
 Continue the investigation using [**Explore Flows**](/docs/guide/ug/tools/explore_flows).
 
-Use the **Interface ID** (available in the [**Interface Drilldown**](/docs/guide/ug/netflow/drilldown)) in the Explore Flows search field to pivot directly from the affected interface into the corresponding communication records.
+Use the **Interface ID** (available in the [**Interface Drilldown**](/docs/guide/ug/netflow/drilldown)) in the Explore Flows search field to pivot directly from the affected interface into the corresponding communication records. For example, enter `interface=1872` for all flows on interface 1872, or `ifout=10.0.17.180_1872` for egress flows on interface 1872 of router 10.0.17.180. See [Quick Search](/docs/guide/ug/tools/explore_flows#quick-search-enter-search-terms-directly) for all fields.
 
 Remain within Explore Flows while analysing:
 
@@ -127,6 +131,8 @@ This step helps answer questions such as:
 #### Continue the Investigation
 
 Once the communication patterns have been established, determine which applications generated the observed traffic.
+
+---
 
 ### Step 4: Analyze Application Usage
 

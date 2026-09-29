@@ -1,5 +1,9 @@
 # Monitor Critical Network Assets
 
+:::note Applies to
+All modes. Step 5 (packet analysis) needs packet capture.
+:::
+
 ## Investigation Overview
 
 Some network assets are more critical than others. Core routers, firewalls, WAN gateways, business-critical servers, and key applications support essential network operations, making changes in their behavior more significant than similar changes elsewhere in the network.
@@ -35,13 +39,17 @@ By completing this investigation, you should be able to:
 
 ---
 
-# Investigation Workflow
+## Investigation Workflow
 
-## Step 1: Review the Critical Asset
+### Step 1: Review the Critical Asset
 
 Every investigation begins by identifying the critical asset requiring attention. Before investigating traffic, applications, or communication patterns, establish which critical asset has changed, understand its operational role, and determine whether additional critical assets are exhibiting similar behavior.
 
-Open [**Custom Key Monitor**](/docs/guide/ug/cg/ckey) to review your monitored critical assets.
+Open [**Custom Key Monitors**](/docs/guide/ug/cg/ckey) to review your monitored critical assets.
+
+:::note Prerequisite
+This investigation needs a Custom Key Monitor for each critical asset. See [Create Custom Key Monitor](/docs/guide/ug/cg/ckey#create-custom-key-monitor).
+:::
 
 Use this dashboard to answer questions such as:
 
@@ -64,11 +72,11 @@ Once the affected critical asset has been identified, determine what operational
 
 ---
 
-## Step 2: Determine What Changed
+### Step 2: Determine What Changed
 
 Understanding that a critical asset has changed is only the beginning of the investigation. The next objective is identifying which operational characteristic differs from normal behavior before attempting to explain why the change occurred.
 
-Review the monitored metrics for the selected critical asset.
+Review the monitored metrics for the selected critical asset. In **Custom Key Monitors**, open the action button for the monitor and choose [**View Dashboard**](/docs/guide/ug/cg/ckey#view-dashboard).
 
 Use this view to answer questions such as:
 
@@ -92,7 +100,7 @@ Once the nature of the operational change has been established, identify the ent
 
 ---
 
-## Step 3: Investigate the Observed Change
+### Step 3: Investigate the Observed Change
 
 After identifying what changed on the critical asset, continue the investigation in [**Explore Flows**](/docs/guide/ug/tools/explore_flows) using the monitored asset and investigation period.
 
@@ -120,7 +128,7 @@ Once the contributing network entities have been identified, determine which app
 
 ---
 
-## Step 4: Analyze Application Activity
+### Step 4: Analyze Application Activity
 
 Remain within [**Explore Flows**](/docs/guide/ug/tools/explore_flows) and review the [**Top Applications**](/docs/guide/ug/tools/explore_flows#activity-details) for the investigation period.
 
@@ -152,7 +160,7 @@ After identifying the applications involved, review the aggregate traffic profil
 
 ---
 
-## Optional Validation: Review Aggregate Traffic
+### Optional Validation: Review Aggregate Traffic
 
 Most Critical Asset investigations can be completed using Explore Flows. Where additional validation is required, [**Aggregate Flows**](/docs/guide/ug/tools/aggregate_flows) provides a summarized view of the investigated traffic.
 
@@ -176,7 +184,9 @@ This step helps answer questions such as:
 
 If packet capture is available, continue with Packet Analysis to validate the observed network behavior.
 
-## Step 5: Validate with Packet Analysis
+---
+
+### Step 5: Validate with Packet Analysis
 
 Where packet capture is available, continue directly from **Explore Flows** by downloading the PCAP for the selected flow records.
 
@@ -202,7 +212,7 @@ Once the network activity has been validated, determine whether the observed cha
 
 ---
 
-## Step 6: Assess the Operational Impact
+### Step 6: Assess the Operational Impact
 
 After understanding the network activity responsible for the observed change, determine whether it had any measurable impact on network operations or business services.
 
@@ -230,7 +240,7 @@ Once the operational impact has been assessed, determine whether the observed be
 
 ---
 
-## Step 7: Determine Whether the Change Was Expected
+### Step 7: Determine Whether the Change Was Expected
 
 Not every operational change affecting a critical asset indicates a problem. Many changes are the result of legitimate operational activities such as scheduled maintenance, infrastructure upgrades, software deployments, backup or replication jobs, or changing business demand.
 
@@ -260,7 +270,7 @@ Once it has been determined whether the behavior is expected, identify the most 
 
 ---
 
-## Step 8: Determine the Appropriate Follow-up Investigation
+### Step 8: Determine the Appropriate Follow-up Investigation
 
 Review the investigation findings as a whole to determine whether the observed change has been fully explained or whether additional investigation is required.
 
@@ -271,10 +281,10 @@ This step helps answer questions such as:
 - Can the observed change be fully explained?
 - Is continued monitoring required?
 - Is no further action required?
-- Should the investigation continue with a Host Investigation?
-- Is an Interface Investigation required?
-- Would Historical Investigation provide additional context?
-- Would a Behavioral Investigation help determine whether this change forms part of a broader pattern?
+- Should the investigation continue with [Investigate the Network Activity of an IP Address](/playbook/Network%20Investigation%20Playbook/inv1-exploreflows)?
+- Is [Investigate High Traffic on a Network Interface](/playbook/Network%20Investigation%20Playbook/inv2-routersintfs) required?
+- Would [Investigate Historical Network Activity](/playbook/Network%20Investigation%20Playbook/inv3-retro) provide additional context?
+- Would [Investigate Network Behavior Anomalies](/playbook/Network%20Investigation%20Playbook/inv5-tba) help determine whether this change forms part of a broader pattern?
 - Is Packet Analysis required?
 - Does the issue require operational or security escalation?
 
@@ -286,7 +296,7 @@ This step helps answer questions such as:
 - Recommended follow-up investigation.
 - Monitoring or escalation recommendations.
 
---
+---
 
 ### Summarize the Investigation with Trisul AI
 
@@ -326,5 +336,5 @@ This investigation can generally be considered complete when:
 ## Related Investigations
 
 - [**Investigate Threshold Crossing Alerts**](/playbook/Network%20Investigation%20Playbook/inv4-tca) – Check whether the critical asset's change corresponds to a triggered threshold alert.
-- [**Investigate Network Behavior Anomalies**](/playbook/securityplaybook/inv5-threatalerts)
+- [**Investigate Network Behavior Anomalies**](/playbook/Network%20Investigation%20Playbook/inv5-tba) – Check whether the change is part of a wider deviation from the learned baseline.
 - [**Correlate Network Activity Across Multiple Dimensions**](/playbook/Network%20Investigation%20Playbook/inv7-crosskey) – Analyse the critical asset alongside application, interface, or site dimensions for a fuller picture.

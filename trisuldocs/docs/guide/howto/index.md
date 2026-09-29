@@ -1,19 +1,17 @@
-# Howtos
+# HowTos
 
-All four Trisul products run on the same core architecture, so the Admin and User Guides are unified for all the users. The documentation spans the full platform, and you may occasionally see features outside your specific product which is simply a reflection of Trisul’s integrated and advanced design.
-
-So this section is a collection of short, actionable how-to guides for common Trisul workflows. If you were wondering "Where do I find this?”, “How do I enable that?”, or “What should I check next?", want a quick answer, not a deep manual, you’re in the right place. These list of HowTos are your quick reference ✨
+Short, task-focused guides for common Trisul jobs: tuning, integrations, web server settings and recovery. Each page covers one task. Some tasks apply only to one product mode.
 
 ## List of howtos
 
-Click on topics from the left menu to view.
+The full list is in the sidebar.
 
 ## Frequently Searched HowTos
 
-### [How to install on Security Onion](./installseco.md)
+### [How to install on Security Onion](/docs/guide/howto/installseco)
 
-### [How to send IDS alerts to Trisul](./setup_ids_alerts.md)
+### [How to send IDS alerts to Trisul](/docs/guide/howto/setup_ids_alerts)
 
-### [How to run Trisul on 10G networks](./10gcapture)
+### [How to run Trisul on 10G networks](/docs/guide/howto/10gcapture)
 
 ### [How to configure Trisul for Netflow](/docs/guide/ug/netflow/netflow_setup)

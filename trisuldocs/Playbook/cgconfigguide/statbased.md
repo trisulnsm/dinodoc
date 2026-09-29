@@ -10,7 +10,7 @@ The requirement is:
 
 > **Show me applications generating more than 500 Kbps and hosts generating less than 1 Mbps.**
 
-A **Stat Based Counter Group** can be used to create custom traffic views based on a statistical value and a defined threshold.
+A [**Stat Based Counter Group**](/docs/guide/ag/context/statbased_countergroups) can be used to create custom traffic views based on a statistical value and a defined threshold.
 
 In this example, we will create two Stat Based Counter Groups:
 
@@ -24,7 +24,7 @@ This configuration tells Trisul to dynamically include keys that satisfy the spe
 :::info Video Walkthrough
 See this scenario in action:
 
-[**How to Monitor Applications and Hosts by Traffic Threshold Using Stat Based Counter Groups | Trisul**](https://youtu.be/BBCfUHSMXt8?si=POmk60aKFxMNOXhp)
+[**How to Monitor Applications and Hosts by Traffic Threshold Using Stat Based Counter Groups | Trisul**](https://youtu.be/BBCfUHSMXt8)
 
 The video demonstrates how to create the Stat Based Counter Groups, configure the thresholds, create a dashboard, and view the resulting applications and hosts.
 :::
@@ -92,7 +92,7 @@ means:
 
 :::info Navigation
 
-👉 Go to **Profile0** from the main sidebar, then navigate to **Custom Counters → Stat Based**
+:point_right: Go to **Profile0** from the main sidebar, then navigate to **Custom Counters → Stat Based**
 
 :::
 
@@ -133,7 +133,7 @@ means:
 
 :::info Navigation
 
-👉 Go to **Profile0** from the main sidebar, then navigate to **Custom Counters → Stat Based**
+:point_right: Go to **Profile0** from the main sidebar, then navigate to **Custom Counters → Stat Based**
 
 :::
 
@@ -144,17 +144,19 @@ means:
 
 The **Hosts &lt; 1Mbps** Counter Group is now created.
 
+[**Restart the Probe**](/playbook/cgconfigguide/#restart-the-probe) to enable the Counter Group.
+
 ---
 
 ## 3. Create a Dashboard for the Stat Based Counter Groups
 
-The Counter Groups define which applications and hosts should be included. Next, create a dashboard to visualize the resulting data.
+The Counter Groups define which applications and hosts should be included. Next, create a dashboard to visualize the resulting data. For all dashboard options, see [Dashboards](/docs/guide/ug/ui/create_dashboards).
 
 ### Navigation
 
 :::info Navigation
 
-👉 Go to **Dashboards** from the main sidebar and click **Show All**
+:point_right: Go to **Dashboards** from the main sidebar and click **Show All**
 
 :::
 

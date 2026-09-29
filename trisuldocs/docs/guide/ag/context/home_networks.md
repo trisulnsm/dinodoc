@@ -20,13 +20,10 @@ See [Home Network Concepts](/docs/guide/learntrisul/homenetwork_concepts)
 
 ## Add a New Home Network
 
-It pays to be accurate about your home network as it can impact several
-reports and views. If you want to add a new subnet to your home network
-or edit an existing entry, follow these steps.
+Your home network settings affect several reports and views, so keep them accurate. To add a subnet to your home network or edit an existing entry, follow these steps.
 
 :::info navigation
-:point_right: (login as admin) Go to Context: Default &rarr; Profile0 &rarr; Home
-Networks
+:point_right: Log in as `admin` and go to Context: default &rarr; Profile0 &rarr; Home Networks
 :::
 
 You are shown the following screen
@@ -54,7 +51,7 @@ Here you can:
 Add one by one a single network number in "Network Number" and subnet mask in "Network Mask"
 
 ### Add in bulk  
-Simply copy paste a series of **comma separated** or **one-per-line** networks in CIDR format in "Network Number". When using the CIDR format you can leave the "Network Mask" field blank.
+Paste a series of **comma separated** or **one-per-line** networks in CIDR format in "Network Number". When using the CIDR format you can leave the "Network Mask" field blank.
 
 ## Action Button 
 
