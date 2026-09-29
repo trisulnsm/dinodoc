@@ -14,14 +14,14 @@ The application also loads a fingerprint database to associate known JA3 hashes 
 
 The JA3 Fingerprints application is available through the **Trisul Apps Repository**.
 
-Install the application using the **Apps** page in the Trisul Web Interface or manually from the GitHub repository.
+Install the application from **Web Admin &rarr; Manage &rarr; Apps**, or manually from the [Trisul Apps repository](https://github.com/trisulnsm/apps).
 
 ---
 
 ## Navigation
 
-:::info navigation
-:point_right: Go to NBAD &rarr; JA3 Fingerprints
+:::info Navigation
+:point_right: Go to **NBAD &rarr; JA3 Fingerprints**
 :::
 
 The JA3 Fingerprints dashboard displays all JA3 hashes observed from TLS ClientHello traffic during the selected time interval.
@@ -44,7 +44,7 @@ The dashboard displays the **JA3 PRINT** counter group.
 
 ---
 
-# Meter Selection
+## Meter Selection
 
 The JA3 application exposes a single meter.
 
@@ -80,7 +80,5 @@ When a generated JA3 hash matches an entry in the database, the associated clien
 
 ### References
 
-* JA3 Fingerprints Repository
-  https://github.com/trisulnsm/ja3prints
-
-* JA3 Fingerprinting Specification
+* [JA3 fingerprint database (trisulnsm/ja3prints)](https://github.com/trisulnsm/ja3prints)
+* [JA3 fingerprinting specification (salesforce/ja3)](https://github.com/salesforce/ja3)

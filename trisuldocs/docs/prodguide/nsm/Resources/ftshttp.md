@@ -12,7 +12,7 @@ All HTTP headers including requests (GET, POST,..etc) and responses
 
 ## What is Stored ?
 
-The entire HTTP request or response body is treated as a single
+The entire HTTP request or response header is treated as a single
 document. All fields are stored in the index except the following which
 have high variability. You can generate reports by User-Agent, Server,
 Content-Type, or any of the fields in the HTTP Header.
@@ -48,11 +48,11 @@ A typical document looks like this
 ```
 ## Using
 
-:::info navigation
-:point_right: Select Resources &rarr; HTTP Header FTS
+:::info Navigation
+:point_right: Go to **Resources &rarr; HTTP Header FTS**
 :::
 
-Follow instructions in the [FTS](fts) documentation.
+Follow the instructions in [Full Text Search](/docs/prodguide/nsm/Resources/fts).
 
 ## Special Tips for HTTP Header FTS
 

@@ -12,10 +12,8 @@ The solution combines flow analytics, Layer 7 visibility, behavioral monitoring,
 
 To access Trisul Apps, Login as admin user
 
-:::info navigation
-
-:point_right: Select Web Admin &rarr; Manage &rarr; Apps
-
+:::info Navigation
+:point_right: Go to **Web Admin &rarr; Manage &rarr; Apps**
 :::
 
 From here you can install, upgrade, or uninstall Trisul Apps.
@@ -63,10 +61,13 @@ After installation:
 - Enable required dashboards and alert groups
 - If NFGEN is installed, restart the Trisul probe to apply the NetFlow/IPFIX export configuration changes
 
-Restart the probe using:
+Restart the Probe so the changes take effect. Use either method:
+
+- **Web UI:** go to **Context: default &rarr; Admin Tasks &rarr; Start/Stop Tasks**, then stop and start the Probe. A pending-restart message appears next to the Start/Stop button until you do. See [Start and Stop Trisul](/docs/guide/ag/admintasks/startstop).
+- **Command line:** run the following, replacing the context and probe names with your own:
 
 ```
-sudo systemctl restart trisul-probe
+trisulctl_probe restart context <context_name>@<probe_name>
 ```
 
 Traffic visibility and dashboards can then be verified from the user interface.

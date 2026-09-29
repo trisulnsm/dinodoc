@@ -12,4 +12,4 @@ sidebar_position: 1
 
 It also provides tools for deeper flow investigation, including packet/PCAP access and per-hop analysis when the same flow is observed by multiple Probes.
 
-[**Click here → to search flows by IP, port, or protocol, and drill down to raw PCAP or export the results**](https://docs.trisul.org/docs/guide/ug/tools/explore_flows)
+For the search options, the results, raw PCAP drilldown and export, see [Explore Flows](/docs/guide/ug/tools/explore_flows) in the User Guide.

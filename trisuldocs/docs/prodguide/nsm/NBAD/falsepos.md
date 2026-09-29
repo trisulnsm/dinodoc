@@ -12,7 +12,7 @@ suppress the specific signature at the IDS layer, rather than trying to filter i
 out after the fact in Trisul.
 
 :::info What is a false positive 
-A false positive is an alert raised for traffic that is actually legitimate  the detection engine flags it as suspicious or malicious, but there is no real threat.  False positives typically come from signatures that are too broad, or from legitimate but unusual traffic patterns internal vulnerability scanners, health checks, backup jobs, or custom applications that happen to match a signature's pattern. Left unaddressed, they add noise that makes it harder to spot genuine alerts. 
+A false positive is an alert raised for traffic that is actually legitimate. The detection engine flags it as suspicious or malicious, but there is no real threat. False positives typically come from signatures that are too broad, or from legitimate but unusual traffic, such as internal vulnerability scanners, health checks, backup jobs, or custom applications that happen to match a signature's pattern. Left unaddressed, they add noise that makes it harder to spot genuine alerts.
 :::
 
 
@@ -33,7 +33,7 @@ enough to spot chronic offenders). Look for:
 ![Example of a false positive Signature](images/falsepos1.png)
 *Example of noisy false positives. Note down the signatures*
 
-Note down the  **signature ID (sid)** in the above screenshot `2016150` for example.
+Note down the **signature ID (sid)**. In the screenshot above, the sid is `2016150`.
 
 ## 2. Disable the signature using `disable.conf`
 
@@ -48,7 +48,7 @@ Add the offending `sid` (one per line):
 
 ```
 # Suppressing noisy signature - internal scanner alerts 
-2019401
+2016150
 ```
 
 You can also disable by regex match on the signature message if several related sids
@@ -71,7 +71,7 @@ sudo systemctl restart suricata
 Verify the signature is gone from the compiled ruleset:
 
 ```bash
-grep "2019401" /var/lib/suricata/rules/suricata.rules
+grep "2016150" /var/lib/suricata/rules/suricata.rules
 ```
 
 This should return nothing (or show the rule commented out, depending on your

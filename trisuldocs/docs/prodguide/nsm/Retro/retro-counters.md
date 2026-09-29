@@ -4,13 +4,13 @@ sidebar_position: 1
 
 # Retro Counters
 
-The Retro Counter Usage page lets you investigate historical network activity by selecting a Counter Group and viewing its usage over a chosen time period.
+The **Retro Counters** page lets you investigate historical network activity by selecting a Counter Group and viewing its usage over a chosen time period.
 
 Use this page when you want to look back at network activity and examine a particular type of measurement rather than a predefined dashboard view.
 
-:::info navigation
-:point_right: Select *Retro &rarr; Retro Counter* to view the Retro Counter Usage page
-::: 
+:::info Navigation
+:point_right: Go to **Retro &rarr; Retro Counters**
+:::
 
 ![Retro Counters Page](images/retrocounters.png)
 *Figure: Retro Counters Page*
@@ -35,7 +35,7 @@ The selector also shows **Selected Time Information**:
 - **Showing** — The duration and starting time of the currently selected historical period.
 - **Available** — The amount of historical data currently available for investigation.
 
-For example, the page shown in the screenshot below shows that the selected view covers 4 hours 15 minutes 53 seconds and that 77 days 15 hours 50 minutes of historical data are available.
+For example, **Showing** can cover a 4-hour period while **Available** shows 77 days of stored history.
 
 
 ## Historical Data Overview
@@ -44,7 +44,7 @@ The smaller chart underneath the main chart represents the larger available hist
 
 The selection on this chart determines which portion of the historical data is displayed in the main chart above.
 
-So, in simple terms:
+In short:
 
 Available history → Historical Data Overview → Selected portion → Main chart
 
@@ -63,7 +63,7 @@ The module below the Retro Time Selector is used to select the countergroup and 
 
 ## Counter Group categories
 
-- Select a category from the Counter Groups dropdown to narrow down the Counter Groups displayed for selection.This helps investigate its historical usage.
+- Select a category from the Counter Groups dropdown to narrow down the Counter Groups displayed for selection. This helps investigate its historical usage.
 
 - The filter regex field lets you filter the Counter Group list using a regular-expression pattern. This is useful when there are many Counter Groups and you want to locate a particular one without scrolling through the entire list.
 
@@ -76,15 +76,11 @@ It shows two limits:
 - **Time duration** — The amount of time covered by content inspection.
 - **Data size** — The maximum amount of data covered by content inspection.
 
-For example, the screenshot shows:
-
-6 Hrs, 0 Mins and 0 Secs and 100 MB
-
-These values represent the current content inspection settings.
+For example, the page can show **6 Hrs, 0 Mins and 0 Secs** and **100 MB**. These values are the current content inspection settings.
 
 Click **Edit** to modify the content inspection width and data-size limit.
 
-## Retro Counter Usage at a glance
+## Retro Counters at a glance {#retro-counter-usage-at-a-glance}
 
 | If you want to...                                    | Use...                     |
 | ---------------------------------------------------- | -------------------------- |
@@ -104,7 +100,7 @@ Click **Edit** to modify the content inspection width and data-size limit.
 | Select the Counter Group to investigate              | **Counter Group dropdown** |
 | Change the content inspection limits                 | **Edit**                   |
 
-## How to use Retro Counter Usage
+## How to use Retro Counters {#how-to-use-retro-counter-usage}
 
 1. Choose the historical period using Hours, Days, Weeks, or Custom.
 2. Check the available history shown in the Retro Time Selector to make sure the period you need is available.
@@ -114,9 +110,9 @@ Click **Edit** to modify the content inspection width and data-size limit.
 6. Examine the historical activity for the selected Counter Group using the main chart and time-range overview.
 7. Adjust the content inspection settings, if required, using Edit.
 
-### In simple terms
+### Summary {#in-simple-terms}
 
-Retro Counter Usage answers two questions:
+Retro Counters answers two questions:
 
 - When do I want to look? → Use the Retro Time Selector.
 - What do I want to look at? → Select a Counter Group.

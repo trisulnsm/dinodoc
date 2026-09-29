@@ -14,14 +14,14 @@ The application also loads a fingerprint database to associate known JA4 fingerp
 
 The JA4 Fingerprints application is available through the **Trisul Apps Repository**.
 
-Install the application using the **Apps** page in the Trisul Web Interface or manually from the GitHub repository.
+Install the application from **Web Admin &rarr; Manage &rarr; Apps**, or manually from the [Trisul Apps repository](https://github.com/trisulnsm/apps).
 
 ---
 
 ## Navigation
 
-:::info navigation  
-:point_right: Go to NBAD → JA4 Fingerprints
+:::info Navigation
+:point_right: Go to **NBAD &rarr; JA4 Fingerprints**
 :::
 
 ## JA4 Fingerprints Dashboard

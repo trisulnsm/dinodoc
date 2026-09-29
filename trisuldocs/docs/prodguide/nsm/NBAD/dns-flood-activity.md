@@ -6,7 +6,7 @@ sidebar_label: DNS Flood Activity
 # DNS Flood Activity
 
 :::info
-**DNS Flood Activity** (shown in the product as **Common Flood - DNS/TCPSYN**) tracks the traffic patterns behind two of the most common denial-of-service techniques, DNS floods and TCP SYN floods so you can catch a flood attempt early instead of discovering it after the fact.
+**DNS Flood Activity** (shown in the product as **Common Flood - DNS/TCPSYN**) tracks the traffic patterns behind two of the most common denial-of-service techniques, DNS floods and TCP SYN floods, so you can catch a flood attempt early instead of discovering it after the fact.
 :::
 
 ## What Can You Do With This Dashboard?
@@ -18,7 +18,9 @@ sidebar_label: DNS Flood Activity
 
 ## Viewing the Dashboard
 
-Go to **NBAD → DNS Flood Activity**.
+:::info Navigation
+:point_right: Go to **NBAD &rarr; DNS Flood Activity**
+:::
 
 Use the **Time window** and **Topper count** controls at the top right to change how far back the dashboard looks and how many top entries each panel shows. The active window is shown just below them. For example, `12h 14m Starting from 2026-09-22 00:00:00`.
 
@@ -37,9 +39,9 @@ Use the **Time window** and **Topper count** controls at the top right to change
 | **TCP SYN Activity (SYNFLOOD Detect)** | TCP SYN sent, SYN received, and SYNACK sent counts, specifically to catch a SYN flood. Stays flat at zero when no SYN flood is present. |
 
 :::tip
-Don't read these panels one at a time, a genuine flood event usually shows up across several of them together, not just one. A correlated rise across Unique Hosts, DNS Traffic, and DNS connections at the same time is a stronger signal than any single panel spiking on its own.
+Don't read these panels one at a time. A genuine flood event usually shows up across several of them together, not just one. A correlated rise across Unique Hosts, DNS Traffic, and DNS connections at the same time is a stronger signal than any single panel spiking on its own.
 :::
 
 :::note
-A spike in one panel without a matching rise in the others is more often normal variation than an actual flood, read the panels together before treating a single spike as an incident.
+A spike in one panel without a matching rise in the others is more often normal variation than an actual flood. Read the panels together before treating a single spike as an incident.
 :::

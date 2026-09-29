@@ -25,4 +25,4 @@ You can use it to quickly find:
 Use Sessions when you need to move from **seeing that something is happening** to **identifying the specific connections involved**.
 
 
-[**Click here → to see the highest volume IP flows, longest lasting connections, and flows ranked by actual TCP payload data**](https://docs.trisul.org/docs/guide/ug/ui/dashboards#sessions)
+For the highest-volume IP flows, the longest-lasting connections and flows ranked by TCP payload, see [Sessions](/docs/guide/ug/ui/dashboards#sessions) in the User Guide.

@@ -27,7 +27,7 @@ In addition, Trisul stores the following extra fields in the FTS index
 3. **PUBKEYSHA1** - a hash of the public key of each certificate. This
    is a hash of only the subjectPublicKey string and does not include
    the algorithm part. See
-   [RFC3280](http://www.ietf.org/rfc/rfc3280.txt)
+   [RFC 5280](https://www.rfc-editor.org/rfc/rfc5280)
 
 #### Sample Document
 
@@ -47,11 +47,11 @@ In addition, Trisul stores the following extra fields in the FTS index
 
 ## Using
 
-:::info navigation
-:point_right: Select Resources &rarr; SSL Certificate FTS
+:::info Navigation
+:point_right: Go to **Resources &rarr; SSL Certificate FTS**
 :::
 
-Then follow instructions in the [FTS](fts) documentation.
+Then follow the instructions in [Full Text Search](/docs/prodguide/nsm/Resources/fts).
 
 SSL Certificates are also in the normal index. Use that to do a bulk
 search for SHA1 hashes from intelligence feeds.
@@ -64,9 +64,9 @@ Use the special attributes
 
 1. chain_depth_x &rarr; Search for chain_depth_1 to locate possible self
    signed certificates
-2. PUBKEY and DERSHA &rarr; Use them to search for particular
+2. PUBKEYSHA1 and DERSHA1 &rarr; Use them to search for particular
    certificates.
-3. CN (Common Name) &rarr; a great place to start looking and for
+3. CN (Common Name) &rarr; a good starting point for searching and
    narrowing your queries
 
 ![](images/ftss1.png)  

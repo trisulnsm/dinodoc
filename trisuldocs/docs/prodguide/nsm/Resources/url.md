@@ -19,19 +19,20 @@ To enable Trisul to reassemble HTTP headers to pull out the URL information:
 1. Locate the [Reassembly](/docs/guide/ref/trisulconfig#reassembly)
    section in the trisulConfig.xml file
 2. Set the *TCPFlowTrack* and *TCPReassembly* `Enabled` option to TRUE
-3. Restart Trisul
+3. Restart the Probe: stop and start it from **Context: default &rarr; Admin Tasks &rarr; Start/Stop Tasks**, or run `trisulctl_probe restart context <context_name>@<probe_name>`. See [Start and Stop Trisul](/docs/guide/ag/admintasks/startstop).
 
 
 ## Searching
 
-:::info navigation
-:point_right: Click on Resources &rarr; URL Resources to bring up the screen
+:::info Navigation
+:point_right: Go to **Resources &rarr; URL Resources**
 :::
 
 ![](images/resources_scform.png)
 *Figure: Search Criteria Form for URL Resources*
 
 Open the Search Criteria box by clicking on [*Show Search Form*](/docs/guide/ug/ui/elements#hide-show-search-form) and fill in the fields with the help of following field descriptions. Click on the [*Download Button*](/docs/prodguide/nsm/Resources/oveview#download) to download only the contents as a text file.
+
 | Fields               | Descriptions                                                                            |
 |----------------------|-----------------------------------------------------------------------------------------|
 | Time Frame           | Select a specific date and time range using the [Time Selector](/docs/guide/ug/ui/elements#time-selector) to search for resources within that period                                                |
@@ -72,7 +73,7 @@ And the matching resources are displayed in the search result table with the [*C
 | Source Port      | Displays the port number used by the device that sent the network traffic.                  |
 | Destination IP   | Shows the IP address of the device that received the network traffic.                       |
 | Destination Port | Displays the port number used by the device that received the network traffic.              |
-| [Options](/docs/prodguide/nsm/Resources/dns#option-button)          | Provides additional actions or options for each resource, such as viewing details or downloading PCAP files                                                      |
+| [Options](/docs/prodguide/nsm/Resources/url#option-button)          | Provides additional actions or options for each resource, such as viewing details or downloading PCAP files                                                      |
 | Resource ID      | A unique identifier assigned to each resource, used for reference and tracking.             |
 | Probe            | Indicates the probe that captured the network traffic.                                      |
 | Contents         | Displays a brief summary or preview of the resource's contents, such as a HTTP URL, URL of the image etc |

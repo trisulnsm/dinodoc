@@ -10,6 +10,6 @@ The **Security** section provides monthly security summaries and unified views o
 
 ## Available Security Views
 
-* [**Monthly Summary**](monthly-summary) — Rollup of monthly alert activity and security trends.
-* [**All Alerts**](all-alerts) — Consolidated, sortable list of all alerts across every alert type.
-* [**Show all**](security-tools) — Catalog of tools available under the Security menu.
+* [**Monthly Summary**](/docs/prodguide/nsm/Security/monthly-summary) — Rollup of monthly alert activity and security trends.
+* [**All Alerts**](/docs/prodguide/nsm/Security/all-alerts) — Sortable listing of alerts, grouped by source, destination and signature.
+* [**Show all**](/docs/prodguide/nsm/Security/security-tools) — Catalog of tools available under the Security menu.

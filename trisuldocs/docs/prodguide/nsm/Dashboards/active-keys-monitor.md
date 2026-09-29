@@ -22,4 +22,4 @@ It helps you quickly understand the variety of activity Trisul is seeing and spo
 Use it when you want to understand **how much variety of network activity Trisul is currently seeing**, rather than looking at the traffic volume itself.
 
 
-[**Click here → to track active and new key counts per counter group, compare against watermarks, and spot cardinality shifts**](https://docs.trisul.org/docs/guide/ug/ui/dashboards#active-keys-monitor)
+For active and new key counts per counter group, watermark comparisons and how to read changes, see [Active Keys Monitor](/docs/guide/ug/ui/dashboards#active-keys-monitor) in the User Guide.

@@ -2,6 +2,8 @@
 sidebar_position: 2
 ---
 
+# Flow Tracking Alerts
+
 :::info Navigation
 :point_right: Go to **Alerts &rarr; Flow Tracking**
 :::

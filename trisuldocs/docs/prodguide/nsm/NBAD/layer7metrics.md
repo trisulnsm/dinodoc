@@ -6,8 +6,8 @@ sidebar_position: 1
 
 The Layer 7 Metrics dashboard provides a complete L7 breakdown of your network traffic. It is the starting point for understanding application usage, encrypted traffic patterns, and DNS behaviour.
 
-:::info navigation
-:point_right: Go to NBAD &rarr; Layer7 Metrics
+:::info Navigation
+:point_right: Go to **NBAD &rarr; Layer7 Metrics**
 :::
 
 ![Layer 7 Metrics Dashboard](./images/l7-metrics.png)
@@ -24,6 +24,7 @@ The Layer 7 Metrics dashboard provides a complete L7 breakdown of your network t
 | Top SSL Certs | Ranked list | Shows the most frequently observed SSL/TLS certificates. Requires the SSL Certs resource group to be enabled. A notification prompt is displayed if the resource group is inactive. |
 | Top TLS Root CAs | Ranked list | Displays the distribution of TLS Root Certificate Authorities observed in certificate chains. A high percentage of self-signed certificates may indicate internal services, private PKI usage, or potentially suspicious infrastructure. |
 | Top DNS Resources | Resource log | Displays recent DNS resource records grouped by Source IP and Destination IP. Includes columns for Time, Source IP/Port, Destination IP/Port, Resource ID, Probe, and Contents. PCAP download is available for each entry. |
+
 ---
 
 ## Metric columns (counters)

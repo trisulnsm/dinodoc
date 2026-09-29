@@ -1,6 +1,6 @@
 ---
 sidebar_position: 6
-sidebar_label: Show all
+sidebar_label: Resources Overview
 ---
 
 # Overview
@@ -41,19 +41,19 @@ searching allows you to group and drilldown on selected attributes.
 You can search by
 
 1. IP
-2. Exclude these IPS
+2. Exclude these IPs
 3. Pair of IPs
 4. Port
 5. Timeframe
 6. Regex Pattern
-7. Invert Regex Pattren
+7. Invert Regex Pattern
 
 #### Search by Regex
 
 You can search by
 
 1. A single regex pattern on one line
-2. A list of substrings each on a separate line 1
+2. A list of substrings, each on a separate line
 
 The main use of this tool in the context of SSL Certs is to allow you to
 search for hundreds of matching hashes at once.
@@ -67,4 +67,4 @@ Enter a list of patterns one per line.
 
 #### Download
 
-Clicking on the download button on the search criteria form downloads only the contents the search result in text format.
+Clicking the download button on the search criteria form downloads only the contents of the search result, in text format.

@@ -686,7 +686,7 @@ const sidebars = {
   "ipdrSidebar": [
     {
       "type": "category",
-      "label": "Trisul IPDR User Guide",
+      "label": "Trisul IPDR DoT Compliance Solution Guide",
       "link": {
         "type": "doc",
         "id": "prodguide/ipdr/index"
@@ -864,7 +864,7 @@ const sidebars = {
   "ispSidebar": [
     {
       "type": "category",
-      "label": "Trisul ISP  Guide",
+      "label": "Trisul ISP Analytics Guide",
       "link": {
         "type": "doc",
         "id": "prodguide/isp/index"
@@ -924,7 +924,7 @@ const sidebars = {
         {
           "type": "ref",
           "id": "prodguide/ipdr/index",
-          "label": "IPDR Solution Guide"
+          "label": "IPDR DoT Compliance Guide"
         },
         {
           "type": "ref",
@@ -934,7 +934,7 @@ const sidebars = {
         {
           "type": "ref",
           "id": "prodguide/nsm/index",
-          "label": "Network Security Monitoring Guide"
+          "label": "NSM Guide"
         }
       ]
     }
@@ -998,7 +998,7 @@ const sidebars = {
         },
         {
           "type": "category",
-          "label": "Netflow",
+          "label": "NetFlow",
           "description": "Use the Netflow section to understand where your flow data is coming from and how traffic is distributed across your network devices and interfaces. You can view NetFlow sources, exporters, routers, interfaces, and interface-level traffic details.",
           "items": [
             "prodguide/nf/Netflow/netflow-sources",
@@ -1034,7 +1034,7 @@ const sidebars = {
         {
           "type": "category",
           "label": "Customize",
-          "description": "Use Customize to adjust how the NetFlow Analyzer Web UI behaves and looks. You can personalize dashboard layouts, real-time parameters, and HTTP/HTTPS traffic classification rules.",
+          "description": "Use Customize to adjust the NetFlow Analyzer Web UI. You can manage dashboards, modules, dashboard packages, Network FAQ questions and the navigation menu.",
           "items": [
             "prodguide/nf/Customize/ui",
             "prodguide/nf/Customize/show-all"
@@ -1046,7 +1046,7 @@ const sidebars = {
   "nsmSidebar": [
     {
       "type": "category",
-      "label": "Trisul Network Security Monitoring (NSM) Guide",
+      "label": "Trisul NSM Guide",
       "link": {
         "type": "doc",
         "id": "prodguide/nsm/index"
@@ -1169,7 +1169,7 @@ const sidebars = {
         {
           "type": "category",
           "label": "Customize",
-          "description": "Use Customize to adjust how the NSM Web UI behaves and looks. You can personalize dashboard layouts, real-time parameters, and HTTP/HTTPS traffic classification rules.",
+          "description": "Use Customize to adjust the NSM Web UI. You can manage dashboards, modules, dashboard packages, Network FAQ questions and the navigation menu.",
           "items": [
             "prodguide/nsm/Customize/ui",
             "prodguide/nsm/Customize/show-all"

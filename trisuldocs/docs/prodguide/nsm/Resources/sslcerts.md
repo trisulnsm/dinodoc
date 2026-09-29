@@ -12,7 +12,7 @@ sidebar_label: SSL Resources
 Trisul's SSL resource tracking feature allows you to monitor and log SSL/TLS certificate information, enabling you to identify encrypted connections, verify certificate authenticity, and analyze certificate attributes. This helps network forensics by providing insights into encrypted network activity.   
 Example: (example.com) → SSL Certificate (SHA-1 hash, subject, issuer, etc.)  
 
-Information contained in SSL certificates are now increasingly showing
+Information contained in SSL certificates is now increasingly showing
 up in intelligence indicators. Trisul indexes information in
 certificates in two forms to aid two usage scenarios
 
@@ -22,7 +22,7 @@ certificates in two forms to aid two usage scenarios
 | 2   | **FTS index**    | Arbitrary search of all fields in certificates to aid drilldowns |
 
 In this section, we describe the usage of the normal index. See the
-section on [SSL FTS Index](ftsssl) for details about the FTS index.
+section on [SSL FTS Index](/docs/prodguide/nsm/Resources/ftsssl) for details about the FTS index.
 
 For each SSL/TLS connection, Trisul stores in the normal index.
 
@@ -52,17 +52,18 @@ in this case Verisign.
 
 ### Searching
 
-:::info navigation
-:point_right: Click on Resources &rarr; SSL Certs
+:::info Navigation
+:point_right: Go to **Resources &rarr; SSL Certs**
 :::
 
 ![](images/resources_scform.png)
 *Figure: Search Criteria Form for SSL Certificates*
 
 Open the Search Criteria box by clicking on [*Show Search Form*](/docs/guide/ug/ui/elements#hide-show-search-form) and fill in the fields with the help of following field descriptions. Click on the [*Download Button*](/docs/prodguide/nsm/Resources/oveview#download) to download only the contents as a text file.
+
 | Fields               | Descriptions                                                                            |
 |----------------------|-----------------------------------------------------------------------------------------|
-| Time Frame           | Select a specific date and time range using the [Time Selector](/docs/guide/ug/ui/elements#time-selector)to search for resources within that period                                                |
+| Time Frame           | Select a specific date and time range using the [Time Selector](/docs/guide/ug/ui/elements#time-selector) to search for resources within that period                                                |
 | IP Address           | Enter a single IP address to search for resources related to that IP                    |
 | Exclude these IPs    | Enter one or more IP addresses to exclude from the search results                       |
 | Regex Pattern        | Enter a regular expression (regex) pattern to search for resources matching that pattern|
@@ -100,7 +101,7 @@ And the matching resources are displayed in the search result table with the [*C
 | Source Port      | Displays the port number used by the device that sent the network traffic.                  |
 | Destination IP   | Shows the IP address of the device that received the network traffic.                       |
 | Destination Port | Displays the port number used by the device that received the network traffic.              |
-| [Options](/docs/prodguide/nsm/Resources/dns#option-button)          | Provides additional actions or options for each resource, such as viewing details or downloading PCAP files                                                      |
+| [Options](/docs/prodguide/nsm/Resources/sslcerts#option-button)          | Provides additional actions or options for each resource, such as viewing details or downloading PCAP files                                                      |
 | Resource ID      | A unique identifier assigned to each resource, used for reference and tracking.             |
 | Probe            | Indicates the probe that captured the network traffic.                                      |
 | Contents         | Displays a brief summary or preview of the resource's contents, such as a Certificate hash and subject information                                                                                          |

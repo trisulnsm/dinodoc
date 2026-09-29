@@ -8,8 +8,7 @@ sidebar_position: 12
 :point_right: Go to **Tools &rarr; Show all**
 :::
 
-![](images/custshowall.png)    
-*Figure: Customize Show all*
+<!-- TODO(verify): add a screenshot of Tools → Show all in NetFlow Analyzer (F-06-4) -->
 
 
-To access all available tools, open the main menu in Trisul and select Tools → Show All. This displays the complete list of available tools.
+This page lists all the available tools in one place.

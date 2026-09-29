@@ -7,7 +7,7 @@ sidebar_label: DNS Resources
 
 <span class="badge badge--primary">PCAP Mode Only</span>
 ## Overview
-DNS Resources resolves domain names into their corresponding IP addresses from DNS records. Doing so, you obtain the information on actual Domain name, Resource type, IP addresses, and other DNS records. This helps network forensics by providing detailed information about network activity. Example: example.com → 192.0.2.1
+DNS Resources lists domain names and the IP addresses they resolved to, taken from the DNS records Trisul sees on the network. For each record you get the domain name, resource type, IP addresses and other DNS details, which help in network forensics. Example: example.com → 192.0.2.1
 
 Trisul extracts domain names from *DNS Question and Answer records* on the
 network. Even hosts that do not receive a reply or those in the
@@ -20,14 +20,15 @@ As shown in the figure, each question in the [*search results*](/docs/prodguide/
 
 ## Searching
 
-:::info navigation
-:point_right: Click on Resources &rarr; DNS Resources
+:::info Navigation
+:point_right: Go to **Resources &rarr; DNS Resources**
 :::
 
 ![](images/resources_scform.png)
 *Figure: Search Criteria Form for DNS Resources*
 
 Open the Search Criteria box by clicking on [*Show Search Form*](/docs/guide/ug/ui/elements#hide-show-search-form) and fill in the fields with the help of following field descriptions. Click on the [*Download Button*](/docs/prodguide/nsm/Resources/oveview#download) to download only the contents as a text file.
+
 | Fields               | Descriptions                                                                            |
 |----------------------|-----------------------------------------------------------------------------------------|
 | Time Frame           | Select a specific date and time range using the [Time Selector](/docs/guide/ug/ui/elements#time-selector) to search for resources within that period                                                |
@@ -53,8 +54,7 @@ There are additional search criteria that allows you to narrow down your search 
 
 You can search by a single regular expression or bulk substring matching. Enter a single regex in the Pattern box. It must be on a single line.
 
-For example `v16.cache?.*youtube.com$` will match
-`tc.v16.cache8.c.youtube.com` but not `v16.cache18.c.youtube.com`
+For example, `v16\.cache[0-9]\.c\.youtube\.com$` matches `tc.v16.cache8.c.youtube.com` but not `v16.cache18.c.youtube.com`.
 
 ### Multiple Patterns for Substring Matches
 

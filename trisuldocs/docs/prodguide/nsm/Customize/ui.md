@@ -17,21 +17,13 @@ It contains the following options:
 
 | Option | What can you customize? |
 | --- | --- |
-| **Dashboards** | Create and manage dashboards and their layouts. |
-| **Modules** | Manage the modules used to display information in dashboards. |
-| **Share dashboards** | Import and export dashboard packages. |
-| **Network FAQ** | Manage the questions available in Network FAQ. |
-| **Menu Manager** | Manage the items and links displayed in the navigation menu. |
+| **[Dashboards](#dashboards)** | Create and manage dashboards and their layouts. |
+| **[Modules](#modules)** | Manage the modules used to display information in dashboards. |
+| **[Share dashboards](#share-dashboards)** | Import and export dashboard packages. |
+| **[Network FAQ](#network-faq)** | Manage the questions available in Network FAQ. |
+| **[Menu Manager](#menu-manager)** | Manage the items and links displayed in the navigation menu. |
 
 Select the option you want to work with to open its management page.
-
-### Customize UI options
-
-- **[Dashboards](#dashboards)** — Manage dashboards.
-- **[Modules](#modules)** — Manage dashboard modules.
-- **[Share dashboards](#share-dashboards)** — Import or export dashboard packages.
-- **[Network FAQ](#network-faq)** — Manage Network FAQ questions.
-- **[Menu Manager](#menu-manager)** — Manage navigation menu items.
 
 ## Dashboards
 
@@ -108,7 +100,7 @@ Each module is listed with:
 | **Name**    | The module's name.                                          |
 | **Action**  | Actions available for managing the module.                  |
 
-The screenshot, for example, shows modules such as **Current Top Hosts - List, Current Top Apps - List, Interfaces, Recently fired alert types, Recently fired alert classes**, and retro topper modules.
+Examples include modules such as **Current Top Hosts - List, Current Top Apps - List, Interfaces, Recently fired alert types, Recently fired alert classes**, and retro topper modules.
 
 ### Find a module
 
@@ -175,11 +167,7 @@ This is useful when someone provides you with a dashboard package that you want 
 
 Use the **Filter** field to find a particular dashboard package by name or other matching text.
 
-**In simple terms**
-
-**Create** a package when you want to share a dashboard.
-
-**Import** a package when you want to use a dashboard shared with you.
+In short: **create** a package when you want to share a dashboard, and **import** one when you want to use a dashboard shared with you.
 
 ## Network FAQ
 
@@ -205,7 +193,7 @@ Each entry contains:
 | **Action** | Actions available for managing the question.            |
 
 
-The screenshot shows examples such as:
+Examples include:
 
 - How many active flows over time?
 - How many TCP connection attempts were made based on observed SYN traffic?
@@ -274,36 +262,6 @@ Depending on the menu item, available actions include:
 | **Delete**             | Removes the menu item.                         |
 
 
-The screenshot also shows that the top-level Dashboards menu has its own **Edit** and **Delete** actions, while individual dashboard entries have additional actions.
+The top-level Dashboards menu has its own **Edit** and **Delete** actions. Individual dashboard entries have additional actions.
 
 > **Tip**: Use **Edit** when you want to change an existing menu entry. Use **Clone** when you want to create a similar entry without starting from scratch.
-
-## Customize UI
-
-The Customize → UI page is the starting point for customizing how Trisul presents information to users.
-
-It provides access to five areas:
-
-| Option               | Purpose                                                                  |
-| -------------------- | ------------------------------------------------------------------------ |
-| **Dashboards**       | Create and manage dashboards and their layouts.                          |
-| **Modules**          | Manage the individual modules used to present information in dashboards. |
-| **Share dashboards** | Import and export dashboard packages for sharing dashboards.             |
-| **Network FAQ**      | Manage questions used for commonly performed network investigations.     |
-| **Menu Manager**     | Control the items and links displayed in the navigation menu.            |
-
-Each option addresses a different part of the Trisul user interface:
-
-- Dashboards → what information is presented together
-
-- Modules → what individual information blocks are available
-
-- Share dashboards → how dashboard configurations are shared
-
-- Network FAQ → which common network questions are available
-
-- Menu Manager → how users navigate to those pages
-
-This gives administrators a central place to customize the Trisul interface rather than having to treat every dashboard, module, and menu item as an isolated thing.
-
-

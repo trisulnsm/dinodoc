@@ -7,13 +7,11 @@ sidebar_position: 9
 The Flow Map dashboard visualizes live network session flows on a geographic world map. It provides an at-a-glance view of where your network traffic is going geographically, and which countries are the largest sources and destinations of traffic.
 
 :::info navigation
-:point_right: Go to NBAD &rarr; Flow Map
+:point_right: Go to **NBAD &rarr; Flow Map**
 :::
 
 ![](./images/flowmap.png)
 *Figure: Flow Map: live geographic session map, top upload/download countries, bandwidth and session sparklines*
-
-Visualises live network session flows on a geographic world map. Provides an at-a-glance view of where traffic is going geographically and which countries are the largest sources and destinations.
 
 ## Map Module
 
@@ -44,7 +42,7 @@ Visualises live network session flows on a geographic world map. Provides an at-
 
 | Control | Description |
 |---|---|
-| Time window | Defines the analysis period applied across all dashboard panels. Default range is the last `19h 58m` starting from midnight of the current day. |
+| Time window | Defines the analysis period applied across all dashboard panels. The active window is shown next to the controls, for example `19h 58m` starting from midnight of the current day. |
 | Topper count | Controls the number of top-ranked entries displayed in country panels, such as top 5 or top 10 countries. |
 | ··· menu | Per-panel action menu providing options such as data export, fullscreen view, and drilldown into counter group retro analysis. |
 

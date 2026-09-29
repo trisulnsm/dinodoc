@@ -10,17 +10,15 @@ The **Resources** section provides access to deep protocol and asset inspection 
 
 ## Available Resources Tools
 
-* [**URL Resources**](url) — Inspect extracted URLs and visited pages.
-* [**DNS Resources**](dns) — Query and response tracking for DNS traffic.
-* [**SSL Resources**](sslcerts) — Certificate metadata, issuers, and subject tracking.
-* [**SSL Certs FTS**](ftsssl) — Scoped full-text search across SSL certificate fields.
-* [**HTTP Header FTS**](ftshttp) — Scoped full-text search across HTTP request and response headers.
+* [**URL Resources**](/docs/prodguide/nsm/Resources/url) — Inspect extracted URLs and visited pages.
+* [**DNS Resources**](/docs/prodguide/nsm/Resources/dns) — Query and response tracking for DNS traffic.
+* [**SSL Resources**](/docs/prodguide/nsm/Resources/sslcerts) — Certificate metadata, issuers, and subject tracking.
+* [**SSL Certs FTS**](/docs/prodguide/nsm/Resources/ftsssl) — Scoped full-text search across SSL certificate fields.
+* [**HTTP Header FTS**](/docs/prodguide/nsm/Resources/ftshttp) — Scoped full-text search across HTTP request and response headers.
 
-:::info[🚧 Content Pending: File Hashes]
-<!--
-CONTENT PENDING:
-- Resources → File Hashes: No matching page found anywhere in UG.
-  Needs confirmation from content owner before a stub is written (do not fabricate a URL).
--->
-Documentation for **File Hashes** is pending confirmation of the corresponding User Guide documentation.
-:::
+How resources are stored and searched:
+
+* [**Resources overview**](/docs/prodguide/nsm/Resources/oveview) — Normal and full-text indexes, and the search options they share.
+* [**Full Text Search**](/docs/prodguide/nsm/Resources/fts) — How FTS documents, attributes and faceted results work.
+
+<!-- TODO(verify): Resources → File Hashes has no page yet. Needs product-team confirmation before a page is written (F-06-50). -->

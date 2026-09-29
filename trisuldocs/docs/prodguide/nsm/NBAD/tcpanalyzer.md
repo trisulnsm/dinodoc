@@ -4,16 +4,14 @@ sidebar_position: 8
 
 # TCP Analyzer
 
-The TCP Analyzer dashboard provides deep visibility into TCP health metrics across your network. It identifies hosts with high retransmission rates, elevated setup latency, session timeouts, and poor-quality flows. All of which are indicators of network congestion, application issues, or degraded path quality.
+The TCP Analyzer dashboard shows TCP health metrics across your network. It identifies hosts with high retransmission rates, elevated setup latency, session timeouts and poor-quality flows. These are all indicators of network congestion, application issues or degraded path quality.
 
 :::info navigation
-:point_right: Go to NBAD &rarr; TCP Analyzer
+:point_right: Go to **NBAD &rarr; TCP Analyzer**
 :::
 
 ![TCP Analyzer Dashboard](./images/tcp-ana.png)
 *Figure: TCP Analyzer: latency, retransmissions, timeouts, poor-quality flows for both internal and external hosts*
-
-Deep visibility into TCP health metrics. Identifies hosts with high retransmission rates, elevated setup latency, session timeouts, and poor-quality flows. All indicators of network congestion, application issues, or degraded path quality.
 
 ## Summary charts
 
@@ -46,4 +44,4 @@ Deep visibility into TCP health metrics. Identifies hosts with high retransmissi
 |---|---|
 | Poor Quality Flows | Time-series of flows classified as poor quality. Requires the Poor Quality Flows tracker to be enabled. A configuration prompt is displayed if the tracker is inactive. |
 | Retransmission Percent | Time-series showing overall TCP retransmission percentage across all sessions, separated into internal and external traffic categories. |
-| Flows with >5% retransmit rate | Detailed table of individual flows sorted by highest retransmission percentage. Includes Source IP, Destination IP, ports, and flow metadata. Packets can be exported directly to Wireshark or Unsniff for packet-level analysis. |
+| Flows with >5% retransmit rate | Detailed table of individual flows sorted by highest retransmission percentage. Includes Source IP, Destination IP, ports, and flow metadata. Packets can be exported directly to Wireshark for packet-level analysis. |

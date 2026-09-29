@@ -20,7 +20,7 @@ This page is the central All Tools launcher, where you can find every analysis t
 
 Tools for investigating traffic that already happened — retrospective ("retro") analysis, long-term trends, and calendar-style usage reporting. Trisul stores data unsummarized, so these tools can drill into raw traffic, flows, and alerts from any point in the past.
 
-1. **Retro Analysis**- [Performing Retro Analysis](/docs/guide/ug/cg/retro), [Retro Analysis Tools](/docs/guide/ug/cg/retrotools), and [Retro Q&A](/docs/guide/ug/cg/retrofaq)
+1. **Retro Analysis**- [Performing Retro Analysis](/docs/guide/ug/cg/retro), [Retro Analysis Tools](/docs/guide/ug/cg/retrotools), and [Network FAQ](/docs/guide/ug/cg/retrofaq)
 2. **Long Term Analysis**- [Using the Analyze Item Page](/docs/guide/ug/tools/analyze_item)
 3. **Daily Usage** - [Using Monthly Charts](/docs/guide/ug/tools/daily_usage)
 4. **Search Key Space** - [Using Search Key Space](/docs/guide/ug/tools/keyspace)
@@ -62,7 +62,7 @@ Live Counters shows you live and recent activity for any counter group, all on o
 To access Live Counters,
 
 :::info Navigation
-:point_right: Go to **Tools → Select Live Counters**
+:point_right: Go to **Tools &rarr; Live Counters**
 :::
 
 The following Select a counter group form opens up.

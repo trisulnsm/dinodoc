@@ -2,7 +2,7 @@
 
 Welcome to the **Trisul NetFlow Analyzer Guide**.
 
-**Trisul NetFlow Analyzer** is designed for monitoring and analyzing network traffic using [flow](https://docs.trisul.org/docs/guide/learntrisul/terminology#flow) data collected from routers, switches, and other network devices. It supports **NetFlow v5/v9, IPFIX, sFlow, and NetStream**.
+**Trisul NetFlow Analyzer** is designed for monitoring and analyzing network traffic using [flow](/docs/guide/learntrisul/terminology#flow) data collected from routers, switches, and other network devices. It supports **NetFlow v5/v9, IPFIX, sFlow, and NetStream**.
 
 With NetFlow Analyzer, you can use flow data to:
 
@@ -16,13 +16,12 @@ With NetFlow Analyzer, you can use flow data to:
 
 ## Before you begin
 
-If you have not installed Trisul yet, start with the installation guide.
+1. Install Trisul. Follow the [Quickstart](/docs/guide/starthere/quickstart).
+2. Configure your routers and switches to export flow records to Trisul. See [Configure NetFlow](/docs/guide/starthere/setuptrisul/network/input_netflow).
+3. Log in to the Web UI and select **NetFlow Analyzer** as the product mode. You choose the mode on first login, not during installation. See [Selecting the Product Mode](/docs/guide/starthere/setuptrisul/install/selectmode).
+4. Confirm that flow data is arriving. Go to **NetFlow &rarr; NetFlow Sources** and check that your flow exporters are sending data. See [NetFlow Sources](/docs/prodguide/nf/Netflow/netflow-sources). If no data arrives, see the [NetFlow troubleshooting guide](/docs/Troubleshooting/netflownotreceiving).
 
-During installation, select **NetFlow Analyzer** as the **Product Mode**. This configures Trisul for collecting and analyzing flow data from your network devices.
-
-**[Install Trisul and select NetFlow Analyzer mode](/docs/guide/starthere/quickstart)**
-
-Once Trisul is installed and you have logged in to the Web UI, return to this guide to learn how to use the NetFlow Analyzer interface.
+When data is arriving, use the rest of this guide to learn the NetFlow Analyzer menus.
 
 The screens and menus described in this guide are available when Trisul is configured in NetFlow Analyzer mode. If you selected a different Product Mode during installation, your Web UI may have a different menu structure.
 

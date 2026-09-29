@@ -20,5 +20,5 @@ From this page you can access other customization pages such as
 - [**Dashboards**](/docs/prodguide/nf/Customize/ui#dashboards)
 - [**Modules**](/docs/prodguide/nf/Customize/ui#modules)
 - [**Share Dashboards**](/docs/prodguide/nf/Customize/ui#share-dashboards)
-- [**Retro Favorites**](/docs/prodguide/nf/Customize/ui#network-faq)
+- [**Favorite Network FAQ**](/docs/prodguide/nf/Customize/ui#network-faq)
 - [**Manage Menus**](/docs/prodguide/nf/Customize/ui#menu-manager)

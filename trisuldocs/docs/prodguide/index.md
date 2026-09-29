@@ -1,8 +1,10 @@
 # Trisul Product Guides
 
-Trisul Network Analytics provides specialized, purpose-built solutions tailored to distinct network monitoring, regulatory compliance, and traffic engineering requirements. 
+Trisul Network Analytics runs in four product modes. Each mode has its own guide.
 
-While all products share the high-performance Trisul streaming analytics backend, each product mode configures dedicated menus, dashboards, counter groups, and query tools optimized for its domain.
+Not sure which mode you need? See [Product Modes](/docs/guide/starthere/what_is_trisul/productmodes).
+
+All four modes share the same Trisul backend. Each mode sets up its own menus, dashboards, counter groups and query tools.
 
 ---
 
@@ -14,12 +16,12 @@ The following dedicated product guides are available:
 
 ![NetFlow Analyzer](/img/appnetflow.png)
 
-The **Trisul NetFlow Analyzer** is designed for high-scale, flow-based network traffic monitoring, capacity planning, and security observability across enterprise networks, datacenters, and campuses.
+**Trisul NetFlow Analyzer** monitors network traffic from the flow records that routers and switches export. Use it for traffic monitoring and capacity planning across enterprise networks, datacenters and campuses.
 
 - **Protocols Supported:** NetFlow v5/v9, IPFIX, sFlow, and NetStream.
 - **Key Capabilities:**
   - **Interface & Router Tracking:** Real-time throughput, bandwidth utilization, and interface metrics.
-  - **Traffic Breakdown:** Instant visibility into hosts, internal/external conversations, TCP/UDP applications, and QoS tags.
+  - **Traffic Breakdown:** Visibility into hosts, internal/external conversations, TCP/UDP applications, and QoS tags.
   - **Retro & Historical Analytics:** Fast retrospective analysis of historical raw flows without aggregation loss.
   - **Automated Alerting:** Threshold-crossing alerts, bandwidth anomaly detection, and security notifications.
 
@@ -27,20 +29,20 @@ The **Trisul NetFlow Analyzer** is designed for high-scale, flow-based network t
 
 ---
 
-### 2. [IPDR Compliance Guide](/docs/prodguide/ipdr/)
+### 2. [IPDR DoT Compliance Guide](/docs/prodguide/ipdr/) {#2-ipdr-compliance-guide}
 
 ![IPDR Compliance](/img/appipdr.png)
 
-The **Trisul IPDR Solution** is purpose-built for Internet Service Providers (ISPs) and telecom operators to meet regulatory compliance requirements for lawful interception and subscriber data logging.
+The **Trisul IPDR DoT Compliance Solution** is built for Internet Service Providers (ISPs) and telecom operators to meet regulatory compliance requirements for lawful interception and subscriber data logging. <!-- TODO(verify): 'lawful interception' and 'international regulatory audit requirements' claims pending product team (F-06-20) -->
 
 - **Regulatory Compliance:** Aligned with Department of Telecommunications (DoT) and international regulatory audit requirements.
 - **Key Capabilities:**
   - **Subscriber Logging:** Captures and stores comprehensive IP Data Records (NAT translations, public-to-private IP mappings).
-  - **AAA & RADIUS Integration:** Seamless correlation of subscriber identities with network session telemetry.
+  - **AAA & RADIUS Integration:** Correlation of subscriber identities with network session telemetry.
   - **Audit & Query Portal:** Fast search interface to retrieve subscriber records by timestamp, IP address, or port.
   - **Long-Term Retention:** High-compression database storage designed for multi-year record retention and automated export.
 
-:point_right: **[Explore the IPDR Compliance Guide &rarr;](/docs/prodguide/ipdr/)**
+:point_right: **[Explore the IPDR DoT Compliance Guide &rarr;](/docs/prodguide/ipdr/)**
 
 ---
 
@@ -48,7 +50,7 @@ The **Trisul IPDR Solution** is purpose-built for Internet Service Providers (IS
 
 ![ISP Analytics](/img/appisp.png)
 
-**Trisul ISP Analytics** combines massive-scale flow telemetry with BGP routing tables to deliver deep insights into transit, peering, and content delivery across ISP backbones.
+**Trisul ISP Analytics** combines flow records with BGP routing data to show transit, peering and content delivery traffic across ISP backbones.
 
 - **Protocols Supported:** Flow protocols (NetFlow/IPFIX/sFlow) correlated with BGP routing feeds.
 - **Key Capabilities:**
@@ -61,17 +63,17 @@ The **Trisul IPDR Solution** is purpose-built for Internet Service Providers (IS
 
 ---
 
-### 4. [Network Security Monitoring (NSM) Guide](/docs/prodguide/nsm/)
+### 4. [Trisul NSM Guide](/docs/prodguide/nsm/) {#4-network-security-monitoring-nsm-guide}
 
 ![Network Security Monitoring](/img/appnsm.png)
 
-The **Trisul Network Security Monitoring (NSM)** solution extends flow-based monitoring with behavioral anomaly detection (NBAD), security alerting, and forensic resources for detecting and investigating threats across the network.
+**Trisul NSM** analyzes raw packets from a SPAN or TAP port, together with IDS alerts from Snort or Suricata. It adds behavioral anomaly detection (NBAD), security alerting and forensic resources for investigating threats across the network.
 
-- **Capabilities Supported:** Flow telemetry, full packet capture (PCAP), IDS alert correlation (Suricata/Snort), and deep protocol extraction.
+- **Capabilities Supported:** Flow telemetry, full packet capture (PCAP), IDS alert correlation (Suricata/Snort), and protocol extraction.
 - **Key Capabilities:**
   - **Network Behavioral Analysis (NBAD):** Layer 7 metrics, protocol anomaly detection, encapsulated tunnels, P2P analytics, and TCP performance analysis.
   - **Threat & Alert Correlation:** MITRE ATT&CK technique mapping, alert timelines, volumetric DDoS detection, and consolidated alert triage.
-  - **Deep Forensic Resources:** Indexed metadata and scoped full-text search across DNS queries, URLs, HTTP headers, and SSL/TLS certificates.
+  - **Forensic Resources:** Indexed metadata and scoped full-text search across DNS queries, URLs, HTTP headers, and SSL/TLS certificates.
   - **Retrospective & Real-Time Analytics:** Continuous flow telemetry and historical investigation without aggregation loss.
 
 :point_right: **[Explore the NSM Guide &rarr;](/docs/prodguide/nsm/)**

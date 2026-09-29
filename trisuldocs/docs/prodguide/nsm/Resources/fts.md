@@ -13,10 +13,10 @@ look up fast. These types of resources are stored in a Full Text Search
 
 Currently the following FTS resources are supported.
 
-1. **[SSL Certificate Chains](ftsssl)** - the full printed form
+1. **[SSL Certificate Chains](/docs/prodguide/nsm/Resources/ftsssl)** - the full printed form
    with all extensions and attributes
-2. **[HTTP Headers](ftshttp)** - all HTTP request and response
-   headerss
+2. **[HTTP Headers](/docs/prodguide/nsm/Resources/ftshttp)** - all HTTP request and response
+   headers
 
 ## Documents and Attributes
 
@@ -41,10 +41,10 @@ matches in a FTS scenario. For example : If you look for *Verisign* in
 *SSL Certs FTS* or *Apache* in a HTTP Header FTS field you are likely to
 match every other document.
 
-Trisul only returns a maximum of 500 matches. If you want more,
+Trisul returns at most 500 matches. If your search hits that limit:
 
-1. You simply have to narrow your search terms
-2. Look for a smaller time interval
+1. Narrow your search terms.
+2. Search a smaller time interval.
 
 ### Faceted Results
 
@@ -55,7 +55,7 @@ search box and narrow the search further.
 ### Flows
 
 The FTS Index also stores flows that were involved in transferring the
-document. This allow you to enter into the network side of things from
+document. This lets you move into the network side of things from
 the document.
 
 1. One document can be transferred by any number of network flows
@@ -70,7 +70,7 @@ the document.
 The following screenshot describes how the UI works.
 
 1. Select a timeframe - the default is to search all the traffic today
-2. Enter a search term and press Search..
+2. Enter a search term and press **Search**.
 
 Results are presented as shown below.
 
@@ -82,7 +82,7 @@ Results are presented as shown below.
 The results are grouped by frequency of appearance of attributes. In the
 above example, **host**, **user_agent** are all attributes with Trisul
 showing how many appearances of various types were seen. This helps
-immensely to narrow down searches.
+you narrow down searches.
 
 To continue the above example, if you click on an attribute say
 **themes.googleusercontent.com** that is added into the search box and

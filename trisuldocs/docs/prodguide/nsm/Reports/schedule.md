@@ -8,7 +8,7 @@ sidebar_position: 2
 :point_right: Go to **Reports &rarr; Schedule**
 :::
 
-Schedule Email Reports lets you automatically generate and email supported Trisul reports on a hourly, daily, weekly, or monthly schedule.
+Schedule Email Reports lets you automatically generate and email supported Trisul reports on an hourly, daily, weekly, or monthly schedule.
 
 Choose the report, time, frequency, recipients, and other required options, then let Trisul generate and send the report automatically.
 

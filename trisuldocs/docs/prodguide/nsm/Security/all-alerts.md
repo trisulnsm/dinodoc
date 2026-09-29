@@ -83,4 +83,4 @@ Each row has its own action menu (**⋮ ▾**) for drilling into that specific a
 Downloading PCAP for a large result set can produce a very large file — narrow the search criteria first if you only need packets for a specific IP, signature, or time range.
 :::
 
-[**Click here → to see every IDS alert grouped by source, destination, or signature, with drilldown into raw PCAP**](https://docs.trisul.org/docs/guide/ug/alerts/viewall)
+For the Alert Bar and the other ways to view a summary of all alerts, see [Summary of All Alerts](/docs/guide/ug/alerts/viewall) in the User Guide.
