@@ -17,9 +17,9 @@ If traffic analytics look unusual or incomplete, this page helps determine wheth
 ![](images/system_health.png)  
 *Figure: System Health Dashboard*  
 
-## 1) System Health Check
+## System Health Check {#1-system-health-check}
 
-This section provides a quick, high-level check of Trisul’s essential components. Each item reports a simple **OK** status so you can immediately see whether something fundamental is not functioning correctly.
+This section provides a quick, high-level check of Trisul’s essential components. Each item reports an **OK** status, so you can see at a glance whether a core component has a problem.
 
 It verifies the status of:
 
@@ -56,7 +56,7 @@ You can configure when disk usage should trigger alerts so storage pressure is d
 In the App Settings form, set **Disk Usage Alert Percentage** and click **Save**.
 
 
-## 2) Disk Usage
+## Disk Usage {#2-disk-usage}
 
 This module provides an in-depth view of the system's disk usage, helping identify potential storage issues. It monitors three storage pools: Oper, Ref, and Archive
 
@@ -72,7 +72,7 @@ For each pool the module displays the following details,
 | Configured days | The number of days the storage pool has been configured |
 | Available days | The number of days the storage pool has been available |
 
-### 3) Data Availability
+## Data Availability {#3-data-availability}
 
 This module displays the availability of data within a specified timeframe, ensuring data is accessible and complete. It shows:
 
@@ -80,7 +80,7 @@ This module displays the availability of data within a specified timeframe, ensu
 **To** : The ending time point of the data availability period.  
 **Duration of data availability**: The total length of time data was available within the specified period.  
 
-### 4) Probe Memory Usage
+## Probe Memory Usage {#4-probe-memory-usage}
 
 This module monitors memory usage for the Trisul Probe, ensuring it has sufficient resources to operate effectively. It displays:
 
@@ -90,13 +90,13 @@ This module monitors memory usage for the Trisul Probe, ensuring it has sufficie
 
 The module presents memory usage in both numerical values and a gauge display, providing a clear visual representation.
 
-### 5) Process Running Status
+## Process Running Status {#5-process-running-status}
 This module verifies the status of critical system processes, ensuring they are running correctly. It monitors:
 
 **Trisul Hub**: Confirms the Trisul Hub is running and connected.   
 **Trisul Probe**: Verifies the Trisul Probe is running and connected.  
 
-### 6)Last Flushed Details
+## Last Flushed Details {#6last-flushed-details}
 This module displays information about the last data flush, ensuring data is being processed and cleared correctly. It shows:
 
 **Number of flows**: The total number of data flows processed.  

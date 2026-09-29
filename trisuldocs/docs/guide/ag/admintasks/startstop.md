@@ -16,10 +16,10 @@ From here, you’ll typically:
 ### Trisul Components
 
 - **Trisul Hub**:  
-Processes the Database
+Stores and serves the data
 
 - **Trisul Probe**:  
-Processes the analytics
+Ingests and processes traffic
 
 - **WebTrisul**:  
 Provides the web interface
@@ -35,7 +35,7 @@ Each context runs its own Hub and Probe pair. Starting or stopping them here aff
 
 Login as `admin` to the Trisul UI 
 
-:point_right:  Select Context:default → Admin Tasks → Start/Stop Tasks 
+:point_right: Go to Context: default → Admin Tasks → Start/Stop Tasks 
 :::
 
 ![startstop menu](images/startstop1.png)  
@@ -63,7 +63,7 @@ Click on the three lines button adjacent to the Start/Stop button to access Hub 
 | Options | Description |
 |---------|-------------|
 | View Flusher Log | Displays the log file for the Flusher process, which is responsible for periodically removing outdated data from the Trisul database to maintain data retention policies. |
-| View TRP Log | Displays Trisul Remote Protocol logs queried from hub to Web Trisul. |
+| View TRP Log | Displays Trisul Remote Protocol logs queried from hub to WebTrisul. |
 | View Data Retention | Allows administrators to view the current data retention policies configured in Trisul |
 | View System Info | Provides detailed information about the Trisul Hub system, including Name, Kernel, IP Addresses, Version etc |
 | Change Customer Logo | Enables customization of the Trisul interface by uploading a custom logo, allowing organizations to brand the platform according to their requirements. |
@@ -73,7 +73,7 @@ Click on the three lines button adjacent to the Start/Stop button to access Hub 
 
 ### Probe Options
 
-Click on the three lines button adjacent to the Start/Stop button to access Hub options menu.
+Click on the three lines button adjacent to the Start/Stop button to access Probe options menu.
 
 ![](images/probeoptions.png)  
 *Figure: Probe Options Menu*
@@ -93,7 +93,7 @@ Click on the three lines button adjacent to the Start/Stop button to access Hub 
 
 ## Start and Stop Via Command Line
 
-The CLI tools [trisulctl_hub](/docs/guide/ref/trisul_hub) allows you to start and stop easily from the root command line. 
+The CLI tool [trisulctl_hub](/docs/guide/ref/trisul_hub) starts and stops Trisul from the root command line. 
 
 ```bash
 $ trisulctl_hub
@@ -102,11 +102,11 @@ $ trisulctl_hub
 
 ## Start and Stop Web Server - WebTrisul
 
-Web Trisul provides the Web UI and is configured to start automatically.
+WebTrisul provides the Web UI and is configured to start automatically.
 
-### Start and Stop Webtrisul
+### Start and Stop WebTrisul
 
-Use the normal Linux tools to start and stop Webtrisul. The service name is `webtrisuld`
+Use the normal Linux tools to start and stop WebTrisul. The service name is `webtrisuld`
 
 ```bash
 systemctl stop webtrisuld

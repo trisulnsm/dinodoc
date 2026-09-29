@@ -8,7 +8,7 @@ The **DB Status** page is used to understand **what is being stored, how much, a
 It provides detailed information on Session Flows, Resources, Alerts, FTS (Full Text Search) objects.
 
 ## Database Segments  
-Trisul Database is generally divided into three segments based on the how many days Trisul has to store data.
+The Trisul database is divided into three segments, based on how many days Trisul has to store data.
 
 - **Oper**:  
 Stores the most recent data.
@@ -19,12 +19,12 @@ Stores older historical data.
 
 You can view how much data is written per day into each segment and use this information to estimate how long data can be retained based on available disk capacity.
 
-> **To configure the DB storage retention policy refer to [Configuring disk storage](/docs/guide/ag/basictasks/configure_storage.md)**
+> **To configure the DB storage retention policy refer to [Configure Retention Policy](/docs/guide/ag/basictasks/configure_storage)**
 
 You can also view the disk occupied by each counter-group in a SLICE
 every-day. This is helpful in tuning the system.
 :::info navigation
-:point_right: Go to Context: Default &rarr; Admin Tasks &rarr; DB Status
+:point_right: Go to Context: default &rarr; Admin Tasks &rarr; DB Status
 :::
 ## DB Status Dashboard  
 On the **DB Status** dashboard, click on the little graph button against each object to view the DB Status trend for that particular object. You can also customize the number of days for which you want to view the traffic data trends by clicking on the graph button.
@@ -90,4 +90,4 @@ It displays the following,
 | Ref         | Size of the packet storage on the reference part |
 | Archive     | Size of the packet storage on the archive part   |
 
-The PCAP tabular data below the probe slices is similar to the [Storage Status tabular data](storage_status#storage-status-tabular-data) which shows the PCAP information in each storage pools: oper, ref, and archive.
+The PCAP tabular data below the probe slices is similar to the [Storage Status tabular data](/docs/guide/ag/admintasks/storage_status#storage-status-tabular-data) which shows the PCAP information in each storage pools: oper, ref, and archive.

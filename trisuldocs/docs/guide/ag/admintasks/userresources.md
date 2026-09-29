@@ -9,35 +9,26 @@ see those resource entities.
 
 ### Use Case - User Device Permissions
 
-A Trisul netflow customer desires to create *cust1* who can only view
-*routers A,B,C* metrics and another user *cust2* who can only see
-*routers X,Y*
+A Trisul NetFlow Analyzer customer wants to create a user *cust1* who can see metrics only for *routers A, B and C*, and a user *cust2* who can see only *routers X and Y*.
 
 1. Create a resource group called *custgroup1* and select routers A,B,C
 2. Create a resource group called *custgroup2* and select routers X,Y
 3. Edit user *cust1* and assign *custgroup1* to it
 4. Edit user *cust2* and assign *custgroup2* to it
 
-Now when *cust1* logs in he/she can only see the two routers assigned to
-him/her.
+Now when *cust1* logs in, they see only routers A, B and C.
 
 ## Creating a Resource Group
 
 The first step is to create a group and select and put resources into
 the group.
 
-#### Terminology for Netflow
+#### Terminology for NetFlow
 
-Before creating a group some terminology to help you select the correct
-counter group
+Before you create a group, pick the counter group that matches what you want to assign:
 
-I want to assign routers to users  
-Select the *FlowGens* counter group. FlowGen = Netflow generator
-represents a router or a netflow capable device
-
-I want to assign specific router interfaces to users  
-Select the *FlowIntfs* counter groups. FlowIntfs = Flow Interfaces
-represents a netflow capable interface flow interfaces 
+- **To assign routers to users**, select the *FlowGens* counter group. A FlowGen (NetFlow generator) is a router or other NetFlow-capable device.
+- **To assign specific router interfaces to users**, select the *FlowIntfs* counter group. A FlowIntf (flow interface) is a NetFlow-capable interface.
 
 :::info navigation
 
@@ -57,8 +48,7 @@ Select “New Resource Group” from the top right.
 
 ### Create a Resource Group
 
-This step is very simple. Just create an empty resource group with a
-name and description. The name can be short such as “East Zone Devices”
+Create an empty resource group with a name and description. The name can be short such as “East Zone Devices”
 and a longer description.
 
 ![](images/edit_new_resourcegroup.png)
@@ -114,7 +104,7 @@ That restricts that users view to only items in that group.
 
 :::info navigation
 
-:point_right: Login as admin and select WebAdmin: Manage &rarr; Users
+:point_right: Log in as `admin` and go to Web Admin &rarr; Manage &rarr; Users
 :::
 
 Then against the user select the *Options &rarr; Assign Resources*
@@ -130,7 +120,7 @@ Then select the resource groups to assign to this user.
 #### Cannot see user groups when I select “Assign Resources”
 
 Ensure that the user is allowed to access the Trisul context. Go to Edit
-User and ensure that there is atleast one context selected in “Allowed
+User and ensure that there is at least one context selected in “Allowed
 Contexts”
 
 #### When Assigning Keys to Resource Group I am Getting: A List of Keys Already Exists for This Counter Group

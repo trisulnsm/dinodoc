@@ -26,7 +26,7 @@ This helps you estimate disk requirements accurately instead of guessing.
 
 :::info Navigation
 
-:point_right: Login as Admin &rarr; Context:default &rarr; Admin Tasks &rarr; Storage Status
+:point_right: Log in as `admin` and go to Context: default &rarr; Admin Tasks &rarr; Storage Status
 :::
 
 ![per day storage](images/storage_per_day.png)
@@ -44,7 +44,7 @@ By default, Trisul retains **96 days** of data.
 
 
 :::info Hub Config File
-The retention period in number of days is specified in the [:memo: Trisul Hub Configuration](/docs/guide/ref/trisulhubconfig) file. 
+The retention period in number of days is specified in the [:memo: Trisul Hub Configuration](/docs/guide/ref/trisulhubconfig) file. For the default context, the file is `/usr/local/etc/trisul-hub/domain0/hub0/context0/trisulHubConfig.xml`.
 :::
 
 The default configuration stores:
@@ -82,7 +82,7 @@ For a total of **96 days**.
 
 ### Increasing the Retention Period
 
-Simply change the Archive Slice Count from 32 to the desired number.  
+Change the Archive `SliceCount` from 32 to the number you need.  
 
 Say if you wanted to store 1 year of data, set the Archive Count to 301 
 
@@ -95,14 +95,14 @@ Say if you wanted to store 1 year of data, set the Archive Count to 301
             </Archive>
 ```
 
-You can also adjust the Oper and Ref , refer to the [Storage Architecture](/docs/guide/learntrisul/concepts/storage_arch) document for details.
+You can also change the Oper and Ref slice counts. See [SlicePolicy](/docs/guide/ref/trisulhubconfig#slicepolicy) in the Trisul Hub Configuration reference.
 
 ### Archiver type for large deployments
 
 The Hub archiver (`trisul_archiver`) controls how slices move between storage tiers on disk. The algorithm is selected with `DBTasks/Archiver/Type` in [Trisul Hub Configuration](/docs/guide/ref/trisulhubconfig):
 
 - **`SLIDE`** (default) — suitable for most customers. Slices slide linearly through operational, reference, archive, and any optional `ExtraArchives` tiers.
-- **`RING`** — for very large deployments where the database grows above roughly **1 TB per day**. Slices rotate across multiple `ExtraRingArchives` volumes instead of sliding through a long chain, which reduces relocation overhead at extreme ingest rates.
+- **`RING`** — for deployments where the database grows above roughly **1 TB per day**. Slices rotate across multiple `ExtraRingArchives` volumes instead of sliding through a long chain, which reduces relocation overhead at extreme ingest rates.
 
 For typical retention tuning (oper/ref/archive slice counts), `SLIDE` is sufficient. Switch to `RING` only when linear sliding cannot keep up with daily ingest volume. See the [Archiver](/docs/guide/ref/trisulhubconfig#archiver) and [Extra ring archives](/docs/guide/ref/trisulhubconfig#extra-ring-archives-ring-archiver) sections in the Hub configuration reference for XML examples.
 
@@ -119,7 +119,7 @@ The default maximum Packet Capture PCAP storage is **10GB**
 
 
 :::tip Max PCAP Storage 
-The packet capture storage limits are defined in the [:memo: Trisul Probe Configuration](/docs/guide/ref/trisulconfig) file in two parameters
+The packet capture storage limits are defined in the [:memo: Trisul Probe Configuration](/docs/guide/ref/trisulconfig) file in two parameters. For the default context, the file is `/usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml`.
 
 - `FileSizeMB` - size of each PCAP file 
 - `SliceCount` - How many such files 
@@ -130,45 +130,37 @@ In the example below we have a
 - `FileSizeMB` set to  `1000MB` or 1GB and 
 - number of such files in each pool `8 + 8 + 0 = 16GB` of packet data. 
 
-```xml {3,12,20,28}
-              </FilePrefix>
-                <FileSizeMB>
-                        1000
-                </FileSizeMB>
-                <EnableDDosNetflowTapTrail/>
- <SlicePolicy>
-                       <Rule mode="IGNORE"/>
-                </RuleChain>
-                <SlicePolicy>
-                        <Operational>
-                                <SliceCount>
-                                        8
-                                </SliceCount>
-                                <UsageRedMark>
-                                        90
-                                </UsageRedMark>
-                        </Operational>
-                        <Reference>
-                                <SliceCount>
-                                        8
-                                </SliceCount>
-                                <UsageRedMark>
-                                        90
-                                </UsageRedMark>
-                        </Reference>
-                        <Archive>
-                                <SliceCount>
-                                        0
-                                </SliceCount>
-                                <UsageRedMark>
-                                        90
-                                </UsageRedMark>
-                        </Archive>
-                </SlicePolicy>
-        </Ring>
-
-
-
+```xml {2,8,16,24}
+<FileSizeMB>
+        1000
+</FileSizeMB>
+..
+<SlicePolicy>
+        <Operational>
+                <SliceCount>
+                        8
+                </SliceCount>
+                <UsageRedMark>
+                        90
+                </UsageRedMark>
+        </Operational>
+        <Reference>
+                <SliceCount>
+                        8
+                </SliceCount>
+                <UsageRedMark>
+                        90
+                </UsageRedMark>
+        </Reference>
+        <Archive>
+                <SliceCount>
+                        0
+                </SliceCount>
+                <UsageRedMark>
+                        90
+                </UsageRedMark>
+        </Archive>
+</SlicePolicy>
 ```
 
 
@@ -186,8 +178,7 @@ If the default 10 GB is insufficient, increase storage by:
 
 Example: Store **500 GB** using **100 files of 5 GB each**:  
 
-```xml {3,10}
-              </FilePrefix>
+```xml {2,9}
                 <FileSizeMB>
                         5000
                 </FileSizeMB>

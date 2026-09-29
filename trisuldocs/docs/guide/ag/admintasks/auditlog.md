@@ -16,7 +16,7 @@ The Audit Log records events such as:
 ## Accessing Audit Logs
 
 :::info navigation
-:point_right: Go to Context &rarr; Admin Tasks &rarr; Audit Log
+:point_right: Go to Context: default &rarr; Admin Tasks &rarr; Audit Log
 :::
 
 ![](images/auditlogs.png)

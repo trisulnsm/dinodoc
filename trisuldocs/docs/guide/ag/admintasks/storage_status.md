@@ -2,19 +2,13 @@
 
 # Storage Status
 
-*Storage status* is a dashboard for your Trisul storage, providing insights to help you optimize and maintain your storage infrastructure. You can check Trisul's health and availability of the storage subsystem, which includes disk space, storage devices, and file systems. It indicates whether the storage is:
+*Storage Status* is a dashboard for Trisul storage. It shows the disk space, storage devices and file systems Trisul uses, and whether each storage pool is online (available) or offline (unavailable).
 
-- Online/Available
-
-- Offline/Unavailable
-
-- Storage Pool Status
-
-You can View database storage in depth, tag slices with labels and tags. To view the storage status,
+You can also view database storage in depth, including the tags on each slice. To open Storage Status:
 
 :::info Navigation
 
-:point_right: Login as Admin &rarr; Context:default &rarr; Admin Tasks &rarr; Storage Status
+:point_right: Log in as `admin` and go to Context: default &rarr; Admin Tasks &rarr; Storage Status
 
 :::
 
@@ -32,11 +26,11 @@ The Storage status consists of the following information and their status detail
 | Per Day       | The amount of disk space used by Trisul on daily basis              |
 | Storage Pools | The number of storage pools configured in Trisul                    |
 
-> In the Disk Usage Per Day Module, each bar represents each day. And yellow color represents the data that belongs to the selected storage pool say oper/ref/archive which gets reflected as you select.
-
 ### Disk Usage Per Day
 
-Disk Usage Per day is a graphical representation of the disk usage per day in bar chart. You can hover over any bar to view the storage data including date, size, duration and status of that particuar date.
+Disk Usage Per day is a graphical representation of the disk usage per day in bar chart. You can hover over any bar to view the storage data including date, size, duration and status of that particular date.
+
+Each bar is one day. Yellow shows the data in the storage pool you select (oper, ref or archive).
 
 ![](images/diskusageperday.png)
 
@@ -120,7 +114,7 @@ Clicking on this tab shows you the table details,
 
 ## Tape
 
-Tape serves as an offline storage solution for backing up data from the archive storage pool. The Meta Slice maintains a comprehensive repository of information for each storage pool, including oper, ref, archive, storage pool retention periods, and slice information for each storage pool.
+Tape serves as an offline storage solution for backing up data from the archive storage pool. The Meta Slice holds information about each storage pool (oper, ref and archive), including its retention period and its slices.
 
 ![](images/tape.png)  
 *Figure: Showing Tape Storage*

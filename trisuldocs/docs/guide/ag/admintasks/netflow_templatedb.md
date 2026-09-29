@@ -1,16 +1,16 @@
 # NetFlow Template DB
 
-NetFlow v9, IPFIX, JFlow, Netstream are technologies that use a concept
-of Template records. These are special records sent by the router which
-describe the metrics contained in normal data flow records. Viewing
-these template records are a great way to troubleshoot NetFlow. 
+:::note Applies to
+NetFlow input (NetFlow v9, IPFIX, JFlow, NetStream).
+:::
 
-This Menu provides NetFlow/IPFIX template database received by all
-probes.
+NetFlow v9, IPFIX, JFlow and NetStream use template records. A router sends these special records to describe the metrics contained in its normal flow records. Viewing the template records helps you troubleshoot NetFlow.
+
+This menu shows the NetFlow/IPFIX template database received by all probes.
 
 
 :::info navigation
-:point_right: Context: Default &rarr; Admin Tasks &rarr; NetFlow Template DB
+:point_right: Go to Context: default &rarr; Admin Tasks &rarr; NetFlow Template DB
 :::
 
 ![](images/netflow_templatedb.png)  

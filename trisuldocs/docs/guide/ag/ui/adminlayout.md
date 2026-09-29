@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Admin Layout
 
-An admin layout also known as an administrator layout is a specialized layout designed for administrators who need to manage and configure the platform. With Admin Layout admins can provide grant access to users other than admins like operators, forensic operators or subscribers. Each user would be allowed to have different levels of accessibility and vsisibility to advanced features, settings, and tools according to their user roles.
+The admin layout (administrator layout) is the interface administrators use to manage and configure Trisul. From it, administrators give access to other users. Each user has a role, such as Operators, Forensics Operators or Subscriber, and the role decides which features, settings and tools the user can see.
 
 When you login as admin you will see the admin layout which is different from the user layout.
 
@@ -64,7 +64,7 @@ The Admin panel consists of the following elements,
    
    10) You can check the status of hub0 and probe0 and start/stop the tasks clicking on start/stop.
    
-   11) If you click the three lines againts the hub0 it will show you the following menu
+   11) If you click the three lines against the hub0 it will show you the following menu
        
        ![](images/hub0.png)
        

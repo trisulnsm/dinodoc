@@ -43,21 +43,21 @@ These logs reflect **packet and flow processing activity** on the probe.
 
 | Type        | What it is   | Default location   | Files   |
 | ----------- | ---- |- | ---
-| Application | trisul-probe main process      | `/usr/local/var/log/trisul-probe/domain0/probe0/context0` replace the domain, probe, and context with the actual fields if you have created your own contexts                     | ns-.log – trisul probe logs, xLuaX.log redirected print() statements from LUA script instances |
+| Application | trisul-probe main process      | `/usr/local/var/log/trisul-probe/domain0/probe0/context0` replace the domain, probe, and context with the actual fields if you have created your own contexts                     | ns-*.log – trisul probe logs, xLuaX.log redirected print() statements from LUA script instances |
 
 ### Hub 
 These logs relate to **data ingestion, storage, and querying**.
 
 | Type        | What it is    | Default location   | Files  |
 | ----------- | ---------------------------- |-----| ---- |
-| Application | trisul-hub Flush process    | `/usr/local/var/log/trisul-hub/domain0/hub0/context0`replace the domain, hub, and context with the actual values | fs-.log – trisul_flushd database writer logs , qs_.log – trisul_trpd TRP database query logs |
+| Application | trisul-hub Flush process    | `/usr/local/var/log/trisul-hub/domain0/hub0/context0`replace the domain, hub, and context with the actual values | fs-*.log – trisul_flushd database writer logs, qs-*.log – trisul_trpd TRP database query logs |
 
 ## Web Server logs
 These logs capture **WebTrisul UI activity and errors**.
 
 | Type        | What it is | Default location | Files   |
 | ----------- | ------------------------ | ----------------------------------------- | -- |
-| Web  | Web Trisul webserver logs | `/usr/local/var/log/trisul-hub/webtrisul` | production.log – the main webserver log |
+| Web  | WebTrisul webserver logs | `/usr/local/var/log/trisul-hub/webtrisul` | production.log – the main webserver log |
 
 ----
 
@@ -112,7 +112,7 @@ Example:
 | HTTP Real IP | 192.168.1.20 | Original IP address of the client that retrieves the value from the HTTP header. |
 | Request IP | 	127.0.0.1 | IP address of the proxy server requested by the client. |
 | Username |user | Username who triggered the event. |
-| Context Name | default | Context in which the event occured. |
+| Context Name | default | Context in which the event occurred. |
 | Log Message | User successfully logged in | A descriptive message on the logged activity. |
 
 > **HTTP Real IP** allows you to get the true client IP rather than the IP of the proxy.
@@ -124,6 +124,7 @@ If the application is behind a proxy and the `X-Forwarded-For` header is present
 ## Domain process logs
 
 Domain processes coordinate internal components and distributed nodes.  
+
 | Type        | What it is   | Default location   | Files   |
 | ----------- | -------------------------------| ------------------ | -----------------|
 | Domain      | Domain processes that co-ordinate nodes | `/usr/local/var/log/trisul-probe/domain0/probe0` replace with probe ID. Each probe has its own domain processes because they are independent entities even if on the same machine | cp-XX.log probe logs                                                                           |
@@ -136,10 +137,12 @@ Each probe and hub maintains its own domain processes, even when running on the 
 
 The most common troubleshooting workflow involves tailing logs in real time.
 Trisul provides shell aliases via `trisbashrc` to make this easier.
+
+### Probe
   
   ```bash
   # as root
-  source /usr/local/share/trisul-probe trisbashrc
+  source /usr/local/share/trisul-probe/trisbashrc
   tailf.ns
   ```
   Useful aliases:

@@ -86,7 +86,14 @@ trisul_hub(domain0)> reset context default@probe0
 Deleting a context removes **both configuration and all associated data**.
 Use this only if you are certain the context is no longer required.
 
-:::warning cant delete the default context 
+Run `delete context <contextname>` from the Trisul Hub control utility. For example, to delete a context named `context1`:
+
+```
+$ trisulctl_hub
+trisul_hub(domain0)> delete context context1
+```
+
+:::warning You can't delete the default context
 
 You are not allowed to delete the `default` context. Running
 `delete context default` will get rid of the configuration and data for

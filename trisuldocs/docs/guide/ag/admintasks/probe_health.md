@@ -1,11 +1,9 @@
 # Probe Health
 
-This menu is nothing but a Probe Health Monitor. It shows the
-reachability, current traffic, and latency of Trisul Probes in this
-particulat context.
+This menu is the Probe Health Monitor. It shows the reachability, current traffic and latency of the Trisul Probes in this context.
 
 :::info navigation
-:point_right: Go to Context: Default &rarr; Admin Tasks &rarr; Probe Health
+:point_right: Go to Context: default &rarr; Admin Tasks &rarr; Probe Health
 :::
 
 ![](images/probehealth.png)  

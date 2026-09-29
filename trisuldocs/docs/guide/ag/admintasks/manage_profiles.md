@@ -6,7 +6,7 @@ Profile assigned to probes cannot be deleted. If multiple probes are
 setup, Multiple profiles will be created automatically and listed here.
 
 :::info navigation
-:point_right: Go to Context: Default &rarr; Admin Tasks &rarr; Manage Profiles
+:point_right: Go to Context: default &rarr; Admin Tasks &rarr; Manage Profiles
 :::
 
 You can see the list of configured profiles assigned for the respective probes here. By default *profile0* is already configured for *probe0* and is readily available. 
@@ -29,7 +29,7 @@ Click *Create* to complete the profile setting.
 
 ## Editing Profiles
 
-Click on the action button against the prfile you would like to edit and the following functions are available.
+Click on the action button against the profile you would like to edit and the following functions are available.
 
 ![](images/edit_profiles.png)  
 *Figure: Action- Profiles*
