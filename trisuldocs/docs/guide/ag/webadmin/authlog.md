@@ -3,7 +3,7 @@
 The Auth Log records and displays all user authentication activities, providing a complete audit trail of user access. It logs successful and failed login attempts, login time, login IP address, login status, failure reasons, logout events, and inactivity timeouts, helping administrators monitor user activity and troubleshoot authentication issues.
 
 :::info navigation
-:point_right: Go to Web Admin:Manage&rarr; Auth Log
+:point_right: Go to Web Admin &rarr; Manage &rarr; Auth Log
 :::
 
 ## Search Criteria
@@ -32,15 +32,15 @@ The Auth Log displays the table of following details and functionalities.
 | Column | Description |
 |--------|-------------|
 | Timestamp IST | Displays the date and time of the authentication event in Indian Standard Time (IST) format. |
-| Location | Shows the IP address from which the authentication event occured. |
+| Location | Shows the IP address from which the authentication event occurred. |
 | Username | Displays the username associated with the authentication event. |
-| Context | Dsiplays the context on which the event occured. |
+| Context | Displays the context on which the event occurred. |
 | Action | Describes the type of authentication event such as login, logout, and timeout. |
-| Message | Provides a short message as an additional context of the action like succesful login, logout duration, or inactivity timer expired duration |
+| Message | Provides a short message as an additional context of the action like successful login, logout duration, or inactivity timer expired duration |
 
 ### Download
 
-Click on the [*Download Button*](/docs/guide/ug/ui/elements#download-button) to download the list of auth logs in PDF, XLSV, or CSV formats.
+Click on the [*Download Button*](/docs/guide/ug/ui/elements#download-button) to download the list of auth logs in PDF, XLSX, or CSV formats.
 
 ### Users List
 

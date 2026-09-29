@@ -52,7 +52,7 @@ Choose *Customize Menus* in *Menu Manager* and select a *user* and select a *con
 | Params Json  							| Enter the parameters in JSON format									   |
 | Image 								| Choose an image for the menu 											   |
 
-Once you have filled all the details for these fields, Click *Create*. A New menu is now created!
+Fill in the fields and click *Create* to create the menu.
 
 And the newly created menu will be reflecting on the index page of *Customize menus*
 

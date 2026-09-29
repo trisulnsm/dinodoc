@@ -19,6 +19,8 @@ This is where admins start or stop tasks including
 
 Due to security considerations, the option of restarting your web server is not available through the user interface. To restart your web server, click the *Restart* button in this module to access instructions on how to manually restart from your Trisul Server.
 
+The restart command on the Trisul Hub server is `systemctl restart webtrisuld`. See [Start and Stop WebTrisul](/docs/guide/ag/admintasks/startstop#start-and-stop-webtrisul).
+
 ![](images/webserver_restart.png)  
 *Figure: Instructions to Restart Web Server*
 

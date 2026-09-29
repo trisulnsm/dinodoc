@@ -9,8 +9,7 @@ plugins
 
 :::info navigation
 
-:point_right: To access this login as `admin` and select WebAdmin Manage &rarr; Plugin
-Data Updates
+:point_right: Log in as `admin` and select Web Admin &rarr; Manage &rarr; Plugin Data Updates
 
 :::
 

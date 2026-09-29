@@ -2,7 +2,7 @@
 
 ## Overview
 
-*Dashboards* in Admin section enables administrators to access a comprehensive list of all available dashboards in the UI, search and filter dashboards using various criteria, and manage dashboard configurations.
+*Dashboards* in the Admin section lists all dashboards in the UI. You can search and filter the list, and manage each dashboard's configuration.
 
 :::info navigation 
 :point_right: Go to Web Admin: Manage&rarr; UI: Dashboards
@@ -29,9 +29,10 @@ The Dashboard details displayed in the table are as follows.
 
 ### Action
 
-**Customize**: Customize the selected dashboard's configurations.   
-**Clone**: Creates an identical copy of the dashboard for creating variations of existing dashboard.   
-**Delete**: Delete the selected dashboard.  
+- **Customize**: Customize the selected dashboard's configurations.
+- **Clone**: Creates an identical copy of the dashboard for creating variations of existing dashboard.
+- **Delete**: Delete the selected dashboard.
+- **Export**: Export the selected dashboard.  
 
 ## Create a New Dashboard
 

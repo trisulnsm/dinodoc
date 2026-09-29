@@ -20,5 +20,5 @@ When enabled, Trisul's VAPT feature:
 ![](images/vapt.png)  
 *Figure: High Security Enabled*
 
-By default Trisul's High Security feature will not be enbaled. You can activate High Security by enabling the mode with `ENABLE_HIGH_SECURITY=true` in OEM settings.
+By default, Trisul's High Security feature is not enabled. You can activate High Security by enabling the mode with `ENABLE_HIGH_SECURITY=true` in OEM settings.
 

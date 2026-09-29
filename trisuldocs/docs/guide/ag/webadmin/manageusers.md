@@ -18,9 +18,11 @@ role management.
 
 - **user** - username `user` and password `user`
 
-The `user` login is for all other operations like viewing and scheduling
-reports, packet analysis, viewing alerts, and pretty much everything
-else a normal operator would do on a regular basis.
+The `user` login is for all other operations, such as viewing and scheduling reports, packet analysis, viewing alerts, and the other tasks an operator does every day.
+
+:::warning Change the default passwords
+After your first login, change the passwords of both built-in users. See [Change Own Password](/docs/guide/ag/webadmin/manageusers#change-own-password) and [Reset password by admin](/docs/guide/ag/webadmin/manageusers#reset-password-by-admin).
+:::
 
 
 ## Create a New User
@@ -39,17 +41,17 @@ Login as `admin` user to create a new user
 
 | Field                | Description                                                         |
 | -------------------- | ------------------------------------------------------------------- |
-| User Name            | The long name of user                                               |
+| User Name            | Login name for user, no spaces, keep it short                       |
 | Authentication       | User can use [LDAP](/docs/guide/ag/webadmin/ldap_login) password to login |
 | Password             | Password for local authentication of the user                       |
 | Password Again       | Repeat the password again                                           |
-| Full Name            | Login name for user, no spaces, keep it short                       |
+| Full Name            | The long name of user                                               |
 | Email                | (Optional) Email address associated with the user account. Required only when using Email OTP as the Two-Factor Authentication (2FA) method.                     |
 | Mobile Number        | (Optional) Mobile number associated with the user account. Required only when using SMS OTP as the Two-Factor Authentication (2FA) method.                     |
-| Role                 | Webtrisul user Roles .See [Roles](userroles) section for more  |
+| Role                 | WebTrisul user role. See [Roles](/docs/guide/ag/webadmin/userroles). |
 | Allow multiple Login | Allows concurrent login option to user. The tickbox is checked by default which means concurrent logins are allowed. <br/>When unchecked, If a user logs in with an ID that is already logged in, the older login session will be terminated.|
 | Default Dashboard    | If you set a Default Dashboard, the user will be taken directly to that dashboard after logging in. |
-| Default Home Page URL | If you set a Default Home Page URL, that takes priority over the Default Dashboard. After logging in, the user will be taken to the specified page (it can be any page, not just a dashboard).<br/> Users can also set their own home page by clicking the Home 🏠 icon from within their dashboards. |
+| Default Home Page URL | If you set a Default Home Page URL, that takes priority over the Default Dashboard. After logging in, the user will be taken to the specified page (it can be any page, not only a dashboard).<br/> Users can also set their own home page by clicking the Home 🏠 icon from within their dashboards. |
 | Allowed Context      | Restrict user to these selected contexts only|
 | Change User Avatar   | Click to choose file and upload the avatar to set it as user avatar. This shows in the top right of the page. |
 
@@ -79,7 +81,7 @@ Click on the **Edit** option (from the action button) against the user and in th
 
 ## Edit Existing User
 
-Login as `admin` user to create a new user
+Log in as `admin` to edit a user.
 
 :::info navigation
 
@@ -100,7 +102,7 @@ generated password (This can be viewed only once). Please send it to the user an
 You have to have admin rights as well as the user you are trying to
 delete must be logged off.
 
-Login as `admin` user to create a new user
+Log in as `admin` to delete a user.
 
 :::info navigation
 
@@ -179,13 +181,13 @@ To change the Superadmin username, click the **Action button** next to it and se
 - There are no restrictions on the characters you can use in your password.
 - Passwords are **case-sensitive**.
 - You can include repeated characters, special characters, numbers, or any combination.
-- The only password constraint is the minimum number of characters i.e.length which can be customized through the [**Web Trisul server : App Settings**](/docs/guide/ag/webadmin/web_options#ui) and specify the minimum number of characters by specifying in the "User Password Minimum length".
+- The only password constraint is the minimum number of characters i.e.length which can be customized through the [**App Settings → UI**](/docs/guide/ag/webadmin/web_options#ui) and specify the minimum number of characters by specifying in the "User Password Minimum length".
 
 ## Password Policy
 
 - For security reasons, we do **not** store previously entered passwords.
 - Passwords do **not** expire.
-- You can reset your password at any time using [**Reset Settings**](/docs/guide/ag/webadmin/manageusers#reset-password-by-admin)
+- You can change your password at any time. See [Change Own Password](/docs/guide/ag/webadmin/manageusers#change-own-password).
 
 ## Configure Two-Factor Authentication (2FA)
 

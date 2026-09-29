@@ -8,7 +8,7 @@ Trisul Apps are plugins to enhance the capabilities of Trisul.
 
 ## Plugin Apps to Extend Trisul
 
-You can install, upgrade, install Trisul Apps right from the web interface.
+You can install, upgrade and uninstall Trisul Apps from the web interface.
 
 :::note
 
@@ -36,7 +36,7 @@ From here you can install, upgrade, or uninstall Trisul Apps.
 Currently the only repository enabled is https://github.com/trisulnsm/apps
 
 ## Offline App Import
-By default, Trisul fetches and displays apps from the online repository in the Apps Dashboard. When you try to access the apps offline github would be unreachable from the webtrisul server.
+By default, Trisul fetches and displays apps from the online repository in the Apps Dashboard. When the WebTrisul server is offline, it can't reach GitHub.
 
  Alternatively, you can download apps from the repository as a TAR file and later import them offline.
 

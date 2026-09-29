@@ -27,9 +27,9 @@ The module details displayed in the table are as follows.
 
 ### Action
 
-**Clone**: Creates an identical copy of the module for creating variations of existing modules or templates.
-**Edit**: Modify the selected module's properties.  
-**Delete**: Delete the selected module.
+- **Clone**: Creates an identical copy of the module for creating variations of existing modules or templates.
+- **Edit**: Modify the selected module's properties.
+- **Delete**: Delete the selected module.
 
 ## Add New Module
 

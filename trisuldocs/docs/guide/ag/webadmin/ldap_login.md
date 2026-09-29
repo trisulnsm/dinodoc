@@ -87,15 +87,15 @@ Fill in the details as shown below.
 | Domain Name                   | A descriptive name given to this LDAP domain                               |
 | Domain Server                 | DNS name or IP address of the LDAP Domain Server                           |
 | Port                          | LDAP port number, usually 389. If using secure LDAP , LDAPS use 636        |
-| Use SSL                       | Check if box is using LDAPS. LDAP over SSL/LDAP. If this option is checked, ensure the *Port* is set correctly                                                                           |
+| Use SSL                       | Check this box if the server uses LDAPS (LDAP over SSL/TLS). If you check it, make sure *Port* is set to the LDAPS port. |
 | Disable SSL Cert verification | When using LDAPS (LDAP over SSL/TLS) if the server is not using a certificate issued by a valid root certificate authority the SSL connection can fail. Check this box to disable SSL certificate verification.                                                                                    |
 | Connection Login Name         | User name of the account used to connect to the LDAP server. All query operations will use this name.                                                                               |
 | Connection Password           | Password for the connection login name                                     |
 | Base DN                       | Base DN or Search DN refers to the structure of the LDAP server against which searches will be performed.                                                                                  |
 | Search Filter                 | The actual attribute name that is used to match the user. Examples : `email` or `uid` `dn` `cn`. If you specify `email` then the username would have to be the email ID eg `email=tim@company.com` |
-| Sync Users Filter             | When LDAP is used to automatically synchronize use from the LDAP server, query users with this filter and automatically add them to Trisul (only used if you want to automatically synchronize users from LDAP directory, if you want to add users manually leave this blank)                               |
+| Sync Users Filter             | When LDAP is used to automatically synchronize users from the LDAP server, query users with this filter and automatically add them to Trisul (only used if you want to automatically synchronize users from LDAP directory, if you want to add users manually leave this blank)                               |
 | Login with user bind only          | If checked, the LDAP login process only uses the user name to bind rather than the default way of using the connection user name and password first and then bind the user                  |
-| Append to username            | The string specified in this field will automatically appended to the user name. A features to help the user avoid typing the full login names. For example : if you set this to *`unitedfederalbankname.com_ then the user who had to type  _mike`unitedfederalbankname.com* only has to type *mike* at the login screen                                                                                          |
+| Append to username            | The string in this field is appended to the user name automatically, so users don't have to type the full login name. For example, if you set this to `@unitedfederalbankname.com`, a user whose login is `mike@unitedfederalbankname.com` types only `mike` at the login screen. <!-- TODO(verify): whether the appended string includes the @ sign --> |
 
 ## Create a LDAP Enabled User
 
@@ -140,9 +140,7 @@ called “LDAP authentication”.
 
 If you experience errors you can try the following.
 
-1. Test the LDAP domain by clicking the *Check Authentication* like on
-   the *Options* link
+1. Test the LDAP domain: in the LDAP Domain list, open the options for the domain and click **Check authentication**.
 2. Login using a LDAP enabled user and check the “LDAP Authentication”
    check box
-3. Then check the Webtrisul log file for errors using *Manage &rarr; Web
-   Server Logs &rarr; Web server logs*
+3. Check the WebTrisul log for errors: **Web Admin &rarr; Manage &rarr; Web Server Logs &rarr; Web Server Log**.

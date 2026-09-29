@@ -11,7 +11,7 @@ From here, administrators can manage user access, configure system settings, mon
 ## Manage
 
 :::info navigation
-Go to Web Admin: Manage &rarr; (*List of all Admin Menus*)
+Go to Web Admin &rarr; Manage, then select a menu from the table below.
 :::
 
 
@@ -26,7 +26,7 @@ Explore the documentation to access detailed information and controls for admini
 | [LDAP Domain](/docs/guide/ag/webadmin/ldap_login) | Configure LDAP domain and create login option that authenticates users against an LDAP server.|
 | [Roles](/docs/guide/ag/webadmin/userroles) | Lists roles and associated permissions, specifying authorized actions for each user category. |
 | [Auth Log](/docs/guide/ag/webadmin/authlog) | System authentication Log to keep track of each and every Login that provides a list of users with name,context,location,timestamp for every login attempt. |
-| [App Settings](/docs/guide/ag/webadmin/web_options) | Make modifications in the web interface directly change few functionalities in UI with the help of this menu. |
+| [App Settings](/docs/guide/ag/webadmin/web_options) | Change settings for the web interface, passwords and security, NetFlow, IPDR, email, charts, SNMP, DR, API keys and Trisul AI. |
 | [Modules](/docs/guide/ag/webadmin/modules) | View and manage list of available modules that are being actively used in the web interface. |
 | [Dashboards](/docs/guide/ag/webadmin/dashboards) | View and manage list of all dashboards in the UI. |
 | [Menu Manager](/docs/guide/ag/webadmin/menus) | Menu manager allows you to change the order of menu items, edit menu links, or clone and add new items. |

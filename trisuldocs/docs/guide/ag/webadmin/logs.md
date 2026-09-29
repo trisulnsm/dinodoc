@@ -9,7 +9,7 @@ Trisul provides access to various logs through the web interface to facilitate t
 | Log Type | Description |
 |----------|-------------|
 | Web Server Log | Displays logs specific to the Trisul web server. |
-| Background Tasks Log | Provides logs for scheduled tasks, including report mailers, blacklist downloaders. You can use this to check status of automatic downloads of threat intelligance, geo, and various other lists. |
+| Background Tasks Log | Provides logs for scheduled tasks, including report mailers, blacklist downloaders. You can use this to check status of automatic downloads of threat intelligence, geo, and various other lists. |
 | Web Sockets Log | Captures errors related to real-time stabbers. |
 | Auth Log | Records user login attempts, including successful and failed logins. |
 | Email Log | Displays email logs sent by Trisul. |
@@ -26,7 +26,8 @@ Select the type of log you would like to view from the list of log categories.
 ![](images/webserverlogs.png)  
 *Figure: Web Server Logs*
 
-### Web Server Log
+
+## Web Server Log
 
 Click *Web Server Log* to view the logs as in the figure. 
 
@@ -35,7 +36,8 @@ Click *Web Server Log* to view the logs as in the figure.
 
 To search for a particular log from the log entries, click on the [*Show Search Form*](/docs/guide/ug/ui/elements#hide-show-search-form) to open up the search criteria form. Search and locate a particular log by filling in the following fields.
 
-#### Search Criteria
+
+### Search Criteria
 
 | Field | Description |
 |-------|-------------|
@@ -53,6 +55,8 @@ Click *Background Tasks Log* to view the background tasks log entries as in the 
 *Figure: Background Tasks Log*
 
 To search for a particular log from the background tasks log entries, click on the *Show Search Form* and fill in the [search criteria form](/docs/guide/ag/webadmin/logs#search-criteria).
+
+For the execution history of each scheduled job (status, start and finish time, duration), see [Background Jobs](/docs/guide/ag/webadmin/bgjobs).
 
 ## Web Sockets Log
 
@@ -77,6 +81,7 @@ Click *Email Logs* to view the email logs sent by Trisul.
 To search for particular email logs, click on the *Show Search Form* and select the time range using the [*Time Selector*](/docs/guide/ug/ui/elements#time-selector) to narrow down the email log entries in the selected time range.
 
 The email logs contain the following details.
+
 | Column | Description |
 |--------|-------------|
 | Time Stamp | Displays the date and time when the alert mail has been sent to the recipient. |
@@ -87,7 +92,7 @@ The email logs contain the following details.
 
 ## SNMP Dump Logs
 
-You can simply click on the *SNMP Dump Logs* button to download the SNMP dumps as a text file. 
+Click the *SNMP Dump Logs* button to download the SNMP dumps as a text file. 
 
 ## Viewing Probe and Hub Logs
 
@@ -115,7 +120,6 @@ below.
 If you want the raw webserver log it can be found on the Trisul Hub
 server at `/usr/local/var/log/trisul-hub/webtrisul`  
 The files are named production.log or productionssl.log (if you are
-running webtrisul on HTTPS)
+running WebTrisul on HTTPS)
 
-Also see `trisbashrc:“/docs/guide/ref/trisbashrc.html` which contains helper
-aliases to locate various log files on the probe and hub server systems.
+Also see [trisbashrc](/docs/guide/ref/trisbashrc), which contains helper aliases to locate log files on the Probe and Hub servers.

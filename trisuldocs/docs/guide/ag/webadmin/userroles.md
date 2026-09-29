@@ -14,7 +14,7 @@ Trisul web users fall into four roles
 
 - Subscriber
 
-The default built-in user called **admin**. You can create other users with the same privileges.  
+The default built-in user is **admin**. You can create other users with the same privileges.  
 
 > Important:  The built-in admin user cannot be deleted.
 
@@ -29,14 +29,13 @@ There are four roles that a user can possess.
 | Forensics Operators | No admin powers. Can monitor traffic, but also inspect in depth what anyone is doing, down to the packet level.                                                                                            |
 | Subscriber          | No admin powers. Can investigate subscribed IPs or Interfaces                           |
 
-A role is but a set of allowed and disallowed operations. You can change
-what a role is allowed to do
+A role is a set of allowed and disallowed operations. You can change what a role is allowed to do.
 
 Login as `admin` user to manage user roles.
 
 :::info navigation
 
-:point_right: Select Webadmin &rarr; Manage &rarr; Roles
+:point_right: Select Web Admin &rarr; Manage &rarr; Roles
 
 :::
 
@@ -55,13 +54,13 @@ For each role
 
 Due to the sensitive nature of the data presented by Trisul, there is an
 inactivity timeout associated with each user. If no user interaction is
-seen by Webtrisul server for a certain period of time, the user is
+seen by WebTrisul server for a certain period of time, the user is
 automatically logged out. They will then have to present their
 login/password again to re-enter the system.
 
 You can increase inactivity timeout  
 :::info navigation 
-:point_right: To access, Select Manage &rarr; App settings &rarr; Web Server &rarr; Idle Timeout  
+:point_right: Select Web Admin &rarr; Manage &rarr; App Settings &rarr; Web Server &rarr; Idle Timeout  
 :::
 
 If you want to disable it - set it to some *huge value* (1000000
