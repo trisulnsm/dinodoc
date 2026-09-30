@@ -10,7 +10,7 @@ If you want even more fine grained control of the PCAP storage policy on a per f
 
 ## Structure
 
-Packet Storage skeleton script
+[Skeleton scripts on GitHub](https://github.com/trisulnsm/trisul-scripts/tree/master/lua/skeletons)
 
 ### Table `packet_storage`
 
@@ -18,7 +18,7 @@ You need to supply code for one or more of the following functions.
 
 | name | type| desc|
 | ---- | ----| ---|
-| [filter](/docs/lua/packet_storage#table-packet_storage)             | function(engine,timestamp,flowkey)  | called when a new flow starts. Examine the flow tuples and decide the packet (pcap) storage policy |
+| [filter](/docs/lua/packet_storage#function-filter)             | function(engine,timestamp,flowkey)  | called when a new flow starts. Examine the flow tuples and decide the packet (pcap) storage policy |
 | [filter_payload](/docs/lua/packet_storage#function-filter_payload) | function(engine, time, flow, dir, seekpos, buff) | called when first chunk of TCP data has been reassembled. Use this if you want to examine the headers and decide packet storage policy |
 
 
@@ -33,7 +33,7 @@ Your script needs to supply one or more of these functions listed below.
 
 ### Function `filter`
 
-Allows you to determine packet storage policy on a per-flow basis. This allows a fine-grained control that may not be possible using the built in method outlined in [Controlling Packet Storage](/docs/lua/packet_storage)
+Allows you to determine packet storage policy on a per-flow basis. This allows a fine-grained control that may not be possible using the built in method outlined in [Controlling Packet Storage](/docs/guide/ug/caps/packetstorage)
 
 #### When called
 
@@ -121,7 +121,7 @@ other values returned will be ignored and treated as “-1”.
 
 The following example
 
-- **blocks** TLS packets that run over port443
+- **blocks** TLS packets that run over port 443
 - TLS identified not by port but by TLS Version number 16 03 03
 - **allows** other packets to be stored
 
@@ -130,15 +130,15 @@ filter_payload  = function(engine, time, flow, dir, seekpos, buff )
      local hs_type           = buff:hval_8(0)
      local tls_version_major   = buff:hval_8(1)
      local tls_version_minor   = buff:hval_8(2)
-     if hs_type == 16 and tls_version_major ==3 and tls_version_minor < 4
-         -
-         - first TLS packets are handshake,version
-         - return 0 to IGNORE TLS packets
+     if hs_type == 0x16 and tls_version_major == 3 and tls_version_minor < 4 then
+         --
+         -- first TLS packets are handshake,version
+         -- return 0 to IGNORE TLS packets
          return 0
      else
-         -
-         - return -1 , no opinion. use the default policy
-         -
+         --
+         -- return -1 , no opinion. use the default policy
+         --
          return -1
      end
 end,

@@ -2,6 +2,12 @@
 
 `trisul_reencrypt` : Reencrypt PCAP files
 
+:::note Applies to
+
+Packet capture mode (stored Trisul PCAP files).
+
+:::
+
 Trisul stores all its PCAP files in an encrypted format. It uses a
 stream encryption cipher AES-128-CTR. Using `trisul_reencrypt` you can
 change the passphrase and reencrypt all files with the new passphrase.
@@ -13,7 +19,7 @@ to re-encrypt all the PCAP files.
 
 Type `man trisul_reencrypt` for a complete list of available options.
 
-```language-bash
+```text
 trisul_reencrypt - rencrypts Trisul packet capture files with a new passphrase
 
 

@@ -10,9 +10,9 @@ Custom data acquisition for driving the Trisul pipelines.
 
 Unlike other LUA scripts the `input_filter` script needs to be run on the command line because it drives the Trisul-Probe.
 
-```lua
+```bash
 trisul -demon /usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml \
-   -mode lua   \ 
+   -mode lua   \
      -in /home/kev/my-input-filter.lua   \
        -args hello-argument
 ```

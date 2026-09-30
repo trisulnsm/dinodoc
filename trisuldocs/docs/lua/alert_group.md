@@ -2,11 +2,11 @@
 
 Create a new Alert Group.
 
-You can extend Trisul’s functionality by creating your own Alert Groups in addition to Trisul built in ones. You can then use the LUA API to generate alerts for that group. They will be integrated into the user interface and the metrics backend seamlessly.
+You can extend Trisul’s functionality by creating your own Alert Groups in addition to Trisul built in ones. You can then use the LUA API to generate alerts for that group. They are integrated into the user interface and the metrics backend.
 
 ## Structure
 
-**[New Alert Group skeleton script]([trisul-scripts/lua/skeletons/new_alert_group.lua at master · trisulnsm/trisul-scripts · GitHub](https://github.com/trisulnsm/trisul-scripts/blob/master/lua/skeletons/new_alert_group.lua))**
+**[New Alert Group skeleton script](https://github.com/trisulnsm/trisul-scripts/blob/master/lua/skeletons/new_alert_group.lua)**
 
 ### Table `alertgroup`
 

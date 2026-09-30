@@ -16,13 +16,13 @@ Extract and dump content like PDFs, Binaries, Javascripts, Video for further ana
 
 ## The `ramfs` filesystem
 
-Linux offers a memory backed filesystem called *ramfs* aka *tmpfs* Trisul’s file extraction feature uses this filesytem to dump extracted files. Your LUA script an operate on that file or copy it out to a real disk backed file system for further analysis.
+Linux offers a memory backed filesystem called *ramfs* aka *tmpfs* Trisul’s file extraction feature uses this filesystem to dump extracted files. Your Lua script can operate on that file or copy it out to a real disk backed file system for further analysis.
 
 The flow looks like this
 
 ![](images/arch1.png)
 
-### Creating the ramfs filesytem
+### Creating the ramfs filesystem {#creating-the-ramfs-filesytem}
 
 #### Location
 
@@ -85,7 +85,7 @@ The streaming mode LUA was created by Trisul to support a number of applications
 
 There is no need to explicitly select a mode.
 
-1. if there is atleast one LUA script that define `onfile_http (..)` – then the mode is **File Mode**
+1. if there is at least one Lua script that define `onfile_http (..)` – then the mode is **File Mode**
 2. if all LUA scripts only use `onpayload_http(..)` or `onpayload_raw(..)` then the mode is **Streaming Mode**
 
 ## Filtering
@@ -95,7 +95,7 @@ The main challenge in file extraction is the sheer volume of files that will be 
 | `filter_flow` | called when each flow is started                      | Decide if you want to extract files by looking at IPs and Ports of the endpoints                                                                                                                                                          |
 | ------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `filter`      | called twice. once for request and again for response | Look at request HTTP header fields and decide if you want the response or look at response HTTP header fields and decide if you want the contents. A common usage of this is to look at the `Content_Type` HTTP header and only save PDFs |
-| at any time   | –                                                     | At any point for example by looking at payload you can decide to skip extraction for a flow by calling `Engine:DisableReassembly(flowid)`                                                                                                 |
+| at any time   | –                                                     | At any point for example by looking at payload you can decide to skip extraction for a flow by calling [`engine:disable_reassembly(key)`](/docs/lua/obj_engine#function-disable_reassembly)                                                                                                 |
 
 Once you have the full file in /ramfs ; you can of course run the standard linux tools like `file abc.bin` to test the magic numbers of the file. If the file interests you, then your LUA script can copy it over to a disk based filesystem.
 
@@ -109,7 +109,7 @@ Some rules for your LUA scripts
 
 #### Getting a “missing tmpfs filesystem” error
 
-No you will get the following error
+If the tmpfs filesystem is missing, you get the following error:
 
 ```lua
 terminate called after throwing an instance of 'std::domain_error'
@@ -117,8 +117,6 @@ terminate called after throwing an instance of 'std::domain_error'
 ```
 
 To fix this you need to set aside a `/tmpfs` memory backed filesystem as follows
-
-Use the
 
 ```lua
 $ cd /usr/local/var/lib/trisul-probe/domain0/probe0/context0/run

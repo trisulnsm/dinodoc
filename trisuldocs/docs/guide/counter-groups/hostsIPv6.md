@@ -1,6 +1,6 @@
 # HostsIPv6
 
-Stats for each IP Host
+Stats for each IPv6 host
 
 ## Counter group
 

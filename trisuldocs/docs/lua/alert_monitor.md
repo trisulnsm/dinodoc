@@ -6,7 +6,7 @@ You can attach your LUA script to listen to various events in the alert stream.
 
 ### Common Alert Groups GUIDs
 
-For quick reference here are the common Alert Group [GUIDs](/docs/lua/basics#on-guids) For a full list Login as Admin > profil0 > Alert Groups
+For quick reference here are the common Alert Group [GUIDs](/docs/lua/basics#on-guids) For a full list Login as Admin > profile0 > Alert Groups
 |Guid|Info|
 |------------------------------------------|-------------------------------------------------------------|
 | `{9AFD8C08-07EB-47E0-BF05-28B4A7AE8DC9}` | IDS Alerts from Snort/Suricata via Unix Socket              |
@@ -101,7 +101,7 @@ The following objects are passed to functions in `alert_monitor`
 
 | field             | return type                                                    | description                                                                                                                                                                                                                                                                                                  |
 | ----------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| timestamp         | number,number                                                  | The time when the item was seen. Seconds in `tv_sec` format, and Microseconds `tv_usec`.<br/><br/>LUACopy`local secs=alert:timestamp()          - if you only want seconds local secs,usecs=alert:timestamp()    - if you want seconds, usecs local printable = os.date(‘%c’, secs) — if you want printable` |
+| timestamp         | number,number                                                  | The time when the item was seen. Seconds in `tv_sec` format, and Microseconds `tv_usec`.<br/><br/>Example: `local secs, usecs = alert:timestamp()` |
 | flow              | A [flow object](/docs/lua/obj_flowid) | The flow that generated the alert. Check for `nil` as this may not be available for all type of alerts.                                                                                                                                                                                                      |
 | source_ip         | string                                                         | Source IP Address                                                                                                                                                                                                                                                                                            |
 | source_port       | string                                                         | Source Port                                                                                                                                                                                                                                                                                                  |

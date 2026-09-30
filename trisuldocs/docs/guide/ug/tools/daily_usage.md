@@ -31,7 +31,7 @@ You can fill in the form with the help of the following fields and their descrip
 | Meters       | Choose the meters within the countergroup to display in the monthly chart.                       |
 | Key          | Specify the keys to filter the data based on specific attributes or identifiers related to the counter group                                                                                                     |
 
-Once you have filled in all the details, click *Show Usage Calendar*.
+Once you have filled in all the details, click *Show usage calendar*.
 
 >Note: You can select multiple meters for any key or multiple keys for any meter. But multiple keys for multiple meters is not supported. By doing so, only the first key specified by you will be considered.
 
@@ -42,11 +42,11 @@ The *Handy Shortcuts* option, located on the upper right side of the top bar, pr
 ![](images/handyshortcuts.png)  
 *Figure: Handy Shortcuts*
 
-Instead of filling in all the search criteria fields, you can choose one of the options from the *Handy Shortcuts* and click *Analyze*.
+Instead of filling in all the search criteria fields, choose one of the options from the *Handy Shortcuts* dropdown. Trisul fills in the form and submits it for you.
 
 ## Search Result
 
-Once you have submitted the form by clicking *Show Usage Calendar* the following search result showing a calendar based visualization gets generated with the specified search criteria.
+Once you have submitted the form by clicking *Show usage calendar* the following search result showing a calendar based visualization gets generated with the specified search criteria.
 
 ### Monthly Chart Visualization
 

@@ -47,7 +47,7 @@ When a new flow is established.
 
 ### Return value
 
-Return `true` if you want files to be extracted for this flow  
+Return `true` if you want this flow to be reassembled  
 Return `false` if you are not interested in this flow.
 
 #### Voting considerations
@@ -77,7 +77,7 @@ filter = function(engine, timestamp, flow )
 
 ### Purpose
 
-Whan a new flow is first seen. You can do housekeeping, setup some datastructures or files here.
+When a new flow is first seen. You can do housekeeping, setup some datastructures or files here.
 
 ### When called
 

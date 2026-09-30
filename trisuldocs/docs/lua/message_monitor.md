@@ -40,8 +40,8 @@ When a new NetFlow record is processed.
 | flow   | A [FlowID](/docs/lua/obj_flowid) object  | use this to determine IPs Ports Routers and Interfaces involved in the flow|
 | bytes_az   | number  | bytes from A->Z direction where the A and Z endpoints are as seen in the [flow](/docs/lua/obj_flowid)  parameter|
 | bytes_za   | number  | bytes from Z->A direction |
-| packets_za   | number  | packets from A->Z direction |
-| packets_az   | number  | packets from Z->A direction |
+| packets_az   | number  | packets from A->Z direction |
+| packets_za   | number  | packets from Z->A direction |
 
 
 #### Return value

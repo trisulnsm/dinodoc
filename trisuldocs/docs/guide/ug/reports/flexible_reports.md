@@ -249,8 +249,8 @@ Here is the table with description for available fields to create CrossKey Drill
 | Subtitle           | Sub-title for the report                              |
 | Key Filter         | Filter toppers in re2 regex format                    |
 | Inverse Key Filter | Inverse toppers in re2 regex format                   |
-| Top Count          | Type of bandwidth chart                               |
-| Traffic Chart      | toppers traffic                                       |
+| Topcount           | Number of top parent items that get a crosskey drilldown (default 10) |
+| Traffic Chart      | Check this box to show a traffic chart for each parent item |
 | Page type          | CrossKey Drilldown                                    |
 | Counter group      | Select the desired counter group                      |
 | Meters             | Select the meters such as total, transmit, received, etc. |

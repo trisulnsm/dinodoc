@@ -2,38 +2,36 @@
 
 ## Tutorial samples
 
-Have you first read the [step-by-step tutorial](trpgemsteps)
+Have you first read the [step-by-step tutorial](/docs/trp/trpgemsteps)?
 
-If you have, then you know  
-\* how to set up a TRP environment  
-\* how to securely connect to a Trisul instance  
-\* exchange a basic message
+If you have, then you know:
+
+- how to set up a TRP environment
+- how to securely connect to a Trisul instance
+- how to exchange a basic message
 
 ## Samples in Ruby
 
 All these samples are written in Ruby, and use the
-[trisulrp](//rubygems.org/gems/trisulrp) gem. These scripts can be
-easily adapted to other languages like Python or Java.
+[trisulrp](https://rubygems.org/gems/trisulrp) gem. These scripts can be adapted to other languages like Python or Java.
 
-<div class="success github autohint">
+:::tip
 
-We have a new Github repo called
-[trisul-samples](https://github.com/trisulnsm/trisul-scripts) containing
-all our scripts.
+All our scripts are in the [trisul-scripts](https://github.com/trisulnsm/trisul-scripts) GitHub repo.
 
-</div>
+:::
 
 | Name                                      | Description                                                                                                                                                          |
 | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [flows_for_ip](./samples/flows_for_ip)    | Print top 100 flows for an IP or host during the past 6 hours.This script contains detailed line by line comments, so start here                                     |
-| [grep_flows](samples/grep_flows)     | Print a maximum of 100 flows which contain a payload matching a specified pattern                                                                                    |
-| [pcap_simple](samples/pcap_simple)   | Retrieve all SMTP and DNS packets over the last 1 hour. This sample demonstrates the use of a [Trisul Filter Format](/docs/guide/ref/trisul_filter_format) expression |
-| [cginfo](samples/cginfo)             | Print information about all available counter groups                                                                                                                 |
-| [sessions](samples/tophttpflows)     | Print top 100 flows by volume seen in an arbitrary time interval                                                                                                     |
-| [alerts_query](samples/alerts_query) | Print 100 alerts in last 6 hours of Priority 1, 2, 3                                                                                                                 |
+| [flows_for_ip](/docs/trp/samples/flows_for_ip)    | Print top 100 flows for an IP or host during the past 6 hours. This script contains detailed line by line comments, so start here                                     |
+| [grep_flows](/docs/trp/samples/grep_flows)     | Print a maximum of 100 flows which contain a payload matching a specified pattern                                                                                    |
+| [pcap_simple](/docs/trp/samples/pcap_simple)   | Retrieve all SMTP and DNS packets over the last 1 hour. This sample demonstrates the use of a [Trisul Filter Format](/docs/guide/ref/trisul_filter_format) expression |
+| [cginfo](/docs/trp/samples/cginfo)             | Print information about all available counter groups                                                                                                                 |
+| [tophttpflows](/docs/trp/samples/tophttpflows)     | Print top 100 flows by volume seen in an arbitrary time interval                                                                                                     |
+| [alerts_query](/docs/trp/samples/alerts_query) | Print 100 alerts in last 6 hours of Priority 1, 2, 3                                                                                                                 |
 
 ## Links
 
 You will need to refer to the following material
 
-\# The [TRP Messages and Fields documentation](/docs/guide/ref/trpproto)
+- The [TRP Messages and Fields documentation](/docs/guide/ref/trpproto)

@@ -54,20 +54,15 @@ Use **View Meters** when you need to answer questions such as:
 
 For example, if you need to work with the **Hosts** counter group and want to know whether Trisul provides a measurement for connections, you can select **Hosts** and check its meter list.
 
-### Special key SYS:GROUP_TOTAL
+### Special key SYS:GROUP_TOTALS {#special-key-sysgroup_total}
 
 - `SYS:GROUP_TOTALS`  
   Each counter group has a special key named `SYS:GROUP_TOTALS` This
   meter represents the cumulative total of all keys in a given time
-  interval. You can type use this instead of a key if you want the
+  interval. You can use this instead of a key if you want the
   totals.
 
 
-# Common groups 
+## All counter groups {#common-groups}
 
-Here are some common groups,  you can also select the group from the menu on the left side. 
-
-
-
-
-
+See [Trisul Traffic Meters](/docs/guide/ref/meters) for the full list of counter groups, with a one-line description of each, or pick a group from the sidebar.

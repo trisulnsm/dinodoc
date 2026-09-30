@@ -2,8 +2,7 @@
 
 The *rat* executable is located in `/usr/local/bin/`.
 
-RAT is a tool that monitoring the internal performance characteristics
-of Trisul pipelines. This can be an invaluable tool when you are trying
+RAT monitors the internal performance characteristics of Trisul pipelines. Use it when you are trying
 to tune the performance of the packet capture and analytics pipelines.
 
 ## Full Command line
@@ -21,14 +20,13 @@ An example run
 [root@li76-90 ~]# rat /usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml rxring 
 ```
 
-You can also use the “helper aliases defined in trisbashrc”: to make it
-easier to start RAT. See the screencast below.
+You can also use the [helper aliases defined in trisbashrc](/docs/guide/ref/trisbashrc) to make it easier to start RAT. See the screenshots below.
 
 ## Demo
 
-The following screencast shows RAT in action
+The following screenshots show RAT in action.
 
-<figure>![image](images/rat1.png)<figcaption>rat tool screenshot showing live Trisul performance</figcaption></figure>
+![rat tool screenshot showing live Trisul performance](images/rat1.png)
 
 ![image](./images/rat2.png)
 

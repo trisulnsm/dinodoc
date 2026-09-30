@@ -32,7 +32,7 @@ Use this to test LUA [input filter scripts](/docs/lua/inputfilter). Run the inpu
 
 ### The special ‘debug0’ context
 
-This is a special context that sets up a nice development environment for you.
+This is a special context that sets up a development environment for you.
 
 1. single threaded
 2. the debug0 context does not actually save the data at the hub, this frees you from cleanups and resets
@@ -50,7 +50,7 @@ trisulctl_probe
 
 ### Specify a development directory for LUA scripts
 
-Using `tp testbench run <pcap-file> luatestdir=<directory>` you have test all the LUA scripts in the development directory without copying them to the standard places where Trisul searches for LUA scripts.
+Using `tp testbench run <pcap-file> luatestdir=<directory>` you can test all the Lua scripts in the development directory without copying them to the standard places where Trisul searches for LUA scripts.
 
 ```lua
 # trisulctl_probe
@@ -66,15 +66,15 @@ You can also set the `TRISUL_LUA_PATHS` environment variable before starting Tri
 # trisulctl_probe testbench run /home/mike/pcaps/largeisp.pcap
 ```
 
-** Using the Lua Debugger **
+## Using the Lua debugger
 
-The Trisul framework includes a powerful debugger you can use immediately.
+The Trisul framework includes a debugger you can use immediately.
 
 The debugger is installed in `/usr/local/lib/trisul-probe/plugins/lua/helpers` and is available to all scripts without any special download or installation.
 
 :::info[**Threading Note**]
 
-Use the debugger using the testbench tools. It could get messy when you turn it on a regular context as multiple threads can enter the debugger at the same time and you cant tell them apart.
+Use the debugger using the testbench tools. It could get messy when you turn it on a regular context as multiple threads can enter the debugger at the same time and you can't tell them apart.
 
 :::
 

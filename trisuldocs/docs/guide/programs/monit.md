@@ -1,4 +1,4 @@
-#  	Install Monit
+# Install Monit
 
 ## Overview
 
@@ -26,7 +26,7 @@ For IPDR customers, add the -d option to the command:
 ```
 ## How it Works
 
-- The script adds the specified processes (Hub and Probe to the Monit configuration file (/etc/monit.rc).
+- The script adds the specified processes (Hub and Probe) to the Monit configuration file (/etc/monit.rc).
 - Monit checks the status of these processes every minute.
 - If a process is found to be not running, Monit automatically restarts it.
 
@@ -37,7 +37,7 @@ For IPDR customers, add the -d option to the command:
 | Option             | Default value   | Description                           | 
 | -------------------| ----------------| ------------------------------------- |
 | `-d`               |                 | Monit IPDR process                    |           
-| `-x-`              |                 | Exclude a context from from being monited |
+| `-x`               |                 | Exclude a context from being monitored |
 | `-n`               |hub0             | Hub node |
 | `-p`               |probe0           | Probe node|
 | `-h`               |                 | Shows Help |

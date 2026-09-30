@@ -2,17 +2,21 @@
 
 `trisul_flowcap`: Prune PCAP files by capping flow payloads
 
+:::note Applies to
+
+Packet capture mode (Trisul and PCAP capture files).
+
+:::
+
 Using this tool you can reduce size of Trisul PCAPs by capping how many
 bytes of each flow is stored. Almost all of the valuable intelligence is
-in the first 1MB or so of each flow, so this is an effective technique
-to dramatically reduce the size of PCAP files.
+in the first 1MB or so of each flow, so capping flows can reduce the size of PCAP files considerably.
 
 In Trisul, PCAP policies can be specified
 
 - During live capture 
   
-  At capture time you can control PCAP policies see controlling
-  packet storage
+  At capture time you can control PCAP policies. See the [Rule Chain](/docs/guide/ref/trisulconfig#rule-chain) section of the Probe config file.
 
 - Post capture
   
@@ -23,16 +27,16 @@ In Trisul, PCAP policies can be specified
 ## Unique features
 
 Some of the unique features of trisul\_flowcap are *Sampling, Rich
-ouput, Dry run*
+output, Dry run*
 
 ### Sampling
 
-A hard cutoff destroys the statistical information convyed in a PCAP
+A hard cutoff destroys the statistical information conveyed in a PCAP
 file. You cannot process the compressed capture file through a program
 to find how many bytes the flow actually transferred. Sampling helps
 here.
 
-Using the `--capbytes-1000000 --samplerate=100` you instruct the program
+Using the `--capbytes=1000000 --samplerate=100` you instruct the program
 to Write the first 1MB of each flow, then for payloads after 1MB sample
 at 1:100 one every 100 packets, then adjust the **WireLength** to save
 the bytes that were skipped.
@@ -44,7 +48,7 @@ summary.
 
 Here is a sample output
 
-```language-bash
+```text
 DOCKER:unplprotectli:root oper$ trisul_flowcap -c /usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml  --capbytes=1000000 --samplerate=100 -i RCF_triscap.wseXmJ -o RCF_triscap.wseXmJ.flowcapped
 Progress       : ||||||||||||||||||||  100%
 In Bytes       : 998931121 (952.65 MB)
@@ -70,7 +74,7 @@ are left AS-IS.
 ### Dry Run
 
 It could be quite difficult to judge what is the optimum capture bytes.
-The `--dryrun` option prints the statistice without actually pruning the
+The `--dryrun` option prints the statistics without actually pruning the
 input file.
 
 ## man page
@@ -133,7 +137,7 @@ keep for each flow.
 −w,
 −−hiwater=NUMBER
 
-The maximum number of flows to keep track of before using a LRU algorithm to evict flows. This option can be used to control memory usage. Default is1000 flows.
+The maximum number of flows to keep track of before using a LRU algorithm to evict flows. This option can be used to control memory usage. Default is 1000 flows.
 
 −s,
 −−samplerate=NUMBER
@@ -147,7 +151,7 @@ Use this option to do a dry run to check the compression performance of this too
 
 −−hide-progress
 
-Dont show the progress bar. Use this when running this tool in a cron job or in the background
+Don't show the progress bar. Use this when running this tool in a cron job or in the background
 
 −q,
 −−quiet
@@ -167,7 +171,7 @@ cutoff of 1MB
 trisul_flowcap
 \
 -c
-/usr/local/etc/trisul-probe/domain0/context0/probe0/trisulProbeConfig.xml
+/usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml
 \
 -i RCF_triscap.P7T8Lw \
 -o /home/bob/RCF_triscap.P7T8Lw.cut -n 1000000
@@ -179,19 +183,19 @@ flow cutoff of 1MB
 trisul_flowcap
 \
 -c
-/usr/local/etc/trisul-probe/domain0/context0/probe0/trisulProbeConfig.xml
+/usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml
 \
 -i Bigcapture.pcap -I pcap \
 -o Bigcapture.pcap.cut -O pcap -n 1000000
 
-To
+To compress
 RCF_triscap.P7T8Lw with a flow cutoff of 1MB and a sampling
 of 1:10 after that
 
 trisul_flowcap
 \
 -c ….trisulProbeConfig.xml \
--i RCF.triscap.P7T8Lw \
+-i RCF_triscap.P7T8Lw \
 -o /home/bob/RCF_triscap.P7T8Lw.cut -n 1000000 -s 10
 
 FILES

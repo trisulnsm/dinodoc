@@ -65,7 +65,7 @@ In IPDR Mode, flows are a crucial component. The `-f` option is used to flush fl
    ```
 ### IPDR with Radius mode
 
-In IPDR with radius mode the radius logs are checked against a particular context `-c` for a particlar duration `-j`. In the example if the flowgens are flushed for one hour (3600) the alerts will not be generated.
+In IPDR with radius mode the radius logs are checked against a particular context `-c` for a particular duration `-j`. In the example if the flowgens are flushed for one hour (3600) the alerts will not be generated.
 
 #### IPDR Mode with Radius Example
 
@@ -84,13 +84,13 @@ In Analytics Mode, flushed FlowGens and other counter groups `-g` are verified a
    ```
 
 #### Execution Options
-The script can be executed with or without the -i argument, which controls the verbosity of the output.  
+The script can be executed with or without the -v argument, which controls the verbosity of the output.  
 
 **Verbose Mode `-v`**  
-When executed with the -i argument, the script operates in verbose mode. In this mode, the script prints all values to the terminal, providing detailed information about the context status.  
+When executed with the -v argument, the script operates in verbose mode. In this mode, the script prints all values to the terminal, providing detailed information about the context status.  
 
 **Non-Verbose Mode (No `-v`)**  
-When executed without the -i argument, the script only prints values to the terminal if the context is not running. This mode provides a more concise output, only alerting the user to contexts that are not running.
+When executed without the -v argument, the script only prints values to the terminal if the context is not running. This mode provides a more concise output, only alerting the user to contexts that are not running.
 
 ### How alerts are generated when the conditions are not met
 
@@ -98,7 +98,7 @@ When executed without the -i argument, the script only prints values to the term
 The script generates alerts to the syslog based on the flush value. If the flush value is 0, it indicates that the context is not running, and an alert is generated.
 #### Alert Format
 The alert format is the same for both Flow Mode and GUID Mode. The script sends a standardized alert message to the syslog, indicating that the context is not running.
->**Note: The alert message does not distinguish between Flow Mode and GUUID Mode. The same alert format is used for both modes.**
+>**Note: The alert message does not distinguish between Flow Mode and GUID Mode. The same alert format is used for both modes.**
 
 
 **Example:**

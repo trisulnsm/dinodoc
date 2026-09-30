@@ -6,7 +6,7 @@ You can extend Trisul’s functionality by creating your own Resource Groups in 
 
 ## Structure
 
-**[New Resource group skeleton script]([trisul-scripts/lua/skeletons/new_resource_group.lua at master · trisulnsm/trisul-scripts · GitHub](https://github.com/trisulnsm/trisul-scripts/blob/master/lua/skeletons/new_resource_group.lua))**
+**[New Resource group skeleton script](https://github.com/trisulnsm/trisul-scripts/blob/master/lua/skeletons/new_resource_group.lua)**
 
 ## Table `resourcegroup`
 

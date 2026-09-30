@@ -10,7 +10,7 @@ Lua function called for each packet. You can use contents of the packet to creat
 
 ## Structure
 
-**[simple counter skeleton script ]([trisul-scripts/lua/skeletons/simple_counter.lua at master · trisulnsm/trisul-scripts · GitHub](https://github.com/trisulnsm/trisul-scripts/blob/master/lua/skeletons/simple_counter.lua))**
+**[Simple counter skeleton script](https://github.com/trisulnsm/trisul-scripts/blob/master/lua/skeletons/simple_counter.lua)**
 
 The simplecounter table attaches the onpacket(..) function to a particular protocol layer.
 
@@ -18,8 +18,6 @@ The simplecounter table attaches the onpacket(..) function to a particular proto
 | ------------- | ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | onpacket      | function ( [engine](/docs/lua/obj_engine) , [layer](/docs/lua/obj_layer) ) | `onpacket(..)` is the main function where your LUA code goes. It is called for each packet with a layer object corresponding to the protocol_guid above                                                                                                                        |
 | flow_counter  | bool                                                                                                                         | **Optional** When set to `true`, this counter turns into a NETFLOW_TAP mode counter. Use this if you want to use this script with NETFLOW_TAP mode processing. Default is `false`                                                                                              |
-
-A typical simplecounter table looks like the following
 
 ## Function `onpacket`
 
@@ -31,12 +29,12 @@ The onpacket function is where your LUA code goes. You can inspect the packet by
 
 ### The `layer` parameter
 
-This code dumps the IP header and the size of the IP layer. Once again the GUID “(0A2C724B-5B9F-4ba6-9C97-B05080558574)” represents the [IPv4 protocol](/docs/guide/ref/guid#protocols )
+This code dumps the IP header and the size of the IP layer. Once again the GUID `{0A2C724B-5B9F-4ba6-9C97-B05080558574}` represents the [IPv4 protocol](/docs/guide/ref/guid#protocols )
 
 ```lua
-simplecounter = (
+simplecounter = {
 
-  protocol_guid = "(0A2C724B-5B9F-4ba6-9C97-B05080558574)",
+  protocol_guid = "{0A2C724B-5B9F-4ba6-9C97-B05080558574}",
 
   onpacket = function(engine,layer)
 
@@ -47,12 +45,12 @@ simplecounter = (
       print(bytes:hexdump())
 
   end,
-),
+},
 ```
 
 The above snippet works as follows
 
-- print the IP layer length via `layer:layer_bytes()` See [Layer](/docs/lua/simple_counter#the-layer-parameter)
+- print the IP layer length via `layer:layer_bytes()` See [Layer](/docs/lua/obj_layer)
 - dump the 20 byte IP header using `layer:rawbytes():hexdump()`
 
 ```lua

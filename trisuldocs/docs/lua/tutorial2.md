@@ -1,12 +1,12 @@
 # Tutorial 2 A simple counter
 
-Congrats, you’ve made it to the second tutorial in the series. In the [first instalment](/docs/lua/tutorial1) , we got our feet wet by writing a very simple hello world script. It didnt no much beyond printing a few log messages, but it taught us how to setup scripting. In this tutorial 2, we will write a simple script that meters packet lengths.
+Congrats, you’ve made it to the second tutorial in the series. In the [first installment](/docs/lua/tutorial1) , we got our feet wet by writing a very simple hello world script. It didn't do much beyond printing a few log messages, but it taught us how to setup scripting. In this tutorial 2, we will write a simple script that meters packet lengths.
 
 ## Packet Length Histogram counter
 
 Once again as in Tutorial-1, lets run the script first and then explore details.
 
-:::info [GOALS]
+:::info[GOALS]
 
  Develop useful Packet Length Histogram counter. How many packets > 1400,1000-1400,500-1000,etc. How to run in production mode, how to write a [simplecounter](/docs/lua/simple_counter) script to plug into each packet, how to view results.
 
@@ -39,15 +39,15 @@ Once again as in Tutorial-1, lets run the script first and then explore details.
    
    1. Login to Webtrisul, you will see a new context called “tut2” at the login screen. Select that and login. Then Go to Retro > Counters
    
-   2. Select “Packet Length” and voila ! You have detailed stats about distribution of packet lengths
+   2. Select “Packet Length”. You now have detailed stats about the distribution of packet lengths.
       
       ![](./images/tutorial2_1.png)
 
-            ![](./images/tutorial2_2.png)
+      ![](./images/tutorial2_2.png)
 
 ## Exploring pktlen.lua
 
-The pktlen.lua script plugs into Trisul to get a look at each packet. then counts the packet length againt a bucket. We will also demonstrate a way to count the bandwidth while we are at it.
+The pktlen.lua script plugs into Trisul to get a look at each packet. then counts the packet length against a bucket. We will also demonstrate a way to count the bandwidth while we are at it.
 
 Lets meter
 
@@ -66,7 +66,7 @@ Each bucket is identified by a unique string called a ‘key’. This script wil
 
 **Structure of pktlen.lua**
 
-Lets look a bit deeper into th script `countergroup` and `simplecounter` sections and these are where the action happens.
+Let's look a bit deeper into the script `countergroup` and `simplecounter` sections and these are where the action happens.
 
 ![](./images/tutorial2_3.png)
 
@@ -78,7 +78,7 @@ The Trisul LUA API consists of about 16 different “script types”. In this tu
 
 ## **The countergroup block**
 
-[Reference : countergroup](/docs/lua/simple_counter)
+[Reference : countergroup](/docs/lua/counter_group)
 
 Since we are creating a new counter group that meters Packet Lengths, we use a `countergroup` block to create a new group called “Packet Length”.
 
@@ -98,8 +98,8 @@ countergroup = {
   --  meter 0 -  bytes by packet len
   --  meter 1 -  number of packets of each length 
   meters = {
-      0, T.K.vartype.RATE_COUNTER, 10, "Bytes",   "bytes" ,   "B" },
-      1, T.K.vartype.COUNTER,      10, "Packets", "packets",  "Pkts" },
+      { 0, T.K.vartype.RATE_COUNTER, 10, "Bytes",   "bytes" ,   "B" },
+      { 1, T.K.vartype.COUNTER,      10, "Packets", "packets",  "Pkts" },
   },
 
 },
@@ -111,15 +111,15 @@ You will notice the counter group has two sub blocks called control and meters.
 
 **guid for the counter group**
 
-                There are tools to generate online, like http://www.guidgen.com/ – note the curly braces
+Generate one with `trisulctl_probe testbench guid`. Note the curly braces.
 
 **name**
 
-                   Packet length
+Packet Length
 
 **bucket_size**
 
-                    we select 30 seconds as the resolution for this group
+We select 30 seconds as the resolution for this group.
 
 ### The `meters` section
 
@@ -145,7 +145,7 @@ We want to tap packets at the IP layer, so we define the protocol_guid as
 
 protocol_guid
 
-            at which layer do we want to listen to packets. The guid `{0A2C724B-5B9F-4ba6-9C97-B05080558574}` in the example stands for IP. See [Well Known GUIDs](/docs/guide/ref/guid#protocols)
+at which layer do we want to listen to packets. The guid `{0A2C724B-5B9F-4ba6-9C97-B05080558574}` in the example stands for IP. See [Well Known GUIDs](/docs/guide/ref/guid#protocols)
 
 ```lua
 simplecounter = {
@@ -177,14 +177,14 @@ simplecounter = {
     engine:update_counter( 
         TrisulPlugin.countergroup.control.guid, key, 1, 1)
 
-  end,```
+  end,
 ```
 
 Key things to remember
 
 1. Your onpacket function is called for every packet. Try not to do any I/O.
 2. The two parameters *engine* and *layer* are objects passed with every packet
-3. Layer – represents the layer you mentioned in the *protocol_guid* section of the countergroup block
+3. Layer – represents the layer you mentioned in the *protocol_guid* field of the simplecounter block
 4. Packet – from the layer you can get access to the entire packet using layer:packet()
 5. The engine parameter is the critical object that provides the methods you need to call to end your script.
 
@@ -193,6 +193,6 @@ What we’re doing
 1. We get the “wire length” from layer:packet(), then group it into 7 keys based on length
 2. Call the update_counter methods in the [Engine object](/docs/lua/obj_engine)
 
-Thats it ! The rest is taken care of by Trisul. We have a brand new counter group called Packet Length.
+That's it! The rest is taken care of by Trisul. We have a brand new counter group called Packet Length.
 
-**Congrats !** You are now well on your way to writing your own scripts. Just browse the code samples on [GitHub](https://github.com/trisulnsm/trisul-scripts/tree/master/lua) and check out the documentaton on the left navigation.
+**Congrats !** You are now well on your way to writing your own scripts. Browse the code samples on [GitHub](https://github.com/trisulnsm/trisul-scripts/tree/master/lua) and check out the documentation in the left navigation.

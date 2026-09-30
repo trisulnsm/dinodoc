@@ -6,7 +6,7 @@ You can attach LUA scripts to any type of resource and get called when they stre
 
 ### Common Resource Groups GUIDs
 
-For quick reference these are the common Resource Group [GUIDs.](/docs/guide/ref/guid#resource-groups) For a full list Login as Admin > profil0 > All Resource Groups
+For quick reference these are the common Resource Group [GUIDs.](/docs/guide/ref/guid#resource-groups) For a full list Login as Admin > profile0 > All Resource Groups
 
 | \{D1E27FF0-6D66-4E57-BB91-99F76BB2143E\} | DNS Resources    |
 | ---------------------------------------- | ---------------- |
@@ -37,7 +37,7 @@ The Lua table `resource_monitor = /{../}` can contain one or more of the followi
 
 | method           | return type                                                    | description                                                                                                                                                                                                                                                                                                   |
 | ---------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| timestamp        | number,number                                                  | The time when the item was seen. Seconds in `tv_sec` format, and Microseconds `tv_usec`.<br/><br/> LUACopy`local secs=alert:timestamp()          - if you only want seconds local secs,usecs=alert:timestamp()    - if you want seconds, usecs local printable = os.date(‘%c’, secs) — if you want printable` |
+| timestamp        | number,number                                                  | The time when the item was seen. Seconds in `tv_sec` format, and Microseconds `tv_usec`.<br/><br/>Example: `local secs, usecs = resource:timestamp()` |
 | flow             | A [flow object](/docs/lua/obj_flowid) | The IP flow that generated the resource                                                                                                                                                                                                                                                                       |
 | source_ip        | string                                                         | Source IP Address                                                                                                                                                                                                                                                                                             |
 | source_port      | string                                                         | Source Port                                                                                                                                                                                                                                                                                                   |

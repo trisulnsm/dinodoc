@@ -107,47 +107,47 @@ The key parts of the script are shown here
 5. Within the *onload* and *onunload* function you can access a global called **T**
 
 6. The [global **T** exposes several methods](/docs/lua/obj_globalt) like `T.log` to interact with Trisul
-   
-   That is the model of the Trisul LUA API, your script will be called at various times depending on the type of script.
-   
-   ## Why is the script loading so many times ?
-   
-   You may have noticed that the print messages appear multiple times.
-   
-   ```lua
-   Onload - hello world  
-   Onunload  - bye  
-   Onload - hello world  
-   Onload - hello world  
-   Onunload  - bye  
-   Onunload  - bye
-   ```
-   
-   The Trisul engine can spin up multiple instances of your LUA script depending on the threading setup. It can also load and unload during the probing/discovery process. This brings us to one of the big rules of LUA scripting with Trisul. Your script can be loaded and unloaded many times and multiple instances of your script might be running at the same time.
-   
-   ## Running in normal mode
-   
-   The tutorial used the ‘development’ mode to run the script. You can also run it normally using the following methods
-   
-   ```lua
-   # option 1: to start listening to live traffic 
-   trisulctl_probe start context default 
-   
-   # option 2: to import pcap
-   trisulctl_probe importpcap /home/npl/BigPcap.pcap 
-   
-   # option 3: to run from command line with a terminal attached 
-   trisulctl_probe start context default@hub0
-   trisul -nodemon /usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml -mode offline -in Test.pcap
-   ```
-   
-   **Using print and logs**
-   
-   You can use the `print(..)` function in LUA in order to debug your script. The following rules apply
 
-7. If running with the `-nodemon` option, Trisul runs in the foreground and all the print(..) messages appear on stdout
+That is the model of the Trisul LUA API, your script will be called at various times depending on the type of script.
 
-8. If running with the `-demon` option, Trisul overwrites the LUA `print(..)` function with its own. So you print messages show up in the log files with a DEBUG level.
+## Why is the script loading so many times ?
+
+You may have noticed that the print messages appear multiple times.
+
+```lua
+Onload - hello world  
+Onunload  - bye  
+Onload - hello world  
+Onload - hello world  
+Onunload  - bye  
+Onunload  - bye
+```
+
+The Trisul engine can spin up multiple instances of your LUA script depending on the threading setup. It can also load and unload during the probing/discovery process. This brings us to one of the big rules of LUA scripting with Trisul. Your script can be loaded and unloaded many times and multiple instances of your script might be running at the same time.
+
+## Running in normal mode
+
+The tutorial used the ‘development’ mode to run the script. You can also run it normally using the following methods
+
+```lua
+# option 1: to start listening to live traffic 
+trisulctl_probe start context default 
+
+# option 2: to import pcap
+trisulctl_probe importpcap /home/npl/BigPcap.pcap 
+
+# option 3: to run from command line with a terminal attached 
+trisulctl_probe start context default@hub0
+trisul -nodemon /usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml -mode offline -in Test.pcap
+```
+
+**Using print and logs**
+
+You can use the `print(..)` function in LUA in order to debug your script. The following rules apply
+
+1. If running with the `-nodemon` option, Trisul runs in the foreground and all the print(..) messages appear on stdout
+
+2. If running with the `-demon` option, Trisul overwrites the LUA `print(..)` function with its own. So you print messages show up in the log files with a DEBUG level.
    
    The log files are generally found in `/usr/local/var/log/trisul-probe` ; the output from your LUA script show up in these files just like the messages from the Trisul core engine. Log messages from each script are automatically prefixed with the script name. So the following
    
@@ -168,4 +168,4 @@ Some useful tips for development.
 
 ## Next steps
 
-Congrats! You have written your first LUA script, although it doesnt do much. Lets move on to the next Tutorial : [How to write a simplecounter](/docs/lua/tutorial2)
+Congrats! You have written your first Lua script, although it doesn't do much. Let's move on to the next tutorial : [How to write a simplecounter](/docs/lua/tutorial2)

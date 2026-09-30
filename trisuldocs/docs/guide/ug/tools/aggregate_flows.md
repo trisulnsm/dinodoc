@@ -66,6 +66,6 @@ Each tab shows the following details for every tuple value.
 - **Item**: The specific value of the tuple field being analyzed (e.g., source IP address, destination port number, etc.).
 - **Label**: A human-readable label or description associated with the item, if available (e.g., hostname, application name, etc.).
 - **Flows**: The aggregate count of network flows matching the tuple.
-- **Volume**: The total amount of data (in kilobytes) transferred in the flows matching the tuple.
+- **Volume**: The total amount of data transferred in the flows matching the tuple. Each value is scaled to its own unit (K, M, G or T, in multiples of 1024).
 - **Percent**: The percentage of total flows or volume represented by the tuple, enabling identification of dominant or anomalous patterns.
 - **Router**: The router device handling the flows for the specific tuple, providing context for network topology and traffic routing.

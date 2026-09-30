@@ -11,9 +11,11 @@ See [Trisul Filter Format](/docs/guide/ref/trisul_filter_format#format) section 
 
 :::info navigation
 
-:point_right: Go to Tools &rarr; Select Rule Builder
+:point_right: Go to Tools &rarr; Show all, then in the *Packet tools* card select *Trisul Rule Builder*
 
 :::
+
+The **Tools** menu is available to the Administrator and Forensic Operator roles. You can also open the rule builder from **Add Rule** in the Flow Tagger policy form.
 
 ![](images/rulebuilder.png)
 *Figure: Rule Builder*

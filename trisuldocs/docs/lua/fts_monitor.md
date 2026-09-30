@@ -11,7 +11,7 @@ Currently there are only two FTS doc types built in to Trisul
 
 ### Common FTS Groups GUIDs
 
-For quick reference these are the common [FTS GUIDs](/docs/lua/basics#on-guids) For a full list Login as Admin > profil0 > All FTS Groups
+For quick reference these are the common [FTS GUIDs](/docs/lua/basics#on-guids) For a full list Login as Admin > profile0 > All FTS Groups
 | Guid                                     | Info                          |
 | ---------------------------------------- | ----------------------------- |
 | \{9FEB8ADE-ADBB-49AD-BC68-C6A02F389C71\} | SSL Certificate FTS           |
@@ -43,7 +43,7 @@ The object has the following fields
 
 | field     | return type                                                   | description                                                                                                                                                                                                                                                                                                   |
 | --------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| timestamp | number,number                                                 | The time when the item was seen. Seconds in `tv_sec` format, and Microseconds `tv_usec`.<br/><br/> LUACopy`local secs=alert:timestamp()          - if you only want seconds local secs,usecs=alert:timestamp()    - if you want seconds, usecs local printable = os.date(‘%c’, secs) — if you want printable` |
+| timestamp | number,number                                                 | The time when the item was seen. Seconds in `tv_sec` format, and Microseconds `tv_usec`.<br/><br/>Example: `local secs, usecs = fts:timestamp()` |
 | key       | string                                                        | The unique string identifying the document                                                                                                                                                                                                                                                                    |
 | flow      | A [flow object](/docs/lua/obj_flowid) | the IP flow from which this document was extracted                                                                                                                                                                                                                                                            |
 | text      | string                                                        | The text of the document.                                                                                                                                                                                                                                                                                     |

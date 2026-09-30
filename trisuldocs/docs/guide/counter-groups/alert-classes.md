@@ -1,6 +1,6 @@
 # Alert Classes
 
-IDS Alert Classfication
+IDS Alert Classification
 
 ## Counter groups
 

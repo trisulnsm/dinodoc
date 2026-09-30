@@ -1,5 +1,7 @@
 # Flow-TOS
 
+Traffic by Type of Service (ToS) value in the IP header
+
 ## Counter group
 
 | GUID                                     | TYPE   | Bucke Size (secs) | Topper Bucket(Secs): |

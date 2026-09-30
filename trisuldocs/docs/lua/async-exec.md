@@ -10,7 +10,7 @@ The [T.async](/docs/lua/obj_tasync) interface provides methods to help you do lo
 
 Recall that the Trisul LUA api supports ‘frontend’ (fast path) and ‘backend’ (slow path) scripts.
 
-The T.async methods are designed for use in scripts that are involve some I/O that can block the streaming pipeline.
+The T.async methods are designed for use in scripts that involve some I/O that can block the streaming pipeline.
 
 1. when frontend scripts block : can result in packet drops
 2. when backend scripts block : backend script have more time budget than front end scripts, but if they block it can result in some metrics being lost because Trisul being a real time streaming engine requires all backend work complete in under 60 seconds.
@@ -43,7 +43,7 @@ There are two ways to approach this
 -- save  path to /tmp/xyz
 -- os.execute returns only when copying is complete
 -- this blocks the packet pipeline can cause packet loss in fast networks 
-os.execute( "cp "..path.." /tmp/xyz.txt")")`
+os.execute( "cp "..path.." /tmp/xyz.txt")
 ```
 
 This would work, but the problem is while the `os.execute(..)` is copying the file, the packet pipeline is blocked. This may result in packet loss. We therefore recommend that whenever you do I/O you use any of the T.async methods.
@@ -58,7 +58,7 @@ This method uses the `T.async:copy` function to do this async
 T.async:copy( path, "/tmp/xyz.txt")
 ```
 
-### Method 3 : Copying a file using T.schedule
+### Method 3 : Copying a file using T.async:schedule {#method-3--copying-a-file-using-tschedule}
 
 T.async:schedule described in the next section allows you to run any lua function out of the fast path and then call back in when results are available. Here is how you would do it using that method.
 
@@ -82,9 +82,9 @@ T.async:schedule(
 
 ### Purpose
 
-Run arbirary LUA code in async manner
+Run arbitrary Lua code in an async manner
 
-[T.async methods](/docs/lua/obj_tasync) `cp` `cat` accomplish very specific tasks. Using the `T.async:schedule` method you can run any arbitrary LUA code off the main packet pipeline.
+[T.async methods](/docs/lua/obj_tasync) such as `copy` and `cat` accomplish very specific tasks. Using the `T.async:schedule` method you can run any arbitrary LUA code off the main packet pipeline.
 
 ### Methods
 
@@ -119,8 +119,6 @@ T.async:schedule(
               end
           }
       )
-
-  end,
 ```
 
 #### Usage
@@ -146,7 +144,7 @@ onfile_http  = function ( engine, timestamp, flowkey,
               -- and return the string
               -- 
               onexecute = function( indata)
-                local h = io.popen("sha1sum "..path)
+                local h = io.popen("sha1sum "..indata)
                 local sha1  = h:read("*a")
                 h:close()
                 return sha1

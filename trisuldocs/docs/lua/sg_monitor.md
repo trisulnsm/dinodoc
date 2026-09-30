@@ -9,7 +9,7 @@ Monitor flow based metrics stream. When new flows are created, terminated, timeo
 
 [Session Group Monitor skeleton script](https://github.com/trisulnsm/trisul-scripts/blob/master/lua/skeletons/session_monitor.lua)
 
-## Table `sg_monitor`]
+## Table `sg_monitor`
 
 The Lua table `sg_monitor = {..}` can contain one or more of the following handler functions.
 

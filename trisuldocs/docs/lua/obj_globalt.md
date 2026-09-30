@@ -38,7 +38,7 @@ Use the object calling notation `T.host:function(..)` to invoke these methods.
 | Name  | In | Out | Description|
 | ----- | ---- | ---- | ---- |
 | get_homenets   | none | Table, Array of [ `string` IP, `string` Netmask ] | Get home networks defined by Trisul.|
-| is_homenet     | `number` 32bit IPv4 or `string` IPv4 in dotted decimal    | `bool`                                            | Is the 32-bit IPv4 address within the home network?<br/><br/> LUACopy`T.host:is_homenet(“192.168.2.1”)` |
+| is_homenet     | `number` 32bit IPv4 or `string` IPv4 in dotted decimal    | `bool`                                            | Is the 32-bit IPv4 address within the home network?<br/><br/>Example: `T.host:is_homenet("192.168.2.1")` |
 | is_homenet_key | `string` IPv4 in trisul key format     | `bool`       | Is the Trisul key format IP address in the home network.    |
 | get_configpath | none    | `string` directory  | Configuration directory |
 | get_datapath   | none    | `string` directory   | Data directory  |
@@ -238,7 +238,7 @@ T.logerror( "This is an error message from my LUA script, same as above T.log() 
 
 ## Function `T.log`
 
-Adds a log message to the main Trisul log file. Trisul automatically adds the lua script filename to the log message so you know where the message is actually coming from. Also see [Printing and Logging from LUA script](//docs/lua/basics#print-and-logging)
+Adds a log message to the main Trisul log file. Trisul automatically adds the lua script filename to the log message so you know where the message is actually coming from. Also see [Printing and Logging from LUA script](/docs/lua/basics#print-and-logging)
 
 | Name         | In                           | Out  | Description        |
 | ------------ | ---------------------------- | ---- | ------------------ |
@@ -266,28 +266,26 @@ T.logerror( "This is an error message from my LUA script, same as above T.log() 
 This section applies equally to `T.countergroups`, `T.resourcegroups`, `T.sessionggroups`, `T.ftsgroups` as well.
 :::
 
-The purpose for this table is to provide a searchable `name` to `guid` mapping table of all the alertgroups currently loaded in Trisul. The backend [alert_monitor](/docs/lua/alert_monitor) scripts require you to specify a GUID that identifies the entity you are attaching the script to. If you do not know the GUID of the alert group but you know the name, you can use this table — or use `alert_name_match` on the monitor block to attach the same script to all groups whose title matches (see [Multi-group attachment](alert_monitor#multi-group-attachment)). See below.
+The purpose for this table is to provide a searchable `name` to `guid` mapping table of all the alertgroups currently loaded in Trisul. The backend [alert_monitor](/docs/lua/alert_monitor) scripts require you to specify a GUID that identifies the entity you are attaching the script to. If you do not know the GUID of the alert group but you know the name, you can use this table — or use `alert_name_match` on the monitor block to attach the same script to all groups whose title matches (see [Multi-group attachment](/docs/lua/alert_monitor#multi-group-attachment)). See below.
 
 #### Example alert_monitor code
 
-If you know the GUID of the alert group named `Malware Domain` as `(FAC478BC-8891-0009-5F31-80774B010086)` you can attach an alert monitor as shown below
-
- LUACopy`TrisulPlugin = (   alert_monitor  = (     alert_guid = '(FAC478BC-8891-0009-5F31-80774B010086)',`
+If you know the GUID of the alert group named `Malware Domain` as `{FAC478BC-8891-0009-5F31-80774B010086}` you can attach an alert monitor as shown below
 
 ```lua
-TrisulPlugin = ( 
+TrisulPlugin = {
 
-alert_monitor  = (
+alert_monitor  = {
 
-  alert_guid = '(FAC478BC-8891-0009-5F31-80774B010086)',
+  alert_guid = '{FAC478BC-8891-0009-5F31-80774B010086}',
 ```
 
 Say you only know the name `Malware Domain` , this is where you use the `T.alertgroups` table to find the GUID
 
 ```lua
-TrisulPlugin = ( 
+TrisulPlugin = {
 
-alert_monitor  = (
+alert_monitor  = {
 
   alert_guid = function()
     for name ,guid in pairs(T.alertgroups) do

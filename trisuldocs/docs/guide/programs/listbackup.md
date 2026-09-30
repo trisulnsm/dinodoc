@@ -27,7 +27,7 @@ The `list_backup_slices.sh` script is designed to retrieve a list of slice names
 **Example Usage**  
 To retrieve a list of slice names for backups between January 20, 2025, and January 24, 2025, using the default source node and context:
 
-`/usr/local/share/trisul-hub# /usr/local/share/trisul-hub/list_backup_slices.sh  -f 2025-01-20 -t 2025-01-24`
+`/usr/local/share/trisul-hub/list_backup_slices.sh -f 2025-01-20 -t 2025-01-24`
 
 This script retrieves a list of slice names that correspond to the specified date range, enabling targeted backups of all relevant slices within that period.
 ```
@@ -41,6 +41,5 @@ This script retrieves a list of slice names that correspond to the specified dat
 /usr/local/var/lib/trisul-hub/domain0/hub0/context0/meters/ref/SLICE.LPC6gW
 /usr/local/var/lib/trisul-hub/domain0/hub0/context0/meters/ref/SLICE.weYyY5
 /usr/local/var/lib/trisul-hub/domain0/hub0/context0/meters/ref/SLICE.A4FSOE
-root@test:/usr/local/share/trisul-hub# 
 ```
 This allows customers to selectively back up these identified slices.

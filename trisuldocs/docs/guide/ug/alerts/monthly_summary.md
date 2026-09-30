@@ -4,8 +4,16 @@ Trisul will show you alerts grouped by Priority. You can click on the totals and
 
 Some applications :
 
-- Traffic by IN/OUT per host per day
+- Alerts by priority per day
 - Malware alerts per day (using the Trisul Badfellas plugin)
+
+:::tip Traffic per day
+To see traffic per host per day, for example IN/OUT bytes, use **Tools → Monthly Chart**. See [Monthly Charts](/docs/guide/ug/tools/daily_usage).
+:::
+
+:::note Applies to
+The **Security** menu isn't shown in NetFlow Analyzer and ISP Analytics modes.
+:::
 
 ## How to Use
 

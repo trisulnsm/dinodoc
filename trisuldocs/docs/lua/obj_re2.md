@@ -18,7 +18,7 @@ You need to use the [T.re2](/docs/lua/obj_globalt#function-tre2) method to creat
 | ---------------- | ------ | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | partial_match    | string | bool                   | Does the regex match anywhere in the input string                                                                                                                                             |
 | full_match       | string | bool                   | Full input string must match the regex                                                                                                                                                        |
-| partial_match_c1 | string | bool, string           | Match input string with 1 capture. If matched, return true + captured string<br/>Example `(Host.*)\\s*:` will pull the match in paranthesis into a string. If not matched, return false, nil. |
+| partial_match_c1 | string | bool, string           | Match input string with 1 capture. If matched, return true + captured string<br/>Example `(Host.*)\\s*:` will pull the match in parentheses into a string. If not matched, return false, nil. |
 | partial_match_c2 | string | bool, string, string   | Same as partial_match_c1 but extract TWO captures rather than one.                                                                                                                            |
 | partial_match_n  | string | bool, string1..stringN | Partial match returns variable number of strings, you are expected to know how many captures are there                                                                                        |
 | full_match_n     | string | bool, string1..stringN | Full input string must match the regex. Returns N-capture strings                                                                                                                             |
@@ -45,7 +45,7 @@ onload = function()
     onpayload = function(engine, timestamp, flowkey, direction, seekpos, buffer) 
 
         -- Using RE2 
-        local match,c1,c2 = T.re2_http_request:partial_match_n(buffstr:tostring())
+        local match,c1,c2 = T.re2_http_request:partial_match_n(buffer:tostring())
 
         print("Method="..c1)
         print("URL="..c2)

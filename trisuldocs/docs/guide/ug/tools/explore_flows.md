@@ -43,7 +43,7 @@ Some common examples of search expressions are :
 | `tag=UA`                                               | Flow tag has UA (Ukraine) if you’ve set up Flow Taggers|
 | `net24=208.219.88`                                     | All flows in the /24 subnet                            |
 | `net16=208.219,port=smtp`                              | All smtp flows in the /16 subnet                       |
-| `ippair=192.168.1.8,59.92.15.145 (pipe separated IPs)` | All flows between the two IP pairs                     |
+| `ippair=192.168.1.8\|59.92.15.145` (pipe-separated IPs; commas separate search terms) | All flows between the two IPs |
 | `router=10.0.17.180`                                   | All router flows                                       |
 | `ifin=1872`                                            | All the ingress flows on a NetFlow interface          |
 | `ifout=1872`                                           | All the egress flows on a NetFlow interface. Combine with `router=` or specify router along with the interface in interface key format such as `ifout=10.0.17.180_1872` to see egress flows.                                                                                                 |
@@ -131,8 +131,8 @@ Available controls include,
 | Labels to front/back | Top left                 | Position labels on the backside of the lines so you can view the flows better                                                                                                 |
 | Toggle Stats         | Top Left                 | Show or hide Statistics                                      |
 | Stats to front/back  | Top left                 | Position Stats on the backside of the lines so you can view the flows better                                                                                                     |
-| Weight Bytes         | Top Left                 | Expands the flow details                                     |
-| Weight Flows         | Top Left                 | Collapses the flow details                                   |
+| Weight bytes         | Top Left                 | Ranks and sizes the nodes on each axis by traffic volume (bytes in both directions) |
+| Weight #flows        | Top Left                 | Ranks and sizes the nodes on each axis by the number of flows |
 | Options              | Top Left                 | Select the data items to display on the Parallel Co-ords     |
 | Lock/Release         | Below each vertical axis | Click on release under a vertical axis to ignore the corresponding tuple                                                                                              |
 | Colorize             | Below each vertical axis | Flows are colorized by source ip. Change it to view the flows from a different angle                                                       |
@@ -222,7 +222,7 @@ You can drill down further in the following manner by clicking on the *Options* 
 | -------------------------------- | ----------------------------------------------------|
 | Flow details                     | More details about the flow                         |
 | URLs in flow                     | URL resources for this flow (HTTP only)             |
-| Quick PCAP view                  | View first 50K bytes of PCAP in hex and text format |
+| Quick PCAP view                  | Opens a *Show PCAP Headers* window with the first 100,000 bytes of the flow as strings and a hexdump (plus a tshark decode when tshark is installed) |
 | Download PCAP                    | Download all the flows shown as a single PCAP       |
 | In this conversation             | Get all flows between these two hosts               |
 | New search for Src IP            | Get all flows from and to the Source IP             |

@@ -12,9 +12,9 @@ Write reusable scripts to create your own reports in any format, automate huntin
 
 This short step by step tutorial explains how you can get a ruby script running and exchange a simple HelloMessage with the Trisul server.
 
-- [Step by step tutorial using Ruby](/docs/trp/trpgemsteps.md)
+- [Step by step tutorial using Ruby](/docs/trp/trpgemsteps)
 
-## DOCUMENTATION
+## Documentation
 
 import { Icon } from '@iconify/react';
 
@@ -34,18 +34,18 @@ import { Icon } from '@iconify/react';
 
 <Icon icon="logos:chrome" height="25" /> [ The trp.proto file - if you want to write clients in any language supported by protocol buffers](/docs/guide/ref/trpproto)
 
-## GITHUB CODE SAMPLES
+## GitHub code samples
 
-Beginner ? Here are some ready to run scripts from our open[Github repo](https://github.com/trisulnsm/trisul-scripts)to get you started
+New to TRP? Here are some ready-to-run scripts from our open [GitHub repo](https://github.com/trisulnsm/trisul-scripts) to get you started.
 
-##### [print_resources.rb](./samples/resources_step_by_step)
+### [print_resources.rb](/docs/trp/samples/resources_step_by_step)
 
 Print HTTP URLs seen by Trisul over a recent time interval. This is a step-by-step tutorial that also explains how to work with IPs and hostnames.
 
-##### [flows_for_ip.rb](./samples/flows_for_ip)
+### [flows_for_ip.rb](/docs/trp/samples/flows_for_ip)
 
 View top 100 flows for an IP in a time window.
 
-##### [pcap_simple.rb](./samples/pcap_simple)
+### [pcap_simple.rb](/docs/trp/samples/pcap_simple)
 
 Get all SMTP and DNS packets in last one hour as a PCAP

@@ -21,7 +21,7 @@ Download a well documented skeleton script from here to copy and get started
 | name  | type | description  |
 | ---- | ---- | ------ |
 | table [control](/docs/lua/protocol_handler#table-control)              | table                                                           | assign a name and GUID to this protocol                                                    |
-| function [parselayer](/docs/lua/protocol_handler#function-parselayer) | function( [layer](/docs/lua/obj_layer) | given a packet consume N bytes for this protocol and tell Trisul what the next protocol is |
+| function [parselayer](/docs/lua/protocol_handler#function-parselayer) | function( [layer](/docs/lua/obj_layer) ) | given a packet consume N bytes for this protocol and tell Trisul what the next protocol is |
 
 ### Table `control`
 
@@ -30,10 +30,10 @@ The control table assigns a unique GUID to this protocol and a name. You can the
 | name  | type | description |
 | ----- | ----- | ------ |
 | guid                | string           | A unique guid that identifies this new protocol. Use `trisulctl_probe testbench guid` to generate a [new GUID](/docs/guide/ref/guid)                                                                                         |
-| name                | string           | Name of the counter group. Keep it short < 15 chars                                                                                                                                                                     |
+| name                | string           | Name of the protocol. Keep it short < 15 chars                                                                                                                                                                     |
 | description         | string           | optional                                                                                                                                                                                                                |
 | host_protocol_guid  | string           | Which lower layer protocol do you want to attach to. To find the GUID for your host protocol such as UDP or IP see [Common protocol GUIDs](/docs/guide/ref/guid#protocols)                                                   |
-| host_protocol_ports | array of numbers | array of port numbers of the host protocol to which you want to attach. These could be TCP/UDP prots, EtherTypes, IP protocol numbers, or other [Access Points](/docs/guide/ag/context/access_points) |
+| host_protocol_ports | array of numbers | array of port numbers of the host protocol to which you want to attach. These could be TCP/UDP ports, EtherTypes, IP protocol numbers, or other [Access Points](/docs/guide/ag/context/access_points) |
 
 ### Sample control block
 

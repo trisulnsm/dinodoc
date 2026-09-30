@@ -1,12 +1,12 @@
 # Step by step – working with resources
 
-This is a step by step tutorial that introduces you to all the key techniques ofTRPand Ruby.
+This is a step by step tutorial that introduces you to all the key techniques of TRP and Ruby.
 
 ### The task
 
-Print allHTTPURLs over the past 6 hours.
+Print all HTTP URLs over the past 6 hours.
 
-We divide this tutorial into steps, each step demonstrating an aspect ofTRP
+We divide this tutorial into steps, each step demonstrating an aspect of TRP
 
 1. [Step 1](/docs/trp/samples/resources_step_by_step#step-1--find-matching-resources)– Retrieve matching resource IDs
 2. [Step 2](/docs/trp/samples/resources_step_by_step#step-2--print-details-of-each-resource)– Print attributes of each matching resource

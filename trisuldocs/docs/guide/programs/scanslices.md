@@ -2,20 +2,18 @@
 
 ## Overview
 
-The Scan Slices feature performs a comprehensive analysis of the METASLICE.DB and SLICE directory (each slices in storage pool) to gather and process slice information. It conducts preliminary checks, extracts slice details, analyzes each slice, and presents the findings in a table format, ultimately providing a summary of the collected slices.
+The Scan Slices feature performs a comprehensive analysis of the METASLICE.SQDB and SLICE directory (each slice in the storage pool) to gather and process slice information. It conducts preliminary checks, extracts slice details, analyzes each slice, and presents the findings in a table format, ultimately providing a summary of the collected slices.
 
-  
-   
-   ## Arguments
-   
-   | Syntax          | Info                             | Usage                            |                Example               |
-   | --------------- | ---------------------------------| ---------------------------------------------------- | ------------------------------------------------------ |
-   | -l              | list the storage pool available                             | Use this output to below argument          | archive<br/>ref<br/>xarchive_1<br/>oper/0/<br/>oper/1/      |
-   | -m storage-pool | prints the slice in the storage pool given by user          | You can run this script anywhere                     | ./scanslices.sh -m ref      |
-   | -d .          | prints the current directry slice details                     | You should be in the storage pool to run this script | ./scan_slices.sh -d .                              |
-   | -d Slice-name   | Print specific slice details given by user                  | You should be in the storage pool to run this script | ./scan_slices.sh -d SLICE.eJkeR                    |
-   | -a              | Prints the slice which is either missing in db or directory | this option should be run aling with -d or -m option | ./scan_slices.sh -m red -a                               |
-   | -h              | Prints the usage details                                    | -                                                    | ./scan_slices.sh -h      |
+## Arguments
+
+| Syntax          | Info                             | Usage                            |                Example               |
+| --------------- | ---------------------------------| ---------------------------------------------------- | ------------------------------------------------------ |
+| -l              | list the storage pool available                             | Use this output to below argument          | archive<br/>ref<br/>xarchive_1<br/>oper/0/<br/>oper/1/      |
+| -m storage-pool | prints the slice in the storage pool given by user          | You can run this script anywhere                     | ./scan_slices.sh -m ref      |
+| -d .          | prints the current directory slice details                     | You should be in the storage pool to run this script | ./scan_slices.sh -d .                              |
+| -d Slice-name   | Print specific slice details given by user                  | You should be in the storage pool to run this script | ./scan_slices.sh -d SLICE.eJkeR                    |
+| -a              | Prints the slice which is either missing in db or directory | this option should be run along with -d or -m option | ./scan_slices.sh -m ref -a                               |
+| -h              | Prints the usage details                                    | -                                                    | ./scan_slices.sh -h      |
 
 ## Description of each column
 
@@ -29,7 +27,7 @@ The Scan Slices feature performs a comprehensive analysis of the METASLICE.DB an
 | Slide-date          | A file that contains the date in the file name                    |
 | Date-Match          | compare the date between topper and meta-slice timestamp & check the difference is below 10 min or not |
 | Slice-in-DB         | slice present in metaslice db or not                              |
-| Slice-in-DIR        | slice presnet in storage-pool or not                              |
+| Slice-in-DIR        | slice present in storage-pool or not                              |
 | Archive             | Check if the file is archivable or not                            |
 | AAA                 | Check the AAAlog.SQT is present or not                            |
 

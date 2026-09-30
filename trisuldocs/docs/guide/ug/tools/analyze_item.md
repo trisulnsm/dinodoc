@@ -41,7 +41,7 @@ The *Handy Shortcuts* option, located on the upper right side of the top bar, pr
 *Figure: Handy Shortcuts*
 
 
-Instead of filling in all the search criteria fields, you can choose one of the options from the *Handy Shortcuts* and click *Analyze*.
+Instead of filling in all the search criteria fields, choose one of the options from the *Handy Shortcuts* dropdown. Trisul fills in the form and submits it for you.
 
 ## Search Result
 

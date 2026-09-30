@@ -1,7 +1,7 @@
 # Hello World TRP in Java
 
 How to write a Java TRP client program that :  
-\* Sends a HelloRequest to Trisul and prints the HelloResponse
+- Sends a HelloRequest to Trisul and prints the HelloResponse
 
 Also see : [Programming model](/docs/trp/trpprogramodel) , [Messages and
 Fields](/docs/guide/ref/trpproto)
@@ -10,7 +10,7 @@ Fields](/docs/guide/ref/trpproto)
 
 You need a development environment for this step.
 
-Go to `http://code.google.com/p/protobuf/` and **download** the latest
+Go to [Protocol Buffers on GitHub](https://github.com/protocolbuffers/protobuf) and **download** the latest
 version.  
 Follow the instructions to install protobuf (usually the ./configure +
 make + make install routine)
@@ -31,11 +31,11 @@ Our goal here is to make a tar file containing the Java API files, we
 will then untar these files in our working directory where they can be
 found easily.
 
-<note tip>
+:::tip
 
 You may also use JAR files or CLASSPATH this directory directly.
 
-</note>
+:::
 
 ```
 $ cd /opt/sware/protobuf-2.3.0/java

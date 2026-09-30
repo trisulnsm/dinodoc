@@ -6,8 +6,11 @@ to Trisul and gets back a Hello Response.
 Also see : [Programming model](/docs/trp/trpprogramodel) , [Messages and
 Fields](/docs/guide/ref/trpproto)
 
-div(info). **Pre-requisites** You must have Ruby installed on your
-machine
+:::info Prerequisites
+
+You must have Ruby installed on your machine.
+
+:::
 
 ## Step 1 : Install required gems
 
@@ -25,8 +28,10 @@ The TRP protocol is completely defined in a file called *trp.proto*.
 directory. You then need to process the trp.proto file and generate
 bindings for your language.
 
-    C:\Users\Vivek\Documents\devbo>protoc trp.proto --ruby_out .
-    ./trp.pb.rb writing...
+```text
+$ protoc trp.proto --ruby_out .
+./trp.pb.rb writing...
+```
 
 ## Step 3 : Save and run this program
 
@@ -35,7 +40,7 @@ the output. We can explain the parts in the next section.
 
 **Save this program into your working directory.**
 
-```language-ruby
+```ruby
 if RUBY_VERSION =~ /1.8/
   require 'rubygems'
   gem 'ruby_protobuf'
@@ -79,7 +84,7 @@ def  get_trp_response(endpoint,trp_request,timeout_seconds=-1)
   if  ret == 0 
     sock.close
     ctx.terminate 
-    raise "no registerted sockets #{endpoint} " 
+    raise "no registered sockets #{endpoint} " 
   end
 
   poller.readables.each do |rsock|
@@ -106,7 +111,7 @@ def  get_trp_response(endpoint,trp_request,timeout_seconds=-1)
 end
 
 
-raise "Usage : $0 trp_zmq_endpount" if  ARGV.length !=1
+raise "Usage : $0 trp_zmq_endpoint" if  ARGV.length !=1
 conn = ARGV.shift
 
 # create a new command of type HelloRequest
@@ -134,10 +139,9 @@ Before you run the program :
 Now run the program
 
 
-```sh
+```text
     $ruby testtrp.rb ipc:///usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/trp_0
     
-    Got Hello Response
     Got Hello Response
     Station ID          : TRP:1 
     Station ID  Request : TRP_TUTORIAL

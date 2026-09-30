@@ -10,7 +10,7 @@ periodic tasks like polling
 
 timer
 
-`onmetronone` is called roughly every second.
+`onmetronome` is called roughly every second.
 
 ## Structure
 

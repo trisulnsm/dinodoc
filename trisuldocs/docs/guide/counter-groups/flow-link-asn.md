@@ -2,7 +2,7 @@
 
 Netflow Link ASN
 
-# Counter groups
+## Counter groups
 
 | GUID                                     | TYPE   | Bucke Size (secs) | Topper Bucket(Secs): |
 | ---------------------------------------- | ------ | ----------------- | --------------------- |

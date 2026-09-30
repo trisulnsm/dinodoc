@@ -197,34 +197,9 @@ If multiple scripts are attached to the same counter group, each script's `onflu
 
 ### Example
 
-### Purpose
-
-Custom processing before each counter item is flushed. Perhaps write to your own tools or logfiles.
-
-### When called
-
-Just before each counter item is flushed to the database. The maximum delay between getting a `onnewcounter item` and a corresponding `onflush(..)` for that counter item is 60 seconds.
-
-### Parameters
-
-| parameter | description | usage notes | 
-| -------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------- |
-| engine         | An [engine](/docs/lua/obj_engine) object | use this object to add metrics, counter items, or counter items into the Trisul framework |
-| timestamp      | Timestamp                                | Timestamps seconds `tv_sec`                                                               |
-| key            | string                                   | the key identifying the counter item                                                      |
-| arrayofmetrics | array of numbers                         | array of metrics. array item 0 refers to meter 0 and so forth                             |
-
-### Return value
-
-Ignored
-
-### Example
-
 ## Function `onflush`
 
-### 
-
-Purpose
+### Purpose
 
 Custom processing before each counter item is flushed. Perhaps write to your own tools or logfiles.
 

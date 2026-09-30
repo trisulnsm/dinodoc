@@ -42,7 +42,7 @@ Fill in the *Edge Graph* form with the help of the following fields and descript
 | Time Frame    | Select a time range from the [Time Selector](/docs/guide/ug/ui/elements#time-selector)  |
 | Key           | Enter a key within the counter group to set as the "root vertex"                  |
 
-Click *Show Graph* to view the edge graph for the search criteria defined by you.
+Click *Show graph* to view the edge graph for the search criteria defined by you.
 
 ## Edge Graph Overview 
 
@@ -58,11 +58,11 @@ The *Edge Graph* explorer options include:
 
 | Options                    | Description                                                                       |
 | -------------------------- | --------------------------------------------------------------------------------- |
-| Flow graph view             | Displays the graph network in a flow-based layout, illustrating the relationships between nodes and edges.                                                                                         |
-| Treemap view               | Renders the graph network as a treemap, using nested rectangles to represent the hierarchical structure of the nodes and edges. This is a cleaner option in some cases                            |
+| Flow Graph View | Default view. Displays the graph network in a flow-based layout, illustrating the relationships between nodes and edges. |
+| Tree map View | Draws the graph as a branching tree from the root vertex (a collapsible node-link layout, not nested rectangles). This is a cleaner option in some cases. |
 | Label View                 | Toggles the display of labels for nodes and edges, providing additional context and information about the graph entities.                                                                            |
-| Only Show Vertices of Type | Filters the graph network to display only nodes of a selected type, allowing for focused analysis on specific entities or groups.                                                                 |
-| Show All                   | Resets the graph network to its default view, displaying all nodes and edges without any filters or restrictions.                                                                                     |
+| Only show vertices of type | Filters the graph network to display only nodes of a selected type, allowing for focused analysis on specific entities or groups.                                                                 |
+| Show all                   | Resets the graph network to its default view, displaying all nodes and edges without any filters or restrictions.                                                                                     |
 
 :::tip
 To declutter a messy force graph, select a highly connected node, drag it to an empty area, and gently "shake" it to settle the graph into a better layout. 
@@ -76,7 +76,7 @@ Upon initial generation, the Graph Explorer presents the following features:
 
 ### Tree Map View
 
-The *Tree Map View* represents the graph network as a branching layout, illustrating the organization of nodes. 
+The *Tree map View* represents the graph network as a branching tree, illustrating the organization of nodes. 
 
 
 ![](images/treeview.png)  
