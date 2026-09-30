@@ -1,6 +1,6 @@
 # IPDR Customer IP Mapping API
 
-The IPDR Customer IP Mapping API provides a comprehensive interface for managing IP address and subnet assignments to IPDR customers. This API enables you to associate static IP addresses or IP subnets with customer records, supporting time-based IP allocation and terminal identification for network tracking and reporting.
+The IPDR Customer IP Mapping API manages IP address and subnet assignments to IPDR customers. This API enables you to associate static IP addresses or IP subnets with customer records, supporting time-based IP allocation and terminal identification for network tracking and reporting.
 
 ## Overview
 
@@ -73,7 +73,7 @@ Each IP mapping record is linked to a customer through the `ipdr_customer_id` fi
 
 To access the IPDR Customer IP Mapping API, you require a unique API token. This token grants authentication and authorization for all API operations.
 
-To generate an API token, follow the provided link: [Generate API token](https://docs.trisul.org/docs/guide/ag/webadmin/manageusers#generate-api-token)
+To generate an API token, follow the provided link: [Generate API token](/docs/guide/ag/webadmin/manageusers#generate-api-token)
 
 ## Base URL
 

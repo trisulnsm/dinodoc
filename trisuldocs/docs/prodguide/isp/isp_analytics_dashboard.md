@@ -4,39 +4,19 @@ sidebar_position: 3
 
 # ISP Analytics Dashboard
 
-Several ISPs have deployed Trisul in their networks to gain deep
-insights into their peering and routing efficiencies. In addition to the
-normal metrics, device, and interface level drilldowns made available in
-Trisul Netflow Analytics , the Trisul ISP configuration adds the
-following.
-
-1. Peering Analytics
-2. Prefixes IPv4 and IPv6
-3. AS analytics
-4. Mapping ASN, Prefixes, Geo location to gateway routers and
-   interfaces
-5. Private Peering analytics with content providers
-6. Route analytics
-7. Custom metering of downstream customers usage patterns
-
-Trisul provides a global level dashboard for ISP Analytics that includes
-several menus with various functionalities.
-
-To install the ISP dashboard apps, Refer [ISP Analytics Dashboard](isapps#install-trisul-apps)
+This page describes the dashboards that the [ISP apps](/docs/prodguide/isp/isapps#install-trisul-apps) add. For an overview of what Trisul ISP Analytics provides, see the [Trisul ISP Analytics Guide](/docs/prodguide/isp/).
 
 ## ISP Overview
 
 ISP Overview is a top level dashboard in Trisul ISP Analytics. It
-provides a overall stats about the Active AS, prefixes, paths, total
+provides overall stats about the Active AS, prefixes, paths, total
 routers, interfaces and countries.
 
 Also it provides statistical information on the total volume of Upload
 and Download of AS Traffic in bytes.
 
-:::info navigation
-
-To access, Login as user & Select Dashboard &rarr; Show All &rarr; Enter ‘ISP Overview’ in Filter
-
+:::info Navigation
+Log in as a user and go to **Dashboards → Show all**. Type **ISP Overview** in the filter.
 :::
 
 ![](images/ispoverview.png)  
@@ -77,11 +57,8 @@ The following table explains the data in the columns
 | Uniq Prefix       | Unique prefixes (need to configure cardinality counting feature for this) |
 | Options           | Drilldown options for this AS                                             |
 
-:::info navigation
-
-To access, Login as user & Select Dashboard &rarr; Show All &rarr; Enter
-‘Peering Analytics’ in Filter
-
+:::info Navigation
+Log in as a user and go to **Dashboards → Show all**. Type **Peering Analytics** in the filter.
 :::
 
 | Field      | Description                                                 |
@@ -96,7 +73,7 @@ To access, Login as user & Select Dashboard &rarr; Show All &rarr; Enter
 Peering Analytics Charts
 
 Every Peer-AS associated to the router and interface in upstream and
-downstream can be deeply analysed using the *`options`* dropbox.
+downstream can be analysed further using the **Options** drop-down.
 
 ![](images/peering_analytics_options.png)  
 options
@@ -104,10 +81,10 @@ options
 #### Drilldown
 
 Peering Analytics in Trisul provides a deep drilldown of each peer AS to
-know the Transmit/Recieve from upstream/downstream of the particular
+know the Transmit/Receive from upstream/downstream of the particular
 peer AS with interfaces.
 
-Refer [Peering Analytics Drilldown](isp_analytics_dashboard#peering-analytics-drilldown)
+See [Peering Analytics Drilldown](#peering-analytics-drilldown).
 
 #### Top Prefixes
 
@@ -151,11 +128,8 @@ The following table explains the data in the columns
 | Bandwidth     | Avg bandwidth / sec                                                                                                                                                                         |
 | Options       | Further options to drilldown into the prefix                                                                                                                                                |
 
-:::info navigation
-
-To access, Login as user & Select Dashboard &rarr; Show All &rarr; Enter
-‘Prefix Analytics’ in Filter
-
+:::info Navigation
+Log in as a user and go to **Dashboards → Show all**. Type **Prefix Analytics** in the filter.
 :::
 
 | Field      | Description                                                 |
@@ -168,7 +142,7 @@ To access, Login as user & Select Dashboard &rarr; Show All &rarr; Enter
 Prefix Analytics Charts
 
 Every Prefix associated with each interface in the upstreams and
-downstreams can be deeply analysed using the *`options`* dropbox.
+downstreams can be analysed further using the **Options** drop-down.
 
 ![](images/prefix_analytics_options.png)  
 options
@@ -177,26 +151,23 @@ options
 #### Drilldown
 
 Prefix Analytics in Trisul provides a deep drilldown of each prefix with
-interfacea.
+interfaces.
 
-Refer [Prefix Analytics Drilldown](isp_analytics_dashboard#prefix-analytics-drilldown)
+See [Prefix Analytics Drilldown](#prefix-analytics-drilldown).
 
 ## Peering Analytics Drilldown
 
 Peering Analytics drilldown provides deeper analysis of AS with
 interfaces.
 
-:::info navigation
-
-To access, Login as user & Select Dashboard &rarr; Show All &rarr; Enter
-‘Peering Analytics Drilldown’ in Filter
-
+:::info Navigation
+Log in as a user and go to **Dashboards → Show all**. Type **Peering Analytics Drilldown** in the filter.
 :::
 
 | Field      | Description                                                    |
 | ---------- | -------------------------------------------------------------- |
 | Time Frame | Select a desired date and time using the custom time option    |
-| AS Number  | Enter an AS Number you need to drilldown eg 9498(Bharti Artel) |
+| AS Number  | Enter an AS Number you need to drilldown for example 9498 (Bharti Airtel) |
 
 ![](images/peeringanalyticsdrilldown.png) 
 ![](images/peeringanalyticsdrilldown2.png) 
@@ -211,11 +182,8 @@ interfaces.
 Track traffic flows for a single prefix in the entire network. Helps
 with traffic engineering and verification.
 
-:::info navigation
-
-To access, Login as user & Select Dashboard &rarr; Show All &rarr; Enter
-‘Prefix Analytics Drilldown’ in Filter
-
+:::info Navigation
+Log in as a user and go to **Dashboards → Show all**. Type **Prefix Analytics Drilldown** in the filter.
 :::
 
 | Field      | Description                                                 |
@@ -223,27 +191,29 @@ To access, Login as user & Select Dashboard &rarr; Show All &rarr; Enter
 | Time Frame | Select a desired date and time using the custom time option |
 | Prefix     | Enter a prefix you need to drilldown                        |
 
-you can see four tabs say,
-1) Receive from upstream
-2) Transmit to upstream
-3) Receive from downstream
-4) Transmit to downstream
-5) Prefixes and hosts
+The page has five tabs:
 
-The "receive from upstream" is the analytical insights of Top Interfaces Prefix Received
+1. Receive from upstream
+2. Transmit to upstream
+3. Receive from downstream
+4. Transmit to downstream
+5. Prefixes and hosts
+
+The **Receive from upstream** tab shows the top interfaces that received traffic for this prefix.
 ![](images/prefixanalyticdrilldown.png)  
 Prefix Analytics Drilldown
 
-Similarly you can click on the concurrent tabs to view their analytical insights. 
+The other traffic tabs work the same way.
 
 The "Prefixes and hosts" tab shows the top ASNumbers, top prefixes, top internal hosts, and top external hosts.  
 
 ![](images/prefixesandhosts.png)  
 *Figure: Showing Prefixes and Hosts*
 
-You can click on the option button against each item to further drilldown to 
-1) [Key dashboard](/docs/guide/ug/ui/key_dashboard) and
-2) [Traffic chart](/docs/guide/ug/ui/module_templates#traffic-chart)
+Click the option button next to an item to drill down to:
+
+- [Key dashboard](/docs/guide/ug/ui/key_dashboard)
+- [Traffic chart](/docs/guide/ug/ui/module_templates#traffic-chart)
 
 ## ISP Country Analytics
 
@@ -267,11 +237,8 @@ The following table explains the data in the columns.
 | Avg Bandwidth | Traffic Bandwidth average for selected time period            |
 | Options       | More options                                                  |
 
-:::info navigation
-
-To access, Login as user & Select Dashboard &rarr; Show All &rarr; Enter ‘ISP
-Country Analytics’ in Filter
-
+:::info Navigation
+Log in as a user and go to **Dashboards → Show all**. Type **ISP Country Analytics** in the filter.
 :::
 
 | Field      | Description                                                 |
@@ -284,16 +251,16 @@ Country Analytics’ in Filter
 Country Analytics Charts
 
 Every country associated to the router and interface in upstream and
-downstream can be deeply analysed using the *`options`* dropbox.
+downstream can be analysed further using the **Options** drop-down.
 
 
 #### Drilldown
 
 Country Analytics in Trisul provides a deep drilldown of each country to
-know the Transmit/Recieve from upstream/downstream of the particular
+know the Transmit/Receive from upstream/downstream of the particular
 country with several other interfaces.
 
-Refer [Country Analytics Drilldown](/docs/prodguide/isp/isp_analytics_dashboard#country-analytics-drilldown)
+See [Country Analytics Drilldown](#country-analytics-drilldown).
 
 ## Country Analytics Drilldown
 
@@ -347,11 +314,8 @@ and egress interface flow are collated. Keep that in mind while
 interpreting the chart. It is focused on interface -\> AS flows, hence
 the interface numbers are important.
 
-:::info navigation
-
-To access, Login as user & Select Dashboard &rarr; Show All &rarr; Enter ‘Path
-Analytics’ in Filter.
-
+:::info Navigation
+Log in as a user and go to **Dashboards → Show all**. Type **Path Analytics** in the filter.
 :::
 
 | Field          | Description                                                    |
@@ -377,11 +341,8 @@ ISP-Peer” to “Flow-ASN” counter group. This will then track Internal IP
 to ASN flows. This dashboard helps you view the Sankey diagram for such
 counter groups.
 
-:::info navigation
-
-To access, Login as user & Select Dashboard &rarr; Show All &rarr; Enter
-‘Sankey Crossdrill’ in Filter
-
+:::info Navigation
+Log in as a user and go to **Dashboards → Show all**. Type **Sankey Crossdrill** in the filter.
 :::
 
 | Field          | Description                                                    |

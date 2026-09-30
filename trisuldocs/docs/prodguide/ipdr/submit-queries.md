@@ -5,11 +5,7 @@ This is the place you go to generate IPDR reports when the agencies request info
 To view Trisul IPDR Query form,
 
 :::info Navigation
-
-:point_right: Login as User name: `dotuser` and
-
-Password: `ipdr@@123`  (:bulb: remember to change the default)
-
+:point_right: Log in as `dotuser`. See [The dotuser ID](/docs/prodguide/ipdr/specialuser) for the default password and how to change it.
 :::
 
 ## Form Structure
@@ -34,11 +30,11 @@ Multiple fields are AND-ed.
 
 | Fields | Input  | Description |
 | ------ | --- |---|
-| IP Address | Enter the IPv4 or IPv6 address. | Enter one or more IPv4 or IPv6 addresses. Example: `209.168.1.20` or `2404:5440:3::a`. For multiple IP queries, enter IPs separated by commas (,). Example: `209.168.1.20,209.168.3.20,2404:5440:3::a`, Recommended limit: up to 20 IPs per query.|
+| IP Address | Enter the IPv4 or IPv6 address. | Enter one or more IPv4 or IPv6 addresses. Example: `203.0.113.20` or `2001:db8:3::a`. For multiple IP queries, enter IPs separated by commas (,). Example: `203.0.113.20,198.51.100.20,2001:db8:3::a`, Recommended limit: up to 20 IPs per query.|
 | Time Frame | Select from a list of time frames (Last 1 hour, this month etc) or click custom to specify a time period | The time range for which you want to retrieve IPDR data.|
 | Port | The TCP or UDP Port number   | The port number|
 | NAT IP | The private IP Address    | When NAT or CGNAT is used , enter the private IP you want to query in this field. This would be in the 100.64.0.0/10, 10.0.0.0/8, or other private ranges|
-| User Name  | The user name from syslogs or from static customer inventory| The user name from NAT syslogs or from the [customer static IP inventory](#user-name). If you want to query the  RADIUS/AAA user then fill in the AAA User Name field instead. See |
+| User Name  | The user name from syslogs or from static customer inventory| The user name from NAT syslogs or from the [customer static IP inventory](#user-name). If you want to query the RADIUS/AAA user, fill in the AAA User Name field instead. See [AAA User Name](#aaa-user-name). |
 | Device IP  | Router IP Example: 10.2.2.1 or 2404:5440:3::a| The IP Address of the device generating the IPDR Data. Typically the router.|
 | [Bulk IP Query File](/docs/prodguide/ipdr/submit-queries#bulk-ip-query-file) | (.txt file)                       | A .txt file containing multiple IP addresses or subnets for bulk IPDR queries.   |
 | AAA User Name | RADIUS/AAA user name|  The AAA RADIUS user name that you would find in AAA logs. |
@@ -50,7 +46,7 @@ Multiple fields are AND-ed.
 
 - Click Submit 
 
-This will create a targeted query to retrieve specific IPDR data. The result statistics and IPDR logs can be viewed on the [IPDR Dashboard](ipdrdashboard) right away!
+This will create a targeted query to retrieve specific IPDR data. You can view the result statistics and IPDR logs on the [IPDR Dashboard](/docs/prodguide/ipdr/ipdrdashboard).
 
 #### Bulk IP Query File
 
@@ -65,11 +61,13 @@ A Bulk IP Query File is a plain text (.txt) file containing multiple IP addresse
 
 ip_list.txt
 
-192.168.1.12  
-192.168.1.13  
-192.168.1.14  
-10.10.0.0/24  
-172.16.5.25  
+```
+192.168.1.12
+192.168.1.13
+192.168.1.14
+10.10.0.0/24
+172.16.5.25
+```
 
 Upload this file using the Bulk IP Query option in the IPDR interface. The application reads each entry and returns the corresponding IPDR records.
 
@@ -134,18 +132,21 @@ The `ipdr_bulkquery.sh` script is a utility provided with the Trisul Hub IPDR pa
 
  - The ipdr_bulkquery.sh script is located in the `/usr/local/share/trisul-hub` directory.
  - Create a text file (e.g., iplist1.txt) containing the list of IPs to query, one per line.
- For example (One per line), 
-203.43.23.1  
-22.23.44.55  
-87.23.55.123  
-78.178.21.139  
+ For example (one per line):
+
+```
+203.0.113.1
+198.51.100.23
+192.0.2.55
+203.0.113.139
+```
 
 #### **Running the Script**
 
 - Place the `ipdr_bulkquery.sh` script and the IP list file (e.g., iplist1.txt) in a desired directory (e.g., /root).
 - Execute the script using the following command format:
 
-`/ipdr_bulkquery.sh -f <start_date> -t <end_date> -i <ip_list_file>`
+`./ipdr_bulkquery.sh -f <start_date> -t <end_date> -i <ip_list_file>`
 
 
  *   `<start_date>`: Specify the start date and time in the format `1-8-2024-13:00`.

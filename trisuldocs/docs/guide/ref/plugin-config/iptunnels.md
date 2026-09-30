@@ -4,10 +4,11 @@ Used for Mobility tunnels.
 
 ## File Location
 
-`/usr/local/etc/trisul-probe/domain0/probe0/context0/PI-AFFFFFFF-125E-48D0-8AC9-A7E3AD2F60FD.xml
-`
+~~~text
+/usr/local/etc/trisul-probe/domain0/probe0/context0/PI-AFFFFFFF-125E-48D0-8AC9-A7E3AD2F60FD.xml
+~~~
 
-``` bash
+```xml
 <TrisulPluginConfiguration>
     <Policy>
         <description>Controls IP Tunneling Deployments</description>

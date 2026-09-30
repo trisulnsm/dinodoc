@@ -19,11 +19,10 @@ To use this feature create PING Groups, these are groups of device IP addresses 
 
  Ping groups are collections of IP addresses that are grouped together for monitoring purposes. These groups are organized and managed to monitor multiple devices or hosts based on various criteria, such as their function, location, or importance.
 
-To create PING groups, Login as admin.
+To create PING groups:
 
-:::note navigation
-Go to Context:default>profile0>Bulk PING Groups
-
+:::note Navigation
+Log in as admin and go to **Context: default → profile0 → Bulk PING Groups**.
 :::
 
 You have now landed on the *PING Monitor: Groups* window where you can add, edit and manage PING groups. 
@@ -44,15 +43,13 @@ Click on the *New* button on the right side of the module.
 | Timeout seconds          | By default timeout seconds to wait for each PING is set to 5. Change if necessary.                                                   |
 | Retries                  | The number of Ping failure before declaring a node unreachable is set to 6 by default. Change if necessary.                          |
 | TTL                      | By default the value of TTL field used in ICMP Echo Request packets sent to this group is set to 255. Leave at default in most cases |
-| TOS                      | Enter theIP TOS Byte used in ICMP Echo Request packets sent to this group                                                           |
-| Dispatch Options         | Enter the mail id to which alert has to be sent. For example: mailto:default@unleashnetworks.com                                     |
+| TOS                      | Enter the IP TOS byte used in ICMP Echo Request packets sent to this group                                                           |
+| Dispatch Options         | Enter the mail id to which alert has to be sent. For example: mailto:noc@example.com                                     |
 | Throttle Microseconds    | A microseconds delay between sending out ICMP PING packets, use only if your network caps ICMP bandwidth. -1 disables this feature.  |
 
 Once providing all the fields, Click *Save*.
 
-You have now successfully created a PING group!
-
-The newly added PING groups are now available for edit on the Ping monitor window.
+The new group appears in the **PING Monitor: Groups** list, where you can edit it.
 
 ## Add IPs to the PING Group
 
@@ -75,7 +72,7 @@ Click on the *Add* button to add or remove IPs to be monitored with PING in this
 
 Once you have provided the required fields, click Save.
 
-You have now succesfully added the IPs to be monitored!
+Trisul now monitors the IP address.
 
 The newly added IP can be edited or removed using the dropdown option button on the right side against the IP address listed.
 
@@ -95,7 +92,7 @@ This will take you to the *Ping Monitor Group default* window where you can see 
 
 ![](images/pingshowip.png)
 
-On the Dashboard module you can see the Total number of IPs, Number of IPs in Up state, Number of IPs in Down state, and Number of Packetlosses occured on the top left of the module. You can change the view to Normal, Compact, Dynamic and Fixed using the dropdown buttons on the top right of the module.
+On the Dashboard module you can see the Total number of IPs, Number of IPs in Up state, Number of IPs in Down state, and number of packet losses at the top left of the module. You can change the view to Normal, Compact, Dynamic and Fixed using the dropdown buttons on the top right of the module.
 The Dashboard module contains the following details.
 
 | Fields          | Information                                                                                |
@@ -105,7 +102,7 @@ The Dashboard module contains the following details.
 | State           | The state of the IP address indicating Up/Down/Packetloss                                  |
 | Last change IST | The last changed time of the IP address state                                              |
 | Since           | The time since when the IP address has been in that state                                  |
-| Pktloss         | The percentage of packetloss occured if any                                                |
+| Pktloss         | The percentage of packet loss, if any                                                |
 | Info            | Click on the info button against the IP address you would like to view the ping history of |
 
 ## PING

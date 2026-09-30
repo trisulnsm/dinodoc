@@ -1,13 +1,13 @@
-# TCP based metering
+# TCP Based Metering
 
 How TCP is metered.
 
-# File Location
-`
+## File Location
+~~~text
 /usr/local/etc/trisul-probe/domain0/probe0/context0/PI-923740FF-125E-48D0-8AC9-A7E3AD2F60FD.xml
-`
+~~~
 
-``` bash
+```xml
 <TrisulPluginConfiguration>
     <Policy>
         <description>TCP  Protocol Handler</description>

@@ -1,6 +1,6 @@
 # IPDR Customer Management API
 
-The IPDR Customer Management API provides a comprehensive interface for managing customer information in your IPDR (Internet Protocol Detail Record) reports. This API enables seamless integration with CRM systems and supports customer data management for RADIUS/AAA and static IP assignments.
+The IPDR Customer Management API manages the customer information in your IPDR (Internet Protocol Detail Record) reports. Use it to integrate with CRM systems and to manage customer data for RADIUS/AAA and static IP assignments.
 
 ## Overview
 
@@ -38,7 +38,7 @@ This ensures that customer information is displayed in reports regardless of the
 
 To access the IPDR Customer Management API, you require a unique API token. This token grants authentication and authorization for all API operations.
 
-To generate an API token, follow the provided link: [Generate API token](https://docs.trisul.org/docs/guide/ag/webadmin/manageusers#generate-api-token)
+To generate an API token, follow the provided link: [Generate API token](/docs/guide/ag/webadmin/manageusers#generate-api-token)
 
 ## Base URL
 

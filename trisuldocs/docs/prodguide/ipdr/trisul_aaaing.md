@@ -21,7 +21,7 @@ man trisul_aaaing
 The process is.
 
 
-  - Create a directory on the Trisul IPDR Server where you want to receive AAA dump files. Say this is is `/opt/ipdr/cdrlogs`  This will be passed as the argument `-d /opt/ipdr/cdrlogs` to the trisul_aaaing process
+  - Create a directory on the Trisul IPDR Server where you want to receive AAA dump files. Say this is `/opt/ipdr/cdrlogs`. This will be passed as the argument `-d /opt/ipdr/cdrlogs` to the trisul_aaaing process
   - Write a script on the RADIUS system to periodically export the active and closed flows say every 1 hour.  Typically each NAS will have its own file. 
   - The filename MUST include the timestamp in some manner. Ex - the file name can be `radiusaaa0_CDRs2023-09-27_133000.csv` where the timestamp is `2023-09-27_133000` or it can be `netxstream-nas1-1740587653.csv` where the number `1740587653` is a unix epoch timestamp. 
   - SFTP (Secure FTP) from the RADIUS server to the Trisul IPDR server say every 1 hour 
@@ -57,7 +57,7 @@ Wed Sep 27 16:59:59 IST 2023,3,HV-1697634786,bobdylanuserid,100.90.2.38,103.112.
 
 ### Other formats
 
-Trisul AAAING uses a powerful LUA parser framework to support any file format that is different to the default one shown above.  So you have to write a LUA parser for your specific format. 
+Trisul AAAING uses a LUA parser framework to support file formats other than the default one shown above. To use a different format, write a LUA parser for it.
 
 You have to use the `--lua-parser` option to use a LUA script. 
 
@@ -93,8 +93,8 @@ To ingest these files into the Trisul IPDR AAA database you can use the followin
 
 
 ```bash
-trisul_aaaing -c /usr/local/etc/trisul-hub/domain0/hub0/context0/trisulHubConfig.xml
-      -d /ipdrdata/cdrlogs 
+trisul_aaaing -c /usr/local/etc/trisul-hub/domain0/hub0/context0/trisulHubConfig.xml \
+      -d /ipdrdata/cdrlogs
 ```
 
 
@@ -124,8 +124,8 @@ Now you can run with the `--lua-parser` option
 
 
 ```bash
-trisul_aaaing -c /usr/local/etc/trisul-hub/domain0/hub0/context0/trisulHubConfig.xml
-      -d /ipdrdata/cdrlogs --lua-parser /root/radiusparse_alepo.lua 
+trisul_aaaing -c /usr/local/etc/trisul-hub/domain0/hub0/context0/trisulHubConfig.xml \
+      -d /ipdrdata/cdrlogs --lua-parser /root/radiusparse_alepo.lua
 ```
 
 

@@ -75,8 +75,8 @@ To ingest these files into the Trisul IPDR AAA database you can use the followin
 
 
 ```bash
-trisul_aaaing -c /usr/local/etc/trisul-hub/domain0/hub0/context0/trisulHubConfig.xml
-      -d /ipdrdata/cdrlogs 
+trisul_aaaing -c /usr/local/etc/trisul-hub/domain0/hub0/context0/trisulHubConfig.xml \
+      -d /ipdrdata/cdrlogs
 ```
 
 The data inside of the CDR are then integrated into the IPDR Flow data. The corresponding flow must exist for every AAA record in the csv files. 

@@ -5,10 +5,7 @@ IPDR NetFlow statistics dashboard contains modules of statistical network usage 
 Let's explore the modules of Trisul IPDR NetFlow Statistics dashboard from this example.  
 
 :::info Navigation
-
-:point_right: Login as User name: `dotuser` and
-Password: `ipdr@@123`
-
+:point_right: Log in as `dotuser`. See [The dotuser ID](/docs/prodguide/ipdr/specialuser) for the default password and how to change it.
 :::
 
 You can see the following screen of IPDR NetFlow Statistics Dashboard.

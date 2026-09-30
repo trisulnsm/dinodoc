@@ -74,7 +74,7 @@ Please contact Unleash Networks for a POC.
 The disk sizing depends on a number of factors 
 
 - Is the ISP a residential or a commercial ISP ? 
-- If the ISP using CGNAT ?
+- Is the ISP using CGNAT?
 - The traffic profile 
 - If the ISP is using Trisul IPDR AAA integration 
 

@@ -8,7 +8,7 @@ Trisul IPDR will be of interest mainly to ISPs who seek to comply with regulator
 
 However, it is not exclusive for ISPs, various stakeholders also utilize Trisul IPDR including LEAs, Network Admins, Security teams etc.
 
-The name for this feature is **Trisul IPDR** ( IP Data Record)
+The name for this feature is **Trisul IPDR** (Internet Protocol Detail Record).
 
 :::warning[Compliance note]
 Every jurisdiction around the world may have their own logging mandates. This page cites the DoT India mandate as an example, however the product can be used in any jurisdiction where similar mandates are found. 
@@ -39,12 +39,12 @@ following information on a per flow basis.
 - NAT source IPv4 or IPv6 address (if NAT is used)
 - Source port
 - NAT source port (if NAT is used)
-- Destination IPv4 of IPv6 address
+- Destination IPv4 or IPv6 address
 - Destination Port
 
 The compliance requirement calls the above information IPDR and NAT
-Syslog. Ideally they should be combined into one simple comprehensive
-per-flow log. This is what Trisul IPDR provides.
+Syslog. Ideally they should be combined into a single per-flow log.
+This is what Trisul IPDR provides.
 
 ## Obtaining Data Telemetry
 

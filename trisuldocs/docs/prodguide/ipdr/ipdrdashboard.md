@@ -6,27 +6,27 @@ To view IPDR Dashboard,
 
 :::info Navigation
 
-:point_right: Login as User name: `dotuser` and password. 
+:point_right: Log in as `dotuser`. See [The dotuser ID](/docs/prodguide/ipdr/specialuser) for the default password and how to change it.
 
 :::
 
-Once logged in and the [Trisul IPDR Query form](submit-queries) is submitted, You can view the Trisul IPDR Dashboard and Menu.
+Once logged in and the [Trisul IPDR Query form](/docs/prodguide/ipdr/submit-queries) is submitted, You can view the Trisul IPDR Dashboard and Menu.
 
 This is the example of the logged in screen that you will be taken to.
 
-   ![](images/ipdrpagelogin.png)
+![](images/ipdrpagelogin.png)
 
 ### IPDR Menu
 
-     ![](images/ipdrlogin2.png)
+![](images/ipdrlogin2.png)
 
-   On the Left side of the screen you can find the IPDR menu where you can navigate to:
+On the Left side of the screen you can find the IPDR menu where you can navigate to:
 
-1) [Query Logs](submit-queries)
+1) [Query Logs](/docs/prodguide/ipdr/submit-queries)
 
 2) IPDR Dashboard
 
-3) [IPDR Statistics](ipdrstatistics)
+3) [IPDR Statistics](/docs/prodguide/ipdr/ipdrstatistics)
 
 4) Show all. Click on Show all to view all other tools and dashboards for analysis.
 

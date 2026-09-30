@@ -1,4 +1,4 @@
-# FTP Settings
+# IPDR Settings
 
 The IPDR Settings page allows you to change two things.
 
@@ -33,12 +33,12 @@ Click **Edit** to access the form as shown below.
 | Username |   | SFTP user name|
 | Private Key  | /usr/local/etc/trisul-hub/ipdrpv.key  | SFTP user private key file path. Use the full file path including the directory name. We recommend you put the private key file in <br/>`/usr/local/etc/trisul-hub/ipdrpv.key` <br/>Ensure the file is readable by the user `trisul.trisul`  See the section [Configuring FTP](#configuring-the-ftp-server) below for instructions on how the private key is generated|
 | Directory  |         | The remote directory where the results file are uploaded|
-| Download File Size | 100M    | Results file less than this number will be available for download on the [IPDR Dashboard](ipdrdashboard) page itself|
+| Download File Size | 100M    | Results file less than this number will be available for download on the [IPDR Dashboard](/docs/prodguide/ipdr/ipdrdashboard) page itself|
 | NAT Syslog Port   | 514     | Port number where NAT translation syslog as well as AAA logs will be sent|
 
 
 :::note restart ipdr service
-Upon changing these parameters. Restart the trisul_ipdr service.
+After you change these parameters, restart the `trisul-ipdr` service.
 
 ```bash
 systemctl restart trisul-ipdr
@@ -87,17 +87,18 @@ On the Trisul-Hub node check if the server works. You can use the ssh
 command to test.
 
 ```bash
-# ensure username@ip matches the FTP settings 
+# use the Username and Server from the FTP Settings form
 
-ssh -i /usr/local/etc/trisul-hub/id_trisul_ipdr  dotuser@10.179.210.1 
+ssh -i /usr/local/etc/trisul-hub/id_trisul_ipdr <username>@<sftp-server>
 
-# if it logs in we are set 
+# if the login succeeds, the SFTP settings are working
 ```
+<!-- TODO(verify): the Private Key field default is /usr/local/etc/trisul-hub/ipdrpv.key but this section creates id_trisul_ipdr; confirm which name to use (F-06-83) -->
 -----
 
 ## Set Mode : Manually Set IPDR Mode
 
-If you have skipped the [Mode Chooser Wizard](install) at time of first login, you can switch Trisul to IPDR mode at anytime by following the steps on this page. 
+If you have skipped the [Mode Chooser Wizard](/docs/prodguide/ipdr/install) at time of first login, you can switch Trisul to IPDR mode at anytime by following the steps on this page. 
 
 :::info navigation
 :point_right: Login as `admin` and select Context:default &rarr; Admin Tasks &rarr; IPDR Settings

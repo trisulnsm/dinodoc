@@ -2,7 +2,7 @@
 sidebar_position: 13
 ---
 
-# BadFellas Plugin
+# Badfellas Plugin
 
 The Badfellas plugin checks your network traffic against millions of indicators to detect malicious activity.
 
@@ -18,11 +18,11 @@ Matches IPs against blacklisted IPs
 
 **Domain**
 
-Matches blacklisted domain names, even if no response was received, or hidden in DNSrecords
+Matches blacklisted domain names, even if no response was received, or hidden in DNS records
 
 **HTTPHost**
 
-Checks if a HTTPhost is blacklisted. Priceless when flagging shared hosts like badun.blogspot.com
+Checks if an HTTP host is blacklisted. Useful for flagging shared hosts like badun.blogspot.com
 
 **SSLHost**
 
@@ -86,7 +86,7 @@ The Badfellas package installs stub copies of the following blacklists. These fe
 | URLs                     | [Ransomware Domain URLs](https://ransomwaretracker.abuse.ch/blocklist/)<br/>Show list of ransomware urls                                                  |       
 | SSL Blacklist            | [SSLBlacklist](https://sslbl.abuse.ch/)<br/>Contains list of bad SSL certificates                                                                        |       
 | Domains                  | Contains top 1 million domains list                                                                                                                   |       
-| TOR nodes                | [TORnodes](https://www.dan.me.uk/torlist/?full)<br/>Checks if any of your network hosts are involved inTORproxy activitiy                              |       
+| TOR nodes                | [TORnodes](https://www.dan.me.uk/torlist/?full)<br/>Checks if any of your network hosts are involved in TOR proxy activity                              |       
 | AlienVault IP Reputation | Flags IPs with poor reputation. This list includes scanners and other mischief                                                                        |       
 | SSL Blacklist            | Hashes of malicious SSL certificates sourced from sslbl.abuse.ch    |       
 
@@ -94,7 +94,7 @@ The Badfellas package installs stub copies of the following blacklists. These fe
 
 The plugin will automatically download a fresh database at a set schedule. You can control when and how frequently this database is updated by modifying the `Frequency` parameter in the rules.xml file. The default setting is 1 update every day. All feeds are updated at the same frequency.
 
-```bash
+```xml
 <Run>
     <RunAt>0200</RunAt>
     <Frequency>86400</Frequency>
@@ -107,7 +107,7 @@ To view the status of feed updates, whether the downloads were successful or not
 
 :::info navigation
 
-:point_right: Login as `admin`, then select Webadmin &rarr; Manage &rarr;  Plugin Data Updates
+:point_right: Log in as `admin`, then select Web Admin &rarr; Manage &rarr; Plugin Data Updates
 
 :::
 
@@ -124,11 +124,11 @@ rpm -Uvh trisul_badfellas-1.0.153-0.el5.x86_64.rpm
 dpkg -i trisul_badfellas-1.0.153.amd64.deb
 ```
 
-##### Upgrading
+### Upgrading
 
-Simply uninstall the old package and reinstall the new package.
+Uninstall the old package and install the new package.
 
-#### A Sample Install
+### A Sample Install
 
 When you install you should get an output like the following.
 
@@ -156,15 +156,15 @@ dpkg -r  trisul_badfellas
 
 ### Starting
 
-Once installed, the plugin will be effective the next time you restart Trisul.
+The plugin takes effect after you restart the context: run `trisulctl_probe restart context <context_name>@<probe_name>`, or stop and start the Probe from **Context: default → Admin Tasks → Start/Stop Tasks**.
 
 ## Adding Custom Indicators
 
-#### Step 1 : Create Tab Separated Indicator file
+### Step 1: Create a tab-separated indicator file
 
 Using external mechanism place your custom feed in a Tab Separated file with the following format `<FEEDNAME><TAB><IP/DOMAIN/URL><TAB><DESCRIPTION>`
 
-#### Step 2 : Add your File as a Source Feed for Badfellas Automatic Updates
+### Step 2: Add your file as a source feed for Badfellas automatic updates
 
 Locate the feed `rules.xml` file [as described in feeds](#feeds)
 

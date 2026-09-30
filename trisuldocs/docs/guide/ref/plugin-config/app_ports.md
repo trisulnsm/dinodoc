@@ -1,11 +1,11 @@
-# APP Ports
+# App Ports
 
 ## File Location
-`
+~~~text
 /usr/local/etc/trisul-probe/domain0/probe0/context0/PI-9999CCCC-125E-48D0-8AC9-A7E3AD2F60FD.xml
-`
+~~~
 
-```bash
+```xml
 <TrisulPluginConfiguration>
     <Policy>
         <description>Server ports for specific hosts </description>
@@ -17,7 +17,6 @@
         </AppPolicyItem>
     </Policy>
 </TrisulPluginConfiguration>
-~                                 
 ```
 
 ### Policy
@@ -32,8 +31,8 @@
 
 | Parameters    | Defaults | Description |
 | ------------  | -------- | ----------- |
-| ServerPorts   |          |             |
-| Subnets       |          |             |
+| ServerPorts   | list of ports   | List of ports. Eg `40000,50000~51000,8378`              |
+| Subnets       | a single subnet | A range of IP to which the above server ports are used. |
 
 By default, the app ports are selected using the following formula. If
 TCP, the client port is the side with the initial SYN packet. Otherwise

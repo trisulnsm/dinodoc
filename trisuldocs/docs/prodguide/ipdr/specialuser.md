@@ -1,14 +1,14 @@
 # The dotuser ID
 
-A special user called `dotuser` is automatically created for IPDR. Use this to login. 
-
+Trisul IPDR creates a special user called `dotuser` automatically. Compliance agents use this login to submit IPDR queries and download the results.
 
 ## The dotuser
 
-When you login with the `dotuser` ID you are taken to a purpose built IPDR Dashboard where you submit and view queries in a easy clutter free manner.
+When you log in as `dotuser`, Trisul opens the IPDR Dashboard. From there you can submit queries and view their results.
 
+The default password for `dotuser` is sent with your Trisul IPDR installation details. If you don't have it, contact Unleash Networks.
 
-The default password is `[you should have received it or contact us via email]` 
+<!-- TODO(verify): confirm how admins obtain the default dotuser password (F-06-75) -->
 
 
 :::warning Change password for dotuser on first login

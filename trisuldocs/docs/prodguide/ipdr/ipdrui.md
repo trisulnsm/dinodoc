@@ -1,6 +1,6 @@
 # Getting familiar with the UI
 
-This section provides an overview of the essential user interface elements that facilitate efficient query management in Trisul. Let's get familiar with features such as pagination, query summaries, download options, resubmit button, and search functionality to locate specific queries, and easily download the reports.
+This page describes the user interface elements you use to manage IPDR queries: pagination, the query summary, page navigation, download options, the Resubmit button and the search bar.
 
 ![](images/ipdruielements.png)  
 *Figure: IPDR UI Elements*
@@ -37,7 +37,7 @@ Below the table of submitted queries, you can navigate to the desired page using
 **First page**: Click the double left arrow button to navigate to the first page.  
 **Last page**: Click the double right arrow button to navigate to the last page.  
 
-This allows you to easily navigate through multiple pages of submitted queries and get an overview of the query status for each page.
+Use these controls to move through the pages of submitted queries and see the query status for each page.
 
 ## Download 
 

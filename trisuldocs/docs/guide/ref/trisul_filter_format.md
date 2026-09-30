@@ -2,18 +2,19 @@
 
 Several features of trisul require you to be able to construct rules.
 
-Some examples of rules :  
-\* Traffic between 192.168.1.8 and 192.168.1.89  
-\* HTTP traffic to and from China  
-\* Traffic on IP 192.168.1.8 and between ports 6000-7000  
-\* Traffic other than port 80 and other than on subnet 192.168.2.0/24
+Some examples of rules:
 
-Some of the areas in Trisul where you need to specify rules are :  
-\* Specify rule chains for full content storage policy  
-\* Create rule based counter groups for business apps  
-\* Create key set counter groups to map range of keys to an
-application  
-\* Flow taggers to mark flows that matched a rule
+- Traffic between 192.168.1.8 and 192.168.1.89
+- HTTP traffic to and from China
+- Traffic on IP 192.168.1.8 and between ports 6000-7000
+- Traffic other than port 80 and other than on subnet 192.168.2.0/24
+
+Some of the areas in Trisul where you need to specify rules are:
+
+- Rule chains for the full content storage policy
+- Rule based counter groups for business apps
+- Key set counter groups that map a range of keys to an application
+- Flow taggers that mark flows that match a rule
 
 These rules are specified in Trisul Filter Format, explained below.
 
@@ -70,7 +71,7 @@ The hosts are keyed by hex digits separated by a period C0.A8.01.01 =
 So our expression is  
 
 ```
-{4CD742B1-C1CA-4708-BE78-0FCA2EB01A86}=C0.A8.01.02,C0.A8.01.0A,C0.A8.01.64\~C0.A8.01.C0  
+{4CD742B1-C1CA-4708-BE78-0FCA2EB01A86}=C0.A8.01.02,C0.A8.01.0A,C0.A8.01.64~C0.A8.01.C0
 ```
 
 ### Countries except US,CA
@@ -78,7 +79,7 @@ So our expression is
 You need the trisul\_geo plugin to enable country / asn metering.
 
 ```
-{00990011-44BD-4C55-891A-77823D59161B}\!us,ca  
+{00990011-44BD-4C55-891A-77823D59161B}!us,ca
 ```
 
 Note that the GUID `00990011-44BD-4C55-891A-77823D59161B` represents the Country counter group.
@@ -93,5 +94,5 @@ Building on the above examples, if you want to filter
 - Traffic on ports 80,81,82,83 only on non USA or Canada traffic
 
 ```
-{C51B48D4-7876-479E-B0D9-BD9EFF03CE2E}=p-0050,p-0051,p-0052,p-0053&{00990011-44bd-4c55-891a-77823d59161b}\!us,ca  
+{C51B48D4-7876-479E-B0D9-BD9EFF03CE2E}=p-0050,p-0051,p-0052,p-0053&{00990011-44BD-4C55-891A-77823D59161B}!us,ca  
 ```

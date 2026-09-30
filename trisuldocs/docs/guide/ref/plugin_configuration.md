@@ -1,7 +1,7 @@
 # Plugin Configuration
 
 Trisul consists of two base configs - the
-[Trisul-Probe](trisulconfig) config file and the
+[Trisul-Probe](/docs/guide/ref/trisulconfig) config file and the
 [Trisul-Hub](/docs/guide/ref/trisulhubconfig) config file. If you wish to finely
 control how various metrics are computed you can tweak the following
 Plugin configuration files.
@@ -14,13 +14,13 @@ Plugin configuration files.
 
 ## Plugin config editor
 
-The config file that controls how IP’s are metered is called
+The config file that controls how IPs are metered is called
 *PI-01010101-125E-48D0-8AC9-A7E3AD2F60FD.xml*. Use **cfgedit** to locate
 and edit these plugin config files.
 
 Type the following command to bring up the editor.
 
-```language-bash
+```bash
 sudo /usr/local/share/trisul-probe/cfgedit 
 ```
 
@@ -28,13 +28,21 @@ Then you can select the configuration to open the configuration file.
 Set the shell variable `$EDITOR` to your favorite text editor, or the
 tool opens the config file in `nano`
 
+### Apply the change
+
+After you save a plugin config file, restart the context so the change takes effect. Run `trisulctl_probe restart context <context_name>@<probe_name>`, or stop and start the Probe from **Context: default → Admin Tasks → Start/Stop Tasks**.
+
+:::note
+The file paths on these pages are for the default context (`domain0/probe0/context0`). For a context named `data1`, replace `context0` with `context_data1`.
+:::
+
 ### Examples
 
 Usage: `cfgedit [domain-name] [probe-id] [context-name]`
 
 Some examples
 
-```language-bash
+```bash
 # to edit configs for default context 
 sudo /usr/local/share/trisul-probe/cfgedit 
 
@@ -45,28 +53,26 @@ sudo /usr/local/share/trisul-probe/cfgedit domain0 probe1 context_nf1
 sudo /usr/local/share/trisul-probe/cfgedit context_firewall
 ```
 
-<asciinema-player src="cast/cfgedit.cast" poster="npt:0:6" rows="30" loop="loop"></asciinema-player>
-
 ## List of all available configuration files
 
 Here is a list of all the current plugin configuration options.
 
-| Name                                              | Description                                                    |
-| ------------------------------------------------- | -------------------------------------------------------------- |
-| [Hosts](plugin_configuration#hosts)               | IP address based metering                                      |
-| [Base Domains](plugin_configuration#base-domains) | DNS Base Domains metering (rules, regexes, etc)                |
-| [Netflow](/docs/guide/ref/netflow-config)               | NETFLOW/IPFIX policy. Link to a separate reference document.   |
-| [SFlow](plugin_configuration#sflow)               | SFLOW policy.                                                  |
-| [TCP Flows](plugin_configuration#tcp-flows)       | TCP Flow metering, subnets, etc                                |
-| [UDP Proto](plugin_configuration#udp-protocol-dissector)       | UDP Protocol parsing and metering                              |
-| [TCP Proto](/docs/guide/ref/plugin_configuration#udp-protocol-dissector)       | TCP Protocol parsing and metering                              |
-| [App Ports](plugin_configuration#app-ports)       | Application counting, special server ports                     |
-| [Mac](plugin_configuration#mac)                   | MAC layer, directional, broadcast metering etc                 |
-| [IP Tunnels](plugin_configuration#ip-tunnels)     | Used for 3GPP mobility (contact us)                            |
-| [DNS](plugin_configuration#dns)                   | Control DNS extraction, resource, Full Text Search, etc        |
-| [Http Hosts](plugin_configuration#http-hosts)     | HTTP Host header depth setting                                 |
-| [Geo](/docs/guide/ref/plugin-config/geoasn)                    | Controls Geo plugin, country and ASN metering rules            |
-| [Badfellas](/docs/guide/ref/plugin-config/badfellas)           | Controls Badfellas lists, how they are refreshed, custom rules |
+| Name                                                            | Description                                                    |
+| --------------------------------------------------------------- | -------------------------------------------------------------- |
+| [Hosts](/docs/guide/ref/plugin-config/hosts)                    | IP address based metering                                      |
+| [Base Domains](/docs/guide/ref/plugin-config/basedomain)        | DNS Base Domains metering (rules, regexes, etc)                |
+| [Netflow](/docs/guide/ref/netflow-config)                       | NETFLOW/IPFIX policy                                           |
+| [SFlow](/docs/guide/ref/plugin_configuration#sflow)             | SFLOW policy                                                   |
+| [TCP Flows](/docs/guide/ref/plugin-config/tcpflow)              | TCP Flow metering, subnets, etc                                |
+| [UDP Proto](/docs/guide/ref/plugin-config/udp_protocol_disector) | UDP Protocol parsing and metering                             |
+| [TCP Proto](/docs/guide/ref/plugin-config/tcp_based_metering)   | TCP Protocol parsing and metering                              |
+| [App Ports](/docs/guide/ref/plugin-config/app_ports)            | Application counting, special server ports                     |
+| [Mac](/docs/guide/ref/plugin-config/mac)                        | MAC layer, directional, broadcast metering etc                 |
+| [IP Tunnels](/docs/guide/ref/plugin-config/iptunnels)           | Used for 3GPP mobility (contact us)                            |
+| [DNS](/docs/guide/ref/plugin-config/dns)                        | Control DNS extraction, resource, Full Text Search, etc        |
+| [Http Hosts](/docs/guide/ref/plugin-config/http_hosts)          | HTTP Host header depth setting                                 |
+| [Geo](/docs/guide/ref/plugin-config/geoasn)                     | Controls Geo plugin, country and ASN metering rules            |
+| [Badfellas](/docs/guide/ref/plugin-config/badfellas)            | Controls Badfellas lists, how they are refreshed, custom rules |
 
 ## Hosts
 
@@ -94,7 +100,7 @@ Application Names.
 | Parameters    | Defaults                        | Description                                                                                                                                                                       |
 | ------------- | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Rules         | string of regex to app names    | The rules section map domain regexes in Google RE2 format to application names. You can add your own rules to this list and they will be picked up when Trisul-Probe is restarted |
-| StaticIPRules | maps static IPs to applications | Most useful in corporate or TELCO settings when you have a fixed mapping of IP addressess to applications. Mostly used by caches                                                  |
+| StaticIPRules | maps static IPs to applications | Most useful in corporate or TELCO settings when you have a fixed mapping of IP addresses to applications. Mostly used by caches                                                  |
 
 ### Specifying rules
 
@@ -107,7 +113,7 @@ Application Names.
 
 <!-- end list -->
 
-```language-xml
+```xml
 <Rule>     <k> WHATSAPP        </k><x>  whatsapp                                         </x></Rule>
 <Rule>     <k> FACEBOOK        </k><x>  (facebook|fbcdn|fb\.me)                          </x></Rule>
 <Rule>     <k> YOUTUBE         </k><x>  (youtube|ytimg|googlevideo|ggpht|gvt1\.com)      </x></Rule>
@@ -132,7 +138,7 @@ How TCP Sessions are metered.
 | Parameters   | Defaults  | Description                                                       |
 | ------------ | --------- | ----------------------------------------------------------------- |
 | SubnetOnly   | 0.0.0.0/0 | Only count flows in this subnet.                                  |
-| ShortUpdates | false     | Only count payloads \> 200 bytes and dont measure payload counts. |
+| ShortUpdates | false     | Only count payloads \> 200 bytes and don't measure payload counts. |
 
 ## UDP Protocol dissector
 
@@ -190,7 +196,7 @@ Controls how MAC addresses are metered.
 | -------------- | -------- | ------------------------------------------ |
 | SampleRate     | 1        | Process only 1 in X packets                |
 | MeterMACPairs  | true     | Meter MAC pairs every single Source-\>Dest |
-| MeterBroadcast | true     | Meter broadcast addresess                  |
+| MeterBroadcast | true     | Meter broadcast addresses                  |
 
 ## IP TUNNELS
 

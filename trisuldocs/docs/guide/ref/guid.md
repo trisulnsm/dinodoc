@@ -1,12 +1,6 @@
 # Well known GUIDs
 
-A GUID is a “Globally Unique Identifier” string used all over Trisul.
-
-In case you have never used them before, GUIDS are nothing but a string
-of the form ``{889900CC-0063-11A5-8380-FEBDBABBDBEA}`` This long
-string braces included, actually represents a 128 bit number that is
-guaranteed to be unique globally. We use this string in Trisul to
-prevent name collisions.
+A GUID (Globally Unique Identifier) is a string of the form `{889900CC-0063-11A5-8380-FEBDBABBDBEA}`, used all over Trisul. The string, braces included, represents a 128-bit number that is unique globally. Trisul uses GUIDs to prevent name collisions.
 
 You may need to get hold of these GUIDs when working with
 
@@ -19,9 +13,9 @@ You may need to get hold of these GUIDs when working with
 To create a new GUID you can use a tool available in the Trisul Probe
 package
 
-```language-bash
+```bash
 $ trisulctl_probe testbench guid 
-`{889900CC-0063-11A5-8380-FEBDBABBDBEA}`
+{889900CC-0063-11A5-8380-FEBDBABBDBEA}
 ```
 
 ## Common GUIDS
@@ -91,7 +85,7 @@ Flow like artifacts.
 ## Alert Groups
 
 If you are writing a LUA script and want to generate an alert without
-having to create your own alert group - just use the *User Alerts*
+having to create your own alert group, use the *User Alerts*
 group.
 
 | guid                                     | name                                           |
@@ -120,7 +114,7 @@ FTS groups are full text search documents in parseable form.
 | --- | ---------------------------------------- | ----------------------------- |
 | 1   | `{9FEB8ADE-ADBB-49AD-BC68-C6A02F389C71}` | SSL Certificate FTS           |
 | 2   | `{28217924-E7A5-4523-993C-44B52758D5A8}` | HTTP Header FTS               |
-| 2   | `{09B305DF-078C-4B9E-8E2F-EA64B7326880}` | Full text dump of DNS records |
+| 3   | `{09B305DF-078C-4B9E-8E2F-EA64B7326880}` | Full text dump of DNS records |
 
 ## Protocols
 

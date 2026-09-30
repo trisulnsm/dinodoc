@@ -1,19 +1,9 @@
 
-# For ISPs
+# Trisul ISP Analytics Guide
 
-# Introduction
+Trisul ISP Analytics adds peering, prefix, AS path and country analytics to flow-based monitoring. It combines NetFlow from your gateway routers with the BGP routes that Trisul collects as a passive I-BGP peer.
 
-Several ISPs have deployed Trisul in their networks to gain deep
-insights into their peering and routing efficiencies. In addition to the
-normal metrics, device, and interface level drilldowns made available in
-Trisul Network Analytics.
-
-import DocCardList from '@theme/DocCardList';
-
-<DocCardList />
-
-The Trisul ISP configuration adds the
-following.
+Trisul ISP Analytics adds the following:
 
 1. Peering Analytics
 2. Prefixes IPv4 and IPv6
@@ -27,46 +17,46 @@ following.
 ### Network integration diagram
 
 The following diagram is an overview of integration points (some are
-optional) for a Netflow based ISP analytics solution.
+optional) for a NetFlow-based Trisul ISP Analytics deployment.
 
 ![](images/network_diagram.png)  
 Network Integration Diagram
 
-The following data source ingestion are supported. Except the Netflow
-others are optional.
+Trisul ISP Analytics ingests the following data sources. Only NetFlow is required.
 
 | Data source |Notes|
 | --- | -- |
-| Netflow    | This is mandatory. All versions of Netflow/JFlow/IPFIX/Sflow/Netstream are supported. ISP Netflow best practices must be followed such as sampling and ingress policies |
-| SNMP       | Optional: for SNMP interface traffic. Useful to add on dashboards along with Netflow interface |
+| NetFlow    | Required. All versions of NetFlow, JFlow, IPFIX, sFlow and NetStream are supported. Follow ISP NetFlow best practices, such as sampling and ingress policies. |
+| SNMP       | Optional: for SNMP interface traffic. Useful to add on dashboards along with NetFlow interface traffic. |
 | BGP        | Optional: if customer requires Route Analytics and Peer vs Origin AS |
-| DNS        | Optional: if customer needs the OTT Analytics App. TO identify content such as Amazon,Netflix,Youtube,Whatsapp, Insta etc|
-| Radius/AAA | Optional: If customer wants to map IP address to dynamically subscriber ID. Needs real time syslog capability from the AAA side. |
+| DNS        | Optional: needed for the OTT Analytics app, to identify content such as Amazon, Netflix, YouTube, WhatsApp and Instagram. |
+| Radius/AAA | Optional: to map IP addresses to subscriber IDs dynamically. Needs real-time syslog from the AAA side. |
 
-## Features of Trisul ISP
+## Features of Trisul ISP Analytics {#features-of-trisul-isp}
 
-Apart from the usual Trisul Network Analytics features, our ISP Module
-has several special monitoring features. They can be grouped as
+In addition to the NetFlow monitoring features, Trisul ISP Analytics provides the following.
 
-| Field             | Description|
+| Feature           | Description |
 | ----------------- | --------- |
-| AS Analytics      | Autonomous system traffic monitoring. AS to AS traffic matrix, AS drilldown. Flexible AS Monitoring at global level, per router, and per interface.Peer AS monitoring.Use case is ISP can keep track of AS traffic flows at minute level |
+| AS Analytics      | Autonomous system traffic monitoring. AS to AS traffic matrix, AS drilldown. Flexible AS monitoring at global level, per router and per interface. Peer AS monitoring. Use case: an ISP can track AS traffic flows at minute level. |
 | Prefix Analytics  | Prefixes are important for traffic engineering purposes. Like AS analytics, Prefix analytics is also available at global level, per router, and per interface |
-| Routing           | Full BGP support.Trisul includes a high performance built in route receiver that can peer with dozens of gateways.AS Path analytics tells you busiest paths and segments for both upstream and downstream customers.AS Path analytics is available at global level (busiest route in ISP Network) and also at per-interface and per-router level.Powerful graphical and tabular tools are available. ISP can track Peer AS and Origin AS separately |
+| Routing           | Trisul includes a built-in BGP route receiver that can peer with dozens of gateways. AS Path analytics shows the busiest paths and segments for upstream and downstream customers, globally (the busiest route in the ISP network), per router and per interface. Peer AS and Origin AS are tracked separately. |
 | Country           | Main use case is to see traffic egressing country on optimal traffic route east or west coast depending on final destination. Per Country in/out traffic is provided again at global level, per router, and per interface granularity.|
 | Drilldowns        | The above mentioned AS,Prefix,Country analytics can also be done in a drilldown method. Rather than starting with a router/interface you can start with a AS Number and see where the traffic is coming from for that AS |
-| Device Monitoring | Using the powerful Routers and Interfaces tool customers can track any router and any interface and drilldown to usage|
+| Device Monitoring | Use the [Routers and Interfaces](/docs/guide/ug/netflow/routers_and_interfaces) tool to track any router and interface and drill down to usage. |
 
-## BGP and Netflow
+## BGP and NetFlow
 
 The Trisul ISP feature is enabled in the starter configuration by mixing
-Netflow and BGP.
+NetFlow and BGP.
 
 ![](images/trisul-bgp.png)
 
-- To Configure BGP in Trisul, Refer [Trisul-BGP](bgp)
+- To configure BGP, see [Configuring BGP](/docs/prodguide/isp/bgp).
+- To install the apps and dashboards for ISP analytics, see [ISP Apps and Dashboards](/docs/prodguide/isp/isapps#install-trisul-apps).
 
-<!-- -->
+## Pages in this guide
 
-- To install Trisul APPs and dashboards specific to ISP analytics, Refer
-  [ISP Analytics](isapps#install-trisul-apps)
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

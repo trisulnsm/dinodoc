@@ -1,6 +1,6 @@
 # Using a tape archive 
 
-For very large ISPs, storing logs in tape archives is a very good value proposition.  This document explains how you can setup Trisul IPDR to use tape archives. 
+For very large ISPs, tape archives can be a cost-effective way to store logs. This page explains how to set up Trisul IPDR to use tape archives.
 
 
 
@@ -18,7 +18,7 @@ For very large ISPs, storing logs in tape archives is a very good value proposit
 
 
 
-# Storage pool architecture
+## Storage pool architecture
 
 The [Manage Storage](/docs/guide/ag/admintasks/storage_status#tape) section of the Admin Guide explains the Storage Pool concept as used by Trisul. Hot data is stored in the pool called Oper, then it moves to Ref, then to a series of Archives.  
 
@@ -40,7 +40,7 @@ When this is enabled, old slices are remembered in the index and tagged with the
 
 ## Allocate a restore point
 
-Allocate a disk area that can store atleast a week of data. For example if you generate 500GB of logs per day, allocate a 4TB disk.
+Allocate a disk area that can store at least a week of data. For example if you generate 500GB of logs per day, allocate a 4TB disk.
 
 Mount or softlink the restore point to  a directory called `tape` in the meters directory.
 
@@ -69,7 +69,7 @@ When the customer wants to query for logs from a particular date say Feb 10, 202
 ### Locate the slices for day 
 
 :::info navigation 
-:point_right: Login as `admin`, Go to Context:default0 &rarr; Admin Tasks &rarr; Storage status
+:point_right: Login as `admin`, Go to Context:default &rarr; Admin Tasks &rarr; Storage status
 :::
 
 ![](images/slices.jpeg)  
@@ -77,7 +77,7 @@ When the customer wants to query for logs from a particular date say Feb 10, 202
 
 Once you have navigated to the Storage Status page and scrolled to the bottom to view the data slices for the selected storage pool. In the top-right corner of the slices section, you'll find the *Search Slice* tool. Enter the desired date in the search bar, and the system will display all data slices for that date, regardless of the storage pool they're stored in.
 
-For instance, to find all slices for February 10th, simply enter "10 Feb" in the search bar. 
+For instance, to find all slices for February 10th, enter "10 Feb" in the search bar. 
 
 ![](images/datesearchslice.jpeg)  
 *Figure: Showing sample of slices searched for a particular date*

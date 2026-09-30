@@ -2,9 +2,6 @@
 
 This page documents the **Trisul Hub configuration** file, which controls how the Hub stores data, manages retention, runs background database tasks, and exposes query services.  
 
-At this point, Trisul is already installed and operational.
-You are here because you need to **inspect or adjust Hub-level behavior**, typically for storage planning, retention tuning, logging, or large-scale deployment optimization.
-
 ## Overview
 
 All Hub configuration parameters are defined in a single XML file named `trisulHubConfig.xml`.
@@ -36,17 +33,17 @@ Also see [trisulProbeConfig.xml](/docs/guide/ref/trisulconfig) for editing Trisu
 
 The Hub configuration file is organized into logical sections. Each section controls a specific part of the Hub’s behavior.
 
-Click a section below to view the parameters defined within it.
-
-| Section     | What part of trisul does it configure                   |
-| ----------- | ------------------------------------------------------- |
-| App         | Core Hub process behavior and basic runtime setup       |
-| Logging     | Log generation for Hub services, including rotation, size limits, and log levels    |
-| StatsEngine | Database cluster tuning                                 |
-| Server      | TRP server settings used for query handling                               |
-| Probes      | List of probes allowed to connect and mapping to layers |
-| [IPDR](#ipdr) | IPDR flow collection and compliance-related processing        |
-| DBTasks     | Background database jobs such as cleanup, archiving, and rollups         |
+| Section                                           | What part of Trisul it configures                                               |
+| ------------------------------------------------- | ------------------------------------------------------------------------------- |
+| [App](#app)                                       | Core Hub process behavior and basic runtime setup                               |
+| [Logging](#logging)                               | Log generation for Hub services, including rotation, size limits and log levels |
+| [StatsEngine](#statsengine)                       | Database storage and retention policy, including slice tiers and archiving      |
+| [Flushers](#flushers)                             | Number and endpoints of backend flusher processes                               |
+| [Server](#server)                                 | TRP server settings used for query handling                                     |
+| [Probes](#probes)                                 | List of probes allowed to connect and mapping to layers                         |
+| [DBTasks](#dbtasks)                               | Background database jobs such as archiving, summaries and caching               |
+| [IPDR](#ipdr)                                     | IPDR flow collection and compliance-related processing                          |
+| [Advanced DB Parameters](#advanced-db-parameters) | Flow database index and compression tuning                                      |
 
 
 ## App
@@ -55,7 +52,7 @@ Click a section below to view the parameters defined within it.
 | ------------- | ---------------------- | ------------------------------------------------------------------ |
 | User          | trisul.trisul                                                              | Which user/group should trisul run as after dropping root privileges.  |
 | TempFolder    | /tmp                                                                       |   Temporary directory used by the Hub for intermediate files and temporary processing data.   | 
-| DBRoot        | /usr/local/var/lib/trisul-hub/ domain0/hub0/context0                       | The base directory under which Trisul stores all its data.   |
+| DBRoot        | /usr/local/var/lib/trisul-hub/domain0/hub0/context0                       | The base directory under which Trisul stores all its data.   |
 | TrafficDBRoot | /usr/local/var/lib/trisul-hub/domain0/hub0/context0/meters                    | The directory under which Trisul stores traffic and flow statistics.  |
 | ConfigDB      | /usr/local/var/lib/trisul-hub/domain0/hub0/context0/config/TRISULCONFIG.SQDB | Location of the configuration database.  |
 | BinDirectory  | /usr/local/bin                                                             | Where Trisul looks for executable binaries |
@@ -63,7 +60,7 @@ Click a section below to view the parameters defined within it.
 | HubID         | FLUSHER HUB0                                                               |   Identifier used to identify this Hub instance.          |
 | HubDesc       | This hub0 flusher and trpd server                                          |  Human-readable description of the Hub instance and the services it provides.           |
 | LicenseFile   | /usr/local/etc/trisul-hub/LicenseKey.txt                                   | Location of the license file. |
-| DebugMode     | false                                                                      | Debug mode is used when trying to develop LUA probe scripts.<br/> If `DebugMode == True` then all streaming metrics from all probes are just sunk to `/dev/null`. Hence this is used for probe testing |
+| DebugMode     | false                                                                      | Debug mode is used when trying to develop LUA probe scripts.<br/> If `DebugMode == True` then all streaming metrics from all probes are sunk to `/dev/null`. Hence this is used for probe testing |
 
 ## Logging
 
@@ -73,7 +70,7 @@ Logs are arranged in a ring of files, with patterns like `fs`, `ns`, `is` etc.
 | ---|---|---|
 | Logdir               | /usr/local/var/log/trisul-hub/domain0/hub0/context0| Where the log files are stored. |
 | FlusherLogFile       | fs-???.log                | log file pattern.|
-| FlusherLogLevel      | DEBUG                     | All messages higher than this level are logged. The available log levels in order of severity (most severe one first is).<br/>**EMERG**<br/>**FATAL**<br/>**ALERT**<br/>**CRIT**<br/>**ERROR**<br/>**WARN**: this level after a few weeks of smooth running<br/>**NOTICE**<br/>**INFO**<br/>**DEBUG**: Recommended default level |
+| FlusherLogLevel      | DEBUG                     | All messages higher than this level are logged. The available log levels in order of severity (most severe first).<br/>**EMERG**<br/>**FATAL**<br/>**ALERT**<br/>**CRIT**<br/>**ERROR**<br/>**WARN**: this level after a few weeks of smooth running<br/>**NOTICE**<br/>**INFO**<br/>**DEBUG**: Recommended default level |
 | FlusherLogRotateSize | 10000000                   | Max size of each log file|
 | FlusheLogRotateCount | 5                         | Number of files in ring|
 | TrpLogFile           | qs-???.log                | log file pattern.|
@@ -92,7 +89,7 @@ Controls the database storage and retention policy for Trisul.
 | Parameters               | Defaults | Description |
 | ------------------------ | -------- | -------- |
 | FlushBudget              | 30       | Maximum time budget, in seconds, allocated for a flush cycle.          |
-| FTSFlushBudget           | 5        | Trisul FTS(Full Text Resources) need to complete the Flush operation within these many seconds. Since Trisul is a Real time system, we have a total about about 60 seconds for the entire snapshot window to flush. |
+| FTSFlushBudget           | 5        | Trisul FTS (Full Text Search) must complete the flush operation within this many seconds. Because Trisul is a real-time system, there is a total of about 60 seconds for the entire snapshot window to flush. |
 |SQLInsertThresholdMSecs | 60000 |  Time threshold, in milliseconds, used to control SQL insert processing during database operations.              |
 | SQLBusyTimeoutMsecs    | 2 |  Maximum time, in milliseconds, that SQLite waits when the database is busy before returning a busy condition.                  |
 | SQLTRPBusyTimeoutMsecs | 8000  |  Maximum time, in milliseconds, that SQLite waits when the database is busy for TRP query operations.              |
@@ -228,7 +225,7 @@ Controls archiving process
 |Parameter| Defaults | Description |
 | ---------- | -------- | --------------- |
 |DeleteIfTargetDirMissing| False | - Used in `HA-Master-Slave` configuration with shared SAN mount point where the cold archive is stored   . In this architecture, both the `HA-Master` and `HA-Slave` store the hot and or warm data but the archive for cold data is mounted in only the current `HA-Master`. <br/>- Set this parameter to true on the `HA-Slave` node, so that if the archive SAN mount point is not available then the slice is deleted. This is correct behavior because the `HA-Master` which has the SAN mounted will use its normal archiving procedure to move data from hot to cold archive|
-|OfflineArchiveTag||- Enables offline archives.<br/>- The Trisul Archiver process does not delete entries from its database mapping slices to dates and storage pools. Instead it simply tags them with this label. Set this to `tape` if you want to enable Tape archives. This maps to a `tape` subdirectory in the meters area. |
+|OfflineArchiveTag||- Enables offline archives.<br/>- The Trisul Archiver process does not delete entries from its database mapping slices to dates and storage pools. Instead it tags them with this label. Set this to `tape` if you want to enable Tape archives. This maps to a `tape` subdirectory in the meters area. |
 
 ## Flushers
 
@@ -240,13 +237,13 @@ This section controls how many backend flushers are used. The default number of 
 | PIDFile        |          | Where the PID for the running `trisul_flushd` process is stored        |
 | AutoStart      | true     | Automatically start flushd process        
 | ControlChannel |          | Internal IPC channel      |
-| Flushers       |          | For each flusher instance specify the connection and DB instance number. Sequentially from 0...8 (MAX). See below |
+| Flushers       |          | For each flusher instance specify the connection and DB instance number. Numbered sequentially from 0 to 7 (maximum 8 flushers). See below |
 
 ### Flusher Instances
 
 Each `<Flusher>` entry defines **one backend flusher process**. Flushers store data snapshots received from probes into database slices.
 
-The total number of flusher instances must be a multiple of 2. Valid values are **1, 2, 4, or 8**.
+The total number of flusher instances must be a power of two. Valid values are **1, 2, 4 or 8**.
 
 A typical flusher configuration looks like this:  
 
@@ -289,7 +286,7 @@ In multi probe very high volume environments consider using the `dedicated="prob
 </Flusher>
 ```
 
-The `<Conenection dedicated="probe0">` format sets up a dedicated endpoint for a probe and an instance. Without it, all probes would use the same endpoint and the messaging framework would demultiplex it.  A performance setting. 
+The `<Connection dedicated="probe0">` format sets up a dedicated endpoint for a probe and an instance. Without it, all probes would use the same endpoint and the messaging framework would demultiplex it.  A performance setting. 
 
 
 ## Server
@@ -320,7 +317,7 @@ Each probe is a line with the following details.
 | Parameters | Defaults | Description                                             |
 | ---------- | -------- | ------------------------------------------------------- |
 | Layer      |     0     | Layer number allocated to the probe.                    |
-| ProbeID    |    probe0 | Probe ID eg, `probe0` this probe must be authenticated by a CURVE certificate earlier for the domain this hub belongs to. See *trisulctl_hub install probe* |
+| ProbeID    |    probe0 | Probe ID eg, `probe0` this probe must be authenticated by a CURVE certificate earlier for the domain this hub belongs to. See `authorize probe` in [trisulctl_hub](/docs/guide/ref/trisul_hub) |
 
 ## DBTasks
 
@@ -367,7 +364,7 @@ Database optimizer task to pack frequently used keys to speed up long range time
 
 | Parameters  | Defaults | Description                                                             |
 | ----------- | -------- | ----------------------------------------------------------------------- |
-| Enable      | TRUE     | Archiving is enabled                                                    |
+| Enable      | TRUE     | Enables the CacheBuild task                                             |
 | TopKeyCount | 25       | The top 25 keys in each metric can be selected for faster retrieval     |
 | InKeyCount  | 100      | In addition to the toppers, these many keys can be selected for caching |
 
@@ -398,7 +395,7 @@ How IP Address resolution works
 | --------------------- | -------- | -------------- |
 | Enable                | TRUE     | Most important / visible IPs are resolved |
 | Debug                 | TRUE     | Prints resolved IPs for debugging purposes in `t_resolveip.log` file    |
-| Candidates            |          | Number of Top-K items per meter for Internal IPs vs External IPs. Internal IPs are those which fall into your Home |
+| Candidates            |          | Number of Top-K items per meter for Internal IPs vs External IPs. Internal IPs are those in your home networks. |
 | AlwaysRefreshExternal | false    | Do a full refresh of External IPs. Normally, the resolver does not keep trying to resolve IPs that fail to resolve or those IPs which have already been recently resolved. |
 | AlwaysRefreshInternal | false    | Do a full refresh of Internal IPs. Use this option if you have an enterprise with dynamically changing IP → User names. |
 
@@ -408,15 +405,15 @@ The persist storage area collects key related information such as IP to host nam
 
 | Parameters | Defaults | Description          |
 | ---------- | -------- | -------------------- |
-| Enable     | TRUE     | Archiving is enabled |
+| Enable     | TRUE     | Enables the CleanPersist task |
 
 ### CatTrf
 
-A database packer algorithm to speed up database reads and to defragement files.
+A database packer algorithm to speed up database reads and to defragment files.
 
 | Parameters | Defaults | Description          |
 | ---------- | -------- | -------------------- |
-| Enable     | TRUE     | Archiving is enabled |
+| Enable     | TRUE     | Enables the CatTrf task |
 
 ### Rebucketizer
 
@@ -539,7 +536,7 @@ Under the node : `DBParameters > FlowStream`
  * The tuning for FlowStream shown below consists essentially of tweaking the size of the underlying Bloom Filters and Bitmap Index datastructures for hosts, applications, tags etc.
  * All values must be powers of two.  Enter 32768 instead of 32K
  * To disable a particular index enter `0` for the corresponding value
- * To use default just leave the value blank
+ * To use the default, leave the value blank
  * The hash used is Murmur-3 
  * These values can be changed at any time, they are stored on a per-block basis
 :::
@@ -551,7 +548,7 @@ Under the node : `DBParameters > FlowStream`
 | kFLOWS_PER_BLOCK           |      | |The number of flows per block. Default 4096                          |
 | kBLOOM_AGG_SIZE            |       |Bloom Filter |The number of flow blocks per bloom filter.                          |
 | kBUMPX_AGG_SIZE            |      |Bitmap Index |The number of flow blocks per full bitmap filter index.              |
-| ZFLOWBLOCK_COMPRESSOR_CODE |       | |The compressor type for the flow database. Available parameter values are<ul> <li>`lz4`</li><li>`lz4-ip-call-log-with-nat-pro-max` : For both IPv4 and IPv6 withNATIP, Port, userid for full log</li><li>`lz4-ip-call-log-with-nat-pro-max-mac` : With MAC ID collection, use only when you are sure MAC ID represent end user terminals</li></ul> |
+| ZFLOWBLOCK_COMPRESSOR_CODE |       | |The compressor type for the flow database. Available parameter values are<ul> <li>`lz4`</li><li>`lz4-ip-call-log-with-nat-pro-max` : For both IPv4 and IPv6 with NAT IP, Port, userid for full log</li><li>`lz4-ip-call-log-with-nat-pro-max-mac` : With MAC ID collection, use only when you are sure MAC ID represent end user terminals</li></ul> |
 | kHOST_BUMPX_BUCKETS        |      |Bitmap Index |buckets for IP (hosts)  |
 | kHOST_A_BUMPX_BUCKETS      |      |Bitmap Index |buckets for source IP  |
 | kHOST_Z_BUMPX_BUCKETS      |      |Bitmap Index |buckets for destination IP |	
@@ -581,10 +578,10 @@ Under the node : `DBParameters > FlowStream`
 | kPROTO_BLOOM_HASHES        |      |Bloom Filter |hashes for IP Protocol |	
 | kGEN1_BLOOM_BITS           |      |Bloom Filter|bits for router indexing|
 | kGEN1_BLOOM_HASHES         |      |Bloom Filter|hashes for routers 
-| kGEN2_BLOOM_BITS           |      |Bloom Filter|bits for ingres interface|
+| kGEN2_BLOOM_BITS           |      |Bloom Filter|bits for ingress interface|
 | kGEN2_BLOOM_HASHES		 |      |Bloom Filter|hashes for ingress interface |
 | kGEN3_BLOOM_BITS           |      |Bloom Filter|bits for egress interface |
-| kGEN3_BLOOM_HASHES         |      |Bloom Filter|hashes for egress inteface |
+| kGEN3_BLOOM_HASHES         |      |Bloom Filter|hashes for egress interface |
 | kAUX0_BLOOM_BITS            |      |Bloom Filter|bits for flow tags , each tag of a composite tag is indexed|
 | kAUX0_BLOOM_HASHES          |      |Bloom Filter|hashes for flow tags|
 | kAUX1_BLOOM_BITS            |      |Bloom Filter|bits for flow tags , each tag of a composite tag is indexed|

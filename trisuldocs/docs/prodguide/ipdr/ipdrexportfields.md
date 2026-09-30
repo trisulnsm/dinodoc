@@ -1,6 +1,6 @@
 # Format of the output report
 
-This page describes the fields when you export flows using this IPDR *IP Data Record* feature.
+This page describes the fields when you export flows using the IPDR (Internet Protocol Detail Record) feature.
 
 ## The IPDR Report Fields
 
@@ -59,7 +59,7 @@ For most cases we prefer the XLSX report. If the number of flows are huge say gr
 
 ### IPDR Excel Report Type
 
-Trisul offers multiple export formats to suit various operational and compliance workflows. You can easily switch between formats depending on your specific use case — whether for internal analysis, regulatory submission, or customer-facing reports.
+Trisul offers multiple export formats for different operational and compliance workflows. You can switch between formats depending on your use case: internal analysis, regulatory submission, or customer-facing reports.
 
 - **Standard Format**
 
@@ -73,7 +73,7 @@ Trisul offers multiple export formats to suit various operational and compliance
 
     A simplified and compact layout designed for customer-facing views or integration into billing or usage panels.
 
-Simply select the required format, and Trisul automatically formats the data accordingly—ready for viewing, export, or secure sharing.
+Select the required format, and Trisul formats the data for viewing, export, or secure sharing.
 
 The MS Excel fields looks like this below.
 
@@ -128,7 +128,7 @@ And this is a sample of IPDR reported in .txt format
 
 ![](images/ipdrreport_txtformat.png)
 
-With CSV format you can automate the report and easily exchange data to different applications, systems or organizations.
+With CSV format you can automate the report and exchange data with other applications, systems or organizations.
 
 ![](images/ipdrreport_csv.png)
 

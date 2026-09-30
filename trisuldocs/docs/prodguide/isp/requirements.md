@@ -5,10 +5,10 @@ import TabItem from '@theme/TabItem';
 # System Requirements
 
 
-This page specifies system requirements for Trisul ISP.
+This page lists the system requirements for Trisul ISP Analytics.
 
 :::note Also see
-The :memo: [System Requirements](/docs/guide/starthere/setuptrisul/install/requirements) page in the Admin Guide for general guidelines.
+The :memo: [System Requirements](/docs/guide/starthere/setuptrisul/install/requirements) page in Start Here for general guidelines.
 :::
 
 ## Operating Systems
@@ -27,7 +27,7 @@ See below for typical requirements.
 
 ## Trisul ISP Requirements 
 
-NetFlow sizing is based on number of devices and interfaces.  Click a tab that is matches your network.
+NetFlow sizing is based on number of devices and interfaces.  Select the tab that matches your network.
 
 <Tabs>
 
@@ -35,7 +35,7 @@ NetFlow sizing is based on number of devices and interfaces.  Click a tab that i
 
 
 :::info Proof of concept
-Use this to run a POC for a ISP with 4-5 gateway routers.  Increase the Memory if running more routers. 
+Use this to run a proof of concept (POC) for an ISP with 4–5 gateway routers. Add memory if you run more routers. 
 :::
 
 
@@ -46,7 +46,7 @@ Use this to run a POC for a ISP with 4-5 gateway routers.  Increase the Memory i
 | CPU | 16 vCPU cores | 
 | Memory |  32GB RAM |
 | Network | 1GbE interface that can be used for both NetFlow and Management access |
-| Disk | 1TB SAS, or NVme SSD  |
+| Disk | 1TB SAS or NVMe SSD  |
 
 
 </TabItem>
@@ -67,13 +67,13 @@ Use this to run a POC for a ISP with 4-5 gateway routers.  Increase the Memory i
 
 <TabItem value="giant" label="Large ISP 500Gbps">
 
-		| Hardware  | System Requirements |
-		| ------- | ------------ |
-		| Type | VM preferred |
-		| CPU | 48 vCPU cores | 
-		| Memory |  128GB RAM |
-		| Network | 1GbE interface that can be used for both NetFlow and Management access |
-		| Disk | 16TB Storage for 3 months,  proportionately add more based on retention|
+| Hardware  | System Requirements |
+| ------- | ------------ |
+| Type | VM preferred |
+| CPU | 48 vCPU cores | 
+| Memory |  128GB RAM |
+| Network | 1GbE interface that can be used for both NetFlow and Management access |
+| Disk | 16TB Storage for 3 months,  proportionately add more based on retention|
 
 
 </TabItem>

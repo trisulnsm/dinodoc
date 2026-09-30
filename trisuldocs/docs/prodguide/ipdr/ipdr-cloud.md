@@ -5,7 +5,7 @@ You do not install or operate Trisul IPDR yourself, Trisul hosts and operates th
 
 ## Overview
 
-IPDR Cloud is intended for ISPs who want regulatory IPDR compliance without the headache of running their own IPDR server. During onboarding you work with the Trisul team to configure your deployment options. When onboarding is complete, Trisul provides the connection details you need to start sending data.
+IPDR Cloud is intended for ISPs who want regulatory IPDR compliance without running their own IPDR server. During onboarding you work with the Trisul team to configure your deployment options. When onboarding is complete, Trisul provides the connection details you need to start sending data.
 
 At minimum, every IPDR Cloud customer receives:
 
@@ -64,7 +64,7 @@ interface GigabitEthernet0/0/0
 
 Enable the monitor on each uplink or gateway interface that carries subscriber traffic. Adjust the interface name to match your device.
 
-For additional router models and configuration tips, see [NetFlow](netflow).
+For additional router models and configuration tips, see [NetFlow](/docs/prodguide/ipdr/netflow).
 
 :::tip[Verify export is working]
 After configuring your routers and confirming your gateways are whitelisted, verify that flow records are reaching the Trisul endpoint. Contact Trisul support if you do not see traffic reflected in your IPDR Cloud environment within the expected timeframe.
@@ -91,7 +91,7 @@ Typical workflow:
 3. SFTP the file to the Trisul IPDR Cloud IPv4 endpoint using the provided credentials.
 4. Repeat on your chosen schedule (for example, every hour via cron).
 
-The expected CSV fields and file formats are described in [AAA and RADIUS](radius) and [Trisul AAA ingestor](trisul_aaaing).
+The expected CSV fields and file formats are described in [AAA and RADIUS](/docs/prodguide/ipdr/radius) and [Trisul AAA ingestor](/docs/prodguide/ipdr/trisul_aaaing).
 
 :::warning[AAA processing requires regular uploads]
 If you opted for AAA processing, SFTP uploads are required for accurate subscriber identification in IPDR output. Missing or delayed RADIUS dumps will result in flows without user ID attribution.
@@ -114,7 +114,7 @@ You manage:
 
 ## Also see
 
-- [NetFlow](netflow) — configuring flow export from your routers
-- [AAA and RADIUS](radius) — AAA integration overview
-- [Trisul AAA ingestor](trisul_aaaing) — RADIUS dump file format and scheduling
-- [Installation](install) — for self-hosted on-premises IPDR deployments
+- [NetFlow](/docs/prodguide/ipdr/netflow) — configuring flow export from your routers
+- [AAA and RADIUS](/docs/prodguide/ipdr/radius) — AAA integration overview
+- [Trisul AAA ingestor](/docs/prodguide/ipdr/trisul_aaaing) — RADIUS dump file format and scheduling
+- [Installation](/docs/prodguide/ipdr/install) — for self-hosted on-premises IPDR deployments

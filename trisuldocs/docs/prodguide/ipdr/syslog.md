@@ -13,7 +13,7 @@ To use the NAT SYSLOG you have to install the  [ NAT Syslog Trisul Apps](/docs/g
 
 ## Sample configuration 
 
-- [Mikrotik NAT Syslog](https://www.trisul.org/devzone/doku.php/netflow:natsyslog	)
+- [Mikrotik NAT Syslog](https://www.trisul.org/devzone/doku.php/netflow:natsyslog)
 
 
 

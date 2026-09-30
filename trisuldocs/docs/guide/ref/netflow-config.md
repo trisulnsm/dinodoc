@@ -1,6 +1,8 @@
-import Link from '@docusaurus/Link';
-
 # Netflow Configuration File
+
+:::note Applies to
+Flow input (NetFlow and IPFIX). Setting `AppMode` to `ipdr` switches the Probe to IPDR processing.
+:::
 
 ## How to edit
 
@@ -8,7 +10,7 @@ On the Trisul-Probe type `sudo /usr/local/share/trisul-probe/cfgedit` then selec
 
 ## Location
 
-In a file called`PI-7CA09636-02D4-45E7-AA00-BE0D49B94E26.xml`in`/usr/local/etc/trisul-probe/domainX/probeX/contextX`You can edit the config file directly by typing the full file name as shown below
+The file is called `PI-7CA09636-02D4-45E7-AA00-BE0D49B94E26.xml`, in `/usr/local/etc/trisul-probe/domainX/probeX/contextX`. You can also edit the file directly by typing the full file name, as shown below.
 
 ```bash
 # vi /usr/local/etc/trisul-probe/domain0/probe0/context0/PI-7CA09636-02D4-45E7-AA00-BE0D49B94E26.xml 
@@ -20,7 +22,7 @@ These are the parameters that control Netflow processing.
 
 :::note Case insensitive
 
-Boolean parameters are case-insensitive. True, true,TRUEmean the same thing
+Boolean parameters are case-insensitive. `True`, `true` and `TRUE` mean the same thing.
 
 :::
 
@@ -35,11 +37,11 @@ Boolean parameters are case-insensitive. True, true,TRUEmean the same thing
 | MergeMultipleSources        | FALSE    | If set, duplicate flows from different routers will be merged.   |
 | MatchBiDirectionalFlows     | TRUE     | Netflow records are unidirectional. If set, Trisul will merge two unidirectional flows into one bidirectional flow.<br/>If you set this option to false, Trisul will retain the uni-directional flow as-is.  |
 | UseRouterTimestamps         | TRUE     | If set, Trisul will use the timestamp from the Netflow records.<br/>If not set, Trisul will use the timestamp at the server running Trisul. This is the default and recommended option unless you have routers which synchronize their timestamps automatically.  |
-| MergeHTTP                   | FALSE    | For HTTP flows, ignore the Source Ephemeral Port and set it to 65535. **NOTE** When the MergeX option is used flows will not be terminate but timed out. Use the MergeX options to reduce the number of unique flows |
+| MergeHTTP                   | FALSE    | For HTTP flows, ignore the Source Ephemeral Port and set it to 65535. **NOTE** When the MergeX option is used flows are not terminated but time out. Use the MergeX options to reduce the number of unique flows |
 | MergeHTTPS                  | FALSE    | For HTTPS flows, ignore the Source Ephemeral Port and set it to 65535.|
 | MergeDNS                    | FALSE    | For DNS flows, ignore the Source Ephemeral Port. Set to FALSE, every DNS transaction will be a separate flow |
 | IgnoreESP                   | FALSE    | Ignore IPSEC ESP flows. These are tunneled interfaces containing no flow information within them. |
-| MeterHomeNetwork            | TRUE     | Classifies traffic relative to your Home Network.<br/>**INCOMING **Destination IP is in your home network but Source IP is not<br/>**OUTGOING** Source IP is in your home network but Destination IP is not<br/>**INTERNAL** Both the Source IP and Destination IP are in your home network<br/>**TRANSIT **Both the Source IP and Destination IP are not in your home network  |
+| MeterHomeNetwork            | TRUE     | Classifies traffic relative to your Home Network.<br/>**INCOMING** Destination IP is in your home network but Source IP is not<br/>**OUTGOING** Source IP is in your home network but Destination IP is not<br/>**INTERNAL** Both the Source IP and Destination IP are in your home network<br/>**TRANSIT** Both the Source IP and Destination IP are not in your home network  |
 | MeterBothPorts              | FALSE    | **When set to FALSE** : The default behaviour of Trisul is to only meter the low numbered port. The assumption is that low numbered ports represent servers. This is usually accurate for traditional server applications that run below port 1024.<br/>**When set to TRUE** : Meters both ports for applications above port 1024. Ports below 1024 (such as HTTP) are still counted in the normal way.<br/>Set this to TRUE if you have P2P / VoIP Traffic you wish to track. |
 | MeterTCPConnections         | TRUE     | Meter connection count for the flow TCP end point IPs. This allows you to get reports for hosts with maximum connections, etc |
 | MeterAppConnections         | TRUE     | Meter connection count for source and destination ports for TCP based application. |
@@ -51,11 +53,11 @@ Boolean parameters are case-insensitive. True, true,TRUEmean the same thing
 | MeterBGPNextHop  | TRUE  |  Enables traffic metering based on the BGP next-hop information reported in NetFlow records.     |
 | MeterMAC      | TRUE  |  Enables traffic metering by MAC address when MAC information is available in the NetFlow/IPFIX records.     |
 | Meterv4v6     | TRUE      |   Enables separate traffic metering for IPv4 and IPv6 traffic.    |  
-| FilterInterfacesInclude     |          | A comma separated list of interfaces.<br/>When set, Trisul will accept and process flows that exit or enter these interfaces. This can be in routerip_ifindex format or Trisul key format<br/>**An example**<br/>If you only want to accept flows that use the WAN link (if Index = 108) on router (122.166.4.242) and GigE link (ifIndex = 120) also on router (122.166.4.242)<br/>You should specify the interfaces as 122.166.2.242_108,122.166.242.100_120   |
+| FilterInterfacesInclude     |          | A comma separated list of interfaces.<br/>When set, Trisul will accept and process flows that exit or enter these interfaces. This can be in routerip_ifindex format or Trisul key format<br/>**An example**<br/>If you only want to accept flows that use the WAN link (if Index = 108) on router (122.166.4.242) and GigE link (ifIndex = 120) also on router (122.166.4.242)<br/>You should specify the interfaces as 122.166.4.242_108,122.166.4.242_120   |
 | FilterInterfacesExclude     |          | A comma separated list of interfaces.<br/>When set, Trisul will only process flows that DO NOT use these interfaces.<br/>The format is same as the parameter FilterInterfacesInclude<br/>**Note**: that you cannot use the FilterInterfacesInclude and Exclude parameters at the same time. This rule applies to all such parameters  |
 | FilterInterfacePairInclude |      |       |
 | FilterFlowASNInclude        |          | Only process netflow records containing one of the ASN in this comma separated list  |
-| FilterFlowASNExclude        |          | Only process netflow records which DO Not contain any ASN in this CSV list. USECASE Upstream ISP filtering out its downstream ISP ASNs for monitoring and logging purposes. |
+| FilterFlowASNExclude        |          | Only process netflow records which do not contain any ASN in this CSV list. USECASE Upstream ISP filtering out its downstream ISP ASNs for monitoring and logging purposes. |
 | FilterHostsInclude          |          | Only process netflow records containing IP address in this CSV list (IPv4 only)   |
 | FilterHostsExclude          |          | Only process netflow records not containing ANY IP in this CSV list (IPv4 only)<br/>**Feature used in ISP environments** |
 | FilterAppsInclude           |          | Only process these ports. Use comma separated port numbers   |
@@ -65,40 +67,40 @@ Boolean parameters are case-insensitive. True, true,TRUEmean the same thing
 | IgnoreAllEgress             | FALSE    | Ignore all flow records generated by egress processing. Egress flow records are those Netflow v9 and IPFIX records with direction = 1 (egress)  |
 | IgnoreOutCounts             |          | Set this option to true to ignore out packets and out bytes sent incorrectly by some devices. Some firewalls send the same metrics in IN and OUT counts by misinterpreting the template as post out counts. Use this if you see the same values of IN/OUT on all flows  |
 | EnableShimTunnel            | FALSE    | If Enabled, Trisul will decapsulate the special SHIM tunnel used to forward Netflow packets from a remote network to the Trisul probe. Normal Netflow will also be processed correctly. For more information see on [Github netflow-shim-tunnel](https://github.com/trisulnsm/netflow-shim-tunnel)  |
-|<a id="HomeASNumbers">HomeASNumbers</a>          |          | Enter a comma separated list of Home AS and Downstream AS numbers. Used in ISP deployments these are the AS numbers of the customer running Trisul. If Home AS numbers are present they are used instead of Home Network Prefixes to determine per-AS Upload (egress) and Download (ingress) traffic metrics per AS and also to split upstream vs downstream. For large and transit ISPs with changing downstream topologies see the parameter [HomeASNumbersFile](/docs/guide/ref/netflow-config)  |
-| AddEdges                    | TRUE     | Adds ASN to  PREFIX edges. If enables, it allows you to select a AS and see which PREFIXES are active in that AS. Here active means prefixes which had some traffic in the selected interval|
+|<a id="HomeASNumbers">HomeASNumbers</a>          |          | Enter a comma separated list of Home AS and Downstream AS numbers. Used in ISP deployments these are the AS numbers of the customer running Trisul. If Home AS numbers are present they are used instead of Home Network Prefixes to determine per-AS Upload (egress) and Download (ingress) traffic metrics per AS and also to split upstream vs downstream. For large and transit ISPs with changing downstream topologies see the parameter [HomeASNumbersFile](pathname:///docs/guide/ref/netflow-config#HomeASNumbersFile)  |
+| AddEdges                    | TRUE     | Adds ASN to  PREFIX edges. If enabled, it lets you select an AS and see which PREFIXES are active in that AS. Here active means prefixes which had some traffic in the selected interval|
 | MeterLinkAS                 | FALSE    | Flow-Link-ASN is a special Crosskey Counter Group which tracks network interface > AS flows. Setting this option to TRUE, enables that counter group. You can then visualize these flows using the Sankey App  |
-| UsePostNATAddresses         | TRUE     | This is Neflow Template option supported on some devices such Palo Alto. Set this to TRUE to use Post-NAT IP address which represent the actual end user in our organization rather than the WAN address. |
-| TemplateDumpIntervalSeconds | 600      | How frequently must the template database be dumped by the probes. These are shown on the Admin > Show Template DB page. Set this to 0 to prevent template databases being dumped |
-| MeterZeroFlows              | FALSE    | Use case Large ISP compliance logging. When compliance only asks for connection logs without collecting byte and packet counts, enabel this option |
+| UsePostNATAddresses         | TRUE     | This is a NetFlow template option supported on some devices, such as Palo Alto. Set this to TRUE to use Post-NAT IP address which represent the actual end user in your organization rather than the WAN address. |
+| TemplateDumpIntervalSeconds | 600      | How frequently must the template database be dumped by the probes. These are shown on **Context: default → Admin Tasks → NetFlow Template DB**. Set this to 0 to prevent template databases being dumped |
+| MeterZeroFlows              | FALSE    | Use case Large ISP compliance logging. When compliance only asks for connection logs without collecting byte and packet counts, enable this option |
 | AllowVariableLengthStrings  | FALSE    | IPFIX variable length strings in templates are used by some network vendors to export labels and tags using IPFIX template field type 65535  |
 | TagFlowsWithUserID          | FALSE    | Some vendors will export flows with a User-ID string which identifies the pre-NAT user of the flow, this appends a tag each flow.  |
 | MeterUserID                 | FALSE    | If User-ID string is present, meter bytes, flows, connections for it |
 | MeterAppID                  | FALSE    | If App-ID string is present, meter bytes, flows, connections for it  |
 | AddL2AccountingBytes        | 0        | Use this option if you want to closely match Netflow with SNMP metrics for accounting and billing purposes. Netflow being a Layer3 (IP) technology it does not account for link layer bytes and also any physical layer bytes such as Ethernet Frame Check sequence. A typical setting is to set this parameter to 18 to add 14 bytes of ethernet and 4 bytes of ethernet FCS to each packet. This option is typically only useful for customers who seek very close match with SNMP metrics for billing purposes  |
 | ReloadConfigCheckSeconds    |          | Set this to 60 to automatically check for changes to this configuration file every 60 seconds. If the modified timestamp of this configuration file changes, the configuration is automatically reloaded. The default behaviour is for Trisul Probe to require a restart for a Netflow configuration file change. |
-| <a name="TagFlowsWithDirection">TagFlowsWithDirection</a>     | FALSE    | Tag each flow with a direction relative to the Home Networks (see user guide [Home network section ](/docs/guide/ag/context/home_networks)based on the AS Number information.<br/>Every flow is tagged with one of the following <br/>**[dir]internet**<br/>when one of source and dest AS is within home network and the other is external<br/>**[tag]internal**<br/>when both source and dest AS are within the home network<br/>**[tag]transit**<br/>when both source and dest AS are outside the home network<br/>**Feature used in ISP environment** |
-| HomeASNumbersFile           |          | Used with ISP licensed customers. Trisul automatically creates an online feed of currently observed downstream AS numbers based on BGP routing information from outside vantage points. Set this to the value *downstream_origin_as.txt* and configure the Geo plugin for automatic updates. For simpler applications see the parameter [HomeASNumbers](/docs/guide/ag/context/home_networks)<br/>Feature used in ISP environments  |
-| Use64BitHostByteOrder       | FALSE    | Some netflow implentations incorrectly send 64 bit counters in template fields as two 32 bit fields in host byte order. If you are seeing bizzarely large numbers for bandwidth, bytes, and packets – try setting this to TRUE   |
+| <a name="TagFlowsWithDirection">TagFlowsWithDirection</a>     | FALSE    | Tag each flow with a direction relative to the Home Networks (see [Home Networks](/docs/guide/ag/context/home_networks) in the Admin Guide), based on the AS Number information.<br/>Every flow is tagged with one of the following <br/>**[dir]internet**<br/>when one of source and dest AS is within home network and the other is external<br/>**[tag]internal**<br/>when both source and dest AS are within the home network<br/>**[tag]transit**<br/>when both source and dest AS are outside the home network<br/>**Feature used in ISP environment** |
+| <a id="HomeASNumbersFile">HomeASNumbersFile</a> |          | Used with ISP licensed customers. Trisul automatically creates an online feed of currently observed downstream AS numbers based on BGP routing information from outside vantage points. Set this to the value *downstream_origin_as.txt* and configure the Geo plugin for automatic updates. For simpler applications see the parameter [HomeASNumbers](pathname:///docs/guide/ref/netflow-config#HomeASNumbers)<br/>Feature used in ISP environments  |
+| Use64BitHostByteOrder       | FALSE    | Some NetFlow implementations incorrectly send 64 bit counters in template fields as two 32 bit fields in host byte order. If you see very large numbers for bandwidth, bytes, and packets – try setting this to TRUE   |
 | MeterTosAsDSCP              | TRUE     | Meter TOS byte as 6-bit DSCP + 2-bit ECN. This is then mapped to DSCP values in Trisul UI such as for example<br/>“**08” → “CS1/AF11-13”<br/>“0A” → “CS1/AF11-13”** |
-| SmartNATRemoval             | TRUE     | Set this to TRUE in firewall environments. When set to TRUE Trisul analyzers Netflow records and always selects the correct IP addresses to reflect the `internal` IPs rather than the public `NAT IP` |
-| Home Prefixes File          |          | A Trisul routes database or a CSV file containing all prefixes to be treated as home or downstream prefixes. Typically this file is named 0.0.0.0_routes.sql3 setup during configuraiton for ISP deployment<br/>**Feature used in ISP environments** |
+| SmartNATRemoval             | TRUE     | Set this to TRUE in firewall environments. When set to TRUE Trisul analyzes NetFlow records and always selects the correct IP addresses to reflect the `internal` IPs rather than the public `NAT IP` |
+| Home Prefixes File          |          | A Trisul routes database or a CSV file containing all prefixes to be treated as home or downstream prefixes. Typically this file is named 0.0.0.0_routes.sql3 set up during configuration for ISP deployment<br/>**Feature used in ISP environments** |
 | AutoloadPreviousTemplates   | FALSE    | When set to `true` Trisul will reload the most recently known netflow template database and immediately start processing instead of waiting for templates. Use this option in networks where template intervals are long |
 | PrintRecords                |          | Used in DDoS report mode to print raw netflow records automatically, Do not set this option manually |
 | TagFlowsWithHTTPHostname | FALSE | Some NetFlow like Cisco SD-WAN can add HTTP/S hostnames to the template. Turn this option on to tag flows with HTTP Hostnames | 
 | TemplateKeyPolicyV9 |  | Policy to handle v9 Templates, use this to handle vendor variations <ul><li>source-id</li><li>source-port</li><li>source-port-if-source-id-zero</li></ul>  | 
-| AddHalfNATEdge |  FALSE | Add an EDGE to map a NAT mapping. Use only if required in IPDR mode. Mostly you dont need this |
+| AddHalfNATEdge |  FALSE | Add an EDGE to map a NAT mapping. Use only if required in IPDR mode. Most deployments don't need this |
 | AllowRunningCounts |  FALSE | Use with some vendors like Checkpoint, who tend to use running counters when Live Flow Timeout is enabled. When this option is set the NetFlow plugin handles running byte and packet counts in flow records. *AllowRunningCounts* must be only used with *InflightTokens*=1 (single threaded)  See InflightTokens parameter in [Probe Config file > Tuning](/docs/guide/ref/trisulconfig#tuning) |
-| CollectIPDRMAC | FALSE | In IPDR Mode, collect the source mac address if available. To use this the CompressorCode in the [hub config file](/docs/guide/ref/trisulhubconfig#ipdr) must be set to `lz4-ip-call-log-with-nat-pro-max-mac` The MAC address will then replace the Device ID | 
+| CollectIPDRMAC | FALSE | In IPDR Mode, collect the source mac address if available. To use this, set the `ZFLOWBLOCK_COMPRESSOR_CODE` parameter in the [Hub config file](/docs/guide/ref/trisulhubconfig#advanced-db-parameters) to `lz4-ip-call-log-with-nat-pro-max-mac`. The MAC address then replaces the Device ID. | 
 
 
 ## Sampling rates
 
-Flow sampling is a technique used by very busy devices to reduceCPUload. If you confiygure a sampling rate of*128*, the device will only process every 128 packets. InIPFIXtechnologies the sampling rate is typically sent in an*options template*. This section provides a manual way to configure sampling rates per router in the event you are not able to setup the options template. This is not a replacement for configuring sampling on the router or enabling the options template.
+Flow sampling is a technique used by very busy devices to reduce CPU load. If you configure a sampling rate of *128*, the device samples 1 in every 128 packets. In IPFIX, the sampling rate is typically sent in an *options template*. This section provides a manual way to configure sampling rates per router in the event you are not able to setup the options template. This is not a replacement for configuring sampling on the router or enabling the options template.
 
 Add a separate line for each router as shown below
 
-```html
+```xml
 <SamplingRates>
     <Rate router="180.179.9.2"   rate="128"  />
 </SamplingRates>
@@ -108,7 +110,7 @@ Add a separate line for each router as shown below
 
 To create a default sampling rate for all routers which do not have an explicit sampling rate set, use the IP address 0.0.0.0. For example to configure a sampling rate of 1000 for all routers. Use 
 
-```html
+```xml
 <SamplingRates>
     <Rate router="180.180.9.2"   rate="128"  />
     <Rate router="0.0.0.0"   rate="1000"  />
@@ -123,7 +125,7 @@ Set the `override_netflow` attribute to `true` to reverse this. When `override_n
 
 The attribute is case-insensitive and only the value `true` enables it. If the attribute is absent or empty, it defaults to `false` (network discovered rate wins).
 
-```html
+```xml
 <SamplingRates>
     <!-- network discovered rate wins (default) -->
     <Rate router="180.179.9.2"   rate="128"  />
@@ -143,7 +145,7 @@ The attribute is case-insensitive and only the value `true` enables it. If the a
 :::note Network-wide rate with per-router exceptions
 Combine the `0.0.0.0` default with `override_netflow="true"` to enforce a single network-wide sampling rate for every device, while still letting individually named routers specify their own rate. The `0.0.0.0` override applies to all routers that do not have their own `<Rate>` entry (and prevents a buggy device from creating a rogue rate from the network); any router listed with its own `<Rate>` line takes precedence and is governed by its own settings.
 
-```html
+```xml
 <SamplingRates>
     <!-- network-wide default, ignore rates reported by devices -->
     <Rate router="0.0.0.0"       rate="1000" override_netflow="true" />
@@ -158,4 +160,4 @@ Combine the `0.0.0.0` default with `override_netflow="true"` to enforce a single
 
 ### Static Templates
 
-Typically you dont need to use this section. We have used this section in the past to address various firmware bugs in some devices which did not export Netflow templates correctly. Templates fields specified in this section will override those received on the network.
+Typically you don't need this section. We have used this section in the past to address various firmware bugs in some devices which did not export Netflow templates correctly. Templates fields specified in this section will override those received on the network.

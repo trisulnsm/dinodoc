@@ -3,10 +3,11 @@
 How HTTP Hosts are metered.
 
 ## File Location
-`/usr/local/etc/trisul-probe/domain0/probe0/context0/PI-D2AAD7C6-E129-4366-A2AD-A8CB9AA4C2F4.xml
-`
+~~~text
+/usr/local/etc/trisul-probe/domain0/probe0/context0/PI-D2AAD7C6-E129-4366-A2AD-A8CB9AA4C2F4.xml
+~~~
 
-``` bash
+```xml
 <TrisulPluginConfiguration>
     <Policy>
         <description>Controls how HTTP Host headers are counted</description>
@@ -33,7 +34,7 @@ How HTTP Hosts are metered.
 DomainDepth if you have a HTTP host like `lax25.sjv.y1.youtube.com`
 
 ### Description
-|     |                      |
+| DomainDepth | Hostname counted     |
 | --- | -------------------- |
 | 0   | indicates fulldomain |
 | 1   | com                  |

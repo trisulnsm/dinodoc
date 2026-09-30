@@ -2,11 +2,12 @@
 
 How DNS protocol is metered.
 
-# File Location
-`/usr/local/etc/trisul-probe/domain0/probe0/context0/PI-CCCBBBB3-125E-48D0-8AC9-A7E3AD2F60FD.xml
-`
+## File Location
+~~~text
+/usr/local/etc/trisul-probe/domain0/probe0/context0/PI-CCCBBBB3-125E-48D0-8AC9-A7E3AD2F60FD.xml
+~~~
 
-``` bash
+```xml
 <TrisulPluginConfiguration>
     <Policy>
         <description>Controls how DNS extraction works </description>

@@ -1,38 +1,40 @@
 # trisbashrc
 
-This is a set of very useful *bash aliases* available for both hub and
-probe. Our engineers use it all the time to navigate various directories
-and view logs etc.
+`trisbashrc` is a set of *bash aliases* for the hub and probe nodes. Use them to move between Trisul directories and view logs.
 
 ## How to use
 
 The script adds certain bash commands and bash *aliases* to your shell
 environment. It is available on both hub and probe nodes.
 
+:::note
+The paths in the command tables below are for the default context (`context0`).
+:::
+
 ### on probe node
 
 #### Usage
 
-```language-bash
+```bash
 source /usr/local/share/trisul-probe/trisbashrc [domain] [probe] [contextname]
 # default domain = domain0, probe=probe0, context=context0
 ```
 
 For setting the environment to the default trisul context, `context0`
 
-```language-bash
+```bash
 source /usr/local/share/trisul-probe/trisbashrc 
 ```
 
-For setting the environment to context named `10gige`
+For setting the environment to context named `10gig3`
 
-```language-bash
+```bash
 source /usr/local/share/trisul-probe/trisbashrc 10gig3
 ```
 
-For setting the environment to context named `10gige` on `probeEAST`
+For setting the environment to context named `10gig3` on `probeEAST`
 
-```language-bash
+```bash
 source /usr/local/share/trisul-probe/trisbashrc domain0 probeEAST 10gig3
 ```
 
@@ -55,26 +57,26 @@ source /usr/local/share/trisul-probe/trisbashrc domain0 probeEAST 10gig3
 | sl.c        | /usr/local/var/lib/trisul-probe/domain0/probe0/context0/config/TRISULCONFIG.SQDB                    | Location of the configuration database.               |
 | tailf.ns    | /usr/local/var/log/trisul-probe/domain0/probe0/context0/ns-000.log                                  | follow the growth of a probe log file                 |
 | tp          | /usr/local/bin/trisulctl\_probe                                                                     | trisulctl\_probe command path                         |
-| vi.x        | usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml                            | trisul probe configuration file                       |
+| vi.x        | /usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml                           | trisul probe configuration file                       |
 
 ### on hub node
 
 #### Usage
 
-```language-bash
+```bash
 source /usr/local/share/trisul-hub/trisbashrc [domain] [hub] [contextname]
 # default domain = domain0, hub=hub0, context=context0
 ```
 
 For setting the environment to the default trisul context, `context0`
 
-```language-bash
+```bash
 source /usr/local/share/trisul-hub/trisbashrc 
 ```
 
-For setting the environment to context named `10gige`
+For setting the environment to context named `10gig3`
 
-```language-bash
+```bash
 source /usr/local/share/trisul-hub/trisbashrc domain0 hub0 10gig3
 ```
 
@@ -83,14 +85,14 @@ source /usr/local/share/trisul-hub/trisbashrc domain0 hub0 10gig3
 | Commands | Path                                                                                      | Description                                           |
 | -------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------- |
 | cd.l     | /usr/local/var/log/trisul-hub/domain0/hub0/context0                                       | context0 hub log directory                            |
-| cd.m     | /usr/local/var/lib/trisul-hub/domain0/hub0/context0/meters                                | Conetext0 data db root directory                      |
+| cd.m     | /usr/local/var/lib/trisul-hub/domain0/hub0/context0/meters                                | Context0 data db root directory                       |
 | cd.s     | /usr/local/share/trisul-hub                                                               | Hub share data directory                              |
-| cd.w     | /usr/local/share/webtrisul                                                                | Webtrisul direcroty                                   |
+| cd.w     | /usr/local/share/webtrisul                                                                | Webtrisul directory                                   |
 | cd.wl    | /usr/local/var/log/trisul-hub/webtrisul                                                   | Webtrisul production log directory                    |
-| cd.x     | /usr/local/etc/trisul-hub/domain0/hub0/context0                                           | context0 db root directory                            |
+| cd.x     | /usr/local/etc/trisul-hub/domain0/hub0/context0                                           | Hub configuration file directory                      |
 | sl       | /usr/local/bin/shell                                                                      | Connect to the SQLite3 db. Example shell \< dbname \> |
 | sl.c     | /usr/local/var/lib/trisul-config/domain0/context0/profile0/TRISULCONFIG.SQDB              | Location of the configuration database.               |
-| sl.mdump | /shell /usr/local/var/lib/trisul-hub/domain0/hub0/context0/meters/METASLICE.SQDB “.dump”’ | dumps sqlite3 metaslice db rows                       |
+| sl.mdump | /usr/local/bin/shell /usr/local/var/lib/trisul-hub/domain0/hub0/context0/meters/METASLICE.SQDB ".dump" | dumps sqlite3 metaslice db rows                       |
 | tailf.fs | /usr/local/var/log/trisul-hub/domain0/hub0/context0/fs-000.log                            | Follow the growth of a flusher log file               |
 | tailf.qs | /usr/local/var/log/trisul-hub/domain0/hub0/context0/qs-000.log                            | Follow the growth of a trp log file                   |
 | tailf.ws | /usr/local/var/log/trisul-hub/webtrisul/production.log                                    | Follow the growth of a webtrisul production log file  |

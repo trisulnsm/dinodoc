@@ -1,13 +1,13 @@
 # Customer Inventory Mappings
 
-The IPDR Customers list provides a comprehensive repository of customer details. Basically tells how to add customer information, so that they are automatically filled into the output EXCEL report.This feature allows authorized users to:
+The IPDR Customers list stores customer details. This page explains how to add customer information so that it is filled into the output Excel report automatically. This feature allows authorized users to:
 
    **Add**: Create new customer entries with detailed information  
    **Edit**: Update existing customer records as needed  
    **Delete**: Remove customer entries from the list  
 
    :::tip
-You can also add customer information for static IP and usernames using the [Trisul IPDR API](ipdr_customer_mappings) . 
+You can also add customer information for static IP and usernames using the [Trisul IPDR API](/docs/prodguide/ipdr/ipdr_customer_mappings) . 
 :::
 
 ## Compliance Requirement
@@ -19,7 +19,7 @@ The DoT compliance letter clearly mentions that the following details need to be
 *Figure: Compliance requirement to add customer info* 
 
 :::info  Static vs AAA customers
-This feature is most useful for the static IP customers of the ISP. Because the inventory is more stable than large scale ISP providing residiential services. For the latter, talk to us to use a REST API to get the fields
+This feature is most useful for the ISP's static IP customers, because that inventory is more stable than a large residential customer base. For residential services, contact Unleash Networks about using a REST API to get the fields.
 :::
 
 Adding customer details for static IP customers can be done in two methods
@@ -33,7 +33,7 @@ Adding customer details for static IP customers can be done in two methods
 :point_right: Go to Context:default &rarr; Admin Tasks &rarr; IPDR Customers
 :::
 
-The column subnets shows the IP Addresses addressed to each customer along with other details.
+The **Subnets** column shows the IP addresses assigned to each customer, along with other details.
 
 ![](images/pagination-ipdr.png)  
 *Figure: Showing IPDR Customers List*
@@ -62,7 +62,7 @@ When importing new customer details into the system, please note that it will ov
 - **Combine New and Existing Customer Details**: Add the new customer details to the exported list, ensuring that all information is accurate and up-to-date.
 - **Import Combined Customer Details**: Import the combined list of customer details into the system. This will update the system with the complete and accurate customer information.
 
-By following these steps, you can ensure a seamless integration of new customer details without overwriting existing data.
+Following these steps adds the new customer details without overwriting existing data.
 
 ### Importing
 
@@ -159,7 +159,7 @@ Below that are the list of assigned subnets to customer containing details such 
 | Column| Descriptions |
 |--------|--------------|
 | IP Subnet | Displays the IP subnet in CIDR notation. |
-| Valid from | Shows the data from which the subnet invalid. |
+| Valid from | Shows the date from which the subnet is valid. |
 | Valid to | Displays the date until which the subnet is valid. By default it is set to "not set" indicating perpetual validity. |
 | Terminal ID | Lists the unique identifier for the terminal device associated with the assigned subnet |
 

@@ -14,7 +14,7 @@ The steps for getting from zero to a working install of Trisul IPDR  are
 
 
 
-:clap: Congrats ! You are halfway there. Follow the steps outlined in the rest of this document.
+Follow the rest of this page to finish the setup.
 
 ## Package Install
 
@@ -48,7 +48,7 @@ After install go to Trisul IPDR webpage at  http://x.y.z.z:3000 and enter admin/
 
 ### 1. Select the IPDR mode
 
-On the very first admin login you will be prompted to switch into the desired mode of Trisul Netflow Analytics. The selection box will look like this. Select the **IPDR Compliance** option and press Next. 
+On the very first admin login you will be prompted to switch into the desired mode of Trisul Network Analytics. The selection box will look like this. Select the **IPDR Compliance** option and press Next. 
 
 ![select IPDR mode](images/prodmode_ipdr.png)
 *Figure: Select IPDR Compliance Mode*
@@ -67,9 +67,17 @@ The built in license only works for 7-days.  We strongly recommend you contact u
 
 ## Configure Network for IPDR
 
-Now the IPDR Server is ready. Next you need to get the network to send data to it. 
+Now the IPDR server is ready. Next, configure your network to send data to it:
 
-Configure to send NetFlow/IPFIX to the Trisul IPDR server.
+- Export NetFlow or IPFIX from your gateway routers. See [NetFlow](/docs/prodguide/ipdr/netflow).
+- If you use NAT or CGNAT, send NAT logs. See [NAT Syslog](/docs/prodguide/ipdr/syslog).
+- If IP addresses are assigned dynamically, integrate your AAA/RADIUS logs. See [AAA and RADIUS](/docs/prodguide/ipdr/radius).
+
+## Verify that IPDR logging works
+
+1. Log in as `dotuser` and open [IPDR Statistics](/docs/prodguide/ipdr/ipdrstatistics). Check that **NetFlow Records** shows a rate above zero, and that **NetFlow Not Received** shows no alert for your routers. If you integrated AAA, check **AAA Files Processing**.
+2. [Submit a query](/docs/prodguide/ipdr/submit-queries) for an IP address you know was active in the last hour.
+3. On the [IPDR Dashboard](/docs/prodguide/ipdr/ipdrdashboard), download the result. Check that the NAT IP, NAT Port and UserID columns are filled where you expect them.
 
 ## Reenabling Product Mode Selector
 

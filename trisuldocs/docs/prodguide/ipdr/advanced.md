@@ -11,6 +11,8 @@ contains configuration tips to optimize this feature.
 
 ### Use compressor lz4-ipv4-call-log-with-nat
 
+<!-- TODO(verify): the hub config reference lists lz4, lz4-ip-call-log-with-nat-pro-max and lz4-ip-call-log-with-nat-pro-max-mac, not lz4-ipv4-call-log-with-nat; confirm which compressor is current and whether Enable IPDR Mode sets it (F-06-84) -->
+
 Use a new flow compressor specifically designed for IPDR flow log. This
 high performance compressor can store a flow with NAT in as little as 14
 bytes.
@@ -30,8 +32,8 @@ Open the [trisulHubConfig.xml](/docs/guide/ref/trisulhubconfig#advanced-db-param
 
 ## The trisul-ipdr Query Service
 
-The Trisul IPDR package comes with a powerful async query service called
-`trisul-ipdr` The features of this service are
+The Trisul IPDR package comes with an asynchronous query service called
+`trisul-ipdr`. The features of this service are:
 
 1. Asynchronous - you can submit multiple long running queries for IP
    and then download the results when done
@@ -50,7 +52,7 @@ The Trisul IPDR package comes with a powerful async query service called
 
 To start this service
 
-```language-bash
+```bash
 systemctl start trisul-ipdr 
 ```
 
@@ -58,10 +60,10 @@ systemctl start trisul-ipdr
 
 The system is designed to create a special login to the agent who will
 be performing the queries. This login has no other privileges other than
-to perform the query required for compliance. The powerful `trisul_ipdr`
+to perform the query required for compliance. The `trisul-ipdr`
 service described above ensures the data is provided as a download or
 pushed directly to a Secure FTP (SFTP) server. Sometimes we have noticed
-agent requests resulting in several GB of output which cannot be downloaded over a browser. See [Configure IPDR Settings](ipdr-settings) on how to setup the SFTP server.
+agent requests resulting in several GB of output which cannot be downloaded over a browser. See [Configure IPDR Settings](/docs/prodguide/ipdr/ipdr-settings) on how to setup the SFTP server.
 
 The following diagram shows the workflow
 
@@ -71,7 +73,7 @@ The following diagram shows the workflow
 #### Agent login with special ID
 
 The agent is given a separate login and password with a dashboard that
-shows only one option to retrieve IPDR logs. Once logged in the agent can submit query using [Trisul IPDR Query form](submit-queries) and view the [IPDR dashboard](ipdrdashboard) for the queried IP addresses. The [IPDR reports](ipdrexportfields) are then downloaded from web browser or FTP server.
+shows only one option to retrieve IPDR logs. Once logged in the agent can submit query using [Trisul IPDR Query form](/docs/prodguide/ipdr/submit-queries) and view the [IPDR dashboard](/docs/prodguide/ipdr/ipdrdashboard) for the queried IP addresses. The [IPDR reports](/docs/prodguide/ipdr/ipdrexportfields) are then downloaded from web browser or FTP server.
 
 ## Tuning
 
@@ -81,6 +83,6 @@ deployment.
 | Config file | Parameter | Set this to | Notes  |
 | -------- | ---- | ------- | ------------ |
 | [Netflow config](/docs/guide/ref/netflow-config)  | AppMode                              | ipdr                             | Sets the Netflow processing to IPDR mode|
-| [Hub Config](/docs/guide/ref/trisulhubconfig#advanced-db-parameters) | DBParameters \> FlowStream \> AppMode | lz4-ip-call-log-with-nat-pro-max | Sets the database schema and compression code to pro-max mode|
+| [Hub Config](/docs/guide/ref/trisulhubconfig#advanced-db-parameters) | DBParameters \> FlowStream \> ZFLOWBLOCK_COMPRESSOR_CODE | lz4-ip-call-log-with-nat-pro-max | Sets the database schema and compression code to pro-max mode|
 | [Probe Config file](/docs/guide/ref/trisulconfig#tuning)            | Tuning \> DisableFlowTupleFeedback   | true                             | Disables monitoring of flow tuples by IP and Application. If this is enabled, there will be connection metrics for every IP and App, could waste disk space for IPDR |
 | [Probe Config file](/docs/guide/ref/trisulconfig#edges)             | Edges \> EnableFlowEdges             | false                            | Disable Edge graph generation for space savings                                                                                                                      |

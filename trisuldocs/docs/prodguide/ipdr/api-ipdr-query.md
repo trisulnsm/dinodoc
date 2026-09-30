@@ -14,7 +14,7 @@ The IPDR Query API allows you to create, manage, and retrieve results of IPDR (I
 
 **Supported Methods:** `GET`, `POST`, `PUT`
 
-**Authentication:** All requests require a valid `api_token` and `username`.
+**Authentication:** All requests require a valid `api_token` and `username`. To create a token, see [Generate API token](/docs/guide/ag/webadmin/manageusers#generate-api-token).
 
 ---
 

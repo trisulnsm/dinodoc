@@ -1,14 +1,14 @@
-# trisulctl_hub commands
+# trisulctl_hub Command Reference
 
-The trisulctl_hub allow you to co-ordinate , manage, and run commands across all the nodes in the domain
+`trisulctl_hub` lets you coordinate, manage and run commands across all the nodes in the domain.
 
 ## General Commands
 
 | Command        | Description                              | Example                                               |
 | -------------- | ---------------------------------------- | ----------------------------------------------------- |
-| `help`         | Displays help messgaes                   | help                                                  |
+| `help`         | Displays help messages                   | help                                                  |
 | `quit`         | Exit trisulctl tool                      | quit                                                  |
-| `alias`        | create shortcuts forCLI                 | help alias                                            |
+| `alias`        | create shortcuts for CLI                | help alias                                            |
 | `machineid`    | get hub machineid for licensing          | machineid                                             |
 | `checklicense` | validate a license file                  | checklicense /usr/local/etc/trisul-hub/LicenseKey.txt |
 | `log`          | view log files across nodes and contexts | log default@hub0 level=1 log=fs tail lastrun          |
@@ -22,7 +22,7 @@ The trisulctl_hub allow you to co-ordinate , manage, and run commands across all
 | `list domains`      | domain cert and nodes found on system                     | list domains                         |
 | `list nodes`        | list all the nodes active in domain                       | list nodes                           |
 | `list hubs`         | list and verify connection of all hubs on this local node | list hubs                            |
-| `node config`       | node config hub0                                          | show node config, allowed probes etc |
+| `node config`       | show node config, allowed probes etc                      | node config hub0                     |
 | `hello`             | get a hello message from all nodes                        | hello probe0                         |
 | `changeuser domain` | change the user.group for an entire domain node           | changeuser domain domain0 trisul     |
 | `ha start domain`   | start the HA (high availability) backup domain            |                                      |
@@ -36,7 +36,7 @@ The trisulctl_hub allow you to co-ordinate , manage, and run commands across all
 | `stop context`     | stop context or connected context                                     | stop context default<br/>stop context default@probe0                                        |
 | `create context`   | Create a new context with name context                                | create context context1<br/>create context context1@probe0                                  |
 | `delete context`   | Delete the context                                                    | delete context context1<br/>delete context context1@probe0                                  |
-| `reset context`    | Just cleanout the data (keep the configuration) for specified context | reset context default<br/>reset context default @probe0                                     |
+| `reset context`    | Clear the data (keep the configuration) for the specified context   | reset context default<br/>reset context default@probe0                                      |
 | `show config`      | show context configuration, socket information                        | show config default                                                                        |
 | `set config`       | set context config parameter                                          | set config default runmode=online_rxring<br/>set config default@probe0 profile=profile_west |
 | `relocate context` | move context storage to different disk volume                         | relocate context domain0 probe0 default                                                    |
