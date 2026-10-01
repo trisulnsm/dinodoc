@@ -266,7 +266,7 @@ const config = {
           },
           {
             from: '/docs/guide/ug/nbad/trisulnbad',
-            to: '/docs/prodguide/nsm/NBAD/trisulnbad',
+            to: '/docs/prodguide/nsm/NBAD/',
           },
           {
             from: '/docs/guide/ug/nbad',
@@ -307,6 +307,66 @@ const config = {
           {
             from: '/docs/guide/ug/resources/index',
             to: '/docs/prodguide/nsm/Resources/',
+          },
+          {
+            from: '/docs/ug/ui/dashboards',
+            to: '/docs/guide/ug/ui/dashboards',
+          },
+          {
+            from: '/docs/prodguide/nf/Dashboards/realtime-alerts',
+            to: '/docs/prodguide/nf/Dashboards/show-all',
+          },
+          {
+            from: '/docs/Product%20Guides/NETFLOW%20ANALYZER%20GUIDE/Dashboards/realtime-alerts',
+            to: '/docs/prodguide/nf/Dashboards/show-all',
+          },
+          {
+            from: '/docs/prodguide/NETFLOW%20ANALYZER%20GUIDE/Dashboards/realtime-alerts',
+            to: '/docs/prodguide/nf/Dashboards/show-all',
+          },
+          {
+            from: '/docs/prodguide/ipdr/systemrequirements',
+            to: '/docs/prodguide/ipdr/requirements',
+          },
+          {
+            from: '/docs/Product%20Guides/ipdr/systemrequirements',
+            to: '/docs/prodguide/ipdr/requirements',
+          },
+          {
+            from: '/docs/prodguide/nsm/NBAD/trisulnbad',
+            to: '/docs/prodguide/nsm/NBAD/',
+          },
+          {
+            from: '/docs/Product%20Guides/nsm/NBAD/trisulnbad',
+            to: '/docs/prodguide/nsm/NBAD/',
+          },
+          {
+            from: '/docs/guide/ag/context/login',
+            to: '/docs/guide/starthere/setuptrisul/login',
+          },
+          {
+            from: '/docs/documentation/ag/context/login',
+            to: '/docs/guide/starthere/setuptrisul/login',
+          },
+          {
+            from: '/docs/guide/ag/basictasks',
+            to: '/docs/guide/ag/',
+          },
+          {
+            from: '/docs/documentation/ag/basictasks',
+            to: '/docs/guide/ag/',
+          },
+          {
+            from: '/docs/guide/ag/basictasks/importpcap',
+            to: '/docs/guide/ug/caps/pcap_import',
+          },
+          {
+            from: '/docs/documentation/ag/basictasks/importpcap',
+            to: '/docs/guide/ug/caps/pcap_import',
+          },
+          {
+            from: '/docs/lua/introduction',
+            to: '/docs/lua/',
           },
         ],
       },

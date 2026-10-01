@@ -134,7 +134,7 @@ After understanding the associated activity, correlate additional evidence to st
 
 A single alert rarely provides sufficient evidence to determine the nature or scope of an incident. Correlating additional network telemetry helps confirm findings and provides greater confidence in the investigation.
 
-Continue the investigation using [**DNS Resources**](/docs/prodguide/nsm/Resources/dns), [**SSL/TLS Metering**](/docs/guide/ug/cg/ssl), and [**NBAD**](/docs/prodguide/nsm/NBAD/trisulnbad).
+Continue the investigation using [**DNS Resources**](/docs/prodguide/nsm/Resources/dns), [**SSL/TLS Metering**](/docs/guide/ug/cg/ssl), and [**NBAD**](/docs/prodguide/nsm/NBAD/).
 
 Use this investigation to answer questions such as:
 

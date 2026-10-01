@@ -129,7 +129,7 @@ To enable this :
 
 :::info navigation
 
-:point_right: Select Customize → App Settings
+:point_right: Go to **Web Admin → Manage → App Settings → Schedule Email Reports**
 
 :::
 

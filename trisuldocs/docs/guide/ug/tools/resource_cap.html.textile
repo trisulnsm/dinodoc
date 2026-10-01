@@ -6,7 +6,7 @@ h2. Create Resource cap
 
 You can set a resource cap value 
 
-# Goto "key dashboard":/docs/ug/ui/dashboards.html#key_dashboard
+# Goto "key dashboard":/docs/guide/ug/ui/dashboards
 # Click the Create cap in the key dashboard module
 #  You will be redirected to Resorce cap creation page
 
@@ -20,7 +20,7 @@ You can set a resource cap value
 
 h2. Edit Resource cap
 
-# Goto "key dashboard":/docs/ug/ui/dashboards.html#key_dashboard
+# Goto "key dashboard":/docs/guide/ug/ui/dashboards
 # Click the Edit cap in the key dashboard module
 #  You will be redirected to Resorce cap edit page
 

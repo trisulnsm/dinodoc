@@ -66,7 +66,7 @@ The following shows a DDoS tracker for ANY host attacked with 10Gbps load with a
 
 ![](image/ddos-tca.png)
 
-*Figure: Configure Email Alerts Form*
+*Figure: DDoS Alerts Form*
 
 ## Alerts Dispatch and Response
 

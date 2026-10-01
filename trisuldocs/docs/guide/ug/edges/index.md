@@ -38,4 +38,4 @@ Trisul uses a memory cap on the number of allowed neighbors per vertex. This pre
 The limits currently in effect are :
 
 1. Max vertices – unlimited
-2. Max neighbors per vertex – 1KB / hour. Roughly 100 uniques per hour. We will revisit this conservative limit based on user feedback in the field.
+2. Max neighbors per vertex – 1KB / hour. Roughly 100 uniques per hour.

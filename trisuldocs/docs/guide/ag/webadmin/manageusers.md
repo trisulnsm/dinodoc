@@ -185,9 +185,9 @@ To change the Superadmin username, click the **Action button** next to it and se
 
 ## Password Policy
 
-- For security reasons, we do **not** store previously entered passwords.
-- Passwords do **not** expire.
-- You can change your password at any time. See [Change Own Password](/docs/guide/ag/webadmin/manageusers#change-own-password).
+Administrators set the password policy in **Web Admin → Manage → App Settings → Password/Security**: password expiry, password history, maximum failed login attempts and account lock duration. See [Password/Security](/docs/guide/ag/webadmin/web_options#passwordsecurity).
+
+You can change your password at any time. See [Change Own Password](/docs/guide/ag/webadmin/manageusers#change-own-password).
 
 ## Configure Two-Factor Authentication (2FA)
 

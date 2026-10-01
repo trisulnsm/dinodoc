@@ -36,7 +36,7 @@ Parent Group : **Applications** (guid = \{C51B48D4-7876-479E-B0D9-BD9EFF03CE2E\}
 | No     | Rule in Trisul Filter Format  | New Key     |
 | ------ | ----------- | --------- |
 | Rule 1 | `{4CD742B1-C1CA-4708-BE78-0FCA2EB01A86}=0A.0A.11.14,0A.0A.11.15,0A.0A.11.16&{C51B48D4-7876-479e-B0D9-BD9EFF03CE2E}=Port-80` | HR-Attendance                                                    |
-| Rule 2 | `{4CD742B1-C1CA-4708-BE78-0FCA2EB01A86}=0A.0A.12.23&{C51B48D4-7876-479e-B0D9-BD9EFF03CE2E}=Port-3000~Port-8000`             | Trisul-NSM                                                       |
+| Rule 2 | `{4CD742B1-C1CA-4708-BE78-0FCA2EB01A86}=0A.0A.12.23&{C51B48D4-7876-479e-B0D9-BD9EFF03CE2E}=Port-3000~Port-9000`             | Trisul-NSM                                                       |
 | Rule 3 | `{4CD742B1-C1CA-4708-BE78-0FCA2EB01A86}=10.10.18.25~10.10.18.45&{C51B48D4-7876-479e-B0D9-BD9EFF03CE2E}=Port-8000`           | Security-Cams                                                    |
 | Rule 4 | `{4CD742B1-C1CA-4708-BE78-0FCA2EB01A86}=10.10.19.3`                                                                         | Exchange-Email                                                   |
 | -     | Catch-all                                                                                                                   | Uses the same application key as the parent group (applications) |

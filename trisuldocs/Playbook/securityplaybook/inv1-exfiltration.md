@@ -79,7 +79,7 @@ Once the source host has been identified, determine where the data was transferr
 
 Once a host with significant outbound traffic has been identified, the next step is to determine where the data is being sent and whether those destinations are expected within the organization's environment.
 
-From the [**Transmit**](/docs/guide/ug/cg/retrotools#investigate-ip-activity) view, click the **Actions** menu for the selected host and choose **Host Conversations**.
+In the **Retro Counters** results, click the host and choose **Host conversations**. Trisul opens [Explore Flows](/docs/guide/ug/tools/explore_flows#top-conversations) for that host over the same time window.
 
 The **Host Conversations** view displays all inbound and outbound communications for the selected host during the investigation period, allowing analysts to identify the external systems involved in the transfer.
 

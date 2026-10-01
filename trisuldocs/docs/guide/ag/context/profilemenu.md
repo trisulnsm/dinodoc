@@ -41,7 +41,7 @@ Lets get familiar with the profile configuration menus as listed in the followin
 
 | Menu | Description |
 |--------------------|-------------------|
-| Session Groups | 
+| Session Groups | See [Flow Handling Settings](/docs/guide/ug/flow/tuning) |
 | Flow Trackers | See [Flow Trackers](/docs/guide/ug/flow/tracker) |
 | Flow Taggers | See [Flow Taggers](/docs/guide/ug/flow/tagger) |
 

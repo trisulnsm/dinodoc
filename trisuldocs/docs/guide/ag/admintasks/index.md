@@ -28,5 +28,4 @@ Explore the documentation to access detailed information and controls for admin 
 | [DR DC Status](/docs/guide/ag/admintasks/drdc_status) | Check configuration of Disaster Recovery when the Primary Site crashes. |
 | [User Resources](/docs/guide/ag/admintasks/userresources) | Assign network devices, interfaces, IP addresses, IP subnets or any other network entity to Users.                                                                     |
 | IPDR Settings          |  See [IPDR Settings](/docs/prodguide/ipdr/ipdr-settings)     |
-| ISP Users              |  See [ISP Users]                                   |
-| IPDR Customers         |  See [IPDR Customers]                              |
+| IPDR Customers         |  See [Set IPDR Mode](/docs/prodguide/ipdr/ipdr-settings#set-mode--manually-set-ipdr-mode) |

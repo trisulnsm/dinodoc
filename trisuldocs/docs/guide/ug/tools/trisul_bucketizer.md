@@ -1,8 +1,8 @@
-# The Bucketizer
+# Rebucketizer
 
 ## Overview
 
-The Trisul Bucketizer tool is a performance optimization feature that enables Trisul to efficiently handle high-resolution time series data. It achieves this by:
+The Rebucketizer is a Hub feature that helps Trisul handle long time windows of time series data. It does this by:
 Maintaining Multiple Resolutions of Data.
 
 
@@ -17,10 +17,10 @@ When querying large time windows, Trisul automatically switches to lower-resolut
 
 ## Configuration
 
-The Bucketizer tool can be configured using the following parameters:
+You configure the Rebucketizer in the Hub configuration file (trisulHubConfig.xml). See [Rebucketizer](/docs/guide/ref/trisulhubconfig#rebucketizer) in the Hub configuration reference. The main parameters are:
 
 ![](images/bucketizer_config.png)  
-*Figure: Sample of Bucketizer Configuration*
+*Figure: Sample of Rebucketizer Configuration*
 
 **Configuration Parameters**
 

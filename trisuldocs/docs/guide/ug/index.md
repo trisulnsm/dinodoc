@@ -3,7 +3,7 @@
 This User Guide covers day-to-day use of the web interface: navigating dashboards, monitoring traffic, analyzing flows and packet captures, setting alerts, and running reports. To install Trisul, start with the [Quickstart](/docs/guide/starthere/quickstart). For server administration, see the [Admin Guide](/docs/guide/ag/).
 
 :::tip[System requirements, getting started ]
-If you are new to Trisul, follow this documentation path [*System Requirements*](/docs/guide/starthere/setuptrisul/install/requirements)  &rarr; [*Installation*](/docs/guide/starthere/setuptrisul/install/doinstall) &rarr;  [*Basic Tasks*](/docs/guide/ag/basictasks/) . 
+If you are new to Trisul, follow this documentation path [*System Requirements*](/docs/guide/starthere/setuptrisul/install/requirements)  &rarr; [*Installation*](/docs/guide/starthere/setuptrisul/install/doinstall) &rarr;  [*Basic Tasks*](/docs/guide/ag/) . 
 :::
 
 ## How to Use This Guide

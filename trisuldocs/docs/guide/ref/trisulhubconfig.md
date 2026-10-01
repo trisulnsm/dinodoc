@@ -516,7 +516,7 @@ These parameters are typically set automatically when you put Trisul in the IPDR
 | ---------- | -------- | -------------------- |
 | OutputDirectory | /usr/local/var/lib/<br/>trisul-hub/domain0/hub0/context0/run| Directory where the IPDR record query result is dumped|
 | ControlDB       |/usr/local/var/lib/trisul-hub/domain0/<br/>hub0/context0/config/IPDRCONTROL.SQDB | The control database location|
-| ReportFormat    | full | The format of the IPDR records. Available values are: <br/> `full` – The full record in columnar report format<br/> `fullcsv` – Full report in CSV format<br/> `trai` – Format for DoT |
+| ReportFormat    | full | The format of the IPDR records. Available values are: <br/> `full` – The full record in columnar report format<br/> `fullcsv` – Full report in CSV format<br/> `trai` – TRAI format (for DoT) |
 | AddCustomerInfo | true | Add the information from the IPDR Static IP customer mapping |
 | AAADumpFilePath | /usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/aaadumpfiles | The place where the RADIUS AAA server dumps the currently active sessions |
 | SubscriberOption | | Add Subscriber ID or other ISP specific tag , this is taken from the RADIUS AAA log files |

@@ -57,7 +57,7 @@ Once you have configured and tested the "sent from" address, configure the targe
 To open *Schedule Email Reports* page, Login as `admin` and
 
 :::info Navigation
-:point_right: Go to Web Admin- Manage&rarr; Settings- App Settings&rarr; Click Schedule Email Reports
+:point_right: Go to **Web Admin → Manage → App Settings → Schedule Email Reports**
 :::
 
 This will open up the following configuration for automatically emailing the scheduled reports.

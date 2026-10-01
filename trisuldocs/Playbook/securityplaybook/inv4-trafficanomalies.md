@@ -40,7 +40,7 @@ By completing this investigation, you should be able to:
 
 Network anomaly investigations begin by identifying the change in network behavior that triggered the investigation. Rather than immediately focusing on individual hosts, the objective is to understand what changed, when it occurred, and whether the observed behavior requires further investigation.
 
-Open [**NBAD**](/docs/prodguide/nsm/NBAD/trisulnbad), [**Threshold Band Anomaly Alerts**](/docs/guide/ug/alerts/tband), [**DDoS Metrics**](/docs/guide/ug/alerts/ddos), or the dashboard that generated the alert.
+Open [**NBAD**](/docs/prodguide/nsm/NBAD/), [**Threshold Band Anomaly Alerts**](/docs/guide/ug/alerts/tband), [**DDoS Metrics**](/docs/guide/ug/alerts/ddos), or the dashboard that generated the alert.
 
 Review the available dashboards and alerts to determine:
 
@@ -70,7 +70,7 @@ Once the anomaly has been identified, determine what type of abnormal network be
 
 Understanding the characteristics of the anomaly helps determine whether it represents expected operational activity or behavior requiring further investigation.
 
-Use [**NBAD**](/docs/prodguide/nsm/NBAD/trisulnbad), [**DDoS Metrics**](/docs/guide/ug/alerts/ddos), [**TCP Analyzer**](/docs/prodguide/nsm/NBAD/tcpanalyzer), [**Layer 7 Metrics**](/docs/prodguide/nsm/NBAD/layer7metrics), or other behavioral dashboards as appropriate.
+Use [**NBAD**](/docs/prodguide/nsm/NBAD/), [**DDoS Metrics**](/docs/guide/ug/alerts/ddos), [**TCP Analyzer**](/docs/prodguide/nsm/NBAD/tcpanalyzer), [**Layer 7 Metrics**](/docs/prodguide/nsm/NBAD/layer7metrics), or other behavioral dashboards as appropriate.
 
 Review the available metrics to determine:
 
@@ -106,7 +106,7 @@ In [**Trisul Retro**](/docs/guide/ug/cg/retro), navigate to:
 
 Review the hosts contributing to the abnormal traffic during the investigation period.
 
-From the selected host, click the **Actions** menu and choose [**Host Conversations**](/docs/guide/ug/tools/explore_flows#top-conversations).
+In the **Retro Counters** results, click the host and choose [**Host conversations**](/docs/guide/ug/tools/explore_flows#top-conversations).
 
 Review the conversations to determine:
 

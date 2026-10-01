@@ -74,7 +74,7 @@ Creates a new user within the application.
 | username | Name of the user to create | test10 |
 | webtrisul_role_id | Role of the user (You can use get_all_roles request to check all available roles.) | 2 |
 | allowed_sub_domains | A comma-separated list of subdomains or tenants that the new user is allowed to access. | Unplcorp,ipdr,customer1 |
-| login_token | Login token for the new user to login from other external websites. The Default string is extlogintoken | YOUR_LOGIN_TOKEN |
+| login_token | Login token the new user uses to log in from external websites. Always set this. If you omit it, Trisul assigns the fixed default `extuserautologin`, which anyone can guess. | YOUR_LOGIN_TOKEN |
 | copy_menu | A boolean value indicating whether to copy the menu from an existing user. When creating a new user, you can choose to copy the menu settings from an existing user. If you don't copy from another user, the system will automatically create a standard set of menu items for the new user. | `1` to copy the menu, `0` not to copy |
 | copy_from_user | The username of the user from which to copy the menu | testuser |
 | copy_from_subdomain | The menu is copied from the specified user and subdomain, allowing for customized menus for each subdomain. This means that a user can have different menus associated with different subdomains. | Unplcorp |

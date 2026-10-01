@@ -199,10 +199,12 @@ const sidebars = {
                 "guide/ag/webadmin/ldap_login",
                 "guide/ag/webadmin/userroles",
                 "guide/ag/webadmin/authlog",
+                "guide/ag/webadmin/highsecurity_vapt",
                 "guide/ag/webadmin/web_options",
                 "guide/ag/webadmin/emailsettings",
                 "guide/ag/webadmin/modules",
                 "guide/ag/webadmin/dashboards",
+                "guide/ag/webadmin/rollingcards",
                 "guide/ag/webadmin/menus",
                 "guide/ag/webadmin/startorstop_tasks",
                 "guide/ag/webadmin/logs",
@@ -361,6 +363,7 @@ const sidebars = {
                 "guide/ug/caps/fullcontent",
                 "guide/ug/caps/packetstorage",
                 "guide/ug/caps/pcap_import",
+                "guide/ag/basictasks/snort",
                 "guide/ug/caps/tasks",
                 "guide/ug/caps/methods"
               ]
@@ -440,6 +443,18 @@ const sidebars = {
                 "guide/ug/tools/keyspace",
                 "guide/ug/tools/rule_builder",
                 "guide/ug/tools/trisul_bucketizer"
+              ]
+            },
+            {
+              "type": "category",
+              "label": "Trisul Apps",
+              "link": {
+                "type": "doc",
+                "id": "guide/ug/apps/index"
+              },
+              "items": [
+                "guide/ug/apps/shiftx",
+                "guide/ug/apps/stablekeys"
               ]
             },
             {
@@ -781,6 +796,7 @@ const sidebars = {
           "type": "category",
           "label": "Global LUA Objects",
           "items": [
+            "lua/intro_top_level_objects",
             "lua/obj_ac",
             "lua/obj_buffer",
             "lua/obj_engine",
@@ -797,6 +813,7 @@ const sidebars = {
           "type": "category",
           "label": "Frontend Scripts",
           "items": [
+            "lua/intro_frontend_scripts",
             "lua/inputfilter",
             "lua/counter_group",
             "lua/alert_group",
@@ -900,7 +917,8 @@ const sidebars = {
       "items": [
         "Troubleshooting/netflownotreceiving",
         "Troubleshooting/unabletologin",
-        "Troubleshooting/contextnotgettingcreated"
+        "Troubleshooting/contextnotgettingcreated",
+        "Troubleshooting/webserverissues"
       ]
     }
   ],
@@ -1138,6 +1156,7 @@ const sidebars = {
             "prodguide/nsm/Resources/url",
             "prodguide/nsm/Resources/dns",
             "prodguide/nsm/Resources/sslcerts",
+            "prodguide/nsm/Resources/fts",
             "prodguide/nsm/Resources/ftsssl",
             "prodguide/nsm/Resources/ftshttp",
             "prodguide/nsm/Resources/oveview"
