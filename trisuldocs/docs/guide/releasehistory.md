@@ -2,6 +2,45 @@
 
 This changelog outlines the key updates, improvements, and fixes made to Trisul across various releases. Browse through the release notes below to learn about the latest features, enhancements, and bug fixes.
 
+## WEBTRISUL 7.0.3204 (July 31,2026)   
+0106094: Display extra dropdown menus for IPDR users.  
+0106104: FOR DOT strict report format: Users can now enter MAC address in the terminal field.  
+0106106: Fixed generation speed/performance issues for large Excel files in DOT strict format.  
+0106140: IPDR Export flows: Allowed CIDR format in IP List field.  
+0106141: IPDR Customer: Added IP regex validation.  
+0106142: Fixed inconsistent behaviors and errors while importing IPv6 Customer CSV in IPDR Customer module.   
+0106143: Fixed duplicate entry handling during IPDR Customer CSV imports.  
+0106147: WEB: Added new menu option in IPDR Export form to extract AAA Records only.  
+0106160: Fixed issue where IPDR AI query could not handle huge volumes of queries.  
+0106166: IPDR Dashboard: Improved text-wrap behavior for long IP lists.  
+0106173: WEB: Added IPDR support for querying AAA logs by user.  
+0106180: IPDR Dashboard: Combined query start and end times into a single column.  
+0106204: IPDR Customers REST API: Restricted unauthorized user context.  
+0106206: Exposed IPDR query results via REST API. Alerts & Notifications  
+0106095: Show signature IDs (Sig IDs) in email alerts.  
+0106106: Added Webhook alert integration support for Zoho Cliq.  
+0106110: Fixed issue where Home Network created without subnet mask was accepted but not displayed in UI.  
+0106122: Fixed issue on Ubuntu Noble where uninstalling WebTrisul Thin and Nginx did not stop services.  
+0106124: Fixed Custom Key Monitor issue where Average Interface Recv and Trans util always showed 0.  
+0106126: Fixed missing “Enable All” option after clicking “Disable All” in Alert Groups page.  
+0106130: Fixed issue where SNMP Agent could be created without entering SNMP Read Community.  
+0106133: Fixed form permitting save when either Email Alert Business Days or Business Hours fields are empty.  
+0106137: Added file download option for NetFlow template database.  
+0106145: Fixed API failure issue when performing tenant IP restart.  
+0106150: Added new scheduled report type for Aggregate Flows.  
+0106154: Fixed Live SNMP chart rendering issues.  
+0106156: Display volume value inside a div in retro counters for automated testing.  
+0106159: Addressed VAPT security points.  
+0106172: Changed Storage Status duration display format to months:days:hours:minutes.  
+0106174: WEB: Updated Alpine slices to show pool type.  
+0106184: Removed redundant "Toggle Labels" button on Aggregate Network Flows in Current Apps menu.  
+0106185: Added support for customer details synchronization from Efficient IP IPAM.  
+0106188: Added top conversation support.  
+0106196: Flexi-report cross-key drilldown: Now displays router or device name in the page title.  
+0106198: Dashboard app installations now automatically update module IDs on the dashboard.  
+0106205: Retro Counters: PDF download now exports chart only.  
+0106281: Optimized Excel report download speed and report styling.  
+
 ## WEBTRISUL 7.0.2572 (September 5,2025)  
 0105937: Added option to generate and display Authentication/API tokens.  
 0105936: Manage users(add/edit/delete) with admin or super admin access.  
