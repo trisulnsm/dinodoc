@@ -30,23 +30,17 @@ clients to access the data collected by Trisul.
 - TRP is based on [Protocol Buffers](https://github.com/protocolbuffers/protobuf), a data interchange format introduced by Google.
 - The entire protocol is specified in a single file called [trp.proto](/docs/guide/ref/trpproto).
 - Allows clients to be written in **Ruby/Python/Java/C#/C** and any language supported by Google Protocol Buffers.
-- Secure TLS with client authentication and Access Control Lists.
+- Uses ZeroMQ sockets: a local `ipc://` socket by default, or `tcp://` for remote clients.
 - Access to traffic stats, flow details, flow investigation features.
 
 ## Synchronous operation
 
-A client sends a request message to Trisul and waits for a response to
-that message. The protocol is synchronous. This means that you cannot
-have multiple outstanding requests on a single connection. You may
-however open any number of connections to Trisul.
-```
-The typical steps a developer needs to do :  
-# Construct a TRP message you want to send by filling in the
-appropriate fields  
-# Serialize the message to a string  
-# Send across a 4 byte message length in **network byte** order  
-# Send across the serialized message itself  
-# Read a 4 byte response message length in **network byte** order  
-# Parse the response message  
-# Process the response as you see fit
-```
+A client sends a request message to Trisul and waits for a response to that message. The typical steps a developer needs to do:
+
+1. Construct a TRP message by filling in the appropriate fields.
+2. Serialize the message.
+3. Send it over the ZeroMQ socket set in the Hub's `Server > ZmqConnection` parameter.
+4. Receive the response message and parse it.
+5. Process the response as you see fit.
+
+The [trisulrp Ruby gem](/docs/trp/trpgemsteps) does steps 2 to 4 for you.

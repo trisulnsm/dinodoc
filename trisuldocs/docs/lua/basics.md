@@ -59,11 +59,12 @@ LUA scripts are loaded by the Trisul probes, not by the Hub nodes. This section 
 
 ### On each trisul-probe
 
-The following two directories are searched for LUA plugins by the probes. Put your *.lua script in either of these two directories
+The following three directories are searched for LUA plugins by the probes. Put your *.lua script in one of them. Run `trisulctl_probe list lua default@probe0` to see the paths for your context.
 
 | **Probe local** loaded by all contexts on the probe | `/usr/local/lib/trisul-probe/plugins/lua`                                  |
 | --------------------------------------------------- | -------------------------------------------------------------------------- |
 | **Context local** loaded by specific context only   | `/usr/local/var/lib/trisul-probe/domain0/probe0/context0/config/local-lua` |
+| **Context, all probes** loaded by every probe in the context | `/usr/local/var/lib/trisul-probe/domain0/probe0/context0/config/lua` |
 
 For [development and test purposes](/docs/lua/debugger) you can set the `TRISUL_LUA_PATHS` environment variable to add your own search paths to the probe nodes.
 

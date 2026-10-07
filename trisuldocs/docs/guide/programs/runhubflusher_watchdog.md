@@ -43,7 +43,7 @@ Configure mail in trisul to receive alert
 | -m MATCH_ANY_ENGINE|    -           | Check if any 1 engine is flushed      | -m                                                          |
 | -r RESTART         |     -           | Restart context if down              | -r                                                          |
 | -a filepath        |     -          | Checks the radius pattern in the file path | -a /home/trisul/radius.txt | 
-| -j interval        |      3600        | The interval of the flows being flushed | -j 11800 |
+| -j interval        |      3600        | AAA file processing interval, in seconds | -j 11800 |
 
 >**The file contains sample output such as:  
 radius_0  

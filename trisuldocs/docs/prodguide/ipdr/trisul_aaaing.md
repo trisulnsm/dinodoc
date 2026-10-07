@@ -48,7 +48,7 @@ Wed Sep 27 16:59:59 IST 2023,3,HV-1697634786,bobdylanuserid,100.90.2.38,103.112.
 |field| position | notes |
 |--- | ---  |--- |
 |logTimeStamp| 1 | note format 'Wed Sep 27 16:59:59 IST 2023' |
-|accountNumber| 3 | optional. for ISP who have a separate account number or subscriberid - added to IPDR output with `--show-hath-bb` |
+|accountNumber| 3 | optional. for ISP who have a separate account number or subscriberid - added to IPDR output with `--store-hath-bb` |
 |userid | 4| the userid |
 |framedIp| 5 | the IPv4 address here it is the CGNAT 100.90.2.38 |
 |nasIp| 6 | the NAS IP address |
@@ -136,8 +136,8 @@ The trisul_aaaing takes the  data inside of the CDR and are then integrated into
 
 There are other options you may want to add 
 
- - --move-out : after processing the file remove it from the directory
- - --store-original : move the CSV files into the IPDR/ data directory inside the Trisul database slices. 
+ - --move-out (-m) : with -d, after importing a file, move it into the matching slice's `IPDR/logs` directory
+ - --store-original (-s) : also store each original log line in the AAA database, for reconciliation 
 
  See `man trisul_aaaing` for full description.
 
@@ -174,9 +174,9 @@ Also see `man trisul_aaaing` for a full list with examples.
 | -F --in-format=ELITE |  -                            | The input log file must be in CSV format. Currently, only a limited set of vendor codes are supported. For additional vendor code support or customization, please contact Unleash Networks. |
 | -i --in-file= Filename |    -       | Process a single, specified AAA Log file in CSV format. |
 | -d --in-directory=Directoryname |      -             | Specify the directory containing the AAA Log CSV files to be processed. The tool will automatically skip files that have already been processed, based on their timestamp. |
-| --store-original |               | Optionally store the original log lines in the database, which can be useful for reconciliation and auditing purposes. |
-| -s --store-hath-bb |       | Store an additional broadband subscriber ID extracted from the AAA log, which will be recorded as an extra column in the database, supplementing the existing user ID field. |
-| -m --move-out |           | Store raw logs in the database for reconciliation and investigation, with optional archiving and removal of processed files. |
+| -s --store-original |               | Optionally store the original log lines in the database, which can be useful for reconciliation and auditing purposes. |
+| --store-hath-bb |       | Store an additional broadband subscriber ID extracted from the AAA log, which will be recorded as an extra column in the database, supplementing the existing user ID field. |
+| -m --move-out |           | Used with -d. After a file is imported, move it out of the input directory into the matching slice's `IPDR/logs` directory. |
 | --lua-parser |  | Utilize a LUA script to parse AAA CDR CSV files and extract custom attributes. A sample script, radiusparser.lua, is provided in /usr/local/share/trisul-hub/ for reference. |
 | --skip-index |  | Skip creating the IP_AAA_INDEX during file creation to significantly speed up IPDR RADIUS CDR processing. Note that the index can be manually added later if needed. |
 | --dry-run |    | Perform a simulated run that displays the processing order of CDR records without actually moving or modifying them. |

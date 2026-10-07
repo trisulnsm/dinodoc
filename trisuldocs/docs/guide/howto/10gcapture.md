@@ -109,7 +109,7 @@ You need a fast disk array to accomplish 10Gbps.
 Some tips to achieve 10Gbps.
 
 - Use really large file sizes  
-  Change the Ring \> FileSizeMB parameter to 60G
+  Set Ring \> FileSizeMB as large as your disks allow. Trisul caps each file at 32 GB and cuts larger values down to 32 GB.
 - Put all your files in oper  
   Set number of files in the Oper area to 200, in ref = 0, and archive
   = 0.

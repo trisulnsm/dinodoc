@@ -38,6 +38,8 @@ You are shown the following screen
 
 - Click **Create** button to add a new home network.
 
+Restart the probe context for the change to take effect, for example `trisulctl_probe restart context default@probe0`.
+
 ## Adding Home Networks in Bulk
 
 When you click on “Add” in the Home Networks screen you can see the Add
@@ -86,11 +88,10 @@ The following chart gives you the traffic details in each direction.
 
 Trisul has the ability to use Flow Taggers to tag each flow with a direction hint based on the endpoint Home Addresses.
 
-1. Enable the [TagFlowsWithDirection](pathname:///docs/guide/ref/netflow-config#TagFlowsWithDirection) setting in the NetFlow configuration file
+1. Enable the [TagFlowsWithDirection](pathname:///docs/guide/ref/netflow-config#TagFlowsWithDirection) setting: open the NetFlow configuration file `/usr/local/etc/trisul-probe/domain0/probe0/context0/PI-7CA09636-02D4-45E7-AA00-BE0D49B94E26.xml`, set `TagFlowsWithDirection` to `true`, and restart the probe context. This works in all product modes.
 2. You can then go to Tools &rarr; Explore Flows to search for flows with
    the appropriate tag.
-3. For example to see all *Transit* flows , enter `tag=[dir]transit` in
-   the tool's search query.
+3. Each flow carries one of these tags: `[dir]internet` (one end inside the home network, the other outside), `[dir]internal` (both ends inside) or `[dir]transit` (both ends outside). For example, to see all transit flows, enter `tag=[dir]transit` in the tool's search query.
 
 ![](images/explore_flows.png)  
 *Figure: Search for directional flows using a custom flow tagger*

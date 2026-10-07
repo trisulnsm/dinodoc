@@ -111,6 +111,6 @@ The raw packets are stored for each context in the following default directories
   - /ref – the reference directory for recent data likely to be looked up
   - /archive – older data  
 
-As data ages they ‘cool down’ and slide from oper to ref to archive. Therefore the ‘hottest’ data slices are under /oper.
+As data ages they ‘cool down’ and slide from oper to ref to archive. Therefore the ‘hottest’ data slices are under /oper. Slices move whole: no data is reduced or summarized when a slice moves to ref or archive.
 
 The reason we have three directories is that they can be mounted on three separate volumes if required for heavy workloads.

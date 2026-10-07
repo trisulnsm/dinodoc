@@ -4,6 +4,12 @@ The Trisul REST API is an HTTP/JSON interface to network analytics data, metadat
 
 The APIs support authenticated access to network statistics, counter groups, historical time windows, and top-N analytics without requiring direct interaction with the Trisul backend.
 
+## Before You Start
+
+- **Version:** The REST API is available from WebTrisul 8.
+- **Protocol:** You can call the endpoints over HTTP or HTTPS. The examples use `http://`. Use `https://` if your WebTrisul server runs SSL.
+- **Methods:** Every endpoint accepts `GET` with query-string parameters and `POST` with body parameters.
+
 ## REST API Overview
 
 The REST API documentation currently includes the following endpoints:

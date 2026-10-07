@@ -9,7 +9,7 @@ All exploration is done in a tool called the “*Edge Graph Explorer*”.
 
 ## Enable Feature
 
-New installations of Trisul will already have *Edges* enabled. If you are upgrading an older install, ensure that you add the following line in [trisulProbeConfig.xml](/docs/guide/ref/trisulconfig#edges)
+*Edges* is enabled by default in NSM (packet capture) mode. In all other modes it is disabled by default. To enable it in another mode, or if you are upgrading an older install, add the following line in [trisulProbeConfig.xml](/docs/guide/ref/trisulconfig#edges):
 
 ```xml
 <Edges> <Enable>True</Enable> </Edges>

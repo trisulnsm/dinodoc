@@ -26,7 +26,7 @@ Replace eth0 with the relevant network interface and 2055 with the expected NetF
 ## Check whether the port number points to Netflow or Sflow
 
 Ensure that NetFlow packets are being received on the correct ports. Verify that the port numbers match the expected configuration. 
-- UDP ports 2055, 2056, 2057, 9500 and 9993 (NetFlow defaults)
+- UDP ports 2055, 2056, 2057, 4739, 5111, 9500 and 9993 (NetFlow, IPFIX, JFlow and NetStream defaults)
 - UDP port 6343 (sFlow default)
 
 These are the default ports listed in [Configuring NetFlow](/docs/guide/ug/netflow/netflow_setup). If your exporter sends to another port, map it in **Context: default &rarr; profile0 &rarr; Access Points**.

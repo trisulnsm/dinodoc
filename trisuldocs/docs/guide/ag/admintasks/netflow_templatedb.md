@@ -27,7 +27,7 @@ On the upper right hand side corner you can see the number of templates received
 
 | Detail | Description |
 |--------|-------------|
-| # | The count of number of fields received. |
+| # | Position of the field in the template. |
 | Field ID | Unique ID for the field. |
-| Length | The count of field (on that row) received. |
+| Length | Length of the field in bytes. |
 | Field Name | Name of the field. |

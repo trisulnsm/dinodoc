@@ -28,7 +28,7 @@ How DNS protocol is metered.
 | -------------------- | -------- | --------------------------------------------------------------------------------- |
 | Description          |Controls how DNS extraction works | |
 | SampleRate           | 1        | Once every X packets                                                              |
-| CreateFTSDocument    | true     | Do you want to create a Full Text Search Document.                                |
+| CreateFTSDocument    | false    | Do you want to create a Full Text Search Document.                                |
 | ExtractResources     | true     | Extract DNS Resources. Resources can be thought of as Logs                        |
 | MergeCDN             | true     | If true, CDN names like akamai.. in answer records map to the original Query name |
 | TrackBaseDomains     | true     | Enable base domains feature.                                                      |

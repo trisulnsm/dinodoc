@@ -98,7 +98,7 @@ The displayed AAA User Name matches the corresponding entry in the AAA or RADIUS
 
 ## Full database dump
 
-Some jurisdictions have this requirement where ISPs are asked to provide a full database dump of all records to the agency. Obviously this is going to be gigantic, hence they can be capped at 1 Million records or such. 
+Some jurisdictions have this requirement where ISPs are asked to provide a full database dump of all records to the agency. Obviously this is going to be gigantic, hence the dump is capped (250,000 records by default; see below). 
 
 To request a full dump leave all the form fields blank and **press the split submit** button as shown below.
 
@@ -143,14 +143,14 @@ The `ipdr_bulkquery.sh` script is a utility provided with the Trisul Hub IPDR pa
 
 #### **Running the Script**
 
-- Place the `ipdr_bulkquery.sh` script and the IP list file (e.g., iplist1.txt) in a desired directory (e.g., /root).
+- Run the script from `/usr/local/share/trisul-hub`, where the Hub package installs it. Put the IP list file (e.g., iplist1.txt) in any directory (e.g., /root) and pass its path with -i.
 - Execute the script using the following command format:
 
 `./ipdr_bulkquery.sh -f <start_date> -t <end_date> -i <ip_list_file>`
 
 
- *   `<start_date>`: Specify the start date and time in the format `1-8-2024-13:00`.
- *   `<end_date>`: Specify the end date and time in the format `1-8-2024-13:30`.
+ *   `<start_date>`: Specify the start date as DD-MM-YYYY, optionally with -HH:MM, for example `1-8-2024-13:00` (1 August 2024, 13:00).
+ *   `<end_date>`: Specify the end date in the same DD-MM-YYYY(-HH:MM) format, for example `1-8-2024-13:30`.
  *   `<ip_list_file>`: Specify the path to the IP list file (e.g., `/root/iplist1.txt`).
 
 **Example Command**

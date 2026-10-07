@@ -40,7 +40,7 @@ trisulctl_probe features a convenient method to create the ramfs
 sudo trisulctl_probe
 createramfs probe0 context0
 
-# then answer the questions, select a size of 10MB for the ramfs
+# then answer the questions; accept the default size of 40 MB (allowed 1-256 MB)
 ```
 
 #### Manually
@@ -58,7 +58,7 @@ $ sudo mount -t tmpfs -o size=40m tmpfs ramfs/
 To ensure that the ramfs partition is persisted on reboot. Add it to fstab as shown in this example
 
 ```lua
-tmpfs   /usr/local/var/lib/trisul-probe/domain0/probe0/context0/run/ramfs     tmpfs   nodev,nosuid,size=20M          0  0
+tmpfs   /usr/local/var/lib/trisul-probe/domain0/probe0/context0/run/ramfs     tmpfs   nodev,nosuid,size=40M          0  0
 ```
 
 #### Size of the file system

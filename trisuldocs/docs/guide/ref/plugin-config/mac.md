@@ -27,4 +27,4 @@ Controls how MAC addresses are metered.
 | SampleRate     | 1        | Process only 1 in X packets                |
 | MeterMACPairs  | true     | Meter MAC pairs every single Source-\>Dest |
 | MeterBroadcast | true     | Meter broadcast addresses                   |
-| LookupOUI      | true     |                                            |
+| LookupOUI      | true     | Labels each MAC key with the vendor name from its OUI (first 3 bytes), and multicast MACs with their multicast name. |

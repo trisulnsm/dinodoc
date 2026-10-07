@@ -1,6 +1,6 @@
 # IPAM
 
-The **IPAM** page allows you to configure integration with an external IP Address Management (IPAM) platform. Once configured, Trisul synchronizes IP address metadata from the configured IPAM server, allowing IP ownership and related information to be displayed throughout the platform.
+The **IPAM** page allows you to configure integration with an external IP Address Management (IPAM) platform. Once configured, Trisul synchronizes IP address metadata from the configured IPAM server. You view the IPAM data on this page.
 
 :::info navigation
 

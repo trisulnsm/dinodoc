@@ -96,6 +96,10 @@ to
 
 Then restart the hub: `trisulctl_hub restart context default@hub0`
 
+:::warning
+The TRP server does not authenticate `tcp://` clients. Allow the port only from trusted hosts with a firewall. A 3-day trial license does not allow `tcp://`; use a time-trial or production license.
+:::
+
 Then change the connection string to `tcp://192.168.2.201:12007` in the
 hellotrp.rb example
 

@@ -4,7 +4,7 @@
 This page describes how to get email alerts when disk usage exceeds a
 certain threshold.
 
-> By default disk usage alerting is not enabled.
+> On the Hub, disk usage alerting is off by default: a blank `UsageRedMark` means disabled. The Hub checks disk usage once an hour. On the Probe, the packet storage tiers ship with `UsageRedMark` set to 90.
 
 ## Pre-requisites
 

@@ -96,7 +96,7 @@ When the first chunk of TCP reassembled data is available on the flow. This meth
 | --------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | timestamp | number                                                            | Timestamp seconds when the first packet in the flow was seen                            |
 | flowkey   | A [FlowID](/docs/lua/obj_flowid) object  | use this to determine IPs and Ports involved in the flow                                |
-| direction | number                                                            | 0 = OUT payload in client>server direction (same as the original SYN) 1 = server>client |
+| direction | number                                                            | 0 = IN payload in server > client direction<br/>1 = OUT payload in client > server direction (same as the original SYN) |
 | seekpos   | number                                                            | Seek position byte position from the beginning of the stream                            |
 | buffer    | A [Buffer](/docs/lua/obj_buffer) object  | represents the reassembled bytes                                                        |
 

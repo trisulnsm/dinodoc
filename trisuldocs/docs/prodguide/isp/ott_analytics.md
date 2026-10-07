@@ -28,6 +28,19 @@ Office 365, Skype, cloud providers like Amazon, GCP, Azure, and so on.
 The customer can tune the file on a rolling basis as new services are
 seen. No restart is required.
 
+### Connect the DNS feed
+
+The DNS feed comes from a separate packet-capture context that collects DNS into its passive DNS database. Two scripts in `/usr/local/share/trisul-probe` copy that database into the NetFlow context:
+
+1. Run `setup-ott-dns.sh` once. It creates `/usr/local/share/trisul-probe/ott-dns.conf` with the source (DNS capture) and destination (NetFlow) context names.
+2. Add `sync-ott-dns.sh` to cron, hourly:
+
+~~~
+0 * * * * /usr/local/share/trisul-probe/sync-ott-dns.sh /usr/local/share/trisul-probe/ott-dns.conf
+~~~
+
+`sync-ott-dns.sh` stops the source context while it copies the database.
+
 OTT App monitoring is available in two formats.
 
 - For the entire network

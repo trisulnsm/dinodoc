@@ -14,7 +14,7 @@ Base domains - map domain names used by popular webservices to Application Names
 
 		<Rules>
 			<Rule> <k> AMAZON AWS                 </k> <x> amazonaws </x> </Rule>
-			<Rule> <k> GMAIL                      </k> <x> (mail\.google|gmail|inbox\.google|mail\-ads\.google|
+			<Rule> <k> GMAIL                      </k> <x> (mail\.google|gmail|inbox\.google|mail\-ads\.google|mail\-attachment\.googleusercontent|googlemail\.l\.google|aspmx\.l\.google) </x> </Rule>
 		</Rules>
 
 		<StaticIPRules>

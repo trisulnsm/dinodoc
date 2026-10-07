@@ -29,4 +29,4 @@ Used for Mobility tunnels.
 ### TunnelPolicy
 | Parameters       | Defaults                          | Description             |
 | ---------------- | --------------------------------- | ----------------------- |
-| Detunnel3GPPGTPU | false                             | Contact us for details. |
+| Detunnel3GPPGTPU | false                             | Set to true to strip 3GPP GTP-U tunnels so Trisul meters the inner IP packets. |

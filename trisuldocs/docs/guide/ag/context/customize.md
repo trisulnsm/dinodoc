@@ -23,9 +23,12 @@ You may modify these fields to suit your environment.
 | -------------- | ----- |
 | IS_DEMO_LOGIN  | false |
 | IS_SHOW_TAGGER | true  |
-| WS_SERVER_PORT | 3003  |
+| WS_SERVER_PORT | 3000  |
 | SITE_ID        | “”    |
 | SHOW_DEMO_LOGO | false |
+| ENABLE_HIGH_SECURITY | false |
+
+You can also change WS_SERVER_PORT in **Web Admin → Manage → App Settings**. For ENABLE_HIGH_SECURITY, see [High Security](/docs/guide/ag/webadmin/highsecurity_vapt). <!-- TODO(verify): App Settings tab/field for WS_SERVER_PORT, SME 04c-Q16-FU -->
 
 ### Manufacturer Details (Do Not Change These)
 

@@ -20,5 +20,5 @@ When enabled, Trisul's VAPT feature:
 ![](images/vapt.png)  
 *Figure: High Security Enabled*
 
-By default, Trisul's High Security feature is not enabled. You can activate High Security by enabling the mode with `ENABLE_HIGH_SECURITY=true` in OEM settings.
+High Security is off by default (`ENABLE_HIGH_SECURITY=false`). To turn it on, set `ENABLE_HIGH_SECURITY=true` in the [OEM settings file](/docs/guide/ag/context/customize#oemsettingsrb) (`/usr/local/share/webtrisul/config/initializers/oem_settings.rb`), then restart WebTrisul. See [Start and Stop WebTrisul](/docs/guide/ag/admintasks/startstop#start-and-stop-webtrisul).
 

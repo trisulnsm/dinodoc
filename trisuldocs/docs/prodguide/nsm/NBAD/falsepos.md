@@ -5,7 +5,7 @@ sidebar_position: 16
 
 # Reducing False Positive Alerts
 
-Trisul interfaces with IDS over Unix sockets / EVE JSON, so any signature that
+Trisul receives IDS alerts over Unix sockets (Suricata EVE alerts come in through a Trisul app), so any signature that
 fires too often in IDS surfaces directly as IDS alert noise inside Trisul. One of
 the most effective ways to cut down false positives from this alert class is to
 suppress the specific signature at the IDS layer, rather than trying to filter it

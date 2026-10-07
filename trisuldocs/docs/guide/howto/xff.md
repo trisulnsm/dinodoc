@@ -54,7 +54,7 @@ proxy3 (proxy3 appears as remote address of the request).
 To enable XFF tracking in Trisul you need to edit a parameter in the
 trisulProbeConfig.xml file as specified below.
 
-Set the `EnableXFFDeproxy` option to TRUE in the
+Check that the `EnableXFFDeproxy` option is TRUE (the default) in the
 [Reassembly section of the Trisul Config
 file](/docs/guide/ref/trisulconfig#reassembly)
 
@@ -72,7 +72,7 @@ The above features are needed because Trisul needs to reassemble the
 HTTP headers accurately to reliably process the XFF headers.
 
 :::note
-You need to restart Trisul for this to take effect.
+Restart the probe context for changes to take effect, for example `trisulctl_probe restart context default@probe0`.
 :::
 
 ## Trisul reports

@@ -25,7 +25,7 @@ Controls how hosts are metered. You need to tweak this only when working with ve
 | ------------------------| -------- | -------------- |
 | description             |          |                |
 | SampleRate              | 1        | packet sampling rate. Default, every packet.  |
-| ExtraCountersSampleRate | 1        |                |
+| ExtraCountersSampleRate | 1        | Sampling rate for the extra Aggregates counters (broadcast, multicast and unicast totals). 1 counts every packet. N counts 1 packet in N and scales the result up. |
 | ExternalIPOnly          | false    | only meter external IPs. IPs that are not in your HOME\_NETWORK   |
 | ShortUpdates            | false    | limited host updates - do not measure TotalBandwidth, IntoHomeNetwork, OutofHomeNetwork. |
 

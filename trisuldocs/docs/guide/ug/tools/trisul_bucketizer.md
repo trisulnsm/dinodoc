@@ -26,20 +26,56 @@ You configure the Rebucketizer in the Hub configuration file (trisulHubConfig.xm
 
 **BucketSize**: The bucket size in seconds.  
 **TopperBucketSize**: The Topper bucket size in seconds.  
-**ThresholdDays**: The number of days to count in that bucket size before switching to a lower resolution.  
+**ThresholdDays**: Trisul uses this resolution when the query time window is at least this many days long.  
+
+**Default**
+
+The Rebucketizer has no built-in resolutions. It stays off until you enable it and enter each resolution yourself. When it is off, the section looks like this:
+
+~~~xml
+<Rebucketizer>
+    <Enable> False </Enable>
+    <Resolutions>
+    </Resolutions>
+</Rebucketizer>
+~~~
 
 **Example Configuration**
-```
-<BucketSize>300</BucketSize>
-<TopperBucketSize>900</TopperBucketSize>
-<ThresholdDays>29</ThresholdDays>
-```
-This configuration sets the bucket size to 5 minutes (300 seconds) and switches to a lower resolution after 30 days.
 
-**Parameters Reference** 
+This example enables the Rebucketizer with three resolutions:
 
-|Parameter | Description |	Default Value |
-|----------|-------------|----------------|
-|BucketSize	| Bucket size in seconds |	300 |
-|TopperBucketSize |	Topper bucket size in seconds |	900 |
-| ThresholdDays |	Number of days to count before switching to lower resolution |	29 |
+~~~xml
+<Rebucketizer>
+    <Enable> True </Enable>
+    <Resolutions>
+        <Resolution>
+            <ID>1</ID>
+            <BucketSize>300</BucketSize>
+            <TopperBucketSize>900</TopperBucketSize>
+            <ThresholdDays>29</ThresholdDays>
+        </Resolution>
+        <Resolution>
+            <ID>2</ID>
+            <BucketSize>900</BucketSize>
+            <TopperBucketSize>900</TopperBucketSize>
+            <ThresholdDays>90</ThresholdDays>
+        </Resolution>
+        <Resolution>
+            <ID>3</ID>
+            <BucketSize>3600</BucketSize>
+            <TopperBucketSize>900</TopperBucketSize>
+            <ThresholdDays>180</ThresholdDays>
+        </Resolution>
+    </Resolutions>
+</Rebucketizer>
+~~~
+
+**Parameters Reference**
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| Enable | Turns the Rebucketizer on (`True`) or off (`False`) | `False` |
+| ID | Unique ID of the resolution | None. You enter it. |
+| BucketSize | Bucket size in seconds | None. You enter it. |
+| TopperBucketSize | Topper bucket size in seconds | None. You enter it. |
+| ThresholdDays | Use this resolution when the query time window is at least this many days | None. You enter it. |

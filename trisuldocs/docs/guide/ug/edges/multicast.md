@@ -14,7 +14,7 @@ Login as admin and,
 
 From the list of Trisul apps, download Multicast GraphX.
 
->Note: Make sure the ICMP Multicast App is also installed and active.
+>Note: Make sure the **IGMP Multicast** app is also installed and active.
 
 ## Viewing Multicast GraphX
 

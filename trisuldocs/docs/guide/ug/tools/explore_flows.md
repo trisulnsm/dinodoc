@@ -93,7 +93,7 @@ The Search results for Flows are presented in terms of,
 3) [**Top Conversations**](/docs/guide/ug/tools/explore_flows#top-conversations): A table showing top conversations
 4) [**Top 100 Matching Flows**](/docs/guide/ug/tools/explore_flows#top-matching-flows): A table of raw flows
 
-> Only the first matching *Max Flows (default 10K)* are retrieved. Please narrow down your query to within this limit. Also see the [Export IP Flows](/docs/prodguide/nf/Tools/export-flows) and [Aggregate Flows](/docs/guide/ug/tools/aggregate_flows) tools, which work with larger matches.
+> Explore Flows retrieves only the first matching flows, up to *Explore Flows Max Items* (default 2000). An admin can change this limit in [App Settings → UI](/docs/guide/ag/webadmin/web_options#ui). Narrow down your query to stay within this limit. Also see the [Export IP Flows](/docs/prodguide/nf/Tools/export-flows) and [Aggregate Flows](/docs/guide/ug/tools/aggregate_flows) tools, which work with larger matches.
 
 
 

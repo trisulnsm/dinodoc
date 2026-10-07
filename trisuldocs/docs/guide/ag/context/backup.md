@@ -39,6 +39,17 @@ To ensure business continuity, it is essential to regularly back up Trisul data 
 
 ### Trisul Data Backup
 
+:::warning Stop the context first
+Stop the context before you copy the data, and start it again when the copy finishes:
+
+~~~
+$ trisulctl_hub
+trisul_hub(domain0)> stop context default
+...
+trisul_hub(domain0)> start context default
+~~~
+:::
+
 Step 1: Load Trisul Environment Variables
 ```Bash
 source /usr/local/share/trisul-hub/trisbashrc
@@ -71,23 +82,15 @@ cp -r /usr/local/var/lib/trisul-hub/domain0/hub0/context0/meters <backup folder>
 
 ### Trisul Configuration Backup
 
-To ensure the preservation of your Trisul configuration, it is essential to backup the following files:
+Back up the following directories. A complete configuration backup needs both the Hub and the Probe directories.
 
 | Config | Path | Description |
 |--------|------|-------------|
-| Trisul Hub Config | The output of ls /usr/local/etc/trisul-hub/ | Contains the hub config files |
-|        | The output of ls /usr/local/share/trisul-hub/ | Contains the hub data |
-
-| Config | Path | Description |
-|--------|------|-------------|
-| Trisul Probe Config | The output of ls /usr/local/etc/trisul-probe/ | Contains the probe config files |
-|        | The output of ls /usr/local/share/trisul-probe/  | Contains the probe data |
-
-| Config | Path | Description |
-|--------|------|-------------|
-| WebTrisul Config | The output of ls /usr/local/var/lib/trisul-config   | Contains the Libraries in the UI |
-
-Please backup the outputs of these commands to ensure that your Trisul configuration is safely preserved.
+| Trisul Hub config | `/usr/local/etc/trisul-hub/` | Hub configuration files |
+| Trisul Hub data | `/usr/local/share/trisul-hub/` | Hub data |
+| Trisul Probe config | `/usr/local/etc/trisul-probe/` | Probe configuration files |
+| Trisul Probe data | `/usr/local/share/trisul-probe/` | Probe data |
+| WebTrisul config | `/usr/local/var/lib/trisul-config/` | WebTrisul database (users, roles, dashboards, App Settings), licence files and profile configuration |
 
 ### Running install_setup_backup.sh
 
@@ -107,7 +110,15 @@ Once completed, a crontab entry will be automatically created to backup at
 
 ### Backup Trisul Configuration
 
+`install_setup_backup.sh` creates `setup_backup.conf` from the template `install_setup_backup.conf` and adds this crontab entry. The entry runs `setup_backup.sh`, the script that does the backup, with the settings in `setup_backup.conf`:
+
 `0 4 * * * /usr/local/share/trisul-hub/setup_backup.sh /usr/local/share/trisul-hub/setup_backup.conf`
+
+To take a one-time backup now, run `setup_backup.sh` directly:
+
+~~~
+/usr/local/share/trisul-hub/setup_backup.sh /usr/local/share/trisul-hub/setup_backup.conf
+~~~
 
 The backups are placed in the remote directory in a single tar.gz file
 with the HOSTNAME and TIMESTAMP of the backup
@@ -124,6 +135,17 @@ repeat the above steps.
 
 To restore the backup. Locate the backup with the correct timestamp you
 wish to use and untar the backup file.
+
+:::warning Stop the context before you restore
+Stop the context before you restore the data, and start it again when the copy finishes:
+
+~~~
+$ trisulctl_hub
+trisul_hub(domain0)> stop context default
+...
+trisul_hub(domain0)> start context default
+~~~
+:::
 
 Step 1: Load Trisul Environment Variables
 ```Bash

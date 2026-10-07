@@ -8,7 +8,7 @@ To use long term traffic tool,
 
 :::info navigation
 
-:point_right: Go to Tools &rarr; Select Long Term Traffic
+:point_right: Go to Tools &rarr; Long Term Traffic
 
 :::
 

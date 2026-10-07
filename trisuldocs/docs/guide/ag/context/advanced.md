@@ -15,3 +15,5 @@
 | Track Protocol per Static IP | Click on the Enable button to start tracking protocol per static IP. |
 | Track Internal Hosts per Static IP | Click on the Enable button to start tracking internal hosts per static IP. |
 | Track External Hosts per Static IP | Click on the Enable button to start tracking external hosts per static IP. |
+
+To view these metrics, log in as user and go to **Reports → Readymade → Static IPs**. See [Static IP Reports](/docs/guide/ug/reports/readymade#static-ip-reports).

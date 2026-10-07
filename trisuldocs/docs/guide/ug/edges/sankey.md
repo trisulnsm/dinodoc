@@ -4,7 +4,7 @@ The Sankey Drill Down App can be downloaded from [Trisul Apps](/docs/guide/ag/we
 
 The chart shows the share of traffic for each application and lets you drill down into specific data points.
 
-Once downloaded the Sankey shall be available on the [Show All](/docs/guide/ug/ui/dashmod_intro) dashboards. Fill in the fields to configure the sankey settings.
+After you install the app, open it from **Dashboards → Show all → Sankey Crossdrill**. Fill in the fields to configure the Sankey settings.
 
 ![](images/sankey.png)  
 *Figure: Sankey Crossdrill Search Criteria Form*

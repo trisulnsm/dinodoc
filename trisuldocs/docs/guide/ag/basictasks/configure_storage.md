@@ -8,7 +8,7 @@ Retention is defined in two places, depending on the type of data:
 
 1) **Raw packet data (Probe nodes)**:  
         - Controlled by total disk space in **GB**  
-        - Default: **10 GB**  
+        - Default: **16 GB** (16 files of 1000 MB: 8 in oper, 8 in ref, 0 in archive)  
 
 2) **Metrics, flows, alerts, and records (Hub nodes)**:  
         - Controlled by retention duration in **days**  
@@ -107,7 +107,7 @@ The Hub archiver (`trisul_archiver`) controls how slices move between storage ti
 For typical retention tuning (oper/ref/archive slice counts), `SLIDE` is sufficient. Switch to `RING` only when linear sliding cannot keep up with daily ingest volume. See the [Archiver](/docs/guide/ref/trisulhubconfig#archiver) and [Extra ring archives](/docs/guide/ref/trisulhubconfig#extra-ring-archives-ring-archiver) sections in the Hub configuration reference for XML examples.
 
 :::tip For IPDR
-To ensure 2-year IPDR logging, set the Hub retention period to **730 days** and make sure the storage directory has enough capacity for two years of IPDR data.
+To keep 2 years (730 days) of IPDR logs, set the Hub slice counts to **Operational 30**, **Reference 100** and **Archive 600** (30 + 100 + 600 = 730 days). Make sure the storage directory has enough capacity for two years of IPDR data.
 :::
 
 ## Packet Capture Retention on the Probe 
@@ -115,7 +115,7 @@ To ensure 2-year IPDR logging, set the Hub retention period to **730 days** and 
 On the Probe, retention is controlled by **total disk space**, not days. Trisul uses a **sliding window** mechanism, automatically overwriting older packet data as space fills up.
 
 
-The default maximum Packet Capture PCAP storage is **10GB**
+The default maximum Packet Capture PCAP storage is **16 GB**
 
 
 :::tip Max PCAP Storage 
@@ -171,7 +171,7 @@ If packet capture data needs to live on a different disk or mount point, relocat
 
 ### Increasing Packet Capture Storage
 
-If the default 10 GB is insufficient, increase storage by:  
+If the default 16 GB is insufficient, increase storage by:  
 
 - Increasing `FileSizeMB`  
 - Increasing `SliceCount` (especially in Archive)  

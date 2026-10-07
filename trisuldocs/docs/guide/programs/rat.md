@@ -11,8 +11,7 @@ to tune the performance of the packet capture and analytics pipelines.
 [root@li76-90 ~]# rat probe-config-file packet-capture-method
 ```
 
-The packet capture method parameter is one of `rxring` , `afp` -
-AF_PACKET, `libpcap`, `ffpcap` - packet capture from file.
+The second parameter is the name of the capture pipeline to watch. RAT matches it as a prefix against the stats files in the context's `run` directory, so use the method the probe runs with, such as `rxring`, `afp` (AF_PACKET), `lpcap` (libpcap), `pfring` or `ffpcap` (capture from file). If you leave it out, RAT uses `tokenpipe_`.
 
 An example run
 

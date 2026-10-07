@@ -12,6 +12,8 @@ The `install_monit.sh` script is designed to monitor and start critical processe
 
 ### NetFlow Customers
 
+The script is installed in `/usr/local/share/trisul-hub`; run it from there. Use `-x` once for each context you do not want monitored. The examples below exclude contexts named `netflow` and `context0`; replace them with your own context names.
+
 To configure process monitoring for NetFlow customers, run the script with the following arguments:
 
 ```bash
@@ -26,7 +28,7 @@ For IPDR customers, add the -d option to the command:
 ```
 ## How it Works
 
-- The script adds the specified processes (Hub and Probe) to the Monit configuration file (/etc/monit.rc).
+- The script adds the specified processes (Hub and Probe) to the Monit configuration file, `/etc/monitrc` or `/etc/monit/monitrc`, whichever exists.
 - Monit checks the status of these processes every minute.
 - If a process is found to be not running, Monit automatically restarts it.
 

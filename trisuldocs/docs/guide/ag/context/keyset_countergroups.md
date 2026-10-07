@@ -69,6 +69,6 @@ Directions to Create new keyset counter groups
 Your keyset group is ready.
 
 > **Restart**  
-> Restart the Probe for changes to take effect.
+> Restart the probe context for changes to take effect, for example `trisulctl_probe restart context default@probe0` (or `trisulctl_hub restart context default@probe0`).
 
 You can then view the new counter group in *Retro > Retro Counters*

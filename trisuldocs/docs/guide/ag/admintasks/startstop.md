@@ -62,12 +62,12 @@ Click on the three lines button adjacent to the Start/Stop button to access Hub 
 
 | Options | Description |
 |---------|-------------|
-| View Flusher Log | Displays the log file for the Flusher process, which is responsible for periodically removing outdated data from the Trisul database to maintain data retention policies. |
+| View Flusher Log | Displays the log file for the Flusher process, which writes collected data to the Trisul database. Old data is removed by the archiver (`trisul_archiver`), not the Flusher. |
 | View TRP Log | Displays Trisul Remote Protocol logs queried from hub to WebTrisul. |
 | View Data Retention | Allows administrators to view the current data retention policies configured in Trisul |
 | View System Info | Provides detailed information about the Trisul Hub system, including Name, Kernel, IP Addresses, Version etc |
 | Change Customer Logo | Enables customization of the Trisul interface by uploading a custom logo, allowing organizations to brand the platform according to their requirements. |
-| Start IPDR Service | Activates the IPDR (Internet Protocol Detail Record) service, which collects and processes IPDR data from network devices for querying.
+| Start IPDR Service | Starts the IPDR (Internet Protocol Detail Record) service. Start this service before you run IPDR queries. |
 
 
 
@@ -83,7 +83,7 @@ Click on the three lines button adjacent to the Start/Stop button to access Prob
 | View RunStats Log | Displays the log file containing runtime statistics for the Trisul Probe, providing insights of uptime and downtime. |
 | View Probe Log | Shows the main log file for the Trisul Probe, capturing events, errors, and informational messages related to its operation. |
 | Get Interfaces List | Retrieves and displays a list of network interfaces configured on that probe. |
-| Clear All Stabbers | Resets or clears all "stabbers" in the Trisul probe. |
+| Clear All Stabbers | Stops all real-time (live) data pages that are open in WebTrisul, in every context. |
 | How to Start Snort? | Provides instructions on configuring and starting Snort with Trisul. |
 | How to Start Suricata? | Offers guidelines on integrating and starting Suricata with Trisul. |
 | How to Start Ping Server? | Provides instructions on starting the Ping monitor. |

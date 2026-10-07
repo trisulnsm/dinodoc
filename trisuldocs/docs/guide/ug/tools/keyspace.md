@@ -46,8 +46,8 @@ For example:
 This format allows you to specify multiple key ranges for a single search query.
 - **Keys Other Than IP Addresses**  
 You can enter any arbitrary key.  
-For example, you can enter the keyspace `P~Z` in the country counter group to pull up activity for country codes
-between PA and ZZ.
+For example, you can enter the keyspace `P~ZZ` in the country counter group to pull up activity for country codes
+between PA and ZZ. Ranges compare keys as text and include both ends, so `P~Z` stops at `Z` and misses `ZA` to `ZZ`.
 
 
 

@@ -90,7 +90,7 @@ To enable trackers for interfaces, follow these steps,
 ![](images/flowtracker_1.png)  
 *Figure: Flow Tracker*
 
-> **Note that probe has to be restarted once the trackers are created**
+> **Restart the probe context once the trackers are created, for example `trisulctl_probe restart context default@probe0`.**
 
 
 ## Step 4: Enable Alerts
@@ -106,7 +106,7 @@ Enable the **Utilization Alerts** as the system generates alerts when interface 
 ![](images/utilizationalerts.png)  
 *Figure: Utilization Alerts*
 
-> **Note that probe has to be restarted once the alerts are created**
+> **Restart the probe context once the alerts are created, for example `trisulctl_probe restart context default@probe0`.**
 
 
 ## Step 5: Configure SNMP

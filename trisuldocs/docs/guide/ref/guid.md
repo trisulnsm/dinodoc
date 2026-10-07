@@ -57,7 +57,7 @@ Counter Groups
 | 16  | `{E89BCD56-30AD-40F5-B1C8-8B7683F440BD}` | NetworkLayerStats           |
 | 17  | `{A8776788-B8E3-4108-AD24-0E3927D9364B}` | VSAT                        |
 | 18  | `{0EC72E9E-3AD2-43FD-8173-74693EEA08D0}` | VLANStats                   |
-| 19  | `{6CD742B1-C1CA-4708-BE78-0FCA2EB01A86}` | HostsIPv6                   |
+| 19  | `{9807E97A-6CD2-442F-BB18-8C104C8EB204}` | HostsIPv6                   |
 | 20  | `{D2AAD7C6-E129-4366-A2AD-A8CB9AA4C2F4}` | HTTP Hosts                  |
 | 21  | `{C0C9757F-2005-4CC5-BB96-D72F607E6188}` | HTTP Content Types          |
 | 22  | `{2314BB8E-2BCC-4B86-8AA2-677E5554C0FE}` | FlowGens                    |

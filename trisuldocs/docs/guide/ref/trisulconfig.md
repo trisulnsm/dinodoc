@@ -252,7 +252,7 @@ Controls how Trisul handles IP fragmentation and TCP reassembly.
 
 | Parameters | Defaults    | Description   |
 | ---------- | ----------- | ------------------------------ |
-| Enabled    | False | Reassembles IP fragments. This is disabled by default due to the CPU and Mem load it can place on Trisul on busy links. The values are:<br/>- **True**<br/>    Full IP reassembly is enabled. Use this on light<br/>    links or if you suspect IP fragmentation on busy links<br/>- **MetricsOnly**<br/>   Do not perform reassembly but collect metrics <br/>   about fragmentation in the Aggregates counter<br/>   group under the key ipfrag. This is the default option<br/>- **False**<br/>   Completely disable IP Defragmentation. IP<br/>   fragments are ignored. Use this on busy links |
+| Enabled    | False | Reassembles IP fragments. This is disabled by default due to the CPU and Mem load it can place on Trisul on busy links. The values are:<br/>- **True**<br/>    Full IP reassembly is enabled. Use this on light<br/>    links or if you suspect IP fragmentation on busy links<br/>- **MetricsOnly**<br/>   Do not perform reassembly but collect metrics <br/>   about fragmentation in the Aggregates counter<br/>   group under the key ipfrag.<br/>- **False** (default)<br/>   Completely disable IP Defragmentation. IP<br/>   fragments are ignored. Use this on busy links |
 
 ## TCPFlowTrack
 
@@ -334,13 +334,13 @@ Controls how security alerts from Snort/Barnyard are handled
 | Parameters                     | Defaults         | Description    |
 | ------------------------------ | ---------------- | ----------- |
 | Enabled                        | True             | Enables this feature   |
-| UnixSocket                | /usr/local/var/lib/trisul-probe/domain0/probe0/context0/run/snort_alert | Trisul opens this unix socket and listens for alerts. The default socket name is `snort_alert` for Unified events from Snort, and `barnyard2_alert` for Unified2 events from Barnyard2. <br/> The directory name is passed to snort or barnyard2 via the `-l` parameter <br/> **Multiple sockets :** You can add any number of `<SnortUnixSocket>` elements to listen to multiple sockets at once. |
+| UnixSocket                | /usr/local/var/lib/trisul-probe/domain0/probe0/context0/run/snort_alert | Trisul opens this unix socket and listens for alerts. The default socket name is `snort_alert` for Unified events from Snort, and `barnyard2_alert` for Unified2 events from Barnyard2. <br/> The directory name is passed to snort or barnyard2 via the `-l` parameter <br/> **Multiple sockets :** You can add any number of `<UnixSocket>` elements to listen to multiple sockets at once. |
 | SnortVersion | 2.9+ | Specifies the Snort version whose alert format is expected by the Probe.              |
 | SnortConfigFile | /etc/snort/snort.conf | Path to the Snort configuration file used by the Snort installation generating alerts.  |
-| GenerateDDosReport             |                  | Set this to TRUE to trigger Trisul Probe to generate a DDoS report on certain TCA firing. Enables generation of a DDoS report when the configured TCA condition is triggered.|
-| DDosReportTopCount             |             | By default 100 top items are included in the DDoS report. Number of top items to include in the generated DDoS report.  |
-| DDosReportWindow>PastSeconds   |            | By default, include in the report 2 minutes prior to the DDoS attack trigger. Number of seconds before the DDoS trigger time to include in the generated report. |
-| DDosReportWindow>FutureSeconds |               | By default, include in the report 1 minutes after the DDoS attack trigger. Number of seconds after the DDoS trigger time to include in the generated report. |
+| GenerateDDosReport             | FALSE            | Set this to TRUE to trigger Trisul Probe to generate a DDoS report on certain TCA firing. Enables generation of a DDoS report when the configured TCA condition is triggered.|
+| DDosReportTopCount             | 10          | Number of top items to include in the generated DDoS report.  |
+| DDosReportWindow>PastSeconds   | 120        | Number of seconds before the DDoS trigger time to include in the generated report. |
+| DDosReportWindow>FutureSeconds | 60            | Number of seconds after the DDoS trigger time to include in the generated report. |
 
 ## OfflineImport
 
@@ -368,7 +368,7 @@ Controls the streaming graph analytics part of Trisul
 
 | Parameters      | Defaults | Description                      |
 | --------------- | -------- | -------------------------------- |
-| Enable        | false     | Enables/Disables this feature             |
+| Enable        | true in NSM (packet) mode; false in all other modes | Enables/Disables this feature |
 | EnableFlowEdges | false     | Do you want edge vertex data to be generated for every flow? For very large networks, consider disabling this option.		   |
 
 ## Tuning
@@ -395,9 +395,9 @@ Fine tune the packet processing pipeline for peak performance.
 | StreamingWindowMSecs     | 60000    | The streaming window in milliseconds. The default value is 1 minute. Do not change this unless you have a very good reason          |
 | DisableFlowTupleFeedback | false    | Flow tuple feedback is a feature in Trisul that allows you to measure per-IP and per-APP connection metrics. This can be overkill for some environments like ISPs who deal with millions of flows/sec. Disable this in those environments. We also suggest disabling this option when the FeedbackQueue (FBQ) sees pressure leading to spiky IP and App flow connection metrics.         |
 | MaxTCARangeAlerts        | 100      | When using TCA range alerts (see [TCA](/docs/guide/ug/alerts/tca#tca-configuration) generate only these many alerts. The reason we need a safety cap on this feature is an incorrect configuration with a TCA range can result in uncontrolled alerts (eg when any IP crosses 1Kbps). For safety we have chosen a cap of 100             |
-| EnableHalfNAT |   | Enables Half-NAT tracking and processing for environments where only part of the NAT translation information is available.                         |
-| HalfNATDebugTrace |          | Enables debug tracing for Half-NAT processing and mapping operations.              |
-| HalfNATMapActiveWindowSeconds |        | Duration, in seconds, for which an inactive Half-NAT mapping remains in the active mapping table.     |
-| HalfNATTCPTimeout  |          | Timeout, in seconds, after which an inactive Half-NAT TCP mapping is considered expired.       |
-| HalfNATUDPTimeout    |        | Timeout, in seconds, after which an inactive Half-NAT UDP mapping is considered expired.         |                 
+| EnableHalfNAT | FALSE | Enables Half-NAT tracking and processing for environments where only part of the NAT translation information is available.                         |
+| HalfNATDebugTrace | FALSE | Enables debug tracing for Half-NAT processing and mapping operations.              |
+| HalfNATMapActiveWindowSeconds | 120 | Duration, in seconds, for which an inactive Half-NAT mapping remains in the active mapping table.     |
+| HalfNATTCPTimeout  | 86400 | Timeout, in seconds, after which an inactive Half-NAT TCP mapping is considered expired.       |
+| HalfNATUDPTimeout    | 3600 | Timeout, in seconds, after which an inactive Half-NAT UDP mapping is considered expired.         |                 
 

@@ -152,7 +152,7 @@ The actual report contains the data of detailed metrics of network activity incl
 | SubscriberID | Unique identifier assigned to the subscriber (example, customer, account) |
 | NatIP        | The private IP address assigned to a device or user by a NAT device       |
 | NatPort      | The port number assigned to a device or user by a NAT device.             |
-| DeviceIP     | The private IP address of the device                                      |
+| DeviceIP     | The IP address of the device that exported the flow, such as the router or BNG |
 | CustName     | Name of the customer                                                      |
 | CustID       | Customer ID                                                               |
 | Address      | Contact address of the customer                                           |

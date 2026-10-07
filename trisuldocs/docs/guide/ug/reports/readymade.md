@@ -225,7 +225,7 @@ The Router and Interfaces Report gives an overview of all routers and their asso
 | Router Activity Report | Displays the bandwidth usage for each router over the selected time interval, providing a visual representation of router activity. |
 | Top Routers by Volume | Lists the top routers by total traffic volume, highlighting the most active and data-intensive routers in the network. |
 | Interface Report for Router | Provides a detailed breakdown of each interface associated with a selected router, including Interface Performance Metrics: Max, Min, Avg, Latest, Total, and 95th Percentile values for each interface for the selected time interval. |
-| Top 20 Breakup of Total Traffic per Interface | Shows the top 20 interfaces on each router, ranked by total traffic volume, providing insight into interface utilization and traffic distribution |
+| Top 20 Breakup of Total Traffic per Interface | Takes the top 20 interfaces across all routers, ranked by total traffic volume, and groups them by router. For each router, it lists only its interfaces that are in that top 20. |
 
 
 ### Direct Reports

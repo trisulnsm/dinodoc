@@ -31,7 +31,7 @@ To view or change these, Login as `admin` and,
 :point_right: Go to Context: Default &rarr;profile0 &rarr; [NetFlow Wizard](/docs/guide/ug/netflow/netflow_wizard)
 :::
 
-- Traffic on UDP ports 2055,2056,2057,9500,9993 is interpreted as
+- Traffic on UDP ports 2055, 2056, 2057, 4739, 5111, 9500 and 9993 is interpreted as
   NetFlow/IPFIX/JFlow.
 - UDP Port 6343 is treated as SFlow.
 

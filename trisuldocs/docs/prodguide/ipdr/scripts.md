@@ -79,12 +79,12 @@ trisul_aaaing -c /usr/local/etc/trisul-hub/domain0/hub0/context0/trisulHubConfig
       -d /ipdrdata/cdrlogs
 ```
 
-The data inside of the CDR are then integrated into the IPDR Flow data. The corresponding flow must exist for every AAA record in the csv files. 
+The data inside of the CDR are then matched with the IPDR flow data at query time, so a flow does not need to exist when the AAA file is ingested. 
 
 
 There are other options you may want to add 
 
- - --move-out : after processing the file remove it from the directory
- - --store-original : move the CSV files into the IPDR/ data directory inside the Trisul database slices. 
+ - --move-out (-m) : with -d, after importing a file, move it into the matching slice's `IPDR/logs` directory
+ - --store-original (-s) : also store each original log line in the AAA database, for reconciliation 
 
  See `man trisul_aaaing` for full description.

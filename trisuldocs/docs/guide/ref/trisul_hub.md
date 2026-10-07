@@ -19,6 +19,7 @@
 | ------------------- | --------------------------------------------------------- | ------------------------------------ |
 | `start domain`      | start the domain processes                                | start domain                         |
 | `stop domain`       | stop the domain processes                                 | stop domain                          |
+| `restart domain`    | restart the domain processes                              | restart domain                       |
 | `list domains`      | domain cert and nodes found on system                     | list domains                         |
 | `list nodes`        | list all the nodes active in domain                       | list nodes                           |
 | `list hubs`         | list and verify connection of all hubs on this local node | list hubs                            |
@@ -34,6 +35,7 @@
 | `info context`     | show context status, leave context blank to show all contexts         | info context default                                                                       |
 | `start context`    | start specified context, you can also use context@node format         | start context default<br/>start context default@probe0                                      |
 | `stop context`     | stop context or connected context                                     | stop context default<br/>stop context default@probe0                                        |
+| `restart context`  | restart a context, or one node of it with context@node format          | restart context default@probe0                                                              |
 | `create context`   | Create a new context with name context                                | create context context1<br/>create context context1@probe0                                  |
 | `delete context`   | Delete the context                                                    | delete context context1<br/>delete context context1@probe0                                  |
 | `reset context`    | Clear the data (keep the configuration) for the specified context   | reset context default<br/>reset context default@probe0                                      |
@@ -50,6 +52,6 @@
 | `install domain`        | install domain (also need private key *.cert_secret)              | install domain hub-certificate-file    |
 | `install remote-domain` | install a remote domain (do not need *.cert_secret)               | install remote-domain domain-cert-file |
 | `install hub`           | install a hub (also need private key *.cert_secret)               | install hub hub-certificate-file       |
-| `authorize probe`       | authorize a new probe – no need of private key (stays with probe) | install probe                          |
+| `authorize probe`       | authorize a new probe – no need of private key (stays with probe) | authorize probe probe1.cert            |
 | `authorize hub`         | authorize a hub identified by the hub-cert to connect             | authorize hub hub-certificate-file     |
-| `uninstall hub`         | install a hub (also need private key *.cert_secret)               | uninstall hub                          |
+| `uninstall hub`         | remove a hub certificate/key pair from this node (for example the default hub0 when you deploy a new hub); then run `restart domain` | uninstall hub domain0 hub1             |

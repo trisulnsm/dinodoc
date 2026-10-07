@@ -55,6 +55,8 @@ You can configure when disk usage should trigger alerts so storage pressure is d
 
 In the App Settings form, set **Disk Usage Alert Percentage** and click **Save**.
 
+The default is 90. This is the recommended way to set disk usage alerts. The `UsageRedMark` parameter in the Hub and Probe configuration files is a separate engine setting.
+
 
 ## Disk Usage {#2-disk-usage}
 

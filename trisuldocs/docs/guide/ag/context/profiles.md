@@ -36,7 +36,7 @@ A form with the following fields are displayed
 | BPF Filter         | A BPF (libpcap/tcpdump) filter expression (see [notes below](/docs/guide/ag/context/profiles#specifying-a-bpf-filter-for-afpacket-and-rxring) on how to generate this for rxring mode - the default) |
 | ERSPAN Interface   | Decapsulate all ERSPAN packets on this interface. If this option is disabled, ERSPAN is counted as a single IP+GRE tunnel.                                                                  |
 | Add Ethernet FCS   | Add 4 byte FCS to packet length. Use this option to reconcile with SNMP based counters.|
-| Force Netflow Mode | Force this adapter into Netflow Mode - use this option if you want to use a mix of Netflow and Packet capture on a per-adapter basis.                                                          |
+| Force Netflow Mode | Force this adapter into Netflow Mode - use this option if you want to use a mix of Netflow and Packet capture on a per-adapter basis. Works in any product mode.                               |
 | Description        | A short description of the profile                                           |
 
 ### Provider Specific Options

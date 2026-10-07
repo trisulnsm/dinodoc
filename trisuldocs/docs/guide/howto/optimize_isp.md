@@ -50,4 +50,4 @@ increase the top 1000 hosts in the external group to the top 5000)
 
 - Enable the first two groups “Internal Hosts” and “External Hosts”
 
-Restart trisul for changes to take effect.
+Restart the probe context for changes to take effect, for example `trisulctl_probe restart context default@probe0`.

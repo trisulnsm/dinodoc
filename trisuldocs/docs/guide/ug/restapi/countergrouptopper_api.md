@@ -171,7 +171,7 @@ curl -G "http://<webtrisul-host>/api/topper/topper_request" \
 | --------------- | ------- | ----------------------------------------------------------------------------- |
 | `counter_group` | string  | GUID of the queried counter group                                             |
 | `meter`         | integer | Meter index used for ranking                                                  |
-| `sysgrouptotal` | integer | Aggregated metric value for all keys **not** included in the top-K ("Others") |
+| `sysgrouptotal` | integer | Total metric value for all keys in the counter group, including keys outside the top-K |
 | `keys`          | array   | Ranked list of top keys                                                       |
 
 

@@ -15,7 +15,7 @@ Trisul is a real-time streaming analytics platform. It processes data in a singl
 
 Trisul Edges brings graph database features into Trisul. Each entity in Trisul metrics also generates information about related entities. In Graph Database architecture, the central concept is to store “connections” and “graphs of connections” as sets of **edges** and **vertices**.
 
-When you enable Trisul Edges, Trisul generates a new type of stream, called an Edge stream, as it processes packets. Streaming algorithms keep this stream to a manageable size. For example, Trisul doesn't store an unbounded graph for high-cardinality relationships.
+When you enable Trisul Edges, Trisul generates a new type of stream, called an Edge stream, as it processes traffic. Flow edges (app-host, host-host and protocol-host) are added when each flow ends; turn them off with `EnableFlowEdges` in [trisulProbeConfig.xml](/docs/guide/ref/trisulconfig#edges) on very large networks. Streaming algorithms keep this stream to a manageable size. For example, Trisul doesn't store an unbounded graph for high-cardinality relationships.
 
 ## Vertices and Edges
 
@@ -38,4 +38,4 @@ Trisul uses a memory cap on the number of allowed neighbors per vertex. This pre
 The limits currently in effect are :
 
 1. Max vertices – unlimited
-2. Max neighbors per vertex – 1KB / hour. Roughly 100 uniques per hour.
+2. Max neighbors per vertex – 128 distinct neighbors of each vertex type in each flush window. Trisul drops the extra neighbors.

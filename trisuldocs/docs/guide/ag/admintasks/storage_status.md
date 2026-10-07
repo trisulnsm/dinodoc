@@ -123,4 +123,6 @@ Tape serves as an offline storage solution for backing up data from the archive 
 
 **Tape Enabled**: If Tape storage is enabled, the Meta Slice marks the entry as "Tape" indicating Tape is enabled.
 
+To enable Tape archives, edit the [Trisul Hub Configuration](/docs/guide/ref/trisulhubconfig#advanced-archiving) file and set `OfflineArchiveTag` to `tape`.
+
 This process ensures a secure and organized backup strategy for archive data.

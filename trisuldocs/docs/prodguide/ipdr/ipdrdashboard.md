@@ -98,7 +98,7 @@ The header of the module contains the total number of status of queries [**Start
 
 **Query To Time**: The IPDR data requested until this specific time by the user.
 
-**Message**: This is the hash of the report file being generated for the particular query.
+**Message**: The SHA-1 hash of the report file. The Hub saves the report as `<sha1>.txt`; the message reads `Completed <sha1>.txt`, or `Sent FTP <sha1>.txt` after the SFTP upload.
 
 **Size**: This is the file size of the generated report for the query.
 

@@ -4,8 +4,7 @@ Cardinality counters allow you to measure unique hits for keys within a
 counter group. For example, we can track how many unique IPs did each
 country see.
 
-By default, Trisul ships with the following three cardinality counters
-enabled.
+Trisul ships with no cardinality counters enabled. These three are common ones to add:
 
 | Cardinality Counter   | Description                                                  |
 | --------------------- | ------------------------------------------------------------ |

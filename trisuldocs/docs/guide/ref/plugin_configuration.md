@@ -208,7 +208,7 @@ Used for Mobility tunnels.
 | Parameters       | Defaults                          | Description             |
 | ---------------- | --------------------------------- | ----------------------- |
 | description      | Controls IP Tunneling Deployments |                         |
-| Detunnel3GPPGTPU | false                             | Contact us for details. |
+| Detunnel3GPPGTPU | false                             | Set to true to strip 3GPP GTP-U tunnels so Trisul meters the inner IP packets. |
 
 ## DNS
 
@@ -220,7 +220,7 @@ How DNS protocol is metered.
 | Parameters           | Defaults | Description                                                                       |
 | -------------------- | -------- | --------------------------------------------------------------------------------- |
 | SampleRate           | 1        | Once every X packets                                                              |
-| CreateFTSDocument    | true     | Do you want to create a Full Text Search Document.                                |
+| CreateFTSDocument    | false    | Do you want to create a Full Text Search Document.                                |
 | ExtractResources     | true     | Extract DNS Resources. Resources can be thought of as Logs                        |
 | MergeCDN             | true     | If true, CDN names like akamai.. in answer records map to the original Query name |
 | TrackBaseDomains     | true     | Enable base domains feature.                                                      |

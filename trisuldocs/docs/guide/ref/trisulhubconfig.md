@@ -72,7 +72,7 @@ Logs are arranged in a ring of files, with patterns like `fs`, `ns`, `is` etc.
 | FlusherLogFile       | fs-???.log                | log file pattern.|
 | FlusherLogLevel      | DEBUG                     | All messages higher than this level are logged. The available log levels in order of severity (most severe first).<br/>**EMERG**<br/>**FATAL**<br/>**ALERT**<br/>**CRIT**<br/>**ERROR**<br/>**WARN**: this level after a few weeks of smooth running<br/>**NOTICE**<br/>**INFO**<br/>**DEBUG**: Recommended default level |
 | FlusherLogRotateSize | 10000000                   | Max size of each log file|
-| FlusheLogRotateCount | 5                         | Number of files in ring|
+| FlusherLogRotateCount | 8                        | Number of files in ring|
 | TrpLogFile           | qs-???.log                | log file pattern.|
 | TrpLoglevel          | DEBUG                     | log level|
 | TrpLogRotateSize     | 5000000                   | Max size of each log file|
@@ -133,7 +133,7 @@ For long term storage mostly for compliance purposes.
 
 An optional feature for advanced users allows for additional archive tiers beyond the primary `archive` pool. For example, data can be moved to slower storage mounted at separate paths. These are disabled by default. Change the node name from `ExtraArchives_Disabled` to `ExtraArchives` to activate this feature.
 
-Extra archives are used only when `DBTasks/Archiver/Type` is `SLIDE` (the default). The archiver chains tiers in order: `oper` → `ref` → `archive` → `xarchive_0` → `xarchive_1` → … → trash. Each tier holds up to its configured `SliceCount` (in days, multiplied by the number of flusher instances).
+Extra archives are used only when `DBTasks/Archiver/Type` is `SLIDE` (the default). The archiver chains tiers in order: `oper` → `ref` → `archive` → `xarchive_0` → `xarchive_1` → … → trash. Each tier holds up to its configured `SliceCount` slice windows (days, with the default DAILY window). Trisul multiplies the count by the number of flushers internally, so the number of days kept does not change when you add flushers.
 
 | Parameters | Defaults | Description|
 | ---------- | -------- | --------------- |
@@ -492,14 +492,14 @@ When Rebucketizer is enabled, additional shadow timeseries resolutions are added
 
 | Parameters | Defaults | Description          |
 | ---------- | -------- | -------------------- |
-| Enable     | TRUE     | Rebucketizer is enabled |
-| ID         | 1        | Unique identifier for each configuration or bucket. The resolution is stored under `resol.1`  and `resol.2` etc|
-| BucketSize | 300      | The size of the bucket in seconds   |
-| TopperBucketSize | 900 | The size of the topper bucket in seconds  |
-| ThresholdDays | 10 | Use this resolution if the query time window is greater than this number of days |
+| Enable     | FALSE    | Set to `TRUE` to enable the Rebucketizer |
+| ID         | None     | Unique identifier for each configuration or bucket. The resolution is stored under `resol.1`  and `resol.2` etc|
+| BucketSize | None     | The size of the bucket in seconds   |
+| TopperBucketSize | None | The size of the topper bucket in seconds  |
+| ThresholdDays | None | Use this resolution when the query time window is at least this many days |
 | TopperClipBelow | 0 | Remove items in topper table if metric value is below this number. The default is 0 , to not clip anything. |
 
-So here by default, for ID=1, the bucket size for 1 day is partitioned into 5 minutes(300 seconds) interval and the topper bucket size for 1 day is partitioned into 15 minutes (900 seconds) interval and so on.
+The Rebucketizer has no default resolutions: you enter each one. In the example above, for ID=1, the bucket size for 1 day is partitioned into 5 minutes (300 seconds) interval and the topper bucket size for 1 day is partitioned into 15 minutes (900 seconds) interval and so on.
 
 
 ## IPDR
@@ -520,7 +520,7 @@ These parameters are typically set automatically when you put Trisul in the IPDR
 | AddCustomerInfo | true | Add the information from the IPDR Static IP customer mapping |
 | AAADumpFilePath | /usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/aaadumpfiles | The place where the RADIUS AAA server dumps the currently active sessions |
 | SubscriberOption | | Add Subscriber ID or other ISP specific tag , this is taken from the RADIUS AAA log files |
-| MaxRecords |  | When using the *Request Full Database Dump* this parameter controls the maximum number of records dumped.  | 
+| MaxRecords | 250000 | When using the *Request Full Database Dump* this parameter controls the maximum number of records dumped. If left blank, Trisul uses 250000.  | 
 | QueryThreadCount | | Number of worker query threads to use for IPDR queries, ideal value is the same  _numflushers*numprobes_ . This maps to `--threads,-j` parameter in trisul_queryflowstream tool  |
 | MACInDeviceID | false| Put the MAC Address in the device ID field which normally contain the router IP |
 | BackupSlicesDBRoot || Set this to the root directory of the backup slices area. This is used for querying AAA RADIUS logs which may be kept in the `BackupSlicesDBRoot` area for a duration longer than the normal flow database. 

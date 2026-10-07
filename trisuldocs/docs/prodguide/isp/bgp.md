@@ -130,7 +130,7 @@ Adding an IGW takes two steps:
 **NetStream on the IGW**
 
 Enable NetStream on all interfaces on the IGW and export to one of the
-two Probe VIPs. A sample config:
+two Probe VIPs. Port 51111 in this sample is not a default Trisul NetFlow port (2055, 2056, 2057, 4739, 5111, 9500, 9993), so add it under **Context: default → profile0 → Access Points**. A sample config:
 
 ```text
 ip netstream as-mode 32

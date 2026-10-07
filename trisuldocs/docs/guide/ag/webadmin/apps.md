@@ -77,6 +77,8 @@ Click on README for instructions. Some of the LUA Analytics Apps need you to ena
 
 When you install a Trisul App, it is automatically deployed to all Probe nodes.
 
+After you install a **LUA Analytics** app, restart the probes. Other app types, such as dashboard apps, need no Probe or Hub restart.
+
 ## Creating your Own Apps
 
 You can clone the [trisulnsm/apps](https://github.com/trisulnsm/apps/tree/apps7/) repository to see how an app is assembled.

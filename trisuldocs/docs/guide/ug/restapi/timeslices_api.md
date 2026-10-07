@@ -186,7 +186,7 @@ curl -G "http://<webtrisul-host>/api/time_slices/time_slices_request" \
 | --------------- | ------- | ------------------------------------------------------------------------------------------------- |
 | `context_name`  | string  | Name of the queried context                                                                       |
 | `ha_slave_mode` | boolean | Whether the context is running in HA slave (standby) mode                                         |
-| `total_window`  | object  | Overall data time range (present when `get_total_window=true`, or always returned by the backend) |
+| `total_window`  | object  | Overall data time range. Returned only when you set `get_total_window=true`; otherwise `null`. |
 | `slices`        | array   | List of time slice objects                                                                        |
 | `pools`         | array   | Storage pool status objects                                                                       |
 

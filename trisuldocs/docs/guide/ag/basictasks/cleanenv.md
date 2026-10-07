@@ -70,7 +70,7 @@ You can run `info context` to confirm that the data has been cleared and the con
 
 Use this option when you want to remove only Probe-side data, such as raw packet capture (PCAP) and other probe-specific files, without affecting Hub data or context configuration.
 
-To do this, target the probe explicitly by appending `@probe0` to the context name. The reset operation will then execute only on that probe.  
+Stop the context first, as in [Step 1: Stop the Context](#step-1-stop-the-context). Then target the probe explicitly by appending `@probe0` to the context name. The reset operation runs only on that probe.  
 **Command format**  
 ```
 reset context <contextname>@probe0
