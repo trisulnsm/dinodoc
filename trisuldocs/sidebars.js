@@ -85,7 +85,6 @@ const sidebars = {
                     "guide/starthere/setuptrisul/install/pkgverify",
                     "guide/starthere/setuptrisul/install/doinstall",
                     "guide/starthere/setuptrisul/install/selectmode",
-                    "guide/starthere/setuptrisul/install/trisulaicli",
                     "guide/starthere/setuptrisul/install/doupgrade",
                     "guide/starthere/setuptrisul/install/douninstall",
                     "guide/starthere/setuptrisul/install/openports"
@@ -502,6 +501,24 @@ const sidebars = {
         },
         {
           "type": "category",
+          "label": "Trisul AI",
+          "link": {
+            "type": "doc",
+            "id": "guide/trisulai/index"
+          },
+          "items": [
+            "guide/trisulai/setup",
+            "guide/trisulai/first-questions",
+            "guide/trisulai/build-dashboard",
+            "guide/trisulai/create-reports",
+            "guide/trisulai/create-countergroup",
+            "guide/trisulai/diagnose",
+            "guide/trisulai/prompts",
+            "guide/trisulai/cli-reference"
+          ]
+        },
+        {
+          "type": "category",
           "label": "Learn Trisul",
           "link": {
             "type": "doc",
@@ -759,6 +776,7 @@ const sidebars = {
         },
         "prodguide/ipdr/ipdrui",
         "prodguide/ipdr/submit-queries",
+        "prodguide/ipdr/ai-query",
         "prodguide/ipdr/ipdrdashboard",
         "prodguide/ipdr/ipdrstatistics",
         "prodguide/ipdr/ipdrexportfields",

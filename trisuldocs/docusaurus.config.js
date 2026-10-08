@@ -368,6 +368,10 @@ const config = {
             from: '/docs/lua/introduction',
             to: '/docs/lua/',
           },
+          {
+            from: '/docs/guide/starthere/setuptrisul/install/trisulaicli',
+            to: '/docs/guide/trisulai/setup',
+          },
         ],
       },
     ],
