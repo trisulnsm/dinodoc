@@ -2,6 +2,28 @@
 
 This changelog outlines the key updates, improvements, and fixes made to Trisul across various releases. Browse through the release notes below to learn about the latest features, enhancements, and bug fixes.
 
+## WEBTRISUL 8.0.2624 (October 12,2026)  
+0106191: MITRE: Introduced a MITRE ATT&CK matrix with search, along with a MITRE timeline view.  
+0106210: TRISUL AI: Introduced Trisul AI chat with chart output, powered by the Trisul AI CLI.  
+0106224: TRISUL AI: Added WebTrisul settings to connect to the Trisul AI API server.  
+0106225: AUDIT: Audit logs can now be viewed in the UI, with session IDs (0106488) and an authentication log summary page (0106489).  
+0106231: IPAM: Added IPAM configuration management and integrations.  
+0106236: SECURITY: Added two-factor authentication over Email and SMS.  
+0106241: NETFLOW: Added a Top 10 interfaces traffic chart for each router.  
+0106243: NETFLOW: Introduced Flow Map for visualizing flows.  
+0106256: APPS: Trisul apps and meta apps can now create their own menus (0106272).  
+0106366: IPDR AI: Extended IPDR AI to support commercial and locally hosted LLMs.  
+0106376: API: Added REST API endpoints for toppers, counter group information and timeslices.  
+0106432: IPDR: IPDR Customer Search now supports searching by a single IP address.  
+0106423: LUA: Added an editor to the Admin UI for the Lua configuration file.  
+0106441: DASHBOARDS: Dashboards can now be previewed from JSON before saving.  
+0106503: IPDR AI: Added OCR and support for more file types in AI Query uploads.  
+0106607: TRISUL AI: Introduced dashboard generation in Trisul AI, with in-chat installation, context-scoped queries and derived counter groups.  
+0106708: LUA: Lua scripts can now be loaded selectively into specific contexts.  
+0106741: IPDR: Changed the default IPDR compressor to lz4-ip-call-log-with-nat-ultra-mac.  
+0106746: NETFLOW: Introduced NetFlow IP Tracker to monitor expected flow exporters.  
+0106768: UI: Introduced a redesigned login page and navigation menu, with a light theme by default and an updated dark mode.  
+
 ## WEBTRISUL 7.0.3204 (July 31,2026)   
 0106094: Display extra dropdown menus for IPDR users.  
 0106104: FOR DOT strict report format: Users can now enter MAC address in the terminal field.  
