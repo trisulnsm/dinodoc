@@ -8,7 +8,7 @@ description: Describe an IPDR request in plain language, or attach the request l
 
 **AI Query** turns a plain-language request, or an attached request document, into IPDR queries. You review the queries, then submit them. Trisul runs them through the normal IPDR query workflow, the same one as **Query Logs**.
 
-**Applies to:** Trisul IPDR DoT Compliance.
+**Applies to:** Trisul IPDR DoT Compliance.  
 **Who uses it:** compliance users who answer agency requests (for example `dotuser`).
 
 :::note IPDR AI Query is not Trisul AI
@@ -33,7 +33,7 @@ It doesn't:
 - Make legal or compliance decisions, or skip any approval step.
 
 :::caution Your request goes to Google Gemini
-The text you type, and the file you attach, are sent to Google Gemini to extract the query fields. Check your organization's rules on sharing agency request contents with a third-party service before you use AI Query. TODO(verify: confirm whether attachments are processed locally before anything is sent to Gemini)
+The text you type, and the file you attach, are sent to Google Gemini to extract the query fields. Check your organization's rules on sharing agency request contents with a third-party service before you use AI Query. 
 :::
 
 ## Before you begin: add a Gemini API key (admin)
@@ -48,7 +48,7 @@ An admin does this once.
 
 ![API Keys settings with the Gemini API Key field](./images/ai-query-apikey.png)
 
-TODO(verify: the IPDR AI blog says the key is tied to each user's identity and permissions. This screen has one key for the whole server. Which is correct?)
+The key applies to the whole server. Every user who runs AI Query uses this one key.
 
 ## Create queries from a request
 
@@ -60,12 +60,15 @@ TODO(verify: the IPDR AI blog says the key is tied to each user's identity and p
    ![AI Powered IPDR Query page](./images/ai-query-start.png)
 
 3. Give the AI the request, in one of two ways:
-   - **Type it** in **Describe your Query here**. Include the identifier (IP, port, NAT IP or username), the exact time window with date and time, and the type of records you need. For example: `Get IPDR logs for IP 203.0.113.1 port 443 from 2025-09-15 11:55 to 12:10`. TODO(verify: confirm a typed example works as shown)
+   - **Type it** in **Describe your Query here**. Include the identifier (IP, port, NAT IP or username), the exact time window with date and time, and the type of records you need. For example: `Get IPDR logs for IP 203.0.113.1 port 443 from 2025-09-15 11:55 to 12:10`.
    - **Attach the request document.** Click **+**, then choose the file. The file appears above the input box. Click the **x** on it to remove it.
 
      ![Request document attached](./images/ai-query-attach.png)
 
-     TODO(verify: supported file types and maximum size. PNG is confirmed.)
+     The file can be up to 10 MB. Supported types are `.txt`, `.csv`, `.xlsx`, `.xls`, `.ods`, `.docx`, `.odt`, `.pdf`, `.png`, `.jpg` and `.jpeg`.
+
+     - For `.docx`, `.odt`, `.pdf`, `.png`, `.jpg` and `.jpeg`, the browser needs internet access. The page loads the libraries that read Word and PDF files and run OCR on images.
+     - Legacy `.doc` files are not read. Save the file as `.docx`, then attach it.
 
 4. Click the send button.
 
@@ -84,10 +87,10 @@ Always review what the AI extracted. A wrong digit in an IP, port or time produc
    ![List of Queries](./images/ai-query-list.png)
 
 2. Compare every row with the original request: the identifiers, the date, and the start and end times.
-3. Check the time zone. TODO(verify: are FROM and TO in server local time, and how does the AI handle a time zone stated in the request?)
+3. Check the time zone. **FROM** and **TO** use the system time zone. If the request gives times in another time zone, convert them to the system time zone before you send the request.
 4. Click **Close**.
 
-If anything is wrong, tell the AI what to fix in a new message, then check the list again. TODO(verify: does the AI update the same query list after a correction?) To enter a query by hand instead, use **Query Logs**. See [Submit queries](/docs/prodguide/ipdr/submit-queries).
+If anything is wrong, tell the AI what to fix in a new message. The AI updates the same query list. Click the view (eye) button and check the list again. To enter a query by hand instead, use **Query Logs**. See [Submit queries](/docs/prodguide/ipdr/submit-queries).
 
 ## Submit the queries
 
@@ -96,7 +99,7 @@ If anything is wrong, tell the AI what to fix in a new message, then check the l
 
    ![Submitted queries for IPDR logs](./images/ai-query-submitted.png)
 
-3. Track each query as its status moves through **NEW**, **STARTED**, **DISPATCH** and **COMPLETED**. When a query is **COMPLETED**, download its report from the **DOWNLOAD** column. For what each status means, see [Submit queries](/docs/prodguide/ipdr/submit-queries). TODO(verify: confirm the status order)
+3. Track each query as its status moves through **NEW**, **STARTED**, **DISPATCH** and **COMPLETED**. When a query is **COMPLETED**, download its report from the **DOWNLOAD** column. For what each status means, see [Submit queries](/docs/prodguide/ipdr/submit-queries).
 
 To stop a query before it runs, click **Cancel** in its row.
 

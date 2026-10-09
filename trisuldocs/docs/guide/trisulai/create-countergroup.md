@@ -43,10 +43,10 @@ For each one, Trisul AI first checks the existing counter groups. If none fits, 
 5. Use the new group in questions, reports and dashboards, for example "chart Chennai vs Mumbai traffic for the last hour".
 
 :::note
-New counter groups collect data only from the time they're created. TODO(verify: whether the context must be restarted before data appears)
+After Trisul AI creates the counter group, restart the context manually (**Admin Tasks → Start/Stop Tasks**). The new counter group collects data only after the restart.
 :::
 
 ## Related
 
-- What keysets are: Keyset counter groups (TODO(verify: link))
-- Create one by hand: TODO(verify: link to the Admin Guide page)
+- What keysets are: [Keyset counter groups](https://docs.trisul.org/glossary/types-of-counter-groups#keyset-counter-groups)
+- [Create one by hand](https://docs.trisul.org/docs/guide/ag/context/keyset_countergroups#creating-a-keyset-counter-group)

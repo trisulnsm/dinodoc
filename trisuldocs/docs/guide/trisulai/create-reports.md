@@ -56,8 +56,8 @@ create an interface utilization report with only Router IP, Hostname, Interface,
 ## Tips
 
 - Always give a time window. Otherwise Trisul AI picks one.
-- Check the time window in the summary before you download. TODO(verify: in testing, "last 1 hour" returned the last hour of available data, not the last hour before now)
-- To send a report on a schedule, use **Schedule Email Reports** in the Admin panel. Trisul AI reports are on demand. TODO(verify)
+- Check the time window in the summary before you download. "Last 1 hour" means the last hour of data available in the context, not the hour before now. If the context stopped receiving traffic, the report covers the last hour before it stopped.
+- To send a report on a schedule, use [**Schedule Email Reports**](/docs/guide/ug/reports/schedreports) in the Admin panel. Trisul AI reports are on demand.
 
 ## Related
 

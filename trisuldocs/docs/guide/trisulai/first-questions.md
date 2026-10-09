@@ -15,7 +15,7 @@ In this tutorial you ask Trisul AI four questions. You get a table, a chart, a l
 
 1. Log in to WebTrisul.
 2. Select a context in the context list at the top left (for example `netflow`).
-3. Open the **Trisul AI** page. TODO(verify: menu path)
+3. Open the **Trisul AI** from the sidebar menu.
 
 The page title reads **Trisul AI**, with the subtitle *Turn raw network data into answers using natural language*. The chat header shows **Online Assistant** and the context the chat is connected to, for example **Context: context_pcap**.
 
@@ -90,9 +90,9 @@ Answers about menus and steps come from the documentation and can be out of date
 ## How the chat chooses context and time
 
 - **Context:** the chat is locked to the context you selected before you opened the **Trisul AI** page. Every question uses that context. To use another context, select it in WebTrisul, then open the **Trisul AI** page again. Don't ask the chat to switch context.
-- **Time window:** if you don't name one, Trisul AI picks a default (the last hour for top-N tables). TODO(verify: is "last hour" relative to now or to the newest data in the context?)
+- **Time window:** if you don't name one, Trisul AI picks a default (the last hour for top-N tables). 
 - **Follow-ups:** the chat remembers earlier messages in the same conversation, so "now chart the second one" works.
-- **New conversation:** click the refresh button in the chat header. TODO(verify: confirm it clears the conversation)
+- **New conversation:** click the refresh button in the chat header.
 
 ## What you learned
 

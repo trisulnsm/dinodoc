@@ -44,7 +44,6 @@ Describe the dashboard you want. Trisul AI proposes a layout, waits for your app
 
    ![Dashboard generated](./img/dashboard-generated.png)
 
-   TODO(verify: this screenshot shows the dashboard already installed, with no **Install dashboard** button. Retake it from the current build.)
 
 6. Click **Install dashboard**, then **View dashboard**.
 
@@ -52,7 +51,7 @@ The dashboard belongs to the context you opened the chat from.
 
 ![The generated Network Overview dashboard](./img/dashboard-result.png)
 
-Use **Time window** and **Topper count** at the top right of the dashboard to change the period and the number of items shown. TODO(verify: where the new dashboard appears in the **Dashboards** menu)
+Use **Time window** and **Topper count** at the top right of the dashboard to change the period and the number of items shown.
 
 ## Add a module that needs new data
 
@@ -61,7 +60,7 @@ If a module needs data that no counter group collects yet, Trisul AI says so and
 For example, "add a module to show data in three dimension with apps, hosts and protocol in tree format" needs a three-way crosskey. Trisul AI found only two-way crosskeys such as **Hosts_X_Apps**, so it proposed a new crosskey counter group, **Apps_X_Hosts_X_Protocol**, with its settings. After you reply `ok`, it creates the counter group and adds the module.
 
 :::note
-A new counter group only collects data from the moment it's created. The module stays empty until traffic arrives. TODO(verify: whether a context restart is needed, as for counter groups created in the UI)
+After Trisul AI creates the counter group, restart the context manually (**Admin Tasks → Start/Stop Tasks**). The new counter group collects data only after the restart, so the module stays empty until then.
 :::
 
 ## Related

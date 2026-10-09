@@ -25,10 +25,6 @@ When dashboards are empty or stop updating, ask Trisul AI. It checks the Hub and
 
    ![Suggested fix](./img/diagnose-fix.png)
 
-:::caution
-Trisul AI suggests fixes. It doesn't run commands on your servers. Check a suggested command against Start and stop Trisul (TODO(verify: link)) before you run it with `sudo`.
-:::
-
 ## Related
 
-- Troubleshooting (TODO(verify: link to HowTos / troubleshooting))
+- [Troubleshooting](https://docs.trisul.org/docs/Troubleshooting/)
