@@ -85,11 +85,11 @@ The Trisul AI CLI is a Python package. Install it in a virtual environment.
 
 ### Where Trisul AI gets its data
 
-If you don't name a context in your question, Trisul AI fetches data from the default context, `context0`, on this machine. You don't need any extra setup for this.
+- If you **don't name a context** in your question, Trisul AI fetches data from the default context, `context0`, on this machine. You don't need any extra setup for this.
 
-To get data from another context on this machine, name that context in your question, in plain English.
+- To get **data from another context** on this machine, name that context in your question, in plain English.
 
-To get data from a Trisul on another server, first change that server's TRP endpoint from IPC to TCP. See [Switching to a distributed domain](/docs/guide/learntrisul/concepts/change_domain#switching-to-a-distributed-domain). Then ask Trisul AI to connect to it, with the server's IP address and TRP port. For example: `Connect to the remote server with IP address 10.16.8.44 and port 5008`.
+- To get **data from a Trisul on another server**, first change that server's TRP endpoint from IPC to TCP. See [Switching to a distributed domain](/docs/guide/learntrisul/concepts/change_domain#switching-to-a-distributed-domain). Then ask Trisul AI to connect to it, with the server's IP address and TRP port. For example: `Connect to the remote server with IP address 10.16.8.44 and port 5008`.
 
 :::caution
 The TRP port of a remote Trisul server is not the port WebTrisul uses to reach Trisul AI (`8200`, in stage 3).
@@ -126,7 +126,7 @@ The WebTrisul **Trisul AI** chat page doesn't start the AI engine itself. It tal
    - `--host 0.0.0.0` lets browsers on other machines reach the server.
    - `--port 8200` is the default port for the WebTrisul connection.
    - The API server uses the same LLM settings (`.env`) as the CLI. If you skipped stage 2 on this machine, it asks for them the first time it starts.
-   - The process must keep running. TODO(verify: recommended way to run it as a service that starts on boot)
+   - The process must keep running.
 
 3. To use HTTPS, add your certificate and key:
 
@@ -169,7 +169,7 @@ Your users' browsers must be able to reach this machine on port 8200. Open the p
 ### Check the chat
 
 1. Select a context in WebTrisul.
-2. Open the **Trisul AI** page (`/trisul_ai/index`). TODO(verify: menu path to the Trisul AI page)
+2. Open the **Trisul AI** from sidebar menu.
 3. Check the header: it shows **Trisul AI**, **Online Assistant**, and the context.
 4. Type `show top 5 hosts` and press Enter.
 
@@ -179,7 +179,7 @@ If you get a table of hosts, setup is done.
 
 | Symptom | What to check |
 | --- | --- |
-| The chat shows **Connection Failed** | 1. `trisul_ai_cli api` is still running. 2. `/api/health` answers on the IP and port you entered. 3. **AI SSL Mode** matches how you started the server (HTTP or HTTPS). 4. If you browse from another machine, **AI Endpoint IP** isn't `127.0.0.1`. To reopen the settings, click **Configure Server Settings** in the failed chat. |
+| The chat shows **Connection Failed** | 1. `trisul_ai_cli api` is still running.<br></br>2. `/api/health` answers on the IP and port you entered.<br></br> 3. **AI SSL Mode** matches how you started the server (HTTP or HTTPS). 4. If you browse from another machine, **AI Endpoint IP** isn't `127.0.0.1`. To reopen the settings, click **Configure Server Settings** in the failed chat. |
 | `Error: ZMQ timeout - no response from ipc://...` | Trisul isn't running, or the context you chose doesn't exist. |
 | `Error: Invalid API key` | In the CLI, run `change_llm_api_key`. If product questions fail, run `change_embedding_api_key`. |
 | Empty answers | Name the time window and the item in your question. Then check `trisul_ai_cli.log`. |

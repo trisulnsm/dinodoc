@@ -58,7 +58,7 @@ The LLM never connects to the Hub or its database directly. It only sees what th
 - The data needed to answer a question (for example, top host IPs and byte counts) goes to the LLM provider you configure. To keep all data on your network, use a self-hosted LLM.
 
 :::caution Trisul AI can change configuration when you approve it
-Most questions only read data. Some requests create things: dashboards and counter groups. For these, Trisul AI first shows a plan and waits for you to reply **ok**. Read the plan before you approve it. TODO(verify: which users can approve changes, and whether non-admin users can create counter groups)
+Most questions only read data. Some requests create things: dashboards and counter groups. For these, Trisul AI first shows a plan and waits for you to reply **ok**. Read the plan before you approve it.
 :::
 
 ## Where to go next
