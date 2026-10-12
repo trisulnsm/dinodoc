@@ -508,6 +508,7 @@ const sidebars = {
           },
           "items": [
             "guide/trisulai/setup",
+            "guide/trisulai/docker",
             "guide/trisulai/first-questions",
             "guide/trisulai/build-dashboard",
             "guide/trisulai/create-reports",
