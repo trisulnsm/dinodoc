@@ -436,6 +436,11 @@ const config = {
             },
             {
               type: 'doc',
+              docId: 'guide/trisulai/index',
+              label: 'Trisul AI',
+            },
+            {
+              type: 'doc',
               docId: 'guide/learntrisul/terminology',
               label: 'Learn Trisul',
             },
