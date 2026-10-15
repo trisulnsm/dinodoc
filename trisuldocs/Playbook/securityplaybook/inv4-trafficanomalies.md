@@ -102,7 +102,7 @@ After understanding the nature of the anomaly, pivot to the affected hosts or in
 
 In [**Trisul Retro**](/docs/guide/ug/cg/retro), navigate to:
 
-**Retro Counters → Retro Usage → Hosts → Transmit**
+**Retro → Retro Counters**, then select the counter group **Hosts** and the meter **Transmit**.
 
 Review the hosts contributing to the abnormal traffic during the investigation period.
 
@@ -194,7 +194,7 @@ Once the impact has been assessed, summarize the investigation findings and dete
 
 ### Step 6: Summarize the Investigation with Trisul AI
 
-Once the investigation is complete, open **Trisul AI** to review the investigation findings.
+Once the investigation is complete, open **Trisul AI**: click the Trisul AI icon in the page header, to the left of the search bar. Trisul AI is available in all Trisul modes. Log in as a user, not as admin, to use it.
 
 Trisul AI can generate a concise summary of the investigation, highlight the key observations, explain how the collected evidence supports the findings, and assist with documenting the investigation for operational review, incident reporting, or future reference.
 

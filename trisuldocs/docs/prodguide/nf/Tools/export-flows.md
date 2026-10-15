@@ -54,9 +54,7 @@ Click **Advanced** to display additional fields that can be used to narrow the s
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | **Port**               | Searches for flows involving a specific port. The field accepts a single port, such as `80` or `443`.                     | Use this when you are interested in traffic associated with a particular service or application port.                               |
 | **NAT IP**             | Searches using a NAT, CGNAT, or private IP address.                                                                       | Use this when the IP you are investigating is associated with NAT or CGNAT and you need to identify the corresponding flow records. |
-| **User Name**          | Searches for a username associated with the network activity. The UI gives a RADIUS/SYSLOG example such as `N5687`.       | Use this when Trisul has user information available and you want to retrieve the flows associated with a particular user.           |
 | **Device IP**          | Searches using the IP address of the network device or router.                                                            | Use this when you want to narrow the search to traffic associated with a particular device.                                         |
-| **AAA User Name**      | Searches using a RADIUS AAA username.                                                                                     | Use this when network access information identifies users through AAA/RADIUS and you want to retrieve their associated flows.       |
 | **Bulk IP Query File** | Allows you to upload a text file containing multiple IPv4 addresses, IPv6 addresses, or subnets, with one entry per line. | Use this when you need to query a large number of IP addresses instead of entering them individually.                               |
 
 ### NAT IP
@@ -106,9 +104,7 @@ The query is then processed using the criteria you entered.
 | Restrict the search to a particular period      | **Time Frame**                        |
 | Find flows involving a particular service port  | **Port**                              |
 | Search using a NAT or private IP                | **NAT IP**                            |
-| Find flows associated with a username           | **User Name**                         |
 | Search traffic associated with a network device | **Device IP**                         |
-| Search using a RADIUS/AAA username              | **AAA User Name**                     |
 | Search a large list of IP addresses or subnets  | **Bulk IP Query File**                |
 | Run the search                                  | **Submit**                            |
 

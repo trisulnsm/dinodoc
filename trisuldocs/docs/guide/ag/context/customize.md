@@ -28,7 +28,7 @@ You may modify these fields to suit your environment.
 | SHOW_DEMO_LOGO | false |
 | ENABLE_HIGH_SECURITY | false |
 
-You can also change WS_SERVER_PORT in **Web Admin → Manage → App Settings**. For ENABLE_HIGH_SECURITY, see [High Security](/docs/guide/ag/webadmin/highsecurity_vapt). <!-- TODO(verify): App Settings tab/field for WS_SERVER_PORT, SME 04c-Q16-FU -->
+You can also change WS_SERVER_PORT in **Web Admin → Manage → App Settings**, in the **webtrisul server port** field. For ENABLE_HIGH_SECURITY, see [High Security](/docs/guide/ag/webadmin/highsecurity_vapt).
 
 ### Manufacturer Details (Do Not Change These)
 

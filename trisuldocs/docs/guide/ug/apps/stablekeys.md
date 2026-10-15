@@ -99,7 +99,11 @@ TrackIPs = {
 
 When `TrackIPs` is configured, only matching keys are considered for Stable Keys monitoring. An empty `TrackIPs` list means that all keys are monitored.
 
-Stable Keys also supports CrossKeys values. When configuring CrossKeys entries, the key must be represented using the required escaped format.
+Stable Keys also supports CrossKey keys. In `TrackIPs`, join the parts of a CrossKey key with a double backslash (`\\`), for example:
+
+~~~lua
+TrackIPs = { "244.0.0.152\\10.68.78.33" }
+~~~
 
 ## Alert Workflow
 
@@ -142,7 +146,7 @@ This allows operators to interpret the event at the appropriate level:
 
 ## Configuration
 
-Stable Keys can be configured on a per-Probe basis.
+Stable Keys reads its settings from `trisulnsm_stablekeys.lua` in the `config` directory of each probe context, for example `/usr/local/var/lib/trisul-probe/domain0/probe0/context0/config/trisulnsm_stablekeys.lua`. Each probe and context can have its own settings.
 
 The primary configuration parameters are:
 
@@ -152,6 +156,9 @@ The primary configuration parameters are:
 | `NumStableIntervals` | Number of consecutive intervals a key must remain missing before an alert is generated. |
 | `DebounceThreshold`  | Number of missing keys that triggers a consolidated alert.         |
 | `TrackIPs`           | List of specific IP addresses to monitor. An empty list monitors all keys.  |
+| `Contexts`           | Contexts to monitor. An empty list monitors all contexts. |
+| `SigID`              | Alert signature ID. Default `STABLEKEYS`. Consolidated alerts use `STABLEKEYS_DEBOUNCED`. |
+| `MailSubject`        | Subject of the alert email. Default `IPDR Alert-No Netflow received for IP`. |
 
 The default configuration includes a FlowGen counter group, one stable interval, a debounce threshold of five keys, and no IP filtering.
 

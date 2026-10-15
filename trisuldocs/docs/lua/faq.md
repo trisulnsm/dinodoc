@@ -33,11 +33,13 @@ This is a very important aspect of the API. Trisul can load multiple instances o
 
 Say you were writing a HTTP logger as following
 
-```lua
-This is a very important aspect of the API. Trisul can load multiple instances of your Lua script depending on the number of hardware threads available on your machine. This can cause a conflict when trying to output to files.
+For a full working example, see [re2http.lua](https://github.com/trisulnsm/trisul-scripts/blob/master/lua/techniques/re2http.lua) in the trisul-scripts repository. A logger like that opens one fixed output file when the script loads:
 
-Say you were writing a HTTP logger as following
-```
+~~~lua
+function onload()
+  outfile = io.open("/tmp/myhttpoutput.log", "w")
+  ..
+~~~
 
 When you run this file on a 2-core machine you might be shocked to see that the `/tmp/myhttpoutput.log` has garbage lines. This is because two instances of your Lua snippet are active at any time. They simultaneously write to the file causing interleaving.
 

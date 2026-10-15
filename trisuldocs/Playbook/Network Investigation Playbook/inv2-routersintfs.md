@@ -223,7 +223,7 @@ Use packet analysis to answer questions such as:
 
 By this stage, the investigation should have established the cause of the increased interface utilization and collected the evidence required to explain the observed behavior.
 
-Open **Trisul AI** and review the investigation findings.
+Open **Trisul AI** and review the investigation findings. To open it, click the Trisul AI icon in the page header, to the left of the search bar. Trisul AI is available in all Trisul modes. Log in as a user, not as admin, to use it.
 
 Use Trisul AI to generate a concise summary of the investigation, highlight the key observations, and assist with documenting the findings for operational review, incident reporting, or future reference.
 

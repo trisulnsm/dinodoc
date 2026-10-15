@@ -7,13 +7,13 @@ sidebar_position: 1
 The Layer 7 Metrics dashboard provides a complete L7 breakdown of your network traffic. It is the starting point for understanding application usage, encrypted traffic patterns, and DNS behaviour.
 
 :::info Navigation
-:point_right: Go to **NBAD &rarr; Layer7 Metrics**
+:point_right: Go to **NBAD &rarr; Layer 7 Metrics**
 :::
 
 ![Layer 7 Metrics Dashboard](./images/l7-metrics.png)
 *Figure: Layer 7 Metrics: applications, SNIs, TLS Root CAs, DNS traffic, and top DNS resources*
 
-### Layer7 Modules
+### Layer 7 Modules {#layer7-modules}
 
 | Modules | Type | Description |
 |---|---|---|
@@ -36,7 +36,7 @@ The Layer 7 Metrics dashboard provides a complete L7 breakdown of your network t
 | Avg (bps) | Average bandwidth calculated across all measurement intervals in the selected window. |
 | Latest (bps) | Most recent bandwidth value available at the time the dashboard was loaded. |
 | Total (Bytes) | Total volume of data transferred during the selected time period. |
-| 0th (bps) | Baseline percentile value used in threshold band and anomaly calculations. |
-| %tile | Percentage contribution of the item relative to total observed traffic. |
+| 0th (bps) | Percentile value of the metric over the selected time window. The header shows the percentile set in **App Settings → Show Percentile**; the default 0th percentile is the minimum. Set a higher percentile, such as 95, to filter out short spikes. |
+| %tile | Toggle on the topper modules, next to Total, Max, Min and Average. It ranks the top items by their percentile value over the selected time window, which surfaces items with consistently high values and reduces the effect of one-off spikes. |
 
 ---

@@ -29,6 +29,12 @@ Set the value of */proc/sys/fs/suid\_dumpable* to *2*
 2  
 ```
 
+The `echo` command lasts until the next reboot. To keep the setting, add this line to `/etc/sysctl.conf` and run `sysctl -p`:
+
+~~~
+fs.suid_dumpable = 2
+~~~
+
 ### Where is the core file ?
 
 By default The core file will be placed in */tmp* and will be called

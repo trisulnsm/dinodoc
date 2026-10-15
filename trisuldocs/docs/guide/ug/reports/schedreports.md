@@ -44,7 +44,7 @@ Here is the table with the description of all available fields to schedule a new
 | Bcc                          | Recipients are invisible to all the other recipients of the message             |
 | Specify a Subject            | Subject of the report                                                           |
 | Signature                    | Signature of the sender                                                         |
-| [Report parameters](/docs/guide/ug/reports/schedreports#report-parameters) (optional) | Optional parameters, if present must be in valid `JSON` format. This parameter is only required for these three reports Endpoint Activity, Application Activity, Router and Interfaces             |
+| [Report parameters](/docs/guide/ug/reports/schedreports#report-parameters) (optional) | Optional parameters, if present must be in valid `JSON` format. This parameter is only required for these three reports: Endpoint Activity, Application Activity and Interface Activity             |
 | Enabled                      | Keep this checkbox checked to generate reports on schedule and unchecked to temporarily disable scheduled reports                                                                            | 
 
 Once you schedule the report, all your scheduled reports will appear on the index page and you can toggle from there.

@@ -8,4 +8,6 @@ sidebar_position: 11
 
 For detecting volumetric attacks with threshold crossing and threshold band alerts, see [Detecting Volumetric Attacks](/docs/guide/ug/alerts/ddos) in the User Guide.
 
-<!-- TODO(verify): describe the DDoS Monitor app dashboard itself; the linked UG page covers TCA/TBA-based DDoS detection (F-06-34) -->
+**NBAD → DDoS Monitor** opens the dashboard of the DDoS Monitor app.
+
+<!-- TODO(verify): list the DDoS Monitor dashboard panels (F-06-34) -->

@@ -6,7 +6,7 @@ sidebar_label: DNS Flood Activity
 # DNS Flood Activity
 
 :::info
-**DNS Flood Activity** (shown in the product as **Common Flood - DNS/TCPSYN**) tracks the traffic patterns behind two of the most common denial-of-service techniques, DNS floods and TCP SYN floods, so you can catch a flood attempt early instead of discovering it after the fact.
+**DNS Flood Activity** tracks the traffic patterns behind two of the most common denial-of-service techniques, DNS floods and TCP SYN floods, so you can catch a flood attempt early instead of discovering it after the fact.
 :::
 
 ## What Can You Do With This Dashboard?
@@ -24,8 +24,8 @@ sidebar_label: DNS Flood Activity
 
 Use the **Time window** and **Topper count** controls at the top right to change how far back the dashboard looks and how many top entries each panel shows. The active window is shown just below them. For example, `12h 14m Starting from 2026-09-22 00:00:00`.
 
-![Common Flood - DNS/TCPSYN](./images/nsm-dns-flood-activity.png)
-*Figure: Common Flood - DNS/TCPSYN*
+![DNS Flood Activity](./images/nsm-dns-flood-activity.png)
+*Figure: DNS Flood Activity*
 
 ## Panels
 

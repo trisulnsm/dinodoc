@@ -14,19 +14,18 @@ Used for marketing optimization.
 
 ## OTT Internet Apps
 
-This app works by integrating a real time DNS packet capture feed into
-the Trisul pipeline. The following diagram shows the integrations.
+Install the **OTT Analytics** app and the **Passive DNS Extractor** app it depends on, plus the **ISP OTT App Analytics** dashboard app, from **Web Admin → Manage → Apps**. OTT Analytics works by integrating a real time DNS packet capture feed into the Trisul pipeline. The following diagram shows the integrations.
 
 ![](images/ott_diagram.png)  
 OTT diagram
 
-This is combined with a fully customizable rules file that converts
+This is combined with a fully customizable rules file (`appmap.lua`, inside the OTT Analytics app) that converts
 domain names into applications. The built in rules file can identify
 over 125 apps including YouTube, WhatsApp, Facebook Video, Instagram,
 many OTT Platforms, local content like Jio Saavn, Zee5, SunTV, Microsoft
 Office 365, Skype, cloud providers like Amazon, GCP, Azure, and so on.
 The customer can tune the file on a rolling basis as new services are
-seen. No restart is required.
+seen. After you edit the file, restart the Probe so the change takes effect.
 
 ### Connect the DNS feed
 

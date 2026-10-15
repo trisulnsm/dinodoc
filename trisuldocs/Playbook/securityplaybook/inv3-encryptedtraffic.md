@@ -1,7 +1,7 @@
 # Investigate Encrypted Traffic
 
 :::note Applies to
-Trisul NSM in packet capture mode. **SSL/TLS Metering** and **DNS Resources** need packet capture. JA3 needs the **JA3 Fingerprints** app.
+Trisul NSM in packet capture mode. **SSL/TLS Metering** and **DNS Resources** need packet capture. JA3 and JA3S fingerprints need the **TLS Fingerprinter** app. SNI hostnames need the **SNI TLS Metrics** app. Both are part of the **Meta NBAD** app.
 :::
 
 ## Investigation Overview
@@ -48,7 +48,7 @@ Look for sessions that:
 
 - Use previously unseen or unusual JA3 or JA3S fingerprints.
 - Present unexpected Server Name Indication (SNI) values.
-- Use self-signed, expired, or otherwise suspicious certificates.
+- Use suspicious certificates. Trisul does not check certificate validity, so review the certificate chain in **Resources → SSL Resources**.
 - Negotiate deprecated TLS versions or unusual cipher suites.
 - Appear inconsistent with the expected applications within your environment.
 
@@ -194,7 +194,7 @@ Once the scope has been established, summarize the investigation findings and de
 
 ### Step 6: Summarize the Investigation with Trisul AI
 
-Once the investigation is complete, open **Trisul AI** to review the investigation findings.
+Once the investigation is complete, open **Trisul AI**: click the Trisul AI icon in the page header, to the left of the search bar. Trisul AI is available in all Trisul modes. Log in as a user, not as admin, to use it.
 
 Trisul AI can generate a concise summary of the investigation, highlight the key observations, explain how the collected evidence supports the findings, and assist with documenting the investigation for operational review, incident reporting, or future reference.
 

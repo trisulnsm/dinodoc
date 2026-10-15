@@ -8,6 +8,8 @@ When you log in as `dotuser`, Trisul opens the IPDR Dashboard. From there you ca
 
 The default password for `dotuser` is `ipdr@@123`.
 
+`dotuser` is a regular user account for querying IPDR records. Administration is done with the `admin` account.
+
 :::warning Change password for dotuser on first login
 You are strongly urged to immediately change the default password of the special user named 'dotuser' on first login.  
 :::

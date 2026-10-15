@@ -25,8 +25,7 @@ Tools for investigating traffic that already happened — retrospective ("retro"
 3. **Daily Usage** - [Using Monthly Charts](/docs/guide/ug/tools/daily_usage)
 4. **Search Key Space** - [Using Search Key Space](/docs/guide/ug/tools/keyspace)
 5. **Edge Graph** - [Using Edge Analysis](/docs/guide/ug/edges/using)
-6. **Bulk Ping Groups** - [Using Bulk Ping Groups](/docs/prodguide/isp/pingmonitor)
-7. **Key Report** - [Using Key Dashboard](/docs/guide/ug/ui/key_dashboard)
+6. **Key Report** - [Using Key Dashboard](/docs/guide/ug/ui/key_dashboard)
 
 ## Realtime and Near Realtime
 

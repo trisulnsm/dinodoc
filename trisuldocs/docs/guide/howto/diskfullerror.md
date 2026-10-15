@@ -4,6 +4,10 @@
 
 If the Trisul disk fills up 100% you may not be able to access the web interface and of course Trisul will stop working. To recover from this error follow these steps.
 
+:::tip Move all data with one command
+The steps below move only the folders you choose. To move all three data folders of a probe context (`oper`, `ref` and `archive`) to a new volume, run `trisulctl_probe` and use `relocate context`, for example `relocate context domain0 probe0 default`. The command asks you to stop the context if it is running. On a single-node install, also run `relocate context` on the Hub. See [relocate context](/docs/guide/ag/basictasks/reloc).
+:::
+
 - ##### Step 1: Mount new partition
   
   Create a new partition with enough space and mount it, for example on `/mnt/trisul_extra`.

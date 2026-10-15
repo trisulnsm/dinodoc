@@ -42,7 +42,7 @@ Every data exfiltration investigation begins by identifying the systems generati
 
 In [**Trisul Retro**](/docs/guide/ug/cg/retro#selecting-a-time-window), navigate to:
 
-**Retro Counters → Retro Usage → Hosts → Transmit**
+**Retro → Retro Counters**, then select the counter group **Hosts** and the meter **Transmit**.
 
 ![](./images/outboundtoppers.png)    
 
@@ -207,7 +207,7 @@ Once the historical context has been established, review the investigation findi
 
 ### Step 6: Summarize the Investigation with Trisul AI
 
-Once the investigation is complete, open **Trisul AI** to review the investigation findings.
+Once the investigation is complete, open **Trisul AI**: click the Trisul AI icon in the page header, to the left of the search bar. Trisul AI is available in all Trisul modes. Log in as a user, not as admin, to use it.
 
 Trisul AI can generate a concise summary of the investigation, highlight the key observations, and assist with documenting the findings for operational review, incident reporting, or future reference.
 

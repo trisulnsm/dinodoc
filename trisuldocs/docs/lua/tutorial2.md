@@ -98,12 +98,14 @@ countergroup = {
   --  meter 0 -  bytes by packet len
   --  meter 1 -  number of packets of each length 
   meters = {
-      { 0, T.K.vartype.RATE_COUNTER, 10, "Bytes",   "bytes" ,   "B" },
-      { 1, T.K.vartype.COUNTER,      10, "Packets", "packets",  "Pkts" },
+      { 0, T.K.vartype.RATE_COUNTER, 10, 0, "Bytes",   "bytes",    "B" },
+      { 1, T.K.vartype.COUNTER,      10, 0, "Packets", "packets",  "Pkts" },
   },
 
 },
 ```
+
+Each meter row has seven fields: meter ID, meter type, number of toppers to track, number of bottom-ers to track, name, units and short units.
 
 You will notice the counter group has two sub blocks called control and meters.
 

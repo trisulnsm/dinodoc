@@ -18,7 +18,7 @@ The following dedicated product guides are available:
 
 **Trisul NetFlow Analyzer** monitors network traffic from the flow records that routers and switches export. Use it for traffic monitoring and capacity planning across enterprise networks, datacenters and campuses.
 
-- **Protocols Supported:** NetFlow v5/v9, IPFIX, sFlow, and NetStream.
+- **Protocols Supported:** NetFlow v5/v9, IPFIX, sFlow, JFlow and NetStream.
 - **Key Capabilities:**
   - **Interface & Router Tracking:** Real-time throughput, bandwidth utilization, and interface metrics.
   - **Traffic Breakdown:** Visibility into hosts, internal/external conversations, TCP/UDP applications, and QoS tags.

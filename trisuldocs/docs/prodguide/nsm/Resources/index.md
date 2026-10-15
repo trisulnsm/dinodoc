@@ -21,4 +21,4 @@ How resources are stored and searched:
 * [**Resources overview**](/docs/prodguide/nsm/Resources/oveview) — Normal and full-text indexes, and the search options they share.
 * [**Full Text Search**](/docs/prodguide/nsm/Resources/fts) — How FTS documents, attributes and faceted results work.
 
-<!-- TODO(verify): Resources → File Hashes has no page yet. Needs product-team confirmation before a page is written (F-06-50). -->
+<!-- Resources → File Hashes is obsolete (SME 06b-Q13): file hashes cannot identify encrypted files. Do not document it. -->

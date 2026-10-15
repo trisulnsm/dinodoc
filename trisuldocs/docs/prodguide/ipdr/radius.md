@@ -13,8 +13,7 @@ There are two ways Trisul IPDR integrates AAA RADIUS logs.
 ## Real time AAA Events via SYSLOG
 
 
-To use this feature, install the Trisul App called **NAT Syslog**
-This consumes AAA Events and tags flows with USER ID as they occur. 
+To use this feature, install the Trisul app called **NAT SYSLOG**. The same app handles NAT syslog mappings and real-time AAA (RADIUS) syslog events, and tags flows with the user ID as they occur. It listens on UDP port 514 for syslog and UDP port 1025 for NAT IPFIX. These ports are fixed in the app; the **NAT Syslog Port** field in IPDR Settings does not change them.
 
 
 ## AAA RADIUS Dump file
@@ -25,7 +24,7 @@ Arrange for the RADIUS server to deposit a file every hour containing a list of 
 ### Fields 
 
 
-Many RADIUS/AAA servers are based on FreeRADIUS, so these fields may be familiar. Every hour export these fields from the SQL Database and FTP it to the location described above.
+Many RADIUS/AAA servers are based on FreeRADIUS, so these fields may be familiar. Every hour export these fields from the SQL Database and FTP it to the location described above. Trisul parses these columns with a Python script and stores the customer details in its database.
 
 ```csv 
 radacctid,acctsessionid,acctuniqueid,customer_id,nasipaddress,nasportid,acctstarttime,acctupdatetime,acctstoptime,acctsessiontime,callingstationid,framed_ipv_4_address,framed_ipv_6_address,delegated_ipv6_prefix

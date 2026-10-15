@@ -23,7 +23,7 @@ APPS](/docs/guide/ag/webadmin/apps)
 
 Create a TAB separated file with the following format. Put it in a
 directory that is readable by the WebTrisul user, which is by default
-`trisul.trisul`. A good place to put this file is the /tmp directory.
+`trisul.trisul`. Use a persistent directory, for example `/opt/trisul-feeds`. Do not use `/tmp`: files there are removed at reboot, and a missing `file://` source makes the feed update fail. **Plugin Data Updates** then shows "(File does not exists)" for the feed.
 
 `FEED_NAME<TAB>INDICATOR<TAB>Description`
 
@@ -39,7 +39,7 @@ include
 
 ### Sample file
 
-A sample TSV file named `/tmp/myfeed1.tsv` would look like the
+A sample TSV file named `/opt/trisul-feeds/myfeed1.tsv` would look like the
 following.
 
 ```text
@@ -92,7 +92,7 @@ Notice the feed config file `rules.xml` consists of *Update* sections.
 Scroll down to the bottom to locate the third Update section. You can
 connect your TAB separated processed feed in this section.
 
-Say you have saved your file in a location `/tmp/myfeed_1.tsv` You can
+Say you have saved your file in a location `/opt/trisul-feeds/myfeed_1.tsv` You can
 connect it to Badfellas in the following way.
 
 - Edit the file
@@ -109,7 +109,7 @@ connect it to Badfellas in the following way.
     <Update>
       <Sources>
         <Source>
-         <URL>file:///tmp/myfeed_1.tsv</URL>     <!-- add this line only -->
+         <URL>file:///opt/trisul-feeds/myfeed_1.tsv</URL>     <!-- add this line only -->
           <Target>badfellas-local-0.tsv</Target>
         </Source>
 
@@ -127,9 +127,7 @@ connect it to Badfellas in the following way.
     </Update>
 ```
 
-Your feed is now integrated into Trisul. The lists will be
-downloaded and processed automatically every 3600 seconds as per the
-*Run\>Frequency* settings.
+Your feed is now integrated into Trisul. WebTrisul checks the feed daily and refreshes it when the *Run > Frequency* interval (3600 seconds here) has passed.
 
 ## Downloading from a custom URL
 
@@ -139,4 +137,4 @@ local file. You can even download from another server via HTTP. Replace the URL 
 
 ### When the Change Takes Effect {#wait-for-a-while-for-this-to-take-effect-or-restart-trisul}
 
-Normally Trisul rolls over to a new feed it detects within 30 minutes. To apply it sooner, restart Trisul.
+WebTrisul checks feeds once a day, at 12:30 PM, and downloads a feed when its *Run > Frequency* interval has passed. It then sends the new feed to the Probes. You do not need to restart Trisul.

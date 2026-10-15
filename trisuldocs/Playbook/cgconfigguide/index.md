@@ -10,6 +10,10 @@ Instead of starting with a Counter Group and trying to determine what it can be 
 
 ---
 
+:::note Modes
+The scenarios in this library apply to NetFlow Analyzer, NSM and ISP Analytics. All six custom counter group types meter the same way in these modes. IPDR mode has no counter groups.
+:::
+
 ## Before You Use This Library
 
 A basic understanding of Trisul Counter Groups and custom Counter Groups is required before using the scenarios in this library.
@@ -93,9 +97,7 @@ After you create or change a Counter Group, restart the Probe for the change to 
 
 :::
 
-<!-- TODO(verify): does Start/Stop Tasks show a restart-pending state for the Probe? -->
-
-The probe will indicate that a restart is pending.
+Start/Stop Tasks shows a yellow **Pending Restart** badge on the Probe node until you restart it. Restart only the Probe; the Hub does not need a restart.
 
 Restart the Probe and wait for it to come back online. See [Start and Stop Trisul](/docs/guide/ag/admintasks/startstop).
 

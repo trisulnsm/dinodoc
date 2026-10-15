@@ -67,19 +67,6 @@ The module below the Retro Time Selector is used to select the countergroup and 
 
 - The filter regex field lets you filter the Counter Group list using a regular-expression pattern. This is useful when there are many Counter Groups and you want to locate a particular one without scrolling through the entire list.
 
-## Current content inspection width
-
-The bottom of the page displays the current content inspection width.
-
-It shows two limits:
-
-- **Time duration** — The amount of time covered by content inspection.
-- **Data size** — The maximum amount of data covered by content inspection.
-
-For example, the page can show **6 Hrs, 0 Mins and 0 Secs** and **100 MB**. These values are the current content inspection settings.
-
-Click **Edit** to modify the content inspection width and data-size limit.
-
 ## Retro Counters at a glance {#retro-counter-usage-at-a-glance}
 
 | If you want to...                                    | Use...                     |
@@ -98,7 +85,6 @@ Click **Edit** to modify the content inspection width and data-size limit.
 | Find flow-generator Counter Groups                   | **FlowGens**               |
 | Quickly locate a Counter Group by name or pattern    | **Filter regex**           |
 | Select the Counter Group to investigate              | **Counter Group dropdown** |
-| Change the content inspection limits                 | **Edit**                   |
 
 ## How to use Retro Counters {#how-to-use-retro-counter-usage}
 
@@ -108,7 +94,6 @@ Click **Edit** to modify the content inspection width and data-size limit.
 4. Select a Counter Group category such as Hosts, Aggregates, or Recent.
 5. Select the Counter Group you want to investigate. Use the filter regex field if the list is large.
 6. Examine the historical activity for the selected Counter Group using the main chart and time-range overview.
-7. Adjust the content inspection settings, if required, using Edit.
 
 ### Summary {#in-simple-terms}
 

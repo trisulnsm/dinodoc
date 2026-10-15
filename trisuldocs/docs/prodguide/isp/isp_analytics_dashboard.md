@@ -233,7 +233,7 @@ The following table explains the data in the columns.
 | ------------- | ------------------------------------------------------------- |
 | Key           | The Country Code                                              |
 | Label         | The name of the country                                       |
-| Volume        | Traffic upload from this country – when seen in the Upload Tab and top download when seen in the Download Tab |
+| Volume        | Upload tab: bytes sent to this country. Download tab: bytes received from this country. Per router and interface. |
 | Avg Bandwidth | Traffic Bandwidth average for selected time period            |
 | Options       | More options                                                  |
 
@@ -272,14 +272,16 @@ toppers associated with every router.
 
 :::info navigation
 
-To access,select ISP Analytics Dashboard &rarr; Country Analytics Drilldown
+Log in as a user and go to **ISP &rarr; Country Analytics Drilldown**.
 
 :::
 
 | Field      | Description                                                 |
 | ---------- | ----------------------------------------------------------- |
 | Time Frame | Select a desired date and time using the custom time option |
-| Prefix     | Enter a prefix you need to drilldown                        |
+| Country    | Select the country you want to drill into                   |
+
+After you submit the form, the drilldown shows the traffic uploaded to and downloaded from the country, with its prefixes and hosts.
 
 ![](images/countryanalyticsdrilldown.png)  
 Country Analytics Drilldown

@@ -34,12 +34,7 @@ Before installing Meta NBAD, ensure that:
 
 ### Installing the Meta NBAD App
 
-The Meta NBAD functionality is provided through Trisul Apps. Installation can be verified through the Web Admin interface.
-
-
-:::info navigation
-:point_right: Go to [Trisul Apps](https://github.com/trisulnsm/apps) and install NBAD Meta Apps
-:::
+Install the **Meta NBAD** app from **Web Admin → Manage → Apps**. Meta NBAD is an app package: it installs the NBAD apps together and adds the **NBAD** menu, so you do not need to install each NBAD app separately.
 
 Verify that required applications such as:
 
@@ -55,10 +50,7 @@ are installed and enabled.
 
 After installation:
 
-- Configure monitoring interfaces
-- Verify traffic ingestion
-- Configure export settings if required
-- Enable required dashboards and alert groups
+- No minimum configuration is needed. NBAD works in NSM (packet capture) mode only.
 - If NFGEN is installed, restart the Trisul probe to apply the NetFlow/IPFIX export configuration changes
 
 Restart the Probe so the changes take effect. Use either method:
@@ -70,5 +62,5 @@ Restart the Probe so the changes take effect. Use either method:
 trisulctl_probe restart context <context_name>@<probe_name>
 ```
 
-Traffic visibility and dashboards can then be verified from the user interface.
+To confirm NBAD works, open any dashboard from the **NBAD** menu and check that it shows data.
 

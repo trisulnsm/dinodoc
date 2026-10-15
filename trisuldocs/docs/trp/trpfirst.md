@@ -6,6 +6,10 @@ to Trisul and gets back a Hello Response.
 Also see : [Programming model](/docs/trp/trpprogramodel) , [Messages and
 Fields](/docs/guide/ref/trpproto)
 
+:::note Current method
+The `protobuf` gem and `protoc --ruby_out` route on this page is no longer current for Ruby. Trisul's own Ruby samples use the `trisulrp` gem (`require 'trisulrp'`) with a ZMQ endpoint. See [trp/helloworld](https://github.com/trisulnsm/trisul-scripts/tree/master/trp/helloworld) in the trisul-scripts repository. The `protoc` route still applies to Python.
+:::
+
 :::info Prerequisites
 
 You must have Ruby installed on your machine.

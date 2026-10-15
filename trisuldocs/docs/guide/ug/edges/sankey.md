@@ -1,6 +1,6 @@
 # Sankey Drilldown
 
-The Sankey Drill Down App can be downloaded from [Trisul Apps](/docs/guide/ag/webadmin/apps). This visualization tool illustrates the split of traffic for various applications, originating from specific routers and interfaces by providing a graphical representation of traffic distribution.
+The **Sankey Crossdrill** app can be installed from [Trisul Apps](/docs/guide/ag/webadmin/apps). This visualization tool illustrates the split of traffic for various applications, originating from specific routers and interfaces by providing a graphical representation of traffic distribution.
 
 The chart shows the share of traffic for each application and lets you drill down into specific data points.
 

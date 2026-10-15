@@ -24,7 +24,7 @@ The fields come from three sources
 | Start Time       | Flow        | Start time of the flow in YYYY-MM-DD-HH:MM:SS up to second                     |
 | End Time         | Flow        | End time of the flow in YYYY-MM-DD-HH:MM:SS up to second                       |
 | Duration         | Flow        | Duration of flow in seconds                                                    |
-| NAT IP           | Flow        | NAT IP – usually this is the public IP, if the source IP is a private IP space |
+| NAT IP           | Flow        | NAT IP – the private IP address assigned to the user by the NAT device |
 | NAT Port         | Flow        | NAT Port                                                                       |
 | Device           | Flow        | The router or other device that exported this flow                             |
 | UserID           | AAA         | The user ID obtained from AAA                                                  |

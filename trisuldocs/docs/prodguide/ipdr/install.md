@@ -63,7 +63,7 @@ Next you need to select the network interface on which you will be receiving the
 
 ### 3. Request a Trial License 
 
-The built in license only works for 7-days.  We strongly recommend you contact us for an extended 15-day Trial License via https://www.trisul.org/support/get-extended-license/ 
+The built-in license works for 7 days. When it ends, you can extend the trial for another 15 days. Request the extension at https://www.trisul.org/support/get-extended-license/ 
 
 ## Configure Network for IPDR
 

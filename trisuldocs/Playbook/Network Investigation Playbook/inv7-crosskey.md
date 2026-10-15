@@ -96,7 +96,7 @@ Once a usable Cross Key group has been confirmed, analyze how those dimensions r
 
 ### Step 3: Analyze the Relationships Between the Selected Dimensions
 
-With the Cross Key Counter Group confirmed, visualize the correlated traffic using the **Sankey Crosskey** app — this is the tool Trisul provides specifically to render Cross Key group data as flow relationships between dimensions, rather than as a flat table.
+With the Cross Key Counter Group confirmed, visualize the correlated traffic using the **Sankey Crossdrill** app (or the built-in **Crosskey Sankey** dashboard module) — this is the tool Trisul provides specifically to render Cross Key group data as flow relationships between dimensions, rather than as a flat table.
 
 Rather than investigating a single host, interface, or application, this step examines how multiple network dimensions relate to one another to answer the original investigation question.
 
@@ -233,7 +233,7 @@ Once the relationships have been validated, decide whether they are expected and
 
 By this stage, the investigation should have answered the original investigation question and collected the evidence required to explain the observed relationships.
 
-Open **Trisul AI** and review the investigation findings.
+Open **Trisul AI** and review the investigation findings. To open it, click the Trisul AI icon in the page header, to the left of the search bar. Trisul AI is available in all Trisul modes. Log in as a user, not as admin, to use it.
 
 Use Trisul AI to generate a concise summary of the investigation, highlight the key observations, and assist with documenting the findings for operational review, incident reporting, or future reference.
 

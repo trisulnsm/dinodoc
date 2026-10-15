@@ -11,7 +11,7 @@ $ trisulctl_hub
 trisul_hub:LAT1(domain0)> create context <context_name>
 ```
 
-Replace \<context_name\> with your desired context name, keeping it alphanumeric with underscores and under 12 characters for better display in the UI.
+Replace \<context_name\> with your context name. Use letters and digits only. There is no length limit.
 
 ### Step 2: Check Context Creation
 
@@ -25,11 +25,19 @@ This command displays information about the context, including node, context nam
 
 ### Step 3: Analyze the Output
 
-Check the output of the info context command for any errors or inconsistencies. Verify the context state is "RUNNING" and the initialization status is as expected (e.g., "INIT" or "READY").
+`info context` lists every context on the server, one row per node. Check that your context appears, that the `init` column shows `INIT`, and that the `state` column shows `RUNNING` for the nodes you expect to run. Sample output:
+
+~~~
+node      context_name   version    init   state    size_disk  data_window   #runs  profile   runmode
+------------------------------------------------------------------------------------------------------
+config0   default        8.0.3322   INIT   RUNNING  -          00h 00m 00s   0      profile0
+hub0      default        8.0.3322   INIT   DOWN     -          04h 02m 00s   0
+probe0    default        8.0.3426   INIT   DOWN     -          00h 00m 00s   1      profile0  online_rxring
+~~~
 
 **Common Issues**
 
-- Invalid context name: Ensure the context name follows the naming conventions (alphanumeric with underscores, under 12 characters).
+- Invalid context name: Use letters and digits only.
 - Permission issues: Run the command as root or with the necessary permissions.
 - Node configuration: Verify all probe and hub nodes are correctly configured and communicating with each other.
 
@@ -46,7 +54,7 @@ Ensure you've created a tenant mapping using the correct API request. The create
 Method: GET
 URL: api/tenants_ip_mapping/create_tenant_mapping
 Required Parameters:
-api_key: Your API key
+api_token: Your API token
 username: Your username (use auth_username in the URL)
 subdomain: The subdomain for the tenant
 Optional Parameters:
@@ -57,6 +65,9 @@ probe: The probe name (defaults to probe0)
 ```
 http://192.168.1.77:8013/api/tenants_ip_mapping/create_tenant_mapping?auth_username=apiuser&api_token=YOUR_API_TOKEN&probe=probe0&subdomain=unpl_corporate
 ```
+
+Replace `YOUR_API_TOKEN` with your own API token, and `8013` with the port your WebTrisul server runs on.
+
 ### Step 2: Check API Response
 Verify the API response indicates a successful creation or update of the tenant mapping.
 

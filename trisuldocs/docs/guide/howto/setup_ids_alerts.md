@@ -12,8 +12,7 @@ There are two ways you can send IDS alerts into Trisul
 
 :::note[Suricata-EVEAPP]
 
-The newly released Trisul APP [Suricata
-EVE](https://medium.com/@vivekrj/how-to-get-suricata-eve-alerts-into-trisul-network-analytics-and-why-f3015d7280e0)
+To get Suricata alerts into Trisul, install the **Suricata via EVE UnixSocket** app from **Web Admin → Manage → Apps**. See [Apps](/docs/guide/ag/webadmin/apps).
 
 :::
 
@@ -92,10 +91,7 @@ barnyard2 -c barnyard2.conf  -l /tmp -o /tmp/byin/unified2.alert.*
 
 ### Suricata note
 
-**UPDATE:** We now recommend using the new EVE alert format for
-Suricata. Please follow instructions in [How to get Suricata EVE alerts
-into Trisul Network
-Analytics?](https://medium.com/@vivekrj/how-to-get-suricata-eve-alerts-into-trisul-network-analytics-and-why-f3015d7280e0)
+**UPDATE:** For Suricata, install the **Suricata via EVE UnixSocket** app instead of using Unified2 and barnyard2. The steps below are for older setups.
 
 First edit the suricata.yaml file and check if Unified2 logging is
 enabled. You can disable all other logging.
