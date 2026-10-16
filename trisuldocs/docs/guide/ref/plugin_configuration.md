@@ -57,6 +57,8 @@ sudo /usr/local/share/trisul-probe/cfgedit context_firewall
 
 Here is a list of all the current plugin configuration options.
 
+Which files apply depends on the product mode. **Netflow** and **SFlow** are for NetFlow mode. **Geo** applies in every mode. The other files are for packet mode (Trisul NSM).
+
 | Name                                                            | Description                                                    |
 | --------------------------------------------------------------- | -------------------------------------------------------------- |
 | [Hosts](/docs/guide/ref/plugin-config/hosts)                    | IP address based metering                                      |

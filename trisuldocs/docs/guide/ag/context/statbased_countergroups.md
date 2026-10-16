@@ -37,4 +37,4 @@ Examples :
 | Parent Counter Group | Select a Parent from the drop down list of parent counter groups   |
 | Stat ID              | Select a Stat ID from the drop down list of Stat IDs               |
 | Operator             | Choose an operator that you want to perform from the dropdown list |
-| Stat Val             | Example : 8Mbps, 2000, 6Kbps (default units is bytes/sec)          |
+| Stat Val             | The threshold. Enter bits per second with a unit, for example `8Mbps` or `6Kbps`, or a plain number in bytes per second, for example `2000`. Trisul stores the value in bytes per second, using decimal units: 1 Kbps = 125 bytes/sec, 1 Mbps = 125,000 bytes/sec. Trisul compares the statistic with this value every 1-minute interval. |

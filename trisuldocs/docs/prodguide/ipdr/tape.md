@@ -87,7 +87,7 @@ For instance, to find all slices for February 10th, enter "10 Feb" in the search
 
 ### Restore the 2 slices 
 
-Restore the two slices SLICE.evlPsX and SLICE.r0Cbmx to the mentioned `tape ` restore point 
+Copy the two slice directories, SLICE.evlPsX and SLICE.r0Cbmx, from your backup storage into the `tape` directory under the meters directory. This works the same for physical tape and any other backup storage.
 
 It should look like this 
 

@@ -41,7 +41,7 @@ On both the Primary and Backup sites , Trisul processes run under the username `
 Repeat the following process on both the primary and backup site.
 
 Edit /etc/passwd  
-Assign a shell to the `trisul` user as shown below
+By default, the `trisul` user can't log in. Replication runs as `trisul`, so enable login for this user: assign it a shell as shown below. You then log in as `trisul` to sync the data.
 
 `trisul:x:999:999:Trisul Daemon User:/home/trisul:/bin/bash`
 
@@ -192,6 +192,10 @@ on primary
 
 on backup  
 `journalctl -fu trisul-hub-primary-health-check`
+
+## Optional: Check DR Status from the Primary
+
+When the virtual IP points only to the DC, Trisul can't tell whether the DR node is running. To check it, set the DR Hub IP and port in **Web Admin → Manage → App Settings → DR Settings** on the DC node. You can then see from the traffic chart whether the DR node is running. This setting is optional and mainly for Trisul support. See [DR Settings](/docs/guide/ag/webadmin/web_options#dr-settings).
 
 ## Failover
 

@@ -16,6 +16,10 @@ From the list of Trisul apps, download Multicast GraphX.
 
 >Note: Make sure the **IGMP Multicast** app is also installed and active.
 
+:::note Product mode
+Multicast GraphX works only in packet mode (Trisul NSM).
+:::
+
 ## Viewing Multicast GraphX
 
 :::info navigation

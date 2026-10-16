@@ -58,6 +58,21 @@ The same approach can be adapted by changing the **Parent Group, statistic, oper
 
 ---
 
+## How Trisul Applies the Threshold
+
+Trisul compares the statistic with the threshold every 1-minute interval, the default counter bucket size. Each key that matches the condition is added to the new counter group.
+
+Enter the threshold in bits per second with a unit (`Kbps`, `Mbps`, `Gbps`), or as a plain number in bytes per second. Trisul converts it to bytes per second using decimal units:
+
+| You enter | Trisul stores (bytes/sec) |
+|---|---|
+| 500 Kbps | 62,500 |
+| 1 Mbps | 125,000 |
+| 1 Gbps | 125,000,000 |
+| 2000 | 2,000 |
+
+---
+
 ## 1. Create the Apps >500Kbps Counter Group
 
 We first need to define **what we want to monitor** and **what statistical condition the keys must satisfy**.

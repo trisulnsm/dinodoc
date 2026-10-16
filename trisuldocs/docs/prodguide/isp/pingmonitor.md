@@ -11,6 +11,8 @@ PING Monitor allows ISP to monitor a select number of devices for the following
 
 Using this feature ISPs typically keep track of the health of their key infrastructure elements like routers, mux, servers etc. 
 
+Ping Monitor works in every product mode. It is most useful for ISPs.
+
 To use this feature create PING Groups, these are groups of device IP addresses that represent some part of their network such as customers, infra, servers, etc.  Once these groups are created you view the PING monitor dashboards and see which devices are down, having poor latency, etc.
 
 
@@ -105,41 +107,17 @@ The Dashboard module contains the following details.
 | Pktloss         | The percentage of packet loss, if any                                                |
 | Info            | Click on the info button against the IP address you would like to view the ping history of |
 
-## PING
+## Start and Stop the Ping Server {#ping}
 
-When you are all set with adding the Ping groups and IPs to the Ping groups. Its go-time for the PING!
+Trisul pings the IP addresses in your PING Groups while the ping server runs. Start and stop it from the web interface.
 
-Enter `ping xxx.xxx.x.xx \\IP address` This will start sending a series of ICMP echo request messages to the specified IP address at certain intervals. This will look something like this, 
+:::note Navigation
+Log in as admin and go to **Context: default → Admin Tasks → Start/Stop Tasks**.
+:::
 
-```
-PING 8.8.8.8 (8.8.8.8): 56 data bytes
-64 bytes from 8.8.8.8: icmp_seq=0 ttl=56 time=14.6 ms
-64 bytes from 8.8.8.8: icmp_seq=1 ttl=56 time=14.3 ms
-64 bytes from 8.8.8.8: icmp_seq=2 ttl=56 time=14.4 ms
-64 bytes from 8.8.8.8: icmp_seq=3 ttl=56 time=14.5 ms
---- 8.8.8.8 ping statistics ---
-4 packets transmitted, 4 packets received, 0.0% packet loss
-round-trip min/avg/max = 14.3/14.5/14.6 ms
-```
+1. Find the Probe node, for example **probe0**.
+2. Open its **Tools** menu and click **Start Ping Server**.
 
-Similarly, to send ping requests to a large number of IP addresses simultaneously and check their availability, enter the command,
+To stop the ping server, click **Stop Ping Server** in the same menu.
 
-`trisul_bulkping -demon /usr/local/etc/trisul-probe/domain0/probe0/context0/trisulProbeConfig.xml`
-
-This will start sending a series of ICMP echo request messages to multiple IP addresses as a bulk at certain intervals.
-
-### To stop the process:
-
-Once you have checked the reachability of the host you can stop the process by using the command,
-
-`ps -ef | grep bulkping` 
-
- This gives you the detailed information of the running process. Something that will look like this,
-
-`user       1234   5678  0 12:34 ?        00:00:01 /path/to/bulkping` 
-
-where 1234 is the PID. Once you have the PID, enter
-
-`sudo kill -9 xxxx //xxxx is PID` to force stop the process.
-
-As you have now stopped the process, you can verify the state of the IP address which will be reflected on the *dashboard* as packetloss/down.
+To see the equivalent command line, click **How to start ping server?** in the same menu.

@@ -27,7 +27,30 @@ password = `admin`
 user name = `user`  
 password = `user`
 
-After you log in, change the default password. See [Change Own Password](/docs/guide/ag/webadmin/manageusers#change-own-password).
+### Change the default password
+
+The first time you log in with a default password, Trisul opens the change-password screen. You can't use Trisul until you set a new password.
+
+1. In **Old Password**, enter the default password.
+2. In **New Password** and **New Password Again**, enter your new password.
+3. Click **Change password**.
+
+The new password must have:
+
+- At least 6 characters
+- One uppercase letter
+- One lowercase letter
+- One number
+- One special character, for example `!`, `@` or `#`. The screen lists every allowed character.
+
+![Change-password screen shown at first login](images/first_login_change_password.png)
+
+*Figure: Mandatory password change at first login*
+
+To change your password later, see [Change Own Password](/docs/guide/ag/webadmin/manageusers#change-own-password).
+
+<!-- TODO(verify): Does the forced change also apply to the default `user` account, or only `admin`? Screenshot shows admin only. -->
+<!-- TODO(verify): What happens after Change password: back to the login screen, or straight into Trisul? -->
 
 ## Contexts
 

@@ -97,6 +97,12 @@ Say if you wanted to store 1 year of data, set the Archive Count to 301
 
 You can also change the Oper and Ref slice counts. See [SlicePolicy](/docs/guide/ref/trisulhubconfig#slicepolicy) in the Trisul Hub Configuration reference.
 
+### Apply the Change on the Hub
+
+You don't need to restart the Hub. The `trisul_archiver` task runs every night at 12:00 AM and picks up the new slice counts.
+
+To check the retention in effect, go to **Context: default → Admin Tasks → Storage Status**. The page shows the **Configured Days** for each storage pool. See [Storage Status](/docs/guide/ag/admintasks/storage_status).
+
 ### Archiver type for large deployments
 
 The Hub archiver (`trisul_archiver`) controls how slices move between storage tiers on disk. The algorithm is selected with `DBTasks/Archiver/Type` in [Trisul Hub Configuration](/docs/guide/ref/trisulhubconfig):
@@ -192,3 +198,7 @@ Example: Store **500 GB** using **100 files of 5 GB each**:
                 ..
 
 ```
+
+### Apply the Change on the Probe
+
+Restart the Probe after you change `FileSizeMB` or `SliceCount`, from **Context: default → Admin Tasks → Start/Stop Tasks**.

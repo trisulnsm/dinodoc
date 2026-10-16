@@ -53,7 +53,7 @@ To generate an API token, see [Generate API Token](/docs/guide/ag/webadmin/manag
 | `get_meter_info`   | boolean | `false` | When `true`, includes detailed meter definitions (id, type, name, description, units) for each counter group          |
 | `probe_id`         | string  | —       | Restrict query to a specific probe                                                                                    |
 | `destination_node` | string  | —       | Route the request to a specific Trisul node                                                                           |
-| `timeout`          | integer | `-1`    | TRP query timeout in seconds (`-1` = use system default)                                                              |
+| `timeout`          | integer | `-1`    | TRP query timeout in seconds. `-1` = no timeout: the query waits until the response arrives. A positive value, such as `5`, waits only that many seconds.                                                              |
 
 
 ---

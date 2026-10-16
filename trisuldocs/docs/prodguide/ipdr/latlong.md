@@ -7,6 +7,8 @@ Imagine a satellite serving multiple IP addresses (For example, 10 IPs) can prov
 
 In the following path `/usr/local/share/webtrisul/config/initializers/latlong_api.rb` set the `LATLON_API_ENABLED=true` and the following details are taken from the API.
 
+Restart WebTrisul after you edit this file. See [Start and Stop WebTrisul](/docs/guide/ag/admintasks/startstop#start-and-stop-webtrisul).
+
 ![](images/latlong_report.png) 
 
 | Detail | Description |

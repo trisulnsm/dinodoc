@@ -36,12 +36,12 @@ Configure mail in trisul to receive alert
 | -c CONTEXT-NAME    | context0        | Name of the Context                         | -c all [prints the flusher for all contexts]   |
 | -e CONTEXT-NAME    |     -           | Ignores a particular context for checking           | -e netflow -e headoffice                                    |
 | -s HOST-NAME       | hostname        | Host name                             | -s Trisul-Server                                            |
-| -i INTERVAL        |     -           | Check flushed item count for last n minutes | -i 2                                                  |
-| -g COUNTER_GROUP   |     -           | Check this counter group in log       | -g `{2314BB8E-2BCC-4B86-8AA2-677E5554C0FE}`                 |
+| -i INTERVAL        |     2           | Check the flushed item count for the last n intervals | -i 4                                                  |
+| -g COUNTER_GROUP   |     -           | Check this counter group in the log. Repeat `-g` to monitor more than one counter group. | -g `{2314BB8E-2BCC-4B86-8AA2-677E5554C0FE}`                 |
 | -f CHECK_FLOW_COUNT|     -           | Check flushed flow count              | -f                                                          |
 | -v VERBOSE         |     -           | Print information like flushed flows  | -v                                                          |
-| -m MATCH_ANY_ENGINE|    -           | Check if any 1 engine is flushed      | -m                                                          |
-| -r RESTART         |     -           | Restart context if down              | -r                                                          |
+| -m MATCH_ANY_ENGINE|    1           | Check if any n engines are flushed      | -m 2                                                          |
+| -r RESTART         |     -           | Restart the Hub and Probe if nothing was flushed | -r                                                          |
 | -a filepath        |     -          | Checks the radius pattern in the file path | -a /home/trisul/radius.txt | 
 | -j interval        |      3600        | AAA file processing interval, in seconds | -j 11800 |
 
@@ -97,8 +97,9 @@ When executed without the -v argument, the script only prints values to the term
 #### Alert Generation
 The script generates alerts to the syslog based on the flush value. If the flush value is 0, it indicates that the context is not running, and an alert is generated.
 #### Alert Format
-The alert format is the same for both Flow Mode and GUID Mode. The script sends a standardized alert message to the syslog, indicating that the context is not running.
->**Note: The alert message does not distinguish between Flow Mode and GUID Mode. The same alert format is used for both modes.**
+The alert format is the same in flow mode and in counter group mode. Flow mode (`-f`) checks the flushed flow count; IPDR mode uses it. Counter group mode (`-g`) checks the counter groups you name; the other product modes use it. The script sends a standard alert message to the syslog saying that the context is not running.
+
+>**Note: The alert message doesn't say whether flow mode or counter group mode found the problem.**
 
 
 **Example:**
@@ -110,7 +111,7 @@ The alert format is the same for both Flow Mode and GUID Mode. The script sends 
 
 ## Cron Tab
 
-The Trisul AAAing tool is a scheduled utility that monitors a directory for AAA CSV log dumps, extracts them, and imports the data into a database, enabling the correlation of AAA user IDs and broadband service IDs with IPDR logs for comprehensive tracking and analysis.
+The Trisul AAAing tool (`trisul_aaaing`) processes AAA records. You dump the AAA records as CSV files into a folder. `trisul_aaaing` picks up each new CSV file and stores the data in the matching slice directory under the meters directory. You can then correlate AAA user IDs and broadband service IDs with IPDR logs.
 
 To schedule a script to run every half hour, add the following cron job to your crontab. This will allow the script to continuously run in the background, periodically checking for flows.
 

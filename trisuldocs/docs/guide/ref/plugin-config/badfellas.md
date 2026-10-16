@@ -73,22 +73,16 @@ The feed will be skipped at the next download. See `Frequency` parameter in the 
 
 The Badfellas package installs stub copies of the following blacklists. These feeds are updated to the latest versions at the next scheduled update time. Within 24 hrs.
 
-| Name                     | Type   |
-| ------------------------ | -------------- |
-| DNS blackhole list       | [malwaredomains.lehigh.edu](http://sbc.io/hosts/hosts)<br/>List keeps track of domains known to propagate malware and spyware                             |   
-| Malicious/scanner IPs    | [Dshield.org](https://www.dshield.org/)<br/>The well known DSHIELD list                                                                                   |        
-| IP Blocklist             | [feodotracker.abuse.ch](https://feodotracker.abuse.ch/blocklist/)<br/>Contains IP addresses (IPv4) used as C&C communication channel by the Feodo Trojan. |        
-| Malware domain + URLs    | [Malware Domain List](http://www.malwaredomainlist.com/)<br/>Domains hosting latest malware                                                           |        |
-| Anti phishing            | [Phish Tank](https://www.phishtank.com/)<br/>User submitted known phishing domains                                                                        |       
-| Domains                  | Contains top domains list                                                                                                                             |       
-| Domains                  | [Ransomware Domain Blocklist](https://ransomwaretracker.abuse.ch/blocklist/)<br/>Show list of ransomware domain                                           |       
-| IPs                      | [Ransomware Domain IPs](https://ransomwaretracker.abuse.ch/blocklist/)<br/>Show list of ransomware IPs                                                    |       
-| URLs                     | [Ransomware Domain URLs](https://ransomwaretracker.abuse.ch/blocklist/)<br/>Show list of ransomware urls                                                  |       
-| SSL Blacklist            | [SSLBlacklist](https://sslbl.abuse.ch/)<br/>Contains list of bad SSL certificates                                                                        |       
-| Domains                  | Contains top 1 million domains list                                                                                                                   |       
-| TOR nodes                | [TORnodes](https://www.dan.me.uk/torlist/?full)<br/>Checks if any of your network hosts are involved in TOR proxy activity                              |       
-| AlienVault IP Reputation | Flags IPs with poor reputation. This list includes scanners and other mischief                                                                        |       
-| SSL Blacklist            | Hashes of malicious SSL certificates sourced from sslbl.abuse.ch    |       
+| Feed file | Source | Contents |
+| --- | --- | --- |
+| `dns-blackhole.txt` | [malwaredomains.lehigh.edu](http://sbc.io/hosts/hosts) | Domains known to spread malware and spyware |
+| `dshield.txt` | [DShield.org](https://www.dshield.org/) | Malicious and scanner IPs |
+| `feodotracker-ips.txt` | [Feodo Tracker](https://feodotracker.abuse.ch/blocklist/) | IPv4 addresses used as command-and-control servers by the Feodo Trojan |
+| `phish-tank.txt` | [PhishTank](https://www.phishtank.com/) | User-submitted phishing domains |
+| `reputation.generic` | AlienVault IP Reputation | IPs with a poor reputation, including scanners |
+| `sslblacklist.csv` | [SSLBL](https://sslbl.abuse.ch/) | SHA1 fingerprints of malicious SSL certificates |
+| `tornodes.txt` | [TOR node list](https://www.dan.me.uk/torlist/?full) | TOR nodes, to flag hosts that use TOR |
+| `urlhaus-active.csv` | [URLhaus](https://urlhaus.abuse.ch/) | Active malware distribution URLs |
 
 ## Feed Updates
 
@@ -115,13 +109,13 @@ This shows the feed status.
 
 ## Installation
 
-This plugin is distributed as a RPM/DEB package.
+This plugin is distributed as an RPM package and a DEB package. The file names include the version number, which changes with each release. The commands below use version 8.1.3011 as an example.
 
 ```bash
-# on centos
-rpm -Uvh trisul_badfellas-1.0.153-0.el5.x86_64.rpm
-# on ubuntu
-dpkg -i trisul_badfellas-1.0.153.amd64.deb
+# on RHEL / Oracle Linux 8
+rpm -Uvh trisul-badfellas-8.1.3011-1.el8.x86_64.rpm
+# on Ubuntu 26.04
+dpkg -i trisul-badfellas_8.1.3011-resolute_amd64.deb
 ```
 
 ### Upgrading
@@ -218,7 +212,7 @@ Check all URLs seen
 
 **FatTailRank**
 
-In the URL Top-1 million lists URLs below this as considered as Fat Tail
+In the Top-1 million URL list, URLs ranked below this value are treated as the fat tail. The parameter is still supported, but you don't need to set it.
 
 Locate the [rules.xml file](#feeds)
 
@@ -230,7 +224,7 @@ Locate the [rules.xml file](#feeds)
         <CheckDNS>TRUE</CheckDNS>
         <CheckHTTPHost>TRUE</CheckHTTPHost>
         <CheckTCPFlows>TRUE</CheckTCPFlows>
-        <CheckURLs>TRUE</CheckURLs>
+        <CheckURL>TRUE</CheckURL>
 ```
 
 ## Also Read

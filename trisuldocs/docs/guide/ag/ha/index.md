@@ -16,25 +16,7 @@ import DocCardList from '@theme/DocCardList';
 
 ## HA
 
-The Trisul HA setup is based on multihoming. A single Trisul Probe flushes to two hubs – a primary and a HA hub.
-
-### HA Architecture Scenario
-
-A typical HA setup is shown below. This particular setup has two hubs and two probe nodes. There is an additional HA hub and a HA probe node.
-
-![](./images/hascenario1.png)
-
-*Figure: HA Setup*
-
-The topology is described below.
-
-- Probe 0 and Probe 1 are production probes. The total load is distributed across the two probes (4 IGWs each).
-- Probe 2 is the HA standby probe for both Probe 0 and Probe 1 (N+1 HA configuration)
-- Probe 0 and Probe 2 share a Virtual IP Address VIP1, Probe 1 and Probe 2 shared a virtual IP VIP2
-- On Probe0 or Probe1 failure, LB forwards traffic to Probe2 (the HA probe). Probe2 takes over as the new Probe-X that failed, The rest of the dataflow is not impacted.
-- Hub 2 acts as the standby HA node for Hub0 and Hub1.
-- When Hub0 fails the probe automatically switches to Hub1 and vice versa.
-- The reports pull from all nodes hence there is no data loss.
+Trisul supports high availability (HA). <!-- TODO(verify): HA architecture to be supplied by the product team (04c-Q03) -->
 
 Contact Trisul Network Analytics for more information. There are multiple options we can suggest.
 

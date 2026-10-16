@@ -15,6 +15,8 @@ If you have, then you know:
 All these samples are written in Ruby, and use the
 [trisulrp](https://rubygems.org/gems/trisulrp) gem. These scripts can be adapted to other languages like Python or Java.
 
+The samples work with Trisul 7 and Trisul 8: the TRP requests are the same in both releases. Use the latest version of the `trisulrp` gem (`gem install trisulrp`). WebTrisul 8 ships with its own copy of the gem.
+
 :::tip
 
 All our scripts are in the [trisul-scripts](https://github.com/trisulnsm/trisul-scripts) GitHub repo.

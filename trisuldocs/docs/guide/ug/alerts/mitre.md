@@ -23,8 +23,7 @@ Before using the MITRE ATT&CK feature, ensure the following:
 Use the [**Product Mode Selector**](/docs/guide/starthere/setuptrisul/install/selectmode) to select **Trisul NSM** mode.
 
 ### 2. Install Suricata App
-Follow the official setup guide:  
-https://www.trisul.org/devzone/doku.php/tips:suricata-eve-unixsocket  
+Install the **Suricata via EVE UnixSocket** app from **Web Admin → Manage → Apps**. See [Apps](/docs/guide/ag/webadmin/apps). For the Suricata side of the setup, see the [DevZone guide](https://www.trisul.org/devzone/doku.php/tips:suricata-eve-unixsocket).
 
 This enables ingestion of Suricata EVE JSON alerts into Trisul.
 
@@ -36,14 +35,25 @@ After installing the Suricata app, you must configure the MITRE rules and Surica
 
 ### 1. Add MITRE Rules File
 
-Copy the provided `mitre.rules` file to: `/var/lib/suricata/rules/`
+MITRE rules are Suricata rules extended with a MITRE tactic ID and technique ID. Trisul provides a reference rules file: download [mitre-rules.rules](http://static.trisul.org/download/prerelease/mitre-rules.rules). You can use it, write your own rules, or add the MITRE fields to rules you already use. Every rule must follow these rules:
+
+- The rule message (`msg`) must start with `MITRE`. The MITRE pages show only these alerts.
+- The rule's `metadata` must include `mitre_tactic_id` and `mitre_technique_id`. `mitre_subtechnique_id` is optional. The Suricata via EVE UnixSocket app copies these fields into Trisul.
+
+An example rule:
+
+~~~
+alert http any any -> any any (msg:"MITRE T1071.001 Web protocol C2 beacon"; flow:established,to_server; http.user_agent; content:"curl"; metadata: mitre_tactic_id TA0011, mitre_technique_id T1071, mitre_subtechnique_id T1071.001; sid:9000001; rev:1;)
+~~~
+
+Save your rules in a file under `/var/lib/suricata/rules/` and add the file to `rule-files` in `suricata.yaml`.
 
 
 ### 2. Update Suricata Configuration
 
-Replace or update the Suricata configuration file with the provided `suricata.yaml` at: `/etc/suricata/suricata.yaml`
+Trisul provides a reference Suricata configuration: download [mitre-suricata.yaml](http://static.trisul.org/download/prerelease/mitre-suricata.yaml). Use it as `/etc/suricata/suricata.yaml`, or copy its `eve-log` output section into your own file. The `eve-log` output must send alerts to the Unix socket that the Suricata via EVE UnixSocket app reads (`filetype: unix_dgram`).
 
-This step ensures that Suricata generates alerts enriched with MITRE ATT&CK technique mappings.
+Suricata then sends each alert with its MITRE fields, and Trisul maps it to the MITRE ATT&CK matrix.
 
 ---
 

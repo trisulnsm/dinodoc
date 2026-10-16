@@ -137,6 +137,10 @@ const config = {
         },
         redirects: [
           {
+            from: '/docs/prodguide/nf/Alerts/dashboards',
+            to: '/docs/prodguide/nf/Dashboards/alerts',
+          },
+          {
             from: '/docs/ipdr/api',
             to: '/docs/prodguide/ipdr/ipdr_customers_api',
           },

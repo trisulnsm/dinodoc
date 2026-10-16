@@ -9,7 +9,9 @@ Resource groups assign devices, interfaces and other objects to users. A subscri
 Log in as admin and go to **Context:MRTG → Admin Tasks → User resources**.
 :::
 
-<!-- TODO(verify): is "MRTG" a context the admin must create for subscribers? The Admin Guide uses Context: default (F-06-104) -->
+:::note About the MRTG context
+`MRTG` is an example context name. One Trisul install can run several contexts, for example `default` for ISP analytics, an IPDR context for compliance, and an `MRTG` context for subscriber traffic charts. Use the context that holds your subscribers' data.
+:::
 
 ![](images/mrtg_resourcegrouphome.png)
 
@@ -69,7 +71,7 @@ The Resource group keys window appears with the following fields.
 | Fields                              | Description                    |
 | ----------------------------------- | ------------------------------ |
 | Description of these group of items | Enter a short description on what this collection represents                                                              |
-| Counter Group                       | Select SNMP-Interface from the list of counter groups                                                                     |
+| Counter Group                       | Select **SNMP-Interface** from the list of counter groups. Use SNMP-Interface for subscriber graphs, not the NetFlow **FlowIntfs** group. |
 | Keys                                | Click on the Plus icon to add the keys and click Select after adding the desirable keys to that particular resource group |
 
 :::note

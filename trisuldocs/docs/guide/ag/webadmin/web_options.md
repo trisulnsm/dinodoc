@@ -61,6 +61,18 @@ The **Password/Security** settings allow administrators to configure password po
 | Password History Count | Specifies the number of previously used passwords that cannot be reused when setting a new password. Default: `3`. |
 | Save | Saves the configured password and security settings. |
 
+### Password Requirements
+
+The password policy applies to all users. It doesn't depend on [High Security](/docs/guide/ag/webadmin/highsecurity_vapt). A new password must have:
+
+- At least 6 characters
+- One uppercase letter
+- One lowercase letter
+- One number
+- One special character from this list: ! @ # $ % & * ( ) _ / ~ and the backtick
+
+By default, passwords don't expire (**Password Expiry (days)** is `0`).
+
 ## NetFlow
 
 :::note Applies to
@@ -211,6 +223,8 @@ configure a proxy server.
 
 ### Advanced SNMP Settings
 
+On large networks, for example 2,500 devices, resolving every SNMP attribute (interface name and alias, MAC and IP address, type, speed) takes time. To speed up SNMP resolution, turn off the attributes you don't need, such as **Resolve Advanced SNMP**.
+
 | Option                   | Default value | Description                          |
 | ------------------------ | ------------- | ------------------------------------ |
 | Use Huawei SNMP Port Map | false         | Use Huawei proprietary SNMP mapping to map Netstream ifIndex to SNMP ifIndex (for Huawei only)                                                         |
@@ -240,6 +254,8 @@ configure a proxy server.
 :::info navigation
 :point_right: Go to Web Admin &rarr; Manage &rarr; App Settings &rarr; MyMRTG
 :::
+
+MyMRTG works in every product mode. It is the traffic chart page that your end customers see. Use these settings to control that page, for example whether the chart title shows the interface name, the alias or both, and how often the page refreshes.
 
 | Option                | Default Value       | Description                                 |
 | --------------------- | ------------------- | ------------------------------------------- |
@@ -302,7 +318,7 @@ By using these variables and customization options, you can tailor your chart ti
 | Option | Description |
 |--------|-------------|
 | **Google API Key** | Google Maps API key used to enable Geo Map visualization within Trisul. |
-| **Microsoft Teams Webhook URL** | Incoming Microsoft Teams Webhook URL used to send alerts and notifications to a Microsoft Teams channel. |
+| **Microsoft Teams Webhook URL** | Teams Workflows webhook URL used to send alerts and notifications to a Microsoft Teams channel. See [Microsoft Teams delivery](/docs/guide/ug/alerts/msteams). |
 | **Zoho Cliq Webhook URL** | Incoming Zoho Cliq Webhook URL used to send alerts and notifications to a Zoho Cliq channel. |
 | **LLM Provider** | Selects the Large Language Model (LLM) provider used by the Trisul IPDR AI query assistant. |
 | **LLM Model** | Specifies the model or deployment name used by the selected LLM provider for Trisul IPDR AI queries, such as **gemini-2.5-flash**, **gpt-4o-mini**, or a custom deployment name. |

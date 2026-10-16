@@ -16,6 +16,8 @@ The IPDR Settings page allows you to change two things.
 
 ## FTP Settings 
 
+Results files larger than **Download File Size** can't be downloaded from the UI. Configure an SFTP server so that Trisul copies them to that server.
+
 To change the FTP settings , click Edit.
 
 ![ftp form](images/settings-access.png)  
@@ -31,7 +33,7 @@ Click **Edit** to access the form as shown below.
 | Server |    | The SFTP server IP address or host name  |
 | Port Number | 22 | The SFTP server port if not running on the default port 22  |
 | Username |   | SFTP user name|
-| Private Key  | /usr/local/etc/trisul-hub/ipdrpv.key  | SFTP user private key file path. Use the full file path including the directory name. We recommend you put the private key file in <br/>`/usr/local/etc/trisul-hub/ipdrpv.key` <br/>Ensure the file is readable by the user `trisul.trisul`  See the section [Configuring FTP](#configuring-the-ftp-server) below for instructions on how the private key is generated|
+| Private Key  |   | Full path of the SFTP private key file on the Hub, for example `/usr/local/etc/trisul-hub/id_trisul_ipdr`. You can use any file name. Ensure the file is readable by the user `trisul.trisul`. See [Configuring the FTP Server](#configuring-the-ftp-server) for how to generate the key.|
 | Directory  |         | The remote directory where the results file are uploaded|
 | Download File Size | 100M    | Results file less than this number will be available for download on the [IPDR Dashboard](/docs/prodguide/ipdr/ipdrdashboard) page itself|
 | NAT Syslog Port   | 514     | Port number where NAT translation syslog as well as AAA logs will be sent|
@@ -52,7 +54,7 @@ This section describes how to configure the FTP server in order to enable automa
 ### Create Key Pair on Trisul IPDR Hub Node
 
 On the Trisul-Hub server create a key pair like so into a file that is
-used for Trisul IPDR only. Use a file name `id_trisul_ipdr`
+used for Trisul IPDR only. This page uses the file name `id_trisul_ipdr`. You can use any name, as long as you enter the same path in the **Private Key** field.
 
 You can do these steps in the `/usr/local/etc/trisul-hub` directory
 
@@ -75,6 +77,8 @@ id_trisul_ipdr           # the private key (never to be shared, stored on Trisul
 Now put the `id_trisul_ipdr.pub` on to the target server with the
 `Username` in the IPDR FTP Settings.
 
+The SFTP user can be an existing account on the target server. You don't need to create a dedicated user.
+
 ```bash
 # on the target server append to authorized_keys
 
@@ -93,7 +97,6 @@ ssh -i /usr/local/etc/trisul-hub/id_trisul_ipdr <username>@<sftp-server>
 
 # if the login succeeds, the SFTP settings are working
 ```
-<!-- TODO(verify): the Private Key field default is /usr/local/etc/trisul-hub/ipdrpv.key but this section creates id_trisul_ipdr; confirm which name to use (F-06-83) -->
 -----
 
 ## Set Mode : Manually Set IPDR Mode

@@ -12,7 +12,7 @@ The Geo plugin is an add-on package to Trisul. It enhances the base Trisul funct
 4. A Prefix Counter Group – for IP Prefix (ASBGP blocks) wise metering
 5. BGP metrics for ISP applications
 
-The plugin can connect to MaxMind and IP2LOC online databases with your API KEY, periodically download, and integrate Geo Metrics from them into Trisul.
+The plugin downloads MaxMind databases on a schedule, using your license key, and adds Geo metrics from them to Trisul. For IP2Location data, install the **Geo based on IP2Location db** app from **Web Admin → Manage → Apps**.
 
 ## Samples
 
@@ -33,7 +33,7 @@ The plugin takes effect after you restart the context: run `trisulctl_probe rest
 
 ## Database Used and API Key
 
-In order to work accurately, this plugin needs an up-to-date Geo location database. We currently support geo location databases from [Maxmind](https://www.maxmind.com/) The basic install includes an out-of-date database in CSV format. Once installed, the databases are automatically updated weekly.
+In order to work accurately, this plugin needs an up-to-date Geo location database. We currently support geo location databases from [Maxmind](https://www.maxmind.com/) The basic install includes an out-of-date database in CSV format. Once installed, Trisul updates the databases every night at 12:30 AM.
 
 :::tip
 
@@ -41,7 +41,7 @@ To automatically download databases you need to sign up with [Maxmind](https://w
 
 Use [cfgedit](/docs/guide/ref/plugin_configuration) to edit the config settings. Select the *Trisul Geo* option in the menu.
 
-Once installed Trisul will automatically keep the databases updated at 2AM everyday. See the Frequency parameter in the config file.
+Trisul downloads the databases every night at 12:30 AM. You can't change the download time.
 
 :::
 
@@ -104,7 +104,7 @@ To disable a feed, remove the `<Source>` block or rename it to something like `<
 
 ## Commercial
 
-For high accuracy it is recommended to purchase a license from https://www.maxmind.com for the following GeoLite2 products.
+The plugin accepts both the free MaxMind GeoLite2 databases and the paid MaxMind GeoIP2 databases. For higher accuracy, buy a license from [MaxMind](https://www.maxmind.com). The default feed configuration uses these GeoLite2 products:
 
 1. GeoLite2 Country
 2. GeoLite2ASN

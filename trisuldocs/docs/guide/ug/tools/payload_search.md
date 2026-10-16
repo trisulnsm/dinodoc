@@ -15,7 +15,7 @@ The search capabilities of the *Payload Search* tool includes searching for,
 
 ### How This Works
 
-> Make sure you have full packet capture and flow tracking enabled in the [trisulProbeConfig.xml](/docs/guide/ref/trisulconfig) file
+> Payload Search needs raw packet capture (the Ring) enabled in [trisulProbeConfig.xml](/docs/guide/ref/trisulconfig). Trisul keeps the raw packets according to the slice policy in that file.
 
 Trisul will reassemble and check all TCP streams in both directions for
 a match. If HTTP compression and chunked encoding are used, they are
@@ -68,6 +68,8 @@ Click **Search Everything**, you will be shown a list of flows that match. You c
 The *Content Inspection Width* parameter defines the limits for deep packet inspection (DPI) in terms of:  
 Deep Packet Inspection Time Limit: The maximum duration for which DPI is performed on a packet stream.  
 Deep Packet Inspection Size Limit: The maximum payload size (in KB,MB) that is inspected.  
+
+The size limit doesn't change how much raw data Trisul stores. It caps how much of a flow you can investigate or download from the UI, so that very large flows don't slow the UI down. For example, with a 10 MB limit and a 100 MB flow, Trisul shows a message that the limit was reached.
 
 You can find the *Content Inspection Width* at the bottom of the *Payload Search* form with an *Edit* button as in this figure.
 

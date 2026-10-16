@@ -43,8 +43,7 @@ The DNS feed comes from a separate packet-capture context that collects DNS into
 OTT App monitoring is available in two formats.
 
 - For the entire network
-- On a per interface basis, however unlike the other apps there is a
-  limit of 4 interfaces per router.
+- On a per interface basis
 
 :::info Navigation
 Log in as a user and go to **Dashboards → Show all**. Type **OTT Internet Apps** in the filter.

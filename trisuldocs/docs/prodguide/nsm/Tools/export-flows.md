@@ -61,6 +61,8 @@ Click **Advanced** to display additional fields that can be used to narrow the s
 
 The **NAT IP** field is useful when the IP address you are investigating has been translated through NAT or CGNAT.
 
+Trisul stores a NAT IP only when the NetFlow or syslog data carries NAT translation details, for example from a CGNAT device. Where there is no NAT, such as dedicated internet (ILL) links, Trisul stores only the source and destination IP, and a NAT IP search returns no flows.
+
 The UI accepts examples such as:
 
 `192.168.1.23`

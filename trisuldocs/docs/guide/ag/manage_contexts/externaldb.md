@@ -1,5 +1,9 @@
 # External DB
 
+:::caution Removed in Trisul 8
+The External DB feature isn't in Trisul 8. This page applies only to earlier releases.
+:::
+
 External db is the place where all the contexts details are stored and managed. Trisul pulls contexts details from the customer database using external DB. Any changes including addition or removal of subnets of the tenant from customers are reflected by syncing their tenant details.
 
 To sync tenants, login as admin

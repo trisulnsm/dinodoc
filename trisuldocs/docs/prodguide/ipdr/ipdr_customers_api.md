@@ -40,6 +40,8 @@ To access the IPDR Customer Management API, you require a unique API token. This
 
 To generate an API token, follow the provided link: [Generate API token](/docs/guide/ag/webadmin/manageusers#generate-api-token)
 
+The `api_token` values in the examples on this page are placeholders. Trisul has no default token. Each time you generate a token, you get a new one.
+
 ## Base URL
 
 All API endpoints are accessible via:

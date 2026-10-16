@@ -111,8 +111,8 @@ Some tips to achieve 10Gbps.
 - Use really large file sizes  
   Set Ring \> FileSizeMB as large as your disks allow. Trisul caps each file at 32 GB and cuts larger values down to 32 GB.
 - Put all your files in oper  
-  Set number of files in the Oper area to 200, in ref = 0, and archive
-  = 0.
+  Set the number of files in the Oper area to 200, in Ref to 0 and in Archive to 0.
+  The Probe keeps raw packets by size, not by days: total storage = `FileSizeMB` × number of files (Oper + Ref + Archive). When all files are full, Trisul overwrites the oldest file. For example, 200 files of 32 GB need 6.4 TB of disk. Choose a file count that fits your disk.
 - Use iostat to measure iops  
   The key stat is number of blocks written per second
 

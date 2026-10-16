@@ -94,7 +94,7 @@ Controls the database storage and retention policy for Trisul.
 | SQLBusyTimeoutMsecs    | 2 |  Maximum time, in milliseconds, that SQLite waits when the database is busy before returning a busy condition.                  |
 | SQLTRPBusyTimeoutMsecs | 8000  |  Maximum time, in milliseconds, that SQLite waits when the database is busy for TRP query operations.              |
 | PidFile | /usr/local/var/lib/trisul-hub/domain0/hub0/context0/run/flushd.pid | Location where the PID of the running trisul_flushd process is stored.|
-| JournalMode              | WAL      | Trisul Resources are stored in SQLITE3 leaf nodes.|
+| JournalMode              | WAL      | SQLite journal mode for the resource databases (Trisul stores resources in SQLITE3 leaf nodes). Allowed values: `WAL`, `DELETE`, `TRUNCATE`, `PERSIST`, `OFF`. For advanced users; leave it at `WAL` unless you have a specific reason to change it. |
 | OfflineAnalysisQueueSize | 2000000  | When importing PCAPs or other offline formats, this parameter controls the Hi Water mark of the items on the queue of the Hub. This helps to control memory usage on the Hub Node.|
 | ScanMalformedDBOnStart | TRUE  | Controls whether the Hub scans for malformed or inconsistent database files when starting.               |
 
@@ -215,7 +215,7 @@ This mode controls how deleted slices are removed from disk. The default is to d
 | Region    |             |  AWS region in which the archive vault is located.             |
 | AccessID |               |  AWS access identifier used to authenticate access to the cloud archive.            |
 | SecretKey |              |  AWS secret key used with the access identifier to authenticate access to the cloud archive.           |
-| Tier |           |  AWS storage tier to use for cloud archive data.                    |
+| Tier | Bulk | AWS retrieval tier. WebTrisul uses `Bulk`, which is hard-coded. Trisul sets this block for its cloud deployments; you don't need to change it. |
 
 
 ### Advanced Archiving

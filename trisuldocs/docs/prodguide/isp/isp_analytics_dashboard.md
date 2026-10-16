@@ -54,7 +54,7 @@ The following table explains the data in the columns
 | Volume            | Total bytes transferred (MB/GB/TB/PB)                                     |
 | Average Bandwidth | Average bandwidth for this traffic flow                                   |
 | Uniq AS Path      | Unique active routes (need BGP) This is an estimate                       |
-| Uniq Prefix       | Unique prefixes (need to configure cardinality counting feature for this) |
+| Uniq Prefix       | Number of unique prefixes. This is a cardinality meter, which counts unique keys. See [Cardinality Counter Groups](/docs/guide/ag/context/cardinality_countergroups). |
 | Options           | Drilldown options for this AS                                             |
 
 :::info Navigation
@@ -88,7 +88,7 @@ See [Peering Analytics Drilldown](#peering-analytics-drilldown).
 
 #### Top Prefixes
 
-It provides a list of top 99 prefixes that is associated with the Peer
+It provides a list of top 100 prefixes that is associated with the Peer
 AS.
 
 ![](images/topprefixes.png)  
@@ -123,7 +123,7 @@ The following table explains the data in the columns
 | BGP Prefix    | The prefix matched with the BGP route receiver database.This can be different                                                                                                               |
 | Peer-AS       | IF BGP prefix is found, the peer AS from the BGP route                                                                                                                                      |
 | Origin-AS     | If BGP Prefix is found, the origin AS from the BGP route                                                                                                                                    |
-| Organization  | The organization, Trisul has an option of maintaining a separate customer database that contains prefix from one AS but announced by another. Example is Akamai servers announced by an ISP |
+| Organization  | The organization that owns the prefix, from Trisul's prefix-to-organization database. A prefix can belong to one organization but be announced by another AS, for example Akamai servers announced by an ISP. |
 | Volume        | Total volume (GB/TB/PB)                                                                                                                                                                     |
 | Bandwidth     | Avg bandwidth / sec                                                                                                                                                                         |
 | Options       | Further options to drilldown into the prefix                                                                                                                                                |

@@ -4,6 +4,10 @@ The **Sankey Crossdrill** app can be installed from [Trisul Apps](/docs/guide/ag
 
 The chart shows the share of traffic for each application and lets you drill down into specific data points.
 
+:::note Before you start
+Sankey Crossdrill works in every product mode. It shows data from crosskey counter groups, so create or configure a crosskey counter group first. See [Crosskey Counter Groups](/docs/guide/ag/context/crosskey_countergroups).
+:::
+
 After you install the app, open it from **Dashboards → Show all → Sankey Crossdrill**. Fill in the fields to configure the Sankey settings.
 
 ![](images/sankey.png)  

@@ -12,16 +12,7 @@ All HTTP headers including requests (GET, POST,..etc) and responses
 
 ## What is Stored ?
 
-The entire HTTP request or response header is treated as a single
-document. All fields are stored in the index except the following which
-have high variability. You can generate reports by User-Agent, Server,
-Content-Type, or any of the fields in the HTTP Header.
-
-:::note The following HTTP fields are excluded from the index.  
-Cookie, Set-Cookie, Date, Expires, Last-Modified,E-Tag, P3P, ETag,
-Cache-Control, Keep-Alive,Age,Last-Modified, If-, Location,
-Content-Length, Referer
-:::
+Trisul stores the entire HTTP request or response header as a single document, with every field indexed. You can generate reports by User-Agent, Server, Content-Type or any other field in the HTTP header.
 
 The following extra attributes are added by Trisul to aid some kinds of
 useful queries

@@ -12,7 +12,7 @@ Configure Trisul as an I-BGP peer of your external gateway routers or your route
 
 ## Configuring Trisul as a BGP peer
 
-The BGP support is present in the **trisul-geo** package. Make sure the package is installed on the Probe. It installs two
+The BGP support is in the **trisul-geo** package. Install it on the Probe yourself: selecting **ISP Analytics Suite** in the product mode selector doesn't install it. The package installs two
 systemd services:
 
 - **trisul-bgp.service** : the BGP peering service
@@ -110,6 +110,10 @@ total 3300
 lrwxrwxrwx 1 trisul trisul      32 Jan  6 16:03 10.17.17.20_routes.db.sqlite3-> 10.10.20.37_routes.db.sqlite3  
 ```
 
+:::note After a reboot
+`/usr/local/var/ramdisk` is a RAMFS partition, so its contents, including these links, are lost when the Probe reboots. Re-create the links after every reboot, or put the `ln -sf` commands in a script or systemd service that runs at boot. You need the links only when the BGP peer address differs from the NetFlow exporter address. In most deployments they are the same. After you create or re-create the links, restart the Probe from **Context: default → Admin Tasks → Start/Stop Tasks**.
+:::
+
 ## Common errors
 
 1. Make sure TCP port 179 is open on the Trisul Probe
@@ -122,15 +126,18 @@ lrwxrwxrwx 1 trisul trisul      32 Jan  6 16:03 10.17.17.20_routes.db.sqlite3-> 
 
 Adding an IGW takes two steps:
 
-1. Configure NetStream on the IGW to export to one of the two Probe VIPs. <!-- TODO(verify): what the two Probe VIPs are (F-06-121b) -->
+1. Configure NetStream on the IGW to export to the Probe VIP. See [NetFlow to a VIP](#netflow-to-a-vip).
 2. Optionally, configure the BGP route receiver on the Trisul Probes and BGP on the IGW.
+
+### NetFlow to a VIP {#netflow-to-a-vip}
+
+A VIP (virtual IP) is an IP address that you configure on a network interface. The IGW sends NetFlow to the VIP, and the VIP delivers it to the DC node or the DR node, whichever is available. The `nfshim` tunnel copies the NetFlow that one site receives to the other site on a different UDP port, for example from port 2055 on the DC to port 5111 on the DR. You can use any UDP ports. Add each one under **Context: default → profile0 → Access Points**.
 
 ### Configure NetStream and BGP on IGW
 
 **NetStream on the IGW**
 
-Enable NetStream on all interfaces on the IGW and export to one of the
-two Probe VIPs. Port 51111 in this sample is not a default Trisul NetFlow port (2055, 2056, 2057, 4739, 5111, 9500, 9993), so add it under **Context: default → profile0 → Access Points**. A sample config:
+Enable NetStream on all interfaces on the IGW and export to the Probe VIP. Port 51111 in this sample is not a default Trisul NetFlow port (2055, 2056, 2057, 4739, 5111, 9500, 9993), so add it under **Context: default → profile0 → Access Points**. A sample config:
 
 ```text
 ip netstream as-mode 32

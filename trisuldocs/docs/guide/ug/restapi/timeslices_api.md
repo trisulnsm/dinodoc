@@ -55,7 +55,7 @@ To generate an API token, see [Generate API Token](/docs/guide/ag/webadmin/manag
 | `get_from_dr`      | boolean | `false` | When `true`, query the disaster-recovery (DR) Trisul node instead of the primary context endpoint                                                 |
 | `probe_id`         | string  | —       | Restrict query to a specific probe                                                                                                                |
 | `destination_node` | string  | —       | Route the request to a specific Trisul node                                                                                                       |
-| `timeout`          | integer | `60`    | TRP query timeout in seconds                                                                                                                      |
+| `timeout`          | integer | `60`    | TRP query timeout in seconds. `-1` = no timeout: the query waits until the response arrives. Other queries use the time slices as input, so use `-1` when a later query depends on this response.                                                                                                                      |
 
 
 ---

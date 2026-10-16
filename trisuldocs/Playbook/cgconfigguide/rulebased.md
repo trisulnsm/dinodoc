@@ -69,7 +69,8 @@ For this example:
 |---|---|
 | **Counter Group Type** | Rule Based |
 | **Parent Group** | Apps |
-| **Rule** | Define the required application rule |
+| **Rule** | `Country = India(IN) & Apps = http(80)` |
+| **Target Key** | http |
 
 Think of the configuration this way:
 
@@ -97,7 +98,7 @@ means:
 
 2. Click **Create New**.
 3. Enter the Rule Based Counter Group details according to the configuration above.
-4. Define the required application rule.
+4. Click **Edit Rules** for the new counter group and add the rule with Target Key `http` and the rule `Country = India(IN) & Apps = http(80)`. Trisul counts HTTP traffic to or from India under the key **http** in the new counter group.
 5. Click **Create**.
 
 The application Rule Based Counter Group is now created.
@@ -116,7 +117,16 @@ For this example:
 |---|---|
 | **Counter Group Type** | Rule Based |
 | **Parent Group** | Hosts |
-| **Rule** | Define the required host rule |
+| **Rule** | Hosts = 192.168.1.30 & Apps = port 443 (HTTPS) |
+| **Target Key** | web-server-https |
+
+Trisul stores this rule with each counter group named by its GUID and each key in Trisul key format:
+
+~~~
+{4CD742B1-C1CA-4708-BE78-0FCA2EB01A86}=C0.A8.01.1E&{C51B48D4-7876-479E-B0D9-BD9EFF03CE2E}=p-01BB
+~~~
+
+`{4CD742B1-…}` is the Hosts counter group and `C0.A8.01.1E` is 192.168.1.30 in hex. `{C51B48D4-…}` is the Apps counter group and `p-01BB` is port 443. For the rule format, see [Rule Based Counter Groups](/docs/guide/ag/context/rulebased_countergroups).
 
 Think of the configuration this way:
 
@@ -136,7 +146,7 @@ means:
 
 1. Click **Create New**.
 2. Enter the Rule Based Counter Group details according to the configuration above.
-3. Define the required host rule.
+3. Click **Edit Rules** for the new counter group and add the rule with Target Key `web-server-https`: Hosts = 192.168.1.30 and Apps = port 443.
 4. Click **Create**.
 
 The host Rule Based Counter Group is now created.

@@ -38,6 +38,8 @@ Usage: trisul [--version|--machineid|--listdev] | [-demon|-nodemon]  /path/to/co
 6.0.1774
 ```
 
+You can also see the Hub and Probe versions in **Context: default → Admin Tasks → Start/Stop Tasks**.
+
 ### Getting machineid
 
 You need to get the machineid in order to upgrade Trisul from the 3-day window free version to a licensed version.

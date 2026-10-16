@@ -30,7 +30,6 @@ Trisul ISP Analytics ingests the following data sources. Only NetFlow is require
 | SNMP       | Optional: for SNMP interface traffic. Useful to add on dashboards along with NetFlow interface traffic. |
 | BGP        | Optional: if customer requires Route Analytics and Peer vs Origin AS |
 | DNS        | Optional: needed for the OTT Analytics app, to identify content such as Amazon, Netflix, YouTube, WhatsApp and Instagram. |
-| Radius/AAA | Optional: to map IP addresses to subscriber IDs dynamically. Needs real-time syslog from the AAA side. |
 
 ## Features of Trisul ISP Analytics {#features-of-trisul-isp}
 
@@ -47,8 +46,7 @@ In addition to the NetFlow monitoring features, Trisul ISP Analytics provides th
 
 ## BGP and NetFlow
 
-The Trisul ISP feature is enabled in the starter configuration by mixing
-NetFlow and BGP.
+Selecting **ISP Analytics Suite** in the [product mode selector](/docs/guide/starthere/setuptrisul/install/selectmode) sets the product mode and the ISP menus. It doesn't configure anything else. You set up BGP and install the ISP apps and dashboards yourself, using the pages below. The trackers in the NetFlow Analyzer guide are for enterprise networks; ISP deployments don't need them.
 
 ![](images/trisul-bgp.png)
 

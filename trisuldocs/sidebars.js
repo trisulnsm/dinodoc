@@ -501,6 +501,20 @@ const sidebars = {
         },
         {
           "type": "category",
+          "label": "App Notes",
+          "link": {
+            "type": "doc",
+            "id": "guide/appnotes/index"
+          },
+          "collapsible": true,
+          "collapsed": true,
+          "items": [
+            "guide/appnotes/an_nf_001_bandwidth_hogs"
+          ],
+          "description": "End-to-end solutions to specific network problems: setup, analysis, alerting and tuning."
+        },
+        {
+          "type": "category",
           "label": "Trisul AI",
           "link": {
             "type": "doc",
@@ -1053,7 +1067,6 @@ const sidebars = {
             "prodguide/nf/Alerts/flow-tracking",
             "prodguide/nf/Alerts/blacklist",
             "prodguide/nf/Alerts/threshold-bands",
-            "prodguide/nf/Alerts/dashboards",
             "prodguide/nf/Alerts/show-all"
           ]
         },

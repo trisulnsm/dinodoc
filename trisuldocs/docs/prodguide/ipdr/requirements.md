@@ -23,7 +23,7 @@ Select the appropriate size below.
 | Type | Bare metal preferred |
 | CPU | 16 vCPU cores | 
 | Memory |  16GB RAM |
-| Network | 1 GbE for receiving the packets via SPAN port and another for management access |
+| Network | 1GbE interface for NetFlow, and a separate 1GbE for management access |
 | Disk | 36TB for 2 years near the 100Gbps end, see [Disk Sizing](#disk-sizing-considerations)  |
 
 ### System Requirements for 100 to 200 Gbps
@@ -103,5 +103,5 @@ Trisul IPDR is available on the following Operating Systems
 
 | OS               | Recommended | Notes |
 | ---------------- | ---|---|
-| Ubuntu 20.04/22.04/24.04 |  Ubuntu 22.04| |
-| RHEL 9/8       | RHEL 9.x| Can also use OracleLinux, RockyLinux, AmazonLinux, RHEL, CentOS versions 9/8|
+| Ubuntu 22.04/24.04/26.04 |  Ubuntu 22.04| |
+| RHEL 10/9/8       | RHEL 9.x| Oracle Linux 10/9/8 is also supported. <!-- TODO(verify): are RockyLinux, AmazonLinux and CentOS still supported (06c-Q02) --> |
