@@ -502,16 +502,14 @@ const sidebars = {
         {
           "type": "category",
           "label": "App Notes",
-          "link": {
-            "type": "doc",
-            "id": "guide/appnotes/index"
-          },
-          "collapsible": true,
-          "collapsed": true,
           "items": [
-            "guide/appnotes/an_nf_001_bandwidth_hogs"
-          ],
-          "description": "End-to-end solutions to specific network problems: setup, analysis, alerting and tuning."
+            "guide/appnotes/an001",
+            "guide/appnotes/an002",
+            "guide/appnotes/an003",
+            "guide/appnotes/an004",
+            "guide/appnotes/an005",
+            "guide/appnotes/an006"
+          ]
         },
         {
           "type": "category",
