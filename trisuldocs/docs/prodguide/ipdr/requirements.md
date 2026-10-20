@@ -41,7 +41,7 @@ Select the appropriate size below.
 ### System Requirements for > 200Gbps upto 5Tbps
 
 :::tip Sizing large ISP
-For large ISP > 500Gbps we recommend running the 200Gbps system requirements for a few days to get an accurate estimate of disk size.
+For an ISP above 200 Gbps, run the 200 Gbps system requirements for a few days to get an accurate estimate of disk size.
 :::
 
 | Hardware  | System Requirements  |
@@ -104,4 +104,4 @@ Trisul IPDR is available on the following Operating Systems
 | OS               | Recommended | Notes |
 | ---------------- | ---|---|
 | Ubuntu 22.04/24.04/26.04 |  Ubuntu 22.04| |
-| RHEL 10/9/8       | RHEL 9.x| Oracle Linux 10/9/8 is also supported. <!-- TODO(verify): are RockyLinux, AmazonLinux and CentOS still supported (06c-Q02) --> |
+| RHEL 10/9/8       | RHEL 9.x| Oracle Linux 10/9/8 and CentOS are also supported. Rocky Linux and Amazon Linux are not supported. |

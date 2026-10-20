@@ -40,5 +40,7 @@ For developers looking to customize Trisul or to query its database.
   - Custom real time analytics using LUA
 - [:memo: TRP API Guide](/docs/trp)
   - Database query API 
+- [:memo: REST API Guide](/docs/restapi)
+  - HTTP/JSON query API
 
 

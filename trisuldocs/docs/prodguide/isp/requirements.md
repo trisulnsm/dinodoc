@@ -83,6 +83,6 @@ Use this to run a proof of concept (POC) for an ISP with 4–5 gateway routers. 
 
 These are minimum system requirements. 
 
-These requirements apply to all ISP sizes. For higher loads, the Trisul team can tune system parameters instead of adding hardware. Contact Unleash Networks before you size a large deployment.
+Pick the tab closest to your network. For higher loads, the Trisul team can tune system parameters instead of adding hardware. Contact Unleash Networks before you size a large deployment.
 
 By default, Trisul keeps about 3 months (90 days) of data. Set the retention you need; see [Configure Retention Policy](/docs/guide/ag/basictasks/configure_storage).

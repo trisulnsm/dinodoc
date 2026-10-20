@@ -18,8 +18,8 @@ This page covers the AI in the IPDR product. It is a separate feature from [Tris
 | --- | --- | --- |
 | Job | Fill in IPDR queries from a request | Answer questions about traffic, build reports and dashboards |
 | Where | **IPDR Logs → AI Query** | **Trisul AI** page |
-| LLM | Google Gemini | Gemini, OpenAI, Anthropic or a self-hosted OpenAI-compatible LLM, through the Trisul AI CLI |
-| Setup | **Gemini API Key** in **API Keys** | AI endpoint in **Settings → Trisul AI** |
+| LLM | The LLM set in **API Keys**: a cloud provider or a self-hosted OpenAI-compatible LLM | Gemini, OpenAI, Anthropic or a self-hosted OpenAI-compatible LLM, through the Trisul AI CLI |
+| Setup | **LLM Provider**, **LLM Model**, **API Key** and **Custom Endpoint** in **Settings → API Keys** | AI endpoint in **Settings → Trisul AI** |
 :::
 
 ## What the AI does and doesn't do
@@ -32,30 +32,38 @@ It doesn't:
 - Run queries or build the report. The IPDR query engine does that, with the same validation and access control as a manual query.
 - Make legal or compliance decisions, or skip any approval step.
 
-:::caution Your request goes to Google Gemini
-The text you type, and the file you attach, are sent to Google Gemini to extract the query fields. Check your organization's rules on sharing agency request contents with a third-party service before you use AI Query. 
+:::caution Your request goes to the LLM you configure
+The text you type, and the file you attach, are sent to the LLM set in **API Keys** to extract the query fields. If that LLM is a cloud service, check your organization's rules on sharing agency request contents with a third party before you use AI Query. To keep requests on your network, use a self-hosted LLM through **Custom Endpoint**.
 :::
 
-## Before you begin: add a Gemini API key (admin)
+## Before you begin: set up the LLM (admin) {#before-you-begin-add-a-gemini-api-key-admin}
 
 An admin does this once.
 
 1. Log in to WebTrisul as **Admin**.
 2. Click the **⋯** menu at the top left, then click **Settings**.
 3. On **Web Trisul Settings**, click **API Keys**.
-4. In **Gemini API Key**, paste your Google Gemini API key.
-5. Click **Save**.
+4. In **LLM Provider**, select the LLM provider.
+5. In **LLM Model**, enter the model or deployment name, for example `gemini-2.5-flash` or `gpt-4o-mini`.
+6. Connect to the LLM:
+   - For a cloud provider, paste the provider's key in **API Key**.
+   - For a self-hosted LLM, such as Ollama or LM Studio, enter its OpenAI-compatible base URL in **Custom Endpoint**. **API Key** is optional if the LLM doesn't need authentication.
+7. Click **Save**.
 
-![API Keys settings with the Gemini API Key field](./images/ai-query-apikey.png)
+![API Keys settings with the LLM fields](./images/ai-query-apikey.png)
 
-The key applies to the whole server. Every user who runs AI Query uses this one key.
+<!-- TODO(verify): replace ai-query-apikey.png with a screenshot of the LLM Provider, LLM Model, API Key and Custom Endpoint fields; list the LLM Provider options (04b-Q13-FU2) -->
+
+These settings apply to the whole server. Every user who runs AI Query uses the same LLM and key.
+
+For the field reference, see [App Settings → API Keys](/docs/guide/ag/webadmin/web_options#api-keys).
 
 ## Create queries from a request
 
 1. Log in as a compliance user and select the IPDR context.
 2. Click **IPDR Logs → AI Query**.
 
-   The **AI Powered IPDR Query** page opens. The header reads **Trisul AI**, **IPDR Query assistance · Google Gemini**.
+   The **AI Powered IPDR Query** page opens, with **Trisul AI** in the header. <!-- TODO(verify): header subtitle when the LLM Provider is not Gemini (04b-Q13-FU2) -->
 
    ![AI Powered IPDR Query page](./images/ai-query-start.png)
 

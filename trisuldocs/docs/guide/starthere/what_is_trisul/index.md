@@ -59,7 +59,7 @@ Typical users of Trisul:
   multi-tenant [Contexts](/docs/guide/learntrisul/concepts/contexts).
 - **Developers/Enthusiasts**: Advanced users can use the Trisul APIs to
   build their own tools on top of the Trisul platform. They can use
-  the [Lua](/docs/lua), [TRP](/docs/trp) and REST APIs.
+  the [Lua](/docs/lua), [TRP](/docs/trp) and [REST](/docs/restapi) APIs.
 
 
 ## Quick Features List

@@ -376,6 +376,54 @@ const config = {
             from: '/docs/guide/starthere/setuptrisul/install/trisulaicli',
             to: '/docs/guide/trisulai/setup',
           },
+          {
+            from: '/docs/guide/ug/restapi',
+            to: '/docs/restapi',
+          },
+          {
+            from: '/docs/guide/ug/restapi/countergrouptopper_api',
+            to: '/docs/restapi/countergrouptopper_api',
+          },
+          {
+            from: '/docs/guide/ug/restapi/countergroupinfo_api',
+            to: '/docs/restapi/countergroupinfo_api',
+          },
+          {
+            from: '/docs/guide/ug/restapi/timeslices_api',
+            to: '/docs/restapi/timeslices_api',
+          },
+          {
+            from: '/docs/ug/restapi',
+            to: '/docs/restapi',
+          },
+          {
+            from: '/docs/ug/restapi/countergrouptopper_api',
+            to: '/docs/restapi/countergrouptopper_api',
+          },
+          {
+            from: '/docs/ug/restapi/countergroupinfo_api',
+            to: '/docs/restapi/countergroupinfo_api',
+          },
+          {
+            from: '/docs/ug/restapi/timeslices_api',
+            to: '/docs/restapi/timeslices_api',
+          },
+          {
+            from: '/docs/documentation/ug/restapi',
+            to: '/docs/restapi',
+          },
+          {
+            from: '/docs/documentation/ug/restapi/countergrouptopper_api',
+            to: '/docs/restapi/countergrouptopper_api',
+          },
+          {
+            from: '/docs/documentation/ug/restapi/countergroupinfo_api',
+            to: '/docs/restapi/countergroupinfo_api',
+          },
+          {
+            from: '/docs/documentation/ug/restapi/timeslices_api',
+            to: '/docs/restapi/timeslices_api',
+          },
         ],
       },
     ],
@@ -507,6 +555,11 @@ const config = {
               type: 'doc',
               docId: 'trp/index',
               label: 'TRP API',
+            },
+            {
+              type: 'doc',
+              docId: 'restapi/index',
+              label: 'REST API',
             },
           ],
         },

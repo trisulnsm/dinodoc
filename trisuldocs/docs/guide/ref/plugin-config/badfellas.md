@@ -142,10 +142,10 @@ Processing File /tmp/temp_trisul_badfellas_staging/usr/local/share/BadFellas/mal
 Stop Trisul and uninstall the RPM/DEB
 
 ```bash
-# centos
-rpm -e trisul_badfellas
-# ubuntu
-dpkg -r  trisul_badfellas
+# on RHEL / Oracle Linux
+rpm -e trisul-badfellas
+# on Ubuntu
+dpkg -r trisul-badfellas
 ```
 
 ### Starting

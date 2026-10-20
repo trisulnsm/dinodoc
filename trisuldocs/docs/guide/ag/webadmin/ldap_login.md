@@ -38,7 +38,7 @@ A list of configured domains is shown with the following details
 2. Server / Port
 3. User name: this is used to bind to the LDAP server
 4. Base DN : under which users are queried
-5. Filter : the username is taken from this attribute, usually the `mail`
+5. Filter : the LDAP attribute that holds the user name, usually `mail` or `uid`
 
 ### LDAP Domain Options
 
@@ -92,10 +92,10 @@ Fill in the details as shown below.
 | Connection Login Name         | User name of the account used to connect to the LDAP server. All query operations will use this name.                                                                               |
 | Connection Password           | Password for the connection login name                                     |
 | Base DN                       | Base DN or Search DN refers to the structure of the LDAP server against which searches will be performed.                                                                                  |
-| Search Filter                 | The actual attribute name that is used to match the user. Examples : `email` or `uid` `dn` `cn`. If you specify `email` then the username would have to be the email ID eg `email=tim@company.com` |
+| Search Filter                 | The LDAP attribute that Trisul matches the user name against, for example `mail`, `uid`, `dn` or `cn`. Trisul searches with the filter `(<Search Filter>=<user name><Append to username>)`. For example, with `mail`, a user who logs in as `tim@company.com` is looked up with `(mail=tim@company.com)`. |
 | Sync Users Filter             | When LDAP is used to automatically synchronize users from the LDAP server, query users with this filter and automatically add them to Trisul (only used if you want to automatically synchronize users from LDAP directory, if you want to add users manually leave this blank)                               |
 | Login with user bind only          | If checked, the LDAP login process only uses the user name to bind rather than the default way of using the connection user name and password first and then bind the user                  |
-| Append to username            | The string in this field is appended to the user name automatically, so users don't have to type the full login name. For example, if you set this to `@unitedfederalbankname.com`, a user whose login is `mike@unitedfederalbankname.com` types only `mike` at the login screen. <!-- TODO(verify): whether the appended string includes the @ sign --> |
+| Append to username            | The string in this field is appended to the user name automatically, so users don't have to type the full login name. For example, if you set this to `@unitedfederalbankname.com`, a user whose login is `mike@unitedfederalbankname.com` types only `mike` at the login screen. Trisul adds the string exactly as you enter it, so include the `@`. |
 
 ## Create a LDAP Enabled User
 

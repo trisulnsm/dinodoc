@@ -54,9 +54,9 @@ The **Password/Security** settings allow administrators to configure password po
 | Setting | Description |
 |---------|-------------|
 | Enable Two-Factor Authentication| Enables Two-Factor Authentication (2FA) for all users. When enabled, users are required to configure a supported 2FA method during their first login. |
-| User Password Minimum Length | Specifies the minimum number of characters required for a valid user password. |
+| User Password Minimum Length | Specifies the minimum number of characters required for a valid user password. Default: `6`. |
 | Maximum Failed Login Attempts | Specifies the maximum number of consecutive failed login attempts allowed before the user account is locked. Default: `5`. |
-| Account Lock Duration (seconds) | Specifies how long, in seconds, a locked account remains inaccessible after exceeding the maximum failed login attempts. Default: `300`. |
+| Account Lock Duration (seconds) | Specifies how long, in seconds, a locked account remains inaccessible after exceeding the maximum failed login attempts. Default: `300` (5 minutes). |
 | Password Expiry (days) | Specifies the number of days a password remains valid before users are required to change it. A value of `0` disables password expiration. Default: `0` (passwords do not expire). |
 | Password History Count | Specifies the number of previously used passwords that cannot be reused when setting a new password. Default: `3`. |
 | Save | Saves the configured password and security settings. |
@@ -65,7 +65,7 @@ The **Password/Security** settings allow administrators to configure password po
 
 The password policy applies to all users. It doesn't depend on [High Security](/docs/guide/ag/webadmin/highsecurity_vapt). A new password must have:
 
-- At least 6 characters
+- At least the number of characters set in **User Password Minimum Length** (default `6`)
 - One uppercase letter
 - One lowercase letter
 - One number
@@ -328,7 +328,7 @@ By using these variables and customization options, you can tailor your chart ti
 
 ## Trisul AI
 
-The **Trisul AI** settings page allows administrators to configure the endpoint used by the Trisul AI service. These settings define how the WebTrisul interface communicates with the Trisul AI backend, including the network endpoint and SSL configuration.
+The **Trisul AI** settings page allows administrators to configure the endpoint used by the Trisul AI service. These settings define how the WebTrisul interface communicates with the Trisul AI backend, including the network endpoint and SSL configuration. Only the **Trisul AI** page uses these settings. IPDR AI Query uses the **LLM Provider**, **LLM Model**, **API Key** and **Custom Endpoint** fields on the [API Keys](#api-keys) tab.
 
 :::info navigation
 :point_right: Go to **Web Admin → Manage → App Settings → Trisul AI**

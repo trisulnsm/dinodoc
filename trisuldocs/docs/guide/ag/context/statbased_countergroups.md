@@ -13,7 +13,7 @@ Examples :
 | Counter Group         | Description     | Meter Criteria              |
 | --------------------- | --------------- | --------------------------- |
 | Internal hosts only   | Subset of hosts | When Hosts meter “Homenet”  |
-| Under the radar hosts | Subset of hosts | When Hosts meter “Total” < 2000 (hosts who only xmit or recv < 2K bytes in an interval )                                                        |
+| Under the radar hosts | Subset of hosts | When Hosts meter “Total” < 2000 (hosts that average less than 2,000 bytes/sec over the 1-minute interval)                                                        |
 
 ### Creating New Meter Value Counter Group
 
