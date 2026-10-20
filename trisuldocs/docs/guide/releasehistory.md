@@ -2,7 +2,7 @@
 
 This changelog outlines the key updates, improvements, and fixes made to Trisul across various releases. Browse through the release notes below to learn about the latest features, enhancements, and bug fixes.
 
-## WEBTRISUL 8.0.2624 (October 12,2026)  
+## WEBTRISUL 8.0.2624 (October,2026) {#webtrisul-8-0}
 0106191: MITRE: Introduced a MITRE ATT&CK matrix with search, along with a MITRE timeline view.  
 0106210: TRISUL AI: Introduced Trisul AI chat with chart output, powered by the Trisul AI CLI.  
 0106224: TRISUL AI: Added WebTrisul settings to connect to the Trisul AI API server.  

@@ -82,6 +82,18 @@ const FeatureList = [
     ),
   },
   {
+    title: 'Trisul AI',
+    linkto: '/docs/guide/trisulai',
+    // TODO: replace with a dedicated Trisul AI illustration
+    Svg: require('@site/static/img/undraw_instant-analysis_vm8x.svg').default,
+    description: (
+      <>
+        Ask questions about your network in plain language and get tables,
+        charts, reports and dashboards. Setup, prompts and CLI reference.
+      </>
+    ),
+  },
+  {
     title: 'Trisul DevZone Wiki',
     linkto: 'https://trisul.org/devzone',
     Svg: require('@site/static/img/undraw_dog_c7i6.svg').default,
