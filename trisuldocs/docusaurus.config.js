@@ -488,6 +488,11 @@ const config = {
             },
             {
               type: 'doc',
+              docId: 'guide/appnotes/an001',
+              label: 'App Notes',
+            },
+            {
+              type: 'doc',
               docId: 'guide/trisulai/index',
               label: 'Trisul AI',
             },
