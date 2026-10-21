@@ -475,6 +475,10 @@ const sidebars = {
         {
           "type": "category",
           "label": "App Notes",
+          "link": {
+            "type": "doc",
+            "id": "guide/appnotes/index"
+          },
           "items": [
             "guide/appnotes/an001",
             "guide/appnotes/an002",
@@ -485,11 +489,11 @@ const sidebars = {
             "guide/appnotes/an007",
             "guide/appnotes/an008",
             "guide/appnotes/an009",
-            "guide/appnotes/an-010",
-            "guide/appnotes/an-011",
-            "guide/appnotes/an-012",
-            "guide/appnotes/an-013",
-            "guide/appnotes/an-014"
+            "guide/appnotes/an010",
+            "guide/appnotes/an011",
+            "guide/appnotes/an012",
+            "guide/appnotes/an013",
+            "guide/appnotes/an014"
           ]
         },
         {
