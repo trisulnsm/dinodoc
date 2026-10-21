@@ -484,7 +484,12 @@ const sidebars = {
             "guide/appnotes/an006",
             "guide/appnotes/an007",
             "guide/appnotes/an008",
-            "guide/appnotes/an009"
+            "guide/appnotes/an009",
+            "guide/appnotes/an-010",
+            "guide/appnotes/an-011",
+            "guide/appnotes/an-012",
+            "guide/appnotes/an-013",
+            "guide/appnotes/an-014"
           ]
         },
         {
