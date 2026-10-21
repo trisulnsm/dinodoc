@@ -18,7 +18,7 @@ Here is how you get started with links to relevant pages.
 
 ### Step 1: Get a Linux VM or a Bare Metal machine ready 
 
-Ubuntu and RHEL/CentOS are supported. Packet capture mode (used by Trisul NSM) needs more resources than flow-based mode (used by the other three product modes). If you're not sure your hardware is enough, check **[System Requirements](/docs/guide/starthere/setuptrisul/install/requirements)** first. It breaks sizing down by deployment scale and by processing mode.
+Trisul runs on Ubuntu 26.04, 24.04 and 22.04, and on RHEL / Oracle Linux 10, 9 and 8. Packet capture mode (used by Trisul NSM) needs more resources than flow-based mode (used by the other three product modes). If you're not sure your hardware is enough, check **[System Requirements](/docs/guide/starthere/setuptrisul/install/requirements)** first. It breaks sizing down by deployment scale and by processing mode.
 
 
 ### Step 2: Sign up and download Trisul

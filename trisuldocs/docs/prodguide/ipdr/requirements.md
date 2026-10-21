@@ -103,5 +103,5 @@ Trisul IPDR is available on the following Operating Systems
 
 | OS               | Recommended | Notes |
 | ---------------- | ---|---|
-| Ubuntu 22.04/24.04/26.04 |  Ubuntu 22.04| |
-| RHEL 10/9/8       | RHEL 9.x| Oracle Linux 10/9/8 and CentOS are also supported. Rocky Linux and Amazon Linux are not supported. |
+| Ubuntu 26.04/24.04/22.04 |  Ubuntu 22.04| |
+| RHEL / Oracle Linux 10/9/8 | RHEL 9.x| CentOS is also supported. Rocky Linux and Amazon Linux are not supported. |

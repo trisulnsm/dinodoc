@@ -6,7 +6,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Start Here',
-    linkto: '/docs/guide/starthere/what_is_trisul',
+    linkto: '/docs/guide/starthere/quickstart',
     Svg: require('@site/static/img/undraw_onboarding_re_6osc.svg').default,
     description: (
       <>

@@ -16,8 +16,8 @@ Trisul Network Analytics packages are available on the following platforms.
 
 | OS               | Recommended   | Notes |
 | ---------------- | ----------|---|
-| Ubuntu LTS 22.04/24.04 |  Ubuntu 24.04| |
-| RHEL 9/8         | RHEL 9.x| Can also use Oracle Linux or CentOS versions 9/8|
+| Ubuntu LTS 26.04/24.04/22.04 |  Ubuntu 24.04| |
+| RHEL / Oracle Linux 10/9/8 | RHEL 9.x| Can also use CentOS 9/8.|
 
 
 ## Processing Modes 

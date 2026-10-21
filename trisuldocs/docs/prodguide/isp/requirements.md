@@ -18,8 +18,8 @@ Packages are available for the following operating systems.
 
 | OS               | Recommended | Notes |
 | ---------------- | ---         |---|
-| Ubuntu 22.04/24.04 |  Ubuntu 24.04| |
-| RHEL 9/8         | RHEL 9.x    | Can also use OracleLinux, AmazonLinux, RHEL, CentOS versions 9/8|
+| Ubuntu 26.04/24.04/22.04 |  Ubuntu 24.04| |
+| RHEL / Oracle Linux 10/9/8 | RHEL 9.x    | Can also use CentOS 9/8. Amazon Linux is not supported.|
 
 
 See below for typical requirements. 
