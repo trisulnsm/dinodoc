@@ -16,7 +16,7 @@ Onion based NSM.
 
 ## Install Trisul
 
-1. Follow the instructions for **Ubuntu 16.04** on the [Download](https://trisul.org/download) page and install Trisul packages on your Security
+1. Follow the instructions for **Ubuntu 16.04** on the download page (open the [Getting Started page](https://trisul.org/get-started/); it leads you to the download page) and install Trisul packages on your Security
    Onion box.
 
 2. Update the shared library cache

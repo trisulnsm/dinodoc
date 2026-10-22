@@ -22,61 +22,34 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-  <TabItem value="noble" label="Ubuntu Noble 24.04" default>
+  <TabItem value="ubuntu" label="Ubuntu 22.04 / 24.04 / 26.04" default>
     ```bash
     # login as root
     sudo -i
-    apt install ca-certificates software-properties-common curl gnupg2 -y 
+    apt update
+    apt install ca-certificates software-properties-common curl gnupg2 -y
     curl -sS https://trisul.org/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/trisul.gpg > /dev/null 2>&1
-    echo "deb [signed-by=/usr/share/keyrings/trisul.gpg] https://trisul.org/repos/apt/debian noble main" | sudo tee /etc/apt/sources.list.d/trisul.list
-    apt update 
+    echo "deb [signed-by=/usr/share/keyrings/trisul.gpg] https://trisul.org/repos/trisul8/apt $(. /etc/os-release && echo "$VERSION_CODENAME") main" | sudo tee /etc/apt/sources.list.d/trisul8.list
+    apt update
     apt install trisul-full
     ```
-  </TabItem>
-  <TabItem value="jammy" label="Ubuntu Jammy 22.04">
-    ```bash
-    # login as root
-    sudo -i
-    apt install ca-certificates software-properties-common curl gnupg2 -y 
-    curl -sS https://trisul.org/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/trisul.gpg > /dev/null 2>&1
-    echo "deb [signed-by=/usr/share/keyrings/trisul.gpg] https://trisul.org/repos/apt/debian jammy main" | sudo tee /etc/apt/sources.list.d/trisul.list
-    apt update 
-    apt install trisul-full
-    ```
-  </TabItem>
 
-  <TabItem value="or9" label="RHEL/ Oracle 9">
-    ```bash
-    #Installing dependencies 
-    yum install yum-utils
-    yum install epel-release
-    yum-config-manager --add-repo http://yum.oracle.com/repo/OracleLinux/OL9/distro/builder/x86_64
-    yum install redhat-lsb-core
-    
-    #adding trisul YUM repository 
-    cd /etc/yum.repos.d 
-    curl -LO https://www.trisul.org/trisulfull-rhel9.repo 
-    # check if Trisul Full is available now
-    yum group list
-    # install
-    yum groupinstall "Trisul Full"
-    # open port 3000/3003 for web access 
-    firewall-cmd --zone=public --add-port=3000/tcp
-    firewall-cmd --zone=public --add-port=3003/tcp
-    ```
+    :movie_camera: Video: [Install Trisul 8.0 with apt (step by step)](https://youtu.be/YFeOENzCCHw)
   </TabItem>
-  <TabItem value="ora8" label="RHEL/ Oracle 8">
+  <TabItem value="rhel" label="RHEL / Oracle 8 / 9 / 10">
     ```bash
     # adding trisul YUM repository
     cd /etc/yum.repos.d
-    curl -LO https://trisul.org/trisulfull-rhel8.repo
+    curl -LO https://trisul.org/trisul8-rhel.repo
+
     # check if Trisul Full is available now
     yum group list
+
     # install
     yum groupinstall "Trisul Full"
-    # open port 3000/3003 for web access 
+
+    # open port 3000 for web access
     firewall-cmd --zone=public --add-port=3000/tcp
-    firewall-cmd --zone=public --add-port=3003/tcp
     ```
   </TabItem>
 </Tabs>
@@ -130,9 +103,13 @@ If you want to install individual packages, you follow the same commands as abov
 
 ### Via the DEB Files 
 
-If you want to install the packages manually, you can use the DEB files. The DEB packages can be found on the [Downloads page](https://www.trisul.org/download/).
+If you want to install the packages manually, you can use the DEB files. The DEB packages are on the download page. Open the [Getting Started page](https://trisul.org/get-started/); it leads you to the download page.
 
-Download each DEB package and install each file with: `dpkg -i trisul-probe-7.0_xxx.deb` etc.
+Download each DEB package for your Ubuntu release and install each file with `dpkg -i`, for example: `dpkg -i trisul-probe_8.0.xxxx-noble_amd64.deb`.
+
+:::tip Offline install video
+Use this method on a server with no internet access. Watch [Install Trisul 8.0 offline (step by step)](https://youtu.be/NTOqz2d55d4).
+:::
 
 
 ----
@@ -147,25 +124,13 @@ You can install Trisul on CentOS or RHEL using either yum or rpm, depending on h
 If you want to install Trisul through **yum**, you only have to do this once to add the Trisul repository to `yum.repos.d`
 
 
-#### Repo locations 
+#### Repo location
 
-Use the file that matches your distribution:
-
-- **RHEL9/Oracle9**   
-```
-curl -LO https://www.trisul.org/trisulfull-rhel9.repo
-```
-- **RHEL8/Oracle8** 
-```
-curl -LO https://www.trisul.org/trisulfull-rhel8.repo
-```
-
-Then move into the repo directory and download the repo file for your distribution from the list above. For example, on RHEL 9:
+One repo file covers RHEL / Oracle 8, 9 and 10. Move into the repo directory and download it:
 
 ```bash
 cd /etc/yum.repos.d
-curl -LO https://www.trisul.org/trisulfull-rhel9.repo
-
+curl -LO https://trisul.org/trisul8-rhel.repo
 
 # check if Trisul Full is available now
 yum group list
@@ -181,12 +146,12 @@ yum install trisul-hub trisul-probe webtrisul
 
 ### Installing the RPM Packages Manually
 
-If you prefer manual installation, download each RPM file and install them with the standard RPM command:
+If you prefer manual installation, download each RPM file for your release (el8, el9 or el10) from the download page (open the [Getting Started page](https://trisul.org/get-started/); it leads you to the download page) and install them with the standard RPM command. For example, on RHEL / Oracle 9:
 
 ```
-rpm -Uvh trisul-probe-7.0xyz.rpm
-rpm -Uvh trisul-hub-7.0xyz.rpm
-rpm -Uvh webtrisul-7.0xyz.rpm
+rpm -Uvh trisul-probe-8.0.xxxx-1.el9.x86_64.rpm
+rpm -Uvh trisul-hub-8.0.xxxx-1.el9.x86_64.rpm
+rpm -Uvh webtrisul-8.0.xxxx-1.el9.x86_64.rpm
 ```
 
 

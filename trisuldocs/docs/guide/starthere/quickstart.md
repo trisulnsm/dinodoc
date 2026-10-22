@@ -23,7 +23,7 @@ Trisul runs on Ubuntu 26.04, 24.04 and 22.04, and on RHEL / Oracle Linux 10, 9 a
 
 ### Step 2: Sign up and download Trisul
 
-Visit the **[Trisul Get Started page](https://www.trisul.org/download/)** and sign up, this also activates your 7-day trial license.
+Visit the **[Trisul Get Started page](https://trisul.org/get-started/)** and sign up, this also activates your 7-day trial license.
 
 ### Step 3: Install
 

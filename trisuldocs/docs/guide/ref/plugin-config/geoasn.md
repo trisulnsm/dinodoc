@@ -25,7 +25,7 @@ Here is a screenshot to give you an idea of what functionality is added by this 
 
 ### Installation
 
-This plugin is distributed as a RPM/DEB package. Follow instructions in the [Downloads](https://trisul.org/download) page to install the **trisul-geo** package
+This plugin is distributed as a RPM/DEB package. Follow the instructions on the download page to install the **trisul-geo** package. Open the [Getting Started page](https://trisul.org/get-started/); it leads you to the download page.
 
 ### Starting
 
