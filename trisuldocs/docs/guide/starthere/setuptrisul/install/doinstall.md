@@ -25,7 +25,6 @@ import TabItem from '@theme/TabItem';
   <TabItem value="ubuntu" label="Ubuntu 22.04 / 24.04 / 26.04" default>
     ```bash
     # login as root
-    sudo -i
     apt update
     apt install ca-certificates software-properties-common curl gnupg2 -y
     curl -sS https://trisul.org/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/trisul.gpg > /dev/null 2>&1
