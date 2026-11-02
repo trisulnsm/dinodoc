@@ -10,6 +10,14 @@ Upgrading keeps your installation, application settings and traffic data,
 
 To move from Trisul 7.0 to Trisul 8.0, remove the Trisul 7.0 packages and the old repository, then install Trisul 8.0. Trisul 8.0 signs the repository with a 3072-bit public key. Trisul 7.0 used a 2048-bit key. The Trisul 8.0 install steps replace that key.
 
+:::warning Get a Trisul 8.0 license before you upgrade
+Your Trisul 7.0 license does not work with Trisul 8.0. If you upgrade without a Trisul 8.0 license, the upgrade does not work.
+
+Before you upgrade, email Trisul at [info@mail.trisul.org](mailto:info@mail.trisul.org) to request a Trisul 8.0 license. Start the upgrade after you receive it.
+
+To install the new license, see [Installing a License File](/docs/guide/starthere/setuptrisul/license/install).
+:::
+
 Read the [Trisul 8.0.3431 release notes](https://forums.trisul.org/d/123-new-release-oct-2026-trisul-803431) before you upgrade.
 
 Typically it will look like the following
