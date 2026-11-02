@@ -68,7 +68,8 @@ Log in as `admin` to change them.
 | [Topper Snapshot Interval (Seconds)](#topper-snapshot-interval) | All counter groups | How often the top-N lists are saved | You want top-N history more or less often |
 | [Topper Traffic Only](#topper-traffic-only) | All counter groups | Whether traffic is stored for every key or only the toppers | A group has too many keys to store them all |
 | [High Water Mark / Low Water Mark](#water-marks) | All counter groups | How many keys Trisul holds in memory | A group uses too much memory, or drops keys you need |
-| [Enable Slice Keys](#slice-keys) | All counter groups | Whether Trisul records every key it sees | You never look up keys in that group |
+| [Enable Slice Keys](#slice-keys) | All counter groups | Whether Trisul keeps a list of every key it sees, toppers or not | You never look up keys in that group |
+| [Resolver Group](#resolver-group) | All counter groups | Which counter group supplies readable names for the keys | Keys show as raw values instead of names |
 | [Meter only keysets](#meter-only-keysets) | Keyset counter groups | Whether keys that match no keyset are counted | You only want the keysets you defined |
 | [Balance Depth1 / Balance Depth2](#balance-depth) | Cross key counter groups | How many key combinations one parent key can create | One busy key creates too many combinations |
 
@@ -178,22 +179,51 @@ Leave a gap that fits how fast new keys arrive in that group.
 
 ## Enable Slice Keys {#slice-keys}
 
-**What it is:** when on, Trisul keeps a record of every key seen in this group, so you can later find out whether and when a key was seen.
+**What it is:** when on, Trisul keeps a list of every key seen in this group. The list includes all keys, not only the toppers, and also keys that the water marks removed from memory. It tells you **whether and when a key was seen**. It doesn't hold the key's traffic.
+
+Key traffic is kept separately:
+
+| You want to know | Where it comes from |
+| --- | --- |
+| Was this IP seen in the traffic, and when? | Slice keys: every key is listed |
+| How much traffic did this IP send? | Key traffic: kept for every key that stays in memory. With **Topper Traffic Only** on, only for toppers |
+
+So a host that appeared once and never made the top-N list still shows up in the slice keys. If **Topper Traffic Only** is on, you can confirm the host was seen, but you can't open its traffic chart.
 
 ```mermaid
 flowchart LR
-  K["Key seen<br/>in traffic"] --> Q{"Enable Slice Keys"}
-  Q -->|"On"| R["Key recorded"]
-  R --> S["Later: was this key seen, and when?"]
-  Q -->|"Off"| N["No record kept"]
+  K["Key seen<br/>in traffic"] --> SK["Slice keys:<br/>key listed as seen"]
+  K --> T{"Topper Traffic Only"}
+  T -->|"Off"| KT["Key traffic<br/>stored"]
+  T -->|"On, key is a topper"| KT
+  T -->|"On, key is not a topper"| NT["No key traffic,<br/>but still listed as seen"]
 ```
 
-**Why tune it:** the record takes storage.
+**Why tune it:** the list takes storage.
 
 **How:**
 
-- Leave it on for groups you search during investigations, such as Hosts.
+- Leave it on for groups you search during investigations, such as Hosts. It's the only way to confirm that a non-topper key was seen.
 - Turn it off on groups where you never look up keys.
+
+## Resolver Group {#resolver-group}
+
+**What it is:** the counter group Trisul uses to turn keys into readable names. Keys are stored as raw values. In the Apps counter group, for example, port 80 is stored as `p-0050` and port 443 as `p-01BB`. Their names, `http` and `https`, are stored with the Apps counter group.
+
+If another counter group already holds the names for the same kind of keys, you select it as the **Resolver Group**. Trisul then shows that group's names instead of the raw keys.
+
+```mermaid
+flowchart LR
+  C["Your counter group<br/>keys: p-0050, p-01BB"] -->|"Resolver Group = Apps"| A["Apps holds the names<br/>p-0050 = http<br/>p-01BB = https"]
+  A --> V["Charts and lists show<br/>http, https"]
+```
+
+**Why tune it:** without a resolver, a counter group whose keys have no names of its own shows raw values such as `p-0050`.
+
+**How:**
+
+- On the **Edit Counter Group** page, select the counter group that already names these keys from the **Resolver Group** list.
+- You don't need it for filtered, keyset, stat based or rule based counter groups. They already use the names from their parent group.
 
 ## Meter only keysets {#meter-only-keysets}
 
@@ -218,27 +248,30 @@ flowchart LR
 
 **What they are:** limits on [cross key counter groups](/docs/guide/ag/context/crosskey_countergroups), which create one key for every combination of their groups.
 
-| Field | Limits |
-| --- | --- |
-| **Balance Depth1** | For each parent key, how many different **CrossKey Group** keys can be added |
-| **Balance Depth2** | For each parent key + CrossKey Group key pair, how many **Optional Group 2** keys can be added |
+Take a cross key counter group of **Interfaces × Apps × Hosts**:
 
-Example: Internal Hosts × External Hosts, with Balance Depth1 set to 3.
+| Field | What it limits | In this example |
+| --- | --- | --- |
+| **Balance Depth1** | For each parent key, how many **CrossKey Group** keys are allowed | How many apps are allowed for each interface |
+| **Balance Depth2** | For each parent key + CrossKey Group key, how many **Optional Group 2** keys are allowed | How many hosts are allowed for each app on that interface |
 
 ```mermaid
 flowchart LR
-  P["Internal host (parent key)<br/>Balance Depth1 = 3"] --> C1["External host 1"]
-  P --> C2["External host 2"]
-  P --> C3["External host 3"]
-  P -.->|"4th, 5th ..."| X["New pairs<br/>not added"]
+  I["Interface"] --> A1["App 1"]
+  I --> A2["App 2"]
+  I -.->|"over Balance Depth1"| AX["More apps<br/>not added"]
+  A1 --> H1["Host 1"]
+  A1 --> H2["Host 2"]
+  A1 -.->|"over Balance Depth2"| HX["More hosts<br/>not added"]
 ```
 
-**Why tune them:** one busy parent key, such as a scanner, can create thousands of combinations and push useful keys out of memory.
+**Why tune them:** one busy interface or app can create thousands of combinations and push useful keys out of memory.
 
 **How:**
 
-- Set **Balance Depth1** to limit two-group cross keys.
-- Also set **Balance Depth2** for three-group cross keys. Balance Depth2 needs Balance Depth1.
+- Set **Balance Depth1** to limit the apps per interface.
+- Set **Balance Depth2** to limit the hosts per app. Balance Depth2 needs Balance Depth1.
+- Keep both values lower than the counter group's [High Water Mark](#water-marks). If the limits are higher, the High Water Mark removes keys before the balance depth limits are ever reached.
 - Leave them empty for no limit.
 
 ## Apply your changes
