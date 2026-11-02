@@ -62,15 +62,15 @@ Log in as `admin` to change them.
 
 ## Settings at a glance
 
-| Setting | Applies to | Change it to |
-| --- | --- | --- |
-| [Bucket Size Counter Resolution (ms)](#bucket-size) | All counter groups | Trade chart detail for disk space |
-| [Topper Snapshot Interval (Seconds)](#topper-snapshot-interval) | All counter groups | Control how often top-N lists are saved |
-| [Topper Traffic Only](#topper-traffic-only) | All counter groups | Store only the busiest keys |
-| [High Water Mark / Low Water Mark](#water-marks) | All counter groups | Cap the number of keys held in memory |
-| [Enable Slice Keys](#slice-keys) | All counter groups | Keep or drop the record of every key seen |
-| [Meter only keysets](#meter-only-keysets) | Keyset counter groups | Drop keys that match no keyset |
-| [Balance Depth1 / Balance Depth2](#balance-depth) | Cross key counter groups | Limit how many key combinations are created |
+| Setting | Available in | What it controls | Change it when |
+| --- | --- | --- | --- |
+| [Bucket Size Counter Resolution (ms)](#bucket-size) | All counter groups | How often each key's traffic is saved | You want to save disk, or see shorter spikes |
+| [Topper Snapshot Interval (Seconds)](#topper-snapshot-interval) | All counter groups | How often the top-N lists are saved | You want top-N history more or less often |
+| [Topper Traffic Only](#topper-traffic-only) | All counter groups | Whether traffic is stored for every key or only the toppers | A group has too many keys to store them all |
+| [High Water Mark / Low Water Mark](#water-marks) | All counter groups | How many keys Trisul holds in memory | A group uses too much memory, or drops keys you need |
+| [Enable Slice Keys](#slice-keys) | All counter groups | Whether Trisul records every key it sees | You never look up keys in that group |
+| [Meter only keysets](#meter-only-keysets) | Keyset counter groups | Whether keys that match no keyset are counted | You only want the keysets you defined |
+| [Balance Depth1 / Balance Depth2](#balance-depth) | Cross key counter groups | How many key combinations one parent key can create | One busy key creates too many combinations |
 
 ## Bucket Size Counter Resolution (ms) {#bucket-size}
 
@@ -135,8 +135,21 @@ flowchart LR
 
 **What they are:**
 
-- **High Water Mark:** the most keys the group tracks in memory.
-- **Low Water Mark:** when the count goes over the high water mark, Trisul removes keys until only this many remain. It removes the keys that were updated least recently.
+- **High Water Mark:** the maximum number of keys the counter group holds in memory at one time. In the Hosts group, that's the number of IP addresses Trisul is metering right now. Every active key counts, not only the toppers. When one more key arrives after this limit is reached, Trisul removes keys.
+- **Low Water Mark:** the number of keys Trisul cuts back to when the High Water Mark is crossed. It removes the keys that were updated least recently.
+
+**High Water Mark and top count are different settings.** Readers often mix them up:
+
+| | High Water Mark | Top count |
+| --- | --- | --- |
+| What it is | The maximum number of keys held in memory | The number of toppers saved in the top-N list |
+| In the Hosts group | How many IP addresses Trisul meters at once | How many of the busiest IP addresses appear in the top-N list |
+| Where you set it | **Edit Counter Group** page | **Edit Toppers**, separately for each meter |
+| Set for | The whole counter group | Each meter, for example Total or Received |
+| What it affects | Key traffic: how many keys keep their own traffic | Topper traffic: how many keys are listed as toppers |
+| Example | 50,000 | 1,000 |
+
+The two are linked. Trisul picks the toppers only from the keys it holds in memory, so set the High Water Mark well above the largest top count. In the example, Trisul picks the top 1,000 hosts from up to 50,000 in memory.
 
 ```mermaid
 flowchart LR
