@@ -247,6 +247,7 @@ const sidebars = {
                   ]
                 },
                 "guide/ag/context/countergroup_settings",
+                "guide/ag/context/countergroup_tuning",
                 "guide/ag/context/managekeys",
                 "guide/ag/context/profilemenu",
                 "guide/ag/context/snmp_agent"
