@@ -72,3 +72,7 @@ Your keyset group is ready.
 > Restart the probe context for changes to take effect, for example `trisulctl_probe restart context default@probe0` (or `trisulctl_hub restart context default@probe0`).
 
 You can then view the new counter group in *Retro > Retro Counters*
+
+### Tune this counter group
+
+To control how much this counter group stores, set its bucket size, topper settings and water marks. To keep only the keys that match your keysets, turn on **Meter only keysets**. See [Tune Counter Groups](/docs/guide/ag/context/countergroup_tuning) and [Meter only keysets](/docs/guide/ag/context/countergroup_tuning#meter-only-keysets).

@@ -50,3 +50,7 @@ country.
 Once configured, cardinality counters behave just like other counters.
 They appear as extra counters in the drop down lists, you can draw
 charts, trend over time, even set threshold crossing alerts on them.
+
+### Tune the counter group
+
+Cardinality counters are meters inside an existing counter group, so they follow that counter group's bucket size and topper settings. To change those settings, see [Tune Counter Groups](/docs/guide/ag/context/countergroup_tuning).

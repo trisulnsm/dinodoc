@@ -43,3 +43,7 @@ Some examples :
 
 For more advanced custom counters you can use the [Lua API](/docs/lua/tutorial1)
 to measure any subset of metrics
+
+### Tune this counter group
+
+To control how much this counter group stores, set its bucket size, topper settings and water marks. See [Tune Counter Groups](/docs/guide/ag/context/countergroup_tuning).

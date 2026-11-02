@@ -79,3 +79,7 @@ leads you to another page , whose fields are as follows
 
 The above rule tracks the activities of the key `80.79.32.7A` only for
 `HTTP` application
+
+### Tune this counter group
+
+To control how much this counter group stores, set its bucket size, topper settings and water marks. See [Tune Counter Groups](/docs/guide/ag/context/countergroup_tuning).

@@ -82,3 +82,7 @@ cross key counter group.
 ![](images/sankeyapps.png)
 
 *Figure: Sankey Crossdrill Apps from Trisul Apps*
+
+### Tune this counter group
+
+A cross key counter group can create one key for every combination of its groups. To limit how many combinations each parent key can create, set **Balance Depth1** and **Balance Depth2**. See [Balance Depth](/docs/guide/ag/context/countergroup_tuning#balance-depth). For bucket size, topper settings and water marks, see [Tune Counter Groups](/docs/guide/ag/context/countergroup_tuning).

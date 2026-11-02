@@ -54,3 +54,7 @@ Cardinality counters are not a new counter group. You can add up to two
 cardinality meters to any counter group. For example : You can add to
 the *Hosts* counter group a meter for tracking *Unique Apps* This allows
 you to track *for every host* a new metric called *unique apps*
+
+### Tune custom counter groups
+
+Each custom counter group has its own bucket size, topper and water mark settings. To control how much a custom counter group stores, see [Tune Counter Groups](/docs/guide/ag/context/countergroup_tuning).
