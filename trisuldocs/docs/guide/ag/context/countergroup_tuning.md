@@ -137,7 +137,7 @@ flowchart LR
 **What they are:**
 
 - **High Water Mark:** the maximum number of keys the counter group holds in memory at one time. In the Hosts group, that's the number of IP addresses Trisul is metering right now. Every active key counts, not only the toppers. When one more key arrives after this limit is reached, Trisul removes keys.
-- **Low Water Mark:** the number of keys Trisul cuts back to when the High Water Mark is crossed. It removes the keys that were updated least recently.
+- **Low Water Mark:** the number of keys Trisul cuts back to when the High Water Mark is crossed. It removes the keys that haven't sent traffic recently, which are usually the low-traffic keys. Busy keys keep sending traffic, so they stay.
 
 **High Water Mark and top count are different settings.** Readers often mix them up:
 
@@ -155,7 +155,7 @@ The two are linked. Trisul picks the toppers only from the keys it holds in memo
 ```mermaid
 flowchart LR
   F["Keys fill up to 50<br/>(High Water Mark)"] --> O["Key 51 arrives"]
-  O --> P["Remove least recently<br/>updated keys"]
+  O --> P["Remove keys with no<br/>recent traffic, usually<br/>low-traffic keys"]
   P --> L["Back to 40<br/>(Low Water Mark)"]
   L -->|"room for 10 new keys"| F
 ```
@@ -179,7 +179,16 @@ Leave a gap that fits how fast new keys arrive in that group.
 
 ## Enable Slice Keys {#slice-keys}
 
-**What it is:** when on, Trisul keeps a list of every key seen in this group. The list includes all keys, not only the toppers, and also keys that the water marks removed from memory. It tells you **whether and when a key was seen**. It doesn't hold the key's traffic.
+**What it is:** when on, Trisul keeps a list of every key seen in this group. It tells you **whether and when a key was seen**. It doesn't hold the key's traffic.
+
+The list includes every key, even the ones Trisul doesn't keep traffic for:
+
+- keys that never made the top-N list, and
+- keys the High Water Mark removed from memory.
+
+Each key is listed once. A key that is left out in one minute and becomes a topper in the next still appears only once in the slice keys.
+
+**Example:** the High Water Mark is 50. In the first minute, 55 hosts send traffic. In the second minute, 52. In the third, 57. The extra 5, 2 and 7 hosts are over the limit, so they lose their key traffic. The slice keys still list all of them, and each host only once.
 
 Key traffic is kept separately:
 
@@ -192,11 +201,10 @@ So a host that appeared once and never made the top-N list still shows up in the
 
 ```mermaid
 flowchart LR
-  K["Key seen<br/>in traffic"] --> SK["Slice keys:<br/>key listed as seen"]
-  K --> T{"Topper Traffic Only"}
-  T -->|"Off"| KT["Key traffic<br/>stored"]
-  T -->|"On, key is a topper"| KT
-  T -->|"On, key is not a topper"| NT["No key traffic,<br/>but still listed as seen"]
+  M1["Minute 1<br/>55 hosts seen<br/>5 over the High Water Mark"] --> SK
+  M2["Minute 2<br/>52 hosts seen<br/>2 over the High Water Mark"] --> SK
+  M3["Minute 3<br/>57 hosts seen<br/>7 over the High Water Mark"] --> SK
+  SK["Slice keys<br/>every host seen, listed once,<br/>including the 5, 2 and 7"]
 ```
 
 **Why tune it:** the list takes storage.
