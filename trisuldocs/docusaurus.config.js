@@ -442,12 +442,10 @@ const config = {
       },
     },
     metadata: [
-      { property: 'og:image', content: 'https://docs.trisul.org/img/latest-release.jpeg' },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://docs.trisul.org/' },
       { property: 'og:title', content: 'Trisul Network Analytics Docs' },
       { property: 'og:description', content: 'Wide and deep visibility, detection, and audit of network traffic' },
-      { name: 'twitter:image', content: 'https://docs.trisul.org/img/latest-release.jpeg' },
       { name: 'twitter:card', content: 'summary_large_image' },
     ],
 
