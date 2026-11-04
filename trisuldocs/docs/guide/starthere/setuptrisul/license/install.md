@@ -11,22 +11,34 @@ The license would look something like this:
 
 ```
 ----------------------------------------------------------------
-User:  Tim HoprXXXX
-Email: test@xx
-Mode:  PRODUCTON;UNLIMITED-DAYWINDOW;UNLIMITED-PCAP;RSNTW;INTERNAL_NODES=UNLIMITED
-Muuid: 4C4C4544-0052-5610-8035-C8C04F375633
-Due:   0 (Upgrade at will)
-Maint: 1725273471 (Sep 2 2024)
-Ver:   7
-Key:   Below
+User:      Tim HoprXXXX
+Email:     test@xx
+Ver:       8.1
+Type:      PRODUCTION
+Muuid:     4087ACCD-4B0B-DE11-833A-00248CB93BDE
+Due:       0 (Upgrade at will)
+Maint:     1824768000 (Oct 29 2027)
+Product:   NETFLOW
+Host:      SELF
+LimitType: INTERNAL_HOSTS
+Limit:     3000
 ----------------------------------------------------------------
-BG5fK4vUHyAf5QN2P4noQXtPTZOIPvnPXEqoEkfMLf2LBOjUbd4l6ENL0SWyglS+
-LKVr80cDlii6U7v1w0U3lGOcwe3nj1N/T1A06f+7nIQ=
-----------------------------------------------------------------
-GirSyXktWOM7qct2MwrIrsAs+DtVbY66pKL3pQO+ZxELOZTvjWkwD8owZ7Z/Qdhw
-KQIDAQAB
+WPpVAkrqtTXXXXXXXXGxxVBeJ54jlMaPIrgAbCcSmDq/VGpBuYc4whDE6tXdEgId
+ARn0tnWcxqv7Fdapo7RvCQ==
 ----------------------------------------------------------------
 ```
+
+| Field | Meaning |
+|---|---|
+| User, Email | Who the license is issued to |
+| Ver | License format, `8.1` for Trisul 8 |
+| Type | `PRODUCTION`, `TIMETRIAL` (extended trial) or `TRIAL` |
+| Muuid | The [Machine ID](/docs/guide/starthere/setuptrisul/license/intro#machine-id) the license is locked to |
+| Due | Date the license stops working, `0` means never |
+| Maint | Date the [Annual Maintenance Contract](#annual-maintenance-contract-amc) ends |
+| Product, Host, LimitType, Limit | What you are licensed for, see [Product, Limit Type and Limit](/docs/guide/starthere/setuptrisul/license/intro#product-limit-type-and-limit) |
+
+The lines between the last two `----` lines are the signature. Do not edit the license file; any change to it makes the license invalid.
 
 :::danger one license file per machine
 A new license file is required for every machine because it is locked to a MachineID. For most customers on a single machine you only need a single license file
