@@ -1,22 +1,54 @@
 # Flow-Prefix-v6
 
-Traffic by IPv6 Prefixes from the router RIB
+Counts IPv6 traffic per routed prefix. The prefix is built from the flow address and the IPv6 prefix-length fields that the router puts in each NetFlow v9/IPFIX record.
 
-## Counter group
+| Property | Value |
+|---|---|
+| GUID | `{467AE21F-F2B7-4509-EA69-514CF2352D36}` |
+| Layer | Flow Record |
+| Input | Flows |
+| Key type | IPv6 prefix (CIDR string) |
+| Implementation | Lua — nf-prefix-v6.lua (trisul_probe/sysplugs/flowhandlers); updated by CPINetflowMeter (PINetflowMeter.cpp) |
+| Bucket / Topper | 60 s / 300 s |
+| Enabled by default | Yes |
 
-| GUID                                     | TYPE   | Bucke Size (secs) | Topper Bucket(Secs): |
-| ---------------------------------------- | ------ | ----------------- | --------------------- |
-| `{467AE21F-F2B7-4509-EA69-514CF2352D36}` | Native | 60                 | 300                    |
+## What it measures
+
+- Each IPv6 v9/IPFIX record updates two keys: the source prefix (`IPV6_SRC_ADDR` + `IPV6_SRC_MASK`, fields 27/29) and the destination prefix (`IPV6_DST_ADDR` + `IPV6_DST_MASK`, fields 28/30). IPv4 records go to [Flow-Prefix](/docs/guide/counter-groups/flow-prefix).
+- If the template has no IPv6 mask fields, the mask is 0 and all traffic lands on `::/0`. sFlow does not update this group.
+- Meters and direction work as in [Flow-Prefix](/docs/guide/counter-groups/flow-prefix). With [`HomeASNumbers`](pathname:///docs/guide/ref/netflow-config#HomeASNumbers) set, the record's AS decides whether a prefix is home or external. If the AS is 0, the IPv6 address is checked against your IPv6 Home Networks. Without `HomeASNumbers`, the IPv6 Home Networks decide.
+- `MeterMasks` (default TRUE) in the [NetFlow config](/docs/guide/ref/netflow-config) turns it on or off. IPDR mode turns it off.
+
+## Keys
+
+The key is the network address in compressed IPv6 text form (lowercase, as printed by `inet_ntop`), followed by `/<mask length>`.
+
+| Key | Meaning |
+|---|---|
+| `2001:db8::/32` | Prefix 2001:db8::/32 |
+| `2001:db8:1200::/40` | Prefix 2001:db8:1200::/40 |
+| `::/0` | Record without IPv6 mask fields |
+
+### Special keys
+
+| Key | Meaning |
+|---|---|
+| `SYS:GROUP_TOTALS` | Sum of every update made to this group in the interval. Each record updates a source prefix and a destination prefix, so Total and Flows here are about 2× the IPv6 flow traffic. |
+| `::/0` | The template had no `IPV6_SRC_MASK`/`IPV6_DST_MASK`, or the router had no route (mask 0). |
 
 ## Meter list
 
-| ID  | DESCRIPTION                | TOP COUNT | BOTTOM COUNT | TYPE            | UNITS   | DESCRIPTION |
-| --- | --------------------------- | --------- | ------------ | --------------- | ------- |-------------|
-| 0   | Total                          | 50        | 0            | VT_RATE_COUNTER | Bps     | This meter reports the combined bandwidth rate for traffic to and from this IPv6 prefix, as learned from the router's routing information base. |
-| 1   | Recv from Upstream AS          | 50        | 0            | VT_RATE_COUNTER | Bps     | This meter reports the bandwidth rate for traffic to this IPv6 prefix received via an upstream (transit provider) AS. |
-| 2   | Transmit to Upstream AS        | 50        | 0            | VT_RATE_COUNTER | Bps     | This meter reports the bandwidth rate for traffic to this IPv6 prefix transmitted via an upstream (transit provider) AS. |
-| 3   | Prefixes Flows                 | 50        | 0            | VT_COUNTER      | Flws    | This meter reports the number of flow records observed for this IPv6 prefix within the collection interval. |
-| 4   | Recv from Downstream AS        | 50        | 0            | VT_RATE_COUNTER | Bps     | This meter reports the bandwidth rate for traffic to this IPv6 prefix received via a downstream (customer) AS. |
-| 5   | Transmit to Downstream AS      | 50        | 0            | VT_RATE_COUNTER | Bps     | This meter reports the bandwidth rate for traffic to this IPv6 prefix transmitted via a downstream (customer) AS. |
-| 6   | Unused Cardinality counter     | 20        | 20           | VT_GAUGE        | Uniques | This is a reserved gauge slot intended for a unique value cardinality metric. It is not currently mapped to any field for this counter group, so it remains an inactive placeholder with no data populated. |
-| 7   | Unused Cardinality counter     | 20        | 20           | VT_GAUGE        | Uniques | This is a second reserved cardinality gauge slot with the same status as meter 6. It is inactive and not instrumented for this group. |
+| ID | Name | Type | Units | Top | Bottom | Description |
+|---|---|---|---|---|---|---|
+| 0 | Total | VT_RATE_COUNTER | Bps | 50 | 0 | Bytes of records where this prefix is the source or the destination. |
+| 1 | Recv from Upstream AS | VT_RATE_COUNTER | Bps | 50 | 0 | Bytes where this prefix is the source and is not home. |
+| 2 | Transmit to Upstream AS | VT_RATE_COUNTER | Bps | 50 | 0 | Bytes where this prefix is the destination and is not home. |
+| 3 | Prefixes Flows | VT_COUNTER | Flws | 50 | 0 | Records where this prefix is the source or the destination (+1 per side). |
+| 4 | Recv from Downstream AS | VT_RATE_COUNTER | Bps | 50 | 0 | Bytes where this prefix is the source and is home. |
+| 5 | Transmit to Downstream AS | VT_RATE_COUNTER | Bps | 50 | 0 | Bytes where this prefix is the destination and is home. |
+| 6 | Unused Cardinality counter | VT_GAUGE | Uniques | 20 | 20 | Reserved cardinality slot. Not populated. |
+| 7 | Unused Cardinality counter | VT_GAUGE | Uniques | 20 | 20 | Reserved cardinality slot. Not populated. |
+
+## Related
+
+- [Flow-Prefix](/docs/guide/counter-groups/flow-prefix), [Flow-ASN](/docs/guide/counter-groups/flow-asn)

@@ -1,31 +1,52 @@
 # LinkLayerStats
 
-Breakdown of activity at link layer
+Counts bytes and packets per EtherType, keyed by the 4-digit hex EtherType.
+
+| Property | Value |
+|---|---|
+| GUID | `{9F5AD3A9-C74D-46D8-A8A8-DCDD773730BA}` |
+| Layer | L2 Link |
+| Input | Packets, Flows |
+| Key type | EtherType (4 hex digits) |
+| Implementation | Native C++ — CPICGLinkLayer (group), CPIMacStats (packet metering) (trisul_probe/src/sysplugs/counters); CPINetflowMeter (sysplugs/flowhandlers) |
+| Bucket / Topper | 60 s / 300 s |
+| Enabled by default | Yes |
+
+## What it measures
+
+- **Packets:** every Ethernet II frame updates one key with its wire length and 1 packet.
+- If the frame has one 802.1Q tag (`8100`), the key is the inner EtherType. Only one tag is skipped. QinQ (`88A8`) frames are keyed `88A8`.
+- **NetFlow/IPFIX** (policy `Meterv4v6`, default on): each record adds its bytes to `0800` (IPv4) or `86DD` (IPv6). Packets (meter 1) are not updated in flow mode.
+- sFlow does not update this group. Linux cooked (SLL) and raw IP captures do not update it.
 
 ## Keys
 
-Each entry in this counter group is keyed by the EtherType value, which identifies the protocol encapsulated in the Ethernet frame. Common EtherTypes include:
+One key is the EtherType as 4 uppercase hex digits. Labels for known EtherTypes are preloaded from `std-ethertypes.txt`.
 
-| KEY   | PROTOCOL | DESCRIPTION                   |
-| ----- | -------- | ------------------------------ |
-| 0800  | IPv4     | Internet Protocol v4           |
-| 86DD  | IPv6     | Internet Protocol v6           |
-| 0806  | ARP      | Address Resolution Protocol    |
-| 8035  | RARP     | Reverse ARP                    |
-| 8100  | VLAN     | Virtual LAN (802.1Q)           |
-| 8847  | MPLS     | Multiprotocol Label Switching  |
+| Key | Meaning |
+|---|---|
+| `0800` | IPv4 |
+| `86DD` | IPv6 |
+| `0806` | ARP |
+| `8847` | MPLS unicast |
 
-## Counter group
+### Special keys
 
-| GUID                                     | TYPE   | Bucke Size (secs) | Topper Bucket(Secs): |
-| ---------------------------------------- | ------ | ----------------- | --------------------- |
-| `{9F5AD3A9-C74D-46D8-A8A8-DCDD773730BA}` | Native | 60                 | 300                    |
+| Key | Meaning |
+|---|---|
+| `SYS:GROUP_TOTALS` | Sum of every update in the interval. Each frame updates one key, so meter 0 equals total frame bytes. |
 
 ## Meter list
 
-| ID  | DESCRIPTION | TOP COUNT | BOTTOM COUNT | TYPE            | UNITS   | DESCRIPTION |
-| --- | ----------- | --------- | ------------ | --------------- | ------- |-------------|
-| 0   | Total           | 10        | 0            | VT_RATE_COUNTER | Bps     | This meter reports the total bandwidth in bytes per second for frames of this EtherType. Multiply by eight to obtain bits per second. |
-| 1   | Packets         | 10        | 0            | VT_RATE_COUNTER | pps     | This meter reports the packet rate in packets per second for frames of this EtherType. |
-| 2   | Unused Cardinality counter | 20 | 20    | VT_GAUGE        | Uniques | This is a reserved gauge slot intended for a unique value cardinality metric. It is not currently mapped to any field for this counter group, so it remains an inactive placeholder with no data populated. |
-| 3   | Unused Cardinality counter | 20 | 20    | VT_GAUGE        | Uniques | This is a second reserved cardinality gauge slot with the same status as meter 2. It is inactive and not instrumented for this group. |
+| ID | Name | Type | Units | Top | Bottom | Description |
+|---|---|---|---|---|---|---|
+| 0 | Total | VT_RATE_COUNTER | Bps | 10 | 0 | Frame bytes, or flow-record bytes in NetFlow mode. |
+| 1 | Packets | VT_RATE_COUNTER | pps | 10 | 0 | Frames. Packet mode only. |
+| 2 | Unused Cardinality counter | VT_GAUGE | Uniques | 20 | 20 | Reserved cardinality slot. Not populated. |
+| 3 | Unused Cardinality counter | VT_GAUGE | Uniques | 20 | 20 | Reserved cardinality slot. Not populated. |
+
+## Related
+
+- [NetworkLayerStats](/docs/guide/counter-groups/networklayerstats)
+- [VLANStats](/docs/guide/counter-groups/vlanstats)
+- [MPLSStats](/docs/guide/counter-groups/mpls-stats)

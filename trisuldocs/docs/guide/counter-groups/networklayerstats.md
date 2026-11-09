@@ -1,40 +1,58 @@
 # NetworkLayerStats
 
-Breakdown of activity at network layer
+Counts traffic and flows per IP protocol, keyed by the IP protocol number in 2-digit hex.
+
+| Property | Value |
+|---|---|
+| GUID | `{E89BCD56-30AD-40F5-B1C8-8B7683F440BD}` |
+| Layer | L3 Network |
+| Input | Packets, Flows |
+| Key type | IP protocol number (2 hex digits) |
+| Implementation | Native C++ — CPICGNetworkLayer (group), CPIIPStats, CPIIP6Stats (packet metering) (trisul_probe/src/sysplugs/counters); stengine/XSessionGroup.cpp (flow meters); CPINetflowMeter, CPISFlowMeter (sysplugs/flowhandlers) |
+| Bucket / Topper | 60 s / 300 s |
+| Enabled by default | Yes |
+
+## What it measures
+
+- **Packets:** every IPv4 packet (protocol field) and IPv6 packet (next-header field of the fixed header) updates one key with its bytes and 1 packet. IPv6 extension headers are not followed.
+- **Flows:** the session tracker adds 1 to Total Flows and Active Flows for each new flow, and subtracts 1 from Active Flows when the flow expires.
+- **NetFlow/IPFIX and sFlow:** each record adds its bytes to the key of its L4 protocol. Packets are not updated in flow mode.
+- Meters 4 and 5 are filled only in a filtered counter group made by an [interface tracker](/docs/guide/ug/netflow/interface_tracker) from this group. The base group never has them.
 
 ## Keys
 
-Each entry in this counter group is keyed by the protocol field from the IP packet header, represented in hexadecimal format. This field identifies the next-level protocol used in the data portion of the IP datagram.
+One key is the IP protocol number as 2 uppercase hex digits. Labels are preloaded from `std-ip-protocols.txt`.
 
-| KEY | PROTOCOL | DESCRIPTION                       |
-| --- | -------- | ---------------------------------- |
-| 06  | TCP      | Transmission Control Protocol      |
-| 11  | UDP      | User Datagram Protocol             |
-| 01  | ICMP     | Internet Control Message Protocol  |
-| 29  | IPv6     | IPv6 encapsulation                 |
-| 2F  | GRE      | Generic Routing Encapsulation      |
+| Key | Meaning |
+|---|---|
+| `06` | TCP |
+| `11` | UDP |
+| `01` | ICMP |
+| `3A` | IPv6-ICMP |
 
-## Counter group
+### Special keys
 
-| GUID                                     | TYPE   | Bucke Size (secs) | Topper Bucket(Secs): |
-| ---------------------------------------- | ------ | ----------------- | --------------------- |
-| `{E89BCD56-30AD-40F5-B1C8-8B7683F440BD}` | Native | 60                 | 300                    |
+| Key | Meaning |
+|---|---|
+| `SYS:GROUP_TOTALS` | Sum of every update in the interval. Each packet updates one key, so meter 0 equals total IP bytes. |
+| `2F`, `32` | GRE and ESP. Common for tunnel and VPN traffic. |
+| `29` | IPv6 encapsulated in IPv4 (protocol 41). |
 
 ## Meter list
 
-| ID  | DESCRIPTION       | TOP COUNT | BOTTOM COUNT | TYPE                | UNITS   | DESCRIPTION |
-| --- | ------------------- | --------- | ------------ | ------------------- | ------- |-------------|
-| 0   | Total                  | 10        | 0            | VT_RATE_COUNTER     | Bps     | This meter reports the total bandwidth, in bytes per second, for this network layer protocol. |
-| 1   | Packets                | 10        | 0            | VT_COUNTER          | pkts    | This meter reports the total number of packets for this network layer protocol. |
-| 2   | Active Flows           | 10        | 0            | VT_RUNNING_COUNTER  | flows   | This meter reports the number of concurrently active flows for this network layer protocol. |
-| 3   | Total Flows            | 10        | 0            | VT_COUNTER          | flows   | This meter reports the total number of flows seen for this protocol. |
-| 4   | Into Interface         | 10        | 0            | VT_RATE_COUNTER     | Bps     | This meter reports the bandwidth for this protocol ingressing the specified interface, when used with Interface Trackers. |
-| 5   | Outof Interface        | 10        | 0            | VT_RATE_COUNTER     | Bps     | This meter reports the bandwidth for this protocol egressing the specified interface, when used with Interface Trackers. |
-| 6   | Unused Cardinality counter | 20    | 20           | VT_GAUGE            | Uniques | This is a reserved gauge slot intended for a unique value cardinality metric. It is not currently mapped to any field for this counter group, so it remains an inactive placeholder with no data populated. |
-| 7   | Unused Cardinality counter | 20    | 20           | VT_GAUGE            | Uniques | This is a second reserved cardinality gauge slot with the same status as meter 6. It is inactive and not instrumented for this group. |
+| ID | Name | Type | Units | Top | Bottom | Description |
+|---|---|---|---|---|---|---|
+| 0 | Total | VT_RATE_COUNTER | Bps | 10 | 0 | IP packet bytes, or flow-record bytes. |
+| 1 | Packets | VT_COUNTER | pkts | 10 | 0 | 1 per IP packet. Packet mode only. Not scaled by `SampleRate`. |
+| 2 | Active Flows | VT_RUNNING_COUNTER | flows | 10 | 0 | +1 when the session tracker creates a flow, −1 when it expires. |
+| 3 | Total Flows | VT_COUNTER | flows | 10 | 0 | +1 for each new flow. |
+| 4 | Into Interface | VT_RATE_COUNTER | Bps | 10 | 0 | Interface-tracker filtered groups only. Bytes into the tracked interface. |
+| 5 | Outof Interface | VT_RATE_COUNTER | Bps | 10 | 0 | Interface-tracker filtered groups only. Bytes out of the tracked interface. |
+| 6 | Unused Cardinality counter | VT_GAUGE | Uniques | 20 | 20 | Reserved cardinality slot. Not populated. |
+| 7 | Unused Cardinality counter | VT_GAUGE | Uniques | 20 | 20 | Reserved cardinality slot. Not populated. |
 
-:::note Interface Tracking NetFlow
+## Related
 
-Meters 4 and 5 (Into Interface and Outof Interface) are created when a filtered counter group is set up with the parent counter group as Network Layer Stats and the filter as a NetFlow Router Interface. In that configuration, these meters represent the ingress and egress network layer protocol metrics for that specific interface.
-
-:::
+- [LinkLayerStats](/docs/guide/counter-groups/link-layer-stats)
+- [ICMP Types](/docs/guide/counter-groups/icmp-types)
+- [Apps](/docs/guide/counter-groups/apps)

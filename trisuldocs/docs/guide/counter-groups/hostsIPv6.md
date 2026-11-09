@@ -1,33 +1,68 @@
 # HostsIPv6
 
-Stats for each IPv6 host
+Traffic and connection counts for every IPv6 address seen, keyed by IPv6 address.
 
-## Counter group
+| Property | Value |
+|---|---|
+| GUID | `{9807E97A-6CD2-442F-BB18-8C104C8EB204}` |
+| Layer | L3 Network |
+| Input | Packets, Flows |
+| Key type | IPv6 address |
+| Implementation | Native C++ — CPIIP6Stats (trisul_probe/sysplugs/counters/PIIP6Stats.cpp); also updated by PINetflowMeter and the flow tracker (stengine/XSessionGroup.cpp) |
+| Bucket / Topper | 60 s / 300 s |
+| Enabled by default | Yes |
 
-| GUID                                     | TYPE   | Bucke Size (secs) | Topper Bucket(Secs): |
-| ---------------------------------------- | ------ | ----------------- | --------------------- |
-| `{9807E97A-6CD2-442F-BB18-8C104C8EB204}` | Native | 60                 | 300                    |
+## What it measures
+
+- **Packets:** each IPv6 packet updates the source address (Total, Transmit, Total Packets) and the destination address (Total, Received, Total Packets).
+- **Flows:** each IPv6 NetFlow v9 or IPFIX record updates both addresses the same way and adds 1 to Flow Records. The sFlow handler meters IPv4 hosts only. In NetFlow IPDR mode this group is not updated.
+- **Home network:** a key's bytes go to **Homenet** if that address is inside a configured IPv6 [Home Network](/docs/guide/ag/context/home_networks), otherwise to **External**.
+- Every packet or flow is counted twice in the group, once for each endpoint.
+- The meter list is the same as [Hosts](/docs/guide/counter-groups/hosts). TCP flag counts, alert counts and interface meters are only written for IPv4, so those meters stay empty here.
+- Shares the `HostCounterPolicy.xml` options of Hosts (`SampleRate`, `ExternalIPOnly`, `ShortUpdates`).
+
+## Keys
+
+One key per IPv6 address: the 16 address bytes in network order as 32 uppercase hex characters, with no separators and no zero compression. The UI shows the compressed RFC 5952 form. DNS names are not attached to these keys automatically.
+
+| Key | Meaning |
+|---|---|
+| `20010DB8000000000000000000000001` | 2001:db8::1 |
+| `FE80000000000000021122FFFE334455` | fe80::211:22ff:fe33:4455 (link local) |
+| `26064700470000000000000000001111` | 2606:4700:4700::1111 |
+| `FF020000000000000000000000000001` | ff02::1, all-nodes multicast destination |
+
+### Special keys
+
+| Key | Meaning |
+|---|---|
+| `SYS:GROUP_TOTALS` | Sum of every update made to this group in the interval. Each packet or flow updates two address keys, so Total here is about 2× the IPv6 link traffic. |
 
 ## Meter list
 
-| ID  | DESCRIPTION       | TOP COUNT | BOTTOM COUNT | TYPE                | UNITS   | DESCRIPTION |
-| --- | ------------------- | --------- | ------------ | ------------------- | ------- |-------------|
-| 0   | Total                  | 50        | 0            | VT_RATE_COUNTER     | Bps     | This meter reports the total bandwidth seen by the host in both the transmit and receive direction. |
-| 1   | Received               | 10        | 0            | VT_RATE_COUNTER     | Bps     | This meter reports the receive bandwidth of the host, counted when the host's IPv6 address appears in the destination address field of the packet. |
-| 2   | Transmit               | 10        | 0            | VT_RATE_COUNTER     | Bps     | This meter reports the transmit bandwidth of the host, counted when the host's IPv6 address appears in the source address field of the packet. |
-| 3   | Total Packets          | 10        | 0            | VT_RATE_COUNTER     | pps     | This meter reports the number of packets seen for this host as either the source address or the destination address. |
-| 4   | Active conns           | 50        | 0            | VT_RUNNING_COUNTER  | conns   | This meter reports the number of concurrently active IP flows involving this host at the end of the streaming window. Hosts that top this metric generally have long running flows, such as video, audio, conferencing, or file transfers. |
-| 5   | Attacker alerts        | 20        | 0            | VT_COUNTER          | alerts  | This meter reports the number of IDS or BadFellas alerts where this host was the source address of the packet that triggered the alert. |
-| 6   | Homenet                | 20        | 0            | VT_RATE_COUNTER     | Bps     | This meter reports the traffic bandwidth for conversations where the other address involved is within the organization's home network. |
-| 7   | External               | 20        | 0            | VT_RATE_COUNTER     | Bps     | This meter reports the traffic bandwidth for conversations where the other address involved is outside the home network. |
-| 8   | TCP SYN sent           | 10        | 0            | VT_COUNTER          | packets | This meter reports how many TCP SYN packets were sent with this host's address as the source, representing this host acting as the client of a TCP service. |
-| 9   | TCP SYN recv           | 10        | 0            | VT_COUNTER          | packets | This meter reports how many TCP SYN packets were received with this host's address as the destination, representing this host acting as the server of a TCP service. |
-| 10  | TCP SYNACK sent        | 10        | 0            | VT_COUNTER          | packets | This meter reports how many TCP SYN plus ACK packets were sent from this host's address as the source. A SYN plus ACK packet is the response to a SYN as part of the TCP session setup handshake, so this represents this host acting as the server side of connection setup. |
-| 11  | Blacklist alerts       | 20        | 0            | VT_COUNTER          | alerts  | This meter reports how many alerts were generated involving this address as either a source or a destination, sourced from the BadFellas threat intelligence plugin, trisul-badfellas. |
-| 12  | Victim alerts          | 20        | 0            | VT_COUNTER          | alerts  | This meter reports how many alerts were generated with this address as the destination address. |
-| 13  | New conns              | 20        | 0            | VT_COUNTER          | conns   | This meter reports how many new connections were made involving this address. Hosts that top this metric generally have short, high frequency connections, such as DNS servers and clients. |
-| 14  | Into Interface         | 20        | 0            | VT_RATE_COUNTER     | Bps     | This meter appears only in a filtered counter group where the parent counter group is HostsIPv6 and the filter is a NetFlow interface. When used with the NetFlow Interface Tracker, it reports bandwidth involving this address as source or destination that is ingressing the interface specified in the interface tracker. |
-| 15  | Outof Interface        | 20        | 0            | VT_RATE_COUNTER     | Bps     | This meter appears only in a filtered counter group where the parent counter group is HostsIPv6 and the filter is a NetFlow interface. When used with the NetFlow Interface Tracker, it reports bandwidth involving this address as source or destination that is egressing the interface specified in the interface tracker. |
-| 16  | Flow Records           | 20        | 0            | VT_COUNTER          | Bps     | This meter reports the number of NetFlow records with this address involved as either source or destination. |
-| 17  | Unused Cardinality counter | 20    | 20           | VT_GAUGE            | Uniques | This is a cardinality counter for this counter group. See the [cardinality counter groups documentation](/docs/guide/ag/context/cardinality_countergroups) for how these are populated and used. |
-| 18  | Unused Cardinality counter | 20    | 20           | VT_GAUGE            | Uniques | This is a cardinality counter for this counter group. See the [cardinality counter groups documentation](/docs/guide/ag/context/cardinality_countergroups) for how these are populated and used. |
+| ID | Name | Type | Units | Top | Bottom | Description |
+|---|---|---|---|---|---|---|
+| 0 | Total | VT_RATE_COUNTER | Bps | 50 | 0 | Bytes where the address is source or destination. |
+| 1 | Received | VT_RATE_COUNTER | Bps | 10 | 0 | Bytes where the address is the destination. |
+| 2 | Transmit | VT_RATE_COUNTER | Bps | 10 | 0 | Bytes where the address is the source. |
+| 3 | Total Packets | VT_RATE_COUNTER | pps | 10 | 0 | Packets where the address is source or destination. For flows, the record's packet count. |
+| 4 | Active conns | VT_RUNNING_COUNTER | conns | 50 | 0 | +1 when the flow tracker creates an IPv6 flow with this address at either end, −1 when it expires. |
+| 5 | Attacker alerts | VT_COUNTER | alerts | 20 | 0 | Not populated by the current code. |
+| 6 | Homenet | VT_RATE_COUNTER | Bps | 20 | 0 | Same bytes as Total, counted only when this address is inside the home network. |
+| 7 | External | VT_RATE_COUNTER | Bps | 20 | 0 | Same bytes as Total, counted only when this address is outside the home network. |
+| 8 | TCP SYN sent | VT_COUNTER | packets | 10 | 0 | TCP packets with SYN set and ACK clear, address is the source. Packet input only. |
+| 9 | TCP SYN recv | VT_COUNTER | packets | 10 | 0 | TCP packets with SYN set and ACK clear, address is the destination. Packet input only. |
+| 10 | TCP SYNACK sent | VT_COUNTER | packets | 10 | 0 | TCP SYN+ACK packets. Both the source and the destination key get +1. Packet input only. |
+| 11 | Blacklist alerts | VT_COUNTER | alerts | 20 | 0 | Not populated by the current code. |
+| 12 | Victim alerts | VT_COUNTER | alerts | 20 | 0 | Not populated by the current code. |
+| 13 | New conns | VT_COUNTER | conns | 20 | 0 | +1 for each new IPv6 flow, on both endpoints. |
+| 14 | Into Interface | VT_RATE_COUNTER | Bps | 20 | 0 | Not populated by the current code. |
+| 15 | Outof Interface | VT_RATE_COUNTER | Bps | 20 | 0 | Not populated by the current code. |
+| 16 | Flow Records | VT_COUNTER | Bps | 20 | 0 | +1 for each IPv6 NetFlow or IPFIX record where the address is source or destination. It is a record count, despite the unit label. |
+| 17 | Unused Cardinality counter | VT_GAUGE | Uniques | 20 | 20 | Reserved cardinality slot. Not populated. |
+| 18 | Unused Cardinality counter | VT_GAUGE | Uniques | 20 | 20 | Reserved cardinality slot. Not populated. |
+
+## Related
+
+- [Hosts](/docs/guide/counter-groups/hosts): the IPv4 equivalent
+- [Internal Hosts v6](/docs/guide/counter-groups/internal-hosts-v6), [External Hosts v6](/docs/guide/counter-groups/external-hosts-v6)

@@ -1,38 +1,60 @@
 # Meta Session Group
 
-Contains metrics related to flow activity in the network.
+Counts internal statistics of each session (flow) group: flow cache size, new, expired, terminated and flushed flows. Keyed by the session group GUID.
 
-## Counter group
+| Property | Value |
+|---|---|
+| GUID | `{594606BD-EEB2-4E0B-BAC4-84B7057088C8}` |
+| Layer | System |
+| Input | Internal |
+| Key type | Session group GUID |
+| Implementation | Native C++ — CPICGFlowMons (trisul_probe/src/sysplugs/monitors/PICGFlowMons.cpp) defines the group; values come from CXSessionGroup::GenMonitorTMS (stengine/XSessionGroup.cpp) |
+| Bucket / Topper | 60 s / 300 s |
+| Enabled by default | Yes |
 
-| GUID                                     | TYPE   | Bucke Size (secs) | Topper Bucket(Secs): |
-| ---------------------------------------- | ------ | ----------------- | --------------------- |
-| `{594606BD-EEB2-4E0B-BAC4-84B7057088C8}` | Native | 60                 | 300                    |
+## What it measures
 
-## Key Format
+- At the end of each flush, every session group writes one row about its flow tracker to its own key.
+- The counters cover the interval since the last flush and reset after each row.
+- Master Size and MRU Size are taken at the start of the flush, before expired flows are removed.
+- Each stats engine writes its own row for the same key. The counter meters add up across engines.
 
-TCP/IP Sessions with Key `{99A78737-4B41-4387-8F31-8077DB917336}`. This represents all IP based flows, including UDP, GRE, ICMP, and so on.
+## Keys
+
+One key is the GUID of the session group being monitored.
+
+| Key | Meaning |
+|---|---|
+| `{99A78737-4B41-4387-8F31-8077DB917336}` | TCP/IP Sessions. Covers all IP flows: TCP, UDP, ICMP, GRE, ESP and others. |
+
+### Special keys
+
+| Key | Meaning |
+|---|---|
+| `SYS:GROUP_TOTALS` | Sum of every update in the interval, across all session groups. |
 
 ## Meter list
 
-:::tip Resolution
-These meters are updated every BucketSize milliseconds. By default, this is 60,000 milliseconds, or 1 minute.
-:::
+| ID | Name | Type | Units | Top | Bottom | Description |
+|---|---|---|---|---|---|---|
+| 0 | Master Size | VT_GAUGE | i | 0 | 0 | Flows in the flow cache at flush time. |
+| 1 | MRU Size | VT_GAUGE | i | 0 | 0 | Flows in the most-recently-used index. Equal to Master Size in normal operation. |
+| 2 | New | VT_COUNTER | i | 0 | 0 | Flows created in the interval. |
+| 3 | Closed | VT_COUNTER | i | 0 | 0 | Not populated by the current code. |
+| 4 | Expired | VT_COUNTER | i | 0 | 0 | Flows removed because they timed out. |
+| 5 | Terminated | VT_COUNTER | i | 0 | 0 | Flows marked ended by the protocol, for example TCP FIN or RST. |
+| 6 | Flushed | VT_COUNTER | i | 0 | 0 | Flows written to the hub. Includes the FlushedActive count. |
+| 7 | FlushedActive | VT_COUNTER | i | 0 | 0 | Long-running flows written to the hub while still active. |
+| 8 | Key Hits | VT_COUNTER | i | 0 | 0 | Updates that found an existing flow. |
+| 9 | Heap mem | VT_GAUGE | i | 0 | 0 | Not populated by the current code. |
+| 10 | Tail Prunes | VT_COUNTER | i | 0 | 0 | Not populated by the current code. |
+| 11 | Hi Water Rej | VT_COUNTER | i | 0 | 0 | New flows refused because the group was at its hi-water mark in fixed hi-water mode. |
+| 12 | After Term | VT_COUNTER | i | 0 | 0 | Not populated by the current code. |
+| 13 | Flush USecs | VT_COUNTER | i | 0 | 0 | Time taken by the last flush of this session group, in microseconds. |
+| 14 | Unused Cardinality counter | VT_GAUGE | Uniques | 20 | 20 | Reserved cardinality slot. Not populated. |
+| 15 | Unused Cardinality counter | VT_GAUGE | Uniques | 20 | 20 | Reserved cardinality slot. Not populated. |
 
-| ID  | DESCRIPTION     | TOP COUNT | BOTTOM COUNT | TYPE       | UNITS | DESCRIPTION |
-| --- | ----------------- | --------- | ------------ | ---------- | ----- |-------------|
-| 0   | Master Size            | 0         | 0            | VT_COUNTER | i     | This meter reports the total size of the flow cache, representing the total number of active flows at the end of the streaming window. By default the streaming window size is 1 minute. |
-| 1   | MRU Size               | 0         | 0            | VT_COUNTER | i     | This meter reports the size of the most recently used cache. |
-| 2   | New                    | 0         | 0            | VT_COUNTER | i     | This meter reports the number of new flows established in the window. |
-| 3   | Closed                 | 0         | 0            | VT_COUNTER | i     | This meter reports the total number of expired and terminated flows in the window. |
-| 4   | Expired                | 0         | 0            | VT_COUNTER | i     | This meter reports the number of flows that timed out. This behavior can be adjusted using the Time Out parameter on the Admin, Manage Session Groups page. |
-| 5   | Terminated             | 0         | 0            | VT_COUNTER | i     | This meter reports the number of flows that ended through an explicit protocol level closure, such as a TCP connection closing normally, rather than timing out. |
-| 6   | Flushed                | 0         | 0            | VT_COUNTER | i     | This meter reports the number of flows flushed to the hub (database). |
-| 7   | FlushedActive          | 0         | 0            | VT_COUNTER | i     | This meter reports the number of active flows that were flushed to the hub. This behavior can be adjusted using the Active Tracking Age Limit on the Admin, Manage Session Groups page. |
-| 8   | Key Hits               | 0         | 0            | VT_COUNTER | i     | This is an internal metric and can be ignored. |
-| 9   | Heap mem               | 0         | 0            | VT_COUNTER | i     | This is an internal metric and can be ignored. |
-| 10  | Tail Prunes            | 0         | 0            | VT_COUNTER | i     | This is an internal metric and can be ignored. |
-| 11  | Hi Water Rej           | 0         | 0            | VT_COUNTER | i     | This meter reports rejections that occur when operating in fixed hi water mode, where only N unique flows are accepted in any one minute window. This behavior can be adjusted using TrackHiWater on the Admin, Manage Session Groups page and FlowMemcapPolicy in the trisulProbeConfig.xml file. |
-| 12  | After Term             | 0         | 0            | VT_COUNTER | i     | This is an internal metric and can be ignored. |
-| 13  | Flush USecs            | 0         | 0            | VT_COUNTER | i     | This meter reports the number of microseconds taken to flush data to the database. |
-| 14  | Unused Cardinality counter | 20    | 20           | VT_GAUGE   | Uniques | This is a reserved gauge slot intended for a unique value cardinality metric. It is not currently mapped to any field for this counter group, so it remains an inactive placeholder with no data populated. |
-| 15  | Unused Cardinality counter | 20    | 20           | VT_GAUGE   | Uniques | This is a second reserved cardinality gauge slot with the same status as meter 14. It is inactive and not instrumented for this group. |
+## Related
+
+- [Meta Counter Group](/docs/guide/counter-groups/meta-counter-group)
+- [Aggregates](/docs/guide/counter-groups/aggregates) (Active Sessions meter)

@@ -1,17 +1,47 @@
 # MPLSStats
 
-Per MPLS Activity Monitor
+Counts bytes per MPLS label, keyed by the top label of the stack in 5-digit hex.
 
-## Counter group
+| Property | Value |
+|---|---|
+| GUID | `{6C312435-80C1-401F-AEDD-090FF4F46212}` |
+| Layer | L2 Link |
+| Input | Packets |
+| Key type | MPLS label (5 hex digits) |
+| Implementation | Native C++ — CPICGMPLS (trisul_probe/src/sysplugs/counters/PICGMPLS.cpp) |
+| Bucket / Topper | 60 s / 300 s |
+| Enabled by default | Yes |
 
-| GUID                                     | TYPE   | Bucke Size (secs) | Topper Bucket(Secs): |
-| ---------------------------------------- | ------ | ----------------- | --------------------- |
-| `{6C312435-80C1-401F-AEDD-090FF4F46212}` | Native | 60                 | 300                    |
+## What it measures
+
+- Every packet that the MPLS protocol handler parses adds its wire length to the key of its top (outermost) label. Inner labels are not counted.
+- The handler treats the payload after the bottom-of-stack label as IPv4.
+- NetFlow/IPFIX and sFlow do not update this group.
+
+## Keys
+
+One key is the 20-bit label value as 5 uppercase hex digits. There are no labels.
+
+| Key | Meaning |
+|---|---|
+| `00010` | Label 16 |
+| `003E8` | Label 1000 |
+| `49310` | Label 299792 |
+
+### Special keys
+
+| Key | Meaning |
+|---|---|
+| `SYS:GROUP_TOTALS` | Sum of every update in the interval. Each MPLS packet updates one key, so meter 0 equals total MPLS bytes. |
 
 ## Meter list
 
-| ID  | DESCRIPTION       | TOP COUNT | BOTTOM COUNT | TYPE            | UNITS   | DESCRIPTION |
-| --- | ------------------- | --------- | ------------ | --------------- | ------- |-------------|
-| 0   | Total bytes/sec         | 50        | 0            | VT_RATE_COUNTER | Bps     | This meter reports the bandwidth rate, in bytes per second, for traffic carrying this MPLS label. |
-| 1   | Unused Cardinality counter | 20    | 20           | VT_GAUGE        | Uniques | This is a reserved gauge slot intended for a unique value cardinality metric. It is not currently mapped to any field for this counter group, so it remains an inactive placeholder with no data populated. |
-| 2   | Unused Cardinality counter | 20    | 20           | VT_GAUGE        | Uniques | This is a second reserved cardinality gauge slot with the same status as meter 1. It is inactive and not instrumented for this group. |
+| ID | Name | Type | Units | Top | Bottom | Description |
+|---|---|---|---|---|---|---|
+| 0 | Total bytes/sec | VT_RATE_COUNTER | Bps | 50 | 0 | Wire bytes of packets with this top label. |
+| 1 | Unused Cardinality counter | VT_GAUGE | Uniques | 20 | 20 | Reserved cardinality slot. Not populated. |
+| 2 | Unused Cardinality counter | VT_GAUGE | Uniques | 20 | 20 | Reserved cardinality slot. Not populated. |
+
+## Related
+
+- [LinkLayerStats](/docs/guide/counter-groups/link-layer-stats) (key `8847`)
