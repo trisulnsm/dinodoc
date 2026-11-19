@@ -10,27 +10,25 @@ Upgrading keeps your installation, application settings and traffic data.
 
 To move from Trisul 7.0 to Trisul 8.0, remove the Trisul 7.0 packages and the old repository, then install Trisul 8.0. Trisul 8.0 signs the repository with a 3072-bit public key. Trisul 7.0 used a 2048-bit key. The Trisul 8.0 install steps replace that key.
 
-:::warning
-You cannot install a version 8.1 license on a version 7 build.
-:::
+:::warning Get a Trisul 8.0 license before you upgrade
+Your Trisul 7.0 license does not work with Trisul 8.0. If you upgrade without a Trisul 8.0 license, the upgrade does not work.
 
-## Back up the v7 license {#backup-v7-license}
+Before you upgrade, email Trisul at [info@mail.trisul.org](mailto:info@mail.trisul.org) to request a Trisul 8.0 license. Start the upgrade after you receive it.
 
-Before you upgrade, back up the old v7 license on both the Hub and the Probe:
+You cannot install a version 8.1 license on a version 7 build. Before you upgrade, back up the old v7 license on both the Hub and the Probe:
 
 ```bash
 cp /usr/local/etc/trisul-hub/LicenseKey.txt /usr/local/etc/trisul-hub/LicenseKey.txt.v7
 cp /usr/local/etc/trisul-probe/LicenseKey.txt /usr/local/etc/trisul-probe/LicenseKey.txt.v7
 ```
 
-## Copy the v8 license {#copy-v8-license}
-
-Copy the new v8 license key:
+Then copy the new v8 license key:
 
 ```bash
 cp /home/trisul/LicenseKey.txt.prod.v8 /usr/local/etc/trisul-hub/LicenseKey.txt
 cp /home/trisul/LicenseKey.txt.prod.v8 /usr/local/etc/trisul-probe/LicenseKey.txt
 ```
+:::
 
 ## Remove Trisul 7.0 and install Trisul 8.0 {#remove-and-install}
 

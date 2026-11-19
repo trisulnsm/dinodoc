@@ -15,7 +15,7 @@ const RELEASE = {
 import styles from './index.module.css';
 
 function HomepageTicker() {
-  const text = "New: Network Analytics Glossary is now live • Explore key terms, concepts, and metrics • ";
+    const text = "Trisul 8.0: Meet Trisul AI • Ask your network in plain English • See it in action → • ";
   return (
     <div className={styles.tickerContainer}>
       <div className={styles.tickerWrapper}>
@@ -26,7 +26,7 @@ function HomepageTicker() {
           New
         </div>
         <div className={styles.tickerScroll}>
-          <Link to="/glossary" className={styles.tickerLink}>
+          <Link to="https://trisul.org/trisul-ai/" className={styles.tickerLink}>
             <div className={styles.tickerTrack}>
               <span className={styles.tickerText}>{text}</span>
               <span className={styles.tickerText}>{text}</span>
@@ -69,4 +69,3 @@ export default function Home() {
     </Layout>
   );
 }
-

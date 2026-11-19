@@ -141,3 +141,38 @@
   color: #fff;
 }
 
+/* Trisul AI gradient ticker (overrides the earlier ticker colours) */
+.tickerContainer {
+  background: linear-gradient(90deg, #101499 0%, #9c43fe 50%, #4cc2e9 100%);
+  background-size: 200% 100%;
+  animation: tickerGradient 12s ease-in-out infinite alternate;
+  border: none;
+}
+
+.tickerBadge {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.tickerText,
+.tickerLink,
+.tickerLink:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.tickerLink:hover .tickerText {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@keyframes tickerGradient {
+  from { background-position: 0% 50%; }
+  to   { background-position: 100% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tickerContainer { animation: none; }
+}
+

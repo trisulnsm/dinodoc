@@ -11,6 +11,11 @@ Trisul AI is a chat assistant inside WebTrisul. You ask a question about your ne
 **Applies to:** NetFlow Analyzer, NSM and ISP Analytics modes.
 **Available from:** Trisul 8.0
 
+:::tip New to Trisul AI?
+See what it can do, watch the demo and book a walkthrough at
+[trisul.org/trisul-ai](https://trisul.org/trisul-ai/).
+:::
+
 :::note Trisul AI is not Trisul IPDR AI
 These pages cover **Trisul AI**, the general-purpose assistant. The IPDR compliance product has its own, separate AI layer that turns a plain-language request into an IPDR query form. That layer has its own setup and rules. See [IPDR AI](/docs/prodguide/ipdr/ai-query)
 :::
