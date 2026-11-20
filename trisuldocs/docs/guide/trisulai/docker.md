@@ -31,7 +31,7 @@ You need:
 ## Step 1: Pull the image
 
 ~~~bash
-docker pull parthasarathy369/trisul-ai-cli:latest
+docker pull trisulnsm/trisul-ai-cli:latest
 ~~~
 
 ## Step 2: Start the container and configure the LLM
@@ -50,7 +50,7 @@ docker run -d \
   -e TRISUL_AI_PROVIDER=gemini \
   -e TRISUL_AI_MODEL=gemini-3.6-flash \
   -e TRISUL_GEMINI_API_KEY=your-api-key \
-  parthasarathy369/trisul-ai-cli:latest
+  trisulnsm/trisul-ai-cli:latest
 ~~~
 
 | Variable | Value |
@@ -68,7 +68,7 @@ docker run -d \
   --name trisul-ai-cli \
   -p 8200:8200 \
   -v trisul-ai-config:/var/lib/trisul-ai \
-  parthasarathy369/trisul-ai-cli:latest
+  trisulnsm/trisul-ai-cli:latest
 ~~~
 
 If a container with that name already exists, remove it first:
@@ -86,7 +86,7 @@ docker rm -f trisul-ai-cli
      --name trisul-ai-cli \
      -p 8200:8200 \
      -v trisul-ai-config:/var/lib/trisul-ai \
-     parthasarathy369/trisul-ai-cli:latest
+     trisulnsm/trisul-ai-cli:latest
    ~~~
 
    The API server starts, but every question returns **LLM is not configured.** until you finish the next steps.
